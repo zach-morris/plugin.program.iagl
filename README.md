@@ -1,11 +1,9 @@
 <meta name=”robots” content=”noindex, nofollow”>
 
-Internet Archive Game Launcher
+![](https://github.com/zach-morris/plugin.program.iagl/blob/main/icon.png?display=inline-block) Internet Archive Game Launcher
 ==========================
 
-This addon is still in *BETA*.  Check back soon!
-
-![IAGL](https://github.com/zach-morris/plugin.program.iagl/blob/main/fanart.jpg)
+![IAGL](https://github.com/zach-morris/plugin.program.iagl/blob/main/icon.jpg)
 
 The Internet Archive Game Launcher (IAGL - /eye/gull/) will launch games from the internet using [Kodi](http://kodi.tv)
 
