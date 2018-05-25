@@ -519,7 +519,6 @@ class iagl_utils(object):
 			game_lists['total_num_archives'] = None
 
 			for ff in [x for x in files if 'xml' in x.lower()]:
-				print ff
 				with closing(xbmcvfs.File(os.path.join(self.get_dat_folder_path(),ff))) as fo:
 					byte_string = bytes(fo.readBytes(10000)) #Read first ~10kb of dat file to get header
 				header_string = byte_string.decode('utf-8')
@@ -542,9 +541,7 @@ class iagl_utils(object):
 			if cache_list_option:
 				try:
 					with open(dat_file_cachename, 'wb') as fn:
-					    t = time.time()
 					    json.dump(game_lists,fn)
-					    print 'Zachs Time Test json: '+str(time.time()-t)
 					xbmc.log(msg='IAGL:  Saving dat file listing to cache in cache file %(dat_file_cachename)s' % {'dat_file_cachename': dat_file_cachename}, level=xbmc.LOGDEBUG)
 				except:
 					try:
@@ -556,10 +553,7 @@ class iagl_utils(object):
 
 	def get_game_lists_as_listitems(self,return_categories=None):
 		game_listitems = list()
-
-		# t = time.time()
 		game_lists_dict = self.get_game_lists()
-		# print 'Zachs Time Test game dat files: '+str(time.time()-t)
 		#Ensure the return categories object is a list so it can be iterated on
 		if type(return_categories) is str:
 			return_cats = [return_categories]
@@ -1220,7 +1214,6 @@ class iagl_utils(object):
 					game_list[-1].setInfo(self.media_type,game_item['info'])
 					game_list[-1].setArt(game_item['art'])
 					game_list[-1].setProperty('iagl_json',game_item['properties']['iagl_json'])
-				# print 'Zachs Time Test: '+str(time.time()-t)
 			elif filter_method == 'alphabetical':
 				if filter_value == '%23' or filter_value == '#':
 					current_page = paginate.Page([x for x in games_dict if x['values']['label2'][0] not in self.non_number_cat], page=page_number, items_per_page=self.get_items_per_page())
