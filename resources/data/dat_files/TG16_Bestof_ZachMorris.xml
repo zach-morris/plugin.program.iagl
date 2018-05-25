@@ -1,0 +1,1557 @@
+<datafile>
+	<header>
+		<emu_name>Internet Archive Best Of - TurboGrafx 16</emu_name>
+		<emu_description>PCE, TurboGrafx 16</emu_description>
+		<emu_category>NEC, 1980s, Console, 8 Bit, Best of</emu_category>
+		<emu_version>04012018</emu_version>
+		<emu_date>03/03/2015</emu_date>
+		<emu_author>Zach Morris</emu_author>
+		<emu_visibility>visible</emu_visibility>
+		<emu_homepage>http://www.no-intro.org</emu_homepage>
+		<emu_baseurl>http://archive.org/download/</emu_baseurl>
+		<emu_launcher>retroplayer</emu_launcher>
+		<emu_default_addon>none</emu_default_addon>
+		<emu_ext_launch_cmd>none</emu_ext_launch_cmd>
+		<emu_downloadpath>default</emu_downloadpath>
+		<emu_postdlaction>unzip_rom</emu_postdlaction>
+		<emu_comment>The TurboGrafx 16 was a peculiar system but it had enough good games to warrant a Best Games list. It had a processor which was actually somewhat weaker than most 16-bit systems, in that it was really only 8-bits. On the other hand, it was one of the first systems with an official CD add-on which allowed it to store games up to a whopping 650 MB large! On one hand, this meant a lot of horrible FMV games. On the other hand, this means absolutely rockin platformers and shmups. These are the Best TurboGrafx 16 Games of all time.</emu_comment>
+		<emu_thumb>https://i.imgur.com/kCBwpPr.jpg</emu_thumb>
+		<emu_banner>https://i.imgur.com/bhZ2V8k.jpg</emu_banner>
+		<emu_fanart>https://i.imgur.com/7QZKpnU.jpg</emu_fanart>
+		<emu_logo>https://i.imgur.com/6aaHz7p.png</emu_logo>
+		<emu_trailer>p8qsPh4ZXOc</emu_trailer>
+	</header>
+	<game name="Order of the Griffon (USA)">
+			<description>50.  Order of the Griffon</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FOrder%20of%20the%20Griffon%20%28USA%29.zip" size="322723" />
+			<title_clean>Order of the Griffon</title_clean>
+			<plot>The best western RPG on the 'Engine (possibly the only Western RPG on the Engine!), Order of the Griffin is a Dungeon's and Dragon's license game which is split between classic 1st person view dungeons and villages, and top down view, turn-based battling on gridded battlefields. Its a little dated, but old school RPG fans should enjoy it.</plot>
+			<releasedate>9/1/1992</releasedate>
+			<year>1992</year>
+			<genre>Adventure, RPG</genre>
+			<studio>Turbo Technologies</studio>
+			<nplayers>1</nplayers>
+			<perspective>1st-Person</perspective>
+			<rating>3.1</rating>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589058-dungeons-and-dragons-order-of-the-griffon</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/order-of-the-griffon</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/dungeons-dragons-order-of-the-griffon/3030-19681/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10748</consolegrid_url>
+			<boxart1>http://static.giantbomb.com/uploads/scale_large/3/30116/1215337-order_of_the_griffon_coverart.png</boxart1>
+			<boxart2>http://www.mobygames.com/images/covers/l/96568-order-of-the-griffon-turbografx-16-back-cover.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/96569-order-of-the-griffon-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://www.mobygames.com/images/shots/l/323890-order-of-the-griffon-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/323891-order-of-the-griffon-turbografx-16-screenshot-setting-up-a.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/323894-order-of-the-griffon-turbografx-16-screenshot-starting-location.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/323893-order-of-the-griffon-turbografx-16-screenshot-exploring-lord.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/323895-order-of-the-griffon-turbografx-16-screenshot-rats-attack.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/323896-order-of-the-griffon-turbografx-16-screenshot-turn-based-combat.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/323897-order-of-the-griffon-turbografx-16-screenshot-finding-treasure.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/323898-order-of-the-griffon-turbografx-16-screenshot-they-are-planning.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/323899-order-of-the-griffon-turbografx-16-screenshot-but-we-stop.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/323900-order-of-the-griffon-turbografx-16-screenshot-an-ancient-book.jpg</snapshot10>
+			<banner1>http://i.imgur.com/9x0HmJv.png</banner1>
+		</game>
+		<game name="Neutopia (USA)">
+			<description>49.  Neutopia</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FNeutopia%20%28USA%29.zip" size="245618" />
+			<title_clean>Neutopia</title_clean>
+			<plot>Essentially this is the PC Engine's response to the original NES Zelda, with a very similar theme and gameplay style. Happily the game retains all of the playability of its influence, whilst making some required improvements here and there, such as improved graphics and better overworld structuring (its set-out in a way which makes it harder to become lost). All in all anyone who's a fan of the original Legend of Zelda should check it out (though it is bettered by its later PC-Engine sequel).</plot>
+			<releasedate>9/1/1990</releasedate>
+			<year>1989</year>
+			<genre>Action</genre>
+			<studio>NEC Technologies</studio>
+			<nplayers>1</nplayers>
+			<perspective>Top-Down</perspective>
+			<rating>4.0</rating>
+			<videoid>8YG2P4JevME</videoid>
+			<thegamesdb_id>5677</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589047-neutopia</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/neutopia</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/neutopia/3030-2936/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/8883</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/5677-1.jpg</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/5677-1.jpg</boxart2>
+			<boxart3>http://i.imgur.com/XOJJurS.jpg</boxart3>
+			<boxart4>http://www.mobygames.com/images/covers/l/45927-neutopia-turbografx-16-media.jpg</boxart4>
+			<boxart5>http://www.mobygames.com/images/covers/l/102503-neutopia-turbografx-16-media.jpg</boxart5>
+			<snapshot1>http://www.mobygames.com/images/shots/l/94346-neutopia-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/94331-neutopia-turbografx-16-screenshot-intro.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/94332-neutopia-turbografx-16-screenshot-the-hero-receives-his-mission.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/94333-neutopia-turbografx-16-screenshot-inventory-and-equipment.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/94334-neutopia-turbografx-16-screenshot-starting-location.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/94335-neutopia-turbografx-16-screenshot-a-lonely-slime-looks-at-you.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/94336-neutopia-turbografx-16-screenshot-nice-rugs.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/94337-neutopia-turbografx-16-screenshot-princess-is-that-you.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/94338-neutopia-turbografx-16-screenshot-trying-to-kill-an-innocent.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/94339-neutopia-turbografx-16-screenshot-attacks-from-all-the-sides.jpg</snapshot10>
+			<banner1>http://i.imgur.com/ehcBZHk.png</banner1>
+		</game>
+		<game name="Coryoon - Child of Dragon (Japan)">
+			<description>48.  Coryoon - Child of Dragon</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FCoryoon%20-%20Child%20of%20Dragon%20%28Japan%29.zip" size="279538" />
+			<title_clean>Coryoon - Child of Dragon</title_clean>
+			<plot>This is a cutesy horizontal shooter starring a baby dragon from Naxat Soft. The graphics here are nice, there's a lot of action going on onscreen, and it throws some of its own ideas in here and there, such as a points system focused on picking up as much fruit as possible. Being that the fruit is flying all over the place amongst the bullets and enemies it takes some real focus, and a good eye to play the game well.</plot>
+			<releasedate>9/1/1991</releasedate>
+			<year>1991</year>
+			<genre>Shooter</genre>
+			<studio>Naxat Soft</studio>
+			<nplayers>1</nplayers>
+			<perspective>Side-Scrolling</perspective>
+			<rating>4.2</rating>
+			<ESRB>E - Everyone</ESRB>
+			<videoid>qwv5OCujfIU</videoid>
+			<thegamesdb_id>18403</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/588930-coryoon</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/coryoon-child-of-dragon</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/coryoon-child-of-dragoon/3030-5362/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10367</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/18403-1.jpg</boxart1>
+			<snapshot1>http://thegamesdb.net/banners/screenshots/18403-1.jpg</snapshot1>
+			<snapshot2>http://static.giantbomb.com/uploads/scale_large/9/97089/2228894-7.png</snapshot2>
+			<snapshot3>http://static.giantbomb.com/uploads/scale_large/9/97089/2228893-6.png</snapshot3>
+			<snapshot4>http://static.giantbomb.com/uploads/scale_large/9/97089/2228892-5.png</snapshot4>
+			<snapshot5>http://static.giantbomb.com/uploads/scale_large/9/97089/2228891-4.png</snapshot5>
+			<snapshot6>http://static.giantbomb.com/uploads/scale_large/9/97089/2228890-3.png</snapshot6>
+			<snapshot7>http://static.giantbomb.com/uploads/scale_large/9/97089/2228889-2.png</snapshot7>
+			<snapshot8>http://static.giantbomb.com/uploads/scale_large/9/97089/2228888-1.png</snapshot8>
+			<snapshot9>http://static.giantbomb.com/uploads/scale_large/0/8273/781674-1120652325_01.png</snapshot9>
+			<snapshot10>http://static.giantbomb.com/uploads/scale_large/0/8273/781673-1120652325_00.png</snapshot10>
+			<banner1>http://i.imgur.com/igVUTgS.png</banner1>
+		</game>
+		<game name="Override (Japan)">
+			<description>47.  Override</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FOverride%20%28Japan%29.zip" size="144576" />
+			<title_clean>Override</title_clean>
+			<plot>Here's an excellent, lessor known vertical shooter from Data East. The game is frenetic and exciting, with fast gameplay and a screen that's always packed with bullets and enemies (sometimes it even manages to approach the sort of mayhem you'd expect from the Saturn or PS1!). The power-ups here are impressive, and the boss battles well done, all in all its a very good example of the genre.</plot>
+			<releasedate>9/1/1991</releasedate>
+			<year>1991</year>
+			<genre>Shooter</genre>
+			<studio>Data East</studio>
+			<nplayers>1</nplayers>
+			<videoid>AlMmKZrAYTE</videoid>
+			<thegamesdb_id>18414</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589062-override</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/override</mobygames_url>
+			<consolegrid_url>http://consolegrid.com/games/10750</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/18414-1.jpg</boxart1>
+			<snapshot1>http://www.mobygames.com/images/shots/l/546190-override-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/546191-override-turbografx-16-screenshot-very-short-intro.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/546192-override-turbografx-16-screenshot-getting-started.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/546193-override-turbografx-16-screenshot-wingmen.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/546194-override-turbografx-16-screenshot-spreading-fire-angry-boss.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/546196-override-turbografx-16-screenshot-nice-clouds.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/546197-override-turbografx-16-screenshot-this-guy-looks-like-he-means.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/546198-override-turbografx-16-screenshot-volcanic-area.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/546199-override-turbografx-16-screenshot-side-fire.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/546200-override-turbografx-16-screenshot-those-yellow-energy-balls.jpg</snapshot10>
+			<banner1>http://i.imgur.com/5oX74Ew.png</banner1>
+		</game>
+		<game name="Spin Pair (Japan)">
+			<description>46.  Spin Pair</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FSpin%20Pair%20%28Japan%29.zip" size="93083" />
+			<title_clean>Spin Pair</title_clean>
+			<plot>This is an under-appreciated block-falling puzzle game where the aim is to fill each shape up with colour by merging two shapes of the same type. The combo's here are very intuitive, and easy to get a handle on, and as always the 2-player competitive mode its tons of fun, with each player dumping loads of garbage shapes on each other whilst desperately trying to stay afloat.</plot>
+			<releasedate>9/1/1990</releasedate>
+			<genre>Puzzle</genre>
+			<studio>Media Rings</studio>
+			<nplayers>1-2 Alt</nplayers>
+			<videoid>US3sVMlqgko</videoid>
+			<thegamesdb_id>28976</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589117-spin-pair</gamefaqs_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/28976-1.jpg</boxart1>
+			<boxart2>http://img.gamefaqs.net/box/7/8/5/312785_back.jpg</boxart2>
+			<snapshot1>http://img.gamefaqs.net/screens/7/2/a/gfs_5090_1_1.jpg</snapshot1>
+			<snapshot2>http://img.gamefaqs.net/screens/d/b/7/gfs_5090_2_1.jpg</snapshot2>
+			<snapshot3>http://img.gamefaqs.net/screens/6/0/3/gfs_5090_3_1.jpg</snapshot3>
+		</game>
+		<game name="Valkyrie no Densetsu (Japan)">
+			<description>45.  Legend of Valkyrie</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FValkyrie%20no%20Densetsu%20%28Japan%29.zip" size="346589" />
+			<title_clean>Valkyrie no Densetsu</title_clean>
+			<plot>This is a top-down perspective shooter where you play as a viking girl. The game doesn't look quite a polished as it could be, but the shooting action is pretty good, the above average focus on platforming elements makes it unique for its genre, and the levels even have multiple routes to keep you busy.</plot>
+			<releasedate>9/8/1990</releasedate>
+			<year>1990</year>
+			<genre>Action, Adventure</genre>
+			<studio>Namco Limited</studio>
+			<nplayers>1</nplayers>
+			<perspective>Top-Down</perspective>
+			<rating>4.2</rating>
+			<videoid>vvFVjUsAIsk</videoid>
+			<thegamesdb_id>22396</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589154-valkyrie-no-densetsu</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/valkyrie-no-densetsu</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/legend-of-valkyrie/3030-17440/</giantbomb_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/22396-1.jpg</boxart1>
+			<snapshot1>http://www.mobygames.com/images/shots/l/323703-valkyrie-no-densetsu-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/323704-valkyrie-no-densetsu-turbografx-16-screenshot-intro.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/323705-valkyrie-no-densetsu-turbografx-16-screenshot-game-start-these.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/323706-valkyrie-no-densetsu-turbografx-16-screenshot-jumping-over.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/323707-valkyrie-no-densetsu-turbografx-16-screenshot-boss-fight.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/323708-valkyrie-no-densetsu-turbografx-16-screenshot-the-valkyrie.jpg</snapshot6>
+			<snapshot7>http://static.giantbomb.com/uploads/scale_large/0/238/520955-valk0004.jpg</snapshot7>
+			<snapshot8>http://static.giantbomb.com/uploads/scale_large/0/238/520920-valkyrie.jpg</snapshot8>
+			<snapshot9>http://static.giantbomb.com/uploads/scale_large/0/238/520919-valk0022.jpg</snapshot9>
+			<snapshot10>http://static.giantbomb.com/uploads/scale_large/0/238/520918-valk0019.jpg</snapshot10>
+		</game>
+		<game name="Image Fight (Japan)">
+			<description>44.  Image Fight</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FImage%20Fight%20%28Japan%29.zip" size="261553" />
+			<title_clean>Image Fight</title_clean>
+			<plot>This is a tough little vertical scroller from Irem that has that familiar shmup design of theirs made famous by titles like R-Type. Like many of their other games Image Fight can be brutal at times, but is intricately designed and very rewarding to fully master. The gameplay hook here is that your satellites fire in the opposite direction to where you're moving. The key to the game is learning how to aim them well, and using their multi-directional firing ability to its full capacity.</plot>
+			<releasedate>27/7/1990</releasedate>
+			<year>1990</year>
+			<genre>Action</genre>
+			<studio>Irem Corp.</studio>
+			<perspective>Top-Down</perspective>
+			<videoid>pzXIBLyl-CE</videoid>
+			<thegamesdb_id>32835</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/588995-image-fight</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/image-fight</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/image-fight/3030-11901/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10707</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/32835-1.jpg</boxart1>
+			<boxart2>http://img.gamefaqs.net/box/6/8/1/44681_back.jpg</boxart2>
+			<snapshot1>http://static.giantbomb.com/uploads/scale_large/0/6518/383674-imagefight0002.png</snapshot1>
+			<snapshot2>http://static.giantbomb.com/uploads/scale_large/0/6518/383670-imagefight0001.png</snapshot2>
+			<snapshot3>http://static.giantbomb.com/uploads/scale_large/0/6518/383667-imagefight0000.png</snapshot3>
+			<snapshot4>http://img.gamefaqs.net/screens/5/f/b/gfs_5038_1_1.jpg</snapshot4>
+			<snapshot5>http://img.gamefaqs.net/screens/5/3/a/gfs_94113_1_1.jpg</snapshot5>
+			<snapshot6>http://img.gamefaqs.net/screens/f/6/6/gfs_5038_2_1.jpg</snapshot6>
+			<snapshot7>http://img.gamefaqs.net/screens/4/d/2/gfs_5038_3_1.jpg</snapshot7>
+			<banner1>http://i.imgur.com/XwrWoQZ.png</banner1>
+		</game>
+		<game name="Aero Blasters (USA)">
+			<description>43.  Aero Blasters</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FAero%20Blasters%20%28USA%29.zip" size="292801" />
+			<title_clean>Aero Blasters</title_clean>
+			<plot>Excellent 2-player horizontal shooter that has you flying over ravaged cities, piloting through zero-gravity space, and taking part in high speed chases through tunnels. Its yet another good shooter for the 'Engine, the power-ups work well, and the 2-player is fun.</plot>
+			<releasedate>9/1/1990</releasedate>
+			<year>1990</year>
+			<genre>Shooter</genre>
+			<studio>Turbo Technologies</studio>
+			<nplayers>1-2 Co-Op</nplayers>
+			<perspective>3rd-Person</perspective>
+			<rating>3.2</rating>
+			<videoid>LAjr4sJrhrs</videoid>
+			<thegamesdb_id>4909</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/588885-aero-blasters</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/air-buster</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/aero-blasters/3030-19275/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10031</consolegrid_url>
+			<boxart1>http://static.giantbomb.com/uploads/scale_large/9/93770/2365508-tg16_aeroblasters.jpg</boxart1>
+			<boxart2>http://i.imgur.com/JJqM1FM.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/190662-air-buster-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://www.mobygames.com/images/shots/l/322560-air-buster-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/322561-air-buster-turbografx-16-screenshot-phase-1.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/322562-air-buster-turbografx-16-screenshot-going-through-a-swarm.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/322563-air-buster-turbografx-16-screenshot-phase-1-boss.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/322564-air-buster-turbografx-16-screenshot-phase-2-mechanized-cave.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/322565-air-buster-turbografx-16-screenshot-flying-through-a-narrow.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/322566-air-buster-turbografx-16-screenshot-lots-of-bullets.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/322567-air-buster-turbografx-16-screenshot-phase-2-boss.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/322568-air-buster-turbografx-16-screenshot-phase-3.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/322569-air-buster-turbografx-16-screenshot-this-thing-can-only-be.jpg</snapshot10>
+			<banner1>http://i.imgur.com/UeaaBGL.png</banner1>
+			<clearlogo1>http://thegamesdb.net/banners/clearlogo/4909.png</clearlogo1>
+		</game>
+		<game name="Jackie Chan's Action Kung Fu (USA)">
+			<description>42.  Jackie Chan's Action Kung Fu</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FJackie%20Chan%27s%20Action%20Kung%20Fu%20%28USA%29.zip" size="291020" />
+			<title_clean>Jackie Chan's Action Kung Fu</title_clean>
+			<plot>Here's a great platform game from Hudson which has you kicking and punching your way through the stages as Jackie Chan. Anyone familiar with the NES game will know what to expect, great pacing, versatile melee combat, and impressive boss fights abound. Happily, whilst superficially similar and sharing loads of gameplay elements the two versions aren't actually identical, as the layouts here deviate quite a bit sometimes and the whole game tends to have more focus on combat here than the NES game. All in all the two versions are different enough that its worth owning both versions.</plot>
+			<releasedate>9/1/1992</releasedate>
+			<year>1991</year>
+			<genre>Action</genre>
+			<studio>Hudson Soft Company</studio>
+			<nplayers>1</nplayers>
+			<perspective>3rd-Person</perspective>
+			<rating>3.5</rating>
+			<videoid>KtKUeSeXIOA</videoid>
+			<thegamesdb_id>8213</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/588998-jackie-chans-action-kung-fu</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/jackie-chans-action-kung-fu</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/jackie-chans-action-kung-fu/3030-5129/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10187</consolegrid_url>
+			<boxart1>http://static.giantbomb.com/uploads/scale_large/9/93770/2361884-nes_jackiechansactionkingfu.jpg</boxart1>
+			<boxart2>http://www.mobygames.com/images/covers/l/253209-jackie-chan-s-action-kung-fu-turbografx-16-back-cover.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/45405-jackie-chan-s-action-kung-fu-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://www.mobygames.com/images/shots/l/109270-jackie-chan-s-action-kung-fu-turbografx-16-screenshot-title.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/109271-jackie-chan-s-action-kung-fu-turbografx-16-screenshot-how.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/109272-jackie-chan-s-action-kung-fu-turbografx-16-screenshot-meditate.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/109273-jackie-chan-s-action-kung-fu-turbografx-16-screenshot-world.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/109274-jackie-chan-s-action-kung-fu-turbografx-16-screenshot-tigers.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/109275-jackie-chan-s-action-kung-fu-turbografx-16-screenshot-travel.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/109276-jackie-chan-s-action-kung-fu-turbografx-16-screenshot-cloud.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/109277-jackie-chan-s-action-kung-fu-turbografx-16-screenshot-perfect.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/109278-jackie-chan-s-action-kung-fu-turbografx-16-screenshot-enter.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/109279-jackie-chan-s-action-kung-fu-turbografx-16-screenshot-this.jpg</snapshot10>
+			<banner1>http://i.imgur.com/oBaEPbt.jpg</banner1>
+		</game>
+		<game name="Galaga '90 (USA)">
+			<description>41.  Galaga '90</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FGalaga%20%2790%20%28USA%29.zip" size="118042" />
+			<title_clean>Galaga '90</title_clean>
+			<plot>The third game in the Galaga series, Galaga 88' revamped and reworked the core gameplay in an attempt to make something that stood up to all its new fangled scrolling competition. The game adds in a whole load more variety in enemy behaviour, from aliens which dart around in different patterns, to those which inflate as they take damage, or split up into loads of mini versions of themselves, you can go up in difficulty levels (to places where there's more points) by collecting two pods which some enemies drop, and the game even throws in the odd scrolling level here and there for variation. Overall its an addictive blast that offers a change of pace from most of the other 'Engine shmups out there.</plot>
+			<releasedate>9/1/1989</releasedate>
+			<genre>Action</genre>
+			<studio>NEC Technologies</studio>
+			<nplayers>1</nplayers>
+			<perspective>3rd-Person</perspective>
+			<rating>3.9</rating>
+			<videoid>L_E1nrbtQEE</videoid>
+			<thegamesdb_id>5671</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/588979-galaga-90</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/galaga-90</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/galaga-88/3030-14593/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/8880</consolegrid_url>
+			<boxart1>http://static.giantbomb.com/uploads/scale_large/9/93770/2365540-tg16_galaga90.jpg</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/5671-1.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/27484-galaga-atari-7800-media.jpg</boxart3>
+			<boxart4>http://www.mobygames.com/images/covers/l/44867-galaga-nes-media.jpg</boxart4>
+			<boxart5>http://www.mobygames.com/images/covers/l/295499-galaga-nes-media.jpg</boxart5>
+			<snapshot1>http://www.mobygames.com/images/shots/l/800299-galaga-arcade-screenshot-they-re-coming-to-take-you-away-haha.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/800300-galaga-arcade-screenshot-being-suckered-away.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/800301-galaga-arcade-screenshot-captured.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/800302-galaga-arcade-screenshot-feeling-whole-again.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/800303-galaga-arcade-screenshot-challenge-accepted.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/800304-galaga-arcade-screenshot-nothing-less.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/800305-galaga-arcade-screenshot-yet-another-wave.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/665762-galaga-arcade-screenshot-score.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/665763-galaga-arcade-screenshot-push-start-button.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/665764-galaga-arcade-screenshot-aliens-appears.jpg</snapshot10>
+			<banner1>http://i.imgur.com/QZuZj3P.jpg</banner1>
+		</game>
+		<game name="Hana Taaka Daka! (Japan)">
+			<description>40.  Hana Taaka Daka</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FHana%20Taaka%20Daka%21%20%28Japan%29.zip" size="282751" />
+			<title_clean>Hana Taaka Daka!</title_clean>
+			<plot>Yet another great scrolling shmup for the 'Engine. Long Nosed Goblin is a cute-em-up style shooter with great graphics and large levels filled with multiple routes. The genre staples are well represented, with good power-ups and memorable boss fights, but there's also a unique element here that adds to longevity, the hidden scrolls. Each level hides one scroll somewhere in one of the routes, whilst another is held by the boss, to complete the game properly you need to find all the scrolls as well as completing the game, this is a welcome addition which helps to add a little more depth to the proceedings.</plot>
+			<releasedate>9/8/1991</releasedate>
+			<genre>Action, Shooter, Scrolling</genre>
+			<studio>Natsume</studio>
+			<nplayers>1</nplayers>
+			<videoid>fVPepc8HB8g</videoid>
+			<thegamesdb_id>27541</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/571604-hana-taaka-daka</gamefaqs_url>
+			<giantbomb_url>http://www.giantbomb.com/hana-taaka-daka/3030-50366/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/12474</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/27541-1.jpg</boxart1>
+			<boxart2>http://img.gamefaqs.net/box/0/7/4/32074_back.jpg</boxart2>
+			<snapshot1>http://img.gamefaqs.net/screens/d/b/3/gfs_8884_1_1.jpg</snapshot1>
+			<snapshot2>http://img.gamefaqs.net/screens/7/2/e/gfs_8884_2_1.jpg</snapshot2>
+			<snapshot3>http://img.gamefaqs.net/screens/c/9/a/gfs_8884_3_1.jpg</snapshot3>
+			<banner1>http://i.imgur.com/AZqSedU.jpg</banner1>
+		</game>
+		<game name="Battle Lode Runner (Japan)">
+			<description>39.  Battle Lode Runner</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FBattle%20Lode%20Runner%20%28Japan%29.zip" size="131224" />
+			<title_clean>Battle Lode Runner</title_clean>
+			<plot>When Hudson ported the US classic, Lode Runner to the Famicom in Japan it was a huge hit, so popular in fact that Hudson ended up releasing their own titles in the series for long after. This is one of the best of the subsequent sequels, all the core elements of the original gameplay are here (run around collecting gold and digging pits to trap enemies), as well as the admirable Edit Mode, but with a new selection of fiendishly designed levels and better presentation. Another important addition here is a battle mode, where Hudson try to add Bomberman-style multiplayer party fun to the Lode Runner gameplay, allowing up to five people to frantically run around collecting power-ups trying to trap each other in pits.</plot>
+			<releasedate>10/2/1993</releasedate>
+			<year>1993</year>
+			<genre>Action</genre>
+			<studio>Hudson Soft Company</studio>
+			<nplayers>1-5 Sim</nplayers>
+			<perspective>Platform</perspective>
+			<rating>3.0</rating>
+			<thegamesdb_id>20244</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/588899-battle-lode-runner</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/battle-lode-runner</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/battle-lode-runner/3030-13011/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10294</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/20244-1.jpg</boxart1>
+			<boxart2>http://img.gamefaqs.net/box/5/5/7/51557_back.jpg</boxart2>
+			<snapshot1>http://www.mobygames.com/images/shots/l/322585-battle-lode-runner-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/322586-battle-lode-runner-turbografx-16-screenshot-game-in-progress.jpg</snapshot2>
+			<snapshot3>http://static.giantbomb.com/uploads/scale_large/2/23093/2723081-3825816131-Z8uv3.jpg</snapshot3>
+			<snapshot4>http://static.giantbomb.com/uploads/scale_large/2/23093/2723080-4486269971-8gcjg.jpg</snapshot4>
+			<snapshot5>http://static.giantbomb.com/uploads/scale_large/2/23093/2723079-5310488510-bWJDZ.jpg</snapshot5>
+			<snapshot6>http://static.giantbomb.com/uploads/scale_large/2/23093/2723078-8548590382-jY5WN.jpg</snapshot6>
+			<snapshot7>http://static.giantbomb.com/uploads/scale_large/2/23093/2723077-7863905686-4k6tL.jpg</snapshot7>
+			<snapshot8>http://static.giantbomb.com/uploads/scale_large/2/23093/2723076-3319048427-86iIy.jpg</snapshot8>
+			<snapshot9>http://static.giantbomb.com/uploads/scale_large/2/23093/2723075-8683140708-zvUN9.jpg</snapshot9>
+			<snapshot10>http://img.gamefaqs.net/screens/e/0/8/gfs_4302_1_1.jpg</snapshot10>
+			<banner1>http://i.imgur.com/Hmu4qQe.jpg</banner1>
+		</game>
+		<game name="New Adventure Island (USA)">
+			<description>38.  New Adventure Island</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FNew%20Adventure%20Island%20%28USA%29.zip" size="328406" />
+			<title_clean>New Adventure Island</title_clean>
+			<plot>This is a bright and colourful exclusive PC-Engine iteration of the popular Adventure Island series. I'd be lying if I didn't say I was a little disappointed with the direction they took here (the game eschews the rideable dinosaurs and memorable boss fights of NES Adventure Island II in favour of gameplay that heralds back to the original title), but the game still manages to succeed at providing fun, fast-paced platforming, with nice graphics (including great parallax), and excellent animations.</plot>
+			<releasedate>9/1/1992</releasedate>
+			<year>1992</year>
+			<genre>Action</genre>
+			<studio>Hudson Soft Company</studio>
+			<nplayers>1</nplayers>
+			<perspective>3rd-Person</perspective>
+			<rating>3.2</rating>
+			<videoid>P6mCDkcO8cg</videoid>
+			<thegamesdb_id>8219</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589049-new-adventure-island</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/new-adventure-island</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/new-adventure-island/3030-14323/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/8946</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/8219-1.jpg</boxart1>
+			<boxart2>http://i.imgur.com/VHgkspd.jpg</boxart2>
+			<boxart3>http://i.imgur.com/gIRgjhy.jpg</boxart3>
+			<boxart4>http://i.imgur.com/TiSNRbf.jpg</boxart4>
+			<boxart5>http://www.mobygames.com/images/covers/l/218290-new-adventure-island-turbografx-16-media.jpg</boxart5>
+			<snapshot1>http://www.mobygames.com/images/shots/l/95485-new-adventure-island-turbografx-16-screenshot-title.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/95486-new-adventure-island-turbografx-16-screenshot-it-s-your-wedding.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/95487-new-adventure-island-turbografx-16-screenshot-you-haven-t-seen.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/95488-new-adventure-island-turbografx-16-screenshot-exploring-the.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/95489-new-adventure-island-turbografx-16-screenshot-on-a-skateboard.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/95490-new-adventure-island-turbografx-16-screenshot-passed-the-halfway.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/95491-new-adventure-island-turbografx-16-screenshot-death-by-fire.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/95492-new-adventure-island-turbografx-16-screenshot-a-fairy-protects.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/95493-new-adventure-island-turbografx-16-screenshot-a-cave.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/95494-new-adventure-island-turbografx-16-screenshot-inside-a-castle.jpg</snapshot10>
+			<banner1>http://i.imgur.com/yAlA3i0.png</banner1>
+		</game>
+		<game name="Bloody Wolf (USA)">
+			<description>37.  Bloody Wolf</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FBloody%20Wolf%20%28USA%29.zip" size="216017" />
+			<title_clean>Bloody Wolf</title_clean>
+			<plot>This top down shooter has you going deep into enemy territory in an effort to single-handedly rescue the president. The game is smooth and polished, there's no deep gameplay here, just shoot them before they shoot you, but there's items to collect and vehicles to ride and its all very fun. As an arcade port this is actually very impressive, if it wasn't for the lack of 2-player you could very easily call this an improvement, the graphics have actually been added to, and there' even some new levels.</plot>
+			<releasedate>9/1/1990</releasedate>
+			<year>1989</year>
+			<genre>Action, Adventure</genre>
+			<studio>NEC Technologies</studio>
+			<nplayers>1</nplayers>
+			<perspective>Top-Down</perspective>
+			<rating>3.2</rating>
+			<videoid>V3i4bdPzQjc</videoid>
+			<thegamesdb_id>8190</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/588903-bloody-wolf</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/bloody-wolf</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/bloody-wolf/3030-2432/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10263</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/8190-1.jpg</boxart1>
+			<boxart2>http://img.gamefaqs.net/box/5/6/3/51563_back.jpg</boxart2>
+			<snapshot1>http://www.mobygames.com/images/shots/l/251494-bloody-wolf-turbografx-16-screenshot-title.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/251495-bloody-wolf-turbografx-16-screenshot-character-selection.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/251496-bloody-wolf-turbografx-16-screenshot-give-yourself-a-code.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/251497-bloody-wolf-turbografx-16-screenshot-your-mission.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/251498-bloody-wolf-turbografx-16-screenshot-stage-1.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/251499-bloody-wolf-turbografx-16-screenshot-free-the-hostages-from.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/251500-bloody-wolf-turbografx-16-screenshot-dialogue.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/251501-bloody-wolf-turbografx-16-screenshot-riding-a-motorcycle.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/251502-bloody-wolf-turbografx-16-screenshot-say-hello-to-shotgun.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/251503-bloody-wolf-turbografx-16-screenshot-inside-a-jeep.jpg</snapshot10>
+			<banner1>http://i.imgur.com/w90KfGX.jpg</banner1>
+		</game>
+		<game name="Son Son II (Japan)">
+			<description>36.  Son Son II</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FSon%20Son%20II%20%28Japan%29.zip" size="147069" />
+			<title_clean>Son Son II</title_clean>
+			<plot>Nice platformer featuring large, explorable levels, shops, and loads of climbing and platforming elements. Son Son II has you playing as a monkey who's main attack is an extendable stick, but can also buy and use magic (chosen by pausing the game, used by pressing both buttons at once), as well as many other interesting items such as a gauntlet which allows you to punch through some walls to find secrets. Its quite challenging at first but once you've got a lay of the land and know what to buy (the extra life giving lamps and bottles are a must), it all falls into place.</plot>
+			<releasedate>27/1/1989</releasedate>
+			<year>1989</year>
+			<genre>Action, Adventure</genre>
+			<studio>NEC Avenue</studio>
+			<nplayers>1</nplayers>
+			<perspective>Platform</perspective>
+			<rating>4.0</rating>
+			<videoid>kWrnjrOS_Lo</videoid>
+			<thegamesdb_id>18416</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589113-sonson-ii</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/son-son-ii</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/son-son-ii/3030-35420/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10326</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/18416-1.jpg</boxart1>
+			<boxart2>http://www.mobygames.com/images/covers/l/191553-son-son-ii-turbografx-16-inside-cover.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/191554-son-son-ii-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://www.mobygames.com/images/shots/l/323953-son-son-ii-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/323954-son-son-ii-turbografx-16-screenshot-intro.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/323955-son-son-ii-turbografx-16-screenshot-the-first-level.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/323956-son-son-ii-turbografx-16-screenshot-collect-fruit-to-gain.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/323957-son-son-ii-turbografx-16-screenshot-a-man-eating-plant.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/323958-son-son-ii-turbografx-16-screenshot-one-of-son-goku-s-friends.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/323959-son-son-ii-turbografx-16-screenshot-the-first-boss.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/323960-son-son-ii-turbografx-16-screenshot-the-second-level.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/323961-son-son-ii-turbografx-16-screenshot-the-fireballs-move-quickly.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/323962-son-son-ii-turbografx-16-screenshot-this-guy-is-big-but-he.jpg</snapshot10>
+			<banner1>http://i.imgur.com/U7f2iVh.jpg</banner1>
+		</game>
+		<game name="Super Star Soldier (Japan)">
+			<description>35.  Super Star Soldier</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FSuper%20Star%20Soldier%20%28Japan%29.zip" size="272901" />
+			<title_clean>Super Star Soldier</title_clean>
+			<plot>This is one of the more challenging games in the "Soldier" series, requiring a little more practice and mastery due to its strong level design which puts much more focus on dodging environmental hazards than in other games in the series. All the other "Soldier" hallmarks are here, lots of action, lots of bullets, huge primary weapons and cool auxiliary weapons such as the ever present homing missiles, as well as some useful rotating shield-pods which were absent from later games in the series.</plot>
+			<releasedate>9/1/1990</releasedate>
+			<year>1990</year>
+			<genre>Action</genre>
+			<studio>Hudson Soft Company</studio>
+			<nplayers>1</nplayers>
+			<perspective>3rd-Person</perspective>
+			<rating>4.3</rating>
+			<videoid>WtqqFhbGjJ0</videoid>
+			<thegamesdb_id>8234</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589127-super-star-soldier</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/super-star-soldier</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/super-star-soldier/3030-3973/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10360</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/8234-1.jpg</boxart1>
+			<boxart2>http://i.imgur.com/yxVku1x.png</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/113922-super-star-soldier-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://www.mobygames.com/images/shots/l/133774-super-star-soldier-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/133775-super-star-soldier-turbografx-16-screenshot-shoot-the-enemy.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/133776-super-star-soldier-turbografx-16-screenshot-shoot-the-enemies.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/133778-super-star-soldier-turbografx-16-screenshot-grab-the-green.jpg</snapshot4>
+			<snapshot5>http://static.giantbomb.com/uploads/scale_large/2/23093/2722582-5900861896-iUv1Q.jpg</snapshot5>
+			<snapshot6>http://static.giantbomb.com/uploads/scale_large/1/17245/557065-pce_sss_02.png</snapshot6>
+			<snapshot7>http://static.giantbomb.com/uploads/scale_large/0/6384/456181-super_star_soldier_01.gif</snapshot7>
+			<snapshot8>http://static.giantbomb.com/uploads/scale_large/0/6384/456180-super_star_soldier.gif</snapshot8>
+			<snapshot9>http://static.giantbomb.com/uploads/scale_large/0/6384/456166-superstarsoldier1.png</snapshot9>
+			<snapshot10>http://static.giantbomb.com/uploads/scale_large/0/6384/456165-super_star_soldier_02.gif</snapshot10>
+			<banner1>http://i.imgur.com/mWV6sdi.png</banner1>
+		</game>
+		<game name="Raiden (USA)">
+			<description>34.  Raiden</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FRaiden%20%28USA%29.zip" size="533256" />
+			<title_clean>Raiden</title_clean>
+			<plot>Raiden was a bit of a benchmark game for vertical shooters when it arrived in the arcade, a shooter with great pacing, nicely designed weapons, and lots of action. Most of the other 16-bit versions came out disappointing for one reason or another, but here we have a very admirable conversion, with good graphics and most of the arcade game's content (it is, however missing the 2-player option). There's an improved CD version of this game with extra levels and re-done music, so those who have CD models should probably plump for that version.</plot>
+			<releasedate>9/1/1991</releasedate>
+			<year>1991</year>
+			<genre>Action</genre>
+			<studio>NEC Technologies</studio>
+			<nplayers>1</nplayers>
+			<perspective>Top-Down</perspective>
+			<rating>3.4</rating>
+			<videoid>7uW07nHihkA</videoid>
+			<thegamesdb_id>8225</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589087-raiden</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/raiden</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/raiden/3030-16693/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/8935</consolegrid_url>
+			<boxart1>http://static.giantbomb.com/uploads/scale_large/1/14912/791203-raiden_ps1_front.png</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/8225-1.jpg</boxart2>
+			<snapshot1>http://www.mobygames.com/images/shots/l/233011-raiden-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/233012-raiden-turbografx-16-screenshot-this-seems-about-right.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/233013-raiden-turbografx-16-screenshot-my-gun-is-too-crappy-for-this.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/233016-raiden-turbografx-16-screenshot-nuked.jpg</snapshot4>
+			<snapshot5>http://static.giantbomb.com/uploads/scale_large/2/23093/2722562-8241223914-1ywvI.jpg</snapshot5>
+			<snapshot6>http://static.giantbomb.com/uploads/scale_large/2/23093/2722561-9976486714-fnxVw.jpg</snapshot6>
+			<snapshot7>http://static.giantbomb.com/uploads/scale_large/2/23093/2722560-8908339234-cl5d9.jpg</snapshot7>
+			<snapshot8>http://static.giantbomb.com/uploads/scale_large/0/6763/501861-s_raiden_6.jpg</snapshot8>
+			<snapshot9>http://static.giantbomb.com/uploads/scale_large/0/6763/501860-s_raiden_5.jpg</snapshot9>
+			<snapshot10>http://static.giantbomb.com/uploads/scale_large/0/6763/501859-s_raiden_4.jpg</snapshot10>
+			<banner1>http://i.imgur.com/2b2tSEt.png</banner1>
+			<clearlogo1>http://thegamesdb.net/banners/clearlogo/8225.png</clearlogo1>
+		</game>
+		<game name="Splatterhouse (USA)">
+			<description>33.  Splatterhouse</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FSplatterhouse%20%28USA%29.zip" size="268197" />
+			<title_clean>Splatterhouse</title_clean>
+			<plot>Here we have the first game in the popular Splatterhouse series. This is essentially a horror-themed scrolling beat-em-up that has you bashing monsters and doing some minor jumping here and there. The thing which really makes the game stand out though are it memorable set-pieces and monster designs, the whole thing just oozes creepy atmosphere.</plot>
+			<releasedate>9/1/1990</releasedate>
+			<year>1990</year>
+			<genre>Action</genre>
+			<studio>NEC Technologies</studio>
+			<nplayers>1</nplayers>
+			<perspective>3rd-Person</perspective>
+			<rating>3.6</rating>
+			<videoid>NOG6F7B2S2Y</videoid>
+			<thegamesdb_id>3776</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589119-splatterhouse</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/splatterhouse</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/splatterhouse/3030-15148/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/8884</consolegrid_url>
+			<boxart1>http://static.giantbomb.com/uploads/scale_large/13/139866/2418727-splatterhouse_arcadeflyer.png</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/3776-1.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/218285-splatterhouse-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://www.mobygames.com/images/shots/l/393991-splatterhouse-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/393992-splatterhouse-turbografx-16-screenshot-setup-shot-of-the-spooky.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/99871-splatterhouse-turbografx-16-screenshot-caverns.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/393993-splatterhouse-turbografx-16-screenshot-stage-1-the-hero-is.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/393994-splatterhouse-turbografx-16-screenshot-batter-up.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/393995-splatterhouse-turbografx-16-screenshot-the-dungeon-is-getting.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/393996-splatterhouse-turbografx-16-screenshot-spikes-from-the-ground.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/393997-splatterhouse-turbografx-16-screenshot-the-level-1-boss-a.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/99872-splatterhouse-turbografx-16-screenshot-first-boss.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/393998-splatterhouse-turbografx-16-screenshot-stage-card.jpg</snapshot10>
+			<banner1>http://i.imgur.com/ggFRktU.jpg</banner1>
+			<clearlogo1>http://thegamesdb.net/banners/clearlogo/3776.png</clearlogo1>
+		</game>
+		<game name="1943 Kai (Japan)">
+			<description>32.  1943 Kai</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2F1943%20Kai%20%28Japan%29.zip" size="268625" />
+			<title_clean>1943 Kai</title_clean>
+			<plot>This is a close recreation of Capcom's classic WWII vertical scrolling shooter, with all of the action of the original arcade game. On top of the original arcade game though you actually get a completely new, more modern extra game included that's good enough to have been a stand-alone sequel! By playing the songs 7,7,7,7,9,3,10 in the option menu you open up "Original Mode" a 2-player, adrenaline fueled, no-nonsense game of non-stop bullets and carnage that has fantastic new levels, presentation, and boss fights</plot>
+			<releasedate>22/3/1991</releasedate>
+			<year>1991</year>
+			<genre>Action</genre>
+			<studio>Naxat Soft</studio>
+			<nplayers>1</nplayers>
+			<perspective>Top-Down</perspective>
+			<rating>3.2</rating>
+			<videoid>wKuwk6TjIgs</videoid>
+			<thegamesdb_id>23253</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/588882-1943-kai</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/1943-kai</mobygames_url>
+			<consolegrid_url>http://consolegrid.com/games/12468</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/23253-1.jpg</boxart1>
+			<boxart3>http://www.mobygames.com/images/covers/l/218279-1943-kai-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://www.mobygames.com/images/shots/l/133752-1943-kai-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/133753-1943-kai-turbografx-16-screenshot-take-off-for-mission-one.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/133754-1943-kai-turbografx-16-screenshot-shoot-the-enemy.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/133755-1943-kai-turbografx-16-screenshot-blow-that-plane-out-of-the.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/133756-1943-kai-turbografx-16-screenshot-attack-the-battle-ship.jpg</snapshot5>
+			<snapshot6>http://img.gamefaqs.net/screens/c/d/5/gfs_4859_1_1.jpg</snapshot6>
+			<snapshot7>http://img.gamefaqs.net/screens/6/0/5/gfs_4859_1_2.jpg</snapshot7>
+			<snapshot8>http://img.gamefaqs.net/screens/f/b/5/gfs_4859_1_3.jpg</snapshot8>
+			<snapshot9>http://img.gamefaqs.net/screens/3/a/5/gfs_4859_1_4.jpg</snapshot9>
+			<snapshot10>http://img.gamefaqs.net/screens/a/1/5/gfs_4859_1_5.jpg</snapshot10>
+			<banner1>http://i.imgur.com/9QbATJj.jpg</banner1>
+			<clearlogo1>http://thegamesdb.net/banners/clearlogo/23253.png</clearlogo1>
+		</game>
+		<game name="Legendary Axe II, The (USA)">
+			<description>31.  Legendary Axe II</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FLegendary%20Axe%20II%2C%20The%20%28USA%29.zip" size="154309" />
+			<title_clean>Legendary Axe II, The</title_clean>
+			<plot>The developers went a very different direction for this sequel, going with a Geiger-inspired horror theme for the art design, and a more conventional system for its weapons and power-ups. The game has you hacking and slashing your way through an army of malevolent monsters and navigating some very excellently designed platforming layouts. All in all the game is successful (much of the new artwork is definitely striking and memorable), but personally I do feel that it doesn't quite live up to its predecessor.</plot>
+			<releasedate>9/1/1990</releasedate>
+			<year>1990</year>
+			<genre>Action</genre>
+			<studio>NEC Technologies</studio>
+			<nplayers>1</nplayers>
+			<perspective>3rd-Person</perspective>
+			<rating>4.2</rating>
+			<videoid>ec4HmMeISBw</videoid>
+			<thegamesdb_id>5675</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589018-legendary-axe-ii</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/legendary-axe-ii</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/the-legendary-axe-ii/3030-6441/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/8943</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/5675-1.jpg</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/5675-1.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/71254-legendary-axe-ii-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://www.mobygames.com/images/shots/l/100051-legendary-axe-ii-turbografx-16-screenshot-title.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/100052-legendary-axe-ii-turbografx-16-screenshot-introduction.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/100053-legendary-axe-ii-turbografx-16-screenshot-level-1.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/100054-legendary-axe-ii-turbografx-16-screenshot-wounded.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/100055-legendary-axe-ii-turbografx-16-screenshot-obtained-a-chain.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/100056-legendary-axe-ii-turbografx-16-screenshot-you-are-the-most.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/100057-legendary-axe-ii-turbografx-16-screenshot-throwing-a-smart.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/100058-legendary-axe-ii-turbografx-16-screenshot-boss.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/100059-legendary-axe-ii-turbografx-16-screenshot-victory.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/100060-legendary-axe-ii-turbografx-16-screenshot-level-2.jpg</snapshot10>
+			<banner1>http://i.imgur.com/3HzoK7X.png</banner1>
+		</game>
+		<game name="Out Run (Japan)">
+			<description>30.  Out Run</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FOut%20Run%20%28Japan%29.zip" size="334688" />
+			<title_clean>Out Run</title_clean>
+			<plot>Here's a very good port of the classic Sega arcade game that even manages to rival Sega's own Mega Drive version, with its smooth scaling and colourful graphics. Outrun's main focus as a racing game is on all out fun, there's no real competition from other competitors here but instead a frantic race against the clock, with each checkpoint replenishing some time, its a great system and its used to its max here, often creating a lot of tense situations and exciting near misses.</plot>
+			<releasedate>30/6/1986</releasedate>
+			<year>1990</year>
+			<genre>Driving, Racing</genre>
+			<studio>NEC Avenue</studio>
+			<nplayers>1</nplayers>
+			<perspective>3rd-Person</perspective>
+			<videoid>An1gUPqqBVg</videoid>
+			<thegamesdb_id>26094</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589061-outrun</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/outrun</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/outrun/3030-11260/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10346</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/26094-1.jpg</boxart1>
+			<boxart2>http://static.giantbomb.com/uploads/scale_large/0/1614/945331-outrun_gen_jp_back.jpg</boxart2>
+			<snapshot1>http://www.mobygames.com/images/shots/l/97710-outrun-turbografx-16-screenshot-title.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/97711-outrun-turbografx-16-screenshot-choose-your-tune.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/97712-outrun-turbografx-16-screenshot-prepare-to-race.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/97713-outrun-turbografx-16-screenshot-approaching-a-crowd.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/97714-outrun-turbografx-16-screenshot-a-sign-tells-you-to-steer-left.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/97715-outrun-turbografx-16-screenshot-spinning-out-of-control.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/97716-outrun-turbografx-16-screenshot-crashed-into-a-tree.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/97717-outrun-turbografx-16-screenshot-stage-2.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/97718-outrun-turbografx-16-screenshot-stage-3.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/97719-outrun-turbografx-16-screenshot-stage-4.jpg</snapshot10>
+			<banner1>http://i.imgur.com/YtJwJnN.jpg</banner1>
+		</game>
+		<game name="Salamander (Japan)">
+			<description>29.  Salamander</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FSalamander%20%28Japan%29.zip" size="186487" />
+			<title_clean>Salamander</title_clean>
+			<plot>Konami favoured the PC-Engine with great versions of a lot of their best shooters, and Salamander is no different. All in all it tries to be a close port, but there seems to be some attempt at honing the game, with some more elaborate enemy behaviour, and an increase in difficulty curve (here you get sent back to a check-point instead of having on-the-spot respawns). All in all the changes are great, but I think the new check-point system does make things a little more frustrating at times so I've dropped the placing accordingly.</plot>
+			<releasedate>9/1/1991</releasedate>
+			<genre>Shooter</genre>
+			<studio>Konami</studio>
+			<nplayers>1-2</nplayers>
+			<rating>8.0</rating>
+			<videoid>cMgdSrd8nY4</videoid>
+			<thegamesdb_id>22395</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589096-salamander</gamefaqs_url>
+			<giantbomb_url>http://www.giantbomb.com/life-force/3030-13960/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10362</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/22395-1.png</boxart1>
+			<boxart2>http://img.gamefaqs.net/box/5/9/7/43597_back.jpg</boxart2>
+			<snapshot1>http://static.giantbomb.com/uploads/scale_large/0/4865/883127-587413_20060222_screen030.jpg</snapshot1>
+			<snapshot2>http://static.giantbomb.com/uploads/scale_large/0/4865/883126-587413_20060222_screen029.jpg</snapshot2>
+			<snapshot3>http://static.giantbomb.com/uploads/scale_large/0/4865/883125-587413_20060222_screen028.jpg</snapshot3>
+			<snapshot4>http://static.giantbomb.com/uploads/scale_large/0/4865/883124-587413_20060222_screen027.jpg</snapshot4>
+			<snapshot5>http://static.giantbomb.com/uploads/scale_large/0/4865/883123-587413_20060222_screen026.jpg</snapshot5>
+			<snapshot6>http://static.giantbomb.com/uploads/scale_large/0/4865/883122-587413_20060222_screen025.jpg</snapshot6>
+			<snapshot7>http://static.giantbomb.com/uploads/scale_large/0/4865/883121-587413_20060222_screen024.jpg</snapshot7>
+			<snapshot8>http://static.giantbomb.com/uploads/scale_large/0/4865/883120-587413_20060222_screen023.jpg</snapshot8>
+			<snapshot9>http://static.giantbomb.com/uploads/scale_large/0/4865/883119-587413_20060222_screen022.jpg</snapshot9>
+			<snapshot10>http://static.giantbomb.com/uploads/scale_large/0/4865/883118-587413_20060222_screen021.jpg</snapshot10>
+			<banner1>http://i.imgur.com/q88UWem.jpg</banner1>
+		</game>
+		<game name="Bonk's Adventure (USA)">
+			<description>28.  Bonk's Adventure</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FBonk%27s%20Adventure%20%28USA%29.zip" size="228096" />
+			<title_clean>Bonk's Adventure</title_clean>
+			<plot>The game that introduced the world to Bonk (or PC Genjin as he was originally known), the star who would become the console's mascot. Bonk's Adventure is a platformer that has you controlling a caveman as he head butts and flips his way through the stages. Two elements which set this apart from other platformers (other than the excellent humour) are the ability for Bonk to spin in mid-air (allowing him to glide), and his talent for head butting enemies from both above and below, together these elements make for a fun, rewarding game where experienced players are able to bounce from enemy to enemy, gliding, or juggling them as they go.</plot>
+			<releasedate>9/1/1990</releasedate>
+			<year>1989</year>
+			<genre>Action</genre>
+			<studio>Hudson Soft Company, NEC Technologies</studio>
+			<nplayers>1</nplayers>
+			<perspective>Platform</perspective>
+			<rating>4.1</rating>
+			<videoid>6ZGC0FSZmRg</videoid>
+			<thegamesdb_id>3777</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/588909-bonks-adventure</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/bonks-adventure</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/bonks-adventure/3030-6973/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/8879</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/3777-1.jpg</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/3777-1.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/96566-bonk-s-adventure-turbografx-16-media.jpg</boxart3>
+			<boxart4>http://www.mobygames.com/images/covers/l/140401-bonk-s-adventure-turbografx-16-media.jpg</boxart4>
+			<snapshot1>http://thegamesdb.net/banners/screenshots/3777-1.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/96353-bonk-s-adventure-turbografx-16-screenshot-title.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/96354-bonk-s-adventure-turbografx-16-screenshot-the-beginning.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/96355-bonk-s-adventure-turbografx-16-screenshot-hit-by-an-enemy-1.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/96356-bonk-s-adventure-turbografx-16-screenshot-hit-by-an-enemy-2.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/96357-bonk-s-adventure-turbografx-16-screenshot-lethal-plant.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/96358-bonk-s-adventure-turbografx-16-screenshot-invincibility.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/96359-bonk-s-adventure-turbografx-16-screenshot-clinging-onto-the.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/96360-bonk-s-adventure-turbografx-16-screenshot-swimming-inside-someone.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/96361-bonk-s-adventure-turbografx-16-screenshot-say-hello-to-huey.jpg</snapshot10>
+			<fanart1>http://thegamesdb.net/banners/fanart/original/3777-1.jpg</fanart1>
+			<banner1>http://i.imgur.com/u2GcuG9.png</banner1>
+			<clearlogo1>http://thegamesdb.net/banners/clearlogo/3777.png</clearlogo1>
+		</game>
+		<game name="Metal Stoker (Japan)">
+			<description>27.  Metal Stoker</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FMetal%20Stoker%20%28Japan%29.zip" size="309685" />
+			<title_clean>Metal Stoker</title_clean>
+			<plot>This has to be Face's best Hu-card as far as i'm concerned, an underrated top-down shooter which has you driving a land craft which can be powered up with multiple gun types, each of which can be upgraded independently by finding the pods hidden throughout the levels. The controls take a little getting used to (one of the buttons locks/unlocks your direction in place allowing you to fire one way whilst moving another), but before long you find yourself double-tapping your way through the stages. The pacing here is great, the levels have a lot of variation from one to the next, always throwing in new elements, its a good length, and the weapon upgrading works well.</plot>
+			<releasedate>9/1/1991</releasedate>
+			<year>1991</year>
+			<genre>Shooter</genre>
+			<studio>Face</studio>
+			<nplayers>1</nplayers>
+			<videoid>z1nABHSRpbU</videoid>
+			<thegamesdb_id>33508</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589028-metal-stoker</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/metal-stoker</mobygames_url>
+			<consolegrid_url>http://consolegrid.com/games/10365</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/33508-1.jpg</boxart1>
+			<snapshot1>http://thegamesdb.net/banners/screenshots/33508-1.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/775155-metal-stoker-turbografx-16-screenshot-title-screen.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/775156-metal-stoker-turbografx-16-screenshot-map.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/775157-metal-stoker-turbografx-16-screenshot-start-of-the-game.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/775158-metal-stoker-turbografx-16-screenshot-fight.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/775159-metal-stoker-turbografx-16-screenshot-info.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/775160-metal-stoker-turbografx-16-screenshot-entrance.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/775161-metal-stoker-turbografx-16-screenshot-destroy-the-big-ground.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/775162-metal-stoker-turbografx-16-screenshot-arena-1-clear.jpg</snapshot9>
+			<snapshot10>http://img.gamefaqs.net/screens/c/4/a/gfs_4003_1_1.jpg</snapshot10>
+			<banner1>http://i.imgur.com/qawjiCz.png</banner1>
+		</game>
+		<game name="Zipang (Japan)">
+			<description>26.  Zipang</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FZipang%20%28Japan%29.zip" size="139441" />
+			<title_clean>Zipang</title_clean>
+			<plot>Zipang is an enhanced version of the classic puzzle game Solomon's Key, now with updated, revamped graphics and loads of new levels. Its a fantastic improvement, making this quite possibly the best version of the game in available. The simple premise here is to collect the wand (which opens a door in each stage), and then reach the door. The interesting thing is that you can create and destroy blocks out of thin air, for instance to make steps, or to pull the ground out from under an enemy.</plot>
+			<releasedate>9/1/1990</releasedate>
+			<genre>Puzzle</genre>
+			<studio>Pack-In-Video</studio>
+			<nplayers>1</nplayers>
+			<videoid>8uE_FsWw8XY</videoid>
+			<thegamesdb_id>32159</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589181-zipang</gamefaqs_url>
+			<consolegrid_url>http://consolegrid.com/games/10282</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/32159-1.png</boxart1>
+			<snapshot1>http://img.gamefaqs.net/screens/6/c/b/gfs_4962_1_1.jpg</snapshot1>
+			<snapshot2>http://img.gamefaqs.net/screens/c/5/6/gfs_4962_2_1.jpg</snapshot2>
+			<snapshot3>http://img.gamefaqs.net/screens/7/e/2/gfs_4962_3_1.jpg</snapshot3>
+			<banner1>http://i.imgur.com/l56sbNc.jpg</banner1>
+		</game>
+		<game name="Detana!! TwinBee (Japan)">
+			<description>25.  Detana!! TwinBee</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FDetana%21%21%20TwinBee%20%28Japan%29.zip" size="326176" />
+			<title_clean>Detana!! TwinBee</title_clean>
+			<plot>This is a vertically scrolling 2-player cute-em-up from Konami. Having played the attractive, but narcolepsy-inducing SNES game I approached this with some level of trepidation, but happily my fears were quickly allayed. This is a fantastic game! the graphics obviously aren't up to the standards of the aforementioned SNES title, but they're still pretty good, and happily the challenge which was so completely absent in that game is here in spades, with the levels requiring you to properly practice and master them to make progress. Good layouts, good difficulty curve, great boss fights, and a tricky (but interesting) power-up system.</plot>
+			<releasedate>28/2/1992</releasedate>
+			<year>1992</year>
+			<genre>Action</genre>
+			<studio>Konami Co.</studio>
+			<nplayers>1-2</nplayers>
+			<perspective>Top-Down</perspective>
+			<rating>3.2</rating>
+			<videoid>BRt_aeHXr9w</videoid>
+			<thegamesdb_id>23257</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589153-detana-twinbee</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/detana-twinbee</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/bells-whistles/3030-9959/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10318</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/23257-1.jpg</boxart1>
+			<boxart2>http://img.gamefaqs.net/box/9/3/8/51938_back.jpg</boxart2>
+			<snapshot1>http://www.mobygames.com/images/shots/l/322603-detana-twinbee-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/322604-detana-twinbee-turbografx-16-screenshot-intro.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/322605-detana-twinbee-turbografx-16-screenshot-the-first-stage-use.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/322606-detana-twinbee-turbografx-16-screenshot-options-are-very-useful.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/322607-detana-twinbee-turbografx-16-screenshot-the-first-boss.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/322608-detana-twinbee-turbografx-16-screenshot-finished-the-first.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/322609-detana-twinbee-turbografx-16-screenshot-lots-of-penguins-attack.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/322610-detana-twinbee-turbografx-16-screenshot-destroy-the-chickens.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/322611-detana-twinbee-turbografx-16-screenshot-a-pink-elephant.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/322612-detana-twinbee-turbografx-16-screenshot-the-second-boss.jpg</snapshot10>
+			<banner1>http://i.imgur.com/9kMMYpw.jpg</banner1>
+		</game>
+		<game name="Gekisha Boy (Japan)">
+			<description>24.  Gekisha Boy</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FGekisha%20Boy%20%28Japan%29.zip" size="274656" />
+			<title_clean>Gekisha Boy</title_clean>
+			<plot>One of the more original games on the 'Engine, this has you controlling a photographer as he walks through the levels, its your job to help him avoid hazards, and take pictures of weird things as they happen (photo's give you a certain amount of money), each level has a required monetary objective to pass, so you have to make the most of every picture. Its a good premise which provides a lot of memorable fun, and some laugh-out-loud humour.</plot>
+			<releasedate>2/10/1992</releasedate>
+			<genre>Action, Miscellaneous</genre>
+			<studio>Tomcat System</studio>
+			<nplayers>1</nplayers>
+			<rating>7.5</rating>
+			<videoid>_TVp4fwo_Z8</videoid>
+			<thegamesdb_id>18444</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589070-gekibo</gamefaqs_url>
+			<giantbomb_url>http://www.giantbomb.com/gekisha-boy/3030-42480/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/12090</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/18444-1.jpg</boxart1>
+			<boxart2>http://img.gamefaqs.net/box/8/5/8/51858_back.jpg</boxart2>
+			<snapshot1>http://static.giantbomb.com/uploads/scale_large/9/97089/2474679-7.png</snapshot1>
+			<snapshot2>http://static.giantbomb.com/uploads/scale_large/9/97089/2474678-6.png</snapshot2>
+			<snapshot3>http://static.giantbomb.com/uploads/scale_large/9/97089/2474677-5.png</snapshot3>
+			<snapshot4>http://static.giantbomb.com/uploads/scale_large/9/97089/2474676-4.png</snapshot4>
+			<snapshot5>http://static.giantbomb.com/uploads/scale_large/9/97089/2474675-3.png</snapshot5>
+			<snapshot6>http://static.giantbomb.com/uploads/scale_large/9/97089/2474674-2.png</snapshot6>
+			<snapshot7>http://static.giantbomb.com/uploads/scale_large/9/97089/2474673-1.png</snapshot7>
+			<snapshot8>http://img.gamefaqs.net/screens/4/1/c/gfs_5042_1_1.jpg</snapshot8>
+			<snapshot9>http://img.gamefaqs.net/screens/e/8/1/gfs_5042_2_1.jpg</snapshot9>
+			<banner1>http://i.imgur.com/GFDtHW7.png</banner1>
+		</game>
+		<game name="Dungeon Explorer (USA)">
+			<description>23.  Dungeon Explorer</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FDungeon%20Explorer%20%28USA%29.zip" size="252771" />
+			<title_clean>Dungeon Explorer</title_clean>
+			<plot>This plays kind of like a Japanese take on Gauntlet. You get Gauntlet's action-packed dungeons, monsters, spawn points and multiplayer focus (except here 5 players can take part), but with some Japanese sensibilities added in, such an overworld with villages, story dialogue, and experience points. Overall the combination is a compelling success and this is some of the best multiplayer fun to be had on the system.</plot>
+			<releasedate>9/1/1989</releasedate>
+			<year>1989</year>
+			<genre>RPG</genre>
+			<studio>Atlus Co.</studio>
+			<nplayers>1-5 Co-Op</nplayers>
+			<perspective>3rd-Person</perspective>
+			<rating>3.2</rating>
+			<thegamesdb_id>5667</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/588955-dungeon-explorer</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/dungeon-explorer_</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/dungeon-explorer/3030-7849/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/8937</consolegrid_url>
+			<boxart1>http://static.giantbomb.com/uploads/scale_large/0/8272/846509-588955_58106_front.jpg</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/5667-1.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/102934-dungeon-explorer-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://www.mobygames.com/images/shots/l/322613-dungeon-explorer-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/322616-dungeon-explorer-turbografx-16-screenshot-the-heroes-behold.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/322614-dungeon-explorer-turbografx-16-screenshot-game-start-choose.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/322617-dungeon-explorer-turbografx-16-screenshot-exploring-the-village.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/322618-dungeon-explorer-turbografx-16-screenshot-talking-to-the-king.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/322619-dungeon-explorer-turbografx-16-screenshot-out-in-the-wilderness.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/322620-dungeon-explorer-turbografx-16-screenshot-in-a-dungeon.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/322621-dungeon-explorer-turbografx-16-screenshot-talking-to-a-villager.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/322622-dungeon-explorer-turbografx-16-screenshot-destroy-the-monster.jpg</snapshot9>
+			<snapshot10>http://static.giantbomb.com/uploads/scale_large/2/23093/2712333-dungeonexplorer002.jpg</snapshot10>
+			<banner1>http://i.imgur.com/4NeXWSv.png</banner1>
+		</game>
+		<game name="Neutopia II (USA)">
+			<description>22.  Neutopia II</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FNeutopia%20II%20%28USA%29.zip" size="440627" />
+			<title_clean>Neutopia II</title_clean>
+			<plot>The sequel to Hudson's earlier Zelda clone. Here we have the same core gameplay seen in the first game, but now with improved graphics and music, and some further advances in the gameplay department, such as diagonal movement, and a more cohesive world. Unlike the original game with its teleporters, the overworld here is now fully connected, each section contains items which, when found allow you to progress futher into the map.</plot>
+			<releasedate>9/1/1992</releasedate>
+			<year>1991</year>
+			<genre>Action, Adventure</genre>
+			<studio>Hudson Soft USA</studio>
+			<nplayers>1</nplayers>
+			<perspective>Top-Down</perspective>
+			<rating>3.7</rating>
+			<videoid>yqXbmHe5v6k</videoid>
+			<thegamesdb_id>8218</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589048-neutopia-ii</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/neutopia-ii</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/neutopia-ii/3030-19420/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/8945</consolegrid_url>
+			<boxart1>http://static.giantbomb.com/uploads/scale_large/2/23093/2720389-5372533851-51836.jpg</boxart1>
+			<boxart2>http://www.mobygames.com/images/covers/l/79164-neutopia-ii-turbografx-16-back-cover.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/79167-neutopia-ii-turbografx-16-media.jpg</boxart3>
+			<boxart4>http://www.mobygames.com/images/covers/l/191530-neutopia-ii-turbografx-16-media.jpg</boxart4>
+			<snapshot1>http://www.mobygames.com/images/shots/l/94367-neutopia-ii-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/94348-neutopia-ii-turbografx-16-screenshot-naming-the-hero-jazeta.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/94349-neutopia-ii-turbografx-16-screenshot-the-hero-dreams.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/94350-neutopia-ii-turbografx-16-screenshot-come-to-me-baby.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/94351-neutopia-ii-turbografx-16-screenshot-inventory-menu.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/94352-neutopia-ii-turbografx-16-screenshot-peaceful-area.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/94353-neutopia-ii-turbografx-16-screenshot-kill-the-old-man-and-get.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/94354-neutopia-ii-turbografx-16-screenshot-what-s-the-password.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/94355-neutopia-ii-turbografx-16-screenshot-fearsome-slimes.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/94356-neutopia-ii-turbografx-16-screenshot-lonely-boy-in-a-lonely.jpg</snapshot10>
+			<banner1>http://i.imgur.com/PGxiIU4.png</banner1>
+		</game>
+		<game name="Air Zonk (USA)">
+			<description>21.  Air Zonk</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FAir%20Zonk%20%28USA%29.zip" size="324385" />
+			<title_clean>Air Zonk</title_clean>
+			<plot>Here's a wacky, humourous scrolling shooter starring the character Zonk, who was created to be the futuristic, updated counterpart to the earlier character Bonk. This game has to be one of the most impressive on the system, the screen is never less than packed with action, with enemy sprites flying around and huge death-dealing attacks coming from Zonk at a rapid pace, there's loads of smooth parallax in the backgrounds, and everything is colourful, and drawn with lots of charm. Gameplay wise this is generally just explosive balls-to-the-wall shooting action, but other features do add some tactics, you get to choose a support character for each level for instance, each giving you combinations of different attacks. All in all very good.</plot>
+			<releasedate>9/1/1992</releasedate>
+			<year>1992</year>
+			<genre>Action</genre>
+			<studio>Hudson Soft USA</studio>
+			<nplayers>1</nplayers>
+			<perspective>Side-Scrolling</perspective>
+			<rating>4.1</rating>
+			<videoid>mxgaUfKvKfY</videoid>
+			<thegamesdb_id>8185</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/588888-air-zonk</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/air-zonk</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/air-zonk/3030-19338/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/8876</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/8185-1.jpg</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/8185-1.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/140399-air-zonk-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://thegamesdb.net/banners/screenshots/8185-1.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/232980-air-zonk-turbografx-16-screenshot-air-zonk.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/232981-air-zonk-turbografx-16-screenshot-not-quite-your-standard.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/232982-air-zonk-turbografx-16-screenshot-different-types-of-meat.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/232985-air-zonk-turbografx-16-screenshot-a-robot-buddy-arrives.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/232986-air-zonk-turbografx-16-screenshot-super-invincible-bazooka.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/232987-air-zonk-turbografx-16-screenshot-this-city-is-totally-cybernetic.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/634328-air-zonk-turbografx-16-screenshot-mechanic-fish-and-aliens.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/634329-air-zonk-turbografx-16-screenshot-how-i-learned-to-stop-worrying.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/634330-air-zonk-turbografx-16-screenshot-magnet-heads.jpg</snapshot10>
+			<fanart1>http://thegamesdb.net/banners/fanart/original/8185-1.jpg</fanart1>
+			<banner1>http://i.imgur.com/ANwOHFy.png</banner1>
+		</game>
+		<game name="Momotarou Katsugeki (Japan)">
+			<description>20.  Momotarou Katsugeki</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FMomotarou%20Katsugeki%20%28Japan%29.zip" size="304063" />
+			<title_clean>Momotarou Katsugeki</title_clean>
+			<plot>Here's a nice, colourful platform game for PC-Engine that you don't often hear about. Momotaru Katsugeki is a fun, playable game that does all the platforming fundamentals well, and throws in some simple adventuring elements for good measure (there's villages and shops for buying weapon and armour upgrades as well as useful items). I'd be lying if I said it was totally import friendly (the menu, and password screen can be a little difficult to navigate at first), but generally everything in the game is straightforward, and accessible.</plot>
+			<releasedate>21/9/1990</releasedate>
+			<genre>Action, Miscellaneous</genre>
+			<studio>Hudson</studio>
+			<videoid>AXcuDPQUvvw</videoid>
+			<thegamesdb_id>24804</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589034-momotarou-katsugeki</gamefaqs_url>
+			<giantbomb_url>http://www.giantbomb.com/momotaro-katsugeki/3030-40235/</giantbomb_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/24804-1.jpg</boxart1>
+			<boxart2>http://img.gamefaqs.net/box/8/0/9/51809_back.jpg</boxart2>
+			<snapshot1>http://img.gamefaqs.net/screens/a/7/6/gfs_4323_1_1.jpg</snapshot1>
+			<snapshot2>http://img.gamefaqs.net/screens/0/e/b/gfs_4323_2_1.jpg</snapshot2>
+			<snapshot3>http://img.gamefaqs.net/screens/a/3/b/gfs_4323_2_2.jpg</snapshot3>
+		</game>
+		<game name="Moto Roader (USA)">
+			<description>19.  Moto Roader</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FMoto%20Roader%20%28USA%29.zip" size="138921" />
+			<title_clean>Moto Roader</title_clean>
+			<plot>This is a top down racing game somewhat akin to a futuristic version of Micro Machines. The control here is great, and the courses are well designed, and memorable, with jumps, floor boosts and hazards littering the tracks. You can also upgrade your vehicle with a plethora of parts, and kit it out with all sorts of different weapons, all of which create mayhem and fun in the excellent 5-player races.</plot>
+			<releasedate>9/1/1989</releasedate>
+			<year>1989</year>
+			<genre>Action, Driving, Racing</genre>
+			<studio>NEC Home Electronics (U.S.A.) Inc.</studio>
+			<nplayers>1</nplayers>
+			<perspective>Top-Down</perspective>
+			<rating>3.4</rating>
+			<thegamesdb_id>8217</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589037-moto-roader</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/moto-roader</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/moto-roader/3030-9303/</giantbomb_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/8217-1.jpg</boxart1>
+			<boxart2>http://www.mobygames.com/images/covers/l/129020-moto-roader-turbografx-16-back-cover.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/130699-moto-roader-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://www.mobygames.com/images/shots/l/111002-moto-roader-turbografx-16-screenshot-title-sequence.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/111000-moto-roader-turbografx-16-screenshot-goddamn-you-half-japanese.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/110999-moto-roader-turbografx-16-screenshot-i-can-t-be-bothered-to.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/110997-moto-roader-turbografx-16-screenshot-soup-up-your-vehicle.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/110998-moto-roader-turbografx-16-screenshot-the-pre-race-fly-by.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/110996-moto-roader-turbografx-16-screenshot-ready-to-go.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/111001-moto-roader-turbografx-16-screenshot-all-guns-blazing.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/110994-moto-roader-turbografx-16-screenshot-blue-s-got-quite-a-big.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/110993-moto-roader-turbografx-16-screenshot-the-blue-spot-is-where.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/110995-moto-roader-turbografx-16-screenshot-game-over.jpg</snapshot10>
+		</game>
+		<game name="Ninja Spirit (USA)">
+			<description>18.  Ninja Spirit</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FNinja%20Spirit%20%28USA%29.zip" size="257960" />
+			<title_clean>Ninja Spirit</title_clean>
+			<plot>Here's a fast-paced action game which has you slashing your sword and shuriken-throwing your way through armies of bad guys. Ninja Spirit's best aspects are its rock-solid control system, which gives you a lot of room for flair and mastery, and its cool power-ups, ranging from longer sword range, to a gang of clones which follow your every move. This excellent version contains both the original arcade game, and a PC-Engine dedicated mode which has been made a little easier.</plot>
+			<releasedate>9/1/1990</releasedate>
+			<year>1990</year>
+			<genre>Action</genre>
+			<studio>Irem Corp.</studio>
+			<nplayers>1</nplayers>
+			<perspective>3rd-Person</perspective>
+			<rating>4.1</rating>
+			<videoid>GLMGRELPfDI</videoid>
+			<thegamesdb_id>5678</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589055-ninja-spirit</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/ninja-spirit</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/ninja-spirit/3030-11674/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10356</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/5678-1.jpg</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/5678-1.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/218288-ninja-spirit-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://www.mobygames.com/images/shots/l/323872-ninja-spirit-turbografx-16-screenshot-title-screen-jpn.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/323873-ninja-spirit-turbografx-16-screenshot-the-first-level.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/323874-ninja-spirit-turbografx-16-screenshot-picked-up-two-shadows.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/323875-ninja-spirit-turbografx-16-screenshot-lots-of-ninjas-attack.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/323876-ninja-spirit-turbografx-16-screenshot-the-first-boss.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/323877-ninja-spirit-turbografx-16-screenshot-level-2.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/323878-ninja-spirit-turbografx-16-screenshot-these-dogs-are-fast.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/323879-ninja-spirit-turbografx-16-screenshot-meteoroids-take-a-lot.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/323880-ninja-spirit-turbografx-16-screenshot-the-second-boss.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/323881-ninja-spirit-turbografx-16-screenshot-level-3-beware-of-this.jpg</snapshot10>
+			<banner1>http://i.imgur.com/NeMus67.jpg</banner1>
+		</game>
+		<game name="Blazing Lazers (USA)">
+			<description>17.  Blazing Lazers</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FBlazing%20Lazers%20%28USA%29.zip" size="208534" />
+			<title_clean>Blazing Lazers</title_clean>
+			<plot>Gunhed was the early PC-Engine title that kick-started its enduring reputation as a shoot-em-up fan's dream console. Co-made by staff of both Compile and Hudsonsoft, Gunhed shows its pedigree well, with frenetic action and a multitude of different interesting weapons. Later PC-Engine shooters may have taken its core core concepts and run with them, but Gunhed remains one of the more memorable, and atmospheric Engine shooters, due in large part to its excellent music and presentation.</plot>
+			<releasedate>9/1/1989</releasedate>
+			<year>1989</year>
+			<genre>Action</genre>
+			<studio>Hudson Soft Company, NEC Home Electronics (U.S.A.) Inc.</studio>
+			<nplayers>1</nplayers>
+			<perspective>Top-Down</perspective>
+			<rating>4.0</rating>
+			<videoid>OquO7XKHDT4</videoid>
+			<thegamesdb_id>5657</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/588902-blazing-lazers</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/blazing-lazers</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/blazing-lazers/3030-5519/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/8948</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/5657-1.jpg</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/5657-1.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/45409-blazing-lazers-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://thegamesdb.net/banners/screenshots/5657-1.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/109042-blazing-lazers-turbografx-16-screenshot-title-screen.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/109043-blazing-lazers-turbografx-16-screenshot-intro-sequence.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/109044-blazing-lazers-turbografx-16-screenshot-first-level.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/109045-blazing-lazers-turbografx-16-screenshot-first-level-mini-boss.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/109046-blazing-lazers-turbografx-16-screenshot-first-level-boss.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/109047-blazing-lazers-turbografx-16-screenshot-second-level-shipyard.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/109048-blazing-lazers-turbografx-16-screenshot-second-level-mini.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/109049-blazing-lazers-turbografx-16-screenshot-suprise-enemy.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/109050-blazing-lazers-turbografx-16-screenshot-second-level-boss.jpg</snapshot10>
+			<fanart1>http://thegamesdb.net/banners/fanart/original/5657-1.jpg</fanart1>
+			<banner1>http://i.imgur.com/e200fdV.png</banner1>
+		</game>
+		<game name="Devil's Crush (USA)">
+			<description>16.  Devil's Crush</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FDevil%27s%20Crush%20%28USA%29.zip" size="204109" />
+			<title_clean>Devil's Crush</title_clean>
+			<plot>Devil's Crush gives you one of the most memorable tables of the genre, an occult themed table of skeletons and monsters. The game builds on the mini-table's of the first game, with more numerous table changes, and some new, cool boss fights. This has a height increas in comparison to Alien Crush, and replaces the flick screen set-up of the 1st game with smooth scrolling. The best 16-bit pinball game bar none.</plot>
+			<releasedate>9/1/1990</releasedate>
+			<year>1990</year>
+			<genre>Action</genre>
+			<studio>NEC Technologies</studio>
+			<nplayers>1</nplayers>
+			<perspective>Top-Down</perspective>
+			<rating>3.2</rating>
+			<videoid>J-7iC8z6q8s</videoid>
+			<thegamesdb_id>5663</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/588942-devils-crush</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/devils-crush</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/devils-crush/3030-11721/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10674</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/5663-1.jpg</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/5663-1.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/171345-devil-s-crush-turbografx-16-media.jpg</boxart3>
+			<boxart4>http://www.mobygames.com/images/covers/l/315002-devil-s-crush-turbografx-16-media.jpg</boxart4>
+			<snapshot1>http://www.mobygames.com/images/shots/l/115462-devil-s-crush-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/115457-devil-s-crush-turbografx-16-screenshot-game-start.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/115458-devil-s-crush-turbografx-16-screenshot-the-top-section-of.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/115459-devil-s-crush-turbografx-16-screenshot-bonus-points-being.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/115463-devil-s-crush-turbografx-16-screenshot-near-the-base-of-the.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/115464-devil-s-crush-turbografx-16-screenshot-the-thick-of-the-action.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/115461-devil-s-crush-turbografx-16-screenshot-high-scores.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/136241-devil-s-crush-turbografx-16-screenshot-japanese-title-screen.jpg</snapshot8>
+			<snapshot9>http://static.giantbomb.com/uploads/scale_large/0/8812/391122-588942_20060606_screen004.jpg</snapshot9>
+			<snapshot10>http://static.giantbomb.com/uploads/scale_large/0/8812/391120-588942_20060606_screen003.jpg</snapshot10>
+			<banner1>http://i.imgur.com/ltk26N2.png</banner1>
+		</game>
+		<game name="Cadash (USA)">
+			<description>15.  Cadash</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FCadash%20%28USA%29.zip" size="259179" />
+			<title_clean>Cadash</title_clean>
+			<plot>Cadash is an action RPG which is similar in structure to Metroid, or one of the later Wonder Boy titles, except here you also get experience points and multiple character classes to go with the shops and upgrades. The game provides a decently lengthed adventure, but the big differences between each character class adds a lot of replay value, the projectile throwing Ninja for instance is a very different experience to the close quarters combat of the warrior. The game's art design here is stellar, and there's also an always welcome 2-player option so you can bring a friend along for the ride. Overall this is a very good arcade port, leagues better than the drab Sega Mega Drive release as far as I'm concerned</plot>
+			<releasedate>9/1/1991</releasedate>
+			<year>1991</year>
+			<genre>Action, RPG</genre>
+			<studio>Working Designs</studio>
+			<nplayers>1</nplayers>
+			<perspective>Platform</perspective>
+			<rating>3.5</rating>
+			<thegamesdb_id>8195</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/588919-cadash</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/cadash</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/cadash/3030-18068/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10287</consolegrid_url>
+			<boxart1>http://static.giantbomb.com/uploads/scale_large/9/93770/2369911-genesis_cadash_none.jpg</boxart1>
+			<boxart2>http://www.mobygames.com/images/covers/l/79157-cadash-turbografx-16-back-cover.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/79160-cadash-turbografx-16-media.jpg</boxart3>
+			<boxart4>http://www.mobygames.com/images/covers/l/249853-cadash-turbografx-16-media.jpg</boxart4>
+			<snapshot1>http://www.mobygames.com/images/shots/l/94329-cadash-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/94317-cadash-turbografx-16-screenshot-story.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/94318-cadash-turbografx-16-screenshot-intro-the-princess.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/94319-cadash-turbografx-16-screenshot-intro-the-king-and-the-warriors.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/94320-cadash-turbografx-16-screenshot-choosing-your-character.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/94321-cadash-turbografx-16-screenshot-ninja-in-front-of-the-king.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/94322-cadash-turbografx-16-screenshot-palace.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/94323-cadash-turbografx-16-screenshot-nice-view.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/94324-cadash-turbografx-16-screenshot-entered-a-dungeon.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/94325-cadash-turbografx-16-screenshot-throwing-shurikens-at-slimes.jpg</snapshot10>
+			<banner1>http://i.imgur.com/LUfG2aZ.jpg</banner1>
+			<clearlogo1>http://thegamesdb.net/banners/clearlogo/8195.png</clearlogo1>
+		</game>
+		<game name="Gomola Speed (Japan)">
+			<description>14.  Gomola Speed</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FGomola%20Speed%20%28Japan%29.zip" size="146366" />
+			<title_clean>Gomola Speed</title_clean>
+			<plot>One of the most original, and under-appreciated games on the system, Gomola Speed is a fun, arcade-style puzzle game which has you controlling a snake as it sweeps through the stage growing and encircling food, whilst avoiding hazards and dropping timed bombs. Its a clever, well-designed game that has an interesting concept and a very unique feel.</plot>
+			<releasedate>28/9/1990</releasedate>
+			<year>1990</year>
+			<genre>Action</genre>
+			<studio>UPL Co.</studio>
+			<nplayers>1</nplayers>
+			<perspective>Top-Down</perspective>
+			<rating>4.0</rating>
+			<videoid>kOzYLSVNayU</videoid>
+			<thegamesdb_id>31080</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/588985-gomola-speed</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/gomola-speed</mobygames_url>
+			<consolegrid_url>http://consolegrid.com/games/10700</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/31080-1.jpg</boxart1>
+			<boxart2>http://www.mobygames.com/images/covers/l/130899-gomola-speed-turbografx-16-back-cover.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/130900-gomola-speed-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://www.mobygames.com/images/shots/l/383841-gomola-speed-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/383842-gomola-speed-turbografx-16-screenshot-first-level.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/383844-gomola-speed-turbografx-16-screenshot-every-time-you-do-something.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/383845-gomola-speed-turbografx-16-screenshot-i-ve-placed-a-bomb-in.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/383847-gomola-speed-turbografx-16-screenshot-time-to-leave-for-the.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/383848-gomola-speed-turbografx-16-screenshot-a-bonus-item-and-a-key.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/383849-gomola-speed-turbografx-16-screenshot-ate-some-food.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/383851-gomola-speed-turbografx-16-screenshot-i-got-to-uncover-the.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/383852-gomola-speed-turbografx-16-screenshot-a-new-type-of-food.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/383853-gomola-speed-turbografx-16-screenshot-a-long-level.jpg</snapshot10>
+			<banner1>http://i.imgur.com/G4OZ21D.png</banner1>
+		</game>
+		<game name="Populous (Japan)">
+			<description>13.  Populous</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FPopulous%20%28Japan%29.zip" size="218423" />
+			<title_clean>Populous</title_clean>
+			<plot>The classic world-building sim was ported to the PC-Engine with everything intact. Here you get to play god to your people helping them grow and prosper with the ultimate goal of wiping out their enemies and thriving.</plot>
+			<releasedate>9/1/1991</releasedate>
+			<year>1991</year>
+			<genre>Strategy</genre>
+			<studio>Hudson Soft Company</studio>
+			<nplayers>1</nplayers>
+			<perspective>Isometric</perspective>
+			<rating>4.2</rating>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589071-populous</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/populous</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/populous/3030-6210/</giantbomb_url>
+			<boxart1>http://static.giantbomb.com/uploads/scale_large/11/118253/2065327-populous_na_box_art.png</boxart1>
+			<boxart2>http://www.mobygames.com/images/covers/l/97784-populous-turbografx-16-back-cover.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/97785-populous-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://www.mobygames.com/images/shots/l/324356-populous-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/643342-populous-turbografx-16-screenshot-houses.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/643343-populous-turbografx-16-screenshot-mountains-terrain-is-useless.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/643344-populous-turbografx-16-screenshot-big-sign.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/643345-populous-turbografx-16-screenshot-fight.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/643346-populous-turbografx-16-screenshot-knight-is-powerful-unit.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/643347-populous-turbografx-16-screenshot-game-won.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/643348-populous-turbografx-16-screenshot-sands-sands-everywhere.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/643349-populous-turbografx-16-screenshot-time-to-dismount-mointain.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/643350-populous-turbografx-16-screenshot-castles.jpg</snapshot10>
+		</game>
+		<game name="Legendary Axe, The (USA)">
+			<description>12.  Legendary Axe</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FLegendary%20Axe%2C%20The%20%28USA%29.zip" size="165953" />
+			<title_clean>Legendary Axe, The</title_clean>
+			<plot>The TurboGraFX library got off to a blistering start in the US, launching with some of the most impressive, and playable games of the year. Legendary Axe was one of those stand-out titles, a well paced arcade style action game with excellent graphics and locales, and some of its own unique gameplay ideas. Here you have an attack bar which is used every time swipe, and then auto-recharges, when at its maximum you do greater damage. This system encourages careful timing and precision over mindless hacking and slashing, so as to maximise damage.</plot>
+			<releasedate>9/1/1989</releasedate>
+			<year>1988</year>
+			<genre>Action</genre>
+			<studio>NEC Home Electronics (U.S.A.) Inc.</studio>
+			<nplayers>1</nplayers>
+			<perspective>3rd-Person</perspective>
+			<rating>2.9</rating>
+			<videoid>h456P9RyTA8</videoid>
+			<thegamesdb_id>5674</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589017-the-legendary-axe</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/legendary-axe</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/the-legendary-axe/3030-1906/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/8942</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/5674-1.jpg</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/5674-1.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/49176-the-legendary-axe-turbografx-16-media.jpg</boxart3>
+			<boxart4>http://www.mobygames.com/images/covers/l/207336-the-legendary-axe-turbografx-16-media.jpg</boxart4>
+			<snapshot1>http://www.mobygames.com/images/shots/l/100021-the-legendary-axe-turbografx-16-screenshot-title.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/100022-the-legendary-axe-turbografx-16-screenshot-zone-1.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/100023-the-legendary-axe-turbografx-16-screenshot-the-first-enemy.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/100024-the-legendary-axe-turbografx-16-screenshot-a-huge-spider.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/100025-the-legendary-axe-turbografx-16-screenshot-killed.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/100026-the-legendary-axe-turbografx-16-screenshot-destroy-the-statue.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/100027-the-legendary-axe-turbografx-16-screenshot-bosses.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/100028-the-legendary-axe-turbografx-16-screenshot-zone-2.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/100029-the-legendary-axe-turbografx-16-screenshot-swinging-on-a-vine.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/100030-the-legendary-axe-turbografx-16-screenshot-boss.jpg</snapshot10>
+			<banner1>http://i.imgur.com/uTSJOk1.jpg</banner1>
+		</game>
+		<game name="R-Type (USA)">
+			<description>11.  R-Type</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FR-Type%20%28USA%29.zip" size="312336" />
+			<title_clean>R-Type</title_clean>
+			<plot>One of the most important scrolling shooters of the 80s, R-Type introduced some of the most intricate level designs, and clever power-up system's to the gaming world, all infused with Alien/H R Geiger inspired art design. So impressive, and unprecedented was the PC-Engine's port of R-Type that it was probably the closest the system came to having a killer application, at least in the early days. Its not quite a perfect port of the game, but it makes a pretty damn good stab at it! The game was originally released in two halves in japan, "Part 1" and "part 2" but the US Turbochip version was the full game.</plot>
+			<releasedate>9/1/1990</releasedate>
+			<year>1990</year>
+			<genre>Action</genre>
+			<studio>NEC Home Electronics (U.S.A.) Inc.</studio>
+			<nplayers>1</nplayers>
+			<perspective>Side-Scrolling</perspective>
+			<rating>3.4</rating>
+			<videoid>qftjpU5xrPo</videoid>
+			<thegamesdb_id>8226</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589090-r-type</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/r-type</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/r-type/3030-13745/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/8882</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/8226-1.jpg</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/8226-1.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/71244-r-type-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://www.mobygames.com/images/shots/l/96165-r-type-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/96166-r-type-turbografx-16-screenshot-nearing-the-end-of-the-first.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/96167-r-type-turbografx-16-screenshot-the-second-level-with-a-giant.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/96168-r-type-turbografx-16-screenshot-level-3-space-fortress-assault.jpg</snapshot4>
+			<snapshot5>http://static.giantbomb.com/uploads/scale_large/2/23093/2712461-rtype003.jpg</snapshot5>
+			<snapshot6>http://static.giantbomb.com/uploads/scale_large/2/23093/2712460-rtype002.jpg</snapshot6>
+			<snapshot7>http://static.giantbomb.com/uploads/scale_large/2/23093/2712459-r-type_complete_%28u%29-002.jpg</snapshot7>
+			<snapshot8>http://static.giantbomb.com/uploads/scale_large/2/23093/2712458-r-type_complete_%28u%29-001.jpg</snapshot8>
+			<snapshot9>http://static.giantbomb.com/uploads/scale_large/2/23093/2712455-rtype001.jpg</snapshot9>
+			<snapshot10>http://static.giantbomb.com/uploads/scale_large/0/7930/653830-r_type_loading_screen.png</snapshot10>
+			<fanart1>http://thegamesdb.net/banners/fanart/original/8226-1.jpg</fanart1>
+			<banner1>http://i.imgur.com/NTDrkkx.jpg</banner1>
+			<clearlogo1>http://thegamesdb.net/banners/clearlogo/8226.png</clearlogo1>
+		</game>
+		<game name="Military Madness (USA)">
+			<description>10.  Military Madness</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FMilitary%20Madness%20%28USA%29.zip" size="282948" />
+			<title_clean>Military Madness</title_clean>
+			<plot>This is a nice, accessible turn-based strategy game in the vein of games like Advance Wars. Here the aim is to try to move your units around the map into the best strategic positions (terrain, and supporting units play a big part on how much damage is done), as the battles go on your forces gain experience with every successful attack, and factories and bases can be captured. All in all its a great strategy game for its time, and all the different elements really come together to add real depth.</plot>
+			<releasedate>9/1/1990</releasedate>
+			<year>1989</year>
+			<genre>Strategy</genre>
+			<studio>NEC Technologies</studio>
+			<nplayers>1</nplayers>
+			<perspective>Top-Down</perspective>
+			<rating>3.8</rating>
+			<videoid>T-fo515wMNc</videoid>
+			<thegamesdb_id>5676</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589030-military-madness</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/military-madness</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/military-madness/3030-4152/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10739</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/5676-1.jpg</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/5676-1.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/97150-military-madness-turbografx-16-media.jpg</boxart3>
+			<boxart4>http://www.mobygames.com/images/covers/l/97153-military-madness-turbografx-16-media.jpg</boxart4>
+			<snapshot1>http://www.mobygames.com/images/shots/l/133823-military-madness-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/133824-military-madness-turbografx-16-screenshot-intro-1.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/133825-military-madness-turbografx-16-screenshot-intro-2.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/133826-military-madness-turbografx-16-screenshot-map.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/133827-military-madness-turbografx-16-screenshot-round-1.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/651324-military-madness-turbografx-16-screenshot-intro-japanese-version.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/651325-military-madness-turbografx-16-screenshot-enemy-tanks-have.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/651326-military-madness-turbografx-16-screenshot-we-must-defeat-enemies.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/651327-military-madness-turbografx-16-screenshot-enemies-are-annihilated.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/651328-military-madness-turbografx-16-screenshot-bison-tank-s-stats.jpg</snapshot10>
+			<banner1>http://i.imgur.com/lPAYyrA.png</banner1>
+		</game>
+		<game name="Parasol Stars - The Story of Bubble Bobble III (USA)">
+			<description>9.  Parasol Stars - The Story of Bubble Bobble III</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FParasol%20Stars%20-%20The%20Story%20of%20Bubble%20Bobble%20III%20%28USA%29.zip" size="241237" />
+			<title_clean>Parasol Stars - The Story of Bubble Bobble III</title_clean>
+			<plot>The third game in the Bubble Bobble series heralded a return to what the series knew best, 2-player, simple gameplay with you dispatching the enemies in new and interesting ways! Here you can pick up the assortment of different enemies and throw them at each other to clear each screen, there's a parasol which can be used to float, as well as collect other weapons that can be released on the enemies, and some memorable boss fights too. Definitely a must for anyone wanting something to play with a friend on their PC-engine.</plot>
+			<releasedate>9/5/1991</releasedate>
+			<year>1991</year>
+			<genre>Action</genre>
+			<studio>Working Designs</studio>
+			<nplayers>1-2 Alt</nplayers>
+			<perspective>Platform</perspective>
+			<rating>4.0</rating>
+			<videoid>KzYmT2TYE-I</videoid>
+			<thegamesdb_id>8222</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589068-parasol-stars-the-story-of-bubble-bobble-iii</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/parasol-stars-the-story-of-bubble-bobble-iii</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/parasol-stars-the-story-of-bubble-bobble-iii/3030-10496/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/12477</consolegrid_url>
+			<boxart1>http://static.giantbomb.com/uploads/scale_large/0/1099/1287317-1170444247_00.jpg</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/8222-1.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/79179-parasol-stars-the-story-of-bubble-bobble-iii-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://www.mobygames.com/images/shots/l/110314-parasol-stars-the-story-of-bubble-bobble-iii-turbografx-16.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/110315-parasol-stars-the-story-of-bubble-bobble-iii-turbografx-16.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/110316-parasol-stars-the-story-of-bubble-bobble-iii-turbografx-16.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/110317-parasol-stars-the-story-of-bubble-bobble-iii-turbografx-16.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/110318-parasol-stars-the-story-of-bubble-bobble-iii-turbografx-16.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/110319-parasol-stars-the-story-of-bubble-bobble-iii-turbografx-16.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/110320-parasol-stars-the-story-of-bubble-bobble-iii-turbografx-16.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/110321-parasol-stars-the-story-of-bubble-bobble-iii-turbografx-16.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/110322-parasol-stars-the-story-of-bubble-bobble-iii-turbografx-16.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/110323-parasol-stars-the-story-of-bubble-bobble-iii-turbografx-16.jpg</snapshot10>
+			<banner1>http://i.imgur.com/DDVtokY.jpg</banner1>
+		</game>
+		<game name="Magical Chase (USA)">
+			<description>8.  Magical Chase</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FMagical%20Chase%20%28USA%29.zip" size="295362" />
+			<title_clean>Magical Chase</title_clean>
+			<plot>Here's a smart, attractive looking shooter that contains many more ideas than the average shooter fare. Magical Chase showers you with a multitude of different control, and power-up features, you get hovering stars which can be set in place anywhere you want which deflect enemy shots, your shot direction itself can similarly be fixed or moved, giving you full multi-directional firing that's independent of movement, and on top of that there's a bunch of weapon and health upgrades that can be acquired from shops. Outside of those elements the levels never fail to be interesting, and engrossing. I'll add though that its worth playing the game on hard mode to get the most out of it, as for a game as pricey as it is Magical Chase can be beaten without too much trouble on the lower difficulties.</plot>
+			<releasedate>9/1/1993</releasedate>
+			<year>1991</year>
+			<genre>Action</genre>
+			<studio>NEC</studio>
+			<nplayers>1</nplayers>
+			<videoid>OHyvX5dzwEI</videoid>
+			<thegamesdb_id>4108</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589022-magical-chase</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/magical-chase</mobygames_url>
+			<consolegrid_url>http://consolegrid.com/games/8881</consolegrid_url>
+			<boxart1>http://i.imgur.com/Teucusk.jpg</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/4108-1.jpg</boxart2>
+			<snapshot1>http://www.mobygames.com/images/shots/l/633893-magical-chase-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/633894-magical-chase-turbografx-16-screenshot-1st-seal.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/633895-magical-chase-turbografx-16-screenshot-chicken-head-with-leg.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/633896-magical-chase-turbografx-16-screenshot-sweet-enemies.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/633897-magical-chase-turbografx-16-screenshot-lions-on-silver-surfer.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/633898-magical-chase-turbografx-16-screenshot-blobs.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/633899-magical-chase-turbografx-16-screenshot-cubical-view-d.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/633900-magical-chase-turbografx-16-screenshot-shop.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/633901-magical-chase-turbografx-16-screenshot-balloon-enemies.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/633902-magical-chase-turbografx-16-screenshot-flying-skulls.jpg</snapshot10>
+			<banner1>http://i.imgur.com/co8WAaO.png</banner1>
+		</game>
+		<game name="Shockman (USA)">
+			<description>7.  Shockman</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FShockman%20%28USA%29.zip" size="290731" />
+			<title_clean>Shockman</title_clean>
+			<plot>Atanaru Teki is the second game in the Shubibinman series. The gameplay has changed dramatically from the first game. Tasuke and Kyapiko no longer use swords but exclusively use their shubibeams, which now resemble the mega buster in function. They can be shot rapidly or charged for a more powerful attack.  In addition, Kyapiko and Tasuke are now capable of super attacks (provided they have a bit) and team-up charge attacks in two-player mode, with different results!</plot>
+			<releasedate>9/1/1992</releasedate>
+			<year>1991</year>
+			<genre>Action</genre>
+			<studio>NCS Corporation</studio>
+			<nplayers>1</nplayers>
+			<perspective>3rd-Person</perspective>
+			<rating>3.6</rating>
+			<videoid>vmxI1MlnM9U</videoid>
+			<thegamesdb_id>8227</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589102-shockman</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/shockman</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/shockman/3030-33381/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10276</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/8227-1.jpg</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/8227-1.jpg</boxart2>
+			<snapshot1>http://www.mobygames.com/images/shots/l/323718-shockman-turbografx-16-screenshot-title-screen.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/323719-shockman-turbografx-16-screenshot-choose-arnold-or-sonya.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/323720-shockman-turbografx-16-screenshot-intro-stage.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/323721-shockman-turbografx-16-screenshot-the-first-boss.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/323722-shockman-turbografx-16-screenshot-robots-attack.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/323723-shockman-turbografx-16-screenshot-dodge-the-flames.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/323724-shockman-turbografx-16-screenshot-some-of-the-buildings-collapse.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/323725-shockman-turbografx-16-screenshot-underwater-shooter-passage.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/323726-shockman-turbografx-16-screenshot-attacking-large-squid-like.jpg</snapshot9>
+			<snapshot10>http://static.giantbomb.com/uploads/scale_large/2/23093/2722952-3689133278-QoaSN.jpg</snapshot10>
+			<banner1>http://i.imgur.com/boWDKfz.jpg</banner1>
+		</game>
+		<game name="Adventure Island (Japan)">
+			<description>6.  Adventure Island</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FAdventure%20Island%20%28Japan%29.zip" size="171494" />
+			<title_clean>Adventure Island</title_clean>
+			<plot>This is an enhanced port of the Master System's "Dragon's Trap". Dragon's Curse is an action adventure game which has you exploring a big world filled with enemies and hazardous jumps, every time you defeat a boss it changes you into a different creature, with each having different abilities that allow you to take routes in the world which were previously un-passable. Overall its a good port, the most noticeable improvements being the smoother scrolling, and some improved graphics here and there. Its probably not quite as improved as it should've been, but its a great version of an all time classic regardless.</plot>
+			<releasedate>9/1/1991</releasedate>
+			<genre>Action, Platform, 2D</genre>
+			<studio>Hudson</studio>
+			<nplayers>1</nplayers>
+			<rating>9.0</rating>
+			<videoid>m6lQCgl01r4</videoid>
+			<thegamesdb_id>8205</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/578657-dragons-curse</gamefaqs_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/8205-1.jpg</boxart1>
+			<snapshot1>http://img.gamefaqs.net/screens/b/2/0/gfs_88028_1_1.jpg</snapshot1>
+			<snapshot2>http://img.gamefaqs.net/screens/1/b/d/gfs_88028_2_1.jpg</snapshot2>
+			<snapshot3>http://img.gamefaqs.net/screens/b/6/d/gfs_88028_2_2.jpg</snapshot3>
+			<snapshot4>http://img.gamefaqs.net/screens/a/0/9/gfs_88028_3_1.jpg</snapshot4>
+		</game>
+		<game name="Parodius Da! - Shinwa kara Owarai e (Japan)">
+			<description>5.  Parodius Da!</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FParodius%20Da%21%20-%20Shinwa%20kara%20Owarai%20e%20%28Japan%29.zip" size="730126" />
+			<title_clean>Parodius Da! - Shinwa kara Owarai e</title_clean>
+			<plot>Konami's excellent parody of their Gradius series of shooters was transferred brilliantly to NEC's small box of wonders. Here you pilot your craft through some of the most imaginatively wacky, and memorable levels in shmup history, the power-up system is as fun to use as it ever was, and slowdown is kept to a minimum. This doesn't have quite as many extras as the SNES version did, but it does have its own exclusive points-attack level.</plot>
+			<releasedate>21/2/1992</releasedate>
+			<genre>Action, Shooter, Scrolling</genre>
+			<studio>Konami</studio>
+			<nplayers>1</nplayers>
+			<rating>9.0</rating>
+			<ESRB>E - Everyone</ESRB>
+			<videoid>u381OCQb7y4</videoid>
+			<thegamesdb_id>18872</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589069-parodius-da</gamefaqs_url>
+			<consolegrid_url>http://consolegrid.com/games/10751</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/18872-1.jpg</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/18872-1.jpg</boxart2>
+			<snapshot1>http://img.gamefaqs.net/screens/1/4/f/gfs_3937_1_1.jpg</snapshot1>
+			<snapshot2>http://img.gamefaqs.net/screens/b/d/2/gfs_3937_2_1.jpg</snapshot2>
+			<snapshot3>http://img.gamefaqs.net/screens/1/0/2/gfs_3937_2_2.jpg</snapshot3>
+			<snapshot4>http://img.gamefaqs.net/screens/0/6/6/gfs_3937_3_1.jpg</snapshot4>
+			<banner1>http://i.imgur.com/O8SSmGY.jpg</banner1>
+		</game>
+		<game name="Bomberman '94 (Japan)">
+			<description>4.  Bomberman '94</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FBomberman%20%2794%20%28Japan%29.zip" size="575066" />
+			<title_clean>Bomberman '94</title_clean>
+			<plot>One of my favourite Bomberman releases, Bomberman 94' (known more commonly for the Mega Drive port, Mega Bomberman) had numerous improvements to the single player gameplay to make it more focused, increasing the pacing and keeping the action moving. Here they're added much more interesting, now scrolling stages which really bring Bomberman's world to life for the first time, they've also made it so you no longer have to blow up every single enemy to proceed, just the new shield generators protecting an artifact in each stage. The ever important multiplayer is as fun as ever here, with this one introducing Rooeys to the series (ride-able creatures which give you an extra hit point, and an ability). This is much better than the later Mega Drive release, with more detailed, better coloured graphics, superior animation, less slowdown, and 5-player support instead of Mega Bomberman's 4-players.</plot>
+			<releasedate>9/1/1993</releasedate>
+			<year>1992</year>
+			<genre>Action</genre>
+			<studio>Hudson</studio>
+			<nplayers>1-5</nplayers>
+			<perspective>Side-Scrolling</perspective>
+			<rating>6.5</rating>
+			<videoid>F5RPoYv22CI</videoid>
+			<thegamesdb_id>18440</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/588908-bomberman-94</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/bomberman-93</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/bomberman-94/3030-25698/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/10664</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/18440-1.jpg</boxart1>
+			<boxart2>http://i.imgur.com/atO0pPI.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/79163-bomberman-93-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://www.mobygames.com/images/shots/l/99415-bomberman-93-turbografx-16-screenshot-title-options.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/99416-bomberman-93-turbografx-16-screenshot-disputed-planets.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/99417-bomberman-93-turbografx-16-screenshot-bomberman-s-control-room.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/99418-bomberman-93-turbografx-16-screenshot-planet-quarry.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/99419-bomberman-93-turbografx-16-screenshot-there-s-the-exit.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/99420-bomberman-93-turbografx-16-screenshot-bomberman-kills-himself.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/99421-bomberman-93-turbografx-16-screenshot-oh-my-god-it-s-pac-man.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/99422-bomberman-93-turbografx-16-screenshot-say-hello-to-digger.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/99423-bomberman-93-turbografx-16-screenshot-bomberman-flies-off-to.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/99424-bomberman-93-turbografx-16-screenshot-how-nice-of-digger-give.jpg</snapshot10>
+			<banner1>http://i.imgur.com/EIA5TXG.png</banner1>
+			<clearlogo1>http://thegamesdb.net/banners/clearlogo/18440.png</clearlogo1>
+		</game>
+		<game name="Bonk's Revenge (USA)">
+			<description>3.  Bonk's Revenge</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FBonk%27s%20Revenge%20%28USA%29.zip" size="350791" />
+			<title_clean>Bonk's Revenge</title_clean>
+			<plot>This just has to be the best Bonk release on the system. With this sequel the levels were much more ambitious, they were huge stages brimming with stuff to find, from heart containers, to bonus games. The graphics from the original were overhauled, creating a much more impressive looking world filled with offbeat, memorable characters, and much more polished visuals. All of this, and they still managed to retain all the humour, and rewarding gameplay of the original.</plot>
+			<releasedate>9/1/1991</releasedate>
+			<year>1991</year>
+			<genre>Action</genre>
+			<studio>Hudson Soft Company, NEC Technologies</studio>
+			<nplayers>1</nplayers>
+			<perspective>3rd-Person</perspective>
+			<rating>4.1</rating>
+			<videoid>-4o32GS2aNg</videoid>
+			<thegamesdb_id>5661</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/588911-bonks-revenge</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/bonks-revenge</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/bonks-revenge/3030-8670/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/8878</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/5661-1.jpg</boxart1>
+			<boxart2>http://thegamesdb.net/banners/boxart/original/back/5661-1.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/43273-bonk-s-revenge-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://thegamesdb.net/banners/screenshots/5661-1.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/106134-bonk-s-revenge-turbografx-16-screenshot-title-screen.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/106135-bonk-s-revenge-turbografx-16-screenshot-tree-climbing.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/106136-bonk-s-revenge-turbografx-16-screenshot-boulder-falls.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/106137-bonk-s-revenge-turbografx-16-screenshot-bonk-is-partially.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/106138-bonk-s-revenge-turbografx-16-screenshot-one-of-many-bonus.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/106139-bonk-s-revenge-turbografx-16-screenshot-cavern-construction.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/106140-bonk-s-revenge-turbografx-16-screenshot-a-ride-to-the-boss.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/106141-bonk-s-revenge-turbografx-16-screenshot-the-first-boss.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/106142-bonk-s-revenge-turbografx-16-screenshot-bonus-train.jpg</snapshot10>
+			<fanart1>http://thegamesdb.net/banners/fanart/original/5661-1.jpg</fanart1>
+			<banner1>http://i.imgur.com/9O1Z92h.png</banner1>
+		</game>
+		<game name="Street Fighter II' - Champion Edition (Japan)">
+			<description>2.  Street Fighter II - Champion Edition</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FStreet%20Fighter%20II%27%20-%20Champion%20Edition%20%28Japan%29.zip" size="1639537" />
+			<title_clean>Street Fighter II' - Champion Edition</title_clean>
+			<plot>This is the Hu-Card to prove to non-believers that the PC-Engine can stand up to its more famous 16-bit competition, an excellent port of the archetypal 1 on 1 fighting game which easily manages to rival the SNES and Mega Drive games. Every one knows the drill here by now, its just you vs the opponent, deplete their energy to zero by using combinations of punches, kicks, and special moves (activated by specific button presses) and you win the match and fight the next guy.</plot>
+			<releasedate>9/1/1993</releasedate>
+			<genre>Fighting</genre>
+			<studio>NEC Interchannel</studio>
+			<nplayers>1-2</nplayers>
+			<rating>8.3</rating>
+			<thegamesdb_id>18873</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/575572-street-fighter-ii-champion-edition</gamefaqs_url>
+			<giantbomb_url>http://www.giantbomb.com/street-fighter-ii-champion-edition/3030-1096/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/11817</consolegrid_url>
+			<boxart1>http://thegamesdb.net/banners/boxart/original/front/18873-1.jpg</boxart1>
+			<boxart2>http://static.giantbomb.com/uploads/scale_large/0/1614/785117-sf2sce_gen_uk_back.jpg</boxart2>
+			<snapshot1>http://thegamesdb.net/banners/screenshots/18873-1.jpg</snapshot1>
+			<snapshot2>http://static.giantbomb.com/uploads/scale_large/2/23093/2723132-2201888471-MJ60H.jpg</snapshot2>
+			<snapshot3>http://static.giantbomb.com/uploads/scale_large/2/23093/2722459-7780017099-APr08.jpg</snapshot3>
+			<snapshot4>http://static.giantbomb.com/uploads/scale_large/2/23093/2722458-6311784432-K7r3h.jpg</snapshot4>
+			<snapshot5>http://static.giantbomb.com/uploads/scale_large/2/23093/2722457-3882864292-6TFdQ.jpg</snapshot5>
+			<snapshot6>http://static.giantbomb.com/uploads/scale_large/0/3715/701302-sfcemg009.jpg</snapshot6>
+			<snapshot7>http://static.giantbomb.com/uploads/scale_large/0/3715/701300-sfcemg013.jpg</snapshot7>
+			<snapshot8>http://static.giantbomb.com/uploads/scale_large/0/3715/701298-sfcemg004.jpg</snapshot8>
+			<snapshot9>http://static.giantbomb.com/uploads/scale_large/0/3715/701296-sfcemg006.jpg</snapshot9>
+			<snapshot10>http://static.giantbomb.com/uploads/scale_large/0/3715/701295-sfcemg007.jpg</snapshot10>
+			<banner1>http://i.imgur.com/8ORXlw1.png</banner1>
+		</game>
+		<game name="Soldier Blade (USA)">
+			<description>1.  Soldier Blade</description>
+			<rom name="No-Intro-Collection_2015-03-03/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.zip/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%2FSoldier%20Blade%20%28USA%29.zip" size="394675" />
+			<title_clean>Soldier Blade</title_clean>
+			<plot>Hudson managed to hone their shmup making skills even further with this, the 3rd, and last of their Soldier series games to appear on PC-Engine. Here we have the tried and true formula of the series, frenetic action, exciting boss fights, and brilliant weapons, except now with better graphics, even more awesome set-pieces than ever, and some of the most impressive music to come from the PC-Engine sound chip. This has to be the number one Hu-Card shoot-em-up on a system that is world famous for its high quality shooters.</plot>
+			<releasedate>10/7/1992</releasedate>
+			<year>1992</year>
+			<genre>Action</genre>
+			<studio>Hudson Soft Company</studio>
+			<nplayers>1</nplayers>
+			<perspective>Top-Down</perspective>
+			<rating>3.7</rating>
+			<videoid>wnnWK9coJ2c</videoid>
+			<thegamesdb_id>8230</thegamesdb_id>
+			<gamefaqs_url>http://www.gamefaqs.com/tg16/589110-soldier-blade</gamefaqs_url>
+			<mobygames_url>http://www.mobygames.com/game/turbo-grafx/soldier-blade</mobygames_url>
+			<giantbomb_url>http://www.giantbomb.com/soldier-blade/3030-20222/</giantbomb_url>
+			<consolegrid_url>http://consolegrid.com/games/8939</consolegrid_url>
+			<boxart1>http://static.giantbomb.com/uploads/scale_large/0/7465/1752196-soldier_blade__u_.jpg</boxart1>
+			<boxart2>http://i.imgur.com/8nksFiW.jpg</boxart2>
+			<boxart3>http://www.mobygames.com/images/covers/l/113920-soldier-blade-turbografx-16-media.jpg</boxart3>
+			<snapshot1>http://www.mobygames.com/images/shots/l/231008-soldier-blade-turbografx-16-screenshot-the-title-scrolls-by.jpg</snapshot1>
+			<snapshot2>http://www.mobygames.com/images/shots/l/231009-soldier-blade-turbografx-16-screenshot-along-with-some-spot.jpg</snapshot2>
+			<snapshot3>http://www.mobygames.com/images/shots/l/231012-soldier-blade-turbografx-16-screenshot-title-screen.jpg</snapshot3>
+			<snapshot4>http://www.mobygames.com/images/shots/l/231013-soldier-blade-turbografx-16-screenshot-your-mothership-enters.jpg</snapshot4>
+			<snapshot5>http://www.mobygames.com/images/shots/l/231014-soldier-blade-turbografx-16-screenshot-release.jpg</snapshot5>
+			<snapshot6>http://www.mobygames.com/images/shots/l/231015-soldier-blade-turbografx-16-screenshot-meet-the-first-wave.jpg</snapshot6>
+			<snapshot7>http://www.mobygames.com/images/shots/l/231016-soldier-blade-turbografx-16-screenshot-you-ve-gained-your.jpg</snapshot7>
+			<snapshot8>http://www.mobygames.com/images/shots/l/231018-soldier-blade-turbografx-16-screenshot-firing-the-blue-weapon.jpg</snapshot8>
+			<snapshot9>http://www.mobygames.com/images/shots/l/231021-soldier-blade-turbografx-16-screenshot-firing-the-laser-at.jpg</snapshot9>
+			<snapshot10>http://www.mobygames.com/images/shots/l/231022-soldier-blade-turbografx-16-screenshot-a-full-force-blast.jpg</snapshot10>
+			<banner1>http://i.imgur.com/RmcN0nl.png</banner1>
+		</game>
+</datafile>

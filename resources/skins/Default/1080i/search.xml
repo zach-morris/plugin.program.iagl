@@ -1,0 +1,444 @@
+<window id="4070">
+    <defaultcontrol always="true">101</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+  <type>dialog</type>
+  <visible>true</visible>
+    <coordinates>
+        <system>1</system>
+        <posx>0</posx>
+        <posy>0</posy>
+    </coordinates>
+    <controls>
+        <control type="image">
+            <description>Background Image</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>720</height>
+            <texture>black.png</texture>
+        </control>
+        <control type="image">
+            <description>Header Color</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>72</height>
+            <texture>white.png</texture>
+        </control>
+        <control type="image">
+            <description>Rom Search</description>
+            <posx>350</posx>
+            <posy>0</posy>
+            <width>600</width>
+            <height>70</height>
+            <aspectratio>keep</aspectratio>
+            <texture>rom_search.png</texture>
+        </control>
+        <control type="label">
+            <description>Select Archives</description>
+            <posx>40</posx>
+            <posy>80</posy>
+            <width min="29" max="200">auto</width>
+            <visible>true</visible>
+            <font>font14</font>
+            <textcolor>blue</textcolor>
+            <label>Select Archives:</label>
+        </control>
+        <control type="label">
+            <description>Enter Search String</description>
+            <posx>610</posx>
+            <posy>80</posy>
+            <width min="29" max="200">auto</width>
+            <visible>true</visible>
+            <font>font14</font>
+            <textcolor>blue</textcolor>
+            <label>Enter Search String:</label>
+        </control>
+        <control type="edit" id="102">
+            <description>Search Box</description>
+            <posx>610</posx>
+            <posy>120</posy>
+            <width>500</width>
+            <height>29</height>
+            <visible>true</visible>
+            <aligny>center</aligny>
+            <hinttext>(Leave blank for all results)</hinttext>
+            <font>font14</font>
+            <textoffsetx>10</textoffsetx>
+            <textcolor>FFB2D4F5</textcolor>
+            <disabledcolor>FF000000</disabledcolor>
+            <invalidcolor>FFFFFFFF</invalidcolor>
+            <texturefocus>button-focus.png</texturefocus>
+            <texturenofocus>button-nofocus.png</texturenofocus>
+            <pulseonselect>yes</pulseonselect>
+            <onleft>101</onleft>
+            <ondown>3007</ondown>
+            <onup>3006</onup>
+        </control>
+        <control type="group" id="3007">
+            <control type="button" id="3003">
+                <description>Advanced Search On</description>
+                <label>Advanced Search On</label>
+                <posx>610</posx>
+                <posy>175</posy>
+                <width>350</width>
+                <height>40</height>
+                <colordiffuse>FFFFFFFF</colordiffuse>
+                <texturefocus>checkbox-focus.png</texturefocus>
+                <texturenofocus>checkbox-nofocus.png</texturenofocus>
+                <focusedcolor>FFFFD700</focusedcolor>
+                <font>font12</font>
+                <textcolor>blue</textcolor>
+                <align>left</align>
+                <aligny>top</aligny>
+                <textoffsetx>50</textoffsetx>
+                <textoffsety>5</textoffsety>
+                <onclick>SetFocus(3007)</onclick>
+                <ondown>104</ondown>
+                <onup>102</onup>
+                <pulseonselect>true</pulseonselect>
+            </control>
+            <control type="button" id="3004">
+                <description>Advanced Search Off</description>
+                <label>Advanced Search Off</label>
+                <posx>610</posx>
+                <posy>175</posy>
+                <width>350</width>
+                <height>40</height>
+                <colordiffuse>FFFFFFFF</colordiffuse>
+                <texturefocus>checkbox-alt-focus.png</texturefocus>
+                <texturenofocus>checkbox-alt-nofocus.png</texturenofocus>
+                <focusedcolor>FFFFD700</focusedcolor>
+                <font>font12</font>
+                <textcolor>blue</textcolor>
+                <align>left</align>
+                <aligny>top</aligny>
+                <textoffsetx>50</textoffsetx>
+                <textoffsety>5</textoffsety>
+                <pulseonselect>true</pulseonselect>
+                <onclick>SetFocus(3007)</onclick>
+                <onleft>101</onleft>
+                <onup>102</onup>
+                <ondown>3006</ondown>
+            </control>
+        </control>
+        <control type="button" id="3001">
+            <description>Add All</description>
+            <posx>40</posx>
+            <posy>620</posy>
+            <width>200</width>
+            <height>40</height>
+            <textoffsetx>12</textoffsetx>
+            <align>center</align>
+            <aligny>center</aligny>
+            <texturenofocus>button-nofocus2.png</texturenofocus>
+            <texturefocus>button-highlight1.png</texturefocus>
+            <onright>3002</onright>
+            <onup>101</onup>
+        </control>
+        <control type="button" id="3002">
+            <description>Remove All</description>
+            <posx>300</posx>
+            <posy>620</posy>
+            <width>200</width>
+            <height>40</height>
+            <textoffsetx>12</textoffsetx>
+            <align>center</align>
+            <aligny>center</aligny>
+            <texturenofocus>button-nofocus2.png</texturenofocus>
+            <texturefocus>button-highlight1.png</texturefocus>
+            <onleft>3001</onleft>
+            <onright>102</onright>
+            <onup>101</onup>
+        </control>
+        <control type="button" id="3006">
+            <description>Search</description>
+            <posx>615</posx>
+            <posy>620</posy>
+            <width>200</width>
+            <height>40</height>
+            <textoffsetx>12</textoffsetx>
+            <align>center</align>
+            <aligny>center</aligny>
+            <texturenofocus>button-nofocus2.png</texturenofocus>
+            <texturefocus>button-highlight1.png</texturefocus>
+            <onleft>3002</onleft>
+            <onright>3008</onright>
+            <onup>102</onup>
+        </control>
+        <control type="button" id="3008">
+            <description>Close</description>
+            <posx>915</posx>
+            <posy>620</posy>
+            <width>200</width>
+            <height>40</height>
+            <textoffsetx>12</textoffsetx>
+            <align>center</align>
+            <aligny>center</aligny>
+            <texturenofocus>button-nofocus2.png</texturenofocus>
+            <texturefocus>button-highlight1.png</texturefocus>
+            <onleft>3006</onleft>
+            <onup>102</onup>
+        </control>
+        <control type="list" id="101">
+            <description>Archive List</description>
+            <posx>25</posx>
+            <posy>125</posy>
+            <width>475</width>
+            <height>460</height>
+            <visible>true</visible>
+            <viewtype label="list">list</viewtype>
+            <orientation>vertical</orientation>
+            <ondown>3001</ondown>
+            <onup>3002</onup>
+            <onright>102</onright>
+            <itemlayout width="475" height="29">
+                <control type="label">
+                    <posx>35</posx>
+                    <posy>3</posy>
+                    <width>475</width>
+                    <height>22</height>
+                    <font>font13</font>
+                    <aligny>center</aligny>
+                    <selectedcolor>green</selectedcolor>
+                    <align>left</align>
+                    <info>ListItem.Label</info>
+                    <visible>IntegerGreaterThan(ListItem.Property(hide_in_search),0)</visible>
+                </control>
+                <control type="image">
+                    <posx>5</posx>
+                    <posy>4</posy>
+                    <width>22</width>
+                    <height>22</height>
+                    <texture>checkbox.png</texture>
+                    <visible>IntegerGreaterThan(ListItem.Property(include_in_search),0)</visible>
+                </control>
+            </itemlayout>
+            <focusedlayout width="475" height="29" >
+                <control type="image">
+                    <width>475</width>
+                    <height>29</height>
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <visible>Control.HasFocus(101)</visible>
+                    <texture>button-highlight1.png</texture>
+                </control>
+                <control type="image">
+                    <posx>5</posx>
+                    <posy>4</posy>
+                    <width>22</width>
+                    <height>22</height>
+                    <texture>checkbox.png</texture>
+                    <visible>IntegerGreaterThan(ListItem.Property(include_in_search),0)</visible>
+                </control>
+                <control type="label">
+                    <posx>35</posx>
+                    <posy>3</posy>
+                    <width>475</width>
+                    <height>22</height>
+                    <font>font13</font>
+                    <aligny>center</aligny>
+                    <selectedcolor>green</selectedcolor>
+                    <align>left</align>
+                    <info>ListItem.Label</info>
+                    <visible>IntegerGreaterThan(ListItem.Property(hide_in_search),0)</visible>
+                    <texture>button-highlight1.png</texture>
+                </control>
+            </focusedlayout>
+        </control>
+        <control type="image">
+            <posx>25</posx>
+            <posy>120</posy>
+            <width>475</width>
+            <height>475</height>
+            <visible>true</visible>
+            <texture>border1.png</texture>
+            <visible>true</visible>
+        </control>
+        <control type="group" id="3005">
+            <description>Advanced Search Group</description>
+            <control type="label" id="103">
+                <description>Genre</description>
+                <posx>630</posx>
+                <posy>250</posy>
+                <width min="29" max="200">auto</width>
+                <font>font14</font>
+                <textcolor>blue</textcolor>
+                <label>Genre:</label>
+            </control>
+            <control type="edit" id="104">
+                <description>AS 1 Edit Box</description>
+                <posx>825</posx>
+                <posy>250</posy>
+                <width>250</width>
+                <height>29</height>
+                <visible>true</visible>
+                <aligny>center</aligny>
+                <font>font14</font>
+                <textoffsetx>10</textoffsetx>
+                <textcolor>FFB2D4F5</textcolor>
+                <disabledcolor>FF000000</disabledcolor>
+                <invalidcolor>FFFFFFFF</invalidcolor>
+                <texturefocus>button-focus.png</texturefocus>
+                <texturenofocus>button-nofocus.png</texturenofocus>
+                <pulseonselect>yes</pulseonselect>
+                <ondown>106</ondown>
+                <onup>3007</onup>
+                <onleft>101</onleft>
+            </control>
+            <control type="label" id="105">
+                <description>Players</description>
+                <posx>630</posx>
+                <posy>319</posy>
+                <width min="29" max="200">auto</width>
+                <font>font14</font>
+                <textcolor>blue</textcolor>
+                <label>Players:</label>
+            </control>
+            <control type="edit" id="106">
+                <description>AS 2 Edit Box</description>
+                <posx>825</posx>
+                <posy>319</posy>
+                <width>250</width>
+                <height>29</height>
+                <visible>true</visible>
+                <aligny>center</aligny>
+                <font>font14</font>
+                <textoffsetx>10</textoffsetx>
+                <textcolor>FFB2D4F5</textcolor>
+                <disabledcolor>FF000000</disabledcolor>
+                <invalidcolor>FFFFFFFF</invalidcolor>
+                <texturefocus>button-focus.png</texturefocus>
+                <texturenofocus>button-nofocus.png</texturenofocus>
+                <pulseonselect>yes</pulseonselect>
+                <ondown>108</ondown>
+                <onup>104</onup>
+                <onleft>101</onleft>
+            </control>
+            <control type="label" id="107">
+                <description>Release Date</description>
+                <posx>630</posx>
+                <posy>388</posy>
+                <width min="29" max="200">auto</width>
+                <font>font14</font>
+                <textcolor>blue</textcolor>
+                <label>Release Date:</label>
+            </control>
+            <control type="label">
+                <description>dash</description>
+                <posx>935</posx>
+                <posy>388</posy>
+                <width min="29" max="200">auto</width>
+                <font>font14</font>
+                <textcolor>blue</textcolor>
+                <label> to </label>
+            </control>
+            <control type="edit" id="108">
+                <description>AS 3.1 Edit Box</description>
+                <posx>825</posx>
+                <posy>388</posy>
+                <width>100</width>
+                <height>29</height>
+                <visible>true</visible>
+                <aligny>center</aligny>
+                <font>font14</font>
+                <textoffsetx>10</textoffsetx>
+                <textcolor>FFB2D4F5</textcolor>
+                <disabledcolor>FF000000</disabledcolor>
+                <invalidcolor>FFFFFFFF</invalidcolor>
+                <texturefocus>button-focus.png</texturefocus>
+                <texturenofocus>button-nofocus.png</texturenofocus>
+                <pulseonselect>yes</pulseonselect>
+                <ondown>111</ondown>
+                <onup>106</onup>
+                <onleft>101</onleft>
+                <onright>109</onright>
+            </control>
+            <control type="edit" id="109">
+                <description>AS 3.2 Edit Box</description>
+                <posx>975</posx>
+                <posy>388</posy>
+                <width>100</width>
+                <height>29</height>
+                <visible>true</visible>
+                <aligny>center</aligny>
+                <font>font14</font>
+                <textoffsetx>10</textoffsetx>
+                <textcolor>FFB2D4F5</textcolor>
+                <disabledcolor>FF000000</disabledcolor>
+                <invalidcolor>FFFFFFFF</invalidcolor>
+                <texturefocus>button-focus.png</texturefocus>
+                <texturenofocus>button-nofocus.png</texturenofocus>
+                <pulseonselect>yes</pulseonselect>
+                <ondown>111</ondown>
+                <onup>106</onup>
+                <onleft>108</onleft>
+            </control>
+            <control type="label" id="110">
+                <description>Studio</description>
+                <posx>630</posx>
+                <posy>457</posy>
+                <width min="29" max="200">auto</width>
+                <font>font14</font>
+                <textcolor>blue</textcolor>
+                <label>Studio:</label>
+            </control>
+            <control type="edit" id="111">
+                <description>AS 4 Edit Box</description>
+                <posx>825</posx>
+                <posy>450</posy>
+                <width>250</width>
+                <height>29</height>
+                <visible>true</visible>
+                <aligny>center</aligny>
+                <font>font14</font>
+                <textoffsetx>10</textoffsetx>
+                <textcolor>FFB2D4F5</textcolor>
+                <disabledcolor>FF000000</disabledcolor>
+                <invalidcolor>FFFFFFFF</invalidcolor>
+                <texturefocus>button-focus.png</texturefocus>
+                <texturenofocus>button-nofocus.png</texturenofocus>
+                <pulseonselect>yes</pulseonselect>
+                <ondown>113</ondown>
+                <onup>108</onup>
+                <onleft>101</onleft>
+            </control>
+            <control type="label" id="112">
+                <description>Region</description>
+                <posx>630</posx>
+                <posy>526</posy>
+                <width min="29" max="200">auto</width>
+                <font>font14</font>
+                <textcolor>blue</textcolor>
+                <label>Region:</label>
+            </control>
+            <control type="edit" id="113">
+                <description>AS 5 Edit Box</description>
+                <posx>825</posx>
+                <posy>526</posy>
+                <width>250</width>
+                <height>29</height>
+                <visible>true</visible>
+                <aligny>center</aligny>
+                <font>font14</font>
+                <textoffsetx>10</textoffsetx>
+                <textcolor>FFB2D4F5</textcolor>
+                <disabledcolor>FF000000</disabledcolor>
+                <invalidcolor>FFFFFFFF</invalidcolor>
+                <texturefocus>button-focus.png</texturefocus>
+                <texturenofocus>button-nofocus.png</texturenofocus>
+                <pulseonselect>yes</pulseonselect>
+                <ondown>3006</ondown>
+                <onup>111</onup>
+                <onleft>101</onleft>
+            </control>
+            <control type="image">
+                <posx>610</posx>
+                <posy>225</posy>
+                <width>500</width>
+                <height>370</height>
+                <texture>border1.png</texture>
+            </control>
+        </control>
+   </controls>
+</window>

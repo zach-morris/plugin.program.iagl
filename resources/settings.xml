@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="General">
+		<setting id="iagl_setting_cache_list" type="bool" label="Cache Lists to Disk" default="true"/>
+		<setting id="iagl_setting_mem_cache" type="bool" label="Enable Memory Cache" default="true"/>
+		<setting id="iagl_setting_clean_list" type="bool" label="Clean ROM Title" default="true"/>
+		<setting id="iagl_setting_archive_listings" type="select" label="Archive Listing Convention" values="Choose from List|Browse All Lists|Browse by Category" default="Choose from List"/>
+		<setting id="iagl_setting_listing" type="select" label="Game Listing Convention" values="One Big List|Choose from List|Alphabetical|Group by Genre|Group by Year|Group by Players|Group by Studio" default="Choose from List"/>
+		<setting id="iagl_setting_naming" type="select" label="Display Naming Convention" values="Title|Title, Genre|Title, Date|Title, Players|Title, Genre, Date|Title, Genre, Size|Title, Genre, Players|Title, Date, Size|Title, Date, Players|Genre, Title|Date, Title|Players, Title|Genre, Title, Date|Date, Title, Genre|Players, Title, Genre|Players, Title, Date|Title, Genre, Date, ROM Tag|Title, Genre, Date, Players|Title, Genre, Players, ROM Tag|Title, Genre, Date, Size" default="Title"/>
+		<setting id="iagl_setting_items_pp" type="select" label="Number of Items Per Page" values="10|25|50|100|150|200|250|300|350|400|450|500|List All" default="List All"/>
+		<setting id="iagl_setting_history" type="slider" label="Last Played History" default="10" range="0,1,100" option="int"/>
+		<setting id="iagl_setting_localfile_action" type="select" label="If Game Already Exists Locally" values="Prompt|Do Not ReDownload|ReDownload and Overwrite" default="Do Not ReDownload"/>
+		<setting id="iagl_setting_default_action" type="select" label="Default Action on Selecting ROM" values="Download and Launch|Download Only|ROM Info Page" default="ROM Info Page"/>
+		<setting id="iagl_setting_show_search" type="select" label="Show Search Item" values="Show|Hide" default="Show" visible="true"/>
+		<setting id="iagl_setting_show_randomplay" type="select" label="Show Random Play Item" values="Show|Hide" default="Show" visible="true"/>
+		<setting id="iagl_setting_show_gamehistory" type="select" label="Show Play History Item" values="Show|Hide" default="Show" visible="true"/>
+		<setting id="iagl_setting_show_extras" type="select" label="Show IAGL Extras Item" values="Show|Hide" default="Show" visible="true"/>
+		<setting id="iagl_setting_autoplay_trailer" type="select" label="Autoplay Game Trailer" values="No|Yes" default="No"/>
+		<setting id="iagl_setting_dl_cache" type="select" label="Cache Size (MB)" values="Zero (One ROM and Supporting Files Only)|10 MB|25MB|50MB|100MB|150MB|200MB|250MB|300MB|350MB|400MB|450MB|500MB|1GB|2GB|5GB|10GB|20GB" default="Zero (One ROM and Supporting Files Only)"/>
+		<setting id="iagl_setting_enable_login" type="select" label="Enable Login" values="Enabled|Disabled" default="Disabled"/>
+		<setting id="iagl_setting_ia_username" type="text" label="archive.org Email" default="" visible="eq(-1,Enabled)"/>
+ +		<setting id="iagl_setting_ia_password" type="text" label="archive.org Password" default="" option="hidden" visible="eq(-2,Enabled)"/>  
+	</category>
+	<category label="External Launchers">
+		<setting id="iagl_external_user_external_env" type="select" label="My System Type" values="Select|OSX|Linux/Kodibuntu|Windows|LibreElec Remix|LibreElec Sx05RE|LibreElec S905 Addon|Gamestarter Addon|Android" default="Select" visible="true"/>
+		<setting id="iagl_external_launch_close_kodi" type="select" label="Close Kodi on Launch" values="Disabled|Enabled" default="Disabled" visible="eq(-1,OSX)|eq(-1,Windows)|eq(-1,Linux/Kodibuntu)"/>
+		<setting id="iagl_external_path_to_retroarch" type="executable" label="RetroArch App Location" visible="eq(-2,OSX)|eq(-2,Windows)|eq(-2,Linux/Kodibuntu)"/>
+		<setting id="iagl_external_path_to_retroarch_system_dir" type="folder" label="RetroArch System Folder" visible="!eq(-3,Select)"/>
+		<setting id="iagl_external_path_to_retroarch_cfg" type="file" label="RetroArch CFG Location" visible="eq(-4,Android)"/>
+		<setting label="Additional Emulators:" type="lsep" visible="eq(-5,OSX)|eq(-5,Windows)|eq(-5,Linux/Kodibuntu)"/>
+		<setting id="iagl_external_additional_emulator_1_type" type="select" label="Additional Emulator 1" values="Disabled|FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone" default="Disabled" visible="eq(-6,OSX)|eq(-6,Windows)|eq(-6,Linux/Kodibuntu)"/>
+		<setting id="iagl_external_additional_emulator_1_path" type="executable" label="Emulator 1 App Location" visible="!eq(-1,Disabled)"/>
+		<setting id="iagl_external_additional_emulator_2_type" type="select" label="Additional Emulator 2" values="Disabled|FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone" default="Disabled" visible="eq(-8,OSX)|eq(-8,Windows)|eq(-8,Linux/Kodibuntu)"/>
+		<setting id="iagl_external_additional_emulator_2_path" type="executable" label="Emulator 2 App Location" visible="!eq(-1,Disabled)"/>
+		<setting id="iagl_external_additional_emulator_3_type" type="select" label="Additional Emulator 3" values="Disabled|FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone" default="Disabled" visible="eq(-10,OSX)|eq(-10,Windows)|eq(-10,Linux/Kodibuntu)"/>
+		<setting id="iagl_external_additional_emulator_3_path" type="executable" label="Emulator 3 App Location" visible="!eq(-1,Disabled)"/>
+	</category>
+	<category label="Netplay">
+		<setting id="iagl_netplay_enable_netplay" type="select" label="Enable Netplay" values="Enabled|Disabled|Start with Context" default="Disabled"/>
+		<setting id="iagl_netplay_hostclient" type="select" label="Player Connection Type" values="Player 1 Host|Player 2 Client|Spectator" default="Player 1 Host" visible="!eq(-1,Disabled)"/>
+		<setting id="iagl_netplay_nickname1" type="text" label="Player Name" default="Kodi Player 1" visible="!eq(-2,Disabled)+eq(-1,Player 1 Host)"/>
+		<setting id="iagl_netplay_nickname2" type="text" label="Player Name" default="Kodi Player 2" visible="!eq(-3,Disabled)+eq(-2,Player 2 Client)"/>
+		<setting id="iagl_netplay_nickname3" type="text" label="Player Name" default="Kodi Spectator" visible="!eq(-4,Disabled)+eq(-3,Spectator)"/>
+		<setting id="iagl_netplay_IP" type="ipaddress" label="Host IP Address" visible="!eq(-5,Disabled)+!eq(-4,Player 1 Host)"/>
+		<setting id="iagl_netplay_port" type="text" label="Host IP Port" default="55435" visible="!eq(-6,Disabled)+!eq(-5,Player 1 Host)"/>
+		<setting id="iagl_netplay_frames" type="select" label="Sync Frames" values="Enabled|Disabled" default="Disabled" visible="!eq(-7,Disabled)+!eq(-6,Player 1 Host)"/>
+	</category>
+	<category label="Setup Wizard">
+		<setting label="Game List quick setup tool for IAGL" type="lsep" visible="true"/>
+		<setting id="iagl_wizard_launcher" type="select" label="Emulator Launcher" values="External|Kodi Retroplayer" default="Kodi Retroplayer" visible="true"/>
+		<setting type="sep"/>
+		<setting visible="true" label="Execute Setup Wizard" type="action" option="close" action="RunScript(special://home/addons/plugin.program.iagl/resources/lib/run_IAGL_wizard.py)"/>
+	</category>
+	<category label="Advanced Settings">
+		<setting label="Note:  You should not use these settings unless you're sure of what you are doing!" type="lsep"/>
+		<setting id="iagl_enable_post_dl_edit" type="select" label="Enable Editing for Post DL Command" values="Disabled|Enabled" default="Disabled"  visible="true"/>
+		<setting id="iagl_enable_android_stop_command" type="select" label="Send Android Stop Command before External Launch" values="Enabled|Disabled" default="Enabled"  visible="true"/>
+		<setting id="iagl_favorites_format" type="select" label="Add to IAGL Favorites" values="Use Hyperlinks to other Lists|Copies all Data|Copies all Data, adds Post DL Command Override" default="Use Hyperlinks to other Lists"  visible="true"/>
+		<setting visible="true" label="Set addon to provide games (RetroPlayer Only)" type="action" action="RunScript(special://home/addons/plugin.program.iagl/resources/lib/update_addonxml_provides_games.py)"/>
+		<setting visible="true" label="Set addon to provide Video" type="action" action="RunScript(special://home/addons/plugin.program.iagl/resources/lib/update_addonxml_provides_video.py)"/>
+		<setting visible="true" label="Set addon to provide Programs" type="action" action="RunScript(special://home/addons/plugin.program.iagl/resources/lib/update_addonxml_provides_program.py)"/>
+		<setting id="iagl_setting_setcontent" type="select" label="Addon Content Type" values="movies|tvshows|videos|mixed|games|None" default="tvshows"/>
+		<setting type="sep"/>
+		<setting visible="true" label="Unhide All Game Lists" type="action" action="RunScript(special://home/addons/plugin.program.iagl/resources/lib/unhide_all_archives.py)"/>
+		<setting type="sep"/>
+		<setting visible="true" label="Clear Cache" type="action" action="RunScript(special://home/addons/plugin.program.iagl/resources/lib/clear_IAGL_cache.py)"/>
+		<setting visible="false" id="iagl_hidden_bool_warn_size" type="bool" label="Display Size Warning" default="true"/>
+		<setting visible="false" id="iagl_hidden_bool_tou" type="bool" label="Agree to Terms of Use" default="false"/>
+		<setting visible="false" id="iagl_hidden_bool_warn_retroarch_sys_dir" type="bool" label="No System Dir Defined" default="true"/>
+	</category>
+</settings>

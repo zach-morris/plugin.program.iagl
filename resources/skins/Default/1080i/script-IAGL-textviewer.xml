@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1102">
+	<defaultcontrol always="true">1000</defaultcontrol>
+	<animation type="WindowOpen" reversible="false">
+			<effect type="zoom" start="80" end="100" center="50%,50%" delay="160" tween="back" time="240" />
+			<effect type="fade" delay="160" end="100" time="240" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="zoom" start="100" end="80" center="50%,50%" easing="in" tween="back" time="240" />
+			<effect type="fade" start="100" end="0" time="240" />
+		</animation>
+		<depth>0.50</depth>
+	<controls>
+		<control type="group">
+			<left>13%</left>
+			<centertop>50%</centertop>
+			<height>770</height>
+			<control type="image">
+			<left>-2000</left>
+			<top>-2000</top>
+			<width>6000</width>
+			<height>6000</height>
+			<animation effect="fade" time="300">VisibleChange</animation>
+			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<texture colordiffuse="C2FFFFFF">black.png</texture>
+			<visible>true</visible>
+		</control>
+		<control type="button">
+			<left>-2000</left>
+			<top>-2000</top>
+			<width>6000</width>
+			<height>6000</height>
+			<texturefocus />
+			<texturenofocus />
+			<onclick>Action(Close)</onclick>
+		</control>
+		<control type="group">
+			<width>84%</width>
+			<height>770</height>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<right>0</right>
+				<bottom>0</bottom>
+				<texture colordiffuse="FF1A2123">white.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<right>0</right>
+				<height>70</height>
+				<texture colordiffuse="FF12A0C7" border="2">white70.png</texture>
+			</control>
+			<control type="label" id="1">
+				<left>40</left>
+				<top>0</top>
+				<right>100</right>
+				<height>70</height>
+				<font>font32_title</font>
+				<label>IAGL - $INFO[Window(home).Property(TextViewer_Header)]</label>
+				<aligny>center</aligny>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="button" id="22002">
+				<description>button overlay to avoid closing in dialog area</description>
+				<left>0</left>
+				<top>0</top>
+				<right>0</right>
+				<bottom>0</bottom>
+				<texturefocus />
+				<texturenofocus />
+				<onclick>noop</onclick>
+			</control>
+			<control type="radiobutton" id="22003">
+				<right>10</right>
+				<top>11</top>
+				<width>48</width>
+				<height>48</height>
+				<radiowidth>48</radiowidth>
+				<radioheight>48</radioheight>
+				<texturefocus />
+				<texturenofocus />
+				<label></label>
+				<textureradioofffocus colordiffuse="EEFFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="EEFFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/logo.png</textureradiooffnofocus>
+				<textureradioonfocus colordiffuse="EEFFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="EEFFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/logo.png</textureradioonnofocus>
+				<onclick>Action(Close)</onclick>
+				<visible>!Skin.HasSetting(touchmode)</visible>
+			</control>
+			<control type="button" id="22004">
+				<right>10</right>
+				<top>11</top>
+				<width>48</width>
+				<height>48</height>
+				<texturefocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</texturefocus>
+				<texturenofocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</texturenofocus>
+				<onclick>Action(Close)</onclick>
+				<visible>Skin.HasSetting(touchmode)</visible>
+			</control>
+		</control>
+			<control type="textbox" id="2000">
+				<left>1%</left>
+				<top>85</top>
+				<width>82%</width>
+				<height>675</height>
+				<shadowcolor>black</shadowcolor>
+				<pagecontrol>3000</pagecontrol>
+				<font>font37</font>
+				<label>$INFO[Window(home).Property(TextViewer_Text)]</label>
+			</control>
+			<control type="scrollbar" id="3000">
+				<left>-3000</left>
+				<top>-3000</top>
+				<width>1</width>
+				<height>1</height>
+				<texturefocus />
+				<texturenofocus />
+				<label></label>
+				<font></font>
+				<ondown>3000</ondown>
+				<onup>3000</onup>
+			</control>
+		</control>
+		<control type="button" id="1000">
+			<left>-3000</left>
+			<top>-3000</top>
+			<width>1</width>
+			<height>1</height>
+			<texturefocus />
+			<texturenofocus />
+			<label></label>
+			<font></font>
+			<onclick>Action(Close)</onclick>
+			<onup>PageUp(3000)</onup>
+			<ondown>PageDown(3000)</ondown>
+		</control>
+		<control type="button">
+			<centerleft>50%</centerleft>
+			<top>113</top>
+			<width>48</width>
+			<height>20</height>
+			<onclick>SetFocus(3000)</onclick>
+			<onclick>Up</onclick>
+			<texturefocus colordiffuse="FF12A0C7" flipy="true">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/arrowdown.png</texturefocus>
+			<texturenofocus colordiffuse="FF12A0C7" flipy="true">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/arrowdown.png</texturenofocus>
+			<visible>Control.IsVisible(3000) + Integer.IsGreater(Container(2000).CurrentPage,1)</visible>
+			<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
+		</control>
+		<control type="button">
+			<centerleft>50%</centerleft>
+			<top>940</top>
+			<width>48</width>
+			<height>20</height>
+			<onclick>SetFocus(3000)</onclick>
+			<onclick>Down</onclick>
+			<texturefocus colordiffuse="FF12A0C7">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/arrowdown.png</texturefocus>
+			<texturenofocus colordiffuse="FF12A0C7">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/arrowdown.png</texturenofocus>
+			<visible>Control.IsVisible(3000) + !String.IsEqual(Container(2000).CurrentPage,Container(2000).NumPages)</visible>
+			<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
+		</control>
+	</controls>
+</window>

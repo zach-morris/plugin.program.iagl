@@ -7,7 +7,7 @@ This addon is still in *BETA*.  Check back soon!
 
 ![IAGL](https://github.com/zach-morris/plugin.program.iagl/blob/master/fanart.jpg)
 
-The Internet Archive Game Launcher (IAGL) will launch Games from the Internet using [Kodi](http://kodi.tv)
+The Internet Archive Game Launcher (IAGL - /eye/gull/) will launch Games from the Internet using [Kodi](http://kodi.tv)
 
 IAGL is *FREE*, as in beer. As in no money. As in gratis.
 
@@ -42,14 +42,13 @@ See the [FAQ](https://github.com/zach-morris/plugin.program.iagl/wiki/5.--FAQ)
 Licenses
 -------------
 
-IAGL code is released under the GNU GENERAL PUBLIC LICENSE Version 3.
+IAGL code is released under the [GNU GENERAL PUBLIC LICENSE Version 3](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
-Supplementary databases released with IAGL, in this folder, are released under the Creative Commons Attribution-NonCommercial 4.0 International license. This allows for *non-commercial* use as long as credit is given and that derivative works (works based on the CC licensed data) are also made available under the same license.
+Supplementary databases released with IAGL, in this folder, are released under the [Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) license. This allows for *non-commercial* use as long as credit is given and that derivative works (works based on the CC licensed data) are also made available under the same license.
 
 Media files in the skin folder are licensed under the Creative Commons Attribution-ShareAlike 4.0 Unported License
-You can find the license details here: <http://creativecommons.org/licenses/by-sa/4.0/>
-Some artwork in this folder is attributed to Estuary by phil65 (Team Kodi)
-https://github.com/phil65/skin.estuary
+You can find the license details [here](http://creativecommons.org/licenses/by-sa/4.0/)
+Some artwork in this folder is attributed to [Estuary by phil65 (Team Kodi)](https://github.com/phil65/skin.estuary)
 
 
 

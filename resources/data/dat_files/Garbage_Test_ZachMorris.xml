@@ -1,0 +1,868 @@
+	<datafile>
+		<header>
+			<emu_name>Garbage Test - Update 3</emu_name>
+			<emu_description>Atary</emu_description>
+			<emu_category>Garbage, Garbage Two</emu_category>
+			<emu_version>093217</emu_version>
+			<emu_date>09/28/2019</emu_date>
+			<emu_author>Jim Jams</emu_author>
+			<emu_visibility>visible</emu_visibility>
+			<emu_homepage>https://archive.org/details/atari_2600_library</emu_homepage>
+			<emu_baseurl>https://archive.org/download/</emu_baseurl>
+			<emu_launcher>retroplayer</emu_launcher>
+			<emu_default_addon>game.libretro.prboom</emu_default_addon>
+			<emu_ext_launch_cmd>This is zachs test</emu_ext_launch_cmd>
+			<emu_downloadpath>/Users/ZC/Downloads/test/</emu_downloadpath>
+			<emu_postdlaction>unarchive_game</emu_postdlaction>
+			<emu_comment>This is zachs test[CR]This is zachs plot test[CR]Test2[CR]Test3333</emu_comment>
+			<emu_thumb>http://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg</emu_thumb>
+			<emu_banner>https://i.imgur.com/h5h8t5t.jpg</emu_banner>
+			<emu_fanart>https://png.pngtree.com/thumb_back/fh260/back_pic/03/63/42/2657ac290bb918c.jpeg</emu_fanart>
+			<emu_logo>https://i.imgur.com/4gaSF6q.png</emu_logo>
+			<emu_trailer>FguRA3WO0jQ</emu_trailer>
+		</header>
+		<game name="Defender II">
+				<description>25.  Defender II</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fdefendr2.zip" size="5752" />
+				<title_clean>Defender II</title_clean>
+				<plot>While the original Defender was a fantastic arcade game, the Atari 2600 port was a major disappointment. Thankfully, when Defender II - or Stargate - came around, the port was a major success and went on to become one of the best games the Atari 2600 had to offer.[CR][CR]In the game, the player pilots a spaceship that is tasked with defending the humans on the surface while destroying the aliens that pop up on the screen. The second joystick is used to control many of the extra features, like hyperspace, which is wise move considering the original Defender instead had the player going off the screen in order to use such things.</plot>
+				<releasedate>18/1/1984</releasedate>
+				<year>1984</year>
+				<genre>Shooter, Scrolling</genre>
+				<studio>Atari</studio>
+				<nplayers>1-2 Alt</nplayers>
+				<rating>8.0</rating>
+				<videoid>hy4xjaXek0I</videoid>
+				<thegamesdb_id>1367</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/585158-stargate</gamefaqs_url>
+				<giantbomb_url>http://www.giantbomb.com/stargate/3030-20967/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/1367-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/1367-1.jpg</boxart2>
+				<snapshot1>http://static.giantbomb.com/uploads/scale_large/7/73970/1418817-3.png</snapshot1>
+				<snapshot2>http://static.giantbomb.com/uploads/scale_large/7/73970/1418816-2.png</snapshot2>
+				<snapshot3>http://static.giantbomb.com/uploads/scale_large/7/73970/1418815-1.png</snapshot3>
+				<snapshot4>http://static.giantbomb.com/uploads/scale_large/7/73970/1418814-4.png</snapshot4>
+				<snapshot5>http://static.giantbomb.com/uploads/scale_large/1/15568/623361-stargate__1984___atari__5.png</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/1/15568/543914-defender_ii__1988___atari__1.png</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/1/15568/543913-defender_ii__1988___atari__4.png</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/1/15568/543912-defender_ii__1988___atari__3.png</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/1/15568/543911-defender_ii__1988___atari__2.png</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/1/15568/543909-defender_ii__1988___atari_.png</snapshot10>
+			</game>
+			<game name="Berzerk">
+				<description>24.  Berzerk</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fberzerk.zip" size="2914" />
+				<title_clean>Berzerk</title_clean>
+				<plot>Featuring a series of mazes filled with killer robots, Berzerk is a shooter that, at first blush, appears regular and standard... and then Evil Otto, the invincible head bounces onto the scene and changed everything. The Atari 2600 port remained faithful to the original arcade game save a few minor adjustments that didn’t have any great effect on gameplay.[CR][CR]With some skill, players could move themselves so that robots ran into walls or even shot each other. But Evil Otto always came if they lingered too long, balancing things out, and making escaping from the entrance to the exit of any screen more complicated.</plot>
+				<releasedate>10/8/2002</releasedate>
+				<year>1982</year>
+				<genre>Action</genre>
+				<studio>AtariAge</studio>
+				<nplayers>1</nplayers>
+				<perspective>3rd-Person</perspective>
+				<rating>4.4</rating>
+				<videoid>J0kWqjDUu7o</videoid>
+				<thegamesdb_id>5297</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/584584-berzerk</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/berzerk_</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/berzerk/3030-4010/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/5297-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/5297-1.jpg</boxart2>
+				<snapshot1>http://www.mobygames.com/images/shots/l/314922-berzerk-atari-2600-screenshot-title-screen.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/314923-berzerk-atari-2600-screenshot-first-maze.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/314924-berzerk-atari-2600-screenshot-these-guys-shoot-back.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/314925-berzerk-atari-2600-screenshot-this-is-evil-otto.jpg</snapshot4>
+				<snapshot5>http://static.giantbomb.com/uploads/scale_large/0/8273/776340-1217344077_00.png</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/0/8273/776339-1217344045_00.png</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/0/8273/776338-1217344007_00.png</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/0/8273/776337-1217343946_00.png</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/1/15568/629484-berzerk__1982___atari__12.png</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/1/15568/629480-berzerk__1982___atari__17.png</snapshot10>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/5297.png</clearlogo1>
+			</game>
+			<game name="Jungle Hunt">
+				<description>23.  Jungle Hunt</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fjungleh.zip" size="6313" />
+				<title_clean>Jungle Hunt</title_clean>
+				<plot>Though it was originally slated to be a Tarzan-infused title, the makers of Jungle Hunt were sued by Edgar Rice Burroughs estate, so we have an original title rather than a derivative one. The explorer even has a pith helmet![CR][CR]The game consisted of a series of scenes that the player was required to traverse. The first a level of ropes the character must swing across, then a crocodile-infested river they must ford followed by a scene where the player must run under boulders and jump over rocks to reach the final screen. In that final area, only two spearmen block the path to rescue the girl.[CR][CR]Though it may sound straightforward, the second difficulty setting, simulated depth and excellent color make Jungle Hunt a cartridge worth tracking down.</plot>
+				<releasedate>18/1/1983</releasedate>
+				<year>1983</year>
+				<studio>Atari, Inc.</studio>
+				<nplayers>1-2 Alt</nplayers>
+				<perspective>3rd-Person</perspective>
+				<rating>3.6</rating>
+				<videoid>Xm_W_OKX7Vo</videoid>
+				<thegamesdb_id>1351</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/584823-jungle-hunt</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/jungle-hunt</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/jungle-hunt/3030-11421/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/1351-1.jpg</boxart1>
+				<boxart2>http://www.mobygames.com/images/covers/l/19519-jungle-hunt-atari-2600-back-cover.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/19520-jungle-hunt-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/34864-jungle-hunt-atari-2600-media.jpg</boxart4>
+				<snapshot1>http://www.mobygames.com/images/shots/l/40453-jungle-hunt-atari-2600-screenshot-title-screen.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/40454-jungle-hunt-atari-2600-screenshot-swinging-from-vine-to-vine.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/40455-jungle-hunt-atari-2600-screenshot-watch-out-for-alligators.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/40456-jungle-hunt-atari-2600-screenshot-jumping-over-boulders.jpg</snapshot4>
+				<snapshot5>http://www.mobygames.com/images/shots/l/40457-jungle-hunt-atari-2600-screenshot-the-natives-are-restless.jpg</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/1/14206/952704-arc.jpg</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/0/3568/485609-junglehunt_pc_00.jpg</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/0/3568/485608-junglehunt_cvis_00.gif</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/0/3568/485607-junglehunt_c64_00.gif</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/0/3568/485606-junglehunt_arc_00.png</snapshot10>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/1351.png</clearlogo1>
+			</game>
+			<game name="River Raid">
+				<description>22.  River Raid</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Friveraid.zip" size="3344" />
+				<title_clean>River Raid</title_clean>
+				<plot>If you’ve ever played a game where branching channels slowly dwindled in space and you needed to avoid the walls, you’ve played a descendant of River Raid. Not only did River Raid feature this mechanic, the player was also required to shoot enemy ships, planes, helicopters, bridges and fuel barges. Fuel is a valuable resource, however, and the player needed to keep track of their own lest they run out.[CR][CR]It was also one of the first games to procedurally generate the placement of enemies and other objects, making it near impossible to try and memorize a set path. While it might not be the best Atari 2600 game, it is certainly a staple in any collection.</plot>
+				<releasedate>18/1/1982</releasedate>
+				<year>1982</year>
+				<genre>Action</genre>
+				<studio>Activision, Inc.</studio>
+				<nplayers>1-2 Alt</nplayers>
+				<perspective>Top-Down</perspective>
+				<rating>3.9</rating>
+				<videoid>pmPjsBDN9Xw</videoid>
+				<thegamesdb_id>1365</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/585031-river-raid</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/river-raid</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/river-raid/3030-10516/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/1365-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/1365-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/53686-river-raid-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/19725-river-raid-atari-2600-media.jpg</boxart4>
+				<boxart5>http://www.mobygames.com/images/covers/l/135247-river-raid-atari-2600-media.jpg</boxart5>
+				<snapshot1>http://thegamesdb.net/banners/screenshots/1365-1.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/39833-river-raid-atari-2600-screenshot-title-screen.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/39834-river-raid-atari-2600-screenshot-a-game-in-progress.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/39835-river-raid-atari-2600-screenshot-the-river-divides.jpg</snapshot4>
+				<snapshot5>http://www.mobygames.com/images/shots/l/39836-river-raid-atari-2600-screenshot-shooting-planes-in-a-narrow.jpg</snapshot5>
+				<snapshot6>http://www.mobygames.com/images/shots/l/39837-river-raid-atari-2600-screenshot-the-game-in-black-and-white.jpg</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/10/106662/1702640-vtm_bloodlines__36_.jpg</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/0/4938/697627-1145407230_00.png</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/0/4938/697626-1145407208_00.png</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/0/4938/697623-1145407288_00.png</snapshot10>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/1365.png</clearlogo1>
+			</game>
+			<game name="Atlantis (Activision)">
+				<description>21.  Atlantis</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fatlantisa.zip" size="3166" />
+				<title_clean>Atlantis</title_clean>
+				<plot>Praised for its graphics, Atlantis might look like Missile Command at the start but ends up playing far differently. As one of the few games on the list designed directly for the Atari 2600, there was nothing to shoehorn into the limited hardware, so everything that was meant to be in the game is.[CR][CR]The player uses three stationary missile bases to fire at invaders dropping from the sky. In order to destroy them, the player must time their shots so that they intersect with the interlopers at exactly the right moment. Atlantis is also highly praised for being one of the first games with a true ending. When all of Atlantis is destroyed, a small craft escapes to fight again another day.</plot>
+				<releasedate>18/1/1982</releasedate>
+				<year>1982</year>
+				<genre>Action</genre>
+				<studio>Imagic</studio>
+				<nplayers>1</nplayers>
+				<perspective>3rd-Person</perspective>
+				<rating>3.4</rating>
+				<videoid>Rpos_OopvIY</videoid>
+				<thegamesdb_id>9272</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/584560-atlantis</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/atlantis</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/atlantis/3030-16631/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/9272-1.jpg</boxart1>
+				<boxart2>http://www.mobygames.com/images/covers/l/24347-atlantis-atari-2600-back-cover.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/24348-atlantis-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/71165-atlantis-atari-2600-media.jpg</boxart4>
+				<snapshot1>http://www.mobygames.com/images/shots/l/48771-atlantis-atari-2600-screenshot-title-screen.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/48772-atlantis-atari-2600-screenshot-a-game-in-progress.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/48773-atlantis-atari-2600-screenshot-more-gorgons-on-their-way-in.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/48774-atlantis-atari-2600-screenshot-game-over.jpg</snapshot4>
+				<snapshot5>http://static.giantbomb.com/uploads/scale_large/1/15568/634659-atlantis__1982___imagic__9.png</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/1/15568/634658-atlantis__1982___imagic__11.png</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/1/15568/634655-atlantis__1982___imagic__10.png</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/1/15568/634653-atlantis__1982___imagic__8.png</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/1/15568/634652-atlantis__1982___imagic__7.png</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/1/15568/634651-atlantis__1982___imagic__6.png</snapshot10>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/9272.png</clearlogo1>
+			</game>
+			<game name="Demon Attack">
+				<description>20.  Demon Attack</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fdemonatk.zip" size="3713" />
+				<title_clean>Demon Attack</title_clean>
+				<plot>Demon Attack was based on the arcade game Galaxian but was often compared to another game from Atari, Phoenix. The resemblance was so uncanny that Atari saw fit to sue Imagic, though they eventually settled out of court. Though the game was an almost entirely straight-forward shooter, increasingly difficult up to the 84th wave of enemies and an endless loop of them afterwords made for compelling gameplay.[CR][CR]The player was represented by a spaceship that shot vertically at demons that shot right back. Over time, different waves would have different attributes, like splitting when hit. While the graphics for the Atari 2600 weren’t terribly impressive, even at the time of release, Demon Attack went on to become the best-selling Imagic cartridge on the system.</plot>
+				<releasedate>18/1/1982</releasedate>
+				<year>1982</year>
+				<genre>Action</genre>
+				<studio>Imagic</studio>
+				<nplayers>1-2 Alt</nplayers>
+				<perspective>3rd-Person</perspective>
+				<rating>3.7</rating>
+				<videoid>3mP37XoJiFc</videoid>
+				<thegamesdb_id>9271</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/584677-demon-attack</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/demon-attack</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/demon-attack/3030-15941/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/9271-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/9271-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/21673-demon-attack-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/21674-demon-attack-atari-2600-media.jpg</boxart4>
+				<boxart5>http://www.mobygames.com/images/covers/l/135233-demon-attack-atari-2600-media.jpg</boxart5>
+				<snapshot1>http://www.mobygames.com/images/shots/l/44256-demon-attack-atari-2600-screenshot-title-screen.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/44257-demon-attack-atari-2600-screenshot-fighting-the-attacking-demons.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/44258-demon-attack-atari-2600-screenshot-demons-attacking-you-with.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/44259-demon-attack-atari-2600-screenshot-some-demons-will-split-into.jpg</snapshot4>
+				<snapshot5>http://www.mobygames.com/images/shots/l/44260-demon-attack-atari-2600-screenshot-a-game-in-progress.jpg</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/10/101045/1438965-da5.png</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/10/101045/1438964-da4.png</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/10/101045/1438963-da3.png</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/10/101045/1438962-da2.png</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/10/101045/1438961-da1.png</snapshot10>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/9271.png</clearlogo1>
+			</game>
+			<game name="Joust">
+				<description>19.  Joust</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fjoust.zip" size="6164" />
+				<title_clean>Joust</title_clean>
+				<plot>Joust, like many other Atari 2600 games, was born in the arcade. It was also another of the games that had to make compromises to fit on the limited hardware provided. But limitation breeds innovation and some of the tricks they used were downright brilliant.[CR][CR]The game pits the player as a knight with a lance riding a flying ostrich with the goal of knocking the other ostrich-riding knights about, gathering eggs and survival in general. As the waves progress, more enemies attempt to unseat the player. On. And there's lava. Did we mention that there's lava?</plot>
+				<releasedate>18/1/1983</releasedate>
+				<year>1983</year>
+				<genre>Action</genre>
+				<studio>Atari, Inc.</studio>
+				<nplayers>1-2 Co-Op</nplayers>
+				<perspective>3rd-Person</perspective>
+				<rating>3.3</rating>
+				<videoid>xa3hUnGX9JI</videoid>
+				<thegamesdb_id>1350</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/563245-joust</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/joust</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/joust/3030-11689/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/1350-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/1350-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/19547-joust-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/34639-joust-atari-2600-media.jpg</boxart4>
+				<snapshot1>http://www.mobygames.com/images/shots/l/50040-joust-atari-2600-screenshot-title-screen.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/50041-joust-atari-2600-screenshot-starting-a-game-of-joust.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/50042-joust-atari-2600-screenshot-platforms-change-from-level-to.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/50043-joust-atari-2600-screenshot-beginning-an-egg-wave.jpg</snapshot4>
+				<snapshot5>http://www.mobygames.com/images/shots/l/50044-joust-atari-2600-screenshot-watch-out-for-the-unbeatable-pterodactyl.jpg</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/0/1987/1127358-joust__softrunner__3.gif</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/0/1987/1127357-joust__softrunner__2.gif</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/0/1987/1127356-joust__softrunner__1.gif</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/0/1987/1127355-joust__softrunner_.gif</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/0/1987/1127354-joust_3.gif</snapshot10>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/1350.png</clearlogo1>
+			</game>
+			<game name="Spy Hunter">
+				<description>18.  Spy Hunter</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fspyhunt.zip" size="6005" />
+				<title_clean>Spy Hunter</title_clean>
+				<plot>Spy Hunter is the arcade and eventually the Atari 2600’s version of James Bond. They were even in talks to use the James Bond theme song, supposedly, and when that fell through they settled for the theme from Peter Gunn. Close enough?[CR][CR]Gameplay primarily consists of two segments: Land and Water. The player pilots a car and then a boat in the different acts that tries to avoid or destroy the enemy vehicles chasing them. It also came with a special controller piece that would let two joysticks be conjoined so the player could use both the machines at the front of the vehicle and the back.</plot>
+				<releasedate>18/1/1984</releasedate>
+				<year>1984</year>
+				<genre>Action, Driving, Racing</genre>
+				<studio>SEGA Enterprises, Inc.</studio>
+				<nplayers>1</nplayers>
+				<perspective>Top-Down</perspective>
+				<rating>1.4</rating>
+				<thegamesdb_id>22182</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/585137-spy-hunter</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/spy-hunter</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/spy-hunter/3030-10448/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/22182-1.jpg</boxart1>
+				<boxart2>http://img.gamefaqs.net/box/4/0/6/32406_back.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/21819-spy-hunter-atari-2600-media.jpg</boxart3>
+				<snapshot1>http://www.mobygames.com/images/shots/l/44577-spy-hunter-atari-2600-screenshot-title-screen.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/44574-spy-hunter-atari-2600-screenshot-a-game-in-progress.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/44575-spy-hunter-atari-2600-screenshot-the-weapons-van-is-on-the.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/44576-spy-hunter-atari-2600-screenshot-driving-the-boat.jpg</snapshot4>
+				<snapshot5>http://static.giantbomb.com/uploads/scale_large/18/185326/2776795-4673939723-Spy_H.jpg</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/18/185326/2776793-8641228698-cpU98.jpg</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/1/15568/616094-1207269808_00.png</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/1/15568/616086-1207269831_00.png</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/1/15568/616085-1207269822_00.png</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/1/15568/616084-1207269815_00.png</snapshot10>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/22182.png</clearlogo1>
+			</game>
+			<game name="Raiders of the Lost Ark">
+				<description>17.  Raiders of the Lost Ark</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fraiders.zip" size="6661" />
+				<title_clean>Raiders of the Lost Ark</title_clean>
+				<plot>Raiders of the Lost Ark comes from the same programmer that did both Yars’ Revenge and E.T. the Extra-Terrestrial. This happens to be more in the vein of Yars’ Revenge than E.T., thankfully, and is often cited as one of the most complex adventure games for the Atari 2600. It’s also recognized as the first video game licensed from a movie.[CR][CR]The game loosely follows the plot of the movie and requires a series of somewhat obscure steps in order to complete it and find the ark. Both joysticks are necessary - one for movement, one for the player’s inventory - and if that weren’t complicated enough, certain events only occur at random intervals in the game.[CR][CR]Even with the ridiculous difficulty, Raiders of the Lost Ark was a wonderfully varied game for something as simple as the Atari 2600. Too bad movie tie-ins didn't remain this good for long...</plot>
+				<releasedate>18/1/1982</releasedate>
+				<year>1982</year>
+				<genre>Adventure</genre>
+				<studio>Atari, Inc.</studio>
+				<nplayers>1</nplayers>
+				<perspective>3rd-Person</perspective>
+				<rating>2.9</rating>
+				<videoid>5JXcwbUG_CI</videoid>
+				<thegamesdb_id>5319</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/585011-raiders-of-the-lost-ark</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/raiders-of-the-lost-ark</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/raiders-of-the-lost-ark/3030-4739/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/5319-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/5319-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/37111-raiders-of-the-lost-ark-atari-2600-media.jpg</boxart3>
+				<snapshot1>http://www.mobygames.com/images/shots/l/86269-raiders-of-the-lost-ark-atari-2600-screenshot-the-opening-screen.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/86270-raiders-of-the-lost-ark-atari-2600-screenshot-starting-location.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/86271-raiders-of-the-lost-ark-atari-2600-screenshot-useful-items.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/86272-raiders-of-the-lost-ark-atari-2600-screenshot-i-found-a-timepiece.jpg</snapshot4>
+				<snapshot5>http://www.mobygames.com/images/shots/l/86273-raiders-of-the-lost-ark-atari-2600-screenshot-uh-oh-here-comes.jpg</snapshot5>
+				<snapshot6>http://www.mobygames.com/images/shots/l/86274-raiders-of-the-lost-ark-atari-2600-screenshot-i-m-up-on-the.jpg</snapshot6>
+				<snapshot7>http://www.mobygames.com/images/shots/l/86275-raiders-of-the-lost-ark-atari-2600-screenshot-falling-from.jpg</snapshot7>
+				<snapshot8>http://www.mobygames.com/images/shots/l/86276-raiders-of-the-lost-ark-atari-2600-screenshot-drat-i-m-trapped.jpg</snapshot8>
+				<snapshot9>http://www.mobygames.com/images/shots/l/302343-raiders-of-the-lost-ark-atari-2600-screenshot-the-map-room.jpg</snapshot9>
+				<snapshot10>http://www.mobygames.com/images/shots/l/302344-raiders-of-the-lost-ark-atari-2600-screenshot-indy-finds-the.jpg</snapshot10>
+			</game>
+			<game name="Asteroids">
+				<description>16.  Asteroids</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fasteroid.zip" size="5547" />
+				<title_clean>Asteroids</title_clean>
+				<plot>Asteroids is one of the classics that never gets old. Though the art style was changed from vector graphics to pixels between the arcade and the Atari 2600 port, the game remained true to its roots and brought a little color into what was previously an entirely black and white universe.[CR][CR]The objective of the game is to last as long as possible, destroying asteroids and other objects as they appear while avoiding them as well. Though it was considered a much easier game than the arcade original, the Atari 2600 still stands out as an example of how to make potentially repetitive games an enjoyable experience.</plot>
+				<releasedate>18/1/1981</releasedate>
+				<year>1981</year>
+				<genre>Action</genre>
+				<studio>Atari, Inc.</studio>
+				<nplayers>1-2 Alt</nplayers>
+				<perspective>3rd-Person</perspective>
+				<rating>3.5</rating>
+				<videoid>wqtbIYq7qrM</videoid>
+				<thegamesdb_id>1342</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/563236-asteroids</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/asteroids_</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/asteroids/3030-1034/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/1342-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/1342-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/19821-asteroids-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/19822-asteroids-atari-2600-media.jpg</boxart4>
+				<boxart5>http://www.mobygames.com/images/covers/l/34133-asteroids-atari-2600-media.jpg</boxart5>
+				<boxart6>http://www.mobygames.com/images/covers/l/62389-asteroids-atari-2600-media.jpg</boxart6>
+				<boxart7>http://www.mobygames.com/images/covers/l/135263-asteroids-atari-2600-media.jpg</boxart7>
+				<boxart8>http://www.mobygames.com/images/covers/l/204047-asteroids-atari-2600-media.jpg</boxart8>
+				<snapshot1>http://www.mobygames.com/images/shots/l/45074-asteroids-atari-2600-screenshot-blasting-asteroids.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/45075-asteroids-atari-2600-screenshot-each-level-starts-with-several.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/45076-asteroids-atari-2600-screenshot-eventually-you-have-lots-of.jpg</snapshot3>
+				<snapshot4>http://static.giantbomb.com/uploads/scale_large/7/73970/1419172-0012.png</snapshot4>
+				<snapshot5>http://static.giantbomb.com/uploads/scale_large/7/73970/1419171-0011.png</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/7/73970/1419170-0010.png</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/7/73970/1419169-0009.png</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/7/73970/1419168-0013.png</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/7/73970/1419160-47.png</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/7/73970/1419159-46.png</snapshot10>
+				<fanart1>http://thegamesdb.net/banners/fanart/original/1342-1.jpg</fanart1>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/1342.png</clearlogo1>
+			</game>
+			<game name="Yars' Revenge">
+				<description>15.  Yars' Revenge</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fyarsrev.zip" size="3525" />
+				<title_clean>Yars' Revenge</title_clean>
+				<plot>Yars’ Revenge is an odd gem of a game and one of the most popular of the original titles for the Atari 2600. The title was meant to poke fun at the CEO of Atari, Ray Kassar, and was programmed by the same guy that worked on both Raiders of the Lost Ark and E.T. the Extra-Terrestrial. Talk about an inside joke.[CR][CR]The game features the player as an intergalactic flying bug that must shoot down the evil Qotile which hides behind its shields. There is a neutral zone in the middle where missiles cannot hurt the player but the player can’t shoot either. The Qotile has some tricks up its sleeve, though, and can still fire an angry swirl and do damage.[CR][CR]Part of the appeal was the difficulty of the game and strategies that developed using the various mechanics available. Specifically, the neutral zone is often cited as a stroke of genius.</plot>
+				<releasedate>18/1/1981</releasedate>
+				<year>1981</year>
+				<genre>Action</genre>
+				<studio>Atari, Inc.</studio>
+				<nplayers>1-2 Alt</nplayers>
+				<perspective>3rd-Person</perspective>
+				<rating>3.7</rating>
+				<videoid>N0cEdNRe98A</videoid>
+				<thegamesdb_id>3598</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/585280-yars-revenge</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/yars-revenge</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/yars-revenge/3030-14821/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/3598-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/3598-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/21442-yars-revenge-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/135269-yars-revenge-atari-2600-media.jpg</boxart4>
+				<snapshot1>http://www.mobygames.com/images/shots/l/43886-yars-revenge-atari-2600-screenshot-title-screen.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/43887-yars-revenge-atari-2600-screenshot-a-game-in-progress.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/43888-yars-revenge-atari-2600-screenshot-mission-accomplished.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/43889-yars-revenge-atari-2600-screenshot-watch-out-for-the-swirl.jpg</snapshot4>
+				<snapshot5>http://static.giantbomb.com/uploads/scale_large/1/15606/1293354-yarswirl2.gif</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/1/15606/1293353-yarexplode.gif</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/1/15606/1293352-yarbluerect.gif</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/0/5768/718383-yar.jpg</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/0/5312/275240-yars2.jpg</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/0/5312/275239-yar3.png</snapshot10>
+			</game>
+			<game name="Centipede">
+				<description>14.  Centipede</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fcentiped.zip" size="5235" />
+				<title_clean>Centipede</title_clean>
+				<plot>Centipede is often boasted as the first arcade game to be designed by a woman. Though there’s been some evidence that this fact was skewed by the marketing folks, time has come and gone and the legend remains. The Atari 2600 port was as faithful as it could possibly be to the original.[CR][CR]Though the hardware limitations prevented the same graphical quality from being presented, the gameplay translated incredibly well to home consoles. The player moves a cannon from side to side while firing at the centipede making its way through the course. Extra points are granted for hitting various other enemies like the spider and fleas. </plot>
+				<releasedate>18/1/1982</releasedate>
+				<year>1982</year>
+				<studio>Atari, Inc.</studio>
+				<nplayers>1 to 2 Alternating</nplayers>
+				<rating>3.5</rating>
+				<videoid>pPfJhUgliSs</videoid>
+				<thegamesdb_id>1346</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/584616-centipede</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/centipede_</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/centipede/3030-1157/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/1346-1.jpg</boxart1>
+				<boxart2>http://www.mobygames.com/images/covers/l/79050-centipede-atari-2600-back-cover.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/20689-centipede-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/20690-centipede-atari-2600-media.jpg</boxart4>
+				<boxart5>http://www.mobygames.com/images/covers/l/34136-centipede-atari-2600-media.jpg</boxart5>
+				<boxart6>http://www.mobygames.com/images/covers/l/34872-centipede-atari-2600-media.jpg</boxart6>
+				<snapshot1>http://www.mobygames.com/images/shots/l/40646-centipede-atari-2600-screenshot-title-screen.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/40647-centipede-atari-2600-screenshot-the-first-level.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/40648-centipede-atari-2600-screenshot-watch-out-for-the-spider.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/40649-centipede-atari-2600-screenshot-the-centipede-makes-its-way.jpg</snapshot4>
+				<snapshot5>http://static.giantbomb.com/uploads/scale_large/7/73970/1414359-5.png</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/7/73970/1414358-4.png</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/7/73970/1414357-3.png</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/7/73970/1414356-1.png</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/7/73970/1414355-6.png</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/8/82221/1276313-gfs_34268_2_1.jpg</snapshot10>
+				<fanart1>http://thegamesdb.net/banners/fanart/original/1346-1.jpg</fanart1>
+				<fanart2>http://thegamesdb.net/banners/fanart/original/1346-2.jpg</fanart2>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/1346.png</clearlogo1>
+			</game>
+			<game name="Ms. Pac-Man">
+				<description>13.  Ms. Pac-Man</description>
+				<rom name="MESS_0.149_Software_List_ROMs/MESS_0.149_Software_List_ROMs.zip/MESS%200.149%20Software%20List%20ROMs%2Fa2600%2Fmspacman.zip" size="4000" />
+				<title_clean>Ms. Pac-Man</title_clean>
+				<plot>Keeping with the trend of ported arcade games, Ms. Pac-Man is an oddity among oddities. To begin with, it was first conceived as an enhancement kit called "Crazy Otto" for the original Pac-Man arcade cabinets by programmers at the General Computer Corporation. When legal troubles forced them to halt, they decided to sell the game as a whole. Thus, with a few changes, Ms. Pac-Man was born.[CR][CR]Whereas the original Atari 2600 version of Pac-Man was a (very) poor port, the port of Ms. Pac-Man was nothing if not stellar and crisp. Of everything included in the arcade cabinet, the only thing missing from the Atari 2600 version were the intermissions. That means that four different mazes, different-colored ghosts, fruit, and even an animated title screen made the jump to consoles, and that's none too shabby, especially considering how much was cut from the original Pac-Man port. </plot>
+				<releasedate>18/1/1982</releasedate>
+				<year>1982</year>
+				<genre>Action</genre>
+				<studio>Atari, Inc.</studio>
+				<nplayers>1-2 Alt</nplayers>
+				<perspective>Top-Down</perspective>
+				<rating>3.6</rating>
+				<videoid>DgqE2fwKt4c</videoid>
+				<thegamesdb_id>5314</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/584919-ms-pac-man</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/ms-pac-man</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/ms-pac-man/3030-6332/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/5314-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/5314-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/19523-ms-pac-man-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/19539-ms-pac-man-atari-2600-media.jpg</boxart4>
+				<snapshot1>http://thegamesdb.net/banners/screenshots/5314-1.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/39694-ms-pac-man-atari-2600-screenshot-title-screen-the-game-screen.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/39695-ms-pac-man-atari-2600-screenshot-a-game-in-progress.jpg</snapshot3>
+				<snapshot4>http://static.giantbomb.com/uploads/scale_large/16/164924/2645498-3350680644-12668.jpg</snapshot4>
+				<snapshot5>http://static.giantbomb.com/uploads/scale_large/16/164924/2645497-7416629069-12668.jpg</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/0/9408/748642-1093918192_00.png</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/0/9408/748641-1128168320_00.png</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/0/9408/748640-1093918268_00.png</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/0/9408/748639-1093918206_00.png</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/0/9408/748636-1128068986_00.png</snapshot10>
+				<fanart1>http://thegamesdb.net/banners/fanart/original/5314-1.jpg</fanart1>
+				<fanart2>http://thegamesdb.net/banners/fanart/original/5314-2.jpg</fanart2>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/5314.png</clearlogo1>
+			</game>
+			<game name="Q*bert">
+				<description>12.  Q*bert</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fqbert.zip" size="3296" />
+				<title_clean>Q*bert</title_clean>
+				<plot>Q*bert’s wacky cast of characters and simple gameplay mechanics made it an instant success in the arcade. When this was ported to the Atari 2600, it remained largely the same except for one major concession: the animations for enemy movement were gone. This made a game that could be difficult at times and easy at others consistently more difficult. Some found this a flaw, while others actually celebrated the new difficulty that arose from technical limitations.[CR][CR]The entire game revolves around the titular character, Q*bert, jumping around to turn blocks the same color. Whilst the player goes about this business, Coily the snake and other bizarre creatures give chase. It’s admittedly a pretty weird scene, but it's weird in a good way.</plot>
+				<releasedate>18/1/1983</releasedate>
+				<year>1983</year>
+				<genre>Action</genre>
+				<studio>Parker Brothers</studio>
+				<nplayers>1-2 Alt</nplayers>
+				<perspective>3rd-Person</perspective>
+				<rating>3.2</rating>
+				<videoid>vkZhWsiHCqM</videoid>
+				<thegamesdb_id>5318</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/584999-qbert</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/qbert</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/qbert/3030-20782/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/5318-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/5318-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/34629-q-bert-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/51284-q-bert-atari-2600-media.jpg</boxart4>
+				<snapshot1>http://www.mobygames.com/images/shots/l/40061-q-bert-atari-2600-screenshot-changing-tiles-on-the-first-level.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/40062-q-bert-atari-2600-screenshot-catch-the-green-ball-to-temporarily.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/40063-q-bert-atari-2600-screenshot-floating-to-the-top-after-jumping.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/40064-q-bert-atari-2600-screenshot-hop-on-each-tile-twice-to-change.jpg</snapshot4>
+				<snapshot5>http://img.gamefaqs.net/screens/1/7/0/gfs_37943_2_1.jpg</snapshot5>
+				<fanart1>http://thegamesdb.net/banners/fanart/original/5318-1.jpg</fanart1>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/5318.png</clearlogo1>
+			</game>
+			<game name="E.T. - The Extra-Terrestrial">
+				<description>11.  E.T. - The Extra-Terrestrial</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fet.zip" size="6222" />
+				<title_clean>E.T. - The Extra-Terrestrial</title_clean>
+				<plot>Video game history has some amazing items in it that represent big moments in the development of the American video game industry.  But one big moment was unrepresented: the dark days of the 1980s when the U.S. video game industry crashed.[CR][CR]That's why E.T. the Extra-Terrestrial Atari 2600 is in this collection.  Unearthed from a landfill, this game personifies the video game crash that took place from 1982 to 1985.</plot>
+				<releasedate>18/1/1982</releasedate>
+				<year>1982</year>
+				<genre>Adventure</genre>
+				<studio>Atari, Inc.</studio>
+				<nplayers>1</nplayers>
+				<perspective>3rd-Person</perspective>
+				<rating>1.1</rating>
+				<videoid>QmrQkQsM9FU</videoid>
+				<thegamesdb_id>7611</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/563239-et-the-extra-terrestrial</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/et-the-extra-terrestrial_</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/et-the-extra-terrestrial/3030-21595/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/7611-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/7611-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/20694-e-t-the-extra-terrestrial-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/36489-e-t-the-extra-terrestrial-atari-2600-media.jpg</boxart4>
+				<snapshot1>http://www.mobygames.com/images/shots/l/53291-e-t-the-extra-terrestrial-atari-2600-screenshot-title-screen.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/53292-e-t-the-extra-terrestrial-atari-2600-screenshot-beginning-the.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/53293-e-t-the-extra-terrestrial-atari-2600-screenshot-exploring-a.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/53294-e-t-the-extra-terrestrial-atari-2600-screenshot-found-something.jpg</snapshot4>
+				<snapshot5>http://www.mobygames.com/images/shots/l/53296-e-t-the-extra-terrestrial-atari-2600-screenshot-uh-oh-in-trouble.jpg</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/8/82221/1277191-et_830.jpg</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/0/316/493585-e.t._the_extraterrestrial_2600_screenshot2.jpg.gif</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/0/316/493584-et2600_pit.gif</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/0/316/493583-e.t._the_extra_terrestrial_2600_screenshot3.gif</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/0/5224/469023-img_4.jpg</snapshot10>
+				<fanart1>http://thegamesdb.net/banners/fanart/original/7611-1.jpg</fanart1>
+			</game>
+			<game name="Warlords">
+				<description>10.  Warlords</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fwarlords.zip" size="3147" />
+				<title_clean>Warlords</title_clean>
+				<plot>Warlords demonstrates the frenetic ever-changing landscape that multiplayer games would come to be known for later. Though there are a variety of modes to choose from, a vast majority of players stick to the four player configuration due to the fact that it allows the most players while still having easy to understand gameplay.[CR][CR]The players each control a shield guarding a wall of blocks in front of their respective knights. A fireball bounces around the screen that the players can deflect using paddle controllers to send them off at their enemies to destroy the blocks guarding their knights. The last knight standing wins the round and the winner of five rounds wins the game.[CR][CR]Though the graphics are nothing to write home about, the game they represent certainly is. Talk about a series overdue for a revisit.</plot>
+				<releasedate>18/1/1981</releasedate>
+				<year>1981</year>
+				<genre>Action</genre>
+				<studio>Sears, Roebuck and Co.</studio>
+				<nplayers>1-4 Sim</nplayers>
+				<perspective>3rd-Person</perspective>
+				<rating>3.4</rating>
+				<thegamesdb_id>1359</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/585261-warlords</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/warlords_</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/warlords/3030-25096/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/1359-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/1359-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/20711-warlords-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/21818-warlords-atari-2600-media.jpg</boxart4>
+				<boxart5>http://www.mobygames.com/images/covers/l/225294-warlords-atari-2600-media.jpg</boxart5>
+				<snapshot1>http://www.mobygames.com/images/shots/l/42012-warlords-atari-2600-screenshot-a-game-in-progress.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/42013-warlords-atari-2600-screenshot-and-player-two-is-ahead-by-a.jpg</snapshot2>
+				<snapshot3>http://static.giantbomb.com/uploads/scale_large/7/73970/1419240-4.png</snapshot3>
+				<snapshot4>http://static.giantbomb.com/uploads/scale_large/7/73970/1419239-3.png</snapshot4>
+				<snapshot5>http://static.giantbomb.com/uploads/scale_large/7/73970/1419238-2.png</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/7/73970/1419237-1.png</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/7/73970/1419236-6.png</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/0/7465/920614-newwarlords_06.jpg</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/0/7465/920613-newwarlords_05.jpg</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/0/7465/920612-newwarlords_04.jpg</snapshot10>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/1359.png</clearlogo1>
+			</game>
+			<game name="Frogger">
+				<description>9.  Frogger</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Ffrogger.zip" size="3485" />
+				<title_clean>Frogger</title_clean>
+				<plot>Frogger, more than the majority of arcade games turned console games on this list, is a nearly flawless port to the Atari 2600. Though it was released a number of times by different publishers, the Parker Brothers version is the most well-known and the one most folks think of when they think of Frogger for the console.[CR][CR]The 1982 version included everything from the arcade game, like navigating the street filled with cars, the river full of logs and flies that could be picked up for extra points. The bright and distinct colors made all of the different objects stand out from each other in a way that made sense. The Atari 2600 version is a timeless classic, and perhaps the best version of Frogger.</plot>
+				<releasedate>18/1/1983</releasedate>
+				<year>1983</year>
+				<genre>Action</genre>
+				<studio>Parker Brothers</studio>
+				<nplayers>1-2 Alt</nplayers>
+				<perspective>Top-Down</perspective>
+				<rating>3.6</rating>
+				<videoid>P0PKgBA-1Zg</videoid>
+				<thegamesdb_id>1369</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/563240-frogger</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/frogger</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/frogger/3030-11903/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/1369-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/1369-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/19788-frogger-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/135229-frogger-atari-2600-media.jpg</boxart4>
+				<snapshot1>http://www.mobygames.com/images/shots/l/40458-frogger-atari-2600-screenshot-a-game-in-progress.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/40459-frogger-atari-2600-screenshot-the-game-in-black-and-white-mode.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/167302-frogger-atari-2600-screenshot-game-in-progress-starpath-supercharger.jpg</snapshot3>
+				<snapshot4>http://static.giantbomb.com/uploads/scale_large/1/14761/1633844-5a433c75_f5b9_4d18_b0fa_022318797a41.png</snapshot4>
+				<snapshot5>http://static.giantbomb.com/uploads/scale_large/1/14761/1633843-374f3bd4_c361_4900_ab7f_2982632402d7.png</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/1/14761/1633842-f0fd6f2d_6d9e_4f0d_9597_507e3dff2e2c.png</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/0/3358/663260-image021.png</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/1/15568/496315-frogger__1982___parker_bros__1.png</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/1/15568/496314-frogger__1982___parker_bros__2.png</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/1/15568/496313-frogger__1982___parker_bros__4.png</snapshot10>
+				<fanart1>http://thegamesdb.net/banners/fanart/original/1369-1.jpg</fanart1>
+				<fanart2>http://thegamesdb.net/banners/fanart/original/1369-2.jpg</fanart2>
+				<banner1>http://thegamesdb.net/banners/graphical/1369-g.jpg</banner1>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/1369.png</clearlogo1>
+			</game>
+			<game name="Pole Position">
+				<description>8.  Pole Position</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fpolepos.zip" size="5694" />
+				<title_clean>Pole Position</title_clean>
+				<plot>The port from arcades to console did have some flaws in Pole Position's case, like the removal of billboards on the highway and how the grass suddenly became entirely paved in the transition, but such is the limitations of moving from the huge cabinet to the small cartridge.[CR][CR]The core game remained unchanged, however, and the gameplay had the player weaving in and out of a series of enemy cars while twisting and turning with the road. The car accelerates automatically and the fire button acts as a brake button as the player jets down the raceway. Though the environment might be sparse and oddly colored, the game itself continued to be exhilarating. Everything that made the arcade game as good as it was made the jump to home consoles.</plot>
+				<releasedate>18/1/1983</releasedate>
+				<year>1983</year>
+				<genre>Driving, Racing</genre>
+				<studio>Atari, Inc.</studio>
+				<nplayers>1</nplayers>
+				<perspective>3rd-Person</perspective>
+				<rating>3.3</rating>
+				<videoid>W2jLrNYzyr8</videoid>
+				<thegamesdb_id>5571</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/584981-pole-position</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/pole-position</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/pole-position/3030-10087/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/5571-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/5571-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/19750-pole-position-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/38040-pole-position-atari-2600-media.jpg</boxart4>
+				<boxart5>http://www.mobygames.com/images/covers/l/52735-pole-position-atari-2600-media.jpg</boxart5>
+				<snapshot1>http://thegamesdb.net/banners/screenshots/5571-1.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/39930-pole-position-atari-2600-screenshot-title-screen.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/39931-pole-position-atari-2600-screenshot-racing.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/39932-pole-position-atari-2600-screenshot-a-crash.jpg</snapshot4>
+				<snapshot5>http://static.giantbomb.com/uploads/scale_large/0/3568/548813-poleposition_vec_00.png</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/0/3568/548811-poleposition_c64_01.gif</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/0/3568/548810-poleposition_c64_00.gif</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/0/3568/548805-poleposition_5200_00.gif</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/1/15568/504992-pole_position__1983___atari__5.png</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/1/15568/504991-pole_position__1983___atari__4.png</snapshot10>
+				<banner1>http://thegamesdb.net/banners/graphical/5571-g.jpg</banner1>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/5571.png</clearlogo1>
+			</game>
+			<game name="Dig Dug">
+				<description>7.  Dig Dug</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fdigdug.zip" size="10361" />
+				<title_clean>Dig Dug</title_clean>
+				<plot>Dig Dug is another port to the Atari 2600 from an arcade classic that remained strongly similar to the original. Though the graphical limitations of the console required some concessions to be made (everything ends up looking like a series of squares), the gameplay survived the transition largely unscathed.[CR][CR]The player, as the intrepid gardener Dig Dug, must dig around and try to blow up the pesky enemies cluttering the screen with their handy-dandy air pump. There are also rocks scattered about that the player can strategically use to drop on said enemies if they so choose. They aren’t terribly discriminating, however, and will crush the player just as easily.</plot>
+				<releasedate>18/1/1983</releasedate>
+				<year>1983</year>
+				<genre>Action</genre>
+				<studio>Atari, Inc.</studio>
+				<nplayers>1-2 Alt</nplayers>
+				<perspective>3rd-Person</perspective>
+				<rating>3.6</rating>
+				<ESRB>E - Everyone</ESRB>
+				<thegamesdb_id>207</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/584684-dig-dug</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/dig-dug</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/dig-dug/3030-2587/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/207-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/207-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/19678-dig-dug-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/34193-dig-dug-atari-2600-media.jpg</boxart4>
+				<boxart5>http://www.mobygames.com/images/covers/l/34623-dig-dug-atari-2600-media.jpg</boxart5>
+				<snapshot1>http://www.mobygames.com/images/shots/l/39947-dig-dug-atari-2600-screenshot-title-screen.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/39948-dig-dug-atari-2600-screenshot-starting-a-new-game.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/39949-dig-dug-atari-2600-screenshot-digging-your-own-maze.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/39950-dig-dug-atari-2600-screenshot-on-the-run-from-many-enemies.jpg</snapshot4>
+				<snapshot5>http://static.giantbomb.com/uploads/scale_large/2/23093/2786026-digdug001.jpg</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/2/23093/2786025-dig+dug+%281990%29%28namco+ltd.%29_003.jpg</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/2/23093/2786024-dig+dug+%281990%29%28namco+ltd.%29_002.jpg</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/2/23093/2786023-dig+dug+%281990%29%28namco+ltd.%29_001.jpg</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/0/7667/1692368-digduggameplay.gif</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/1/15568/543929-dig_dug__1983___atari__2.png</snapshot10>
+				<fanart1>http://thegamesdb.net/banners/fanart/original/207-1.jpg</fanart1>
+				<banner1>http://thegamesdb.net/banners/graphical/207-g.jpg</banner1>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/207.png</clearlogo1>
+			</game>
+			<game name="Space Invaders">
+				<description>6.  Space Invaders</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fspaceinv.zip" size="3527" />
+				<title_clean>Space Invaders</title_clean>
+				<plot>Space Invaders is a game that symbolizes nearly everything there is to the say about the arcade. But the port to the Atari 2600, with 112 variations, should probably be considered even more of a success. Gameplay consists of moving a ship behind three barriers and firing on an ever-dropping series of invaders that shoot back and slowly destroy your barriers.[CR][CR]The different variations allowed for elements like moving shields and invisible invaders but the core game remains a classic. Though it went on to inspire games like Galaxian and Galaga, the original Space Invaders for Atari 2600 remains a worthwhile game to play for an afternoon or more.</plot>
+				<releasedate>18/1/1980</releasedate>
+				<year>1980</year>
+				<genre>Action</genre>
+				<studio>Atari, Inc.</studio>
+				<nplayers>1</nplayers>
+				<perspective>3rd-Person</perspective>
+				<rating>3.6</rating>
+				<videoid>_ftVrgJTl4w</videoid>
+				<thegamesdb_id>4890</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/585116-space-invaders</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/space-invaders-</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/space-invaders/3030-5099/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/4890-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/4890-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/19973-space-invaders-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/19975-space-invaders-atari-2600-media.jpg</boxart4>
+				<boxart5>http://www.mobygames.com/images/covers/l/19976-space-invaders-atari-2600-media.jpg</boxart5>
+				<boxart6>http://www.mobygames.com/images/covers/l/30800-space-invaders-atari-2600-media.jpg</boxart6>
+				<boxart7>http://www.mobygames.com/images/covers/l/19974-space-invaders-atari-2600-media.jpg</boxart7>
+				<boxart8>http://www.mobygames.com/images/covers/l/135273-space-invaders-atari-2600-media.jpg</boxart8>
+				<boxart9>http://www.mobygames.com/images/covers/l/135281-space-invaders-atari-2600-media.jpg</boxart9>
+				<snapshot1>http://www.mobygames.com/images/shots/l/39799-space-invaders-atari-2600-screenshot-the-game-demo-mode.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/39800-space-invaders-atari-2600-screenshot-a-game-in-progress.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/39801-space-invaders-atari-2600-screenshot-the-scores-disappear-when.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/39802-space-invaders-atari-2600-screenshot-the-game-in-black-and.jpg</snapshot4>
+				<snapshot5>http://static.giantbomb.com/uploads/scale_large/13/139866/2707980-34415.jpg</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/13/139866/2707979-34341.jpg</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/13/139866/2707978-34328.jpg</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/13/139866/2707977-34253.jpg</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/13/139866/2707976-34249.jpg</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/13/139866/2707975-34246.jpg</snapshot10>
+				<fanart1>http://thegamesdb.net/banners/fanart/original/4890-1.jpg</fanart1>
+				<banner1>http://thegamesdb.net/banners/graphical/4890-g.jpg</banner1>
+				<banner2>http://thegamesdb.net/banners/graphical/4890-g2.jpg</banner2>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/4890.png</clearlogo1>
+			</game>
+			<game name="Combat (PAL)">
+				<description>5.  Combat</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fcombate.zip" size="2069" />
+				<title_clean>Combat</title_clean>
+				<plot>The original Atari VCS package came with two joysticks, two paddle controllers, an RF adapter, the console and a single cartridge: Combat. Based on earlier arcade games, Combat offered 27 variations on tank, jet, and biplane levels where two players could face off.[CR][CR]Though simplistic and straightforward, the game remains an enjoyable experience due mostly to the tank levels. A form of Tank Pong can be played that is both brilliant and strangely addicting. Shots bounce off walls and some variations require them to do so before they hit their target. Then again, it’s Pong with tanks; there’s little there that doesn’t sound appealing.</plot>
+				<releasedate>18/1/1977</releasedate>
+				<year>1977</year>
+				<genre>Action</genre>
+				<studio>Atari, Inc.</studio>
+				<nplayers>2 Players VS</nplayers>
+				<perspective>Top-Down</perspective>
+				<rating>3.1</rating>
+				<videoid>3m86ftny1uY</videoid>
+				<thegamesdb_id>4887</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/584636-combat</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/combat-</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/combat/3030-5368/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/4887-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/4887-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/19825-combat-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/19824-combat-atari-2600-media.jpg</boxart4>
+				<boxart5>http://www.mobygames.com/images/covers/l/19826-combat-atari-2600-media.jpg</boxart5>
+				<boxart6>http://www.mobygames.com/images/covers/l/19827-combat-atari-2600-media.jpg</boxart6>
+				<boxart7>http://www.mobygames.com/images/covers/l/101414-combat-atari-2600-media.jpg</boxart7>
+				<boxart8>http://www.mobygames.com/images/covers/l/135237-combat-atari-2600-media.jpg</boxart8>
+				<boxart9>http://www.mobygames.com/images/covers/l/135251-combat-atari-2600-media.jpg</boxart9>
+				<boxart10>http://www.mobygames.com/images/covers/l/263356-combat-atari-2600-media.jpg</boxart10>
+				<snapshot1>http://www.mobygames.com/images/shots/l/40192-combat-atari-2600-screenshot-tank-combat.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/40193-combat-atari-2600-screenshot-tank-combat-with-some-obstacles.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/40194-combat-atari-2600-screenshot-tank-combat-with-walls-and-reflective.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/40195-combat-atari-2600-screenshot-biplane-combat.jpg</snapshot4>
+				<snapshot5>http://www.mobygames.com/images/shots/l/40196-combat-atari-2600-screenshot-jet-combat.jpg</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/1/15568/543850-combat__1977___atari__3.png</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/1/15568/543849-combat__1977___atari__4.png</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/1/15568/543848-combat__1977___atari__6.png</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/1/15568/543847-combat__1977___atari__5.png</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/1/15568/543844-combat__1977___atari__2.png</snapshot10>
+			</game>
+			<game name="Adventure">
+				<description>4.  Adventure</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fadventur.zip" size="3167" />
+				<title_clean>Adventure</title_clean>
+				<plot>Adventure is often credited as both the first action-adventure game on consoles and as the first widely-known game to feature an Easter egg. Though it was inspired by Colossal Cave Adventure - a text-based computer game - the Atari 2600 game shares very little in common with it. Adventure is entirely its own... well, adventure.[CR][CR]In the game, the player navigates a series of screens in order to find and return an enchanted chalice to the gold castle. There are multiple items hidden throughout the world, such as swords and the keys needed to unlock the castles, as well as monsters to defeat. There are even dragons named Yorgle, Grundle, and Rhindle that will eat the player if they come in contact with them.</plot>
+				<releasedate>18/1/1980</releasedate>
+				<year>1980</year>
+				<genre>Adventure</genre>
+				<studio>Sears, Roebuck and Co.</studio>
+				<nplayers>1</nplayers>
+				<perspective>Top-Down</perspective>
+				<rating>3.7</rating>
+				<videoid>mWN92q3phm4</videoid>
+				<thegamesdb_id>2570</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/584543-adventure</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/adventure</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/adventure/3030-8851/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/2570-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/2570-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/27172-adventure-atari-2600-media.jpg</boxart3>
+				<snapshot1>http://www.mobygames.com/images/shots/l/54792-adventure-atari-2600-screenshot-got-the-treaure.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/54793-adventure-atari-2600-screenshot-get-the-key-to-unlock-the-castle.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/83935-adventure-atari-2600-screenshot-using-the-invisible-gray-dot.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/83936-adventure-atari-2600-screenshot-the-first-easter-egg-in-a-video.jpg</snapshot4>
+				<snapshot5>http://static.giantbomb.com/uploads/scale_large/0/1176/927950-adv.jpg</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/1/15568/543705-adventure__1980___atari__10.png</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/1/15568/543704-adventure__1980___atari__9.png</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/1/15568/543703-adventure__1980___atari__8.png</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/1/15568/543702-adventure__1980___atari__7.png</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/1/15568/543701-adventure__1980___atari__6.png</snapshot10>
+			</game>
+			<game name="Super Breakout">
+				<description>3.  Super Breakout</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fsbrkout.zip" size="3029" />
+				<title_clean>Super Breakout</title_clean>
+				<plot>Super Breakout is ostensibly not that much different from its ancestor, Breakout, but tweaks just enough to make the list instead of it. Breakout is essentially a single-player version of Pong, with breakable bricks replacing the second player and play happening vertically rather than horizontally. We're like, 99% sure you've played it.[CR][CR]What Super Breakout offers over its progenitor is a set of three different modes other than the original. Double gave the player two bars on top of each other to move and two balls to juggle, Cavity provided two extra balls encased in bricks that could be used once freed and Progressive, like it sounds, progressively moved the ceiling down to make play faster and more difficult as time went on.</plot>
+				<releasedate>18/1/1981</releasedate>
+				<year>1981</year>
+				<genre>Action</genre>
+				<studio>Atari, Inc.</studio>
+				<nplayers>1-2 Alt</nplayers>
+				<perspective>3rd-Person</perspective>
+				<rating>3.2</rating>
+				<videoid>ON5A2el_CuM</videoid>
+				<thegamesdb_id>5330</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/585178-super-breakout</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/super-breakout</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/super-breakout/3030-1055/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/5330-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/5330-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/20990-super-breakout-atari-2600-media.jpg</boxart3>
+				<snapshot1>http://www.mobygames.com/images/shots/l/42644-super-breakout-atari-2600-screenshot-basic-breakout.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/42645-super-breakout-atari-2600-screenshot-progressive-breakout.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/42646-super-breakout-atari-2600-screenshot-double-breakout.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/42647-super-breakout-atari-2600-screenshot-cavity.jpg</snapshot4>
+				<snapshot5>http://static.giantbomb.com/uploads/scale_large/2/29460/891025-sbrkout.png</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/0/2860/462988-1070330858_00.jpg</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/0/7900/261702-super_breakout.gif</snapshot7>
+				<snapshot8>http://img.gamefaqs.net/screens/4/0/0/gfs_38113_2_1.jpg</snapshot8>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/5330.png</clearlogo1>
+			</game>
+			<game name="Missile Command">
+				<description>2.  Missile Command</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fmissile.zip" size="3536" />
+				<title_clean>Missile Command</title_clean>
+				<plot>If there ever were a game influenced by the cultural context surrounding it, Missile Command is that game. The very nature of the game requires the player to shoot down incoming missiles in order to stop them from destroying six cities with distinct pixelated mushroom clouds. The game reeks of the Cold War. It's no wonder that the creator had nightmares of nuclear war while coding the game.[CR][CR]Though it began life as an arcade game, the Atari 2600 port remained miraculously faithful to the source. It limited the player to one missile base, three missiles on the screen at once, and had some other oddities, but remained largely the same even down to the screeching alarms and tones. As an added bonus, the backgrounds changed colors as the waves continue.[CR][CR]The hectic pace and consistent movement made Missile Command an enjoyable game when it first released, and it remains so because of it. Quick! Someone give this game the Geometry Wars treatment, stat!</plot>
+				<releasedate>18/1/1981</releasedate>
+				<year>1981</year>
+				<genre>Action</genre>
+				<studio>Atari, Inc.</studio>
+				<nplayers>1-2 Alt</nplayers>
+				<perspective>3rd-Person</perspective>
+				<rating>3.8</rating>
+				<videoid>uJijGLGHRTE</videoid>
+				<thegamesdb_id>5313</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/584898-missile-command</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/missile-command_</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/missile-command/3030-4062/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/5313-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/5313-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/20752-missile-command-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/34447-missile-command-atari-2600-media.jpg</boxart4>
+				<boxart5>http://www.mobygames.com/images/covers/l/36486-missile-command-atari-2600-media.jpg</boxart5>
+				<boxart6>http://www.mobygames.com/images/covers/l/205513-missile-command-atari-2600-media.jpg</boxart6>
+				<boxart7>http://www.mobygames.com/images/covers/l/117483-missile-command-atari-2600-media.jpg</boxart7>
+				<boxart8>http://www.mobygames.com/images/covers/l/135270-missile-command-atari-2600-media.jpg</boxart8>
+				<boxart9>http://www.mobygames.com/images/covers/l/135280-missile-command-atari-2600-media.jpg</boxart9>
+				<snapshot1>http://www.mobygames.com/images/shots/l/42203-missile-command-atari-2600-screenshot-a-game-in-progress.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/42204-missile-command-atari-2600-screenshot-defending-your-cities.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/42205-missile-command-atari-2600-screenshot-the-game-in-black-and.jpg</snapshot3>
+				<snapshot4>http://static.giantbomb.com/uploads/scale_large/0/7465/925988-0023.jpg</snapshot4>
+				<snapshot5>http://static.giantbomb.com/uploads/scale_large/0/7465/925987-0022.jpg</snapshot5>
+				<snapshot6>http://static.giantbomb.com/uploads/scale_large/0/7465/925986-0021.jpg</snapshot6>
+				<snapshot7>http://static.giantbomb.com/uploads/scale_large/0/7465/925985-0018.jpg</snapshot7>
+				<snapshot8>http://static.giantbomb.com/uploads/scale_large/0/7465/925984-0016.jpg</snapshot8>
+				<snapshot9>http://static.giantbomb.com/uploads/scale_large/0/7465/925983-0015.jpg</snapshot9>
+				<snapshot10>http://static.giantbomb.com/uploads/scale_large/0/7465/925982-0014.jpg</snapshot10>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/5313.png</clearlogo1>
+			</game>
+			<game name="Pitfall! - Pitfall Harry's Jungle Adventure">
+				<description>1.  Pitfall!</description>
+				<rom name="MESS_0.151_Software_List_ROMs/a2600.zip/MESS%200.151%20Software%20List%20ROMs%2Fa2600%2Fpitfall.zip" size="3325" />
+				<title_clean>Pitfall! - Pitfall Harry's Jungle Adventure</title_clean>
+				<plot>The top spot for the Atari 2600 is rightfully occupied by Pitfall! from Activision. Largely credited with establishing the platformer genre, Pitfall! is as difficult as it is critically acclaimed. Starring the eponymous Pitfall Harry, players must rush across over 200 screens of treacherous jungle in order to collect all the jewels and treasures that lay in wait.[CR][CR]The real trouble comes when you factor in the time limit - a mere 20 minutes. The game even taunted players by providing underground tunnels that advanced the screen three times for every full tunnel explored. Unfortunately, said tunnels are even more dangerous that the ground above them with scorpions guarding their passages. If you were looking to actually complete the game, however, they were a necessary evil.[CR][CR]Those lucky enough to reach 20,000 points could even score a sweet patch from Activision for their trouble. How many other games can boast such claims?</plot>
+				<releasedate>20/4/1982</releasedate>
+				<year>1982</year>
+				<genre>Action, Platform, 2D</genre>
+				<studio>Activision</studio>
+				<nplayers>1</nplayers>
+				<perspective>Platform</perspective>
+				<rating>8.6</rating>
+				<ESRB>E - Everyone</ESRB>
+				<videoid>pslbO6Fddhw</videoid>
+				<thegamesdb_id>5317</thegamesdb_id>
+				<gamefaqs_url>http://www.gamefaqs.com/atari2600/584972-pitfall</gamefaqs_url>
+				<mobygames_url>http://www.mobygames.com/game/atari-2600/pitfall</mobygames_url>
+				<giantbomb_url>http://www.giantbomb.com/pitfall/3030-10014/</giantbomb_url>
+				<boxart1>http://thegamesdb.net/banners/boxart/original/front/5317-1.jpg</boxart1>
+				<boxart2>http://thegamesdb.net/banners/boxart/original/back/5317-1.jpg</boxart2>
+				<boxart3>http://www.mobygames.com/images/covers/l/19560-pitfall-atari-2600-media.jpg</boxart3>
+				<boxart4>http://www.mobygames.com/images/covers/l/19561-pitfall-atari-2600-media.jpg</boxart4>
+				<snapshot1>http://thegamesdb.net/banners/screenshots/5317-1.jpg</snapshot1>
+				<snapshot2>http://www.mobygames.com/images/shots/l/39696-pitfall-atari-2600-screenshot-title-screen-starting-the-game.jpg</snapshot2>
+				<snapshot3>http://www.mobygames.com/images/shots/l/39697-pitfall-atari-2600-screenshot-use-ropes-to-swing-over-bottomless.jpg</snapshot3>
+				<snapshot4>http://www.mobygames.com/images/shots/l/39698-pitfall-atari-2600-screenshot-ah-some-treasure.jpg</snapshot4>
+				<snapshot5>http://www.mobygames.com/images/shots/l/39699-pitfall-atari-2600-screenshot-swinging-over-some-alligators.jpg</snapshot5>
+				<snapshot6>http://www.mobygames.com/images/shots/l/134595-pitfall-atari-2600-screenshot-score-has-reached-20-000-points.jpg</snapshot6>
+				<snapshot7>http://www.mobygames.com/images/shots/l/134596-pitfall-atari-2600-screenshot-a-beautiful-diamond-ring-it.jpg</snapshot7>
+				<snapshot8>http://www.mobygames.com/images/shots/l/134597-pitfall-atari-2600-screenshot-escaping-the-bite-of-a-dangerous.jpg</snapshot8>
+				<snapshot9>http://www.mobygames.com/images/shots/l/134598-pitfall-atari-2600-screenshot-entering-the-catacomb-of-tunnels.jpg</snapshot9>
+				<snapshot10>http://www.mobygames.com/images/shots/l/134599-pitfall-atari-2600-screenshot-death-by-a-scorpion-if-you-don.jpg</snapshot10>
+				<fanart1>http://thegamesdb.net/banners/fanart/original/5317-1.jpg</fanart1>
+				<fanart2>http://thegamesdb.net/banners/fanart/original/5317-2.jpg</fanart2>
+				<banner1>http://thegamesdb.net/banners/graphical/5317-g.jpg</banner1>
+				<clearlogo1>http://thegamesdb.net/banners/clearlogo/5317.png</clearlogo1>
+			</game>
+</datafile>

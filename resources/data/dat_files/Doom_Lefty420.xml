@@ -1,0 +1,56 @@
+<datafile>
+	<header>
+		<emu_name>Doom</emu_name>
+		<emu_description>Standalone Game</emu_description>
+		<emu_category>Port</emu_category>
+		<emu_version>04012018</emu_version>
+		<emu_date>9/14/2016</emu_date>
+		<emu_author>Lefty420</emu_author>
+		<emu_visibility>visible</emu_visibility>
+		<emu_homepage>https://archive.org</emu_homepage>
+		<emu_baseurl>https://archive.org/download/</emu_baseurl>
+		<emu_launcher>retroplayer</emu_launcher>
+		<emu_default_addon>none</emu_default_addon>
+		<emu_ext_launch_cmd>none</emu_ext_launch_cmd>
+		<emu_downloadpath>default</emu_downloadpath>
+		<emu_postdlaction>unzip_to_folder_and_launch_file</emu_postdlaction>
+		<emu_comment>Doom and Doom II Shareware Versions</emu_comment>
+		<emu_thumb>https://i.imgur.com/Ow2yRG0.jpg</emu_thumb>
+		<emu_banner>https://i.imgur.com/8kceD3y.jpg</emu_banner>
+		<emu_fanart>https://i.imgur.com/22s811K.jpg</emu_fanart>
+		<emu_logo>https://i.imgur.com/qfsEaC0.png</emu_logo>
+		<emu_trailer>BkaC1-QoraY</emu_trailer>
+	</header>
+	<game name="Doom">
+		<description>Doom</description>
+		<rom name="tom_bftp_D/d1.zip" size="1688202" />
+		<title_clean>Doom</title_clean>
+		<plot>Doom (stylized as DOOM) is a series of first-person shooter video games developed by id Software. The series focuses on the exploits of an unnamed space marine operating under the auspices of Union Aerospace Corporation (UAC), who fights hordes of demons and the undead in order to survive.[CR]Doom is considered to be one of the pioneering first-person shooter games, introducing to IBM-compatible computers features such as 3D graphics, third-dimension spatiality, networked multiplayer gameplay, and support for player-created modifications with the Doom WAD format. Since the release of Doom in 1993, the series has spawned numerous sequels, expansion packs, and a film.[CR]Since its debut, over 10 million copies of games in the Doom series have been sold.</plot>
+		<releasedate>10/12/1993</releasedate>
+		<year>1993</year>
+		<genre>FPS</genre>
+		<nplayers>1</nplayers>
+		<thegamesdb_id>745</thegamesdb_id>
+		<videoid>yr-lQZzevwA</videoid>
+		<giantbomb_url>http://www.giantbomb.com/doom/3025-156/</giantbomb_url>
+		<boxart1>http://i.imgur.com/Ow2yRG0.jpg</boxart1>
+		<banner1>https://i.mgur.com/qTdlslF.jpg</banner1>
+		<emu_command>doom1.wad</emu_command>
+	</game>
+	<game name="Doom II">
+		<description>Doom II</description>
+		<rom name="tom_bftp_D/d2.zip" size="5996211" />
+		<title_clean>Doom II</title_clean>
+		<plot>Doom II: Hell on Earth is a first-person shooter video game, the second title of id Software's Doom franchise.  It was originally released for MS-DOS computers in 1994 and Macintosh computers in 1995. Unlike Doom, which was initially only available through shareware and mail order, Doom II was a commercial release sold in stores. Master Levels for Doom II, an expansion pack that includes 21 new levels, was released on December 26, 1995 by id Software.[CR]Due to its success and popularity, Doom II was later released for the Game Boy Advance in 2002, the Tapwave Zodiac in 2004, and on Xbox Live Arcade in 2010. The release of the original Doom source code has facilitated ports to many other platforms, including the Apple iPhone and several other types of cellphones. On August 13, during the QuakeCon 2009 media conference, it was announced that Doom II would be ported to Xbox Live Arcade, and was released in May the following year.</plot>
+		<releasedate>10/12/1993</releasedate>
+		<year>1995</year>
+		<genre>FPS</genre>
+		<nplayers>1</nplayers>
+		<thegamesdb_id>745</thegamesdb_id>
+		<videoid>Vh9nzvgJYFo</videoid>
+		<giantbomb_url>http://www.giantbomb.com/doom/3025-156/</giantbomb_url>
+		<boxart1>https://i.imgur.com/EJv0DHY.jpg</boxart1>
+		<banner1>https://i.imgur.com/pFBeysD.jpg</banner1>
+		<emu_command>Doom2.wad</emu_command>
+	</game>
+</datafile>

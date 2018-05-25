@@ -1,0 +1,25 @@
+<!-- IAGL Favorites List -->
+<datafile>
+	<header>
+		<emu_name>Favorites</emu_name>
+		<emu_description>Favorites</emu_description>
+		<emu_category>Favorites</emu_category>
+		<emu_version>04012018</emu_version>
+		<emu_date>04/01/2018</emu_date>
+		<emu_author>Zach Morris</emu_author>
+		<emu_visibility>visible</emu_visibility>
+		<emu_homepage>http://kodi.tv</emu_homepage>
+		<emu_baseurl>http://archive.org/download/</emu_baseurl>
+		<emu_launcher>retroplayer</emu_launcher>
+		<emu_default_addon>none</emu_default_addon>
+		<emu_ext_launch_cmd>favorite</emu_ext_launch_cmd>
+		<emu_downloadpath>default</emu_downloadpath>
+		<emu_postdlaction>none</emu_postdlaction>
+		<emu_comment>Your Favorites List</emu_comment>
+		<emu_thumb>special://home/addons/plugin.program.iagl/resources/skins/Default/media/favorites.png</emu_thumb>
+		<emu_banner>special://home/addons/plugin.program.iagl/resources/skins/Default/media/favorites_banner.png</emu_banner>
+		<emu_fanart>special://home/addons/plugin.program.iagl/resources/skins/Default/media/fanart.jpg</emu_fanart>
+		<emu_logo>special://home/addons/plugin.program.iagl/resources/skins/Default/media/favorites_logo.png</emu_logo>
+		<emu_trailer>NUx66ZEDjnQ</emu_trailer>
+	</header>
+</datafile>

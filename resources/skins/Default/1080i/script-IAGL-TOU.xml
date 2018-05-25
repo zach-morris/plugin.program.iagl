@@ -1,0 +1,118 @@
+<window id="4070">
+    <defaultcontrol always="false">3011</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+  <type>dialog</type>
+  <visible>true</visible>
+    <coordinates>
+        <system>1</system>
+        <posx>0</posx>
+        <posy>0</posy>
+    </coordinates>
+    <controls>
+        <control type="image">
+            <description>Background Image</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>100%</width>
+            <height>100%</height>
+            <texture>black.png</texture>
+            <ondown>3001</ondown>
+            <onup>3001</onup>
+            <onleft>3001</onleft>
+            <onright>3001</onright>
+        </control>
+        <control type="textbox" id="104">
+         <description>Terms</description>
+         <posx>2%</posx>
+         <posy>2%</posy>
+         <width>95%</width>
+         <height>85%</height>
+         <ondown>3001</ondown>
+         <onup>3001</onup>
+         <onleft>3001</onleft>
+         <onright>3001</onright>
+         <visible>true</visible>
+         <colordiffuse>FFFFFFFF</colordiffuse>
+         <font>font13</font>
+         <textcolor>white</textcolor>
+         <pulseonselect></pulseonselect>
+         <pagecontrol>13</pagecontrol>
+         <scrolltime>200</scrolltime>
+         <autoscroll delay="10000" time="1000" repeat="10000"></autoscroll>
+         <label>[CR][CR][CR][CR][CR][CR]This addon will access data hosted on archive.org.  As such you must agree to the terms of use for the archive.org web site, included below, in order to use this addon.[CR][CR][B]Terms of Use[CR]31 Dec 2014[/B][CR]This terms of use agreement (the "Agreement") governs your use of the collection of Web pages and other digital content (the "Collections") available through the Internet Archive (the "Archive"). When accessing an archived page, you will be presented with the terms of use agreement. If you do not agree to these terms, please do not use the Archive’s Collections or its Web site (the "Site").[CR][CR]Access to the Archive’s Collections is provided at no cost to you and is granted for scholarship and research purposes only. The Archive, at its sole discretion, may provide you with a password to access certain Collections, provided that you complete any required application process and provide accurate information in your application. You may use your password only to access the Collections in ways consistent with this Agreement — no other access to or use of the Site, the Collections, or the Archive's services is authorized. You agree not to interfere with the work of other users or Archive personnel, servers, or resources. Further, you agree not to recirculate your password to other people or organizations. Please report any unauthorized use of your password promptly to info@archive.org. You acknowledge that you have read and understood the Archive’s Privacy Policy and agree that the Archive may collect, use, and distribute information pursuant to that policy. If you provide any content to the Archive, you grant the Archive a nonexclusive, royalty-free right to use that content.[CR][C]Some of the content available through the Archive may be governed by local, national, and/or international laws and regulations, and your use of such content is solely at your own risk. You agree to abide by all applicable laws and regulations, including intellectual property laws, in connection with your use of the Archive. In particular, you certify that your use of any part of the Archive's Collections will be limited to noninfringing or fair use under copyright law. If a Creative Commons or other license has been declared for particular material on the Archive, to the extent you trust the declaration and declarer (which is rarely the Internet Archive), you may use the content according to the terms and conditions of the applicable license. In using the Archive's site, Collections, and/or services, you further agree (a) not to violate anyone's rights of privacy, (b) not to act in any way that might give rise to civil or criminal liability, (c) not to use or attempt to use another person's password, (d) not to collect or store personal data about anyone, (e) not to infringe any copyright, trademark, patent, or other proprietary rights of any person, (f) not to transmit or facilitate the transmission of unsolicited email ("spam"), (g) not to harass, threaten, or otherwise annoy anyone, and (h) not to act in any way that might be harmful to minors, including, without limitation, transmitting or facilitating the transmission of child pornography, which is prohibited by federal law and may be reported to the authorities should it be discovered by the Archive.[CR][CR]You agree that we may contact you from time to time with surveys or other questions regarding your opinions about and uses of the Archive, as well as with information we believe may be of interest to you. We encourage you to respond to these surveys because we value your input, which will assist us in improving the Archive. In addition, we request that, according to standard academic practice, if you use the Archive's Collections for any research that results in an article, a book, or other publication, you list the Archive as a resource in your bibliography.[CR][CR]While we collect publicly available Internet documents, sometimes authors and publishers express a desire for their documents not to be included in the Collections (by tagging a file for robot exclusion or by contacting us or the original crawler group). If the author or publisher of some part of the Archive does not want his or her work in our Collections, then we may remove that portion of the Collections without notice.[CR][CR]The Archive may immediately terminate this Agreement at its sole discretion at any time upon written notice (including via email) to you. Upon termination, you agree that the Archive may immediately deactivate any password it has issued to you and bar you from accessing the Collections or the Site.[CR][CR]The Archive may modify this Agreement from time to time, and your continued use of the Collections and/or the Site constitutes your acceptance of any and all modifications. The Archive will attempt to notify you of substantial modifications via the email address that you have registered with us, if any.[CR][CR]Because the content of the Collections comes from around the world and from many different sectors, the Collections may contain information that might be deemed offensive, disturbing, pornographic, racist, sexist, bizarre, misleading, fraudulent, or otherwise objectionable. The Archive does not endorse or sponsor any content in the Collections, nor does it guarantee or warrant that the content available in the Collections is accurate, complete, noninfringing, or legally accessible in your jurisdiction, and you agree that you are solely responsible for abiding by all laws and regulations that may be applicable to the viewing of the content. In addition, the Collections are provided to you on an as-is and as-available basis. You agree that your use of the Site and the Collections is at your sole risk. You understand and agree that the Archive makes no warranty or representation regarding the accuracy, currency, completeness, reliability, or usefulness of the content in the Collections, that the Site or the Collections will meet your requirements, that access to the Collections will be uninterrupted, timely, secure, or error free, or that defects, if any, will be corrected. We make no warranty of any kind, either express or implied.[CR][CR]You agree to indemnify and hold harmless the Internet Archive and its parents, subsidiaries, affiliates, agents, officers, directors, and employees from and against any and all liability, loss, claims, damages, costs, and/or actions (including attorneys’ fees) arising from your use of the Archive’s services, the site, or the Collections. You agree that this Agreement is governed by California law and that any suit arising from this Agreement will be brought in San Francisco, California, and you further agree that on the election and reasonable notice of either party any litigation shall be referred to arbitration pursuant to the California Code of Civil Procedure, §§1280 et seq. In addition, you agree that should any provision in the Agreement be found invalid, unlawful, or unenforceable, that provision shall not affect the validity or enforceability of the remaining provisions.[CR][CR]Under no circumstances, including, without limitation, negligence, shall the Archive or its parents, affiliates, officers, employees, or agents be responsible for any indirect, incidental, special, or consequential damages arising from or in connection with the use of or the inability to use the Site or the Collections, or any content contained on the Site or in the Collections, or resulting from unauthorized access to the Collections or your transmissions of data, including, without limitation, damages for loss of profits, use, data, or other intangibles, even if the Archive has been advised of the possibility of such damages. Some jurisdictions do not allow the limitation or exclusion of liability for incidental or consequential damages, so some of the above may not apply to you.[CR][CR]This Agreement, the Privacy Policy, and other policies posted on the Site constitute the full and complete agreement between you and the Archive and are not intended to inure to third-party beneficiaries.[CR][CR]We welcome your input. Please contact us with any comments or questions at info@archive.org.</label>
+        </control>
+        <control type="image">
+            <description>Header Color</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>100%</width>
+            <height>10%</height>
+            <texture>white.png</texture>
+        </control>
+        <control type="button" id="3001">
+            <description>Agree and Close Button</description>
+            <label>Agree</label>
+            <posx>25%</posx>
+            <posy>90%</posy>
+            <width>250</width>
+            <height>60</height>
+            <textoffsetx>12</textoffsetx>
+            <align>center</align>
+            <aligny>center</aligny>
+            <texturenofocus>button-nofocus2.png</texturenofocus>
+            <texturefocus>button-highlight1.png</texturefocus>
+            <onleft>3003</onleft>
+            <onright>3003</onright>
+            <onup>3003</onup>
+            <ondown>3003</ondown>
+        </control>
+        <control type="button" id="3003">
+            <description>Do not Agree</description>
+            <label>Do not Agree</label>
+            <posx>65%</posx>
+            <posy>90%</posy>
+            <width>250</width>
+            <height>60</height>
+            <textoffsetx>12</textoffsetx>
+            <align>center</align>
+            <aligny>center</aligny>
+            <texturenofocus>button-nofocus2.png</texturenofocus>
+            <texturefocus>button-highlight1.png</texturefocus>
+            <onleft>3001</onleft>
+            <onright>3001</onright>
+            <onup>3001</onup>
+            <ondown>3001</ondown>
+        </control>
+        <control type="button" id="3011">
+            <description>Control Grabber</description>
+            <posx>1</posx>
+            <posy>1</posy>
+            <width>1</width>
+            <height>1</height>
+            <texturefocus>transparent.png</texturefocus>
+            <texturenofocus>transparent.png</texturenofocus>
+            <onleft>3003</onleft>
+            <onright>3003</onright>
+            <onup>3003</onup>
+            <ondown>3003</ondown>
+        </control>
+        <control type="textbox" id="3007">
+           <description>Title</description>
+           <posx>40%</posx>
+           <posy>2%</posy>
+           <width>300</width>
+           <height>65</height>
+           <align>center</align>
+           <ondown>3001</ondown>
+           <onup>3001</onup>
+           <onleft>3001</onleft>
+           <onright>3001</onright>
+           <visible>true</visible>
+           <colordiffuse>FFFFFFFF</colordiffuse>
+           <font>font14</font>
+           <textcolor>black</textcolor>
+           <scrolltime>200</scrolltime>
+           <label>Terms of Use</label>
+       </control>
+   </controls>
+</window>

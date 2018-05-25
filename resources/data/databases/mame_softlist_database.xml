@@ -1,0 +1,1299 @@
+<systems>
+	<system name="32x">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/32x.xml</web_url>
+	</system>
+	<system name="3do_m2">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/3do_m2.xml</web_url>
+	</system>
+	<system name="a2600">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/a2600.xml</web_url>
+	</system>
+	<system name="a2600_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/a2600_cass.xml</web_url>
+	</system>
+	<system name="a5200">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/a5200.xml</web_url>
+		<folder_name>a5200</folder_name>
+		<media_type>-cart</media_type>
+	</system>
+	<system name="a7800">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/a7800.xml</web_url>
+		<folder_name>a7800</folder_name>
+		<media_type>-cart</media_type>
+	</system>
+	<system name="a800">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/a800.xml</web_url>
+		<folder_name>a800</folder_name>
+		<media_type>-cart</media_type>
+	</system>
+	<system name="a800_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/a800_flop.xml</web_url>
+		<folder_name>a800</folder_name>
+		<media_type>-flop</media_type>
+	</system>
+	<system name="abc1600">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/abc1600.xml</web_url>
+	</system>
+	<system name="abc800">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/abc800.xml</web_url>
+	</system>
+	<system name="abc800_hdd">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/abc800_hdd.xml</web_url>
+	</system>
+	<system name="abc806">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/abc806.xml</web_url>
+	</system>
+	<system name="abc80_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/abc80_cass.xml</web_url>
+	</system>
+	<system name="abc80_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/abc80_flop.xml</web_url>
+	</system>
+	<system name="adam_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/adam_cart.xml</web_url>
+	</system>
+	<system name="adam_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/adam_cass.xml</web_url>
+	</system>
+	<system name="adam_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/adam_flop.xml</web_url>
+	</system>
+	<system name="advantage">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/advantage.xml</web_url>
+	</system>
+	<system name="advision">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/advision.xml</web_url>
+	</system>
+	<system name="aim65_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/aim65_cart.xml</web_url>
+	</system>
+	<system name="aleste">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/aleste.xml</web_url>
+	</system>
+	<system name="alice32">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/alice32.xml</web_url>
+	</system>
+	<system name="alice90">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/alice90.xml</web_url>
+	</system>
+	<system name="alphatro_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/alphatro_flop.xml</web_url>
+	</system>
+	<system name="altos5">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/altos5.xml</web_url>
+	</system>
+	<system name="amiga_a1000">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/amiga_a1000.xml</web_url>
+	</system>
+	<system name="amiga_a3000">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/amiga_a3000.xml</web_url>
+	</system>
+	<system name="amiga_apps">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/amiga_apps.xml</web_url>
+	</system>
+	<system name="amiga_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/amiga_flop.xml</web_url>
+	</system>
+	<system name="amiga_hardware">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/amiga_hardware.xml</web_url>
+	</system>
+	<system name="amiga_workbench">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/amiga_workbench.xml</web_url>
+	</system>
+	<system name="amigaaga_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/amigaaga_flop.xml</web_url>
+	</system>
+	<system name="amigaecs_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/amigaecs_flop.xml</web_url>
+	</system>
+	<system name="amigaocs_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/amigaocs_flop.xml</web_url>
+	</system>
+	<system name="ampro">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ampro.xml</web_url>
+	</system>
+	<system name="apc">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/apc.xml</web_url>
+	</system>
+	<system name="apfimag_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/apfimag_cass.xml</web_url>
+	</system>
+	<system name="apfm1000">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/apfm1000.xml</web_url>
+	</system>
+	<system name="apogee">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/apogee.xml</web_url>
+	</system>
+	<system name="apollo_ctape">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/apollo_ctape.xml</web_url>
+	</system>
+	<system name="apple1">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/apple1.xml</web_url>
+	</system>
+	<system name="apple2">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/apple2.xml</web_url>
+	</system>
+	<system name="apple2gs">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/apple2gs.xml</web_url>
+		<folder_name>apple2gs</folder_name>
+		<media_type>-flop</media_type>
+	</system>
+	<system name="apple3">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/apple3.xml</web_url>
+	</system>
+	<system name="aquarius">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/aquarius.xml</web_url>
+	</system>
+	<system name="arcadia">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/arcadia.xml</web_url>
+	</system>
+	<system name="archimedes">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/archimedes.xml</web_url>
+	</system>
+	<system name="astrocde">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/astrocde.xml</web_url>
+		<folder_name>astrocde</folder_name>
+		<media_type>-cart</media_type>
+	</system>
+	<system name="atom_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/atom_cass.xml</web_url>
+	</system>
+	<system name="atom_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/atom_flop.xml</web_url>
+	</system>
+	<system name="atom_rom">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/atom_rom.xml</web_url>
+	</system>
+	<system name="attache">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/attache.xml</web_url>
+	</system>
+	<system name="b2m">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/b2m.xml</web_url>
+	</system>
+	<system name="bbc_flop_32016">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbc_flop_32016.xml</web_url>
+	</system>
+	<system name="bbc_flop_6502">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbc_flop_6502.xml</web_url>
+	</system>
+	<system name="bbc_flop_65c102">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbc_flop_65c102.xml</web_url>
+	</system>
+	<system name="bbc_flop_68000">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbc_flop_68000.xml</web_url>
+	</system>
+	<system name="bbc_flop_80186">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbc_flop_80186.xml</web_url>
+	</system>
+	<system name="bbc_flop_arm">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbc_flop_arm.xml</web_url>
+	</system>
+	<system name="bbc_flop_torch">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbc_flop_torch.xml</web_url>
+	</system>
+	<system name="bbc_flop_z80">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbc_flop_z80.xml</web_url>
+	</system>
+	<system name="bbca_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbca_cass.xml</web_url>
+	</system>
+	<system name="bbcb_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbcb_cass.xml</web_url>
+	</system>
+	<system name="bbcb_cass_de">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbcb_cass_de.xml</web_url>
+	</system>
+	<system name="bbcb_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbcb_flop.xml</web_url>
+	</system>
+	<system name="bbcb_flop_orig">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbcb_flop_orig.xml</web_url>
+	</system>
+	<system name="bbcb_flop_us">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbcb_flop_us.xml</web_url>
+	</system>
+	<system name="bbcbc">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbcbc.xml</web_url>
+	</system>
+	<system name="bbcm_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbcm_cart.xml</web_url>
+	</system>
+	<system name="bbcm_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbcm_cass.xml</web_url>
+	</system>
+	<system name="bbcm_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbcm_flop.xml</web_url>
+	</system>
+	<system name="bbcmc_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bbcmc_flop.xml</web_url>
+	</system>
+	<system name="bk0010">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bk0010.xml</web_url>
+	</system>
+	<system name="bml3_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bml3_flop.xml</web_url>
+	</system>
+	<system name="bw12">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bw12.xml</web_url>
+	</system>
+	<system name="bw14">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bw14.xml</web_url>
+	</system>
+	<system name="bw2">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bw2.xml</web_url>
+	</system>
+	<system name="bx256hp_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/bx256hp_flop.xml</web_url>
+	</system>
+	<system name="c128_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/c128_cart.xml</web_url>
+	</system>
+	<system name="c128_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/c128_flop.xml</web_url>
+	</system>
+	<system name="c128_rom">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/c128_rom.xml</web_url>
+	</system>
+	<system name="c64_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/c64_cart.xml</web_url>
+		<folder_name>c64</folder_name>
+		<media_type>-cart</media_type>
+	</system>
+	<system name="c64_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/c64_cass.xml</web_url>
+		<folder_name>c64</folder_name>
+		<media_type>-cass</media_type>
+	</system>
+	<system name="c64_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/c64_flop.xml</web_url>
+		<folder_name>c64</folder_name>
+		<media_type>-flop</media_type>
+	</system>
+	<system name="c65_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/c65_flop.xml</web_url>
+	</system>
+	<system name="casloopy">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/casloopy.xml</web_url>
+		<folder_name>casloopy</folder_name>
+		<media_type>-cart</media_type>
+	</system>
+	<system name="cbm2_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/cbm2_cart.xml</web_url>
+	</system>
+	<system name="cbm2_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/cbm2_flop.xml</web_url>
+	</system>
+	<system name="cbm8096_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/cbm8096_flop.xml</web_url>
+	</system>
+	<system name="cbm8296_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/cbm8296_flop.xml</web_url>
+	</system>
+	<system name="cc40_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/cc40_cart.xml</web_url>
+	</system>
+	<system name="cd32">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/cd32.xml</web_url>
+	</system>
+	<system name="cdi">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/cdi.xml</web_url>
+		<folder_name>cdimono1</folder_name>
+		<media_type>-cdrom</media_type>
+	</system>
+	<system name="cdtv">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/cdtv.xml</web_url>
+		<folder_name>cdtv</folder_name>
+		<media_type>-cdrom</media_type>
+	</system>
+	<system name="cgenie_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/cgenie_cart.xml</web_url>
+	</system>
+	<system name="cgenie_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/cgenie_cass.xml</web_url>
+	</system>
+	<system name="channelf">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/channelf.xml</web_url>
+		<folder_name>channelf</folder_name>
+		<media_type>-cart</media_type>
+	</system>
+	<system name="coco_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/coco_cart.xml</web_url>
+	</system>
+	<system name="coco_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/coco_flop.xml</web_url>
+	</system>
+	<system name="coleco">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/coleco.xml</web_url>
+		<folder_name>coleco</folder_name>
+		<media_type>-cart</media_type>
+	</system>
+	<system name="compclr2_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/compclr2_flop.xml</web_url>
+	</system>
+	<system name="compis">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/compis.xml</web_url>
+	</system>
+	<system name="comx35_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/comx35_flop.xml</web_url>
+	</system>
+	<system name="copera">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/copera.xml</web_url>
+	</system>
+	<system name="cpc_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/cpc_cass.xml</web_url>
+	</system>
+	<system name="cpc_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/cpc_flop.xml</web_url>
+	</system>
+	<system name="crvision">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/crvision.xml</web_url>
+	</system>
+	<system name="cx3000tc">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/cx3000tc.xml</web_url>
+	</system>
+	<system name="dai_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/dai_cass.xml</web_url>
+	</system>
+	<system name="database">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/database.xml</web_url>
+	</system>
+	<system name="dim68k">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/dim68k.xml</web_url>
+	</system>
+	<system name="dmv">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/dmv.xml</web_url>
+	</system>
+	<system name="dps1">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/dps1.xml</web_url>
+	</system>
+	<system name="ec1841">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ec1841.xml</web_url>
+	</system>
+	<system name="einstein">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/einstein.xml</web_url>
+	</system>
+	<system name="electron_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/electron_cart.xml</web_url>
+	</system>
+	<system name="electron_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/electron_cass.xml</web_url>
+	</system>
+	<system name="ep64_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ep64_cart.xml</web_url>
+	</system>
+	<system name="ep64_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ep64_cass.xml</web_url>
+	</system>
+	<system name="ep64_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ep64_flop.xml</web_url>
+	</system>
+	<system name="epson_cpm">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/epson_cpm.xml</web_url>
+	</system>
+	<system name="exl100">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/exl100.xml</web_url>
+	</system>
+	<system name="famicom_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/famicom_cass.xml</web_url>
+	</system>
+	<system name="famicom_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/famicom_flop.xml</web_url>
+	</system>
+	<system name="fidel_scc">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/fidel_scc.xml</web_url>
+	</system>
+	<system name="fm77av">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/fm77av.xml</web_url>
+	</system>
+	<system name="fm7_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/fm7_cass.xml</web_url>
+	</system>
+	<system name="fm7_disk">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/fm7_disk.xml</web_url>
+	</system>
+	<system name="fmtowns_cd">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/fmtowns_cd.xml</web_url>
+	</system>
+	<system name="g7400">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/g7400.xml</web_url>
+	</system>
+	<system name="galaxy">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/galaxy.xml</web_url>
+	</system>
+	<system name="gamate">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/gamate.xml</web_url>
+	</system>
+	<system name="gameboy">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/gameboy.xml</web_url>
+	</system>
+	<system name="gamecom">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/gamecom.xml</web_url>
+		<folder_name>gamecom</folder_name>
+		<media_type>-cart</media_type>
+	</system>
+	<system name="gamegear">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/gamegear.xml</web_url>
+	</system>
+	<system name="gameking">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/gameking.xml</web_url>
+	</system>
+	<system name="gameking3">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/gameking3.xml</web_url>
+	</system>
+	<system name="gamepock">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/gamepock.xml</web_url>
+	</system>
+	<system name="gba">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/gba.xml</web_url>
+	</system>
+	<system name="gbcolor">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/gbcolor.xml</web_url>
+	</system>
+	<system name="genius">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/genius.xml</web_url>
+	</system>
+	<system name="gimix">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/gimix.xml</web_url>
+	</system>
+	<system name="gjmovie">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/gjmovie.xml</web_url>
+	</system>
+	<system name="gl2000">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/gl2000.xml</web_url>
+	</system>
+	<system name="gl6000sl">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/gl6000sl.xml</web_url>
+	</system>
+	<system name="glcolor">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/glcolor.xml</web_url>
+	</system>
+	<system name="gmaster">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/gmaster.xml</web_url>
+	</system>
+	<system name="gp32">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/gp32.xml</web_url>
+	</system>
+	<system name="guab">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/guab.xml</web_url>
+	</system>
+	<system name="gx4000">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/gx4000.xml</web_url>
+		<folder_name>gx4000</folder_name>
+		<media_type>-cart</media_type>
+	</system>
+	<system name="h21">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/h21.xml</web_url>
+	</system>
+	<system name="horizon">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/horizon.xml</web_url>
+	</system>
+	<system name="hp9835a_rom">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/hp9835a_rom.xml</web_url>
+	</system>
+	<system name="hp9845a_rom">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/hp9845a_rom.xml</web_url>
+	</system>
+	<system name="hp9845b_rom">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/hp9845b_rom.xml</web_url>
+	</system>
+	<system name="ht68k">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ht68k.xml</web_url>
+	</system>
+	<system name="i7000_card">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/i7000_card.xml</web_url>
+	</system>
+	<system name="ibm5140">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ibm5140.xml</web_url>
+	</system>
+	<system name="ibm5150">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ibm5150.xml</web_url>
+	</system>
+	<system name="ibm5150_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ibm5150_cass.xml</web_url>
+	</system>
+	<system name="ibm5160_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ibm5160_flop.xml</web_url>
+	</system>
+	<system name="ibm5170">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ibm5170.xml</web_url>
+	</system>
+	<system name="ibm5170_cdrom">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ibm5170_cdrom.xml</web_url>
+	</system>
+	<system name="ibmpcjr_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ibmpcjr_cart.xml</web_url>
+	</system>
+	<system name="ibmpcjr_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ibmpcjr_flop.xml</web_url>
+	</system>
+	<system name="interact">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/interact.xml</web_url>
+	</system>
+	<system name="intv">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/intv.xml</web_url>
+		<folder_name>intv</folder_name>
+		<media_type>-cart</media_type>
+	</system>
+	<system name="intvecs">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/intvecs.xml</web_url>
+	</system>
+	<system name="iq128">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/iq128.xml</web_url>
+	</system>
+	<system name="iq151_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/iq151_cart.xml</web_url>
+	</system>
+	<system name="iq151_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/iq151_flop.xml</web_url>
+	</system>
+	<system name="jaguar">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/jaguar.xml</web_url>
+	</system>
+	<system name="juicebox">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/juicebox.xml</web_url>
+	</system>
+	<system name="jupace_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/jupace_cass.xml</web_url>
+	</system>
+	<system name="k28m2">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/k28m2.xml</web_url>
+	</system>
+	<system name="kayproii">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/kayproii.xml</web_url>
+	</system>
+	<system name="kc_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/kc_cart.xml</web_url>
+	</system>
+	<system name="kc_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/kc_cass.xml</web_url>
+	</system>
+	<system name="kc_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/kc_flop.xml</web_url>
+	</system>
+	<system name="korvet_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/korvet_flop.xml</web_url>
+	</system>
+	<system name="lantutor">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/lantutor.xml</web_url>
+	</system>
+	<system name="leapster">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/leapster.xml</web_url>
+	</system>
+	<system name="lisa">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/lisa.xml</web_url>
+	</system>
+	<system name="lisa2">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/lisa2.xml</web_url>
+	</system>
+	<system name="lviv">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/lviv.xml</web_url>
+	</system>
+	<system name="lynx">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/lynx.xml</web_url>
+	</system>
+	<system name="m20">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/m20.xml</web_url>
+	</system>
+	<system name="m5_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/m5_cart.xml</web_url>
+	</system>
+	<system name="m5_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/m5_cass.xml</web_url>
+	</system>
+	<system name="m5_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/m5_flop.xml</web_url>
+	</system>
+	<system name="mac_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mac_flop.xml</web_url>
+	</system>
+	<system name="mac_hdd">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mac_hdd.xml</web_url>
+	</system>
+	<system name="mbc200">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mbc200.xml</web_url>
+	</system>
+	<system name="mbc55x">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mbc55x.xml</web_url>
+	</system>
+	<system name="mc10">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mc10.xml</web_url>
+	</system>
+	<system name="mc1000_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mc1000_cass.xml</web_url>
+	</system>
+	<system name="mc1502_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mc1502_flop.xml</web_url>
+	</system>
+	<system name="md2_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/md2_flop.xml</web_url>
+	</system>
+	<system name="megacd">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/megacd.xml</web_url>
+	</system>
+	<system name="megacdj">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/megacdj.xml</web_url>
+	</system>
+	<system name="megadriv">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/megadriv.xml</web_url>
+	</system>
+	<system name="megaduck">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/megaduck.xml</web_url>
+		<folder_name>megaduck</folder_name>
+		<media_type>-cart</media_type>
+	</system>
+	<system name="megapc">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/megapc.xml</web_url>
+	</system>
+	<system name="megatech">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/megatech.xml</web_url>
+	</system>
+	<system name="microvision">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/microvision.xml</web_url>
+	</system>
+	<system name="mikro80">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mikro80.xml</web_url>
+	</system>
+	<system name="mikrosha_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mikrosha_cart.xml</web_url>
+	</system>
+	<system name="mikrosha_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mikrosha_cass.xml</web_url>
+	</system>
+	<system name="misterx">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/misterx.xml</web_url>
+	</system>
+	<system name="mm1_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mm1_flop.xml</web_url>
+	</system>
+	<system name="mo5_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mo5_cart.xml</web_url>
+	</system>
+	<system name="mpu1000">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mpu1000.xml</web_url>
+	</system>
+	<system name="mpz80">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mpz80.xml</web_url>
+	</system>
+	<system name="msx1_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/msx1_cart.xml</web_url>
+	</system>
+	<system name="msx1_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/msx1_cass.xml</web_url>
+	</system>
+	<system name="msx1_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/msx1_flop.xml</web_url>
+	</system>
+	<system name="msx2_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/msx2_cart.xml</web_url>
+	</system>
+	<system name="msx2_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/msx2_cass.xml</web_url>
+	</system>
+	<system name="msx2_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/msx2_flop.xml</web_url>
+	</system>
+	<system name="msx2p_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/msx2p_flop.xml</web_url>
+	</system>
+	<system name="msxr_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/msxr_flop.xml</web_url>
+	</system>
+	<system name="mtx_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mtx_cass.xml</web_url>
+	</system>
+	<system name="myvision">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/myvision.xml</web_url>
+	</system>
+	<system name="mz2000_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mz2000_cass.xml</web_url>
+	</system>
+	<system name="mz2000_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mz2000_flop.xml</web_url>
+	</system>
+	<system name="mz2500">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mz2500.xml</web_url>
+	</system>
+	<system name="mz700_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mz700_cass.xml</web_url>
+	</system>
+	<system name="mz800_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/mz800_cass.xml</web_url>
+	</system>
+	<system name="n64">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/n64.xml</web_url>
+	</system>
+	<system name="n64dd">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/n64dd.xml</web_url>
+	</system>
+	<system name="nascom_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/nascom_flop.xml</web_url>
+	</system>
+	<system name="nascom_socket">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/nascom_socket.xml</web_url>
+	</system>
+	<system name="neocd">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/neocd.xml</web_url>
+		<folder_name>neocd</folder_name>
+		<media_type>-cdrom</media_type>
+	</system>
+	<system name="neocdz">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/neocd.xml</web_url>
+		<folder_name>neocdz</folder_name>
+		<media_type>-cdrom</media_type>
+	</system>
+	<system name="neogeo">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/neogeo.xml</web_url>
+	</system>
+	<system name="nes">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/nes.xml</web_url>
+	</system>
+	<system name="nes_ade">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/nes_ade.xml</web_url>
+	</system>
+	<system name="nes_datach">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/nes_datach.xml</web_url>
+	</system>
+	<system name="nes_kstudio">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/nes_kstudio.xml</web_url>
+	</system>
+	<system name="nes_ntbrom">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/nes_ntbrom.xml</web_url>
+	</system>
+	<system name="next">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/next.xml</web_url>
+	</system>
+	<system name="ngp">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ngp.xml</web_url>
+	</system>
+	<system name="ngpc">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ngpc.xml</web_url>
+	</system>
+	<system name="nimbus">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/nimbus.xml</web_url>
+	</system>
+	<system name="odyssey2">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/odyssey2.xml</web_url>
+	</system>
+	<system name="ondra">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ondra.xml</web_url>
+	</system>
+	<system name="orao">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/orao.xml</web_url>
+	</system>
+	<system name="orion_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/orion_cart.xml</web_url>
+	</system>
+	<system name="orion_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/orion_cass.xml</web_url>
+	</system>
+	<system name="orion_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/orion_flop.xml</web_url>
+	</system>
+	<system name="orionpro_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/orionpro_flop.xml</web_url>
+	</system>
+	<system name="osborne1">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/osborne1.xml</web_url>
+	</system>
+	<system name="osborne2">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/osborne2.xml</web_url>
+	</system>
+	<system name="p500_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/p500_flop.xml</web_url>
+	</system>
+	<system name="partner_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/partner_cass.xml</web_url>
+	</system>
+	<system name="partner_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/partner_flop.xml</web_url>
+	</system>
+	<system name="pasogo">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pasogo.xml</web_url>
+	</system>
+	<system name="pb2000c">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pb2000c.xml</web_url>
+	</system>
+	<system name="pc1000">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pc1000.xml</web_url>
+	</system>
+	<system name="pc1512">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pc1512.xml</web_url>
+	</system>
+	<system name="pc1640">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pc1640.xml</web_url>
+	</system>
+	<system name="pc8201">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pc8201.xml</web_url>
+	</system>
+	<system name="pc8801_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pc8801_cass.xml</web_url>
+	</system>
+	<system name="pc8801_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pc8801_flop.xml</web_url>
+	</system>
+	<system name="pc88va">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pc88va.xml</web_url>
+	</system>
+	<system name="pc98">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pc98.xml</web_url>
+		<folder_name>pc9821</folder_name>
+		<media_type>-flop</media_type>
+	</system>
+	<system name="pce">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pce.xml</web_url>
+	</system>
+	<system name="pce_tourvision">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pce_tourvision.xml</web_url>
+	</system>
+	<system name="pcecd">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pcecd.xml</web_url>
+	</system>
+	<system name="pcw">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pcw.xml</web_url>
+	</system>
+	<system name="pcw16">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pcw16.xml</web_url>
+	</system>
+	<system name="pecom_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pecom_cass.xml</web_url>
+	</system>
+	<system name="pegasus_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pegasus_cart.xml</web_url>
+	</system>
+	<system name="pencil2">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pencil2.xml</web_url>
+	</system>
+	<system name="pentagon_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pentagon_cass.xml</web_url>
+	</system>
+	<system name="pet_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pet_cass.xml</web_url>
+	</system>
+	<system name="pet_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pet_flop.xml</web_url>
+	</system>
+	<system name="pet_hdd">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pet_hdd.xml</web_url>
+	</system>
+	<system name="pet_rom">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pet_rom.xml</web_url>
+	</system>
+	<system name="pico">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pico.xml</web_url>
+	</system>
+	<system name="pippin">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pippin.xml</web_url>
+	</system>
+	<system name="pippin_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pippin_flop.xml</web_url>
+	</system>
+	<system name="plus4_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/plus4_cart.xml</web_url>
+	</system>
+	<system name="plus4_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/plus4_cass.xml</web_url>
+	</system>
+	<system name="plus4_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/plus4_flop.xml</web_url>
+	</system>
+	<system name="pmd85_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pmd85_cass.xml</web_url>
+	</system>
+	<system name="pockchalv1">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pockchalv1.xml</web_url>
+	</system>
+	<system name="pockchalv2">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pockchalv2.xml</web_url>
+	</system>
+	<system name="pokemini">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pokemini.xml</web_url>
+	</system>
+	<system name="pro128_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pro128_cart.xml</web_url>
+	</system>
+	<system name="pro128s_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pro128s_flop.xml</web_url>
+	</system>
+	<system name="prof180">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/prof180.xml</web_url>
+	</system>
+	<system name="prof80">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/prof80.xml</web_url>
+	</system>
+	<system name="psion1">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/psion1.xml</web_url>
+	</system>
+	<system name="psion2">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/psion2.xml</web_url>
+	</system>
+	<system name="psx">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/psx.xml</web_url>
+	</system>
+	<system name="pt68k2">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pt68k2.xml</web_url>
+	</system>
+	<system name="pv1000">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pv1000.xml</web_url>
+	</system>
+	<system name="pv2000">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pv2000.xml</web_url>
+	</system>
+	<system name="px4_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/px4_cart.xml</web_url>
+	</system>
+	<system name="pyl601">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/pyl601.xml</web_url>
+	</system>
+	<system name="ql_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ql_cart.xml</web_url>
+	</system>
+	<system name="ql_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ql_cass.xml</web_url>
+	</system>
+	<system name="ql_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ql_flop.xml</web_url>
+	</system>
+	<system name="qx10_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/qx10_flop.xml</web_url>
+	</system>
+	<system name="r9751">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/r9751.xml</web_url>
+	</system>
+	<system name="radio86_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/radio86_cart.xml</web_url>
+	</system>
+	<system name="radio86_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/radio86_cass.xml</web_url>
+	</system>
+	<system name="rainbow">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/rainbow.xml</web_url>
+	</system>
+	<system name="rwtrntcs">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/rwtrntcs.xml</web_url>
+	</system>
+	<system name="rx78">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/rx78.xml</web_url>
+	</system>
+	<system name="sage2">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/sage2.xml</web_url>
+	</system>
+	<system name="samcoupe_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/samcoupe_cass.xml</web_url>
+	</system>
+	<system name="samcoupe_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/samcoupe_flop.xml</web_url>
+	</system>
+	<system name="sat_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/sat_cart.xml</web_url>
+	</system>
+	<system name="saturn">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/saturn.xml</web_url>
+	</system>
+	<system name="sawatte">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/sawatte.xml</web_url>
+	</system>
+	<system name="sc3000_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/sc3000_cart.xml</web_url>
+	</system>
+	<system name="sc3000_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/sc3000_cass.xml</web_url>
+	</system>
+	<system name="scv">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/scv.xml</web_url>
+	</system>
+	<system name="segacd">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/segacd.xml</web_url>
+	</system>
+	<system name="sf7000">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/sf7000.xml</web_url>
+	</system>
+	<system name="sg1000">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/sg1000.xml</web_url>
+	</system>
+	<system name="sgx">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/sgx.xml</web_url>
+	</system>
+	<system name="smc777">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/smc777.xml</web_url>
+	</system>
+	<system name="sms">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/sms.xml</web_url>
+	</system>
+	<system name="snes">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/snes.xml</web_url>
+	</system>
+	<system name="snes_bspack">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/snes_bspack.xml</web_url>
+	</system>
+	<system name="snes_strom">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/snes_strom.xml</web_url>
+	</system>
+	<system name="snes_vkun">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/snes_vkun.xml</web_url>
+	</system>
+	<system name="snotec">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/snotec.xml</web_url>
+	</system>
+	<system name="snread">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/snread.xml</web_url>
+	</system>
+	<system name="snspell">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/snspell.xml</web_url>
+	</system>
+	<system name="socrates">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/socrates.xml</web_url>
+	</system>
+	<system name="softbox">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/softbox.xml</web_url>
+	</system>
+	<system name="softwarelist.dtd">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/softwarelist.dtd</web_url>
+	</system>
+	<system name="sol20_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/sol20_cass.xml</web_url>
+	</system>
+	<system name="sorcerer_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/sorcerer_cart.xml</web_url>
+	</system>
+	<system name="sorcerer_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/sorcerer_cass.xml</web_url>
+	</system>
+	<system name="sorcerer_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/sorcerer_flop.xml</web_url>
+	</system>
+	<system name="spc1000_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/spc1000_cass.xml</web_url>
+	</system>
+	<system name="special_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/special_cass.xml</web_url>
+	</system>
+	<system name="special_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/special_flop.xml</web_url>
+	</system>
+	<system name="specpls3_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/specpls3_flop.xml</web_url>
+	</system>
+	<system name="spectrum_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/spectrum_cart.xml</web_url>
+	</system>
+	<system name="spectrum_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/spectrum_cass.xml</web_url>
+	</system>
+	<system name="st_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/st_cart.xml</web_url>
+	</system>
+	<system name="st_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/st_flop.xml</web_url>
+	</system>
+	<system name="studio2">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/studio2.xml</web_url>
+	</system>
+	<system name="stv">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/stv.xml</web_url>
+	</system>
+	<system name="super6">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/super6.xml</web_url>
+	</system>
+	<system name="superpet_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/superpet_flop.xml</web_url>
+	</system>
+	<system name="supracan">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/supracan.xml</web_url>
+	</system>
+	<system name="sv8000">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/sv8000.xml</web_url>
+	</system>
+	<system name="svi318_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/svi318_cart.xml</web_url>
+	</system>
+	<system name="svi318_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/svi318_cass.xml</web_url>
+	</system>
+	<system name="svi318_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/svi318_flop.xml</web_url>
+	</system>
+	<system name="svision">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/svision.xml</web_url>
+		<folder_name>svision</folder_name>
+		<media_type>-cart</media_type>
+	</system>
+	<system name="svmu">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/svmu.xml</web_url>
+	</system>
+	<system name="tandy200">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/tandy200.xml</web_url>
+	</system>
+	<system name="tandy2k">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/tandy2k.xml</web_url>
+	</system>
+	<system name="tandy6k">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/tandy6k.xml</web_url>
+	</system>
+	<system name="tdv2324">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/tdv2324.xml</web_url>
+	</system>
+	<system name="tek4052_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/tek4052_cart.xml</web_url>
+	</system>
+	<system name="tg16">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/tg16.xml</web_url>
+	</system>
+	<system name="ti74_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ti74_cart.xml</web_url>
+	</system>
+	<system name="ti99_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ti99_cart.xml</web_url>
+	</system>
+	<system name="tiki100">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/tiki100.xml</web_url>
+	</system>
+	<system name="timex_dock">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/timex_dock.xml</web_url>
+	</system>
+	<system name="tntell">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/tntell.xml</web_url>
+	</system>
+	<system name="to770_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/to770_cart.xml</web_url>
+	</system>
+	<system name="to7_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/to7_cart.xml</web_url>
+	</system>
+	<system name="trs80m2">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/trs80m2.xml</web_url>
+	</system>
+	<system name="trsm100">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/trsm100.xml</web_url>
+	</system>
+	<system name="tutor">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/tutor.xml</web_url>
+	</system>
+	<system name="tvc_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/tvc_cart.xml</web_url>
+	</system>
+	<system name="tvc_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/tvc_cass.xml</web_url>
+	</system>
+	<system name="tvc_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/tvc_flop.xml</web_url>
+	</system>
+	<system name="unichamp">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/unichamp.xml</web_url>
+	</system>
+	<system name="ut88">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/ut88.xml</web_url>
+	</system>
+	<system name="uzebox">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/uzebox.xml</web_url>
+	</system>
+	<system name="v1050_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/v1050_flop.xml</web_url>
+	</system>
+	<system name="v1050_hdd">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/v1050_hdd.xml</web_url>
+	</system>
+	<system name="vboy">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/vboy.xml</web_url>
+	</system>
+	<system name="vc4000">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/vc4000.xml</web_url>
+	</system>
+	<system name="vector06_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/vector06_cart.xml</web_url>
+	</system>
+	<system name="vectrex">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/vectrex.xml</web_url>
+		<folder_name>vectrex</folder_name>
+		<media_type>-cart</media_type>
+	</system>
+	<system name="vg5k">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/vg5k.xml</web_url>
+	</system>
+	<system name="vic10">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/vic10.xml</web_url>
+	</system>
+	<system name="vic1001_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/vic1001_cart.xml</web_url>
+	</system>
+	<system name="vic1001_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/vic1001_cass.xml</web_url>
+	</system>
+	<system name="vic1001_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/vic1001_flop.xml</web_url>
+	</system>
+	<system name="victor9k_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/victor9k_flop.xml</web_url>
+	</system>
+	<system name="vidbrain">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/vidbrain.xml</web_url>
+	</system>
+	<system name="vii">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/vii.xml</web_url>
+	</system>
+	<system name="vip">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/vip.xml</web_url>
+	</system>
+	<system name="visicom">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/visicom.xml</web_url>
+	</system>
+	<system name="vixen">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/vixen.xml</web_url>
+	</system>
+	<system name="vreader">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/vreader.xml</web_url>
+	</system>
+	<system name="vsmile_cart">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/vsmile_cart.xml</web_url>
+	</system>
+	<system name="vsmile_cd">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/vsmile_cd.xml</web_url>
+	</system>
+	<system name="vz_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/vz_cass.xml</web_url>
+	</system>
+	<system name="wangpc">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/wangpc.xml</web_url>
+	</system>
+	<system name="wicat">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/wicat.xml</web_url>
+	</system>
+	<system name="wmbullet">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/wmbullet.xml</web_url>
+	</system>
+	<system name="wscolor">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/wscolor.xml</web_url>
+	</system>
+	<system name="wswan">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/wswan.xml</web_url>
+	</system>
+	<system name="x07_card">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/x07_card.xml</web_url>
+	</system>
+	<system name="x07_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/x07_cass.xml</web_url>
+	</system>
+	<system name="x1_cass">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/x1_cass.xml</web_url>
+		<folder_name>x1</folder_name>
+		<media_type>-cass</media_type>
+	</system>
+	<system name="x1_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/x1_flop.xml</web_url>
+		<folder_name>x1</folder_name>
+		<media_type>-flop</media_type>
+	</system>
+	<system name="x68k_flop">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/x68k_flop.xml</web_url>
+		<folder_name>x68000</folder_name>
+		<media_type>-flop</media_type>
+	</system>
+	<system name="xegs">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/xegs.xml</web_url>
+	</system>
+	<system name="xerox820">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/xerox820.xml</web_url>
+	</system>
+	<system name="xerox820ii">
+		<web_url>https://raw.githubusercontent.com/mamedev/mame/master/hash/xerox820ii.xml</web_url>
+	</system>
+</systems>

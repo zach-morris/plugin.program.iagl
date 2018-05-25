@@ -1,0 +1,35 @@
+# FS-UAE Configuration Template
+# For use with IAGL
+
+[fs-uae]
+amiga_model = CD32
+accuracy = 1
+fullscreen = 1
+floppy_drive_0_sounds = off
+floppy_drive_1_sounds = off
+floppy_drive_2_sounds = off
+floppy_drive_3_sounds = off
+
+cdrom_drive_0 = %AMIGA_DISK0%
+
+cdrom_image_0 = %AMIGA_DISK0%
+%INCLUDE_AMIGA_DISK1%cdrom_image_1 = %AMIGA_DISK1%
+%INCLUDE_AMIGA_DISK2%cdrom_image_2 = %AMIGA_DISK2%
+%INCLUDE_AMIGA_DISK3%cdrom_image_3 = %AMIGA_DISK3%
+%INCLUDE_AMIGA_DISK4%cdrom_image_4 = %AMIGA_DISK4%
+%INCLUDE_AMIGA_DISK5%cdrom_image_5 = %AMIGA_DISK5%
+%INCLUDE_AMIGA_DISK6%cdrom_image_6 = %AMIGA_DISK6%
+%INCLUDE_AMIGA_DISK7%cdrom_image_7 = %AMIGA_DISK7%
+%INCLUDE_AMIGA_DISK8%cdrom_image_8 = %AMIGA_DISK8%
+%INCLUDE_AMIGA_DISK9%cdrom_image_9 = %AMIGA_DISK9%
+%INCLUDE_AMIGA_DISK10%cdrom_image_10 = %AMIGA_DISK10%
+%INCLUDE_AMIGA_DISK11%cdrom_image_11 = %AMIGA_DISK11%
+%INCLUDE_AMIGA_DISK12%cdrom_image_12 = %AMIGA_DISK12%
+%INCLUDE_AMIGA_DISK13%cdrom_image_13 = %AMIGA_DISK13%
+%INCLUDE_AMIGA_DISK14%cdrom_image_14 = %AMIGA_DISK14%
+%INCLUDE_AMIGA_DISK15%cdrom_image_15 = %AMIGA_DISK15%
+%INCLUDE_AMIGA_DISK16%cdrom_image_16 = %AMIGA_DISK16%
+%INCLUDE_AMIGA_DISK17%cdrom_image_17 = %AMIGA_DISK17%
+%INCLUDE_AMIGA_DISK18%cdrom_image_18 = %AMIGA_DISK18%
+%INCLUDE_AMIGA_DISK19%cdrom_image_19 = %AMIGA_DISK19%
+

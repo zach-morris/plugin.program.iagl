@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IAGL InfoDialog Window
+Copied and edited from the default Estuary InfoDialog Window for use with IAGL
+https://github.com/phil65/skin.estuary
+ -->
+<window>
+	<defaultcontrol always="false">3011</defaultcontrol>
+	<controls>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>100%</width>
+			<height>100%</height>
+			<aspectratio>scale</aspectratio>
+			<texture background="true">special://home/addons/plugin.program.iagl/resources/skins/Default/media/fanart.jpg</texture>
+			<visible>true</visible>
+		</control>
+        <control type="button" id="3011">
+            <description>Control Grabber</description>
+            <posx>1</posx>
+            <posy>1</posy>
+            <width>1</width>
+            <height>1</height>
+            <texturefocus>transparent.png</texturefocus>
+            <texturenofocus>transparent.png</texturenofocus>
+            <onleft>3003</onleft>
+            <onright>3003</onright>
+            <onup>3003</onup>
+            <ondown>3003</ondown>
+        </control>
+        <control type="list" id="113">
+            <description>Invisible List for Info</description>
+            <posx>1</posx>
+            <posy>1</posy>
+            <itemlayout width="0" height="0"></itemlayout>
+            <focusedlayout width="0" height="0"></focusedlayout>
+        </control>
+		<control type="wraplist" id="114">
+			<description>Fanart Slideshow List</description>
+			<posx>2</posx>
+			<posy>2</posy>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<scrolltime>9000</scrolltime>
+			<autoscroll>True</autoscroll>
+			<itemlayout width="0" height="0"></itemlayout>
+			<focusedlayout width="0" height="0"></focusedlayout>
+		</control>
+		<control type="wraplist" id="115">
+			<description>Box and Snapshot Slideshow List</description>
+			<posx>3</posx>
+			<posy>3</posy>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<scrolltime>8000</scrolltime>
+			<autoscroll>True</autoscroll>
+			<itemlayout width="0" height="0"></itemlayout>
+			<focusedlayout width="0" height="0"></focusedlayout>
+		</control>
+		<control type="wraplist" id="116">
+			<description>Banner Slideshow List</description>
+			<posx>3</posx>
+			<posy>3</posy>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<scrolltime>12000</scrolltime>
+			<autoscroll>True</autoscroll>
+			<itemlayout width="0" height="0"></itemlayout>
+			<focusedlayout width="0" height="0"></focusedlayout>
+		</control>
+
+        <control type="multiimage" id="1141">
+			<left>0</left>
+			<top>0</top>
+			<width>100%</width>
+			<height>100%</height>
+			<aspectratio>scale</aspectratio>
+			<fadetime>300</fadetime>
+			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<imagepath background="true">$INFO[Container(114).ListItem.Art(fanart)]</imagepath>
+			<visible>!String.IsEmpty(Container(114).ListItem.Art(fanart))</visible>
+		</control>
+		<control type="image">
+			<width>100%</width>
+			<height>100%</height>
+			<aspectratio>stretch</aspectratio>
+			<texture border="25" background="true" colordiffuse="96FFFFFF">grey.png</texture>
+			<visible>True</visible>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>100%</width>
+			<height>100%</height>
+			<aspectratio>scale</aspectratio>
+			<texture background="true">special://home/addons/plugin.program.iagl/resources/skins/Default/media/fanart.jpg</texture>
+			<visible>!Control.IsVisible(1141)</visible>
+		</control>
+		<control type="group">
+			<centertop>50%</centertop>
+			<height>1080</height>
+			<centerleft>50%</centerleft>
+			<width>1920</width>
+			<control type="image">
+				<depth>0.10</depth>
+				<left>20</left>
+				<top>40</top>
+				<width>200</width>
+				<height>100</height>
+				<aspectratio aligny="center">keep</aspectratio>
+				<texture>$INFO[Container(113).ListItem.Art(clearlogo)]</texture>
+			</control>
+			<control type="image">
+				<depth>0.10</depth>
+				<right>40</right>
+				<top>40</top>
+				<width>200</width>
+				<height>100</height>
+				<aspectratio aligny="center">keep</aspectratio>
+				<texture>$INFO[Container(113).ListItem.Property(emu_logo)]</texture>
+			</control>
+			<control type="group">
+				<top>150</top>
+				<left>66</left>
+				<animation effect="fade" end="100" time="200">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<control type="image">
+					<top>-16</top>
+					<left>-16</left>
+					<width>566</width>
+					<height>841</height>
+					<texture>black.png</texture>
+					<bordertexture border="21">shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<visible>False</visible>
+				</control>
+				<control type="image" id="1151">
+					<depth>0.10</depth>
+					<left>4</left>
+					<top>4</top>
+					<width>550</width>
+					<height>801</height>
+					<aspectratio aligny="center">keep</aspectratio>
+					<fadetime>200</fadetime>
+					<bordertexture border="6">semi_tranparent_1.png</bordertexture>
+					<bordersize>5</bordersize>
+					<texture>$INFO[Container(115).ListItem.Art(poster)]</texture>
+					<visible>!String.IsEmpty(Container(115).ListItem.Art(poster))</visible>
+				</control>
+				<control type="image">
+					<depth>0.10</depth>
+					<left>4</left>
+					<top>4</top>
+					<width>550</width>
+					<height>801</height>
+					<aspectratio aligny="center">keep</aspectratio>
+					<fadetime>200</fadetime>
+					<texture>$INFO[Container(113).ListItem.Property(emu_boxart)]</texture>
+					<visible>!Control.IsVisible(1151)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<left>620</left>
+				<top>-30</top>
+				<control type="group" id="140">
+					<top>468</top>
+					<control type="button" id="138">
+						<width>754</width>
+						<height>418</height>
+						<textoffsetx>40</textoffsetx>
+						<textoffsety>20</textoffsety>
+						<aligny>bottom</aligny>
+						<label></label>
+						<onclick condition="!String.IsEmpty(Container(113).ListItem.Plot)">SetProperty(TextViewer_Header,Plot,home)</onclick>
+						<onclick condition="!String.IsEmpty(Container(113).ListItem.Plot)">SetProperty(TextViewer_Text,$ESCINFO[Container(113).ListItem.Plot],home)</onclick>
+						<onclick condition="!String.IsEmpty(Container(113).ListItem.Plot)">RunPlugin(plugin://plugin.program.iagl/text_viewer)</onclick>
+						<onup>50</onup>
+						<onleft>138</onleft>
+						<onright>138</onright>
+						<ondown>5000</ondown>
+						<texturenofocus border="21">dialog-bg.png</texturenofocus>
+						<visible>Integer.IsGreater(Container(4000).NumItems,0) + String.IsEqual(Window(HOME).Property(iagl.trailer_started),False)</visible>
+					</control>
+					<control type="image">
+						<left>735</left>
+						<width>512</width>
+						<height>418</height>
+						<aligny>bottom</aligny>
+						<texture border="21">dialog-bg.png</texture>
+						<visible>Integer.IsGreater(Container(4000).NumItems,0) + String.IsEqual(Window(HOME).Property(iagl.trailer_started),False)</visible>
+					</control>
+					<control type="button" id="139">
+						<width>1245</width>
+						<height>418</height>
+						<textoffsetx>40</textoffsetx>
+						<textoffsety>20</textoffsety>
+						<aligny>bottom</aligny>
+						<label></label>
+						<onclick condition="!String.IsEmpty(Container(113).ListItem.Plot)">SetProperty(TextViewer_Header,Plot,home)</onclick>
+						<onclick condition="!String.IsEmpty(Container(113).ListItem.Plot)">SetProperty(TextViewer_Text,$ESCINFO[Container(113).ListItem.Plot],home)</onclick>
+						<onclick condition="!String.IsEmpty(Container(113).ListItem.Plot)">ActivateWindow(1102)</onclick>
+						<onup>50</onup>
+						<onleft>139</onleft>
+						<onright>139</onright>
+						<ondown>5000</ondown>
+						<texturenofocus border="21">dialog-bg.png</texturenofocus>
+						<visible>!Integer.IsGreater(Container(4000).NumItems,0) + String.IsEqual(Window(HOME).Property(iagl.trailer_started),False)</visible>
+					</control>
+					<control type="textbox">
+						<left>40</left>
+						<top>25</top>
+						<width>670</width>
+						<height>363</height>
+						<label fallback="19055">$INFO[Container(113).ListItem.Plot]</label>
+						<autoscroll delay="8000" time="5000" repeat="10000">True</autoscroll>
+						<visible>Integer.IsGreater(Container(4000).NumItems,0)+String.IsEqual(Window(HOME).Property(iagl.trailer_started),False)</visible>
+					</control>
+				</control>
+				<control type="grouplist" id="4000">
+					<visible>String.IsEqual(Window(HOME).Property(iagl.trailer_started),False)</visible>
+					<orientation>vertical</orientation>
+					<scrolltime tween="sine" easing="out">200</scrolltime>
+					<left>730</left>
+					<top>488</top>
+					<height>355</height>
+					<itemgap>-9</itemgap>
+					<ondown>5000</ondown>
+					<onup>50</onup>
+					<onright>140</onright>
+					<onleft>140</onleft>
+					<control type="button" id="150">
+						<width>505</width>
+						<height>49</height>
+						<textoffsetx>40</textoffsetx>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<texturefocus />
+						<texturenofocus />
+						<onclick>noop</onclick>
+						<label>[COLOR FF12A0C7]Platform: [/COLOR]$INFO[Container(113).ListItem.Property(emu_description)]</label>
+						<visible>!String.IsEmpty(Container(113).ListItem.Property(emu_description))</visible>
+					</control>
+					<control type="button" id="151">
+						<width>505</width>
+						<height>49</height>
+						<textoffsetx>40</textoffsetx>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<texturefocus />
+						<texturenofocus />
+						<onclick>noop</onclick>
+						<label>[COLOR FF12A0C7]Categories: [/COLOR]$INFO[Container(113).ListItem.Property(emu_category)]</label>
+						<visible>!String.IsEmpty(Container(113).ListItem.Property(emu_category))</visible>
+					</control>
+					<control type="button" id="152">
+						<width>505</width>
+						<height>49</height>
+						<textoffsetx>40</textoffsetx>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<texturefocus />
+						<texturenofocus />
+						<onclick>noop</onclick>
+						<label>[COLOR FF12A0C7]Date: [/COLOR]$INFO[Container(113).ListItem.Date]</label>
+						<visible>!String.IsEmpty(Container(113).ListItem.Date)</visible>
+					</control>
+					<control type="button" id="153">
+						<width>505</width>
+						<height>49</height>
+						<textoffsetx>40</textoffsetx>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<texturefocus />
+						<texturenofocus />
+						<onclick>noop</onclick>
+						<label>[COLOR FF12A0C7]Genre: [/COLOR]$INFO[Container(113).ListItem.Genre]</label>
+						<visible>!String.IsEmpty(Container(113).ListItem.Genre)</visible>
+					</control>
+					<control type="button" id="154">
+						<width>505</width>
+						<height>49</height>
+						<textoffsetx>40</textoffsetx>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<texturefocus />
+						<texturenofocus />
+						<onclick>noop</onclick>
+						<label>[COLOR FF12A0C7]Studio: [/COLOR]$INFO[Container(113).ListItem.Studio]</label>
+						<visible>!String.IsEmpty(Container(113).ListItem.Studio)</visible>
+					</control>
+					<control type="button" id="155">
+						<width>505</width>
+						<height>49</height>
+						<textoffsetx>40</textoffsetx>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<texturefocus />
+						<texturenofocus />
+						<onclick>noop</onclick>
+						<label>[COLOR FF12A0C7]Rating: [/COLOR]$INFO[Container(113).ListItem.RatingAndVotes]</label>
+						<visible>!String.IsEmpty(Container(113).ListItem.RatingAndVotes)</visible>
+					</control>
+					<control type="button" id="156">
+						<width>505</width>
+						<height>49</height>
+						<textoffsetx>40</textoffsetx>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<texturefocus />
+						<texturenofocus />
+						<onclick>noop</onclick>
+						<label>[COLOR FF12A0C7]Players: [/COLOR]$INFO[Container(113).ListItem.Property(nplayers)]</label>
+						<visible>!String.IsEmpty(Container(113).ListItem.Property(nplayers))</visible>
+					</control>
+					<control type="button" id="157">
+						<width>505</width>
+						<height>49</height>
+						<textoffsetx>40</textoffsetx>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<texturefocus />
+						<texturenofocus />
+						<onclick>noop</onclick>
+						<label>[COLOR FF12A0C7]Perspective: [/COLOR]$INFO[Container(113).ListItem.Property(perspective)]</label>
+						<visible>!String.IsEmpty(Container(113).ListItem.Property(perspective))</visible>
+					</control>
+					<control type="button" id="158">
+						<width>505</width>
+						<height>49</height>
+						<textoffsetx>40</textoffsetx>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<texturefocus />
+						<texturenofocus />
+						<onclick>noop</onclick>
+						<label>[COLOR FF12A0C7]ESRB: [/COLOR]$INFO[Container(113).ListItem.Mpaa]</label>
+						<visible>!String.IsEmpty(Container(113).ListItem.Mpaa)</visible>
+					</control>
+					<control type="button" id="159">
+						<width>505</width>
+						<height>49</height>
+						<textoffsetx>40</textoffsetx>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<texturefocus />
+						<texturenofocus />
+						<onclick>noop</onclick>
+						<label>[COLOR FF12A0C7]Tag: [/COLOR]$INFO[Container(113).ListItem.Property(tag)]</label>
+						<visible>!String.IsEmpty(Container(113).ListItem.Property(tag))</visible>
+					</control>
+					<control type="button" id="160">
+						<width>505</width>
+						<height>49</height>
+						<textoffsetx>40</textoffsetx>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<texturefocus />
+						<texturenofocus />
+						<onclick>noop</onclick>
+						<label>[COLOR FF12A0C7]Size: [/COLOR]$INFO[Container(113).ListItem.Size]</label>
+						<visible>!String.IsEmpty(Container(113).ListItem.Size)</visible>
+					</control>
+				</control>
+				<control type="image">
+					<left>77</left>
+					<top>185</top>
+					<width>1090</width>
+					<height>283</height>
+					<fadetime>150</fadetime>
+					<aspectratio>keep</aspectratio>
+					<bordertexture border="6">semi_tranparent_1.png</bordertexture>
+					<bordersize>5</bordersize>
+					<texture>$INFO[Container(116).ListItem.Art(banner)]</texture>
+					<visible>!String.IsEmpty(Container(116).ListItem.Art(banner))+String.IsEqual(Window(HOME).Property(iagl.trailer_started),False)</visible>
+				</control>
+				<control type="image">
+					<left>77</left>
+					<top>185</top>
+					<width>1090</width>
+					<height>283</height>
+					<fadetime>150</fadetime>
+					<aspectratio>keep</aspectratio>
+					<bordertexture border="6">semi_tranparent_1.png</bordertexture>
+					<bordersize>5</bordersize>
+					<texture>$INFO[Container(113).ListItem.Property(emu_banner)]</texture>
+					<visible>String.IsEmpty(Container(113).ListItem.Art(banner))+String.IsEqual(Window(HOME).Property(iagl.trailer_started),False)</visible>
+				</control>
+				<control type="panel" id="50">
+					<top>158</top>
+					<width>1235</width>
+					<height>370</height>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<ondown>140</ondown>
+					<scrolltime>200</scrolltime>
+					<orientation>horizontal</orientation>
+					<itemlayout height="317" width="245">
+						<control type="group">
+							<top>10</top>
+							<control type="image">
+								<top>20</top>
+								<left>20</left>
+								<width>224</width>
+								<height>277</height>
+								<texture background="true">$INFO[Container(113).ListItem.Thumb]</texture>
+								<aspectratio aligny="center">scale</aspectratio>
+							</control>
+							<control type="image">
+								<left>20</left>
+								<width>224</width>
+								<height>80</height>
+								<bottom>10</bottom>
+								<texture>overlayfade.png</texture>
+								<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
+							</control>
+							<control type="label">
+								<left>25</left>
+								<width>214</width>
+								<height>67</height>
+								<top>218</top>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font12</font>
+								<label>$INFO[Container(113).ListItem.Label]</label>
+							</control>
+							<control type="label">
+								<left>25</left>
+								<width>214</width>
+								<height>67</height>
+								<top>245</top>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font12</font>
+								<textcolor>grey</textcolor>
+								<label>$INFO[Container(113).ListItem.Label2]</label>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout height="317" width="245">
+						<control type="group">
+							<left>0</left>
+							<top>10</top>
+							<control type="image">
+								<top>20</top>
+								<left>20</left>
+								<width>224</width>
+								<height>277</height>
+								<texture background="true">$INFO[Container(113).ListItem.Thumb]</texture>
+								<aspectratio aligny="center">scale</aspectratio>
+							</control>
+							<control type="image">
+								<left>20</left>
+								<width>224</width>
+								<height>80</height>
+								<bottom>10</bottom>
+								<texture>overlayfade.png</texture>
+								<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
+							</control>
+							<control type="label">
+								<left>25</left>
+								<width>214</width>
+								<height>67</height>
+								<top>218</top>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font12</font>
+								<scroll>true</scroll>
+								<label>$INFO[Container(113).ListItem.Label]</label>
+							</control>
+							<control type="label">
+								<left>25</left>
+								<width>214</width>
+								<height>67</height>
+								<top>245</top>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font12</font>
+								<textcolor>grey</textcolor>
+								<scroll>true</scroll>
+								<label>$INFO[Container(113).ListItem.Label2]</label>
+							</control>
+							<control type="image">
+								<left>16</left>
+								<top>16</top>
+								<width>232</width>
+								<height>285</height>
+								<texture border="8" colordiffuse="FF12A0C7">thumbnail_focused.png</texture>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="grouplist" id="5000">
+					<left>0</left>
+					<top>864</top>
+					<width>1246</width>
+					<height>400</height>
+					<onleft>5000</onleft>
+					<onright>5000</onright>
+					<onup>140</onup>
+					<ondown condition="!Integer.IsGreater(Container(5000).Position,4)">SetFocus(50,$INFO[Container(5000).Position])</ondown>
+					<ondown condition="Integer.IsGreater(Container(5000).Position,4)">SetFocus(50,4)</ondown>
+					<itemgap>-16</itemgap>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+					<scrolltime tween="quadratic">200</scrolltime>
+					<control type="radiobutton" id="3002">
+						<width>262</width>
+						<height>142</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<texturefocus border="21" colordiffuse="FF12A0C7">button-fo.png</texturefocus>
+						<texturenofocus border="21">button-nofo.png</texturenofocus>
+						<textoffsetx>35</textoffsetx>
+						<textoffsety>78</textoffsety>
+						<radioposx>108</radioposx>
+						<radioposy>16</radioposy>
+						<radiowidth>48</radiowidth>
+						<font>font12</font>
+						<textureradioonfocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/launch.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/launch.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/launch.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/launch.png</textureradiooffnofocus>
+						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/launch.png</textureradiooffdisabled>
+						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/launch.png</textureradioondisabled>
+						<label>Launch</label>
+						<visible>True</visible>
+						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
+					</control>
+					<control type="radiobutton" id="11">
+						<width>262</width>
+						<height>142</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<texturefocus border="21" colordiffuse="FF12A0C7">button-fo.png</texturefocus>
+						<texturenofocus border="21">button-nofo.png</texturenofocus>
+						<textoffsetx>35</textoffsetx>
+						<textoffsety>78</textoffsety>
+						<radioposx>108</radioposx>
+						<radioposy>16</radioposy>
+						<radiowidth>48</radiowidth>
+						<font>font12</font>
+						<textureradioonfocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradiooffnofocus>
+						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradiooffdisabled>
+						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradioondisabled>
+						<label>Trailer</label>
+						<onclick>SetProperty(iagl.trailer_started,True,HOME)</onclick>
+						<onclick>PlayMedia($INFO[Container(113).ListItem.Trailer],False,1)</onclick>
+						<visible>!String.IsEmpty(Container(113).ListItem.Trailer)+String.IsEqual(Window(HOME).Property(iagl.trailer_started),False)</visible>
+						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
+					</control>
+					<control type="radiobutton" id="12">
+						<width>262</width>
+						<height>142</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<texturefocus border="21" colordiffuse="FF12A0C7">button-fo.png</texturefocus>
+						<texturenofocus border="21">button-nofo.png</texturenofocus>
+						<textoffsetx>35</textoffsetx>
+						<textoffsety>78</textoffsety>
+						<radioposx>108</radioposx>
+						<radioposy>16</radioposy>
+						<radiowidth>48</radiowidth>
+						<font>font12</font>
+						<textureradioonfocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/stop.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/stop.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/stop.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/stop.png</textureradiooffnofocus>
+						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/stop.png</textureradiooffdisabled>
+						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/stop.png</textureradioondisabled>
+						<label>Stop</label>
+						<onclick>PlayerControl(Stop)</onclick>
+						<onclick>PlayMedia($INFO[Container(113).ListItem.Trailer],False,1)</onclick>
+						<visible>SetProperty(iagl.trailer_started,False,HOME)</visible>
+						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
+					</control>
+					<control type="radiobutton" id="3001">
+						<width>262</width>
+						<height>142</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<texturefocus border="21" colordiffuse="FF12A0C7">button-fo.png</texturefocus>
+						<texturenofocus border="21">button-nofo.png</texturenofocus>
+						<textoffsetx>35</textoffsetx>
+						<textoffsety>78</textoffsety>
+						<radioposx>108</radioposx>
+						<radioposy>16</radioposy>
+						<radiowidth>48</radiowidth>
+						<font>font12</font>
+						<textureradioonfocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/download.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/download.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/download.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/download.png</textureradiooffnofocus>
+						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/download.png</textureradiooffdisabled>
+						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/download.png</textureradioondisabled>
+						<label>Download</label>
+						<visible>True</visible>
+						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
+					</control>
+					<control type="radiobutton" id="3003">
+						<width>262</width>
+						<height>142</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<texturefocus border="21" colordiffuse="FF12A0C7">button-fo.png</texturefocus>
+						<texturenofocus border="21">button-nofo.png</texturenofocus>
+						<textoffsetx>35</textoffsetx>
+						<textoffsety>78</textoffsety>
+						<radioposx>108</radioposx>
+						<radioposy>16</radioposy>
+						<radiowidth>48</radiowidth>
+						<font>font12</font>
+						<textureradioonfocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradiooffnofocus>
+						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradiooffdisabled>
+						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioondisabled>
+						<label>Close</label>
+						<visible>True</visible>
+						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
+					</control>
+				</control>
+			</control>
+			<control type="grouplist">
+				<left>100</left>
+				<right>100</right>
+				<top>20</top>
+				<animation effect="fade" start="0" end="100" time="200" delay="100">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<height>150</height>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<control type="label">
+					<width>100%</width>
+					<label>$INFO[Container(113).ListItem.Label]$INFO[Container(113).ListItem.Year, ([COLOR cornflowerblue],[/COLOR])]</label>
+					<font>font52_title</font>
+					<shadowcolor>black</shadowcolor>
+					<height>65</height>
+					<align>center</align>
+					<scroll>true</scroll>
+					<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(Control.GetLabel(33333))">Conditional</animation>
+				</control>
+				<control type="label" id="33333">
+					<label>$INFO[Container(113).ListItem.Genre]</label>
+					<left>85</left>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<height>100</height>
+					<width>100%</width>
+				</control>
+			</control>
+			<control type="videowindow" id="105">
+				<description>Trailer Window</description>
+				<left>650</left>
+				<bottom>250</bottom>
+				<width>1250</width>
+				<height>650</height>
+				<aspectratio aligny="center">scale</aspectratio>
+				<visible>String.IsEqual(Window(HOME).Property(iagl.trailer_started),True)</visible>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.program.iagl" name="Internet Archive Game Launcher" version="2.0.0">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0"/>
+    <import addon="plugin.video.youtube"/>
+    <import addon="script.module.kodi-six"/>
+    <import addon="script.module.routing"/>
+    <import addon="script.module.elementtree"/>
+    <import addon="script.module.dateutil"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video game</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language></language>
+    <summary>Internet Archive Game Launcher</summary>
+    <description>The Internet Archive Game Launcher (IAGL) is a FREE Kodi addon that will browse and launch games available from the Internet</description>
+    <license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
+    <forum>http://forum.kodi.tv/showthread.php?tid=231339</forum>
+    <source>https://github.com/zach-morris/plugin.program.iagl</source>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+      <screenshot>support/media/screen1.jpg</screenshot>
+      <screenshot>support/media/screen2.jpg</screenshot>
+      <screenshot>support/media/screen3.jpg</screenshot>
+      <screenshot>support/media/screen4.jpg</screenshot>
+      <screenshot>support/media/screen5.jpg</screenshot>
+      <screenshot>support/media/screen6.jpg</screenshot>
+    </assets>
+  </extension>
+</addon>
