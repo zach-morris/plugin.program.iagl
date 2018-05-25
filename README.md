@@ -3,12 +3,12 @@
 ![](https://i.imgur.com/nQfTbZq.png?display=inline-block) Internet Archive Game Launcher
 ==========================
 
-![IAGL](https://github.com/zach-morris/plugin.program.iagl/blob/main/fanart.jpg)
-
 The Internet Archive Game Launcher (IAGL - /eye/gull/) will launch games from the internet using [Kodi](http://kodi.tv)
 
 IAGL is *FREE*, as in beer. As in no money. As in gratis.
 
+
+![IAGL](https://github.com/zach-morris/plugin.program.iagl/blob/main/fanart.jpg)
 
 
 Installation
@@ -52,7 +52,7 @@ Some artwork in this folder is attributed to [Estuary by phil65 (Team Kodi)](htt
 
 IAGL in Action
 -------------------
-[![IARL](https://i.imgur.com/rHgDFw1.gif)](https://www.youtube.com/watch?v=fJ6nuyM6sOo)
+[![IAGL](https://i.imgur.com/rHgDFw1.gif)](https://www.youtube.com/watch?v=fJ6nuyM6sOo)
 
 
 

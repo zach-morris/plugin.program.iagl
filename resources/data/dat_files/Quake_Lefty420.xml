@@ -15,10 +15,10 @@
 		<emu_downloadpath>default</emu_downloadpath>
 		<emu_postdlaction>unzip_and_launch_file</emu_postdlaction>
 		<emu_comment>Quake Shareware list by Lefty420.  Quake is a first-person shooter video game, developed by id Software and published by GT Interactive in 1996</emu_comment>
-		<emu_thumb>https://i.imgur.com/yx17By8.jpg</emu_thumb>
-		<emu_banner>https://i.imgur.com/171sMlm.jpg</emu_banner>
-		<emu_fanart>https://i.imgur.com/jsk2VsS.jpg</emu_fanart>
-		<emu_logo>https://i.imgur.com/43hjv6B.png</emu_logo>
+		<emu_thumb>yx17By8.jpg</emu_thumb>
+		<emu_banner>171sMlm.jpg</emu_banner>
+		<emu_fanart>jsk2VsS.jpg</emu_fanart>
+		<emu_logo>43hjv6B.png</emu_logo>
 		<emu_trailer>5WzyVjx-SXM</emu_trailer>
 	</header>
 	<game name="Quake">
@@ -34,9 +34,9 @@
 		<videoid>5WzyVjx-SXM</videoid>
 		<giantbomb_url>http://www.giantbomb.com/quake/3030-8015/</giantbomb_url>
 		<boxart1>https://github.com/libretro/libretro-thumbnails/raw/master/Quake1/Named_Boxarts/Quake%20(v1.06).png</boxart1>
-		<banner1>https://i.imgur.com/171sMlm.jpg</banner1>
-		<fanart1>https://i.imgur.com/jsk2VsS.jpg</fanart1>
-		<clearlogo1>https://i.imgur.com/dfPD2j3.png</clearlogo1>
+		<banner1>171sMlm.jpg</banner1>
+		<fanart1>jsk2VsS.jpg</fanart1>
+		<clearlogo1>dfPD2j3.png</clearlogo1>
 		<emu_command>pak0.pak</emu_command>
 	</game>
 	<game name="Quake Mission Pack 1 - Scourge of Armagon">
@@ -52,9 +52,9 @@
 		<videoid>_26ocyo8rQo</videoid>
 		<giantbomb_url>http://www.giantbomb.com/quake/3030-8015/</giantbomb_url>
 		<boxart1>https://github.com/libretro/libretro-thumbnails/raw/master/Quake1/Named_Boxarts/Quake%20Mission%20Pack%201_%20Scourge%20of%20Armagon.png</boxart1>
-		<banner1>https://i.imgur.com/G6SjClx.jpg</banner1>
+		<banner1>G6SjClx.jpg</banner1>
 		<fanart1>https://i.ytimg.com/vi/Ter1I7O4aX0/maxresdefault.jpg</fanart1>
-		<clearlogo1>https://i.imgur.com/dfPD2j3.png</clearlogo1>
+		<clearlogo1>dfPD2j3.png</clearlogo1>
 		<emu_command>hipnotic.pak</emu_command>
 	</game>
 	<game name="Quake Mission Pack 2 - Dissolution of Eternity">
@@ -70,9 +70,9 @@
 		<videoid>zVHC0xWd8uY</videoid>
 		<giantbomb_url>http://www.giantbomb.com/quake/3030-8015/</giantbomb_url>
 		<boxart1>https://github.com/libretro/libretro-thumbnails/raw/master/Quake1/Named_Boxarts/Quake%20Mission%20Pack%202_%20Dissolution%20of%20Eternity.png</boxart1>
-		<banner1>https://i.imgur.com/5qixLME.jpg</banner1>
+		<banner1>5qixLME.jpg</banner1>
 		<fanart1>https://i.ytimg.com/vi/jkqJEKBOxHM/maxresdefault.jpg</fanart1>
-		<clearlogo1>https://i.imgur.com/dfPD2j3.png</clearlogo1>
+		<clearlogo1>dfPD2j3.png</clearlogo1>
 		<emu_command>rogue.pak</emu_command>
 	</game>
 	<game name="Quake - Quoth">
@@ -87,10 +87,10 @@
 		<thegamesdb_id>777</thegamesdb_id>
 		<videoid>d16LhD3B9PE</videoid>
 		<giantbomb_url>http://www.giantbomb.com/quake/3030-8015/</giantbomb_url>
-		<boxart1>https://i.imgur.com/4UYcQ6t.jpg</boxart1>
-		<banner1>https://i.imgur.com/0Lg2IHp.jpg</banner1>
-		<fanart1>https://i.imgur.com/w9858E5.jpg</fanart1>
-		<clearlogo1>https://i.imgur.com/dfPD2j3.png</clearlogo1>
+		<boxart1>4UYcQ6t.jpg</boxart1>
+		<banner1>0Lg2IHp.jpg</banner1>
+		<fanart1>w9858E5.jpg</fanart1>
+		<clearlogo1>dfPD2j3.png</clearlogo1>
 		<emu_command>quoth.pak</emu_command>
 	</game>
 </datafile>

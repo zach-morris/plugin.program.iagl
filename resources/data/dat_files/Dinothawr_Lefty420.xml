@@ -15,10 +15,10 @@
 		<emu_downloadpath>default</emu_downloadpath>
 		<emu_postdlaction>unzip_to_folder_and_launch_file</emu_postdlaction>
 		<emu_comment>Dinothawr is a block pushing puzzle game on slippery surfaces. Our hero is a dinosaur whose friends are trapped in ice. Through puzzles it is your task to free the dinos from their ice prison.</emu_comment>
-		<emu_thumb>https://i.imgur.com/T5PSkqb.jpg</emu_thumb>
-		<emu_banner>https://i.imgur.com/F1y5y5A.jpg</emu_banner>
-		<emu_fanart>https://i.imgur.com/NkhqZah.jpg</emu_fanart>
-		<emu_logo>https://i.imgur.com/F7IxpAE.png</emu_logo>
+		<emu_thumb>T5PSkqb.jpg</emu_thumb>
+		<emu_banner>F1y5y5A.jpg</emu_banner>
+		<emu_fanart>NkhqZah.jpg</emu_fanart>
+		<emu_logo>F7IxpAE.png</emu_logo>
 		<emu_trailer>VQpHejqlzzY</emu_trailer>
 	</header>
 	<game name="Dinothawr">
@@ -33,8 +33,8 @@
 		<thegamesdb_id></thegamesdb_id>
 		<videoid>d62cb9z6j9M</videoid>
 		<giantbomb_url>http://www.giantbomb.com/dinothawr/3030-45105/</giantbomb_url>
-		<boxart1>https://i.imgur.com/T5PSkqb.jpg</boxart1>
-		<banner1>https://i.imgur.com/F1y5y5A.jpg</banner1>
+		<boxart1>T5PSkqb.jpg</boxart1>
+		<banner1>F1y5y5A.jpg</banner1>
 		<emu_command>dinothawr.game</emu_command>
 	</game>
 </datafile>
