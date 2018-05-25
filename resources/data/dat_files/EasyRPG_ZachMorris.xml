@@ -14,7 +14,7 @@
 		<emu_ext_launch_cmd>none</emu_ext_launch_cmd>
 		<emu_downloadpath>default</emu_downloadpath>
 		<emu_postdlaction>unzip_and_launch_file</emu_postdlaction>
-		<emu_comment>EasyRPG List by Zach Morris.[CR]EasyRPG is a free and open source role playing game interpreter compatible with RPG Maker 2000 and 2003.[CR]RPG Maker, known in Japan as RPG Tsukuru, is the name of a series of programs for the development of role-playing games (RPGs) first created by the Japanese group ASCII, then succeeded by Enterbrain. The Japanese name, Tsukuru, is a pun mixing the Japanese word tsukuru, which means "make" or "create", with tsuru, the Japanese transcription of the English word "tool".[CR]The RPG Maker series has been released primarily in Japan, with later versions also released in East Asia, North America, Europe, and Australia.[CR]Since its first release, RPG Maker has been used to create numerous titles, both free and commercial.  Hundreds of commercial games created using RPG Maker have been released on Steam, for example.</emu_comment>
+		<emu_comment>EasyRPG is a free and open source role playing game interpreter compatible with RPG Maker 2000 and 2003.[CR]RPG Maker, known in Japan as RPG Tsukuru, is the name of a series of programs for the development of role-playing games (RPGs) first created by the Japanese group ASCII, then succeeded by Enterbrain. The Japanese name, Tsukuru, is a pun mixing the Japanese word tsukuru, which means "make" or "create", with tsuru, the Japanese transcription of the English word "tool".[CR]The RPG Maker series has been released primarily in Japan, with later versions also released in East Asia, North America, Europe, and Australia.[CR]Since its first release, RPG Maker has been used to create numerous titles, both free and commercial.  Hundreds of commercial games created using RPG Maker have been released on Steam, for example.</emu_comment>
 		<emu_thumb>Ozk2Wju.jpg</emu_thumb>
 		<emu_banner>sXD3BVK.jpg</emu_banner>
 		<emu_fanart>VtHK44P.jpg</emu_fanart>
@@ -232,7 +232,7 @@
 		<snapshot7>FJejh6N.png</snapshot7>
 		<snapshot8>rfvEdSI.png</snapshot8>
 		<snapshot9>V4mAYrQ.png</snapshot9>
-		<clearlogo1>http://i.imgur.com/79vnIyo.png</clearlogo1>
+		<clearlogo1>79vnIyo.png</clearlogo1>
 		<emu_command>Ara Fell Demo/RPG_RT.ini</emu_command>
 	</game>
 	<game name="Ara Fell Episode One">
@@ -254,7 +254,7 @@
 		<snapshot7>FJejh6N.png</snapshot7>
 		<snapshot8>rfvEdSI.png</snapshot8>
 		<snapshot9>V4mAYrQ.png</snapshot9>
-		<clearlogo1>http://i.imgur.com/79vnIyo.png</clearlogo1>
+		<clearlogo1>79vnIyo.png</clearlogo1>
 		<emu_command>Ara Fell Episode One/RPG_RT.ini</emu_command>
 	</game>
 	<game name="Ascendence RSD VI">
@@ -454,7 +454,7 @@
 		<snapshot7>g9Gqlo5.png</snapshot7>
 		<snapshot8>xeSifih.png</snapshot8>
 		<snapshot9>i1HVO5r.png</snapshot9>
-		<clearlogo1>http://i.imgur.com/IEsL4jq.png</clearlogo1>
+		<clearlogo1>IEsL4jq.png</clearlogo1>
 		<emu_command>Blue Skies/RPG_RT.ini</emu_command>
 	</game>
 	<game name="Bro Quest">
@@ -491,7 +491,7 @@
 		<snapshot7>8973qDE.png</snapshot7>
 		<snapshot8>VUvgZDn.png</snapshot8>
 		<snapshot9>PSViyOF.png</snapshot9>
-		<clearlogo1>http://i.imgur.com/Hzh1o.gif</clearlogo1>
+		<clearlogo1>Hzh1o.gif</clearlogo1>
 		<emu_command>Chain Of Retribution/RPG_RT.ini</emu_command>
 	</game>
 	<game name="Chiis Challenge">
@@ -611,7 +611,7 @@
 		<snapshot2>KBm9AY7.png</snapshot2>
 		<snapshot3>LrQIYv4.png</snapshot3>
 		<snapshot4>cmwR1Ab.png</snapshot4>
-		<clearlogo1>http://i.imgur.com/IdN9tnf.png</clearlogo1>
+		<clearlogo1>IdN9tnf.png</clearlogo1>
 		<emu_command>COLORS Lost Memories v1.02/RPG_RT.ini</emu_command>
 	</game>
 	<game name="Cross Chaos">
@@ -672,8 +672,8 @@
 		<rom crc="3fd0065f" md5="7869860114243605bb0d1e634b2da3a9" name="EasyRPG_Games/CurseOfSilence.zip" sha1="c50fb94ff94fe3a3c41273bcddb1550bfed7d16e" size="17802870" />
 		<title_clean>Curse of Silence</title_clean>
 		<plot>In addition to the main three Legion Saga games in the series, I also started making two more using RPG Maker 2003. These games were eventually cancelled as I moved away from 2D RPGs to focus on 3D action game design.[CR]Curse of Silence was an action-RPG along the lines of early Zelda games, while Legion Saga R was a full remake of the first game in the series with revised systems and narrative. Both are incomplete games, but fully playable up to a certain point.</plot>
-		<snapshot1>http://i.imgur.com/sfn2QgL.jpg</snapshot1>
-		<snapshot2>http://i.imgur.com/SnjZq73.jpg</snapshot2>
+		<snapshot1>sfn2QgL.jpg</snapshot1>
+		<snapshot2>SnjZq73.jpg</snapshot2>
 		<emu_command>Curse of Silence/RPG_RT.ini</emu_command>
 	</game>
 	<game name="Cyber Factor Demo">
@@ -1202,7 +1202,7 @@
 		<title_clean>Final Fallacy Dusk of Spirits</title_clean>
 		<plot>For anyone who played the original, the story of 'Dusk of Spirits' takes place years after the story that WOULD have taken place in Final Fallacy II. So, sorry if you were really waiting to see what happened there! The set-up of the contest necessitated starting from a clean-ish slate. So the original cast reunites long after the world was saved (either from evil or Guy's own incompetance is left up in the air) for one last adventure. [CR]The dimwitted heroic Guy, the tired sarcastic Snark, the mysterious and practically personality-less Wrin and Karan. You'll even finally get to see what happened to Gary and Emm after they were thrown overboard in that pirate attack! What ultimately became of Zhodoa, Maj'nen, and the Archvillain! And fight a giant evil persimmon! </plot>
 		<clearlogo1>7WJx3lC.gif</clearlogo1>
-		<snapshot1>http://i.imgur.com/MJJjKPG.png</snapshot1>
+		<snapshot1>MJJjKPG.png</snapshot1>
 		<emu_command>Final Fallacy Dusk of Spirits/RPG_RT.ini</emu_command>
 	</game>
 	<game name="Final Fantasy Crystal Wings">
@@ -1525,7 +1525,7 @@
 		<snapshot7>nUgPyjm.png</snapshot7>
 		<snapshot8>pxFgmMI.png</snapshot8>
 		<snapshot9>GR33swU.png</snapshot9>
-		<clearlogo1>http://i.imgur.com/rZYZf1R.png</clearlogo1>
+		<clearlogo1>rZYZf1R.png</clearlogo1>
 		<emu_command>Golden Guard/RPG_RT.ini</emu_command>
 	</game>
 	<game name="Grave Spirit">
@@ -1983,8 +1983,8 @@
 		<rom crc="132c2437" md5="e597b850daae98088b483f37af070ec5" name="EasyRPG_Games/LegionSagaR.zip" sha1="c33e760178c6fa21ce4d47806d42145c2ea8b74a" size="30378431" />
 		<title_clean>Legion Saga R</title_clean>
 		<plot>In addition to the main three Legion Saga games in the series, I also started making two more using RPG Maker 2003. These games were eventually cancelled as I moved away from 2D RPGs to focus on 3D action game design.[CR]Curse of Silence was an action-RPG along the lines of early Zelda games, while Legion Saga R was a full remake of the first game in the series with revised systems and narrative. Both are incomplete games, but fully playable up to a certain point.</plot>
-		<snapshot1>http://i.imgur.com/nsiKnRA.jpg</snapshot1>
-		<snapshot2>http://i.imgur.com/M74H8A4.jpg</snapshot2>
+		<snapshot1>nsiKnRA.jpg</snapshot1>
+		<snapshot2>M74H8A4.jpg</snapshot2>
 		<emu_command>Legion Saga R/RPG_RT.ini</emu_command>
 	</game>
 	<game name="Leo and Leah">
@@ -2157,7 +2157,7 @@
 		<snapshot4>OFn4j3g.png</snapshot4>
 		<snapshot5>17ZJ0cf.png</snapshot5>
 		<snapshot6>BgxkdnH.png</snapshot6>
-		<clearlogo1>http://i.imgur.com/0al8mLE.png</clearlogo1>
+		<clearlogo1>0al8mLE.png</clearlogo1>
 		<emu_command>Mystic Sunrise/RPG_RT.ini</emu_command>
 	</game>
 	<game name="Mystic Tales">
@@ -2526,7 +2526,7 @@
 		<snapshot6>5Uu83a6.png</snapshot6>
 		<snapshot7>JylmXLa.png</snapshot7>
 		<snapshot8>CsA1NYM.png</snapshot8>
-		<clearlogo1>http://i.imgur.com/6evKYkO.png</clearlogo1>
+		<clearlogo1>6evKYkO.png</clearlogo1>
 		<emu_command>Polixiuhs/RPG_RT.ini</emu_command>
 	</game>
 	<game name="Pom Gets WiFi v1.04">
@@ -2915,7 +2915,7 @@
 		<snapshot2>WxMfQEo.png</snapshot2>
 		<snapshot3>tYeZnxr.png</snapshot3>
 		<snapshot4>GdChp4B.png</snapshot4>
-		<clearlogo1>http://i.imgur.com/Lw920Ak.png</clearlogo1>
+		<clearlogo1>Lw920Ak.png</clearlogo1>
 		<emu_command>Sunset Over Imdahl/RPG_RT.ini</emu_command>
 	</game>
 	<game name="Super Mario RPG Seven Sages v1.7.0">
@@ -3093,7 +3093,7 @@
 		<snapshot2>I3fGjNe.png</snapshot2>
 		<snapshot3>wEuWKoN.png</snapshot3>
 		<snapshot4>AhezSzn.png</snapshot4>
-		<clearlogo1>http://i.imgur.com/BanmqYm.png</clearlogo1>
+		<clearlogo1>BanmqYm.png</clearlogo1>
 		<emu_command>The Maid of Fairewell Heights v1.0/RPG_RT.ini</emu_command>
 	</game>
 	<game name="The Nothingness">
@@ -3119,7 +3119,7 @@
 		<snapshot4>hBNvHcr.png</snapshot4>
 		<snapshot5>c8mKHxu.png</snapshot5>
 		<snapshot6>pLkER5j.png</snapshot6>
-		<clearlogo1>http://i.imgur.com/VUYmycP.png</clearlogo1>
+		<clearlogo1>VUYmycP.png</clearlogo1>
 		<emu_command>The Panspermia v1.15/RPG_RT.ini</emu_command>
 	</game>
 	<game name="The Phantoms Entry Map Contest">
@@ -3289,7 +3289,7 @@
 		<rom crc="a541bdcd" md5="c3458417e5e10f84be5490d8035bb96e" name="EasyRPG_Games/TouhouSequelrokuReturnOfTouhouMother.zip" sha1="0613a08abf6a96954c9a65c6c2110b0931bae106" size="22832268" />
 		<title_clean>Touhou Sequelroku Return of Touhou Mother</title_clean>
 		<plot>There's also Kirai Shouen on graphics, mao and ALiCE TAiL on music, and Mifo on programming (the battle system)[CR]It is the sequel to Touhou Mother, but you can get away with not playing the first game. (It's not that good.)[CR]Six months have passed since Porky was driven out of Gensokyo.[CR]In the outside world, Ness and Paula are just trying to relax when Iku appears with an unusual request.[CR]Meanwhile, Koishi and Satori, having been cooped up underground for months, decide to take a look at the surface.[CR]What has become of Gensokyo? And what will become of it?</plot>
-		<snapshot1>https://imgur.com/VRl0Gb2.jpg</snapshot1>
+		<snapshot1>VRl0Gb2.jpg</snapshot1>
 		<clearlogo1>gUOSP2s.png</clearlogo1>
 		<videoid>0XcfPHqw59E</videoid>
 		<emu_command>Touhou Sequelroku Return of Touhou Mother/RPG_RT.ini</emu_command>

@@ -14,7 +14,7 @@
 		<emu_ext_launch_cmd>none</emu_ext_launch_cmd>
 		<emu_downloadpath>default</emu_downloadpath>
 		<emu_postdlaction>unzip_rom</emu_postdlaction>
-		<emu_comment>NGPC List by Zach Morris, filtered to remove duplicates and games not many people actually want to play.[CR]The Neo Geo Pocket Color (shortened NGPC), is a 16-bit colour handheld video game console manufactured by SNK. It is a successor to SNK's monochrome Neo Geo Pocket handheld which debuted in 1998 in Japan. The Neo Geo Pocket Color was released on March 16, 1999 in Japan, August 6, 1999 in North America, and some time in 1999 in Europe. The Neo Geo Pocket Color was SNK's last video game console, and is backwards compatible with the Neo Geo Pocket. In 2000, following SNK's purchase by American pachinko manufacturer Aruze, the Neo Geo Pocket Color was dropped from both the North American and European markets. It did, however, last until 2001 in Japan, with a total of 2 million units sold.[CR]Developer:  SNK[CR]CPU:  Toshiba TLCS900H core (16-bit), 6.144 MHz, Z80 at 3.072 MHz for sound[CR]Memory:  12 k for 900H, 4k for Z80 (shared with the 900H)[CR]Graphics:  160x152 (256x256 virtual screen)[CR]Sound:  SN76489 variant, T6W28 (3 square wave tone generators with limited stereo capability plus 1 monaural noise generator plus direct access to the two 6 bits DAC)[CR]Display:  16 palettes per plane, 48 palettes. 146 colors on screen out of 4096 (or 20 colors out of 4096 in monochrome mode)[CR]Media:  Cartridge[CR]Max Controllers:  1</emu_comment>
+		<emu_comment>NGPC list.  Filtered to remove duplicates, betas, etc.[CR]The Neo Geo Pocket Color (shortened NGPC), is a 16-bit colour handheld video game console manufactured by SNK. It is a successor to SNK's monochrome Neo Geo Pocket handheld which debuted in 1998 in Japan. The Neo Geo Pocket Color was released on March 16, 1999 in Japan, August 6, 1999 in North America, and some time in 1999 in Europe. The Neo Geo Pocket Color was SNK's last video game console, and is backwards compatible with the Neo Geo Pocket. In 2000, following SNK's purchase by American pachinko manufacturer Aruze, the Neo Geo Pocket Color was dropped from both the North American and European markets. It did, however, last until 2001 in Japan, with a total of 2 million units sold.[CR]Developer:  SNK[CR]CPU:  Toshiba TLCS900H core (16-bit), 6.144 MHz, Z80 at 3.072 MHz for sound[CR]Memory:  12 k for 900H, 4k for Z80 (shared with the 900H)[CR]Graphics:  160x152 (256x256 virtual screen)[CR]Sound:  SN76489 variant, T6W28 (3 square wave tone generators with limited stereo capability plus 1 monaural noise generator plus direct access to the two 6 bits DAC)[CR]Display:  16 palettes per plane, 48 palettes. 146 colors on screen out of 4096 (or 20 colors out of 4096 in monochrome mode)[CR]Media:  Cartridge[CR]Max Controllers:  1</emu_comment>
 		<emu_thumb>t2LEnKw.jpg</emu_thumb>
 		<emu_banner>H4WRIE4.jpg</emu_banner>
 		<emu_fanart>eXLfwyd.jpg</emu_fanart>
@@ -979,9 +979,9 @@
 		<snapshot2>http://www.mobygames.com/images/shots/l/571167-pac-man-neo-geo-pocket-color-screenshot-character-introduction.jpg</snapshot2>
 		<snapshot3>http://www.mobygames.com/images/shots/l/571168-pac-man-neo-geo-pocket-color-screenshot-gameplay-scrolling.jpg</snapshot3>
 		<snapshot4>http://www.mobygames.com/images/shots/l/571169-pac-man-neo-geo-pocket-color-screenshot-gameplay-full-screen.jpg</snapshot4>
-		<snapshot5>http://static.giantbomb.com/uploads/scale_large/13/139866/2697679-1101-064953.jpg</snapshot5>
-		<snapshot6>http://static.giantbomb.com/uploads/scale_large/13/139866/2697678-1101-064829.jpg</snapshot6>
-		<snapshot7>http://static.giantbomb.com/uploads/scale_large/13/139866/2697677-1101-064706.jpg</snapshot7>
+		<snapshot5>e995wQn.jpg</snapshot5>
+		<snapshot6>iIhPRlo.jpg</snapshot6>
+		<snapshot7>2mnrLXq.jpg</snapshot7>
 		<snapshot8>http://static.giantbomb.com/uploads/scale_large/13/139866/2697676-1101-064649.jpg</snapshot8>
 		<snapshot9>http://static.giantbomb.com/uploads/scale_large/13/139866/2697675-1101-064645.jpg</snapshot9>
 		<snapshot10>http://static.giantbomb.com/uploads/scale_large/13/139866/2697674-1101-064638.jpg</snapshot10>
@@ -1093,10 +1093,10 @@
 		<giantbomb_url>http://www.giantbomb.com/puyo-puyo-2/3030-4929/</giantbomb_url>
 		<boxart1>http://thegamesdb.net/banners/boxart/original/front/18511-1.jpg</boxart1>
 		<boxart2>http://img.gamefaqs.net/box/3/7/5/6375_back.jpg</boxart2>
-		<snapshot1>http://static.giantbomb.com/uploads/scale_large/0/112/372387-1083079616_00.png</snapshot1>
-		<snapshot2>http://static.giantbomb.com/uploads/scale_large/0/112/372385-1083079688_00.png</snapshot2>
-		<snapshot3>http://static.giantbomb.com/uploads/scale_large/0/112/372384-1083079631_00.png</snapshot3>
-		<snapshot4>http://static.giantbomb.com/uploads/scale_large/0/112/372382-1083079599_00.png</snapshot4>
+		<snapshot1>KhV0qVN.png</snapshot1>
+		<snapshot2>SBo0WkG.png</snapshot2>
+		<snapshot3>8MfaT3c.png</snapshot3>
+		<snapshot4>Npnti4k.png</snapshot4>
 		<snapshot5>http://static.giantbomb.com/uploads/scale_large/0/112/372381-1083079110_00.png</snapshot5>
 		<snapshot6>http://static.giantbomb.com/uploads/scale_large/0/112/372380-1083079072_00.png</snapshot6>
 		<snapshot7>http://static.giantbomb.com/uploads/scale_large/0/112/372379-1083079061_00.png</snapshot7>
