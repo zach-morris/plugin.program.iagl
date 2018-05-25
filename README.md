@@ -5,9 +5,9 @@ Internet Archive Game Launcher
 
 This addon is still in *BETA*.  Check back soon!
 
-![IAGL](https://github.com/zach-morris/plugin.program.iagl/blob/master/fanart.jpg)
+![IAGL](https://github.com/zach-morris/plugin.program.iagl/blob/main/fanart.jpg)
 
-The Internet Archive Game Launcher (IAGL - /eye/gull/) will launch Games from the Internet using [Kodi](http://kodi.tv)
+The Internet Archive Game Launcher (IAGL - /eye/gull/) will launch games from the internet using [Kodi](http://kodi.tv)
 
 IAGL is *FREE*, as in beer. As in no money. As in gratis.
 
@@ -54,7 +54,7 @@ Some artwork in this folder is attributed to [Estuary by phil65 (Team Kodi)](htt
 
 IAGL in Action
 -------------------
-
+[![IARL](https://i.imgur.com/rHgDFw1.gif)](https://www.youtube.com/watch?v=fJ6nuyM6sOo)
 
 
 
