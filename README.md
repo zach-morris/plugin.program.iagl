@@ -42,7 +42,7 @@ Licenses
 
 IAGL code is released under the [GNU GENERAL PUBLIC LICENSE Version 3](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
-Supplementary databases released with IAGL, in this folder, are released under the [Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) license. This allows for *non-commercial* use as long as credit is given and that derivative works (works based on the CC licensed data) are also made available under the same license.
+Supplementary databases released with IAGL, in [this folder](https://github.com/zach-morris/plugin.program.iagl/tree/main/resources/data/databases), are released under the [Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) license. This allows for *non-commercial* use as long as credit is given and that derivative works (works based on the CC licensed data) are also made available under the same license.
 
 Media files in the skin folder are licensed under the Creative Commons Attribution-ShareAlike 4.0 Unported License
 You can find the license details [here](http://creativecommons.org/licenses/by-sa/4.0/)
