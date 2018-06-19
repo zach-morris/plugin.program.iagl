@@ -1,7 +1,7 @@
 #Internet Archive Game Launcher v2.X
 #Zach Morris
 #https://github.com/zach-morris/plugin.program.iagl
-import os, re, json, zlib, shutil, time
+import os, re, json, zlib, shutil, time, io
 # import random
 from kodi_six import xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
 from contextlib import closing
@@ -1625,7 +1625,7 @@ class iagl_utils(object):
 			addons_available = xbmc.executeJSONRPC('{ "jsonrpc": "2.0", "method": "Addons.GetAddons","params":{"type":"kodi.gameclient"}, "id": "1"}')
 			if '"error"' not in addons_available:
 				# dont_include_these_addons = ['game.libretro','game.libretro.2048','game.libretro.dinothawr','game.libretro.mrboom']
-				current_game_addon_values = [x.get('addonid') for x in json.loads(addons_available).get('result').get('addons') if x.get('type') == 'kodi.gameclient' and x.get('addonid') not in self.IAGL.ignore_these_game_addons]
+				current_game_addon_values = [x.get('addonid') for x in json.loads(addons_available).get('result').get('addons') if x.get('type') == 'kodi.gameclient' and x.get('addonid') not in self.ignore_these_game_addons]
 				current_game_addon_choices = [xbmcaddon.Addon(id='%(addon_name)s' % {'addon_name':x}).getAddonInfo('name') for x in current_game_addon_values]
 				current_game_addon_values = ['none']+[current_game_addon_values[x] for x in sorted(range(len(current_game_addon_choices)), key=lambda k: current_game_addon_choices[k])]
 				current_game_addon_choices = ['Auto (choose from list)']+[current_game_addon_choices[x] for x in sorted(range(len(current_game_addon_choices)), key=lambda k: current_game_addon_choices[k])]
@@ -1645,6 +1645,11 @@ class iagl_utils(object):
 				if self.get_setting_as_bool(self.handle.getSetting(id='iagl_external_launch_close_kodi')):
 					if current_external_environment in ['OSX','Linux/Kodibuntu','Windows']: #Close Kodi option only available for these systems
 						current_ext_key = current_external_environment+' Close_Kodi'
+					else:
+						current_ext_key = current_external_environment
+				elif self.get_setting_as_bool(self.handle.getSetting(id='iagl_external_launch_pause_kodi')):
+					if current_external_environment in ['Linux/Kodibuntu']: #Pause Kodi option only available for these systems
+						current_ext_key = current_external_environment+' Pause_Kodi'
 					else:
 						current_ext_key = current_external_environment
 				else:
@@ -3373,7 +3378,8 @@ def get_crc32(filename):
 
 def zlib_csum(filename, func):
 	csum = None
-	with open(filename, 'rb') as f:
+	# with open(filename, 'rb') as f:
+	with io.FileIO(filename, 'rb') as f:
 		try:
 			chunk = f.read(1024)
 			if len(chunk)>0:
