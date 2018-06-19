@@ -16,15 +16,15 @@ Installation
 
 Do *NOT* use a third party installer, build, TVA Link, fusion installer, or other non-official means to install IAGL.  Doing so is akin to clubbing baby seals.
 
-Install IAGL in one of these ways:
+~Install IAGL in one of these ways:
 
 - Download the repository zipfile from here to install the addon and get automatic updates.
 
 or
 
-- Download the latest version zipfile from here to install by zipfile.
+- Download the latest version zipfile from here to install by zipfile.~
 
-
+Until official release, just use the 'Clone or Download' button on the git main page & download zip :arrow_upper_right:
 
 Help
 -------------
