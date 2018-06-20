@@ -52,7 +52,7 @@ Some artwork in this folder is attributed to [Estuary by phil65 (Team Kodi)](htt
 
 IAGL in Action
 -------------------
-[![IAGL](https://i.imgur.com/rHgDFw1.gif)](https://www.youtube.com/watch?v=fJ6nuyM6sOo)
+[![IAGL](https://i.imgur.com/rHgDFw1.gif)](https://www.youtube.com/watch?v=jUIbVqd_iTE)
 
 
 
