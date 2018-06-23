@@ -4,7 +4,7 @@
 from kodi_six import xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
 xbmc.log(msg='IAGL:  Lets Play!', level=xbmc.LOGNOTICE)
 xbmc.log(msg='IAGL:  Version %(addon_version)s' % {'addon_version': xbmcaddon.Addon().getAddonInfo('version')}, level=xbmc.LOGDEBUG)
-import routing
+import routing, sys
 from resources.lib.main import *
 
 try:
@@ -42,9 +42,14 @@ def iagl_main():
 @plugin.route('/archives/choose_from_list')
 def list_archives_browse():
 	list_method = 'choose_from_list'
+	print 'test'
 	for list_item in IAGL.get_browse_lists_as_listitems():
+		print 'test1'
+		print list_item.getLabel2()
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/archives/'+url_quote(list_item.getLabel2())),list_item, True)
+	print 'test2'
 	xbmcplugin.endOfDirectory(plugin.handle)
+	print 'test3'
 
 @plugin.route('/archives/all')
 def list_archives_all():
@@ -64,6 +69,7 @@ def list_archives_all():
 
 @plugin.route('/archives/categorized')
 def list_archives_by_category():
+	print 'test4'
 	# for ii,list_item in enumerate(IAGL.get_game_list_categories_as_listitems()):
 	for list_item in IAGL.get_game_list_categories_as_listitems():
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game_lists_in_category, category_id=url_quote(list_item.getLabel())),list_item, True)
@@ -373,4 +379,4 @@ def iagl_text_viewer():
 	IAGL_Dialog.doModal()
 
 if __name__ == '__main__':
-	plugin.run()
+	plugin.run(sys.argv)
