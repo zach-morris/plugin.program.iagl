@@ -181,7 +181,7 @@ if not WIN.getProperty('iagl.script_started'):
 					try:
 						new_command = current_external_command_values[current_external_command_choices.index(current_wiz_setting)]
 					except Exception as exc1:
-						xbmc.log(msg='IAGL Error:  Wizard encountered a problem for %(dat_filename)s, Exception %(exc)s' % {'dat_filename': current_game_lists['dat_filename'][ii],'exc': str(exc)}, level=xbmc.LOGDEBUG)
+						xbmc.log(msg='IAGL Error:  Wizard encountered a problem for %(dat_filename)s, Exception %(exc1)s' % {'dat_filename': current_game_lists['dat_filename'][ii],'exc1': str(exc1)}, level=xbmc.LOGDEBUG)
 						new_command = None
 					if new_command is not None:
 						if current_wiz_setting == 'hidden':

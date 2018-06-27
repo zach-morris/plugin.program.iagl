@@ -3074,7 +3074,7 @@ class iagl_launch(object):
 			xbmc.enableNavSounds(False)
 			android_stop_command = '/system/bin/am force-stop com.retroarch'
 			try:
-				if self.get_setting_as_bool(self.handle.getSetting(id='iagl_enable_android_stop_command')):
+				if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_android_stop_command')):
 					external_command_stop = subprocess.call(android_stop_command,shell=True,executable='/system/bin/sh')
 					xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGNOTICE)
 					xbmc.sleep(500)
@@ -3082,7 +3082,7 @@ class iagl_launch(object):
 				external_command = subprocess.call(self.external_launch_command,shell=True,executable='/system/bin/sh')
 			except Exception as exc:
 				xbmc.log(msg='IAGL:  Unable to use subprocess call.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGNOTICE)
-				if self.get_setting_as_bool(self.handle.getSetting(id='iagl_enable_android_stop_command')):
+				if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_android_stop_command')):
 					os.system(android_stop_command)
 					xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGNOTICE)
 				xbmc.sleep(500)
@@ -3378,14 +3378,16 @@ def get_crc32(filename):
 
 def zlib_csum(filename, func):
 	csum = None
+	# chunk_size = 1024
+	chunk_size = 10485760 #10MB
 	# with open(filename, 'rb') as f:
-	with io.FileIO(filename, 'rb') as f:
+	with io.FileIO(filename, 'rb') as f: #Using FileIO as open fails on Android
 		try:
-			chunk = f.read(1024)
+			chunk = f.read(chunk_size)
 			if len(chunk)>0:
 				csum = func(chunk)
 				while True:
-					chunk = f.read(1024)
+					chunk = f.read(chunk_size)
 					if len(chunk)>0:
 						csum = func(chunk, csum)
 					else:
@@ -3399,13 +3401,15 @@ def zlib_csum(filename, func):
 
 def zlib_csum_xbmcvfs(filename, func):
 	csum = None
+	# chunk_size = 1024
+	chunk_size = 10485760 #10MB
 	with closing(xbmcvfs.File(filename)) as f:
 		try:
-			chunk = bytes(f.readBytes(1024))
+			chunk = bytes(f.readBytes(chunk_size))
 			if len(chunk)>0:
 				csum = func(chunk)
 				while True:
-					chunk = bytes(f.readBytes(1024))
+					chunk = bytes(f.readBytes(chunk_size))
 					if len(chunk)>0:
 						csum = func(chunk, csum)
 					else:
