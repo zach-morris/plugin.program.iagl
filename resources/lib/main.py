@@ -2859,6 +2859,8 @@ class iagl_download(object):
 						self.post_process_unarchive_to_folder_and_launch_requested_file('.cue',self.current_saved_files[ii])
 					if pda == 'unarchive_game_launch_gdi':
 						self.post_process_unarchive_to_folder_and_launch_requested_file('.gdi',self.current_saved_files[ii])
+					if pda == 'unarchive_game_launch_lst':
+						self.post_process_unarchive_to_folder_and_launch_requested_file('.lst',self.current_saved_files[ii])
 					if 'launch_mame_softlist' in pda:
 						self.post_process_launch_softlist_file(self.current_saved_files[ii],pda.split('(')[-1].split(')')[0].split(',')[0].replace("'",''),pda.split('(')[-1].split(')')[0].split(',')[-1].replace("'",''))
 					# xbmc.executebuiltin('Dialog.Close(busydialog)')

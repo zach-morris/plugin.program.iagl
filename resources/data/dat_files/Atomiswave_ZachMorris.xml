@@ -1,0 +1,387 @@
+<datafile>
+	<header>
+		<emu_name>Atomiswave</emu_name>
+		<emu_description>Arcade</emu_description>
+		<emu_category>Arcade</emu_category>
+		<emu_version>07012018</emu_version>
+		<emu_date>07/01/2018</emu_date>
+		<emu_author>Zach Morris</emu_author>
+		<emu_visibility>visible</emu_visibility>
+		<emu_homepage>http://archive.org</emu_homepage>
+		<emu_baseurl>https://archive.org/download/</emu_baseurl>
+		<emu_launcher>external</emu_launcher>
+		<emu_default_addon>none</emu_default_addon>
+		<emu_ext_launch_cmd>none</emu_ext_launch_cmd>
+		<emu_downloadpath>default</emu_downloadpath>
+		<emu_postdlaction>unarchive_game_launch_lst</emu_postdlaction>
+		<emu_comment>The Atomiswave is a custom arcade system board and cabinet from Sammy Corporation. It is based on Sega's NAOMI system board (thus it's common to see the "Sega" logo on its boot up screen). The Atomiswave uses interchangeable game cartridges and the cabinets control panel can be easily switched out with different control sets, including dual joysticks, dual lightguns and a steering wheel.[CR]With the retirement of the aging Neo Geo MVS system, SNK Playmore chose the Atomiswave as its next system to develop games for. In a contract with Sammy, SNK Playmore agreed to develop five games for the Atomiswave system.</emu_comment>
+		<emu_thumb>OGRLqjw.jpg</emu_thumb>
+		<emu_banner>PQXd3E4.jpg</emu_banner>
+		<emu_fanart>tpTBubq.jpg</emu_fanart>
+		<emu_logo>gY76rh7.png</emu_logo>
+		<emu_trailer>slBeCjsLqsg</emu_trailer>
+	</header>
+	<game name="Animal Basket">
+		<description>Animal Basket</description>
+		<rom crc="42813b59" name="naomi_aw2naomi/aw2naomi/Animal_Basket.zip" size="49645315" />
+		<title_clean>Animal Basket</title_clean>
+		<plot>Animal Basket (Hustle Tamaire Kyousou) mimics a game traditionally played at Japanese sports festivals.  In this game, the furry competitors fight over a single ball.  The goal is attached to another animal, adding to the challenge by having a moving target.  One major difference between the human and robot characters is that the robot characters can blow up (or lose all their power) if they are worked too hard during a game. That can happen if you constantly make them dive for a ball, run extra bases, or even if they get hit by a pitch. Under no stress whatsoever, some robots, especially pitchers, will naturally run out of power as the game progresses. When this happens, they will lose all their abilities and be useless, both offensively and defensively.</plot>
+		<releasedate>01/24/2005</releasedate>
+		<year>2005</year>
+		<genre>Sports</genre>
+		<studio>Sammy</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/d506d11b-b1cf-481e-b86a-79d1128b9cd9.jpg</boxart1>
+		<snapshot1>sVn46A1.png</snapshot1>
+		<snapshot2>CUKl5z3.png</snapshot2>
+		<clearlogo1>vlHpFeJ.png</clearlogo1>
+		<videoid>pytwFCGKVg</videoid>
+	</game>
+	<game name="Demolish Fist">
+		<description>Demolish Fist</description>
+		<rom crc="d5da2939" name="naomi_aw2naomi/aw2naomi/Demolish_Fist.zip" size="71081312" />
+		<title_clean>Demolish Fist</title_clean>
+		<plot>The player controls one of four characters: Enzo, Leoneer, Vanessa, or Undead. As you battle your way through various stages, there are many items which are available to use as a weapons against your enemies. Each player has their own assortment of moves and specials that they can unleash at will. Also, all four of these characters have the ability to use the awesome Vertigo technique!</plot>
+		<year>2003</year>
+		<genre>Action, Fighting</genre>
+		<studio>Sammy</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/29693040-869d-4a4d-ac50-c6de30324119.jpg</boxart1>
+		<snapshot1>B7pcRoV.png</snapshot1>
+		<snapshot2>IVl5SI4.png</snapshot2>
+		<clearlogo1>1tqNc4L.png</clearlogo1>
+		<fanart1>https://images.launchbox-app.com/9221b5d2-b60f-4a4c-9202-a2d79d78c136.jpg</fanart1>
+		<videoid>lORa5-s1LjY</videoid>
+	</game>
+	<game name="Dirty Pigskin Football">
+		<description>Dirty Pigskin Football</description>
+		<rom crc="ed6afaef" name="naomi_aw2naomi/aw2naomi/Dirty_Pigskin_Football.zip" size="70779644" />
+		<title_clean>Dirty Pigskin Football</title_clean>
+		<plot>This is Football with a twist. Rather than regularly suited up football players each with their own set of morals, we have got a completely unique cast of players who don't know the meaning of the word. One of the featured teams is: The prisoners, in their traditional orange jail overalls. Then we have: The Hitman group, a group of assassins, all dressed in black suits and dark glasses, pleasant right? These men are all just urging to get their hands dirty. In total there are 12 teams in this game, various venues to play at, and the game also features a cool 4-player simultaneous play mode. With a play system that is easy to use, Pigskin welcomes all level of player to join in the action.</plot>
+		<year>2004</year>
+		<genre>Sports</genre>
+		<studio>Sammy</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/916e06d3-f8c8-4f9a-9312-1e86b324ac47.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/291401a9-0b9f-4a24-907e-ef44e3146e0d.jpg</boxart2>
+		<snapshot1>YGrO2vF.png</snapshot1>
+		<snapshot2>Nm31Kn2.png</snapshot2>
+		<clearlogo1>thMfdxl.png</clearlogo1>
+		<fanart1>https://images.launchbox-app.com/1e62df19-9136-4242-a54b-339d1a15631e.jpg</fanart1>
+		<videoid>21k3brydMOM</videoid>
+	</game>
+	<game name="Dolphin Blue">
+		<description>Dolphin Blue</description>
+		<rom crc="ad9f8d9d" name="naomi_aw2naomi/aw2naomi/Dolphin_Blue.zip" size="63250018" />
+		<title_clean>Dolphin Blue</title_clean>
+		<plot>Dolphin Blue is a bit of an oddity. Developed and published by Sammy for their Atomiswave hardware, its a run-n-gun arcade game released in 2003, at a time when run-n-guns were mostly out of the mainstream. It's also very obviously inspired by Metal Slug, which was, not coincidentally, the only other run-and-gun series that was still on the marketplace at this point. You play as one of two characters - Eiro, an arms dealer who is looking for some action, or Ann, a soldier who is out to protect the local kingdom. Each of them also have their own pet dolphins, which are blue and pink, respectively. The game is set in the future, and a major incident has transformed what used to be a peaceful nation into a troubled land of waste and ruin, damaging the Earths surface and immersing most everything underwater. The heroes have to protect the Earths remains from an evil empire that wants to take over the world, and rescue a princess figure in the process. The premise was almost definitely inspired by Waterworld, a movie released a decade earlier.</plot>
+		<year>2003</year>
+		<genre>Shooter</genre>
+		<studio>Sammy</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/1b93b593-a6a6-4d9a-8207-f3e92a7c5878.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/ba505ae0-f3cd-4773-b8ef-66a01059f8e5.png</boxart2>
+		<snapshot1>eh3Bm7V.png</snapshot1>
+		<snapshot2>9DOjq0M.png</snapshot2>
+		<clearlogo1>MusAu7Q.png</clearlogo1>
+		<fanart1>https://images.launchbox-app.com/b0141841-389c-4011-befe-13f713b988e3.jpg</fanart1>
+		<videoid>X9X3b789CLA</videoid>
+	</game>
+	<game name="Faster Than Speed">
+		<description>Faster Than Speed</description>
+		<rom crc="90efd49d" name="naomi_aw2naomi/aw2naomi/Faster_Than_Speed.zip" size="119436170" />
+		<title_clean>Faster Than Speed</title_clean>
+		<plot>Enter the exciting street-racing world of FASTER THAN SPEED where the winner rules and the loser walks! Hit the street with the most addictive driving experience of your life! Pick from 8 customized rides. FASTER THAN SPEED will take your players into the exotic, dim-lit, back streets of over 6 tracks challenging the quickest, the fastest, the baddest, and the most stocked racer conquers the asphalt! To take down your challenger, you need to burn the street with a variety of high-speed tricks.</plot>
+		<year>2004</year>
+		<genre>Racing</genre>
+		<studio>Sammy</studio>
+		<nplayers>1</nplayers>
+		<boxart1>https://images.launchbox-app.com/68080249-7337-4eb1-a248-e676af439fd1.jpg</boxart1>
+		<snapshot1>R8Dlae5.png</snapshot1>
+		<snapshot2>wqFdDbg.png</snapshot2>
+		<clearlogo1>N7iWJ81.png</clearlogo1>
+		<fanart1>https://images.launchbox-app.com/fba6f764-1f2f-4992-b423-85c75c27954f.jpg</fanart1>
+		<videoid>ZlJwA2MQzDw</videoid>
+	</game>
+	<game name="Fist of the North Star">
+		<description>Fist of the North Star</description>
+		<rom crc="9f42ec26" name="naomi_aw2naomi/aw2naomi/Fist_of_the_North_Star.zip" size="94697014" />
+		<title_clean>Fist of the North Star</title_clean>
+		<plot>The game is based on the eponymous manga and features 10 fighters: Kenshiro, Raoh, Toki, Jagi, Souther, Rei, Shin, Yuda, Mamiya and Heart</plot>
+		<year>2005</year>
+		<genre>Fighting</genre>
+		<studio>Sega</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/42a50282-edea-4f02-b15a-a0cc74d02491.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/bfcbe1c8-4fb5-4ffd-b744-07cf6e0f49ad.png</boxart2>
+		<snapshot1>Vq0EALj.png</snapshot1>
+		<snapshot2>1VskEQM.png</snapshot2>
+		<clearlogo1>qCyWtyg.png</clearlogo1>
+		<fanart1>https://images.launchbox-app.com/597cbae6-315c-4e15-b3df-2094bbf60a02.jpg</fanart1>
+		<videoid>JbBZvGk-Rus</videoid>
+	</game>
+	<game name="Guilty Gear Isuka">
+		<description>Guilty Gear Isuka</description>
+		<rom crc="5c2cb45e" name="naomi_aw2naomi/aw2naomi/Guilty_Gear_Isuka.zip" size="104812679" />
+		<title_clean>Guilty Gear Isuka</title_clean>
+		<plot>The brilliant 2D wonder is back in all its glory! Guilty Gear has rocked the 2D world ever since its very first release. It has captured the attention of 2D lovers worldwide. The original, vast and complex system of this classic sets it apart from other one on one beat 'em ups, also along with it's great and definitive character design. Guilty Gear has many great features to its system. In Isuka you can now play up to 4 players simultaneously. You can either go against 3 other opponents alone to test your individual skills, or pair up with a partner and go head to head against an opposing team. The choice is yours. Now the level of excitement can be taken up yet again with this great new version called Guilty Gear Isuka!</plot>
+		<year>2004</year>
+		<genre>Fighting</genre>
+		<studio>Sammy</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/97ce6068-1641-4541-89a3-feee5b650960.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/d8c8b6b7-1933-4378-9199-c8cfd3d583ff.jpg</boxart2>
+		<snapshot1>3EMrPxY.png</snapshot1>
+		<snapshot2>UFCVIQF.png</snapshot2>
+		<clearlogo1>LLLdKca.png</clearlogo1>
+		<fanart1>https://images.launchbox-app.com/1e110dd8-9de7-421e-ad7f-7c23774290d3.jpg</fanart1>
+		<videoid>BuMbaL3EGgE</videoid>
+	</game>
+	<game name="Guilty Gear X">
+		<description>Guilty Gear X</description>
+		<rom crc="a97dcc48" name="naomi_aw2naomi/aw2naomi/Guilty_Gear_X.zip" size="91582771" />
+		<title_clean>Guilty Gear X</title_clean>
+		<plot>When the humans created artificial beings named "gears" in 22th century, they didn't expect that their creation will eventually turn against them. Because gears had no will of their own and could only obey humans. Only one gear, named Justice, was able to transfer his will onto other gears and to rebel against the humans. In year 2180, Justice was killed as a result of a bloody tournament organized by the Sacred Order of Holy Knights. Yet recently, a new gear was discovered. He showed no signs of hostility, yet he had no master and was roaming about free. It was impossible to capture or to kill him because he was immensely strong. Fearing a new Justice will grow out of this gear, the Order organized yet another tournament, this time with a solid prize: five hundred thousand world dollars for the winner. Guilty Gear X is a follow up to Guilty Gear, and is also a 2D fighting game. There are now 16 characters available for you to choose. The battle system became more complicated, thanks to the variety of moves you can perform. Beside special attacks which you can execute if you build up your Tension Gauge by attacking or advancing towards your opponent, there is also a variety of defensing moves to perform. The instant kill moves are back from the previous game.</plot>
+		<year>2003</year>
+		<genre>Figthing</genre>
+		<studio>Sammy</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/b1558e04-c826-48fa-b0d1-8ac380372692.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/61c455f0-8771-4dde-82e9-5783dcca469d.jpg</boxart2>
+		<snapshot1>JrYxbI0.png</snapshot1>
+		<snapshot2>h2NcM7u.png</snapshot2>
+		<clearlogo1>0oetSig.png</clearlogo1>
+		<fanart1>https://images.launchbox-app.com/d05bc6c8-cd42-4df8-8f83-52363822fcef.jpg</fanart1>
+		<videoid>I_pEtOIDt2c</videoid>
+	</game>
+	<game name="King of Fighters Neowave">
+		<description>King of Fighters Neowave</description>
+		<rom crc="68c7850b" name="naomi_aw2naomi/aw2naomi/King_of_Fighters_Neowave.zip" size="98497757" />
+		<title_clean>King of Fighters Neowave</title_clean>
+		<plot>The King of Fighters Neowave is a 2004 2D competitive fighting game produced by SNK Playmore and originally released as a coin-operated arcade game for Sammy's Atomiswave hardware. It was the first game SNK Playmore produced for the Atomiswave. An offshoot of The King of Fighters series, it is not counted in the main series numbering.</plot>
+		<year>2004</year>
+		<genre>Fighting</genre>
+		<studio>SNK</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/cc157b25-ced5-4feb-9cfb-489eb9741ea5.jpg</boxart1>
+		<snapshot1>qeIV2hd.png</snapshot1>
+		<snapshot2>3g3ZoPn.png</snapshot2>
+		<clearlogo1>jIuLrWN.png</clearlogo1>
+		<fanart1>https://images.launchbox-app.com/545588fa-d491-4204-8bc8-0f78f8f49780.jpg</fanart1>
+		<videoid>6FW2qB82t-M</videoid>
+	</game>
+	<game name="King of Fighters XI">
+		<description>King of Fighters XI</description>
+		<rom crc="e29eda1d" name="naomi_aw2naomi/aw2naomi/King_of_Fighters_XI.zip" size="184980857" />
+		<title_clean>King of Fighters XI</title_clean>
+		<plot>The King of Fighters XI is a 2D fighting game produced by SNK Playmore originally released in 2005 as a coin-operated arcade game for the Atomiswave platform. It is the eleventh official installment in The King of Fighters series following The King of Fighters 2003, although The King of Fighters Neowave was previously released for the same platform.</plot>
+		<year>2005</year>
+		<genre>Fighting</genre>
+		<studio>SNK</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/fc79d689-0b89-488c-9cc5-2423326b9f0d.jpg</boxart1>
+		<clearlogo1>c2nrLjv.png</clearlogo1>
+		<fanart1>https://images.launchbox-app.com/fa7642ba-9487-44fa-8852-971444f5858a.jpg</fanart1>
+		<videoid>PZPuQeOeBhk</videoid>
+	</game>
+	<game name="Knights of Valour Seven Spirits">
+		<description>Knights of Valour Seven Spirits</description>
+		<rom crc="29c7c1d3" name="naomi_aw2naomi/aw2naomi/Knights_of_Valour_Seven_Spirits.zip" size="40822951" />
+		<title_clean>Knights of Valour Seven Spirits</title_clean>
+		<plot>Knights of Valour is a very classic, famous Sango story based, 2.5D side-scrolling action game series in the arcade market, developed by the Taiwan International Games System Co., Ltd. (IGS) adapting from one of the Chinese Four Great Classical Novels, with many models and versions.[CR]New Knights of Valour The Seven Spirits is a sequel of KoV series released by IGS together with Sammy and Atomiswave. In KoV 3, a big feature is switched the hitting method to a new "press keys in rhyme". In laymans terms that means the every hit is pressed out using buttons, which is not shaken out using the rocker as usual other Knights of Valour series.</plot>
+		<year>2003</year>
+		<genre>Fighting</genre>
+		<studio>IGS</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/0a11cf13-0c24-4a88-9e76-4c98dc045df1.jpg</boxart1>
+		<snapshot1>https://img.appnee.com/appnee.com/New-Knights-of-Valour-The-Seven-Spirits-1.jpg</snapshot1>
+		<clearlogo1>6TvBXFS.png</clearlogo1>
+		<fanart1>https://images.launchbox-app.com/ab9ba110-3aa1-42fb-8787-b01d249da808.jpg</fanart1>
+		<videoid>8v8ObiQU0G0</videoid>
+	</game>
+	<game name="Maximum Speed">
+		<description>Maximum Speed</description>
+		<rom crc="67925525" name="naomi_aw2naomi/aw2naomi/Maximum_Speed.zip" size="87120328" />
+		<title_clean>Maximum Speed</title_clean>
+		<plot>Maximum Speed is a racing game in similar style to Daytona USA. You can choose to drive either trucks, stock cars, or Formula 1 vehicles.</plot>
+		<year>2003</year>
+		<genre>Racing</genre>
+		<studio>Sammy</studio>
+		<nplayers>1</nplayers>
+		<boxart1>https://images.launchbox-app.com/79a984b6-b35f-46e3-8eb3-8b46979e8dea.jpg</boxart1>
+		<snapshot1>YlkOCUe.png</snapshot1>
+		<snapshot2>ddwxPur.png</snapshot2>
+		<clearlogo1>TferUSc.png</clearlogo1>
+		<videoid>ZcBTwW6R5kI</videoid>
+	</game>
+	<game name="Metal Slug 6">
+		<description>Metal Slug 6</description>
+		<rom crc="8b236f47" name="naomi_aw2naomi/aw2naomi/Metal_Slug_6.zip" size="155031754" />
+		<title_clean>Metal Slug 6</title_clean>
+		<plot>Negotiations have broken off and hostages have been taken! Your country needs a highly trained mercenary to neutralize the enemy and free the hostages. Metal Slug 6 is a 1 or 2 player game with continuous buy-in. It is the first installment of the series developed on Sega's arcade hardware system. Metal Slug 6 includes 6 characters, with two new being Ralph and Clark from the King of Fighters series. Plus, two new player control buttons have been added to allow for greater control over the action!</plot>
+		<year>2006</year>
+		<genre>Action, Shooter</genre>
+		<studio>SNK</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/beb8c080-2379-40cf-864e-fb6febdb58f3.jpg</boxart1>
+		<snapshot1>sd2j1FX.png</snapshot1>
+		<snapshot2>gHgTvrG.png</snapshot2>
+		<clearlogo1>GE085Wy.png</clearlogo1>
+		<fanart1>https://images.launchbox-app.com/52683716-bcf9-4f12-91d7-9fbe42ba4af8.jpg</fanart1>
+		<videoid>hBV21g5FXr8</videoid>
+	</game>
+	<game name="Metal Slug 6 (Blood)">
+		<description>Metal Slug 6 (Blood)</description>
+		<rom crc="781782b6" name="naomi_aw2naomi/aw2naomi/Metal_Slug_6_Blood.zip" size="155031810" />
+		<title_clean>Metal Slug 6</title_clean>
+		<plot>Metal Slug 6 Blood Hack.[CR]Negotiations have broken off and hostages have been taken! Your country needs a highly trained mercenary to neutralize the enemy and free the hostages. Metal Slug 6 is a 1 or 2 player game with continuous buy-in. It is the first installment of the series developed on Sega's arcade hardware system. Metal Slug 6 includes 6 characters, with two new being Ralph and Clark from the King of Fighters series. Plus, two new player control buttons have been added to allow for greater control over the action!</plot>
+		<year>2006</year>
+		<genre>Action, Shooter</genre>
+		<studio>SNK</studio>
+		<nplayers>2</nplayers>
+		<boxart1>j4GFcHg.jpg</boxart1>
+		<snapshot1>sd2j1FX.png</snapshot1>
+		<snapshot2>gHgTvrG.png</snapshot2>
+		<clearlogo1>GE085Wy.png</clearlogo1>
+		<fanart1>https://images.launchbox-app.com/52683716-bcf9-4f12-91d7-9fbe42ba4af8.jpg</fanart1>
+		<videoid>zCjZU338C0M</videoid>
+	</game>
+	<game name="Neo Geo Battle Colliseum">
+		<description>Neo Geo Battle Colliseum</description>
+		<rom crc="8ae76392" name="naomi_aw2naomi/aw2naomi/Neo_Geo_Battle_Colliseum.zip" size="160179771" />
+		<title_clean>Neo Geo Battle Colliseum</title_clean>
+		<plot>NeoGeo Battle Coliseum is a 2-on-2 tag team fighting game for the Atomiswave arcade board developed and released by SNK in 2005. The game features characters from several SNK and ADK titles.</plot>
+		<year>2005</year>
+		<genre>Fighting</genre>
+		<studio>SNK</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/62ab26f6-3a9f-4025-b56b-42d2c8251e9e.jpg</boxart1>
+		<snapshot1>1qaj8WN.png</snapshot1>
+		<snapshot2>j6792Ch.png</snapshot2>
+		<clearlogo1>XZrv5cR.png</clearlogo1>
+		<fanart1>https://images.launchbox-app.com/f51d6377-0336-4402-8783-a5a819f602b6.jpg</fanart1>
+		<videoid>755KWYd09hY</videoid>
+	</game>
+	<game name="Rumble Fish">
+		<description>Rumble Fish</description>
+		<rom crc="0b184939" name="naomi_aw2naomi/aw2naomi/Rumble_Fish.zip" size="56955460" />
+		<title_clean>Rumble Fish</title_clean>
+		<plot>The Rumble Fish is a 2D fighting game developed by Dimps and first published by Sammy for the Atomiswave arcade platform in 2004.  The game takes place in the distant future during the 21st century. During the turn of the 21st century, a large-scale natural disaster tears through the eastern side of an unverified country, destroying its economical and political operations and taking a total of 158,000 lives. A prominent corporation in the series, called PROBE-NEXUS, moves its base of operations to the ruined east side and begins reconstructing the area. The rebuilt area flourishes again as it becomes a wealthy and busy city known as Zone Prime, which serves as the backdrop for many locales in the game.</plot>
+		<year>2004</year>
+		<genre>Fighting</genre>
+		<studio>Sammy</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/516a3253-4803-4e19-83fe-709f2f1d6919.jpg</boxart1>
+		<snapshot1>K6dB78F.png</snapshot1>
+		<snapshot2>9SjVOgw.png</snapshot2>
+		<clearlogo1>Gc1Xc3n.png</clearlogo1>
+		<fanart1>https://images.launchbox-app.com/ad234bdb-fb57-4fec-a428-b9da513bbf54.jpg</fanart1>
+		<videoid>_3xXa406MiI</videoid>
+	</game>
+	<game name="Rumble Fish 2">
+		<description>Rumble Fish 2</description>
+		<rom crc="085e5cad" name="naomi_aw2naomi/aw2naomi/Rumble_Fish_2.zip" size="90921620" />
+		<title_clean>Rumble Fish 2</title_clean>
+		<plot>The Rumble Fish 2 is a 2D fighting game for the Atomiswave arcade platform. The Rumble Fish 2 uses all of the elements from the first game and adds some new ones. The Offense and Defense gauges have been divided into three sections each, allowing for more usage of Offensive and Defensive Arts, as well as techniques tied to each gauge. An addition to the system is the Boost Dive, which puts each character into a powered-up state according to their style. Most characters have had modifications to their movelists in some way, such as new moves and new commands for old moves.</plot>
+		<year>2005</year>
+		<genre>Fighting</genre>
+		<studio>Sammy</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/4a91f251-8dab-402a-b6f9-f4f81760d972.jpg</boxart1>
+		<snapshot1>OIicQUi.png</snapshot1>
+		<snapshot2>z6sMhHP.png</snapshot2>
+		<clearlogo1>lAkZKLf.png</clearlogo1>
+		<videoid>9uGaG_Cpcck</videoid>
+	</game>
+	<game name="Salary Man">
+		<description>Salary Man</description>
+		<rom crc="dab9739a" name="naomi_aw2naomi/aw2naomi/Salary_Man.zip" size="59262029" />
+		<title_clean>Salary Man</title_clean>
+		<plot>Salaryman Kintarou is an Action game, developed and published by Sammy Studios, which was released in Japan in 2004.</plot>
+		<year>2004</year>
+		<genre>Action</genre>
+		<studio>Sammy</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/8c6f5c84-e470-4261-88ca-894c23179700.jpg</boxart1>
+		<snapshot1>iZC2J58.png</snapshot1>
+		<snapshot2>t236x1a.png</snapshot2>
+		<clearlogo1>zVyyIJ6.png</clearlogo1>
+		<fanart1>https://images.launchbox-app.com/8ed7c8db-f266-4aa5-9939-4a03a97d5c30.jpg</fanart1>
+		<videoid>0OQRQqyfw3M</videoid>
+	</game>
+	<game name="Samurai Showdown VI">
+		<description>Samurai Showdown VI</description>
+		<rom crc="4209f91e" name="naomi_aw2naomi/aw2naomi/Samurai_Showdown_VI.zip" size="152031968" />
+		<title_clean>Samurai Showdown VI</title_clean>
+		<plot>Samurai Spirits Tenkaichi Kenkakuden is a dream match game which features the entire cast from Samurai Shodown V Special, seven returning characters from Samurai Shodown and Samurai Shodown II, and several new characters added to the Playstation 2 port of the game. The story is parallel to Samurai Shodown V; Yoshitora decides to find out who the strongest fighter in the world is, so a tournament is then organized with this purpose. The game is similar to the Samurai Showdown V Special; however, the player is now capable of using one of six different fighting systems, all of which have their own advantages and disadvantages. Items like bombs and rocks can also be picked up and thrown at the enemy.</plot>
+		<year>2005</year>
+		<genre>Fighting</genre>
+		<studio>SNK</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/19ac1676-1a67-4ba5-ba2c-8d4cfff3e2dc.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/f10aa718-5a2c-47d9-8315-5bd64b31cc98.jpg</boxart2>
+		<snapshot1>OSfUWdY.png</snapshot1>
+		<snapshot2>s6NwNr8.png</snapshot2>
+		<clearlogo1>NB8J1wL.png</clearlogo1>
+		<videoid>46JlWMzSIpQ</videoid>
+	</game>
+	<game name="Sega Bass Fishing Challenge">
+		<description>Sega Bass Fishing Challenge</description>
+		<rom crc="99bc12f8" name="naomi_aw2naomi/aw2naomi/Sega_Bass_Fishing_Challenge.zip" size="66157848" />
+		<title_clean>Sega Bass Fishing Challenge</title_clean>
+		<plot>Sega Bass Fishing Challenge is the latest entry in the Sega Bass Fishing series. It was released for the Atomiswave arcade platform in 2009 and was released for iOS devices in autumn 2011.</plot>
+		<year>2009</year>
+		<genre>Sports</genre>
+		<studio>Sega</studio>
+		<nplayers>1</nplayers>
+		<boxart1>https://images.launchbox-app.com/538a9f5f-8e30-4bba-94bf-6e853da36ce8.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/1c8412ee-ef51-42f3-bc4d-02b2b0181418.png</boxart2>
+		<fanart1>https://images.launchbox-app.com/30db727a-d035-492a-98bb-215177c96d15.jpg</fanart1>
+		<videoid>MPgvxoRQUJg</videoid>
+	</game>
+	<game name="Sega Clay Challenge">
+		<description>Sega Clay Challenge</description>
+		<rom crc="c60e370e" name="naomi_aw2naomi/aw2naomi/Sega_Clay_Challenge.zip" size="67645469" />
+		<title_clean>Sega Clay Challenge</title_clean>
+		<plot>Sega Clay Challenge is a Atomiswave light gun game released by Sega in 2008. It was also sold as a conversion kit for Extreme Hunting, Extreme Hunting 2, Ranger Mission or Sports Shooting USA - any Atomiswave game which is compatible with the Sega NAOMI universal upright cabinet (with light guns).</plot>
+		<year>2008</year>
+		<genre>Sports</genre>
+		<studio>Sega</studio>
+		<nplayers>1</nplayers>
+		<boxart1>https://images.launchbox-app.com/cb6d9cbc-ae3b-4b84-88b0-ca6a070dc73c.jpg</boxart1>
+		<clearlogo1>https://images.launchbox-app.com/210dded2-7a9f-409e-b9c0-f586057cb4ed.png</clearlogo1>
+		<fanart1>https://images.launchbox-app.com/6faa33bc-840a-4fdd-bfde-6490d7517c5f.jpg</fanart1>
+		<videoid>awN5rO8m3OQ</videoid>
+	</game>
+	<game name="Sports Shooting USA">
+		<description>Sports Shooting USA</description>
+		<rom crc="a58252cd" name="naomi_aw2naomi/aw2naomi/Sports_Shooting_USA.zip" size="99988317" />
+		<title_clean>Sports Shooting USA</title_clean>
+		<plot>Sport Shooting USA is a competitive 1 to 2 player shooting game where players, using optical guns, must shoot a number of required on-screen targets within a certain time limit to qualify and proceed to next round.</plot>
+		<year>2003</year>
+		<genre>Sports</genre>
+		<studio>Sammy</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/3cad5f9c-b24e-41b9-bbb1-675a0fa967a4.jpg</boxart1>
+		<snapshot1>QxRsgKy.png</snapshot1>
+		<snapshot2>rFKMdUN.png</snapshot2>
+		<clearlogo1>https://images.launchbox-app.com/8fe75867-3b31-4fea-b77c-b0009ee67f9d.png</clearlogo1>
+		<fanart1>https://images.launchbox-app.com/9efd102d-3afd-4e51-b2ec-66a691e507dc.jpg</fanart1>
+		<videoid>Vl26hCg5h2k</videoid>
+	</game>
+	<game name="Sushi Bar">
+		<description>Sushi Bar</description>
+		<rom crc="2ba2d27d" name="naomi_aw2naomi/aw2naomi/Sushi_Bar.zip" size="81416599" />
+		<title_clean>Sushi Bar</title_clean>
+		<plot>So you aspire to become a sushi chef? Here you challenge your opponent in epic sushi battles! Culinary fights in the vein of Puzzle Fighter.</plot>
+		<year>2003</year>
+		<genre>Puzzle, Fighter</genre>
+		<studio>Sammy</studio>
+		<nplayers>2</nplayers>
+		<boxart1>Oo3GBhT.jpg</boxart1>
+		<snapshot1>https://i.ytimg.com/vi/i_iFH-OYrAc/maxresdefault.jpg</snapshot1>
+		<snapshot2>https://i.ytimg.com/vi/eyOJBVwIj6o/maxresdefault.jpg</snapshot2>
+		<clearlogo1>http://hyperspin-fe.com/uploads/monthly_2017_11/sushibar.png.bccba77b3d0851540a9947891ca95b26.png</clearlogo1>
+		<videoid>i_iFH-OYrAc</videoid>
+	</game>
+</datafile>
