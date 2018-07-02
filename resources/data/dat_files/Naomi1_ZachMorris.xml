@@ -1,0 +1,1802 @@
+<datafile>
+	<header>
+		<emu_name>Naomi</emu_name>
+		<emu_description>Arcade</emu_description>
+		<emu_category>Arcade</emu_category>
+		<emu_version>07012018</emu_version>
+		<emu_date>07/01/2018</emu_date>
+		<emu_author>Zach Morris</emu_author>
+		<emu_visibility>visible</emu_visibility>
+		<emu_homepage>http://archive.org</emu_homepage>
+		<emu_baseurl>https://archive.org/download/</emu_baseurl>
+		<emu_launcher>retroplayer</emu_launcher>
+		<emu_default_addon>none</emu_default_addon>
+		<emu_ext_launch_cmd>none</emu_ext_launch_cmd>
+		<emu_downloadpath>default</emu_downloadpath>
+		<emu_postdlaction>unarchive_game_launch_lst</emu_postdlaction>
+		<emu_comment>The NAOMI (New Arcade Operation Machine Idea) is the successor to the Sega Model 3. Sega first demonstrated NAOMI publicly at the 1998 Amusement Machine Show (an annual trade show hosted in Tokyo by the Japan Amusement Machinery Manufacturers Association). After the show, Sega released the first NAOMI title to the Japanese market: The House of the Dead 2.[CR]NAOMI uses some of the same electronic components as the Dreamcast home game console.  However, NAOMI has twice as much system memory, twice as much video memory, and four times as much sound memory.[CR]Some NAOMI titles read game data from a GD-ROM optical disc, which is also the Dreamcast software medium. Game data can also be stored in a 168-megabyte bank of solid-state ROM. GD-ROM support requires a specialized DIMM board in addition to the GD-ROM drive.[CR]A modified version of the NAOMI was used for the Sammy Atomiswave.</emu_comment>
+		<emu_thumb>vrR0RcE.jpg</emu_thumb>
+		<emu_banner>Nwz95k4.jpg</emu_banner>
+		<emu_fanart>tLbaXoN.jpg</emu_fanart>
+		<emu_logo>x7CFqy3.png</emu_logo>
+		<emu_trailer>l5Q4wogpMjQ</emu_trailer>
+	</header>
+	<game name="18 Wheeler (DLX)">
+		<description>18 Wheeler (DLX)</description>
+		<rom crc="5258e3d7" name="naomi_aw2naomi/naomi_1/18_Wheeler_DLX.zip" size="98495466" />
+		<title_clean>18 Wheeler</title_clean>
+		<plot>18 Wheeler: American Pro Trucker (also known as just 18 Wheeler) is an arcade game developed by Sega AM2 and distributed by Sega. The game was first released in arcades in 2000, then ported to the Dreamcast in 2001. It was later released for the PlayStation 2 in 2001 and Nintendo GameCube in 2002 by Acclaim Entertainment. Sega followed up on the success of 18 Wheeler with a sequel, The King of Route 66, which was released in the arcades around 2002 and ported to the PlayStation 2. This was one of the final arcade video games ports to be on the Dreamcast after its discontinuation before Sega became a third party developer.</plot>
+		<releasedate>7/26/2000</releasedate>
+		<year>2000</year>
+		<studio>Sega AM2</studio>
+		<nplayers>1</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/18_Wheeler:_American_Pro_Trucker</wiki_url>
+		<boxart1>https://images.launchbox-app.com/255202ba-fd4d-470b-8a61-54dbef654ebd.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/0d5f1999-637b-4be8-bdd0-98d3be8f0c4b.png</boxart2>
+		<clearlogo1>https://images.launchbox-app.com/1ebf22fc-edbb-4685-8044-956abe3dafcf.png</clearlogo1>
+	</game>
+	<game name="18 Wheeler (STD)">
+		<description>18 Wheeler (STD)</description>
+		<rom crc="87edc9b4" name="naomi_aw2naomi/naomi_1/18_Wheeler_STD.zip" size="98491520" />
+		<title_clean>18 Wheeler</title_clean>
+		<plot>18 Wheeler: American Pro Trucker (also known as just 18 Wheeler) is an arcade game developed by Sega AM2 and distributed by Sega. The game was first released in arcades in 2000, then ported to the Dreamcast in 2001. It was later released for the PlayStation 2 in 2001 and Nintendo GameCube in 2002 by Acclaim Entertainment. Sega followed up on the success of 18 Wheeler with a sequel, The King of Route 66, which was released in the arcades around 2002 and ported to the PlayStation 2. This was one of the final arcade video games ports to be on the Dreamcast after its discontinuation before Sega became a third party developer.</plot>
+		<releasedate>7/26/2000</releasedate>
+		<year>2000</year>
+		<studio>Sega AM2</studio>
+		<nplayers>1</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/18_Wheeler:_American_Pro_Trucker</wiki_url>
+		<boxart1>https://images.launchbox-app.com/255202ba-fd4d-470b-8a61-54dbef654ebd.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/0d5f1999-637b-4be8-bdd0-98d3be8f0c4b.png</boxart2>
+		<clearlogo1>https://images.launchbox-app.com/1ebf22fc-edbb-4685-8044-956abe3dafcf.png</clearlogo1>
+	</game>
+	<game name="Airline Pilot">
+		<description>Airline Pilot</description>
+		<rom crc="9036e430" name="naomi_aw2naomi/naomi_1/Airline_Pilot.zip" size="42731819" />
+		<title_clean>Airline Pilot</title_clean>
+		<plot>Airline Pilots is a flight simulator released for Sega NAOMI arcade hardware in 1999. The game simulates flying a Boeing 777 aircraft, and was developed with the input of engineers and pilots from Japan Airlines. Two different cabinet models were manufactured. The default type is a typical sit down cabinet with one monitor, while the "DX type" cabinet features three side-by-side 29" monitors, which surround the player to create a "cockpit".[CR]The extreme difficulty of "Airline Pilots", combined with a lack of interest in realistic flight simulators, led Sega to manufacture a conversion kit which allowed owners to convert the units into the more popular Sega Strike Fighter. As a result, Airline Pilots cabinets are relatively rare.</plot>
+		<genre>Flight Simulator</genre>
+		<studio>Sega</studio>
+		<nplayers>1</nplayers>
+		<boxart1>https://images.launchbox-app.com/1dfeafc3-7de1-4c8c-96e1-3b439b8d03ac.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/69b35d18-a7d9-450b-9f0f-154ded24bcb7.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/f345f26d-ca87-4ae0-8d2c-34a16486b97a.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/e877a7a6-6f79-448f-8322-746b482a43cf.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/3afe2784-b4c2-480e-a5af-07095523af16.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/076f96e5-d537-40cf-8f69-aff59607d3cd.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/3746c464-6e98-453e-9b15-a1957d985652.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/8733e50e-a946-4f6b-8183-224cd03cf853.png</banner1>
+		<banner2>https://images.launchbox-app.com/cefe0e31-dbd9-45bd-a5cb-32345c71b9ef.png</banner2>
+	</game>
+	<game name="Akatsuki Blitzkampf Auf Asche">
+		<description>Akatsuki Blitzkampf Auf Asche</description>
+		<rom crc="b9aed488" name="naomi_aw2naomi/naomi_1/Akatsuki_Blitzkampf_Auf_Asche.zip" size="68815151" />
+		<title_clean>Akatsuki Blitzkampf Auf Asche</title_clean>
+		<plot>Akatsuki Blitzkampf Ausf Achse is based upon the original Akatsuki Blitzkampf Japanese PC dojin 2D fighting game from SUBTLE STYLE which was originally released on the 30th April 2007.  The original PC game got a lot of attention in Japan for its high-resolution sprites and older style gameplay similar to that of the older Samurai Showdown in the way that you can parry.  This Naomi arcade release features improved graphics as well as an extra character going under the name of Perfect.</plot>
+		<genre>Fighting</genre>
+		<studio>Subtle Style</studio>
+		<wiki_url>https://en.wikipedia.org/wiki/Akatsuki_Blitzkampf#Akatsuki_Blitzkampf_Ausf._Achse</wiki_url>
+		<boxart1>https://images.launchbox-app.com/2908b764-f1cd-464c-8e12-0fcd2fe59d2a.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/08c9fa15-1714-4ff3-bdcd-e32c152815f1.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/5b38e2ec-3839-4379-a595-75e6bd24bec1.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/bfa4d271-067c-4b7a-a2cf-43e2c8d71803.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/a1574848-7657-4d86-aaa7-577a8f0daf06.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/ac0142d6-c448-4e06-a92a-d7057ced5689.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/063d5bd4-7619-4153-914d-c2ebf120c2c8.jpg</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/e984b1c8-fe7f-40c2-bf3c-d585fdeecee7.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/bdf31958-ec9c-43e8-852d-cf86a03ce825.png</snapshot4>
+		<banner1>https://images.launchbox-app.com/784c69a8-cf27-4d1f-ad87-8964334cd5e0.png</banner1>
+		<banner2>https://images.launchbox-app.com/4fe94d2d-a1a5-4567-b8fc-66db94a2f090.jpg</banner2>
+	</game>
+	<game name="Alien Front">
+		<description>Alien Front</description>
+		<rom crc="f761c304" name="naomi_aw2naomi/naomi_1/Alien_Front.zip" size="38381688" />
+		<title_clean>Alien Front</title_clean>
+		<plot>Alien Front Online is a 2001 video game released for the Sega Dreamcast exclusively in North America. Alien Front Online is an online version of the arcade game Alien Front, where it was bundled with the Dreamcast Microphone.</plot>
+		<genre>Action</genre>
+		<studio>WOW Entertainment</studio>
+		<wiki_url>https://en.wikipedia.org/wiki/Alien_Front_Online</wiki_url>
+		<boxart1>https://images.launchbox-app.com/943f66e5-e0f6-4710-a66a-3b05b6cac9a1.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/38337be1-6849-42ba-9e67-146282ee5150.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/7e28acc3-530f-40f3-a029-68c9a44276ba.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/444c7b7d-2cd6-4386-b320-91c223b2442b.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/2c1a2a8b-0d6f-4f13-9a47-468f10855851.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/8b140fc7-8dfa-4bae-97d8-c3f218805420.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/49105ab9-a920-4e89-910a-1bea2b704fee.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/5b4c021b-c2e6-4db9-8bb4-83a01bfda411.png</snapshot4>
+		<banner1>https://images.launchbox-app.com/97b926c6-29c8-48ce-93f0-b23bec651cf0.png</banner1>
+	</game>
+	<game name="Azumanga Daioh Puzzle Bobble">
+		<description>Azumanga Daioh Puzzle Bobble</description>
+		<rom crc="1ec0c71e" name="naomi_aw2naomi/naomi_1/Azumanga_Daioh_Puzzle_Bobble.zip" size="64405817" />
+		<title_clean>Azumanga Daioh Puzzle Bobble</title_clean>
+		<plot>Azumanga Daioh Puzzle Bobble is a game based on the Azumanga Daioh anime and manga which was released by Taito Corporation as an arcade-only Puzzle Bobble spin-off on June 1, 2002. It was developed by MOSS for the Sega NAOMI GD-ROM arcade and distributed in Japan exclusively. It also has a two-player mode and the original voice actors from the Azumanga Daioh anime reprise their roles. It is controlled using one joystick and two buttons</plot>
+		<genre>Puzzle</genre>
+		<studio>MOSS (Taito license)</studio>
+		<nplayers>2</nplayers>
+		<ESRB>E - Everyone</ESRB>
+		<boxart1>https://images.launchbox-app.com/948e78fc-5090-434e-8db8-b54e6e4b10ff.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/69f5fcd5-9fbb-4e8d-ac7e-cd576d236e3e.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/18547d7c-c239-40d3-b6e7-ac57b901cbbd.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/3855657f-66e1-4691-b6a9-865caab97b93.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/ae069234-1b08-4c0b-855e-06d9293247f9.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/81951810-bf81-451d-8959-6c72131a286d.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/e183eb18-afd7-4208-a7ff-af51a16ed8be.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/e500692e-5421-4d90-b9bf-51902be44614.png</snapshot4>
+		<banner1>https://images.launchbox-app.com/b53e6b83-bebd-4b34-b5cf-9b05aaf8e0f3.png</banner1>
+		<banner2>https://images.launchbox-app.com/6f518a49-ebe9-4122-b6e0-8aa8fcb79800.jpg</banner2>
+		<clearlogo1>https://images.launchbox-app.com/3b6fc431-285b-4571-b87b-d950cc1074ac.png</clearlogo1>
+	</game>
+	<game name="Border Down">
+		<description>Border Down</description>
+		<rom crc="05f93397" name="naomi_aw2naomi/naomi_1/Border_Down.zip" size="151030174" />
+		<title_clean>Border Down</title_clean>
+		<plot>Border Down is a horizontally scrolling shoot 'em up video game developed by G.rev and released in Japanese arcades in 2003. It is a spiritual sequel to Metal Black, a favorite game of creator Hiroyuki Maruyama. As with most other Sega NAOMI titles, the game was later released on the Dreamcast in September 2003 in two incarnations: a normal edition, and a limited edition that came bundled with a music CD and alternative cover art. Border Down was G.rev's second independent game (though they did subcontracted work on other titles, most notably Ikaruga and Gradius V), released after Sega's official discontinuation of the Dreamcast console.</plot>
+		<studio>G.Rev</studio>
+		<nplayers>1</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Border_Down</wiki_url>
+		<boxart1>https://images.launchbox-app.com/0c910fbd-08eb-4494-a7d1-3476cda48bd9.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/dfd42026-f163-4fa4-a5e5-22a598ccb9fc.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/9372d525-c425-433a-915e-4b018a8ba981.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/d040fee7-c267-4ce8-8288-f768d9c4715b.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/d0f29282-317e-4b0d-a04c-94f79f55f382.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/a962d254-0892-48d1-9fd9-db8203e4b6b6.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/8029cace-a136-4380-940f-37c2d8db2a42.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/749d6c78-eedf-4f78-a5ca-76af119fd619.png</banner1>
+		<banner2>https://images.launchbox-app.com/1eaf7100-74b8-47ff-8e0a-08b170b0f46f.png</banner2>
+		<clearlogo1>https://images.launchbox-app.com/c4456b43-d97b-4013-9192-8297246771e0.png</clearlogo1>
+	</game>
+	<game name="Burning Casino">
+		<description>Burning Casino</description>
+		<rom crc="fa4840e5" name="naomi_aw2naomi/naomi_1/Burning_Casino.zip" size="64277206" />
+		<title_clean>Burning Casino</title_clean>
+		<snapshot1>https://i.ytimg.com/vi/2BE6sDEFfmE/maxresdefault.jpg</snapshot1>
+		<videoid>p1Xmhn0zNWM</videoid>
+	</game>
+	<game name="Capcom VS SNK - Millenium Fight 2000">
+		<description>Capcom VS SNK - Millenium Fight 2000</description>
+		<rom crc="e6aa3bdc" name="naomi_aw2naomi/naomi_1/Capcom_VS_SNK_Millenium_Fight_2000.zip" size="89975967" />
+		<title_clean>Capcom VS SNK - Millenium Fight 2000</title_clean>
+		<genre>Fighting</genre>
+		<studio>Capcom</studio>
+		<boxart1>https://images.launchbox-app.com/cfdb8d4c-719b-404b-aac1-64e8e6f7f055.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/289fefb9-6dc2-418d-8ceb-c281ea1696c8.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/838a6f88-cc32-4f3c-9608-1f106c6a0100.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/7647f652-36b9-4406-aa68-d1e0fedd2c22.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/c350259a-9414-4b93-82c9-b9e53799b7e0.png</boxart5>
+	</game>
+	<game name="Capcom VS SNK 2 - Mark of the Millennium 2001">
+		<description>Capcom VS SNK 2 - Mark of the Millennium 2001</description>
+		<rom crc="4fe65562" name="naomi_aw2naomi/naomi_1/Capcom_vs_SNK_2_Mark_of_the_Millennium_2001.zip" size="120976480" />
+		<title_clean>Capcom VS SNK 2 - Mark of the Millennium 2001</title_clean>
+		<plot>Capcom vs. SNK 2 combines characters and gameplay elements from various Capcom and SNK fighting games, mainly the Street Fighter and The King of Fighters series. Other elements, most noticeably different fighting styles, incorporated elements from other games as well, such as Street Fighter III, Garou: Mark of the Wolves, and the Samurai Shodown series.[CR]This game runs on the Sga NAOMI Arcade system which is based on Sega Dreamcast's hardware.</plot>
+		<releasedate>8/1/2001</releasedate>
+		<year>2001</year>
+		<genre>Fighting</genre>
+		<studio>Capcom</studio>
+		<nplayers>2</nplayers>
+		<videoid>IZmouManskU</videoid>
+		<wiki_url>https://en.wikipedia.org/wiki/Capcom_vs._SNK_2</wiki_url>
+		<boxart1>https://images.launchbox-app.com/c0c75275-8294-4475-ade9-6c977da62cbd.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/73c6c745-1388-4c2f-8d2c-2e4561f1ae54.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/70751fdf-57ff-42ae-98dc-e9f9582596d5.jpg</boxart3>
+		<boxart4>https://images.launchbox-app.com/04cbf8b3-be1f-47f8-8951-7d718fdfa6b6.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/c0e2a8c5-a646-4e11-81e8-9562386562c9.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/d2ce3348-0714-4c3f-84ac-198f4e5890af.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/875f0ef3-3235-4653-baf6-5ecac10a1685.jpg</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/3805d4d6-158e-452f-895b-d31fd1b43ec1.jpg</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/a4769d3c-3aca-4680-865f-b7222d8984ef.jpg</snapshot4>
+		<snapshot5>https://images.launchbox-app.com/825fdf5a-4eb7-4a0e-bff6-f35ed6f1f4c6.png</snapshot5>
+		<banner1>https://images.launchbox-app.com/543202bd-dfe6-40b9-bd3e-6c8b4056c715.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/98d5e5f3-430a-4335-b39f-978828eae09d.png</clearlogo1>
+		<clearlogo2>https://images.launchbox-app.com/bae85d5d-8670-4649-ba1d-ed048845606c.png</clearlogo2>
+	</game>
+	<game name="Chaos Field">
+		<description>Chaos Field</description>
+		<rom crc="b1fe1d6c" name="naomi_aw2naomi/naomi_1/Chaos_Field.zip" size="104133921" />
+		<title_clean>Chaos Field</title_clean>
+		<plot>The technological advancements of mankind discover a dimension of absolute chaos that its discoverers soon called the Chaos Field. Upon its discovery, the overly destructive inhabitants of the Chaos Field, known as the Abo, invaded Earth which is considered the Orderfield. The war raged so long that special pilots were selected to fly the best star fighters equipped with trans-dimensional technology to combat the Abo and save the Orderfield.</plot>
+		<releasedate>6/1/2004</releasedate>
+		<year>2004</year>
+		<genre>Shooter</genre>
+		<studio>Able Corporation</studio>
+		<nplayers>1</nplayers>
+		<ESRB>E - Everyone</ESRB>
+		<wiki_url>https://en.wikipedia.org/wiki/Chaos_Field</wiki_url>
+		<boxart1>https://images.launchbox-app.com/543a16f0-5d22-4aac-a1d5-a805931f5061.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/9a0aede4-396d-493f-bcc5-3d74c5922895.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/80b7797b-e52f-4180-8183-fb0e54170ce0.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/38cc06f5-eeae-46a6-bf32-f54b1c8f850b.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/9ee9ef11-8249-4c60-ba9e-03d19c38f2a3.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/fd52d8bf-5089-4cb5-9f22-887c3969081c.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/a03ca965-c267-4a96-ae69-2f85c66b9130.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/4f541b91-44de-4818-8012-540d5492463f.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/fc586a68-1987-43f4-bb15-c81d2f928dbf.png</clearlogo1>
+	</game>
+	<game name="Cleopatra Fortune Plus">
+		<description>Cleopatra Fortune Plus</description>
+		<rom crc="e7f5f309" name="naomi_aw2naomi/naomi_1/Cleopatra_Fortune_Plus.zip" size="29638542" />
+		<title_clean>Cleopatra Fortune Plus</title_clean>
+		<genre>Puzzle</genre>
+		<studio>Altron</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/2eae244c-d888-495d-9d9d-dde43b601377.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/618ade77-d177-46ba-9a4b-3e2d21858bfa.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/34324257-b042-44fb-9d16-edf2bd3fbbaa.png</boxart3>
+		<snapshot1>https://images.launchbox-app.com/bd9ba7fe-6059-4982-9667-702f031af911.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/e0321f9e-bbf6-415d-acc1-8fdec19e7aeb.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/3006ec4e-d0c2-4300-9907-1719eca3f962.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/37c912fe-719e-4391-91b5-ed26c7bef3ce.png</snapshot4>
+		<snapshot5>https://images.launchbox-app.com/d692ca0d-b61b-441f-b81a-7fc1e3ef792c.png</snapshot5>
+	</game>
+	<game name="Confidential Mission">
+		<description>Confidential Mission</description>
+		<rom crc="486c5960" name="naomi_aw2naomi/naomi_1/Confidential_Mission.zip" size="72487886" />
+		<title_clean>Confidential Mission</title_clean>
+		<plot>Confidential Mission is a light gun game published by Sega, first available as an arcade game, then ported to the Dreamcast. The game is in the same style as the Virtua Cop series or The House of the Dead series, with support for one or two players. The game was developed by Sega's Hitmaker development team and first released in 2000. Its plot is of the same vein as James Bond and Mission: Impossible. Despite it also having an arcade release, it never enjoyed the popularity of the Virtua Cop nor The House of the Dead series, which were also produced by Sega.</plot>
+		<genre>Shooter</genre>
+		<studio>Hitmaker</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Confidential_Mission</wiki_url>
+		<boxart1>https://images.launchbox-app.com/7f514433-4fd4-48de-9f89-4a591495114f.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/8c0ad938-2a7d-45ee-b172-5a62a11793e4.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/fe24e812-9cc3-4e8b-9bb8-1fdc1093729d.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/473ee0e8-7ab2-43d4-be5d-7a96499f8544.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/199dce3d-f17b-4581-bede-1d62358ce59a.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/5701471d-0a4a-414f-a54e-6973e917811b.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/e4659b81-49f5-4db4-8b92-03f17fae8486.png</snapshot2>
+		<banner1>https://images.launchbox-app.com/1d0acd4a-593d-4e6f-b465-459622d11e73.png</banner1>
+	</game>
+	<game name="Cosmic Smash">
+		<description>Cosmic Smash</description>
+		<rom crc="9f5aa291" name="naomi_aw2naomi/naomi_1/Cosmic_Smash.zip" size="35562169" />
+		<title_clean>Cosmic Smash</title_clean>
+		<plot>Cosmic Smash is an arcade game that was later ported to the Dreamcast console. It is a futuristic combination of squash and Breakout, and is a single player game.</plot>
+		<genre>Sports</genre>
+		<studio>Sega Rosso</studio>
+		<nplayers>1</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Cosmic_Smash</wiki_url>
+		<boxart1>https://images.launchbox-app.com/5d9b2fc4-674b-4479-912f-9a47c0b8e773.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/3e8fda13-f1e7-4101-8459-a631a2bddd86.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/97c44998-ed44-4d45-83b2-ea9787fb6a62.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/1d3082ba-2d3f-487f-8cf6-0e7c2926714f.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/c4857f72-0090-4d15-99ed-2a815b4e4f2b.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/3f1da4b2-8456-49dd-b913-d696e3a284dd.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/f2f36ee1-d9c2-4221-b95e-0b1589db174f.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/4cfad8a9-8323-4220-801a-9f9275df3b66.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/3206b522-e598-4f5a-a879-28ca4c14f1eb.png</banner1>
+	</game>
+	<game name="Crazy Taxi">
+		<description>Crazy Taxi</description>
+		<rom crc="c4724e43" name="naomi_aw2naomi/naomi_1/Crazy_Taxi.zip" size="55047397" />
+		<title_clean>Crazy Taxi</title_clean>
+		<plot>Crazy Taxi is a series of score attack racing video games that was developed by Hitmaker and published by Sega. The first game appeared in arcades in 1999 and was very successful, prompting Sega to port the arcade version to their Dreamcast console in 2000. It is the third best-selling Dreamcast game in the United States, selling over a million copies. The game was later ported to the PlayStation 2, Nintendo GameCube, and PC with sequels also appearing on the Xbox, Game Boy Advance, and PlayStation Portable systems.</plot>
+		<nplayers>1</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Crazy_Taxi</wiki_url>
+		<boxart1>https://images.launchbox-app.com/a54ee261-0ddf-4ae8-aedf-efddaf88fb76.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/be505e20-2b50-406d-ab94-528b2c04e7da.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/983f98c7-2129-4ae1-9558-bafdaddffe2f.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/83e8736a-b283-464f-90c8-fc96c786518c.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/2577ffb3-a409-402a-ab90-a97260ce9012.png</boxart5>
+		<boxart6>https://images.launchbox-app.com/f5f7d510-bab7-469c-8252-cf6ce4745e60.png</boxart6>
+		<snapshot1>https://images.launchbox-app.com/bb11e707-9205-462e-b849-46730f973fd7.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/3b2df46e-5895-4fdb-be74-ef5014abb52e.png</snapshot2>
+		<banner1>https://images.launchbox-app.com/07c6299e-693b-4e99-8e24-1db712a02401.png</banner1>
+		<banner2>https://images.launchbox-app.com/2d2533bb-08a4-4dd6-8643-84019be8fe49.png</banner2>
+	</game>
+	<game name="Dead or Alive 2">
+		<description>Dead or Alive 2</description>
+		<rom crc="8769df34" name="naomi_aw2naomi/naomi_1/Dead_or_Alive_2.zip" size="107406127" />
+		<title_clean>Dead or Alive 2</title_clean>
+		<plot>Dead or Alive 2 is a fighting game in the Dead or Alive series, developed by Team Ninja and published by Tecmo. It debuted in arcades in 1999 and was later ported for the Dreamcast and the PlayStation 2 in 2000. Several enhanced editions of the game were released, including the updates Dead or Alive 2 Hardcore and Dead or Alive 2 Hard*Core.</plot>
+		<genre>Fighting</genre>
+		<studio>Team Ninja</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Dead_or_Alive_2</wiki_url>
+		<boxart1>https://images.launchbox-app.com/4aaa01b9-265c-457e-a72e-56550244bac9.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/9cfeb013-5e01-4317-b23f-dac87fc33970.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/d7b881c0-ec5d-4e24-9211-3067fa3d5f6d.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/8c023bac-fe2a-4b49-bfc9-50df07031fe4.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/564eb767-7c14-45f2-be15-48b83cea11db.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/99641ac5-ca41-4856-8860-4483caf8fd6a.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/aad19855-51fd-4d2b-a886-fcf586ad1083.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/153af33a-866f-44a6-acf6-3545ac7156d1.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/edce803a-4b8f-441d-a976-b7aecb325386.png</banner1>
+	</game>
+	<game name="Dead or Alive 2 - Millenium">
+		<description>Dead or Alive 2 - Millenium</description>
+		<rom crc="57c8d268" name="naomi_aw2naomi/naomi_1/Dead_or_Alive_2_Millenium.zip" size="107468984" />
+		<title_clean>Dead or Alive 2 - Millenium</title_clean>
+		<plot>Dead or Alive 2 Millennium is an updated version of Dead or Alive 2, which includes features from the Dreamcast version that were not present in the arcade. The game was only released on the Sega NAOMI platform in arcades.</plot>
+		<genre>Fighting</genre>
+		<studio>Team Ninja</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Dead_or_Alive_2</wiki_url>
+		<boxart1>https://images.launchbox-app.com/4aaa01b9-265c-457e-a72e-56550244bac9.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/9cfeb013-5e01-4317-b23f-dac87fc33970.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/d7b881c0-ec5d-4e24-9211-3067fa3d5f6d.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/8c023bac-fe2a-4b49-bfc9-50df07031fe4.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/564eb767-7c14-45f2-be15-48b83cea11db.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/99641ac5-ca41-4856-8860-4483caf8fd6a.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/aad19855-51fd-4d2b-a886-fcf586ad1083.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/153af33a-866f-44a6-acf6-3545ac7156d1.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/edce803a-4b8f-441d-a976-b7aecb325386.png</banner1>
+	</game>
+	<game name="Death Crimson OX">
+		<description>Death Crimson OX</description>
+		<rom crc="94cd1c53" name="naomi_aw2naomi/naomi_1/Death_Crimson_OX.zip" size="56020244" />
+		<title_clean>Death Crimson OX</title_clean>
+		<genre>Shooter</genre>
+		<plot>Death Crimson OX is a light gun shooting game developed by Ecole. It was released in arcades in 2000 then ported to the Dreamcast console in 2001 (published by Sammy Entertainment), several months after Sega had dropped support for the console. It is the third game in the Death Crimson series, and the only one to be released outside Japan.</plot>
+		<boxart1>https://images.launchbox-app.com/ff2ec1f8-d4f3-4f4b-9aa7-73622a416fad.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/e494fdf0-f644-4d67-ae8a-1d4f2ff3619b.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/e32fef4e-6166-409f-8ef5-683497a2af91.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/9ca87fb7-5040-423a-8f5a-0b799dadba54.jpg</boxart4>
+		<boxart5>https://images.launchbox-app.com/494c82f9-dccd-4c77-a6e2-bc8bf2cbbacd.png</boxart5>
+		<boxart6>https://images.launchbox-app.com/50d8f89b-dbcd-4235-9d9d-0ac86051ab9c.png</boxart6>
+		<snapshot1>https://images.launchbox-app.com/f8e6d290-2e57-4e58-9418-daf2ca534793.jpg</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/bf1d3eee-925a-45aa-852f-f19aa4534bf9.jpg</snapshot2>
+		<clearlogo1>https://images.launchbox-app.com/c10f1ca4-ca0c-42a9-9475-205b8a94ca18.png</clearlogo1>
+	</game>
+	<game name="Doki Doki Idol Star Seeker">
+		<description>Doki Doki Idol Star Seeker</description>
+		<rom crc="eebdf5b3" name="naomi_aw2naomi/naomi_1/Doki_Doki_Idol_Star_Seeker.zip" size="14944123" />
+		<title_clean>Doki Doki Idol Star Seeker</title_clean>
+		<plot>Doki Doki Idol Star Seeker is an arcade puzzle game for Sega NAOMI hardware.</plot>
+		<genre>Puzzle</genre>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/39c8c62c-9039-4cec-bd0b-9c26d5454198.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/8052aead-5877-44e5-9e74-09800d63d5a2.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/db3d3544-4a23-4b89-8daa-76c200a1a1bc.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/c5ce65d0-6f3e-4614-adcb-d73d61616f1c.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/4bb6d46c-49b3-4afd-bc86-7c85f4da6a01.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/6040fe61-6639-4560-8846-7c5fbc59e8ba.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/c74364d4-af8a-4b64-aa39-be2ae90d2597.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/e0c61ccf-e1eb-4c53-a12d-89bb704a3464.png</clearlogo1>
+	</game>
+	<game name="Dynamite Deka Ex">
+		<description>Dynamite Deka Ex</description>
+		<rom crc="2f0d62ca" name="naomi_aw2naomi/naomi_1/Dynamite_Deka_Ex.zip" size="114346646" />
+		<title_clean>Dynamite Deka Ex</title_clean>
+		<plot>Asian Dynamite is a Sega NAOMI arcade beat-'em-up game. It is known as Dynamite Deka EX in Japan, and is a direct sequel to Dynamite Deka, meaning in its localised form, Asian Dynamite is a direct sequel to Die Hard Arcade, with the references to the movie franchise removed.[CR]The game has not been ported to home platforms, nor has it even seen a US release. It is extremely similar to Dynamite Cop in design, simply sporting an updated Asian aesthetic and replacing Jean Ivy and Eddie Brown with Caroline Powell and Jennifer Genuine, respectively. Caroline is the president's daughter from the first game grown up.</plot>
+		<releasedate>7/30/2007</releasedate>
+		<year>2007</year>
+		<genre>Beat Em Up</genre>
+		<studio>Sega</studio>
+		<nplayers>1-2 Co-Op</nplayers>
+		<boxart1>https://images.launchbox-app.com/aa07d8a8-5a97-44f7-aa89-755e833775ff.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/0c001b07-3558-4750-8be6-d3ca36071e6b.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/bdfe66a6-8df8-49c8-bfe2-1fb958625507.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/8e8a2368-ae0a-4a23-9130-f89464756236.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/4ac5726a-c74c-4889-9141-738cd61c4a11.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/091019bd-f523-4511-b776-6e245150fe7a.png</snapshot1>
+		<fanart1>https://images.launchbox-app.com/72206ffb-61e6-490a-a913-7f9e83982914.jpg</fanart1>
+		<clearlogo1>https://images.launchbox-app.com/b4778279-c762-47a4-9f24-32e63bcdabf2.png</clearlogo1>
+	</game>
+	<game name="Giant Gram 2000 Zen-nihon Pro Wrestle 3">
+		<description>Giant Gram 2000 Zen-nihon Pro Wrestle 3</description>
+		<rom crc="6f495982" name="naomi_aw2naomi/naomi_1/Giant_Gram_2000_Zennihon_Pro_Wrestle_3.zip" size="122788944" />
+		<title_clean>Giant Gram 2000 Zen-nihon Pro Wrestle 3</title_clean>
+		<plot>Giant Gram is the sequel to the ST-V/Saturn "puroresu" title "All Japan Pro Wrestling Featuring Virtua". Both titles feature AJPW superstars, as well as Virtua Fighter characters. Japanese "puroresu" is all about fighting spirit and appeal. Gimmicks and soap opera theatrics do not get you "over" the way they do  in the US of A. It's all about ability, athleticism, and sportsmanship.</plot>
+		<releasedate>6/24/1999</releasedate>
+		<year>1999</year>
+		<genre>Fighting; Sports</genre>
+		<studio>Scarab</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/cbaa249b-e41c-4fd3-a30c-dd58e596c94c.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/c1a2cc63-124c-44ef-bcec-51411ce0e88e.jpg</boxart2>
+		<clearlogo1>https://images.launchbox-app.com/378617a2-6dde-49e7-a6f4-e866ca756c74.png</clearlogo1>
+	</game>
+	<game name="Giant Gram Zen-nihon Pro Wrestle 2">
+		<description>Giant Gram Zen-nihon Pro Wrestle 2</description>
+		<rom crc="71acc44c" name="naomi_aw2naomi/naomi_1/Giant_Gram_Zennihon_Pro_Wrestle_2.zip" size="48333843" />
+		<title_clean>Giant Gram Zen-nihon Pro Wrestle 2</title_clean>
+		<plot>Giant Gram is the sequel to the ST-V/Saturn "puroresu" title "All Japan Pro Wrestling Featuring Virtua". Both titles feature AJPW superstars, as well as Virtua Fighter characters. Japanese "puroresu" is all about fighting spirit and appeal. Gimmicks and soap opera theatrics do not get you "over" the way they do  in the US of A. It's all about ability, athleticism, and sportsmanship.</plot>
+		<releasedate>6/24/1999</releasedate>
+		<year>1999</year>
+		<genre>Fighting; Sports</genre>
+		<studio>Scarab</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/cbaa249b-e41c-4fd3-a30c-dd58e596c94c.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/c1a2cc63-124c-44ef-bcec-51411ce0e88e.jpg</boxart2>
+		<clearlogo1>https://images.launchbox-app.com/378617a2-6dde-49e7-a6f4-e866ca756c74.png</clearlogo1>
+	</game>
+	<game name="Gigawing 2">
+		<description>Gigawing 2</description>
+		<rom crc="d8d0e30c" name="naomi_aw2naomi/naomi_1/Gigawing_2.zip" size="53210334" />
+		<title_clean>Gigawing 2</title_clean>
+		<plot>Giga Wing 2 is a 2000 vertical scrolling shooter arcade game developed by Takumi and published by Capcom on Sega's NAOMI arcade system board and later ported in 2001 to the Dreamcast console. The arcade version is notable both for its excessive scores (scores in the quintillions are not unheard of), and for using a horizontally aligned monitor (much like Treasure Co. Ltd's Radiant Silvergun), something that is considered rare for a vertical shooter.</plot>
+		<studio>Takumi Corporation</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Giga_Wing_2</wiki_url>
+		<boxart1>https://images.launchbox-app.com/1e6a13a3-4ed9-4505-96ed-f75c78eb9bd4.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/dfce538a-36d6-401f-bbac-877da006cd4f.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/deb82da4-933c-481d-8fa7-1751b7b20343.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/b554619b-cae5-4b0f-bb20-ee330e57b94b.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/91de9bc0-8a81-43bc-82d1-004269bb56c3.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/72cddf12-e535-4bb0-9719-5c1444ba12c2.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/f55fc19a-a41d-44a3-950b-56f3c37a9be7.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/8daf4e80-2d5e-4f5d-a52f-6a6369746953.png</snapshot4>
+		<snapshot5>https://images.launchbox-app.com/07d6dd5e-d6c8-4cd9-9f4c-84e8ead70ab5.png</snapshot5>
+	</game>
+	<game name="Guilty Gear X">
+		<description>Guilty Gear X</description>
+		<rom crc="9bd3fb0c" name="naomi_aw2naomi/naomi_1/Guilty_Gear_X.zip" size="80925440" />
+		<title_clean>Guilty Gear X</title_clean>
+		<plot>When the humans created artificial beings named "gears" in 22th century, they didn't expect that their creation will eventually turn against them. Because gears had no will of their own and could only obey humans. Only one gear, named Justice, was able to transfer his will onto other gears and to rebel against the humans. In year 2180, Justice was killed as a result of a bloody tournament organized by the Sacred Order of Holy Knights. Yet recently, a new gear was discovered. He showed no signs of hostility, yet he had no master and was roaming about free. It was impossible to capture or to kill him because he was immensely strong. Fearing a new Justice will grow out of this gear, the Order organized yet another tournament, this time with a solid prize: five hundred thousand world dollars for the winner.[CR]Guilty Gear X is a follow up to Guilty Gear, and is also a 2D fighting game. There are now 16 characters available for you to choose. The battle system became more complicated, thanks to the variety of moves you can perform. Beside special attacks which you can execute if you build up your Tension Gauge by attacking or advancing towards your opponent, there is also a variety of defensing moves to perform. The instant kill moves are back from the previous game.</plot>
+		<genre>Fighting</genre>
+		<studio>Arc System Works Co.</studio>
+		<nplayers>2</nplayers>
+		<ESRB>T - Teen</ESRB>
+		<videoid>3X2Xdm0NPQg</videoid>
+		<wiki_url>https://en.wikipedia.org/wiki/Guilty_Gear_X</wiki_url>
+		<boxart1>https://images.launchbox-app.com/9cec1607-b882-46de-adb1-8d8d7e971bd2.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/f3e98a57-2a15-4aae-b553-2ce016f0423c.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/f350dfb9-fa10-4d1c-b4ee-04c20385cd71.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/cc0d5e9f-e141-4d3e-8c44-c0bb13865397.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/264fde9b-530d-492b-98f0-40d78dce08a5.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/9239813c-10d8-4209-b265-b922f1d74528.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/c9f9f821-2b56-4d52-8f03-aac06c774f5a.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/53e0c46a-2273-46db-a2ec-7ce6a426d3c4.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/14227155-55bb-4ffd-babd-22c40b015014.png</clearlogo1>
+	</game>
+	<game name="Guilty Gear XX">
+		<description>Guilty Gear XX</description>
+		<rom crc="4f47eb2c" name="naomi_aw2naomi/naomi_1/Guilty_Gear_XX.zip" size="219582602" />
+		<title_clean>Guilty Gear XX</title_clean>
+		<plot>The third main installment (5th overall) of the Guilty Gear series, Guilty Gear X2 furthered the plot of the series, as well as introduced new characters and gameplay mechanics. Adds a new feature to the series: a burst gauge, which is fulfilled as the player causes or receives damage.[2] By pressing buttons in combination, the player character jump and unleash a blast of energy - a Psyche Burst.  It allows the player to break combinations and super moves in the middle of the opponent's offensive. Also, if the blast hit the adversary, the tension gauge is filled to its maximum capacity immediately.[CR]The game picks up the story approximately two weeks after the events of Guilty Gear X. A new organization called Post-War Administration Bureau is looking for and destroying Gears, descendants of Japanese, and those who are able to use qi energy in combat. To achieve their goals the organization has created several copies of Ky Kiske, the Robo-Kys. In addition, I-No sparks conflict as she wants to destroy all she perceived threats to her master, "That Man", the creator of the Gears. Each character provides a different ending.</plot>
+		<genre>Fighting</genre>
+		<studio>Arc System Works</studio>
+		<nplayers>2</nplayers>
+		<videoid>x52NZxQbDqA</videoid>
+		<boxart1>https://images.launchbox-app.com/51528a1d-57c5-43a4-a754-b43c01d9a3c3.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/ae225f9c-5903-48d6-98db-bd7c16d49a1d.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/a5a3cfbc-08c8-4c07-ac61-6e31885e14df.png</boxart3>
+		<snapshot1>https://images.launchbox-app.com/039e12b2-29e6-4b99-b9b8-0a36186b14a7.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/d4733f12-82c6-441e-8011-b02e620e287b.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/042f9472-81aa-424c-8bd1-1523804d754a.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/e5e364fd-2d1d-4e19-bbaa-45c6a874df83.png</banner1>
+		<banner2>https://images.launchbox-app.com/5b45d43e-f2ff-4040-b05a-e4675f157cc7.png</banner2>
+		<clearlogo1>https://images.launchbox-app.com/f1b234f1-57b6-4dd3-b39a-58b3f19791e8.png</clearlogo1>
+	</game>
+	<game name="Guilty Gear XX Accent Core">
+		<description>Guilty Gear XX Accent Core</description>
+		<rom crc="cf797428" name="naomi_aw2naomi/naomi_1/Guilty_Gear_XX_Accent_Core.zip" size="227163115" />
+		<title_clean>Guilty Gear XX Accent Core</title_clean>
+		<genre>Fighting</genre>
+		<nplayers>2</nplayers>
+		<plot>Guilty Gear XX Accent Core is an enhanced version of GGX and the 13th installment of the Guilty Gear series. No changes to the battle system have been made, but new features were added. These include the return of Kliff and Justice, with appropriate changes and additions made for the game, the return of Mission mode, a new Survival mode with level-up features, a new Gallery mode with new illustrations, and bug fixes, rebalances, and tune ups from the previous version.</plot>
+		<boxart1>https://images.launchbox-app.com/fbcca303-2750-4181-aff7-3eed43dc494e.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/c822e73d-9713-47ad-a162-e91c4e25738d.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/061096d6-0a87-4947-98a6-ab88593358ba.png</boxart3>
+		<snapshot1>https://images.launchbox-app.com/d1be960a-b1d3-4456-a22d-98792ff576e3.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/0fcca1af-5755-4963-ab04-aef53b910542.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/6e83f483-e803-4f9c-a009-cd72ba599770.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/106835f6-e103-4e19-b814-0cf62bf1afbd.png</clearlogo1>
+	</game>
+	<game name="Guilty Gear XX Reload">
+		<description>Guilty Gear XX Reload</description>
+		<rom crc="348bf3d5" name="naomi_aw2naomi/naomi_1/Guilty_Gear_XX_Reload.zip" size="224154461" />
+		<title_clean>Guilty Gear XX Reload</title_clean>
+		<genre>Fighting</genre>
+		<nplayers>2</nplayers>
+		<plot>Guilty Gear XX Reload is the first update to Guilty Gear XX and the 7th installment of the Guilty Gear series. It features balancing changes along with giving the character Robo-Ky its own moveset, with it being merely a palette-swap of Ky in the original game. The console version adds a fully voiced story mode dictating the events that took place after X as seen through each character's view. It also added Kliff and Justice back in as secret characters.</plot>
+		<boxart1>https://images.launchbox-app.com/194f687e-c049-44c2-9ed2-52f679306f70.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/e836439e-8cd9-453f-b2cd-a2fad773f1c7.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/9b03261b-e8d0-48ba-9abb-013f6facb9ad.png</boxart3>
+		<snapshot1>https://images.launchbox-app.com/84f7a9a9-9c57-4f71-9f12-08db017a7a7b.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/7489d879-812f-406e-8e84-1dca788a150f.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/8645185a-7789-45b0-818a-a1508e2901f7.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/efe7950b-8c48-4fc6-80e2-df9c0f79dfd8.png</snapshot4>
+		<snapshot5>https://images.launchbox-app.com/0f59367b-a183-4563-bc54-b0472b8a2fc2.png</snapshot5>
+		<banner1>https://images.launchbox-app.com/ce796283-f9d2-4877-bc1d-ebcbf79512fd.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/1e453585-8d05-4137-a8f1-2ca4c1d23e96.png</clearlogo1>
+	</game>
+	<game name="Guilty Gear XX Slash">
+		<description>Guilty Gear XX Slash</description>
+		<rom crc="bd6777eb" name="naomi_aw2naomi/naomi_1/Guilty_Gear_XX_Slash.zip" size="220153761" />
+		<title_clean>Guilty Gear XX Slash</title_clean>
+		<plot>Slash is the second update to Guilty Gear XX, after Reload. It again features a wide range of balance tweaks and other adjustments, along with two new characters: A.B.A (originally introduced in Isuka) and Order Sol, and a new canceling system called Force Roman Cancel.</plot>
+		<genre>Fighting</genre>
+		<studio>Arc System Works</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/863c04cf-c9c7-4415-8900-1a63f6e8456e.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/d0261b8d-4f0c-4aa4-b6c5-91c5ac4710ad.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/f8e64e9a-b579-4866-8b15-99e6c66d6a6d.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/3b30429c-550d-4a21-b3db-9d2a2c8b4c9c.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/9413e6e9-68a3-4d6e-92a9-57021adaaa7a.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/9b19df66-008a-4778-bf31-faf3f6432fb6.png</snapshot2>
+		<banner1>https://images.launchbox-app.com/c5facdc5-7b72-4a2c-89aa-911a3020ef33.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/842d9845-29f2-41b1-9631-52e395df3171.png</clearlogo1>
+	</game>
+	<game name="Gun Survivor 2">
+		<description>Gun Survivor 2</description>
+		<rom crc="9c685dd0" name="naomi_aw2naomi/naomi_1/Gun_Survivor_2.zip" size="173078733" />
+		<title_clean>naomi_1/Gun_Survivor_2</title_clean>
+		<genre>Shooter</genre>
+		<studio>Namco</studio>
+		<nplayers>2</nplayers>
+		<plot>Gun Survivor 2 – Biohazard – Code: Veronica is a light gun shooter video game developed and published by Capcom and the 7th installment of the Resident Evil series. The arcade version was developed in conjunction with Namco for the arcade machines. The game is the second installment in the Gun Survivor series and sequel to Resident Evil Survivor. The game is adapted from Resident Evil Code: Veronica and features enemies and characters from that game, and enemies from Resident Evil 2 and Resident Evil 3: Nemesis</plot>
+		<boxart1>https://images.launchbox-app.com/d0e5684f-9f71-405a-a406-bb0966c95aa5.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/1f159ac1-a613-4d06-9f0c-8a6a1142c68d.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/1369a761-7be0-45fc-a2c0-fb7c8963ebd3.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/c54c0317-42b3-49ae-9f50-586fb6094b0d.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/0405a1fe-b45e-4a1b-b08e-be0070f4211d.png</boxart5>
+		<boxart6>https://images.launchbox-app.com/ce7b5ba0-57e5-4737-afab-dbb89f317df7.png</boxart6>
+		<snapshot1>https://images.launchbox-app.com/5349393b-0c94-4799-a2f1-a529b997e197.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/8dda518c-4ffc-49d6-a9e3-7ce57a1d75c6.png</snapshot2>
+		<banner1>https://images.launchbox-app.com/fa454687-1d91-454a-94a4-b634a7fcb930.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/c93d3096-7551-4283-9284-f929ad132f13.png</clearlogo1>
+	</game>
+	<game name="Gunspike">
+		<description>Gunspike</description>
+		<rom crc="4a5a2d88" name="naomi_aw2naomi/naomi_1/Gunspike.zip" size="57749602" />
+		<title_clean>Gunspike</title_clean>
+		<plot>Cannon Spike (Gunspike in Japan) is an overhead-camera shooting game in the vein of Smash TV and another Capcom creation, the Commando series. Released for the arcades, and later for the Sega Dreamcast,  it uses Capcom-designed characters and runs on Sega's Naomi Hardware.[CR]Cannon Spike is a linear game, heavily focused towards boss encounters. A main feature of the game is the ability to play as a number of familiar Capcom characters from other franchises. The international name of Cannon Spike is the name of a trademark attack performed by Cammy, a character from the Street Fighter series of video games and one of the protagonists of this title.</plot>
+		<genre>Action</genre>
+		<studio>Capcom</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Cannon_Spike</wiki_url>
+		<boxart1>https://images.launchbox-app.com/88dba039-e0a1-4d26-8480-287f2184aca7.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/00a170b0-c05b-4565-93a7-b52bd8d185f6.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/3db7e34c-b891-4e4e-b20e-26f63a8b0eb5.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/d0914e2c-052d-4637-af12-9e8ef96492e0.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/e032574d-799f-41a0-922e-9157b8f272f8.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/bf2e541a-709f-4a48-941e-99c5e3b900aa.jpg</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/8277e9ac-e344-44a6-bf1d-be4cb0637a2a.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/b45789d7-c5e3-4a52-b408-f6f94e6d6996.png</snapshot4>
+		<snapshot5>https://images.launchbox-app.com/1790ba0b-3619-466e-9123-8078e59a6e88.png</snapshot5>
+		<fanart1>https://images.launchbox-app.com/3ce2a6ce-ab79-47cb-bf04-2a3fff097281.jpg</fanart1>
+		<banner1>https://images.launchbox-app.com/9303ecbd-6637-408c-912e-7253ffe11766.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/73625bad-0682-4d33-95da-3174e2214a77.png</clearlogo1>
+		<clearlogo2>https://images.launchbox-app.com/e8032fd7-f6d3-4332-a38f-5a92d9d92a3f.png</clearlogo2>
+	</game>
+	<game name="Heavy Metal Geomatrix">
+		<description>Heavy Metal Geomatrix</description>
+		<rom crc="d6dae0b9" name="naomi_aw2naomi/naomi_1/Heavy_Metal_Geomatrix.zip" size="68317536" />
+		<title_clean>Heavy Metal Geomatrix</title_clean>
+		<plot>Heavy Metal: Geomatrix is a fully 3D arena fighting video game released in 2001 by both Sega and Capcom for the Sega NAOMI and Dreamcast, based upon the Heavy Metal license.</plot>
+		<genre>Fighting</genre>
+		<studio>Capcom</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Heavy_Metal:_Geomatrix</wiki_url>
+		<boxart1>https://images.launchbox-app.com/bff31717-6d18-4cb5-a941-90f653d837c1.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/3f013483-483c-4e5e-a576-826f0dd7d759.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/41b5cafd-9a3b-4b7d-896c-4359f502ff3c.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/f47cd7d9-d237-40ae-822d-25f252e4060f.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/e0f60434-14bd-4eff-8dcd-73996d1680b5.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/82ccc2e8-291a-436c-b213-593156e72716.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/a47e98b9-39c8-42de-b3f1-1c4fa72e87fa.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/ef9a8254-db2b-486f-ae2e-5ae3dc204c0d.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/12f383fb-44e5-4576-8b8a-fa9d17fe4c31.png</clearlogo1>
+	</game>
+	<game name="Ikaruga">
+		<description>Ikaruga</description>
+		<rom crc="78c0d463" name="naomi_aw2naomi/naomi_1/Ikaruga.zip" size="10114516" />
+		<title_clean>Ikaruga</title_clean>
+		<plot>Ikaruga is a shoot 'em up developed by Treasure. It is the spiritual sequel to Radiant Silvergun (1998) and was originally released in Japanese arcades in December 2001. The game's story follows a rebel pilot named Shinra as he battles an enemy nation using a specially designed fighter called the Ikaruga which can flip between two polarities, black and white. This polarity mechanism is the game's key feature and the foundation for its stage and enemy design. All enemies and bullets in the game are either black or white. Bullets which are the same color as the player are absorbed while the others will kill the player. The game features both single-player and cooperative modes.</plot>
+		<studio>Treasure</studio>
+		<nplayers>2</nplayers>
+		<genre>Shoot Em Up</genre>
+		<wiki_url>https://en.wikipedia.org/wiki/Ikaruga</wiki_url>
+		<boxart1>https://images.launchbox-app.com/08d66a6e-6b0e-4835-a5dc-3cf0c68d0490.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/2d82b61d-19c9-4039-ba2b-ccbca4b3c480.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/de402943-380a-413d-aed0-a7d1638a7fd3.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/b7ed8a64-9945-432b-b03a-863d4defa12d.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/a426b389-cf4c-4149-a90b-b7bba384bd39.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/6cf4719e-5c56-47af-ac3b-82d8025cbdfc.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/368059b4-c954-4ee8-a3f2-d14cbe91475d.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/b008afd6-09b6-45fe-bb1d-bd20eeb3a6cf.png</banner1>
+		<banner2>https://images.launchbox-app.com/63b19de9-1f8a-4418-b4c5-19817f9a2ae9.png</banner2>
+		<clearlogo1>https://images.launchbox-app.com/59f83386-5a64-4245-82a0-7a539f2246a7.png</clearlogo1>
+	</game>
+	<game name="Illvelo">
+		<description>Illvelo</description>
+		<rom crc="a3b75a33" name="naomi_aw2naomi/naomi_1/Illvelo.zip" size="80750618" />
+		<title_clean>Illvelo</title_clean>
+		<plot>Illmatic Envelope, commonly abbreviated Illvelo, is a 2008 shoot-em-up for the Sega NAOMI arcade platform by Milestone. They ported it to the Nintendo Wii later that year as Illvelo Wii, with Sega partnering in its release.</plot>
+		<genre>Shooter</genre>
+		<studio>Milestone</studio>
+		<boxart1>https://images.launchbox-app.com/aa151a9a-93ea-4f09-bd5c-13d59894a5cb.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/31584ecd-c587-4e24-83d1-0503e2dc505b.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/e7aead93-8c1b-4dc9-b29f-f4d25682954a.png</boxart3>
+		<clearlogo1>https://images.launchbox-app.com/4e88a310-5145-40d8-9570-63c405ab8e76.png</clearlogo1>
+	</game>
+	<game name="Jambo Safari">
+		<description>Jambo Safari</description>
+		<rom crc="a7f009c5" name="naomi_aw2naomi/naomi_1/Jambo_Safari.zip" size="23237341" />
+		<title_clean>Jambo Safari</title_clean>
+		<plot>Jambo! Safari is a video game first released by Sega in 1999. The original arcade version of the game used the Naomi board, arcade hardware which was based on Sega's Dreamcast video game console. Despite the fact that other Naomi-based arcade games were released for the Dreamcast, Jambo! Safari was never ported to the Sega console. The UK version of the Official Dreamcast Magazine reported that the game was to be released in a 3-in-1 compilation along with other games in Sega's "Real Life Career Series", Brave Firefighters and Emergency Call Ambulance, but such a game was never released and neither of the other two games were ported either. Sega released versions of the game for the Wii and Nintendo DS, under the title Jambo! Safari: Animal Rescue on November 17, 2009.</plot>
+		<studio>AM2, TOSE</studio>
+		<nplayers>1</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Jambo!_Safari</wiki_url>
+		<boxart1>https://images.launchbox-app.com/ff4f2361-69bf-4d82-a3bf-d83491ae9528.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/d12b6492-45b3-4baf-b67c-336857981cf1.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/f863710b-0876-42e9-bc41-cc6e4ac75313.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/a195e264-4c19-4746-accd-2db1cd6ed93e.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/a1ba78c8-c5a2-4622-ba0d-b2f7d8cee249.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/8e6faddf-9607-4a53-9444-628f4f783e53.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/6d5b5d1e-b94e-4f25-8a0a-f0746514dca8.png</snapshot2>
+		<banner1>https://images.launchbox-app.com/3b744aaa-6472-41ac-aa70-9bea3a0af384.png</banner1>
+		<banner2>https://images.launchbox-app.com/182e4ea7-1afb-49b1-ba8a-8f26b4e892ab.png</banner2>
+		<clearlogo1>https://images.launchbox-app.com/605468c6-d97e-402e-b631-5d8b85981d14.png</clearlogo1>
+	</game>
+	<game name="Mushiking: The King of Beetles 2k4">
+		<description>Mushiking: The King of Beetles 2k4</description>
+		<rom crc="d0f53534" name="naomi_aw2naomi/naomi_1/Japan_Mushikings_2004.zip" size="51610760" />
+		<title_clean>naomi_1/Japan_Mushikings_2004</title_clean>
+		<plot>Mushiking: The King of Beetles 2k4 also called Mushiking: Battle of the Beetles 2004, is a combination arcade game and collectible card game developed by Sega and released in Japan and other Asian countries such as the Philippines. The game involves battles between cards describing various beetle species. The cards can be scanned in by a Mushiking arcade machine, which will both carry out battles and dispense new cards.[CR]The rock-paper-scissors-style battle game can be played by one player against CPU-controlled beetles, or with two or more players against each other in Tournament mode or Tag Battle mode. The game is played with cards representing beetles and skill cards related to three move types - Hitting, Pinching and Throwing. At the start of a match, players may scan one beetle card and up to three different skill cards with the card scanner in the middle of the machine before choosing one of the three move types to execute within a given time limit. The first player whose beetle reaches 0 stamina points loses.</plot>
+		<year>2004</year>
+		<snapshot1>https://i.ytimg.com/vi/rnC3OstQpn8/maxresdefault.jpg</snapshot1>
+	</game>
+	<game name="Mushiking: The King of Beetles 2k5 1ST">
+		<description>Mushiking: The King of Beetles 2k5 1ST</description>
+		<rom crc="dbb8dc53" name="naomi_aw2naomi/naomi_1/Japan_Mushikings_2005.zip" size="63666935" />
+		<title_clean>naomi_1/Japan_Mushikings_2005</title_clean>
+		<plot>Mushiking: The King of Beetles 2k5 1ST also called Mushiking: Battle of the Beetles 2005, is a combination arcade game and collectible card game developed by Sega and released in Japan and other Asian countries such as the Philippines. The game involves battles between cards describing various beetle species. The cards can be scanned in by a Mushiking arcade machine, which will both carry out battles and dispense new cards.[CR]The rock-paper-scissors-style battle game can be played by one player against CPU-controlled beetles, or with two or more players against each other in Tournament mode or Tag Battle mode. The game is played with cards representing beetles and skill cards related to three move types - Hitting, Pinching and Throwing. At the start of a match, players may scan one beetle card and up to three different skill cards with the card scanner in the middle of the machine before choosing one of the three move types to execute within a given time limit. The first player whose beetle reaches 0 stamina points loses.</plot>
+		<year>2005</year>
+		<snapshot1>https://i.ytimg.com/vi/Ev2RXU_eG9k/hqdefault.jpg</snapshot1>
+		<videoid>Ev2RXU_eG9k</videoid>
+	</game>
+	<game name="Jingy Storm - The Arcade">
+		<description>Jingy Storm - The Arcade</description>
+		<rom crc="2b776a64" name="naomi_aw2naomi/naomi_1/Jingy_Storm_The_Arcade.zip" size="111008195" />
+		<title_clean>Jingy Storm - The Arcade</title_clean>
+		<plot>Jingi Storm is a 3D versus fighting game were each of the nine male fighters is paired up with a female, whose only purpose is to deliver the winning/losing lines at the end of each match.</plot>
+		<releasedate>9/20/2006</releasedate>
+		<year>2006</year>
+		<genre>Fighting</genre>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/8fd12e89-1557-463b-bece-dc4be3e78370.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/ae2d1236-bcdd-4c39-904e-83e5b74c8791.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/7c24123b-d3f6-4bb3-b6ed-8a7898dc93c4.png</boxart3>
+		<snapshot1>https://images.launchbox-app.com/95db67cc-f4ca-46a8-b048-05c3409a4856.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/9b4c6093-206b-4c69-b28c-3d5d8b69a39e.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/d7a9bfaf-2bb1-4518-8112-c2438db00232.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/733074b1-ecd0-4cc4-a419-38aa988ab98d.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/585c1d44-53a2-48e6-9a4e-db2d0545f97d.png</clearlogo1>
+	</game>
+	<game name="Karous">
+		<description>Karous</description>
+		<rom crc="0ce3cdf0" name="naomi_aw2naomi/naomi_1/Karous.zip" size="91046996" />
+		<title_clean>Karous</title_clean>
+		<plot>Karous is a vertical-scrolling shooter video game developed by Milestone Inc. for the Sega NAOMI platform, and released in Japanese arcades on November 15, 2006. The game was later ported to the Sega Dreamcast, becoming the system's last officially licensed title when it was released in Japan on March 8, 2007.</plot>
+		<studio>MileStone Inc.</studio>
+		<nplayers>1</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Karous</wiki_url>
+		<boxart1>https://images.launchbox-app.com/b5b0a862-80fc-4ad0-b89a-e0858db0cf2a.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/9c64f2d7-4724-46de-9360-fdb561dcabff.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/4343e04a-1f75-472a-ac3e-5736802118dc.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/1320b08b-cffe-4e6c-aac9-fbdff5f1e7d5.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/ffea00b7-fadd-4291-b7e4-9dc4974b79fc.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/b802d7d1-2c22-4302-9f27-e3b24d1f716c.png</snapshot2>
+		<clearlogo1>https://images.launchbox-app.com/e6bf05f1-2879-4165-8806-e3d99c701e18.png</clearlogo1>
+	</game>
+	<game name="Kuru Kuru Chameleon">
+		<description>Kuru Kuru Chameleon</description>
+		<rom crc="ece12f6e" name="naomi_aw2naomi/naomi_1/Kuru_Kuru_Chameleon.zip" size="14066739" />
+		<title_clean>Kuru Kuru Chameleon</title_clean>
+		<plot>Kuru Kuru Chameleon is a 2006 puzzle game by Starfish for the Sega NAOMI GD-ROM arcade platform. It is thought to have been released exclusively in Japan.[CR]Two players take opposite corners of a rectangular playing field consisting of hexagonal tiles of various colors. Each player is in control of one set of tiles which all have the same color and all touch on at least one side. On each turn, the player chooses one of the remaining colors, which turns their current set of tiles into that color and adds all adjacent tiles of that color to their set. The first player to have a majority of the fields tiles in their control wins.</plot>
+		<year>2006</year>
+		<studio>Starfish</studio>
+		<genre>Puzzle</genre>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/535179d5-b18e-44fd-ab63-d82ff74beae8.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/724bf3b0-f9d7-437b-9a08-6eb82845a08f.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/bcc3f8ba-26b4-4f21-9480-2daeeb58f997.png</boxart3>
+		<snapshot1>https://images.launchbox-app.com/f0f3b15d-fe61-44b1-8154-8353a933a826.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/1f351a8a-3e9e-41c4-a490-391333dd7096.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/3fc14edb-ed65-4b6f-99f9-c70fc579546e.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/7504f80a-b3dd-42be-92d8-4cd5d13fe44b.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/bb83ee3b-a4cb-4ba6-925a-f809ce25983f.png</clearlogo1>
+	</game>
+	<game name="La Keyboard XYU">
+		<description>La Keyboard XYU</description>
+		<rom crc="997ad607" name="naomi_aw2naomi/naomi_1/La_Keyboard_XYU.zip" size="8986912" />
+		<title_clean>La Keyboard XYU</title_clean>
+		<genre>Quiz</genre>
+		<studio>Sega Rosso</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/b46c0195-0ec1-45f7-8d7d-f4fe07b4aa8e.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/cf3f0630-b46c-4466-92c6-15abb01cff06.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/4cabf76a-8b1e-422b-955c-60183ad49211.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/becbd7ce-a90d-466e-9dc2-b196029ee5f4.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/35e10bda-4588-4f6e-8292-896fd58e795d.png</snapshot1>
+		<banner1>https://images.launchbox-app.com/cf89a1ec-bb07-4087-b310-6414269a58fd.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/3763037a-772f-4031-99df-e4dde48d4806.png</clearlogo1>
+	</game>
+	<game name="Lupin 3 The Shooting">
+		<description>Lupin 3 The Shooting</description>
+		<rom crc="d9d5680b" name="naomi_aw2naomi/naomi_1/Lupin_3_The_Shooting.zip" size="160321012" />
+		<title_clean>Lupin 3 The Shooting</title_clean>
+		<plot>Players take the role of Lupin III as they shoot through fifteen of The Wolf's wackiest endeavors. Driving scenarios where the player has to shoot left or right in order to control their vehicle appear as special levels. The game also offers a co-op mode where a second player can take up the role of Jigen and assist Lupin throughout the adventure.</plot>
+		<genre>Shooter</genre>
+		<studio>WOW Entertainment</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>http://lupin.wikia.com/wiki/Lupin_the_3rd:_The_Shooting</wiki_url>
+		<boxart1>https://images.launchbox-app.com/103e994a-947c-4d72-86c4-2aa7ffbf52bd.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/1a6af4f1-91fe-48dc-afe4-9cf06685588a.png</boxart2>
+	</game>
+	<game name="Lupin - The Typing">
+		<description>Lupin - The Typing</description>
+		<rom crc="d4066cac" name="naomi_aw2naomi/naomi_1/Lupin_The_Typing.zip" size="112790639" />
+		<title_clean>Lupin - The Typing</title_clean>
+		<plot>Lupin the 3rd: The Typing is a keyboard game developed by Wow Entertainment and published by Sega for the Sega NAOMI arcade system. Similar to Typing of the Dead, it is based on the Lupin the 3rd: The Shooting game released in the previous year, but reworked for typing in words to perform shots rather than using a light gun.</plot>
+		<genre>Shooter</genre>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/5164dea0-b08f-40db-82ad-d0b3a0fed737.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/612a7410-c51d-4fa0-8859-8107fadc2030.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/f7c7f08b-2214-434e-be72-930a4ff725b6.png</boxart3>
+		<banner1>https://images.launchbox-app.com/961ae60e-bc25-4fb9-8914-2d119aba63bd.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/81567afd-aa55-4a1c-a95a-a29c2a0cbdb9.png</clearlogo1>
+	</game>
+	<game name="Mamoru-kun wa Norowarete Shimatta!">
+		<description>Mamoru-kun wa Norowarete Shimatta!</description>
+		<rom crc="983265b9" name="naomi_aw2naomi/naomi_1/Mamorukun_wa_Norowarete_Shimatta.zip" size="139326593" />
+		<title_clean>Mamoru-kun wa Norowarete Shimatta!</title_clean>
+		<plot>Mamorukun Curse is a shoot 'em up arcade game developed by G.rev and Gulti. The game was released for arcade in Japan on July 30, 2008.[CR]The game puts the player in control of Mamoru in an overhead shooter. Different from most shooters, the scrolling is not forced. The player is able to move about as they please, although most movements end up being up and down.[CR]The "curse" part of the title comes from a special "curse bomb" attack which uses a separate button from the standard shot. These bombs can be used both to destroy the enemies' bullets, and to "curse" them, making them more powerful but opening up chances for a higher score.</plot>
+		<year>2008</year>
+		<genre>Shooter</genre>
+		<nplayers>1</nplayers>
+		<boxart1>https://images.launchbox-app.com/b82168d3-a6d8-4ab3-aefc-022160c5d829.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/8a05f1b7-141a-46d8-b9df-5fbd7bfef414.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/fd014ff6-22fc-4cca-b276-c0cdaabb5683.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/6ceb7ff8-b363-4f8d-ad9b-bae058945c83.png</boxart4>
+		<banner1>https://images.launchbox-app.com/79bcaf06-9329-4826-99cc-f93b7bccfa96.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/5605d12e-dfe2-41dd-9666-6b44f2033c69.png</clearlogo1>
+	</game>
+	<game name="Marvel vs Capcom 2">
+		<description>Marvel vs Capcom 2</description>
+		<rom crc="a5b10d4c" name="naomi_aw2naomi/naomi_1/Marvel_vs_Capcom_2.zip" size="85158634" />
+		<title_clean>Marvel vs Capcom 2</title_clean>
+		<plot>Marvel vs. Capcom 2: New Age of Heroes is a crossover fighting game developed and published by Capcom. It is the fourth installment in both the Marvel vs. Capcom series and Capcom's Vs. series respectively, which features characters from both Capcom's video game franchises and comic book series published by Marvel Comics. Originally released in Japanese arcades in 2000, the game received ports to the Dreamcast, PlayStation 2, PlayStation 3, Xbox, Xbox 360, and iOS devices over the span of twelve years.</plot>
+		<genre>Fighting</genre>
+		<studio>Capcom</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Marvel_vs._Capcom_2:_New_Age_of_Heroes</wiki_url>
+		<boxart1>https://images.launchbox-app.com/8bad013c-d0d1-41b8-9b20-0b5321d69797.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/03956edc-8862-497d-b2f4-61c5d0cdac63.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/5a25a0e4-4445-4d0f-86f0-c7a608b064b7.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/7c845c62-9d0e-43da-9e31-13bdd006d6bb.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/d2cf8bc5-b6be-4be8-bc10-7a3aa9fb00a1.png</boxart5>
+		<fanart1>https://images.launchbox-app.com/9437aac4-9ad7-480c-9aab-1a6f647e0283.jpg</fanart1>
+		<banner1>https://images.launchbox-app.com/f4355578-1bd9-4771-a8c0-de0f2b192dbc.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/87bb307b-8907-4309-86da-65e9ab10bef6.png</clearlogo1>
+	</game>
+	<game name="Marvel vs Capcom 2 (Unlocked)">
+		<description>Marvel vs Capcom 2 (Unlocked)</description>
+		<rom crc="fa278d97" name="naomi_aw2naomi/naomi_1/Marvel_vs_Capcom_2_Unlocked.zip" size="85158664" />
+		<title_clean>Marvel vs Capcom 2</title_clean>
+		<plot>Marvel vs. Capcom 2: New Age of Heroes with all characters unlocked![CR]Marvel vs. Capcom 2: New Age of Heroes is a crossover fighting game developed and published by Capcom. It is the fourth installment in both the Marvel vs. Capcom series and Capcom's Vs. series respectively, which features characters from both Capcom's video game franchises and comic book series published by Marvel Comics. Originally released in Japanese arcades in 2000, the game received ports to the Dreamcast, PlayStation 2, PlayStation 3, Xbox, Xbox 360, and iOS devices over the span of twelve years.</plot>
+		<genre>Fighting</genre>
+		<studio>Capcom</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Marvel_vs._Capcom_2:_New_Age_of_Heroes</wiki_url>
+		<boxart1>https://images.launchbox-app.com/8bad013c-d0d1-41b8-9b20-0b5321d69797.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/03956edc-8862-497d-b2f4-61c5d0cdac63.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/5a25a0e4-4445-4d0f-86f0-c7a608b064b7.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/7c845c62-9d0e-43da-9e31-13bdd006d6bb.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/d2cf8bc5-b6be-4be8-bc10-7a3aa9fb00a1.png</boxart5>
+		<fanart1>https://images.launchbox-app.com/9437aac4-9ad7-480c-9aab-1a6f647e0283.jpg</fanart1>
+		<banner1>https://images.launchbox-app.com/f4355578-1bd9-4771-a8c0-de0f2b192dbc.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/87bb307b-8907-4309-86da-65e9ab10bef6.png</clearlogo1>
+	</game>
+	<game name="Maze of the King">
+		<description>Maze of the King</description>
+		<rom crc="cf56f324" name="naomi_aw2naomi/naomi_1/Maze_of_the_King.zip" size="102863779" />
+		<title_clean>Maze of the King</title_clean>
+		<plot>A 1 to 2 player shooting game where each player assumes the role of an archaeological treasure hunter armed with a magical cane who travels across rivers and deserts and explores the insides of pyramids searching for lost treasure while killing mummies and other evil creatures. Each player gets a choice of what kind of firepwoer to use for his or her character's magical cane: Light, Spark, or Fire.</plot>
+		<genre>Shooter</genre>
+		<studio>Sega</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/ad20ea2e-392d-41ed-a592-a16413b71ca9.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/cbaf2ccf-5c57-4648-a710-fd0c0b96b417.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/8b27d6f0-1622-4e4e-8fc7-f9b73052f2dd.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/d4e22b46-0576-4803-a8d9-fb8bc38b5db9.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/cdb92aa3-cd49-477a-89bd-3493fd69762a.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/b3bf926f-2461-4991-bc1f-ce0095d04bc1.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/35b47152-6df3-406c-afa4-70e69cff904a.png</snapshot2>
+		<banner1>https://images.launchbox-app.com/73e25947-dbb0-4842-a6df-891df27a6f2f.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/b943413d-ea98-49bc-a62a-8bb03647e2df.png</clearlogo1>
+	</game>
+	<game name="Melty Blood Act Cadenza (Rev A)">
+		<description>Melty Blood Act Cadenza (Rev A)</description>
+		<rom crc="7b5735b0" name="naomi_aw2naomi/naomi_1/Melty_Blood_Act_Cadenza_Rev_A.zip" size="133665741" />
+		<title_clean>Melty Blood Act Cadenza</title_clean>
+		<plot>Melty Blood follows one year after Tsukihime and some days after of Kagetsu Tohya. In the beginning of August 2001, Shiki Tohno hears of a new series of murders in Misaki Town, similar to the ones that took place Tsukihime, in the last weeks of October 1999. Whilst searching for the murderer he meets Sion Eltnam Atlasia who initiates a fight with him, attempting to capture him. After the fight she reveals that her reason for trying to capture him is to get in contact with the "True Ancestor" (referring to Arcueid) so that she may acquire information on the "cure for vampirism". Shiki then decides to help her with this task.</plot>
+		<genre>Fighting</genre>
+		<studio>Ecole Software</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Melty_Blood#Act_Cadenza</wiki_url>
+		<boxart1>https://images.launchbox-app.com/6b0424af-df22-44c5-a48c-da2283fcc028.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/06366a7c-712e-488c-bedf-4082caffcea6.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/118b8713-cefa-4fbd-ac10-7c2f36257f35.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/7027a5ec-2316-4d8e-bc75-556842aeb1ad.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/291bb8d7-d0a9-4023-a1de-1c70f6865ad0.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/02662d0f-4b8f-49f0-86ee-35aa992cc148.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/4453454c-10df-49aa-aefc-2fa44b2e0efa.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/6addb1b7-3504-4bc6-8a84-7879ae6e79e0.png</snapshot4>
+	</game>
+	<game name="Melty Blood Act Cadenza (Rev B)">
+		<description>Melty Blood Act Cadenza (Rev B)</description>
+		<rom crc="ca55fb25" name="naomi_aw2naomi/naomi_1/Melty_Blood_Act_Cadenza_Rev_B.zip" size="110005400" />
+		<title_clean>Melty Blood Act Cadenza</title_clean>
+		<plot>Melty Blood follows one year after Tsukihime and some days after of Kagetsu Tohya. In the beginning of August 2001, Shiki Tohno hears of a new series of murders in Misaki Town, similar to the ones that took place Tsukihime, in the last weeks of October 1999. Whilst searching for the murderer he meets Sion Eltnam Atlasia who initiates a fight with him, attempting to capture him. After the fight she reveals that her reason for trying to capture him is to get in contact with the "True Ancestor" (referring to Arcueid) so that she may acquire information on the "cure for vampirism". Shiki then decides to help her with this task.</plot>
+		<genre>Fighting</genre>
+		<studio>Ecole Software</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Melty_Blood#Act_Cadenza</wiki_url>
+		<boxart1>https://images.launchbox-app.com/6b0424af-df22-44c5-a48c-da2283fcc028.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/06366a7c-712e-488c-bedf-4082caffcea6.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/118b8713-cefa-4fbd-ac10-7c2f36257f35.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/7027a5ec-2316-4d8e-bc75-556842aeb1ad.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/291bb8d7-d0a9-4023-a1de-1c70f6865ad0.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/02662d0f-4b8f-49f0-86ee-35aa992cc148.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/4453454c-10df-49aa-aefc-2fa44b2e0efa.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/6addb1b7-3504-4bc6-8a84-7879ae6e79e0.png</snapshot4>
+	</game>
+	<game name="Melty Blood Act Cadenza (Rev B2)">
+		<description>Melty Blood Act Cadenza (Rev B2)</description>
+		<rom crc="c8c913bf" name="naomi_aw2naomi/naomi_1/Melty_Blood_Act_Cadenza_Rev_B2.zip" size="113102672" />
+		<title_clean>Melty Blood Act Cadenza</title_clean>
+		<plot>Melty Blood follows one year after Tsukihime and some days after of Kagetsu Tohya. In the beginning of August 2001, Shiki Tohno hears of a new series of murders in Misaki Town, similar to the ones that took place Tsukihime, in the last weeks of October 1999. Whilst searching for the murderer he meets Sion Eltnam Atlasia who initiates a fight with him, attempting to capture him. After the fight she reveals that her reason for trying to capture him is to get in contact with the "True Ancestor" (referring to Arcueid) so that she may acquire information on the "cure for vampirism". Shiki then decides to help her with this task.</plot>
+		<genre>Fighting</genre>
+		<studio>Ecole Software</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Melty_Blood#Act_Cadenza</wiki_url>
+		<boxart1>https://images.launchbox-app.com/6b0424af-df22-44c5-a48c-da2283fcc028.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/06366a7c-712e-488c-bedf-4082caffcea6.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/118b8713-cefa-4fbd-ac10-7c2f36257f35.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/7027a5ec-2316-4d8e-bc75-556842aeb1ad.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/291bb8d7-d0a9-4023-a1de-1c70f6865ad0.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/02662d0f-4b8f-49f0-86ee-35aa992cc148.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/4453454c-10df-49aa-aefc-2fa44b2e0efa.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/6addb1b7-3504-4bc6-8a84-7879ae6e79e0.png</snapshot4>
+	</game>
+	<game name="Melty Blood Actress Again">
+		<description>Melty Blood Actress Again</description>
+		<rom crc="194131f6" name="naomi_aw2naomi/naomi_1/Melty_Blood_Actress_Again.zip" size="227524885" />
+		<title_clean>Melty Blood Actress Again</title_clean>
+		<plot>Melty Blood: Actress Again, is the third game in the Melty Blood fighting game series. It was released in the 4Q 2008 on Sega Naomi hardware. Compared to Act Cadenza, the game features three entirely new playable characters, as well as several new alternate versions of existing characters in the PS2 version. All characters now feature selection between three different fighting styles, known as Full Moon Style, Crescent Moon Style (most similar to Act Cadenza) and Half Moon Style, which changes not only the way in which life and Magic Circuit meters function, but also each characters' basic and special attacks.</plot>
+		<genre>Fighting</genre>
+		<studio>Ecole</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Melty_Blood#Actress_Again</wiki_url>
+		<boxart1>https://images.launchbox-app.com/a53f3ca6-e8fd-40c5-b53e-22d2b4ec8734.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/f11e6118-cb38-457a-9a54-cc993b7774d9.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/d75bb041-93d5-467c-b4f1-0b2da35e7f1e.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/c4af3136-6bc7-4161-855f-90da59ca2c97.png</boxart4>
+		<fanart1>https://images.launchbox-app.com/1d2bec3e-7c8a-486c-ac2d-f7337f49348c.jpg</fanart1>
+		<clearlogo1>https://images.launchbox-app.com/5710dcca-82c5-4c77-a7ae-4281f341e177.png</clearlogo1>
+	</game>
+	<game name="Mobile Suit Gundam - Federation Vs Zeon">
+		<description>Mobile Suit Gundam - Federation Vs Zeon</description>
+		<rom crc="702519c3" name="naomi_aw2naomi/naomi_1/Mobile_Suit_Gundam_Federation_Vs_Zeon.zip" size="91448860" />
+		<title_clean>Mobile Suit Gundam - Federation Vs Zeon</title_clean>
+		<plot>Mobile Suit Gundam: Federation vs. Zeon is a 2001 arcade video game based on the anime television series Mobile Suit Gundam. An upgraded edition of the game, Federation vs. Zeon DX (DX stands for "Deluxe"), includes 360-degree, zero-G space battlefields. Both versions were later ported to the Dreamcast and PlayStation 2 game consoles.</plot>
+		<genre>Action</genre>
+		<studio>Capcom</studio>
+		<nplayers>1</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Mobile_Suit_Gundam:_Federation_vs._Zeon</wiki_url>
+		<boxart1>https://images.launchbox-app.com/6f21191c-f8e9-4db7-ab6b-9d0806aa7142.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/ab487fbe-987d-4eba-8964-a53b942124df.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/e5e97083-d665-4b3f-a6b4-d583e7ac7b6d.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/21b0c340-4e32-4cf9-b3b1-3812b97840c4.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/b4a594eb-319d-4a47-a96c-2db6a223ec49.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/fe2861fe-97b0-4df7-895f-3b700800bc78.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/948b2d7b-e3e9-4409-a590-25355b7f8bb9.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/3b76a4d6-baed-42df-b5cb-f6e763d6e181.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/3471d7d4-d52b-468d-8117-6ac6c9863b0b.png</clearlogo1>
+	</game>
+	<game name="Mobile Suit Gundam - Federation Vs Zeon (DX)">
+		<description>Mobile Suit Gundam - Federation Vs Zeon (DX)</description>
+		<rom crc="7afbe312" name="naomi_aw2naomi/naomi_1/Mobile_Suit_Gundam_Federation_Vs_Zeon_DX.zip" size="108200704" />
+		<title_clean>Mobile Suit Gundam - Federation Vs Zeon</title_clean>
+		<plot>Mobile Suit Gundam: Federation vs. Zeon is a 2001 arcade video game based on the anime television series Mobile Suit Gundam. An upgraded edition of the game, Federation vs. Zeon DX (DX stands for "Deluxe"), includes 360-degree, zero-G space battlefields. Both versions were later ported to the Dreamcast and PlayStation 2 game consoles.</plot>
+		<genre>Action</genre>
+		<studio>Capcom</studio>
+		<nplayers>1</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Mobile_Suit_Gundam:_Federation_vs._Zeon</wiki_url>
+		<boxart1>https://images.launchbox-app.com/6f21191c-f8e9-4db7-ab6b-9d0806aa7142.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/ab487fbe-987d-4eba-8964-a53b942124df.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/e5e97083-d665-4b3f-a6b4-d583e7ac7b6d.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/21b0c340-4e32-4cf9-b3b1-3812b97840c4.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/b4a594eb-319d-4a47-a96c-2db6a223ec49.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/fe2861fe-97b0-4df7-895f-3b700800bc78.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/948b2d7b-e3e9-4409-a590-25355b7f8bb9.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/3b76a4d6-baed-42df-b5cb-f6e763d6e181.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/3471d7d4-d52b-468d-8117-6ac6c9863b0b.png</clearlogo1>
+	</game>
+	<game name="Monkey Ball">
+		<description>Monkey Ball</description>
+		<rom crc="0d8d1819" name="naomi_aw2naomi/naomi_1/Monkey_Ball.zip" size="58287577" />
+		<title_clean>Monkey Ball</title_clean>
+		<plot>Monkey Ball is a Sega NAOMI arcade game, originally released in 2001. It is the first game in the Super Monkey Ball series.[CR]The arcade cabinet of Monkey Ball is unique for its banana-shaped joystick. All the bananas in the game are sponsored by Dole, a practise that would carry through to its successor, Super Monkey Ball and Super Monkey Ball 2. There are three characters, AiAi, MeeMee and Baby, three difficulty levels and numerous puzzles to complete.[CR]Monkey Ball was somewhat unique at the time of release. Though marble/ball rolling games had been done in the past, such as Marble Madness, these types of games are fairly rare, and none had ever been presented in 3D.[CR]Monkey Ball itself was not ported to consoles. Instead, an upgraded version titled Super Monkey Ball was released for the GameCube a few years later. It contains all the levels seen in Monkey Ball, plus enhanced graphics and extra features.</plot>
+		<year>2001</year>
+		<genre>Puzzle</genre>
+		<nplayers>4</nplayers>
+		<boxart1>https://images.launchbox-app.com/4786a0b9-fcbd-4ea9-b346-18d5860b58b1.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/72c87e56-d8cf-4d04-9e34-5563755cbd8b.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/a4c9fc52-40af-49be-8cab-a185fa14688c.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/3ef4b475-acc6-4c31-a68b-c0c80ccfbcee.png</boxart4>
+		<banner1>https://images.launchbox-app.com/81b4ccfa-4408-442d-bd09-9a36cfffd3d0.png</banner1>
+		<banner2>https://images.launchbox-app.com/869ab43b-f6d2-46c1-b6c8-012e3b4b556c.png</banner2>
+		<clearlogo1>https://images.launchbox-app.com/916bb8d6-8644-4ab3-8232-1f9010bc32bb.png</clearlogo1>
+	</game>
+	<game name="Musapeys Choco Marker">
+		<description>Musapeys Choco Marker</description>
+		<rom crc="184fb48a" name="naomi_aw2naomi/naomi_1/Musapeys_Choco_Marker.zip" size="42113066" />
+		<title_clean>Musapeys Choco Marker</title_clean>
+		<plot>Musapey's Choco Marker is a Puzzle game, developed and published by Ecole, which was released in Japan in 2002.</plot>
+		<year>2002</year>
+		<studio>Ecole</studio>
+		<genre>Puzzle</genre>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/c919082b-7c2c-4c41-a282-0f74c58e331d.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/1baf2f2d-9e5b-4d70-bea5-d1eb9ece8d5b.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/a5d8d3f7-716d-4218-88c1-8af64b505a5d.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/771726a1-fa17-4a1b-bc9d-0a53536bb3e5.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/b5e06590-a483-43e5-9c4d-153ea47b2c22.png</snapshot1>
+		<banner1>https://images.launchbox-app.com/1d98ca9b-b9e4-424e-806b-d39f20d00ad1.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/298fd0fe-7798-485a-9ee4-e307628db302.png</clearlogo1>
+	</game>
+	<game name="Nomiso Kone Kone Puzzle Takoron">
+		<description>Nomiso Kone Kone Puzzle Takoron</description>
+		<rom crc="641b9873" name="naomi_aw2naomi/naomi_1/Nomiso_Kone_Kone_Puzzle_Takoron.zip" size="26311320" />
+		<title_clean>Nomiso Kone Kone Puzzle Takoron</title_clean>
+		<plot>Noumiso Konekone Puzzle Takoron is a puzzle game by Compile Heart.[CR]The player controls a 2x2 cursor over a field of colored octopuses. Pressing a button causes the octopuses under the cursor to rotate counter-clockwise. Numbered nets are scattered around the playing field. If the player arranges a number of same-colored octopuses under the net, the octopuses under the net, as well as any other octopuses of the same color which are connected orthogonally, are removed.[CR]By removing octopuses in this way, the player can send sea urchins to their opponents playing field. Sea urchins can not be removed using nets, but are removed if they are orthogonal to other octopuses being removed, similar to ojama puyos in Puyo Puyo. If the players field fills up for 3 seconds, they lose.</plot>
+		<genre>Puzzle</genre>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/89344362-9f00-4623-93aa-c8d2ac12a97b.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/1fff6fca-e06f-474a-9d7d-9b584c169e62.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/29b7becc-3f8d-4bb2-b71e-1e033b24a4e2.png</boxart3>
+		<banner1>https://images.launchbox-app.com/f5ac7a86-fdb3-463e-b795-1a9b88859a08.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/ccb93268-e217-4b81-86a5-de073c364d1a.png</clearlogo1>
+	</game>
+	<game name="OutTrigger">
+		<description>OutTrigger</description>
+		<rom crc="fac842b5" name="naomi_aw2naomi/naomi_1/OutTrigger.zip" size="74921984" />
+		<title_clean>OutTrigger</title_clean>
+		<plot>Outtrigger is a first/third person shoot-em-up game originally released for Sega NAOMI arcade hardware before being ported to the Sega Dreamcast. It is compatible with the Dreamcast Mouse, and in Japan, came bundled with one.[CR]Developed by Sega AM2 and produced by Yu Suzuki, the game featured four unique characters, each with their own class and abilities. This makes it the first hero shooter.</plot>
+		<genre>Shooter</genre>
+		<studio>Sega</studio>
+		<nplayers>1</nplayers>
+		<boxart1>https://images.launchbox-app.com/7ae4c113-a625-47f8-9be5-73dab64c890a.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/db500a9d-02ff-4846-bb0f-27bdee021772.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/bbcf61ee-ede3-4d6c-80ae-82ff21c73791.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/9537f3c2-0e32-4987-a9ef-77357726a44f.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/bc235fc6-ecaa-43a8-9b7f-18a8db5042e5.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/1fd7fbb6-7eb7-42d8-a312-7e6199768b5b.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/685b4998-959e-4ede-92c4-926811e3af2d.png</snapshot2>
+		<banner1>https://images.launchbox-app.com/d16838f8-c5e0-45aa-bf18-1bfaac995a5b.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/1a03c72f-9b52-44f1-8e67-2e451c3e24ed.png</clearlogo1>
+	</game>
+	<game name="Powerstone">
+		<description>Powerstone</description>
+		<rom crc="6cc74e9d" name="naomi_aw2naomi/naomi_1/Powerstone.zip" size="33586975" />
+		<title_clean>Powerstone</title_clean>
+		<plot>Power Stone is a fully 3D arena fighting game made by Capcom. Power Stone was initially released on the Sega NAOMI hardware and later ported to the Dreamcast. In 2006, Capcom ported the game and its sequel to the PlayStation Portable as Power Stone Collection. An anime TV series based on the game ran in 1999 from April 3 to September 25.</plot>
+		<genre>Fighting</genre>
+		<studio>Capcom</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Power_Stone</wiki_url>
+		<boxart1>https://images.launchbox-app.com/a45b589f-d795-4d1b-aa3f-642cd5a54c88.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/9a4f6af1-fbda-40b8-8fbc-5a9ad8a6bd25.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/5f49a7bb-c330-4d7d-bd72-ca93b64f80d7.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/77362330-7d0c-4237-b457-8716f0b9410b.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/ad183886-c40d-4309-b1b8-dad63e2de779.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/3afdb811-4207-4e9a-a0cf-1ca5594b2ff7.png</snapshot1>
+		<banner1>https://images.launchbox-app.com/8ac5dac0-44db-43d6-8b87-9294c935a7ad.png</banner1>
+		<banner2>https://images.launchbox-app.com/9b1e1ca1-4074-4607-9003-9e96d356cb30.png</banner2>
+		<clearlogo1>https://images.launchbox-app.com/34bcd8fe-2c3b-4bfe-ad9e-99ee65adaadf.png</clearlogo1>
+	</game>
+	<game name="Powerstone 2">
+		<description>Powerstone 2</description>
+		<rom crc="6fe27f97" name="naomi_aw2naomi/naomi_1/Powerstone_2.zip" size="52130001" />
+		<title_clean>Powerstone 2</title_clean>
+		<plot>Power Stone 2 is a multiplayer fighting game that built on the innovative gameplay introduced by its predecessor, Power Stone. Power Stone 2 allows up to four players to choose from multiple characters and utilize items such as tables, chairs, and rocks in battle.</plot>
+		<genre>Fighting</genre>
+		<studio>Capcom</studio>
+		<nplayers>4</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Power_Stone_2</wiki_url>
+		<boxart1>https://images.launchbox-app.com/ba5b02db-66de-4a68-b4c0-dc73505f390c.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/4125f6c4-1750-4a4c-952a-6c6bf5f74f4b.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/e52361b7-c9b4-46ed-a4c6-15aecbc96e63.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/5ae451c5-f11d-4047-aa2d-e8d6f68d99e0.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/31cd927a-7b46-4e2e-adf8-991e875378ba.png</boxart5>
+		<banner1>https://images.launchbox-app.com/1ddfb8af-6246-4dc3-98a1-03a4d2237b34.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/e06fa63a-d0c1-4d3e-9c54-1fb5bb459774.png</clearlogo1>
+	</game>
+	<game name="Project Justice - Rival School 2">
+		<description>Project Justice - Rival School 2</description>
+		<rom crc="71fe8765" name="naomi_aw2naomi/naomi_1/Project_Justice_Rival_School_2.zip" size="120742804" />
+		<title_clean>Project Justice - Rival School 2</title_clean>
+		<plot>A group of long time friends now unite in the pursuit of honor and excellence. Setting all past rivalries aside, they band together to uncover the mystery behind an unusual series of events. Join over 20 playable characters, each with their own unique skills and custom attacks, as they compete in 3-on-3 battles in beautifully rendered 3-D worlds. Assemble your team and perform incredible fighting combos all for one united goal...Project Justice!</plot>
+		<releasedate>5/16/2001</releasedate>
+		<year>2001</year>
+		<genre>Fighting</genre>
+		<studio>Capcom</studio>
+		<nplayers>2</nplayers>
+		<ESRB>T - Teen</ESRB>
+		<videoid>https://ZjfFw4NwqmQ</videoid>
+		<wiki_url>https://en.wikipedia.org/wiki/Project_Justice</wiki_url>
+		<boxart1>https://images.launchbox-app.com/ee93745e-0faa-464f-a488-6f34826cec4c.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/430029af-34ae-47c0-9331-482c75f472ba.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/fe1d94a3-5140-447e-b76f-5879743567ee.jpg</boxart3>
+		<boxart4>https://images.launchbox-app.com/358d7a58-7a19-44fc-a936-8ab2872748f3.jpg</boxart4>
+		<boxart5>https://images.launchbox-app.com/c8eb3ee6-848e-4348-9aca-b43e65d0998b.jpg</boxart5>
+		<boxart6>https://images.launchbox-app.com/fbae2169-b4e4-4c82-acca-753371da7520.jpg</boxart6>
+		<boxart7>https://images.launchbox-app.com/7fd98e58-baf0-4d44-9f2c-bfa9759e16da.jpg</boxart7>
+		<boxart8>https://images.launchbox-app.com/bc12a05c-ddc3-4ff1-8174-1e08e15c7e9f.png</boxart8>
+		<boxart9>https://images.launchbox-app.com/7f37b8cb-4051-4f34-82c4-455b4a3a1715.png</boxart9>
+		<snapshot1>https://images.launchbox-app.com/4d902d0c-7359-4100-9fb8-3e5bf1177f86.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/6d68efd6-532e-4eef-b294-d30a22f00f8a.jpg</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/7586b0c9-3e36-47f9-b15d-7221d50b1b82.jpg</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/b86610c9-cf1a-4d8a-8c4d-1035fe12cd4e.jpg</snapshot4>
+		<snapshot5>https://images.launchbox-app.com/54ff335a-dcc5-47c6-b4fe-4e51e33b68ec.jpg</snapshot5>
+		<fanart1>https://images.launchbox-app.com/444311fd-1f7e-464d-9571-c36f49a43813.jpg</fanart1>
+		<fanart2>https://images.launchbox-app.com/6b2c51c2-926b-40e9-b480-d8e87b43a5ec.jpg</fanart2>
+		<fanart3>https://images.launchbox-app.com/8fe693a6-4690-462f-92e3-03b2cf4253be.jpg</fanart3>
+		<clearlogo1>https://images.launchbox-app.com/1f9aff40-3fbc-4317-9f21-ef41a1a4a8ab.png</clearlogo1>
+		<clearlogo2>https://images.launchbox-app.com/e2f494c3-3827-4bb7-a9d5-29ea27c68970.png</clearlogo2>
+	</game>
+	<game name="Project Justice - Rival School 2 (Unlocked)">
+		<description>Project Justice - Rival School 2 (Unlocked)</description>
+		<rom crc="0bcbdc60" name="naomi_aw2naomi/naomi_1/Project_Justice_Rival_School_2_Unlocked.zip" size="120742833" />
+		<title_clean>Project Justice - Rival School 2</title_clean>
+		<plot>Project Justice - Rival School 2 with all characters unlocked![CR]A group of long time friends now unite in the pursuit of honor and excellence. Setting all past rivalries aside, they band together to uncover the mystery behind an unusual series of events. Join over 20 playable characters, each with their own unique skills and custom attacks, as they compete in 3-on-3 battles in beautifully rendered 3-D worlds. Assemble your team and perform incredible fighting combos all for one united goal...Project Justice!</plot>
+		<releasedate>5/16/2001</releasedate>
+		<year>2001</year>
+		<genre>Fighting</genre>
+		<studio>Capcom</studio>
+		<nplayers>2</nplayers>
+		<ESRB>T - Teen</ESRB>
+		<videoid>https://ZjfFw4NwqmQ</videoid>
+		<wiki_url>https://en.wikipedia.org/wiki/Project_Justice</wiki_url>
+		<boxart1>https://images.launchbox-app.com/ee93745e-0faa-464f-a488-6f34826cec4c.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/430029af-34ae-47c0-9331-482c75f472ba.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/fe1d94a3-5140-447e-b76f-5879743567ee.jpg</boxart3>
+		<boxart4>https://images.launchbox-app.com/358d7a58-7a19-44fc-a936-8ab2872748f3.jpg</boxart4>
+		<boxart5>https://images.launchbox-app.com/c8eb3ee6-848e-4348-9aca-b43e65d0998b.jpg</boxart5>
+		<boxart6>https://images.launchbox-app.com/fbae2169-b4e4-4c82-acca-753371da7520.jpg</boxart6>
+		<boxart7>https://images.launchbox-app.com/7fd98e58-baf0-4d44-9f2c-bfa9759e16da.jpg</boxart7>
+		<boxart8>https://images.launchbox-app.com/bc12a05c-ddc3-4ff1-8174-1e08e15c7e9f.png</boxart8>
+		<boxart9>https://images.launchbox-app.com/7f37b8cb-4051-4f34-82c4-455b4a3a1715.png</boxart9>
+		<snapshot1>https://images.launchbox-app.com/4d902d0c-7359-4100-9fb8-3e5bf1177f86.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/6d68efd6-532e-4eef-b294-d30a22f00f8a.jpg</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/7586b0c9-3e36-47f9-b15d-7221d50b1b82.jpg</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/b86610c9-cf1a-4d8a-8c4d-1035fe12cd4e.jpg</snapshot4>
+		<snapshot5>https://images.launchbox-app.com/54ff335a-dcc5-47c6-b4fe-4e51e33b68ec.jpg</snapshot5>
+		<fanart1>https://images.launchbox-app.com/444311fd-1f7e-464d-9571-c36f49a43813.jpg</fanart1>
+		<fanart2>https://images.launchbox-app.com/6b2c51c2-926b-40e9-b480-d8e87b43a5ec.jpg</fanart2>
+		<fanart3>https://images.launchbox-app.com/8fe693a6-4690-462f-92e3-03b2cf4253be.jpg</fanart3>
+		<clearlogo1>https://images.launchbox-app.com/1f9aff40-3fbc-4317-9f21-ef41a1a4a8ab.png</clearlogo1>
+		<clearlogo2>https://images.launchbox-app.com/e2f494c3-3827-4bb7-a9d5-29ea27c68970.png</clearlogo2>
+	</game>
+	<game name="Psyvariar 2">
+		<description>Psyvariar 2</description>
+		<rom crc="77a8691b" name="naomi_aw2naomi/naomi_1/Psyvariar_2.zip" size="107013500" />
+		<title_clean>Psyvariar 2</title_clean>
+		<plot>Psyvariar 2: The Will to Fabricate is a vertically scrolling shoot em up developed by SKONEC Entertainment and distributed by Success. It is the sequel to the 2000 title, Psyvariar.[CR]The game was initially developed for the Sega NAOMI arcade platform, and was released in Japanese arcades in November 2003.</plot>
+		<year>2003</year>
+		<genre>Shooter</genre>
+		<nplayers>1</nplayers>
+		<boxart1>https://images.launchbox-app.com/4ad03793-2703-4ee9-935c-c5a5810fa732.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/37b18bb6-0f83-4703-a15d-df9e04c64ae9.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/53e7db25-6619-421d-9bff-9f1b7463c4dd.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/c67bbd04-7642-4fec-a62a-141b58ac275e.png</boxart4>
+		<banner1>https://images.launchbox-app.com/072fcb8f-77af-4b6e-95cb-3c86f5f54a46.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/82cccc5d-edf9-4dc3-bc84-fe0b891f516f.png</clearlogo1>
+	</game>
+	<game name="Puyo Pop Fever">
+		<description>Puyo Pop Fever</description>
+		<rom crc="66b28aa0" name="naomi_aw2naomi/naomi_1/Puyo_Pop_Fever.zip" size="119684355" />
+		<title_clean>naomi_1/Puyo_Pop_Fever</title_clean>
+		<plot>Accord, teacher of the local magic school, has lost her magic flying cane. There is word of an award so the students are busy searching high and low for it. Naturally, our heroes Amitie and her school nemesis Raffine make their way toward the distant dark castle, challenging - and being challenged by - everyone you come across in a game of Puyo Pop.[CR]Puyo Pop Fever is a puzzle game of the falling-block variety, the goal of which is to clear your blocks (Puyos) by combining four or more of the same color, which will then vanish. This will produce Nuisance Puyos. These colorless Puyos will fall onto your opponents screen, thus blocking chains and combos they could create. These pesky Puyos can only be exterminated by removing neighboring Puyos.[CR]When an opponent sends Nuisance Puyos to your screen you can try to "offset" by clearing your own Puyos and limiting the number that would fall on your screen. This will also increase your Fever Meter. When this meter fills you will be given a set of prearranged Puyos with which you can wrack up giant combos and send tons of Nuisance Puyos to your opponent. When any player's field becomes so full that they can no longer drop Puyos they lose the game.[CR]The game features a two-player mode. Some versions allow for more people such as the DS version which allows up to eight players to compete in free-for-all or team modes.</plot>
+		<releasedate>2/4/2004</releasedate>
+		<year>2004</year>
+		<genre>Puzzle</genre>
+		<studio>Sonic Team</studio>
+		<boxart1>https://images.launchbox-app.com/16b76c28-7fac-4521-9e48-082f5050d511.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/3e7ae1ab-77b6-44f3-adb6-a36791136415.jpg</boxart2>
+		<clearlogo1>https://images.launchbox-app.com/6012100e-2ccf-4e1a-8b3b-7f89e9c96b89.png</clearlogo1>
+	</game>
+	<game name="Puyo Puyo Da">
+		<description>Puyo Puyo Da</description>
+		<rom crc="d2c8f3c3" name="naomi_aw2naomi/naomi_1/Puyo_Puyo_Da.zip" size="105623782" />
+		<title_clean>Puyo Puyo Da</title_clean>
+		<plot>Puyo Puyo DA! featuring Ellena System is a Puyo Puyo dancing game created in 1999 for Arcade and Dreamcast. The game was released only in Japan.[CR]Arle Nadja and her friends take some time off from Puyo fighting and challenge players to dance with them. The game features several dance stages similar to those of Dance Dance Revolution. It also introduces a new ELLENA system used to render the game as well as a new exclusive character featuring the same name (Ellena Stevens, the protagonist of the original Broadway Legend Ellena). One or two players can dance to a variety of J-pop tunes by using the controller buttons to copy their opponents moves. Based on how well a player copies the moves, Nuisance Puyos are sent to their opponent. The player not having Nuisance Puyos on their side of the screen when the song is over wins the stage.</plot>
+		<genre>Music</genre>
+		<boxart1>https://images.launchbox-app.com/532befab-8849-4f7d-8a26-5aae83a94743.png</boxart1>
+	</game>
+	<game name="Quiz Keitai Q Mode">
+		<description>Quiz Keitai Q Mode</description>
+		<rom crc="5ac29506" name="naomi_aw2naomi/naomi_1/Quiz_Keitai_Q_Mode.zip" size="86870479" />
+		<title_clean>Quiz Keitai Q Mode</title_clean>
+		<genre>Quiz</genre>
+		<boxart1>https://images.launchbox-app.com/3eef2fe8-1666-4d67-8ef2-da8e948145b2.png</boxart1>
+	</game>
+	<game name="Radirgy">
+		<description>Radirgy</description>
+		<rom crc="b954cb8b" name="naomi_aw2naomi/naomi_1/Radirgy.zip" size="92866865" />
+		<title_clean>Radirgy</title_clean>
+		<plot>Radirgy is a vertical-screen top-down bullet-hell shooter originally developed by Milestone for Naomi arcade system and later released on console systems. The game features bright, cartoony, cel-shaded graphics. At the beginning, the player is given choice among three different mecha-ships: one with a spread-gun, a weak homing laser, or a slow but powerful bubble gun. Additionally, each ship can use a sword for anything that gets too close, or specific enemies which can't be killed otherwise, a shield, which appears at the front of the ship once the player lets go of the fire button, and a smart-bomb-like field that can be extended around the player in a small circle, damaging enemies, absorbing their shots and turning them into points.</plot>
+		<boxart1>https://images.launchbox-app.com/80c997b9-0fef-42b3-a807-33837b652cb5.jpg</boxart1>
+	</game>
+	<game name="Radirgy Noa">
+		<description>Radirgy Noa</description>
+		<rom crc="912fb272" name="naomi_aw2naomi/naomi_1/Radirgy_Noa.zip" size="101349013" />
+		<title_clean>Radirgy Noa</title_clean>
+		<plot>Radirgy Noa (also written as Radirgynoa) is a vertically scrolling shoot em up that was released in June 2009 for the Sega Naomi arcade platform by Milestone Inc. and the sequel to Radirgy.[CR]Radirgy Noa features a cel-shaded graphical style very similar to that of its predecessor and 2-player co-op. Screen orientation is horizontal. Ruki Mishima, a reddemed villain of the first game, joins the cast as a player character.</plot>
+		<genre>Shooter</genre>
+		<nplayers>1-2 Co-Op</nplayers>
+		<boxart1>https://images.launchbox-app.com/d0f01a1d-e7bc-40f5-b2c8-3110915ff1b9.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/c485a2c2-aad2-466d-9ca4-3a33509c066d.jpg</boxart2>
+		<snapshot1>https://images.launchbox-app.com/5ef90d47-165f-43f7-80b2-e87d9dd619a3.jpg</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/e6b2aaf4-284a-49d4-9f1e-a121b7af3c2a.jpg</snapshot2>
+		<clearlogo1>https://images.launchbox-app.com/7aab6557-7692-427f-95c2-9332196c135b.png</clearlogo1>
+	</game>
+	<game name="Rhythm Tengoku">
+		<description>Rhythm Tengoku</description>
+		<rom crc="6f1a26a1" name="naomi_aw2naomi/naomi_1/Rhythm_Tengoku.zip" size="112528158" />
+		<title_clean>Rhythm Tengoku</title_clean>
+		<plot>Rhythm Tengoku is a rhythm game developed by Nintendo SPD and published by Nintendo. It was released on August 3, 2006, and was the last game developed by Nintendo for the Game Boy Advance. An arcade version of the game was reprogrammed and published by Sega on September 20, 2007. Both versions were released in Japan exclusively. The game has spawned three sequels; Rhythm Heaven, Rhythm Heaven Fever, and Rhythm Heaven Megamix. It began as an idea created by its composer and supervisor Tsunku who proposed it to Nintendo due to his belief that they could do a better job with it than he could.[CR]Rhythm Tengokus gameplay focuses on audio cues rather than visual cues to convey information to players. It features a number of unique stages which have their own type of rhythm and gameplay. Players follow the rhythm (in some rhythm games as a character) until the end where they are given a score based on their performance. The gameplay and music were both well received by critics and consumers. Parallels have been drawn between it and the developer's previous work on the WarioWare series.</plot>
+		<genre>Music</genre>
+		<boxart1>https://images.launchbox-app.com/a5c44f95-6476-4ca7-8442-b80412636a56.jpg</boxart1>
+	</game>
+	<game name="Samba de Amigo">
+		<description>Samba de Amigo</description>
+		<rom crc="94bbf01e" name="naomi_aw2naomi/naomi_1/Samba_de_Amigo.zip" size="123461867" />
+		<title_clean>Samba de Amigo</title_clean>
+		<plot>Samba de Amigo is a rhythm game developed by Sonic Team and published by Sega. The game was released in arcades in December 1999, and for the Dreamcast video game console in 2000.[CR]In Samba de Amigo, the player uses controllers shaped like maracas with the goal of matching a series of patterns displayed on-screen. The music in Samba de Amigo is made of primarily popular Latin music songs rather than common or traditional samba. The game also features non-Latin pop songs.</plot>
+		<year>1999</year>
+		<genre>Music</genre>
+		<boxart1>https://images.launchbox-app.com/29a8f805-1711-4e8f-843e-523190924ecb.jpg</boxart1>
+	</game>
+	<game name="Sega Marine Fishing">
+		<description>Sega Marine Fishing</description>
+		<rom crc="3475272d" name="naomi_aw2naomi/naomi_1/Sega_Marine_Fishing.zip" size="27078763" />
+		<title_clean>Sega Marine Fishing</title_clean>
+		<plot>Sega Marine Fishing is a fishing video game in which the player attempts to catch various marine sport fish. The gameplay's emphasis was on enticing fish to bite onto the lure and then successfully fighting the fish and reeling it to the boat.</plot>
+		<genre>Sports</genre>
+		<studio>WOW Entertainment</studio>
+		<nplayers>1</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Sega_Marine_Fishing</wiki_url>
+		<boxart1>https://images.launchbox-app.com/083890af-115f-4b3c-857a-1eb9b23bf475.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/d4b23b6a-e179-4c6e-b4c8-bb3b9a0c92cd.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/8ce5a2c1-a859-4dd3-b323-99d7aec9d1dd.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/da958885-8a1e-4dcd-9ecf-dfff24476e8b.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/1fe6d0d0-bef0-47e8-b03f-03369dfa1b1b.png</boxart5>
+		<boxart6>https://images.launchbox-app.com/fed2ff58-7392-4a6b-9fb6-d26868bf5593.png</boxart6>
+		<snapshot1>https://images.launchbox-app.com/dbebc6d0-8151-4268-b307-2f56a85c83bb.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/33ef0064-1559-4c9e-b8da-20c5fa289b41.png</snapshot2>
+		<banner1>https://images.launchbox-app.com/806e7ef9-f448-4ee3-a91a-7d0e6a197d56.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/6bdcc4ce-147a-4f75-be5c-12958c78ee40.png</clearlogo1>
+	</game>
+	<game name="Sega Strike Fighter">
+		<description>Sega Strike Fighter</description>
+		<rom crc="ebd4e15f" name="naomi_aw2naomi/naomi_1/Sega_Strike_Fighter.zip" size="69363606" />
+		<title_clean>Sega Strike Fighter</title_clean>
+		<plot>As the pilot of an F/A-18 Hornet, a player embarks on a multitude of hair raising missions. These missions range from basic training to full fledged air-to-air and air-to-ground engagements.[CR]This game was released in two cabinet styles Deluxe and Standard. Both models have rudder pedals, throttle with a button for air brake, and flight stick with trigger guns and thumb button missles. However, the Deluxe model is slightly larger and is styled much like the cockpit of a fighter. It has three monitors one for forward headsupdisplay view and two that act as window views for left and right. The Standard model just has a seat and one monitor for forward headsupdisplay view.</plot>
+		<genre>Shooter</genre>
+		<studio>Sega</studio>
+		<nplayers>1</nplayers>
+		<boxart1>https://images.launchbox-app.com/4fc537e1-33e4-4660-a018-3c68d7e391f5.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/7bbc95cb-f625-47eb-adf2-45c41944edfd.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/6d5821aa-9703-4497-88d1-265fe2bf4185.jpg</boxart3>
+		<boxart4>https://images.launchbox-app.com/9c4b1fbd-a197-4048-8ea9-bad826e7cc82.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/00cc4152-31e8-49e3-9d95-c6b9449ed4ca.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/16844968-668c-4a6b-9584-07c99cc4b53b.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/e8ec90a0-b278-46fc-809e-9858bad95429.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/56c553c5-1c1a-486d-8494-4b6a052e6e9a.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/ca001eb6-d2a0-49d7-91a0-720e978ca915.png</snapshot4>
+		<snapshot5>https://images.launchbox-app.com/0e8dab64-0b1e-4cc7-bc62-a9de0a66e90a.png</snapshot5>
+		<snapshot6>https://images.launchbox-app.com/f19e19b7-cb97-4cc6-ad12-bd219cd5468d.png</snapshot6>
+		<fanart1>https://images.launchbox-app.com/b0bc90b3-d2b7-4f6d-85ce-9adfd7467b33.jpg</fanart1>
+		<banner1>https://images.launchbox-app.com/1998fac1-ac4a-4872-a822-4eb9f72bcb79.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/8ef893a8-f8fa-4082-91d7-19e2c810402f.png</clearlogo1>
+	</game>
+	<game name="Sega Tetris">
+		<description>Sega Tetris</description>
+		<rom crc="e902cf2f" name="naomi_aw2naomi/naomi_1/Sega_Tetris.zip" size="27104928" />
+		<title_clean>Sega Tetris</title_clean>
+		<plot>Ready to take a step into the surreal? Then welcome to Sega Tetris. Originally created by Sega AM1 as a NAOMI arcade game, the subsequently created Wow Entertainment ported Sega Tetris to the Dreamcast in 2000. A Japanese exclusive, Sega Tetris is a pretty interesting and original take on the original game, not least because of the bizarre imagery and settings it uses. The game naturally playes in a familiar manner with the usual gameplay mechanics in place, but it's the extra details that make Sega Tetris such a fun title. The addiction of bizarre cartoon characters that dance and gyrate by the play board as you move the Tetriminos around is interesting, and the way they hit the blocks to destroy any lines you make can be amusing.</plot>
+		<genre>Puzzle</genre>
+		<studio>Sega</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/a2a74fe5-563c-4a6f-8a55-076128637be4.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/b9193ba1-2dff-4fb3-8b7f-7d4444d4dded.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/cc3edfd4-1f17-49a3-b682-b3dd1c411505.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/71827264-672a-49cc-999f-d0513675001c.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/318a6341-c56f-4727-8b02-81e3e3997efe.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/205e3ccf-4626-4368-a3ae-709fe0b5cb30.jpg</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/992a5161-7def-4af7-adfc-1a3b1e32ea83.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/66cc2d51-658c-428e-89bd-54f2b396ec83.jpg</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/10188a15-973a-4ff5-9b24-490441fbf020.png</clearlogo1>
+		<clearlogo2>https://images.launchbox-app.com/6cca0a42-9963-4dd9-b6b7-3eb051615014.png</clearlogo2>
+	</game>
+	<game name="Senko No Ronde">
+		<description>Senko No Ronde</description>
+		<rom crc="386417fc" name="naomi_aw2naomi/naomi_1/Senko_No_Ronde.zip" size="175019067" />
+		<title_clean>Senko No Ronde</title_clean>
+		<plot>Due to a past catastrophe on Earth, humanity was forced to live amongst the stars for several centuries, resulting in the creation of the S.D. calendar and the birth of the Aria Federation, an empire whose influence extends from Earth to Saturn. In S.D. 1478, an embassy located within the empires capital on Earths moon was seized by terrorists, and forces deployed by Aria's Special Space Service ended in disaster as the terrorists triggered a self-detonation device, killing themselves and several civilians in the process.[CR]The game begins six years after this event, with the player assuming the role of one of eight characters who will become involved in a mastermind's scheme to take control of the Aria Federation's superweapon and use it for his own purposes.[CR]Toward the Terra, a science fiction series created by Keiko Takemiya, has played a major influence for both Senko no Ronde's story and art style.</plot>
+		<genre>Shooter</genre>
+		<studio>G.Rev</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/05261d36-cb5b-4f5d-a36b-b22aff9212df.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/31832ed5-8711-4155-8ef9-e8617151e59c.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/3e299b09-3778-474e-9bb9-833fcfad6569.png</boxart3>
+		<snapshot1>https://images.launchbox-app.com/28d84712-9fe9-4cba-9724-2defc64cc68c.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/bb83cb98-f887-4a38-8453-5e7637f1440c.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/140fbeb8-dc15-490b-b9de-22dd48062dc0.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/2d563764-3d51-400e-954c-8e68a2406eb8.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/72bf312d-f599-4597-8c5b-5db7e334b0e2.png</clearlogo1>
+		<clearlogo2>https://images.launchbox-app.com/dec6cbc0-9e1a-46f6-a70c-08150ccc4c25.png</clearlogo2>
+	</game>
+	<game name="Senko No Ronde (New Ver)">
+		<description>Senko No Ronde (New Ver)</description>
+		<rom crc="65d68ce5" name="naomi_aw2naomi/naomi_1/Senko_No_Ronde_New_Ver.zip" size="176090704" />
+		<title_clean>Senko No Ronde</title_clean>
+		<plot>Due to a past catastrophe on Earth, humanity was forced to live amongst the stars for several centuries, resulting in the creation of the S.D. calendar and the birth of the Aria Federation, an empire whose influence extends from Earth to Saturn. In S.D. 1478, an embassy located within the empires capital on Earths moon was seized by terrorists, and forces deployed by Aria's Special Space Service ended in disaster as the terrorists triggered a self-detonation device, killing themselves and several civilians in the process.[CR]The game begins six years after this event, with the player assuming the role of one of eight characters who will become involved in a mastermind's scheme to take control of the Aria Federation's superweapon and use it for his own purposes.[CR]Toward the Terra, a science fiction series created by Keiko Takemiya, has played a major influence for both Senko no Ronde's story and art style.</plot>
+		<genre>Shooter</genre>
+		<studio>G.Rev</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/05261d36-cb5b-4f5d-a36b-b22aff9212df.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/31832ed5-8711-4155-8ef9-e8617151e59c.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/3e299b09-3778-474e-9bb9-833fcfad6569.png</boxart3>
+		<snapshot1>https://images.launchbox-app.com/28d84712-9fe9-4cba-9724-2defc64cc68c.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/bb83cb98-f887-4a38-8453-5e7637f1440c.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/140fbeb8-dc15-490b-b9de-22dd48062dc0.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/2d563764-3d51-400e-954c-8e68a2406eb8.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/72bf312d-f599-4597-8c5b-5db7e334b0e2.png</clearlogo1>
+		<clearlogo2>https://images.launchbox-app.com/dec6cbc0-9e1a-46f6-a70c-08150ccc4c25.png</clearlogo2>
+	</game>
+	<game name="Senko No Ronde (SP)">
+		<description>Senko No Ronde (SP)</description>
+		<rom crc="1af1d5a3" name="naomi_aw2naomi/naomi_1/Senko_No_Ronde_SP.zip" size="190977579" />
+		<title_clean>Senko No Ronde</title_clean>
+		<plot>Senko no Ronde SP is a fighting game developed by G.Rev and published by Sega for the Sega NAOMI arcade system.  It is the sequel to Senko no Ronde, and includes many features backported from the game Senko no Ronde Rev X.</plot>
+		<genre>Shooter</genre>
+		<studio>G.Rev</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/05261d36-cb5b-4f5d-a36b-b22aff9212df.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/31832ed5-8711-4155-8ef9-e8617151e59c.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/3e299b09-3778-474e-9bb9-833fcfad6569.png</boxart3>
+		<snapshot1>https://images.launchbox-app.com/28d84712-9fe9-4cba-9724-2defc64cc68c.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/bb83cb98-f887-4a38-8453-5e7637f1440c.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/140fbeb8-dc15-490b-b9de-22dd48062dc0.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/2d563764-3d51-400e-954c-8e68a2406eb8.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/72bf312d-f599-4597-8c5b-5db7e334b0e2.png</clearlogo1>
+		<clearlogo2>https://images.launchbox-app.com/dec6cbc0-9e1a-46f6-a70c-08150ccc4c25.png</clearlogo2>
+	</game>
+	<game name="Shikigami No Shiro 2">
+		<description>Shikigami No Shiro 2</description>
+		<rom crc="a9394e27" name="naomi_aw2naomi/naomi_1/Shikigami_No_Shiro_2.zip" size="72425066" />
+		<title_clean>Shikigami No Shiro 2</title_clean>
+		<plot>In the recent past, a band of champions gathered to engage this threat. Using weapons forged by the great magicians and masters of arcane sciences, the heroes managed to banished the demons, quelling their thirst for conquest!  The time: 2006, the distant future. The Demon Gods and their mystical castle have reappeared above the skies of Tokyo City with the goal of continuing the domination and conquest of humanity. Can the heroes of recent legend return to defeat the nemesis of all mankind? The tools for defeating the gods are trapped within the very castle in which the demons reside. The hope of the world lies on the shoulders of these heroes; they must succeed in this vertical shooter.</plot>
+		<releasedate>3/24/2004</releasedate>
+		<year>2004</year>
+		<genre>Action; Shooter</genre>
+		<ESRB>E - Everyone</ESRB>
+		<boxart1>https://images.launchbox-app.com/ed505516-fb4a-4ac2-a578-1a149a8a4005.jpg</boxart1>
+	</game>
+	<game name="Shin Nihon Prowrestling Toukon Retsuden 4">
+		<description>Shin Nihon Prowrestling Toukon Retsuden 4</description>
+		<rom crc="270c0edb" name="naomi_aw2naomi/naomi_1/Shin_Nihon_Prowrestling_Toukon_Retsuden_4.zip" size="216442420" />
+		<title_clean>Shin Nihon Prowrestling Toukon Retsuden 4</title_clean>
+		<plot>Toukon Retsuden 4 was developed by Yukes, and is mainly focused on providing a realistic representation of professional wrestling.  Toukon Retsuden's presentation is similar to real life broadcasts, including crowd noise and extravagant introductions.  The gameplay found in Toukon Retsuden is vastly different from traditional American/Japanese wrestling games</plot>
+		<releasedate>9/2/1999</releasedate>
+		<year>1999</year>
+		<genre>Fighting; Sports</genre>
+		<studio>Yuke's</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/ea07d4f4-c201-4050-b106-e2e28c7a6b10.jpg</boxart1>
+	</game>
+	<game name="Shooting Love 2007 - Exzeal">
+		<description>Shooting Love 2007 - Exzeal</description>
+		<rom crc="19a0d3b1" name="naomi_aw2naomi/naomi_1/Shooting_Love_2007_Exzeal.zip" size="102347985" />
+		<title_clean>Shooting Love 2007 - Exzeal</title_clean>
+		<plot>Shooting Love 2007 is a Sega NAOMI arcade shoot-'em-up game developed by Triangle Service. It contains two games; Exzeal, which is a sequel to Trizeal and Shmups Skills Test</plot>
+		<genre>Shooter</genre>
+		<boxart1>https://images.launchbox-app.com/c2e820c4-af48-4106-b6dd-13cbff480cc7.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/24c900e4-f5e4-48b7-8fb1-2a5e3395a25e.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/945713a6-de82-43ef-b170-aff75944b12b.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/ea103a7a-2a9c-4966-b007-076f3015580a.png</boxart4>
+		<clearlogo1>https://images.launchbox-app.com/eca43dbd-a1fe-475e-ad2f-0be7e456a7a3.png</clearlogo1>
+	</game>
+	<game name="Shootout Pool">
+		<description>Shootout Pool</description>
+		<rom crc="1f716242" name="naomi_aw2naomi/naomi_1/Shootout_Pool.zip" size="7274548" />
+		<title_clean>Shootout Pool</title_clean>
+		<plot>Shootout Pool is an arcade billiards game released for Sega NAOMI arcade hardware</plot>
+		<genre>Sports</genre>
+		<studio>Sega</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/ad2bd182-f743-446f-99a4-77713eacf8a2.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/fe309c4f-bcb1-432f-bc79-772eebc565a7.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/92abc23b-12ed-4d80-a0b8-5465f88b75d2.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/711dabbe-ab30-419a-89d1-622b0f52b680.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/025e67f8-0c89-4bea-ada0-0ab30119a79d.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/a30cf51e-34f3-4443-abb9-8121f2a4745d.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/aa4f9316-c528-4e1b-a1a6-455a9a3e5f5c.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/81a01083-be2f-4eb9-b835-43bc04a27196.png</clearlogo1>
+		<clearlogo2>https://images.launchbox-app.com/9504ed52-3aba-487a-8c3d-30f9538d14a5.png</clearlogo2>
+	</game>
+	<game name="SlashOut">
+		<description>SlashOut</description>
+		<rom crc="cb1ce95d" name="naomi_aw2naomi/naomi_1/SlashOut.zip" size="107462151" />
+		<title_clean>SlashOut</title_clean>
+		<plot>Slashout is the third installment to the Spikeout series, released for Sega NAOMI hardware in 2000. Unlike other games in the series, Slashout has a completely different setting, based in a fantasy world with different characters-gameplay remains similar, however.</plot>
+		<genre>Fighting</genre>
+		<studio>Sega</studio>
+		<nplayers>1</nplayers>
+		<boxart1>https://images.launchbox-app.com/1fd68771-4454-4335-b772-9b0f0e98558e.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/14f05fc7-4426-4736-bdbe-9fba40f4ca21.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/d9ff5271-fcf5-4b7a-8c54-46a810092cf3.jpg</boxart3>
+		<boxart4>https://images.launchbox-app.com/987580b0-73a0-4286-b8ac-a5a2d51b4ac1.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/10bef523-9032-4d84-a573-1685e66533a6.png</boxart5>
+		<boxart6>https://images.launchbox-app.com/06be9584-38b2-420f-b20f-1a17a5d6186b.png</boxart6>
+		<snapshot1>https://images.launchbox-app.com/e4b5f300-4206-4f33-9ada-7fdd4c15b076.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/281d13e6-6ccf-4efa-8b4f-f07481f59420.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/8f762a36-7944-4f7e-aff6-fc6de932b881.jpg</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/be84305b-5cd8-47f7-b561-241fea9d5ef5.png</snapshot4>
+		<banner1>https://images.launchbox-app.com/72acd5ea-53a0-4fe3-b5af-cf96ef904089.png</banner1>
+		<banner2>https://images.launchbox-app.com/cda5dc97-7de5-4a1a-80a1-49624f941c99.png</banner2>
+		<clearlogo1>https://images.launchbox-app.com/935276e9-3c50-42dd-ae21-909d079b225e.png</clearlogo1>
+	</game>
+	<game name="Spawn">
+		<description>Spawn</description>
+		<rom crc="38fefa04" name="naomi_aw2naomi/naomi_1/Spawn.zip" size="55853924" />
+		<title_clean>Spawn</title_clean>
+		<plot>Spawn: In the Demon's Hand is a video game developed and published by Capcom for the Dreamcast and arcade. It is based on the comic book character Spawn created by Todd McFarlane and produced by Image Comics. A port was planned for the PlayStation 2 as a launch title but it was later canceled.</plot>
+		<genre>Action</genre>
+		<studio>Capcom</studio>
+		<nplayers>1</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Spawn:_In_the_Demon%27s_Hand</wiki_url>
+		<boxart1>https://images.launchbox-app.com/c2c4ef6c-7027-458b-b173-f5f054c4e25d.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/49f883d7-184f-4c20-a9ce-d743f514e381.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/b6a66b08-2602-42e4-9ea7-e77ed357c412.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/a4b417ea-48eb-45ac-991a-0ef6eac9058c.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/c80c08eb-b1a1-4df0-88a2-8fefff2df2fb.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/85a22784-346a-422a-8d57-c6342b7e9df2.png</snapshot2>
+		<banner1>https://images.launchbox-app.com/8a563ec2-d2ae-4f4d-bab0-4e5ef43fb711.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/17cbbd56-17c7-4699-8937-e03ad88f74b4.png</clearlogo1>
+	</game>
+	<game name="Spikers Battle">
+		<description>Spikers Battle</description>
+		<rom crc="e7ee4f98" name="naomi_aw2naomi/naomi_1/Spikers_Battle.zip" size="104924539" />
+		<title_clean>Spikers Battle</title_clean>
+		<plot>Spikers Battle is a cross between a 3D beat 'em-up and versus fighting game. The game takes place in a urban setting and offers a total of eight playable streetfighter characters. Returning characters from the earlier 1998 arcade game Spikeout are Spike, Linda, Tenshin and White. The new fighters are Albelto, Hikaru, Fengli and Gorn.[CR]In the game you fight in several different arenas against three playable and/or non-playable characters in a best out of three round match. Aside from the kick and punch attacks weapons like a baseball bat, hammer and flame thrower can be picked up and used on the opponents. Beaten enemies sometimes drop boxes that replenish life.</plot>
+		<genre>Fighting</genre>
+		<studio>Sega</studio>
+		<nplayers>1</nplayers>
+		<boxart1>https://images.launchbox-app.com/2cae75be-4f3f-4ada-8ede-528667faa012.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/a61ea2e5-9f85-4d9d-894f-5374851b6d00.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/6afff1ec-87ec-45fc-b238-4fbbe6333e70.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/fe8a0532-fe3f-4b59-b180-52cc35c8e2f8.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/8322c90f-2c00-4b90-8591-2e6aba9312f9.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/5f284b2d-5b9a-4817-9148-2878b0d91f05.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/2a45e80b-df19-4833-b23d-fb4a6354baf8.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/a9bd0aa3-aa2e-4207-8898-64d145cd076b.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/c1d290f4-f66d-4f9a-9c4c-e8f991d400b4.png</clearlogo1>
+	</game>
+	<game name="Sports Jam">
+		<description>Sports Jam</description>
+		<rom crc="b71d1dd8" name="naomi_aw2naomi/naomi_1/Sports_Jam.zip" size="87274124" />
+		<title_clean>Sports Jam</title_clean>
+		<plot>Sports Jam contains many sports games that can be played by a single player or as multi-player games. Players can select from a great range of sporting games.[CR]Sports include 3 point shoot out, a basketball game in which the player needs both speed and accuracy to sink as many 3 point shots as possible in the time allowed, and Touch down derby, an American football game where the player attempts to return a kickdown all the way for a touchdown.</plot>
+		<genre>Sports</genre>
+		<studio>Sega</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/de08a214-ccd0-4890-b168-3def6f28bd10.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/3125075f-5e7f-44dc-91ee-c30ba3970eee.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/6e25c278-7450-4e56-b3bf-bc6ba1b45aab.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/eab10fa5-0ca6-4774-8668-967ca9a1cf15.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/b0e0aca0-1ec7-4adc-836a-8d410003ad34.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/379b1e68-d560-45c8-8680-87d43de898c3.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/a13c199a-ebab-434d-82ea-a7ef62e2230b.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/bec1c12c-a800-4389-b8de-6cd4c13902a1.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/b234d66c-a98c-4737-9a4e-65368547dec9.png</snapshot4>
+		<fanart1>https://images.launchbox-app.com/333ec02e-64f6-409c-9f6a-1bed2aeda900.jpg</fanart1>
+		<banner1>https://images.launchbox-app.com/bae2f7e3-9bfe-40af-97a1-70ee13cbf328.png</banner1>
+		<banner2>https://images.launchbox-app.com/b793570b-b376-499f-a2c6-e050c422cea1.png</banner2>
+		<banner3>https://images.launchbox-app.com/669a2e0a-6019-48a5-b8f7-3b3fdc83b8a0.jpg</banner3>
+		<clearlogo1>https://images.launchbox-app.com/5715a6ed-c063-4686-b66f-b37e9dd98ac7.png</clearlogo1>
+	</game>
+	<game name="Street Fighter Zero 3 Upper">
+		<description>Street Fighter Zero 3 Upper</description>
+		<rom crc="b657d4e5" name="naomi_aw2naomi/naomi_1/Street_Fighter_Zero_3_Upper.zip" size="69836855" />
+		<title_clean>Street Fighter Zero 3 Upper</title_clean>
+		<plot>Street Fighter Zero 3 is the third game in the Street Fighter Alpha series, following Street Fighter Alpha: Warriors' Dreams and Street Fighter Alpha 2. The gameplay system from the previous Alpha games was given a complete overhaul with the addition of three selectable fighting styles based on Street Fighter Alpha: Warriors' Dreams (A-ism), Street Fighter Alpha 2 (V-ism), and Super Street Fighter II Turbo (X-ism), new stages, over 7 new and returning characters, and a new and exclusive soundtrack for the game.[CR]The game illustrations, select screens, soundtrack, sound effects, etc, all have a similar style to the Final Fight series, unlike the previous games.[CR]Street Fighter Zero 3 Upper discards the Manual and Auto modes from the previous Alpha games by offering the player three different playing styles known as "isms." The standard playing style, A-ism (or Z-ism in Japan), is based on the previous games, in which the player has a three-level Super Combo gauge with access to several Super Combo moves. X-ism is a simple style based on Super Street Fighter II Turbo, in which the player has a single-level Super Combo gauge and access to a single, but powerful, Super Combo move. The third style, V-ism (or variable style), a unique style that allows the player to perform Custom Combos similar to the ones in Street Fighter Alpha 2. In X-ism, players cannot air-block nor use Alpha Counters.  The game also introduces a Guard Power gauge which depletes each time the player blocks - everytime the gauge is completely depleted, the player suffers a "guard crush" (in which the gauge itself decreases in size, thus causing the player to gradatively lose ability to block attacks as the guard gauge keeps decreasing) which leaves him/her temporarily vulnerable for an attack.</plot>
+		<genre>Fighting</genre>
+		<studio>Capcom</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/011e36f5-47a2-4b8d-abb2-e797e2b43d17.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/ab6e266b-58ef-4c73-ba65-450446d54424.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/d685d9e5-8e6f-4265-96eb-112861ff3b68.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/88e2fac6-cc64-42e1-828c-8ef381ee767e.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/47c031a4-27b6-4348-be26-2a172a43f61c.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/d1ae9560-b130-493b-b051-4c026bcf83c7.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/a5569c69-dc43-45a0-8f03-583efd61a85a.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/5ffa6806-bd58-4a96-a2fc-91443bf9bd97.jpg</banner1>
+		<banner2>https://images.launchbox-app.com/24a8ea67-93c6-42ac-ab9c-1f50e6431e72.png</banner2>
+		<clearlogo1>https://images.launchbox-app.com/4f26822c-7de6-41fe-a14b-168b58930261.png</clearlogo1>
+	</game>
+	<game name="Super Shanghai 2005">
+		<description>Super Shanghai 2005</description>
+		<rom crc="7425ab60" name="naomi_aw2naomi/naomi_1/Super_Shanghai_2005.zip" size="32187370" />
+		<title_clean>Super Shanghai 2005</title_clean>
+		<genre>Puzzle</genre>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/b5c64b4a-156b-4a8f-b1e5-db0279922ed2.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/bc5e6b4c-0eae-426a-b49f-38b5cbda3625.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/928f543e-88e5-4c45-b2d8-bb341e3ede0e.png</boxart3>
+		<banner1>https://images.launchbox-app.com/d4937177-54e0-403b-b311-0fabb7d23f3b.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/4ce4f09f-d5f7-44d8-abfa-17f133723f26.png</clearlogo1>
+	</game>
+	<game name="Super Shanghai 2005 (Rev A)">
+		<description>Super Shanghai 2005 (Rev A)</description>
+		<rom crc="97ada8d9" name="naomi_aw2naomi/naomi_1/Super_Shanghai_2005_Rev_A.zip" size="32812996" />
+		<title_clean>Super Shanghai 2005</title_clean>
+		<plot>Super Shanghai 2005 is a mahjong game released for Sega NAOMI in 2005.</plot>
+		<genre>Puzzle</genre>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/b5c64b4a-156b-4a8f-b1e5-db0279922ed2.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/bc5e6b4c-0eae-426a-b49f-38b5cbda3625.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/928f543e-88e5-4c45-b2d8-bb341e3ede0e.png</boxart3>
+		<banner1>https://images.launchbox-app.com/d4937177-54e0-403b-b311-0fabb7d23f3b.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/4ce4f09f-d5f7-44d8-abfa-17f133723f26.png</clearlogo1>
+	</game>
+	<game name="Tetris Kiwamemichi">
+		<description>Tetris Kiwamemichi</description>
+		<rom crc="7ef18bb3" name="naomi_aw2naomi/naomi_1/Tetris_Kiwamemichi.zip" size="33418862" />
+		<title_clean>Tetris Kiwamemichi</title_clean>
+		<plot>Tetris Kiwamemichi looks very similar to Tetris DS, as well as Tetris Advance. The game includes a two player co-op and versus mode. Infinity is included, but can be disabled. Like the gameboy tetris versions, this game features a post entry delay, that lets you move and rotate a piece before it starts to drop. This significantly decreases the difficulty of 20G play.</plot>
+		<genre>Puzzle</genre>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/b0f66d2f-ec20-433f-86aa-abd5a7980b3f.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/ae21bded-c69b-40d7-bd40-50e9249a5f7c.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/058fdf50-0258-4599-a2ca-cc5734f8804c.png</boxart3>
+		<clearlogo1>https://images.launchbox-app.com/ef8678cb-2986-40bf-915e-6ab9917ec00b.png</clearlogo1>
+	</game>
+	<game name="The Typing Of The Dead">
+		<description>The Typing Of The Dead</description>
+		<rom crc="37a251e7" name="naomi_aw2naomi/naomi_1/The_Typing_Of_The_Dead.zip" size="82271140" />
+		<title_clean>The Typing Of The Dead</title_clean>
+		<plot>The Typing of the Dead is an arcade game that was developed by WOW Entertainment and published by Sega for the NAOMI hardware. The game was released in Japanese arcades in 1999 and was ported to the Sega Dreamcast in 2001 by Smilebit.[CR]The Typing of the Dead is a modification of Sega's 1998 light gun arcade game The House of the Dead 2 in which the gun is replaced by a computer keyboard. The player takes the role of a secret agent in a zombie-infested Venice and must quickly type letters, words and phrases in order to kill fast-advancing enemies.[CR]Despite falling under the criteria of 'edutainment', the game was lauded by mainstream game critics for its humor, difficulty and originality.</plot>
+		<genre>Shooter</genre>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/53d30912-e92f-4675-89a3-51db9faa6b6d.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/48c5ffed-dd0b-4b99-bbb2-3e5a6ad6f36e.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/3a85ef5b-6d52-47d6-8bf2-f29984aec912.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/eeaeb953-21a5-40de-ad83-1ccf544ccfc9.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/19df751c-74ff-41c4-b19e-3bac83308f52.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/4988e8a5-c149-47fc-baec-24ff553ef8bc.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/8c72b317-2ce6-480c-9278-9b070b425035.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/773db78b-de76-4ee7-8ec5-a56693ff1d48.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/44200302-79c9-4cc2-8663-f58366637119.png</clearlogo1>
+	</game>
+	<game name="Tokyo Bus Tour">
+		<description>Tokyo Bus Tour</description>
+		<rom crc="82d09668" name="naomi_aw2naomi/naomi_1/Tokyo_Bus_Tour.zip" size="75091973" />
+		<title_clean>Tokyo Bus Tour</title_clean>
+		<plot>Tokyo Bus Tour is a driving game where the player assumes the role of a bus driver who gives passengers a tour of Tokyo, Japan.</plot>
+		<genre>Driving</genre>
+		<studio>Fortyfive</studio>
+		<boxart1>https://images.launchbox-app.com/b56963d1-b5ff-4b57-a4a7-3433fb103483.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/49620d6c-3fb0-4c83-a6b6-be5612b07ba5.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/1003e5e1-5096-406d-b3aa-894d6c7027ef.jpg</boxart3>
+		<boxart4>https://images.launchbox-app.com/338292e2-0a49-41d0-bfe5-9d26ccc3b52e.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/a1a33a62-83aa-4d09-b6fb-da77d30616cc.png</boxart5>
+		<boxart6>https://images.launchbox-app.com/8341d286-1543-4ac2-ae62-ecf68babd8e3.png</boxart6>
+		<snapshot1>https://images.launchbox-app.com/c342ac45-ae96-46ce-8234-a8baa3ce1b12.jpg</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/03b06662-ccfb-48bb-a2db-20974031fa28.jpg</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/c55f9a07-a6bc-4d56-acab-4277be52920f.jpg</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/0ef5c28a-9551-442b-b196-9a0188065a2f.png</clearlogo1>
+	</game>
+	<game name="Toy Fighter">
+		<description>Toy Fighter</description>
+		<rom crc="76add0c1" name="naomi_aw2naomi/naomi_1/Toy_Fighter.zip" size="37727313" />
+		<title_clean>Toy Fighter</title_clean>
+		<plot>Toy Fighter is a Sega NAOMI versus fighting game released in 1999. Plans were supposedly put in place to release this game on the Sega Dreamcast, though were shelved for unknown reasons</plot>
+		<genre>Fighting</genre>
+		<year>1999</year>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/0ed7a46f-ffba-404a-8ad3-a6798a20b56f.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/d88003e9-5373-430b-ad01-f4fadf0c5fba.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/a0322f9f-a32d-44c4-a0e5-a507b241aaa5.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/d71c9b54-855c-4ec6-bc58-50e24dfbd963.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/5ec6ae07-a361-4b25-a3d1-a8c09dcec996.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/6886bd1b-1ddd-4351-a409-400da89028a5.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/4f5be6f9-bac1-4a0b-ac02-9ff0e48ee39f.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/c27ad6f7-e787-4a97-87e8-a86a18545610.png</snapshot4>
+		<banner1>https://images.launchbox-app.com/de4665e6-173b-474a-94cc-b78893c83d2a.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/121cc12c-fc21-4dc0-a873-b9e4f5dddbc5.png</clearlogo1>
+	</game>
+	<game name="Trigger Heart Exelica">
+		<description>Trigger Heart Exelica</description>
+		<rom crc="521110e6" name="naomi_aw2naomi/naomi_1/Trigger_Heart_Exelica.zip" size="55426946" />
+		<title_clean>Trigger Heart Exelica</title_clean>
+		<plot>Triggerheart Exelica is a vertically scrolling shoot 'em up developed by Warashi for the Sega NAOMI platform. The game was first released in Japanese arcades in May 2006, and was later ported to the Sega Dreamcast, becoming the system's penultimate licensed title when it was released in Japan on February 22, 2007-only two weeks prior to Karous.</plot>
+		<studio>Warashi</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Triggerheart_Exelica</wiki_url>
+		<boxart1>https://images.launchbox-app.com/0f719b58-6ed8-4bc2-bbfe-7c9f635f42ab.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/69b2678c-aa4b-4a27-bb1c-a803fe44c261.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/95bb45c5-8883-491c-be7c-478b0c2f964f.png</boxart3>
+		<snapshot1>https://images.launchbox-app.com/877712f7-f0b4-41c9-bb9d-e6d0f6be44ac.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/cdcbc8e3-bc85-45e4-b45b-c4bb5221954d.png</snapshot2>
+		<clearlogo1>https://images.launchbox-app.com/b3c296b1-e919-4ac0-993f-b85d181896c8.png</clearlogo1>
+	</game>
+	<game name="Trizeal">
+		<description>Trizeal</description>
+		<rom crc="ad7f7e27" name="naomi_aw2naomi/naomi_1/Trizeal.zip" size="82899940" />
+		<title_clean>Trizeal</title_clean>
+		<plot>Trizeal is a Japanese shoot 'em up arcade game developed by Triangle Service.[CR]Players control and can transform a spaceship into three forms (which alternates weapon attacks), working through multiple levels and boss sequences. The game can be played in four different screen modes, with one mode mimicking the narrow arcade version. A ship from Triangle Service's previous release, XII Stag, is hidden in the game and can be unlocked by holding the X button before selecting a stage in Stage Attack mode. The power-ups can be used to upgrade each separate weapon respectively.[CR]There are 6 levels in the game, they get progressively harder until the last stage which consists of only two bosses. Two unlockable modes become available when the game is completed, they are Omake mode and Lifting mode. Omake mode is a short level which has denser bullet patterns than the normal game, lifting mode is where you have to juggle a stone on your ship to score points</plot>
+		<genre>Shooter</genre>
+		<nplayers>1</nplayers>
+		<boxart1>https://images.launchbox-app.com/c60abbe1-9f1f-4e3a-a10f-962396a338c4.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/6e359299-2009-456b-a200-5039de03646b.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/e94c8f75-7921-4757-97a6-7da38a93a003.png</boxart3>
+		<clearlogo1>https://images.launchbox-app.com/36a29724-e66e-430f-8db1-d9032215f2e5.png</clearlogo1>
+	</game>
+	<game name="Under Defeat">
+		<description>Under Defeat</description>
+		<rom crc="8c952f31" name="naomi_aw2naomi/naomi_1/Under_Defeat.zip" size="112478643" />
+		<title_clean>Under Defeat</title_clean>
+		<plot>Under Defeat is a shoot 'em up arcade game by G.rev. It was released for the Sega Dreamcast in March 2006. The game takes place in an alternate reality based on World War II, and, in a controversial twist, players control German-speaking characters (under the banner of "the Empire"), fighting against enemies ("the Union") that speak English and possess weapons patterned after those of both real-life Allied and Axis powers (for example, naval units in Level 2 bear heavy resemblance toward the Imperial Japanese warships). The game was released very late in the life of the Dreamcast, but sold much better than expected, probably because there were no other home ports planned in the foreseeable future.</plot>
+		<studio>G.Rev</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Under_Defeat</wiki_url>
+		<boxart1>https://images.launchbox-app.com/c56a2f05-69ac-4a1e-82d7-6e94b1a92fc6.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/72294219-2937-4ced-9228-32effe2b712b.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/2c973085-22f5-4f53-ae73-0cea58b92a1b.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/6cc15ff6-e21c-471e-94ea-a87a43f177e7.png</boxart4>
+		<clearlogo1>https://images.launchbox-app.com/0531b800-2b36-467b-81c3-7f162eea0591.png</clearlogo1>
+	</game>
+	<game name="Usagui - Yamashiro Mahjong Hen">
+		<description>Usagui - Yamashiro Mahjong Hen</description>
+		<rom crc="5a4f9241" name="naomi_aw2naomi/naomi_1/Usagui_Yamashiro_Mahjong_Hen.zip" size="66631604" />
+		<title_clean>Usagui - Yamashiro Mahjong Hen</title_clean>
+		<plot>Usagi: Yasei no Touhai: Yamashiro Mahjong Hen is a mahjong game developed by Warashi and published by Taito for the Sega NAOMI arcade system. It is based on the manga Usagi Yasei no Tohai by Makoto Ito.</plot>
+		<genre>Board Game</genre>
+		<studio>Warashi / Mahjong Kobo / Taito</studio>
+		<nplayers>1</nplayers>
+		<boxart1>https://images.launchbox-app.com/84d4fef1-8c0f-4033-b1d7-bc66e865468d.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/77c14d3f-cdaf-4b04-88ac-2c7d116e4b9b.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/b011e571-87bd-49cc-a00a-42862054a9b8.png</boxart3>
+		<snapshot1>https://images.launchbox-app.com/730569c6-3e67-4183-9558-cb12edf9375c.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/6787b1bb-c0c5-466c-88a7-87585d0a8c31.png</snapshot2>
+		<clearlogo1>https://images.launchbox-app.com/57d9c788-55f5-40e1-86e1-7de26c63d2f2.png</clearlogo1>
+	</game>
+	<game name="Virtua Athlete">
+		<description>Virtua Athlete</description>
+		<rom crc="2d4abd21" name="naomi_aw2naomi/naomi_1/Virtua_Athlete.zip" size="42978590" />
+		<title_clean>Virtua Athlete</title_clean>
+		<plot>Virtua Athlete is a sports game developed by Hitmaker and published by Sega for the Sega NAOMI arcade system. It is based on the Dreamcast game Virtua Athlete 2K, released a year earlier.</plot>
+		<genre>Sports</genre>
+		<studio>Sega</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/42d1945d-df88-4a6f-82e3-304fffc0784a.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/06aff738-286a-4f34-bf03-6626a76c9e0b.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/2fa9f27e-ecae-496b-a209-5c6f3b98b0dd.png</boxart3>
+		<snapshot1>https://images.launchbox-app.com/61d15a3d-4d51-4e62-a44c-1276007b9f30.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/7e0f9af8-80f4-4dfe-bcb9-54cf52688014.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/bcea3672-ee1b-41ea-9805-dbc554398dbe.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/635773c9-a442-4914-b279-ded6f4d24bde.png</banner1>
+		<banner2>https://images.launchbox-app.com/044c9f41-31b0-46c2-bd22-0e22fb01b8df.png</banner2>
+		<clearlogo1>https://images.launchbox-app.com/067ab008-6094-4515-a9ef-1afa7ad6d3bd.png</clearlogo1>
+	</game>
+	<game name="Virtua Golf">
+		<description>Virtua Golf</description>
+		<rom crc="ebd0c10b" name="naomi_aw2naomi/naomi_1/Virtua_Golf.zip" size="39123599" />
+		<title_clean>Virtua Golf</title_clean>
+		<plot>Dynamic Golf is a Sports game, developed by Wow Entertainment and published by Sega, which was released in 2001</plot>
+		<year>2001</year>
+		<genre>Sports</genre>
+		<studio>Sega</studio>
+		<nplayers>1</nplayers>
+		<boxart1>https://images.launchbox-app.com/b995136c-f18e-4ee0-814b-390e1910a608.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/dc67c83d-2a4e-4072-8ec2-7ff431208475.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/dygolf.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/193d4163-12b6-4d3c-bea2-21bdc8bc4afe.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/5573b515-ce58-47b4-9a7e-d8affb6f9305.png</boxart5>
+		<banner1>https://images.launchbox-app.com/fd494976-cd87-41d3-91a7-eda52988d89c.jpg</banner1>
+	</game>
+	<game name="Virtua NBA">
+		<description>Virtua NBA</description>
+		<rom crc="4ea26eaa" name="naomi_aw2naomi/naomi_1/Virtua_NBA.zip" size="96853301" />
+		<title_clean>Virtua NBA</title_clean>
+		<plot>Virtua NBA is a basketball game released for Sega NAOMI arcade hardware in 2000.</plot>
+		<genre>Sports</genre>
+		<studio>Sega</studio>
+		<year>2000</year>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/257fdfb4-7ee4-45be-8e39-ee2489db73ad.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/2ebd84fc-75f0-4c9f-933d-9756bc86306b.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/92cc6289-0178-4c0f-8fc0-58ec0194e9d8.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/500aa07e-68ff-4b12-8b72-ed9530cecffc.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/db2b212e-89e7-41fd-9576-23d826d1a871.png</boxart5>
+		<boxart6>https://images.launchbox-app.com/0c56e443-3853-405c-a117-e169b591d56d.png</boxart6>
+		<snapshot1>https://images.launchbox-app.com/fc193a96-349d-4729-bac3-d774c2b28dfa.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/6f6a018c-e111-4274-963b-43ea19cc5247.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/ed39e6c6-71fa-42f0-9f36-f066a6ed42a4.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/8bc0fbe1-80fb-4865-ad9e-a87924ff99b6.png</snapshot4>
+		<snapshot5>https://images.launchbox-app.com/5728bdd4-f6b9-467e-9f93-64947a2893c5.png</snapshot5>
+		<snapshot6>https://images.launchbox-app.com/aed0978a-1853-4c7c-9a9d-e897ee8ea250.png</snapshot6>
+		<banner1>https://images.launchbox-app.com/4419b5bc-e58d-4742-9770-1149b8f53fba.png</banner1>
+		<banner2>https://images.launchbox-app.com/93081e7d-d90f-4abc-8b21-c0fe7b248efd.png</banner2>
+		<clearlogo1>https://images.launchbox-app.com/41459fbe-dc91-4e6d-b010-8ff5e9cb0651.png</clearlogo1>
+	</game>
+	<game name="Virtua Striker 2 (Ver 2000)">
+		<description>Virtua Striker 2 (Ver 2000)</description>
+		<rom crc="d76d8e4a" name="naomi_aw2naomi/naomi_1/Virtua_Striker_2_Ver_2000.zip" size="52312017" />
+		<title_clean>Virtua Striker 2</title_clean>
+		<plot>The Virtua Striker 2 is an arcade-style football/soccer sports games by Sega.[CR]A critic for Next Generation applauded the original Virtua Striker 2 as both excellent to play and watch. He cited the smooth and accurate control, realistic player moves, camera which consistently zooms in or out to the perfect frame at every moment of play, gorgeous texture-mapped players and backgrounds, and realistically strong defense.</plot>
+		<genre>Sports</genre>
+		<studio>Sega</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/26731c7c-af9e-49a9-b883-c2f2ad559ad2.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/bc30bf3d-f4c2-4d9c-8724-3a56b962e133.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/aeb66816-6c2b-414b-be8a-3a25d0d7e1b2.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/367e6687-483d-430f-950c-73fc38b4c8b7.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/4931ba89-2bfa-4aea-bd92-b21f310131e6.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/8238c9e7-68d9-4354-9cd8-0829643adb3a.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/4ecd3de2-66ec-4df0-99e8-aff9deaf5022.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/f2e1ad59-e7f9-467e-90b8-e96dd166f4fc.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/95fc5d9b-f000-439a-a5ef-4a6b0a555300.png</banner1>
+		<banner2>https://images.launchbox-app.com/047e77c0-99ad-49d2-a743-7a822230917a.png</banner2>
+		<clearlogo1>https://images.launchbox-app.com/f2307191-1bc0-4140-8241-22bb4f1c99fd.png</clearlogo1>
+	</game>
+	<game name="Virtua Tennis">
+		<description>Virtua Tennis</description>
+		<rom crc="74458b8f" name="naomi_aw2naomi/naomi_1/Virtua_Tennis.zip" size="24354721" />
+		<title_clean>Virtua Tennis</title_clean>
+		<plot>Virtua Tennis (Power Smash in Japan) is a 1999 tennis arcade game created by Sega-AM3. The player competes through tennis tournaments in an arcade mode. For the home console market the game was expanded with the introduction of the campaign mode. It was later ported to Dreamcast in 2000, and for Microsoft Windows in 2002. A Game Boy Advance version was also released in 2002.</plot>
+		<genre>Sports</genre>
+		<studio>Sega AM-3</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Virtua_Tennis</wiki_url>
+		<boxart1>https://images.launchbox-app.com/c4e8640d-2ff6-474a-87ca-9bc3ff33e558.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/072e7d4f-5658-4a6f-89d9-1f8686202c4c.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/e5a91a18-4342-4403-9dbf-1b2854f946c1.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/a9451b17-ed7f-4c26-ab87-8877deead226.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/2881781c-5c09-414e-aa8e-988ab2f70cbe.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/38fd7e23-874e-4c51-b5e7-8193eef7f8b0.png</snapshot2>
+		<banner1>https://images.launchbox-app.com/7aa958eb-40bc-4562-9cc0-cc58b07b0f08.png</banner1>
+		<banner2>https://images.launchbox-app.com/2ee4b19e-fb65-49b7-9293-79a4304706e6.png</banner2>
+		<clearlogo1>https://images.launchbox-app.com/d711d1ff-e983-4d96-affd-2213292fd913.png</clearlogo1>
+	</game>
+	<game name="Virtua Tennis 2">
+		<description>Virtua Tennis 2</description>
+		<rom crc="3f34fbec" name="naomi_aw2naomi/naomi_1/Virtua_Tennis_2.zip" size="74613754" />
+		<title_clean>Virtua Tennis 2</title_clean>
+		<plot>Virtua Tennis (Power Smash in Japan) is a 1999 tennis arcade game created by Sega-AM3. The player competes through tennis tournaments in an arcade mode. For the home console market the game was expanded with the introduction of the campaign mode. It was later ported to Dreamcast in 2000, and for Microsoft Windows in 2002. A Game Boy Advance version was also released in 2002.</plot>
+		<genre>Sports</genre>
+		<studio>Sega AM-3</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Virtua_Tennis</wiki_url>
+		<boxart1>https://images.launchbox-app.com/c4e8640d-2ff6-474a-87ca-9bc3ff33e558.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/072e7d4f-5658-4a6f-89d9-1f8686202c4c.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/e5a91a18-4342-4403-9dbf-1b2854f946c1.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/a9451b17-ed7f-4c26-ab87-8877deead226.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/2881781c-5c09-414e-aa8e-988ab2f70cbe.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/38fd7e23-874e-4c51-b5e7-8193eef7f8b0.png</snapshot2>
+		<banner1>https://images.launchbox-app.com/7aa958eb-40bc-4562-9cc0-cc58b07b0f08.png</banner1>
+		<banner2>https://images.launchbox-app.com/2ee4b19e-fb65-49b7-9293-79a4304706e6.png</banner2>
+		<clearlogo1>https://images.launchbox-app.com/d711d1ff-e983-4d96-affd-2213292fd913.png</clearlogo1>
+	</game>
+	<game name="Virtual On Oratorio Tangram">
+		<description>Virtual On Oratorio Tangram</description>
+		<rom crc="6545e17b" name="naomi_aw2naomi/naomi_1/Virtual_On_Oratorio_Tangram.zip" size="86199141" />
+		<title_clean>Virtual On Oratorio Tangram</title_clean>
+		<plot>Virtual-On Oratorio Tangram is an arcade game for the Sega NAOMI. Oratorio Tangram is a 3D fighting game where the player assumes control of a giant humanoid robot. It is a sequel to the 1995 video game Virtual On: Cyber Troopers.</plot>
+		<genre>Shooter</genre>
+		<boxart1>https://images.launchbox-app.com/bdff0eeb-5e9c-44c8-b9bd-e285ebc897fd.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/fa63147f-2580-4ce1-a00f-ee2717aa817e.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/3de2961a-b687-4f93-9790-6f77b14a153e.png</boxart3>
+		<snapshot1>https://images.launchbox-app.com/b73c7eed-b945-4975-a9ab-e85e49a5ef2e.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/176697ef-3982-46db-affb-666b7199bb46.png</snapshot2>
+		<banner1>https://images.launchbox-app.com/a821f570-e7db-4652-a810-cfae185ad4fe.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/3fe86238-584f-4709-a996-c271436ffc47.png</clearlogo1>
+	</game>
+	<game name="WWF Royal Rumble">
+		<description>WWF Royal Rumble</description>
+		<rom crc="88801c03" name="naomi_aw2naomi/naomi_1/WWF_Royal_Rumble.zip" size="99151674" />
+		<title_clean>WWF Royal Rumble</title_clean>
+		<plot>WWF Royal Rumble is a professional wrestling video game released by LJN in 1993 for the Super NES and Sega Genesis. Like its predecessor, WWF Super WrestleMania it is based on the World Wrestling Federation (WWF). It features a variety of match types, including the newly added Royal Rumble match. The game's roster consists of wrestlers who were top stars in the WWF at the time, and each version of the game has five exclusive playable characters.</plot>
+		<studio>Sculptured Software</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/WWF_Royal_Rumble_(1993_video_game)</wiki_url>
+		<boxart1>https://images.launchbox-app.com/ccbbe06b-16a5-4cde-a100-18ea95aa2324.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/a905f60b-d638-475b-89ae-fd45a1787e60.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/07b70574-6119-4f2b-a9b2-63c604e024c8.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/e8bddc3e-aec9-489e-921c-64114af1ff05.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/cf3f81e9-c26c-409e-832e-44ccc0337eac.png</boxart5>
+		<boxart6>https://images.launchbox-app.com/e1bf3656-b22e-4f85-9978-502bf4ff3910.png</boxart6>
+		<snapshot1>https://images.launchbox-app.com/73e9c7b0-bf71-4532-8bf9-46d8be80599a.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/04a42e63-f41d-4396-ab09-adc6ac506910.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/1ac8e7c0-b9b0-4656-8096-62ffb0d6b4c1.png</snapshot3>
+		<banner1>https://images.launchbox-app.com/1d92fcaa-ae76-4f92-9758-67faae0180b9.png</banner1>
+		<banner2>https://images.launchbox-app.com/7a827aa9-1d4e-4bfa-a7e4-0891e176459b.png</banner2>
+		<clearlogo1>https://images.launchbox-app.com/054ce439-ce3e-4cec-868f-215d412d4983.png</clearlogo1>
+	</game>
+	<game name="Wave Runner GP">
+		<description>Wave Runner GP</description>
+		<rom crc="d8c98978" name="naomi_aw2naomi/naomi_1/Wave_Runner_GP.zip" size="39929183" />
+		<title_clean>Wave Runner GP</title_clean>
+		<plot>Wave Runner GP is a jet ski racing game by Sega and AM1 [CR]This is a racing game which does something different from other arcade racers, but does lack in areas and originality. You actually get to ride a replica of a Yamaha WaveRunner on water, while you race against other 7 other opponents. The game plays like Sega Rally Championship around some veins, but does something different which makes the game fresh, such as riding on a jet ski instead of cars. The game also relies on doing tricks on ramps which somewhat affects your scoring. There are three courses in game, ranging from Novice (beginner course), Intermediate (advanced course), and the Expert course.</plot>
+		<genre>Racing</genre>
+		<studio>Sega</studio>
+		<nplayers>1</nplayers>
+		<boxart1>https://images.launchbox-app.com/47c529fc-d878-4988-9c34-6144aee1a983.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/92620d44-a066-45af-9f79-f14caac5f35b.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/5258553d-2457-4cc2-8cca-94d69ba22046.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/73cfd28d-9985-4386-9c5f-806fa3dc73d9.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/7586d1af-642f-4dbb-b2d3-465f0d1190f0.png</boxart5>
+		<boxart6>https://images.launchbox-app.com/503c8427-77b2-4b2b-a467-1a7bb2418a96.png</boxart6>
+		<snapshot1>https://images.launchbox-app.com/22a6c6a7-10f5-4918-b2b2-e479188e8f54.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/d2acc969-af5c-4cf5-afb6-d83114821556.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/50daea51-c99f-481d-905d-8e49d99bd657.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/61164209-1f31-4d0d-9d67-a52fa5199274.png</clearlogo1>
+	</game>
+	<game name="World Series BaseBall">
+		<description>World Series BaseBall</description>
+		<rom crc="f13f777d" name="naomi_aw2naomi/naomi_1/World_Series_BaseBall.zip" size="127157584" />
+		<title_clean>World Series BaseBall</title_clean>
+		<plot>World Series BaseBall is a baseball game released for Sega NAOMI arcade hardware in 2001.</plot>
+		<genre>Sports</genre>
+		<year>2001</year>
+		<studio>Sega</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://images.launchbox-app.com/5a60185c-a2bd-437a-bd60-ede71407f962.jpg</boxart1>
+		<boxart2>https://images.launchbox-app.com/64fb71df-8261-47e0-8b27-9ca616ac08fc.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/bcefe5be-7820-49bd-bac8-8e57599026e6.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/a9a97ef2-0456-4c63-b9f1-ac329b099c0c.png</boxart4>
+		<snapshot1>https://images.launchbox-app.com/88c7d80e-a911-4d1f-be47-ecf55f280813.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/161750b5-b2ea-4161-8cb7-635aac7f8910.png</snapshot2>
+		<banner1>https://images.launchbox-app.com/96dc241f-cbd9-4b83-8342-99e5e00a4d95.png</banner1>
+		<banner2>https://images.launchbox-app.com/9a5afcb8-2d08-4438-b0a4-9a29bea4f14a.png</banner2>
+		<clearlogo1>https://images.launchbox-app.com/2f4174b5-20ae-463d-b22a-c99619e292af.png</clearlogo1>
+	</game>
+	<game name="Zero Gunner 2">
+		<description>Zero Gunner 2</description>
+		<rom crc="fb218c91" name="naomi_aw2naomi/naomi_1/Zero_Gunner_2.zip" size="39177742" />
+		<title_clean>Zero Gunner 2</title_clean>
+		<plot>Zero Gunner 2 is a 3D multidirectional shooter developed by Psikyo as a sequel to Zero Gunner, the original arcade game. It was released for the Dreamcast in Japan in 2001.</plot>
+		<studio>Psikyo</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Zero_Gunner_2</wiki_url>
+		<boxart1>https://images.launchbox-app.com/d5cb617b-dbcf-411f-9034-10242e993a43.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/29bac6ad-b394-454d-9dc3-d60efdfe849b.png</boxart2>
+		<boxart3>https://images.launchbox-app.com/43ded9e8-14b9-462d-8e09-4d044964b156.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/949cda7c-4b66-4120-9882-a1ae2f646e09.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/9b79e614-3233-4a9a-aa26-1e462bb50371.png</boxart5>
+		<snapshot1>https://images.launchbox-app.com/4a71271e-eddd-4704-a556-20dbdec0227a.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/c197d8f6-5c92-4839-95b9-a77cba44160e.png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/248d2575-3a5d-4fd8-80d2-cf17408a8b3a.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/ac75380a-1644-45e8-862c-baf63e9e5bc7.png</snapshot4>
+		<banner1>https://images.launchbox-app.com/8f867b58-be12-4a39-82c4-0b95395b1ead.png</banner1>
+		<banner2>https://images.launchbox-app.com/0559f767-7dce-4706-8ded-c3d83d802371.png</banner2>
+		<clearlogo1>https://images.launchbox-app.com/5baf25fb-6f83-4d9d-ac30-75d013725740.png</clearlogo1>
+	</game>
+	<game name="Zombie Revenge">
+		<description>Zombie Revenge</description>
+		<rom crc="2b874eca" name="naomi_aw2naomi/naomi_1/Zombie_Revenge.zip" size="91296491" />
+		<title_clean>Zombie Revenge</title_clean>
+		<plot>Zombie Revenge is an arcade and Sega Dreamcast video game released in 1999, a Beat Em Up game. Armed with their fists, feet, and whatever weapons they should find along the way, players are tasked with ridding an unnamed city of zombies. Originally titled Blood Bullet: The House of the Dead Side Story, the game was later renamed Zombies Nightmare before Sega decided on the name Zombie Revenge.</plot>
+		<genre>Beat Em Up</genre>
+		<studio>Sega</studio>
+		<nplayers>2</nplayers>
+		<wiki_url>https://en.wikipedia.org/wiki/Zombie_Revenge</wiki_url>
+		<boxart1>https://images.launchbox-app.com/b4054d2a-6a23-4ec6-9a57-8482219ccb38.png</boxart1>
+		<boxart2>https://images.launchbox-app.com/5790cf55-f834-4e09-89a5-f83118a81842.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/23e90fec-a2a5-46cc-8db0-353db2cfcb8a.png</boxart3>
+		<boxart4>https://images.launchbox-app.com/35cc5c79-0e15-4bed-9653-ac217a8d8839.png</boxart4>
+		<boxart5>https://images.launchbox-app.com/28ad6b8d-7c7d-4a86-b7ed-12560b4c7a37.png</boxart5>
+		<boxart6>https://images.launchbox-app.com/b8caae87-2bd7-4fcd-9b10-59867aa808a6.png</boxart6>
+		<snapshot1>https://images.launchbox-app.com/8d8934bc-7a13-44e4-82a1-b91a1e44cbe7.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/5e4f8132-41be-4baf-857c-1d384b8b45b9.png</snapshot2>
+		<banner1>https://images.launchbox-app.com/2fa5942b-c3e0-4f4f-aed2-dec65a494386.png</banner1>
+		<clearlogo1>https://images.launchbox-app.com/99d272cd-5f16-41b7-a353-4daf0d0d6d7f.png</clearlogo1>
+	</game>
+</datafile>
