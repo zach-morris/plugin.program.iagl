@@ -16,15 +16,14 @@ Installation
 
 Do *NOT* use a third party installer, build, TVA Link, fusion installer, or other non-official means to install IAGL.  Doing so is akin to clubbing baby seals.
 
-~Install IAGL in one of these ways:~
+Install IAGL in one of these ways:
 
-~- Download the repository zipfile from here to install the addon and get automatic updates.~
+- Download the repository zipfile from [here](https://github.com/zach-morris/repository.zachmorris/raw/master/repository.zachmorris/repository.zachmorris-1.0.0.zip) to install the addon and get automatic updates.
 
-~or~
+or
 
-~- Download the latest version zipfile from here to install by zipfile.~
+- Download the latest version zipfile from [here](https://github.com/zach-morris/repository.zachmorris/tree/master/plugin.program.iagl) to install by zipfile.
 
-Until official release, just use the git main page & download zip link [here](https://github.com/zach-morris/plugin.program.iagl/archive/main.zip)
 
 Help
 -------------
