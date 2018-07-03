@@ -1,0 +1,41 @@
+<datafile>
+	<header>
+		<emu_name>REminiscence</emu_name>
+		<emu_description>Standalone Game</emu_description>
+		<emu_category>Port</emu_category>
+		<emu_version>07012018</emu_version>
+		<emu_date>07/01/2018</emu_date>
+		<emu_author>Gregory Montoir</emu_author>
+		<emu_visibility>visible</emu_visibility>
+		<emu_homepage>https://archive.org</emu_homepage>
+		<emu_baseurl>https://archive.org/download/</emu_baseurl>
+		<emu_launcher>external</emu_launcher>
+		<emu_default_addon>none</emu_default_addon>
+		<emu_ext_launch_cmd>none</emu_ext_launch_cmd>
+		<emu_downloadpath>default</emu_downloadpath>
+		<emu_postdlaction>unzip_to_folder_and_launch_file</emu_postdlaction>
+		<emu_comment>REminiscence, the Flashback game engine</emu_comment>
+		<emu_thumb>oiD7I6M.jpg</emu_thumb>
+		<emu_banner>2j81s0O.jpg</emu_banner>
+		<emu_fanart>aZAZiRp.jpg</emu_fanart>
+		<emu_logo>KCjUSho.png</emu_logo>
+		<emu_trailer>wNTnRM77XuE</emu_trailer>
+	</header>
+	<game name="REminiscence">
+		<description>REminiscence</description>
+		<rom name="reminiscence_files/REminiscence.zip" size="96769185" />
+		<title_clean>REminiscence</title_clean>
+		<plot>REminiscence is a recreation of the classic Flashback game engine by Gregory Montoir.[CR]Flashback is a 1992 science fiction cinematic platform game.  The game was directed, written/designed and partially programmed by Paul Cuisset, who had previously created the adventure game Future Wars.[CR]Originally advertised as a "CD-ROM game on a cartridge", the game features fully hand-drawn backdrops and all animation is rotoscoped, giving movements an unusual fluidity, similar to that of the earlier Prince of Persia. The capture technique of Flashback was invented independently of Prince of Persia and used a more complicated method of first tracing video images onto transparencies.[CR]The game was a commercial and critical success and was listed in the Guinness World Records as the best-selling French game of all time.</plot>
+		<year>1992</year>
+		<genre>Adventure</genre>
+		<nplayers>1</nplayers>
+		<videoid>wNTnRM77XuE</videoid>
+		<wiki_url>https://en.wikipedia.org/wiki/Flashback_(1992_video_game)</wiki_url>
+		<boxart1>oiD7I6M.jpg</boxart1>
+		<banner1>2j81s0O.jpg</banner1>
+		<snapshot1>UCQC4b3.png</snapshot1>
+		<snapshot2>ijhmvzg.png</snapshot2>
+		<fanart1>aZAZiRp.jpg</fanart1>
+		<emu_command>REminiscence.map</emu_command>
+	</game>
+</datafile>
