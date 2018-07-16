@@ -1458,7 +1458,7 @@ class iagl_utils(object):
 			with open(game_history_filename, 'wb') as fn:
 				# Pickle the 'data' dictionary using the highest protocol available.
 				# pickle.dump(games_dict, fn, pickle.HIGHEST_PROTOCOL)
-				json.dump(game_history_filename,fn)
+				json.dump(games_dict,fn)
 			xbmc.log(msg='IAGL:  Saving game history cache file', level=xbmc.LOGDEBUG)
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  Unable to save game history cache file %(cache_filename)s.  Exception %(exc)s' % {'cache_filename': game_history_filename,'exc': exc}, level=xbmc.LOGERROR)
