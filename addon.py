@@ -30,6 +30,7 @@ def iagl_main():
 	if not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_hidden_bool_tou')):
 		TOU_Dialog = iagl_TOUdialog('script-IAGL-TOU.xml',IAGL.get_addon_install_path(),'Default','1080i')
 		TOU_Dialog.doModal()
+		del TOU_Dialog
 		if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_hidden_bool_tou')):
 			IAGL.check_for_new_dat_files()
 			plugin.redirect('/archives/'+IAGL.archive_listing_settings_route)
@@ -37,6 +38,8 @@ def iagl_main():
 			xbmcplugin.endOfDirectory(plugin.handle)
 	else:
 		IAGL.check_for_new_dat_files()
+		IAGL.initialize_search_query()
+		IAGL.initialize_random_query()
 		plugin.redirect('/archives/'+IAGL.archive_listing_settings_route)
 
 @plugin.route('/archives/choose_from_list')
@@ -266,6 +269,7 @@ def get_game(game_list_id,game_id):
 	if IAGL.handle.getSetting(id='iagl_setting_default_action') == 'ROM Info Page':
 		IAGL_Dialog = iagl_infodialog('script-IAGL-infodialog.xml',IAGL.get_addon_install_path(),'Default','1080i',current_game=current_game)
 		IAGL_Dialog.doModal()
+		del IAGL_Dialog
 	elif IAGL.handle.getSetting(id='iagl_setting_default_action') == 'Download Only':
 		IAGL_DL = iagl_download(current_game['json']) #Initialize download object
 		download_and_process_success = IAGL_DL.download_and_process_game_files() #Download files
@@ -277,6 +281,7 @@ def get_game(game_list_id,game_id):
 				ok_ret = current_dialog.ok('Error','%(game_title)s download failed[CR]%(fail_reason)s' % {'game_title': IAGL_DL.current_game_title, 'fail_reason': IAGL_DL.download_fail_reason})
 		else:  #So far so good, now process the files
 			ok_ret = current_dialog.ok('Complete','%(game_title)s was successfully downloaded' % {'game_title': IAGL_DL.current_game_title})
+		del current_dialog
 	elif IAGL.handle.getSetting(id='iagl_setting_default_action') == 'Download and Launch':
 		IAGL_DL = iagl_download(current_game['json']) #Initialize download object
 		download_and_process_success = IAGL_DL.download_and_process_game_files() #Download files
@@ -288,6 +293,7 @@ def get_game(game_list_id,game_id):
 		else:
 			current_dialog = xbmcgui.Dialog()
 			ok_ret = current_dialog.ok('Error','%(game_title)s failed to launch[CR]%(fail_reason)s' % {'game_title': IAGL_DL.current_game_title, 'fail_reason': IAGL_DL.download_fail_reason})
+			del current_dialog
 	else:
 		xbmc.log(msg='IAGL:  Unkown default action in settings',level=xbmc.LOGERROR)
 
@@ -347,6 +353,7 @@ def update_game_list(game_list_id,setting_id):
 					current_dialog = xbmcgui.Dialog()
 					ok_ret = current_dialog.ok('Complete','Cache cleared for %(game_list_id)s' % {'game_list_id': game_list_id})
 					IAGL.delete_dat_file_cache()
+					del current_dialog
 			elif current_key == 'view_list_settings':
 				xbmc.log(msg='IAGL:  Show settings for game list %(game_list_id)s' % {'game_list_id': game_list_id}, level=xbmc.LOGDEBUG)
 				current_settings_text = IAGL.get_list_settings_text(current_game_list)
@@ -367,10 +374,666 @@ def update_game_item(game_list_id,game_id,setting_id):
 	else:
 		xbmc.log(msg='IAGL:  Unknown game context menu setting  %(setting_id)s' % {'setting_id': setting_id}, level=xbmc.LOGERROR)
 
+@plugin.route('/archives/search_menu')
+def search_games_menu():
+	xbmc.log(msg='IAGL:  Game Search menu called', level=xbmc.LOGDEBUG)
+	try:
+		current_query = json.loads(xbmcgui.Window(IAGL.windowid).getProperty('iagl_search_query'))
+	except:
+		xbmc.log(msg='IAGL:  Search query could not be loaded, resetting the query', level=xbmc.LOGDEBUG)
+		IAGL.initialize_search_query()
+		current_query = json.loads(xbmcgui.Window(IAGL.windowid).getProperty('iagl_search_query'))
+	for list_item in IAGL.get_search_menu_items_as_listitems(current_query):
+		if list_item.getLabel2() == 'execute_link':
+			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(generate_search_listitem),list_item, True)
+		elif list_item.getLabel2() == 'execute':
+			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(update_search_query, search_id=url_quote(list_item.getLabel2())),list_item, True)
+		else:
+			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(update_search_query, search_id=url_quote(list_item.getLabel2())),list_item, False)
+	xbmcplugin.endOfDirectory(plugin.handle)
+
+@plugin.route('/search_query/<search_id>')
+def update_search_query(search_id):
+	xbmc.log(msg='IAGL:  Query update for %(search_id)s called' % {'search_id':search_id}, level=xbmc.LOGDEBUG)
+	try:
+		current_query = json.loads(xbmcgui.Window(IAGL.windowid).getProperty('iagl_search_query'))
+	except:
+		xbmc.log(msg='IAGL:  Search query could not be loaded, resetting the query', level=xbmc.LOGDEBUG)
+		IAGL.initialize_search_query()
+		current_query = json.loads(xbmcgui.Window(IAGL.windowid).getProperty('iagl_search_query'))
+
+	input_query_types = ['title','tag']
+	list_query_types = ['lists']
+	filter_query_types = ['year','nplayers','genre','studio']
+
+	if search_id in input_query_types:
+		current_dialog = xbmcgui.Dialog()
+		new_value = current_dialog.input(xbmc.getInfoLabel('ListItem.Label'))
+		if len(new_value)>0:
+			current_query[search_id] = new_value
+		else:
+			current_query[search_id] = None
+		del current_dialog
+		xbmcgui.Window(IAGL.windowid).setProperty('iagl_search_query',json.dumps(current_query))
+		xbmc.executebuiltin('Container.Refresh')
+	if search_id in list_query_types:
+		current_game_lists = IAGL.get_game_lists()
+		try:
+			current_select = ['Any']+[x for x in current_game_lists.get('emu_name')]
+			current_filenames = [None]+[x for x in current_game_lists.get('dat_filename')]
+		except Exception as exc:
+			current_select = None
+			current_filenames = None
+			xbmc.log(msg='IAGL:  The game lists could not be found.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
+		if current_select is not None:
+			if current_query['lists'] is not None:
+				currently_selected_lists = [current_filenames.index(x) for x in current_query['lists']]
+			else:
+				currently_selected_lists = None
+			current_dialog = xbmcgui.Dialog()
+			if currently_selected_lists is not None:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_select,0,currently_selected_lists)
+			else:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_select)
+			del current_dialog
+			if ret1 is not None:
+				if 0 in ret1:
+					current_query['lists'] = None
+				else:
+					current_query['lists'] = [x for x in current_filenames if current_filenames.index(x) in ret1]
+		else:
+			current_query['lists'] = None
+		xbmcgui.Window(IAGL.windowid).setProperty('iagl_search_query',json.dumps(current_query))
+		xbmc.executebuiltin('Container.Refresh')
+
+	if search_id == 'genre':
+		current_genre_lists = None
+		if current_query['lists'] is None:
+			current_dialog = xbmcgui.Dialog()
+			ret1 = current_dialog.select('Filter genres for all lists?  This could take a while...', ['Yes','Cancel'])
+			del current_dialog
+			if ret1 == 0:
+				current_genre_lists = IAGL.get_genres_from_game_lists(current_query['lists'])
+			else:
+				current_genre_lists = None
+				xbmc.log(msg='IAGL:  User cancelled large genre query', level=xbmc.LOGDEBUG)
+		else:
+			if len(current_query['lists'])>10:
+				current_dialog = xbmcgui.Dialog()
+				ret1 = current_dialog.select('Filter genres for more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				del current_dialog
+				if ret1 == 0:
+					current_genre_lists = IAGL.get_genres_from_game_lists(current_query['lists'])
+				else:
+					current_genre_lists = None
+					xbmc.log(msg='IAGL:  User cancelled large genre query', level=xbmc.LOGDEBUG)
+			else:
+				current_genre_lists = IAGL.get_genres_from_game_lists(current_query['lists'])
+		if current_genre_lists is not None:
+			current_genre_lists = ['Any']+current_genre_lists
+			if current_query['genre'] is not None:
+				currently_selected_genres = [current_genre_lists.index(x) for x in current_query['genre']]
+			else:
+				currently_selected_genres = None
+			current_dialog = xbmcgui.Dialog()
+			if currently_selected_genres is not None:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_genre_lists,0,currently_selected_genres)
+			else:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_genre_lists)
+			del current_dialog
+			if ret1 is not None:
+				if 0 in ret1:
+					current_query['genre'] = None
+				else:
+					current_query['genre'] = [x for x in current_genre_lists if current_genre_lists.index(x) in ret1]
+		xbmcgui.Window(IAGL.windowid).setProperty('iagl_search_query',json.dumps(current_query))
+		xbmc.executebuiltin('Container.Refresh')
+
+	if search_id == 'nplayers':
+		current_players_lists = None
+		if current_query['lists'] is None:
+			current_dialog = xbmcgui.Dialog()
+			ret1 = current_dialog.select('Filter number of players for all lists?  This could take a while...', ['Yes','Cancel'])
+			del current_dialog
+			if ret1 == 0:
+				current_players_lists = IAGL.get_players_from_game_lists(current_query['lists'])
+			else:
+				current_players_lists = None
+				xbmc.log(msg='IAGL:  User cancelled large nplayers query', level=xbmc.LOGDEBUG)
+		else:
+			if len(current_query['lists'])>10:
+				current_dialog = xbmcgui.Dialog()
+				ret1 = current_dialog.select('Filter number of players for more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				del current_dialog
+				if ret1 == 0:
+					current_players_lists = IAGL.get_players_from_game_lists(current_query['lists'])
+				else:
+					current_players_lists = None
+					xbmc.log(msg='IAGL:  User cancelled large nplayers query', level=xbmc.LOGDEBUG)
+			else:
+				current_players_lists = IAGL.get_players_from_game_lists(current_query['lists'])
+		if current_players_lists is not None:
+			current_players_lists = ['Any']+current_players_lists
+			if current_query['nplayers'] is not None:
+				currently_selected_players = [current_players_lists.index(x) for x in current_query['nplayers']]
+			else:
+				currently_selected_players = None
+			current_dialog = xbmcgui.Dialog()
+			if currently_selected_players is not None:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_players_lists,0,currently_selected_players)
+			else:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_players_lists)
+			del current_dialog
+			if ret1 is not None:
+				if 0 in ret1:
+					current_query['nplayers'] = None
+				else:
+					current_query['nplayers'] = [x for x in current_players_lists if current_players_lists.index(x) in ret1]
+		xbmcgui.Window(IAGL.windowid).setProperty('iagl_search_query',json.dumps(current_query))
+		xbmc.executebuiltin('Container.Refresh')
+
+	if search_id == 'year':
+		current_year_lists = None
+		if current_query['lists'] is None:
+			current_dialog = xbmcgui.Dialog()
+			ret1 = current_dialog.select('Filter years for all lists?  This could take a while...', ['Yes','Cancel'])
+			del current_dialog
+			if ret1 == 0:
+				current_year_lists = IAGL.get_years_from_game_lists(current_query['lists'])
+			else:
+				current_year_lists = None
+				xbmc.log(msg='IAGL:  User cancelled large year query', level=xbmc.LOGDEBUG)
+		else:
+			if len(current_query['lists'])>10:
+				current_dialog = xbmcgui.Dialog()
+				ret1 = current_dialog.select('Filter years for more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				del current_dialog
+				if ret1 == 0:
+					current_year_lists = IAGL.get_years_from_game_lists(current_query['lists'])
+				else:
+					current_year_lists = None
+					xbmc.log(msg='IAGL:  User cancelled large year query', level=xbmc.LOGDEBUG)
+			else:
+				current_year_lists = IAGL.get_years_from_game_lists(current_query['lists'])
+		if current_year_lists is not None:
+			current_year_lists = ['Any']+current_year_lists
+			if current_query['year'] is not None:
+				currently_selected_years = [current_year_lists.index(x) for x in current_query['year']]
+			else:
+				currently_selected_years = None
+			current_dialog = xbmcgui.Dialog()
+			if currently_selected_years is not None:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_year_lists,0,currently_selected_years)
+			else:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_year_lists)
+			del current_dialog
+			if ret1 is not None:
+				if 0 in ret1:
+					current_query['year'] = None
+				else:
+					current_query['year'] = [x for x in current_year_lists if current_year_lists.index(x) in ret1]
+		xbmcgui.Window(IAGL.windowid).setProperty('iagl_search_query',json.dumps(current_query))
+		xbmc.executebuiltin('Container.Refresh')
+		
+	if search_id == 'studio':
+		current_studio_lists = None
+		if current_query['lists'] is None:
+			current_dialog = xbmcgui.Dialog()
+			ret1 = current_dialog.select('Filter studios for all lists?  This could take a while...', ['Yes','Cancel'])
+			del current_dialog
+			if ret1 == 0:
+				current_studio_lists = IAGL.get_studios_from_game_lists(current_query['lists'])
+			else:
+				current_studio_lists = None
+				xbmc.log(msg='IAGL:  User cancelled large studio query', level=xbmc.LOGDEBUG)
+		else:
+			if len(current_query['lists'])>10:
+				current_dialog = xbmcgui.Dialog()
+				ret1 = current_dialog.select('Filter studios for more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				del current_dialog
+				if ret1 == 0:
+					current_studio_lists = IAGL.get_studios_from_game_lists(current_query['lists'])
+				else:
+					current_studio_lists = None
+					xbmc.log(msg='IAGL:  User cancelled large studio query', level=xbmc.LOGDEBUG)
+			else:
+				current_studio_lists = IAGL.get_studios_from_game_lists(current_query['lists'])
+		if current_studio_lists is not None:
+			current_studio_lists = ['Any']+current_studio_lists
+			if current_query['studio'] is not None:
+				currently_selected_studios = [current_studio_lists.index(x) for x in current_query['studio']]
+			else:
+				currently_selected_studios = None
+			current_dialog = xbmcgui.Dialog()
+			if currently_selected_studios is not None:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_studio_lists,0,currently_selected_studios)
+			else:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_studio_lists)
+			del current_dialog
+			if ret1 is not None:
+				if 0 in ret1:
+					current_query['studio'] = None
+				else:
+					current_query['studio'] = [x for x in current_studio_lists if current_studio_lists.index(x) in ret1]
+		xbmcgui.Window(IAGL.windowid).setProperty('iagl_search_query',json.dumps(current_query))
+		xbmc.executebuiltin('Container.Refresh')
+
+	if search_id == 'execute':
+		if current_query['title'] is None:
+			current_dialog = xbmcgui.Dialog()
+			ok_ret = current_dialog.ok('Error','You must enter a title')
+			del current_dialog
+		else:
+			if current_query['lists'] is None:
+				current_dialog = xbmcgui.Dialog()
+				ret1 = current_dialog.select('Query all lists?  This could take a while...', ['Yes','Cancel'])
+				del current_dialog
+				if ret1 == 0:
+					plugin.run(['plugin://plugin.program.iagl/run_search/1/', '0', IAGL.get_query_as_url(current_query)])
+				else:
+					xbmc.log(msg='IAGL:  User cancelled large query', level=xbmc.LOGDEBUG)
+			else:
+				if len(current_query['lists'])>10:
+					current_dialog = xbmcgui.Dialog()
+					ret1 = current_dialog.select('Query more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+					del current_dialog
+					if ret1 == 0:
+						plugin.run(['plugin://plugin.program.iagl/run_search/1/', '0', IAGL.get_query_as_url(current_query)])
+					else:
+						xbmc.log(msg='IAGL:  User cancelled large query', level=xbmc.LOGDEBUG)
+				else:
+					plugin.run(['plugin://plugin.program.iagl/run_search/1/', '0', IAGL.get_query_as_url(current_query)])
+
+@plugin.route('/generate_search_item')
+def generate_search_listitem():
+	xbmc.log(msg='IAGL:  Generate search listitem called', level=xbmc.LOGDEBUG)
+	try:
+		current_query = json.loads(xbmcgui.Window(IAGL.windowid).getProperty('iagl_search_query'))
+	except:
+		xbmc.log(msg='IAGL:  Search query could not be loaded, resetting the query', level=xbmc.LOGDEBUG)
+		IAGL.initialize_search_query()
+		current_query = json.loads(xbmcgui.Window(IAGL.windowid).getProperty('iagl_search_query'))
+	create_listitem = False
+	if current_query['title'] is None:
+		current_dialog = xbmcgui.Dialog()
+		ok_ret = current_dialog.ok('Error','You must enter a title')
+		del current_dialog
+	else:
+		if current_query['lists'] is None:
+			current_dialog = xbmcgui.Dialog()
+			ret1 = current_dialog.select('Create a query for all lists?  This could take a while...', ['Yes','Cancel'])
+			del current_dialog
+			if ret1 == 0:
+				create_listitem = True
+			else:
+				xbmc.log(msg='IAGL:  User cancelled large query', level=xbmc.LOGDEBUG)
+		else:
+			if len(current_query['lists'])>10:
+				current_dialog = xbmcgui.Dialog()
+				ret1 = current_dialog.select('Query more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				del current_dialog
+				if ret1 == 0:
+					create_listitem = True
+				else:
+					xbmc.log(msg='IAGL:  User cancelled large query', level=xbmc.LOGDEBUG)
+			else:
+				create_listitem = True
+	default_label = 'IAGL Search %(query_value)s' % {'query_value':current_query['title']}
+	if create_listitem:
+		current_dialog = xbmcgui.Dialog()
+		new_value = current_dialog.input('Enter a label for your query',default_label)
+		del current_dialog
+		if len(new_value)<1:
+			new_value = default_label
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/run_search/1/?'+IAGL.get_query_as_url(current_query)),IAGL.get_search_query_listitem(new_value,current_query), True)
+		xbmcplugin.endOfDirectory(plugin.handle)
+	else:
+		pass
+
+@plugin.route('/run_search/<page_number>/')
+def run_search_query(page_number=1):
+	current_query = IAGL.get_query_from_args(plugin.args)
+	if current_query['title'] is not None:
+		xbmc.log(msg='IAGL:  Executing query', level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Query Title: %(query_value)s' % {'query_value':current_query['title']}, level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Query Tag: %(query_value)s' % {'query_value':current_query['tag']}, level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Query Lists: %(query_value)s' % {'query_value':current_query['lists']}, level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Query Years: %(query_value)s' % {'query_value':current_query['year']}, level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Query Genres: %(query_value)s' % {'query_value':current_query['genre']}, level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Query Players: %(query_value)s' % {'query_value':current_query['nplayers']}, level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Query Studios: %(query_value)s' % {'query_value':current_query['studio']}, level=xbmc.LOGDEBUG)
+		list_method = 'list_all'
+		xbmc.log(msg='IAGL:  Getting game list for search, display method %(list_method)s with %(items_pp)s items per page, on page %(page_number)s' % {'list_method': list_method, 'items_pp': str(IAGL.get_items_per_page()), 'page_number': page_number}, level=xbmc.LOGDEBUG)
+		current_page, page_info = IAGL.get_games_from_search_query_as_listitems(current_query,list_method,None,page_number)
+		for list_item in current_page:
+			current_game_list_id = json.loads(list_item.getProperty('iagl_json')).get('emu').get('game_list_id')
+			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(current_game_list_id), game_id=url_quote(list_item.getLabel2())),IAGL.add_game_context_menus(list_item,current_game_list_id,url_quote(list_item.getLabel2()),page_info['categories']), True) #Method 1, dont pass json as arg
+		next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
+		if next_page_li is not None:
+			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game_list, list_method=list_method, game_list_id=game_list_id, page_number=page_info['next_page']),next_page_li, True)
+		xbmcplugin.endOfDirectory(plugin.handle)
+	else:
+		pass
+
+@plugin.route('/archives/random_menu')
+def random_games_menu():
+	xbmc.log(msg='IAGL:  Random game menu called', level=xbmc.LOGDEBUG)
+	try:
+		current_query = json.loads(xbmcgui.Window(IAGL.windowid).getProperty('iagl_random_query'))
+	except:
+		xbmc.log(msg='IAGL:  Random query could not be loaded, resetting the query', level=xbmc.LOGDEBUG)
+		IAGL.initialize_random_query()
+		current_query = json.loads(xbmcgui.Window(IAGL.windowid).getProperty('iagl_random_query'))
+	for list_item in IAGL.get_random_menu_items_as_listitems(current_query):
+		if list_item.getLabel2() == 'execute_link':
+			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(generate_random_listitem),list_item, True)
+		elif list_item.getLabel2() == 'execute':
+			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(update_random_query, random_id=url_quote(list_item.getLabel2())),list_item, True)
+		else:
+			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(update_random_query, random_id=url_quote(list_item.getLabel2())),list_item, False)
+	xbmcplugin.endOfDirectory(plugin.handle)
+
+@plugin.route('/random_query/<random_id>')
+def update_random_query(random_id):
+	xbmc.log(msg='IAGL:  Query update for %(random_id)s called' % {'random_id':random_id}, level=xbmc.LOGDEBUG)
+	try:
+		current_query = json.loads(xbmcgui.Window(IAGL.windowid).getProperty('iagl_random_query'))
+	except:
+		xbmc.log(msg='IAGL:  Random query could not be loaded, resetting the query', level=xbmc.LOGDEBUG)
+		IAGL.initialize_random_query()
+		current_query = json.loads(xbmcgui.Window(IAGL.windowid).getProperty('iagl_random_query'))
+
+	choose_query_types = ['title']
+	input_query_types = ['tag']
+	list_query_types = ['lists']
+	filter_query_types = ['year','nplayers','genre','studio']
+
+	if random_id in choose_query_types:
+		current_dialog = xbmcgui.Dialog()
+		ret1 = current_dialog.select('Choose number of random results to return',['1','2','5','10','25','100'],0,0)
+		del current_dialog
+		if ret1>0:
+			new_value = ['1','2','5','10','25','100'][ret1]
+		else:
+			new_value = '1'
+		if len(new_value)>0:
+			current_query[random_id] = new_value
+		else:
+			current_query[random_id] = '1'
+		xbmcgui.Window(IAGL.windowid).setProperty('iagl_random_query',json.dumps(current_query))
+		xbmc.executebuiltin('Container.Refresh')		
+	if random_id in input_query_types:
+		current_dialog = xbmcgui.Dialog()
+		new_value = current_dialog.input(xbmc.getInfoLabel('ListItem.Label'))
+		if len(new_value)>0:
+			current_query[random_id] = new_value
+		else:
+			current_query[random_id] = None
+		del current_dialog
+		xbmcgui.Window(IAGL.windowid).setProperty('iagl_random_query',json.dumps(current_query))
+		xbmc.executebuiltin('Container.Refresh')
+	if random_id in list_query_types:
+		current_game_lists = IAGL.get_game_lists()
+		try:
+			current_select = ['Any']+[x for x in current_game_lists.get('emu_name')]
+			current_filenames = [None]+[x for x in current_game_lists.get('dat_filename')]
+		except Exception as exc:
+			current_select = None
+			current_filenames = None
+			xbmc.log(msg='IAGL:  The game lists could not be found.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
+		if current_select is not None:
+			if current_query['lists'] is not None:
+				currently_selected_lists = [current_filenames.index(x) for x in current_query['lists']]
+			else:
+				currently_selected_lists = None
+			current_dialog = xbmcgui.Dialog()
+			if currently_selected_lists is not None:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_select,0,currently_selected_lists)
+			else:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_select)
+			del current_dialog
+			if ret1 is not None:
+				if 0 in ret1:
+					current_query['lists'] = None
+				else:
+					current_query['lists'] = [x for x in current_filenames if current_filenames.index(x) in ret1]
+		else:
+			current_query['lists'] = None
+		xbmcgui.Window(IAGL.windowid).setProperty('iagl_random_query',json.dumps(current_query))
+		xbmc.executebuiltin('Container.Refresh')
+
+	if random_id == 'genre':
+		current_genre_lists = None
+		if current_query['lists'] is None:
+			current_dialog = xbmcgui.Dialog()
+			ret1 = current_dialog.select('Filter genres for all lists?  This could take a while...', ['Yes','Cancel'])
+			del current_dialog
+			if ret1 == 0:
+				current_genre_lists = IAGL.get_genres_from_game_lists(current_query['lists'])
+			else:
+				current_genre_lists = None
+				xbmc.log(msg='IAGL:  User cancelled large genre query', level=xbmc.LOGDEBUG)
+		else:
+			if len(current_query['lists'])>10:
+				current_dialog = xbmcgui.Dialog()
+				ret1 = current_dialog.select('Filter genres for more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				del current_dialog
+				if ret1 == 0:
+					current_genre_lists = IAGL.get_genres_from_game_lists(current_query['lists'])
+				else:
+					current_genre_lists = None
+					xbmc.log(msg='IAGL:  User cancelled large genre query', level=xbmc.LOGDEBUG)
+			else:
+				current_genre_lists = IAGL.get_genres_from_game_lists(current_query['lists'])
+		if current_genre_lists is not None:
+			current_genre_lists = ['Any']+current_genre_lists
+			if current_query['genre'] is not None:
+				currently_selected_genres = [current_genre_lists.index(x) for x in current_query['genre']]
+			else:
+				currently_selected_genres = None
+			current_dialog = xbmcgui.Dialog()
+			if currently_selected_genres is not None:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_genre_lists,0,currently_selected_genres)
+			else:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_genre_lists)
+			del current_dialog
+			if ret1 is not None:
+				if 0 in ret1:
+					current_query['genre'] = None
+				else:
+					current_query['genre'] = [x for x in current_genre_lists if current_genre_lists.index(x) in ret1]
+		xbmcgui.Window(IAGL.windowid).setProperty('iagl_random_query',json.dumps(current_query))
+		xbmc.executebuiltin('Container.Refresh')
+
+	if random_id == 'nplayers':
+		current_players_lists = None
+		if current_query['lists'] is None:
+			current_dialog = xbmcgui.Dialog()
+			ret1 = current_dialog.select('Filter number of players for all lists?  This could take a while...', ['Yes','Cancel'])
+			del current_dialog
+			if ret1 == 0:
+				current_players_lists = IAGL.get_players_from_game_lists(current_query['lists'])
+			else:
+				current_players_lists = None
+				xbmc.log(msg='IAGL:  User cancelled large nplayers query', level=xbmc.LOGDEBUG)
+		else:
+			if len(current_query['lists'])>10:
+				current_dialog = xbmcgui.Dialog()
+				ret1 = current_dialog.select('Filter number of players for more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				del current_dialog
+				if ret1 == 0:
+					current_players_lists = IAGL.get_players_from_game_lists(current_query['lists'])
+				else:
+					current_players_lists = None
+					xbmc.log(msg='IAGL:  User cancelled large nplayers query', level=xbmc.LOGDEBUG)
+			else:
+				current_players_lists = IAGL.get_players_from_game_lists(current_query['lists'])
+		if current_players_lists is not None:
+			current_players_lists = ['Any']+current_players_lists
+			if current_query['nplayers'] is not None:
+				currently_selected_players = [current_players_lists.index(x) for x in current_query['nplayers']]
+			else:
+				currently_selected_players = None
+			current_dialog = xbmcgui.Dialog()
+			if currently_selected_players is not None:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_players_lists,0,currently_selected_players)
+			else:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_players_lists)
+			del current_dialog
+			if ret1 is not None:
+				if 0 in ret1:
+					current_query['nplayers'] = None
+				else:
+					current_query['nplayers'] = [x for x in current_players_lists if current_players_lists.index(x) in ret1]
+		xbmcgui.Window(IAGL.windowid).setProperty('iagl_random_query',json.dumps(current_query))
+		xbmc.executebuiltin('Container.Refresh')
+
+	if random_id == 'year':
+		current_year_lists = None
+		if current_query['lists'] is None:
+			current_dialog = xbmcgui.Dialog()
+			ret1 = current_dialog.select('Filter years for all lists?  This could take a while...', ['Yes','Cancel'])
+			del current_dialog
+			if ret1 == 0:
+				current_year_lists = IAGL.get_years_from_game_lists(current_query['lists'])
+			else:
+				current_year_lists = None
+				xbmc.log(msg='IAGL:  User cancelled large year query', level=xbmc.LOGDEBUG)
+		else:
+			if len(current_query['lists'])>10:
+				current_dialog = xbmcgui.Dialog()
+				ret1 = current_dialog.select('Filter years for more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				del current_dialog
+				if ret1 == 0:
+					current_year_lists = IAGL.get_years_from_game_lists(current_query['lists'])
+				else:
+					current_year_lists = None
+					xbmc.log(msg='IAGL:  User cancelled large year query', level=xbmc.LOGDEBUG)
+			else:
+				current_year_lists = IAGL.get_years_from_game_lists(current_query['lists'])
+		if current_year_lists is not None:
+			current_year_lists = ['Any']+current_year_lists
+			if current_query['year'] is not None:
+				currently_selected_years = [current_year_lists.index(x) for x in current_query['year']]
+			else:
+				currently_selected_years = None
+			current_dialog = xbmcgui.Dialog()
+			if currently_selected_years is not None:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_year_lists,0,currently_selected_years)
+			else:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_year_lists)
+			del current_dialog
+			if ret1 is not None:
+				if 0 in ret1:
+					current_query['year'] = None
+				else:
+					current_query['year'] = [x for x in current_year_lists if current_year_lists.index(x) in ret1]
+		xbmcgui.Window(IAGL.windowid).setProperty('iagl_random_query',json.dumps(current_query))
+		xbmc.executebuiltin('Container.Refresh')
+		
+	if random_id == 'studio':
+		current_studio_lists = None
+		if current_query['lists'] is None:
+			current_dialog = xbmcgui.Dialog()
+			ret1 = current_dialog.select('Filter studios for all lists?  This could take a while...', ['Yes','Cancel'])
+			del current_dialog
+			if ret1 == 0:
+				current_studio_lists = IAGL.get_studios_from_game_lists(current_query['lists'])
+			else:
+				current_studio_lists = None
+				xbmc.log(msg='IAGL:  User cancelled large studio query', level=xbmc.LOGDEBUG)
+		else:
+			if len(current_query['lists'])>10:
+				current_dialog = xbmcgui.Dialog()
+				ret1 = current_dialog.select('Filter studios for more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				del current_dialog
+				if ret1 == 0:
+					current_studio_lists = IAGL.get_studios_from_game_lists(current_query['lists'])
+				else:
+					current_studio_lists = None
+					xbmc.log(msg='IAGL:  User cancelled large studio query', level=xbmc.LOGDEBUG)
+			else:
+				current_studio_lists = IAGL.get_studios_from_game_lists(current_query['lists'])
+		if current_studio_lists is not None:
+			current_studio_lists = ['Any']+current_studio_lists
+			if current_query['studio'] is not None:
+				currently_selected_studios = [current_studio_lists.index(x) for x in current_query['studio']]
+			else:
+				currently_selected_studios = None
+			current_dialog = xbmcgui.Dialog()
+			if currently_selected_studios is not None:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_studio_lists,0,currently_selected_studios)
+			else:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_studio_lists)
+			del current_dialog
+			if ret1 is not None:
+				if 0 in ret1:
+					current_query['studio'] = None
+				else:
+					current_query['studio'] = [x for x in current_studio_lists if current_studio_lists.index(x) in ret1]
+		xbmcgui.Window(IAGL.windowid).setProperty('iagl_random_query',json.dumps(current_query))
+		xbmc.executebuiltin('Container.Refresh')
+
+	if random_id == 'execute':
+		if current_query['title'] is None:
+			current_query['title'] = 1
+		plugin.run(['plugin://plugin.program.iagl/run_random/1/', '0', IAGL.get_query_as_url(current_query)])
+
+@plugin.route('/generate_random_item')
+def generate_random_listitem():
+	xbmc.log(msg='IAGL:  Generate random listitem called', level=xbmc.LOGDEBUG)
+	try:
+		current_query = json.loads(xbmcgui.Window(IAGL.windowid).getProperty('iagl_random_query'))
+	except:
+		xbmc.log(msg='IAGL:  Random query could not be loaded, resetting the query', level=xbmc.LOGDEBUG)
+		IAGL.initialize_random_query()
+		current_query = json.loads(xbmcgui.Window(IAGL.windowid).getProperty('iagl_random_query'))
+	create_listitem = True
+	if current_query['title'] is None:
+		current_query['title'] = 1
+	
+	default_label = 'IAGL Random Play %(query_value)s' % {'query_value':IAGL.get_random_time()}
+	if create_listitem:
+		current_dialog = xbmcgui.Dialog()
+		new_value = current_dialog.input('Enter a label for your query',default_label)
+		del current_dialog
+		if len(new_value)<1:
+			new_value = default_label
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/run_random/1/?'+IAGL.get_query_as_url(current_query)),IAGL.get_random_query_listitem(new_value,current_query), True)
+		xbmcplugin.endOfDirectory(plugin.handle)
+	else:
+		pass
+
+@plugin.route('/run_random/<page_number>/')
+def run_random_query(page_number=1):
+	current_query = IAGL.get_query_from_args(plugin.args)
+	if current_query['title'] is not None:
+		xbmc.log(msg='IAGL:  Executing random query', level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Query Number of Results: %(query_value)s' % {'query_value':current_query['title']}, level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Query Tag: %(query_value)s' % {'query_value':current_query['tag']}, level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Query Lists: %(query_value)s' % {'query_value':current_query['lists']}, level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Query Years: %(query_value)s' % {'query_value':current_query['year']}, level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Query Genres: %(query_value)s' % {'query_value':current_query['genre']}, level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Query Players: %(query_value)s' % {'query_value':current_query['nplayers']}, level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Query Studios: %(query_value)s' % {'query_value':current_query['studio']}, level=xbmc.LOGDEBUG)
+		list_method = 'list_all'
+		xbmc.log(msg='IAGL:  Getting game list for random play, display method %(list_method)s with %(items_pp)s items per page, on page %(page_number)s' % {'list_method': list_method, 'items_pp': str(IAGL.get_items_per_page()), 'page_number': page_number}, level=xbmc.LOGDEBUG)
+		current_page, page_info = IAGL.get_games_from_random_query_as_listitems(current_query,list_method,None,page_number)
+		for list_item in current_page:
+			current_game_list_id = json.loads(list_item.getProperty('iagl_json')).get('emu').get('game_list_id')
+			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(current_game_list_id), game_id=url_quote(list_item.getLabel2())),IAGL.add_game_context_menus(list_item,current_game_list_id,url_quote(list_item.getLabel2()),page_info['categories']), True) #Method 1, dont pass json as arg
+		next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
+		if next_page_li is not None:
+			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game_list, list_method=list_method, game_list_id=game_list_id, page_number=page_info['next_page']),next_page_li, True)
+		xbmcplugin.endOfDirectory(plugin.handle)
+	else:
+		pass
+
 @plugin.route('/text_viewer')
 def iagl_text_viewer():
-	IAGL_Dialog = iagl_textviewer_dialog('script-IAGL-textviewer.xml',IAGL.get_addon_install_path(),'Default','1080i')
-	IAGL_Dialog.doModal()
+	IAGL_text_Dialog = iagl_textviewer_dialog('script-IAGL-textviewer.xml',IAGL.get_addon_install_path(),'Default','1080i')
+	IAGL_text_Dialog.doModal()
+	del IAGL_text_Dialog
 
 if __name__ == '__main__':
 	plugin.run(sys.argv)

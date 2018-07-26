@@ -15,7 +15,7 @@
 			<left>13%</left>
 			<centertop>50%</centertop>
 			<height>770</height>
-			<control type="image">
+		<control type="image">
 			<left>-2000</left>
 			<top>-2000</top>
 			<width>6000</width>
@@ -23,7 +23,7 @@
 			<animation effect="fade" time="300">VisibleChange</animation>
 			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-			<texture colordiffuse="C2FFFFFF">black.png</texture>
+			<texture colordiffuse="C2FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/black.png</texture>
 			<visible>true</visible>
 		</control>
 		<control type="button">
@@ -43,14 +43,14 @@
 				<top>0</top>
 				<right>0</right>
 				<bottom>0</bottom>
-				<texture colordiffuse="FF1A2123">white.png</texture>
+				<texture colordiffuse="FF1A2123">special://home/addons/plugin.program.iagl/resources/skins/Default/media/white.png</texture>
 			</control>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
 				<right>0</right>
 				<height>70</height>
-				<texture colordiffuse="FF12A0C7" border="2">white70.png</texture>
+				<texture colordiffuse="FF12A0C7" border="2">special://home/addons/plugin.program.iagl/resources/skins/Default/media/white70.png</texture>
 			</control>
 			<control type="label" id="1">
 				<left>40</left>
@@ -58,6 +58,7 @@
 				<right>100</right>
 				<height>70</height>
 				<font>font32_title</font>
+				<textcolor>white</textcolor>
 				<label>IAGL - $INFO[Window(home).Property(TextViewer_Header)]</label>
 				<aligny>center</aligny>
 				<shadowcolor>black</shadowcolor>
@@ -108,6 +109,7 @@
 				<shadowcolor>black</shadowcolor>
 				<pagecontrol>3000</pagecontrol>
 				<font>font37</font>
+				<textcolor>white</textcolor>
 				<label>$INFO[Window(home).Property(TextViewer_Text)]</label>
 			</control>
 			<control type="scrollbar" id="3000">

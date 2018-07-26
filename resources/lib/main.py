@@ -7,6 +7,7 @@ from kodi_six import xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
 from contextlib import closing
 from collections import defaultdict
 from dateutil import parser as date_parser
+from ast import literal_eval as lit_eval
 import xml.etree.ElementTree as ET
 import paginate
 import requests
@@ -22,10 +23,12 @@ except:
 try:
 	from urllib.parse import quote_plus as url_quote
 	from urllib.parse import unquote_plus as url_unquote
+	from urllib.parse import urlencode as url_encode
 	xbmc.log(msg='IAGL:  Using python 3 urrlib', level=xbmc.LOGDEBUG)
 except:
 	from urllib import quote_plus as url_quote
 	from urllib import unquote_plus as url_unquote
+	from urllib import urlencode as url_encode
 	xbmc.log(msg='IAGL:  Using python 2 urrlib', level=xbmc.LOGDEBUG)
 # try:
 #     import cPickle as pickle
@@ -72,6 +75,8 @@ class iagl_utils(object):
 		# self.game_history_filename = 'game_history.pickle'
 		self.game_history_filename = 'game_history.json'
 		self.browse_choose_filename = 'browse_database.xml'
+		self.search_menu_filename = 'search_database.xml'
+		self.random_menu_filename = 'random_database.xml'
 		self.game_list_categories_filename = 'categories_database.xml'
 		self.game_list_alphabetical_filename = 'alphabetical_database.xml'
 		self.game_list_genre_filename = 'genres_database.xml'
@@ -93,10 +98,11 @@ class iagl_utils(object):
 		self.dat_file_header_keys = ['emu_name','emu_visibility','emu_description','emu_category','emu_version','emu_date','emu_author','emu_homepage','emu_baseurl','emu_launcher','emu_default_addon','emu_ext_launch_cmd','emu_downloadpath','emu_postdlaction','emu_comment','emu_thumb','emu_banner','emu_fanart','emu_logo','emu_trailer']
 		self.language = self.handle.getLocalizedString
 		self.get_setting_as_bool = lambda nn: True if nn.lower()=='true' or nn.lower()=='enabled' or nn.lower()=='show' else False
+		self.change_search_terms_to_any = lambda nn: 'Any' if nn is None else nn
 		self.flatten_list = lambda l: [item for sublist in l for item in sublist]
 		self.game_label_settings = 'Title|Title, Genre|Title, Date|Title, Players|Title, Genre, Date|Title, Genre, Size|Title, Genre, Players|Title, Date, Size|Title, Date, Players|Genre, Title|Date, Title|Players, Title|Genre, Title, Date|Date, Title, Genre|Players, Title, Genre|Players, Title, Date|Title, Genre, Date, ROM Tag|Title, Genre, Date, Players|Title, Genre, Players, ROM Tag|Title, Genre, Date, Size'
-		self.archive_listing_settings = 'Choose from List|Browse All Lists|Browse by Category'
-		self.archive_listing_settings_routes = ['choose_from_list','all','categorized']
+		self.archive_listing_settings = 'Choose from List|Browse All Lists|Browse by Category|Search|Random Play'
+		self.archive_listing_settings_routes = ['choose_from_list','all','categorized','search_menu','random_menu']
 		self.archive_listing_settings_route = None
 		self.game_listing_settings = 'One Big List|Choose from List|Alphabetical|Group by Genre|Group by Year|Group by Players|Group by Studio'
 		self.game_listing_settings_routes = ['list_all','choose_from_list','alphabetical','list_by_genre','list_by_year','list_by_players','list_by_studio']
@@ -457,6 +463,86 @@ class iagl_utils(object):
 		game_history_listitem.setArt(li['art'])
 		return game_history_listitem
 
+	def get_search_query_listitem(self,label_in,current_query):
+		search_query_listitem = None
+		if type(self.change_search_terms_to_any(current_query['lists'])) is list:
+			current_lists = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['lists']))
+		else:
+			current_lists = self.change_search_terms_to_any(current_query['lists'])
+		if type(self.change_search_terms_to_any(current_query['genre'])) is list:
+			current_genres = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['genre']))
+		else:
+			current_genres = self.change_search_terms_to_any(current_query['genre'])
+		if type(self.change_search_terms_to_any(current_query['nplayers'])) is list:
+			current_nplayers = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['nplayers']))
+		else:
+			current_nplayers = self.change_search_terms_to_any(current_query['nplayers'])	
+		if type(self.change_search_terms_to_any(current_query['year'])) is list:
+			current_years = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['year']))
+		else:
+			current_years = self.change_search_terms_to_any(current_query['year'])	
+		if type(self.change_search_terms_to_any(current_query['studio'])) is list:
+			current_studios = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['studio']))
+		else:
+			current_studios = self.change_search_terms_to_any(current_query['studio'])		
+		current_plot = '[B]Current Query[/B][CR]Search Title: '+self.change_search_terms_to_any(current_query['title'])+'[CR]Search Lists: '+current_lists+'[CR]Search Genres: '+current_genres+'[CR]Search Players: '+current_nplayers+'[CR]Search Years: '+current_years+'[CR]Search Studios: '+current_studios+'[CR]Search Tags: '+self.change_search_terms_to_any(current_query['tag'])+'[CR]'
+		li = {'info': {'genre' : 'Search',
+		'date' : '01/01/2999',
+		'plot' : current_plot,
+		},
+		'art': {'icon' : self.default_icon,
+		'thumb' : self.default_thumb,
+		'poster' : self.default_thumb,
+		'banner' : self.default_banner,
+		'fanart' : self.default_fanart,
+		},}
+		search_query_listitem = self.create_kodi_listitem(label_in)
+		search_query_listitem.setInfo(self.media_type,li['info'])
+		search_query_listitem.setArt(li['art'])
+		return search_query_listitem
+
+	def get_random_query_listitem(self,label_in,current_query):
+		random_query_listitem = None
+		if current_query['title'] is None:
+			current_num_results = '1'
+		else:
+			current_num_results = str(current_query['title'])
+		if type(self.change_search_terms_to_any(current_query['lists'])) is list:
+			current_lists = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['lists']))
+		else:
+			current_lists = self.change_search_terms_to_any(current_query['lists'])
+		if type(self.change_search_terms_to_any(current_query['genre'])) is list:
+			current_genres = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['genre']))
+		else:
+			current_genres = self.change_search_terms_to_any(current_query['genre'])
+		if type(self.change_search_terms_to_any(current_query['nplayers'])) is list:
+			current_nplayers = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['nplayers']))
+		else:
+			current_nplayers = self.change_search_terms_to_any(current_query['nplayers'])	
+		if type(self.change_search_terms_to_any(current_query['year'])) is list:
+			current_years = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['year']))
+		else:
+			current_years = self.change_search_terms_to_any(current_query['year'])	
+		if type(self.change_search_terms_to_any(current_query['studio'])) is list:
+			current_studios = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['studio']))
+		else:
+			current_studios = self.change_search_terms_to_any(current_query['studio'])		
+		current_plot = '[B]Random Play[/B][CR]Num of Results: '+current_num_results+'[CR]Search Lists: '+current_lists+'[CR]Search Genres: '+current_genres+'[CR]Search Players: '+current_nplayers+'[CR]Search Years: '+current_years+'[CR]Search Studios: '+current_studios+'[CR]Search Tags: '+self.change_search_terms_to_any(current_query['tag'])+'[CR]'
+		li = {'info': {'genre' : 'Random',
+		'date' : '01/01/2999',
+		'plot' : current_plot,
+		},
+		'art': {'icon' : self.default_icon,
+		'thumb' : self.default_thumb,
+		'poster' : self.default_thumb,
+		'banner' : self.default_banner,
+		'fanart' : self.default_fanart,
+		},}
+		random_query_listitem = self.create_kodi_listitem(label_in)
+		random_query_listitem.setInfo(self.media_type,li['info'])
+		random_query_listitem.setArt(li['art'])
+		return random_query_listitem
+
 	def get_game_list_categories_file(self):
 		return os.path.join(self.get_databases_folder_path(),self.game_list_categories_filename)
 
@@ -480,6 +566,12 @@ class iagl_utils(object):
 
 	def get_browse_choose_file(self):
 		return os.path.join(self.get_databases_folder_path(),self.browse_choose_filename)
+
+	def get_search_menu_file(self):
+		return os.path.join(self.get_databases_folder_path(),self.search_menu_filename)
+
+	def get_random_menu_file(self):
+		return os.path.join(self.get_databases_folder_path(),self.random_menu_filename)
 
 	def get_external_command_db_file(self):
 		return os.path.join(self.get_addon_install_path(),*self.external_command_db_filename)
@@ -668,6 +760,20 @@ class iagl_utils(object):
 			xbmc.log(msg='IAGL:  There was an error parsing the browse xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
 
+	def get_search_listing(self):
+		try:
+			return etree_to_dict(ET.parse(self.get_search_menu_file()).getroot()) #No cache for this currently, since its small
+		except Exception as exc: #except Exception, (exc):
+			xbmc.log(msg='IAGL:  There was an error parsing the search menu xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
+			return None
+
+	def get_random_listing(self):
+		try:
+			return etree_to_dict(ET.parse(self.get_random_menu_file()).getroot()) #No cache for this currently, since its small
+		except Exception as exc: #except Exception, (exc):
+			xbmc.log(msg='IAGL:  There was an error parsing the random menu xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
+			return None
+
 	def get_external_command_listing(self):
 		try:
 			return etree_to_dict(ET.parse(self.get_external_command_db_file()).getroot()) #No cache for this currently, since its small
@@ -782,6 +888,20 @@ class iagl_utils(object):
 
 		return alphabetical_listitems
 
+	def get_genres_from_game_lists(self, game_lists):
+		genre_list_temp = list()
+		genre_list_sorted = list()
+		for game_list_id in game_lists:
+			current_games_dict = self.get_games(game_list_id)
+			current_game_genres = [y.strip().lower() for y in self.flatten_list([x.get('info').get('genre').split(',') for x in current_games_dict if x.get('info').get('genre') is not None]) if len(y)>0]
+			current_game_genres_unknown = [x.get('info').get('genre') for x in current_games_dict if x.get('info').get('genre') is None]
+			current_game_genres_sorted = sorted(list(set([y.strip() for y in self.flatten_list([x.get('info').get('genre').split(',') for x in current_games_dict if x.get('info').get('genre') is not None]) if len(y)>0])))
+			if len(current_game_genres_unknown)>0:
+				current_game_genres_sorted.append('Unknown')
+			genre_list_temp = genre_list_temp+current_game_genres_sorted
+		genre_list_sorted = sorted(list(set(genre_list_temp)))
+		return genre_list_sorted
+
 	def get_game_list_genres_as_listitems(self, game_list_id):
 		genre_listitems = list()
 		games_dict = self.get_games(game_list_id)
@@ -835,6 +955,20 @@ class iagl_utils(object):
 				xbmc.log(msg='IAGL Error:  An error occured and genre %(cats)s could not be displayed' % {'cats': cats}, level=xbmc.LOGERROR)
 
 		return genre_listitems
+
+	def get_years_from_game_lists(self, game_lists):
+		year_list_temp = list()
+		year_list_sorted = list()
+		for game_list_id in game_lists:
+			current_games_dict = self.get_games(game_list_id)
+			current_game_years = [str(y).strip().lower() for y in [x.get('info').get('year') for x in current_games_dict if x.get('info').get('year') is not None] if len(y)>0]
+			current_game_years_unknown = [x.get('info').get('year') for x in current_games_dict if x.get('info').get('year') is None]
+			current_game_years_sorted = sorted(list(set([str(y).strip() for y in [x.get('info').get('year') for x in current_games_dict if x.get('info').get('year') is not None] if len(y)>0])))
+			if len(current_game_years_unknown)>0:
+				current_game_years_sorted.append('Unknown')
+			year_list_temp = year_list_temp+current_game_years_sorted
+		year_list_sorted = sorted(list(set(year_list_temp)))
+		return year_list_sorted
 
 	def get_game_list_years_as_listitems(self, game_list_id):
 		year_listitems = list()
@@ -890,6 +1024,20 @@ class iagl_utils(object):
 
 		return year_listitems
 
+	def get_players_from_game_lists(self, game_lists):
+		players_list_temp = list()
+		players_list_sorted = list()
+		for game_list_id in game_lists:
+			current_games_dict = self.get_games(game_list_id)
+			current_game_players = [y.strip() for y in self.flatten_list([x.get('properties').get('nplayers').split(',') for x in current_games_dict if x.get('properties').get('nplayers') is not None]) if len(y)>0]
+			current_game_players_unknown = [x.get('properties').get('nplayers') for x in current_games_dict if x.get('properties').get('nplayers') is None]
+			current_game_players_sorted = sorted(list(set(current_game_players)))
+			if len(current_game_players_unknown)>0:
+				current_game_players_sorted.append('Unknown')
+			players_list_temp = players_list_temp+current_game_players_sorted
+		players_list_sorted = sorted(list(set(players_list_temp)))
+		return players_list_sorted
+
 	def get_game_list_players_as_listitems(self, game_list_id):
 		player_listitems = list()
 		games_dict = self.get_games(game_list_id)
@@ -897,7 +1045,6 @@ class iagl_utils(object):
 		current_game_players = [y.strip() for y in self.flatten_list([x.get('properties').get('nplayers').split(',') for x in games_dict if x.get('properties').get('nplayers') is not None]) if len(y)>0]
 		current_game_players_unknown = [x.get('properties').get('nplayers') for x in games_dict if x.get('properties').get('nplayers') is None]
 		current_game_players_sorted = sorted(list(set(current_game_players)))
-
 		if len(current_game_players_unknown)>0:
 			current_game_players_sorted.append('Unknown')
 		player_dict_labels = [x['label'] for x in player_dict['categories']['category']]
@@ -944,6 +1091,20 @@ class iagl_utils(object):
 				xbmc.log(msg='IAGL Error:  An error occured and num players %(cats)s could not be displayed' % {'cats': cats}, level=xbmc.LOGERROR)
 
 		return player_listitems
+
+	def get_studios_from_game_lists(self, game_lists):
+		studio_list_temp = list()
+		studio_list_sorted = list()
+		for game_list_id in game_lists:
+			current_games_dict = self.get_games(game_list_id)
+			current_game_studios = [y.strip().lower() for y in self.flatten_list([x.get('info').get('studio').split(',') for x in current_games_dict if x.get('info').get('studio') is not None]) if len(y)>0]
+			current_game_studios_unknown = [x.get('info').get('studio') for x in current_games_dict if x.get('info').get('studio') is None]
+			current_game_studios_sorted = sorted(list(set([y.strip() for y in self.flatten_list([x.get('info').get('studio').split(',') for x in current_games_dict if x.get('info').get('studio') is not None]) if len(y)>0])))
+			if len(current_game_studios_unknown)>0:
+				current_game_studios_sorted.append('Unknown')
+			studio_list_temp = studio_list_temp+current_game_studios_sorted
+		studio_list_sorted = sorted(list(set(studio_list_temp)))
+		return studio_list_sorted
 
 	def get_game_list_studios_as_listitems(self, game_list_id):
 		studio_listitems = list()
@@ -1090,6 +1251,217 @@ class iagl_utils(object):
 				xbmc.log(msg='IAGL Error:  An error occured and browse category %(cats)s could not be displayed' % {'cats': cats}, level=xbmc.LOGERROR)
 
 		return browse_listitems
+
+	def get_search_menu_items_as_listitems(self,current_query):
+		search_listitems = list()
+		search_dict = self.get_search_listing()
+		search_dict_labels = [x['label'] for x in search_dict['categories']['category']]
+
+		for ii,search_terms in enumerate(search_dict_labels):
+			current_trailer = self.get_trailer(search_dict['categories']['category'][ii].get('trailer'))
+			try:
+				if type(current_query[search_dict['categories']['category'][ii].get('label2')]) is list:
+					current_value = ','.join(current_query[search_dict['categories']['category'][ii].get('label2')])
+				else:
+					current_value = current_query[search_dict['categories']['category'][ii].get('label2')]
+			except:
+				current_value = None
+			if current_value is not None:
+				if len(current_value)> 50:
+					current_value = current_value[0:50]+'...' #Shorten what is displayed
+				current_label = search_terms+'[CR]'+current_value
+			else:
+				current_label = search_terms
+			if search_dict['categories']['category'][ii].get('label2') == 'execute':
+				if type(self.change_search_terms_to_any(current_query['lists'])) is list:
+					current_lists = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['lists']))
+				else:
+					current_lists = self.change_search_terms_to_any(current_query['lists'])
+				if type(self.change_search_terms_to_any(current_query['genre'])) is list:
+					current_genres = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['genre']))
+				else:
+					current_genres = self.change_search_terms_to_any(current_query['genre'])
+				if type(self.change_search_terms_to_any(current_query['nplayers'])) is list:
+					current_nplayers = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['nplayers']))
+				else:
+					current_nplayers = self.change_search_terms_to_any(current_query['nplayers'])	
+				if type(self.change_search_terms_to_any(current_query['year'])) is list:
+					current_years = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['year']))
+				else:
+					current_years = self.change_search_terms_to_any(current_query['year'])	
+				if type(self.change_search_terms_to_any(current_query['studio'])) is list:
+					current_studios = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['studio']))
+				else:
+					current_studios = self.change_search_terms_to_any(current_query['studio'])		
+				current_plot = '[B]Current Query[/B][CR]Search Title: '+self.change_search_terms_to_any(current_query['title'])+'[CR]Search Lists: '+current_lists+'[CR]Search Genres: '+current_genres+'[CR]Search Players: '+current_nplayers+'[CR]Search Years: '+current_years+'[CR]Search Studios: '+current_studios+'[CR]Search Tags: '+self.change_search_terms_to_any(current_query['tag'])+'[CR]'
+			else:
+				if current_value is not None:
+					current_plot = '[B]Current Entry[/B][CR]'+current_value
+				else:
+					current_plot = search_dict['categories']['category'][ii].get('plot')
+			li = {'values': {'label' : current_label,
+					'label2' : search_dict['categories']['category'][ii].get('label2'),
+					},
+					'info': {'originaltitle' : search_dict['categories']['category'][ii].get('label'),
+					'title' : search_dict['categories']['category'][ii].get('label'),
+					'plot' : current_plot,
+					'trailer' : current_trailer,
+					},
+					'art': {'poster' : self.choose_image(search_dict['categories']['category'][ii]['thumb'],self.default_thumb,None),
+					'banner' : self.choose_image(search_dict['categories']['category'][ii]['banner'],self.default_banner,None),
+					'fanart' : self.choose_image(search_dict['categories']['category'][ii]['fanart'],self.default_fanart,None),
+					'clearlogo' : self.choose_image(search_dict['categories']['category'][ii]['logo'],None,None),
+					'icon' : self.choose_image(search_dict['categories']['category'][ii]['logo'],None,None),
+					'thumb' : self.choose_image(search_dict['categories']['category'][ii]['thumb'],self.default_thumb,None),
+					},
+					}
+			search_listitems.append(self.create_kodi_listitem(li['values']['label'],li['values']['label2']))
+			search_listitems[-1].setInfo(self.media_type,li['info'])
+			search_listitems[-1].setArt(li['art'])
+
+		return search_listitems
+
+	def get_random_menu_items_as_listitems(self,current_query):
+		random_listitems = list()
+		random_dict = self.get_random_listing()
+		random_dict_labels = [x['label'] for x in random_dict['categories']['category']]
+
+		for ii,random_terms in enumerate(random_dict_labels):
+			current_trailer = self.get_trailer(random_dict['categories']['category'][ii].get('trailer'))
+			try:
+				if type(current_query[random_dict['categories']['category'][ii].get('label2')]) is list:
+					current_value = ','.join(current_query[random_dict['categories']['category'][ii].get('label2')])
+				else:
+					current_value = current_query[random_dict['categories']['category'][ii].get('label2')]
+			except:
+				current_value = None
+			if current_value is not None:
+				if len(current_value)> 50:
+					current_value = current_value[0:50]+'...' #Shorten what is displayed
+				current_label = random_terms+'[CR]'+current_value
+			else:
+				current_label = random_terms
+			if random_dict['categories']['category'][ii].get('label2') == 'execute':
+				if current_query['title'] is None:
+					current_num_results = '1'
+				else:
+					current_num_results = str(current_query['title'])
+				if type(self.change_search_terms_to_any(current_query['lists'])) is list:
+					current_lists = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['lists']))
+				else:
+					current_lists = self.change_search_terms_to_any(current_query['lists'])
+				if type(self.change_search_terms_to_any(current_query['genre'])) is list:
+					current_genres = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['genre']))
+				else:
+					current_genres = self.change_search_terms_to_any(current_query['genre'])
+				if type(self.change_search_terms_to_any(current_query['nplayers'])) is list:
+					current_nplayers = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['nplayers']))
+				else:
+					current_nplayers = self.change_search_terms_to_any(current_query['nplayers'])	
+				if type(self.change_search_terms_to_any(current_query['year'])) is list:
+					current_years = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['year']))
+				else:
+					current_years = self.change_search_terms_to_any(current_query['year'])	
+				if type(self.change_search_terms_to_any(current_query['studio'])) is list:
+					current_studios = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['studio']))
+				else:
+					current_studios = self.change_search_terms_to_any(current_query['studio'])		
+				current_plot = '[B]Random Play[/B][CR]Num of Results: '+current_num_results+'[CR]Search Lists: '+current_lists+'[CR]Search Genres: '+current_genres+'[CR]Search Players: '+current_nplayers+'[CR]Search Years: '+current_years+'[CR]Search Studios: '+current_studios+'[CR]Search Tags: '+self.change_search_terms_to_any(current_query['tag'])+'[CR]'
+			else:
+				if current_value is not None:
+					current_plot = '[B]Current Entry[/B][CR]'+current_value
+				else:
+					current_plot = random_dict['categories']['category'][ii].get('plot')
+			li = {'values': {'label' : current_label,
+					'label2' : random_dict['categories']['category'][ii].get('label2'),
+					},
+					'info': {'originaltitle' : random_dict['categories']['category'][ii].get('label'),
+					'title' : random_dict['categories']['category'][ii].get('label'),
+					'plot' : current_plot,
+					'trailer' : current_trailer,
+					},
+					'art': {'poster' : self.choose_image(random_dict['categories']['category'][ii]['thumb'],self.default_thumb,None),
+					'banner' : self.choose_image(random_dict['categories']['category'][ii]['banner'],self.default_banner,None),
+					'fanart' : self.choose_image(random_dict['categories']['category'][ii]['fanart'],self.default_fanart,None),
+					'clearlogo' : self.choose_image(random_dict['categories']['category'][ii]['logo'],None,None),
+					'icon' : self.choose_image(random_dict['categories']['category'][ii]['logo'],None,None),
+					'thumb' : self.choose_image(random_dict['categories']['category'][ii]['thumb'],self.default_thumb,None),
+					},
+					}
+			random_listitems.append(self.create_kodi_listitem(li['values']['label'],li['values']['label2']))
+			random_listitems[-1].setInfo(self.media_type,li['info'])
+			random_listitems[-1].setArt(li['art'])
+
+		return random_listitems
+
+
+	def initialize_search_query(self):
+		current_query = dict()
+		current_query['title'] = None
+		current_query['tag'] = None
+		current_query['lists'] = None
+		current_query['year'] = None
+		current_query['genre'] = None
+		current_query['nplayers'] = None
+		current_query['studio'] = None
+		xbmcgui.Window(self.windowid).setProperty('iagl_search_query',json.dumps(current_query))
+
+	def initialize_random_query(self):
+		current_query = dict()
+		current_query['title'] = None
+		current_query['tag'] = None
+		current_query['lists'] = None
+		current_query['year'] = None
+		current_query['genre'] = None
+		current_query['nplayers'] = None
+		current_query['studio'] = None
+		xbmcgui.Window(self.windowid).setProperty('iagl_random_query',json.dumps(current_query))
+
+	def get_query_as_url(self,query_in):
+		return url_encode(query_in)
+
+	def get_query_from_args(self,args_in):
+		current_query = dict()
+		current_query['title'] = None
+		current_query['tag'] = None
+		current_query['lists'] = None
+		current_query['year'] = None
+		current_query['genre'] = None
+		current_query['nplayers'] = None
+		current_query['studio'] = None
+		try:
+			current_query['title'] = args_in['title'][0]
+			if current_query['title'].lower() == 'none':
+				current_query['title'] = None
+		except:
+			pass
+		try:
+			current_query['tag'] = args_in['tag'][0]
+			if current_query['tag'].lower() == 'none':
+				current_query['tag'] = None
+		except:
+			pass
+		try:
+			current_query['lists'] = lit_eval(args_in['lists'][0])
+		except:
+			pass
+		try:
+			current_query['genre'] = lit_eval(args_in['genre'][0])
+		except:
+			pass
+		try:
+			current_query['year'] = lit_eval(args_in['year'][0])
+		except:
+			pass	
+		try:
+			current_query['nplayers'] = lit_eval(args_in['nplayers'][0])
+		except:
+			pass
+		try:
+			current_query['studio'] = lit_eval(args_in['studio'][0])
+		except:
+			pass
+		return current_query
 
 	def get_games(self, game_list_id):
 		games_dict = None
@@ -1320,6 +1692,150 @@ class iagl_utils(object):
 
 		return game_list, page_info
 
+	def get_games_from_search_query_as_listitems(self, current_query, filter_method = None, filter_value = None, page_number = 1):
+		game_list = list()
+		page_info = dict()
+		games_dict = list()
+		clean_label_option = self.get_setting_as_bool(self.handle.getSetting(id='iagl_setting_clean_list'))
+		label_naming_convention = self.handle.getSetting(id='iagl_setting_naming')
+		#1.  Get all games from all the lists
+		for game_list_id in current_query['lists']:
+			games_dict = games_dict+self.get_games(game_list_id)
+		xbmc.log(msg='IAGL:  Search started from %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
+		#2.  Filter by title (regex)
+		if current_query['title'] is not None:
+			title_filter = re.compile(current_query['title'], re.IGNORECASE)
+			games_dict = [x for x in games_dict if x.get('values').get('label2') is not None and len(title_filter.findall(x.get('values').get('label2')))>0]
+			xbmc.log(msg='IAGL:  Title search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
+		#3.  Filter by tag
+		if current_query['tag'] is not None:
+			tag_filter = re.compile(current_query['tag'], re.IGNORECASE)
+			games_dict = [x for x in games_dict if x.get('properties').get('tag') is not None and len(tag_filter.findall(x.get('properties').get('tag')))>0]
+			xbmc.log(msg='IAGL:  Tag search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
+		#4.  Filter by genre
+		if current_query['genre'] is not None:
+			games_dict = [x for x in games_dict if x.get('info').get('genre') is not None and x.get('info').get('genre') in current_query['genre']]
+			xbmc.log(msg='IAGL:  Genre search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
+		#5.  Filter by nplayers
+		if current_query['nplayers'] is not None:
+			games_dict = [x for x in games_dict if x.get('properties').get('nplayers') is not None and x.get('properties').get('nplayers') in current_query['nplayers']]
+			xbmc.log(msg='IAGL:  Players search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
+		#6.  Filter by year
+		if current_query['year'] is not None:
+			games_dict = [x for x in games_dict if x.get('info').get('year') is not None and x.get('info').get('year') in current_query['year']]
+			xbmc.log(msg='IAGL:  Years search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
+		#7.  Filter by studio
+		if current_query['studio'] is not None:
+			games_dict = [x for x in games_dict if x.get('info').get('studio') is not None and x.get('info').get('studio') in current_query['studio']]
+			xbmc.log(msg='IAGL:  Studio search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
+		
+		if games_dict is not None and len(games_dict)>0:
+			current_categories = 'Search Results'
+			# current_categories = None
+			# if games_dict[0].get('properties').get('iagl_json') is not None:
+			# 	current_categories = json.loads(games_dict[0].get('properties').get('iagl_json')).get('emu').get('emu_category')
+
+			if filter_method == 'list_all' or filter_method == None:
+				current_page = paginate.Page(games_dict, page=page_number, items_per_page=self.get_items_per_page())
+				page_info['page'] = current_page.page
+				page_info['page_count'] = current_page.page_count
+				page_info['next_page'] = current_page.next_page
+				page_info['item_count'] = current_page.item_count
+				page_info['categories'] = current_categories
+				for game_item in current_page:
+					game_item['values']['label'] = self.update_game_label(self.get_clean_label(game_item['values']['label'],clean_label_option),game_item,label_naming_convention)
+					# game_list.append(xbmcgui.ListItem(label=game_item['values']['label'],label2=game_item['values']['label2'], offscreen=True))
+					game_list.append(self.create_kodi_listitem(game_item['values']['label'],game_item['values']['label2']))
+					game_list[-1].setInfo(self.media_type,game_item['info'])
+					game_list[-1].setArt(game_item['art'])
+					game_list[-1].setProperty('iagl_json',game_item['properties']['iagl_json'])
+			else:
+				xbmc.log(msg='IAGL:  Unknown game filtering method %(filter_method)s' % {'filter_method': filter_method}, level=xbmc.LOGERROR)
+		else:
+			xbmc.log(msg='IAGL:  No Results Found for the search', level=xbmc.LOGDEBUG)
+			game_dict = list()
+			page_info['page'] = 0
+			page_info['page_count'] = 0
+			page_info['next_page'] = 0
+			page_info['item_count'] = 0
+			page_info['categories'] = None
+
+		return game_list, page_info
+
+	def get_games_from_random_query_as_listitems(self, current_query, filter_method = None, filter_value = None, page_number = 1):
+		from random import sample as random_sample
+		game_list = list()
+		page_info = dict()
+		games_dict = list()
+		games_dict_random = list()
+		random_numbers_chosen = list()
+		clean_label_option = self.get_setting_as_bool(self.handle.getSetting(id='iagl_setting_clean_list'))
+		label_naming_convention = self.handle.getSetting(id='iagl_setting_naming')
+		#1.  Get all games from all the lists
+		for game_list_id in current_query['lists']:
+			games_dict = games_dict+self.get_games(game_list_id)
+		xbmc.log(msg='IAGL:  Random play started from %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
+		#2.  Filter by tag
+		if current_query['tag'] is not None:
+			tag_filter = re.compile(current_query['tag'], re.IGNORECASE)
+			games_dict = [x for x in games_dict if x.get('properties').get('tag') is not None and len(tag_filter.findall(x.get('properties').get('tag')))>0]
+			xbmc.log(msg='IAGL:  Tag search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
+		#3.  Filter by genre
+		if current_query['genre'] is not None:
+			games_dict = [x for x in games_dict if x.get('info').get('genre') is not None and x.get('info').get('genre') in current_query['genre']]
+			xbmc.log(msg='IAGL:  Genre search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
+		#4.  Filter by nplayers
+		if current_query['nplayers'] is not None:
+			games_dict = [x for x in games_dict if x.get('properties').get('nplayers') is not None and x.get('properties').get('nplayers') in current_query['nplayers']]
+			xbmc.log(msg='IAGL:  Players search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
+		#5.  Filter by year
+		if current_query['year'] is not None:
+			games_dict = [x for x in games_dict if x.get('info').get('year') is not None and x.get('info').get('year') in current_query['year']]
+			xbmc.log(msg='IAGL:  Years search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
+		#6.  Filter by studio
+		if current_query['studio'] is not None:
+			games_dict = [x for x in games_dict if x.get('info').get('studio') is not None and x.get('info').get('studio') in current_query['studio']]
+			xbmc.log(msg='IAGL:  Studio search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
+		#7.  Get number of results
+		if current_query['title'] is not None:
+			random_numbers_chosen = random_sample(range(len(games_dict)), int(current_query['title']))
+			for rnc in random_numbers_chosen:
+				games_dict_random.append(games_dict[rnc])
+			xbmc.log(msg='IAGL:  Random play filtered results to %(game_number)s total games' % {'game_number': len(games_dict_random)}, level=xbmc.LOGDEBUG)
+
+		if games_dict_random is not None and len(games_dict_random)>0:
+			current_categories = 'Random Results'
+			# current_categories = None
+			# if games_dict[0].get('properties').get('iagl_json') is not None:
+			# 	current_categories = json.loads(games_dict[0].get('properties').get('iagl_json')).get('emu').get('emu_category')
+
+			if filter_method == 'list_all' or filter_method == None:
+				current_page = paginate.Page(games_dict_random, page=page_number, items_per_page=self.get_items_per_page())
+				page_info['page'] = current_page.page
+				page_info['page_count'] = current_page.page_count
+				page_info['next_page'] = current_page.next_page
+				page_info['item_count'] = current_page.item_count
+				page_info['categories'] = current_categories
+				for game_item in current_page:
+					game_item['values']['label'] = self.update_game_label(self.get_clean_label(game_item['values']['label'],clean_label_option),game_item,label_naming_convention)
+					# game_list.append(xbmcgui.ListItem(label=game_item['values']['label'],label2=game_item['values']['label2'], offscreen=True))
+					game_list.append(self.create_kodi_listitem(game_item['values']['label'],game_item['values']['label2']))
+					game_list[-1].setInfo(self.media_type,game_item['info'])
+					game_list[-1].setArt(game_item['art'])
+					game_list[-1].setProperty('iagl_json',game_item['properties']['iagl_json'])
+			else:
+				xbmc.log(msg='IAGL:  Unknown game filtering method %(filter_method)s' % {'filter_method': filter_method}, level=xbmc.LOGERROR)
+		else:
+			xbmc.log(msg='IAGL:  No Results Found for the search', level=xbmc.LOGDEBUG)
+			game_dict = list()
+			page_info['page'] = 0
+			page_info['page_count'] = 0
+			page_info['next_page'] = 0
+			page_info['item_count'] = 0
+			page_info['categories'] = None
+
+		return game_list, page_info
+		
 	def get_route_from_json(self, json_string):
 		json_in = json.loads(json_string)
 		route_out = None
@@ -1923,6 +2439,24 @@ class iagl_utils(object):
 			xbmc.log(msg='IAGL Error:  Unable to parse videoid %(video_id_in)s.  Exception %(exc)s' % {'video_id_in': video_id_in, 'exc': exc}, level=xbmc.LOGERROR)
 
 		return video_id_out
+
+	def get_current_time(self):
+		date_time_out = None
+		try:
+			date_time_out = str(time.strftime(self.listitem_date_format,time.localtime()))
+		except Exception as exc: #except Exception, (exc):
+			date_time_out = '???'
+			xbmc.log(msg='IAGL Error:  Unable to get local time as string.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGDEBUG)
+		return date_time_out
+
+	def get_random_time(self):
+		date_time_out = None
+		try:
+			date_time_out = str(time.strftime('%d%H%M%S',time.localtime()))
+		except Exception as exc: #except Exception, (exc):
+			date_time_out = '???'
+			xbmc.log(msg='IAGL Error:  Unable to get random local time as string.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGDEBUG)
+		return date_time_out
 
 	def get_date(self, date_in):
 		date_out = date_in
