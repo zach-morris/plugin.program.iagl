@@ -2553,12 +2553,15 @@ class iagl_utils(object):
 		return sizes_out
 
 	def bytes_to_string_size(self, num, suffix='B'):
-		num_sum = sum(map(int,[num,.001]))
-		for unit in ['','k','M','G','T','P','E','Z']:
-			if abs(num_sum) < 1024.0:
-				return '%3.1f%s%s' % (num_sum, unit, suffix)
-			num_sum /= 1024.0
-		return str('%.1f%s%s') % (num_sum, 'Yi', suffix)
+		if num is not None:
+			num_sum = sum(map(int,[num,.001]))
+			for unit in ['','k','M','G','T','P','E','Z']:
+				if abs(num_sum) < 1024.0:
+					return '%3.1f%s%s' % (num_sum, unit, suffix)
+				num_sum /= 1024.0
+			return str('%.1f%s%s') % (num_sum, 'Yi', suffix)
+		else:
+			return '0'
 
 	def get_crc32_from_list_id(self,list_id_in):
 		if list_id_in == 'game_history':
@@ -2881,6 +2884,10 @@ class iagl_download(object):
 					header_filesize = None
 				if header_filesize is not None:
 					est_filesize = header_filesize
+				if est_filesize is not None and est_filesize>0:
+					line2_description = 'current_size / %(estimated_size)s'% {'estimated_size': self.IAGL.bytes_to_string_size(est_filesize)}
+				else:
+					line2_description = ''
 				# f = open(dest, 'wb')
 				with closing(xbmcvfs.File(dest,'w')) as game_file:
 					size = 0
@@ -2898,7 +2905,7 @@ class iagl_download(object):
 						if diff > 1:
 							percent = int(percent)
 							last_time = now
-							dp.update(percent)
+							dp.update(percent,description,line2_description.replace('current_size','%(current_estimated_size)s'% {'current_estimated_size': self.IAGL.bytes_to_string_size(size)}))
 							if dp.iscanceled():
 								dp.close()
 								self.download_fail_reason = 'Download was cancelled.'
@@ -2964,30 +2971,34 @@ class iagl_download(object):
 				header_filesize = None
 			if header_filesize is not None:
 				est_filesize = header_filesize
+			if est_filesize is not None and est_filesize>0:
+				line2_description = 'current_size / %(estimated_size)s'% {'estimated_size': self.IAGL.bytes_to_string_size(est_filesize)}
+			else:
+				line2_description = ''
 			# f = open(dest, 'wb')
-			f = xbmcvfs.File(dest,'w') #Use xbmvcvfs to support SMB
-			size = 0
-			last_time = time.time()
-			for chunk in r.iter_content(self.chunk_size):
-				if dp.iscanceled():
-					dp.close()
-					self.download_fail_reason = 'Download was cancelled.'
-					raise Exception('User Cancelled Download')
-				size = size + self.chunk_size
-				percent = 100.0 * size / (est_filesize + 1) #Added 1 byte to avoid div by zero
-				f.write(chunk)
-				now = time.time()
-				diff = now - last_time
-				if diff > 1:
-					percent = int(percent)
-					last_time = now
-					dp.update(percent)
+			with closing(xbmcvfs.File(dest,'w')) as game_file:
+				size = 0
+				last_time = time.time()
+				for chunk in r.iter_content(self.chunk_size):
 					if dp.iscanceled():
 						dp.close()
 						self.download_fail_reason = 'Download was cancelled.'
 						raise Exception('User Cancelled Download')
+					size = size + self.chunk_size
+					percent = 100.0 * size / (est_filesize + 1) #Added 1 byte to avoid div by zero
+					game_file.write(chunk)
+					now = time.time()
+					diff = now - last_time
+					if diff > 1:
+						percent = int(percent)
+						last_time = now
+						dp.update(percent,description,line2_description.replace('current_size','%(current_estimated_size)s'% {'current_estimated_size': self.IAGL.bytes_to_string_size(size)}))
+						if dp.iscanceled():
+							dp.close()
+							self.download_fail_reason = 'Download was cancelled.'
+							raise Exception('User Cancelled Download')
 			# f.flush()
-			f.close()
+			# f.close()
 			self.current_saved_files_success.append(True)
 			self.current_saved_files.append(dest)
 			self.current_saved_files_size.append(xbmcvfs.Stat(dest).st_size())
