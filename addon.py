@@ -987,7 +987,25 @@ def update_random_query(random_id):
 	if random_id == 'execute':
 		if current_query['title'] is None:
 			current_query['title'] = 1
-		plugin.run(['plugin://plugin.program.iagl/run_random/1/', '0', IAGL.get_query_as_url(current_query)])
+		if current_query['lists'] is None:
+			current_dialog = xbmcgui.Dialog()
+			ret1 = current_dialog.select('Query all lists?  This could take a while...', ['Yes','Cancel'])
+			del current_dialog
+			if ret1 == 0:
+				plugin.run(['plugin://plugin.program.iagl/run_random/1/', '0', IAGL.get_query_as_url(current_query)])
+			else:
+				xbmc.log(msg='IAGL:  User cancelled large query', level=xbmc.LOGDEBUG)
+		else:
+			if len(current_query['lists'])>10:
+				current_dialog = xbmcgui.Dialog()
+				ret1 = current_dialog.select('Query more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				del current_dialog
+				if ret1 == 0:
+					plugin.run(['plugin://plugin.program.iagl/run_random/1/', '0', IAGL.get_query_as_url(current_query)])
+				else:
+					xbmc.log(msg='IAGL:  User cancelled large query', level=xbmc.LOGDEBUG)
+			else:
+				plugin.run(['plugin://plugin.program.iagl/run_random/1/', '0', IAGL.get_query_as_url(current_query)])
 
 @plugin.route('/generate_random_item')
 def generate_random_listitem():
@@ -996,12 +1014,30 @@ def generate_random_listitem():
 		current_query = json.loads(xbmcgui.Window(IAGL.windowid).getProperty('iagl_random_query'))
 	except:
 		xbmc.log(msg='IAGL:  Random query could not be loaded, resetting the query', level=xbmc.LOGDEBUG)
-		IAGL.initialize_random_query()
+		IAGL.initialize_search_query()
 		current_query = json.loads(xbmcgui.Window(IAGL.windowid).getProperty('iagl_random_query'))
-	create_listitem = True
+	create_listitem = False
 	if current_query['title'] is None:
 		current_query['title'] = 1
-	
+	if current_query['lists'] is None:
+		current_dialog = xbmcgui.Dialog()
+		ret1 = current_dialog.select('Create a query for all lists?  This could take a while...', ['Yes','Cancel'])
+		del current_dialog
+		if ret1 == 0:
+			create_listitem = True
+		else:
+			xbmc.log(msg='IAGL:  User cancelled large query', level=xbmc.LOGDEBUG)
+	else:
+		if len(current_query['lists'])>10:
+			current_dialog = xbmcgui.Dialog()
+			ret1 = current_dialog.select('Query more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+			del current_dialog
+			if ret1 == 0:
+				create_listitem = True
+			else:
+				xbmc.log(msg='IAGL:  User cancelled large query', level=xbmc.LOGDEBUG)
+		else:
+			create_listitem = True
 	default_label = 'IAGL Random Play %(query_value)s' % {'query_value':IAGL.get_random_time()}
 	if create_listitem:
 		current_dialog = xbmcgui.Dialog()

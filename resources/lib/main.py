@@ -1699,6 +1699,8 @@ class iagl_utils(object):
 		clean_label_option = self.get_setting_as_bool(self.handle.getSetting(id='iagl_setting_clean_list'))
 		label_naming_convention = self.handle.getSetting(id='iagl_setting_naming')
 		#1.  Get all games from all the lists
+		if current_query['lists'] is None: #Use all lists is the query is for None
+			current_query['lists'] = [x for x in self.get_game_lists().get('dat_filename')]
 		for game_list_id in current_query['lists']:
 			games_dict = games_dict+self.get_games(game_list_id)
 		xbmc.log(msg='IAGL:  Search started from %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
@@ -1772,6 +1774,8 @@ class iagl_utils(object):
 		clean_label_option = self.get_setting_as_bool(self.handle.getSetting(id='iagl_setting_clean_list'))
 		label_naming_convention = self.handle.getSetting(id='iagl_setting_naming')
 		#1.  Get all games from all the lists
+		if current_query['lists'] is None: #Use all lists is the query is for None
+			current_query['lists'] = [x for x in self.get_game_lists().get('dat_filename')]
 		for game_list_id in current_query['lists']:
 			games_dict = games_dict+self.get_games(game_list_id)
 		xbmc.log(msg='IAGL:  Random play started from %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
