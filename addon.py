@@ -46,7 +46,12 @@ def iagl_main():
 def list_archives_browse():
 	list_method = 'choose_from_list'
 	for list_item in IAGL.get_browse_lists_as_listitems():
-		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/archives/'+url_quote(list_item.getLabel2())),list_item, True)
+		if (list_item.getLabel2() == 'search_menu' and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_setting_show_search'))) or (list_item.getLabel2() == 'random_menu' and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_setting_show_randomplay'))):
+			xbmc.log(msg='IAGL:  Getting game item %(game_list_item)s is hidden per setting' % {'game_list_item': list_item.getLabel2()}, level=xbmc.LOGDEBUG)
+		else:
+			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/archives/'+url_quote(list_item.getLabel2())),list_item, True)
+	if IAGL.check_to_show_history(): #Add history to the main choose menu as well
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/game_list/'+IAGL.current_game_listing_route+'/game_history/1'),IAGL.get_game_history_listitem(), True)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/archives/all')
@@ -61,7 +66,12 @@ def list_archives_all():
 			if list_item.getProperty('emu_visibility') != 'hidden':
 				xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/game_list/'+IAGL.current_game_listing_route+'/'+url_quote(list_item.getProperty('dat_filename'))),IAGL.add_list_context_menus(list_item,url_quote(list_item.getProperty('dat_filename'))), True)
 		# xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game_list, game_list_id=url_quote(list_item.getProperty('dat_filename')), page_number=1),list_item, True)
-	if IAGL.check_to_show_history():
+	search_and_browse_list_item = IAGL.get_browse_lists_as_listitems()
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_setting_show_search')): #Add search to the bottom of the all page
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/archives/search_menu'),[x for x in search_and_browse_list_item if x.getLabel2()=='search_menu'][0], True)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_setting_show_randomplay')): #Add random play to the bottom of the all page
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/archives/search_menu'),[x for x in search_and_browse_list_item if x.getLabel2()=='random_menu'][0], True)
+	if IAGL.check_to_show_history(): #Add history item to the bottom of the all page
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/game_list/'+IAGL.current_game_listing_route+'/game_history/1'),IAGL.get_game_history_listitem(), True)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
