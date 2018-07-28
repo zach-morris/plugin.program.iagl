@@ -81,6 +81,9 @@
 	<launcher name="RetroArch DOSBox (DOS)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/dosbox_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch DOSBox SVN (DOS)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/dosbox_svn_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/easyrpg_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -119,6 +122,12 @@
 	</launcher>
 	<launcher name="RetroArch FFmpeg (Media Player)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/ffmpeg_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixGB (GB/GBC)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/fixgb_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixNES (NES)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/fixnes_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch fMSX (MSX)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/fmsx_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -173,6 +182,9 @@
 	</launcher>
 	<launcher name="RetroArch Imageviewer (Media Viewer)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/imageviewer_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Dolphin Ishiiruka (Wii / Gamecube)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/ishiiruka_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Lua Engine (Lutro)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/lutro_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -254,6 +266,9 @@
 	</launcher>
 	<launcher name="RetroArch mGBA (GBA)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mgba_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch MPV (Media Player)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mpv_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mrboom_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -426,6 +441,9 @@
 	<launcher name="RetroArch Virtual Jaguar (Jaguar)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/virtualjaguar_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE SDL C64 (C64)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/x64sdl_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/xrick_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -527,6 +545,9 @@
 	<launcher name="RetroArch DOSBox (DOS)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/dosbox_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch DOSBox SVN (DOS)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/dosbox_svn_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/easyrpg_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -565,6 +586,12 @@
 	</launcher>
 	<launcher name="RetroArch FFmpeg (Media Player)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/ffmpeg_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixGB (GB/GBC)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/fixgb_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixNES (NES)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/fixnes_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch fMSX (MSX)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/fmsx_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -619,6 +646,9 @@
 	</launcher>
 	<launcher name="RetroArch Imageviewer (Media Viewer)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/imageviewer_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Dolphin Ishiiruka (Wii / Gamecube)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/ishiiruka_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Lua Engine (Lutro)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/lutro_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -700,6 +730,9 @@
 	</launcher>
 	<launcher name="RetroArch mGBA (GBA)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mgba_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch MPV (Media Player)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mpv_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mrboom_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -872,6 +905,9 @@
 	<launcher name="RetroArch Virtual Jaguar (Jaguar)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/virtualjaguar_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE SDL C64 (C64)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/x64sdl_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/xrick_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -973,6 +1009,9 @@
 	<launcher name="RetroArch DOSBox (DOS)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/dosbox_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch DOSBox SVN (DOS)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/dosbox_svn_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/easyrpg_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -1011,6 +1050,12 @@
 	</launcher>
 	<launcher name="RetroArch FFmpeg (Media Player)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/ffmpeg_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixGB (GB/GBC)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/fixgb_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixNES (NES)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/fixnes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch fMSX (MSX)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/fmsx_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1065,6 +1110,9 @@
 	</launcher>
 	<launcher name="RetroArch Imageviewer (Media Viewer)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/imageviewer_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Dolphin Ishiiruka (Wii / Gamecube)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/ishiiruka_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Lua Engine (Lutro)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/lutro_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1146,6 +1194,9 @@
 	</launcher>
 	<launcher name="RetroArch mGBA (GBA)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mgba_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch MPV (Media Player)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mpv_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mrboom_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1318,6 +1369,9 @@
 	<launcher name="RetroArch Virtual Jaguar (Jaguar)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/virtualjaguar_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE SDL C64 (C64)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/x64sdl_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/xrick_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -1419,6 +1473,9 @@
 	<launcher name="RetroArch DOSBox (DOS)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/dosbox_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch DOSBox SVN (DOS)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/dosbox_svn_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/easyrpg_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -1457,6 +1514,12 @@
 	</launcher>
 	<launcher name="RetroArch FFmpeg (Media Player)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/ffmpeg_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixGB (GB/GBC)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/fixgb_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixNES (NES)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/fixnes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch fMSX (MSX)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/fmsx_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1511,6 +1574,9 @@
 	</launcher>
 	<launcher name="RetroArch Imageviewer (Media Viewer)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/imageviewer_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Dolphin Ishiiruka (Wii / Gamecube)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/ishiiruka_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Lua Engine (Lutro)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/lutro_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1592,6 +1658,9 @@
 	</launcher>
 	<launcher name="RetroArch mGBA (GBA)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mgba_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch MPV (Media Player)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mpv_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mrboom_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1764,6 +1833,9 @@
 	<launcher name="RetroArch Virtual Jaguar (Jaguar)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/virtualjaguar_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE SDL C64 (C64)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/x64sdl_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/xrick_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -1865,6 +1937,9 @@
 	<launcher name="RetroArch DOSBox (DOS)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/dosbox_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch DOSBox SVN (DOS)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/dosbox_svn_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/easyrpg_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -1903,6 +1978,12 @@
 	</launcher>
 	<launcher name="RetroArch FFmpeg (Media Player)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/ffmpeg_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixGB (GB/GBC)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/fixgb_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixNES (NES)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/fixnes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch fMSX (MSX)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/fmsx_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1957,6 +2038,9 @@
 	</launcher>
 	<launcher name="RetroArch Imageviewer (Media Viewer)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/imageviewer_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Dolphin Ishiiruka (Wii / Gamecube)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/ishiiruka_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Lua Engine (Lutro)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/lutro_libretro.so "%ROM_PATH%"</launcher_command>
@@ -2038,6 +2122,9 @@
 	</launcher>
 	<launcher name="RetroArch mGBA (GBA)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mgba_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch MPV (Media Player)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mpv_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mrboom_libretro.so "%ROM_PATH%"</launcher_command>
@@ -2210,6 +2297,9 @@
 	<launcher name="RetroArch Virtual Jaguar (Jaguar)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/virtualjaguar_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE SDL C64 (C64)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/x64sdl_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/xrick_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -2311,6 +2401,9 @@
 	<launcher name="RetroArch DOSBox (DOS)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\dosbox_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch DOSBox SVN (DOS)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\dosbox_svn_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\easyrpg_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -2349,6 +2442,12 @@
 	</launcher>
 	<launcher name="RetroArch FFmpeg (Media Player)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\ffmpeg_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixGB (GB/GBC)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\fixgb_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixNES (NES)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\fixnes_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch fMSX (MSX)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\fmsx_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -2403,6 +2502,9 @@
 	</launcher>
 	<launcher name="RetroArch Imageviewer (Media Viewer)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\imageviewer_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Dolphin Ishiiruka (Wii / Gamecube)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\ishiiruka_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Lua Engine (Lutro)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\lutro_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -2484,6 +2586,9 @@
 	</launcher>
 	<launcher name="RetroArch mGBA (GBA)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mgba_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch MPV (Media Player)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mpv_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mrboom_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -2656,6 +2761,9 @@
 	<launcher name="RetroArch Virtual Jaguar (Jaguar)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\virtualjaguar_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE SDL C64 (C64)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\x64sdl_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\xrick_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -2766,6 +2874,9 @@
 	<launcher name="RetroArch DOSBox (DOS)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\dosbox_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch DOSBox SVN (DOS)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\dosbox_svn_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\easyrpg_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -2804,6 +2915,12 @@
 	</launcher>
 	<launcher name="RetroArch FFmpeg (Media Player)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\ffmpeg_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixGB (GB/GBC)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\fixgb_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixNES (NES)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\fixnes_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch fMSX (MSX)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\fmsx_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -2858,6 +2975,9 @@
 	</launcher>
 	<launcher name="RetroArch Imageviewer (Media Viewer)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\imageviewer_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Dolphin Ishiiruka (Wii / Gamecube)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\ishiiruka_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Lua Engine (Lutro)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\lutro_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -2939,6 +3059,9 @@
 	</launcher>
 	<launcher name="RetroArch mGBA (GBA)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mgba_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch MPV (Media Player)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mpv_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mrboom_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -3111,6 +3234,9 @@
 	<launcher name="RetroArch Virtual Jaguar (Jaguar)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\virtualjaguar_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE SDL C64 (C64)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\x64sdl_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\xrick_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3221,6 +3347,9 @@
 	<launcher name="RetroArch DOSBox (DOS)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/dosbox_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch DOSBox SVN (DOS)" os="LibreElec Remix">
+		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/dosbox_svn_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/easyrpg_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3259,6 +3388,12 @@
 	</launcher>
 	<launcher name="RetroArch FFmpeg (Media Player)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/ffmpeg_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixGB (GB/GBC)" os="LibreElec Remix">
+		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/fixgb_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixNES (NES)" os="LibreElec Remix">
+		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/fixnes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch fMSX (MSX)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/fmsx_libretro.so "%ROM_PATH%"</launcher_command>
@@ -3313,6 +3448,9 @@
 	</launcher>
 	<launcher name="RetroArch Imageviewer (Media Viewer)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/imageviewer_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Dolphin Ishiiruka (Wii / Gamecube)" os="LibreElec Remix">
+		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/ishiiruka_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Lua Engine (Lutro)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/lutro_libretro.so "%ROM_PATH%"</launcher_command>
@@ -3394,6 +3532,9 @@
 	</launcher>
 	<launcher name="RetroArch mGBA (GBA)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/mgba_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch MPV (Media Player)" os="LibreElec Remix">
+		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/mpv_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/mrboom_libretro.so "%ROM_PATH%"</launcher_command>
@@ -3566,6 +3707,9 @@
 	<launcher name="RetroArch Virtual Jaguar (Jaguar)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/virtualjaguar_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE SDL C64 (C64)" os="LibreElec Remix">
+		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/x64sdl_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/xrick_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3667,6 +3811,9 @@
 	<launcher name="RetroArch DOSBox (DOS)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" dosbox "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch DOSBox SVN (DOS)" os="LibreElec Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" dosbox_svn "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" easyrpg "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3705,6 +3852,12 @@
 	</launcher>
 	<launcher name="RetroArch FFmpeg (Media Player)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" ffmpeg "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixGB (GB/GBC)" os="LibreElec Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" fixgb "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixNES (NES)" os="LibreElec Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" fixnes "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch fMSX (MSX)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" fmsx "%ROM_PATH%"</launcher_command>
@@ -3759,6 +3912,9 @@
 	</launcher>
 	<launcher name="RetroArch Imageviewer (Media Viewer)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" imageviewer "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Dolphin Ishiiruka (Wii / Gamecube)" os="LibreElec Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" ishiiruka "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Lua Engine (Lutro)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" lutro "%ROM_PATH%"</launcher_command>
@@ -3840,6 +3996,9 @@
 	</launcher>
 	<launcher name="RetroArch mGBA (GBA)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mgba "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch MPV (Media Player)" os="LibreElec Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mpv "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mrboom "%ROM_PATH%"</launcher_command>
@@ -4012,6 +4171,9 @@
 	<launcher name="RetroArch Virtual Jaguar (Jaguar)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" virtualjaguar "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE SDL C64 (C64)" os="LibreElec Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" x64sdl "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" xrick "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4104,6 +4266,9 @@
 	<launcher name="RetroArch DOSBox (DOS)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh dosbox "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch DOSBox SVN (DOS)" os="LibreElec S905 Addon">
+		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh dosbox_svn "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh easyrpg "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4142,6 +4307,12 @@
 	</launcher>
 	<launcher name="RetroArch FFmpeg (Media Player)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh ffmpeg "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixGB (GB/GBC)" os="LibreElec S905 Addon">
+		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh fixgb "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixNES (NES)" os="LibreElec S905 Addon">
+		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh fixnes "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch fMSX (MSX)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh fmsx "%ROM_PATH%"</launcher_command>
@@ -4196,6 +4367,9 @@
 	</launcher>
 	<launcher name="RetroArch Imageviewer (Media Viewer)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh imageviewer "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Dolphin Ishiiruka (Wii / Gamecube)" os="LibreElec S905 Addon">
+		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh ishiiruka "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Lua Engine (Lutro)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh lutro "%ROM_PATH%"</launcher_command>
@@ -4277,6 +4451,9 @@
 	</launcher>
 	<launcher name="RetroArch mGBA (GBA)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mgba "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch MPV (Media Player)" os="LibreElec S905 Addon">
+		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mpv "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mrboom "%ROM_PATH%"</launcher_command>
@@ -4449,6 +4626,9 @@
 	<launcher name="RetroArch Virtual Jaguar (Jaguar)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh virtualjaguar "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE SDL C64 (C64)" os="LibreElec S905 Addon">
+		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh x64sdl "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh xrick "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4541,6 +4721,9 @@
 	<launcher name="RetroArch DOSBox (DOS)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh dosbox "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch DOSBox SVN (DOS)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh dosbox_svn "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh easyrpg "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4579,6 +4762,12 @@
 	</launcher>
 	<launcher name="RetroArch FFmpeg (Media Player)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh ffmpeg "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixGB (GB/GBC)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh fixgb "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixNES (NES)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh fixnes "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch fMSX (MSX)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh fmsx "%ROM_PATH%"</launcher_command>
@@ -4633,6 +4822,9 @@
 	</launcher>
 	<launcher name="RetroArch Imageviewer (Media Viewer)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh imageviewer "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Dolphin Ishiiruka (Wii / Gamecube)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh ishiiruka "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Lua Engine (Lutro)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh lutro "%ROM_PATH%"</launcher_command>
@@ -4714,6 +4906,9 @@
 	</launcher>
 	<launcher name="RetroArch mGBA (GBA)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh mgba "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch MPV (Media Player)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh mpv "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh mrboom "%ROM_PATH%"</launcher_command>
@@ -4886,6 +5081,9 @@
 	<launcher name="RetroArch Virtual Jaguar (Jaguar)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh virtualjaguar "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE SDL C64 (C64)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh x64sdl "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh xrick "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4987,6 +5185,9 @@
 	<launcher name="RetroArch DOSBox (DOS)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/dosbox_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
 	</launcher>
+	<launcher name="RetroArch DOSBox SVN (DOS)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/dosbox_svn_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
+	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/easyrpg_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
 	</launcher>
@@ -5025,6 +5226,12 @@
 	</launcher>
 	<launcher name="RetroArch FFmpeg (Media Player)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/ffmpeg_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixGB (GB/GBC)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/fixgb_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
+	</launcher>
+	<launcher name="RetroArch fixNES (NES)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/fixnes_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
 	</launcher>
 	<launcher name="RetroArch fMSX (MSX)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/fmsx_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
@@ -5079,6 +5286,9 @@
 	</launcher>
 	<launcher name="RetroArch Imageviewer (Media Viewer)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/imageviewer_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Dolphin Ishiiruka (Wii / Gamecube)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/ishiiruka_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Lua Engine (Lutro)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/lutro_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
@@ -5160,6 +5370,9 @@
 	</launcher>
 	<launcher name="RetroArch mGBA (GBA)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/mgba_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
+	</launcher>
+	<launcher name="RetroArch MPV (Media Player)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/mpv_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/mrboom_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
@@ -5331,6 +5544,9 @@
 	</launcher>
 	<launcher name="RetroArch Virtual Jaguar (Jaguar)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/virtualjaguar_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VICE SDL C64 (C64)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/x64sdl_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
 	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/xrick_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
