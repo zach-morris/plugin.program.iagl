@@ -70,7 +70,7 @@ def list_archives_all():
 	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_setting_show_search')): #Add search to the bottom of the all page
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/archives/search_menu'),[x for x in search_and_browse_list_item if x.getLabel2()=='search_menu'][0], True)
 	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_setting_show_randomplay')): #Add random play to the bottom of the all page
-		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/archives/search_menu'),[x for x in search_and_browse_list_item if x.getLabel2()=='random_menu'][0], True)
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/archives/random_menu'),[x for x in search_and_browse_list_item if x.getLabel2()=='random_menu'][0], True)
 	if IAGL.check_to_show_history(): #Add history item to the bottom of the all page
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/game_list/'+IAGL.current_game_listing_route+'/game_history/1'),IAGL.get_game_history_listitem(), True)
 	xbmcplugin.endOfDirectory(plugin.handle)

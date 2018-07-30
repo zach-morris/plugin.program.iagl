@@ -262,6 +262,7 @@ class iagl_utils(object):
 						current_dialog = xbmcgui.Dialog()
 						ok_ret = current_dialog.ok('New Game List Version', 'New version %(new_game_list_version)s for %(dat_filename)s' % {'new_game_list_version': new_game_list_version, 'dat_filename': new_game_lists['dat_filename'][ii]})
 						ret1 = current_dialog.select('Update to new version of %(dat_filename)s ?'% {'dat_filename': new_game_lists['dat_filename'][ii]}, ['Get updated list','Ask me again later', 'No, Never!'])
+						del current_dialog
 						if ret1>-1:
 							if ret1==0: #Copy file from addon data to userdata and copy userdata settings
 								if xbmcvfs.rename(ff,current_game_lists.get('fullpath')[idx]):
@@ -287,10 +288,12 @@ class iagl_utils(object):
 				if len([x for x in new_game_list_added if x])>2:
 					current_dialog = xbmcgui.Dialog()
 					ok_ret = current_dialog.ok('New Game Lists','New game lists are now available')
+					del current_dialog
 				else:
 					for ff in [x for x in new_game_list_added if x]:
 						current_dialog = xbmcgui.Dialog()
 						ok_ret = current_dialog.ok('New Game Lists','New game list %(dat_filename)s is now available' % {'dat_filename': ff})
+						del current_dialog
 
 	def get_list_cache_path(self):
 		current_path = os.path.join(self.get_addon_userdata_path(),self.list_cache_name)
@@ -1716,19 +1719,20 @@ class iagl_utils(object):
 			xbmc.log(msg='IAGL:  Tag search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
 		#4.  Filter by genre
 		if current_query['genre'] is not None:
-			games_dict = [x for x in games_dict if x.get('info').get('genre') is not None and x.get('info').get('genre') in current_query['genre']]
+			games_dict = [x for x in games_dict if x.get('info').get('genre') is not None and any([y in x.get('info').get('genre') for y in current_query['genre']])]
 			xbmc.log(msg='IAGL:  Genre search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
 		#5.  Filter by nplayers
 		if current_query['nplayers'] is not None:
-			games_dict = [x for x in games_dict if x.get('properties').get('nplayers') is not None and x.get('properties').get('nplayers') in current_query['nplayers']]
+			games_dict = [x for x in games_dict if x.get('properties').get('nplayers') is not None and any([y in x.get('properties').get('nplayers') for y in current_query['nplayers']])]
 			xbmc.log(msg='IAGL:  Players search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
 		#6.  Filter by year
 		if current_query['year'] is not None:
-			games_dict = [x for x in games_dict if x.get('info').get('year') is not None and x.get('info').get('year') in current_query['year']]
+			games_dict = [x for x in games_dict if x.get('info').get('year') is not None and any([y in x.get('info').get('year') for y in current_query['year']])]
 			xbmc.log(msg='IAGL:  Years search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
 		#7.  Filter by studio
 		if current_query['studio'] is not None:
-			games_dict = [x for x in games_dict if x.get('info').get('studio') is not None and x.get('info').get('studio') in current_query['studio']]
+			games_dict = [x for x in games_dict if x.get('info').get('studio') is not None and any([y in x.get('info').get('studio') for y in current_query['studio']])]
+			# games_dict = [x for x in games_dict if x.get('info').get('studio') is not None and x.get('info').get('studio') in current_query['studio']]
 			xbmc.log(msg='IAGL:  Studio search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
 		
 		if games_dict is not None and len(games_dict)>0:
@@ -1786,23 +1790,25 @@ class iagl_utils(object):
 			xbmc.log(msg='IAGL:  Tag search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
 		#3.  Filter by genre
 		if current_query['genre'] is not None:
-			games_dict = [x for x in games_dict if x.get('info').get('genre') is not None and x.get('info').get('genre') in current_query['genre']]
+			games_dict = [x for x in games_dict if x.get('info').get('genre') is not None and any([y in x.get('info').get('genre') for y in current_query['genre']])]
 			xbmc.log(msg='IAGL:  Genre search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
 		#4.  Filter by nplayers
 		if current_query['nplayers'] is not None:
-			games_dict = [x for x in games_dict if x.get('properties').get('nplayers') is not None and x.get('properties').get('nplayers') in current_query['nplayers']]
+			games_dict = [x for x in games_dict if x.get('properties').get('nplayers') is not None and any([y in x.get('properties').get('nplayers') for y in current_query['nplayers']])]
 			xbmc.log(msg='IAGL:  Players search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
 		#5.  Filter by year
 		if current_query['year'] is not None:
-			games_dict = [x for x in games_dict if x.get('info').get('year') is not None and x.get('info').get('year') in current_query['year']]
+			games_dict = [x for x in games_dict if x.get('info').get('year') is not None and any([y in x.get('info').get('year') for y in current_query['year']])]
 			xbmc.log(msg='IAGL:  Years search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
 		#6.  Filter by studio
 		if current_query['studio'] is not None:
-			games_dict = [x for x in games_dict if x.get('info').get('studio') is not None and x.get('info').get('studio') in current_query['studio']]
+			games_dict = [x for x in games_dict if x.get('info').get('studio') is not None and any([y in x.get('info').get('studio') for y in current_query['studio']])]
 			xbmc.log(msg='IAGL:  Studio search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
 		#7.  Get number of results
-		if current_query['title'] is not None:
-			random_numbers_chosen = random_sample(range(len(games_dict)), int(current_query['title']))
+		if current_query['title'] is None:
+			current_query['title'] = 1
+		if len(games_dict)>0:
+			random_numbers_chosen = random_sample(range(len(games_dict)), min(len(games_dict),int(current_query['title'])))  #Choose between smallest of length of game list and requested number of games
 			for rnc in random_numbers_chosen:
 				games_dict_random.append(games_dict[rnc])
 			xbmc.log(msg='IAGL:  Random play filtered results to %(game_number)s total games' % {'game_number': len(games_dict_random)}, level=xbmc.LOGDEBUG)
@@ -2072,6 +2078,7 @@ class iagl_utils(object):
 		if setting_id == 'metadata':
 			current_dialog = xbmcgui.Dialog()
 			ret1 = current_dialog.select('Select metadata value to update',self.context_menu_metadata_choices)
+			del current_dialog
 			if ret1 > -1:
 				current_key = self.context_menu_metadata_keys[ret1]
 				current_choice = self.context_menu_metadata_choices[ret1]
@@ -2080,6 +2087,7 @@ class iagl_utils(object):
 		elif setting_id == 'art':
 			current_dialog = xbmcgui.Dialog()
 			ret1 = current_dialog.select('Select art to update',self.context_menu_art_choices)
+			del current_dialog
 			if ret1 > -1:
 				current_key = self.context_menu_art_keys[ret1]
 				current_choice = self.context_menu_art_choices[ret1]
@@ -2209,7 +2217,7 @@ class iagl_utils(object):
 			ret2 = current_dialog.select('Are you sure you want to update %(current_choice)s?'%{'current_choice':current_choice}, ['Yes','Cancel'])
 			if ret2 != 0:
 				new_value = None
-
+		del current_dialog
 		return new_value
 
 	def update_xml_header(self,current_filename,current_key,new_value,silent_update=False):
@@ -2248,10 +2256,12 @@ class iagl_utils(object):
 						if not silent_update:
 							current_dialog = xbmcgui.Dialog()
 							ok_ret = current_dialog.ok('Complete','%(current_filename)s was updated and cache was cleared' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]})
+							del current_dialog
 					else: #Delete list file cache
 						if not silent_update:
 							current_dialog = xbmcgui.Dialog()
 							ok_ret = current_dialog.ok('Complete','%(current_filename)s was updated' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]})
+							del current_dialog
 				else:
 					xbmc.log(msg='IAGL:  Temporary XML file could not be renamed.  How on earth did you get here?', level=xbmc.LOGDEBUG)
 			else: #Cant delete the existing file
@@ -2296,6 +2306,7 @@ class iagl_utils(object):
 						xbmc.log(msg='IAGL:  Error, the entered favorites name %(current_filename)s already exists.' % {'current_filename': new_favorites_filename}, level=xbmc.LOGERROR)
 			else:
 				self.add_game_to_xml(new_value,game_list_id_in,game_id_in,json_in)  #Add the game to the file
+		del current_dialog
 
 	def add_game_to_xml(self,filename_in,game_list_id_in,game_id_in,json_in):
 		xbmc.log(msg='IAGL:  Adding game %(game_id_in)s to favorites list %(filename_in)s'%{'game_id_in':url_unquote(game_id_in),'filename_in':os.path.split(filename_in)[-1]}, level=xbmc.LOGDEBUG)
@@ -2343,9 +2354,11 @@ class iagl_utils(object):
 							if self.delete_list_cache(os.path.splitext(os.path.split(filename_in)[-1])[0]):
 								current_dialog = xbmcgui.Dialog()
 								ok_ret = current_dialog.ok('Complete','%(current_game)s added to %(current_filename)s and cache was cleared' % {'current_game': current_game_name,'current_filename': os.path.splitext(os.path.split(filename_in)[-1])[0]})
+								del current_dialog
 							else: #Delete list file cache
 								current_dialog = xbmcgui.Dialog()
 								ok_ret = current_dialog.ok('Complete','%(current_game)s added to %(current_filename)s' % {'current_game': current_game_name, 'current_filename': os.path.splitext(os.path.split(filename_in)[-1])[0]})
+								del current_dialog
 						else:
 							xbmc.log(msg='IAGL:  Temporary XML file could not be renamed.  How on earth did you get here?', level=xbmc.LOGDEBUG)
 					else: #Cant delete the existing file
@@ -2401,6 +2414,7 @@ class iagl_utils(object):
 						xbmc.log(msg='IAGL Error:  Unable to find the favorite CRC in %(game_list_id_in)s' % {'game_list_id_in': game_list_id_in}, level=xbmc.LOGERROR)
 			else:
 				xbmc.log(msg='IAGL Error:  Unable to find the favorites file %(current_filename)s' % {'current_filename': current_filename}, level=xbmc.LOGERROR)
+		del current_dialog
 
 	def get_list_settings_text(self,current_game_list):
 		launch_command_string = ''
@@ -2750,6 +2764,11 @@ class iagl_download(object):
 		self.username_setting = self.IAGL.handle.getSetting(id='iagl_setting_ia_username')
 		self.password_setting = self.IAGL.handle.getSetting(id='iagl_setting_ia_password')
 		self.local_file_setting = self.IAGL.handle.getSetting(id='iagl_setting_localfile_action')
+		if len([x for x in json.loads(xbmc.executeJSONRPC('{ "jsonrpc": "2.0", "method": "Addons.GetAddons","params":{"type":"kodi.vfs"}, "id": "1"}')).get('result').get('addons') if x.get('addonid')=='vfs.libarchive'])>0:
+			self.libarchive_available = True
+		else:
+			self.libarchive_available = False
+		self.libarchive_extensions = ['.7z','.tar.gz','.tar.bz2','.tar.xz','.zip','.rar','.tgz','.tbz2','.gz','.bz2','.xz']
 		if self.username_setting is not None and len(self.username_setting)<1:
 			self.username_setting = None
 		if self.password_setting is not None and len(self.password_setting)<1:
@@ -3014,8 +3033,13 @@ class iagl_download(object):
 				self.download_fail_reason = 'Failed to establish connection.'
 			xbmc.log(msg='IAGL:  There was a download error (no login): %(url)s - %(web_except)s' % {'url': url, 'web_except': web_except}, level=xbmc.LOGERROR)
 
-	def post_process_unarchive_files(self):
-		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unzip (vfs.libarchive)'% {'filename_in': self.current_saved_files[-1]}, level=xbmc.LOGDEBUG)
+	def post_process_unarchive_files(self,filename_in,crc_in):
+		#Libarchive not yet working, so default to xbmc builtin
+		#Check for libarchive and use that if available, otherwise try xbmc builtin extract
+		# if self.libarchive_available:
+		# 	self.post_process_unarchive_files_libarchive(filename_in,crc_in)
+		# else:
+		self.post_process_unarchive_files_xbmc_builtin(filename_in,crc_in)		
 
 	def post_process_unarchive_files_to_folder_name_xbmc_builtin(self,filename_in,name_in):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unzip files to folder %(name_in)s (builtin)'% {'filename_in': filename_in, 'name_in': name_in}, level=xbmc.LOGDEBUG)
@@ -3033,6 +3057,16 @@ class iagl_download(object):
 			self.current_processed_files.append(filename_in)
 			self.current_processed_files_success.append(True) #Set this to true regardless in this case...
 			xbmc.log(msg='IAGL:  The file %(filename_in)s does not appear to be a zip file and was not processed, pointing back to file in attempts to launch.'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
+	
+	def post_process_unarchive_files_libarchive(self,filename_in,crc_in):
+		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unarchive (vfs.libarchive)'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
+		if any([x in filename_in.lower() for x in self.libarchive_extensions]):
+			dirs_in_dir, files_in_dir = xbmcvfs.listdir('archive://%(filename_in)s' % {'filename_in': url_quote(filename_in)})
+			files_extracted, files_extracted_success = move_directory_contents_libarchive(filename_in,os.path.split(filename_in)[0])
+		else:
+			self.current_processed_files.append(filename_in)
+			self.current_processed_files_success.append(True) #Set this to true regardless in this case...
+			xbmc.log(msg='IAGL:  The file %(filename_in)s does not appear to be a supported libarchive file and was not processed, pointing back to file in attempts to launch.'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
 
 	def post_process_unarchive_files_xbmc_builtin(self,filename_in,crc_in):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unzip (builtin)'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
@@ -3340,6 +3374,7 @@ class iagl_download(object):
 			if self.local_file_setting == 'Prompt':
 				current_dialog = xbmcgui.Dialog()
 				ret1 = current_dialog.select('Download and overwrite local files?', ['No','Yes'])
+				del current_dialog
 				if ret1 == 0: #Do not overwrite local files, so just point to them directly
 					overwrite_files = False		
 				else:
@@ -3391,7 +3426,7 @@ class iagl_download(object):
 				if pda is not None:
 					# xbmc.executebuiltin('ActivateWindow(busydialog)')
 					if pda == 'unzip_rom':
-						self.post_process_unarchive_files_xbmc_builtin(self.current_saved_files[ii],self.current_saved_files_crc[ii])
+						self.post_process_unarchive_files(self.current_saved_files[ii],self.current_saved_files_crc[ii])
 					if pda == 'unzip_and_rename_file': 
 						self.post_process_unarchive_and_rename_files_xbmc_builtin(self.current_saved_files[ii],self.current_saved_files_crc[ii])
 					if pda == 'unzip_to_folder_and_launch_file':
@@ -3520,6 +3555,7 @@ class iagl_launch(object):
 		if self.external_launch_command == 'none':
 			current_dialog = xbmcgui.Dialog()
 			ok_ret = current_dialog.ok('Error','No external command is defined.[CR]Please check settings.')
+			del current_dialog
 			return False
 		else:
 			#Define %APP_PATH% Variable
@@ -3798,6 +3834,7 @@ class iagl_infodialog(xbmcgui.WindowXMLDialog):
 				ok_ret = current_dialog.ok('Error','%(game_title)s download failed[CR]%(fail_reason)s' % {'game_title': IAGL_DL.current_game_title, 'fail_reason': IAGL_DL.download_fail_reason})
 		else:  #So far so good, now process the files
 			ok_ret = current_dialog.ok('Complete','%(game_title)s was successfully downloaded' % {'game_title': IAGL_DL.current_game_title})
+		del current_dialog
 		#Re-Enable buttons
 		if self.download_button is not None:
 			self.download_button.setEnabled(True)
@@ -4076,6 +4113,34 @@ def move_directory_contents_xbmcvfs(directory_from,directory_to):
 				shutil.rmtree(os.path.join(directory_from,''))
 			except Exception as exc: #except Exception, (exc):
 				xbmc.log(msg='IAGL:  Unable to delete the folder after moving files: %(dir_from)s.  Exception %(exc)s' % {'dir_from': os.path.join(directory_from,''), 'exc': exc}, level=xbmc.LOGDEBUG)
+	return files_out, overall_success
+
+def move_directory_contents_libarchive(directory_from,directory_to):
+	#not yet working - seems to be a bug with libarchive
+	overall_success = True
+	files_out = list()
+
+	dirs_in_dir, files_in_dir = xbmcvfs.listdir('archive://%(directory_from)s' % {'directory_from': url_quote(directory_from)})
+
+	for ff in files_in_dir:
+		success = xbmcvfs.copy(os.path.join('archive://%(directory_from)s' % {'directory_from': url_quote(directory_from)},ff),os.path.join(directory_to,ff))  #Attempt to move the file first
+		if not success:
+			overall_success = False
+		else:
+			files_out.append(os.path.join(directory_to,ff))
+	for dd in dirs_in_dir:
+		success = xbmcvfs.mkdir(os.path.join(directory_to,dd))
+		if not success:
+			overall_success = False
+		else:
+			files_out2, success = move_directory_contents_libarchive(os.path.join(directory_from,dd),os.path.join(directory_to,dd))
+		if not success:
+			overall_success = False
+		else:
+			files_out = files_out + files_out2
+	# if overall_success:
+	# 	if not xbmcvfs.delete(os.path.join(directory_from,'')):
+	# 		xbmc.log(msg='IAGL:  Unable to delete the archive after moving files: %(dir_from)s' % {'dir_from': os.path.join(directory_from,'')}, level=xbmc.LOGDEBUG)
 	return files_out, overall_success
 
 def clean_file_folder_name(text_in):
