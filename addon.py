@@ -265,10 +265,14 @@ def get_game(game_list_id,game_id):
 	#Check to see if its an IAGL favorite route
 	current_route = IAGL.get_route_from_json(current_game_json)
 	if current_route is not None and 'plugin://plugin.program.iagl' in current_route[0]:
-		route_parse = current_route[0].replace('plugin://plugin.program.iagl/game','').replace('plugin://plugin.program.iagl','').split('/')
-		current_page, page_info = IAGL.get_games_as_listitems(url_unquote(route_parse[1]),list_method,url_unquote(route_parse[2]),1)
-		current_game_json = current_page[0].getProperty('iagl_json')
-		xbmc.log(msg='IAGL:  Rerouting to %(game_id)s in game category %(game_list_id)s' % {'game_list_id': route_parse[1], 'game_id': route_parse[2]}, level=xbmc.LOGDEBUG)
+		if 'plugin.program.iagl/run_random' in current_route[0] or 'plugin.program.iagl/run_search' in current_route[0]:
+			plugin.run([current_route[0].split('?')[0], '0', current_route[0].split('?')[-1]])
+			return
+		else:
+			route_parse = current_route[0].replace('plugin://plugin.program.iagl/game','').replace('plugin://plugin.program.iagl','').split('/')
+			current_page, page_info = IAGL.get_games_as_listitems(url_unquote(route_parse[1]),list_method,url_unquote(route_parse[2]),1)
+			current_game_json = current_page[0].getProperty('iagl_json')
+			xbmc.log(msg='IAGL:  Rerouting to %(game_id)s in game category %(game_list_id)s' % {'game_list_id': route_parse[1], 'game_id': route_parse[2]}, level=xbmc.LOGDEBUG)
 		
 	#Info Dialog
 	current_game = dict()
@@ -373,9 +377,12 @@ def update_game_list(game_list_id,setting_id):
 
 @plugin.route('/games_context_menu/<game_list_id>/<game_id>/<setting_id>')
 def update_game_item(game_list_id,game_id,setting_id):
-	xbmc.log(msg='IAGL:  Game Context menu called for game %(game_id)s in list %(game_list_id)s setting %(setting_id)s' % {'game_id':game_id, 'game_list_id': game_list_id, 'setting_id': setting_id}, level=xbmc.LOGDEBUG)
-	current_page, page_info = IAGL.get_games_as_listitems(url_unquote(game_list_id),'list_single_game',url_unquote(game_id),1)
-	current_game_json = current_page[0].getProperty('iagl_json')
+	if url_unquote(game_list_id) == 'query':  #Add ability to add search or random play query to IAGL favorites
+		current_game_json = xbmc.getInfoLabel('ListItem.Property(iagl_json)')
+	else:
+		xbmc.log(msg='IAGL:  Game Context menu called for game %(game_id)s in list %(game_list_id)s setting %(setting_id)s' % {'game_id':game_id, 'game_list_id': game_list_id, 'setting_id': setting_id}, level=xbmc.LOGDEBUG)
+		current_page, page_info = IAGL.get_games_as_listitems(url_unquote(game_list_id),'list_single_game',url_unquote(game_id),1)
+		current_game_json = current_page[0].getProperty('iagl_json')
 	if setting_id == 'add':
 		IAGL.add_game_to_IAGL_favorites(game_list_id,game_id,current_game_json)
 	elif setting_id == 'remove':
