@@ -119,6 +119,7 @@ class iagl_utils(object):
 		self.post_dl_action_keys = ['none','unzip_rom','unzip_and_rename_file','unzip_and_launch_file','unzip_to_folder_and_launch_file','unarchive_game','unarchive_game_rename_file','unarchive_game_rename_extension','unarchive_game_generate_m3u','unarchive_game_launch_bin','unarchive_game_launch_cue','unarchive_game_launch_iso','unarchive_game_launch_gdi','unarchive_game_launch_adf','unarchive_dosbox_launch_cmd','unarchive_dosbox_generate_conf','unzip_and_launch_scummvm_file','unzip_and_launch_win31_file','launch_mame_softlist']
 		self.context_menu_items_favorites = [('Share My List!','RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/share_favorite)')]
 		self.context_menu_items_games = [('Add to IAGL Favorites','RunPlugin(plugin://plugin.program.iagl/games_context_menu/<game_list_id>/<game_id>/add)')]
+		self.context_menu_items_query = [('Add to IAGL Favorites','RunPlugin(plugin://plugin.program.iagl/games_context_menu/query/<query_id>/add)')]
 		self.context_menu_items_remove_favorite = [('Remove from IAGL Favorites','RunPlugin(plugin://plugin.program.iagl/games_context_menu/<game_list_id>/<game_id>/remove)')]
 		self.context_menu_metadata_choices = ['Title','Categories','Platform', 'Plot / Overview', 'Trailer', 'Author', 'Date']
 		self.context_menu_metadata_keys = ['emu_name','emu_category','emu_description', 'emu_comment', 'emu_trailer', 'emu_author', 'emu_date']
@@ -489,6 +490,18 @@ class iagl_utils(object):
 		else:
 			current_studios = self.change_search_terms_to_any(current_query['studio'])		
 		current_plot = '[B]Current Query[/B][CR]Search Title: '+self.change_search_terms_to_any(current_query['title'])+'[CR]Search Lists: '+current_lists+'[CR]Search Genres: '+current_genres+'[CR]Search Players: '+current_nplayers+'[CR]Search Years: '+current_years+'[CR]Search Studios: '+current_studios+'[CR]Search Tags: '+self.change_search_terms_to_any(current_query['tag'])+'[CR]'
+		#Generate json for IAGL favorites
+		json_item = dict()
+		json_item['game'] = dict()
+		json_item['game']['@name'] = label_in
+		json_item['game']['description'] = label_in
+		json_item['game']['rom'] = dict()
+		json_item['game']['rom']['@name'] = self.get_query_as_url(current_query)
+		json_item['game']['genre'] = 'Search'
+		json_item['game']['plot'] = current_plot
+		json_item['game']['boxart1'] = self.default_thumb
+		json_item['game']['banner1'] = self.default_banner
+		json_item['game']['fanart1'] = self.default_fanart
 		li = {'info': {'genre' : 'Search',
 		'date' : '01/01/2999',
 		'plot' : current_plot,
@@ -498,10 +511,16 @@ class iagl_utils(object):
 		'poster' : self.default_thumb,
 		'banner' : self.default_banner,
 		'fanart' : self.default_fanart,
-		},}
+		},
+		'properties': {'iagl_json' : json.dumps(json_item),
+		},
+		}
 		search_query_listitem = self.create_kodi_listitem(label_in)
 		search_query_listitem.setInfo(self.media_type,li['info'])
 		search_query_listitem.setArt(li['art'])
+		for kk in li['properties'].keys():
+			search_query_listitem.setProperty(kk,li['properties'][kk])
+		search_query_listitem = self.add_query_context_menus(search_query_listitem,'search')
 		return search_query_listitem
 
 	def get_random_query_listitem(self,label_in,current_query):
@@ -531,6 +550,18 @@ class iagl_utils(object):
 		else:
 			current_studios = self.change_search_terms_to_any(current_query['studio'])		
 		current_plot = '[B]Random Play[/B][CR]Num of Results: '+current_num_results+'[CR]Search Lists: '+current_lists+'[CR]Search Genres: '+current_genres+'[CR]Search Players: '+current_nplayers+'[CR]Search Years: '+current_years+'[CR]Search Studios: '+current_studios+'[CR]Search Tags: '+self.change_search_terms_to_any(current_query['tag'])+'[CR]'
+		#Generate json for IAGL favorites
+		json_item = dict()
+		json_item['game'] = dict()
+		json_item['game']['@name'] = label_in
+		json_item['game']['description'] = label_in
+		json_item['game']['rom'] = dict()
+		json_item['game']['rom']['@name'] = self.get_query_as_url(current_query)
+		json_item['game']['genre'] = 'Random'
+		json_item['game']['plot'] = current_plot
+		json_item['game']['boxart1'] = self.default_thumb
+		json_item['game']['banner1'] = self.default_banner
+		json_item['game']['fanart1'] = self.default_fanart
 		li = {'info': {'genre' : 'Random',
 		'date' : '01/01/2999',
 		'plot' : current_plot,
@@ -540,10 +571,16 @@ class iagl_utils(object):
 		'poster' : self.default_thumb,
 		'banner' : self.default_banner,
 		'fanart' : self.default_fanart,
-		},}
+		},
+		'properties': {'iagl_json' : json.dumps(json_item),
+		},
+		}
 		random_query_listitem = self.create_kodi_listitem(label_in)
 		random_query_listitem.setInfo(self.media_type,li['info'])
 		random_query_listitem.setArt(li['art'])
+		for kk in li['properties'].keys():
+			random_query_listitem.setProperty(kk,li['properties'][kk])
+		random_query_listitem = self.add_query_context_menus(random_query_listitem,'random')
 		return random_query_listitem
 
 	def get_game_list_categories_file(self):
@@ -2072,6 +2109,11 @@ class iagl_utils(object):
 		listitem_in.addContextMenuItems(current_context_menus)
 		return listitem_in
 
+	def add_query_context_menus(self,listitem_in,query_id_in):
+		current_context_menus = [(labels,actions.replace('<query_id>',query_id_in)) for labels, actions in self.context_menu_items_query]
+		listitem_in.addContextMenuItems(current_context_menus)
+		return listitem_in
+
 	def get_user_context_choice(self, setting_id):
 		current_key = None
 		current_choice = None
@@ -2314,7 +2356,13 @@ class iagl_utils(object):
 		favorite_dict['games'] = dict()
 		favorite_dict['games']['game'] = json.loads(json_in).get('game')
 		if favorite_dict['games']['game'] is not None:
-			current_route = 'plugin://plugin.program.iagl/game/<game_list_id>/<game_id>'.replace('<game_list_id>',game_list_id_in).replace('<game_id>',game_id_in)
+			if game_list_id_in == 'query':
+				if game_id_in == 'search':
+					current_route = 'plugin://plugin.program.iagl/run_search/1/?'+favorite_dict['games']['game']['rom']['@name']
+				else:
+					current_route = 'plugin://plugin.program.iagl/run_random/1/?'+favorite_dict['games']['game']['rom']['@name']
+			else:
+				current_route = 'plugin://plugin.program.iagl/game/<game_list_id>/<game_id>'.replace('<game_list_id>',game_list_id_in).replace('<game_id>',game_id_in)
 			current_size = self.get_rom_size(favorite_dict['games']['game'])
 			if self.handle.getSetting(id='iagl_favorites_format') == 'Use Hyperlinks to other Lists': #Replace current game data with plugin route URL
 				favorite_dict['games']['game']['rom'] = dict()
@@ -3127,17 +3175,20 @@ class iagl_download(object):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unarchive and point to launch file'% {'filename_in': self.current_saved_files[-1]}, level=xbmc.LOGDEBUG)
 		if os.path.splitext(filename_in)[-1].lower() == '.iagl': #Attempt to launch from file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the diectory with the pointer file
-			if any([os.path.join(*os.path.split(self.rom_emu_command)) in x for x in current_files]):
+			if any([os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower() for x in current_files]):
 				xbmc.log(msg='IAGL:  File %(rom_emu_command)s was found for launching.'% {'rom_emu_command': os.path.join(*os.path.split(self.rom_emu_command))}, level=xbmc.LOGDEBUG)
-				found_file = current_files[[self.rom_emu_command in x for x in current_files].index(True)]
+				# found_file = current_files[[self.rom_emu_command in x for x in current_files].index(True)]
+				found_file = [x for x in self.current_processed_files if os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower()][0]
+				self.current_processed_files.insert(0,found_file)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
 			else:
 				xbmc.log(msg='IAGL Error:  Unable to find the file %(rom_emu_command)s.  You may have to try downloading the game again.'% {'rom_emu_command': os.path.join(*os.path.split(self.rom_emu_command))}, level=xbmc.LOGERROR)
 		else:
 			self.post_process_unarchive_files_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive to current directory
-			if any([os.path.join(*os.path.split(self.rom_emu_command)) in x for x in self.current_processed_files]):
-				found_file = self.current_processed_files[[self.rom_emu_command in x for x in self.current_processed_files].index(True)]
+			if any([os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower() for x in self.current_processed_files]):
+				# found_file = self.current_processed_files[[self.rom_emu_command in x for x in self.current_processed_files].index(True)]
+				found_file = [x for x in self.current_processed_files if os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower()][0]
 				self.current_processed_files.insert(0,found_file)
 				# if not any([self.current_files_to_save_no_ext[0] in x for x in self.current_processed_files]): #The archive will have to be downloaded again unless a trace file is pla
 				self.write_pointer_file(os.path.split(found_file)[0],self.current_files_to_save_no_ext[0],'.iagl',found_file) #Write a pointer file for later launching
@@ -3146,17 +3197,19 @@ class iagl_download(object):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unarchive to folder and point to launch file'% {'filename_in': self.current_saved_files[-1]}, level=xbmc.LOGDEBUG)
 		if os.path.splitext(filename_in)[-1].lower() == '.iagl': #Attempt to launch from file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the diectory with the pointer file
-			if any([os.path.join(*os.path.split(self.rom_emu_command)) in x for x in current_files]):
+			if any([os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower() for x in current_files]):
 				xbmc.log(msg='IAGL:  File %(rom_emu_command)s was found for launching.'% {'rom_emu_command': os.path.join(*os.path.split(self.rom_emu_command))}, level=xbmc.LOGDEBUG)
-				found_file = current_files[[self.rom_emu_command in x for x in current_files].index(True)]
+				# found_file = current_files[[self.rom_emu_command in x for x in current_files].index(True)]
+				found_file = [x for x in self.current_processed_files if os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower()][0]
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
 			else:
 				xbmc.log(msg='IAGL Error:  Unable to find the file %(rom_emu_command)s.  You may have to try downloading the game again.'% {'rom_emu_command': os.path.join(*os.path.split(self.rom_emu_command))}, level=xbmc.LOGERROR)
 		else:
 			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
-			if any([os.path.join(*os.path.split(self.rom_emu_command)) in x for x in self.current_processed_files]):
-				found_file = self.current_processed_files[[self.rom_emu_command in x for x in self.current_processed_files].index(True)]
+			if any([os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower() for x in self.current_processed_files]):
+				# found_file = self.current_processed_files[[self.rom_emu_command in x for x in self.current_processed_files].index(True)]
+				found_file = [x for x in self.current_processed_files if os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower()][0]
 				self.current_processed_files.insert(0,found_file)
 				# if not any([self.current_files_to_save_no_ext[0] in x for x in self.current_processed_files]): #The archive will have to be downloaded again unless a trace file is pla
 				self.write_pointer_file(os.path.split(found_file)[0],self.current_files_to_save_no_ext[0],'.iagl',found_file) #Write a pointer file for later launching
