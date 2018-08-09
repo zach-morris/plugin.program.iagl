@@ -253,7 +253,11 @@ def get_game_list(game_list_id,page_number=1):
 def get_game(game_list_id,game_id):
 	list_method = 'list_single_game'
 	xbmc.log(msg='IAGL:  Getting game ID: %(game_id)s in game category %(game_list_id)s' % {'game_list_id': game_list_id, 'game_id': game_id}, level=xbmc.LOGDEBUG)
-	current_game_json = xbmc.getInfoLabel('ListItem.Property(iagl_json)') #Method 1, get current game json manifest
+	
+	if len(sys.argv)>2 and sys.argv[2] is not None and 'reload' not in sys.argv[2]:  #This catch is to avoid loading the game when a skin widget reloads
+		current_game_json = xbmc.getInfoLabel('ListItem.Property(iagl_json)') #Method 1, get current game json manifest
+	else:
+		current_game_json = None
 	return_to_home_from_infodialog = False
 
 	#No json is available from listitem, so this must be a link from a favorite

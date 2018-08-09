@@ -3869,8 +3869,9 @@ class iagl_infodialog(xbmcgui.WindowXMLDialog):
 		self.close()
 		if self.return_home:
 			xbmc.log(msg='IAGL:  Returning to Home', level=xbmc.LOGDEBUG)
+			self.close()
 			xbmc.executebuiltin('ActivateWindow(home)')
-
+			
 	def action_download_only(self):
 		#Temporarily disable these buttons to avoid double taps
 		if self.download_button is not None:
