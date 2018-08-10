@@ -286,15 +286,6 @@ class iagl_utils(object):
 			if len([x for x in new_game_list_added if x])>0:
 				if xbmcvfs.exists(dat_file_cachename):
 					xbmcvfs.delete(dat_file_cachename)
-				if len([x for x in new_game_list_added if x])>2:
-					current_dialog = xbmcgui.Dialog()
-					ok_ret = current_dialog.ok('New Game Lists','New game lists are now available')
-					del current_dialog
-				else:
-					for ff in [x for x in new_game_list_added if x]:
-						current_dialog = xbmcgui.Dialog()
-						ok_ret = current_dialog.ok('New Game Lists','New game list %(dat_filename)s is now available' % {'dat_filename': ff})
-						del current_dialog
 
 	def get_list_cache_path(self):
 		current_path = os.path.join(self.get_addon_userdata_path(),self.list_cache_name)
