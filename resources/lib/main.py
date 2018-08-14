@@ -62,6 +62,8 @@ class iagl_utils(object):
 			xbmc.log(msg='IAGL:  Unable to parse Kodi GUI date format, defaulting to environment default.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGDEBUG)
 		self.year_format = '%Y'
 		self.total_arts = 10
+		self.notification_time = 2000
+		self.error_notification_time = 5000
 		self.clean_game_tags = re.compile(r'\([^)]*\)')
 		self.temp_cache_folder_name = 'temp_iagl'
 		self.dat_folder_name = 'dat_files'
@@ -288,12 +290,12 @@ class iagl_utils(object):
 					xbmcvfs.delete(dat_file_cachename)
 				if len([x for x in new_game_list_added if x])>2 and len(current_game_lists)>len([x for x in new_game_list_added if x]): #Only show new game list dialogs if addon is updated, do not show on initial install
 					current_dialog = xbmcgui.Dialog()
-					ok_ret = current_dialog.ok('New Game Lists','New game lists are now available')
+					ok_ret = current_dialog.notification('New Game Lists','New game lists are now available',xbmcgui.NOTIFICATION_INFO,self.notification_time)
 					del current_dialog
 				else:
 					for ff in [x for x in new_game_list_added if x]:
 						current_dialog = xbmcgui.Dialog()
-						ok_ret = current_dialog.ok('New Game Lists','New game list %(dat_filename)s is now available' % {'dat_filename': ff})
+						ok_ret = current_dialog.notification('New Game Lists','New game list %(dat_filename)s is now available' % {'dat_filename': ff},xbmcgui.NOTIFICATION_INFO,self.notification_time)
 						del current_dialog
 
 	def get_list_cache_path(self):
@@ -2304,12 +2306,12 @@ class iagl_utils(object):
 					if self.delete_list_cache(os.path.splitext(os.path.split(current_filename)[-1])[0]):
 						if not silent_update:
 							current_dialog = xbmcgui.Dialog()
-							ok_ret = current_dialog.ok('Complete','%(current_filename)s was updated and cache was cleared' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]})
+							ok_ret = current_dialog.notification('Complete','%(current_filename)s was updated and cache was cleared' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
 							del current_dialog
 					else: #Delete list file cache
 						if not silent_update:
 							current_dialog = xbmcgui.Dialog()
-							ok_ret = current_dialog.ok('Complete','%(current_filename)s was updated' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]})
+							ok_ret = current_dialog.notification('Complete','%(current_filename)s was updated' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
 							del current_dialog
 				else:
 					xbmc.log(msg='IAGL:  Temporary XML file could not be renamed.  How on earth did you get here?', level=xbmc.LOGDEBUG)
@@ -2408,11 +2410,11 @@ class iagl_utils(object):
 							xbmcvfs.delete(os.path.join(self.get_list_cache_path(),self.dat_file_cache_filename)) #Delete dat file cache
 							if self.delete_list_cache(os.path.splitext(os.path.split(filename_in)[-1])[0]):
 								current_dialog = xbmcgui.Dialog()
-								ok_ret = current_dialog.ok('Complete','%(current_game)s added to %(current_filename)s and cache was cleared' % {'current_game': current_game_name,'current_filename': os.path.splitext(os.path.split(filename_in)[-1])[0]})
+								ok_ret = current_dialog.notification('Complete','%(current_game)s added to %(current_filename)s and cache was cleared' % {'current_game': current_game_name,'current_filename': os.path.splitext(os.path.split(filename_in)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
 								del current_dialog
 							else: #Delete list file cache
 								current_dialog = xbmcgui.Dialog()
-								ok_ret = current_dialog.ok('Complete','%(current_game)s added to %(current_filename)s' % {'current_game': current_game_name, 'current_filename': os.path.splitext(os.path.split(filename_in)[-1])[0]})
+								ok_ret = current_dialog.notification('Complete','%(current_game)s added to %(current_filename)s' % {'current_game': current_game_name, 'current_filename': os.path.splitext(os.path.split(filename_in)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
 								del current_dialog
 						else:
 							xbmc.log(msg='IAGL:  Temporary XML file could not be renamed.  How on earth did you get here?', level=xbmc.LOGDEBUG)
@@ -2457,10 +2459,10 @@ class iagl_utils(object):
 								xbmcvfs.delete(os.path.join(self.get_list_cache_path(),self.dat_file_cache_filename)) #Delete dat file cache
 								if self.delete_list_cache(os.path.splitext(os.path.split(current_filename)[-1])[0]):
 									current_dialog = xbmcgui.Dialog()
-									ok_ret = current_dialog.ok('Complete','%(current_filename)s was updated and cache was cleared' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]})
+									ok_ret = current_dialog.notification('Complete','%(current_filename)s was updated and cache was cleared' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
 								else: #Delete list file cache
 									current_dialog = xbmcgui.Dialog()
-									ok_ret = current_dialog.ok('Complete','%(current_filename)s was updated' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]})
+									ok_ret = current_dialog.notification('Complete','%(current_filename)s was updated' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
 							else:
 								xbmc.log(msg='IAGL:  Temporary XML file could not be renamed.  How on earth did you get here?', level=xbmc.LOGDEBUG)
 						else:
@@ -3900,7 +3902,7 @@ class iagl_infodialog(xbmcgui.WindowXMLDialog):
 			else:  #Only bad files found
 				ok_ret = current_dialog.ok('Error','%(game_title)s download failed[CR]%(fail_reason)s' % {'game_title': IAGL_DL.current_game_title, 'fail_reason': IAGL_DL.download_fail_reason})
 		else:  #So far so good, now process the files
-			ok_ret = current_dialog.ok('Complete','%(game_title)s was successfully downloaded' % {'game_title': IAGL_DL.current_game_title})
+			ok_ret = current_dialog.notification('Complete','%(game_title)s was successfully downloaded' % {'game_title': IAGL_DL.current_game_title},xbmcgui.NOTIFICATION_INFO,IAGL_DL.IAGL.notification_time)
 		del current_dialog
 		#Re-Enable buttons
 		if self.download_button is not None:

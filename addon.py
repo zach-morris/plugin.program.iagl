@@ -298,7 +298,7 @@ def get_game(game_list_id,game_id):
 			else:  #Only bad files found
 				ok_ret = current_dialog.ok('Error','%(game_title)s download failed[CR]%(fail_reason)s' % {'game_title': IAGL_DL.current_game_title, 'fail_reason': IAGL_DL.download_fail_reason})
 		else:  #So far so good, now process the files
-			ok_ret = current_dialog.ok('Complete','%(game_title)s was successfully downloaded' % {'game_title': IAGL_DL.current_game_title})
+			ok_ret = current_dialog.notification('Complete','%(game_title)s was successfully downloaded' % {'game_title': IAGL_DL.current_game_title},xbmcgui.NOTIFICATION_INFO,IAGL.notification_time)
 		del current_dialog
 	elif IAGL.handle.getSetting(id='iagl_setting_default_action') == 'Download and Launch':
 		IAGL_DL = iagl_download(current_game['json']) #Initialize download object
@@ -369,7 +369,7 @@ def update_game_list(game_list_id,setting_id):
 				xbmc.log(msg='IAGL:  Refreshing cache for game list %(game_list_id)s' % {'game_list_id': game_list_id}, level=xbmc.LOGDEBUG)
 				if IAGL.delete_list_cache(game_list_id):
 					current_dialog = xbmcgui.Dialog()
-					ok_ret = current_dialog.ok('Complete','Cache cleared for %(game_list_id)s' % {'game_list_id': game_list_id})
+					ok_ret = current_dialog.notification('Complete','Cache cleared for %(game_list_id)s' % {'game_list_id': game_list_id},xbmcgui.NOTIFICATION_INFO,IAGL.notification_time)
 					IAGL.delete_dat_file_cache()
 					del current_dialog
 			elif current_key == 'view_list_settings':
@@ -642,7 +642,7 @@ def update_search_query(search_id):
 	if search_id == 'execute':
 		if current_query['title'] is None:
 			current_dialog = xbmcgui.Dialog()
-			ok_ret = current_dialog.ok('Error','You must enter a title')
+			ok_ret = current_dialog.notification('Error','You must enter a title',xbmcgui.NOTIFICATION_ERROR,IAGL.error_notification_time)
 			del current_dialog
 		else:
 			if current_query['lists'] is None:
@@ -677,7 +677,7 @@ def generate_search_listitem():
 	create_listitem = False
 	if current_query['title'] is None:
 		current_dialog = xbmcgui.Dialog()
-		ok_ret = current_dialog.ok('Error','You must enter a title')
+		ok_ret = current_dialog.notification('Error','You must enter a title',xbmcgui.NOTIFICATION_ERROR,IAGL.error_notification_time)
 		del current_dialog
 	else:
 		if current_query['lists'] is None:
