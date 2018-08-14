@@ -24,15 +24,16 @@
 	<category label="External Launchers">
 		<setting id="iagl_external_user_external_env" type="select" label="My System Type" values="Select|OSX|Linux/Kodibuntu|Windows|LibreElec Remix|LibreElec Sx05RE|LibreElec S905 Addon|Gamestarter Addon|Android" default="Select" visible="true"/>
 		<setting id="iagl_external_launch_close_kodi" type="select" label="Close Kodi on Launch" values="Disabled|Enabled" default="Disabled" visible="eq(-1,OSX)|eq(-1,Windows)|eq(-1,Linux/Kodibuntu)"/>
-		<setting id="iagl_external_path_to_retroarch" type="executable" label="RetroArch App Location" visible="eq(-2,OSX)|eq(-2,Windows)|eq(-2,Linux/Kodibuntu)"/>
-		<setting id="iagl_external_path_to_retroarch_system_dir" type="folder" label="RetroArch System Folder" visible="!eq(-3,Select)"/>
-		<setting id="iagl_external_path_to_retroarch_cfg" type="file" label="RetroArch CFG Location" visible="eq(-4,Android)"/>
-		<setting label="Additional Emulators:" type="lsep" visible="eq(-5,OSX)|eq(-5,Windows)|eq(-5,Linux/Kodibuntu)"/>
-		<setting id="iagl_external_additional_emulator_1_type" type="select" label="Additional Emulator 1" values="Disabled|FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone" default="Disabled" visible="eq(-6,OSX)|eq(-6,Windows)|eq(-6,Linux/Kodibuntu)"/>
+		<setting id="iagl_external_launch_pause_kodi" type="select" label="Pause Kodi on Launch" values="Disabled|Enabled" default="Disabled" visible="eq(-2,Linux/Kodibuntu)+!eq(-1,Enabled)"/>
+		<setting id="iagl_external_path_to_retroarch" type="executable" label="RetroArch App Location" visible="eq(-3,OSX)|eq(-3,Windows)|eq(-3,Linux/Kodibuntu)"/>
+		<setting id="iagl_external_path_to_retroarch_system_dir" type="folder" label="RetroArch System Folder" visible="!eq(-4,Select)"/>
+		<setting id="iagl_external_path_to_retroarch_cfg" type="file" label="RetroArch CFG Location" visible="eq(-5,Android)"/>
+		<setting label="Additional Emulators:" type="lsep" visible="eq(-6,OSX)|eq(-6,Windows)|eq(-6,Linux/Kodibuntu)"/>
+		<setting id="iagl_external_additional_emulator_1_type" type="select" label="Additional Emulator 1" values="Disabled|FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone" default="Disabled" visible="eq(-7,OSX)|eq(-7,Windows)|eq(-7,Linux/Kodibuntu)"/>
 		<setting id="iagl_external_additional_emulator_1_path" type="executable" label="Emulator 1 App Location" visible="!eq(-1,Disabled)"/>
-		<setting id="iagl_external_additional_emulator_2_type" type="select" label="Additional Emulator 2" values="Disabled|FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone" default="Disabled" visible="eq(-8,OSX)|eq(-8,Windows)|eq(-8,Linux/Kodibuntu)"/>
+		<setting id="iagl_external_additional_emulator_2_type" type="select" label="Additional Emulator 2" values="Disabled|FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone" default="Disabled" visible="eq(-9,OSX)|eq(-9,Windows)|eq(-9,Linux/Kodibuntu)"/>
 		<setting id="iagl_external_additional_emulator_2_path" type="executable" label="Emulator 2 App Location" visible="!eq(-1,Disabled)"/>
-		<setting id="iagl_external_additional_emulator_3_type" type="select" label="Additional Emulator 3" values="Disabled|FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone" default="Disabled" visible="eq(-10,OSX)|eq(-10,Windows)|eq(-10,Linux/Kodibuntu)"/>
+		<setting id="iagl_external_additional_emulator_3_type" type="select" label="Additional Emulator 3" values="Disabled|FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone" default="Disabled" visible="eq(-11,OSX)|eq(-11,Windows)|eq(-11,Linux/Kodibuntu)"/>
 		<setting id="iagl_external_additional_emulator_3_path" type="executable" label="Emulator 3 App Location" visible="!eq(-1,Disabled)"/>
 	</category>
 	<category label="Netplay">

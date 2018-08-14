@@ -127,9 +127,9 @@ class iagl_utils(object):
 		self.context_menu_art_keys = ['emu_thumb', 'emu_logo', 'emu_banner', 'emu_fanart']
 		self.ignore_these_game_addons = ['game.libretro','game.libretro.2048','game.libretro.dinothawr','game.libretro.mrboom']
 		self.remove_these_filetypes = ['.srm','.sav','.fs','.state','.auto','.xml','.nfo']
-		self.possible_linux_core_directories = ['/usr/lib/libretro','/usr/lib/x86_64-linux-gnu/libretro','/usr/lib/i386-linux-gnu/libretro','/usr/local/lib/libretro','/tmp/cores']
+		self.possible_linux_core_directories = ['/usr/lib/libretro','/usr/lib/x86_64-linux-gnu/libretro','/usr/lib/i386-linux-gnu/libretro','/usr/lib/s390x-linux-gnu/libretro','/usr/local/lib/libretro','~/.config/retroarch/cores','/tmp/cores']
 		self.default_linux_core_directory = '/usr/lib/libretro'
-		self.possible_retroarch_app_locations = [os.path.join('/Applications','RetroArch.app','Contents','MacOS','RetroArch'),os.path.join('usr','bin','retroarch'),os.path.join('C:','Program Files (x86)','Retroarch','retroarch.exe')]
+		self.possible_retroarch_app_locations = [os.path.join('/Applications','RetroArch.app','Contents','MacOS','RetroArch'),os.path.join('usr','bin','retroarch'),os.path.join('C:','Program Files (x86)','Retroarch','retroarch.exe'),os.path.join('opt','retropie','emulators','retroarch','bin','retroarch')]
 		self.possible_retroarch_config_locations = [os.path.join('mnt','internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('data','data','com.retroarch','retroarch.cfg'),os.path.join('data','data','com.retroarch','files','retroarch.cfg')]
 		self.windowid = xbmcgui.getCurrentWindowId()
 		#Define temp download cache size
@@ -286,7 +286,7 @@ class iagl_utils(object):
 			if len([x for x in new_game_list_added if x])>0:
 				if xbmcvfs.exists(dat_file_cachename):
 					xbmcvfs.delete(dat_file_cachename)
-				if len([x for x in new_game_list_added if x])>2:
+				if len([x for x in new_game_list_added if x])>2 and len(current_game_lists)>len([x for x in new_game_list_added if x]): #Only show new game list dialogs if addon is updated, do not show on initial install
 					current_dialog = xbmcgui.Dialog()
 					ok_ret = current_dialog.ok('New Game Lists','New game lists are now available')
 					del current_dialog
@@ -317,9 +317,12 @@ class iagl_utils(object):
 		
 		if any([file_crc in x for x in files]):
 			try:
+				# cache_exists = True
+				# cache_filename = files[[file_crc in x for x in files].index(True)]
+				cache_filename = [x for x in files if file_crc in x][0]
 				cache_exists = True
-				cache_filename = files[[file_crc in x for x in files].index(True)]
 			except Exception as exc:
+				cache_exists = False
 				xbmc.log(msg='IAGL:  No cache found for file with crc %(file_crc)s.  Exception %(exc)s' % {'file_crc': file_crc, 'exc': exc}, level=xbmc.LOGDEBUG)
 
 		return cache_exists, cache_filename
@@ -332,9 +335,11 @@ class iagl_utils(object):
 		
 		if any([dat_filename in x for x in files]):
 			try:
+				# cache_filename = files[[dat_filename in x for x in files].index(True)]
+				cache_filename = [x for x in files if dat_filename in x][0]
 				cache_exists = True
-				cache_filename = files[[dat_filename in x for x in files].index(True)]
 			except Exception as exc:
+				cache_exists = False
 				xbmc.log(msg='IAGL:  No cache found for file with crc %(file_crc)s.  Exception %(exc)s' % {'file_crc': file_crc, 'exc': exc}, level=xbmc.LOGDEBUG)
 
 		if cache_exists:
@@ -518,6 +523,7 @@ class iagl_utils(object):
 		search_query_listitem = self.create_kodi_listitem(label_in)
 		search_query_listitem.setInfo(self.media_type,li['info'])
 		search_query_listitem.setArt(li['art'])
+		#https://forum.kodi.tv/showthread.php?tid=332283
 		for kk in li['properties'].keys():
 			search_query_listitem.setProperty(kk,li['properties'][kk])
 		search_query_listitem = self.add_query_context_menus(search_query_listitem,'search')
@@ -730,6 +736,7 @@ class iagl_utils(object):
 			game_listitems.append(self.create_kodi_listitem(li['values']['label'],li['values']['label2']))
 			game_listitems[-1].setInfo(self.media_type,li['info'])
 			game_listitems[-1].setArt(li['art'])
+			#https://forum.kodi.tv/showthread.php?tid=332283
 			for kk in li['properties'].keys():
 				game_listitems[-1].setProperty(kk,li['properties'][kk])
 
@@ -3176,9 +3183,9 @@ class iagl_download(object):
 		if os.path.splitext(filename_in)[-1].lower() == '.iagl': #Attempt to launch from file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the diectory with the pointer file
 			if any([os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower() for x in current_files]):
-				xbmc.log(msg='IAGL:  File %(rom_emu_command)s was found for launching.'% {'rom_emu_command': os.path.join(*os.path.split(self.rom_emu_command))}, level=xbmc.LOGDEBUG)
 				# found_file = current_files[[self.rom_emu_command in x for x in current_files].index(True)]
 				found_file = [x for x in self.current_processed_files if os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower()][0]
+				xbmc.log(msg='IAGL:  File %(rom_emu_command)s was found for launching.'% {'rom_emu_command': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.insert(0,found_file)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
@@ -3198,9 +3205,9 @@ class iagl_download(object):
 		if os.path.splitext(filename_in)[-1].lower() == '.iagl': #Attempt to launch from file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the diectory with the pointer file
 			if any([os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower() for x in current_files]):
-				xbmc.log(msg='IAGL:  File %(rom_emu_command)s was found for launching.'% {'rom_emu_command': os.path.join(*os.path.split(self.rom_emu_command))}, level=xbmc.LOGDEBUG)
 				# found_file = current_files[[self.rom_emu_command in x for x in current_files].index(True)]
 				found_file = [x for x in self.current_processed_files if os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower()][0]
+				xbmc.log(msg='IAGL:  File %(rom_emu_command)s was found for launching.'% {'rom_emu_command': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
 			else:
@@ -3221,8 +3228,9 @@ class iagl_download(object):
 		if os.path.splitext(filename_in)[-1].lower() != '.zip': #Attempt to launch from m3u file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the directory
 			if any([m3u_filename in x for x in current_files]):
-				xbmc.log(msg='IAGL:  M3U File %(mtu_filename)s was found for launching.'% {'mtu_filename': m3u_filename}, level=xbmc.LOGDEBUG)
-				found_file = current_files[[m3u_filename in x for x in current_files].index(True)]
+				# found_file = current_files[[m3u_filename in x for x in current_files].index(True)]
+				found_file = [x for x in current_files if m3u_filename in x][0]
+				xbmc.log(msg='IAGL:  M3U File %(mtu_filename)s was found for launching.'% {'mtu_filename': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
 			else:
@@ -3231,7 +3239,8 @@ class iagl_download(object):
 			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the unarchive diectory
 			if any(['.cue' in x for x in current_files]): #cue files exist in the file list
-				found_file = current_files[['.cue' in x for x in current_files].index(True)]
+				# found_file = current_files[['.cue' in x for x in current_files].index(True)]
+				found_file = [x for x in current_files if '.cue' in x][0]
 				m3u_content = '\r\n'.join([os.path.split(x)[-1] for x in current_files if '.cue' in x]) #List all cue files in the m3u
 				self.write_pointer_file(os.path.split(found_file)[0],m3u_filename_no_ext,'.m3u',m3u_content)
 				self.current_processed_files.insert(0,os.path.join(os.path.split(found_file)[0],m3u_filename))
@@ -3242,7 +3251,8 @@ class iagl_download(object):
 		if os.path.splitext(filename_in)[-1].lower() != '.zip' and os.path.splitext(filename_in)[-1].lower() != '.7z': #Attempt to launch from file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the directory
 			if any([requested_file_type in x for x in current_files]):
-				found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
+				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
+				found_file = [x for x in current_files if requested_file_type in x][0]
 				xbmc.log(msg='IAGL: File %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
@@ -3252,7 +3262,8 @@ class iagl_download(object):
 			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the unarchive diectory
 			if any([requested_file_type in x for x in current_files]): #cue files exist in the file list
-				found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
+				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
+				found_file = [x for x in current_files if requested_file_type in x][0]
 				xbmc.log(msg='IAGL: File %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.insert(0,found_file)
 				self.current_processed_files_success.insert(0,True)
@@ -3266,7 +3277,8 @@ class iagl_download(object):
 		if os.path.splitext(filename_in)[-1].lower() == '.scummvm': #Attempt to launch from file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the diectory with the pointer file
 			if any(['.scummvm' in x for x in current_files]):
-				found_file = current_files[['.scummvm' in x for x in current_files].index(True)]
+				# found_file = current_files[['.scummvm' in x for x in current_files].index(True)]
+				found_file = [x for x in current_files if '.scummvm' in x][0]
 				xbmc.log(msg='IAGL:  SCUMMVM file %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
@@ -3291,8 +3303,9 @@ class iagl_download(object):
 		if os.path.splitext(filename_in)[-1].lower() != '.zip': #Attempt to launch from bat file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the directory
 			if any([bat_filename in x for x in current_files]):
-				xbmc.log(msg='IAGL:  BAT File %(bat_filename)s was found for launching.'% {'bat_filename': bat_filename}, level=xbmc.LOGDEBUG)
-				found_file = current_files[[bat_filename in x for x in current_files].index(True)]
+				# found_file = current_files[[bat_filename in x for x in current_files].index(True)]
+				found_file = [x for x in current_files if bat_filename in x][0]
+				xbmc.log(msg='IAGL:  BAT File %(bat_filename)s was found for launching.'% {'bat_filename': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
 			else:
@@ -3301,7 +3314,7 @@ class iagl_download(object):
 			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the unarchive diectory
 			if any([self.rom_emu_command.lower() in x.lower() for x in current_files]):
-				found_file = current_files[[self.rom_emu_command.lower() in x.lower() for x in current_files].index(True)] #Place the bat file next to the exe file
+				found_file = [x for x in current_files if self.rom_emu_command.lower() in x.lower()][0] #Place the bat file next to the exe file
 				xbmc.log(msg='IAGL:  WIN31 File %(found_file)s was found'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				bat_content = '@echo off\r\npath=%path%;\r\ncopy c:\\iniback\\*.* c:\\windows\\\r\nsetini c:\windows\system.ini boot shell "C:\XXCOMMANDXX"\r\nc:\r\ncd \\\r\nc:\\windows\\win\r\n'.replace('XXCOMMANDXX',self.rom_emu_command)
 				self.write_pointer_file(os.path.split(found_file)[0],bat_filename_no_ext,'.bat',bat_content)
