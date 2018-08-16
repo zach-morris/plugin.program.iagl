@@ -294,11 +294,11 @@ def get_game(game_list_id,game_id):
 		current_dialog = xbmcgui.Dialog()
 		if False in download_and_process_success:  #Bad files found
 			if True in download_and_process_success:  #Good and Bad files found
-				ok_ret = current_dialog.ok('Error','%(game_title)s partial download failed[CR]%(fail_reason)s' % {'game_title': IAGL_DL.current_game_title, 'fail_reason': IAGL_DL.download_fail_reason})
+				ok_ret = current_dialog.ok(IAGL.loc_str(30203),IAGL.loc_str(30303) % {'game_title': IAGL_DL.current_game_title, 'fail_reason': IAGL_DL.download_fail_reason})
 			else:  #Only bad files found
-				ok_ret = current_dialog.ok('Error','%(game_title)s download failed[CR]%(fail_reason)s' % {'game_title': IAGL_DL.current_game_title, 'fail_reason': IAGL_DL.download_fail_reason})
+				ok_ret = current_dialog.ok(IAGL.loc_str(30203),IAGL.loc_str(30304) % {'game_title': IAGL_DL.current_game_title, 'fail_reason': IAGL_DL.download_fail_reason})
 		else:  #So far so good, now process the files
-			ok_ret = current_dialog.notification('Complete','%(game_title)s was successfully downloaded' % {'game_title': IAGL_DL.current_game_title},xbmcgui.NOTIFICATION_INFO,IAGL.notification_time)
+			ok_ret = current_dialog.notification(IAGL.loc_str(30202),IAGL.loc_str(30302) % {'game_title': IAGL_DL.current_game_title},xbmcgui.NOTIFICATION_INFO,IAGL.notification_time)
 		del current_dialog
 	elif IAGL.handle.getSetting(id='iagl_setting_default_action') == 'Download and Launch':
 		IAGL_DL = iagl_download(current_game['json']) #Initialize download object
@@ -310,7 +310,7 @@ def get_game(game_list_id,game_id):
 				xbmc.log(msg='IAGL:  Game Launched: %(game_title)s' % {'game_title': IAGL_DL.current_game_title}, level=xbmc.LOGDEBUG)
 		else:
 			current_dialog = xbmcgui.Dialog()
-			ok_ret = current_dialog.ok('Error','%(game_title)s failed to launch[CR]%(fail_reason)s' % {'game_title': IAGL_DL.current_game_title, 'fail_reason': IAGL_DL.download_fail_reason})
+			ok_ret = current_dialog.ok(IAGL.loc_str(30203),IAGL.loc_str(30305) % {'game_title': IAGL_DL.current_game_title, 'fail_reason': IAGL_DL.download_fail_reason})
 			del current_dialog
 	else:
 		xbmc.log(msg='IAGL:  Unkown default action in settings',level=xbmc.LOGERROR)
@@ -369,7 +369,7 @@ def update_game_list(game_list_id,setting_id):
 				xbmc.log(msg='IAGL:  Refreshing cache for game list %(game_list_id)s' % {'game_list_id': game_list_id}, level=xbmc.LOGDEBUG)
 				if IAGL.delete_list_cache(game_list_id):
 					current_dialog = xbmcgui.Dialog()
-					ok_ret = current_dialog.notification('Complete','Cache cleared for %(game_list_id)s' % {'game_list_id': game_list_id},xbmcgui.NOTIFICATION_INFO,IAGL.notification_time)
+					ok_ret = current_dialog.notification(IAGL.loc_str(30202),IAGL.loc_str(30306) % {'game_list_id': game_list_id},xbmcgui.NOTIFICATION_INFO,IAGL.notification_time)
 					IAGL.delete_dat_file_cache()
 					del current_dialog
 			elif current_key == 'view_list_settings':
@@ -471,7 +471,7 @@ def update_search_query(search_id):
 		current_genre_lists = None
 		if current_query['lists'] is None:
 			current_dialog = xbmcgui.Dialog()
-			ret1 = current_dialog.select('Filter genres for all lists?  This could take a while...', ['Yes','Cancel'])
+			ret1 = current_dialog.select(IAGL.loc_str(30307), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
 			if ret1 == 0:
 				current_genre_lists = IAGL.get_genres_from_game_lists(current_query['lists'])
@@ -481,7 +481,7 @@ def update_search_query(search_id):
 		else:
 			if len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
-				ret1 = current_dialog.select('Filter genres for more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				ret1 = current_dialog.select(IAGL.loc_str(30308), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
 				if ret1 == 0:
 					current_genre_lists = IAGL.get_genres_from_game_lists(current_query['lists'])
@@ -514,7 +514,7 @@ def update_search_query(search_id):
 		current_players_lists = None
 		if current_query['lists'] is None:
 			current_dialog = xbmcgui.Dialog()
-			ret1 = current_dialog.select('Filter number of players for all lists?  This could take a while...', ['Yes','Cancel'])
+			ret1 = current_dialog.select(IAGL.loc_str(30309), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
 			if ret1 == 0:
 				current_players_lists = IAGL.get_players_from_game_lists(current_query['lists'])
@@ -524,7 +524,7 @@ def update_search_query(search_id):
 		else:
 			if len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
-				ret1 = current_dialog.select('Filter number of players for more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				ret1 = current_dialog.select(IAGL.loc_str(30310), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
 				if ret1 == 0:
 					current_players_lists = IAGL.get_players_from_game_lists(current_query['lists'])
@@ -557,7 +557,7 @@ def update_search_query(search_id):
 		current_year_lists = None
 		if current_query['lists'] is None:
 			current_dialog = xbmcgui.Dialog()
-			ret1 = current_dialog.select('Filter years for all lists?  This could take a while...', ['Yes','Cancel'])
+			ret1 = current_dialog.select(IAGL.loc_str(30311), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
 			if ret1 == 0:
 				current_year_lists = IAGL.get_years_from_game_lists(current_query['lists'])
@@ -567,7 +567,7 @@ def update_search_query(search_id):
 		else:
 			if len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
-				ret1 = current_dialog.select('Filter years for more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				ret1 = current_dialog.select(IAGL.loc_str(30312), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
 				if ret1 == 0:
 					current_year_lists = IAGL.get_years_from_game_lists(current_query['lists'])
@@ -600,7 +600,7 @@ def update_search_query(search_id):
 		current_studio_lists = None
 		if current_query['lists'] is None:
 			current_dialog = xbmcgui.Dialog()
-			ret1 = current_dialog.select('Filter studios for all lists?  This could take a while...', ['Yes','Cancel'])
+			ret1 = current_dialog.select(IAGL.loc_str(30313), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
 			if ret1 == 0:
 				current_studio_lists = IAGL.get_studios_from_game_lists(current_query['lists'])
@@ -610,7 +610,7 @@ def update_search_query(search_id):
 		else:
 			if len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
-				ret1 = current_dialog.select('Filter studios for more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				ret1 = current_dialog.select(IAGL.loc_str(30314), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
 				if ret1 == 0:
 					current_studio_lists = IAGL.get_studios_from_game_lists(current_query['lists'])
@@ -642,12 +642,12 @@ def update_search_query(search_id):
 	if search_id == 'execute':
 		if current_query['title'] is None:
 			current_dialog = xbmcgui.Dialog()
-			ok_ret = current_dialog.notification('Error','You must enter a title',xbmcgui.NOTIFICATION_ERROR,IAGL.error_notification_time)
+			ok_ret = current_dialog.notification(IAGL.loc_str(30203),IAGL.loc_str(30319),xbmcgui.NOTIFICATION_ERROR,IAGL.error_notification_time)
 			del current_dialog
 		else:
 			if current_query['lists'] is None:
 				current_dialog = xbmcgui.Dialog()
-				ret1 = current_dialog.select('Query all lists?  This could take a while...', ['Yes','Cancel'])
+				ret1 = current_dialog.select(IAGL.loc_str(30315), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
 				if ret1 == 0:
 					plugin.run(['plugin://plugin.program.iagl/run_search/1/', '0', IAGL.get_query_as_url(current_query)])
@@ -656,7 +656,7 @@ def update_search_query(search_id):
 			else:
 				if len(current_query['lists'])>10:
 					current_dialog = xbmcgui.Dialog()
-					ret1 = current_dialog.select('Query more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+					ret1 = current_dialog.select(IAGL.loc_str(30316), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 					del current_dialog
 					if ret1 == 0:
 						plugin.run(['plugin://plugin.program.iagl/run_search/1/', '0', IAGL.get_query_as_url(current_query)])
@@ -677,12 +677,12 @@ def generate_search_listitem():
 	create_listitem = False
 	if current_query['title'] is None:
 		current_dialog = xbmcgui.Dialog()
-		ok_ret = current_dialog.notification('Error','You must enter a title',xbmcgui.NOTIFICATION_ERROR,IAGL.error_notification_time)
+		ok_ret = current_dialog.notification(IAGL.loc_str(30203),IAGL.loc_str(30319),xbmcgui.NOTIFICATION_ERROR,IAGL.error_notification_time)
 		del current_dialog
 	else:
 		if current_query['lists'] is None:
 			current_dialog = xbmcgui.Dialog()
-			ret1 = current_dialog.select('Create a query for all lists?  This could take a while...', ['Yes','Cancel'])
+			ret1 = current_dialog.select(IAGL.loc_str(30317), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
 			if ret1 == 0:
 				create_listitem = True
@@ -691,7 +691,7 @@ def generate_search_listitem():
 		else:
 			if len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
-				ret1 = current_dialog.select('Query more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				ret1 = current_dialog.select(IAGL.loc_str(30318), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
 				if ret1 == 0:
 					create_listitem = True
@@ -702,7 +702,7 @@ def generate_search_listitem():
 	default_label = 'IAGL Search %(query_value)s' % {'query_value':current_query['title']}
 	if create_listitem:
 		current_dialog = xbmcgui.Dialog()
-		new_value = current_dialog.input('Enter a label for your query',default_label)
+		new_value = current_dialog.input(IAGL.loc_str(30320),default_label)
 		del current_dialog
 		if len(new_value)<1:
 			new_value = default_label
@@ -771,7 +771,7 @@ def update_random_query(random_id):
 
 	if random_id in choose_query_types:
 		current_dialog = xbmcgui.Dialog()
-		ret1 = current_dialog.select('Choose number of random results to return',['1','2','5','10','25','100'],0,0)
+		ret1 = current_dialog.select(IAGL.loc_str(30321),['1','2','5','10','25','100'],0,0)
 		del current_dialog
 		if ret1>0:
 			new_value = ['1','2','5','10','25','100'][ret1]
@@ -827,7 +827,7 @@ def update_random_query(random_id):
 		current_genre_lists = None
 		if current_query['lists'] is None:
 			current_dialog = xbmcgui.Dialog()
-			ret1 = current_dialog.select('Filter genres for all lists?  This could take a while...', ['Yes','Cancel'])
+			ret1 = current_dialog.select(IAGL.loc_str(30307), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
 			if ret1 == 0:
 				current_genre_lists = IAGL.get_genres_from_game_lists(current_query['lists'])
@@ -837,7 +837,7 @@ def update_random_query(random_id):
 		else:
 			if len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
-				ret1 = current_dialog.select('Filter genres for more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				ret1 = current_dialog.select(IAGL.loc_str(30308), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
 				if ret1 == 0:
 					current_genre_lists = IAGL.get_genres_from_game_lists(current_query['lists'])
@@ -870,7 +870,7 @@ def update_random_query(random_id):
 		current_players_lists = None
 		if current_query['lists'] is None:
 			current_dialog = xbmcgui.Dialog()
-			ret1 = current_dialog.select('Filter number of players for all lists?  This could take a while...', ['Yes','Cancel'])
+			ret1 = current_dialog.select(IAGL.loc_str(30309), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
 			if ret1 == 0:
 				current_players_lists = IAGL.get_players_from_game_lists(current_query['lists'])
@@ -880,7 +880,7 @@ def update_random_query(random_id):
 		else:
 			if len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
-				ret1 = current_dialog.select('Filter number of players for more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				ret1 = current_dialog.select(IAGL.loc_str(30310), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
 				if ret1 == 0:
 					current_players_lists = IAGL.get_players_from_game_lists(current_query['lists'])
@@ -913,7 +913,7 @@ def update_random_query(random_id):
 		current_year_lists = None
 		if current_query['lists'] is None:
 			current_dialog = xbmcgui.Dialog()
-			ret1 = current_dialog.select('Filter years for all lists?  This could take a while...', ['Yes','Cancel'])
+			ret1 = current_dialog.select(IAGL.loc_str(30311), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
 			if ret1 == 0:
 				current_year_lists = IAGL.get_years_from_game_lists(current_query['lists'])
@@ -923,7 +923,7 @@ def update_random_query(random_id):
 		else:
 			if len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
-				ret1 = current_dialog.select('Filter years for more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				ret1 = current_dialog.select(IAGL.loc_str(30312), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
 				if ret1 == 0:
 					current_year_lists = IAGL.get_years_from_game_lists(current_query['lists'])
@@ -956,7 +956,7 @@ def update_random_query(random_id):
 		current_studio_lists = None
 		if current_query['lists'] is None:
 			current_dialog = xbmcgui.Dialog()
-			ret1 = current_dialog.select('Filter studios for all lists?  This could take a while...', ['Yes','Cancel'])
+			ret1 = current_dialog.select(IAGL.loc_str(30313), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
 			if ret1 == 0:
 				current_studio_lists = IAGL.get_studios_from_game_lists(current_query['lists'])
@@ -966,7 +966,7 @@ def update_random_query(random_id):
 		else:
 			if len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
-				ret1 = current_dialog.select('Filter studios for more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				ret1 = current_dialog.select(IAGL.loc_str(30314), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
 				if ret1 == 0:
 					current_studio_lists = IAGL.get_studios_from_game_lists(current_query['lists'])
@@ -1000,7 +1000,7 @@ def update_random_query(random_id):
 			current_query['title'] = 1
 		if current_query['lists'] is None:
 			current_dialog = xbmcgui.Dialog()
-			ret1 = current_dialog.select('Query all lists?  This could take a while...', ['Yes','Cancel'])
+			ret1 = current_dialog.select(IAGL.loc_str(30315), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
 			if ret1 == 0:
 				plugin.run(['plugin://plugin.program.iagl/run_random/1/', '0', IAGL.get_query_as_url(current_query)])
@@ -1009,7 +1009,7 @@ def update_random_query(random_id):
 		else:
 			if len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
-				ret1 = current_dialog.select('Query more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+				ret1 = current_dialog.select(IAGL.loc_str(30316), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
 				if ret1 == 0:
 					plugin.run(['plugin://plugin.program.iagl/run_random/1/', '0', IAGL.get_query_as_url(current_query)])
@@ -1032,7 +1032,7 @@ def generate_random_listitem():
 		current_query['title'] = 1
 	if current_query['lists'] is None:
 		current_dialog = xbmcgui.Dialog()
-		ret1 = current_dialog.select('Create a query for all lists?  This could take a while...', ['Yes','Cancel'])
+		ret1 = current_dialog.select(IAGL.loc_str(30317), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 		del current_dialog
 		if ret1 == 0:
 			create_listitem = True
@@ -1041,7 +1041,7 @@ def generate_random_listitem():
 	else:
 		if len(current_query['lists'])>10:
 			current_dialog = xbmcgui.Dialog()
-			ret1 = current_dialog.select('Query more than 10 lists?  This could take a while...', ['Yes','Cancel'])
+			ret1 = current_dialog.select(IAGL.loc_str(30318), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
 			if ret1 == 0:
 				create_listitem = True
@@ -1052,7 +1052,7 @@ def generate_random_listitem():
 	default_label = 'IAGL Random Play %(query_value)s' % {'query_value':IAGL.get_random_time()}
 	if create_listitem:
 		current_dialog = xbmcgui.Dialog()
-		new_value = current_dialog.input('Enter a label for your query',default_label)
+		new_value = current_dialog.input(IAGL.loc_str(30320),default_label)
 		del current_dialog
 		if len(new_value)<1:
 			new_value = default_label

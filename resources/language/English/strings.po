@@ -1,0 +1,603 @@
+# Kodi Media Center language file
+# Addon Name: Internet Archive Game Launcher
+# Addon id: plugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: zachmorris\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "Internet Archive Game Launcher"
+
+#
+#Settings
+#
+
+msgctxt "#30002"
+msgid "General"
+msgstr "General"
+
+msgctxt "#30003"
+msgid "External Launchers"
+msgstr "External Launchers"
+
+msgctxt "#30004"
+msgid "Netplay"
+msgstr "Netplay"
+
+msgctxt "#30005"
+msgid "Setup Wizard"
+msgstr "Setup Wizard"
+
+msgctxt "#30006"
+msgid "Advanced Settings"
+msgstr "Advanced Settings"
+
+msgctxt "#30007"
+msgid "Cache Lists to Disk"
+msgstr "Cache Lists to Disk"
+
+msgctxt "#30008"
+msgid "Enable Memory Cache"
+msgstr "Enable Memory Cache"
+
+msgctxt "#30009"
+msgid "Clean Game Title"
+msgstr "Clean Game Title"
+
+msgctxt "#30010"
+msgid "Archive Listing Convention"
+msgstr "Archive Listing Convention"
+
+msgctxt "#30011"
+msgid "Game Listing Convention"
+msgstr "Game Listing Convention"
+
+msgctxt "#30012"
+msgid "Display Naming Convention"
+msgstr "Display Naming Convention"
+
+msgctxt "#30013"
+msgid "Number of Items Per Page"
+msgstr "Number of Items Per Page"
+
+msgctxt "#30014"
+msgid "Last Played History"
+msgstr "Last Played History"
+
+msgctxt "#30015"
+msgid "If Game Already Exists Locally"
+msgstr "If Game Already Exists Locally"
+
+msgctxt "#30016"
+msgid "Default Action on Selecting Game"
+msgstr "Default Action on Selecting Game"
+
+msgctxt "#30017"
+msgid "Show Search Item"
+msgstr "Show Search Item"
+
+msgctxt "#30018"
+msgid "Show Random Play Item"
+msgstr "Show Random Play Item"
+
+msgctxt "#30019"
+msgid "Show Play History Item"
+msgstr "Show Play History Item"
+
+msgctxt "#30020"
+msgid "Autoplay Game Trailer"
+msgstr "Autoplay Game Trailer"
+
+msgctxt "#30021"
+msgid "Cache Size (MB)"
+msgstr "Cache Size (MB)"
+
+msgctxt "#30022"
+msgid "Enable Login"
+msgstr "Enable Login"
+
+msgctxt "#30023"
+msgid "archive.org Email"
+msgstr "archive.org Email"
+
+msgctxt "#30024"
+msgid "archive.org Password"
+msgstr "archive.org Password"
+
+msgctxt "#30025"
+msgid "My System Type"
+msgstr "My System Type"
+
+msgctxt "#30026"
+msgid "Close Kodi on Launch"
+msgstr "Close Kodi on Launch"
+
+msgctxt "#30027"
+msgid "Pause Kodi on Launch"
+msgstr "Pause Kodi on Launch"
+
+msgctxt "#30028"
+msgid "RetroArch App Location"
+msgstr "RetroArch App Location"
+
+msgctxt "#30029"
+msgid "RetroArch System Folder"
+msgstr "RetroArch System Folder"
+
+msgctxt "#30030"
+msgid "RetroArch CFG Location"
+msgstr "RetroArch CFG Location"
+
+msgctxt "#30031"
+msgid "Additional Emulators:"
+msgstr "Additional Emulators:"
+
+msgctxt "#30032"
+msgid "Additional Emulator 1"
+msgstr "Additional Emulator 1"
+
+msgctxt "#30033"
+msgid "Emulator 1 App Location"
+msgstr "Emulator 1 App Location"
+
+msgctxt "#30034"
+msgid "Additional Emulator 2"
+msgstr "Additional Emulator 2"
+
+msgctxt "#30035"
+msgid "Emulator 2 App Location"
+msgstr "Emulator 2 App Location"
+
+msgctxt "#30036"
+msgid "Additional Emulator 3"
+msgstr "Additional Emulator 3"
+
+msgctxt "#30037"
+msgid "Emulator 3 App Location"
+msgstr "Emulator 3 App Location"
+
+msgctxt "#30038"
+msgid "Enable Netplay"
+msgstr "Enable Netplay"
+
+msgctxt "#30039"
+msgid "Player Connection Type"
+msgstr "Player Connection Type"
+
+msgctxt "#30040"
+msgid "Player Name"
+msgstr "Player Name"
+
+msgctxt "#30041"
+msgid "Host IP Address"
+msgstr "Host IP Address"
+
+msgctxt "#30042"
+msgid "Host IP Port"
+msgstr "Host IP Port"
+
+msgctxt "#30043"
+msgid "Sync Frames"
+msgstr "Sync Frames"
+
+msgctxt "#30044"
+msgid "Game List quick setup tool for IAGL"
+msgstr "Game List quick setup tool for IAGL"
+
+msgctxt "#30045"
+msgid "Emulator Launcher"
+msgstr "Emulator Launcher"
+
+msgctxt "#30046"
+msgid "Execute Setup Wizard"
+msgstr "Execute Setup Wizard"
+
+msgctxt "#30047"
+msgid "Note:  You should not use these settings unless you're sure of what you are doing!"
+msgstr "Note:  You should not use these settings unless you're sure of what you are doing!"
+
+msgctxt "#30048"
+msgid "Enable Editing for Post DL Command"
+msgstr "Enable Editing for Post DL Command"
+
+msgctxt "#30049"
+msgid "Send Android Stop Command before External Launch"
+msgstr "Send Android Stop Command before External Launch"
+
+msgctxt "#30050"
+msgid "Add to IAGL Favorites"
+msgstr "Add to IAGL Favorites"
+
+msgctxt "#30051"
+msgid "Set addon to provide games (RetroPlayer Only)"
+msgstr "Set addon to provide games (RetroPlayer Only)"
+
+msgctxt "#30052"
+msgid "Set addon to provide Video"
+msgstr "Set addon to provide Video"
+
+msgctxt "#30053"
+msgid "Set addon to provide Programs"
+msgstr "Set addon to provide Programs"
+
+msgctxt "#30054"
+msgid "Addon Content Type"
+msgstr "Addon Content Type"
+
+msgctxt "#30055"
+msgid "Unhide All Game Lists"
+msgstr "Unhide All Game Lists"
+
+msgctxt "#30056"
+msgid "Clear Cache"
+msgid "Clear Cache"
+
+#
+#General
+#
+
+msgctxt "#30200"
+msgid "Yes"
+msgstr "Yes"
+
+msgctxt "#30201"
+msgid "Cancel"
+msgstr "Cancel"
+
+msgctxt "#30202"
+msgid "Complete"
+msgstr "Complete"
+
+msgctxt "#30203"
+msgid "Error"
+msgstr "Error"
+
+msgctxt "#30204"
+msgid "No"
+msgstr "No"
+
+msgctxt "#30205"
+msgid "Kodi"
+msgstr "Kodi"
+
+msgctxt "#30206"
+msgid "External"
+msgstr "External"
+
+msgctxt "#30207"
+msgid "Default"
+msgstr "Default"
+
+msgctxt "#30208"
+msgid "Custom Path"
+msgstr "Custom Path"
+
+#
+#Dialogs
+#
+#
+#Note, do not change portions of the message with '%(variable)s' in the text, the addon automatically enters this information
+#
+
+msgctxt "#30302"
+msgid "%(game_title)s was successfully downloaded"
+msgstr "%(game_title)s was successfully downloaded"
+
+msgctxt "#30303"
+msgid "%(game_title)s partial download failed[CR]%(fail_reason)s"
+msgstr "%(game_title)s partial download failed[CR]%(fail_reason)s"
+
+msgctxt "#30304"
+msgid "%(game_title)s download failed[CR]%(fail_reason)s"
+msgstr "%(game_title)s download failed[CR]%(fail_reason)s"
+
+msgctxt "#30305"
+msgid "%(game_title)s failed to launch[CR]%(fail_reason)s"
+msgstr "%(game_title)s failed to launch[CR]%(fail_reason)s"
+
+msgctxt "#30306"
+msgid "Cache cleared for %(game_list_id)s"
+msgstr "Cache cleared for %(game_list_id)s"
+
+msgctxt "#30307"
+msgid "Filter genres for all lists?  This could take a while..."
+msgstr "Filter genres for all lists?  This could take a while..."
+
+msgctxt "#30308"
+msgid "Filter genres for more than 10 lists?  This could take a while..."
+msgstr "Filter genres for more than 10 lists?  This could take a while..."
+
+msgctxt "#30309"
+msgid "Filter number of players for all lists?  This could take a while..."
+msgstr "Filter number of players for all lists?  This could take a while..."
+
+msgctxt "#30310"
+msgid "Filter number of players for more than 10 lists?  This could take a while..."
+msgstr "Filter number of players for more than 10 lists?  This could take a while..."
+
+msgctxt "#30311"
+msgid "Filter years for all lists?  This could take a while..."
+msgstr "Filter years for all lists?  This could take a while..."
+
+msgctxt "#30312"
+msgid "Filter years for more than 10 lists?  This could take a while..."
+msgstr "Filter years for more than 10 lists?  This could take a while..."
+
+msgctxt "#30313"
+msgid "Filter studios for all lists?  This could take a while..."
+msgstr "Filter studios for all lists?  This could take a while..."
+
+msgctxt "#30314"
+msgid "Filter studios for more than 10 lists?  This could take a while..."
+msgstr "Filter studios for more than 10 lists?  This could take a while..."
+
+msgctxt "#30315"
+msgid "Query all lists?  This could take a while..."
+msgstr "Query all lists?  This could take a while..."
+
+msgctxt "#30316"
+msgid "Query more than 10 lists?  This could take a while..."
+msgstr "Query more than 10 lists?  This could take a while..."
+
+msgctxt "#30317"
+msgid "Create a query for all lists?  This could take a while..."
+msgstr "Create a query for all lists?  This could take a while..."
+
+msgctxt "#30318"
+msgid "Create a query for more than 10 lists?  This could take a while..."
+msgstr "Create a query for more than 10 lists?  This could take a while..."
+
+msgctxt "#30319"
+msgid "You must enter a title"
+msgstr "You must enter a title"
+
+msgctxt "#30320"
+msgid "Enter a label for your query"
+msgstr "Enter a label for your query"
+
+msgctxt "#30321"
+msgid "Choose number of random results to return"
+msgstr "Choose number of random results to return"
+
+msgctxt "#30322"
+msgid "New Game List Version"
+msgstr "New Game List Version"
+
+msgctxt "#30323"
+msgid "New version %(new_game_list_version)s for %(dat_filename)s"
+msgstr "New version %(new_game_list_version)s for %(dat_filename)s"
+
+msgctxt "#30324"
+msgid "Update to new version of %(dat_filename)s ?"
+msgstr "Update to new version of %(dat_filename)s ?"
+
+msgctxt "#30325"
+msgid "Get updated list"
+msgstr "Get updated list"
+
+msgctxt "#30326"
+msgid "Ask me again later"
+msgstr "Ask me again later"
+
+msgctxt "#30327"
+msgid "No, Never!"
+msgstr "No, Never!"
+
+msgctxt "#30328"
+msgid "New Game Lists"
+msgstr "New Game Lists"
+
+msgctxt "#30329"
+msgid "New game lists are now available"
+msgstr "New game lists are now available"
+
+msgctxt "#30330"
+msgid "New game list %(dat_filename)s is now available"
+msgstr "New game list %(dat_filename)s is now available"
+
+msgctxt "#30331"
+msgid "Select metadata value to update"
+msgstr "Select metadata value to update"
+
+msgctxt "#30332"
+msgid "Select art to update"
+msgstr "Select art to update"
+
+msgctxt "#30333"
+msgid "Select Launcher"
+msgstr "Select Launcher"
+
+msgctxt "#30334"
+msgid "Hide Game List?"
+msgstr "Hide Game List?"
+
+msgctxt "#30335"
+msgid "Select Post DL Command"
+msgstr "Select Post DL Command"
+
+msgctxt "#30336"
+msgid "Select Download Path"
+msgstr "Select Download Path"
+
+msgctxt "#30337"
+msgid "Update Download Path"
+msgstr "Update Download Path"
+
+msgctxt "#30338"
+msgid "Auto (choose from list)"
+msgstr "Auto (choose from list)"
+
+msgctxt "#30339"
+msgid "Select Default Addon"
+msgstr "Select Default Addon"
+
+msgctxt "#30340"
+msgid "System Type is not defined[CR]Update external launcher addon settings"
+msgstr "System Type is not defined[CR]Update external launcher addon settings"
+
+msgctxt "#30341"
+msgid "Select Launch Command"
+msgstr "Select Launch Command"
+
+msgctxt "#30342"
+msgid "Enter your new launch command:"
+msgstr "Enter your new launch command:"
+
+msgctxt "#30343"
+msgid "Enter new value for %(current_choice)s"
+msgstr "Enter new value for %(current_choice)s"
+
+msgctxt "#30344"
+msgid "Are you sure you want to update %(current_choice)s?"
+msgstr "Are you sure you want to update %(current_choice)s?"
+
+msgctxt "#30345"
+msgid "%(current_filename)s was updated and cache was cleared"
+msgstr "%(current_filename)s was updated and cache was cleared"
+
+msgctxt "#30346"
+msgid "%(current_filename)s was updated"
+msgstr "%(current_filename)s was updated"
+
+msgctxt "#30347"
+msgid "+ Create New Favorites List"
+msgstr "+ Create New Favorites List"
+
+msgctxt "#30348"
+msgid "My Favorites List %(default_number)s"
+msgstr "My Favorites List %(default_number)s"
+
+msgctxt "#30349"
+msgid "Choose Favorites List"
+msgstr "Choose Favorites List"
+
+msgctxt "#30350"
+msgid "%(current_username)ss Favorites List %(default_number)s"
+msgstr "%(current_username)ss Favorites List %(default_number)s"
+
+msgctxt "#30351"
+msgid "Enter New Favorites List Name:"
+msgstr "Enter New Favorites List Name:"
+
+msgctxt "#30352"
+msgid "%(current_game)s added to %(current_filename)s and cache was cleared"
+msgstr "%(current_game)s added to %(current_filename)s and cache was cleared"
+
+msgctxt "#30353"
+msgid "%(current_game)s added to %(current_filename)s"
+msgstr "%(current_game)s added to %(current_filename)s"
+
+msgctxt "#30354"
+msgid "Are you sure you want to delete %(game_id_in)s from the list %(game_list_id_in)s?"
+msgstr "Are you sure you want to delete %(game_id_in)s from the list %(game_list_id_in)s?"
+
+msgctxt "#30355"
+msgid "Download and overwrite local files?"
+msgstr "Download and overwrite local files?"
+
+msgctxt "#30356"
+msgid "No external command is defined.[CR]Please check settings."
+msgstr "No external command is defined.[CR]Please check settings."
+
+#
+#Context Menus
+#
+msgctxt "#30400"
+msgid "Update Metadata"
+msgstr "Update Metadata"
+
+msgctxt "#30402"
+msgid "Update List Art"
+msgstr "Update List Art"
+
+msgctxt "#30403"
+msgid "Update Visibility"
+msgstr "Update Visibility"
+
+msgctxt "#30404"
+msgid "Update Launcher"
+msgstr "Update Launcher"
+
+msgctxt "#30405"
+msgid "Update Download Path"
+msgstr "Update Download Path"
+
+msgctxt "#30406"
+msgid "View List Settings"
+msgstr "View List Settings"
+
+msgctxt "#30407"
+msgid "Refresh Game List"
+msgstr "Refresh Game List"
+
+msgctxt "#30408"
+msgid "Update Launch Command"
+msgstr "Update Launch Command"
+
+msgctxt "#30409"
+msgid "Update Default Game Addon"
+msgstr "Update Default Game Addon"
+
+msgctxt "#30410"
+msgid "Update Post DL Command"
+msgstr "Update Post DL Command"
+
+msgctxt "#30411"
+msgid "Share My List!"
+msgstr "Share My List!"
+
+msgctxt "#30412"
+msgid "Add to IAGL Favorites"
+msgstr "Add to IAGL Favorites"
+
+msgctxt "#30413"
+msgid "Remove from IAGL Favorites"
+msgstr "Remove from IAGL Favorites"
+
+msgctxt "#30414"
+msgid "Title"
+msgstr "Title"
+
+msgctxt "#30415"
+msgid "Categories"
+msgstr "Categories"
+
+msgctxt "#30416"
+msgid "Platform"
+msgstr "Platform"
+
+msgctxt "#30417"
+msgid "Plot / Overview"
+msgstr "Plot / Overview"
+
+msgctxt "#30418"
+msgid "Trailer"
+msgstr "Trailer"
+
+msgctxt "#30419"
+msgid "Author"
+msgstr "Author"
+
+msgctxt "#30420"
+msgid "Date"
+msgstr "Date"
+
+msgctxt "#30421"
+msgid "Thumb / Poster"
+msgstr "Thumb / Poster"
+
+msgctxt "#30422"
+msgid "Logo"
+msgstr "Logo"
+
+msgctxt "#30423"
+msgid "Banner"
+msgstr "Banner"
+
+msgctxt "#30424"
+msgid "Fanart"
+msgstr "Fanart"
