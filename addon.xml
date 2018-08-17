@@ -13,7 +13,7 @@
     <provides>video game</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <reuselanguageinvoker>false</reuselanguageinvoker>
+    <!-- <reuselanguageinvoker>false</reuselanguageinvoker> -->
     <platform>all</platform>
     <language></language>
     <summary>Internet Archive Game Launcher</summary>

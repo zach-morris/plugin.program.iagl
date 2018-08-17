@@ -62,6 +62,8 @@ class iagl_utils(object):
 			xbmc.log(msg='IAGL:  Unable to parse Kodi GUI date format, defaulting to environment default.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGDEBUG)
 		self.year_format = '%Y'
 		self.total_arts = 10
+		self.notification_time = 2000
+		self.error_notification_time = 5000
 		self.clean_game_tags = re.compile(r'\([^)]*\)')
 		self.temp_cache_folder_name = 'temp_iagl'
 		self.dat_folder_name = 'dat_files'
@@ -111,33 +113,40 @@ class iagl_utils(object):
 		self.max_items_per_page = 99999
 		self.number_cat = ['0','1','2','3','4','5','6','7','8','9']
 		self.non_number_cat = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-		self.context_menu_items = [('Update Metadata','RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/metadata)'),('Update List Art','RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/art)'),('Update Visibility','RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/visibility)'),('Update Launcher','RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/launcher)'),('Update Download Path','RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/download_path)'),('View List Settings','RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/view_list_settings)'),('Refresh Game List','RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/refresh_list)')]
-		self.context_menu_ext_launch_cmd = [('Update Launch Command','RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/launch_command)')]
-		self.context_menu_default_addon_launch_cmd = [('Update Default Game Addon','RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/default_addon)')]
-		self.context_menu_items_post_dl = [('Update Post DL Command','RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/post_dl_command)')]
+		self.context_menu_items = [(self.loc_str(30400),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/metadata)'),(self.loc_str(30402),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/art)'),(self.loc_str(30403),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/visibility)'),(self.loc_str(30404),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/launcher)'),(self.loc_str(30405),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/download_path)'),(self.loc_str(30406),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/view_list_settings)'),(self.loc_str(30407),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/refresh_list)')]
+		self.context_menu_ext_launch_cmd = [(self.loc_str(30408),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/launch_command)')]
+		self.context_menu_default_addon_launch_cmd = [(self.loc_str(30409),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/default_addon)')]
+		self.context_menu_items_post_dl = [(self.loc_str(30410),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/post_dl_command)')]
 		self.post_dl_actions = ['None','UnZIP Game','UnZIP Game, Rename file','UnZIP Game, Point to Launch File','UnZIP Game to Folder, Point to Launch File','Unarchive Game','Unarchive Game, Rename file','Unarchive Game, Update file extension','Unarchive Game, Generate M3U','Unarchive Game, Point to BIN','Unarchive Game, Point to CUE','Unarchive Game, Point to ISO','Unarchive Game, Point to GDI','Unarchive Game, Point to ADF','Unarchive DOSBox, Point to EXE','Unarchive DOSBox, Generate Conf','Unarchive SCUMMVm, Generate Conf','Unarchive WIN31, Point to BAT','Process MAME / MESS Softlist Game',]
 		self.post_dl_action_keys = ['none','unzip_rom','unzip_and_rename_file','unzip_and_launch_file','unzip_to_folder_and_launch_file','unarchive_game','unarchive_game_rename_file','unarchive_game_rename_extension','unarchive_game_generate_m3u','unarchive_game_launch_bin','unarchive_game_launch_cue','unarchive_game_launch_iso','unarchive_game_launch_gdi','unarchive_game_launch_adf','unarchive_dosbox_launch_cmd','unarchive_dosbox_generate_conf','unzip_and_launch_scummvm_file','unzip_and_launch_win31_file','launch_mame_softlist']
-		self.context_menu_items_favorites = [('Share My List!','RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/share_favorite)')]
-		self.context_menu_items_games = [('Add to IAGL Favorites','RunPlugin(plugin://plugin.program.iagl/games_context_menu/<game_list_id>/<game_id>/add)')]
-		self.context_menu_items_query = [('Add to IAGL Favorites','RunPlugin(plugin://plugin.program.iagl/games_context_menu/query/<query_id>/add)')]
-		self.context_menu_items_remove_favorite = [('Remove from IAGL Favorites','RunPlugin(plugin://plugin.program.iagl/games_context_menu/<game_list_id>/<game_id>/remove)')]
-		self.context_menu_metadata_choices = ['Title','Categories','Platform', 'Plot / Overview', 'Trailer', 'Author', 'Date']
+		self.context_menu_items_favorites = [(self.loc_str(30411),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/share_favorite)')]
+		self.context_menu_items_games = [(self.loc_str(30412),'RunPlugin(plugin://plugin.program.iagl/games_context_menu/<game_list_id>/<game_id>/add)')]
+		self.context_menu_items_query = [(self.loc_str(30412),'RunPlugin(plugin://plugin.program.iagl/games_context_menu/query/<query_id>/add)')]
+		self.context_menu_items_remove_favorite = [(self.loc_str(30413),'RunPlugin(plugin://plugin.program.iagl/games_context_menu/<game_list_id>/<game_id>/remove)')]
+		self.context_menu_metadata_choices = [self.loc_str(30414),self.loc_str(30415),self.loc_str(30416),self.loc_str(30417),self.loc_str(30418),self.loc_str(30419),self.loc_str(30420)]
 		self.context_menu_metadata_keys = ['emu_name','emu_category','emu_description', 'emu_comment', 'emu_trailer', 'emu_author', 'emu_date']
-		self.context_menu_art_choices = ['Thumb / Poster', 'Logo', 'Banner', 'Fanart']
+		self.context_menu_art_choices = [self.loc_str(30421),self.loc_str(30422),self.loc_str(30423),self.loc_str(30424)]
 		self.context_menu_art_keys = ['emu_thumb', 'emu_logo', 'emu_banner', 'emu_fanart']
 		self.ignore_these_game_addons = ['game.libretro','game.libretro.2048','game.libretro.dinothawr','game.libretro.mrboom']
 		self.remove_these_filetypes = ['.srm','.sav','.fs','.state','.auto','.xml','.nfo']
-		self.possible_linux_core_directories = ['/usr/lib/libretro','/usr/lib/x86_64-linux-gnu/libretro','/usr/lib/i386-linux-gnu/libretro','/usr/local/lib/libretro','/tmp/cores']
+		self.possible_linux_core_directories = ['/usr/lib/libretro','/usr/lib/x86_64-linux-gnu/libretro','/usr/lib/i386-linux-gnu/libretro','/usr/lib/s390x-linux-gnu/libretro','/usr/local/lib/libretro','~/.config/retroarch/cores','/tmp/cores']
 		self.default_linux_core_directory = '/usr/lib/libretro'
-		self.possible_retroarch_app_locations = [os.path.join('/Applications','RetroArch.app','Contents','MacOS','RetroArch'),os.path.join('usr','bin','retroarch'),os.path.join('C:','Program Files (x86)','Retroarch','retroarch.exe')]
+		self.possible_retroarch_app_locations = [os.path.join('/Applications','RetroArch.app','Contents','MacOS','RetroArch'),os.path.join('usr','bin','retroarch'),os.path.join('C:','Program Files (x86)','Retroarch','retroarch.exe'),os.path.join('opt','retropie','emulators','retroarch','bin','retroarch')]
 		self.possible_retroarch_config_locations = [os.path.join('mnt','internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('data','data','com.retroarch','retroarch.cfg'),os.path.join('data','data','com.retroarch','files','retroarch.cfg')]
 		self.windowid = xbmcgui.getCurrentWindowId()
 		#Define temp download cache size
-		cache_options = {'Zero (One ROM and Supporting Files Only)':0,'10 MB':10*1e6,'10MB':10*1e6,'25MB':25*1e6,'50MB':50*1e6,'100MB':100*1e6,'150MB':150*1e6,'200MB':200*1e6,'250MB':250*1e6,'300MB':300*1e6,'350MB':350*1e6,'400MB':400*1e6,'450MB':450*1e6,'500MB':500*1e6,'1GB':1000*1e6,'2GB':2000*1e6,'5GB':5000*1e6,'10GB':10000*1e6,'20GB':20000*1e6}
+		cache_options = {'Zero (Current Game Only)':0,'10 MB':10*1e6,'10MB':10*1e6,'25MB':25*1e6,'50MB':50*1e6,'100MB':100*1e6,'150MB':150*1e6,'200MB':200*1e6,'250MB':250*1e6,'300MB':300*1e6,'350MB':350*1e6,'400MB':400*1e6,'450MB':450*1e6,'500MB':500*1e6,'1GB':1000*1e6,'2GB':2000*1e6,'5GB':5000*1e6,'10GB':10000*1e6,'20GB':20000*1e6}
 		try:
 			self.cache_folder_size = cache_options[self.handle.getSetting(id='iagl_setting_dl_cache')]
 		except ValueError:
 			self.cache_folder_size = 0 #Default to 0 if not initialized correctly
+
+	def loc_str(self,string_id_in):
+		try:
+			return self.handle.getLocalizedString(string_id_in)
+		except:
+			xbmc.log(msg='IAGL Error:  No translation available for %(string_id_in)s' % {'string_id_in': string_id_in}, level=xbmc.LOGERROR)
+			return ''
 
 	def initialize_IAGL_settings(self):
 		if self.handle.getSetting(id='iagl_external_user_external_env') ==  'Select':  #Not yet defined, try and define for the user
@@ -261,8 +270,8 @@ class iagl_utils(object):
 							xbmc.log(msg='IAGL:  Dat file %(ff)s could not be deleted from addon data' % {'ff': new_game_lists['dat_filename'][ii]}, level=xbmc.LOGERROR)
 					else:  #New version, check if the file should be updated
 						current_dialog = xbmcgui.Dialog()
-						ok_ret = current_dialog.ok('New Game List Version', 'New version %(new_game_list_version)s for %(dat_filename)s' % {'new_game_list_version': new_game_list_version, 'dat_filename': new_game_lists['dat_filename'][ii]})
-						ret1 = current_dialog.select('Update to new version of %(dat_filename)s ?'% {'dat_filename': new_game_lists['dat_filename'][ii]}, ['Get updated list','Ask me again later', 'No, Never!'])
+						ok_ret = current_dialog.ok(self.loc_str(30322), self.loc_str(30323) % {'new_game_list_version': new_game_list_version, 'dat_filename': new_game_lists['dat_filename'][ii]})
+						ret1 = current_dialog.select(self.loc_str(30324) % {'dat_filename': new_game_lists['dat_filename'][ii]}, [self.loc_str(30325),self.loc_str(30326),self.loc_str(30327)])
 						del current_dialog
 						if ret1>-1:
 							if ret1==0: #Copy file from addon data to userdata and copy userdata settings
@@ -286,14 +295,14 @@ class iagl_utils(object):
 			if len([x for x in new_game_list_added if x])>0:
 				if xbmcvfs.exists(dat_file_cachename):
 					xbmcvfs.delete(dat_file_cachename)
-				if len([x for x in new_game_list_added if x])>2:
+				if len([x for x in new_game_list_added if x])>2 and len(current_game_lists)>len([x for x in new_game_list_added if x]): #Only show new game list dialogs if addon is updated, do not show on initial install
 					current_dialog = xbmcgui.Dialog()
-					ok_ret = current_dialog.ok('New Game Lists','New game lists are now available')
+					ok_ret = current_dialog.notification(self.loc_str(30328),self.loc_str(30329),xbmcgui.NOTIFICATION_INFO,self.notification_time)
 					del current_dialog
 				else:
 					for ff in [x for x in new_game_list_added if x]:
 						current_dialog = xbmcgui.Dialog()
-						ok_ret = current_dialog.ok('New Game Lists','New game list %(dat_filename)s is now available' % {'dat_filename': ff})
+						ok_ret = current_dialog.notification(self.loc_str(30328),self.loc_str(30330) % {'dat_filename': ff},xbmcgui.NOTIFICATION_INFO,self.notification_time)
 						del current_dialog
 
 	def get_list_cache_path(self):
@@ -317,9 +326,12 @@ class iagl_utils(object):
 		
 		if any([file_crc in x for x in files]):
 			try:
+				# cache_exists = True
+				# cache_filename = files[[file_crc in x for x in files].index(True)]
+				cache_filename = [x for x in files if file_crc in x][0]
 				cache_exists = True
-				cache_filename = files[[file_crc in x for x in files].index(True)]
 			except Exception as exc:
+				cache_exists = False
 				xbmc.log(msg='IAGL:  No cache found for file with crc %(file_crc)s.  Exception %(exc)s' % {'file_crc': file_crc, 'exc': exc}, level=xbmc.LOGDEBUG)
 
 		return cache_exists, cache_filename
@@ -332,9 +344,11 @@ class iagl_utils(object):
 		
 		if any([dat_filename in x for x in files]):
 			try:
+				# cache_filename = files[[dat_filename in x for x in files].index(True)]
+				cache_filename = [x for x in files if dat_filename in x][0]
 				cache_exists = True
-				cache_filename = files[[dat_filename in x for x in files].index(True)]
 			except Exception as exc:
+				cache_exists = False
 				xbmc.log(msg='IAGL:  No cache found for file with crc %(file_crc)s.  Exception %(exc)s' % {'file_crc': file_crc, 'exc': exc}, level=xbmc.LOGDEBUG)
 
 		if cache_exists:
@@ -518,6 +532,7 @@ class iagl_utils(object):
 		search_query_listitem = self.create_kodi_listitem(label_in)
 		search_query_listitem.setInfo(self.media_type,li['info'])
 		search_query_listitem.setArt(li['art'])
+		#https://forum.kodi.tv/showthread.php?tid=332283
 		for kk in li['properties'].keys():
 			search_query_listitem.setProperty(kk,li['properties'][kk])
 		search_query_listitem = self.add_query_context_menus(search_query_listitem,'search')
@@ -730,6 +745,7 @@ class iagl_utils(object):
 			game_listitems.append(self.create_kodi_listitem(li['values']['label'],li['values']['label2']))
 			game_listitems[-1].setInfo(self.media_type,li['info'])
 			game_listitems[-1].setArt(li['art'])
+			#https://forum.kodi.tv/showthread.php?tid=332283
 			for kk in li['properties'].keys():
 				game_listitems[-1].setProperty(kk,li['properties'][kk])
 
@@ -2119,7 +2135,7 @@ class iagl_utils(object):
 		current_choice = None
 		if setting_id == 'metadata':
 			current_dialog = xbmcgui.Dialog()
-			ret1 = current_dialog.select('Select metadata value to update',self.context_menu_metadata_choices)
+			ret1 = current_dialog.select(self.loc_str(30331),self.context_menu_metadata_choices)
 			del current_dialog
 			if ret1 > -1:
 				current_key = self.context_menu_metadata_keys[ret1]
@@ -2128,7 +2144,7 @@ class iagl_utils(object):
 				current_key = None
 		elif setting_id == 'art':
 			current_dialog = xbmcgui.Dialog()
-			ret1 = current_dialog.select('Select art to update',self.context_menu_art_choices)
+			ret1 = current_dialog.select(self.loc_str(30332),self.context_menu_art_choices)
 			del current_dialog
 			if ret1 > -1:
 				current_key = self.context_menu_art_keys[ret1]
@@ -2171,24 +2187,24 @@ class iagl_utils(object):
 		new_value = None
 		current_dialog = xbmcgui.Dialog()
 		if current_key == 'emu_launcher':
-			ret1 = current_dialog.select('Select Launcher', ['Kodi','External'])
+			ret1 = current_dialog.select(self.loc_str(30333), [self.loc_str(30205),self.loc_str(30206)])
 			if ret1 > -1:
 				new_value = ['retroplayer','external'][ret1]
 		elif current_key == 'emu_visibility':
-			ret1 = current_dialog.select('Hide Game List?', ['No','Yes'])
+			ret1 = current_dialog.select(self.loc_str(30334), [self.loc_str(30204),self.loc_str(30200)])
 			if ret1 > 0:
 				new_value = ['visible','hidden'][ret1]
 		elif current_key == 'emu_postdlaction':
-			ret1 = current_dialog.select('Select Post DL Command',self.post_dl_actions)
+			ret1 = current_dialog.select(self.loc_str(30335),self.post_dl_actions)
 			if ret1 > -1:
 				new_value = self.post_dl_action_keys[ret1]
 		elif current_key == 'emu_downloadpath':
-			ret1 = current_dialog.select('Select Download Path', ['Default','Custom Path'])
+			ret1 = current_dialog.select(self.loc_str(30336), [self.loc_str(30207),self.loc_str(30208)])
 			if ret1 > -1:
 				if ret1 == 0:
 					new_value = 'default'
 				else:
-					new_value = current_dialog.browse(0,'Update Download Path','files')
+					new_value = current_dialog.browse(0,self.loc_str(30337),'files')
 					if len(new_value)<1:
 						new_value = None
 		elif current_key == 'emu_default_addon':
@@ -2198,10 +2214,10 @@ class iagl_utils(object):
 				current_game_addon_values = [x.get('addonid') for x in json.loads(addons_available).get('result').get('addons') if x.get('type') == 'kodi.gameclient' and x.get('addonid') not in self.ignore_these_game_addons]
 				current_game_addon_choices = [xbmcaddon.Addon(id='%(addon_name)s' % {'addon_name':x}).getAddonInfo('name') for x in current_game_addon_values]
 				current_game_addon_values = ['none']+[current_game_addon_values[x] for x in sorted(range(len(current_game_addon_choices)), key=lambda k: current_game_addon_choices[k])]
-				current_game_addon_choices = ['Auto (choose from list)']+[current_game_addon_choices[x] for x in sorted(range(len(current_game_addon_choices)), key=lambda k: current_game_addon_choices[k])]
+				current_game_addon_choices = [self.loc_str(30338)]+[current_game_addon_choices[x] for x in sorted(range(len(current_game_addon_choices)), key=lambda k: current_game_addon_choices[k])]
 				# current_game_addon_values = ['none']+current_game_addon_values
 				# current_game_addon_choices = ['Auto']+current_game_addon_choices
-				ret1 = current_dialog.select('Select Default Addon', current_game_addon_choices)
+				ret1 = current_dialog.select(self.loc_str(30339), current_game_addon_choices)
 				if ret1 > -1:
 					new_value = current_game_addon_values[ret1]
 			else:
@@ -2210,7 +2226,7 @@ class iagl_utils(object):
 		elif current_key == 'emu_ext_launch_cmd':
 			current_external_environment = self.handle.getSetting(id='iagl_external_user_external_env')
 			if current_external_environment == 'Select':
-				ok_ret = current_dialog.ok('Error','System Type is not defined[CR]Update external launcher addon settings')
+				ok_ret = current_dialog.ok(self.loc_str(30203),self.loc_str(30340))
 			else:
 				if self.get_setting_as_bool(self.handle.getSetting(id='iagl_external_launch_close_kodi')):
 					if current_external_environment in ['OSX','Linux/Kodibuntu','Windows']: #Close Kodi option only available for these systems
@@ -2229,13 +2245,13 @@ class iagl_utils(object):
 				current_external_command_values = [x.get('launcher_command') for x in current_external_command_db.get('system').get('launcher') if x.get('@os') == current_ext_key]
 				current_external_command_choices = current_external_command_choices+['Manually Input Command']
 				current_external_command_values = current_external_command_values+['manual_command']
-				ret1 = current_dialog.select('Select Launch Command', current_external_command_choices)
+				ret1 = current_dialog.select(self.loc_str(30341), current_external_command_choices)
 				if ret1 > -1:
 					new_value = current_external_command_values[ret1]
 				if new_value == 'manual_command':
-					new_value = current_dialog.input('Enter your new launch command:')
+					new_value = current_dialog.input(self.loc_str(30342))
 		elif current_key == 'emu_category':
-			new_value = current_dialog.input('Enter new value for %(current_choice)s'%{'current_choice':current_choice},old_value)
+			new_value = current_dialog.input(self.loc_str(30343) % {'current_choice':current_choice},old_value)
 			if len(new_value)<1: #User hit cancel
 				new_value = None
 			if new_value == old_value: #User didnt change the value
@@ -2245,7 +2261,7 @@ class iagl_utils(object):
 					xbmc.log(msg='IAGL:  Favorites list category was updated to include the Favorites keyword', level=xbmc.LOGDEBUG)
 					new_value = new_value+', Favorites' #Favories must remain in favorites
 		else:
-			new_value = current_dialog.input('Enter new value for %(current_choice)s'%{'current_choice':current_choice},old_value)
+			new_value = current_dialog.input(self.loc_str(30343) % {'current_choice':current_choice},old_value)
 			if len(new_value)<1: #User hit cancel
 				new_value = None
 			if new_value == old_value: #User didnt change the value
@@ -2256,7 +2272,7 @@ class iagl_utils(object):
 				new_value = new_value.split('=')[-1]
 
 		if new_value is not None:
-			ret2 = current_dialog.select('Are you sure you want to update %(current_choice)s?'%{'current_choice':current_choice}, ['Yes','Cancel'])
+			ret2 = current_dialog.select(self.loc_str(30344) % {'current_choice':current_choice}, [self.loc_str(30200),self.loc_str(30201)])
 			if ret2 != 0:
 				new_value = None
 		del current_dialog
@@ -2297,12 +2313,12 @@ class iagl_utils(object):
 					if self.delete_list_cache(os.path.splitext(os.path.split(current_filename)[-1])[0]):
 						if not silent_update:
 							current_dialog = xbmcgui.Dialog()
-							ok_ret = current_dialog.ok('Complete','%(current_filename)s was updated and cache was cleared' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]})
+							ok_ret = current_dialog.notification(self.loc_str(30202),self.loc_str(30345) % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
 							del current_dialog
 					else: #Delete list file cache
 						if not silent_update:
 							current_dialog = xbmcgui.Dialog()
-							ok_ret = current_dialog.ok('Complete','%(current_filename)s was updated' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]})
+							ok_ret = current_dialog.notification(self.loc_str(30202),self.loc_str(30346) % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
 							del current_dialog
 				else:
 					xbmc.log(msg='IAGL:  Temporary XML file could not be renamed.  How on earth did you get here?', level=xbmc.LOGDEBUG)
@@ -2320,22 +2336,22 @@ class iagl_utils(object):
 	def add_game_to_IAGL_favorites(self,game_list_id_in,game_id_in,json_in):
 		current_favorites_lists = self.get_list_of_favorites_lists()
 		if type(current_favorites_lists['emu_name']) == list:
-			current_list_choices = [x for x in current_favorites_lists.get('emu_name')]+['+ Create New Favorites List']
+			current_list_choices = [x for x in current_favorites_lists.get('emu_name')]+[self.loc_str(30347)]
 			current_list_values = [x for x in current_favorites_lists.get('fullpath')]+['create_new_list']
 		else:
-			current_list_choices = current_favorites_lists['emu_name']+['+ Create New Favorites List']
+			current_list_choices = current_favorites_lists['emu_name']+[self.loc_str(30347)]
 			current_list_values = current_favorites_lists['fullpath']+['create_new_list']
 		
 		current_dialog = xbmcgui.Dialog()
-		ret1 = current_dialog.select('Choose Favorites List', current_list_choices)
+		ret1 = current_dialog.select(self.loc_str(30349), current_list_choices)
 		if ret1 > -1:
 			new_value = current_list_values[ret1]
 			if new_value == 'create_new_list':
 				if self.kodi_username.lower() == 'master user':
-					default_fav_name = 'My Favorites List %(default_number)s'%{'default_number':len(current_list_values)}
+					default_fav_name = self.loc_str(30348) % {'default_number':len(current_list_values)}
 				else:
-					default_fav_name = '%(current_username)ss Favorites List %(default_number)s'%{'current_username':self.kodi_username, 'default_number':len(current_list_values)}
-				ret2 = current_dialog.input('Enter New Favorites List Name:',default_fav_name)
+					default_fav_name = self.loc_str(30350) % {'current_username':self.kodi_username, 'default_number':len(current_list_values)}
+				ret2 = current_dialog.input(self.loc_str(30351),default_fav_name)
 				if len(ret2)>0:
 					new_favorites_filename = os.path.join(self.get_dat_folder_path(),clean_file_folder_name(ret2)+'.xml')
 					if new_favorites_filename not in current_list_values:
@@ -2401,11 +2417,11 @@ class iagl_utils(object):
 							xbmcvfs.delete(os.path.join(self.get_list_cache_path(),self.dat_file_cache_filename)) #Delete dat file cache
 							if self.delete_list_cache(os.path.splitext(os.path.split(filename_in)[-1])[0]):
 								current_dialog = xbmcgui.Dialog()
-								ok_ret = current_dialog.ok('Complete','%(current_game)s added to %(current_filename)s and cache was cleared' % {'current_game': current_game_name,'current_filename': os.path.splitext(os.path.split(filename_in)[-1])[0]})
+								ok_ret = current_dialog.notification(self.loc_str(30202),self.loc_str(30352) % {'current_game': current_game_name,'current_filename': os.path.splitext(os.path.split(filename_in)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
 								del current_dialog
 							else: #Delete list file cache
 								current_dialog = xbmcgui.Dialog()
-								ok_ret = current_dialog.ok('Complete','%(current_game)s added to %(current_filename)s' % {'current_game': current_game_name, 'current_filename': os.path.splitext(os.path.split(filename_in)[-1])[0]})
+								ok_ret = current_dialog.notification(self.loc_str(30202),self.loc_str(30353) % {'current_game': current_game_name, 'current_filename': os.path.splitext(os.path.split(filename_in)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
 								del current_dialog
 						else:
 							xbmc.log(msg='IAGL:  Temporary XML file could not be renamed.  How on earth did you get here?', level=xbmc.LOGDEBUG)
@@ -2422,7 +2438,7 @@ class iagl_utils(object):
 
 	def remove_game_from_IAGL_favorites(self,game_list_id_in,game_id_in,json_in):
 		current_dialog = xbmcgui.Dialog()
-		ret1 = current_dialog.select('Are you sure you want to delete %(game_id_in)s from the list %(game_list_id_in)s?'%{'game_id_in':url_unquote(game_id_in),'game_list_id_in':url_unquote(game_list_id_in)}, ['Yes','Cancel'])
+		ret1 = current_dialog.select(self.loc_str(30354) % {'game_id_in':url_unquote(game_id_in),'game_list_id_in':url_unquote(game_list_id_in)}, [self.loc_str(30200),self.loc_str(30201)])
 		if ret1 == 0:
 			favorite_dict = dict()
 			favorite_dict['games'] = dict()
@@ -2450,10 +2466,10 @@ class iagl_utils(object):
 								xbmcvfs.delete(os.path.join(self.get_list_cache_path(),self.dat_file_cache_filename)) #Delete dat file cache
 								if self.delete_list_cache(os.path.splitext(os.path.split(current_filename)[-1])[0]):
 									current_dialog = xbmcgui.Dialog()
-									ok_ret = current_dialog.ok('Complete','%(current_filename)s was updated and cache was cleared' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]})
+									ok_ret = current_dialog.notification(self.loc_str(30202),self.loc_str(30345) % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
 								else: #Delete list file cache
 									current_dialog = xbmcgui.Dialog()
-									ok_ret = current_dialog.ok('Complete','%(current_filename)s was updated' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]})
+									ok_ret = current_dialog.notification(self.loc_str(30202),self.loc_str(30346) % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
 							else:
 								xbmc.log(msg='IAGL:  Temporary XML file could not be renamed.  How on earth did you get here?', level=xbmc.LOGDEBUG)
 						else:
@@ -3176,9 +3192,9 @@ class iagl_download(object):
 		if os.path.splitext(filename_in)[-1].lower() == '.iagl': #Attempt to launch from file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the diectory with the pointer file
 			if any([os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower() for x in current_files]):
-				xbmc.log(msg='IAGL:  File %(rom_emu_command)s was found for launching.'% {'rom_emu_command': os.path.join(*os.path.split(self.rom_emu_command))}, level=xbmc.LOGDEBUG)
 				# found_file = current_files[[self.rom_emu_command in x for x in current_files].index(True)]
 				found_file = [x for x in self.current_processed_files if os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower()][0]
+				xbmc.log(msg='IAGL:  File %(rom_emu_command)s was found for launching.'% {'rom_emu_command': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.insert(0,found_file)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
@@ -3198,9 +3214,9 @@ class iagl_download(object):
 		if os.path.splitext(filename_in)[-1].lower() == '.iagl': #Attempt to launch from file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the diectory with the pointer file
 			if any([os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower() for x in current_files]):
-				xbmc.log(msg='IAGL:  File %(rom_emu_command)s was found for launching.'% {'rom_emu_command': os.path.join(*os.path.split(self.rom_emu_command))}, level=xbmc.LOGDEBUG)
 				# found_file = current_files[[self.rom_emu_command in x for x in current_files].index(True)]
 				found_file = [x for x in self.current_processed_files if os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower()][0]
+				xbmc.log(msg='IAGL:  File %(rom_emu_command)s was found for launching.'% {'rom_emu_command': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
 			else:
@@ -3221,8 +3237,9 @@ class iagl_download(object):
 		if os.path.splitext(filename_in)[-1].lower() != '.zip': #Attempt to launch from m3u file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the directory
 			if any([m3u_filename in x for x in current_files]):
-				xbmc.log(msg='IAGL:  M3U File %(mtu_filename)s was found for launching.'% {'mtu_filename': m3u_filename}, level=xbmc.LOGDEBUG)
-				found_file = current_files[[m3u_filename in x for x in current_files].index(True)]
+				# found_file = current_files[[m3u_filename in x for x in current_files].index(True)]
+				found_file = [x for x in current_files if m3u_filename in x][0]
+				xbmc.log(msg='IAGL:  M3U File %(mtu_filename)s was found for launching.'% {'mtu_filename': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
 			else:
@@ -3231,7 +3248,8 @@ class iagl_download(object):
 			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the unarchive diectory
 			if any(['.cue' in x for x in current_files]): #cue files exist in the file list
-				found_file = current_files[['.cue' in x for x in current_files].index(True)]
+				# found_file = current_files[['.cue' in x for x in current_files].index(True)]
+				found_file = [x for x in current_files if '.cue' in x][0]
 				m3u_content = '\r\n'.join([os.path.split(x)[-1] for x in current_files if '.cue' in x]) #List all cue files in the m3u
 				self.write_pointer_file(os.path.split(found_file)[0],m3u_filename_no_ext,'.m3u',m3u_content)
 				self.current_processed_files.insert(0,os.path.join(os.path.split(found_file)[0],m3u_filename))
@@ -3242,7 +3260,8 @@ class iagl_download(object):
 		if os.path.splitext(filename_in)[-1].lower() != '.zip' and os.path.splitext(filename_in)[-1].lower() != '.7z': #Attempt to launch from file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the directory
 			if any([requested_file_type in x for x in current_files]):
-				found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
+				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
+				found_file = [x for x in current_files if requested_file_type in x][0]
 				xbmc.log(msg='IAGL: File %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
@@ -3252,7 +3271,8 @@ class iagl_download(object):
 			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the unarchive diectory
 			if any([requested_file_type in x for x in current_files]): #cue files exist in the file list
-				found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
+				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
+				found_file = [x for x in current_files if requested_file_type in x][0]
 				xbmc.log(msg='IAGL: File %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.insert(0,found_file)
 				self.current_processed_files_success.insert(0,True)
@@ -3266,7 +3286,8 @@ class iagl_download(object):
 		if os.path.splitext(filename_in)[-1].lower() == '.scummvm': #Attempt to launch from file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the diectory with the pointer file
 			if any(['.scummvm' in x for x in current_files]):
-				found_file = current_files[['.scummvm' in x for x in current_files].index(True)]
+				# found_file = current_files[['.scummvm' in x for x in current_files].index(True)]
+				found_file = [x for x in current_files if '.scummvm' in x][0]
 				xbmc.log(msg='IAGL:  SCUMMVM file %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
@@ -3291,8 +3312,9 @@ class iagl_download(object):
 		if os.path.splitext(filename_in)[-1].lower() != '.zip': #Attempt to launch from bat file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the directory
 			if any([bat_filename in x for x in current_files]):
-				xbmc.log(msg='IAGL:  BAT File %(bat_filename)s was found for launching.'% {'bat_filename': bat_filename}, level=xbmc.LOGDEBUG)
-				found_file = current_files[[bat_filename in x for x in current_files].index(True)]
+				# found_file = current_files[[bat_filename in x for x in current_files].index(True)]
+				found_file = [x for x in current_files if bat_filename in x][0]
+				xbmc.log(msg='IAGL:  BAT File %(bat_filename)s was found for launching.'% {'bat_filename': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
 			else:
@@ -3301,7 +3323,7 @@ class iagl_download(object):
 			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the unarchive diectory
 			if any([self.rom_emu_command.lower() in x.lower() for x in current_files]):
-				found_file = current_files[[self.rom_emu_command.lower() in x.lower() for x in current_files].index(True)] #Place the bat file next to the exe file
+				found_file = [x for x in current_files if self.rom_emu_command.lower() in x.lower()][0] #Place the bat file next to the exe file
 				xbmc.log(msg='IAGL:  WIN31 File %(found_file)s was found'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				bat_content = '@echo off\r\npath=%path%;\r\ncopy c:\\iniback\\*.* c:\\windows\\\r\nsetini c:\windows\system.ini boot shell "C:\XXCOMMANDXX"\r\nc:\r\ncd \\\r\nc:\\windows\\win\r\n'.replace('XXCOMMANDXX',self.rom_emu_command)
 				self.write_pointer_file(os.path.split(found_file)[0],bat_filename_no_ext,'.bat',bat_content)
@@ -3426,7 +3448,7 @@ class iagl_download(object):
 		if current_files_exist_locally_check:
 			if self.local_file_setting == 'Prompt':
 				current_dialog = xbmcgui.Dialog()
-				ret1 = current_dialog.select('Download and overwrite local files?', ['No','Yes'])
+				ret1 = current_dialog.select(self.IAGL.loc_str(30355), [self.IAGL.loc_str(30204),self.IAGL.loc_str(30200)])
 				del current_dialog
 				if ret1 == 0: #Do not overwrite local files, so just point to them directly
 					overwrite_files = False		
@@ -3607,7 +3629,7 @@ class iagl_launch(object):
 	def update_external_launch_command(self):
 		if self.external_launch_command == 'none':
 			current_dialog = xbmcgui.Dialog()
-			ok_ret = current_dialog.ok('Error','No external command is defined.[CR]Please check settings.')
+			ok_ret = current_dialog.ok(self.IAGL.loc_str(30203),self.IAGL.loc_str(30356))
 			del current_dialog
 			return False
 		else:
@@ -3883,11 +3905,11 @@ class iagl_infodialog(xbmcgui.WindowXMLDialog):
 		current_dialog = xbmcgui.Dialog()
 		if False in download_and_process_success:  #Bad files found
 			if True in download_and_process_success:  #Good and Bad files found
-				ok_ret = current_dialog.ok('Error','%(game_title)s partial download failed[CR]%(fail_reason)s' % {'game_title': IAGL_DL.current_game_title, 'fail_reason': IAGL_DL.download_fail_reason})
+				ok_ret = current_dialog.ok(IAGL_DL.IAGL.loc_str(30203),IAGL_DL.IAGL.loc_str(30303) % {'game_title': IAGL_DL.current_game_title, 'fail_reason': IAGL_DL.download_fail_reason})
 			else:  #Only bad files found
-				ok_ret = current_dialog.ok('Error','%(game_title)s download failed[CR]%(fail_reason)s' % {'game_title': IAGL_DL.current_game_title, 'fail_reason': IAGL_DL.download_fail_reason})
+				ok_ret = current_dialog.ok(IAGL_DL.IAGL.loc_str(30203),IAGL_DL.IAGL.loc_str(30304) % {'game_title': IAGL_DL.current_game_title, 'fail_reason': IAGL_DL.download_fail_reason})
 		else:  #So far so good, now process the files
-			ok_ret = current_dialog.ok('Complete','%(game_title)s was successfully downloaded' % {'game_title': IAGL_DL.current_game_title})
+			ok_ret = current_dialog.notification(IAGL_DL.IAGL.loc_str(30202),IAGL_DL.IAGL.loc_str(30302) % {'game_title': IAGL_DL.current_game_title},xbmcgui.NOTIFICATION_INFO,IAGL_DL.IAGL.notification_time)
 		del current_dialog
 		#Re-Enable buttons
 		if self.download_button is not None:
@@ -3911,7 +3933,7 @@ class iagl_infodialog(xbmcgui.WindowXMLDialog):
 				self.closeDialog()
 		else:
 			current_dialog = xbmcgui.Dialog()
-			ok_ret = current_dialog.ok('Error','%(game_title)s failed to launch[CR]%(fail_reason)s' % {'game_title': IAGL_DL.current_game_title, 'fail_reason': IAGL_DL.download_fail_reason})
+			ok_ret = current_dialog.ok(IAGL_DL.IAGL.loc_str(30203),IAGL_DL.IAGL.loc_str(30305) % {'game_title': IAGL_DL.current_game_title, 'fail_reason': IAGL_DL.download_fail_reason})
 		#Re-Enable buttons
 		if self.download_button is not None:
 			self.download_button.setEnabled(True)
