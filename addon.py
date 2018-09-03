@@ -314,6 +314,7 @@ def get_game(game_list_id,game_id):
 			del current_dialog
 	else:
 		xbmc.log(msg='IAGL:  Unkown default action in settings',level=xbmc.LOGERROR)
+	xbmcplugin.endOfDirectory(plugin.handle, succeeded=False)
 
 @plugin.route('/context_menu/<game_list_id>/<setting_id>')
 def update_game_list(game_list_id,setting_id):

@@ -2828,9 +2828,12 @@ class iagl_download(object):
 		self.username_setting = self.IAGL.handle.getSetting(id='iagl_setting_ia_username')
 		self.password_setting = self.IAGL.handle.getSetting(id='iagl_setting_ia_password')
 		self.local_file_setting = self.IAGL.handle.getSetting(id='iagl_setting_localfile_action')
-		if len([x for x in json.loads(xbmc.executeJSONRPC('{ "jsonrpc": "2.0", "method": "Addons.GetAddons","params":{"type":"kodi.vfs"}, "id": "1"}')).get('result').get('addons') if x.get('addonid')=='vfs.libarchive'])>0:
-			self.libarchive_available = True
-		else:
+		try:
+			if len([x for x in json.loads(xbmc.executeJSONRPC('{ "jsonrpc": "2.0", "method": "Addons.GetAddons","params":{"type":"kodi.vfs"}, "id": "1"}')).get('result').get('addons') if x is not None and x.get('addonid')=='vfs.libarchive'])>0:
+				self.libarchive_available = True
+			else:
+				self.libarchive_available = False
+		except:
 			self.libarchive_available = False
 		self.libarchive_extensions = ['.7z','.tar.gz','.tar.bz2','.tar.xz','.zip','.rar','.tgz','.tbz2','.gz','.bz2','.xz']
 		if self.username_setting is not None and len(self.username_setting)<1:
