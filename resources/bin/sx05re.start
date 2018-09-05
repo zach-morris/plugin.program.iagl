@@ -1,0 +1,38 @@
+#!/bin/sh
+
+################################################################################
+#      Created by zachmorris to launch games using sx05re build
+################################################################################
+
+. /etc/profile
+
+
+RETROARCH_EXE="/usr/bin/retroarch"
+RETROARCH_CORE_DIR="/tmp/cores"
+
+RETROARCH_CONFIG_DIR="/storage/.config/retroarch"
+RETROARCH_CONFIG_FILE="$RETROARCH_CONFIG_DIR/retroarch.cfg"
+
+
+#if [ "$launch_method" -ne 0 ]; then
+systemctl stop kodi
+if [ "$2" != "" ]; then
+	$RETROARCH_EXE -c $RETROARCH_CONFIG_FILE -L $RETROARCH_CORE_DIR/$1_libretro.so "$2"
+else
+	$RETROARCH_EXE -c $RETROARCH_CONFIG_FILE --menu --verbose >> "/storage/.tmp/retroarch_log.txt" 2>&1
+fi
+#make sure the requirement to run kodi is met.
+rm -rf /var/lock/start.games
+touch  /var/lock/start.kodi
+#systemctl start kodi
+#else
+#	pgrep kodi.bin | xargs kill -SIGSTOP	
+#	if [ "$2" != "" ]; then
+#		$RETROARCH_EXE -c $RETROARCH_CONFIG_FILE -L $ADDON_DIR/lib/libretro/$1_libretro.so "$2"
+#	else
+#		$RETROARCH_EXE -c $RETROARCH_CONFIG_FILE --menu
+#	fi
+#	pgrep kodi.bin | xargs kill -SIGCONT	
+#fi
+
+exit 0
