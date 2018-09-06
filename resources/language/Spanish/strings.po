@@ -22,7 +22,7 @@ msgstr "General"
 
 msgctxt "#30003"
 msgid "External Launchers"
-msgstr "Lanzadores externos"
+msgstr "Launcher externo"
 
 msgctxt "#30004"
 msgid "Netplay"
@@ -38,7 +38,7 @@ msgstr "Configuración avanzada"
 
 msgctxt "#30007"
 msgid "Cache Lists to Disk"
-msgstr "Listas caché en disco"
+msgstr "Usar disco para crear caché de listas"
 
 msgctxt "#30008"
 msgid "Enable Memory Cache"
@@ -46,7 +46,7 @@ msgstr "Habilitar memoria caché"
 
 msgctxt "#30009"
 msgid "Clean Game Title"
-msgstr "Limpiar el título del juego"
+msgstr "Limpiar título del juego"
 
 msgctxt "#30010"
 msgid "Archive Listing Convention"
@@ -58,7 +58,7 @@ msgstr "Convención para listado de juegos"
 
 msgctxt "#30012"
 msgid "Display Naming Convention"
-msgstr "Mostrar convención de nombres"
+msgstr "Convención para visualizar nombres"
 
 msgctxt "#30013"
 msgid "Number of Items Per Page"
@@ -66,7 +66,7 @@ msgstr "Número de elementos por página"
 
 msgctxt "#30014"
 msgid "Last Played History"
-msgstr "Historial último jugado"
+msgstr "Historial de lo último jugado"
 
 msgctxt "#30015"
 msgid "If Game Already Exists Locally"
@@ -74,15 +74,15 @@ msgstr "Si el juego ya existe localmente"
 
 msgctxt "#30016"
 msgid "Default Action on Selecting Game"
-msgstr "Acción predeterminada al seleccionar juego"
+msgstr "Acción predeterminada al seleccionar un juego"
 
 msgctxt "#30017"
 msgid "Show Search Item"
-msgstr "Mostrar elemento de búsqueda"
+msgstr "Mostrar elemento buscar"
 
 msgctxt "#30018"
 msgid "Show Random Play Item"
-msgstr "Mostrar elemento de juego aleatorio"
+msgstr "Mostrar elemento juego aleatorio"
 
 msgctxt "#30019"
 msgid "Show Play History Item"
@@ -90,11 +90,11 @@ msgstr "Mostrar elemento historial de juego"
 
 msgctxt "#30020"
 msgid "Autoplay Game Trailer"
-msgstr "Autoreproducir tráiler del juego"
+msgstr "Auto-reproducir tráiler de juego"
 
 msgctxt "#30021"
 msgid "Cache Size (MB)"
-msgstr "Tamaño de caché (MB)"
+msgstr "Tamaño para caché (MB)"
 
 msgctxt "#30022"
 msgid "Enable Login"
@@ -166,7 +166,7 @@ msgstr "Habilitar Netplay"
 
 msgctxt "#30039"
 msgid "Player Connection Type"
-msgstr "Tipo de conexión del jugador"
+msgstr "Tipo de conexión para el jugador"
 
 msgctxt "#30040"
 msgid "Player Name"
@@ -186,11 +186,11 @@ msgstr "Sincronizar fotogramas"
 
 msgctxt "#30044"
 msgid "Game List quick setup tool for IAGL"
-msgstr "Herramienta de configuración rápida de la lista de juegos para IAGL"
+msgstr "Herramienta de configuración rápida para listas de juegos IAGL"
 
 msgctxt "#30045"
 msgid "Emulator Launcher"
-msgstr "Emulator Launcher"
+msgstr "Launcher emulador"
 
 msgctxt "#30046"
 msgid "Execute Setup Wizard"
@@ -198,19 +198,19 @@ msgstr "Ejecutar el asistente de configuración"
 
 msgctxt "#30047"
 msgid "Note:  You should not use these settings unless you're sure of what you are doing!"
-msgstr "Nota: ¡No debe usar estas configuraciones a menos que esté seguro de lo que está haciendo!"
+msgstr "Nota: ¡No debe utilizar estos ajustes a menos que esté seguro de lo que está haciendo!"
 
 msgctxt "#30048"
 msgid "Enable Editing for Post DL Command"
-msgstr "Habilitar la edición para el comando Post DL"
+msgstr "Habilitar edición para comando Post DL"
 
 msgctxt "#30049"
 msgid "Send Android Stop Command before External Launch"
-msgstr "Enviar comando Stop Android antes de lanzamiento externo"
+msgstr "Enviar comando Android Stop antes de lanzamiento externo"
 
 msgctxt "#30050"
 msgid "Add to IAGL Favorites"
-msgstr "Agregar a favoritos de IAGL"
+msgstr "Agregar a favoritos IAGL"
 
 msgctxt "#30051"
 msgid "Set addon to provide games (RetroPlayer Only)"
@@ -218,11 +218,11 @@ msgstr "Establecer complemento para proporcionar juegos (solo para RetroPlayer)"
 
 msgctxt "#30052"
 msgid "Set addon to provide Video"
-msgstr "Establecer complemento para proporcionar video"
+msgstr "Establecer complemento para proporcionar Video"
 
 msgctxt "#30053"
 msgid "Set addon to provide Programs"
-msgstr "Establecer complemento para proporcionar programas"
+msgstr "Establecer complemento para proporcionar Programas"
 
 msgctxt "#30054"
 msgid "Addon Content Type"
@@ -234,7 +234,7 @@ msgstr "Mostrar todas las listas de juegos"
 
 msgctxt "#30056"
 msgid "Clear Cache"
-msgid "Borrar caché"
+msgstr "Borrar caché"
 
 #
 #General
@@ -289,15 +289,15 @@ msgstr "%(game_title)s se descargó correctamente"
 
 msgctxt "#30303"
 msgid "%(game_title)s partial download failed[CR]%(fail_reason)s"
-msgstr "Falló la descarga parcial de %(game_title)s[CR]%(fail_reason)s"
+msgstr "Error en descarga parcial de %(game_title)s[CR]%(fail_reason)s"
 
 msgctxt "#30304"
 msgid "%(game_title)s download failed[CR]%(fail_reason)s"
-msgstr "Falló la descarga de %(game_title)s[CR]%(fail_reason)s"
+msgstr "Error en descarga de %(game_title)s[CR]%(fail_reason)s"
 
 msgctxt "#30305"
 msgid "%(game_title)s failed to launch[CR]%(fail_reason)s"
-msgstr "Error al cargar %(game_title)s[CR]%(fail_reason)s"
+msgstr "Error en carga de %(game_title)s[CR]%(fail_reason)s"
 
 msgctxt "#30306"
 msgid "Cache cleared for %(game_list_id)s"
@@ -313,15 +313,15 @@ msgstr "¿Filtrar géneros para más de 10 listas?. Esto podría llevar un tiemp
 
 msgctxt "#30309"
 msgid "Filter number of players for all lists?  This could take a while..."
-msgstr "¿Filtrar el número de jugadores para todas las listas?. Esto podría llevar un tiempo..."
+msgstr "¿Filtrar número de jugadores para todas las listas?. Esto podría llevar un tiempo..."
 
 msgctxt "#30310"
 msgid "Filter number of players for more than 10 lists?  This could take a while..."
-msgstr "¿Filtrar el número de jugadores para más de 10 listas?. Esto podría llevar un tiempo..."
+msgstr "¿Filtrar número de jugadores para más de 10 listas?. Esto podría llevar un tiempo..."
 
 msgctxt "#30311"
 msgid "Filter years for all lists?  This could take a while..."
-msgstr "¿Filtrar años para todas las listas?  Esto podría llevar un tiempo..."
+msgstr "¿Filtrar años para todas las listas?. Esto podría llevar un tiempo..."
 
 msgctxt "#30312"
 msgid "Filter years for more than 10 lists?  This could take a while..."
@@ -409,7 +409,7 @@ msgstr "Seleccionar arte para actualizar"
 
 msgctxt "#30333"
 msgid "Select Launcher"
-msgstr "Seleccionar lanzador"
+msgstr "Seleccionar Launcher"
 
 msgctxt "#30334"
 msgid "Hide Game List?"
@@ -437,7 +437,7 @@ msgstr "Seleccionar complemento predeterminado"
 
 msgctxt "#30340"
 msgid "System Type is not defined[CR]Update external launcher addon settings"
-msgstr "El tipo de sistema no está definido[CR]Actualizar configuración del complemento para lanzador externo"
+msgstr "Tipo de sistema no definido[CR]Modificar en ajustes del complemento opciones para Launcher externo"
 
 msgctxt "#30341"
 msgid "Select Launch Command"
@@ -481,7 +481,7 @@ msgstr "%(current_username)ss Lista de favoritos %(default_number)s"
 
 msgctxt "#30351"
 msgid "Enter New Favorites List Name:"
-msgstr "Ingrese el nuevo nombre de la lista de favoritos:"
+msgstr "Ingrese el nuevo nombre para la lista de favoritos:"
 
 msgctxt "#30352"
 msgid "%(current_game)s added to %(current_filename)s and cache was cleared"
@@ -501,7 +501,7 @@ msgstr "¿Descargar y sobrescribir archivos locales?"
 
 msgctxt "#30356"
 msgid "No external command is defined.[CR]Please check settings."
-msgstr "No se definió ningún comando externo.[CR]Compruebe la configuración."
+msgstr "Sin comando externo definido.[CR]Por favor, compruebe ajustes."
 
 #
 #Context Menus
@@ -520,7 +520,7 @@ msgstr "Actualizar visibilidad"
 
 msgctxt "#30404"
 msgid "Update Launcher"
-msgstr "Actualizar lanzador"
+msgstr "Actualizar Launcher"
 
 msgctxt "#30405"
 msgid "Update Download Path"
@@ -528,7 +528,7 @@ msgstr "Actualizar carpeta de descarga"
 
 msgctxt "#30406"
 msgid "View List Settings"
-msgstr "Ver configuración de lista"
+msgstr "Ver ajustes para lista"
 
 msgctxt "#30407"
 msgid "Refresh Game List"
@@ -536,11 +536,11 @@ msgstr "Refrescar lista de juegos"
 
 msgctxt "#30408"
 msgid "Update Launch Command"
-msgstr "Actualizar comando de inicio"
+msgstr "Actualizar comando de lanzamiento"
 
 msgctxt "#30409"
 msgid "Update Default Game Addon"
-msgstr "Actualizar el addon de juego predeterminado"
+msgstr "Actualizar el complemento de juego predeterminado"
 
 msgctxt "#30410"
 msgid "Update Post DL Command"
@@ -572,7 +572,7 @@ msgstr "Platforma"
 
 msgctxt "#30417"
 msgid "Plot / Overview"
-msgstr "Gráfico / Resumen"
+msgstr "Argumento / Resumen"
 
 msgctxt "#30418"
 msgid "Trailer"
@@ -588,7 +588,7 @@ msgstr "Fecha"
 
 msgctxt "#30421"
 msgid "Thumb / Poster"
-msgstr "Thumb / Poster"
+msgstr "Miniatura / Póster"
 
 msgctxt "#30422"
 msgid "Logo"
