@@ -23,12 +23,16 @@ case "$(uname -s)" in
 		;;
 	Linux)
 		Kodi_standalone_PID=$(ps -A | grep [k]odi-standalone | head -1 | awk '{print $1}')
-		Kodi_PID=$(ps -A | grep [k]odi.bin | head -1 | awk '{print $1}')
-		if [ -n $Kodi_standalone_PID ]
+		Kodi_PID=$(ps -A | grep [k]odi-x11 | head -1 | awk '{print $1}')
+		if [ -z $Kodi_PID ]
 		then
-			Kodi_BIN="kodi-standalone"
-		else
+			Kodi_PID=$(ps -A | grep [k]odi | head -1 | awk '{print $1}')
+		fi
+		if [ -z $Kodi_standalone_PID ]
+		then
 			Kodi_BIN="kodi"
+		else
+			Kodi_BIN="kodi-standalone"
 		fi
 		;;	
 	*)
@@ -37,34 +41,48 @@ case "$(uname -s)" in
 		;;
 esac
 
-# Is Kodi running?
-if [ -n $Kodi_PID ]
+# Shutdown Kodi
+if ps -p $Kodi_PID > /dev/null
 then
-	if [ -n $Kodi_standalone_PID ]
+	if ! [ -z $Kodi_standalone_PID ]
 	then
-		kill -1 $Kodi_standalone_PID # Shutdown nice (SIGHUP)
+		kill -s SIGHUP $Kodi_standalone_PID 
+		#kill -1 $Kodi_standalone_PID # Shutdown nice (SIGHUP)
+		echo "Standalone shutdown nice"
+	fi
+	if ! [ -z $Kodi_PID ]
+	then
+		kill -s SIGHUP $Kodi_PID 
+		#kill -1 $Kodi_PID # Shutdown nice (SIGHUP)
 		echo "Shutdown nice"
 	fi
-	kill -1 $Kodi_PID # Shutdown nice (SIGHUP)
-	echo "Shutdown nice"
-else
-	echo "This script should only be run from within Kodi."
-	exit
+#else
+#	echo "This script should only be run from within Kodi."
+#	exit
 fi
 
 # Wait for the kill
 sleep 1
 
 # Is Kodi still running?
-if [ -n $Kodi_PID ]
+if ps -p $Kodi_PID > /dev/null
 then
-	if [ -n $Kodi_standalone_PID ]
+	echo "Kodi is still running, attempting to KILL it"
+	if ! [ -z $Kodi_standalone_PID ]
 	then
-		kill -9 $Kodi_standalone_PID # Shutdown not so nice (SIGTERM)
+		kill -s SIGKILL $Kodi_standalone_PID 
+		#kill -9 $Kodi_standalone_PID # Shutdown nice (SIGHUP)
+		echo "Standalone shutdown hard"
+	fi
+	if ! [ -z $Kodi_PID ]
+	then
+		kill -s SIGKILL $Kodi_PID 
+		#kill -1 $Kodi_PID # Shutdown nice (SIGHUP)
 		echo "Shutdown hard"
 	fi
-    kill -9 $Kodi_PID # Force immediate kill (SIGTERM)
-	echo "Shutdown hard"
+#else
+#	echo "This script should only be run from within Kodi."
+#	exit
 fi
 
 echo "$@"

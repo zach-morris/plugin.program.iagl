@@ -6,7 +6,6 @@
 # By malte 2015-01-22 (change from XBMC to Kodi)
 # Updated by zachmorris for use with IAGL
 
-
 # Check for agruments
 if [ -z "$*" ]; then
 	echo "No arguments provided."
@@ -15,7 +14,6 @@ if [ -z "$*" ]; then
 	exit
 fi
 
-
 case "$(uname -s)" in
 	Darwin)
 		Kodi_PID=$(ps -A | grep [K]odi | grep -v [H]elper | head -1 | awk '{print $1}')
@@ -23,12 +21,16 @@ case "$(uname -s)" in
 		;;
 	Linux)
 		Kodi_standalone_PID=$(ps -A | grep [k]odi-standalone | head -1 | awk '{print $1}')
-		Kodi_PID=$(ps -A | grep [k]odi.bin | head -1 | awk '{print $1}')
-		if [ -n $Kodi_standalone_PID ]
+		Kodi_PID=$(ps -A | grep [k]odi-x11 | head -1 | awk '{print $1}')
+		if [ -z $Kodi_PID ]
 		then
-			Kodi_BIN="kodi-standalone"
-		else
+			Kodi_PID=$(ps -A | grep [k]odi | head -1 | awk '{print $1}')
+		fi
+		if [ -z $Kodi_standalone_PID ]
+		then
 			Kodi_BIN="kodi"
+		else
+			Kodi_BIN="kodi-standalone"
 		fi
 		;;	
 	*)
@@ -37,21 +39,23 @@ case "$(uname -s)" in
 		;;
 esac
 
-#echo $Kodi_BIN
-
-# Is Kodi running?
-if [ -n $Kodi_PID ]
+# PAUSE Kodi
+if ps -p $Kodi_PID > /dev/null
 then
-	if [ -n $Kodi_standalone_PID ]
+	if ! [ -z $Kodi_standalone_PID ]
 	then
-		kill -SIGSTOP $Kodi_standalone_PID # STOP nice
+		kill -s SIGSTOP $Kodi_standalone_PID 
+		echo "Pausing Kodi Standalone"
 	fi
-	kill -SIGSTOP $Kodi_PID # STOP nice
-	echo "STOP nice"
-else
-	echo "This script should only be run from within Kodi."
-	exit
+	if ! [ -z $Kodi_PID ]
+	then
+		kill -s SIGSTOP $Kodi_PID 
+		echo "Pausing Kodi"
+	fi
 fi
+
+# Wait for the kill
+sleep 1
 
 # Wait for the STOP
 sleep 1
@@ -61,16 +65,17 @@ echo "$@"
 # Launch app - escaped!
 "$@"
 
-# Done? Restart Kodi
-if [ -n $Kodi_PID ]
+# Done? Unpause Kodi
+if ps -p $Kodi_PID > /dev/null
 then
-	if [ -n $Kodi_standalone_PID ]
+	if ! [ -z $Kodi_standalone_PID ]
 	then
-		kill -SIGCONT $Kodi_standalone_PID & # START nice
+		kill -s SIGCONT $Kodi_standalone_PID 
+		echo "Continuing Kodi Standalone"
 	fi
-	kill -SIGCONT $Kodi_PID & # START nice
-	echo "START nice"
-else
-	echo "This script should only be run from within Kodi."
-	exit
+	if ! [ -z $Kodi_PID ]
+	then
+		kill -s SIGCONT $Kodi_PID 
+		echo "Continuing Kodi"
+	fi
 fi
