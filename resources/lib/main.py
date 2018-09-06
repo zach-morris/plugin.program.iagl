@@ -71,6 +71,7 @@ class iagl_utils(object):
 		self.addon_dat_folder_name = ['resources','data','dat_files']
 		self.databases_folder_name = ['resources','data','databases']
 		self.templates_folder_name = ['resources','data','templates']
+		self.scripts_folder_name = ['resources','bin']
 		self.media_folder_name = ['resources','skins','Default','media']
 		# self.dat_file_cache_filename = 'dat_file_cache.pickle'
 		self.dat_file_cache_filename = 'dat_file_cache.json'
@@ -179,6 +180,8 @@ class iagl_utils(object):
 					xbmc.log(msg='IAGL:  External Retroarch location defined to %(pral_found)s' % {'pral_found': pral_found}, level=xbmc.LOGDEBUG)
 				else:
 					xbmc.log(msg='IAGL:  External Retroarch location is unknown', level=xbmc.LOGDEBUG)
+
+		self.make_scripts_executable() #Attempt to chmod scripts, possibly find a way to only do this once
 
 		# possible_retroarch_config_locations = [os.path.join('mnt','internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('data','data','com.retroarch','retroarch.cfg'),os.path.join('data','data','com.retroarch','files','retroarch.cfg')]
 
@@ -304,6 +307,14 @@ class iagl_utils(object):
 						current_dialog = xbmcgui.Dialog()
 						ok_ret = current_dialog.notification(self.loc_str(30328),self.loc_str(30330) % {'dat_filename': ff},xbmcgui.NOTIFICATION_INFO,self.notification_time)
 						del current_dialog
+
+	def make_scripts_executable(self):
+	#Attempt to make addon scripts executable
+		for ffiles in get_all_files_in_directory_xbmcvfs(self.get_scripts_folder_path()):
+			try:
+				os.chmod(ffiles, os.stat(ffiles).st_mode | 0o111)
+			except Exception as exc:
+				xbmc.log(msg='IAGL:  chmod failed for %(ffiles)s.  Exception %(exc)s' % {'ffiles': ffiles, 'exc': exc}, level=xbmc.LOGDEBUG)
 
 	def get_list_cache_path(self):
 		current_path = os.path.join(self.get_addon_userdata_path(),self.list_cache_name)
@@ -438,6 +449,9 @@ class iagl_utils(object):
 
 	def get_media_folder_path(self):
 		return os.path.join(self.get_addon_install_path(),*self.media_folder_name)
+
+	def get_scripts_folder_path(self):
+		return os.path.join(self.get_addon_install_path(),*self.scripts_folder_name)
 
 	def get_items_per_page(self):
 		items_per_page = self.max_items_per_page

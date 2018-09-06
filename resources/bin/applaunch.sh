@@ -18,12 +18,12 @@ fi
 
 case "$(uname -s)" in
 	Darwin)
-		Kodi_PID=$(ps -A | grep Kodi.app | grep -v Helper | grep -v grep | awk '{print $1}')
-		Kodi_BIN=$(ps -A | grep Kodi.app | grep -v Helper | grep -v grep | awk '{print $4}')
+		Kodi_PID=$(ps -A | grep [K]odi | grep -v [H]elper | head -1 | awk '{print $1}')
+		Kodi_BIN=$(ps -A | grep [K]odi | grep -v [H]elper | head -1 | awk '{print $4}')
 		;;
 	Linux)
-		Kodi_standalone_PID=$(ps -A | grep kodi-standalone | awk '{print $1}')
-		Kodi_PID=$(ps -A | grep kodi.bin | awk '{print $1}')
+		Kodi_standalone_PID=$(ps -A | grep [k]odi-standalone | head -1 | awk '{print $1}')
+		Kodi_PID=$(ps -A | grep [k]odi.bin | head -1 | awk '{print $1}')
 		if [ -n $Kodi_standalone_PID ]
 		then
 			Kodi_BIN="kodi-standalone"
@@ -37,16 +37,15 @@ case "$(uname -s)" in
 		;;
 esac
 
-#echo $Kodi_BIN
-
 # Is Kodi running?
 if [ -n $Kodi_PID ]
 then
 	if [ -n $Kodi_standalone_PID ]
 	then
-		kill -1 $Kodi_standalone_PID # Shutdown nice
+		kill -1 $Kodi_standalone_PID # Shutdown nice (SIGHUP)
+		echo "Shutdown nice"
 	fi
-	kill -1 $Kodi_PID # Shutdown nice
+	kill -1 $Kodi_PID # Shutdown nice (SIGHUP)
 	echo "Shutdown nice"
 else
 	echo "This script should only be run from within Kodi."
@@ -54,18 +53,18 @@ else
 fi
 
 # Wait for the kill
-# sleep 
-
+sleep 1
 
 # Is Kodi still running?
 if [ -n $Kodi_PID ]
 then
 	if [ -n $Kodi_standalone_PID ]
 	then
-		kill -9 $Kodi_standalone_PID # Shutdown nice
+		kill -9 $Kodi_standalone_PID # Shutdown not so nice (SIGTERM)
+		echo "Shutdown hard"
 	fi
-    kill -9 $Kodi_PID # Force immediate kill
-	echo "Shutdown hard"	
+    kill -9 $Kodi_PID # Force immediate kill (SIGTERM)
+	echo "Shutdown hard"
 fi
 
 echo "$@"
