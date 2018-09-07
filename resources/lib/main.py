@@ -115,6 +115,7 @@ class iagl_utils(object):
 		self.number_cat = ['0','1','2','3','4','5','6','7','8','9']
 		self.non_number_cat = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 		self.context_menu_items = [(self.loc_str(30400),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/metadata)'),(self.loc_str(30402),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/art)'),(self.loc_str(30403),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/visibility)'),(self.loc_str(30404),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/launcher)'),(self.loc_str(30405),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/download_path)'),(self.loc_str(30406),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/view_list_settings)'),(self.loc_str(30407),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/refresh_list)')]
+		self.context_menu_item_view_info = [(self.loc_str(30425),'RunPlugin(plugin://plugin.program.iagl/games_context_menu/<game_list_id>/<game_id>/view_info_page)')]
 		self.context_menu_ext_launch_cmd = [(self.loc_str(30408),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/launch_command)')]
 		self.context_menu_default_addon_launch_cmd = [(self.loc_str(30409),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/default_addon)')]
 		self.context_menu_items_post_dl = [(self.loc_str(30410),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/post_dl_command)')]
@@ -2132,10 +2133,13 @@ class iagl_utils(object):
 		return listitem_in
 
 	def add_game_context_menus(self,listitem_in,game_list_id_in,game_id_in,current_categories):
+		current_context_menus = []
+		if 'Info Page' not in self.handle.getSetting(id='iagl_setting_default_action'): #If Info page is not the default, add context option for viewing the info page
+			current_context_menus = current_context_menus+[(labels,actions.replace('<game_list_id>',game_list_id_in).replace('<game_id>',game_id_in)) for labels, actions in self.context_menu_item_view_info]
 		if current_categories is not None and 'favorites' not in current_categories.lower():
-			current_context_menus = [(labels,actions.replace('<game_list_id>',game_list_id_in).replace('<game_id>',game_id_in)) for labels, actions in self.context_menu_items_games]
+			current_context_menus = current_context_menus+[(labels,actions.replace('<game_list_id>',game_list_id_in).replace('<game_id>',game_id_in)) for labels, actions in self.context_menu_items_games]
 		if current_categories is not None and 'favorites' in current_categories.lower():
-			current_context_menus = [(labels,actions.replace('<game_list_id>',game_list_id_in).replace('<game_id>',game_id_in)) for labels, actions in self.context_menu_items_remove_favorite]
+			current_context_menus = current_context_menus+[(labels,actions.replace('<game_list_id>',game_list_id_in).replace('<game_id>',game_id_in)) for labels, actions in self.context_menu_items_remove_favorite]
 		listitem_in.addContextMenuItems(current_context_menus)
 		return listitem_in
 
@@ -2188,6 +2192,9 @@ class iagl_utils(object):
 			current_choice = None
 		elif setting_id == 'refresh_list':
 			current_key = 'refresh_list'
+			current_choice = None
+		elif setting_id == 'view_info_page':
+			current_key = 'view_info_page'
 			current_choice = None
 		else:
 			xbmc.log(msg='IAGL:  Unknown context menu setting  %(setting_id)s' % {'setting_id': setting_id}, level=xbmc.LOGERROR)

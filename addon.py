@@ -284,7 +284,7 @@ def get_game(game_list_id,game_id):
 	current_game['return_home'] = return_to_home_from_infodialog
 	current_game['autoplay_trailer'] = IAGL.handle.getSetting(id='iagl_setting_autoplay_trailer')
 	current_game['json'] = current_game_json
-	if IAGL.handle.getSetting(id='iagl_setting_default_action') == 'ROM Info Page':
+	if 'Info Page' in IAGL.handle.getSetting(id='iagl_setting_default_action'):
 		IAGL_Dialog = iagl_infodialog('script-IAGL-infodialog.xml',IAGL.get_addon_install_path(),'Default','1080i',current_game=current_game)
 		IAGL_Dialog.doModal()
 		del IAGL_Dialog
@@ -393,6 +393,16 @@ def update_game_item(game_list_id,game_id,setting_id):
 	elif setting_id == 'remove':
 		IAGL.remove_game_from_IAGL_favorites(game_list_id,game_id,current_game_json)
 		xbmc.executebuiltin('Container.Refresh')
+	elif setting_id == 'view_info_page':
+		#Info Dialog
+		current_game = dict()
+		current_game['game_id'], current_game['listitem'], current_game['fanarts'], current_game['boxart_and_snapshots'], current_game['banners'], current_game['trailer'] = IAGL.get_gamelistitem_from_json(current_game_json)
+		current_game['return_home'] = False
+		current_game['autoplay_trailer'] = IAGL.handle.getSetting(id='iagl_setting_autoplay_trailer')
+		current_game['json'] = current_game_json
+		IAGL_Dialog = iagl_infodialog('script-IAGL-infodialog.xml',IAGL.get_addon_install_path(),'Default','1080i',current_game=current_game)
+		IAGL_Dialog.doModal()
+		del IAGL_Dialog
 	else:
 		xbmc.log(msg='IAGL:  Unknown game context menu setting  %(setting_id)s' % {'setting_id': setting_id}, level=xbmc.LOGERROR)
 

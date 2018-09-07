@@ -10,7 +10,7 @@
 		<setting id="iagl_setting_items_pp" type="select" label="30013" values="10|25|50|100|150|200|250|300|350|400|450|500|List All" default="List All"/>
 		<setting id="iagl_setting_history" type="slider" label="30014" default="10" range="0,1,100" option="int"/>
 		<setting id="iagl_setting_localfile_action" type="select" label="30015" values="Prompt|Do Not ReDownload|ReDownload and Overwrite" default="Do Not ReDownload"/>
-		<setting id="iagl_setting_default_action" type="select" label="30016" values="Download and Launch|Download Only|ROM Info Page" default="ROM Info Page"/>
+		<setting id="iagl_setting_default_action" type="select" label="30016" values="Download and Launch|Download Only|Show Info Page" default="Show Info Page"/>
 		<setting id="iagl_setting_show_search" type="select" label="30017" values="Show|Hide" default="Show" visible="true"/>
 		<setting id="iagl_setting_show_randomplay" type="select" label="30018" values="Show|Hide" default="Show" visible="true"/>
 		<setting id="iagl_setting_show_gamehistory" type="select" label="30019" values="Show|Hide" default="Show" visible="true"/>
