@@ -2305,15 +2305,16 @@ class iagl_utils(object):
 				if not value_updated:  #Only update the first instance of the requested tag
 					if starting_tag in line and ending_tag in line:
 						try:
-							output_file.write(line.split(starting_tag)[0]+new_value_line+line.split(ending_tag)[-1])
+							output_file.write('%(start_value)s%(new_value)s%(end_value)s' % {'start_value': line.split(starting_tag)[0], 'new_value': new_value_line, 'end_value':line.split(ending_tag)[-1]})
 							value_updated = True
-						except:
+						except Exception as exc1: #except Exception, (exc):
 							try:
+								xbmc.log(msg='IAGL:  XML %(current_filename)s write error.  Exception %(exc)s.  Attempting to write again.' % {'current_filename': current_filename, 'exc': exc1}, level=xbmc.LOGERROR)
 								output_file.write(new_value_line)
 								value_updated = True
-							except Exception as exc: #except Exception, (exc):
+							except Exception as exc2: #except Exception, (exc):
 								value_updated = False
-								xbmc.log(msg='IAGL:  XML %(current_filename)s write error.  Exception %(exc)s' % {'current_filename': current_filename, 'exc': exc}, level=xbmc.LOGERROR)
+								xbmc.log(msg='IAGL:  XML %(current_filename)s write error.  Exception %(exc)s' % {'current_filename': current_filename, 'exc': exc2}, level=xbmc.LOGERROR)
 					else:
 						output_file.write(line)
 				else:
