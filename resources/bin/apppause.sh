@@ -1,9 +1,5 @@
 #!/bin/bash
-# App Launch script - Quit Kodi to launch another program
-# Thanks to rodalpho @ # http://xbmc.org/forum/showthread.php?t=34635
-# By Redsandro 	2008-07-07
-# By ryosaeba87	2010-08-24 (Added support for MacOSX)
-# By malte 2015-01-22 (change from XBMC to Kodi)
+# App Launch script - Pause Kodi to launch another program
 # Updated by zachmorris for use with IAGL
 
 # Check for agruments
@@ -54,8 +50,6 @@ then
 	fi
 fi
 
-# Wait for the kill
-sleep 1
 
 # Wait for the STOP
 sleep 1
