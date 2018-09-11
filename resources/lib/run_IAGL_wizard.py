@@ -167,6 +167,11 @@ if not WIN.getProperty('iagl.script_started'):
 					current_ext_key = current_external_environment+' Close_Kodi'
 				else:
 					current_ext_key = current_external_environment
+			elif IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_external_launch_pause_kodi')):
+				if current_external_environment in ['Linux/Kodibuntu']: #Pause Kodi option only available for these systems
+					current_ext_key = current_external_environment+' Pause_Kodi'
+				else:
+					current_ext_key = current_external_environment
 			else:
 				current_ext_key = current_external_environment
 			current_external_command_db = IAGL.get_external_command_listing()
