@@ -179,7 +179,7 @@ if not WIN.getProperty('iagl.script_started'):
 			current_external_command_values = [x.get('launcher_command') for x in current_external_command_db.get('system').get('launcher') if x.get('@os') == current_ext_key]
 			for ii,dat_filename in enumerate(current_game_lists['fullpath']):
 				try:
-					current_wiz_setting =  wizard_data[current_ext_key][os.path.splitext(current_game_lists['dat_filename'][ii])[0]][0]
+					current_wiz_setting =  wizard_data[current_ext_key.replace(' Close_Kodi','').replace(' Pause_Kodi','')][os.path.splitext(current_game_lists['dat_filename'][ii])[0]][0]
 				except:
 					xbmc.log(msg='IAGL:  No wizard value found for %(dat_filename)s, skipping'% {'dat_filename': current_game_lists['dat_filename'][ii]}, level=xbmc.LOGDEBUG)
 					current_wiz_setting = None
