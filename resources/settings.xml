@@ -29,11 +29,11 @@
 		<setting id="iagl_external_path_to_retroarch_system_dir" type="folder" label="30029" visible="!eq(-4,Select)"/>
 		<setting id="iagl_external_path_to_retroarch_cfg" type="file" label="30030" visible="eq(-5,Android)"/>
 		<setting label="30031" type="lsep" visible="eq(-6,OSX)|eq(-6,Windows)|eq(-6,Linux/Kodibuntu)"/>
-		<setting id="iagl_external_additional_emulator_1_type" type="select" label="30032" values="Disabled|FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone" default="Disabled" visible="eq(-7,OSX)|eq(-7,Windows)|eq(-7,Linux/Kodibuntu)"/>
+		<setting id="iagl_external_additional_emulator_1_type" type="select" label="30032" values="Disabled|FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone|DEMUL (Win)|ePSXe" default="Disabled" visible="eq(-7,OSX)|eq(-7,Windows)|eq(-7,Linux/Kodibuntu)"/>
 		<setting id="iagl_external_additional_emulator_1_path" type="executable" label="30033" visible="!eq(-1,Disabled)"/>
-		<setting id="iagl_external_additional_emulator_2_type" type="select" label="30034" values="Disabled|FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone" default="Disabled" visible="eq(-9,OSX)|eq(-9,Windows)|eq(-9,Linux/Kodibuntu)"/>
+		<setting id="iagl_external_additional_emulator_2_type" type="select" label="30034" values="Disabled|FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone|DEMUL (Win)|ePSXe" default="Disabled" visible="eq(-9,OSX)|eq(-9,Windows)|eq(-9,Linux/Kodibuntu)"/>
 		<setting id="iagl_external_additional_emulator_2_path" type="executable" label="30035" visible="!eq(-1,Disabled)"/>
-		<setting id="iagl_external_additional_emulator_3_type" type="select" label="30036" values="Disabled|FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone" default="Disabled" visible="eq(-11,OSX)|eq(-11,Windows)|eq(-11,Linux/Kodibuntu)"/>
+		<setting id="iagl_external_additional_emulator_3_type" type="select" label="30036" values="Disabled|FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone|DEMUL (Win)|ePSXe" default="Disabled" visible="eq(-11,OSX)|eq(-11,Windows)|eq(-11,Linux/Kodibuntu)"/>
 		<setting id="iagl_external_additional_emulator_3_path" type="executable" label="30037" visible="!eq(-1,Disabled)"/>
 	</category>
 	<category label="30004">

@@ -135,6 +135,8 @@ class iagl_utils(object):
 		self.default_linux_core_directory = '/usr/lib/libretro'
 		self.possible_retroarch_app_locations = [os.path.join('/Applications','RetroArch.app','Contents','MacOS','RetroArch'),os.path.join('usr','bin','retroarch'),os.path.join('C:','Program Files (x86)','Retroarch','retroarch.exe'),os.path.join('opt','retropie','emulators','retroarch','bin','retroarch')]
 		self.possible_retroarch_config_locations = [os.path.join('mnt','internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('data','data','com.retroarch','retroarch.cfg'),os.path.join('data','data','com.retroarch','files','retroarch.cfg')]
+		self.additional_supported_external_emulators = ['APP_PATH_FS_UAE','APP_PATH_PJ64','APP_PATH_DOLPHIN','APP_PATH_MAME','APP_PATH_DEMUL','APP_PATH_EPSXE']
+		self.additional_supported_external_emulator_settings = 'FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone|DEMUL (Win)|ePSXe'
 		self.windowid = xbmcgui.getCurrentWindowId()
 		#Define temp download cache size
 		cache_options = {'Zero (Current Game Only)':0,'10 MB':10*1e6,'10MB':10*1e6,'25MB':25*1e6,'50MB':50*1e6,'100MB':100*1e6,'150MB':150*1e6,'200MB':200*1e6,'250MB':250*1e6,'300MB':300*1e6,'350MB':350*1e6,'400MB':400*1e6,'450MB':450*1e6,'500MB':500*1e6,'1GB':1000*1e6,'2GB':2000*1e6,'5GB':5000*1e6,'10GB':10000*1e6,'20GB':20000*1e6}
@@ -3687,6 +3689,19 @@ class iagl_launch(object):
 			self.external_launch_command = self.external_launch_command.replace('%CFG_PATH%',current_cfg_path) #Replace config path user setting
 			self.external_launch_command = self.external_launch_command.replace('%ROM_PATH%',xbmc.translatePath(self.launch_filenames[0])) #Replace ROM filepath
 			self.external_launch_command = self.external_launch_command.replace('%ROM_BASE_PATH%',os.path.join(os.path.split(xbmc.translatePath(self.launch_filenames[0]))[0],'')) #Replace ROM Base path
+			
+			if any([x in self.external_launch_command for x in self.IAGL.additional_supported_external_emulators]): #Non Retroarch emulator requested
+				other_emulator_key = [x for x in self.IAGL.additional_supported_external_emulators if x in self.external_launch_command][0]
+				other_emulator = self.IAGL.additional_supported_external_emulator_settings.split('|')[self.IAGL.additional_supported_external_emulators.index(other_emulator_key)]
+				other_emulator_found = False
+				xbmc.log(msg='IAGL:  Requested other emulator application %(other_emulator)s' % {'other_emulator': other_emulator}, level=xbmc.LOGDEBUG)
+				for ii in range(1,4):
+					if other_emulator in self.IAGL.handle.getSetting(id='iagl_external_additional_emulator_%(em_idx)s_type'%{'em_idx': ii}): #Emulator setting found
+						if self.IAGL.handle.getSetting(id='iagl_external_additional_emulator_%(em_idx)s_path'%{'em_idx': ii}) is not None and len(self.IAGL.handle.getSetting(id='iagl_external_additional_emulator_%(em_idx)s_path'%{'em_idx': ii}))>0:
+							other_emulator_found = True
+							self.external_launch_command = self.external_launch_command.replace('%'+other_emulator_key+'%',xbmc.translatePath(self.IAGL.handle.getSetting(id='iagl_external_additional_emulator_%(em_idx)s_path'%{'em_idx': ii}))) #Replace app path with user setting
+				if not other_emulator_found:					
+					xbmc.log(msg='IAGL:  Unable to find emulator application %(other_emulator)s in settings' % {'other_emulator': other_emulator}, level=xbmc.LOGDEBUG)
 
 			if '%RETROARCH_CORE_DIR%' in self.external_launch_command:
 				core_found_idx = None
