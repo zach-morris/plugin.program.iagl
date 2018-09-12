@@ -251,7 +251,7 @@ def get_game_list(game_list_id,page_number=1):
 
 @plugin.route('/game/<game_list_id>/<game_id>')
 def get_game(game_list_id,game_id):
-	# xbmcplugin.endOfDirectory(plugin.handle, succeeded=False) #Is this needed?  It doesn't seem to do anything
+	xbmcplugin.endOfDirectory(plugin.handle, succeeded=False) #Seems like this is needed, some race condition on modal
 	list_method = 'list_single_game'
 	xbmc.log(msg='IAGL:  Getting game ID: %(game_id)s in game category %(game_list_id)s' % {'game_list_id': game_list_id, 'game_id': game_id}, level=xbmc.LOGDEBUG)
 	

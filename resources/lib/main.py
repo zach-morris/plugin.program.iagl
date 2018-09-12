@@ -3696,10 +3696,13 @@ class iagl_launch(object):
 				other_emulator_found = False
 				xbmc.log(msg='IAGL:  Requested other emulator application %(other_emulator)s' % {'other_emulator': other_emulator}, level=xbmc.LOGDEBUG)
 				for ii in range(1,4):
-					if other_emulator in self.IAGL.handle.getSetting(id='iagl_external_additional_emulator_%(em_idx)s_type'%{'em_idx': ii}): #Emulator setting found
-						if self.IAGL.handle.getSetting(id='iagl_external_additional_emulator_%(em_idx)s_path'%{'em_idx': ii}) is not None and len(self.IAGL.handle.getSetting(id='iagl_external_additional_emulator_%(em_idx)s_path'%{'em_idx': ii}))>0:
-							other_emulator_found = True
-							self.external_launch_command = self.external_launch_command.replace('%'+other_emulator_key+'%',xbmc.translatePath(self.IAGL.handle.getSetting(id='iagl_external_additional_emulator_%(em_idx)s_path'%{'em_idx': ii}))) #Replace app path with user setting
+					try:
+						if other_emulator in self.IAGL.handle.getSetting(id='iagl_external_additional_emulator_%(em_idx)s_type'%{'em_idx': ii}): #Emulator setting found
+							if self.IAGL.handle.getSetting(id='iagl_external_additional_emulator_%(em_idx)s_path'%{'em_idx': ii}) is not None and len(self.IAGL.handle.getSetting(id='iagl_external_additional_emulator_%(em_idx)s_path'%{'em_idx': ii}))>0:
+								other_emulator_found = True
+								self.external_launch_command = self.external_launch_command.replace('%'+other_emulator_key+'%',xbmc.translatePath(self.IAGL.handle.getSetting(id='iagl_external_additional_emulator_%(em_idx)s_path'%{'em_idx': ii}))) #Replace app path with user setting
+					except Exception as exc:
+						xbmc.log(msg='IAGL:  Unable to identify other emulator.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGDEBUG)
 				if not other_emulator_found:					
 					xbmc.log(msg='IAGL:  Unable to find emulator application %(other_emulator)s in settings' % {'other_emulator': other_emulator}, level=xbmc.LOGDEBUG)
 

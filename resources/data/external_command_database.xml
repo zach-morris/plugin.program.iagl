@@ -66,6 +66,9 @@
 	<launcher name="RetroArch CrocoDS (Amstrad CPC)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/crocods_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Daphne (Arcade Laserdisc)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/daphne_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch DeSmuME 2015 (NDS)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/desmume2015_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -529,6 +532,9 @@
 	</launcher>
 	<launcher name="RetroArch CrocoDS (Amstrad CPC)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/crocods_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Daphne (Arcade Laserdisc)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/daphne_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch DeSmuME 2015 (NDS)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/desmume2015_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -994,6 +1000,9 @@
 	<launcher name="RetroArch CrocoDS (Amstrad CPC)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/crocods_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Daphne (Arcade Laserdisc)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/daphne_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch DeSmuME 2015 (NDS)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/desmume2015_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -1457,6 +1466,9 @@
 	</launcher>
 	<launcher name="RetroArch CrocoDS (Amstrad CPC)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/crocods_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Daphne (Arcade Laserdisc)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/daphne_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch DeSmuME 2015 (NDS)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/desmume2015_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1922,6 +1934,9 @@
 	<launcher name="RetroArch CrocoDS (Amstrad CPC)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/crocods_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Daphne (Arcade Laserdisc)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/daphne_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch DeSmuME 2015 (NDS)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/desmume2015_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -2385,6 +2400,9 @@
 	</launcher>
 	<launcher name="RetroArch CrocoDS (Amstrad CPC)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\crocods_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Daphne (Arcade Laserdisc)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\daphne_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch DeSmuME 2015 (NDS)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\desmume2015_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -2859,6 +2877,9 @@
 	<launcher name="RetroArch CrocoDS (Amstrad CPC)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\crocods_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Daphne (Arcade Laserdisc)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\daphne_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch DeSmuME 2015 (NDS)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\desmume2015_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3332,6 +3353,9 @@
 	<launcher name="RetroArch CrocoDS (Amstrad CPC)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/crocods_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Daphne (Arcade Laserdisc)" os="LibreElec Remix">
+		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/daphne_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch DeSmuME 2015 (NDS)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/desmume2015_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3796,6 +3820,9 @@
 	<launcher name="RetroArch CrocoDS (Amstrad CPC)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" crocods "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Daphne (Arcade Laserdisc)" os="LibreElec Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" daphne "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch DeSmuME 2015 (NDS)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" desmume2015 "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4251,6 +4278,9 @@
 	<launcher name="RetroArch CrocoDS (Amstrad CPC)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh crocods "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Daphne (Arcade Laserdisc)" os="LibreElec S905 Addon">
+		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh daphne "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch DeSmuME 2015 (NDS)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh desmume2015 "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4705,6 +4735,9 @@
 	</launcher>
 	<launcher name="RetroArch CrocoDS (Amstrad CPC)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh crocods "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Daphne (Arcade Laserdisc)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh daphne "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch DeSmuME 2015 (NDS)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh desmume2015 "%ROM_PATH%"</launcher_command>
@@ -5169,6 +5202,9 @@
 	</launcher>
 	<launcher name="RetroArch CrocoDS (Amstrad CPC)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/crocods_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Daphne (Arcade Laserdisc)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/daphne_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
 	</launcher>
 	<launcher name="RetroArch DeSmuME 2015 (NDS)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e ROM "%ROM_PATH%" -e LIBRETRO /data/data/com.retroarch/cores/desmume2015_libretro_android.so -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture</launcher_command>
