@@ -3259,7 +3259,7 @@ class iagl_download(object):
 
 	def post_process_unarchive_to_folder_and_launch_m3u_file(self,filetype_in,m3u_filename_in,filename_in):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unarchive to folder and point to m3u file'% {'filename_in': self.current_saved_files[-1]}, level=xbmc.LOGDEBUG)
-		m3u_filename = os.path.splitext(os.path.split(m3u_filename_in.split('(Disk')[0])[-1])[0]+'.m3u'
+		m3u_filename = os.path.splitext(os.path.split(m3u_filename_in.split('(Disk')[0].split('Disk')[0])[-1])[0]+'.m3u'
 		m3u_filename_no_ext = os.path.splitext(m3u_filename)[0]
 		if os.path.splitext(filename_in)[-1].lower() != '.zip': #Attempt to launch from m3u file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the directory
@@ -3281,32 +3281,34 @@ class iagl_download(object):
 				self.write_pointer_file(os.path.split(found_file)[0],m3u_filename_no_ext,'.m3u',m3u_content)
 				self.current_processed_files.insert(0,os.path.join(os.path.split(found_file)[0],m3u_filename))
 				self.current_processed_files_success.insert(0,True)
+			else:
+				xbmc.log(msg='IAGL:  Unable to find any %(filetype_in)s to add to an M3U'% {'filetype_in': filetype_in}, level=xbmc.LOGDEBUG)
 
-	def post_process_save_files_to_folder_and_launch_m3u_file(self,filetype_in,m3u_filename_in,filename_in):
+	def post_process_save_files_to_folder_and_launch_m3u_file(self,filetype_in,m3u_filename_in,filename_in,last_file_to_process):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - save %(filetype_in)s to folder and point to m3u file'% {'filename_in': self.current_saved_files[-1], 'filetype_in': filetype_in}, level=xbmc.LOGDEBUG)
 		m3u_filename = os.path.splitext(os.path.split(m3u_filename_in.split('(Disk')[0].split('Disk')[0])[-1])[0]+'.m3u'
 		m3u_filename_no_ext = os.path.splitext(m3u_filename)[0]
-		if os.path.splitext(filename_in)[-1].lower() != filetype_in: #Attempt to launch from m3u file already locally available
-			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the directory
-			if any([m3u_filename in x for x in current_files]):
-				# found_file = current_files[[m3u_filename in x for x in current_files].index(True)]
-				found_file = [x for x in current_files if m3u_filename in x][0]
-				xbmc.log(msg='IAGL:  M3U File %(mtu_filename)s was found for launching.'% {'mtu_filename': found_file}, level=xbmc.LOGDEBUG)
-				self.current_processed_files.append(found_file)
-				self.current_processed_files_success.append(True)
-			else:
-				xbmc.log(msg='IAGL Error:  Unable to find the M3U file %(mtu_filename)s.  You may have to try downloading the game again.'% {'mtu_filename': m3u_filename}, level=xbmc.LOGERROR)
+		current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the directory
+		if any([m3u_filename in x for x in current_files]):  #M3U already exists
+			found_file = [x for x in current_files if m3u_filename in x][0]
+			xbmc.log(msg='IAGL:  M3U File %(mtu_filename)s was found for launching.'% {'mtu_filename': found_file}, level=xbmc.LOGDEBUG)
+			self.current_processed_files.append(found_file)
+			self.current_processed_files_success.append(True)
 		else:
-			move_file_to_directory(filename_in,os.path.join(os.path.split(filename_in)[0],self.current_safe_filename))
-			# self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
-			current_files = get_all_files_in_directory_xbmcvfs(os.path.join(os.path.split(filename_in)[0],self.current_safe_filename)) #Get a list of files in the unarchive diectory
-			if any([filetype_in in x for x in current_files]): #filetype exist in the file list
-				# found_file = current_files[['.cue' in x for x in current_files].index(True)]
-				found_file = sorted([x for x in current_files if filetype_in in x])[0]  #Use the first file found and place the m3u file in the same directory
-				m3u_content = '\r\n'.join([os.path.split(x)[-1] for x in sorted(current_files) if filetype_in in x]) #List all files of the correct filetype in the m3u
-				self.write_pointer_file(os.path.split(found_file)[0],m3u_filename_no_ext,'.m3u',m3u_content)
-				self.current_processed_files.insert(0,os.path.join(os.path.split(found_file)[0],m3u_filename))
-				self.current_processed_files_success.insert(0,True)				
+			if filename_in == last_file_to_process: #Last file, move it to the directory and make an m3u
+				move_file_to_directory(filename_in,os.path.join(os.path.split(filename_in)[0],self.current_safe_filename))
+				current_files = get_all_files_in_directory_xbmcvfs(os.path.join(os.path.split(filename_in)[0],self.current_safe_filename)) #Get a list of files in the unarchive diectory
+				if any([filetype_in in x for x in current_files]): #filetype exist in the file list
+					# found_file = current_files[['.cue' in x for x in current_files].index(True)]
+					found_file = [x for x in sorted(current_files) if filetype_in in x][0]  #Use the first file found and place the m3u file in the same directory
+					m3u_content = '\r\n'.join([os.path.split(x)[-1] for x in sorted(current_files) if filetype_in in x]) #List all files of the correct filetype in the m3u
+					self.write_pointer_file(os.path.split(found_file)[0],m3u_filename_no_ext,'.m3u',m3u_content)
+					self.current_processed_files.insert(0,os.path.join(os.path.split(found_file)[0],m3u_filename))
+					self.current_processed_files_success.insert(0,True)
+				else:
+					xbmc.log(msg='IAGL:  Unable to find any %(filetype_in)s to add to an M3U'% {'filetype_in': filetype_in}, level=xbmc.LOGDEBUG)
+			else: #Not the last file, move it to the directory
+				move_file_to_directory(filename_in,os.path.join(os.path.split(filename_in)[0],self.current_safe_filename))
 
 	def post_process_unarchive_to_folder_and_launch_requested_file(self,requested_file_type,filename_in):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unarchive to folder and point to %(requested_file_type)s file'% {'filename_in': self.current_saved_files[-1], 'requested_file_type': requested_file_type}, level=xbmc.LOGDEBUG)
@@ -3572,7 +3574,7 @@ class iagl_download(object):
 					if pda == 'unarchive_game_generate_m3u_st':
 						self.post_process_unarchive_to_folder_and_launch_m3u_file('.st',self.current_saved_files[0],self.current_saved_files[ii])	
 					if pda == 'save_adf_to_folder_and_launch_m3u_file':
-						self.post_process_save_files_to_folder_and_launch_m3u_file('.adf',self.current_saved_files[0],self.current_saved_files[ii])	
+						self.post_process_save_files_to_folder_and_launch_m3u_file('.adf',self.current_saved_files[0],self.current_saved_files[ii],self.current_saved_files[-1])	
 					if pda == 'unarchive_game_launch_cue':
 						self.post_process_unarchive_to_folder_and_launch_requested_file('.cue',self.current_saved_files[ii])
 					if pda == 'unarchive_game_launch_gdi':
