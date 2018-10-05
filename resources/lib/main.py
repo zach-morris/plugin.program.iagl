@@ -3259,7 +3259,7 @@ class iagl_download(object):
 
 	def post_process_unarchive_to_folder_and_launch_m3u_file(self,filetype_in,m3u_filename_in,filename_in):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unarchive to folder and point to m3u file'% {'filename_in': self.current_saved_files[-1]}, level=xbmc.LOGDEBUG)
-		m3u_filename = os.path.splitext(os.path.split(m3u_filename_in.split('(Disk')[0].split('Disk')[0])[-1])[0].strip()+'.m3u'
+		m3u_filename = os.path.splitext(os.path.split(m3u_filename_in.split('(Disk')[0].split('Disk')[0].split('(Disc')[0].split('Disc')[0])[-1])[0].strip()+'.m3u'
 		m3u_filename_no_ext = os.path.splitext(m3u_filename)[0]
 		if os.path.splitext(filename_in)[-1].lower() != '.zip': #Attempt to launch from m3u file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the directory
@@ -3286,7 +3286,7 @@ class iagl_download(object):
 
 	def post_process_save_files_to_folder_and_launch_m3u_file(self,filetype_in,m3u_filename_in,filename_in,last_file_to_process):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - save %(filetype_in)s to folder and point to m3u file'% {'filename_in': self.current_saved_files[-1], 'filetype_in': filetype_in}, level=xbmc.LOGDEBUG)
-		m3u_filename = os.path.splitext(os.path.split(m3u_filename_in.split('(Disk')[0].split('Disk')[0])[-1])[0].strip()+'.m3u'
+		m3u_filename = os.path.splitext(os.path.split(m3u_filename_in.split('(Disk')[0].split('Disk')[0].split('(Disc')[0].split('Disc')[0])[-1])[0].strip()+'.m3u'
 		m3u_filename_no_ext = os.path.splitext(m3u_filename)[0]
 		current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the directory
 		if any([m3u_filename in x for x in current_files]):  #M3U already exists
@@ -3683,6 +3683,8 @@ class iagl_launch(object):
 			xbmc.Player().stop()
 			xbmc.sleep(500) #If sleep is not called, Kodi will crash - does not like playing video and then swiching to a game
 		try:
+			xbmc.log(msg='IAGL:  Gameclient for Retroplayer set to: %(current_gameclient)s' % {'current_gameclient': current_gameclient}, level=xbmc.LOGNOTICE)
+			xbmc.log(msg='IAGL:  Attempting to play the following file through Retroplayer: %(url)s' % {'url': self.launch_filenames[0]}, level=xbmc.LOGNOTICE)
 			xbmc.Player().play(xbmc.translatePath(self.launch_filenames[0]),game_listitem)
 			return True
 		except Exception as exc: #except Exception, (exc):
