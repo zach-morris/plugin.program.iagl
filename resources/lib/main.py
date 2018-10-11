@@ -3375,14 +3375,23 @@ class iagl_download(object):
 			else:
 				xbmc.log(msg='IAGL Error:  Unable to find the BAT file %(bat_filename)s.  You may have to try downloading the game again.'% {'bat_filename': bat_filename}, level=xbmc.LOGERROR)
 		else:
+			if 'win31.zip' in filename_in: #Temporarily make a new copy of win31
+				win31_success = xbmcvfs.copy(filename_in,os.path.join(os.path.split(filename_in)[0],'win31_temp.zip'))
+				if not win31_success:
+					xbmc.log(msg='IAGL:  win31 file could not be copied: %(file_from)s' % {'file_from': filename_in}, level=xbmc.LOGDEBUG)
 			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
-			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the unarchive diectory
+			if 'win31.zip' in filename_in: #Temporarily make a new copy of win31
+				if win31_success: #Restore temp copy of win31
+					win31_success2 = xbmcvfs.rename(os.path.join(os.path.split(filename_in)[0],'win31_temp.zip'),filename_in)
+					if not win31_success2:
+						xbmc.log(msg='IAGL:  win31 temp file could not be copied: %(file_from)s' % {'file_from': os.path.join(os.path.split(filename_in)[0],'win31_temp.zip')}, level=xbmc.LOGDEBUG)
+			current_files = get_all_files_in_directory_xbmcvfs(os.path.join(os.path.split(filename_in)[0],self.current_safe_filename)) #Get a list of files in the unarchive diectory
 			if any([self.rom_emu_command.lower() in x.lower() for x in current_files]):
 				found_file = [x for x in current_files if self.rom_emu_command.lower() in x.lower()][0] #Place the bat file next to the exe file
 				xbmc.log(msg='IAGL:  WIN31 File %(found_file)s was found'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				bat_content = '@echo off\r\npath=%path%;\r\ncopy c:\\iniback\\*.* c:\\windows\\\r\nsetini c:\windows\system.ini boot shell "C:\XXCOMMANDXX"\r\nc:\r\ncd \\\r\nc:\\windows\\win\r\n'.replace('XXCOMMANDXX',self.rom_emu_command)
 				self.write_pointer_file(os.path.split(found_file)[0],bat_filename_no_ext,'.bat',bat_content)
-				self.write_pointer_file(os.path.split(found_file)[0],'win31','.iagl',self.rom_emu_command) #Need a pointer file for the win31 archive as well
+				# self.write_pointer_file(os.path.split(found_file)[0],'win31','.iagl',self.rom_emu_command) #Need a pointer file for the win31 archive as well
 				self.current_processed_files.insert(0,os.path.join(os.path.split(found_file)[0],bat_filename))
 				self.current_processed_files_success.insert(0,True)
 
