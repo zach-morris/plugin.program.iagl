@@ -657,6 +657,7 @@ class iagl_utils(object):
 	def get_game_lists(self):
 		cache_list_option = self.get_setting_as_bool(self.handle.getSetting(id='iagl_setting_cache_list'))
 		dirs, files = xbmcvfs.listdir(self.get_dat_folder_path())
+		files = list(sorted(files)) #Sort the list of files
 		dat_file_cachename = os.path.join(self.get_list_cache_path(),self.dat_file_cache_filename) #Save the dat file listing in the list cache folder
 		game_lists = None
 

@@ -73,6 +73,9 @@ def list_archives_all():
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/archives/random_menu'),[x for x in search_and_browse_list_item if x.getLabel2()=='random_menu'][0], True)
 	if IAGL.check_to_show_history(): #Add history item to the bottom of the all page
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/game_list/'+IAGL.current_game_listing_route+'/game_history/1'),IAGL.get_game_history_listitem(), True)
+
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_DATE)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/archives/categorized')
@@ -80,6 +83,8 @@ def list_archives_by_category():
 	# for ii,list_item in enumerate(IAGL.get_game_list_categories_as_listitems()):
 	for list_item in IAGL.get_game_list_categories_as_listitems():
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game_lists_in_category, category_id=url_quote(list_item.getLabel())),list_item, True)
+	
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/archives/categorized/<category_id>')
@@ -94,6 +99,8 @@ def get_game_lists_in_category(category_id):
 			if list_item.getProperty('emu_visibility') != 'hidden':
 				xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/game_list/'+IAGL.current_game_listing_route+'/'+url_quote(list_item.getProperty('dat_filename'))),IAGL.add_list_context_menus(list_item,url_quote(list_item.getProperty('dat_filename'))), True)
 		# xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game_list, game_list_id=url_quote(list_item.getProperty('dat_filename')), page_number=1),list_item, True)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_DATE)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/game_list/choose_from_list/game_history/1')
@@ -117,6 +124,7 @@ def get_alphabetical_list(game_list_id):
 	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s alphabetically, display method %(list_method)s' % {'game_list_id': game_list_id,'list_method': list_method}, level=xbmc.LOGDEBUG)
 	for list_item in IAGL.get_alphabetical_as_listitem(game_list_id):
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_letter, letter=url_quote(list_item.getLabel2()), game_list_id=game_list_id, page_number=1),list_item, True)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/game_list/alphabetical/<letter>/<game_list_id>/')
@@ -134,6 +142,12 @@ def get_games_with_letter(letter,game_list_id,page_number=1):
 	next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
 	if next_page_li is not None:
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_letter, letter=letter, game_list_id=game_list_id, page_number=page_info['next_page']),next_page_li, True)
+	
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_DATE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_GENRE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_SIZE)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/game_list/list_by_genre/<game_list_id>')
@@ -142,6 +156,7 @@ def get_genre_list(game_list_id):
 	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s by genre, display method %(list_method)s' % {'game_list_id': game_list_id,'list_method': list_method}, level=xbmc.LOGDEBUG)
 	for list_item in IAGL.get_game_list_genres_as_listitems(game_list_id):
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_genre, genre=url_quote(list_item.getLabel2()), game_list_id=game_list_id, page_number=1),list_item, True)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/game_list/list_by_genre/<genre>/<game_list_id>/')
@@ -159,6 +174,12 @@ def get_games_with_genre(genre,game_list_id,page_number=1):
 	next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
 	if next_page_li is not None:
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_genre, genre=genre, game_list_id=game_list_id, page_number=page_info['next_page']),next_page_li, True)
+	
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_DATE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_GENRE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_SIZE)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/game_list/list_by_year/<game_list_id>')
@@ -167,6 +188,8 @@ def get_years_list(game_list_id):
 	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s by year, display method %(list_method)s' % {'game_list_id': game_list_id,'list_method': list_method}, level=xbmc.LOGDEBUG)
 	for list_item in IAGL.get_game_list_years_as_listitems(game_list_id):
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_year, year=url_quote(list_item.getLabel2()), game_list_id=game_list_id, page_number=1),list_item, True)
+	
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/game_list/list_by_year/<year>/<game_list_id>/')
@@ -184,6 +207,12 @@ def get_games_with_year(year,game_list_id,page_number=1):
 	next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
 	if next_page_li is not None:
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_year, year=year, game_list_id=game_list_id, page_number=page_info['next_page']),next_page_li, True)
+	
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_DATE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_GENRE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_SIZE)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/game_list/list_by_players/<game_list_id>')
@@ -192,6 +221,8 @@ def get_players_list(game_list_id):
 	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s by num players, display method %(list_method)s' % {'game_list_id': game_list_id,'list_method': list_method}, level=xbmc.LOGDEBUG)
 	for list_item in IAGL.get_game_list_players_as_listitems(game_list_id):
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_players, nplayers=url_quote(list_item.getLabel2()), game_list_id=game_list_id, page_number=1),list_item, True)
+	
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/game_list/list_by_players/<nplayers>/<game_list_id>/')
@@ -209,6 +240,12 @@ def get_games_with_players(nplayers,game_list_id,page_number=1):
 	next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
 	if next_page_li is not None:
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_players, nplayers=nplayers, game_list_id=game_list_id, page_number=page_info['next_page']),next_page_li, True)
+	
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_DATE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_GENRE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_SIZE)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/game_list/list_by_studio/<game_list_id>')
@@ -217,6 +254,8 @@ def get_studio_list(game_list_id):
 	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s by studio, display method %(list_method)s' % {'game_list_id': game_list_id,'list_method': list_method}, level=xbmc.LOGDEBUG)
 	for list_item in IAGL.get_game_list_studios_as_listitems(game_list_id):
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_studio, studio=url_quote(list_item.getLabel2()), game_list_id=game_list_id, page_number=1),list_item, True)
+	
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/game_list/list_by_studio/<studio>/<game_list_id>/<page_number>')
@@ -230,6 +269,12 @@ def get_games_with_studio(studio,game_list_id,page_number=1):
 	next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
 	if next_page_li is not None:
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_studio, studio=studio, game_list_id=game_list_id, page_number=page_info['next_page']),next_page_li, True)
+	
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_DATE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_GENRE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_SIZE)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/game_list/list_all/<game_list_id>/')
@@ -247,6 +292,12 @@ def get_game_list(game_list_id,page_number=1):
 	next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
 	if next_page_li is not None:
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game_list, list_method=list_method, game_list_id=game_list_id, page_number=page_info['next_page']),next_page_li, True)
+	
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_DATE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_GENRE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_SIZE)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/game/<game_list_id>/<game_id>')
@@ -744,6 +795,12 @@ def run_search_query(page_number=1):
 		next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
 		if next_page_li is not None:
 			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game_list, list_method=list_method, game_list_id=game_list_id, page_number=page_info['next_page']),next_page_li, True)
+		
+		xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
+		xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_DATE)
+		xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_GENRE)
+		xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE)
+		xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_SIZE)
 		xbmcplugin.endOfDirectory(plugin.handle)
 	else:
 		pass
