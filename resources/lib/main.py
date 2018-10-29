@@ -3610,7 +3610,7 @@ class iagl_launch(object):
 		self.json = None
 		self.launcher = None
 		self.external_launch_command = None
-		
+		self.launch_success = None #Default to unknown successfull launch
 		self.game_id = game_id_in
 		try:
 			self.json = json.loads(json_in)
@@ -3633,13 +3633,13 @@ class iagl_launch(object):
 
 	def launch(self):
 		if self.launcher.lower() == 'retroplayer':
-			launch_success = self.launch_retroplayer()
+			self.launch_success = self.launch_retroplayer()
 		if self.launcher.lower() == 'external':
 			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android':
-				launch_success = self.launch_external_android()
+				self.launch_success = self.launch_external_android()
 			else:
-				launch_success = self.launch_external()
-		if launch_success:
+				self.launch_success = self.launch_external()
+		if self.launch_success:
 			self.IAGL.add_game_to_history(self.json,self.game_list_id,self.game_id)
 
 	def launch_retroplayer(self):
@@ -4018,8 +4018,8 @@ class iagl_infodialog(xbmcgui.WindowXMLDialog):
 		download_and_process_success = IAGL_DL.download_and_process_game_files() #Download files
 		if False not in download_and_process_success:
 			IAGL_LAUNCH = iagl_launch(self.current_json,IAGL_DL.current_processed_files,self.game_id) #Initialize launch object
-			launch_success = IAGL_LAUNCH.launch() #Launch Game
-			if launch_success:
+			IAGL_LAUNCH.launch() #Launch Game
+			if IAGL_LAUNCH.launch_success:
 				xbmc.log(msg='IAGL:  Game Launched: %(game_title)s' % {'game_title': IAGL_DL.current_game_title}, level=xbmc.LOGDEBUG)
 				self.closeDialog()
 		else:
