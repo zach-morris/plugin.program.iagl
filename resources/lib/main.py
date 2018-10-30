@@ -3153,7 +3153,7 @@ class iagl_download(object):
 	def post_process_unarchive_files_libarchive(self,filename_in,crc_in):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unarchive (vfs.libarchive)'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
 		if any([x in filename_in.lower() for x in self.libarchive_extensions]):
-			dirs_in_dir, files_in_dir = xbmcvfs.listdir('archive://%(filename_in)s' % {'filename_in': url_quote(filename_in)})
+			dirs_in_dir, files_in_dir = xbmcvfs.listdir('archive://%(filename_in)s' % {'filename_in': filename_in})
 			files_extracted, files_extracted_success = move_directory_contents_libarchive(filename_in,os.path.split(filename_in)[0])
 		else:
 			self.current_processed_files.append(filename_in)
@@ -3899,7 +3899,7 @@ class iagl_infodialog(xbmcgui.WindowXMLDialog):
 
 		xbmc.log(msg='IAGL:  InfoDialog Initialized', level=xbmc.LOGDEBUG)
 	def onInit(self):
-		self.onaction_id_exit = [10, 13] #Default exit keys to close window via keyboard / controller
+		self.onaction_id_exit = [10, 13, 92] #Default exit keys to close window via keyboard / controller
 		self.onclick_id_download = 3001
 		self.onclick_id_launch = 3002
 		self.onclick_id_exit = 3003
@@ -4036,7 +4036,7 @@ class iagl_TOUdialog(xbmcgui.WindowXMLDialog):
 	def __init__(self, *args, **kwargs):
 		xbmc.log(msg='IAGL:  TOU Dialog Initialized', level=xbmc.LOGDEBUG)
 	def onInit(self):
-		self.action_exitkeys_id = [10, 13]
+		self.action_exitkeys_id = [10, 13, 92]
 		self.control_id_button_action1 = 3001 #Agree and Close
 		self.control_id_button_exit = 3003 #Do not Agree and Close
 		self.button_action1 = self.getControl(self.control_id_button_action1)
@@ -4063,7 +4063,7 @@ class iagl_textviewer_dialog(xbmcgui.WindowXMLDialog):
 	def __init__(self, *args, **kwargs):
 		xbmc.log(msg='IAGL:  Text Viewer Dialog Initialized', level=xbmc.LOGDEBUG)
 	def onInit(self):
-		self.action_exitkeys_id = [10, 13]
+		self.action_exitkeys_id = [10, 13, 92]
 		self.control_id_button_close = [22003, 22004] #Close
 	def onAction(self, action):
 		if action in self.action_exitkeys_id:
