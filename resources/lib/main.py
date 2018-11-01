@@ -2228,7 +2228,7 @@ class iagl_utils(object):
 				if ret1 == 0:
 					new_value = 'default'
 				else:
-					new_value = current_dialog.browse(0,self.loc_str(30337),'files')
+					new_value = current_dialog.browse(0,self.loc_str(30337),'')
 					if len(new_value)<1:
 						new_value = None
 		elif current_key == 'emu_default_addon':
