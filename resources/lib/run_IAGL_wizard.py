@@ -69,9 +69,9 @@ if not WIN.getProperty('iagl.script_started'):
 						# IAGL.handle.setSetting(id='iagl_external_path_to_retroarch',value=pral)
 						pral_found = pral
 				if len(pral_found)>0:
-					new_path = current_dialog.browse(1,'Verify RetroArch App Location','files','',False,False,pral_found)
+					new_path = current_dialog.browse(1,'Verify RetroArch App Location','','',False,False,pral_found)
 				else:
-					new_path = current_dialog.browse(1,'RetroArch App Location','files')
+					new_path = current_dialog.browse(1,'RetroArch App Location','')
 				if len(new_path)>1:
 					IAGL.handle.setSetting(id='iagl_external_path_to_retroarch',value=new_path)
 					xbmc.log(msg='IAGL:  Wizard updated Retroarch app path to to %(new_path)s'%{'new_path': new_path}, level=xbmc.LOGDEBUG)
@@ -88,7 +88,7 @@ if not WIN.getProperty('iagl.script_started'):
 			else:
 				ret1 = 0
 			if ret1 == 0:
-				new_path = current_dialog.browse(0,'RetroArch System Directory Location','files')
+				new_path = current_dialog.browse(0,'RetroArch System Directory Location','')
 				if len(new_path)>1:
 					IAGL.handle.setSetting(id='iagl_external_path_to_retroarch_system_dir',value=new_path)
 					xbmc.log(msg='IAGL:  Wizard updated Retroarch system directory path to to %(new_path)s'%{'new_path': new_path}, level=xbmc.LOGDEBUG)
@@ -111,9 +111,9 @@ if not WIN.getProperty('iagl.script_started'):
 						# IAGL.handle.setSetting(id='iagl_external_path_to_retroarch_cfg',value=prcl)
 						prcl_found = prcl
 				if len(prcl_found)>0:
-					new_path = current_dialog.browse(1,'Verify RetroArch CFG Location','files','',False,False,prcl_found)
+					new_path = current_dialog.browse(1,'Verify RetroArch CFG Location','','',False,False,prcl_found)
 				else:
-					new_path = current_dialog.browse(1,'RetroArch CFG File Location','files')
+					new_path = current_dialog.browse(1,'RetroArch CFG File Location','')
 				if len(new_path)>1:
 					IAGL.handle.setSetting(id='iagl_external_path_to_retroarch_cfg',value=new_path)
 					xbmc.log(msg='IAGL:  Wizard updated Retroarch app path to to %(new_path)s'%{'new_path': new_path}, level=xbmc.LOGDEBUG)
