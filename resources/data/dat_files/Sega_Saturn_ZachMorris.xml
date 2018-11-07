@@ -3,7 +3,7 @@
 		<emu_name>Sega Saturn</emu_name>
 		<emu_description>Sega Saturn</emu_description>
 		<emu_category>Sega, 1990s, Console, 32 Bit</emu_category>
-		<emu_version>04012018</emu_version>
+		<emu_version>11072018</emu_version>
 		<emu_date>06/17/2017</emu_date>
 		<emu_author>Zach Morris</emu_author>
 		<emu_visibility>visible</emu_visibility>
@@ -13,7 +13,7 @@
 		<emu_default_addon>none</emu_default_addon>
 		<emu_ext_launch_cmd>none</emu_ext_launch_cmd>
 		<emu_downloadpath>default</emu_downloadpath>		
-		<emu_postdlaction>unarchive_game_generate_m3u</emu_postdlaction>
+		<emu_postdlaction>unarchive_game_launch_cue</emu_postdlaction>
 		<emu_comment>ReDump Sega Saturn list.  Filtered to remove duplicates, betas, etc.[CR]The Sega Saturn is a 32-bit fifth-generation home video game console that was developed by Sega and released in 1994 in Japan as the successor to the successful Sega Genesis. Saturn has a dual-CPU architecture and a total of eight processors. Its games are in CD-ROM format, and its game library contains several arcade ports as well as original titles.[CR]Developer:  Sega[CR]Manufacturer:  Sega[CR]CPU:  2 x Hitachi SH-2 32-bit RISC[CR]Memory:  1 MB SDRAM as work RAM for both SH-2 CPUs[CR]Graphics:  Custom VDP 1 32-bit video display processor[CR]Sound:  Yamaha FH1 DSP[CR]Display:  320x240[CR]Media:  CD[CR]Max. Controllers:  2</emu_comment>
 		<emu_thumb>hzYQJIT.jpg</emu_thumb>
 		<emu_banner>czN7m2Z.jpg</emu_banner>
