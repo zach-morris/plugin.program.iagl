@@ -2867,7 +2867,7 @@ class iagl_download(object):
 			self.password_setting = None
 
 		self.zero_byte_file_size = 1
-		self.small_file_byte_size = 8000 #Small file, check if archive.org did not return a good game file
+		self.small_file_byte_size = 150000 #Small file, check if archive.org did not return a good game file
 		self.bad_file_text_check = '<title>' #Small file, check if archive.org did not return a good game file
 		# self.IAGL.remove_these_filetypes = ['.srm','.sav','.fs','.state','.auto','.xml','.nfo'] #Save filetypes, do not match with existing files
 		# self.user_agent_options = ['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/603.2.4 (KHTML, like Gecko) Version/10.1.1 Safari/603.2.4','Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko','Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:53.0) Gecko/20100101 Firefox/53.0','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:53.0) Gecko/20100101 Firefox/53.0','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36','Mozilla/5.0 (Windows NT 10.0; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.1 Safari/603.1.30','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36','Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36','Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/603.2.5 (KHTML, like Gecko) Version/10.1.1 Safari/603.2.5']
@@ -3221,7 +3221,7 @@ class iagl_download(object):
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the diectory with the pointer file
 			if any([os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower() for x in current_files]):
 				# found_file = current_files[[self.rom_emu_command in x for x in current_files].index(True)]
-				found_file = [x for x in self.current_processed_files if os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower()][0]
+				found_file = [x for x in current_files if os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower()][0]
 				xbmc.log(msg='IAGL:  File %(rom_emu_command)s was found for launching.'% {'rom_emu_command': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.insert(0,found_file)
 				self.current_processed_files.append(found_file)
@@ -3243,7 +3243,7 @@ class iagl_download(object):
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the diectory with the pointer file
 			if any([os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower() for x in current_files]):
 				# found_file = current_files[[self.rom_emu_command in x for x in current_files].index(True)]
-				found_file = [x for x in self.current_processed_files if os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower()][0]
+				found_file = [x for x in current_files if os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower()][0]
 				xbmc.log(msg='IAGL:  File %(rom_emu_command)s was found for launching.'% {'rom_emu_command': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
@@ -3803,15 +3803,17 @@ class iagl_launch(object):
 		import subprocess
 		self.update_external_launch_command()
 		if self.external_launch_command != 'none':
-			if xbmc.Player().isPlaying():
+			if xbmc.Player().isPlaying() and not self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_stop_media_before_launch')):
 				xbmc.Player().stop()
 				xbmc.sleep(500)
-			xbmc.audioSuspend()
-			xbmc.enableNavSounds(False)
+			if not self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_stop_media_before_launch')):
+				xbmc.audioSuspend()
+				xbmc.enableNavSounds(False)
 			xbmc.log(msg='IAGL:  Sending Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGNOTICE)
 			external_command = subprocess.call(self.external_launch_command,shell=True)
-			xbmc.audioResume()
-			xbmc.enableNavSounds(True)
+			if not self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_stop_media_before_launch')):
+				xbmc.audioResume()
+				xbmc.enableNavSounds(True)
 			return True
 		else:
 			return False
