@@ -3843,21 +3843,56 @@ class iagl_launch(object):
 			xbmc.audioSuspend()
 			xbmc.enableNavSounds(False)
 			android_stop_command = '/system/bin/am force-stop com.retroarch'
-			try:
+			if int(self.IAGL.handle.getSetting(id='iagl_android_command_type')) == 1: #Subprocess normal
+				xbmc.log(msg='IAGL:  Android subprocess (normal shell) external launch selected', level=xbmc.LOGDEBUG)
+				executable_path = '/system/bin/sh' #This is the path to the normal shell for most android installations
 				if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_android_stop_command')):
-					external_command_stop = subprocess.call(android_stop_command,shell=True,executable='/system/bin/sh')
-					xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGNOTICE)
-					xbmc.sleep(500)
-				xbmc.log(msg='IAGL:  Sending Android Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGNOTICE)
-				external_command = subprocess.call(self.external_launch_command,shell=True,executable='/system/bin/sh')
-			except Exception as exc:
-				xbmc.log(msg='IAGL:  Unable to use subprocess call.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGNOTICE)
-				if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_android_stop_command')):
-					os.system(android_stop_command)
-					xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGNOTICE)
+					try:
+						xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGNOTICE)
+						retcode = subprocess.call(android_stop_command,shell=True,executable=executable_path)
+						xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
+					except Exception as exc:
+						xbmc.log(msg='IAGL: Error sending subprocess (normal shell) stop command, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 				xbmc.sleep(500)
-				xbmc.log(msg='IAGL:  Sending Android Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGNOTICE)
-				os.system(self.external_launch_command)
+				try:
+					xbmc.log(msg='IAGL:  Sending Android Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGNOTICE)
+					retcode = subprocess.call(self.external_launch_command,shell=True,executable=executable_path)
+					xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
+				except Exception as exc:
+					xbmc.log(msg='IAGL: Error sending subprocess (normal shell) command, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
+			elif int(self.IAGL.handle.getSetting(id='iagl_android_command_type')) == 2: #Subprocess root
+				xbmc.log(msg='IAGL:  Android subprocess (root shell) external launch selected', level=xbmc.LOGDEBUG)
+				executable_path = '/system/xbin/su -c "/system/xbin/bash -"' #This is the method for root shell for most rooted android installations
+				if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_android_stop_command')):
+					try:
+						xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGNOTICE)
+						retcode = subprocess.call(android_stop_command,shell=True,executable=executable_path)
+						xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
+					except Exception as exc:
+						xbmc.log(msg='IAGL: Error sending subprocess (root shell) stop command, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
+				xbmc.sleep(500)
+				try:
+					xbmc.log(msg='IAGL:  Sending Android Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGNOTICE)
+					retcode = subprocess.call(self.external_launch_command,shell=True,executable=executable_path)
+					xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
+				except Exception as exc:
+					xbmc.log(msg='IAGL: Error sending subprocess (root shell) command, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
+			else: #Default
+				xbmc.log(msg='IAGL:  Android os.system external launch selected', level=xbmc.LOGDEBUG)
+				if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_android_stop_command')):
+					try:
+						xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGNOTICE)
+						retcode = os.system(android_stop_command)
+						xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
+					except Exception as exc:
+						xbmc.log(msg='IAGL: Error sending os.system stop command, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
+				xbmc.sleep(500)
+				try:
+					xbmc.log(msg='IAGL:  Sending Android Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGNOTICE)
+					retcode = os.system(self.external_launch_command)
+					xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
+				except Exception as exc:
+					xbmc.log(msg='IAGL: Error sending os.system command, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			xbmc.audioResume()
 			xbmc.enableNavSounds(True)
 			return True
