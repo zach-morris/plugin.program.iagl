@@ -4,27 +4,27 @@
 		<setting id="iagl_setting_cache_list" type="bool" label="30007" default="true"/>
 		<setting id="iagl_setting_mem_cache" type="bool" label="30008" default="true"/>
 		<setting id="iagl_setting_clean_list" type="bool" label="30009" default="true"/>
-		<setting id="iagl_setting_archive_listings" type="select" label="30010" values="Choose from List|Browse All Lists|Browse by Category" default="Choose from List"/>
-		<setting id="iagl_setting_listing" type="select" label="30011" values="One Big List|Choose from List|Alphabetical|Group by Genre|Group by Year|Group by Players|Group by Studio" default="Choose from List"/>
-		<setting id="iagl_setting_naming" type="select" label="30012" values="Title|Title, Genre|Title, Date|Title, Players|Title, Genre, Date|Title, Genre, Size|Title, Genre, Players|Title, Date, Size|Title, Date, Players|Genre, Title|Date, Title|Players, Title|Genre, Title, Date|Date, Title, Genre|Players, Title, Genre|Players, Title, Date|Title, Genre, Date, ROM Tag|Title, Genre, Date, Players|Title, Genre, Players, ROM Tag|Title, Genre, Date, Size" default="Title"/>
+		<setting id="iagl_setting_archive_listings" type="select" label="30010" lvalues="30058|30059|30060" default="0"/>
+		<setting id="iagl_setting_listing" type="select" label="30011" lvalues="30061|30058|30062|30063|30064|30065|30066" default="1"/>
+		<setting id="iagl_setting_naming" type="select" label="30012" lvalues="30414|30067|30068|30069|30070|30071|30072|30073|30074|30075|30076|30077|30078|30079|30080|30081|30082|30083|30084|30085" default="0"/>
 		<setting id="iagl_setting_items_pp" type="select" label="30013" values="10|25|50|100|150|200|250|300|350|400|450|500|List All" default="List All"/>
 		<setting id="iagl_setting_history" type="slider" label="30014" default="10" range="0,1,100" option="int"/>
-		<setting id="iagl_setting_localfile_action" type="select" label="30015" values="Prompt|Do Not ReDownload|ReDownload and Overwrite" default="Do Not ReDownload"/>
-		<setting id="iagl_setting_default_action" type="select" label="30016" values="Download and Launch|Download Only|Show Info Page" default="Show Info Page"/>
-		<setting id="iagl_setting_show_search" type="select" label="30017" values="Show|Hide" default="Show" visible="true"/>
-		<setting id="iagl_setting_show_randomplay" type="select" label="30018" values="Show|Hide" default="Show" visible="true"/>
-		<setting id="iagl_setting_show_gamehistory" type="select" label="30019" values="Show|Hide" default="Show" visible="true"/>
-		<setting id="iagl_setting_show_extras" type="select" label="Show IAGL Extras Item" values="Show|Hide" default="Show" visible="false"/>
-		<setting id="iagl_setting_autoplay_trailer" type="select" label="30020" values="No|Yes" default="No"/>
-		<setting id="iagl_setting_dl_cache" type="select" label="30021" values="Zero (Current Game Only)|10 MB|25MB|50MB|100MB|150MB|200MB|250MB|300MB|350MB|400MB|450MB|500MB|1GB|2GB|5GB|10GB|20GB" default="Zero (Current Game Only)"/>
-		<setting id="iagl_setting_enable_login" type="select" label="30022" values="Enabled|Disabled" default="Disabled"/>
-		<setting id="iagl_setting_ia_username" type="text" label="30023" default="" visible="eq(-1,Enabled)"/>
- +		<setting id="iagl_setting_ia_password" type="text" label="30024" default="" option="hidden" visible="eq(-2,Enabled)"/>  
+		<setting id="iagl_setting_localfile_action" type="select" label="30015" lvalues="30086|30087|30088" default="1"/>
+		<setting id="iagl_setting_default_action" type="select" label="30016" lvalues="30089|30090|30091" default="2"/>
+		<setting id="iagl_setting_show_search" type="select" label="30017" lvalues="30092|30093" default="0" visible="true"/>
+		<setting id="iagl_setting_show_randomplay" type="select" label="30018" lvalues="30092|30093" default="0" visible="true"/>
+		<setting id="iagl_setting_show_gamehistory" type="select" label="30019" lvalues="30092|30093" default="0" visible="true"/>
+		<setting id="iagl_setting_show_extras" type="select" label="30094" lvalues="30092|30093" default="0" visible="false"/>
+		<setting id="iagl_setting_autoplay_trailer" type="select" label="30020" lvalues="30204|30200" default="0"/>
+		<setting id="iagl_setting_dl_cache" type="select" label="30021" lvalues="30097|30098|30099|30100|30101|30102|30103|30104|30105|30106|30107|30108|30109|30110|30111|30112|30113|30114|30129|30130" default="0"/>
+		<setting id="iagl_setting_enable_login" type="select" label="30022" lvalues="30095|30096" default="1"/>
+		<setting id="iagl_setting_ia_username" type="text" label="30023" default="" visible="eq(-1,0)"/>
+ +		<setting id="iagl_setting_ia_password" type="text" label="30024" default="" option="hidden" visible="eq(-2,0)"/>  
 	</category>
 	<category label="30003">
 		<setting id="iagl_external_user_external_env" type="select" label="30025" values="Select|OSX|Linux/Kodibuntu|Windows|LibreElec Remix|LibreElec Sx05RE|LibreElec S905 Addon|Gamestarter Addon|Android" default="Select" visible="true"/>
-		<setting id="iagl_external_launch_close_kodi" type="select" label="30026" values="Disabled|Enabled" default="Disabled" visible="eq(-1,OSX)|eq(-1,Windows)|eq(-1,Linux/Kodibuntu)"/>
-		<setting id="iagl_external_launch_pause_kodi" type="select" label="30027" values="Disabled|Enabled" default="Disabled" visible="eq(-2,Linux/Kodibuntu)+!eq(-1,Enabled)"/>
+		<setting id="iagl_external_launch_close_kodi" type="select" label="30026" lvalues="30095|30096" default="1" visible="eq(-1,OSX)|eq(-1,Windows)|eq(-1,Linux/Kodibuntu)"/>
+		<setting id="iagl_external_launch_pause_kodi" type="select" label="30027" lvalues="30095|30096" default="1" visible="eq(-2,Linux/Kodibuntu)+!eq(-1,0)"/>
 		<setting id="iagl_external_path_to_retroarch" type="executable" label="30028" visible="eq(-3,OSX)|eq(-3,Windows)|eq(-3,Linux/Kodibuntu)"/>
 		<setting id="iagl_external_path_to_retroarch_system_dir" type="folder" label="30029" visible="!eq(-4,Select)"/>
 		<setting id="iagl_external_path_to_retroarch_cfg" type="file" label="30030" visible="eq(-5,Android)"/>
@@ -37,26 +37,26 @@
 		<setting id="iagl_external_additional_emulator_3_path" type="executable" label="30037" visible="!eq(-1,Disabled)"/>
 	</category>
 	<category label="30004">
-		<setting id="iagl_netplay_enable_netplay" type="select" label="30038" values="Enabled|Disabled|Start with Context" default="Disabled"/>
-		<setting id="iagl_netplay_hostclient" type="select" label="30039" values="Player 1 Host|Player 2 Client|Spectator" default="Player 1 Host" visible="!eq(-1,Disabled)"/>
-		<setting id="iagl_netplay_nickname1" type="text" label="30040" default="Kodi Player 1" visible="!eq(-2,Disabled)+eq(-1,Player 1 Host)"/>
-		<setting id="iagl_netplay_nickname2" type="text" label="30040" default="Kodi Player 2" visible="!eq(-3,Disabled)+eq(-2,Player 2 Client)"/>
-		<setting id="iagl_netplay_nickname3" type="text" label="30040" default="Kodi Spectator" visible="!eq(-4,Disabled)+eq(-3,Spectator)"/>
-		<setting id="iagl_netplay_IP" type="ipaddress" label="30041" visible="!eq(-5,Disabled)+!eq(-4,Player 1 Host)"/>
-		<setting id="iagl_netplay_port" type="text" label="30042" default="55435" visible="!eq(-6,Disabled)+!eq(-5,Player 1 Host)"/>
-		<setting id="iagl_netplay_frames" type="select" label="30043" values="Enabled|Disabled" default="Disabled" visible="!eq(-7,Disabled)+!eq(-6,Player 1 Host)"/>
+		<setting id="iagl_netplay_enable_netplay" type="select" label="30038" lvalues="30095|30096" default="1"/>
+		<setting id="iagl_netplay_hostclient" type="select" label="30039" lvalues="30125|30126|30127" default="0" visible="!eq(-1,1)"/>
+		<setting id="iagl_netplay_nickname1" type="text" label="30040" default="Kodi Player 1" visible="!eq(-2,1)+eq(-1,0)"/>
+		<setting id="iagl_netplay_nickname2" type="text" label="30040" default="Kodi Player 2" visible="!eq(-3,1)+eq(-2,1)"/>
+		<setting id="iagl_netplay_nickname3" type="text" label="30040" default="Kodi Spectator" visible="!eq(-4,1)+eq(-3,2)"/>
+		<setting id="iagl_netplay_IP" type="ipaddress" label="30041" visible="!eq(-5,1)+!eq(-4,0)"/>
+		<setting id="iagl_netplay_port" type="text" label="30042" default="55435" visible="!eq(-6,1)+!eq(-5,0)"/>
+		<setting id="iagl_netplay_frames" type="select" label="30043" lvalues="30095|30096" default="1" visible="!eq(-7,1)+!eq(-6,0)"/>
 	</category>
 	<category label="30005">
 		<setting label="30044" type="lsep" visible="true"/>
-		<setting id="iagl_wizard_launcher" type="select" label="30045" values="External|Kodi Retroplayer" default="Kodi Retroplayer" visible="true"/>
+		<setting id="iagl_wizard_launcher" type="select" label="30045" lvalues="30206|30128" default="1" visible="true"/>
 		<setting type="sep"/>
 		<setting visible="true" label="30046" type="action" option="close" action="RunScript(special://home/addons/plugin.program.iagl/resources/lib/run_IAGL_wizard.py)"/>
 	</category>
 	<category label="30006">
 		<setting label="30047" type="lsep"/>
-		<setting id="iagl_enable_post_dl_edit" type="select" label="30048" values="Disabled|Enabled" default="Disabled"  visible="true"/>
-		<setting id="iagl_enable_android_stop_command" type="select" label="30049" values="Enabled|Disabled" default="Enabled"  visible="true"/>
-		<setting id="iagl_enable_stop_media_before_launch" type="select" label="30057" values="Enabled|Disabled" default="Enabled"  visible="true"/>
+		<setting id="iagl_enable_post_dl_edit" type="select" label="30048" lvalues="30095|30096" default="1" visible="true"/>
+		<setting id="iagl_enable_android_stop_command" type="select" label="30049" lvalues="30095|30096" default="0"  visible="true"/>
+		<setting id="iagl_enable_stop_media_before_launch" type="select" label="30057" lvalues="30095|30096" default="0"  visible="true"/>
 		<setting id="iagl_favorites_format" type="select" label="30050" values="Use Hyperlinks to other Lists|Copies all Data|Copies all Data, adds Post DL Command Override" default="Use Hyperlinks to other Lists"  visible="true"/>
 		<setting visible="true" label="30051" type="action" action="RunScript(special://home/addons/plugin.program.iagl/resources/lib/update_addonxml_provides_games.py)"/>
 		<setting visible="true" label="30052" type="action" action="RunScript(special://home/addons/plugin.program.iagl/resources/lib/update_addonxml_provides_video.py)"/>

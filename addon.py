@@ -21,8 +21,10 @@ plugin = routing.Plugin() #Plugin Handle
 IAGL = iagl_utils() #IAGL utils Class
 IAGL.initialize_IAGL_settings() #Initialize some addon stuff
 xbmcplugin.setContent(plugin.handle,IAGL.handle.getSetting(id='iagl_setting_setcontent')) #Define the content type per settings
-IAGL.archive_listing_settings_route = IAGL.archive_listing_settings_routes[IAGL.archive_listing_settings.split('|').index(IAGL.handle.getSetting(id='iagl_setting_archive_listings'))]
-IAGL.current_game_listing_route = IAGL.game_listing_settings_routes[IAGL.game_listing_settings.split('|').index(IAGL.handle.getSetting(id='iagl_setting_listing'))]
+# IAGL.archive_listing_settings_route = IAGL.archive_listing_settings_routes[IAGL.archive_listing_settings.split('|').index(IAGL.handle.getSetting(id='iagl_setting_archive_listings'))] #Old method pre language update
+IAGL.archive_listing_settings_route = IAGL.archive_listing_settings_routes[int(IAGL.handle.getSetting(id='iagl_setting_archive_listings'))]
+# IAGL.current_game_listing_route = IAGL.game_listing_settings_routes[IAGL.game_listing_settings.split('|').index(IAGL.handle.getSetting(id='iagl_setting_listing'))] #Old method pre language update
+IAGL.current_game_listing_route = IAGL.game_listing_settings_routes[int(IAGL.handle.getSetting(id='iagl_setting_listing'))]
 
 ## Plugin Routes ##
 @plugin.route('/')
@@ -56,7 +58,8 @@ def list_archives_browse():
 
 @plugin.route('/archives/all')
 def list_archives_all():
-	IAGL.current_game_listing_route = IAGL.game_listing_settings_routes[IAGL.game_listing_settings.split('|').index(IAGL.handle.getSetting(id='iagl_setting_listing'))]
+	# IAGL.current_game_listing_route = IAGL.game_listing_settings_routes[IAGL.game_listing_settings.split('|').index(IAGL.handle.getSetting(id='iagl_setting_listing'))] #Old method pre language update
+	IAGL.current_game_listing_route = IAGL.game_listing_settings_routes[int(IAGL.handle.getSetting(id='iagl_setting_listing'))]
 	# for ii,list_item in enumerate(IAGL.get_game_lists_as_listitems()):
 	for list_item in IAGL.get_game_lists_as_listitems():
 		if IAGL.current_game_listing_route == 'list_all':
@@ -89,7 +92,8 @@ def list_archives_by_category():
 
 @plugin.route('/archives/categorized/<category_id>')
 def get_game_lists_in_category(category_id):
-	IAGL.current_game_listing_route = IAGL.game_listing_settings_routes[IAGL.game_listing_settings.split('|').index(IAGL.handle.getSetting(id='iagl_setting_listing'))]
+	# IAGL.current_game_listing_route = IAGL.game_listing_settings_routes[IAGL.game_listing_settings.split('|').index(IAGL.handle.getSetting(id='iagl_setting_listing'))] #Old method pre language update
+	IAGL.current_game_listing_route = IAGL.game_listing_settings_routes[int(IAGL.handle.getSetting(id='iagl_setting_listing'))]
 	# for ii,list_item in enumerate(IAGL.get_game_lists_as_listitems(url_unquote(category_id))):
 	for list_item in IAGL.get_game_lists_as_listitems(url_unquote(category_id)):
 		if IAGL.current_game_listing_route == 'list_all':
@@ -336,11 +340,13 @@ def get_game(game_list_id,game_id):
 	current_game['return_home'] = return_to_home_from_infodialog
 	current_game['autoplay_trailer'] = IAGL.handle.getSetting(id='iagl_setting_autoplay_trailer')
 	current_game['json'] = current_game_json
-	if 'Info Page' in IAGL.handle.getSetting(id='iagl_setting_default_action'):
+	# if 'Info Page' in IAGL.handle.getSetting(id='iagl_setting_default_action'): #Old method pre language update
+	if int(IAGL.handle.getSetting(id='iagl_setting_default_action')) == 2:
 		IAGL_Dialog = iagl_infodialog('script-IAGL-infodialog.xml',IAGL.get_addon_install_path(),'Default','1080i',current_game=current_game)
 		IAGL_Dialog.doModal()
 		del IAGL_Dialog
-	elif IAGL.handle.getSetting(id='iagl_setting_default_action') == 'Download Only':
+	# elif IAGL.handle.getSetting(id='iagl_setting_default_action') == 'Download Only': #Old method pre language update
+	elif int(IAGL.handle.getSetting(id='iagl_setting_default_action')) == 1:
 		IAGL_DL = iagl_download(current_game['json']) #Initialize download object
 		download_and_process_success = IAGL_DL.download_and_process_game_files() #Download files
 		current_dialog = xbmcgui.Dialog()
@@ -352,7 +358,8 @@ def get_game(game_list_id,game_id):
 		else:  #So far so good, now process the files
 			ok_ret = current_dialog.notification(IAGL.loc_str(30202),IAGL.loc_str(30302) % {'game_title': IAGL_DL.current_game_title},xbmcgui.NOTIFICATION_INFO,IAGL.notification_time)
 		del current_dialog
-	elif IAGL.handle.getSetting(id='iagl_setting_default_action') == 'Download and Launch':
+	# elif IAGL.handle.getSetting(id='iagl_setting_default_action') == 'Download and Launch': #Old method pre language update
+	elif int(IAGL.handle.getSetting(id='iagl_setting_default_action')) == 0:
 		IAGL_DL = iagl_download(current_game['json']) #Initialize download object
 		download_and_process_success = IAGL_DL.download_and_process_game_files() #Download files
 		if False not in download_and_process_success:

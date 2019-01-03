@@ -100,7 +100,7 @@ class iagl_utils(object):
 		self.label_sep = '  |  '
 		self.dat_file_header_keys = ['emu_name','emu_visibility','emu_description','emu_category','emu_version','emu_date','emu_author','emu_homepage','emu_baseurl','emu_launcher','emu_default_addon','emu_ext_launch_cmd','emu_downloadpath','emu_postdlaction','emu_comment','emu_thumb','emu_banner','emu_fanart','emu_logo','emu_trailer']
 		self.language = self.handle.getLocalizedString
-		self.get_setting_as_bool = lambda nn: True if nn.lower()=='true' or nn.lower()=='enabled' or nn.lower()=='show' else False
+		self.get_setting_as_bool = lambda nn: True if nn.lower()=='true' or nn.lower()=='enabled' or nn.lower()=='show' or nn.lower()=='0' else False
 		self.change_search_terms_to_any = lambda nn: 'Any' if nn is None else nn
 		self.flatten_list = lambda l: [item for sublist in l for item in sublist]
 		self.game_label_settings = 'Title|Title, Genre|Title, Date|Title, Players|Title, Genre, Date|Title, Genre, Size|Title, Genre, Players|Title, Date, Size|Title, Date, Players|Genre, Title|Date, Title|Players, Title|Genre, Title, Date|Date, Title, Genre|Players, Title, Genre|Players, Title, Date|Title, Genre, Date, ROM Tag|Title, Genre, Date, Players|Title, Genre, Players, ROM Tag|Title, Genre, Date, Size'
@@ -139,9 +139,10 @@ class iagl_utils(object):
 		self.additional_supported_external_emulator_settings = 'FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone|DEMUL (Win)|ePSXe'
 		self.windowid = xbmcgui.getCurrentWindowId()
 		#Define temp download cache size
-		cache_options = {'Zero (Current Game Only)':0,'10 MB':10*1e6,'10MB':10*1e6,'25MB':25*1e6,'50MB':50*1e6,'100MB':100*1e6,'150MB':150*1e6,'200MB':200*1e6,'250MB':250*1e6,'300MB':300*1e6,'350MB':350*1e6,'400MB':400*1e6,'450MB':450*1e6,'500MB':500*1e6,'1GB':1000*1e6,'2GB':2000*1e6,'5GB':5000*1e6,'10GB':10000*1e6,'20GB':20000*1e6}
+		cache_options = {'Zero (Current Game Only)':0,'10 MB':10*1e6,'10MB':10*1e6,'25MB':25*1e6,'50MB':50*1e6,'100MB':100*1e6,'150MB':150*1e6,'200MB':200*1e6,'250MB':250*1e6,'300MB':300*1e6,'350MB':350*1e6,'400MB':400*1e6,'450MB':450*1e6,'500MB':500*1e6,'1GB':1000*1e6,'2GB':2000*1e6,'5GB':5000*1e6,'10GB':10000*1e6,'20GB':20000*1e6,'32GB':32000*1e6,'64GB':64000*1e6}
 		try:
-			self.cache_folder_size = cache_options[self.handle.getSetting(id='iagl_setting_dl_cache')]
+			# self.cache_folder_size = cache_options[self.handle.getSetting(id='iagl_setting_dl_cache')] #Old method pre language update
+			self.cache_folder_size = [v for k,v in cache_options.items()][int(self.handle.getSetting(id='iagl_setting_dl_cache'))]
 		except ValueError:
 			self.cache_folder_size = 0 #Default to 0 if not initialized correctly
 
@@ -321,7 +322,6 @@ class iagl_utils(object):
 
 	def get_list_cache_path(self):
 		current_path = os.path.join(self.get_addon_userdata_path(),self.list_cache_name)
-
 		if xbmcvfs.exists(os.path.join(current_path,'')) and not self.get_setting_as_bool(self.handle.getSetting(id='iagl_setting_cache_list')): #The list cache option is set to no cache
 				if xbmcvfs.Stat(os.path.join(current_path,'')).st_size() > 500:  #Cache will be more than 500 bytes, so if the folder is larger than that it should be purged
 					shutil.rmtree(current_path, ignore_errors=True)
@@ -1914,7 +1914,8 @@ class iagl_utils(object):
 			page_info['next_page'] = 0
 			page_info['item_count'] = 0
 			page_info['categories'] = None
-
+		print('ztest')
+		print(page_info)
 		return game_list, page_info
 		
 	def get_route_from_json(self, json_string):
@@ -2137,7 +2138,8 @@ class iagl_utils(object):
 
 	def add_game_context_menus(self,listitem_in,game_list_id_in,game_id_in,current_categories):
 		current_context_menus = []
-		if 'Info Page' not in self.handle.getSetting(id='iagl_setting_default_action'): #If Info page is not the default, add context option for viewing the info page
+		# if 'Info Page' not in self.handle.getSetting(id='iagl_setting_default_action'): #Old method pre language update
+		if int(self.handle.getSetting(id='iagl_setting_default_action')) < 2: #If Info page is not the default, add context option for viewing the info page
 			current_context_menus = current_context_menus+[(labels,actions.replace('<game_list_id>',game_list_id_in).replace('<game_id>',game_id_in)) for labels, actions in self.context_menu_item_view_info]
 		if current_categories is not None and 'favorites' not in current_categories.lower():
 			current_context_menus = current_context_menus+[(labels,actions.replace('<game_list_id>',game_list_id_in).replace('<game_id>',game_id_in)) for labels, actions in self.context_menu_items_games]
@@ -2724,11 +2726,14 @@ class iagl_utils(object):
 		label_out = current_label
 
 		try:
-			label_key = self.game_label_settings.split('|').index(naming_convention)
+			# label_key = self.game_label_settings.split('|').index(naming_convention) #Old method pre language update
+			label_key = int(naming_convention)
 		except:
 			label_key = None
 		if label_key is not None:
-			if label_key == 1: #Title, Genre
+			if label_key == 0: #Title
+				xbmc.log(msg='IAGL:  Naming convention title only', level=xbmc.LOGDEBUG)
+			elif label_key == 1: #Title, Genre
 				if game_item.get('info').get('genre') is not None:
 					label_out = label_out+self.label_sep+game_item.get('info').get('genre')
 			elif label_key == 2: #Title, Date
@@ -2852,7 +2857,8 @@ class iagl_download(object):
 		self.login_setting = self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_setting_enable_login'))
 		self.username_setting = self.IAGL.handle.getSetting(id='iagl_setting_ia_username')
 		self.password_setting = self.IAGL.handle.getSetting(id='iagl_setting_ia_password')
-		self.local_file_setting = self.IAGL.handle.getSetting(id='iagl_setting_localfile_action')
+		# self.local_file_setting = self.IAGL.handle.getSetting(id='iagl_setting_localfile_action') #Old method pre language update
+		self.local_file_setting = int(self.IAGL.handle.getSetting(id='iagl_setting_localfile_action'))
 		try:
 			if len([x for x in json.loads(xbmc.executeJSONRPC('{ "jsonrpc": "2.0", "method": "Addons.GetAddons","params":{"type":"kodi.vfs"}, "id": "1"}')).get('result').get('addons') if x is not None and x.get('addonid')=='vfs.libarchive'])>0:
 				self.libarchive_available = True
@@ -3511,7 +3517,8 @@ class iagl_download(object):
 				current_files_exist_locally_check = True
 				xbmc.log(msg='IAGL:  The file %(fts)s was found to already exist locally.'% {'fts': fts}, level=xbmc.LOGDEBUG)
 		if current_files_exist_locally_check:
-			if self.local_file_setting == 'Prompt':
+			# if self.local_file_setting == 'Prompt': #Old method pre language update
+			if self.local_file_setting == 0:
 				current_dialog = xbmcgui.Dialog()
 				ret1 = current_dialog.select(self.IAGL.loc_str(30355), [self.IAGL.loc_str(30204),self.IAGL.loc_str(30200)])
 				del current_dialog
@@ -3519,9 +3526,11 @@ class iagl_download(object):
 					overwrite_files = False		
 				else:
 					overwrite_files = True
-			if self.local_file_setting == 'Do Not ReDownload':
+			# if self.local_file_setting == 'Do Not ReDownload': #Old method pre language update
+			if self.local_file_setting == 1:
 				overwrite_files = False
-			if self.local_file_setting == 'ReDownload and Overwrite':
+			# if self.local_file_setting == 'ReDownload and Overwrite': #Old method pre language update
+			if self.local_file_setting == 2:
 				overwrite_files = True
 			if not overwrite_files: #Point to existing file rather than redownload
 				xbmc.log(msg='IAGL:  File was found to exist locally, no overwrite option selected', level=xbmc.LOGDEBUG)
@@ -3772,20 +3781,26 @@ class iagl_launch(object):
 			# if self.IAGL.handle.getSetting(id='iagl_netplay_enable_netplay') == 'Enabled':
 			if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_netplay_enable_netplay')):
 				current_netplay_command = ''
-				if self.IAGL.handle.getSetting(id='iagl_netplay_hostclient') == 'Player 1 Host':
+				# if self.IAGL.handle.getSetting(id='iagl_netplay_hostclient') == 'Player 1 Host': #Old method pre language update
+				if int(self.IAGL.handle.getSetting(id='iagl_netplay_hostclient')) == 0:
+					xbmc.log(msg='IAGL:  Attempting to start netplay as player 1 host', level=xbmc.LOGDEBUG)
 					current_netplay_command = current_netplay_command+'--host '
 					# if self.IAGL.handle.getSetting(id='iagl_netplay_frames') == 'Enabled':
 					if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_netplay_frames')):
 						current_netplay_command = current_netplay_command+'--frames '
 						current_netplay_command = current_netplay_command+'--nick "'+str(self.IAGL.handle.getSetting(id='iagl_netplay_nickname1'))+'" '
-				elif self.IAGL.handle.getSetting(id='iagl_netplay_hostclient') == 'Player 2 Client':
+				# elif self.IAGL.handle.getSetting(id='iagl_netplay_hostclient') == 'Player 2 Client':
+				elif int(self.IAGL.handle.getSetting(id='iagl_netplay_hostclient')) == 1:
+					xbmc.log(msg='IAGL:  Attempting to start netplay as player 2 client', level=xbmc.LOGDEBUG)
 					current_netplay_command = current_netplay_command+'--connect '+str(self.IAGL.handle.getSetting(id='iagl_netplay_IP'))+' '
 					current_netplay_command = current_netplay_command+'--port '+str(self.IAGL.handle.getSetting(id='iagl_netplay_port'))+' '
 					# if self.IAGL.handle.getSetting(id='iagl_netplay_frames') == 'Enabled':
 					if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_netplay_frames')):
 						current_netplay_command = current_netplay_command+'--frames '
 						current_netplay_command = current_netplay_command+'--nick "'+str(self.IAGL.handle.getSetting(id='iagl_netplay_nickname2'))+'" '
-				elif self.IAGL.handle.getSetting(id='iagl_netplay_hostclient') == 'Spectator':
+				# elif self.IAGL.handle.getSetting(id='iagl_netplay_hostclient') == 'Spectator':
+				else:
+					xbmc.log(msg='IAGL:  Attempting to start netplay as no player / spectator', level=xbmc.LOGDEBUG)
 					current_netplay_command = current_netplay_command+'--spectate '+str(self.IAGL.handle.getSetting(id='iagl_netplay_IP'))+' '
 					current_netplay_command = current_netplay_command+'--port '+str(self.IAGL.handle.getSetting(id='iagl_netplay_port'))+' '
 					# if self.IAGL.handle.getSetting(id='iagl_netplay_frames') == 'Enabled':
@@ -3951,7 +3966,7 @@ class iagl_infodialog(xbmcgui.WindowXMLDialog):
 			self.exit_button.setEnabled(True)
 
 		#Auto play trailer if settings are defined
-		if self.autoplay_trailer=='Yes':
+		if self.autoplay_trailer=='Yes' or self.autoplay_trailer=='1':
 			if self.current_trailer is not None:
 				if xbmc.Player().isPlaying():
 					xbmc.Player().stop()
