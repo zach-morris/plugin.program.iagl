@@ -2873,8 +2873,10 @@ class iagl_download(object):
 
 		self.zero_byte_file_size = 1
 		self.small_file_byte_size = 150000 #Small file, check if archive.org did not return a good game file
-		self.bad_file_text_check = '<title>' #Small file, check if archive.org did not return a good game file
-		# self.IAGL.remove_these_filetypes = ['.srm','.sav','.fs','.state','.auto','.xml','.nfo'] #Save filetypes, do not match with existing files
+		self.small_file_text_check = '<title>' #Small file, check if archive.org did not return a good game file or login was wrong
+		self.bad_login_text_check = '<h1>item not available</h1>' #Check if archive.org returned a 'requires login' page
+		self.bad_file_text_check = '<h1>page not found</h1>' #Check if archive.org returned a 'requires login' page
+
 		# self.user_agent_options = ['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/603.2.4 (KHTML, like Gecko) Version/10.1.1 Safari/603.2.4','Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko','Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:53.0) Gecko/20100101 Firefox/53.0','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:53.0) Gecko/20100101 Firefox/53.0','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36','Mozilla/5.0 (Windows NT 10.0; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.1 Safari/603.1.30','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36','Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36','Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/603.2.5 (KHTML, like Gecko) Version/10.1.1 Safari/603.2.5']
 		# try:
 			# self.user_agent = user_agent_options[random.randint(0,len(user_agent_options)-1)]  #Just pick a random user agent
@@ -3489,9 +3491,13 @@ class iagl_download(object):
 					file_contents = byte_string.decode('utf-8',errors='ignore')  #If this doesn't work, then it's binary data and likely a valid file
 				except:
 					file_contents = ''
-				if self.bad_file_text_check in file_contents.lower():
+				if self.small_file_text_check in file_contents.lower():
 					self.current_saved_files_success[-1] = False
 					self.download_fail_reason = 'Archive returned no file or requires login in settings.'
+					if self.bad_login_text_check in file_contents.lower():
+						self.download_fail_reason = 'Archive requires login in settings.'
+					if self.bad_file_text_check in file_contents.lower():
+						self.download_fail_reason = 'Archive returned no file.'
 					xbmcvfs.delete(self.current_saved_files[-1])
 					xbmc.log(msg='IAGL:  The archive %(filename_in)s returned a bad file, deleted.  This archive is either no longer available or requires login credentials to be entered into IAGL settings.'% {'filename_in': self.current_saved_files[-1]}, level=xbmc.LOGDEBUG)
 				else:
