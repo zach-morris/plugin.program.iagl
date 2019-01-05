@@ -3495,7 +3495,7 @@ class iagl_download(object):
 					self.current_saved_files_success[-1] = False
 					self.download_fail_reason = 'Archive returned no file or requires login in settings.'
 					if self.bad_login_text_check in file_contents.lower():
-						self.download_fail_reason = 'Archive requires login in settings.'
+						self.download_fail_reason = 'Archive requires account email and password in settings.'
 					if self.bad_file_text_check in file_contents.lower():
 						self.download_fail_reason = 'Archive returned no file.'
 					xbmcvfs.delete(self.current_saved_files[-1])
