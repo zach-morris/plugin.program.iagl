@@ -1914,8 +1914,7 @@ class iagl_utils(object):
 			page_info['next_page'] = 0
 			page_info['item_count'] = 0
 			page_info['categories'] = None
-		print('ztest')
-		print(page_info)
+
 		return game_list, page_info
 		
 	def get_route_from_json(self, json_string):

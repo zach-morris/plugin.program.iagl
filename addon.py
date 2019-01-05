@@ -306,7 +306,7 @@ def get_game_list(game_list_id,page_number=1):
 
 @plugin.route('/game/<game_list_id>/<game_id>')
 def get_game(game_list_id,game_id):
-	xbmcplugin.endOfDirectory(plugin.handle, succeeded=False) #Seems like this is needed, some race condition on modal
+	# xbmcplugin.endOfDirectory(plugin.handle, succeeded=False) #Seems like this is needed, some race condition on modal
 	list_method = 'list_single_game'
 	xbmc.log(msg='IAGL:  Getting game ID: %(game_id)s in game category %(game_list_id)s' % {'game_list_id': game_list_id, 'game_id': game_id}, level=xbmc.LOGDEBUG)
 	
@@ -333,7 +333,8 @@ def get_game(game_list_id,game_id):
 			current_page, page_info = IAGL.get_games_as_listitems(url_unquote(route_parse[1]),list_method,url_unquote(route_parse[2]),1)
 			current_game_json = current_page[0].getProperty('iagl_json')
 			xbmc.log(msg='IAGL:  Rerouting to %(game_id)s in game category %(game_list_id)s' % {'game_list_id': route_parse[1], 'game_id': route_parse[2]}, level=xbmc.LOGDEBUG)
-		
+	
+	xbmcplugin.endOfDirectory(plugin.handle, succeeded=False) #Seems like this is needed, some race condition on modal.  Needs to be before modal call but after any redirect to a different game list
 	#Info Dialog
 	current_game = dict()
 	current_game['game_id'], current_game['listitem'], current_game['fanarts'], current_game['boxart_and_snapshots'], current_game['banners'], current_game['trailer'] = IAGL.get_gamelistitem_from_json(current_game_json)
