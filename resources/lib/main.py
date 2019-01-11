@@ -119,8 +119,8 @@ class iagl_utils(object):
 		self.context_menu_ext_launch_cmd = [(self.loc_str(30408),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/launch_command)')]
 		self.context_menu_default_addon_launch_cmd = [(self.loc_str(30409),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/default_addon)')]
 		self.context_menu_items_post_dl = [(self.loc_str(30410),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/post_dl_command)')]
-		self.post_dl_actions = ['None','UnZIP Game','UnZIP Game, Rename file','UnZIP Game, Point to Launch File','UnZIP Game to Folder, Point to Launch File','Unarchive Game','Unarchive Game, Rename file','Unarchive Game, Update file extension','Unarchive Game, Generate M3U containing CUE files','Unarchive Game, Generate M3U containing CUE files','Unarchive Game, Generate M3U containing ST files','Unarchive Game, Generate M3U containing ADF files','Create Game Folder, Generate M3U containing ADF files','Create Game Folder, Generate M3U containing D64 files','Unarchive Game, Point to BIN','Unarchive Game, Point to CUE','Unarchive Game, Point to ISO','Unarchive Game, Point to GDI','Unarchive Game, Point to ADF','Unarchive DOSBox, Point to EXE','Unarchive DOSBox, Generate Conf','Unarchive SCUMMVm, Generate Conf','Unarchive WIN31, Point to BAT','Process MAME / MESS Softlist Game',]
-		self.post_dl_action_keys = ['none','unzip_rom','unzip_and_rename_file','unzip_and_launch_file','unzip_to_folder_and_launch_file','unarchive_game','unarchive_game_rename_file','unarchive_game_rename_extension','unarchive_game_generate_m3u','unarchive_game_generate_m3u_cue','unarchive_game_generate_m3u_st','unarchive_game_generate_m3u_adf','save_adf_to_folder_and_launch_m3u_file','save_d64_to_folder_and_launch_m3u_file','unarchive_game_launch_bin','unarchive_game_launch_cue','unarchive_game_launch_iso','unarchive_game_launch_gdi','unarchive_game_launch_adf','unarchive_dosbox_launch_cmd','unarchive_dosbox_generate_conf','unzip_and_launch_scummvm_file','unzip_and_launch_win31_file','launch_mame_softlist']
+		self.post_dl_actions = ['None','UnZIP Game','UnZIP Game, Rename file','UnZIP Game, Point to Launch File','UnZIP Game to Folder, Point to Launch File','Unarchive Game','Unarchive Game, Rename file','Unarchive Game, Update file extension','Unarchive Game, Generate M3U containing CUE files','Unarchive Game, Generate M3U containing CUE files','Unarchive Game, Generate M3U containing ST files','Unarchive Game, Generate M3U containing ADF files','Create Game Folder, Generate M3U containing ADF files','Create Game Folder, Generate M3U containing D64 files','Unarchive Game, Point to BIN','Unarchive Game, Point to CUE','Unarchive Game, Point to ISO','Unarchive Game, Point to GDI','Unarchive Game, Point to ADF','Unarchive DOSBox, Point to EXE','Unarchive DOSBox, Generate Conf','Unarchive SCUMMVm, Generate Conf','Unarchive eXoDOS, Generate BAT','Unarchive WIN31, Point to BAT','Process MAME / MESS Softlist Game',]
+		self.post_dl_action_keys = ['none','unzip_rom','unzip_and_rename_file','unzip_and_launch_file','unzip_to_folder_and_launch_file','unarchive_game','unarchive_game_rename_file','unarchive_game_rename_extension','unarchive_game_generate_m3u','unarchive_game_generate_m3u_cue','unarchive_game_generate_m3u_st','unarchive_game_generate_m3u_adf','save_adf_to_folder_and_launch_m3u_file','save_d64_to_folder_and_launch_m3u_file','unarchive_game_launch_bin','unarchive_game_launch_cue','unarchive_game_launch_iso','unarchive_game_launch_gdi','unarchive_game_launch_adf','unarchive_dosbox_launch_cmd','unarchive_dosbox_generate_conf','unzip_and_launch_scummvm_file','unzip_and_launch_exodos_file','unzip_and_launch_win31_file','launch_mame_softlist']
 		self.context_menu_items_favorites = [(self.loc_str(30411),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/share_favorite)')]
 		self.context_menu_items_games = [(self.loc_str(30412),'RunPlugin(plugin://plugin.program.iagl/games_context_menu/<game_list_id>/<game_id>/add)')]
 		self.context_menu_items_query = [(self.loc_str(30412),'RunPlugin(plugin://plugin.program.iagl/games_context_menu/query/<query_id>/add)')]
@@ -3342,8 +3342,40 @@ class iagl_download(object):
 
 	def post_process_unarchive_DOSBOX_and_run_command(self):
 		pass
-	def post_process_unarchive_DOSBOX_and_launch_config_file(self):
-		pass
+	def post_process_unarchive_DOSBOX_and_launch_bat_file(self,filename_in):
+		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unarchive to folder and point to DOSBOX BAT file'% {'filename_in': self.current_saved_files[-1]}, level=xbmc.LOGDEBUG)
+		current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the diectory with the pointer file
+		if os.path.splitext(filename_in)[-1].lower() == '.bat': #Attempt to launch from file already locally available
+			if any([os.path.join(self.current_safe_filename,os.path.split(filename_in)[-1]) in x for x in current_files]): #If the bat was already found in the required folder, then this is a previously launched game
+				found_file = [x for x in current_files if os.path.join(self.current_safe_filename,os.path.split(filename_in)[-1]) in x][0]
+				# crc_string = get_crc32_from_string(os.path.split(filename_in)[-1].encode('utf-8',errors='ignore')) #Create a repeatable crc string for filename of correct 8.3 DOS format
+				# print('ztest')
+				# print(crc_string)
+				xbmc.log(msg='IAGL:  DOSBOX BAT file %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
+				self.current_processed_files.append(found_file)
+				self.current_processed_files_success.append(True)
+			else:
+				if not xbmcvfs.exists(os.path.join(os.path.split(filename_in)[0],self.current_safe_filename)):
+					if not xbmcvfs.mkdir(os.path.join(os.path.split(filename_in)[0],self.current_safe_filename)):
+						xbmc.log(msg='IAGL:  The folder %(folder_in)s could not be created'% {'folder_in': filename_in}, level=xbmc.LOGDEBUG)
+				if not xbmcvfs.rename(filename_in,os.path.join(os.path.split(filename_in)[0],self.current_safe_filename,os.path.split(filename_in)[-1])):
+					xbmc.log(msg='IAGL:  The file %(filename_in)s could not be moved'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
+				else:
+					self.current_processed_files.insert(0,os.path.join(os.path.split(filename_in)[0],self.current_safe_filename,os.path.split(filename_in)[-1]))
+					self.current_processed_files_success.insert(0,True)
+				xbmc.log(msg='IAGL Error:  Unable to find the DOSBOX BAT file.  You may have to try downloading the game again.', level=xbmc.LOGERROR)
+		elif os.path.splitext(filename_in)[-1].lower() == '.zip':
+			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive files to folder
+			# self.write_pointer_file(path_in=os.path.join(os.path.split(filename_in)[0],self.current_safe_filename),name_in=os.path.splitext(os.path.split(filename_in)[-1])[0],contents_in=self.current_safe_filename)
+		elif os.path.splitext(filename_in)[-1].lower() == '.conf':
+			if not any([os.path.join(self.current_safe_filename,os.path.split(filename_in)[-1]) in x for x in current_files]): #File not yet in new folder
+				if not xbmcvfs.rename(filename_in,os.path.join(os.path.split(filename_in)[0],self.current_safe_filename,os.path.split(filename_in)[-1])):
+					xbmc.log(msg='IAGL:  The file %(filename_in)s could not be moved'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
+				else:
+					self.current_processed_files.append(os.path.join(os.path.split(filename_in)[0],self.current_safe_filename,os.path.split(filename_in)[-1]))
+					self.current_processed_files_success.append(True)
+		else:
+			xbmc.log(msg='IAGL:  The file %(filename_in)s is not known to be an eXoDOS file'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
 	def post_process_unarchive_SCUMMVM_and_launch_config_file(self,filename_in):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unarchive to folder and point to SCUMMVM file'% {'filename_in': self.current_saved_files[-1]}, level=xbmc.LOGDEBUG)
 		if os.path.splitext(filename_in)[-1].lower() == '.scummvm': #Attempt to launch from file already locally available
@@ -3589,6 +3621,8 @@ class iagl_download(object):
 						self.post_process_unarchive_and_launch_pointer_file(self.current_saved_files[ii])
 					if pda == 'unzip_and_launch_scummvm_file':
 						self.post_process_unarchive_SCUMMVM_and_launch_config_file(self.current_saved_files[ii])
+					if pda == 'unzip_and_launch_exodos_file':
+						self.post_process_unarchive_DOSBOX_and_launch_bat_file(self.current_saved_files[ii])
 					if pda == 'unzip_and_launch_win31_file':
 						self.post_process_unarchive_WIN31_and_launch_bat_file(self.current_saved_files[0],self.current_saved_files[ii])
 					if pda == 'unarchive_game_generate_m3u':
