@@ -139,12 +139,15 @@ class iagl_utils(object):
 		self.additional_supported_external_emulator_settings = 'FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone|DEMUL (Win)|ePSXe'
 		self.windowid = xbmcgui.getCurrentWindowId()
 		#Define temp download cache size
-		cache_options = {'Zero (Current Game Only)':0,'10 MB':10*1e6,'10MB':10*1e6,'25MB':25*1e6,'50MB':50*1e6,'100MB':100*1e6,'150MB':150*1e6,'200MB':200*1e6,'250MB':250*1e6,'300MB':300*1e6,'350MB':350*1e6,'400MB':400*1e6,'450MB':450*1e6,'500MB':500*1e6,'1GB':1000*1e6,'2GB':2000*1e6,'5GB':5000*1e6,'10GB':10000*1e6,'20GB':20000*1e6,'32GB':32000*1e6,'64GB':64000*1e6}
+		cache_options = [0,10*1e6,25*1e6,50*1e6,100*1e6,150*1e6,200*1e6,250*1e6,300*1e6,350*1e6,400*1e6,450*1e6,500*1e6,1000*1e6,2000*1e6,5000*1e6,10000*1e6,20000*1e6,32000*1e6,64000*1e6]
+		cache_options_log = ['Zero (Current Game Only)','10 MB','25MB','50MB','100MB','150MB','200MB','250MB','300MB','350MB','400MB','450MB','500MB','1GB','2GB','5GB','10GB','20GB','32GB','64GB']
 		try:
-			# self.cache_folder_size = cache_options[self.handle.getSetting(id='iagl_setting_dl_cache')] #Old method pre language update
-			self.cache_folder_size = [v for k,v in cache_options.items()][int(self.handle.getSetting(id='iagl_setting_dl_cache'))]
+			print(int(self.handle.getSetting(id='iagl_setting_dl_cache')))
+			self.cache_folder_size = cache_options[int(self.handle.getSetting(id='iagl_setting_dl_cache'))]
+			xbmc.log(msg='IAGL:  Cache Size set to - %(current_size)s - %(current_cache_log_option)s' % {'current_size': self.cache_folder_size, 'current_cache_log_option': cache_options_log[int(self.handle.getSetting(id='iagl_setting_dl_cache'))]}, level=xbmc.LOGDEBUG)
 		except ValueError:
 			self.cache_folder_size = 0 #Default to 0 if not initialized correctly
+			xbmc.log(msg='IAGL:  Cache Size set to is unknown - defaulting to zero', level=xbmc.LOGDEBUG)
 
 	def loc_str(self,string_id_in):
 		try:
@@ -3901,7 +3904,7 @@ class iagl_launch(object):
 					xbmc.log(msg='IAGL: Error sending subprocess (normal shell) command, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			elif int(self.IAGL.handle.getSetting(id='iagl_android_command_type')) == 2: #Subprocess root
 				xbmc.log(msg='IAGL:  Android subprocess (root shell) external launch selected', level=xbmc.LOGDEBUG)
-				executable_path = '/system/xbin/su -c "/system/xbin/bash -"' #This is the method for root shell for most rooted android installations
+				executable_path = '/system/xbin/su' #This is the method for root shell for most rooted android installations
 				if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_android_stop_command')):
 					try:
 						xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGNOTICE)
