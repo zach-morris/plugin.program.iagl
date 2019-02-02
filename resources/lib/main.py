@@ -142,7 +142,6 @@ class iagl_utils(object):
 		cache_options = [0,10*1e6,25*1e6,50*1e6,100*1e6,150*1e6,200*1e6,250*1e6,300*1e6,350*1e6,400*1e6,450*1e6,500*1e6,1000*1e6,2000*1e6,5000*1e6,10000*1e6,20000*1e6,32000*1e6,64000*1e6]
 		cache_options_log = ['Zero (Current Game Only)','10 MB','25MB','50MB','100MB','150MB','200MB','250MB','300MB','350MB','400MB','450MB','500MB','1GB','2GB','5GB','10GB','20GB','32GB','64GB']
 		try:
-			print(int(self.handle.getSetting(id='iagl_setting_dl_cache')))
 			self.cache_folder_size = cache_options[int(self.handle.getSetting(id='iagl_setting_dl_cache'))]
 			xbmc.log(msg='IAGL:  Cache Size set to - %(current_size)s - %(current_cache_log_option)s' % {'current_size': self.cache_folder_size, 'current_cache_log_option': cache_options_log[int(self.handle.getSetting(id='iagl_setting_dl_cache'))]}, level=xbmc.LOGDEBUG)
 		except ValueError:
