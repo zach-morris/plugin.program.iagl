@@ -138,6 +138,7 @@ class iagl_utils(object):
 		self.additional_supported_external_emulators = ['APP_PATH_FS_UAE','APP_PATH_PJ64','APP_PATH_DOLPHIN','APP_PATH_MAME','APP_PATH_DEMUL','APP_PATH_EPSXE']
 		self.additional_supported_external_emulator_settings = 'FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone|DEMUL (Win)|ePSXe'
 		self.windowid = xbmcgui.getCurrentWindowId()
+		self.force_viewtype_options = [0,10,50,51,52,501,502,503,504,505,53,54,55,506,56,57,58,59,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525]
 		#Define temp download cache size
 		cache_options = [0,10*1e6,25*1e6,50*1e6,100*1e6,150*1e6,200*1e6,250*1e6,300*1e6,350*1e6,400*1e6,450*1e6,500*1e6,1000*1e6,2000*1e6,5000*1e6,10000*1e6,20000*1e6,32000*1e6,64000*1e6]
 		cache_options_log = ['Zero (Current Game Only)','10 MB','25MB','50MB','100MB','150MB','200MB','250MB','300MB','350MB','400MB','450MB','500MB','1GB','2GB','5GB','10GB','20GB','32GB','64GB']
@@ -2231,7 +2232,11 @@ class iagl_utils(object):
 				if ret1 == 0:
 					new_value = 'default'
 				else:
-					new_value = current_dialog.browse(0,self.loc_str(30337),'')
+					try:
+						new_value = current_dialog.browse(0,self.loc_str(30337),'')
+					except Exception as exc: #except Exception, (exc):
+						xbmc.log(msg='IAGL:  Unable to browse default location, trying files source.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGDEBUG)
+						new_value = current_dialog.browse(0,self.loc_str(30337),'files')
 					if len(new_value)<1:
 						new_value = None
 		elif current_key == 'emu_default_addon':
