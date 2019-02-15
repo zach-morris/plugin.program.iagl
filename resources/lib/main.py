@@ -3005,8 +3005,10 @@ class iagl_download(object):
 				r = s.get(url,verify=False,stream=True,timeout=self.download_timeout)
 				try:
 					header_filesize = int(r.headers['Content-length'])
+					xbmc.log(msg='IAGL:  Source URL returned filesize of %(header_size)s'%{'header_size': header_filesize}, level=xbmc.LOGDEBUG)
 				except:
 					header_filesize = None
+					xbmc.log(msg='IAGL:  Source URL returned no filesize, current size estimate is %(est_filesize)s'%{'est_filesize': est_filesize}, level=xbmc.LOGDEBUG)
 				if header_filesize is not None:
 					est_filesize = header_filesize
 				if est_filesize is not None and est_filesize>0:
