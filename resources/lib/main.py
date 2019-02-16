@@ -3024,7 +3024,8 @@ class iagl_download(object):
 							dp.close()
 							self.download_fail_reason = 'Download was cancelled.'
 							raise Exception('User Cancelled Download')
-						size = size + self.chunk_size
+						# size = size + self.chunk_size
+						size = size+len(chunk) #chunks may be a different size when streaming
 						percent = 100.0 * size / (est_filesize + 1) #Added 1 byte to avoid div by zero
 						game_file.write(chunk)
 						now = time.time()
@@ -3094,8 +3095,10 @@ class iagl_download(object):
 			r = s.get(url,verify=False,stream=True,timeout=self.download_timeout)
 			try:
 				header_filesize = int(r.headers['Content-length'])
+				xbmc.log(msg='IAGL:  Source URL returned filesize of %(header_size)s'%{'header_size': header_filesize}, level=xbmc.LOGDEBUG)
 			except:
 				header_filesize = None
+				xbmc.log(msg='IAGL:  Source URL returned no filesize, current size estimate is %(est_filesize)s'%{'est_filesize': est_filesize}, level=xbmc.LOGDEBUG)
 			if header_filesize is not None:
 				est_filesize = header_filesize
 			if est_filesize is not None and est_filesize>0:
@@ -3111,7 +3114,8 @@ class iagl_download(object):
 						dp.close()
 						self.download_fail_reason = 'Download was cancelled.'
 						raise Exception('User Cancelled Download')
-					size = size + self.chunk_size
+					# size = size + self.chunk_size
+					size = size+len(chunk) #chunks may be a different size when streaming
 					percent = 100.0 * size / (est_filesize + 1) #Added 1 byte to avoid div by zero
 					game_file.write(chunk)
 					now = time.time()
