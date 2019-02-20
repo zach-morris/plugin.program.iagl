@@ -55,6 +55,9 @@ def list_archives_browse():
 	if IAGL.check_to_show_history(): #Add history to the main choose menu as well
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/game_list/'+IAGL.current_game_listing_route+'/game_history/1'),IAGL.get_game_history_listitem(), True)
 	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_1')) > 0:
+		xbmc.log(msg='IAGL:  Frontpage Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_1'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_1'))]})
 
 @plugin.route('/archives/all')
 def list_archives_all():
@@ -80,6 +83,10 @@ def list_archives_all():
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_DATE)
 	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_2')) > 0:
+		xbmc.log(msg='IAGL:  Games Library Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_2'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_2'))]})
+
 
 @plugin.route('/archives/categorized')
 def list_archives_by_category():
@@ -89,6 +96,9 @@ def list_archives_by_category():
 	
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
 	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_3')) > 0:
+		xbmc.log(msg='IAGL:  Games Categories Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_3'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_3'))]})
 
 @plugin.route('/archives/categorized/<category_id>')
 def get_game_lists_in_category(category_id):
@@ -106,6 +116,9 @@ def get_game_lists_in_category(category_id):
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_DATE)
 	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_2')) > 0:
+		xbmc.log(msg='IAGL:  Games Library (by Category) Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_2'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_2'))]})
 
 @plugin.route('/game_list/choose_from_list/game_history/1')
 def get_choose_list_history_redirect():
@@ -121,6 +134,9 @@ def get_choose_list(game_list_id):
 		else:
 			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/game_list/'+url_quote(list_item.getLabel2())+'/'+game_list_id),list_item, True)
 	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_3')) > 0:
+		xbmc.log(msg='IAGL:  Games Categories (by Game List) Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_3'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_3'))]})
 
 @plugin.route('/game_list/alphabetical/<game_list_id>')
 def get_alphabetical_list(game_list_id):
@@ -130,6 +146,10 @@ def get_alphabetical_list(game_list_id):
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_letter, letter=url_quote(list_item.getLabel2()), game_list_id=game_list_id, page_number=1),list_item, True)
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
 	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_5')) > 0:
+		xbmc.log(msg='IAGL:  Games Alphabetical Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_5'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_5'))]})
+
 
 @plugin.route('/game_list/alphabetical/<letter>/<game_list_id>/')
 def get_alphabetical_redirect(letter,game_list_id):
@@ -153,6 +173,10 @@ def get_games_with_letter(letter,game_list_id,page_number=1):
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE)
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_SIZE)
 	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4')) > 0:
+		xbmc.log(msg='IAGL:  Games List (by Alpha) Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]})
+
 
 @plugin.route('/game_list/list_by_genre/<game_list_id>')
 def get_genre_list(game_list_id):
@@ -162,6 +186,9 @@ def get_genre_list(game_list_id):
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_genre, genre=url_quote(list_item.getLabel2()), game_list_id=game_list_id, page_number=1),list_item, True)
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
 	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_6')) > 0:
+		xbmc.log(msg='IAGL:  Games Genre Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_6'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_6'))]})
 
 @plugin.route('/game_list/list_by_genre/<genre>/<game_list_id>/')
 def get_genres_redirect(genre,game_list_id):
@@ -185,6 +212,9 @@ def get_games_with_genre(genre,game_list_id,page_number=1):
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE)
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_SIZE)
 	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4')) > 0:
+		xbmc.log(msg='IAGL:  Games List (by Genre) Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]})
 
 @plugin.route('/game_list/list_by_year/<game_list_id>')
 def get_years_list(game_list_id):
@@ -192,9 +222,11 @@ def get_years_list(game_list_id):
 	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s by year, display method %(list_method)s' % {'game_list_id': game_list_id,'list_method': list_method}, level=xbmc.LOGDEBUG)
 	for list_item in IAGL.get_game_list_years_as_listitems(game_list_id):
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_year, year=url_quote(list_item.getLabel2()), game_list_id=game_list_id, page_number=1),list_item, True)
-	
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
 	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_7')) > 0:
+		xbmc.log(msg='IAGL:  Games Year Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_7'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_7'))]})
 
 @plugin.route('/game_list/list_by_year/<year>/<game_list_id>/')
 def get_years_redirect(year,game_list_id):
@@ -218,16 +250,21 @@ def get_games_with_year(year,game_list_id,page_number=1):
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE)
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_SIZE)
 	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4')) > 0:
+		xbmc.log(msg='IAGL:  Games List (by Year) Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]})
 
 @plugin.route('/game_list/list_by_players/<game_list_id>')
 def get_players_list(game_list_id):
 	list_method = 'list_by_players'
 	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s by num players, display method %(list_method)s' % {'game_list_id': game_list_id,'list_method': list_method}, level=xbmc.LOGDEBUG)
 	for list_item in IAGL.get_game_list_players_as_listitems(game_list_id):
-		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_players, nplayers=url_quote(list_item.getLabel2()), game_list_id=game_list_id, page_number=1),list_item, True)
-	
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_players, nplayers=url_quote(list_item.getLabel2()), game_list_id=game_list_id, page_number=1),list_item, True)	
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
 	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_8')) > 0:
+		xbmc.log(msg='IAGL:  Games Players Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_8'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_8'))]})
 
 @plugin.route('/game_list/list_by_players/<nplayers>/<game_list_id>/')
 def get_players_redirect(nplayers,game_list_id):
@@ -251,6 +288,9 @@ def get_games_with_players(nplayers,game_list_id,page_number=1):
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE)
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_SIZE)
 	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4')) > 0:
+		xbmc.log(msg='IAGL:  Games List (by Players) Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]})
 
 @plugin.route('/game_list/list_by_studio/<game_list_id>')
 def get_studio_list(game_list_id):
@@ -258,9 +298,11 @@ def get_studio_list(game_list_id):
 	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s by studio, display method %(list_method)s' % {'game_list_id': game_list_id,'list_method': list_method}, level=xbmc.LOGDEBUG)
 	for list_item in IAGL.get_game_list_studios_as_listitems(game_list_id):
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_studio, studio=url_quote(list_item.getLabel2()), game_list_id=game_list_id, page_number=1),list_item, True)
-	
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
 	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_9')) > 0:
+		xbmc.log(msg='IAGL:  Games Studios Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_9'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_9'))]})
 
 @plugin.route('/game_list/list_by_studio/<studio>/<game_list_id>/<page_number>')
 def get_games_with_studio(studio,game_list_id,page_number=1):
@@ -280,6 +322,9 @@ def get_games_with_studio(studio,game_list_id,page_number=1):
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE)
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_SIZE)
 	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4')) > 0:
+		xbmc.log(msg='IAGL:  Games List (by Studio) Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]})
 
 @plugin.route('/game_list/list_all/<game_list_id>/')
 def get_all_games_redirect(game_list_id):
@@ -303,6 +348,9 @@ def get_game_list(game_list_id,page_number=1):
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE)
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_SIZE)
 	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4')) > 0:
+		xbmc.log(msg='IAGL:  Games List (by All) Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]})
 
 @plugin.route('/game/<game_list_id>/<game_id>')
 def get_game(game_list_id,game_id):
@@ -540,7 +588,7 @@ def update_search_query(search_id):
 
 	if search_id == 'genre':
 		current_genre_lists = None
-		if current_query['lists'] is None:
+		if current_query['lists'] is None and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')):
 			current_dialog = xbmcgui.Dialog()
 			ret1 = current_dialog.select(IAGL.loc_str(30307), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
@@ -550,7 +598,7 @@ def update_search_query(search_id):
 				current_genre_lists = None
 				xbmc.log(msg='IAGL:  User cancelled large genre query', level=xbmc.LOGDEBUG)
 		else:
-			if len(current_query['lists'])>10:
+			if not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')) and len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
 				ret1 = current_dialog.select(IAGL.loc_str(30308), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
@@ -583,7 +631,7 @@ def update_search_query(search_id):
 
 	if search_id == 'nplayers':
 		current_players_lists = None
-		if current_query['lists'] is None:
+		if current_query['lists'] is None and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')):
 			current_dialog = xbmcgui.Dialog()
 			ret1 = current_dialog.select(IAGL.loc_str(30309), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
@@ -593,7 +641,7 @@ def update_search_query(search_id):
 				current_players_lists = None
 				xbmc.log(msg='IAGL:  User cancelled large nplayers query', level=xbmc.LOGDEBUG)
 		else:
-			if len(current_query['lists'])>10:
+			if not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')) and len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
 				ret1 = current_dialog.select(IAGL.loc_str(30310), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
@@ -626,7 +674,7 @@ def update_search_query(search_id):
 
 	if search_id == 'year':
 		current_year_lists = None
-		if current_query['lists'] is None:
+		if current_query['lists'] is None and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')):
 			current_dialog = xbmcgui.Dialog()
 			ret1 = current_dialog.select(IAGL.loc_str(30311), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
@@ -636,7 +684,7 @@ def update_search_query(search_id):
 				current_year_lists = None
 				xbmc.log(msg='IAGL:  User cancelled large year query', level=xbmc.LOGDEBUG)
 		else:
-			if len(current_query['lists'])>10:
+			if not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')) and len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
 				ret1 = current_dialog.select(IAGL.loc_str(30312), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
@@ -669,7 +717,7 @@ def update_search_query(search_id):
 		
 	if search_id == 'studio':
 		current_studio_lists = None
-		if current_query['lists'] is None:
+		if current_query['lists'] is None and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')):
 			current_dialog = xbmcgui.Dialog()
 			ret1 = current_dialog.select(IAGL.loc_str(30313), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
@@ -679,7 +727,7 @@ def update_search_query(search_id):
 				current_studio_lists = None
 				xbmc.log(msg='IAGL:  User cancelled large studio query', level=xbmc.LOGDEBUG)
 		else:
-			if len(current_query['lists'])>10:
+			if not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')) and len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
 				ret1 = current_dialog.select(IAGL.loc_str(30314), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
@@ -716,7 +764,7 @@ def update_search_query(search_id):
 			ok_ret = current_dialog.notification(IAGL.loc_str(30203),IAGL.loc_str(30319),xbmcgui.NOTIFICATION_ERROR,IAGL.error_notification_time)
 			del current_dialog
 		else:
-			if current_query['lists'] is None:
+			if current_query['lists'] is None and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')):
 				current_dialog = xbmcgui.Dialog()
 				ret1 = current_dialog.select(IAGL.loc_str(30315), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
@@ -725,7 +773,7 @@ def update_search_query(search_id):
 				else:
 					xbmc.log(msg='IAGL:  User cancelled large query', level=xbmc.LOGDEBUG)
 			else:
-				if len(current_query['lists'])>10:
+				if not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')) and len(current_query['lists'])>10:
 					current_dialog = xbmcgui.Dialog()
 					ret1 = current_dialog.select(IAGL.loc_str(30316), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 					del current_dialog
@@ -810,6 +858,9 @@ def run_search_query(page_number=1):
 		xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE)
 		xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_SIZE)
 		xbmcplugin.endOfDirectory(plugin.handle)
+		if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_10')) > 0:
+			xbmc.log(msg='IAGL:  Games Search Results Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_10'))]}, level=xbmc.LOGDEBUG)
+			xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_10'))]})
 	else:
 		pass
 
@@ -902,7 +953,7 @@ def update_random_query(random_id):
 
 	if random_id == 'genre':
 		current_genre_lists = None
-		if current_query['lists'] is None:
+		if current_query['lists'] is None and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')):
 			current_dialog = xbmcgui.Dialog()
 			ret1 = current_dialog.select(IAGL.loc_str(30307), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
@@ -912,7 +963,7 @@ def update_random_query(random_id):
 				current_genre_lists = None
 				xbmc.log(msg='IAGL:  User cancelled large genre query', level=xbmc.LOGDEBUG)
 		else:
-			if len(current_query['lists'])>10:
+			if not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')) and len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
 				ret1 = current_dialog.select(IAGL.loc_str(30308), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
@@ -945,7 +996,7 @@ def update_random_query(random_id):
 
 	if random_id == 'nplayers':
 		current_players_lists = None
-		if current_query['lists'] is None:
+		if current_query['lists'] is None and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')):
 			current_dialog = xbmcgui.Dialog()
 			ret1 = current_dialog.select(IAGL.loc_str(30309), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
@@ -955,7 +1006,7 @@ def update_random_query(random_id):
 				current_players_lists = None
 				xbmc.log(msg='IAGL:  User cancelled large nplayers query', level=xbmc.LOGDEBUG)
 		else:
-			if len(current_query['lists'])>10:
+			if not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')) and len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
 				ret1 = current_dialog.select(IAGL.loc_str(30310), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
@@ -988,7 +1039,7 @@ def update_random_query(random_id):
 
 	if random_id == 'year':
 		current_year_lists = None
-		if current_query['lists'] is None:
+		if current_query['lists'] is None and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')):
 			current_dialog = xbmcgui.Dialog()
 			ret1 = current_dialog.select(IAGL.loc_str(30311), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
@@ -998,7 +1049,7 @@ def update_random_query(random_id):
 				current_year_lists = None
 				xbmc.log(msg='IAGL:  User cancelled large year query', level=xbmc.LOGDEBUG)
 		else:
-			if len(current_query['lists'])>10:
+			if not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')) and len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
 				ret1 = current_dialog.select(IAGL.loc_str(30312), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
@@ -1031,7 +1082,7 @@ def update_random_query(random_id):
 		
 	if random_id == 'studio':
 		current_studio_lists = None
-		if current_query['lists'] is None:
+		if current_query['lists'] is None and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')):
 			current_dialog = xbmcgui.Dialog()
 			ret1 = current_dialog.select(IAGL.loc_str(30313), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
@@ -1041,7 +1092,7 @@ def update_random_query(random_id):
 				current_studio_lists = None
 				xbmc.log(msg='IAGL:  User cancelled large studio query', level=xbmc.LOGDEBUG)
 		else:
-			if len(current_query['lists'])>10:
+			if not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')) and len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
 				ret1 = current_dialog.select(IAGL.loc_str(30314), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
@@ -1075,7 +1126,7 @@ def update_random_query(random_id):
 	if random_id == 'execute':
 		if current_query['title'] is None:
 			current_query['title'] = 1
-		if current_query['lists'] is None:
+		if current_query['lists'] is None and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')):
 			current_dialog = xbmcgui.Dialog()
 			ret1 = current_dialog.select(IAGL.loc_str(30315), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 			del current_dialog
@@ -1084,7 +1135,7 @@ def update_random_query(random_id):
 			else:
 				xbmc.log(msg='IAGL:  User cancelled large query', level=xbmc.LOGDEBUG)
 		else:
-			if len(current_query['lists'])>10:
+			if not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')) and len(current_query['lists'])>10:
 				current_dialog = xbmcgui.Dialog()
 				ret1 = current_dialog.select(IAGL.loc_str(30316), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
 				del current_dialog
@@ -1160,6 +1211,9 @@ def run_random_query(page_number=1):
 		if next_page_li is not None:
 			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game_list, list_method=list_method, game_list_id=game_list_id, page_number=page_info['next_page']),next_page_li, True)
 		xbmcplugin.endOfDirectory(plugin.handle)
+		if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_11')) > 0:
+			xbmc.log(msg='IAGL:  Games Random Results Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_11'))]}, level=xbmc.LOGDEBUG)
+			xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_11'))]})
 	else:
 		pass
 

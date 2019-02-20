@@ -138,7 +138,7 @@ class iagl_utils(object):
 		self.additional_supported_external_emulators = ['APP_PATH_FS_UAE','APP_PATH_PJ64','APP_PATH_DOLPHIN','APP_PATH_MAME','APP_PATH_DEMUL','APP_PATH_EPSXE']
 		self.additional_supported_external_emulator_settings = 'FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone|DEMUL (Win)|ePSXe'
 		self.windowid = xbmcgui.getCurrentWindowId()
-		self.force_viewtype_options = [0,10,50,51,52,501,502,503,504,505,53,54,55,506,56,57,58,59,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525]
+		self.force_viewtype_options = [0,'50','51','52','501','502','503','504','505','53','54','55','506','56','57','58','59','507','508','509','510','511','512','513','514','515','516','517','518','519','520','521','522','523','524','525','500']
 		#Define temp download cache size
 		cache_options = [0,10*1e6,25*1e6,50*1e6,100*1e6,150*1e6,200*1e6,250*1e6,300*1e6,350*1e6,400*1e6,450*1e6,500*1e6,1000*1e6,2000*1e6,5000*1e6,10000*1e6,20000*1e6,32000*1e6,64000*1e6]
 		cache_options_log = ['Zero (Current Game Only)','10 MB','25MB','50MB','100MB','150MB','200MB','250MB','300MB','350MB','400MB','450MB','500MB','1GB','2GB','5GB','10GB','20GB','32GB','64GB']
@@ -968,6 +968,8 @@ class iagl_utils(object):
 	def get_genres_from_game_lists(self, game_lists):
 		genre_list_temp = list()
 		genre_list_sorted = list()
+		if game_lists is None: #Use all lists is the query is for None
+			game_lists = [x for x in self.get_game_lists().get('dat_filename')]
 		for game_list_id in game_lists:
 			current_games_dict = self.get_games(game_list_id)
 			current_game_genres = [y.strip().lower() for y in self.flatten_list([x.get('info').get('genre').split(',') for x in current_games_dict if x.get('info').get('genre') is not None]) if len(y)>0]
@@ -1036,6 +1038,8 @@ class iagl_utils(object):
 	def get_years_from_game_lists(self, game_lists):
 		year_list_temp = list()
 		year_list_sorted = list()
+		if game_lists is None: #Use all lists is the query is for None
+			game_lists = [x for x in self.get_game_lists().get('dat_filename')]
 		for game_list_id in game_lists:
 			current_games_dict = self.get_games(game_list_id)
 			current_game_years = [str(y).strip().lower() for y in [x.get('info').get('year') for x in current_games_dict if x.get('info').get('year') is not None] if len(y)>0]
@@ -1104,6 +1108,8 @@ class iagl_utils(object):
 	def get_players_from_game_lists(self, game_lists):
 		players_list_temp = list()
 		players_list_sorted = list()
+		if game_lists is None: #Use all lists is the query is for None
+			game_lists = [x for x in self.get_game_lists().get('dat_filename')]
 		for game_list_id in game_lists:
 			current_games_dict = self.get_games(game_list_id)
 			current_game_players = [y.strip() for y in self.flatten_list([x.get('properties').get('nplayers').split(',') for x in current_games_dict if x.get('properties').get('nplayers') is not None]) if len(y)>0]
@@ -1172,6 +1178,8 @@ class iagl_utils(object):
 	def get_studios_from_game_lists(self, game_lists):
 		studio_list_temp = list()
 		studio_list_sorted = list()
+		if game_lists is None: #Use all lists is the query is for None
+			game_lists = [x for x in self.get_game_lists().get('dat_filename')]
 		for game_list_id in game_lists:
 			current_games_dict = self.get_games(game_list_id)
 			current_game_studios = [y.strip().lower() for y in self.flatten_list([x.get('info').get('studio').split(',') for x in current_games_dict if x.get('info').get('studio') is not None]) if len(y)>0]
@@ -2364,6 +2372,9 @@ class iagl_utils(object):
 			if xbmcvfs.exists(os.path.join(self.get_dat_folder_path(),'temp.xml')):
 				if not xbmcvfs.delete(os.path.join(self.get_dat_folder_path(),'temp.xml')):
 					xbmc.log(msg='IAGL:  Temporary XML file could not be deleted.', level=xbmc.LOGDEBUG)
+			current_dialog = xbmcgui.Dialog()
+			ok_ret = current_dialog.notification(self.loc_str(30203),'Error updating %(current_filename)s, see log' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
+			del current_dialog
 			xbmc.log(msg='IAGL:  XML %(current_filename)s was not updated.  The tag %(current_key)s could not be located.' % {'current_filename': os.path.split(current_filename)[-1], 'current_key': current_key}, level=xbmc.LOGERROR)
 
 	def add_game_to_IAGL_favorites(self,game_list_id_in,game_id_in,json_in):
