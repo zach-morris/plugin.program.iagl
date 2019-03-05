@@ -36,6 +36,21 @@
 		<setting id="iagl_external_additional_emulator_3_type" type="select" label="30036" values="Disabled|FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone|DEMUL (Win)|ePSXe" default="Disabled" visible="eq(-11,OSX)|eq(-11,Windows)|eq(-11,Linux/Kodibuntu)"/>
 		<setting id="iagl_external_additional_emulator_3_path" type="executable" label="30037" visible="!eq(-1,Disabled)"/>
 	</category>
+	<category label="30135">
+		<setting label="30185" type="lsep" visible="true"/>
+		<setting id="iagl_enable_forced_views" type="select" label="30136" lvalues="30095|30096" default="1"/>
+		<setting id="iagl_enable_forced_views_1" type="select" label="30137" lvalues="30148|30149|30150|30151|30152|30153|30154|30155|30156|30157|30158|30159|30160|30161|30162|30163|30164|30165|30166|30167|30168|30169|30170|30171|30172|30173|30174|30175|30176|30177|30178|30179|30180|30181|30182|30183|30184" default="0" visible="!eq(-1,1)"/>
+		<setting id="iagl_enable_forced_views_2" type="select" label="30138" lvalues="30148|30149|30150|30151|30152|30153|30154|30155|30156|30157|30158|30159|30160|30161|30162|30163|30164|30165|30166|30167|30168|30169|30170|30171|30172|30173|30174|30175|30176|30177|30178|30179|30180|30181|30182|30183|30184" default="0" visible="!eq(-2,1)"/>
+		<setting id="iagl_enable_forced_views_3" type="select" label="30139" lvalues="30148|30149|30150|30151|30152|30153|30154|30155|30156|30157|30158|30159|30160|30161|30162|30163|30164|30165|30166|30167|30168|30169|30170|30171|30172|30173|30174|30175|30176|30177|30178|30179|30180|30181|30182|30183|30184" default="0" visible="!eq(-3,1)"/>
+		<setting id="iagl_enable_forced_views_4" type="select" label="30140" lvalues="30148|30149|30150|30151|30152|30153|30154|30155|30156|30157|30158|30159|30160|30161|30162|30163|30164|30165|30166|30167|30168|30169|30170|30171|30172|30173|30174|30175|30176|30177|30178|30179|30180|30181|30182|30183|30184" default="0" visible="!eq(-4,1)"/>
+		<setting id="iagl_enable_forced_views_5" type="select" label="30141" lvalues="30148|30149|30150|30151|30152|30153|30154|30155|30156|30157|30158|30159|30160|30161|30162|30163|30164|30165|30166|30167|30168|30169|30170|30171|30172|30173|30174|30175|30176|30177|30178|30179|30180|30181|30182|30183|30184" default="0" visible="!eq(-5,1)"/>
+		<setting id="iagl_enable_forced_views_6" type="select" label="30142" lvalues="30148|30149|30150|30151|30152|30153|30154|30155|30156|30157|30158|30159|30160|30161|30162|30163|30164|30165|30166|30167|30168|30169|30170|30171|30172|30173|30174|30175|30176|30177|30178|30179|30180|30181|30182|30183|30184" default="0" visible="!eq(-6,1)"/>
+		<setting id="iagl_enable_forced_views_7" type="select" label="30143" lvalues="30148|30149|30150|30151|30152|30153|30154|30155|30156|30157|30158|30159|30160|30161|30162|30163|30164|30165|30166|30167|30168|30169|30170|30171|30172|30173|30174|30175|30176|30177|30178|30179|30180|30181|30182|30183|30184" default="0" visible="!eq(-7,1)"/>
+		<setting id="iagl_enable_forced_views_8" type="select" label="30144" lvalues="30148|30149|30150|30151|30152|30153|30154|30155|30156|30157|30158|30159|30160|30161|30162|30163|30164|30165|30166|30167|30168|30169|30170|30171|30172|30173|30174|30175|30176|30177|30178|30179|30180|30181|30182|30183|30184" default="0" visible="!eq(-8,1)"/>
+		<setting id="iagl_enable_forced_views_9" type="select" label="30145" lvalues="30148|30149|30150|30151|30152|30153|30154|30155|30156|30157|30158|30159|30160|30161|30162|30163|30164|30165|30166|30167|30168|30169|30170|30171|30172|30173|30174|30175|30176|30177|30178|30179|30180|30181|30182|30183|30184" default="0" visible="!eq(-9,1)"/>
+		<setting id="iagl_enable_forced_views_10" type="select" label="30146" lvalues="30148|30149|30150|30151|30152|30153|30154|30155|30156|30157|30158|30159|30160|30161|30162|30163|30164|30165|30166|30167|30168|30169|30170|30171|30172|30173|30174|30175|30176|30177|30178|30179|30180|30181|30182|30183|30184" default="0" visible="!eq(-10,1)"/>
+		<setting id="iagl_enable_forced_views_11" type="select" label="30147" lvalues="30148|30149|30150|30151|30152|30153|30154|30155|30156|30157|30158|30159|30160|30161|30162|30163|30164|30165|30166|30167|30168|30169|30170|30171|30172|30173|30174|30175|30176|30177|30178|30179|30180|30181|30182|30183|30184" default="0" visible="!eq(-11,1)"/>
+	</category>
 	<category label="30004">
 		<setting id="iagl_netplay_enable_netplay" type="select" label="30038" lvalues="30095|30096" default="1"/>
 		<setting id="iagl_netplay_hostclient" type="select" label="30039" lvalues="30125|30126|30127" default="0" visible="!eq(-1,1)"/>
@@ -54,6 +69,7 @@
 	</category>
 	<category label="30006">
 		<setting label="30047" type="lsep"/>
+		<setting id="iagl_silence_query_warning" type="select" label="30186" lvalues="30095|30096" default="1" visible="true"/>
 		<setting id="iagl_enable_post_dl_edit" type="select" label="30048" lvalues="30095|30096" default="1" visible="true"/>
 		<setting id="iagl_android_command_type" type="select" label="30131" lvalues="30132|30133|30134" default="0"  visible="true"/>
 		<setting id="iagl_enable_android_stop_command" type="select" label="30049" lvalues="30095|30096" default="0"  visible="true"/>

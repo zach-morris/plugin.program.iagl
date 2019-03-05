@@ -138,7 +138,7 @@ class iagl_utils(object):
 		self.additional_supported_external_emulators = ['APP_PATH_FS_UAE','APP_PATH_PJ64','APP_PATH_DOLPHIN','APP_PATH_MAME','APP_PATH_DEMUL','APP_PATH_EPSXE']
 		self.additional_supported_external_emulator_settings = 'FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone|DEMUL (Win)|ePSXe'
 		self.windowid = xbmcgui.getCurrentWindowId()
-		self.force_viewtype_options = [0,10,50,51,52,501,502,503,504,505,53,54,55,506,56,57,58,59,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525]
+		self.force_viewtype_options = [0,'50','51','52','501','502','503','504','505','53','54','55','506','56','57','58','59','507','508','509','510','511','512','513','514','515','516','517','518','519','520','521','522','523','524','525','500']
 		#Define temp download cache size
 		cache_options = [0,10*1e6,25*1e6,50*1e6,100*1e6,150*1e6,200*1e6,250*1e6,300*1e6,350*1e6,400*1e6,450*1e6,500*1e6,1000*1e6,2000*1e6,5000*1e6,10000*1e6,20000*1e6,32000*1e6,64000*1e6]
 		cache_options_log = ['Zero (Current Game Only)','10 MB','25MB','50MB','100MB','150MB','200MB','250MB','300MB','350MB','400MB','450MB','500MB','1GB','2GB','5GB','10GB','20GB','32GB','64GB']
@@ -968,6 +968,8 @@ class iagl_utils(object):
 	def get_genres_from_game_lists(self, game_lists):
 		genre_list_temp = list()
 		genre_list_sorted = list()
+		if game_lists is None: #Use all lists is the query is for None
+			game_lists = [x for x in self.get_game_lists().get('dat_filename')]
 		for game_list_id in game_lists:
 			current_games_dict = self.get_games(game_list_id)
 			current_game_genres = [y.strip().lower() for y in self.flatten_list([x.get('info').get('genre').split(',') for x in current_games_dict if x.get('info').get('genre') is not None]) if len(y)>0]
@@ -1036,6 +1038,8 @@ class iagl_utils(object):
 	def get_years_from_game_lists(self, game_lists):
 		year_list_temp = list()
 		year_list_sorted = list()
+		if game_lists is None: #Use all lists is the query is for None
+			game_lists = [x for x in self.get_game_lists().get('dat_filename')]
 		for game_list_id in game_lists:
 			current_games_dict = self.get_games(game_list_id)
 			current_game_years = [str(y).strip().lower() for y in [x.get('info').get('year') for x in current_games_dict if x.get('info').get('year') is not None] if len(y)>0]
@@ -1104,6 +1108,8 @@ class iagl_utils(object):
 	def get_players_from_game_lists(self, game_lists):
 		players_list_temp = list()
 		players_list_sorted = list()
+		if game_lists is None: #Use all lists is the query is for None
+			game_lists = [x for x in self.get_game_lists().get('dat_filename')]
 		for game_list_id in game_lists:
 			current_games_dict = self.get_games(game_list_id)
 			current_game_players = [y.strip() for y in self.flatten_list([x.get('properties').get('nplayers').split(',') for x in current_games_dict if x.get('properties').get('nplayers') is not None]) if len(y)>0]
@@ -1172,6 +1178,8 @@ class iagl_utils(object):
 	def get_studios_from_game_lists(self, game_lists):
 		studio_list_temp = list()
 		studio_list_sorted = list()
+		if game_lists is None: #Use all lists is the query is for None
+			game_lists = [x for x in self.get_game_lists().get('dat_filename')]
 		for game_list_id in game_lists:
 			current_games_dict = self.get_games(game_list_id)
 			current_game_studios = [y.strip().lower() for y in self.flatten_list([x.get('info').get('studio').split(',') for x in current_games_dict if x.get('info').get('studio') is not None]) if len(y)>0]
@@ -2364,6 +2372,9 @@ class iagl_utils(object):
 			if xbmcvfs.exists(os.path.join(self.get_dat_folder_path(),'temp.xml')):
 				if not xbmcvfs.delete(os.path.join(self.get_dat_folder_path(),'temp.xml')):
 					xbmc.log(msg='IAGL:  Temporary XML file could not be deleted.', level=xbmc.LOGDEBUG)
+			current_dialog = xbmcgui.Dialog()
+			ok_ret = current_dialog.notification(self.loc_str(30203),'Error updating %(current_filename)s, see log' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
+			del current_dialog
 			xbmc.log(msg='IAGL:  XML %(current_filename)s was not updated.  The tag %(current_key)s could not be located.' % {'current_filename': os.path.split(current_filename)[-1], 'current_key': current_key}, level=xbmc.LOGERROR)
 
 	def add_game_to_IAGL_favorites(self,game_list_id_in,game_id_in,json_in):
@@ -3148,10 +3159,39 @@ class iagl_download(object):
 	def post_process_unarchive_files(self,filename_in,crc_in):
 		#Libarchive not yet working, so default to xbmc builtin
 		#Check for libarchive and use that if available, otherwise try xbmc builtin extract
-		# if self.libarchive_available:
-		# 	self.post_process_unarchive_files_libarchive(filename_in,crc_in)
-		# else:
-		self.post_process_unarchive_files_xbmc_builtin(filename_in,crc_in)		
+		if self.libarchive_available:
+			self.post_process_unarchive_files_libarchive(filename_in,crc_in)
+		else:
+			self.post_process_unarchive_files_xbmc_builtin(filename_in,crc_in)
+
+	def post_process_unarchive_files_to_folder(self,filename_in,name_in):
+		#Libarchive not yet working, so default to xbmc builtin
+		#Check for libarchive and use that if available, otherwise try xbmc builtin extract
+		if self.libarchive_available:
+			self.post_process_unarchive_files_to_folder_libarchive(filename_in,name_in)
+		else:
+			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,name_in)		
+
+	def post_process_unarchive_files_to_folder_libarchive(self,filename_in,name_in):
+		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unarchive files to folder %(name_in)s (vfs.libarchive)'% {'filename_in': filename_in, 'name_in': name_in}, level=xbmc.LOGDEBUG)
+		if any([x in filename_in.lower() for x in self.libarchive_extensions]):
+			folder_name = xbmc.translatePath(os.path.join(os.path.split(filename_in)[0],str(name_in)))
+			if xbmcvfs.mkdir(folder_name): #Create the folder to unarchive into
+				files_extracted, files_extracted_success = extract_all_libarchive(filename_in,folder_name)
+				if files_extracted_success:
+					self.current_processed_files.extend(files_extracted)
+					self.current_processed_files_success = [True for x in files_extracted]
+					xbmc.log(msg='IAGL:  The file %(filename_in)s was unarchived.  First file extracted: %(files_extracted)s'% {'filename_in': filename_in, 'files_extracted':files_extracted[0]}, level=xbmc.LOGDEBUG)
+					if not xbmcvfs.delete(filename_in):
+						xbmc.log(msg='IAGL:  The file %(filename_in)s could not be deleted after processing'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
+				else:
+					self.current_processed_files_success = False
+			else:
+				xbmc.log(msg='IAGL:  The folder %(folder_in)s could not be created for unarchiving.'% {'folder_in': folder_name}, level=xbmc.LOGERROR)
+		else:
+			self.current_processed_files.append(filename_in)
+			self.current_processed_files_success.append(True) #Set this to true regardless in this case...
+			xbmc.log(msg='IAGL:  The file %(filename_in)s does not appear to be an archive file and was not processed, pointing back to file in attempts to launch.'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
 
 	def post_process_unarchive_files_to_folder_name_xbmc_builtin(self,filename_in,name_in):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unzip files to folder %(name_in)s (builtin)'% {'filename_in': filename_in, 'name_in': name_in}, level=xbmc.LOGDEBUG)
@@ -3169,16 +3209,23 @@ class iagl_download(object):
 			self.current_processed_files.append(filename_in)
 			self.current_processed_files_success.append(True) #Set this to true regardless in this case...
 			xbmc.log(msg='IAGL:  The file %(filename_in)s does not appear to be a zip file and was not processed, pointing back to file in attempts to launch.'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
-	
+
 	def post_process_unarchive_files_libarchive(self,filename_in,crc_in):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unarchive (vfs.libarchive)'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
 		if any([x in filename_in.lower() for x in self.libarchive_extensions]):
-			dirs_in_dir, files_in_dir = xbmcvfs.listdir('archive://%(filename_in)s' % {'filename_in': filename_in})
-			files_extracted, files_extracted_success = move_directory_contents_libarchive(filename_in,os.path.split(filename_in)[0])
+			files_extracted, files_extracted_success = extract_all_libarchive(filename_in,os.path.split(filename_in)[0])
+			if files_extracted_success:
+				self.current_processed_files.extend(files_extracted)
+				self.current_processed_files_success = [True for x in files_extracted]
+				xbmc.log(msg='IAGL:  The file %(filename_in)s was unarchived.  First file extracted: %(files_extracted)s'% {'filename_in': filename_in, 'files_extracted':files_extracted[0]}, level=xbmc.LOGDEBUG)
+				if not xbmcvfs.delete(filename_in):
+					xbmc.log(msg='IAGL:  The file %(filename_in)s could not be deleted after processing'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
+			else:
+				self.current_processed_files_success = False
 		else:
 			self.current_processed_files.append(filename_in)
 			self.current_processed_files_success.append(True) #Set this to true regardless in this case...
-			xbmc.log(msg='IAGL:  The file %(filename_in)s does not appear to be a supported libarchive file and was not processed, pointing back to file in attempts to launch.'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
+			xbmc.log(msg='IAGL:  The file %(filename_in)s does not appear to be an archive file and was not processed, pointing back to file in attempts to launch.'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
 
 	def post_process_unarchive_files_xbmc_builtin(self,filename_in,crc_in):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unzip (builtin)'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
@@ -3202,6 +3249,7 @@ class iagl_download(object):
 
 	def post_process_unarchive_and_rename_files(self):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unzip and rename (vfs.libarchive)'% {'filename_in': self.current_saved_files[-1]}, level=xbmc.LOGDEBUG)
+	
 	def post_process_unarchive_and_rename_files_xbmc_builtin(self,filename_in,crc_in):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unzip and rename (builtin)'% {'filename_in': self.current_saved_files[-1]}, level=xbmc.LOGDEBUG)
 		self.post_process_unarchive_files_xbmc_builtin(filename_in,crc_in)
@@ -3249,7 +3297,7 @@ class iagl_download(object):
 			else:
 				xbmc.log(msg='IAGL Error:  Unable to find the file %(rom_emu_command)s.  You may have to try downloading the game again.'% {'rom_emu_command': os.path.join(*os.path.split(self.rom_emu_command))}, level=xbmc.LOGERROR)
 		else:
-			self.post_process_unarchive_files_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive to current directory
+			self.post_process_unarchive_files(filename_in,self.current_safe_filename) #Unarchive to current directory
 			if any([os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower() for x in self.current_processed_files]):
 				# found_file = self.current_processed_files[[self.rom_emu_command in x for x in self.current_processed_files].index(True)]
 				found_file = [x for x in self.current_processed_files if os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower()][0]
@@ -3270,7 +3318,7 @@ class iagl_download(object):
 			else:
 				xbmc.log(msg='IAGL Error:  Unable to find the file %(rom_emu_command)s.  You may have to try downloading the game again.'% {'rom_emu_command': os.path.join(*os.path.split(self.rom_emu_command))}, level=xbmc.LOGERROR)
 		else:
-			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
+			self.post_process_unarchive_files_to_folder(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
 			if any([os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower() for x in self.current_processed_files]):
 				# found_file = self.current_processed_files[[self.rom_emu_command in x for x in self.current_processed_files].index(True)]
 				found_file = [x for x in self.current_processed_files if os.path.join(*os.path.split(self.rom_emu_command)).lower() in x.lower()][0]
@@ -3293,7 +3341,7 @@ class iagl_download(object):
 			else:
 				xbmc.log(msg='IAGL Error:  Unable to find the M3U file %(mtu_filename)s.  You may have to try downloading the game again.'% {'mtu_filename': m3u_filename}, level=xbmc.LOGERROR)
 		else:
-			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
+			self.post_process_unarchive_files_to_folder(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.join(os.path.split(filename_in)[0],self.current_safe_filename)) #Get a list of files in the unarchive diectory
 			if any([filetype_in in x for x in current_files]): #filetype exist in the file list
 				# found_file = current_files[['.cue' in x for x in current_files].index(True)]
@@ -3344,7 +3392,7 @@ class iagl_download(object):
 			else:
 				xbmc.log(msg='IAGL Error:  Unable to find the file %(requested_file_type)s.  You may have to try downloading the game again.'% {'requested_file_type': requested_file_type}, level=xbmc.LOGERROR)
 		else:
-			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
+			self.post_process_unarchive_files_to_folder(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the unarchive diectory
 			if any([requested_file_type in x for x in current_files]): #cue files exist in the file list
 				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
@@ -3378,7 +3426,7 @@ class iagl_download(object):
 					self.current_processed_files_success.insert(0,True)
 				xbmc.log(msg='IAGL Error:  Unable to find the DOSBOX BAT file.  You may have to try downloading the game again.', level=xbmc.LOGERROR)
 		elif os.path.splitext(filename_in)[-1].lower() == '.zip':
-			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive files to folder
+			self.post_process_unarchive_files_to_folder(filename_in,self.current_safe_filename) #Unarchive files to folder
 			# self.write_pointer_file(path_in=os.path.join(os.path.split(filename_in)[0],self.current_safe_filename),name_in=os.path.splitext(os.path.split(filename_in)[-1])[0],contents_in=self.current_safe_filename)
 		elif os.path.splitext(filename_in)[-1].lower() == '.conf':
 			if not any([os.path.join(self.current_safe_filename,os.path.split(filename_in)[-1]) in x for x in current_files]): #File not yet in new folder
@@ -3402,7 +3450,7 @@ class iagl_download(object):
 			else:
 				xbmc.log(msg='IAGL Error:  Unable to find the SCUMMVM file.  You may have to try downloading the game again.', level=xbmc.LOGERROR)
 		else:
-			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive files to folder
+			self.post_process_unarchive_files_to_folder(filename_in,self.current_safe_filename) #Unarchive files to folder
 			scummvm_file = os.path.join(os.path.join(os.path.split(filename_in)[0],self.current_safe_filename),os.path.splitext(os.path.split(filename_in)[-1])[0]+'.scummvm')
 			current_game_path = os.path.dirname(scummvm_file)
 			# scummvm_template = '-p "%GAME_PATH%" %GAME_ID%'.replace('%GAME_ID%',self.rom_emu_command).replace('%GAME_PATH%',current_game_path) #No point in using a template
@@ -3432,7 +3480,7 @@ class iagl_download(object):
 				win31_success = xbmcvfs.copy(filename_in,os.path.join(os.path.split(filename_in)[0],'win31_temp.zip'))
 				if not win31_success:
 					xbmc.log(msg='IAGL:  win31 file could not be copied: %(file_from)s' % {'file_from': filename_in}, level=xbmc.LOGDEBUG)
-			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
+			self.post_process_unarchive_files_to_folder(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
 			if 'win31.zip' in filename_in: #Temporarily make a new copy of win31
 				if win31_success: #Restore temp copy of win31
 					win31_success2 = xbmcvfs.rename(os.path.join(os.path.split(filename_in)[0],'win31_temp.zip'),filename_in)
@@ -4386,33 +4434,66 @@ def move_directory_contents_xbmcvfs(directory_from,directory_to):
 				xbmc.log(msg='IAGL:  Unable to delete the folder after moving files: %(dir_from)s.  Exception %(exc)s' % {'dir_from': os.path.join(directory_from,''), 'exc': exc}, level=xbmc.LOGDEBUG)
 	return files_out, overall_success
 
-def move_directory_contents_libarchive(directory_from,directory_to):
-	#not yet working - seems to be a bug with libarchive
+def extract_all_libarchive(archive_file,directory_to):
 	overall_success = True
 	files_out = list()
-
-	dirs_in_dir, files_in_dir = xbmcvfs.listdir('archive://%(directory_from)s' % {'directory_from': url_quote(directory_from)})
-
-	for ff in files_in_dir:
-		success = xbmcvfs.copy(os.path.join('archive://%(directory_from)s' % {'directory_from': url_quote(directory_from)},ff),os.path.join(directory_to,ff))  #Attempt to move the file first
-		if not success:
-			overall_success = False
+	if 'archive://' in archive_file:
+		archive_path = archive_file
+	else:
+		archive_path = 'archive://%(archive_file)s' % {'archive_file': url_quote(xbmc.translatePath(archive_file))}
+	dirs_in_archive, files_in_archive = xbmcvfs.listdir(archive_path)
+	for ff in files_in_archive:
+		if not xbmcvfs.exists(os.path.join(xbmc.translatePath(directory_to),ff)):
+			success = xbmcvfs.copy(os.path.join(archive_path,ff),os.path.join(xbmc.translatePath(directory_to),ff)) #Attempt to move the file first
+			if not success:
+				xbmc.log(msg='IAGL:  Error extracting file %(ff)s from archive %(archive_file)s' % {'ff': ff,'archive_file':archive_file}, level=xbmc.LOGDEBUG)
+				overall_success = False
+			else:
+				xbmc.log(msg='IAGL:  Extracted file %(ff)s from archive %(archive_file)s' % {'ff': ff,'archive_file':archive_file}, level=xbmc.LOGDEBUG)
+				files_out.append(os.path.join(xbmc.translatePath(directory_to),ff))
 		else:
-			files_out.append(os.path.join(directory_to,ff))
-	for dd in dirs_in_dir:
-		success = xbmcvfs.mkdir(os.path.join(directory_to,dd))
-		if not success:
-			overall_success = False
+			xbmc.log(msg='IAGL:  File %(ff)s already exists and was not extracted from archive %(archive_file)s' % {'ff': ff,'archive_file':archive_file}, level=xbmc.LOGDEBUG)
+			files_out.append(os.path.join(xbmc.translatePath(directory_to),ff))
+	for dd in dirs_in_archive:
+		if xbmcvfs.exists(os.path.join(xbmc.translatePath(directory_to),dd)) or xbmcvfs.mkdir(os.path.join(xbmc.translatePath(directory_to),dd)):
+			xbmc.log(msg='IAGL:  Created folder %(dd)s for archive %(archive_file)s' % {'dd': os.path.join(xbmc.translatePath(directory_to),dd,''),'archive_file':archive_file}, level=xbmc.LOGDEBUG)
+			files_out2, success2 = extract_all_libarchive(os.path.join(archive_path,dd,''),os.path.join(directory_to,dd))
+			if success2:
+				files_out = files_out + files_out2
+			else:
+				overall_success = False
 		else:
-			files_out2, success = move_directory_contents_libarchive(os.path.join(directory_from,dd),os.path.join(directory_to,dd))
-		if not success:
 			overall_success = False
-		else:
-			files_out = files_out + files_out2
-	# if overall_success:
-	# 	if not xbmcvfs.delete(os.path.join(directory_from,'')):
-	# 		xbmc.log(msg='IAGL:  Unable to delete the archive after moving files: %(dir_from)s' % {'dir_from': os.path.join(directory_from,'')}, level=xbmc.LOGDEBUG)
+			xbmc.log(msg='IAGL:  Unable to create the folder %(dir_from)s for libarchive extraction' % {'dir_from': os.path.join(xbmc.translatePath(directory_to),dd)}, level=xbmc.LOGDEBUG)
 	return files_out, overall_success
+
+# def move_directory_contents_libarchive(directory_from,directory_to):
+# 	#not yet working - seems to be a bug with libarchive
+# 	overall_success = True
+# 	files_out = list()
+
+# 	dirs_in_dir, files_in_dir = xbmcvfs.listdir('archive://%(directory_from)s' % {'directory_from': url_quote(directory_from)})
+
+# 	for ff in files_in_dir:
+# 		success = xbmcvfs.copy(os.path.join('archive://%(directory_from)s' % {'directory_from': url_quote(directory_from)},ff),os.path.join(directory_to,ff))  #Attempt to move the file first
+# 		if not success:
+# 			overall_success = False
+# 		else:
+# 			files_out.append(os.path.join(directory_to,ff))
+# 	for dd in dirs_in_dir:
+# 		success = xbmcvfs.mkdir(os.path.join(directory_to,dd))
+# 		if not success:
+# 			overall_success = False
+# 		else:
+# 			files_out2, success = move_directory_contents_libarchive(os.path.join(directory_from,dd),os.path.join(directory_to,dd))
+# 		if not success:
+# 			overall_success = False
+# 		else:
+# 			files_out = files_out + files_out2
+# 	# if overall_success:
+# 	# 	if not xbmcvfs.delete(os.path.join(directory_from,'')):
+# 	# 		xbmc.log(msg='IAGL:  Unable to delete the archive after moving files: %(dir_from)s' % {'dir_from': os.path.join(directory_from,'')}, level=xbmc.LOGDEBUG)
+# 	return files_out, overall_success
 
 def clean_file_folder_name(text_in):
 	text_out = text_in
