@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datafile>
+    <header>
+        <emu_name>Vectrex</emu_name>
+        <emu_description>Vectrex</emu_description>
+        <emu_category>1980s, Console, 8 Bit</emu_category>
+        <emu_version>03052019</emu_version>
+        <emu_date>06/19/2018</emu_date>
+        <emu_author>Zach Morris</emu_author>
+        <emu_visibility>visible</emu_visibility>
+        <emu_homepage>https://www.no-intro.org</emu_homepage>
+        <emu_baseurl>https://archive.org/download/</emu_baseurl>
+        <emu_launcher>retroplayer</emu_launcher>
+        <emu_default_addon>none</emu_default_addon>
+        <emu_ext_launch_cmd>none</emu_ext_launch_cmd>
+        <emu_downloadpath>default</emu_downloadpath>
+        <emu_postdlaction>unzip_rom</emu_postdlaction>
+        <emu_comment>No Intro GCE Vectrex list[CR]The Vectrex is a vector display-based home video game console that was developed by Western Technologies/Smith Engineering. It was licensed and distributed first by General Consumer Electronics (GCE), and then by Milton Bradley Company after its purchase of GCE. Unlike other non-portable video game consoles, which connected to televisions and rendered raster graphics, the Vectrex has an integrated vector monitor which displays vector graphics. The Vectrex is monochrome and uses plastic screen overlays to simulate color and various static graphics and decorations. At the time, many of the most popular arcade games used vector displays, and through a licensing deal with Cinematronics, GCE was able to produce high-quality versions of arcade games such as Space Wars and Armor Attack.[CR]Developer:  Western Technologies[CR]Manufacturer:  General Consumer Electronics[CR]CPU:  Motorola 68A09 @ 1.5 MHz[CR]Memory:  1 kB (two 4-bit 2114 chips)[CR]Graphics:  MOS 6522 Versatile Interface Adapter (VIA)[CR]Sound:  General Instrument AY-3-8912[CR]Display:  Vector CRT[CR]Media:  Cartridge[CR]Max Controllers:  2</emu_comment>
+        <emu_thumb>kAOXEcp.jpg</emu_thumb>
+        <emu_banner>3Cw4tjw.png</emu_banner>
+        <emu_fanart>mUQ7tZD.jpg</emu_fanart>
+        <emu_logo>Sb0bUW2.png</emu_logo>
+        <emu_trailer>jagJAWKLV0I</emu_trailer>
+    </header>
+  <game name="3D Crazy Coaster (USA)">
+    <description>3D Crazy Coaster (USA)</description>
+    <title_clean>3D Crazy Coaster</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2F3D%20Crazy%20Coaster%20%28USA%29.zip" size="6058"/>
+    <releasedate>18/10/1983</releasedate>
+    <genre>Action,Platform,3D</genre>
+    <studio>Milton Bradley</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/927511-3d-crazy-coaster</gamefaqs_url>
+    <plot>Climb aboard the Crazy Coaster and get ready for a roller coaster ride more dangerous and exciting than any you experienced before! The magic of the Vectrex 3-D makes your ride so real...you'll feel yourself leaning with the G-force![CR]You control the movements of the passenger in the lead car as he plummets down the spectacularly steep hills and careens around the gravity-defying curves of the Crazy Coaster.  Will you be able to keep his arms raised throughout the ride without sending him flying off into space?!</plot>
+    <nplayers>1</nplayers>
+    <year>1983</year>
+    <boxart1>Yiv20IN.png</boxart1>
+    <clearlogo1>9XeJ6Jr.png</clearlogo1>
+    <snapshot1>mvBzbsP.png</snapshot1>
+    <snapshot2>7kgCc79.png</snapshot2>
+    <boxart2>VulGGzF.png</boxart2>
+    <boxart4>5C5mpi9.png</boxart4>
+  </game>
+  <game name="3D Mine Storm (USA)">
+    <description>3D Mine Storm (USA)</description>
+    <title_clean>3D Mine Storm</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2F3D%20Mine%20Storm%20%28USA%29.zip" size="5754"/>
+    <genre>Shooter</genre>
+    <studio>GCE</studio>
+    <plot>In 3D Mine Storm, the player controls a ship through multiple mine fields destroying all mines on each field to progress to the next field. The game will start with the enemy minelayer seeding the first mine field. Mines are left in 3 different levels or planes per field. The player's ship will come into view after all the mines have been activated and the minelayer has left the field.</plot>
+    <nplayers>1</nplayers>
+    <year>1983</year>
+    <boxart1>VmJYq20.png</boxart1>
+    <snapshot1>mqr1kep.png</snapshot1>
+    <snapshot2>8UhiFPw.png</snapshot2>
+    <videoid>HETO56lupeI</videoid>
+  </game>
+  <game name="3D Narrow Escape (USA)">
+    <description>3D Narrow Escape (USA)</description>
+    <title_clean>3D Narrow Escape</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2F3D%20Narrow%20Escape%20%28USA%29.zip" size="5408"/>
+    <releasedate>18/10/1983</releasedate>
+    <genre>Action,General</genre>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/927513-3d-narrow-escape</gamefaqs_url>
+    <plot>3D Narrow Escape is an Action game, developed and published by GCE,which was released in 1983.</plot>
+    <boxart1>fzp5rgO.png</boxart1>
+    <clearlogo1>vHB9D1X.png</clearlogo1>
+    <snapshot1>qxNAjCq.png</snapshot1>
+    <boxart2>NxQiEEV.png</boxart2>
+    <snapshot2>TkTAwkI.png</snapshot2>
+    <boxart3>o1BVS18.png</boxart3>
+  </game>
+  <game name="AnimAction - Advanced Animation (USA)">
+    <description>AnimAction - Advanced Animation (USA)</description>
+    <title_clean>AnimAction - Advanced Animation</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FAnimAction%20-%20Advanced%20Animation%20%28USA%29.zip" size="5959"/>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/937684-animaction</gamefaqs_url>
+    <boxart1>eUNJmLH.png</boxart1>
+    <snapshot1>emgil9l.png</snapshot1>
+    <snapshot2>lzhzKu7.png</snapshot2>
+  </game>
+  <game name="Armor..Attack (World)">
+    <description>Armor..Attack (World)</description>
+    <title_clean>Armor..Attack</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FArmor..Attack%20%28World%29.zip" size="3677"/>
+    <releasedate>18/10/1982</releasedate>
+    <genre>Action,General</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/576744-armor-attack</gamefaqs_url>
+    <plot>Armor Attack is an Action game, developed and published by GCE,which was released in 1982.</plot>
+    <nplayers>1-2</nplayers>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <rating>3.0</rating>
+    <boxart1>GHhWyWx.png</boxart1>
+    <snapshot1>Muv8bzp.png</snapshot1>
+    <snapshot2>HKGwYvx.png</snapshot2>
+  </game>
+  <game name="Art Master (USA)">
+    <description>Art Master (USA)</description>
+    <title_clean>Art Master</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FArt%20Master%20%28USA%29.zip" size="2886"/>
+    <releasedate>18/10/1983</releasedate>
+    <genre>Miscellaneous,General</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/937685-art-master</gamefaqs_url>
+    <plot>ART MASTER is a high performance, state-of-the-art experience that takes you into a world of art exploration you've never seen before! Finally, sketching comes of age... and your creativity comes to life!</plot>
+    <rating>0.50</rating>
+    <nplayers>1</nplayers>
+    <year>1983</year>
+    <boxart1>0mD8Hnn.png</boxart1>
+    <clearlogo1>q7DOAN5.png</clearlogo1>
+    <snapshot1>EPtsOJx.png</snapshot1>
+    <boxart2>w6ypnZ9.png</boxart2>
+    <snapshot2>AHw7aJx.png</snapshot2>
+    <boxart3>oauM6Zu.png</boxart3>
+  </game>
+  <game name="Bedlam (USA, Europe)">
+    <description>Bedlam (USA, Europe)</description>
+    <title_clean>Bedlam</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FBedlam%20%28USA%2C%20Europe%29.zip" size="3301"/>
+    <releasedate>18/10/1982</releasedate>
+    <genre>Action,General</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/576745-bedlam</gamefaqs_url>
+    <plot>Your home galaxy has been invaded by alien colonists hoping to claim all inhabited worlds as their own. Unacceptable! You have been given the ultimate responsibility of protecting your galactic neighbors from the invaders. Blasting the aliens with the amazing anti-molecular cannon transports them thousands of light years away where they cause no further bedlam. But beware, the invaders will be increasingly ruthless. The future of the galaxy rests on your shoulders. Good luck!</plot>
+    <rating>4.00</rating>
+    <nplayers>2</nplayers>
+    <year>1983</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <boxart1>cYcout3.png</boxart1>
+    <clearlogo1>rRqeCBd.png</clearlogo1>
+    <snapshot1>o5uVTjB.png</snapshot1>
+    <snapshot2>RmldzaN.png</snapshot2>
+    <boxart2>3ElpK1y.png</boxart2>
+    <boxart3>fBJYuEe.png</boxart3>
+    <videoid>KdVtS1fN2aE</videoid>
+  </game>
+  <game name="Berzerk (World)">
+    <description>Berzerk (World)</description>
+    <title_clean>Berzerk</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FBerzerk%20%28World%29.zip" size="3490"/>
+    <releasedate>18/10/1982</releasedate>
+    <genre>Action,General</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/576746-berzerk</gamefaqs_url>
+    <plot>Maneuver your humanoid trough the electrified mazes of robot filled rooms.  You may kill off the first group of robots but initial success does not mean survival...future groups begin firing at you!  Added dangers lurk when Evil Otto enters.  He can jump the maze walls and squash you if you linger too long!</plot>
+    <rating>3.27</rating>
+    <nplayers>2</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <boxart1>b9UM6Uo.png</boxart1>
+    <clearlogo1>b61EdTD.png</clearlogo1>
+    <snapshot1>PQ3Nhxa.png</snapshot1>
+    <snapshot2>WDTDeex.png</snapshot2>
+    <boxart2>VQLwWbl.png</boxart2>
+  </game>
+  <game name="Berzerk Debugged (USA)">
+    <description>Berzerk Debugged (USA)</description>
+    <title_clean>Berzerk Debugged</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FBerzerk%20Debugged%20%28USA%29.zip" size="3780"/>
+    <releasedate>18/10/1982</releasedate>
+    <genre>Action,General</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/576746-berzerk</gamefaqs_url>
+    <plot>The original version of Berzerk crashes when you are racking up high points.  The debugged version fixes this crash.[CR]Maneuver your humanoid trough the electrified mazes of robot filled rooms.  You may kill off the first group of robots but initial success does not mean survival...future groups begin firing at you!  Added dangers lurk when Evil Otto enters.  He can jump the maze walls and squash you if you linger too long!</plot>
+    <rating>3.27</rating>
+    <nplayers>2</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <boxart1>b9UM6Uo.png</boxart1>
+    <clearlogo1>b61EdTD.png</clearlogo1>
+    <snapshot1>PQ3Nhxa.png</snapshot1>
+    <snapshot2>WDTDeex.png</snapshot2>
+    <boxart2>VQLwWbl.png</boxart2>
+  </game>
+  <game name="Blitz! - Action Football (USA, Europe) (0F11CE0C)">
+    <description>Blitz! - Action Football (USA, Europe) (0F11CE0C)</description>
+    <title_clean>Blitz! - Action Football</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FBlitz%21%20-%20Action%20Football%20%28USA%2C%20Europe%29%20%280F11CE0C%29.zip" size="5754"/>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/576747-blitz</gamefaqs_url>
+    <nplayers>1</nplayers>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <rating>3.5</rating>
+    <boxart1>OLaUaZG.png</boxart1>
+    <snapshot1>42Fi5Ws.png</snapshot1>
+    <snapshot2>ndgDjKE.png</snapshot2>
+  </game>
+  <game name="Blitz! - Action Football (USA, Europe) (881B27C5)">
+    <description>Blitz! - Action Football (USA, Europe) (881B27C5)</description>
+    <title_clean>Blitz! - Action Football</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FBlitz%21%20-%20Action%20Football%20%28USA%2C%20Europe%29%20%28881B27C5%29.zip" size="5755"/>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/576747-blitz</gamefaqs_url>
+    <nplayers>1</nplayers>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <rating>3.5</rating>
+    <boxart1>93uvqxZ.png</boxart1>
+    <snapshot1>ZX1PB2t.png</snapshot1>
+    <snapshot2>ACMLrRh.png</snapshot2>
+  </game>
+  <game name="Clean Sweep (World)">
+    <description>Clean Sweep (World)</description>
+    <title_clean>Clean Sweep</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FClean%20Sweep%20%28World%29.zip" size="3511"/>
+    <releasedate>18/10/1982</releasedate>
+    <genre>Action,General</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/924473-clean-sweep</gamefaqs_url>
+    <plot>Evil bank robbers have just blown your bank to smithereens. As bank president, you only have a vacuum available to recover the money strewn among the rubble, before the thieves destroy you! The thieves get increasingly anxious, but for added challenge, turn of the lights of the banks corridors and gather the money through a blind maze.</plot>
+    <rating>3.67</rating>
+    <nplayers>2</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <boxart1>l3ZNtsb.png</boxart1>
+    <clearlogo1>tQp95Yo.png</clearlogo1>
+    <snapshot1>BuI4smV.png</snapshot1>
+    <snapshot2>a1yWiDW.png</snapshot2>
+    <boxart2>TaOekbq.png</boxart2>
+    <videoid>cM_fkm5Tzs0</videoid>
+  </game>
+  <game name="Cosmic Chasm (World)">
+    <description>Cosmic Chasm (World)</description>
+    <title_clean>Cosmic Chasm</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FCosmic%20Chasm%20%28World%29.zip" size="3658"/>
+    <releasedate>18/10/1982</releasedate>
+    <genre>Action,General</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/562925-cosmic-chasm</gamefaqs_url>
+    <plot>Can you save the galaxy by blowing up the alien-inhabited planet... and get off the planet before you explode? You must burrow deep inside, finding your way through the underground maze while battling the Planet Protectors. If you can get to the center, plant your bomb and try to find your way out. Its only a matter of seconds before the planet goes BOOM!</plot>
+    <rating>5.00</rating>
+    <nplayers>2</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <boxart1>296BZJz.jpg</boxart1>
+    <clearlogo1>2y1ZBc6.png</clearlogo1>
+    <snapshot1>SjDyLKp.png</snapshot1>
+    <snapshot2>Hk2BO1B.png</snapshot2>
+    <boxart2>lhTBwwK.png</boxart2>
+    <boxart3>SHM1f0I.png</boxart3>
+  </game>
+  <game name="Dark Tower (USA) (Proto)">
+    <description>Dark Tower (USA) (Proto)</description>
+    <title_clean>Dark Tower</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FDark%20Tower%20%28USA%29%20%28Proto%29.zip" size="8465"/>
+    <boxart1>UUCcj3O.png</boxart1>
+    <snapshot1>0GQkopy.png</snapshot1>
+    <snapshot2>xE67Nzz.png</snapshot2>
+  </game>
+  <game name="Engine Analyzer (USA) (Proto)">
+    <description>Engine Analyzer (USA) (Proto)</description>
+    <title_clean>Engine Analyzer</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FEngine%20Analyzer%20%28USA%29%20%28Proto%29.zip" size="1900"/>
+    <boxart1>JvLR1HE.png</boxart1>
+    <snapshot1>Zt4CNg6.png</snapshot1>
+    <snapshot2>ffWZlZs.png</snapshot2>
+  </game>
+  <game name="Fortress of Narzod (USA, Europe)">
+    <description>Fortress of Narzod (USA, Europe)</description>
+    <title_clean>Fortress of Narzod</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FFortress%20of%20Narzod%20%28USA%2C%20Europe%29.zip" size="6169"/>
+    <releasedate>18/10/1982</releasedate>
+    <genre>Action,General</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/576748-fortress-of-narzod</gamefaqs_url>
+    <plot>A long time ago, before our history began, wizards-both good and evil-battled supremacy of the earth. It was a time of magic and adventure when all men possessed special powers. The most evil wizard, Narzod, gained  the power to enslave all mankind. You are the only remaining honorable wizard with the knowledge to harness all the forces of good to defeat Narzod and destroy his sinister fortress. But Narzod has prepared for your approach and guards his realm with deadly creatures of the darkness, including the Mystic Hurler. Beware, and approach the Fortress of Narzod with great Caution!</plot>
+    <rating>5.00</rating>
+    <nplayers>2</nplayers>
+    <year>1983</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <boxart1>cFHcHLV.jpg</boxart1>
+    <clearlogo1>stQR4EE.png</clearlogo1>
+    <snapshot1>PkkuDv5.png</snapshot1>
+    <snapshot2>Qigz48i.png</snapshot2>
+    <boxart2>fIiy6if.png</boxart2>
+    <boxart3>He7oBys.png</boxart3>
+  </game>
+  <game name="Heads-Up - Action Soccer (USA)">
+    <description>Heads-Up - Action Soccer (USA)</description>
+    <title_clean>Heads-Up - Action Soccer</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FHeads-Up%20-%20Action%20Soccer%20%28USA%29.zip" size="5792"/>
+    <genre>Sports</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/582062-heads-up</gamefaqs_url>
+    <plot>Take the ultimate soccer challenge... without ever leaving your seat! Play with a friend or tackle the computer itself in an action-packed soccer game that takes all the concentration, strategy and split -second reactions of the real thing! You're in control as the realistic, dimensional players get the ball down the field by passing, bouncing and kicking it back and forth to one another-just like a real soccer game! HEADS-UP And get ready for an exciting and demanding soccer tournament...complete with the roar of the crowd!</plot>
+    <nplayers>2</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <rating>3.8</rating>
+    <boxart1>OycxrBX.png</boxart1>
+    <clearlogo1>6xS4ARX.png</clearlogo1>
+    <snapshot1>m8cb13I.png</snapshot1>
+    <snapshot2>MT5kq5q.png</snapshot2>
+    <boxart2>YulBbpS.png</boxart2>
+  </game>
+  <game name="HyperChase - Auto Race (World)">
+    <description>HyperChase - Auto Race (World)</description>
+    <title_clean>HyperChase - Auto Race</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FHyperChase%20-%20Auto%20Race%20%28World%29.zip" size="3455"/>
+    <genre>Racing, Sports</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/925075-hyperchase</gamefaqs_url>
+    <plot>Watch our for the guardrail! You're behind the wheel of your formula one racer about to start the world's toughest grand prix. Try to stay alive through city streets and country roads. Start your engine - the start lights are counting down!</plot>
+    <nplayers>2</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <rating>4.3</rating>
+    <boxart1>edzIq8L.png</boxart1>
+    <clearlogo1>0FAUg55.png</clearlogo1>
+    <snapshot1>FVMocsy.png</snapshot1>
+    <snapshot2>b6ulwPV.png</snapshot2>
+    <boxart2>zYeRKk9.png</boxart2>
+  </game>
+  <game name="Mail Plane (USA) (Proto)">
+    <description>Mail Plane (USA) (Proto)</description>
+    <title_clean>Mail Plane</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FMail%20Plane%20%28USA%29%20%28Proto%29.zip" size="3784"/>
+    <boxart1>hFGxyRX.png</boxart1>
+    <clearlogo1>4ijRXdA.png</clearlogo1>
+    <snapshot1>wJtv949.png</snapshot1>
+    <boxart2>7DCBAOg.jpg</boxart2>
+    <snapshot2>R30lmgh.png</snapshot2>
+  </game>
+  <game name="Melody Master - Music Composition and Entertainment (USA)">
+    <description>Melody Master - Music Composition and Entertainment (USA)</description>
+    <title_clean>Melody Master - Music Composition and Entertainment</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FMelody%20Master%20-%20Music%20Composition%20and%20Entertainment%20%28USA%29.zip" size="5033"/>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/937687-melody-master</gamefaqs_url>
+    <boxart1>Ro8kRsD.png</boxart1>
+    <snapshot1>1qPfusU.png</snapshot1>
+    <snapshot2>eg1fp2z.png</snapshot2>
+  </game>
+  <game name="Mine Storm (World)">
+    <description>Mine Storm (World)</description>
+    <title_clean>Mine Storm</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FMine%20Storm%20%28World%29.zip" size="3377"/>
+    <studio>GCE</studio>
+    <plot>The game begins with a large enemy ship dropping mines onto the field as an ominous jingle plays, and moves from the top to the bottom of the screen, where it disappears. The player's ship starts in the middle of the field with 5 lives. Numerous mines then start popping up. The player must destroy all of the mines in order to progress to the next minefield. All of the mines can be destroyed with one shot, or hit with the player's ship, costing the player a life. There are 4 types of mines.[CR]This game came programmed onto the Vectrex.</plot>
+    <rating>2.00</rating>
+    <nplayers>2</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <boxart1>Kul2RZi.png</boxart1>
+    <clearlogo1>dsHzxDx.png</clearlogo1>
+    <snapshot1>dNTNfV6.png</snapshot1>
+    <boxart2>xUxewej.jpg</boxart2>
+    <snapshot2>9UXTwWm.png</snapshot2>
+    <videoid>IVf6AGntHo8</videoid>
+  </game>
+  <game name="Mine Storm II (USA) (Rev 2)">
+    <description>Mine Storm II (USA) (Rev 2)</description>
+    <title_clean>Mine Storm II</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FMine%20Storm%20II%20%28USA%29%20%28Rev%202%29.zip" size="3436"/>
+    <genre>Shooter</genre>
+    <studio>GCE</studio>
+    <plot>Mine Storm is the built-in game that came with every Vectrex unit. It was also released in a 3-D version that required the use of the Vectrex 3D Imager and Mine Storm 2 is a debugged version of Mine Storm.[CR]One of the built-in versions of Mine Storm had a glitch that made the game crash at level 13, so GCE decided to send a copy of Mine Storm 2 to gamers that wrote to the company and complained.[CR]This game is rare, because most of the gamers didn't know about the offer, and also because not many gamers got to level 13.</plot>
+    <rating>3.09</rating>
+    <nplayers>2</nplayers>
+    <year>1983</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <boxart1>jR3cWeN.png</boxart1>
+    <clearlogo1>q6kDuPr.png</clearlogo1>
+    <snapshot1>ldmIN1A.png</snapshot1>
+    <boxart2>c9BOLgG.png</boxart2>
+    <snapshot2>xRurP1R.png</snapshot2>
+  </game>
+  <game name="Pitcher's Duel (USA) (Proto)">
+    <description>Pitcher's Duel (USA) (Proto)</description>
+    <title_clean>Pitcher's Duel</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FPitcher%27s%20Duel%20%28USA%29%20%28Proto%29.zip" size="6571"/>
+    <releasedate>28/07/2007</releasedate>
+    <genre>Sports,Traditional,Baseball,Arcade</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/942663-pitchers-duel</gamefaqs_url>
+    <plot>Pitcher's Duel was an unreleased Vectrex baseball game.  A prototype of Pitcher's Duel was found though a private sale and was held until a high quality release could be done. Pitcher's Duel was eventually released at Classic Gaming Expo in both a retro-styled reproduction Vectrex box and also as a loose cartridge. While not a perfect reproduction of the game of baseball, this title is fairly accurate. Standard rules for baseball apply, however fielding, throwing and base runners are all controlled by the computer. At the start of the game Player 1 always pitches first. If a two player game is selected, then Player 2 will be at bat.</plot>
+    <nplayers>2</nplayers>
+    <year>2007</year>
+    <boxart1>HMzu0uY.png</boxart1>
+    <clearlogo1>v4hGWik.png</clearlogo1>
+    <snapshot1>6gSYfZZ.png</snapshot1>
+    <boxart2>2fXvvx4.jpg</boxart2>
+    <snapshot2>7Kejy9G.png</snapshot2>
+  </game>
+  <game name="Polar Rescue (USA)">
+    <description>Polar Rescue (USA)</description>
+    <title_clean>Polar Rescue</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FPolar%20Rescue%20%28USA%29.zip" size="6829"/>
+    <releasedate>18/10/1983</releasedate>
+    <genre>Action,Shooter,1st Person,Modern</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/924625-polar-rescue</gamefaqs_url>
+    <plot>Journey to the icy waters beneath the North Pole. As commander of a powerful and highly maneuverable submarine, you must rescue the survivors of ill-fated expedition. Seek out the survivors on your sonar screen and pilot your sub to their rescue! To complete your mission, you must avoid deadly mine fields, enemy submarines and terror of the maelstrom! Monitor your oxygen supply carefully and hurry! Lives are at stake!</plot>
+    <nplayers>2</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <rating>4.0</rating>
+    <boxart1>Fs1RdRJ.png</boxart1>
+    <clearlogo1>egf2Tru.png</clearlogo1>
+    <snapshot1>J8TAhVe.png</snapshot1>
+    <boxart2>44eIELh.png</boxart2>
+    <snapshot2>NBlbuuZ.png</snapshot2>
+    <boxart3>rJThHsR.png</boxart3>
+  </game>
+  <game name="Polar Rescue (USA) (Beta)">
+    <description>Polar Rescue (USA) (Beta)</description>
+    <title_clean>Polar Rescue</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FPolar%20Rescue%20%28USA%29%20%28Beta%29.zip" size="6780"/>
+    <releasedate>18/10/1983</releasedate>
+    <genre>Action,Shooter,1st Person,Modern</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/924625-polar-rescue</gamefaqs_url>
+    <plot>Journey to the icy waters beneath the North Pole. As commander of a powerful and highly maneuverable submarine, you must rescue the survivors of ill-fated expedition. Seek out the survivors on your sonar screen and pilot your sub to their rescue! To complete your mission, you must avoid deadly mine fields, enemy submarines and terror of the maelstrom! Monitor your oxygen supply carefully and hurry! Lives are at stake!</plot>
+    <nplayers>2</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <rating>4.0</rating>
+    <boxart1>75KLBoo.png</boxart1>
+    <clearlogo1>egf2Tru.png</clearlogo1>
+    <snapshot1>5RWL9mg.png</snapshot1>
+    <boxart2>44eIELh.png</boxart2>
+    <snapshot2>H6QjgIi.png</snapshot2>
+    <boxart3>rJThHsR.png</boxart3>
+  </game>
+  <game name="Pole Position (USA) (A00ED3D6)">
+    <description>Pole Position (USA) (A00ED3D6)</description>
+    <title_clean>Pole Position</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FPole%20Position%20%28USA%29%20%28A00ED3D6%29.zip" size="6253"/>
+    <releasedate>18/10/1983</releasedate>
+    <genre>Driving,Racing,Formula One</genre>
+    <studio>Namco</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/937688-pole-position</gamefaqs_url>
+    <plot>The spectacular arcade game, Pole Position, takes on an exciting new look through the magic of Vectrex! Experience all the challenge of a Grand Prix racing event with non-stop action that'll leave you breathless! Do you possess the skill, dexterity and courage to pull out from the crowd for qualification in one of the exclusive starting positions... or will you end up as an also ran?</plot>
+    <rating>3.06</rating>
+    <nplayers>1</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <boxart1>fJDyPNH.png</boxart1>
+    <clearlogo1>8psv481.png</clearlogo1>
+    <snapshot1>RXblfUL.png</snapshot1>
+    <snapshot2>IDFRMMa.png</snapshot2>
+    <boxart2>9ZD1f5E.png</boxart2>
+    <boxart3>YqFxlFL.png</boxart3>
+  </game>
+  <game name="Pole Position (USA) (C10F37D8)">
+    <description>Pole Position (USA) (C10F37D8)</description>
+    <title_clean>Pole Position</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FPole%20Position%20%28USA%29%20%28C10F37D8%29.zip" size="6254"/>
+    <releasedate>18/10/1983</releasedate>
+    <genre>Driving,Racing,Formula One</genre>
+    <studio>Namco</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/937688-pole-position</gamefaqs_url>
+    <plot>The spectacular arcade game, Pole Position, takes on an exciting new look through the magic of Vectrex! Experience all the challenge of a Grand Prix racing event with non-stop action that'll leave you breathless! Do you possess the skill, dexterity and courage to pull out from the crowd for qualification in one of the exclusive starting positions... or will you end up as an also ran?</plot>
+    <rating>3.06</rating>
+    <nplayers>1</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <boxart1>fJDyPNH.png</boxart1>
+    <clearlogo1>8psv481.png</clearlogo1>
+    <snapshot1>6YA1zyV.png</snapshot1>
+    <snapshot2>pj4sM7Z.png</snapshot2>
+    <boxart2>9ZD1f5E.png</boxart2>
+    <boxart3>YqFxlFL.png</boxart3>
+  </game>
+  <game name="RA A Spectrum I  Stress Tester (USA) (Proto)">
+    <description>RA A Spectrum I  Stress Tester (USA) (Proto)</description>
+    <title_clean>RA A Spectrum I  Stress Tester</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FRA%20A%20Spectrum%20I%20%20Stress%20Tester%20%28USA%29%20%28Proto%29.zip" size="12053"/>
+    <boxart1>QAxz9qm.png</boxart1>
+    <snapshot1>2gx4tQ5.png</snapshot1>
+    <snapshot2>7sCLz93.png</snapshot2>
+  </game>
+  <game name="Rip Off (World)">
+    <description>Rip Off (World)</description>
+    <title_clean>Rip Off</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FRip%20Off%20%28World%29.zip" size="3571"/>
+    <releasedate>18/10/1982</releasedate>
+    <genre>Action,Shooter,Static</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/562926-rip-off</gamefaqs_url>
+    <plot>Beware of scavenging pirates trying to steal your precious fuel cells! The more pirates you destroy, the faster their successors become. Guard your tanks carefully...you are always outnumbered!</plot>
+    <rating>4.00</rating>
+    <nplayers>1-2 Co-Op</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <boxart1>qauUEJf.png</boxart1>
+    <clearlogo1>Hkej8JU.png</clearlogo1>
+    <snapshot1>7RmnYji.png</snapshot1>
+    <snapshot2>9ykjqD3.png</snapshot2>
+    <boxart2>qowDNU7.png</boxart2>
+  </game>
+  <game name="Scramble (USA, Europe)">
+    <description>Scramble (USA, Europe)</description>
+    <title_clean>Scramble</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FScramble%20%28USA%2C%20Europe%29.zip" size="3529"/>
+    <releasedate>18/10/1982</releasedate>
+    <genre>Action,General</genre>
+    <studio>Konami</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/562927-scramble</gamefaqs_url>
+    <plot>Watch out for that next mountain! Maneuver your ship over rough terrain in an effort to destroy the enemy base. Careful piloting alone won't get you to your destination...You must brave rockets, UFOs, flamoids and some very tight tunnels. Few people have ever seen the enemy base, let alone destroy it. Will you be one of the select few?</plot>
+    <nplayers>2</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <rating>3.3</rating>
+    <boxart1>JR7IVFu.png</boxart1>
+    <clearlogo1>2jGbaMI.png</clearlogo1>
+    <snapshot1>vr5up2o.png</snapshot1>
+    <snapshot2>4f52zzs.png</snapshot2>
+    <boxart2>3NwcHn1.png</boxart2>
+  </game>
+  <game name="Sledge 3D (USA) (Sample)">
+    <description>Sledge 3D (USA) (Sample)</description>
+    <title_clean>Sledge 3D</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FSledge%203D%20%28USA%29%20%28Sample%29.zip" size="2862"/>
+    <boxart1>hs8LUcn.png</boxart1>
+    <snapshot1>7Y5iBvV.png</snapshot1>
+    <snapshot2>JQJ5d0w.png</snapshot2>
+  </game>
+  <game name="Solar Quest (World)">
+    <description>Solar Quest (World)</description>
+    <title_clean>Solar Quest</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FSolar%20Quest%20%28World%29.zip" size="3376"/>
+    <releasedate>18/10/1982</releasedate>
+    <genre>Action,Shooter,Scrolling</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/570145-solar-quest</gamefaqs_url>
+    <plot>How may types of alien vessels will you be able to destroy? Seven different types are after you. You must destroy them and then attempt to rescue survivors before they float into the sun. Don't get your ship to close to the sun...it's high temperatures can destroy you.</plot>
+    <rating>3.80</rating>
+    <nplayers>2</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <boxart1>WFlQibz.png</boxart1>
+    <clearlogo1>yxlPZQO.png</clearlogo1>
+    <snapshot1>2x25zZK.png</snapshot1>
+    <snapshot2>r7c52so.png</snapshot2>
+    <boxart2>XsFqFjh.png</boxart2>
+  </game>
+  <game name="Space Wars (World)">
+    <description>Space Wars (World)</description>
+    <title_clean>Space Wars</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FSpace%20Wars%20%28World%29.zip" size="3145"/>
+    <releasedate>18/10/1982</releasedate>
+    <genre>Action,General</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/576751-space-wars</gamefaqs_url>
+    <plot>Who says there are no rules in intergalactic warfare. Pick your own. Bounce, expand universe, black hole - as you embark on a deadly dogfight.</plot>
+    <nplayers>2</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <rating>4.0</rating>
+    <boxart1>0gVJ4Pt.png</boxart1>
+    <clearlogo1>LVUTocc.png</clearlogo1>
+    <snapshot1>avFoii9.png</snapshot1>
+    <snapshot2>WwGvzuh.png</snapshot2>
+    <boxart2>Z5xMqA2.png</boxart2>
+    <videoid>VO6IhjS6TOo</videoid>
+  </game>
+  <game name="Spike (USA, Europe)">
+    <description>Spike (USA, Europe)</description>
+    <title_clean>Spike</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FSpike%20%28USA%2C%20Europe%29.zip" size="7201"/>
+    <releasedate>18/10/1982</releasedate>
+    <genre>Action,General</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/576752-spike</gamefaqs_url>
+    <plot>Molly, has been kidnapped by the evil Spud! You will hear her cry, "Eek! Help, Spike!" as he drags her away. Only Spike cam save her from this awful fate.</plot>
+    <rating>4.00</rating>
+    <nplayers>2</nplayers>
+    <year>1983</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <boxart1>OJdKByt.png</boxart1>
+    <clearlogo1>Zoq7SrB.png</clearlogo1>
+    <snapshot1>TN1pjjL.png</snapshot1>
+    <snapshot2>tffLVI3.png</snapshot2>
+    <boxart2>Vk8aGYP.png</boxart2>
+    <boxart3>HNBD63d.png</boxart3>
+  </game>
+  <game name="Spin ball (USA)">
+    <description>Spin ball (USA)</description>
+    <title_clean>Spin ball</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FSpin%20ball%20%28USA%29.zip" size="6837"/>
+    <releasedate>18/10/1983</releasedate>
+    <genre>Miscellaneous,Parlor,Pinball</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/937686-spinball</gamefaqs_url>
+    <plot>Spinball is a Miscellaneous game, developed by GCE and published by Milton Bradley,which was released in 1983.</plot>
+    <nplayers>1</nplayers>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <rating>2.5</rating>
+    <boxart1>cKNDI86.png</boxart1>
+    <snapshot1>CfMlkV2.png</snapshot1>
+    <snapshot2>ydeKozV.png</snapshot2>
+  </game>
+  <game name="Star Castle (USA)">
+    <description>Star Castle (USA)</description>
+    <title_clean>Star Castle</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FStar%20Castle%20%28USA%29.zip" size="3393"/>
+    <releasedate>18/10/1983</releasedate>
+    <genre>Action,General</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/562928-star-castle</gamefaqs_url>
+    <plot>You and other experienced intergalactic voyagers have heard about and shared the legend of Star Castle -- a mysterious fortress in a far away galaxy filled with incredible niches and surrounded by revolving walls of shimmering solid gold.  Yet no one, until now, has ever actually seen the Castle -- or lived to tell about it!</plot>
+    <rating>3.50</rating>
+    <nplayers>2</nplayers>
+    <year>1983</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <boxart1>Xvv2Eym.png</boxart1>
+    <clearlogo1>ZmlK2vE.png</clearlogo1>
+    <snapshot1>Fr6Kdy2.png</snapshot1>
+    <snapshot2>NX9VONY.png</snapshot2>
+    <boxart2>64xMu6w.png</boxart2>
+  </game>
+  <game name="Star Ship (Europe)">
+    <description>Star Ship (Europe)</description>
+    <title_clean>Star Ship</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FStar%20Ship%20%28Europe%29.zip" size="3523"/>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/929712-star-trek-the-motion-picture</gamefaqs_url>
+    <boxart1>6s7TQee.png</boxart1>
+    <snapshot1>yySxYqO.png</snapshot1>
+    <snapshot2>qLxzTba.png</snapshot2>
+  </game>
+  <game name="Star Trek - The Motion Picture (USA)">
+    <description>Star Trek - The Motion Picture (USA)</description>
+    <title_clean>Star Trek - The Motion Picture</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FStar%20Trek%20-%20The%20Motion%20Picture%20%28USA%29.zip" size="3526"/>
+    <releasedate>18/10/1982</releasedate>
+    <genre>Action,General</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/929712-star-trek-the-motion-picture</gamefaqs_url>
+    <plot>Welcome, Captain Kirk, to your command of the starship Enterprise. Your mission is to seek out and destroy the enemy Klingon Mothership. Travel through nine sectors of space, each more difficult, or take a shortcut through the Black Hole. Be careful...the Klingons and Romulans are hiding in space, waiting to destroy you at every turn!</plot>
+    <rating>5.00</rating>
+    <nplayers>2</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <boxart1>OSWFnFB.png</boxart1>
+    <clearlogo1>JuybjH1.png</clearlogo1>
+    <snapshot1>W0ceR03.png</snapshot1>
+    <snapshot2>l1XC819.png</snapshot2>
+    <boxart2>9kbO9lN.png</boxart2>
+    <boxart3>yCItFSk.png</boxart3>
+    <videoid>3fQgaDKkcsQ</videoid>
+  </game>
+  <game name="Star Trek - The Motion Picture Debugged (USA)">
+    <description>Star Trek Debugged (USA)</description>
+    <title_clean>Star Trek Debugged</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FStar%20Trek%20Debugged%20%28USA%29.zip" size="3535"/>
+    <genre>Shooter</genre>
+    <plot>This version of Star Trek Features a pause button, different looking Klingon ships and minor bug fixes.[CR]Welcome, Captain Kirk, to your command of the starship Enterprise. Your mission is to seek out and destroy the enemy Klingon Mothership. Travel through nine sectors of space, each more difficult, or take a shortcut through the Black Hole. Be careful...the Klingons and Romulans are hiding in space, waiting to destroy you at every turn![CR]This ROM hack features a pause button, different looking Klingon ships and minor bug fixes.</plot>
+    <rating>5.00</rating>
+    <nplayers>2</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <boxart1>OSWFnFB.png</boxart1>
+    <clearlogo1>JuybjH1.png</clearlogo1>
+    <snapshot1>W0ceR03.png</snapshot1>
+    <snapshot2>l1XC819.png</snapshot2>
+    <boxart2>9kbO9lN.png</boxart2>
+    <boxart3>yCItFSk.png</boxart3>
+    <videoid>3fQgaDKkcsQ</videoid>
+  </game>
+  <game name="StarHawk (World)">
+    <description>StarHawk (World)</description>
+    <title_clean>StarHawk</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FStarHawk%20%28World%29.zip" size="3157"/>
+    <releasedate>18/10/1982</releasedate>
+    <genre>Action,Shooter,Static</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/937689-starhawk</gamefaqs_url>
+    <plot>Fasten your seatbelt...you're the pilot defending the sovereignty of your planet. Don't blink - you might miss one of the alien vessels.</plot>
+    <nplayers>1-2 Co-Op</nplayers>
+    <year>1982</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <rating>4.0</rating>
+    <boxart1>PKglWQu.png</boxart1>
+    <clearlogo1>GGQsPec.png</clearlogo1>
+    <snapshot1>9wxDpvH.png</snapshot1>
+    <snapshot2>mEfpCfE.png</snapshot2>
+    <boxart2>vQbd3ed.png</boxart2>
+    <boxart3>E7a9djv.png</boxart3>
+    <videoid>-2H4IYMEx0I</videoid>
+  </game>
+  <game name="Test Cartridge (USA) (Rev 4) (Proto)">
+    <description>Test Cartridge (USA) (Rev 4) (Proto)</description>
+    <title_clean>Test Cartridge</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FTest%20Cartridge%20%28USA%29%20%28Rev%204%29%20%28Proto%29.zip" size="2465"/>
+    <boxart1>iSDkfcF.png</boxart1>
+    <snapshot1>ndSRL2d.png</snapshot1>
+    <snapshot2>zlM1lIP.png</snapshot2>
+  </game>
+  <game name="Tour De France (USA) (Proto)">
+    <description>Tour De France (USA) (Proto)</description>
+    <title_clean>Tour De France</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FTour%20De%20France%20%28USA%29%20%28Proto%29.zip" size="5681"/>
+    <studio>GCE</studio>
+    <rating>1.20</rating>
+    <boxart1>l8TLw82.png</boxart1>
+    <clearlogo1>gCwGlb3.png</clearlogo1>
+    <snapshot1>3TZrGft.png</snapshot1>
+    <snapshot2>gzgz8Vh.png</snapshot2>
+  </game>
+  <game name="WebWarp (Europe)">
+    <description>WebWarp (Europe)</description>
+    <title_clean>WebWarp</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FWebWarp%20%28Europe%29.zip" size="6070"/>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/562929-web-wars</gamefaqs_url>
+    <boxart1>ycMc6Zr.png</boxart1>
+    <snapshot1>3WaQpL1.png</snapshot1>
+    <snapshot2>LzonExn.png</snapshot2>
+  </game>
+  <game name="WebWars (USA)">
+    <description>WebWars (USA)</description>
+    <title_clean>WebWars</title_clean>
+    <rom name="GCEVectrex/GCE%20-%20Vectrex.rar/GCE%20-%20Vectrex%2FWebWars%20%28USA%29.zip" size="6064"/>
+    <releasedate>18/10/1982</releasedate>
+    <genre>Action,General</genre>
+    <studio>GCE</studio>
+    <gamefaqs_url>http://www.gamefaqs.com/vectrex/562929-web-wars</gamefaqs_url>
+    <plot>The player slips into the role of Hawk King. His mission is to search the Web of Fantasy for certain legendary creatures and collect them all.[CR]The Hawk King is controlled in a third person perspective, flying through the Web. The 20 creatures that can be captured are protected by drones, which can in turn be destroyed with the blaster weapon. Other actions the player can take is speeding up or slowing down the Hawk King, and extending a rod to capture a rare species once the player encounters one.[CR]After a creature has been successfully captured, the player enters the trophy room though a portal, which displays all captured creatures. If the player proves unsuccessful after two attempts however, they will have to face the Cosmic Dragon, at which point the only defence the player has left is avoiding its deadly fireballs.</plot>
+    <rating>4.00</rating>
+    <nplayers>1</nplayers>
+    <year>1983</year>
+    <ESRB>ESRB - E (Everyone)</ESRB>
+    <boxart1>YSybI8T.png</boxart1>
+    <clearlogo1>CY0F6rq.png</clearlogo1>
+    <snapshot1>tvLwCeK.png</snapshot1>
+    <snapshot2>xLTh2L3.png</snapshot2>
+    <boxart2>vYx0fsc.png</boxart2>
+  </game>
+</datafile>
