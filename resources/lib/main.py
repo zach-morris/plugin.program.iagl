@@ -4186,6 +4186,8 @@ class iagl_infodialog(xbmcgui.WindowXMLDialog):
 			self.launch_button.setEnabled(False)
 		IAGL_DL = iagl_download(self.current_json) #Initialize download object
 		download_and_process_success = IAGL_DL.download_and_process_game_files() #Download files
+		if type(download_and_process_success) is bool:
+			download_and_process_success = [download_and_process_success]
 		current_dialog = xbmcgui.Dialog()
 		if False in download_and_process_success:  #Bad files found
 			if True in download_and_process_success:  #Good and Bad files found
@@ -4209,6 +4211,8 @@ class iagl_infodialog(xbmcgui.WindowXMLDialog):
 			self.launch_button.setEnabled(False)
 		IAGL_DL = iagl_download(self.current_json) #Initialize download object
 		download_and_process_success = IAGL_DL.download_and_process_game_files() #Download files
+		if type(download_and_process_success) is bool:
+			download_and_process_success = [download_and_process_success]
 		if False not in download_and_process_success:
 			IAGL_LAUNCH = iagl_launch(self.current_json,IAGL_DL.current_processed_files,self.game_id) #Initialize launch object
 			IAGL_LAUNCH.launch() #Launch Game
