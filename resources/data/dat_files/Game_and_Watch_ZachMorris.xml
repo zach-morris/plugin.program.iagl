@@ -4,12 +4,12 @@
 		<emu_name>Game and Watch</emu_name>
 		<emu_description>Game and Watch</emu_description>
 		<emu_category>Nintendo, Handheld</emu_category>
-		<emu_version>0830018</emu_version>
+		<emu_version>03122019</emu_version>
 		<emu_date>10/13/2017</emu_date>
 		<emu_author>Zach Morris</emu_author>
 		<emu_visibility>visible</emu_visibility>
 		<emu_homepage>https://libretro.com</emu_homepage>
-		<emu_baseurl>https://buildbot.libretro.com/assets/cores/HandheldElectronicGame/</emu_baseurl>
+		<emu_baseurl>http://buildbot.libretro.com/assets/cores/Handheld%20Electronic%20Game/</emu_baseurl>
 		<emu_launcher>retroplayer</emu_launcher>
 		<emu_default_addon>none</emu_default_addon>
 		<emu_ext_launch_cmd>none</emu_ext_launch_cmd>
