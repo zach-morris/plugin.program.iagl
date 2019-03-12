@@ -285,10 +285,13 @@ class iagl_utils(object):
 						del current_dialog
 						if ret1>-1:
 							if ret1==0: #Copy file from addon data to userdata and copy userdata settings
-								if xbmcvfs.rename(ff,current_game_lists.get('fullpath')[idx]):
-									new_game_list_added.append(new_game_lists['dat_filename'][ii])
-									self.delete_list_cache(new_game_lists['dat_filename'][ii])
-									xbmc.log(msg='IAGL:  Dat file %(ff)s updated to new version' % {'ff': new_game_lists['dat_filename'][ii]}, level=xbmc.LOGDEBUG)
+								if xbmcvfs.delete(current_game_lists.get('fullpath')[idx]):
+									if xbmcvfs.rename(ff,current_game_lists.get('fullpath')[idx]):
+										new_game_list_added.append(new_game_lists['dat_filename'][ii])
+										self.delete_list_cache(new_game_lists['dat_filename'][ii])
+										xbmc.log(msg='IAGL:  Dat file %(ff)s updated to new version' % {'ff': new_game_lists['dat_filename'][ii]}, level=xbmc.LOGDEBUG)
+								else:
+									xbmc.log(msg='IAGL:  Dat file %(ff)s was not because the original file could not be deleted' % {'ff': new_game_lists['dat_filename'][ii]}, level=xbmc.LOGERROR)
 							elif ret1 == 1: #Do not update, but do not delete file in the addon folder
 								xbmc.log(msg='IAGL:  Dat file %(ff)s was not updated, ask later' % {'ff': new_game_lists['dat_filename'][ii]}, level=xbmc.LOGDEBUG)
 							else: #Delete the file in the addon folder
@@ -3157,15 +3160,20 @@ class iagl_download(object):
 			xbmc.log(msg='IAGL:  There was a download error (no login): %(url)s - %(web_except)s' % {'url': url, 'web_except': web_except}, level=xbmc.LOGERROR)
 
 	def post_process_unarchive_files(self,filename_in,crc_in):
-		#Libarchive not yet working, so default to xbmc builtin
 		#Check for libarchive and use that if available, otherwise try xbmc builtin extract
 		if self.libarchive_available:
 			self.post_process_unarchive_files_libarchive(filename_in,crc_in)
 		else:
 			self.post_process_unarchive_files_xbmc_builtin(filename_in,crc_in)
 
+	def post_process_unarchive_and_rename_files(self,filename_in,crc_in):
+		#Check for libarchive and use that if available, otherwise try xbmc builtin extract
+		if self.libarchive_available:
+			self.post_process_unarchive_and_rename_files_libarchive(filename_in,crc_in)
+		else:
+			self.post_process_unarchive_and_rename_files_xbmc_builtin(filename_in,crc_in)			
+
 	def post_process_unarchive_files_to_folder(self,filename_in,name_in):
-		#Libarchive not yet working, so default to xbmc builtin
 		#Check for libarchive and use that if available, otherwise try xbmc builtin extract
 		if self.libarchive_available:
 			self.post_process_unarchive_files_to_folder_libarchive(filename_in,name_in)
@@ -3247,9 +3255,42 @@ class iagl_download(object):
 			self.current_processed_files_success.append(True) #Set this to true regardless in this case...
 			xbmc.log(msg='IAGL:  The file %(filename_in)s does not appear to be a zip file and was not processed, pointing back to file in attempts to launch.'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
 
-	def post_process_unarchive_and_rename_files(self):
-		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unzip and rename (vfs.libarchive)'% {'filename_in': self.current_saved_files[-1]}, level=xbmc.LOGDEBUG)
-	
+	def post_process_unarchive_and_rename_files_libarchive(self,filename_in,crc_in):
+		xbmc.log(msg='IAGL:  Post Process and rename file %(filename_in)s - unarchive (vfs.libarchive)'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
+		if any([x in filename_in.lower() for x in self.libarchive_extensions]):
+			files_extracted, files_extracted_success = extract_all_libarchive(filename_in,os.path.split(filename_in)[0])
+			if files_extracted_success:
+				xbmc.log(msg='IAGL:  The file %(filename_in)s was unarchived.  First file extracted: %(files_extracted)s'% {'filename_in': filename_in, 'files_extracted':files_extracted[0]}, level=xbmc.LOGDEBUG)
+				if not xbmcvfs.delete(filename_in):
+					xbmc.log(msg='IAGL:  The file %(filename_in)s could not be deleted after processing'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
+				for ii,ff in enumerate(files_extracted):
+					new_filename = os.path.join(os.path.split(filename_in)[0],os.path.splitext(os.path.split(filename_in)[-1])[0]+os.path.splitext(ff)[-1])
+					if not xbmcvfs.exists(new_filename):
+						if not xbmcvfs.rename(ff,new_filename):  #Attempt to move the file first
+							if xbmcvfs.copy(ff,new_filename): #If move does not work, then copy
+								self.current_processed_files.extend(new_filename)
+								self.current_processed_files_success.append(True)
+								xbmc.log(msg='IAGL:  File move failed, so the file was copied from: %(file_from)s, to: %(file_to)s' % {'file_from': ff, 'file_to': new_filename}, level=xbmc.LOGDEBUG)
+								if not xbmcvfs.delete(ff):
+									xbmc.log(msg='IAGL:  Unable to delete the file after copy: %(file_from)s' % {'file_from':ff}, level=xbmc.LOGDEBUG)
+							else:
+								self.current_processed_files_success.append(False)
+								xbmc.log(msg='IAGL:  File move and copy failed: %(file_from)s, to: %(file_to)s' % {'file_from': ff, 'file_to': new_filename}, level=xbmc.LOGDEBUG)
+						else:
+							self.current_processed_files.extend(new_filename)
+							self.current_processed_files_success.append(True)
+							xbmc.log(msg='IAGL:  File renamed from: %(file_from)s, to: %(file_to)s' % {'file_from': ff, 'file_to': new_filename}, level=xbmc.LOGDEBUG)
+					else:
+						self.current_processed_files.extend(new_filename)
+						self.current_processed_files_success.append(True)
+						xbmc.log(msg='IAGL:  File %(filename_in)s is already exists'% {'filename_in': new_filename}, level=xbmc.LOGDEBUG)
+			else:
+				self.current_processed_files_success.append(True)
+		else:
+			self.current_processed_files = filename_in
+			self.current_processed_files_success.append(True) #Set this to true regardless in this case...
+			xbmc.log(msg='IAGL:  The file %(filename_in)s does not appear to be an archive file and was not processed, pointing back to file in attempts to launch.'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
+
 	def post_process_unarchive_and_rename_files_xbmc_builtin(self,filename_in,crc_in):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unzip and rename (builtin)'% {'filename_in': self.current_saved_files[-1]}, level=xbmc.LOGDEBUG)
 		self.post_process_unarchive_files_xbmc_builtin(filename_in,crc_in)
@@ -3675,7 +3716,7 @@ class iagl_download(object):
 					if pda == 'unzip_rom':
 						self.post_process_unarchive_files(self.current_saved_files[ii],self.current_saved_files_crc[ii])
 					if pda == 'unzip_and_rename_file': 
-						self.post_process_unarchive_and_rename_files_xbmc_builtin(self.current_saved_files[ii],self.current_saved_files_crc[ii])
+						self.post_process_unarchive_and_rename_files(self.current_saved_files[ii],self.current_saved_files_crc[ii])
 					if pda == 'unzip_to_folder_and_launch_file':
 						self.post_process_unarchive_to_folder_and_launch_pointer_file(self.current_saved_files[ii])
 					if pda == 'unzip_and_launch_file':
