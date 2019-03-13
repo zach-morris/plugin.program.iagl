@@ -4489,11 +4489,7 @@ def extract_all_libarchive(archive_file,directory_to):
 	dirs_in_archive, files_in_archive = xbmcvfs.listdir(archive_path)
 	for ff in files_in_archive:
 		if not xbmcvfs.exists(os.path.join(xbmc.translatePath(directory_to),ff)):
-			if archive_path.endswith('/'):
-				file_from = os.path.join(archive_path,ff)
-			else:
-				file_from = archive_path+'/'+ff #Windows unexpectedly requires a forward slash in the path
-			# file_from = os.path.join(archive_path,ff)
+			file_from = os.path.join(archive_path,ff).replace('\\','/') #Windows unexpectadely requires a forward slash in the path
 			success = xbmcvfs.copy(file_from,os.path.join(xbmc.translatePath(directory_to),ff)) #Attempt to move the file first
 			if not success:
 				xbmc.log(msg='IAGL:  Error extracting file %(ff)s from archive %(archive_file)s' % {'ff': ff,'archive_file':archive_file}, level=xbmc.LOGDEBUG)
@@ -4507,7 +4503,7 @@ def extract_all_libarchive(archive_file,directory_to):
 	for dd in dirs_in_archive:
 		if xbmcvfs.exists(os.path.join(xbmc.translatePath(directory_to),dd)) or xbmcvfs.mkdir(os.path.join(xbmc.translatePath(directory_to),dd)):
 			xbmc.log(msg='IAGL:  Created folder %(dd)s for archive %(archive_file)s' % {'dd': os.path.join(xbmc.translatePath(directory_to),dd,''),'archive_file':archive_file}, level=xbmc.LOGDEBUG)
-			files_out2, success2 = extract_all_libarchive(os.path.join(archive_path,dd,''),os.path.join(directory_to,dd))
+			files_out2, success2 = extract_all_libarchive(os.path.join(archive_path,dd,'').replace('\\','/'),os.path.join(directory_to,dd)) #Windows unexpectadely requires a forward slash in the path
 			if success2:
 				files_out = files_out + files_out2
 			else:
