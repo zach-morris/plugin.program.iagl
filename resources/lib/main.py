@@ -4489,7 +4489,10 @@ def extract_all_libarchive(archive_file,directory_to):
 	dirs_in_archive, files_in_archive = xbmcvfs.listdir(archive_path)
 	for ff in files_in_archive:
 		if not xbmcvfs.exists(os.path.join(xbmc.translatePath(directory_to),ff)):
-			file_from = archive_path+'/'+ff #Windows unexpectadely requires a forward slash in the path
+			if archive_path.endswith('/'):
+				file_from = os.path.join(archive_path,ff)
+			else:
+				file_from = archive_path+'/'+ff #Windows unexpectedly requires a forward slash in the path
 			# file_from = os.path.join(archive_path,ff)
 			success = xbmcvfs.copy(file_from,os.path.join(xbmc.translatePath(directory_to),ff)) #Attempt to move the file first
 			if not success:
