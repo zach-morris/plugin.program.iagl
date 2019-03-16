@@ -134,7 +134,7 @@ class iagl_utils(object):
 		self.possible_linux_core_directories = ['/usr/lib/libretro','/usr/lib/x86_64-linux-gnu/libretro','/usr/lib/i386-linux-gnu/libretro','/usr/lib/s390x-linux-gnu/libretro','/usr/local/lib/libretro','~/.config/retroarch/cores','/tmp/cores','/home/kodi/bin/libretro/']
 		self.default_linux_core_directory = '/usr/lib/libretro'
 		self.possible_retroarch_app_locations = [os.path.join('/Applications','RetroArch.app','Contents','MacOS','RetroArch'),os.path.join('usr','bin','retroarch'),os.path.join('C:','Program Files (x86)','Retroarch','retroarch.exe'),os.path.join('opt','retropie','emulators','retroarch','bin','retroarch'),os.path.join('home','kodi','bin','retroarch')]
-		self.possible_retroarch_config_locations = [os.path.join('mnt','internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('data','data','com.retroarch','retroarch.cfg'),os.path.join('data','data','com.retroarch','files','retroarch.cfg')]
+		self.possible_retroarch_config_locations = [os.path.join('mnt','internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('data','data','com.retroarch','retroarch.cfg'),os.path.join('data','data','com.retroarch','files','retroarch.cfg'),os.path.join('mnt','internal_sd','Android','data','com.retroarch.aarch64','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch.aarch64','files','retroarch.cfg'),os.path.join('data','user','0','com.retroarch.aarch64','retroarch.cfg'),os.path.join('data','user','0','com.retroarch.aarch64','files','retroarch.cfg')]
 		self.additional_supported_external_emulators = ['APP_PATH_FS_UAE','APP_PATH_PJ64','APP_PATH_DOLPHIN','APP_PATH_MAME','APP_PATH_DEMUL','APP_PATH_EPSXE']
 		self.additional_supported_external_emulator_settings = 'FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone|DEMUL (Win)|ePSXe'
 		self.windowid = xbmcgui.getCurrentWindowId()
@@ -3785,7 +3785,7 @@ class iagl_launch(object):
 		if self.launcher.lower() == 'retroplayer':
 			self.launch_success = self.launch_retroplayer()
 		if self.launcher.lower() == 'external':
-			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android':
+			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android' or self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android Aarch64':
 				self.launch_success = self.launch_external_android()
 			else:
 				self.launch_success = self.launch_external()
@@ -3870,6 +3870,19 @@ class iagl_launch(object):
 			current_cfg_path = ''
 			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android':
 				default_config_locations = ['/mnt/internal_sd/Android/data/com.retroarch/files/retroarch.cfg','/sdcard/Android/data/com.retroarch/files/retroarch.cfg','/data/data/com.retroarch/retroarch.cfg']
+				current_cfg_path = None
+				if len(self.IAGL.handle.getSetting(id='iagl_external_path_to_retroarch_cfg'))<1: #Config is not defined in settings, try to find it in one of the default locales
+					for cfg_files in default_config_locations:
+						if xbmcvfs.exists(cfg_files):
+							if current_cfg_path is None: #If the current config path is not yet defined and the file was found, then define it
+								current_cfg_path = cfg_files
+				else:
+					current_cfg_path = xbmc.translatePath(self.IAGL.handle.getSetting(id='iagl_external_path_to_retroarch_cfg')) #If the config path is defined in settings, use that
+				if current_cfg_path is None:
+					current_cfg_path = ''
+					xbmc.log(msg='IAGL:  No Retroarch config file could be defined, please set your config file location in addon settings', level=xbmc.LOGERROR)
+			elif self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android Aarch64':
+				default_config_locations = ['/mnt/internal_sd/Android/data/com.retroarch.aarch64/files/retroarch.cfg','/sdcard/Android/data/com.retroarch.aarch64/files/retroarch.cfg','/data/user/0/com.retroarch.aarch64/retroarch.cfg']
 				current_cfg_path = None
 				if len(self.IAGL.handle.getSetting(id='iagl_external_path_to_retroarch_cfg'))<1: #Config is not defined in settings, try to find it in one of the default locales
 					for cfg_files in default_config_locations:
