@@ -3996,7 +3996,10 @@ class iagl_launch(object):
 				xbmc.sleep(500)
 			xbmc.audioSuspend()
 			xbmc.enableNavSounds(False)
-			android_stop_command = '/system/bin/am force-stop com.retroarch'
+			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android':
+				android_stop_command = '/system/bin/am force-stop com.retroarch'
+			elif self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android Aarch64':
+				android_stop_command = '/system/bin/am force-stop com.retroarch.aarch64'
 			if int(self.IAGL.handle.getSetting(id='iagl_android_command_type')) == 1: #Subprocess normal
 				xbmc.log(msg='IAGL:  Android subprocess (normal shell) external launch selected', level=xbmc.LOGDEBUG)
 				executable_path = '/system/bin/sh' #This is the path to the normal shell for most android installations
