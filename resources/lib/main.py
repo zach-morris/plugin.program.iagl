@@ -134,7 +134,7 @@ class iagl_utils(object):
 		self.possible_linux_core_directories = ['/usr/lib/libretro','/usr/lib/x86_64-linux-gnu/libretro','/usr/lib/i386-linux-gnu/libretro','/usr/lib/s390x-linux-gnu/libretro','/usr/local/lib/libretro','~/.config/retroarch/cores','/tmp/cores','/home/kodi/bin/libretro/']
 		self.default_linux_core_directory = '/usr/lib/libretro'
 		self.possible_retroarch_app_locations = [os.path.join('/Applications','RetroArch.app','Contents','MacOS','RetroArch'),os.path.join('usr','bin','retroarch'),os.path.join('C:','Program Files (x86)','Retroarch','retroarch.exe'),os.path.join('opt','retropie','emulators','retroarch','bin','retroarch'),os.path.join('home','kodi','bin','retroarch')]
-		self.possible_retroarch_config_locations = [os.path.join('mnt','internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('data','data','com.retroarch','retroarch.cfg'),os.path.join('data','data','com.retroarch','files','retroarch.cfg')]
+		self.possible_retroarch_config_locations = [os.path.join('mnt','internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('data','data','com.retroarch','retroarch.cfg'),os.path.join('data','data','com.retroarch','files','retroarch.cfg'),os.path.join('mnt','internal_sd','Android','data','com.retroarch.aarch64','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch.aarch64','files','retroarch.cfg'),os.path.join('data','user','0','com.retroarch.aarch64','retroarch.cfg'),os.path.join('data','user','0','com.retroarch.aarch64','files','retroarch.cfg')]
 		self.additional_supported_external_emulators = ['APP_PATH_FS_UAE','APP_PATH_PJ64','APP_PATH_DOLPHIN','APP_PATH_MAME','APP_PATH_DEMUL','APP_PATH_EPSXE']
 		self.additional_supported_external_emulator_settings = 'FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone|DEMUL (Win)|ePSXe'
 		self.windowid = xbmcgui.getCurrentWindowId()
@@ -3785,7 +3785,7 @@ class iagl_launch(object):
 		if self.launcher.lower() == 'retroplayer':
 			self.launch_success = self.launch_retroplayer()
 		if self.launcher.lower() == 'external':
-			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android':
+			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android' or self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android Aarch64':
 				self.launch_success = self.launch_external_android()
 			else:
 				self.launch_success = self.launch_external()
@@ -3866,13 +3866,12 @@ class iagl_launch(object):
 			else: #Linux
 				current_retroarch_path = xbmc.translatePath(self.IAGL.handle.getSetting(id='iagl_external_path_to_retroarch'))
 
-			#Define %CFG_PATH% Variable
+			#Define %CFG_PATH% Variable for Android
 			current_cfg_path = ''
-			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android':
-				default_config_locations = ['/mnt/internal_sd/Android/data/com.retroarch/files/retroarch.cfg','/sdcard/Android/data/com.retroarch/files/retroarch.cfg','/data/data/com.retroarch/retroarch.cfg']
+			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android' or self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android Aarch64':
 				current_cfg_path = None
 				if len(self.IAGL.handle.getSetting(id='iagl_external_path_to_retroarch_cfg'))<1: #Config is not defined in settings, try to find it in one of the default locales
-					for cfg_files in default_config_locations:
+					for cfg_files in self.IAGL.possible_retroarch_config_locations:
 						if xbmcvfs.exists(cfg_files):
 							if current_cfg_path is None: #If the current config path is not yet defined and the file was found, then define it
 								current_cfg_path = cfg_files
@@ -3983,18 +3982,18 @@ class iagl_launch(object):
 				xbmc.sleep(500)
 			xbmc.audioSuspend()
 			xbmc.enableNavSounds(False)
-			android_stop_command = '/system/bin/am force-stop com.retroarch'
+			# android_stop_command = '/system/bin/am force-stop com.retroarch'  #Changed to add stop command in the external launch command arguments
 			if int(self.IAGL.handle.getSetting(id='iagl_android_command_type')) == 1: #Subprocess normal
 				xbmc.log(msg='IAGL:  Android subprocess (normal shell) external launch selected', level=xbmc.LOGDEBUG)
 				executable_path = '/system/bin/sh' #This is the path to the normal shell for most android installations
-				if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_android_stop_command')):
-					try:
-						xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGNOTICE)
-						retcode = subprocess.call(android_stop_command,shell=True,executable=executable_path)
-						xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
-					except Exception as exc:
-						xbmc.log(msg='IAGL: Error sending subprocess (normal shell) stop command, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
-				xbmc.sleep(500)
+				# if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_android_stop_command')):
+				# 	try:
+				# 		xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGNOTICE)
+				# 		retcode = subprocess.call(android_stop_command,shell=True,executable=executable_path)
+				# 		xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
+				# 	except Exception as exc:
+				# 		xbmc.log(msg='IAGL: Error sending subprocess (normal shell) stop command, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
+				# xbmc.sleep(500)
 				try:
 					xbmc.log(msg='IAGL:  Sending Android Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGNOTICE)
 					retcode = subprocess.call(self.external_launch_command,shell=True,executable=executable_path)
@@ -4004,14 +4003,14 @@ class iagl_launch(object):
 			elif int(self.IAGL.handle.getSetting(id='iagl_android_command_type')) == 2: #Subprocess root
 				xbmc.log(msg='IAGL:  Android subprocess (root shell) external launch selected', level=xbmc.LOGDEBUG)
 				executable_path = '/system/xbin/su' #This is the method for root shell for most rooted android installations
-				if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_android_stop_command')):
-					try:
-						xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGNOTICE)
-						retcode = subprocess.call(android_stop_command,shell=True,executable=executable_path)
-						xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
-					except Exception as exc:
-						xbmc.log(msg='IAGL: Error sending subprocess (root shell) stop command, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
-				xbmc.sleep(500)
+				# if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_android_stop_command')):
+				# 	try:
+				# 		xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGNOTICE)
+				# 		retcode = subprocess.call(android_stop_command,shell=True,executable=executable_path)
+				# 		xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
+				# 	except Exception as exc:
+				# 		xbmc.log(msg='IAGL: Error sending subprocess (root shell) stop command, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
+				# xbmc.sleep(500)
 				try:
 					xbmc.log(msg='IAGL:  Sending Android Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGNOTICE)
 					retcode = subprocess.call(self.external_launch_command,shell=True,executable=executable_path)
@@ -4020,14 +4019,14 @@ class iagl_launch(object):
 					xbmc.log(msg='IAGL: Error sending subprocess (root shell) command, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			else: #Default
 				xbmc.log(msg='IAGL:  Android os.system external launch selected', level=xbmc.LOGDEBUG)
-				if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_android_stop_command')):
-					try:
-						xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGNOTICE)
-						retcode = os.system(android_stop_command)
-						xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
-					except Exception as exc:
-						xbmc.log(msg='IAGL: Error sending os.system stop command, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
-				xbmc.sleep(500)
+				# if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_android_stop_command')):
+				# 	try:
+				# 		xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGNOTICE)
+				# 		retcode = os.system(android_stop_command)
+				# 		xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
+				# 	except Exception as exc:
+				# 		xbmc.log(msg='IAGL: Error sending os.system stop command, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
+				# xbmc.sleep(500)
 				try:
 					xbmc.log(msg='IAGL:  Sending Android Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGNOTICE)
 					retcode = os.system(self.external_launch_command)
