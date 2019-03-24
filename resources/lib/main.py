@@ -1790,7 +1790,10 @@ class iagl_utils(object):
 		if current_query['lists'] is None: #Use all lists is the query is for None
 			current_query['lists'] = [x for x in self.get_game_lists().get('dat_filename')]
 		for game_list_id in current_query['lists']:
-			games_dict = games_dict+self.get_games(game_list_id)
+			try:
+				games_dict = games_dict+self.get_games(game_list_id)
+			except Exception as exc: #except Exception, (exc):
+				xbmc.log(msg='IAGL Error:  The game list could not be serached, it may be corrupted.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGDEBUG) 
 		xbmc.log(msg='IAGL:  Search started from %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
 		#2.  Filter by title (regex)
 		if current_query['title'] is not None:
@@ -2325,9 +2328,11 @@ class iagl_utils(object):
 
 		starting_tag = '<%(current_key)s>'%{'current_key':current_key}
 		ending_tag = '</%(current_key)s>'%{'current_key':current_key}
+		file_ending_tag = '</datafile>'
 
 		new_value_line = '<%(current_key)s>%(new_value)s</%(current_key)s>'%{'current_key':current_key,'new_value':new_value.replace('\r\n','[CR]').replace('\r','[CR]').replace('\n','[CR]')}
 		value_updated = False
+		last_line_written = False
 
 		with open(current_filename,'r') as input_file, open(os.path.join(self.get_dat_folder_path(),'temp.xml'), 'w') as output_file:
 			for line in input_file:
@@ -2346,10 +2351,14 @@ class iagl_utils(object):
 								xbmc.log(msg='IAGL:  XML %(current_filename)s write error.  Exception %(exc)s' % {'current_filename': current_filename, 'exc': exc2}, level=xbmc.LOGERROR)
 					else:
 						output_file.write(line)
+						if file_ending_tag in line:
+							last_line_written = True
 				else:
 					output_file.write(line)
+					if file_ending_tag in line:
+						last_line_written = True
 
-		if value_updated: #Success
+		if value_updated and last_line_written: #Success
 			if xbmcvfs.delete(current_filename): #Current file was deleted
 				if xbmcvfs.rename(os.path.join(self.get_dat_folder_path(),'temp.xml'),current_filename):
 					xbmc.log(msg='IAGL:  XML %(current_filename)s updated with value %(new_value)s' % {'current_filename': os.path.split(current_filename)[-1], 'new_value': new_value}, level=xbmc.LOGDEBUG)
@@ -2379,6 +2388,8 @@ class iagl_utils(object):
 			ok_ret = current_dialog.notification(self.loc_str(30203),'Error updating %(current_filename)s, see log' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
 			del current_dialog
 			xbmc.log(msg='IAGL:  XML %(current_filename)s was not updated.  The tag %(current_key)s could not be located.' % {'current_filename': os.path.split(current_filename)[-1], 'current_key': current_key}, level=xbmc.LOGERROR)
+			if not last_line_written:
+				xbmc.log(msg='IAGL:  XML %(current_filename)s was not updated.  The file ending tag was never written.' % {'current_filename': os.path.split(current_filename)[-1]}, level=xbmc.LOGERROR)
 
 	def add_game_to_IAGL_favorites(self,game_list_id_in,game_id_in,json_in):
 		current_favorites_lists = self.get_list_of_favorites_lists()
