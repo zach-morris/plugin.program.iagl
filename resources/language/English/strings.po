@@ -1047,6 +1047,14 @@ msgctxt "#30356"
 msgid "No external command is defined.[CR]Please check settings."
 msgstr "No external command is defined.[CR]Please check settings."
 
+msgctxt "#30357"
+msgid "You are removing the only game listed in %(game_list_id_in)s, do you want to delete the list?"
+msgstr "You are removing the only game listed in %(game_list_id_in)s, do you want to delete the list?"
+
+msgctxt "#30358"
+msgid "%(game_list_id_in)s was deleted."
+msgstr "%(game_list_id_in)s was deleted."
+
 #
 #Context Menus
 #

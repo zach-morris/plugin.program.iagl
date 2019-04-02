@@ -2453,6 +2453,7 @@ class iagl_utils(object):
 			if '<games>' in favorite_xml and '</games>' in favorite_xml:
 				favorite_header = '<!-- IAGL Favorite XXXCRCXXX -->'.replace('XXXCRCXXX',crc_string)
 				favorite_xml = favorite_xml.replace('<games>',favorite_header).replace('</games>',favorite_header).replace('><','>\r\n\t\t<').replace('\t\t<game ','\t<game ').replace('\t\t</game>','\t</game>').replace('\t\t<!--','<!--')+'\r\n</datafile>'
+				favorite_xml = favorite_xml.replace('\n\n','\n').replace('\r\r','\r') #Remove extra newlines
 				value_updated = False
 				with open(filename_in,'r') as input_file, open(os.path.join(self.get_dat_folder_path(),'temp.xml'), 'w') as output_file:
 					for line in input_file:
@@ -2515,21 +2516,24 @@ class iagl_utils(object):
 					new_file_list = file_contents.split('<!-- IAGL Favorite XXXCRCXXX -->'.replace('XXXCRCXXX',crc_string))
 					if type(new_file_list) == list and len(new_file_list) == 3: #Favorite crc was found
 						new_file_contents = new_file_list[0]+new_file_list[-1] #Combine the two parts of the file without the favorite
-						new_file_contents = new_file_contents.replace('\r\n\r\n','\r\n')
+						new_file_contents = new_file_contents.replace('\r\n\r\n','\r\n').replace('\n\n','\n').replace('\r\r','\r')
 						with closing(xbmcvfs.File(os.path.join(self.get_dat_folder_path(),'temp.xml'),'w')) as content_file:
 							content_file.write(new_file_contents)
-						if xbmcvfs.exists(os.path.join(self.get_dat_folder_path(),'temp.xml')):
-							if xbmcvfs.rename(os.path.join(self.get_dat_folder_path(),'temp.xml'),current_filename):
-								xbmc.log(msg='IAGL:  Game %(game_id_in)s removed from XML %(current_filename)s' % {'game_id_in': game_id_in, 'current_filename': os.path.split(current_filename)[-1]}, level=xbmc.LOGDEBUG)
-								xbmcvfs.delete(os.path.join(self.get_list_cache_path(),self.dat_file_cache_filename)) #Delete dat file cache
-								if self.delete_list_cache(os.path.splitext(os.path.split(current_filename)[-1])[0]):
-									current_dialog = xbmcgui.Dialog()
-									ok_ret = current_dialog.notification(self.loc_str(30202),self.loc_str(30345) % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
-								else: #Delete list file cache
-									current_dialog = xbmcgui.Dialog()
-									ok_ret = current_dialog.notification(self.loc_str(30202),self.loc_str(30346) % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
+						if xbmcvfs.exists(os.path.join(self.get_dat_folder_path(),'temp.xml')): #If the temp file was written
+							if xbmcvfs.delete(current_filename): #and the old favorites xml can be deleted
+								if xbmcvfs.rename(os.path.join(self.get_dat_folder_path(),'temp.xml'),current_filename): #rename the temp file to the favorites xml
+									xbmc.log(msg='IAGL:  Game %(game_id_in)s removed from XML %(current_filename)s' % {'game_id_in': game_id_in, 'current_filename': os.path.split(current_filename)[-1]}, level=xbmc.LOGDEBUG)
+									xbmcvfs.delete(os.path.join(self.get_list_cache_path(),self.dat_file_cache_filename)) #Delete dat file cache
+									if self.delete_list_cache(os.path.splitext(os.path.split(current_filename)[-1])[0]):
+										current_dialog = xbmcgui.Dialog()
+										ok_ret = current_dialog.notification(self.loc_str(30202),self.loc_str(30345) % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
+									else: #Delete list file cache
+										current_dialog = xbmcgui.Dialog()
+										ok_ret = current_dialog.notification(self.loc_str(30202),self.loc_str(30346) % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
+								else:
+									xbmc.log(msg='IAGL:  Temporary XML file could not be renamed.  How on earth did you get here?', level=xbmc.LOGDEBUG)
 							else:
-								xbmc.log(msg='IAGL:  Temporary XML file could not be renamed.  How on earth did you get here?', level=xbmc.LOGDEBUG)
+								xbmc.log(msg='IAGL:  The favorites XML could not be deleted.  How on earth did you get here?', level=xbmc.LOGDEBUG)
 						else:
 							xbmc.log(msg='IAGL:  Temporary XML file could not be found.  How on earth did you get here?', level=xbmc.LOGDEBUG)
 					else:
