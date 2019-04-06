@@ -161,7 +161,7 @@ def get_games_with_letter(letter,game_list_id,page_number=1):
 	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s alphabetically, display method %(list_method)s, starting with letter %(letter)s, with %(items_pp)s items per page, on page %(page_number)s' % {'game_list_id': game_list_id,'list_method': list_method, 'letter': url_unquote(letter), 'items_pp': str(IAGL.get_items_per_page()), 'page_number': page_number}, level=xbmc.LOGDEBUG)
 	current_page, page_info = IAGL.get_games_as_listitems(url_unquote(game_list_id),list_method,letter,page_number)
 	for list_item in current_page:
-		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2())),list_item, True) #Method 1, dont pass json as arg
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2())),IAGL.add_game_context_menus(list_item,game_list_id,url_quote(list_item.getLabel2()),page_info['categories']), True) #Method 1, dont pass json as arg
 		# xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2()), json=list_item.getProperty('iagl_json')),list_item, True) #Method 2, pass json as arg, works well for Kodi favs, but is 'messy'
 	next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
 	if next_page_li is not None:
@@ -200,7 +200,7 @@ def get_games_with_genre(genre,game_list_id,page_number=1):
 	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s by genre, display method %(list_method)s, with the genre %(genre)s, with %(items_pp)s items per page, on page %(page_number)s' % {'game_list_id': game_list_id,'list_method': list_method, 'genre': url_unquote(genre), 'items_pp': str(IAGL.get_items_per_page()), 'page_number': page_number}, level=xbmc.LOGDEBUG)
 	current_page, page_info = IAGL.get_games_as_listitems(url_unquote(game_list_id),list_method,url_unquote(genre),page_number)
 	for list_item in current_page:
-		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2())),list_item, True) #Method 1, dont pass json as arg
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2())),IAGL.add_game_context_menus(list_item,game_list_id,url_quote(list_item.getLabel2()),page_info['categories']), True) #Method 1, dont pass json as arg
 		# xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2()), json=list_item.getProperty('iagl_json')),list_item, True) #Method 2, pass json as arg, works well for Kodi favs, but is 'messy'
 	next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
 	if next_page_li is not None:
@@ -238,7 +238,7 @@ def get_games_with_year(year,game_list_id,page_number=1):
 	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s by year, display method %(list_method)s, with the year %(year)s, with %(items_pp)s items per page, on page %(page_number)s' % {'game_list_id': game_list_id,'list_method': list_method, 'year': url_unquote(year), 'items_pp': str(IAGL.get_items_per_page()), 'page_number': page_number}, level=xbmc.LOGDEBUG)
 	current_page, page_info = IAGL.get_games_as_listitems(url_unquote(game_list_id),list_method,url_unquote(year),page_number)
 	for list_item in current_page:
-		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2())),list_item, True) #Method 1, dont pass json as arg
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2())),IAGL.add_game_context_menus(list_item,game_list_id,url_quote(list_item.getLabel2()),page_info['categories']), True) #Method 1, dont pass json as arg
 		# xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2()), json=list_item.getProperty('iagl_json')),list_item, True) #Method 2, pass json as arg, works well for Kodi favs, but is 'messy'
 	next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
 	if next_page_li is not None:
@@ -276,7 +276,7 @@ def get_games_with_players(nplayers,game_list_id,page_number=1):
 	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s by num players, display method %(list_method)s, with the num players %(nplayers)s, with %(items_pp)s items per page, on page %(page_number)s' % {'game_list_id': game_list_id,'list_method': list_method, 'nplayers': url_unquote(nplayers), 'items_pp': str(IAGL.get_items_per_page()), 'page_number': page_number}, level=xbmc.LOGDEBUG)
 	current_page, page_info = IAGL.get_games_as_listitems(url_unquote(game_list_id),list_method,url_unquote(nplayers),page_number)
 	for list_item in current_page:
-		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2())),list_item, True) #Method 1, dont pass json as arg
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2())),IAGL.add_game_context_menus(list_item,game_list_id,url_quote(list_item.getLabel2()),page_info['categories']), True) #Method 1, dont pass json as arg
 		# xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2()), json=list_item.getProperty('iagl_json')),list_item, True) #Method 2, pass json as arg, works well for Kodi favs, but is 'messy'
 	next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
 	if next_page_li is not None:
@@ -310,7 +310,7 @@ def get_games_with_studio(studio,game_list_id,page_number=1):
 	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s by studio, display method %(list_method)s, with the studio %(studio)s, with %(items_pp)s items per page, on page %(page_number)s' % {'game_list_id': game_list_id,'list_method': list_method, 'studio': url_unquote(studio), 'items_pp': str(IAGL.get_items_per_page()), 'page_number': page_number}, level=xbmc.LOGDEBUG)
 	current_page, page_info = IAGL.get_games_as_listitems(url_unquote(game_list_id),list_method,url_unquote(studio),page_number)
 	for list_item in current_page:
-		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2())),list_item, True) #Method 1, dont pass json as arg
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2())),IAGL.add_game_context_menus(list_item,game_list_id,url_quote(list_item.getLabel2()),page_info['categories']), True) #Method 1, dont pass json as arg
 		# xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2()), json=list_item.getProperty('iagl_json')),list_item, True) #Method 2, pass json as arg, works well for Kodi favs, but is 'messy'
 	next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
 	if next_page_li is not None:
