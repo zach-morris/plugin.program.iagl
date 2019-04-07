@@ -2341,11 +2341,15 @@ class iagl_utils(object):
 						try:
 							output_file.write('%(start_value)s%(new_value)s%(end_value)s' % {'start_value': line.split(starting_tag)[0], 'new_value': new_value_line, 'end_value':line.split(ending_tag)[-1]})
 							value_updated = True
+							if file_ending_tag in line:  #Of course android does something totally unexpected with standard python code
+								last_line_written = True
 						except Exception as exc1: #except Exception, (exc):
 							try:
 								xbmc.log(msg='IAGL:  XML %(current_filename)s write error.  Exception %(exc)s.  Attempting to write again.' % {'current_filename': current_filename, 'exc': exc1}, level=xbmc.LOGERROR)
 								output_file.write(new_value_line)
 								value_updated = True
+								if file_ending_tag in line:  #Of course android does something totally unexpected with standard python code
+									last_line_written = True
 							except Exception as exc2: #except Exception, (exc):
 								value_updated = False
 								xbmc.log(msg='IAGL:  XML %(current_filename)s write error.  Exception %(exc)s' % {'current_filename': current_filename, 'exc': exc2}, level=xbmc.LOGERROR)
@@ -2387,7 +2391,8 @@ class iagl_utils(object):
 			current_dialog = xbmcgui.Dialog()
 			ok_ret = current_dialog.notification(self.loc_str(30203),'Error updating %(current_filename)s, see log' % {'current_filename': os.path.splitext(os.path.split(current_filename)[-1])[0]},xbmcgui.NOTIFICATION_INFO,self.notification_time)
 			del current_dialog
-			xbmc.log(msg='IAGL:  XML %(current_filename)s was not updated.  The tag %(current_key)s could not be located.' % {'current_filename': os.path.split(current_filename)[-1], 'current_key': current_key}, level=xbmc.LOGERROR)
+			if not value_updated:
+				xbmc.log(msg='IAGL:  XML %(current_filename)s was not updated.  The tag %(current_key)s could not be located.' % {'current_filename': os.path.split(current_filename)[-1], 'current_key': current_key}, level=xbmc.LOGERROR)
 			if not last_line_written:
 				xbmc.log(msg='IAGL:  XML %(current_filename)s was not updated.  The file ending tag was never written.' % {'current_filename': os.path.split(current_filename)[-1]}, level=xbmc.LOGERROR)
 
