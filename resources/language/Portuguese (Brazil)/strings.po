@@ -1,0 +1,1160 @@
+# Kodi Media Center language file
+# Addon Name: Internet Archive Game Launcher
+# Addon id: plugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: zachmorris\n"
+"Last-Translator: LITUATUI geral@caixapreta.pt\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "Internet Archive Game Launcher"
+
+#
+#Settings
+#
+
+msgctxt "#30002"
+msgid "General"
+msgstr "Geral"
+
+msgctxt "#30003"
+msgid "External Launchers"
+msgstr "Lançadores externos"
+
+msgctxt "#30004"
+msgid "Netplay"
+msgstr "Netplay"
+
+msgctxt "#30005"
+msgid "Setup Wizard"
+msgstr "Assistente de configuração"
+
+msgctxt "#30006"
+msgid "Advanced Settings"
+msgstr "Configurações avançadas"
+
+msgctxt "#30007"
+msgid "Cache Lists to Disk"
+msgstr "Usar disco para cache de listas"
+
+msgctxt "#30008"
+msgid "Enable Memory Cache"
+msgstr "Ativar memória cache"
+
+msgctxt "#30009"
+msgid "Clean Game Title"
+msgstr "Limpar o título do jogo"
+
+msgctxt "#30010"
+msgid "Archive Listing Convention"
+msgstr "Convenção para listagem de arquivos"
+
+msgctxt "#30011"
+msgid "Game Listing Convention"
+msgstr "Convenção para listagem de jogos"
+
+msgctxt "#30012"
+msgid "Display Naming Convention"
+msgstr "Convenção para mostrar nomes"
+
+msgctxt "#30013"
+msgid "Number of Items Per Page"
+msgstr "Número de elementos por página"
+
+msgctxt "#30014"
+msgid "Last Played History"
+msgstr "Histórico de últimos jogos"
+
+msgctxt "#30015"
+msgid "If Game Already Exists Locally"
+msgstr "Se o jogo já existe localmente"
+
+msgctxt "#30016"
+msgid "Default Action on Selecting Game"
+msgstr "Acção padrão ao selecionar o jogo"
+
+msgctxt "#30017"
+msgid "Show Search Item"
+msgstr "Mostrar item de pesquisa"
+
+msgctxt "#30018"
+msgid "Show Random Play Item"
+msgstr "Mostrar item de jogo aleatório"
+
+msgctxt "#30019"
+msgid "Show Play History Item"
+msgstr "Mostrar item do histórico de jogo"
+
+msgctxt "#30020"
+msgid "Autoplay Game Trailer"
+msgstr "Reproduzir trailers automaticamente"
+
+msgctxt "#30021"
+msgid "Cache Size (MB)"
+msgstr "Tamanho da cache (MB)"
+
+msgctxt "#30022"
+msgid "Enable Login"
+msgstr "Ativar login"
+
+msgctxt "#30023"
+msgid "archive.org Email"
+msgstr "Email"
+
+msgctxt "#30024"
+msgid "archive.org Password"
+msgstr "Senha"
+
+msgctxt "#30025"
+msgid "My System Type"
+msgstr "Tipo de sistema"
+
+msgctxt "#30026"
+msgid "Close Kodi on Launch"
+msgstr "Fecha o Kodi no lançamento"
+
+msgctxt "#30027"
+msgid "Pause Kodi on Launch"
+msgstr "Pausa Kodi no lançamento"
+
+msgctxt "#30028"
+msgid "RetroArch App Location"
+msgstr "Localização da app RetroArch"
+
+msgctxt "#30029"
+msgid "RetroArch System Folder"
+msgstr "Pasta de sistema do RetroArch"
+
+msgctxt "#30030"
+msgid "RetroArch CFG Location"
+msgstr "Pasta de configuração do RetroArch"
+
+msgctxt "#30031"
+msgid "Additional Emulators:"
+msgstr "Emuladores adicionais:"
+
+msgctxt "#30032"
+msgid "Additional Emulator 1"
+msgstr "Emulador adicional 1"
+
+msgctxt "#30033"
+msgid "Emulator 1 App Location"
+msgstr "Localização do emulador 1"
+
+msgctxt "#30034"
+msgid "Additional Emulator 2"
+msgstr "Emulador adicional 2"
+
+msgctxt "#30035"
+msgid "Emulator 2 App Location"
+msgstr "Localização do emulador 2"
+
+msgctxt "#30036"
+msgid "Additional Emulator 3"
+msgstr "Emulador adicional 3"
+
+msgctxt "#30037"
+msgid "Emulator 3 App Location"
+msgstr "Localização do emulador 3"
+
+msgctxt "#30038"
+msgid "Enable Netplay"
+msgstr "Ativar Netplay"
+
+msgctxt "#30039"
+msgid "Player Connection Type"
+msgstr "Tipo de conexão do jogador"
+
+msgctxt "#30040"
+msgid "Player Name"
+msgstr "Nome do jogador"
+
+msgctxt "#30041"
+msgid "Host IP Address"
+msgstr "Endereço IP do hospedeiro"
+
+msgctxt "#30042"
+msgid "Host IP Port"
+msgstr "Porta IP do hospedeiro"
+
+msgctxt "#30043"
+msgid "Sync Frames"
+msgstr "Sincronizar fotogramas"
+
+msgctxt "#30044"
+msgid "Game List quick setup tool for IAGL"
+msgstr "Ferramenta de configuração rápida da lista de jogos do IAGL"
+
+msgctxt "#30045"
+msgid "Emulator Launcher"
+msgstr "Lançador de emulador"
+
+msgctxt "#30046"
+msgid "Execute Setup Wizard"
+msgstr "Execute o assistente de configuração"
+
+msgctxt "#30047"
+msgid "Note:  You should not use these settings unless you're sure of what you are doing!"
+msgstr "Nota:  Não deve usar estas configurações a menos que tenha certeza do que está fazendo!"
+
+msgctxt "#30048"
+msgid "Enable Editing for Post DL Command"
+msgstr "Ativar edição para o comando Post DL"
+
+msgctxt "#30049"
+msgid "Send Android Stop Command before External Launch"
+msgstr "Envie o comando parar do Android antes do lançamento externo"
+
+msgctxt "#30050"
+msgid "Add to IAGL Favorites"
+msgstr "Adicione aos favoritos do IAGL"
+
+msgctxt "#30051"
+msgid "Set addon to provide games (RetroPlayer Only)"
+msgstr "Definir o addon para fornecer jogos (somente RetroPlayer)"
+
+msgctxt "#30052"
+msgid "Set addon to provide Video"
+msgstr "Definir addon para fornecer vídeo"
+
+msgctxt "#30053"
+msgid "Set addon to provide Programs"
+msgstr "Definir addon para fornecer programas"
+
+msgctxt "#30054"
+msgid "Addon Content Type"
+msgstr "Tipo de conteúdo do addon"
+
+msgctxt "#30055"
+msgid "Unhide All Game Lists"
+msgstr "Mostrar todas as listas de jogos"
+
+msgctxt "#30056"
+msgid "Clear Cache"
+msgstr "Limpar cache"
+
+msgctxt "#30057"
+msgid "Stop Media before Launch"
+msgstr "Pare a média antes do lançamento"
+
+msgctxt "#30058"
+msgid "Choose from List"
+msgstr "Escolha da lista"
+
+msgctxt "#30059"
+msgid "Browse All Lists"
+msgstr "Explorar todas as listas"
+
+msgctxt "#30060"
+msgid "Browse by Category"
+msgstr "Explorar categorias"
+
+msgctxt "#30061"
+msgid "One Big List"
+msgstr "Uma lista grande"
+
+msgctxt "#30062"
+msgid "Alphabetical"
+msgstr "Ordem alfabética"
+
+msgctxt "#30063"
+msgid "Group by Genre"
+msgstr "Agrupar por género"
+
+msgctxt "#30064"
+msgid "Group by Year"
+msgstr "Agrupar por ano"
+
+msgctxt "#30065"
+msgid "Group by Players"
+msgstr "Agrupar por número de jogadores"
+
+msgctxt "#30066"
+msgid "Group by Studio"
+msgstr "Agrupar por estúdio"
+
+msgctxt "#30067"
+msgid "Title, Genre"
+msgstr "Título, Género"
+
+msgctxt "#30068"
+msgid "Title, Date"
+msgstr "Título, Data"
+
+msgctxt "#30069"
+msgid "Title, Players"
+msgstr "Título, Jogadores"
+
+msgctxt "#30070"
+msgid "Title, Genre, Date"
+msgstr "Título, Género, Data"
+
+msgctxt "#30071"
+msgid "Title, Genre, Size"
+msgstr "Título, Género, Tamanho"
+
+msgctxt "#30072"
+msgid "Title, Genre, Players"
+msgstr "Título, Género, Jogadores"
+
+msgctxt "#30073"
+msgid "Title, Date, Size"
+msgstr "Título, Data, Tamanho"
+
+msgctxt "#30074"
+msgid "Title, Date, Players"
+msgstr "Título, Data, Jogadores"
+
+msgctxt "#30075"
+msgid "Genre, Title"
+msgstr "Genre, Título"
+
+msgctxt "#30076"
+msgid "Date, Title"
+msgstr "Date, Título"
+
+msgctxt "#30077"
+msgid "Players, Title"
+msgstr "Players, Título"
+
+msgctxt "#30078"
+msgid "Genre, Title, Date"
+msgstr "Género, Título, Data"
+
+msgctxt "#30079"
+msgid "Date, Title, Genre"
+msgstr "Date, Título, Género"
+
+msgctxt "#30080"
+msgid "Players, Title, Genre"
+msgstr "Players, Título, Género"
+
+msgctxt "#30081"
+msgid "Players, Title, Date"
+msgstr "Players, Título, Data"
+
+msgctxt "#30082"
+msgid "Title, Genre, Date, ROM Tag"
+msgstr "Título, Género, Data, Etiqueta ROM"
+
+msgctxt "#30083"
+msgid "Title, Genre, Date, Players"
+msgstr "Título, Género, Data, Jogadores"
+
+msgctxt "#30084"
+msgid "Title, Genre, Players, ROM Tag"
+msgstr "Título, Género, Jogadores, Etiqueta ROM"
+
+msgctxt "#30085"
+msgid "Title, Genre, Date, Size"
+msgstr "Título, Género, Data, Tamanho"
+
+msgctxt "#30086"
+msgid "Prompt"
+msgstr "Preguntar"
+
+msgctxt "#30087"
+msgid "Do Not ReDownload"
+msgstr "Não voltar a descarregar"
+
+msgctxt "#30088"
+msgid "ReDownload and Overwrite"
+msgstr "Voltar a descarregar e sobrescrever"
+
+msgctxt "#30089"
+msgid "Download and Launch"
+msgstr "Descarregar e executar"
+
+msgctxt "#30090"
+msgid "Download Only"
+msgstr "Descarregar apenas"
+
+msgctxt "#30091"
+msgid "Show Info Page"
+msgstr "Mostrar informação"
+
+msgctxt "#30092"
+msgid "Show"
+msgstr "Mostrar"
+
+msgctxt "#30093"
+msgid "Hide"
+msgstr "Ocultar"
+
+msgctxt "#30094"
+msgid "Show IAGL Extras Item"
+msgstr "Mostrar itens extra IAGL"
+
+msgctxt "#30095"
+msgid "Enabled"
+msgstr "Ativado"
+
+msgctxt "#30096"
+msgid "Disabled"
+msgstr "Desativado"
+
+msgctxt "#30097"
+msgid "Zero (Current Game Only)"
+msgstr "Zero (Apenas jogo actual)"
+
+msgctxt "#30098"
+msgid "10 MB"
+msgstr "10 MB"
+
+msgctxt "#30099"
+msgid "25 MB"
+msgstr "25 MB"
+
+msgctxt "#30100"
+msgid "50 MB"
+msgstr "50 MB"
+
+msgctxt "#30101"
+msgid "100 MB"
+msgstr "100 MB"
+
+msgctxt "#30102"
+msgid "150 MB"
+msgstr "150 MB"
+
+msgctxt "#30103"
+msgid "200 MB"
+msgstr "200 MB"
+
+msgctxt "#30104"
+msgid "250 MB"
+msgstr "250 MB"
+
+msgctxt "#30105"
+msgid "300 MB"
+msgstr "300 MB"
+
+msgctxt "#30106"
+msgid "350 MB"
+msgstr "350 MB"
+
+msgctxt "#30107"
+msgid "400 MB"
+msgstr "400 MB"
+
+msgctxt "#30108"
+msgid "450 MB"
+msgstr "450 MB"
+
+msgctxt "#30109"
+msgid "500 MB"
+msgstr "500 MB"
+
+msgctxt "#30110"
+msgid "1 GB"
+msgstr "1 GB"
+
+msgctxt "#30111"
+msgid "2 GB"
+msgstr "2 GB"
+
+msgctxt "#30112"
+msgid "5 GB"
+msgstr "5 GB"
+
+msgctxt "#30113"
+msgid "10 GB"
+msgstr "10 GB"
+
+msgctxt "#30114"
+msgid "20 GB"
+msgstr "20 GB"
+
+msgctxt "#30129"
+msgid "32 GB"
+msgstr "32 GB"
+
+msgctxt "#30130"
+msgid "64 GB"
+msgstr "64 GB"
+
+msgctxt "#30115"
+msgid "Select"
+msgstr "Seleccionar"
+
+msgctxt "#30116"
+msgid "OSX"
+msgstr "OSX"
+
+msgctxt "#30117"
+msgid "Linux/Kodibuntu"
+msgstr "Linux/Kodibuntu"
+
+msgctxt "#30118"
+msgid "Windows"
+msgstr "Windows"
+
+msgctxt "#30119"
+msgid "LibreElec Remix"
+msgstr "LibreElec Remix"
+
+msgctxt "#30120"
+msgid "LibreElec Sx05RE"
+msgstr "LibreElec Sx05RE"
+
+msgctxt "#30121"
+msgid "LibreElec S905 Addon"
+msgstr "LibreElec S905 Addon"
+
+msgctxt "#30122"
+msgid "Gamestarter Addon"
+msgstr "Gamestarter Addon"
+
+msgctxt "#30123"
+msgid "Android"
+msgstr "Android"
+
+msgctxt "#30124"
+msgid "Start with Context"
+msgstr "Comece com o contexto"
+
+msgctxt "#30125"
+msgid "Player 1 Host"
+msgstr "Hospedeiro jogador 1"
+
+msgctxt "#30126"
+msgid "Player 2 Client"
+msgstr "Cliente jogador 2"
+
+msgctxt "#30127"
+msgid "Spectator"
+msgstr "Espectador"
+
+msgctxt "#30128"
+msgid "Kodi Retroplayer"
+msgstr "Retroplayer Kodi"
+
+msgctxt "#30131"
+msgid "Android External Launch Command Type"
+msgstr "Tipo de Comando de lançamento externo do Android"
+
+msgctxt "#30132"
+msgid "Python os.system"
+msgstr "Python os.system"
+
+msgctxt "#30133"
+msgid "Python subprocess"
+msgstr "Python subprocess"
+
+msgctxt "#30134"
+msgid "Python root subprocess"
+msgstr "Python root subprocess"
+
+msgctxt "#30135"
+msgid "Viewtypes"
+msgstr "Tipos de vista"
+
+msgctxt "#30136"
+msgid "Force IAGL Viewtypes"
+msgstr "Forçar tipos de vista IAGL"
+
+msgctxt "#30137"
+msgid "Frontpage Viewtype"
+msgstr "Tipo de vista da página inicial"
+
+msgctxt "#30138"
+msgid "Game Library Lists Viewtype"
+msgstr "Tipo de vista da biblioteca de jogos"
+
+msgctxt "#30139"
+msgid "Game Categories Viewtype"
+msgstr "Tipo de vista das categorias de jogos"
+
+msgctxt "#30140"
+msgid "Games List Viewtype"
+msgstr "Tipo de vista da lista de jogos"
+
+msgctxt "#30141"
+msgid "Alpha List Viewtype"
+msgstr "Tipo de vista da lista por ordem alfabética"
+
+msgctxt "#30142"
+msgid "Genre List Viewtype"
+msgstr "Tipo de vista da lista por género"
+
+msgctxt "#30143"
+msgid "Year List Viewtype"
+msgstr "Tipo de vista da lista por ano"
+
+msgctxt "#30144"
+msgid "Players List Viewtype"
+msgstr "Tipo de vista da lista por jogadores"
+
+msgctxt "#30145"
+msgid "Studio List Viewtype"
+msgstr "Tipo de vista da lista por estúdio"
+
+msgctxt "#30146"
+msgid "Search Results Viewtype"
+msgstr "Tipo de vista da lista de resultados"
+
+msgctxt "#30147"
+msgid "Random Results Viewtype"
+msgstr "Tipo de vista da lista de resultados aleatórios"
+
+msgctxt "#30148"
+msgid "Off (Default)"
+msgstr "Desligador (Padrão)"
+
+msgctxt "#30149"
+msgid "List / Poster (50)"
+msgstr "Lista / Poster (50)"
+
+msgctxt "#30150"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "Poster / Lista grande / Parede de poster (51)"
+
+msgctxt "#30151"
+msgid "Icon Wall / Horizontal Panel / LS Wall (52)"
+msgstr "Mostrador de ícone / Painel horizontal / Parede LS (52)"
+
+msgctxt "#30152"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "Banner / Panorama / Poster informativo (501)"
+
+msgctxt "#30153"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "Fanart / Panorama único / Lista de episódio (502)"
+
+msgctxt "#30154"
+msgid "Logos / Big Square Wall (503)"
+msgstr "Logos / Mostrador quadrado grande (503)"
+
+msgctxt "#30155"
+msgid "Big List 2 (504)"
+msgstr "List grande 2 (504)"
+
+msgctxt "#30156"
+msgid "Landscape Details (505)"
+msgstr "Panorama com detalhes (505)"
+
+msgctxt "#30157"
+msgid "Shift / Panel Details / Square Wall / Wrap Info (53)"
+msgstr "Shift / Painel com detalhes / Mostrador quadrado / Moldura informativa (53)"
+
+msgctxt "#30158"
+msgid "Info Wall / Panel / Banner Wall (54)"
+msgstr "Mostrador informativo / Painel / Mostrador de banner (54)"
+
+msgctxt "#30159"
+msgid "Wide List / Banner List / Poster Showcase (55)"
+msgstr "Lista alargada / Lista de banner / Vitrine de poster (55)"
+
+msgctxt "#30160"
+msgid "Extended List (506)"
+msgstr "Lista estendida (506)"
+
+msgctxt "#30161"
+msgid "Banner Plex / Landscape Showcase (56)"
+msgstr "Banner Plex / Vitrine de panorama (56)"
+
+msgctxt "#30162"
+msgid "Big Panel / Square Showcase (57)"
+msgstr "Painel grande / Vitrine quadrada (57)"
+
+msgctxt "#30163"
+msgid "Large Poster / List Info (58)"
+msgstr "Poster grande / Lista Informativa (58)"
+
+msgctxt "#30164"
+msgid "Big Panel Details / Lovefilm (59)"
+msgstr "Painel grande com detalhes / Lovefilm (59)"
+
+msgctxt "#30165"
+msgid "FanArt (507)"
+msgstr "FanArt (507)"
+
+msgctxt "#30166"
+msgid "Single Poster (508)"
+msgstr "Poster único (508)"
+
+msgctxt "#30167"
+msgid "Panel Square (509)"
+msgstr "Painel quadrado (509)"
+
+msgctxt "#30168"
+msgid "Panel Square Details (510)"
+msgstr "Painel quadrado com detalhes (510)"
+
+msgctxt "#30169"
+msgid "Thumbs (511)"
+msgstr "Miniaturas (511)"
+
+msgctxt "#30170"
+msgid "Thumbs Details (512)"
+msgstr "Miniaturas com detalhes (512)"
+
+msgctxt "#30171"
+msgid "Poster Row (513)"
+msgstr "Poster em linha (513)"
+
+msgctxt "#30172"
+msgid "Poster Shift (514)"
+msgstr "Poster Shift (514)"
+
+msgctxt "#30173"
+msgid "Low List (515)"
+msgstr "Lista baixa (515)"
+
+msgctxt "#30174"
+msgid "Slim List (516)"
+msgstr "Lista reduzida (516)"
+
+msgctxt "#30175"
+msgid "Cards (517)"
+msgstr "Cartões (517)"
+
+msgctxt "#30176"
+msgid "Wide (518)"
+msgstr "Alargado (518)"
+
+msgctxt "#30177"
+msgid "Big Panel Wall (519)"
+msgstr "Mostrador de painel grande (519)"
+
+msgctxt "#30178"
+msgid "Panel Wall (520)"
+msgstr "Mostrador de painel (520)"
+
+msgctxt "#30179"
+msgid "Panel Low (521)"
+msgstr "Painel baixo (521)"
+
+msgctxt "#30180"
+msgid "Right List (522)"
+msgstr "List direita (522)"
+
+msgctxt "#30181"
+msgid "Netflix (523)"
+msgstr "Netflix (523)"
+
+msgctxt "#30182"
+msgid "Showcase (524)"
+msgstr "Vitrine (524)"
+
+msgctxt "#30183"
+msgid "Netflix Landscape (525)"
+msgstr "Panorama Netflix (525)"
+
+msgctxt "#30184"
+msgid "Wall / Media Info (500)"
+msgstr "Mostrador / Informação média (500)"
+
+msgctxt "#30185"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "Verifique se o seu tema tem o ID do tipo de visualização forçado disponível"
+
+msgctxt "#30186"
+msgid "Silence Search and Random Query Warnings"
+msgstr "Pesquisa silenciosa e avisos de consulta aleatórios"
+
+msgctxt "#30187"
+msgid "List Info 2 (66)"
+msgstr "Lista informativa 2 (66)"
+
+msgctxt "#30188"
+msgid "List Info 3 (95)"
+msgstr "Lista informativa 3 (95)"
+
+msgctxt "#30189"
+msgid "Thumbs Info (97)"
+msgstr "Miniatura informativa (97)"
+
+msgctxt "#30190"
+msgid "Fanart View (583)"
+msgstr "Vista fanart (583)"
+
+msgctxt "#30191"
+msgid "3D Wrap (588)"
+msgstr "Moldura 3D (588)"
+
+msgctxt "#30192"
+msgid "Wall View (69)"
+msgstr "Vista de mostrador (69)"
+
+#
+#General
+#
+
+msgctxt "#30200"
+msgid "Yes"
+msgstr "Sim"
+
+msgctxt "#30201"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "#30202"
+msgid "Complete"
+msgstr "Completo"
+
+msgctxt "#30203"
+msgid "Error"
+msgstr "Erro"
+
+msgctxt "#30204"
+msgid "No"
+msgstr "Não"
+
+msgctxt "#30205"
+msgid "Kodi"
+msgstr "Kodi"
+
+msgctxt "#30206"
+msgid "External"
+msgstr "Externo"
+
+msgctxt "#30207"
+msgid "Default"
+msgstr "Padrão"
+
+msgctxt "#30208"
+msgid "Custom Path"
+msgstr "Caminho personalizado"
+
+#
+#Dialogs
+#
+#
+#Note, do not change portions of the message with '%(variable)s' in the text, the addon automatically enters this information
+#
+
+msgctxt "#30302"
+msgid "%(game_title)s was successfully downloaded"
+msgstr "%(game_title)s descargado correctamente"
+
+msgctxt "#30303"
+msgid "%(game_title)s partial download failed[CR]%(fail_reason)s"
+msgstr "%(game_title)s descarga parcial falhou[CR]%(fail_reason)s"
+
+msgctxt "#30304"
+msgid "%(game_title)s download failed[CR]%(fail_reason)s"
+msgstr "%(game_title)s descarga falhou[CR]%(fail_reason)s"
+
+msgctxt "#30305"
+msgid "%(game_title)s failed to launch[CR]%(fail_reason)s"
+msgstr "%(game_title)s falhou a executar[CR]%(fail_reason)s"
+
+msgctxt "#30306"
+msgid "Cache cleared for %(game_list_id)s"
+msgstr "Cache apagada para %(game_list_id)s"
+
+msgctxt "#30307"
+msgid "Filter genres for all lists?  This could take a while..."
+msgstr "Filtrar géneros para todas as listas? Isto pode demorar um pouco..."
+
+msgctxt "#30308"
+msgid "Filter genres for more than 10 lists?  This could take a while..."
+msgstr "Filtrar géneros para mais de 10 listas? Isto pode demorar um pouco..."
+
+msgctxt "#30309"
+msgid "Filter number of players for all lists?  This could take a while..."
+msgstr "Filtrar número de jogadores para todas as listas? Isto pode demorar um pouco..."
+
+msgctxt "#30310"
+msgid "Filter number of players for more than 10 lists?  This could take a while..."
+msgstr "Filtrar número de jogadores para mais de 10 listas? Isto pode demorar um pouco..."
+
+msgctxt "#30311"
+msgid "Filter years for all lists?  This could take a while..."
+msgstr "Filtrar anos para todas as listas? Isto pode demorar um pouco..."
+
+msgctxt "#30312"
+msgid "Filter years for more than 10 lists?  This could take a while..."
+msgstr "Filtrar anos para mais de 10 listas? Isto pode demorar um pouco..."
+
+msgctxt "#30313"
+msgid "Filter studios for all lists?  This could take a while..."
+msgstr "Filtrar estúdios para todas as listas? Isto pode demorar um pouco..."
+
+msgctxt "#30314"
+msgid "Filter studios for more than 10 lists?  This could take a while..."
+msgstr "Filtrar estúdios para mais de 10 listas? Isto pode demorar um pouco..."
+
+msgctxt "#30315"
+msgid "Query all lists?  This could take a while..."
+msgstr "Consultar todas as listas? Isto pode demorar um pouco..."
+
+msgctxt "#30316"
+msgid "Query more than 10 lists?  This could take a while..."
+msgstr "Consultar mais de 10 listas? Isto pode demorar um pouco..."
+
+msgctxt "#30317"
+msgid "Create a query for all lists?  This could take a while..."
+msgstr "Criar uma consulta para todas as listas? Isto pode demorar um pouco..."
+
+msgctxt "#30318"
+msgid "Create a query for more than 10 lists?  This could take a while..."
+msgstr "Criar uma consulta para mais de 10 listas? Isto pode demorar um pouco..."
+
+msgctxt "#30319"
+msgid "You must enter a title"
+msgstr "Deve introduzir um título"
+
+msgctxt "#30320"
+msgid "Enter a label for your query"
+msgstr "Insira um marcador para sua consulta"
+
+msgctxt "#30321"
+msgid "Choose number of random results to return"
+msgstr "Escolha o número de resultados aleatórios"
+
+msgctxt "#30322"
+msgid "New Game List Version"
+msgstr "Nova versão para lista de jogos"
+
+msgctxt "#30323"
+msgid "New version %(new_game_list_version)s for %(dat_filename)s"
+msgstr "Nova versão %(new_game_list_version)s para %(dat_filename)s"
+
+msgctxt "#30324"
+msgid "Update to new version of %(dat_filename)s ?"
+msgstr "Actualizar para a nova versão de %(dat_filename)s ?"
+
+msgctxt "#30325"
+msgid "Get updated list"
+msgstr "Obter lista actualizada"
+
+msgctxt "#30326"
+msgid "Ask me again later"
+msgstr "Pergunte mais tarde"
+
+msgctxt "#30327"
+msgid "No, Never!"
+msgstr "Não, Nunca!"
+
+msgctxt "#30328"
+msgid "New Game Lists"
+msgstr "Novas listas de jogos"
+
+msgctxt "#30329"
+msgid "New game lists are now available"
+msgstr "Novas listas de jogos disponíveis"
+
+msgctxt "#30330"
+msgid "New game list %(dat_filename)s is now available"
+msgstr "Nova lista de jogos %(dat_filename)s disponível"
+
+msgctxt "#30331"
+msgid "Select metadata value to update"
+msgstr "Seleccione os metadatos a actualizar"
+
+msgctxt "#30332"
+msgid "Select art to update"
+msgstr "Seleccione tipo de ilustrações a actualizar"
+
+msgctxt "#30333"
+msgid "Select Launcher"
+msgstr "Seleccione lançador"
+
+msgctxt "#30334"
+msgid "Hide Game List?"
+msgstr "Ocultar a lista de jogos?"
+
+msgctxt "#30335"
+msgid "Select Post DL Command"
+msgstr "Selecciona comando Post DL"
+
+msgctxt "#30336"
+msgid "Select Download Path"
+msgstr "Selecione o caminho de download"
+
+msgctxt "#30337"
+msgid "Update Download Path"
+msgstr "Actualizar o caminho de download"
+
+msgctxt "#30338"
+msgid "Auto (choose from list)"
+msgstr "Auto (seleccione da lista)"
+
+msgctxt "#30339"
+msgid "Select Default Addon"
+msgstr "Selecione o addon padrão"
+
+msgctxt "#30340"
+msgid "System Type is not defined[CR]Update external launcher addon settings"
+msgstr "Tipo de sistema não definido[CR]Modifique nas opções do lançador externo"
+
+msgctxt "#30341"
+msgid "Select Launch Command"
+msgstr "Seleccione comando de execução"
+
+msgctxt "#30342"
+msgid "Enter your new launch command:"
+msgstr "Introduza novo comando de execução:"
+
+msgctxt "#30343"
+msgid "Enter new value for %(current_choice)s"
+msgstr "Introduza novo valor para %(current_choice)s"
+
+msgctxt "#30344"
+msgid "Are you sure you want to update %(current_choice)s?"
+msgstr "Tem a certeza que deseja actualizar %(current_choice)s?"
+
+msgctxt "#30345"
+msgid "%(current_filename)s was updated and cache was cleared"
+msgstr "%(current_filename)s foi actualizado e a cache apagada"
+
+msgctxt "#30346"
+msgid "%(current_filename)s was updated"
+msgstr "%(current_filename)s foi actualizado"
+
+msgctxt "#30347"
+msgid "+ Create New Favorites List"
+msgstr "+ Criar nova lista de favoritos"
+
+msgctxt "#30348"
+msgid "My Favorites List %(default_number)s"
+msgstr "Minha lista de favoritos %(default_number)s"
+
+msgctxt "#30349"
+msgid "Choose Favorites List"
+msgstr "Seleccione lista de favoritos"
+
+msgctxt "#30350"
+msgid "%(current_username)ss Favorites List %(default_number)s"
+msgstr "%(current_username)ss Lista de favoritos %(default_number)s"
+
+msgctxt "#30351"
+msgid "Enter New Favorites List Name:"
+msgstr "Introduza o novo nome da lista de favoritos:"
+
+msgctxt "#30352"
+msgid "%(current_game)s added to %(current_filename)s and cache was cleared"
+msgstr "%(current_game)s adicionado a %(current_filename)s e cache apagada"
+
+msgctxt "#30353"
+msgid "%(current_game)s added to %(current_filename)s"
+msgstr "%(current_game)s adicionado a %(current_filename)s"
+
+msgctxt "#30354"
+msgid "Are you sure you want to delete %(game_id_in)s from the list %(game_list_id_in)s?"
+msgstr "Tem certeza de que deseja apagar %(game_id_in)s da lista %(game_list_id_in)s?"
+
+msgctxt "#30355"
+msgid "Download and overwrite local files?"
+msgstr "Descarregar e apagar ficheiros locais?"
+
+msgctxt "#30356"
+msgid "No external command is defined.[CR]Please check settings."
+msgstr "Nenhum comando externo definido.[CR]Consulte as definições."
+
+msgctxt "#30357"
+msgid "You are removing the only game listed in %(game_list_id_in)s, do you want to delete the list?"
+msgstr "Está a remover o único jogo em %(game_list_id_in)s, deseja apagar a lista?"
+
+msgctxt "#30358"
+msgid "%(game_list_id_in)s was deleted."
+msgstr "%(game_list_id_in)s foi apagada."
+
+#
+#Context Menus
+#
+msgctxt "#30400"
+msgid "Update Metadata"
+msgstr "Actualizar metadatos"
+
+msgctxt "#30402"
+msgid "Update List Art"
+msgstr "Atualizar ilustrações"
+
+msgctxt "#30403"
+msgid "Update Visibility"
+msgstr "Atualizar visibilidade"
+
+msgctxt "#30404"
+msgid "Update Launcher"
+msgstr "Atualizar lançador"
+
+msgctxt "#30405"
+msgid "Update Download Path"
+msgstr "Atualizar caminho de download"
+
+msgctxt "#30406"
+msgid "View List Settings"
+msgstr "Exibir configurações da lista"
+
+msgctxt "#30407"
+msgid "Refresh Game List"
+msgstr "Actualizar lista de jogos"
+
+msgctxt "#30408"
+msgid "Update Launch Command"
+msgstr "Actualizar comando de execução"
+
+msgctxt "#30409"
+msgid "Update Default Game Addon"
+msgstr "Actualizar addon de jogos padrão"
+
+msgctxt "#30410"
+msgid "Update Post DL Command"
+msgstr "Actualizar comando Post DL"
+
+msgctxt "#30411"
+msgid "Share My List!"
+msgstr "Partilhar minha lista!"
+
+msgctxt "#30412"
+msgid "Add to IAGL Favorites"
+msgstr "Adicionar aos favoritos IAGL"
+
+msgctxt "#30413"
+msgid "Remove from IAGL Favorites"
+msgstr "Remover dos favoritos IAGL"
+
+msgctxt "#30414"
+msgid "Title"
+msgstr "Título"
+
+msgctxt "#30415"
+msgid "Categories"
+msgstr "Categorias"
+
+msgctxt "#30416"
+msgid "Platform"
+msgstr "Plataforma"
+
+msgctxt "#30417"
+msgid "Plot / Overview"
+msgstr "Argumento / Resumo"
+
+msgctxt "#30418"
+msgid "Trailer"
+msgstr "Trailer"
+
+msgctxt "#30419"
+msgid "Author"
+msgstr "Autor"
+
+msgctxt "#30420"
+msgid "Date"
+msgstr "Data"
+
+msgctxt "#30421"
+msgid "Thumb / Poster"
+msgstr "Miniatura / Poster"
+
+msgctxt "#30422"
+msgid "Logo"
+msgstr "Logo"
+
+msgctxt "#30423"
+msgid "Banner"
+msgstr "Banner"
+
+msgctxt "#30424"
+msgid "Fanart"
+msgstr "Fanart"
+
+msgctxt "#30425"
+msgid "View Info Page"
+msgstr "Ver página informativa"
