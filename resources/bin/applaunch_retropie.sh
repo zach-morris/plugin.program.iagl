@@ -45,8 +45,20 @@ fi
 # Wait for the kill
 sleep 1
 
-# Launch app - escaped!
-/opt/retropie/supplementary/runcommand/runcommand.sh "$@"
+if [ -f "/opt/retropie/supplementary/runcommand/runcommand.sh" ]
+then
+	# Launch app - escaped!
+	/opt/retropie/supplementary/runcommand/runcommand.sh "$@"
+	# Done? Restart Kodi
+	/opt/retropie/supplementary/runcommand/runcommand.sh 0 _PORT_ kodi
+fi
 
-# Done? Restart Kodi
-/opt/retropie/supplementary/runcommand/runcommand.sh 0 _PORT_ kodi
+if [ -f "/opt/retroarena/supplementary/runcommand/runcommand.sh" ]
+then
+	# Launch app - escaped!
+	/opt/retroarena/supplementary/runcommand/runcommand.sh "$@"
+	# Done? Restart Kodi
+	/opt/retroarena/supplementary/runcommand/runcommand.sh 0 _PORT_ kodi
+fi
+
+# Done!
