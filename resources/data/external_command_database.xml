@@ -6511,4 +6511,246 @@
 	<launcher name="uoYabause (Saturn)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -n org.uoyabause.android/org.uoyabause.android.Yabause -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e org.uoyabause.android.FileNameEx "%ROM_PATH%"</launcher_command>
 	</launcher>
+<!-- RetroPie External Retroarch Commands -->
+<!-- RetroPie External Retroarch Commands -->
+	<launcher name="RetroPie Port CannonBall" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _PORT_ cannonball "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie Port Cavestory" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _PORT_ cavestory "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie Port Dinothawr" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _PORT_ dinothawr "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie Port Doom" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _PORT_ doom "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie Port Quake" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _PORT_ quake "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System 3DO" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ 3do "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Amiga" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ amiga "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Amstrad CPC" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ amstradcpc "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Apple 2" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ apple2 "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Arcade" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ arcade "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Atari 2600" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ atari2600 "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Atari 5200" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ atari5200 "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Atari 7800" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ atari7800 "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Atari 800" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ atari800 "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Atari Jaguar" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ atarijaguar "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Atari Lynx" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ atarilynx "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Atari Lynx" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ atarilynx "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Atari ST" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ atarist "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System C64" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ c64 "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System CoCo" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ coco "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Coleco" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ coleco "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Daphne" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ daphne "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Dragon 32" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ dragon32 "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Dreamcast" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ dreamcast "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System FBA" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ fba "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System FDS" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ fds "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Game and Watch" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ gameandwatch "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Game Gear" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ gamegear "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System GB" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ gb "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System GBA" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ gba "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System GBC" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ gbc "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System GC" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ gc "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Intellivision" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ intellivision "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Macintosh" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ macintosh "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System MAME libretro" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ mame-libretro "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System MAME-advMAME" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ mame-advmame "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System MAME-MAME4All" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ mame-mame4all "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Master System" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ mastersystem "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Mega Drive" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ megadrive "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System MSX" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ msx "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System N64" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ n64 "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System NDS" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ nds "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Neo Geo" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ neogeo "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Neo Geo" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ neogeo "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System NES" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ nes "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System NGP" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ ngp "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System NGPC" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ ngpc "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Oric" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ oric "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System PC" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ pc "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System PC Engine" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ pcengine "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System PC-FX" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ pcfx "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System PC98" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ pc88 "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System PC98" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ pc88 "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Poke Mini" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ pokemini "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System PS2" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ ps2 "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System PSP" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ psp "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System PSX" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ psx "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System PSX" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ psx "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Residual VM" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ residualvm "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Sam Coupe" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ samcoupe "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Saturn" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ saturn "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System ScummVM" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ scummvm "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Sega 32X" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ sega32x "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Sega CD" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ segacd "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System SG-1000" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ sg-1000 "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System SNES" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ snes "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System TI-99" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ ti99 "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System TRS-80" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ trs-80 "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Vectrex" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ vectrex "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Vectrex" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ vectrex "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Video Pac" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ videopac "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Virtual boy" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ virtualboy "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System WII" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ wii "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Wonderswan" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ wonderswan "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System Wonderswan Color" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ wonderswancolor "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System X1" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ x1 "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System X68000" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ x68000 "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System ZMachine" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ zmachine "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System ZX Spectrum" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ zxspectrum "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie System ZX81" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ zx81 "%ROM_PATH%</launcher_command>
+	</launcher>
 </system>
