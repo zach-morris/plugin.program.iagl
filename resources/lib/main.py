@@ -3065,8 +3065,6 @@ class iagl_download(object):
 					size = 0
 					last_time = time.time()
 					for chunk in r.iter_content(self.chunk_size):
-						print('ztest')
-						print(r.status_code)
 						if dp.iscanceled():
 							dp.close()
 							self.download_fail_reason = 'Download was cancelled.'
