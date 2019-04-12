@@ -71,6 +71,7 @@
 		<setting label="30047" type="lsep"/>
 		<setting id="iagl_silence_query_warning" type="select" label="30186" lvalues="30095|30096" default="1" visible="true"/>
 		<setting id="iagl_enable_post_dl_edit" type="select" label="30048" lvalues="30095|30096" default="1" visible="true"/>
+		<setting id="iagl_organize_temp_files" type="select" label="30193" lvalues="30095|30096" default="1" visible="true"/>
 		<setting id="iagl_android_command_type" type="select" label="30131" lvalues="30132|30133|30134" default="0"  visible="true"/>
 		<setting id="iagl_enable_android_stop_command" type="select" label="30049" lvalues="30095|30096" default="0"  visible="true"/>
 		<setting id="iagl_enable_stop_media_before_launch" type="select" label="30057" lvalues="30095|30096" default="0"  visible="true"/>

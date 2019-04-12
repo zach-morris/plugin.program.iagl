@@ -2935,7 +2935,18 @@ class iagl_download(object):
 
 			if self.json.get('emu').get('emu_downloadpath') is not None and len(self.json.get('emu').get('emu_downloadpath'))>0:
 				if self.json.get('emu').get('emu_downloadpath').lower() == 'default':
-					self.download_location = self.default_download_location
+					if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_organize_temp_files')) and self.json.get('emu').get('emu_description') is not None:
+						organized_temp_folder = os.path.join(self.default_download_location,clean_file_folder_name(self.json.get('emu').get('emu_description')))
+						if not xbmcvfs.exists(os.path.join(organized_temp_folder,'')):
+							if not xbmcvfs.mkdir(organized_temp_folder):
+								xbmc.log(msg='IAGL:  The folder %(folder_in)s could not be created so the default will be used'% {'folder_in': organized_temp_folder}, level=xbmc.LOGDEBUG)
+								self.download_location = self.default_download_location
+							else:
+								self.download_location = organized_temp_folder
+						else:
+							self.download_location = organized_temp_folder
+					else:
+						self.download_location = self.default_download_location
 				else:
 					self.download_location = xbmc.translatePath(self.json.get('emu').get('emu_downloadpath')) #Translate the download path if the user used a source:// path
 			else:
@@ -3054,6 +3065,8 @@ class iagl_download(object):
 					size = 0
 					last_time = time.time()
 					for chunk in r.iter_content(self.chunk_size):
+						print('ztest')
+						print(r.status_code)
 						if dp.iscanceled():
 							dp.close()
 							self.download_fail_reason = 'Download was cancelled.'
