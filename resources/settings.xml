@@ -22,7 +22,7 @@
  +		<setting id="iagl_setting_ia_password" type="text" label="30024" default="" option="hidden" visible="eq(-2,0)"/>  
 	</category>
 	<category label="30003">
-		<setting id="iagl_external_user_external_env" type="select" label="30025" values="Select|OSX|Linux/Kodibuntu|Windows|LibreElec Remix|LibreElec Sx05RE|LibreElec S905 Addon|Gamestarter Addon|Android|Android Aarch64" default="Select" visible="true"/>
+		<setting id="iagl_external_user_external_env" type="select" label="30025" values="Select|OSX|Linux/Kodibuntu|Windows|LibreElec Remix|LibreElec Sx05RE|LibreElec S905 Addon|Gamestarter Addon|Android|Android Aarch64|RetroPie" default="Select" visible="true"/>
 		<setting id="iagl_external_launch_close_kodi" type="select" label="30026" lvalues="30095|30096" default="1" visible="eq(-1,OSX)|eq(-1,Windows)|eq(-1,Linux/Kodibuntu)"/>
 		<setting id="iagl_external_launch_pause_kodi" type="select" label="30027" lvalues="30095|30096" default="1" visible="eq(-2,Linux/Kodibuntu)+!eq(-1,0)"/>
 		<setting id="iagl_external_path_to_retroarch" type="executable" label="30028" visible="eq(-3,OSX)|eq(-3,Windows)|eq(-3,Linux/Kodibuntu)"/>

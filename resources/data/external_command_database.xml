@@ -6525,8 +6525,14 @@
 	<launcher name="RetroPie Port Doom" os="RetroPie">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _PORT_ doom "%ROM_PATH%</launcher_command>
 	</launcher>
+	<launcher name="RetroPie Port EasyRPG" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _PORT_ easyrpgplayer "%ROM_PATH%</launcher_command>
+	</launcher>
 	<launcher name="RetroPie Port Quake" os="RetroPie">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _PORT_ quake "%ROM_PATH%</launcher_command>
+	</launcher>
+	<launcher name="RetroPie Port REminiscence" os="RetroPie">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _PORT_ reminiscence "%ROM_PATH%</launcher_command>
 	</launcher>
 	<launcher name="RetroPie System 3DO" os="RetroPie">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _SYS_ 3do "%ROM_PATH%</launcher_command>
