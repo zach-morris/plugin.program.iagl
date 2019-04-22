@@ -37,7 +37,7 @@ if not WIN.getProperty('iagl.script_started'):
 				not_ready_to_run_wizard = True
 				not_ready_to_run_wizard_reason = not_ready_to_run_wizard_reason+', External retroarch system directory is not defined in settings.'
 				not_ready_to_run_questions.append(3)
-			if IAGL.handle.getSetting('iagl_external_user_external_env') in ['Android']:
+			if IAGL.handle.getSetting('iagl_external_user_external_env') in ['Android','Android Aarch64']:
 				if len(IAGL.handle.getSetting('iagl_external_path_to_retroarch_cfg'))<1:
 					not_ready_to_run_wizard = True
 					not_ready_to_run_wizard_reason = not_ready_to_run_wizard_reason+', External retroarch cfg file path is not defined in settings.'			
@@ -51,7 +51,7 @@ if not WIN.getProperty('iagl.script_started'):
 	if not_ready_to_run_wizard:
 		xbmc.log(msg='IAGL:  Wizard not ready to run yet, reasons %(not_ready_to_run_wizard_reason)s' % {'not_ready_to_run_wizard_reason': str(not_ready_to_run_wizard_reason)}, level=xbmc.LOGDEBUG)
 		if 1 in not_ready_to_run_questions:
-			options = 'OSX|Linux/Kodibuntu|Windows|LibreElec Remix|LibreElec Sx05RE|LibreElec S905 Addon|Gamestarter Addon|Android'
+			options = 'OSX|Linux/Kodibuntu|Windows|LibreElec Remix|LibreElec Sx05RE|LibreElec S905 Addon|Gamestarter Addon|Android|Android Aarch64|RetroPie'
 			ret1 = current_dialog.select('Select your system type', options.split('|'))
 			if ret1>-1:
 				IAGL.handle.setSetting(id='iagl_external_user_external_env',value=options.split('|')[ret1])
