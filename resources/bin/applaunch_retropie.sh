@@ -58,7 +58,7 @@ then
 	# Launch app - escaped!
 	/opt/retroarena/supplementary/runcommand/runcommand.sh "$@"
 	# Done? Restart Kodi
-	/opt/retroarena/supplementary/runcommand/runcommand.sh 0 _PORT_ kodi
+	kodi
 fi
 
 # Done!
