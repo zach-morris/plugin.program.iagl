@@ -99,6 +99,7 @@ class iagl_utils(object):
 		self.default_fanart = 'special://home/addons/plugin.program.iagl/fanart.jpg'
 		self.label_sep = '  |  '
 		self.dat_file_header_keys = ['emu_name','emu_visibility','emu_description','emu_category','emu_version','emu_date','emu_author','emu_homepage','emu_baseurl','emu_launcher','emu_default_addon','emu_ext_launch_cmd','emu_downloadpath','emu_postdlaction','emu_comment','emu_thumb','emu_banner','emu_fanart','emu_logo','emu_trailer']
+		self.dat_file_header_keys_to_copy = ['emu_launcher','emu_default_addon','emu_ext_launch_cmd','emu_downloadpath','emu_postdlaction']
 		self.language = self.handle.getLocalizedString
 		self.get_setting_as_bool = lambda nn: True if nn.lower()=='true' or nn.lower()=='enabled' or nn.lower()=='show' or nn.lower()=='0' else False
 		self.change_search_terms_to_any = lambda nn: 'Any' if nn is None else nn
@@ -290,6 +291,9 @@ class iagl_utils(object):
 										new_game_list_added.append(new_game_lists['dat_filename'][ii])
 										self.delete_list_cache(new_game_lists['dat_filename'][ii])
 										xbmc.log(msg='IAGL:  Dat file %(ff)s updated to new version' % {'ff': new_game_lists['dat_filename'][ii]}, level=xbmc.LOGDEBUG)
+										#Copy old dat file settings to new dat file
+										for key_to_copy in self.dat_file_header_keys_to_copy:
+											self.update_xml_header(current_game_lists.get('fullpath')[idx],key_to_copy,current_game_lists.get(key_to_copy)[idx],True)
 								else:
 									xbmc.log(msg='IAGL:  Dat file %(ff)s was not because the original file could not be deleted' % {'ff': new_game_lists['dat_filename'][ii]}, level=xbmc.LOGERROR)
 							elif ret1 == 1: #Do not update, but do not delete file in the addon folder
