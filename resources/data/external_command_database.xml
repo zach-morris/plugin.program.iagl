@@ -240,6 +240,9 @@
 	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mednafen_pce_fast_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mednafen_pce_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mednafen_pcfx_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -363,6 +366,9 @@
 	<launcher name="RetroArch Sharp X68000 (X68000)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/px68k_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch QUASI88 (PC-8801)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/quasi88_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/quicknes_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -371,6 +377,9 @@
 	</launcher>
 	<launcher name="RetroArch Reicast (Dreamcast)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/reicast_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/reicast_wince_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch REminiscence (Standalone Game)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/reminiscence_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -404,6 +413,9 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x (SNES Latest)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/snes9x_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/stella2014_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Stella (Atari 2600)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/stella_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -728,6 +740,9 @@
 	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mednafen_pce_fast_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mednafen_pce_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mednafen_pcfx_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -851,6 +866,9 @@
 	<launcher name="RetroArch Sharp X68000 (X68000)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/px68k_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch QUASI88 (PC-8801)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/quasi88_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/quicknes_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -859,6 +877,9 @@
 	</launcher>
 	<launcher name="RetroArch Reicast (Dreamcast)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/reicast_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/reicast_wince_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch REminiscence (Standalone Game)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/reminiscence_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -892,6 +913,9 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x (SNES Latest)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/snes9x_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/stella2014_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Stella (Atari 2600)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/stella_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -1216,6 +1240,9 @@
 	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_pce_fast_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_pce_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_pcfx_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -1339,6 +1366,9 @@
 	<launcher name="RetroArch Sharp X68000 (X68000)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/px68k_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch QUASI88 (PC-8801)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/quasi88_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/quicknes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -1347,6 +1377,9 @@
 	</launcher>
 	<launcher name="RetroArch Reicast (Dreamcast)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/reicast_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/reicast_wince_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch REminiscence (Standalone Game)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/reminiscence_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1380,6 +1413,9 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x (SNES Latest)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/snes9x_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/stella2014_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Stella (Atari 2600)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/stella_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1704,6 +1740,9 @@
 	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_pce_fast_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_pce_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_pcfx_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -1827,6 +1866,9 @@
 	<launcher name="RetroArch Sharp X68000 (X68000)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/px68k_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch QUASI88 (PC-8801)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/quasi88_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/quicknes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -1835,6 +1877,9 @@
 	</launcher>
 	<launcher name="RetroArch Reicast (Dreamcast)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/reicast_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/reicast_wince_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch REminiscence (Standalone Game)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/reminiscence_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1868,6 +1913,9 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x (SNES Latest)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/snes9x_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/stella2014_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Stella (Atari 2600)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/stella_libretro.so "%ROM_PATH%"</launcher_command>
@@ -2192,6 +2240,9 @@
 	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_pce_fast_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_pce_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_pcfx_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -2315,6 +2366,9 @@
 	<launcher name="RetroArch Sharp X68000 (X68000)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/px68k_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch QUASI88 (PC-8801)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/quasi88_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/quicknes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -2323,6 +2377,9 @@
 	</launcher>
 	<launcher name="RetroArch Reicast (Dreamcast)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/reicast_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/reicast_wince_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch REminiscence (Standalone Game)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/reminiscence_libretro.so "%ROM_PATH%"</launcher_command>
@@ -2356,6 +2413,9 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x (SNES Latest)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/snes9x_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/stella2014_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Stella (Atari 2600)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/stella_libretro.so "%ROM_PATH%"</launcher_command>
@@ -2680,6 +2740,9 @@
 	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mednafen_pce_fast_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mednafen_pce_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mednafen_pcfx_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -2803,6 +2866,9 @@
 	<launcher name="RetroArch Sharp X68000 (X68000)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\px68k_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch QUASI88 (PC-8801)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\quasi88_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\quicknes_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -2811,6 +2877,9 @@
 	</launcher>
 	<launcher name="RetroArch Reicast (Dreamcast)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\reicast_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\reicast_wince_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch REminiscence (Standalone Game)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\reminiscence_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -2844,6 +2913,9 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x (SNES Latest)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\snes9x_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\stella2014_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Stella (Atari 2600)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\stella_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -3177,6 +3249,9 @@
 	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mednafen_pce_fast_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mednafen_pce_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mednafen_pcfx_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3300,6 +3375,9 @@
 	<launcher name="RetroArch Sharp X68000 (X68000)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\px68k_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch QUASI88 (PC-8801)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\quasi88_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\quicknes_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3308,6 +3386,9 @@
 	</launcher>
 	<launcher name="RetroArch Reicast (Dreamcast)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\reicast_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\reicast_wince_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch REminiscence (Standalone Game)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\reminiscence_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -3341,6 +3422,9 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x (SNES Latest)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\snes9x_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\stella2014_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Stella (Atari 2600)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\stella_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -3674,6 +3758,9 @@
 	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/mednafen_pce_fast_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="LibreElec Remix">
+		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/mednafen_pce_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/mednafen_pcfx_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3797,6 +3884,9 @@
 	<launcher name="RetroArch Sharp X68000 (X68000)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/px68k_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch QUASI88 (PC-8801)" os="LibreElec Remix">
+		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/quasi88_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/quicknes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3805,6 +3895,9 @@
 	</launcher>
 	<launcher name="RetroArch Reicast (Dreamcast)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/reicast_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="LibreElec Remix">
+		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/reicast_wince_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch REminiscence (Standalone Game)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/reminiscence_libretro.so "%ROM_PATH%"</launcher_command>
@@ -3838,6 +3931,9 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x (SNES Latest)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/snes9x_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="LibreElec Remix">
+		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/stella2014_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Stella (Atari 2600)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.sh %NETPLAY_COMMAND% -L /tmp/cores/stella_libretro.so "%ROM_PATH%"</launcher_command>
@@ -4162,6 +4258,9 @@
 	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_pce_fast "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="LibreElec Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_pce "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_pcfx "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4285,6 +4384,9 @@
 	<launcher name="RetroArch Sharp X68000 (X68000)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" px68k "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch QUASI88 (PC-8801)" os="LibreElec Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" quasi88 "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" quicknes "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4293,6 +4395,9 @@
 	</launcher>
 	<launcher name="RetroArch Reicast (Dreamcast)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" reicast "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="LibreElec Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" reicast_wince "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch REminiscence (Standalone Game)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" reminiscence "%ROM_PATH%"</launcher_command>
@@ -4326,6 +4431,9 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x (SNES Latest)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" snes9x "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="LibreElec Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" stella2014 "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Stella (Atari 2600)" os="LibreElec Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" stella "%ROM_PATH%"</launcher_command>
@@ -4641,6 +4749,9 @@
 	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mednafen_pce_fast "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="LibreElec S905 Addon">
+		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mednafen_pce "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mednafen_pcfx "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4764,6 +4875,9 @@
 	<launcher name="RetroArch Sharp X68000 (X68000)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh px68k "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch QUASI88 (PC-8801)" os="LibreElec S905 Addon">
+		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh quasi88 "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh quicknes "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4772,6 +4886,9 @@
 	</launcher>
 	<launcher name="RetroArch Reicast (Dreamcast)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh reicast "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="LibreElec S905 Addon">
+		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh reicast_wince "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch REminiscence (Standalone Game)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh reminiscence "%ROM_PATH%"</launcher_command>
@@ -4805,6 +4922,9 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x (SNES Latest)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh snes9x "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="LibreElec S905 Addon">
+		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh stella2014 "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Stella (Atari 2600)" os="LibreElec S905 Addon">
 		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh stella "%ROM_PATH%"</launcher_command>
@@ -5120,6 +5240,9 @@
 	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh mednafen_pce_fast "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh mednafen_pce "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh mednafen_pcfx "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -5243,6 +5366,9 @@
 	<launcher name="RetroArch Sharp X68000 (X68000)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh px68k "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch QUASI88 (PC-8801)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh quasi88 "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh quicknes "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -5251,6 +5377,9 @@
 	</launcher>
 	<launcher name="RetroArch Reicast (Dreamcast)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh reicast "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh reicast_wince "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch REminiscence (Standalone Game)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh reminiscence "%ROM_PATH%"</launcher_command>
@@ -5284,6 +5413,9 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x (SNES Latest)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh snes9x "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh stella2014 "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Stella (Atari 2600)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh stella "%ROM_PATH%"</launcher_command>
@@ -5608,6 +5740,9 @@
 	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/mednafen_pce_fast_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/mednafen_pce_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/mednafen_pcfx_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
@@ -5731,6 +5866,9 @@
 	<launcher name="RetroArch Sharp X68000 (X68000)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/px68k_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
+	<launcher name="RetroArch QUASI88 (PC-8801)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/quasi88_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/quicknes_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
@@ -5739,6 +5877,9 @@
 	</launcher>
 	<launcher name="RetroArch Reicast (Dreamcast)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/reicast_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/reicast_wince_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch REminiscence (Standalone Game)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/reminiscence_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
@@ -5772,6 +5913,9 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x (SNES Latest)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/snes9x_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/stella2014_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Stella (Atari 2600)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/stella_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
@@ -6180,6 +6324,9 @@
 	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/mednafen_pce_fast_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/mednafen_pce_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/mednafen_pcfx_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
@@ -6303,6 +6450,9 @@
 	<launcher name="RetroArch Sharp X68000 (X68000)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/px68k_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
+	<launcher name="RetroArch QUASI88 (PC-8801)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/quasi88_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/quicknes_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
@@ -6311,6 +6461,9 @@
 	</launcher>
 	<launcher name="RetroArch Reicast (Dreamcast)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/reicast_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/reicast_wince_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch REminiscence (Standalone Game)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/reminiscence_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
@@ -6344,6 +6497,9 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x (SNES Latest)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/snes9x_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/stella2014_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Stella (Atari 2600)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/stella_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
