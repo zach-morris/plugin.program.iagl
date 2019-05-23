@@ -2303,7 +2303,10 @@ class iagl_utils(object):
 				if ret1 > -1:
 					new_value = current_external_command_values[ret1]
 				if new_value == 'manual_command':
-					new_value = current_dialog.input(self.loc_str(30342))
+					if len(old_value)>0:
+						new_value = current_dialog.input(self.loc_str(30342),old_value)
+					else:
+						new_value = current_dialog.input(self.loc_str(30342))
 		elif current_key == 'emu_category':
 			new_value = current_dialog.input(self.loc_str(30343) % {'current_choice':current_choice},old_value)
 			if len(new_value)<1: #User hit cancel
