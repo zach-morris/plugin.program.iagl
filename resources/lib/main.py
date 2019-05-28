@@ -3094,29 +3094,7 @@ class iagl_download(object):
 								dp.close()
 								self.download_fail_reason = 'Download was cancelled.'
 								raise Exception('User Cancelled Download')
-				# f = xbmcvfs.File(dest,'w')
-				# size = 0
-				# last_time = time.time()
-				# for chunk in r.iter_content(self.chunk_size):
-				# 	if dp.iscanceled():
-				# 		dp.close()
-				# 		self.download_fail_reason = 'Download was cancelled.'
-				# 		raise Exception('User Cancelled Download')
-				# 	size = size + self.chunk_size
-				# 	percent = 100.0 * size / (est_filesize + 1) #Added 1 byte to avoid div by zero
-				# 	f.write(chunk)
-				# 	now = time.time()
-				# 	diff = now - last_time
-				# 	if diff > 1:
-				# 		percent = int(percent)
-				# 		last_time = now
-				# 		dp.update(percent)
-				# 		if dp.iscanceled():
-				# 			dp.close()
-				# 			self.download_fail_reason = 'Download was cancelled.'
-				# 			raise Exception('User Cancelled Download')
-				# # f.flush()
-				# f.close()
+
 				self.current_saved_files_success.append(True)
 				self.current_saved_files.append(dest)
 				self.current_saved_files_size.append(xbmcvfs.Stat(dest).st_size())
@@ -3129,6 +3107,11 @@ class iagl_download(object):
 				self.current_saved_files.append(None)
 				self.current_saved_files_size.append(None)
 				self.current_saved_files_crc.append(None)
+				if xbmcvfs.exists(dest): #Delete partial files if an error has occurred
+					if not xbmcvfs.delete(dest):
+						xbmc.log(msg='IAGL:  The file %(filename_in)s could not be deleted after a download error'% {'filename_in': dest}, level=xbmc.LOGDEBUG)
+					else:
+						xbmc.log(msg='IAGL:  The partially saved file %(filename_in)s was deleted after a download error occurred'% {'filename_in': dest}, level=xbmc.LOGDEBUG)
 				if 'Failed to establish a new connection' in str(web_except):
 					self.download_fail_reason = 'Failed to establish connection.'
 				xbmc.log(msg='IAGL:  There was a download error (with login): %(url)s - %(web_except)s' % {'url': url, 'web_except': web_except}, level=xbmc.LOGERROR)
@@ -3197,6 +3180,11 @@ class iagl_download(object):
 			self.current_saved_files.append(None)
 			self.current_saved_files_size.append(None)
 			self.current_saved_files_crc.append(None)
+			if xbmcvfs.exists(dest): #Delete partial files if an error has occurred
+				if not xbmcvfs.delete(dest):
+					xbmc.log(msg='IAGL:  The file %(filename_in)s could not be deleted after a download error'% {'filename_in': dest}, level=xbmc.LOGDEBUG)
+				else:
+					xbmc.log(msg='IAGL:  The partially saved file %(filename_in)s was deleted after a download error occurred'% {'filename_in': dest}, level=xbmc.LOGDEBUG)
 			if 'Failed to establish a new connection' in str(web_except):
 				self.download_fail_reason = 'Failed to establish connection.'
 			xbmc.log(msg='IAGL:  There was a download error (no login): %(url)s - %(web_except)s' % {'url': url, 'web_except': web_except}, level=xbmc.LOGERROR)
