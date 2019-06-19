@@ -438,6 +438,9 @@
 	<launcher name="RetroArch PowderToy (Standalone Game)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/thepowdertoy_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch TIC80 (TIC-80)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/tic80_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/tyrquake_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -940,6 +943,9 @@
 	</launcher>
 	<launcher name="RetroArch PowderToy (Standalone Game)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/thepowdertoy_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch TIC80 (TIC-80)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/tic80_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/tyrquake_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -1444,6 +1450,9 @@
 	<launcher name="RetroArch PowderToy (Standalone Game)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/thepowdertoy_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch TIC80 (TIC-80)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/tic80_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/tyrquake_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -1946,6 +1955,9 @@
 	</launcher>
 	<launcher name="RetroArch PowderToy (Standalone Game)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/thepowdertoy_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch TIC80 (TIC-80)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/tic80_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/tyrquake_libretro.so "%ROM_PATH%"</launcher_command>
@@ -2450,6 +2462,9 @@
 	<launcher name="RetroArch PowderToy (Standalone Game)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/thepowdertoy_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch TIC80 (TIC-80)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/tic80_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/tyrquake_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -2952,6 +2967,9 @@
 	</launcher>
 	<launcher name="RetroArch PowderToy (Standalone Game)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\thepowdertoy_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch TIC80 (TIC-80)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\tic80_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\tyrquake_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -3465,6 +3483,9 @@
 	<launcher name="RetroArch PowderToy (Standalone Game)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\thepowdertoy_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch TIC80 (TIC-80)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\tic80_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\tyrquake_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3976,6 +3997,9 @@
 	</launcher>
 	<launcher name="RetroArch PowderToy (Standalone Game)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/thepowdertoy_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch TIC80 (TIC-80)" os="LibreElec Remix">
+		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/tic80_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/tyrquake_libretro.so "%ROM_PATH%"</launcher_command>
@@ -4492,6 +4516,9 @@
 	<launcher name="RetroArch PowderToy (Standalone Game)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/thepowdertoy_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch TIC80 (TIC-80)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/tic80_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/tyrquake_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4559,993 +4586,502 @@
 	<launcher name="RetroArch Launch App Only" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh</launcher_command>
 	</launcher>
-<!-- LibreElec Sx05RE Build https://forum.libreelec.tv/thread/4785-sx095re-v1-6-5-emulationstation-lakka-kodi/ -->
-	<launcher name="RetroArch 2048 (Standalone Game)" os="LibreElec Sx05RE">
+<!-- Sx05RE (Shantigilbert EmuELEC) https://discourse.coreelec.org/t/sx05re-retro-emulation-kodi-addon-for-coreelec-released-for-testing/3203 -->
+	<launcher name="RetroArch 2048 (Standalone Game)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" 2048 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch 3D Engine (Other)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch 3D Engine (Other)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" 3dengine "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch 4DO (3DO)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch 4DO (3DO)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" 4do "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch EightyOne (ZX81)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch EightyOne (ZX81)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" 81 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Atari800 (Atari 800/Atari 5200)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Atari800 (Atari 800/Atari 5200)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" atari800 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch BlastEm (Gen/MD)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch BlastEm (Gen/MD)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" blastem "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch BlueMSX (MSX)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch BlueMSX (MSX)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" bluemsx "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch BNES (NES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch BNES (NES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" bnes "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch BSNES Accuracy (SNES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch BSNES Accuracy (SNES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" bsnes_accuracy "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch BSNES Balanced (SNES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch BSNES Balanced (SNES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" bsnes_balanced "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch BSNES Performance v085 (SNES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch BSNES Performance v085 (SNES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" bsnes_cplusplus98 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch BSNES Mercury Accuracy (SNES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch BSNES Mercury Accuracy (SNES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" bsnes_mercury_accuracy "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch BSNES Mercury Balanced (SNES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch BSNES Mercury Balanced (SNES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" bsnes_mercury_balanced "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch BSNES Mercury Performance (SNES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch BSNES Mercury Performance (SNES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" bsnes_mercury_performance "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch BSNES Performance (SNES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch BSNES Performance (SNES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" bsnes_performance "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch CannonBall (Standalone Game)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch CannonBall (Standalone Game)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" cannonball "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch CAP32 (Amstrad CPC)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch CAP32 (Amstrad CPC)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" cap32 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch ChaiLove Engine (ChaiLove)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch ChaiLove Engine (ChaiLove)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" chailove "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Citra Canary (3DS)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Citra Canary (3DS)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" citra_canary "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Citra (3DS)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Citra (3DS)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" citra "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Craft (Standalone Game)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Craft (Standalone Game)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" craft "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch CrocoDS (Amstrad CPC)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch CrocoDS (Amstrad CPC)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" crocods "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Daphne (Laserdisc)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Daphne (Laserdisc)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" daphne "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch DeSmuME 2015 (NDS)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch DeSmuME 2015 (NDS)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" desmume2015 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch DeSmuME (NDS)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch DeSmuME (NDS)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" desmume "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Dinothawr (Standalone Game)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Dinothawr (Standalone Game)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" dinothawr "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Dolphin (Wii/Gamecube)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Dolphin (Wii/Gamecube)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" dolphin "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch DOSBox (DOS)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch DOSBox (DOS)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" dosbox "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch DOSBox SVN Glide (DOS)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch DOSBox SVN Glide (DOS)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" dosbox_svn_glide "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch DOSBox SVN (DOS)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch DOSBox SVN (DOS)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" dosbox_svn "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" easyrpg "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch EMUX CHIP-8 (CHIP-8)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch EMUX CHIP-8 (CHIP-8)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" emux_chip8 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch EMUX GB (GB/GBC)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch EMUX GB (GB/GBC)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" emux_gb "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch EMUX NES (NES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch EMUX NES (NES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" emux_nes "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch EMUX SMS (SMS)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch EMUX SMS (SMS)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" emux_sms "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch FBA CPS1 2012 (Arcade CPS1 0.2.97.29)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch FBA CPS1 2012 (Arcade CPS1 0.2.97.29)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" fbalpha2012_cps1 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch FBA CPS2 2012 (Arcade CPS2 0.2.97.29)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch FBA CPS2 2012 (Arcade CPS2 0.2.97.29)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" fbalpha2012_cps2 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch FBA CPS3 2012 (Arcade CPS3 0.2.97.29)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch FBA CPS3 2012 (Arcade CPS3 0.2.97.29)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" fbalpha2012_cps3 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch FBA 2012 (Arcade 0.2.97.29)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch FBA 2012 (Arcade 0.2.97.29)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" fbalpha2012 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch FBA NEO 2012 (Neo Geo 0.2.97.29)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch FBA NEO 2012 (Neo Geo 0.2.97.29)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" fbalpha2012_neogeo "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch FB Neo (Arcade Latest)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch FB Neo (Arcade Latest)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" fbneo "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch FCEUmm (NES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch FCEUmm (NES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" fceumm "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch FFmpeg (Media Player)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch FFmpeg (Media Player)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" ffmpeg "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch fixGB (GB/GBC)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch fixGB (GB/GBC)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" fixgb "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch fixNES (NES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch fixNES (NES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" fixnes "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="Retroarch FlyCast (Dreamcast/Naomi)" os="LibreElec Sx05RE">
+	<launcher name="Retroarch FlyCast (Dreamcast/Naomi)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" flycast "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch FlyCast (Dreamcast WinCE)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch FlyCast (Dreamcast WinCE)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" flycast_wince "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch fMSX (MSX)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch fMSX (MSX)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" fmsx "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch FreeChaF (Fairchild ChannelF)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch FreeChaF (Fairchild ChannelF)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" freechaf "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch FreeIntv (Intellivision)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch FreeIntv (Intellivision)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" freeintv "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch FreeJ2ME (Java)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch FreeJ2ME (Java)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" freej2me "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Frodo (C64)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Frodo (C64)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" frodo "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch FSUAE (Amiga)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch FSUAE (Amiga)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" fsuae "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch FUSE (Spectrum)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch FUSE (Spectrum)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" fuse "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Gambatte (GB/GBC)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Gambatte (GB/GBC)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" gambatte "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Gearboy (GB/GBC)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Gearboy (GB/GBC)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" gearboy "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Gearsystem (GG/SMS)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Gearsystem (GG/SMS)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" gearsystem "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Genesis Plus GX (GG/SMS/Gen/PICO/SG-1000)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Genesis Plus GX (GG/SMS/Gen/PICO/SG-1000)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" genesis_plus_gx "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Game Music Emu (Other)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Game Music Emu (Other)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" gme "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch gpSP (GBA)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch gpSP (GBA)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" gpsp "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Game and Watch (Game and Watch)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Game and Watch (Game and Watch)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" gw "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Handy (Lynx)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Handy (Lynx)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" handy "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Hatari (Atari ST/STE/TT/Falcon)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Hatari (Atari ST/STE/TT/Falcon)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" hatari "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES Higan nSide Balanced (SNES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch SNES Higan nSide Balanced (SNES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" higan_sfc_balanced "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES Higan (SNES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch SNES Higan (SNES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" higan_sfc "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Imageviewer (Media Viewer)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Imageviewer (Media Viewer)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" imageviewer "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Dolphin Ishiiruka (Wii/Gamecube)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Dolphin Ishiiruka (Wii/Gamecube)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" ishiiruka "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Kronos (Saturn)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Kronos (Saturn)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" kronos "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Lua Engine (Lutro)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Lua Engine (Lutro)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" lutro "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch MAME 2000 (Arcade 0.37b5)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch MAME 2000 (Arcade 0.37b5)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mame2000 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch MAME 2003 (Arcade 0.78)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch MAME 2003 (Arcade 0.78)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mame2003 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch MAME 2003 Midway (Arcade Midway 0.78)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch MAME 2003 Midway (Arcade Midway 0.78)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mame2003_midway "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch MAME 2003 Plus (Arcade 0.78)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch MAME 2003 Plus (Arcade 0.78)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mame2003_plus "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch MAME 2010 (Arcade 0.135u4)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch MAME 2010 (Arcade 0.135u4)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mame2009 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch MAME 2010 (Arcade 0.139)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch MAME 2010 (Arcade 0.139)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mame2010 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch MAME 2015 (Arcade 0.160)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch MAME 2015 (Arcade 0.160)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mame2015 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch MAME 2016 (Arcade 0.174)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch MAME 2016 (Arcade 0.174)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mame2016 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch MAME (Arcade Latest)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch MAME (Arcade Latest)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mame "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mednafen GBA (GBA)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mednafen GBA (GBA)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_gba "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mednafen Lynx (Lynx)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mednafen Lynx (Lynx)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_lynx "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_ngp "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_pce_fast "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_pce "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_pcfx "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mednafen PSX HW (PS1)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mednafen PSX HW (PS1)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_psx_hw "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mednafen PSX (PS1)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mednafen PSX (PS1)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_psx "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mednafen Saturn (Saturn)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mednafen Saturn (Saturn)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_saturn "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mednafen SNES (SNES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mednafen SNES (SNES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_snes "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mednafen SuperGrafx (PCE SuperGrafx)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mednafen SuperGrafx (PCE SuperGrafx)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_supergrafx "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mednafen VB (VirtualBoy)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mednafen VB (VirtualBoy)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_vb "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mednafen Cygne (WonderSwan/WonderSwan Color)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mednafen Cygne (WonderSwan/WonderSwan Color)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_wswan "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch melonDS (Nintendo DS)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch melonDS (Nintendo DS)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" melonds "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mesen (NES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mesen (NES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mesen "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch MESS 2014 (MESS 0.160)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch MESS 2014 (MESS 0.160)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mess2015 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Meteor (GBA)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Meteor (GBA)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" meteor "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch mGBA (GBA)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch mGBA (GBA)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mgba "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch MPV (Media Player)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch MPV (Media Player)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mpv "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mrboom "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mu (Palm OS)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mu (Palm OS)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mu "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mupen64Plus GLES3 (N64)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mupen64Plus GLES3 (N64)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mupen64plus_gles3 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mupen64Plus (N64)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mupen64Plus (N64)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mupen64plus "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Mupen64Plus Next (N64)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Mupen64Plus Next (N64)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mupen64plus_next "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Neko Project II (NEC PC-98)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Neko Project II (NEC PC-98)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" nekop2 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Nestopia (NES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Nestopia (NES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" nestopia "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Neko Project II Kai (NEC PC-98)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Neko Project II Kai (NEC PC-98)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" np2kai "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch CaveStory (NXEngine)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch CaveStory (NXEngine)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" nxengine "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch O2EM (Odyssey2/Videopac)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch O2EM (Odyssey2/Videopac)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" o2em "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Oberon (RISC)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Oberon (RISC)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" oberon "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch OpenLara (Tomb Raider)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch OpenLara (Tomb Raider)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" openlara "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch OpenTyrian (Standalone Game)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch OpenTyrian (Standalone Game)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" opentyrian "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch ParaLLEl (N64)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch ParaLLEl (N64)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" parallel_n64 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch PascalPong (Standalone Game)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch PascalPong (Standalone Game)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" pascal_pong "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch PCem (PC)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch PCem (PC)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" pcem "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch PCSX1 (PS1)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch PCSX1 (PS1)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" pcsx1 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch PCSX ReArmed (PS1)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch PCSX ReArmed (PS1)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" pcsx_rearmed "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch PCSX ReArmed NEON (PS1)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch PCSX ReArmed NEON (PS1)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" pcsx_rearmed_neon "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch PicoDrive (SMS/Gen/Sega CD/32X)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch PicoDrive (SMS/Gen/Sega CD/32X)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" picodrive "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch PocketCDG (CDG Music)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch PocketCDG (CDG Music)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" pocketcdg "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" pokemini "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch PPSSPP (PSP)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch PPSSPP (PSP)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" ppsspp "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch PrBoom (Doom)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch PrBoom (Doom)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" prboom "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch ProSystem (Atari 7800)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch ProSystem (Atari 7800)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" prosystem "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch PUAE (Amiga)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch PUAE (Amiga)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" puae "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Sharp X68000 (X68000)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Sharp X68000 (X68000)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" px68k "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch QUASI88 (PC-8801)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch QUASI88 (PC-8801)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" quasi88 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch QuickNES (NES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch QuickNES (NES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" quicknes "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Redream (Dreamcast)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Redream (Dreamcast)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" redream "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch REminiscence (Standalone Game)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch REminiscence (Standalone Game)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" reminiscence "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch RemoteJoy (PSP RemotePlay)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch RemoteJoy (PSP RemotePlay)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" remotejoy "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Rustation (PS1)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Rustation (PS1)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" rustation "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SameBoy (GB/GBC)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch SameBoy (GB/GBC)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" sameboy "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch ScummVM (Various)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch ScummVM (Various)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" scummvm "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SimCoupe (SAM coupe)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch SimCoupe (SAM coupe)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" simcp "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x 2002 (SNES 1.39)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch SNES9x 2002 (SNES 1.39)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" snes9x2002 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x 2005 (SNES 1.43)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch SNES9x 2005 (SNES 1.43)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" snes9x2005 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x 2005 Plus (SNES 1.43)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch SNES9x 2005 Plus (SNES 1.43)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" snes9x2005_plus "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" snes9x2010 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x (SNES)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch SNES9x (SNES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" snes9x "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SquirrelJME (Java)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch SquirrelJME (Java)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" squirreljme "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" stella2014 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Stella (Atari 2600)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Stella (Atari 2600)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" stella "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Dungeon Crawl Stone Soup (Standalone Game)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Dungeon Crawl Stone Soup (Standalone Game)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" stonesoup "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch TempGBA (GBA)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch TempGBA (GBA)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" tempgba "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch TGBDual (GB/GBC)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch TGBDual (GB/GBC)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" tgbdual "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Theodore (Thomson TO8D)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Theodore (Thomson TO8D)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" theodore "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch PowderToy (Standalone Game)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch PowderToy (Standalone Game)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" thepowdertoy "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch TyrQuake (Quake)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch TIC80 (TIC-80)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" tic80 "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch TyrQuake (Quake)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" tyrquake "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch UAE4ARM (Amiga)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch UAE4ARM (Amiga)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" uae4arm "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch UME2015 (MAME/MESS 0.160)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch UME2015 (MAME/MESS 0.160)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" ume2015 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="Retroarch Uzem (Uzebox)" os="LibreElec Sx05RE">
+	<launcher name="Retroarch Uzem (Uzebox)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" uzem "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch VBANext (GBA)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch VBANext (GBA)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vba_next "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch VBA-M (GBA)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch VBA-M (GBA)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vbam "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch VECX (Vectrex)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch VECX (Vectrex)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vecx "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch VeMUlator (Sega VMU)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch VeMUlator (Sega VMU)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vemulator "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch VICE C128 (C128)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch VICE C128 (C128)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vice_x128 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch VICE C64 (C64)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch VICE C64 (C64)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vice_x64 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vice_xplus4 "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Commodore VICE VIC20 (VIC20)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Commodore VICE VIC20 (VIC20)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vice_xvic "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Virtual Jaguar (Jaguar)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Virtual Jaguar (Jaguar)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" virtualjaguar "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch VICE SDL C64 (C64)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch VICE SDL C64 (C64)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" x64sdl "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch XRick (Rick Dangerous)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch XRick (Rick Dangerous)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" xrick "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Yabasanshiro (Saturn)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Yabasanshiro (Saturn)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" yabasanshiro "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch Yabuse (Saturn)" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Yabuse (Saturn)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" yabause "%ROM_PATH%"</launcher_command>
 	</launcher>
 <!-- LibreElec Sx05RE Build Additional Emulator External Commands -->
-	<launcher name="RetroArch Launch App Only" os="LibreElec Sx05RE">
+	<launcher name="RetroArch Launch App Only" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh"</launcher_command>
-	</launcher>
-<!-- LibreElec S805/S905 Addon https://github.com/JoKeRzBoX/JoKeRzBoX_LibreELEC_Repo_S905 -->
-	<launcher name="RetroArch 2048 (Standalone Game)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh 2048 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch 3D Engine (Other)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh 3dengine "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch 4DO (3DO)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh 4do "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch EightyOne (ZX81)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh 81 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Atari800 (Atari 800/Atari 5200)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh atari800 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch BlastEm (Gen/MD)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh blastem "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch BlueMSX (MSX)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh bluemsx "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch BNES (NES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh bnes "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch BSNES Accuracy (SNES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh bsnes_accuracy "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch BSNES Balanced (SNES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh bsnes_balanced "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch BSNES Performance v085 (SNES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh bsnes_cplusplus98 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch BSNES Mercury Accuracy (SNES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh bsnes_mercury_accuracy "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch BSNES Mercury Balanced (SNES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh bsnes_mercury_balanced "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch BSNES Mercury Performance (SNES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh bsnes_mercury_performance "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch BSNES Performance (SNES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh bsnes_performance "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch CannonBall (Standalone Game)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh cannonball "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch CAP32 (Amstrad CPC)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh cap32 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch ChaiLove Engine (ChaiLove)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh chailove "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Citra Canary (3DS)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh citra_canary "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Citra (3DS)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh citra "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Craft (Standalone Game)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh craft "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch CrocoDS (Amstrad CPC)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh crocods "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Daphne (Laserdisc)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh daphne "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch DeSmuME 2015 (NDS)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh desmume2015 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch DeSmuME (NDS)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh desmume "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Dinothawr (Standalone Game)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh dinothawr "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Dolphin (Wii/Gamecube)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh dolphin "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch DOSBox (DOS)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh dosbox "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch DOSBox SVN Glide (DOS)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh dosbox_svn_glide "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch DOSBox SVN (DOS)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh dosbox_svn "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh easyrpg "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch EMUX CHIP-8 (CHIP-8)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh emux_chip8 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch EMUX GB (GB/GBC)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh emux_gb "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch EMUX NES (NES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh emux_nes "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch EMUX SMS (SMS)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh emux_sms "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch FBA CPS1 2012 (Arcade CPS1 0.2.97.29)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh fbalpha2012_cps1 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch FBA CPS2 2012 (Arcade CPS2 0.2.97.29)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh fbalpha2012_cps2 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch FBA CPS3 2012 (Arcade CPS3 0.2.97.29)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh fbalpha2012_cps3 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch FBA 2012 (Arcade 0.2.97.29)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh fbalpha2012 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch FBA NEO 2012 (Neo Geo 0.2.97.29)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh fbalpha2012_neogeo "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch FB Neo (Arcade Latest)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh fbneo "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch FCEUmm (NES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh fceumm "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch FFmpeg (Media Player)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh ffmpeg "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch fixGB (GB/GBC)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh fixgb "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch fixNES (NES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh fixnes "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="Retroarch FlyCast (Dreamcast/Naomi)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh flycast "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch FlyCast (Dreamcast WinCE)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh flycast_wince "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch fMSX (MSX)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh fmsx "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch FreeChaF (Fairchild ChannelF)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh freechaf "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch FreeIntv (Intellivision)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh freeintv "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch FreeJ2ME (Java)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh freej2me "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Frodo (C64)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh frodo "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch FSUAE (Amiga)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh fsuae "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch FUSE (Spectrum)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh fuse "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Gambatte (GB/GBC)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh gambatte "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Gearboy (GB/GBC)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh gearboy "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Gearsystem (GG/SMS)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh gearsystem "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Genesis Plus GX (GG/SMS/Gen/PICO/SG-1000)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh genesis_plus_gx "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Game Music Emu (Other)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh gme "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch gpSP (GBA)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh gpsp "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Game and Watch (Game and Watch)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh gw "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Handy (Lynx)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh handy "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Hatari (Atari ST/STE/TT/Falcon)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh hatari "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch SNES Higan nSide Balanced (SNES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh higan_sfc_balanced "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch SNES Higan (SNES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh higan_sfc "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Imageviewer (Media Viewer)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh imageviewer "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Dolphin Ishiiruka (Wii/Gamecube)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh ishiiruka "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Kronos (Saturn)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh kronos "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Lua Engine (Lutro)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh lutro "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME 2000 (Arcade 0.37b5)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mame2000 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME 2003 (Arcade 0.78)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mame2003 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME 2003 Midway (Arcade Midway 0.78)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mame2003_midway "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME 2003 Plus (Arcade 0.78)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mame2003_plus "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME 2010 (Arcade 0.135u4)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mame2009 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME 2010 (Arcade 0.139)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mame2010 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME 2015 (Arcade 0.160)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mame2015 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME 2016 (Arcade 0.174)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mame2016 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME (Arcade Latest)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mame "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen GBA (GBA)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mednafen_gba "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen Lynx (Lynx)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mednafen_lynx "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mednafen_ngp "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mednafen_pce_fast "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mednafen_pce "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mednafen_pcfx "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen PSX HW (PS1)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mednafen_psx_hw "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen PSX (PS1)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mednafen_psx "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen Saturn (Saturn)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mednafen_saturn "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen SNES (SNES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mednafen_snes "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen SuperGrafx (PCE SuperGrafx)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mednafen_supergrafx "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen VB (VirtualBoy)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mednafen_vb "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen Cygne (WonderSwan/WonderSwan Color)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mednafen_wswan "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch melonDS (Nintendo DS)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh melonds "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mesen (NES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mesen "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch MESS 2014 (MESS 0.160)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mess2015 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Meteor (GBA)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh meteor "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch mGBA (GBA)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mgba "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch MPV (Media Player)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mpv "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mrboom "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mu (Palm OS)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mu "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mupen64Plus GLES3 (N64)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mupen64plus_gles3 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mupen64Plus (N64)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mupen64plus "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mupen64Plus Next (N64)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh mupen64plus_next "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Neko Project II (NEC PC-98)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh nekop2 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Nestopia (NES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh nestopia "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Neko Project II Kai (NEC PC-98)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh np2kai "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch CaveStory (NXEngine)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh nxengine "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch O2EM (Odyssey2/Videopac)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh o2em "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Oberon (RISC)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh oberon "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch OpenLara (Tomb Raider)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh openlara "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch OpenTyrian (Standalone Game)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh opentyrian "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch ParaLLEl (N64)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh parallel_n64 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch PascalPong (Standalone Game)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh pascal_pong "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch PCem (PC)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh pcem "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch PCSX1 (PS1)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh pcsx1 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch PCSX ReArmed (PS1)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh pcsx_rearmed "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch PCSX ReArmed NEON (PS1)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh pcsx_rearmed_neon "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch PicoDrive (SMS/Gen/Sega CD/32X)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh picodrive "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch PocketCDG (CDG Music)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh pocketcdg "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh pokemini "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch PPSSPP (PSP)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh ppsspp "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch PrBoom (Doom)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh prboom "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch ProSystem (Atari 7800)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh prosystem "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch PUAE (Amiga)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh puae "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Sharp X68000 (X68000)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh px68k "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch QUASI88 (PC-8801)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh quasi88 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch QuickNES (NES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh quicknes "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Redream (Dreamcast)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh redream "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch REminiscence (Standalone Game)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh reminiscence "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch RemoteJoy (PSP RemotePlay)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh remotejoy "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Rustation (PS1)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh rustation "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch SameBoy (GB/GBC)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh sameboy "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch ScummVM (Various)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh scummvm "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch SimCoupe (SAM coupe)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh simcp "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch SNES9x 2002 (SNES 1.39)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh snes9x2002 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch SNES9x 2005 (SNES 1.43)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh snes9x2005 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch SNES9x 2005 Plus (SNES 1.43)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh snes9x2005_plus "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh snes9x2010 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch SNES9x (SNES)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh snes9x "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch SquirrelJME (Java)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh squirreljme "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh stella2014 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Stella (Atari 2600)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh stella "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Dungeon Crawl Stone Soup (Standalone Game)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh stonesoup "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch TempGBA (GBA)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh tempgba "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch TGBDual (GB/GBC)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh tgbdual "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Theodore (Thomson TO8D)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh theodore "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch PowderToy (Standalone Game)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh thepowdertoy "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch TyrQuake (Quake)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh tyrquake "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch UAE4ARM (Amiga)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh uae4arm "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch UME2015 (MAME/MESS 0.160)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh ume2015 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="Retroarch Uzem (Uzebox)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh uzem "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch VBANext (GBA)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh vba_next "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch VBA-M (GBA)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh vbam "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch VECX (Vectrex)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh vecx "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch VeMUlator (Sega VMU)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh vemulator "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch VICE C128 (C128)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh vice_x128 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch VICE C64 (C64)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh vice_x64 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh vice_xplus4 "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Commodore VICE VIC20 (VIC20)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh vice_xvic "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Virtual Jaguar (Jaguar)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh virtualjaguar "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch VICE SDL C64 (C64)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh x64sdl "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch XRick (Rick Dangerous)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh xrick "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Yabasanshiro (Saturn)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh yabasanshiro "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch Yabuse (Saturn)" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh yabause "%ROM_PATH%"</launcher_command>
-	</launcher>
-<!-- LibreElec S805/S905 Addon Additional Emulator External Commands -->
-	<launcher name="RetroArch Launch App Only" os="LibreElec S905 Addon">
-		<launcher_command>/storage/.kodi/addons/emulator.tools.retroarch/bin/retroarch.sh</launcher_command>
 	</launcher>
 <!-- Gamestarter Addon, RetroArch Cores https://github.com/bite-your-idols/Gamestarter -->
 	<launcher name="RetroArch 2048 (Standalone Game)" os="Gamestarter Addon">
@@ -5985,6 +5521,9 @@
 	</launcher>
 	<launcher name="RetroArch PowderToy (Standalone Game)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh thepowdertoy "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch TIC80 (TIC-80)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh tic80 "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh tyrquake "%ROM_PATH%"</launcher_command>
@@ -6488,6 +6027,9 @@
 	</launcher>
 	<launcher name="RetroArch PowderToy (Standalone Game)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/thepowdertoy_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch TIC80 (TIC-80)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/tic80_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/tyrquake_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
@@ -7075,6 +6617,9 @@
 	</launcher>
 	<launcher name="RetroArch PowderToy (Standalone Game)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/thepowdertoy_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch TIC80 (TIC-80)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/tic80_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/tyrquake_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
