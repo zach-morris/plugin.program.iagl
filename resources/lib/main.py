@@ -3215,7 +3215,10 @@ class iagl_download(object):
 		if any([x in filename_in.lower() for x in self.libarchive_extensions]):
 			folder_name = xbmc.translatePath(os.path.join(os.path.split(filename_in)[0],str(name_in)))
 			if xbmcvfs.mkdir(folder_name): #Create the folder to unarchive into
+				dp = xbmcgui.DialogProgressBG()
+				dp.create('Please Wait...','Extracting files')
 				files_extracted, files_extracted_success = extract_all_libarchive(filename_in,folder_name)
+				dp.close()
 				if files_extracted_success:
 					self.current_processed_files.extend(files_extracted)
 					self.current_processed_files_success = [True for x in files_extracted]
@@ -3235,9 +3238,10 @@ class iagl_download(object):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unzip files to folder %(name_in)s (builtin)'% {'filename_in': filename_in, 'name_in': name_in}, level=xbmc.LOGDEBUG)
 		if '.zip' in filename_in.lower():
 			temp_folder =  os.path.join(os.path.split(filename_in)[0],str(name_in))
-			# xbmc.executebuiltin('ActivateWindow(busydialog)')
+			dp = xbmcgui.DialogProgressBG()
+			dp.create('Please Wait...','Extracting files')
 			xbmc.executebuiltin(('XBMC.Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmc.translatePath(filename_in), 'location_to_extract_to':xbmc.translatePath(temp_folder)}).encode('utf-8'), True) #Unzip the file(s) to a temp folder
-			# xbmc.executebuiltin('Dialog.Close(busydialog)')
+			dp.close()
 			if xbmcvfs.exists(os.path.join(temp_folder,'')): #Unzip generated a folder
 				self.current_processed_files.extend(get_all_files_in_directory_xbmcvfs(temp_folder))
 				self.current_processed_files_success = [True for x in self.current_processed_files]
@@ -3251,7 +3255,10 @@ class iagl_download(object):
 	def post_process_unarchive_files_libarchive(self,filename_in,crc_in):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unarchive (vfs.libarchive)'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
 		if any([x in filename_in.lower() for x in self.libarchive_extensions]):
+			dp = xbmcgui.DialogProgressBG()
+			dp.create('Please Wait...','Extracting files')
 			files_extracted, files_extracted_success = extract_all_libarchive(filename_in,os.path.split(filename_in)[0])
+			dp.close()
 			if files_extracted_success:
 				self.current_processed_files.extend(files_extracted)
 				self.current_processed_files_success = [True for x in files_extracted]
@@ -3269,9 +3276,10 @@ class iagl_download(object):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unzip (builtin)'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
 		if '.zip' in filename_in.lower():
 			temp_folder =  os.path.join(os.path.split(filename_in)[0],str(crc_in))
-			# xbmc.executebuiltin('ActivateWindow(busydialog)')
+			dp = xbmcgui.DialogProgressBG()
+			dp.create('Please Wait...','Extracting files')
 			xbmc.executebuiltin(('XBMC.Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmc.translatePath(filename_in), 'location_to_extract_to':xbmc.translatePath(temp_folder)}).encode('utf-8'), True) #Unzip the file(s) to a temp folder
-			# xbmc.executebuiltin('Dialog.Close(busydialog)')
+			dp.close()
 			if xbmcvfs.exists(os.path.join(temp_folder,'')): #Unzip generated a folder
 				files_extracted, files_extracted_success = move_directory_contents_xbmcvfs(os.path.join(temp_folder,''),os.path.join(os.path.split(filename_in)[0],''))
 				if files_extracted_success:
@@ -3288,7 +3296,10 @@ class iagl_download(object):
 	def post_process_unarchive_and_rename_files_libarchive(self,filename_in,crc_in):
 		xbmc.log(msg='IAGL:  Post Process and rename file %(filename_in)s - unarchive (vfs.libarchive)'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
 		if any([x in filename_in.lower() for x in self.libarchive_extensions]):
+			dp = xbmcgui.DialogProgressBG()
+			dp.create('Please Wait...','Extracting files')
 			files_extracted, files_extracted_success = extract_all_libarchive(filename_in,os.path.split(filename_in)[0])
+			dp.close()
 			if files_extracted_success:
 				xbmc.log(msg='IAGL:  The file %(filename_in)s was unarchived.  First file extracted: %(files_extracted)s'% {'filename_in': filename_in, 'files_extracted':files_extracted[0]}, level=xbmc.LOGDEBUG)
 				if not xbmcvfs.delete(filename_in):
