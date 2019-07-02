@@ -1,0 +1,1641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datafile>
+  <header>
+    <emu_name>TIC-80</emu_name>
+    <emu_description>Standalone Game</emu_description>
+    <emu_category>Port</emu_category>
+    <emu_version>07012019</emu_version>
+    <emu_date>07/01/2019</emu_date>
+    <emu_author>Zach Morris</emu_author>
+    <emu_visibility>visible</emu_visibility>
+    <emu_homepage>https://tic.computer/</emu_homepage>
+    <emu_baseurl>http://archive.org/download/TIC80/</emu_baseurl>
+    <emu_launcher>retroplayer</emu_launcher>
+    <emu_default_addon>none</emu_default_addon>
+    <emu_ext_launch_cmd>none</emu_ext_launch_cmd>
+    <emu_downloadpath>default</emu_downloadpath>
+    <emu_postdlaction>none</emu_postdlaction>
+    <emu_comment>TIC-80 is a fantasy computer for making, playing and sharing tiny games.[CR]There are built-in tools for development: code, sprites, maps, sound editors and the command line, which is enough to create a mini retro game. At the exit you will get a cartridge file, which can be stored and played.[CR]To make a retro styled game the whole process of creation takes place under some technical limitations: 240x136 pixels display, 16 color palette, 256 8x8 color sprites, 4 channel sound, etc.</emu_comment>
+    <emu_thumb>TK3iL01.jpg</emu_thumb>
+    <emu_banner>4cw9kIK.jpg</emu_banner>
+    <emu_fanart>K58on6i.png</emu_fanart>
+    <emu_logo>2xwckr0.png</emu_logo>
+    <emu_trailer>pb-JqofdA8Y</emu_trailer>
+  </header>
+  <game name="12 PACES JOE">
+    <description>12 PACES JOE</description>
+    <rom name="12%20PACES%20JOE.tic" size="22790"/>
+    <snapshot1>O1ak7mr.gif</snapshot1>
+    <studio>Tomthetom</studio>
+    <plot>A short (Unfinished) platformer I made to test out a few features. Will add more stuff later.[CR]Thanks to Trelemar for the camera code.</plot>
+  </game>
+  <game name="15 MINUTES TO LIVE">
+    <description>15 MINUTES TO LIVE</description>
+    <rom name="15%20MINUTES%20TO%20LIVE.tic" size="75088"/>
+    <snapshot1>DUfPz11.gif</snapshot1>
+    <studio>Altrix Studios</studio>
+    <plot>The year is 20XX. Ageing is a thing of the past, and all humans have predetermined lifespans, shown by digital clocks embedded in their arm. Time can be bought, sold, or traded - just like a currency.[CR]You are Vance Anderson. Your lifespan has just been stolen. You have 15 minutes to live... unless you can find whoever is responsible.[CR]Created in 48 hours for Ludum Dare 44.[CR]Controls:[CR]- Arrows: Move[CR]- Z: Talk[CR]- X: View inventory</plot>
+  </game>
+  <game name="2 PLAYER BOMBERMAN">
+    <description>2 PLAYER BOMBERMAN</description>
+    <rom name="2%20PLAYER%20BOMBERMAN.tic" size="14302"/>
+    <snapshot1>dsQxPTL.gif</snapshot1>
+    <studio>Marcel</studio>
+    <plot>A two-player Bomberman game[CR]Be sure to keymap enough for both players.[CR]Button A drops bombs[CR]Button B lights fire(only usable once per battle)[CR]X and Y are unused.</plot>
+  </game>
+  <game name="2048 TIC-80 VERSION">
+    <description>2048 TIC-80 VERSION</description>
+    <rom name="2048%20TIC-80%20VERSION.tic" size="10381"/>
+    <snapshot1>PZU9hcg.gif</snapshot1>
+    <studio>Spacebit</studio>
+    <plot>I made a game like 2048 with Javascript, have fun[CR]by Spacebit</plot>
+  </game>
+  <game name="8 BIT PANDA 3D GLASSES EDITION">
+    <description>8 BIT PANDA 3D GLASSES EDITION</description>
+    <rom name="8%20BIT%20PANDA%203D%20GLASSES%20EDITION.tic" size="132968"/>
+    <snapshot1>Kg0dFtU.gif</snapshot1>
+    <studio>Bruno Oliveira, StinkerB06</studio>
+    <plot>Kingpug asked me to add a stereoscopic 3D visual to 8-bit Panda "Virtual Boy" Edition on his live stream, but the problem is that TIC-80 is only 2D. TIC-80 cannot blend sprites/maps to do the 3D anaglyph visual.[CR]To compensate for this, I pre-made a mod of 8-bit Panda with shades of red and cyan colors, giving it the feel of a stereoscopic eye-masking effect on certain graphics in the game. But at least you cannot experience true 3D effects, like what's possible on the real Virtual Boy. :(</plot>
+  </game>
+  <game name="8 BIT PANDA CHEAT VERSION">
+    <description>8 BIT PANDA CHEAT VERSION</description>
+    <rom name="8%20BIT%20PANDA%20CHEAT%20VERSION.tic" size="131633"/>
+    <snapshot1>pfAKzNu.gif</snapshot1>
+    <studio>Bruno Oliveira, StinkerB06</studio>
+    <plot>Now there's 1,000 lives with no enemies, partially hahaha[CR]Note: This cartridge can be used as a cheat tool for the original game to skip isles.[CR]Now back in games section!</plot>
+  </game>
+  <game name="8 BIT PANDA INVISABLE EDITON">
+    <description>8 BIT PANDA INVISABLE EDITON</description>
+    <rom name="8%20BIT%20PANDA%20INVISABLE%20EDITON.tic" size="132490"/>
+    <snapshot1>A9NT7uP.gif</snapshot1>
+    <studio>Bruno Oliveira,Master nama</studio>
+    <plot>How works invisible panda you cannot see.[CR]This text is a bad  down here.[CR]Debug menu - display says "No panda,Clear Panda,Kill panda,Lost the panda and Delete panda"[CR]Game over - Panda is back[CR]Win game - Killed panda by monster[CR]Tilte down - www.github.com/btco/error404pandaisback[CR](C) Master nama[CR]8 bit panda (C) btco</plot>
+  </game>
+  <game name="8 BIT PANDA VIRTUAL BOY EDITION">
+    <description>8 BIT PANDA VIRTUAL BOY EDITION</description>
+    <rom name="8%20BIT%20PANDA%20VIRTUAL%20BOY%20EDITION.tic" size="132974"/>
+    <snapshot1>kqPBTg8.gif</snapshot1>
+    <studio>Bruno Oliveira, mod StinkerB06</studio>
+    <plot>I decided to do this because of fun.[CR]Though the Virtual Boy is only capable of displaying black and 3 shades of red at any given moment, 8-bit Panda "Virtual Boy" Edition uses a linear scale of red colors, hence the quotation used.[CR]If you don't know what the Virtual Boy was, it was a failed 32-bit system from Nintendo, which came out in Japan and the US in 1995, to predate the Nintendo 64 in those regions. Unfortunately, the public hands from the rest of the world never got to touch the system back then, so it is considered to be a collectors' item to them. Only about 22 games were released for the Virtual Boy, before it faded away less than a year later.[CR]I also made a few minor changes to the base 8-bit Panda game.</plot>
+  </game>
+  <game name="8 BIT PANDA WHITEOUT CHALLENGE">
+    <description>8 BIT PANDA WHITEOUT CHALLENGE</description>
+    <rom name="8%20BIT%20PANDA%20WHITEOUT%20CHALLENGE.tic" size="132888"/>
+    <snapshot1>FR4S4z5.gif</snapshot1>
+    <studio>Bruno Oliveira, mod oshaboy</studio>
+    <plot>You thought Light Theme was bad?[CR]8 Bit Panda: Whiteout Challenge. It is Oliveira's game if it was played on the sun using sun spots.[CR]The darkest spots are at around 97% of the maximum brightness of your monitor, However if you focus very hard and your screen is clean you may be able to see the characters... Maybe. [CR]If you press escape you can see ahead but then you will be a cheater, and cheaters never win. [CR]Bonus points if you play on a VGA monitor. </plot>
+  </game>
+  <game name="8 BIT PANDA">
+    <description>8 BIT PANDA</description>
+    <rom name="8%20BIT%20PANDA.tic" size="132361"/>
+    <snapshot1>qm2TrNs.gif</snapshot1>
+    <studio>Bruno Oliveira</studio>
+    <plot>8 Bit Panda is a classic-style platformer for the TIC-80. You can move, run, jump and get powerups (and occasionally fly planes!). It has 17 levels distributed across 6 major areas (isles). Each area has  different enemies and difficulty. The game is saved every time you complete a full area (after level 3 of each isle).[CR]This project is open source and available at:[CR]https://github.com/btco/panda[CR]Follow me on twitter: @btco_code (http://twitter.com/btco_code)</plot>
+  </game>
+  <game name="A BLOBFISH OUT OF WATER">
+    <description>A BLOBFISH OUT OF WATER</description>
+    <rom name="A%20BLOBFISH%20OUT%20OF%20WATER.tic" size="20772"/>
+    <snapshot1>fb8vAkm.gif</snapshot1>
+    <studio>Sammy6</studio>
+    <plot>Run as Blobster the blobfish to reach to ocean (If there is one...).[CR]Press A (Z) to jump!</plot>
+  </game>
+  <game name="A CLICKER">
+    <description>A CLICKER</description>
+    <rom name="A%20CLICKER.tic" size="4315"/>
+    <snapshot1>xMuvdiS.gif</snapshot1>
+    <studio>derpguy125</studio>
+    <plot>The title says it all... You press "A (or Z on the keyboard... if you have one.)" a lot! Cool, huh? I even made a very basic upgrade system! Press "B (or X)" when you have enough Clicks! Tha-- thas it.[CR]UPDATE 1: wow look its an autoclicker thingy! press "X (or A)" to upgrade it. When you have so many clicks, you can just sit back![CR]Follow me on twitter: www.twitter.com/derpguy125[CR]Gotta plug my social media! haha lol xDDD</plot>
+  </game>
+  <game name="AIR HOCKEY">
+    <description>AIR HOCKEY</description>
+    <rom name="AIR%20HOCKEY.tic" size="42625"/>
+    <snapshot1>aYkL5iS.gif</snapshot1>
+    <studio>Developer from onj</studio>
+    <plot>scoring 7 points[CR]by Developer from onj</plot>
+  </game>
+  <game name="AMROGUE">
+    <description>AMROGUE</description>
+    <rom name="AMROGUE.tic" size="38114"/>
+    <snapshot1>4ggocFW.gif</snapshot1>
+    <studio>trelemar</studio>
+    <plot>The Goons are chasing you down as you decend through the depths of the Place. You'll find various items and chests to help on your journey below. How far down can you make it before they get to you? [CR]This game is in a playable state, but does not have a lot of content. If you enjoy it, you can follow me @trelemar. I'm sure I'll be posting updates for this. Feedback and or suggestions are appreciated!</plot>
+  </game>
+  <game name="ANT RACER">
+    <description>ANT RACER</description>
+    <rom name="ANT%20RACER.tic" size="45896"/>
+    <snapshot1>VAPtWVn.gif</snapshot1>
+    <studio>zlatovlas</studio>
+    <plot>Infinite runner type game made for Slovak rally team red ants[CR]by @zlatovlas</plot>
+  </game>
+  <game name="ARK2KS ARITHMETIC">
+    <description>ARK2KS ARITHMETIC</description>
+    <rom name="ARK2KS%20ARITHMETIC.tic" size="9458"/>
+    <snapshot1>6h5AQyJ.gif</snapshot1>
+    <studio>Ark2000</studio>
+    <plot>my second game, and I have learnt a lot about organizing data and operation.[CR]just do some really easy calculation,you will get mark A.[CR]No integral or differential calculation,don't worry.</plot>
+  </game>
+  <game name="ASPRIN">
+    <description>ASPRIN</description>
+    <rom name="ASPRIN.tic" size="113153"/>
+    <studio>mholowsko</studio>
+    <plot>Collect dots dodge lines[CR]by mholowsko</plot>
+  </game>
+  <game name="ASTEROIDS">
+    <description>ASTEROIDS</description>
+    <rom name="ASTEROIDS.tic" size="31207"/>
+    <snapshot1>24rdWC8.gif</snapshot1>
+    <studio>Vinicius M.</studio>
+    <plot>A copy of the classic asteroids atari game[CR]by Vinicius M.</plot>
+  </game>
+  <game name="BALLOON AND CACTUS A LOVE STORY">
+    <description>BALLOON AND CACTUS A LOVE STORY</description>
+    <rom name="BALLOON%20AND%20CACTUS%20A%20LOVE%20STORY.tic" size="22846"/>
+    <snapshot1>gLxnJYA.gif</snapshot1>
+    <studio>Alex Bair</studio>
+    <plot>How long can you help Balloon survive in the thorniest of relationships? [CR]Inflated list of features:[CR]  - Carefully float Balloon into hugs while avoiding the deadly arms of Cactus![CR]  - Avoid the ever-closing walls of Cactus's crush![CR]  - Mumble puns about balloons and cacti nobody will hear![CR]Balloon and Cactus was built with TIC-80 as an example for a teens' game-making work shop at Fort Vancouver Regional Library!</plot>
+  </game>
+  <game name="BALLOON PUNCH">
+    <description>BALLOON PUNCH</description>
+    <rom name="BALLOON%20PUNCH.tic" size="52589"/>
+    <snapshot1>rzQez0N.gif</snapshot1>
+    <studio>tak0294</studio>
+    <plot>an old school seesaw game[CR](I don't know how describe this kind of game)[CR]move seesaw : cursor key left/right[CR]have fun :)</plot>
+  </game>
+  <game name="BALMUNG">
+    <description>BALMUNG</description>
+    <rom name="BALMUNG.tic" size="135733"/>
+    <snapshot1>E1n6oIJ.gif</snapshot1>
+    <studio>petet</studio>
+    <plot>Explore an island filled with monsters and mysteries![CR]Updates[CR]-balanced some enemies, bosses[CR]-money no longer disappears on death[CR]-improved arrow sfx[CR]-adds completion meter</plot>
+  </game>
+  <game name="BARE BONES">
+    <description>BARE BONES</description>
+    <rom name="BARE%20BONES.tic" size="90462"/>
+    <snapshot1>oHralDy.gif</snapshot1>
+    <studio>trelemar, level27geek, RushJet1</studio>
+    <plot>Collect body parts to make yourself whole again![CR]For Dr. Zilog who created you, you are just another failed experiment. But even that he destroyed your body and left you with nothing more than bare bones, you have a will to survive.[CR]Journey through Dr. Zilog's dungeon of discarded creations. Solve puzzles, fight bizarre creatures, rebuild your body and finally take your revenge on the mad scientist responsible for all this mess in this Zelda inspired dungeon-crawler.</plot>
+  </game>
+  <game name="BATTLE">
+    <description>BATTLE</description>
+    <rom name="BATTLE.tic" size="10802"/>
+    <snapshot1>0iq5TV0.gif</snapshot1>
+    <studio>Sammy6</studio>
+    <plot>My first game :D[CR]Use WASD and Space to control red, and use the Arrow Keys and Right Shift to control blue!</plot>
+  </game>
+  <game name="BEJEWELED">
+    <description>BEJEWELED</description>
+    <rom name="BEJEWELED.tic" size="6850"/>
+    <snapshot1>yYwsbME.gif</snapshot1>
+    <studio>jose_pedro_dias</studio>
+    <plot>minimal bejeweled clone[CR]by @jose_pedro_dias</plot>
+  </game>
+  <game name="BINARY ROAD">
+    <description>BINARY ROAD</description>
+    <rom name="BINARY%20ROAD.tic" size="3166"/>
+    <snapshot1>PMjxjOI.gif</snapshot1>
+    <studio>Kikeroga</studio>
+    <plot>This is very simple one key jump game.[CR]The running man jumps with the [X] key.[CR]Don't fall into the pitfalls.</plot>
+  </game>
+  <game name="BIRD JUMPER">
+    <description>BIRD JUMPER</description>
+    <rom name="BIRD%20JUMPER.tic" size="18286"/>
+    <snapshot1>8y9NGLC.gif</snapshot1>
+    <studio>Sammy6</studio>
+    <plot>Use the arrow keys to move. Land on birds to get points and make combos![CR]Press f11 for full screen.[CR]Made for the 4th Alakajam. https://alakajam.com/</plot>
+  </game>
+  <game name="BITMAZE">
+    <description>BITMAZE</description>
+    <rom name="BITMAZE.tic" size="17476"/>
+    <snapshot1>fl1k923.gif</snapshot1>
+    <studio>ewpratten</studio>
+    <plot>BitMaze Version 1.0[CR]A simple maze game with randomly spawning objective.[CR]collect the coin 20 times to win.[CR]Movement:[CR]Up[CR]Down[CR]Left[CR]Right</plot>
+  </game>
+  <game name="BLAST-80">
+    <description>BLAST-80</description>
+    <rom name="BLAST-80.tic" size="30974"/>
+    <snapshot1>XsOKOGI.gif</snapshot1>
+    <studio>VirtualGround</studio>
+    <plot>How to play:[CR]Aim with the directional keys and fire with X[CR]Defend the earth from a horde of incoming comets. The spawn rate of the comets will increase as you progress. How far can you make it before our planet meets its doom. [CR]This game is also available at itch.io:[CR]https://virtualground.itch.io/blast-80</plot>
+  </game>
+  <game name="BLOCK WALK">
+    <description>BLOCK WALK</description>
+    <rom name="BLOCK%20WALK.tic" size="27843"/>
+    <snapshot1>P86hBap.gif</snapshot1>
+    <studio>King Sirracha</studio>
+    <plot>a game created for the 2018 GMTK Game jame[CR]by King Sirracha</plot>
+  </game>
+  <game name="BLUES DANCE SHOW">
+    <description>BLUES DANCE SHOW</description>
+    <rom name="BLUES%20DANCE%20SHOW.tic" size="79618"/>
+    <snapshot1>9aABPIv.gif</snapshot1>
+    <studio>auBergewohnlich</studio>
+    <plot>HOW TO PLAY:[CR]When an arrow is inside the score box, press the corresponding directional button to earn points. To unlock the next level, you must get at least 80% 'good' and 'excellent' in your final score.[CR]WHAT'S NEW[CR]-- Improved songs and dance animations[CR]-- New animated cart cover</plot>
+  </game>
+  <game name="BOOM BUSHES">
+    <description>BOOM BUSHES</description>
+    <rom name="BOOM%20BUSHES.tic" size="10975"/>
+    <snapshot1>3WJNybl.gif</snapshot1>
+    <studio>Graic</studio>
+    <plot>A simple endless game I made this week, try to avoid enemies and not blow yourself up.[CR]Controls:[CR] * Arrow Keys: Move[CR] * Z: Drops a bomb[CR] * X: Uses your powerup[CR]Powerups:[CR] * Blue: Kills all enemies[CR] * Coin: Score+10[CR] * Orange: Invincibility for 10 seconds[CR]Have fun and don't die ;)</plot>
+  </game>
+  <game name="BOUNCELOT">
+    <description>BOUNCELOT</description>
+    <rom name="BOUNCELOT.tic" size="24836"/>
+    <snapshot1>Ul4xspK.gif</snapshot1>
+    <studio>niltic</studio>
+    <plot>As a living ball, bounce on the walls and over the people to make it as high as you can before the time runs out. Hurry up![CR]Controls:[CR]Left, right - Move[CR]Z (A button) - Bounce hit[CR]Hold A (X button) to restart.[CR]Feedback:[CR]This is not the final version, I will make more updates, such as hazards or more modes or more dimensions... who knows. So, let me know what do you think about this current version of the game in the comments below. And thanks for playing!</plot>
+  </game>
+  <game name="BREAKOUT-TEST">
+    <description>BREAKOUT-TEST</description>
+    <rom name="BREAKOUT-TEST.tic" size="6648"/>
+    <snapshot1>F8dc1wA.gif</snapshot1>
+    <studio>GaoGaoTaiga</studio>
+    <plot>Simple breakout game to test out TIC-80[CR]Collision is kinda iffy[CR]Game restarting after win/lose added</plot>
+  </game>
+  <game name="BRICKGAME">
+    <description>BRICKGAME</description>
+    <rom name="BRICKGAME.tic" size="32874"/>
+    <snapshot1>hk5CfOn.gif</snapshot1>
+    <studio>frombetelgeuse</studio>
+    <plot>The mini-collection of the arcade games from the popular console of the 1990s - Brick Game Classic. [CR]Now with correct working Breakout.</plot>
+  </game>
+  <game name="CALL OF THE TREES">
+    <description>CALL OF THE TREES</description>
+    <rom name="CALL%20OF%20THE%20TREES.tic" size="29119"/>
+    <snapshot1>nxBecPj.gif</snapshot1>
+    <studio>Seiya Elby</studio>
+    <plot>You are a tree in this exciting top down maze game. Art and design by a 6 year old. Can you rescue the baby trees?[CR]2019-06-01 Update: better doors, dead enemies, new sprites</plot>
+  </game>
+  <game name="CANDYTIC">
+    <description>CANDYTIC</description>
+    <rom name="CANDYTIC.tic" size="56502"/>
+    <snapshot1>GTofsnN.gif</snapshot1>
+    <studio>Fachi177</studio>
+    <plot>A TIC-80 version of Candy Crash. Without levels, just try to make the best score.[CR]Now with all the special candies and combos.[CR]When there are no more possible moves the game is reset, but the record is saved, try to break it.[CR]Use the arrows to move, and Z to select.[CR]Bug: [CR]-Vertical striped candy looks like it does not move, but it does[CR]-The double candy wrapped combo does not work like in the game[CR]The game has no music or sound (I'm very bad at that). If someone wants to put sound to it, I'd love that</plot>
+  </game>
+  <game name="CANT STOP">
+    <description>CANT STOP</description>
+    <rom name="CANT%20STOP.tic" size="12039"/>
+    <snapshot1>F00Jop9.gif</snapshot1>
+    <studio>Mannzerhacker</studio>
+    <plot>Dice rolling board game 1-4 players, with AI</plot>
+  </game>
+  <game name="CAP HELL">
+    <description>CAP HELL</description>
+    <rom name="CAP%20HELL.tic" size="47032"/>
+    <snapshot1>6vl784p.gif</snapshot1>
+    <studio>tak0294</studio>
+    <plot>beer is z[CR]wine is x[CR]Put caps on the bottle!!</plot>
+  </game>
+  <game name="CAULIFLOWER POWER">
+    <description>CAULIFLOWER POWER</description>
+    <rom name="CAULIFLOWER%20POWER.tic" size="111918"/>
+    <snapshot1>nP5hHQM.gif</snapshot1>
+    <studio>librorumque</studio>
+    <plot>How To Play[CR]Move all water buckets to the marked places. You can push them, but not pull. Avoid being seen: stay out of guards line of sight, or hide behind buckets or other guards.[CR]About:[CR]Originally it was an entry for Ludum Dare 41 (compo mode)[CR]Since the ancient times, the humanity knew very well about the exceptional values of the cauliflower plant: nutritional, medicinal, or aesthetic. Some even went as far as to claim it can ward off demonic spirit, boosts the intellectual power, or becomes a decent booze if you know what to do. Yet only in 2027, in a sudden flash of enlightenment, Dr. P.Golabek of CDDA Labs realized the true potential hidden in the unloved part of his meal. There was more to the boiled curd of the brassica oleracea than what it seemed on the surface. The discovery didn't go unnoticed, and instead of bringing prosperity and nutrition, the wondrous plant became outlawed along with significant number of unrelated species of brassicaceae family. The time has come to put an end to it and let the cauliflower bloom everywhere! Welcome to the Cauliflower Research Liberation Front, comrade![CR]Controls:[CR]-||- - Walk[CR]btn A / key  - Show guards line of view[CR]btn B / Key  - Restart level[CR]| / btnA / key  - Scroll messages[CR]btn X / key  - Skip[CR]on itch.io &gt; https://librorumque.itch.io/cauliflower-power</plot>
+  </game>
+  <game name="CELESTE">
+    <description>CELESTE</description>
+    <rom name="CELESTE.tic" size="18062"/>
+    <snapshot1>lvuuc09.gif</snapshot1>
+    <studio>100yan</studio>
+    <plot>TITLE: CELESTE[CR]ORIGINAL AUTHOR: uripan[CR]ORIGINAL GAME NAME: pb1 [CR]MODIFIED CODE, LEVEL DESIGN, PIXEL ART AND SFX AUTHOR: 100yan</plot>
+  </game>
+  <game name="CHARACTER GENERATOR SHOOTING">
+    <description>CHARACTER GENERATOR SHOOTING</description>
+    <rom name="CHARACTER%20GENERATOR%20SHOOTING.tic" size="50584"/>
+    <snapshot1>uOMNWjz.gif</snapshot1>
+    <studio>Time Tripper</studio>
+    <plot>Character Generator Shooting game.[CR]'A' Game Start[CR]Move with the cursor keys and Z,X keys shooting</plot>
+  </game>
+  <game name="CITY BUILDING SIMILUATOR">
+    <description>CITY BUILDING SIMILUATOR</description>
+    <rom name="CITY%20BUILDING%20SIMILUATOR.tic" size="61144"/>
+    <snapshot1>z5UQKI4.gif</snapshot1>
+    <studio>Anssi Uistola, Topias Syri</studio>
+    <plot>City Building Similuator[CR]HOW TO PLAY:[CR]Arrow Keys to move the cursor around[CR]z (A) to select a human[CR]X (B) to open building menu[CR]A (X) to go back[CR]The Goal is to Advance to end of level 3 (the blue bar) with as many sets of four colors as possible (one of each). Each human will have a different color assigned to them.[CR]By building blue schools, you can increase the speed of advancement. Gold Mines will increase your gold production rate.[CR]The population will increase over time and people need more food, causing your hunger bar (green) to decrease more rapidly. If your hunger bar drops to zero, three random citizens will be eaten.[CR]You can build green houses to prevent that. Or... you can sacrifice your citizens for food.[CR]Which citizen is most valuable to you, make your choice.</plot>
+  </game>
+  <game name="CLICKER">
+    <description>CLICKER</description>
+    <rom name="CLICKER.tic" size="10661"/>
+    <snapshot1>DHcWxDZ.gif</snapshot1>
+    <studio>Kirill</studio>
+    <plot>cookie clicker v 1.1</plot>
+  </game>
+  <game name="COMETS">
+    <description>COMETS</description>
+    <rom name="COMETS.tic" size="38017"/>
+    <snapshot1>BXeVfmq.gif</snapshot1>
+    <studio>nickifr</studio>
+    <plot>Oh no! You're trapped inside a swarm of comets! You'll have no other option but to shoot them if you want to survive - But what's that? You can only rotate on an 8-directional axis? Well, that will make aiming somewhat harder... Will you survive anyway?[CR]This is a game about shooting comets (or asteroids, alright).[CR]Current Version: V1.0.1 (Made for TIC-80 Version 0.30.0)[CR]Controls: Arrows for movement, any of A/S/Z/X to shoot. F11 for fullscreen.[CR]Also available on itch.io: https://nickifr.itch.io/comets</plot>
+  </game>
+  <game name="CONWAYS GAME OF LIFE">
+    <description>CONWAYS GAME OF LIFE</description>
+    <rom name="CONWAYS%20GAME%20OF%20LIFE.tic" size="4186"/>
+    <snapshot1>X0xPmdP.gif</snapshot1>
+    <studio>Apan Trikha (PixelTrik)</studio>
+    <plot>This is the cartridge for my TIC-80 tutorial of Conway's Game of Life.[CR]Game pad instructions:[CR]1)   Xbox A button or Z: Toggle cell states continuously. Hold down the button for creating a line of toggled cells. Only in Edit Mode.[CR]2)  Xbox B button or X: Switch between Play Mode and Edit Mode.[CR]3)  Xbox X button or A: Resets the game.[CR]4)  Xbox Y button or S: Toggle a cell state one with each button press. Only in Edit Mode.</plot>
+  </game>
+  <game name="COOKIE CLICKER THE FIRST VERSION">
+    <description>COOKIE CLICKER THE FIRST VERSION</description>
+    <rom name="COOKIE%20CLICKER%20THE%20FIRST%20VERSION.tic" size="5432"/>
+    <snapshot1>mbYr9eP.gif</snapshot1>
+    <studio>Sammy6</studio>
+    <plot>Classic Cookie Clicker, simply remade on TIC-80.[CR]UPGRADES:[CR]Auto Clicker: Gives you 1 cookie per second[CR]Super Click: Increases your cookies per click by 1[CR]Luck: Increases your chances of getting a lucky click, giving you 5 times the cookies for that click</plot>
+  </game>
+  <game name="COOKIE CLICKER">
+    <description>COOKIE CLICKER</description>
+    <rom name="COOKIE%20CLICKER.tic" size="14974"/>
+    <snapshot1>o15xmaf.gif</snapshot1>
+    <studio>K_O_T_I_K</studio>
+    <plot>cookie clicker v1 [CR]please like</plot>
+  </game>
+  <game name="COOL AND NEW RPG">
+    <description>COOL AND NEW RPG</description>
+    <rom name="COOL%20AND%20NEW%20RPG.tic" size="50342"/>
+    <snapshot1>MGY7WnD.gif</snapshot1>
+    <studio>dj_pale, dg125</studio>
+    <plot>you go on quest to find death in innocent creatures[CR]Is a parody edit :)</plot>
+  </game>
+  <game name="CPONG">
+    <description>CPONG</description>
+    <rom name="CPONG.tic" size="6800"/>
+    <snapshot1>c3ieVE6.gif</snapshot1>
+    <studio>trelemar</studio>
+    <plot>Quick game that turned out pretty fun, nothing special.[CR]Left/right arrows move clockwise,counter-clockwise.[CR]Try to keep the ball within the circle as long as possible.</plot>
+  </game>
+  <game name="CRAB RUN">
+    <description>CRAB RUN</description>
+    <rom name="CRAB%20RUN.tic" size="27591"/>
+    <snapshot1>DwU8oEr.gif</snapshot1>
+    <studio>Paul Brownsea</studio>
+    <plot>Just a silly little running game. Your character runs, crabs appear, jump with the (z) button.</plot>
+  </game>
+  <game name="CROCO CRAZE">
+    <description>CROCO CRAZE</description>
+    <rom name="CROCO%20CRAZE.tic" size="11897"/>
+    <snapshot1>t0MCjS4.gif</snapshot1>
+    <studio>StinkerB06</studio>
+    <plot>Try to get all of the teeth without getting bit! You can change the number of teeth by going into the code editor (ESC &gt; CLOSE GAME &gt; F1) and changing the variable GAME.numTeeth. The maximum number of teeth is 13, due to how English QWERTY keyboards are laid out. The minimum number is 2.[CR]It's best to play this with at least 2 friends![CR]Use the top-row (Q to backslash) keys to touch the teeth.[CR]You can also press Shift+E on the title screen to erase the stats.[CR]GITHUB: https://github.com/StinkerB06/Croco_Craze[CR]CHANGELOG:[CR]v1.0: Initial release! Woohoo![CR]v1.0 REV A: Did a minor fix[CR]v1.1: Added audio, doubled the scale of my logo, added high scores, and re-positioned some things.[CR]v1.2: Fixed a bug where v1.1 would play the death sound instead of the victory jingle when winning a round from the 13th bad tooth. I also altered the music and added another cheat function.[CR]v1.3: Fixed the high-score saving system, changed some graphics, added fades between screens, and some other minor tweaks.</plot>
+  </game>
+  <game name="CUBES CHARMER">
+    <description>CUBES CHARMER</description>
+    <rom name="CUBES%20CHARMER.tic" size="63574"/>
+    <snapshot1>s2rYI1c.gif</snapshot1>
+    <studio>Foopyo</studio>
+    <plot>Cubes Charmer is a platformer/puzzler in which you have to collect games in order to open the central door.[CR]TO progress in the world, you will have to use cubes in various way.</plot>
+  </game>
+  <game name="CURSE OF KILDREN">
+    <description>CURSE OF KILDREN</description>
+    <rom name="CURSE%20OF%20KILDREN.tic" size="57668"/>
+    <snapshot1>J1K2hYY.gif</snapshot1>
+    <studio>Spacebit</studio>
+    <plot>Probably no more updates, because my code is a mess and I find it very hard to implement new features and to work without a debugger :([CR]The hardest part for me was to finish the 0.7 update, where I worked on new Areas like shops and dungeons, but can't finish it now.[CR]0.7: &gt; Added teleporter and first shop[CR]0.1.6.2: &gt; Added Chests, keys and hearth container[CR]0.1.6: &gt; Added inventory and potions[CR]0.1.5.2: &gt; Some improvements[CR]0.1.5: &gt; Added drops and some Game Objects</plot>
+  </game>
+  <game name="DEADLY SKELTONS">
+    <description>DEADLY SKELTONS</description>
+    <rom name="DEADLY%20SKELTONS.tic" size="131397"/>
+    <snapshot1>MzzW8kG.gif</snapshot1>
+    <studio>team slime</studio>
+    <plot>A tower-defense game, with bonus stabbing and bonus exploding.  Stop the skeletons from reaching your core using a knife, and a bomb, and many, many turrets. It's a remake of a MFGJ game from last year, that wasn't very good. Hopefully this one's better! [CR]Itch.io: https://vriskaserket.itch.io/deadly-skeltons</plot>
+  </game>
+  <game name="DOOR">
+    <description>DOOR</description>
+    <rom name="DOOR.tic" size="5108"/>
+    <snapshot1>zdKD6ru.gif</snapshot1>
+    <studio>Jojololly</studio>
+    <plot>A reinvented board game for two players. Hold S for help.[CR]by Jojololly</plot>
+  </game>
+  <game name="DOORS OF DOOM">
+    <description>DOORS OF DOOM</description>
+    <rom name="DOORS%20OF%20DOOM.tic" size="85629"/>
+    <snapshot1>JKQ9MNV.gif</snapshot1>
+    <studio>msx80</studio>
+    <plot>Explore the dungeon with infinite number of locked doors! More than 23 monsters to fight and like 40 or so different items! Craft new stuff between a fight and the next to help in your quest! Combat items, dressable items, fancy panties and much more!</plot>
+  </game>
+  <game name="DOUBLE SIDED">
+    <description>DOUBLE SIDED</description>
+    <rom name="DOUBLE%20SIDED.tic" size="63628"/>
+    <snapshot1>FIQf2fx.gif</snapshot1>
+    <studio>Delta-Key</studio>
+    <plot>A small game made for the Weekly Game Jam #56. Control two characters at once, with some small but important twists:[CR]-The walking is mirrored (one of the characters going left means the other going right);[CR]-The jump buttons are individual for each character.[CR]Far from being a masterpiece, but still, I'm getting better :)</plot>
+  </game>
+  <game name="DREAS UP">
+    <description>DREAS UP</description>
+    <rom name="DREAS%20UP.tic" size="23210"/>
+    <snapshot1>tvERWnK.gif</snapshot1>
+    <studio>rainbowsillyfun</studio>
+    <plot>If you like to show it off press F8. You can then crop out the outside bounds and make the background transparent before uploading it.</plot>
+  </game>
+  <game name="DUNGEON WALKER">
+    <description>DUNGEON WALKER</description>
+    <rom name="DUNGEON%20WALKER.tic" size="13006"/>
+    <snapshot1>UrEHxuN.gif</snapshot1>
+    <studio>Kikeroga</studio>
+    <plot>Let's take a walk in an automatically generated dungeon.[CR][Z] Use Potion[CR][X] Slash/Unlocking Door/Break Box</plot>
+  </game>
+  <game name="EDEN THE FOX PROTOTYPE BETA">
+    <description>EDEN THE FOX PROTOTYPE BETA</description>
+    <rom name="EDEN%20THE%20FOX%20PROTOTYPE%20BETA.tic" size="7932"/>
+    <snapshot1>r2K6JFn.gif</snapshot1>
+    <studio>TehShadowz, Master nama</studio>
+    <plot>This game is same.[CR]Inspired by TehShadowz[CR]Press Up to Jump[CR]Press Down to duck[CR](C) Run run run TehShadowz[CR](C) 2019 Master nama</plot>
+  </game>
+  <game name="ENTROPIPES GRAPHICS MOD">
+    <description>ENTROPIPES GRAPHICS MOD</description>
+    <rom name="ENTROPIPES%20GRAPHICS%20MOD.tic" size="29577"/>
+    <snapshot1>6BXGenV.gif</snapshot1>
+    <studio>Alfonso Saavedra,LemonQuest</studio>
+    <plot>Connect all the pipes. This is a GRAPHICS mod. No code has been changed.[CR]by Alfonso Saavedra "Son Link" Graphics done LemonQuest</plot>
+  </game>
+  <game name="ENTROPIPES">
+    <description>ENTROPIPES</description>
+    <rom name="ENTROPIPES.tic" size="29525"/>
+    <snapshot1>RJB5SiY.gif</snapshot1>
+    <studio>Alfonso Saavedra</studio>
+    <plot>EntroPipes is a puzzle type game. Simply connect all pipes[CR]by Alfonso Saavedra "Son Link</plot>
+  </game>
+  <game name="EVERDAWN">
+    <description>EVERDAWN</description>
+    <rom name="EVERDAWN.tic" size="127417"/>
+    <snapshot1>hbu4jHp.gif</snapshot1>
+    <studio>Benjamin Hanken</studio>
+    <plot>Welcome to Everdawn, a tiny island where the sun and moon have ceased to move through the sky. Explore it, learn its history, and unlock the secrets behind its strange curse.</plot>
+  </game>
+  <game name="EVOLUTION">
+    <description>EVOLUTION</description>
+    <rom name="EVOLUTION.tic" size="19414"/>
+    <snapshot1>KX5Rl4v.gif</snapshot1>
+    <studio>fachi177</studio>
+    <plot>A simulation of small creatures that struggle to survive.[CR]Each being has a DNA that determines its attributes (like hp, strength, speed) and appearance.[CR]When they reproduce, the DNA of the parents mixes to create the DNA of the children, more or less a mutation.[CR]When they meet another of the same sex, they fight to the death.[CR]And they eat grass to recover their health.[CR]Click a creature to see its attributes.[CR]Use the up and down arrows to accelerate and decelerate the simulation.</plot>
+  </game>
+  <game name="EYESOUL">
+    <description>EYESOUL</description>
+    <rom name="EYESOUL.tic" size="67346"/>
+    <snapshot1>Wm52RNa.gif</snapshot1>
+    <studio>null1024</studio>
+    <plot>This is eyesoul, revision 4.[CR]Slide and bounce around while shooting demons![CR]Controls:[CR]arrow-keys/d-pad: move[CR]z-key/A-button: fire[CR]a-key/X-button: pause[CR]s-key/Y-button: switch song[CR]New changes include:[CR]* You lose only 4 seconds of time if hit in the first minute of play (first 20s in riot mode). After that, you lose 7.[CR]* Due to this, how much time you've lost shows up on screen. If it doesn't, check that your cart shows [revision.4+] on the bottom left of the title screen. I uploaded a version earlier having forgotten I was going to implement this (showing [revision.4!] on the title screen). This change doesn't affect scoring.[CR]* Updated and new music![CR]* New attract mode sequence alongside the updated old one.[CR]* Riot mode now saves three high scores (note: as of this writing, the browser version of TIC-80 doesn't preserve pmem).[CR]* Slightly animated enemies![CR]and a few other little tweaks.[CR]Scores made in this version are not directly comparable to those in older versions.[CR]I originally wrote this game for BotB's Game Jam 3.[CR]Revision 3 was submitted for the competition.[CR]https://battleofthebits.org/arena/Entry/eyesoul+%28rev3_+final%29/29381/</plot>
+  </game>
+  <game name="FIRST GAME">
+    <description>FIRST GAME</description>
+    <rom name="FIRST%20GAME.tic" size="2954"/>
+    <snapshot1>WnDwkBN.gif</snapshot1>
+    <studio>sadek</studio>
+    <plot>my first game for keyboard use learning without eye.</plot>
+  </game>
+  <game name="FLAPPY BIRD TEST">
+    <description>FLAPPY BIRD TEST</description>
+    <rom name="FLAPPY%20BIRD%20TEST.tic" size="8044"/>
+    <snapshot1>AFNoVmx.gif</snapshot1>
+    <studio>TehShadowz</studio>
+    <plot>I made this a long time ago, when I wasn't as good at programming as I am today (I think), so the game may be a little bit unoptimised and have a terrible gameplay, but I found it in my pc and just wanted to publish it now, so here it goes...</plot>
+  </game>
+  <game name="FLAPPY BIRD TIC EDITION">
+    <description>FLAPPY BIRD TIC EDITION</description>
+    <rom name="FLAPPY%20BIRD%20TIC%20EDITION.tic" size="54922"/>
+    <snapshot1>0RIMj9R.gif</snapshot1>
+    <studio>Legacy107</studio>
+    <plot>A clone of Flappy bird. I hope you enjoy.[CR]Change log v2.0[CR]-Add mouse control[CR]-Improve collision detection[CR]-Clean the code[CR]-Fix some bug[CR]Note: You can change the thickness of the pipe by changing psize to 6</plot>
+  </game>
+  <game name="FLAPPY BIRD">
+    <description>FLAPPY BIRD</description>
+    <rom name="FLAPPY%20BIRD.tic" size="23298"/>
+    <snapshot1>EwtzQqq.gif</snapshot1>
+    <studio>K_O_T_I_K</studio>
+    <plot>flappy bird[CR]by K_O_T_I_K</plot>
+  </game>
+  <game name="FLIPPY">
+    <description>FLIPPY</description>
+    <rom name="FLIPPY.tic" size="7295"/>
+    <snapshot1>L124aq6.gif</snapshot1>
+    <studio>auBergewohnlich</studio>
+    <plot>Headphones are recommended[CR]WARNING: Contains flashing images that may trigger seizures and epilepsy</plot>
+  </game>
+  <game name="FLOCK BLOCK">
+    <description>FLOCK BLOCK</description>
+    <rom name="FLOCK%20BLOCK.tic" size="21603"/>
+    <snapshot1>5KBNnjq.gif</snapshot1>
+    <studio>trelemar</studio>
+    <plot>Winter is coming and there is an over population of ducks in the south. It's your job to shoot them down before they get there! Be careful, allow 10 ducks to pass and it's game over.</plot>
+  </game>
+  <game name="FLOWER FARM">
+    <description>FLOWER FARM</description>
+    <rom name="FLOWER%20FARM.tic" size="11234"/>
+    <snapshot1>KXTZfvE.gif</snapshot1>
+    <studio>Mustooch,T34</studio>
+    <plot>It's a flower farm[CR]by Mustooch and T34</plot>
+  </game>
+  <game name="FLUFFY BALLOON">
+    <description>FLUFFY BALLOON</description>
+    <rom name="FLUFFY%20BALLOON.tic" size="4705"/>
+    <snapshot1>TUFaGxe.gif</snapshot1>
+    <studio>Kikeroga</studio>
+    <plot>This is a leisurely one-key balloon game.[CR]Let's avoid birds.</plot>
+  </game>
+  <game name="FPS80 CHEAT VERSION">
+    <description>FPS80 CHEAT VERSION</description>
+    <rom name="FPS80%20CHEAT%20VERSION.tic" size="106787"/>
+    <snapshot1>QpLkZlB.gif</snapshot1>
+    <studio>Bruno Oliveira, Cheat Version StinkerB06</studio>
+    <plot>Finally did a cheat version of btco's other game, FPS80![CR]Now we have two games in the Cheat series!</plot>
+  </game>
+  <game name="FPS80">
+    <description>FPS80</description>
+    <rom name="FPS80.tic" size="108055"/>
+    <snapshot1>NFyC3sN.gif</snapshot1>
+    <studio>Bruno Oliveira</studio>
+    <plot>FPS80 is a 3D first-person shooter. Shoot the monsters, collect powerups, find the keys to open the locked doors and escape the dungeons![CR]*** ATTENTION: For the best experience, play this on your desktop (standalone TIC-80), not on the browser. To do this, install TIC-80 on your computer, then use the "surf" command to browse games, select [tic.computer/play] and then select FPS80.[CR]There are 3 levels: Dungeons, Gardens and City.[CR]This game uses a custom simple 3D engine I built. I'll release the (more readable) source code soon![CR]Here's an article on how I developed this game:[CR]https://medium.com/@btco_code/writing-a-retro-3d-fps-engine-from-scratch-b2a9723e6b06[CR]Add me on Twitter: http://twitter.com/btco_code[CR]Source code: https://github.com/btco/ticgeo3d</plot>
+  </game>
+  <game name="FROGGER">
+    <description>FROGGER</description>
+    <rom name="FROGGER.tic" size="15035"/>
+    <snapshot1>FjHnG56.gif</snapshot1>
+    <studio>Volfik</studio>
+    <plot>Do you remember Frogger from the Atari 2600 port. NOW![CR]KEEP ATARI FROGGER - port at TIC-80!![CR]New year is a good opportunity to start a new life by creating games, not just playing them.</plot>
+  </game>
+  <game name="GAMETEST">
+    <description>GAMETEST</description>
+    <rom name="GAMETEST.tic" size="21701"/>
+    <snapshot1>ElsQvyX.gif</snapshot1>
+    <studio>Galindosoft</studio>
+    <plot>This is my first game created for tic80</plot>
+  </game>
+  <game name="GENIUS">
+    <description>GENIUS</description>
+    <rom name="GENIUS.tic" size="5668"/>
+    <snapshot1>XZCaxnU.gif</snapshot1>
+    <studio>emersonjpa</studio>
+    <plot>Fan-made tribute to the simon eletronic game. Genius was the name of Simon in Brazil. No sprites. No map. Only code.</plot>
+  </game>
+  <game name="GENJUUMIN SHOOTING">
+    <description>GENJUUMIN SHOOTING</description>
+    <rom name="GENJUUMIN%20SHOOTING.tic" size="21855"/>
+    <snapshot1>dfOXwiI.gif</snapshot1>
+    <studio>Developer from onj</studio>
+    <plot>Score Attack Game[CR]by Developer from onj</plot>
+  </game>
+  <game name="GHOSTNCOIN">
+    <description>GHOSTNCOIN</description>
+    <rom name="GHOSTNCOIN.tic" size="6674"/>
+    <snapshot1>1SjxQCK.gif</snapshot1>
+    <studio>x.art2012</studio>
+    <plot>take 20 coins before ghost![CR]by x.art2012</plot>
+  </game>
+  <game name="GIAH">
+    <description>GIAH</description>
+    <rom name="GIAH.tic" size="45688"/>
+    <snapshot1>O1ESbiM.gif</snapshot1>
+    <studio>ItsAKaime</studio>
+    <plot>Welcome to the beta ;) The game is nowhere near complete, and I plan on add many, many, many more levels and mechanics! Be sure to follow me on instagram for updates @its_a_kaime</plot>
+  </game>
+  <game name="GOOGLE DINO">
+    <description>GOOGLE DINO</description>
+    <rom name="GOOGLE%20DINO.tic" size="32026"/>
+    <snapshot1>fsibVpA.gif</snapshot1>
+    <studio>K_O_T_I_K</studio>
+    <plot>google dino in TIC-80[CR]by K_O_T_I_K</plot>
+  </game>
+  <game name="GRAVITRON EXPERIMENT">
+    <description>GRAVITRON EXPERIMENT</description>
+    <rom name="GRAVITRON%20EXPERIMENT.tic" size="72501"/>
+    <snapshot1>8UHmhs8.gif</snapshot1>
+    <studio>Delta-Key,Sklaiser</studio>
+    <plot>A simple and small game where you control gravity, made for the 2D Platformer Jam. Feedback is welcome![CR] Controls:[CR]-Arrow keys: move left or right;[CR]-Z: Increase gravity;[CR]-X: Decrease gravity. Notice that the gravity can be negative!</plot>
+  </game>
+  <game name="GRUNIOZERCA - CARROT HUNT">
+    <description>GRUNIOZERCA - CARROT HUNT</description>
+    <rom name="GRUNIOZERCA%20-%20CARROT%20HUNT.tic" size="16542"/>
+    <snapshot1>mbfy2SW.gif</snapshot1>
+    <studio>Teodozjusz, Hatemonday</studio>
+    <plot>Little update (better carrot spawn)[CR]Now with true cover![CR]--[CR]Character's color change: Keyboard - Z, TIC Gamepad - A[CR]PL: Nieoficjalny port pierwszej czesci Gruniozercy na TIC-80. Kieruj swinka tak i zmieniaj kolor jej pyszczka tak, aby zebrac jak najwiecej marchewek! UWAGA: Przyciski podawane w grze odpowiadaja przyciskom kontrolera TIC, nie przyciskom na klawiaturze.[CR]EN: Unofficial port of home-brew game ,,Gruniozerca" to TIC-80. ,,Gruniozerca" is a Polish neologism which means ,,Grunio the eater"(Grunio is a main character's name). In this game you have to catch carrots, but carrots has four colors and you must change color of character to catch them. ATTENTION: Buttons in in-game hints are virtual game-pad buttons, not keyboard buttons, so you can easily play this game on smartphone or controller connected to PC.</plot>
+  </game>
+  <game name="GUESS THE NUMBER">
+    <description>GUESS THE NUMBER</description>
+    <rom name="GUESS%20THE%20NUMBER.tic" size="25021"/>
+    <snapshot1>WRDYCjU.gif</snapshot1>
+    <studio>K_O_T_I_K</studio>
+    <plot>---eng---[CR]guess the number of 1 to 99[CR]to switch the language, press the button on the side[CR]---rus---[CR]ugadai chislo ot 1 do 99[CR]chtoby perekliuchit' iazyk nazhmi knopku sboku</plot>
+  </game>
+  <game name="GUSDRAW">
+    <description>GUSDRAW</description>
+    <rom name="GUSDRAW.tic" size="4566"/>
+    <snapshot1>TvSHWfN.gif</snapshot1>
+    <studio>gusg21</studio>
+    <plot>A simple drawing program I made in 20 minutes or so. It has actual line completion which I haven't seen in my lack of digging through the games here. I hope that someone likes it.</plot>
+  </game>
+  <game name="HANGERJAM">
+    <description>HANGERJAM</description>
+    <rom name="HANGERJAM.tic" size="78393"/>
+    <snapshot1>79Z9eO8.gif</snapshot1>
+    <studio>Os Cabides Purpura</studio>
+    <plot>Retro Game Jam from IEEE of UP Student Branch with the theme Reflection</plot>
+  </game>
+  <game name="HEALTH CARE">
+    <description>HEALTH CARE</description>
+    <rom name="HEALTH%20CARE.tic" size="93501"/>
+    <snapshot1>PQthKkn.gif</snapshot1>
+    <studio>Enzo Vaghetti</studio>
+    <plot>A simple game i made for a jam i took part recently</plot>
+  </game>
+  <game name="HELLO KITTYS MAZE">
+    <description>HELLO KITTYS MAZE</description>
+    <rom name="HELLO%20KITTYS%20MAZE.tic" size="40656"/>
+    <snapshot1>uQ9RtL7.gif</snapshot1>
+    <studio>auBergewohnlich</studio>
+    <plot>If you love Hello Kitty, then you will certainly love this cute game a lot.[CR]This supercute maze game comes in several sizes. Use the arrow keys to move. Try to collect all the ribbons in the maze before reaching the exit.[CR]Discord channel:[CR]https://discord.gg/RDAhdYq[CR]Google Forms (Feedback):[CR]https://goo.gl/forms/tSmwW3Ak0DR45mcU2[CR]-- WHAT'S NEW --[CR]Improved UI[CR]Improved Size adjustments</plot>
+  </game>
+  <game name="HERBERT THE GHOST">
+    <description>HERBERT THE GHOST</description>
+    <rom name="HERBERT%20THE%20GHOST.tic" size="47152"/>
+    <snapshot1>fw0CfSx.gif</snapshot1>
+    <studio>ClockworkDice</studio>
+    <plot>First TIC-80 game. Made for a friend's birthday.[CR]Get coins, avoid bats. Z to dash, X to increase score in case of unreachable coin</plot>
+  </game>
+  <game name="HI-EX">
+    <description>HI-EX</description>
+    <rom name="HI-EX.tic" size="67309"/>
+    <snapshot1>nXkeJKG.gif</snapshot1>
+    <studio>Ieilen Jacob</studio>
+    <plot>A Battle of the Bits Game Jam 3 entry.[CR]https://battleofthebits.org/arena/Entry/Hi-Ex/29514/[CR]Run around and blow up the enemies. [CR]Try not to die! 64 stages of action! [CR]Avoid the perils of fire, enemies, and recoil! [CR]Your gun is super-powerful, but it has major kick. [CR]* Controls: [CR]- The A-button fires a shot. There can only be one shot on screen. [CR]- The B-button jumps. You can jump as often as you like. [CR]- The X-button pauses. Each stage starts paused, too. [CR]- Left and right move. </plot>
+  </game>
+  <game name="I WONDER IF I HAD A YOUNGER SISTER">
+    <description>I WONDER IF I HAD A YOUNGER SISTER</description>
+    <rom name="I%20WONDER%20IF%20I%20HAD%20A%20YOUNGER%20SISTER.tic" size="53871"/>
+    <snapshot1>P9Vlvie.gif</snapshot1>
+    <studio>fangzhangmnm</studio>
+    <plot>This is a game inspired by Undertale. I discovered that danmaku (bullet screen) games is a good media to express the madness of main character. So it comes to my mind that a Syuraba (tension between multiple girl friends) is a good idea for this jam's theme. So there it is.[CR]It is a fanart game. I used characters in three sister-themed animes:[CR]Umaru in Himouto[CR]Sagiri in Eromanga Sensei[CR]Shana in Shakugan no Shana[CR][Controls][CR][x] jump [CR][left/right arrows] move</plot>
+  </game>
+  <game name="IMPOSSIBLE FPS80">
+    <description>IMPOSSIBLE FPS80</description>
+    <rom name="IMPOSSIBLE%20FPS80.tic" size="109364"/>
+    <snapshot1>a85nk8L.gif</snapshot1>
+    <studio>Bruno Oliveira and IiTossiI(Yatsenko Roman)</studio>
+    <plot>Impossible 3D first-person shooter for the TIC-80[CR]by Bruno Oliveira and IiTossiI(Yatsenko Roman)</plot>
+  </game>
+  <game name="IMPOSSIBLE PONG">
+    <description>IMPOSSIBLE PONG</description>
+    <rom name="IMPOSSIBLE%20PONG.tic" size="6264"/>
+    <snapshot1>viYAh8z.gif</snapshot1>
+    <studio>Adam McKibben (sleepydev)</studio>
+    <plot>My very first published TIC-80 game. A pong game made to troll people. You can't beat the AI (wink wink). </plot>
+  </game>
+  <game name="INDIANA JONES 1">
+    <description>INDIANA JONES 1</description>
+    <rom name="INDIANA%20JONES%201.tic" size="58317"/>
+    <snapshot1>7us5A9u.gif</snapshot1>
+    <studio>Rigachupe</studio>
+    <plot>Hello. This is my first big game for Tic-80. It is a remake of an text adventure game for ZX-spectrum that has been created by a Czech programmer Frantisek Fuka (Fuxoft) in year 1985. I just polished the original idea and made better GUI so it would be easier to play this just by mouse.[CR]Controls:[CR]- mouse for selecting commands and objects from list[CR]- arrows for quick access to north, south, west and east directions[CR]Do not give up easily. There are lots of death traps, places you can get stuck when using items incorrectly and some red herrings. Game can be ended in more than one way! You get score and number of turns at the end when you get to the finish room. Have fun! </plot>
+  </game>
+  <game name="JETPAC">
+    <description>JETPAC</description>
+    <rom name="JETPAC.tic" size="53729"/>
+    <snapshot1>5XK8DHn.gif</snapshot1>
+    <studio>trelemar</studio>
+    <plot>This was the first game I made for TIC-80! Avoid the falling meteors and kill the aliens. See how long you can last!</plot>
+  </game>
+  <game name="KATZU">
+    <description>KATZU</description>
+    <rom name="KATZU.tic" size="90812"/>
+    <snapshot1>bse8bgN.gif</snapshot1>
+    <studio>kleeder, Nimo, BotA, alili1996</studio>
+    <plot>You're a cat and your goal is to have fun! [CR]That's basically it! Just play around with this little ball of wool~ [CR]You just need to push it to the needle at the end of the level. [CR]Oh... and don't forget about the lava, cacti and puzzles o: [CR]Features: [CR]- a lot of fun [CR]- a cute cat [CR]- a lot of wool [CR]- five levels that are getting progressively harder [CR]- puzzles [CR]- music box [CR]This game is a collaboration! [CR]- GFX and Idea by BotA [CR]- Music and Concept by kleeder [CR]- Level Design by alili1996 [CR]- Code by Nimo and kleeder [CR]Controls: [CR]- Arrows L/R: Move [CR]- Arrow up: Jump [CR]- Arrow down: Sneak [CR]- D: Throw Wool [CR]- D + Sneak (near Wool): Pull Wool [CR]- R: Reset Room (Keyboard only) [CR]- R (hold): Reset Level (Keyboard only) [CR]Additional Controls are displayed inside the game. We recommend to use your keyboard instead of a controller. Some inputs are only possible via keyboard (Resets, Musicbox-Selecter)!</plot>
+  </game>
+  <game name="KIRBONG">
+    <description>KIRBONG</description>
+    <rom name="KIRBONG.tic" size="2920"/>
+    <snapshot1>WnjClCc.gif</snapshot1>
+    <studio>KIKEROGA</studio>
+    <plot>This is a primitive pong game.</plot>
+  </game>
+  <game name="KITTY GUYS KEYBOARD TRAINING">
+    <description>KITTY GUYS KEYBOARD TRAINING</description>
+    <rom name="KITTY%20GUYS%20KEYBOARD%20TRAINING.tic" size="35892"/>
+    <snapshot1>VqoVsiI.gif</snapshot1>
+    <studio>auBergewohnlich</studio>
+    <plot>In this game you learn to type on the keyboard. It's like Typing Agent, but even better.[CR]Server link for Discord:[CR]https://discord.gg/qgaCgb2</plot>
+  </game>
+  <game name="KOMET">
+    <description>KOMET</description>
+    <rom name="KOMET.tic" size="70937"/>
+    <snapshot1>m2a7ayF.gif</snapshot1>
+    <studio>Andrei Rudenko</studio>
+    <plot>You are a comet, get bigger, avoid stars and black holes.[CR]This game is made for GDQ One Mechanic Game Jam 4[CR]Controls[CR]You can only switch your magnetic polarity by pressing Z  [CR]Menu: S[CR]Notes  [CR]If web version is laggy, set visibility to lower values, or download cartrige.</plot>
+  </game>
+  <game name="LANDER">
+    <description>LANDER</description>
+    <rom name="LANDER.tic" size="6061"/>
+    <snapshot1>au3Ziu1.gif</snapshot1>
+    <studio>glorphindale</studio>
+    <plot>Reimplementtion of the Lander game with limited fuel.</plot>
+  </game>
+  <game name="LANDING">
+    <description>LANDING</description>
+    <rom name="LANDING.tic" size="4213"/>
+    <snapshot1>8FYMZ46.gif</snapshot1>
+    <studio>Kikeroga</studio>
+    <plot>This is a moon landing game.[CR]The lander jets with the arrow keys.[CR]You should land slowly on the bottom of the crater.</plot>
+  </game>
+  <game name="LAVENDER WOODS">
+    <description>LAVENDER WOODS</description>
+    <rom name="LAVENDER%20WOODS.tic" size="112001"/>
+    <snapshot1>Cibpcn2.gif</snapshot1>
+    <studio>William Anderson</studio>
+    <plot>Gameplay and Controls: Scroll down to "Controls" section.[CR]Please support Lavender woods on itch.io by visiting: https://thewilliamanderson.itch.io/lavender-woods[CR]Lavender Woods[CR]Monnet is lost in Lavender Woods...[CR]Monnet finds herself lost in the woods after wandering in against her mother's warning. Now she is on an epic adventure to get back, all-the-while taking time to explore the 9 unique areas of the Lavender Woods, capture slime, and collect treasures. [CR]On her way back though, she must also be careful not to run into any un-netted slime, and to avoid the puddles of ooze they leave about, or she may get her clothes dirty --inviting trouble when she gets home.[CR]Carefully balance, the order you catch slime, collect un-matchable objects (such as rocks and gems), navigate back through areas, and explore to maximize your score and fun![CR]CONTROLS: [CR]- KEYBOARD: [CR]  [?] z -- shoot net[CR]  [?] x + left or right -- move slime in match 3 game[CR]  [?] up,down,left,right -- move character (Monnet)[CR]- PLAY[CR]  [?] Hit slimes with nets to trap them[CR]  [?] Collect captured slime[CR]  [?] Match 3+ slime of the same color to clear them[CR]  [?] Nets are limited and must be retrieved[CR]  [?] Get to the goal at the end[CR]Features[CR]  [?] 9 Areas to reach and explore[CR]  [?] An adorable world full of slimes and ghosts[CR]  [?] Local leaderboards (local to the machine running the game)[CR]  [?] Action Adventure meets Match 3 gameplay[CR]  [?] Full original chiptune soundtrack</plot>
+  </game>
+  <game name="LCD TETRIS">
+    <description>LCD TETRIS</description>
+    <rom name="LCD%20TETRIS.tic" size="62119"/>
+    <snapshot1>59u0aUv.gif</snapshot1>
+    <studio>derpguy125</studio>
+    <plot>A mod of Ticris by AlKau.[CR]Mostly just art, but some added things there.[CR]follow me on Twitter: www.twitter.com/derpguy125</plot>
+  </game>
+  <game name="LEVEL DOWN">
+    <description>LEVEL DOWN</description>
+    <rom name="LEVEL%20DOWN.tic" size="7518"/>
+    <snapshot1>xJHbjzp.gif</snapshot1>
+    <studio>glorphindale</studio>
+    <plot>Level the field.[CR]Click on the numbers to reduce horizontal and vertical lines.[CR]There should be only 1! Actually, no, there should be only zeroes!</plot>
+  </game>
+  <game name="LIGHTS OFF">
+    <description>LIGHTS OFF</description>
+    <rom name="LIGHTS%20OFF.tic" size="40610"/>
+    <snapshot1>ijgfzss.gif</snapshot1>
+    <studio>Bear Thorne</studio>
+    <plot>A clone of "Lights Out"[CR]Click the lights to toggle them...[CR]Try to turn off all the lights![CR]24 Levels![CR]every level GUARANTEED solvable![CR]RESTART: resets the current level[CR]HOME: goes back to menu (but keeps your progress)[CR]NOTE: this game uses mouse/touch</plot>
+  </game>
+  <game name="LITTLE BAT">
+    <description>LITTLE BAT</description>
+    <rom name="LITTLE%20BAT.tic" size="29298"/>
+    <snapshot1>oblEpAB.gif</snapshot1>
+    <studio>Jamie Boyce</studio>
+    <plot>Made for Createive Jam 10[CR]by Jamie Boyce</plot>
+  </game>
+  <game name="LOST IN SPACE">
+    <description>LOST IN SPACE</description>
+    <rom name="LOST%20IN%20SPACE.tic" size="67950"/>
+    <snapshot1>1wPXrKT.gif</snapshot1>
+    <studio>Artisia</studio>
+    <plot>Spaceship of capitan Pinny was crashed on the robots's planet![CR]Help him find all parts of ship and leave the planet![CR]Caution! Used "especial" collisions :)</plot>
+  </game>
+  <game name="M3">
+    <description>M3</description>
+    <rom name="M3.tic" size="26107"/>
+    <snapshot1>L2KX2bf.gif</snapshot1>
+    <studio>Anoghastra</studio>
+    <plot>A Match-3 Game.[CR]Keep that combo![CR]Z - Select[CR]X - Adjust Sound</plot>
+  </game>
+  <game name="MAINFIGHTER GRAPHICS MOD">
+    <description>MAINFIGHTER GRAPHICS MOD</description>
+    <rom name="MAINFIGHTER%20GRAPHICS%20MOD.tic" size="101679"/>
+    <snapshot1>nOlJey3.gif</snapshot1>
+    <studio>nickifr</studio>
+    <plot>A rail-shooter set in a fake-3D world made for #FC_JAM.[CR]by nickifr</plot>
+  </game>
+  <game name="MAINFIGHTER">
+    <description>MAINFIGHTER</description>
+    <rom name="MAINFIGHTER.tic" size="102875"/>
+    <snapshot1>gTDfLqu.gif</snapshot1>
+    <studio>Nalquas</studio>
+    <plot>In MainFighter, you play a fighter in a planet's atmosphere. Your goal is to defeat all enemy spacecraft to win that bet you made with Droid X2 yesterday.[CR]Current Version: V1.1 (Made for TIC-80 Version 0.70.6)[CR]Controls: Arrow Keys for Movement; Z for Shooting[CR]Also available on itch.io: https://nickifr.itch.io/mainfighter[CR]Originally made for #FC_JAM 2 in 2017 (Theme: You're not the main character).</plot>
+  </game>
+  <game name="MARIO BROS">
+    <description>MARIO BROS</description>
+    <rom name="MARIO%20BROS.tic" size="67682"/>
+    <snapshot1>bzxKSlv.gif</snapshot1>
+    <studio>trelemar, Luna</studio>
+    <plot>This project took about 2 weeks to complete. I'm not 100% happy with the outcome but still think its pretty fun. Huge shout out to Luna from the Discord server for the awesome music. Thanks for playing :)</plot>
+  </game>
+  <game name="MARIO">
+    <description>MARIO</description>
+    <rom name="MARIO.tic" size="50423"/>
+    <snapshot1>eJXsGVi.gif</snapshot1>
+    <studio>K_O_T_I_K</studio>
+    <plot>mario in tic-80[CR]by K_O_T_I_K</plot>
+  </game>
+  <game name="MINECRAFT">
+    <description>MINECRAFT</description>
+    <rom name="MINECRAFT.tic" size="10663"/>
+    <snapshot1>XX9G4u9.gif</snapshot1>
+    <studio>derpguy125</studio>
+    <plot>Minecraft clone for TIC-80.[CR]FEATURES: [CR]1.) 33 unique blocks![CR]2.) Day-Night cycle![CR]3.) 3 different types of weather![CR]4.) Easter eggs!*[CR]5.) A sword for no reason![CR]6.) Your creativity![CR]7.) FUN!!**[CR]So why not play today?[CR]* One block is my face. See it here ---------&gt;twitter.com/derpguy125[CR]**Fun is not a guarantee.</plot>
+  </game>
+  <game name="MINERS">
+    <description>MINERS</description>
+    <rom name="MINERS.tic" size="61218"/>
+    <snapshot1>xW3VAXK.gif</snapshot1>
+    <studio>Zach Hagelberg</studio>
+    <plot>Fun game! Get a pickaxe and mine![CR]by Zach Hagelberg:only a kid!</plot>
+  </game>
+  <game name="MINESWEEPER">
+    <description>MINESWEEPER</description>
+    <rom name="MINESWEEPER.tic" size="17214"/>
+    <snapshot1>9DNX9Vx.gif</snapshot1>
+    <studio>markgabbahey</studio>
+    <plot>MS Windows 3.1 Minesweeper clone[CR]by markgabbahey</plot>
+  </game>
+  <game name="MISSILE RAIN">
+    <description>MISSILE RAIN</description>
+    <rom name="MISSILE%20RAIN.tic" size="12401"/>
+    <snapshot1>VmQdyfT.gif</snapshot1>
+    <studio>Jojololly</studio>
+    <plot>Missile catch game made in one hour for One Hour Game Jam.</plot>
+  </game>
+  <game name="MOLE">
+    <description>MOLE</description>
+    <rom name="MOLE.tic" size="34340"/>
+    <snapshot1>2SZZb2q.gif</snapshot1>
+    <studio>Rigachupe</studio>
+    <plot>You are the gardener controlled by left/right arrows. Any key (A/B/X/Y on android or A/S/Z/X for keyboard users) is for using shovel. Do not let the mole steal your carrots![CR]2019-02-13 [CR] - added sound[CR]2019-02-14 [CR] - added icon for enabling on screen joystick -&gt; good for tablet/phone users without keyboard[CR] - hiscore is now saved to cartridge after game over screen</plot>
+  </game>
+  <game name="MOUZI II">
+    <description>MOUZI II</description>
+    <rom name="MOUZI%20II.tic" size="81727"/>
+    <snapshot1>hbnULFC.gif</snapshot1>
+    <studio>Wannabe Tracers</studio>
+    <plot>Kill Nazis with a rat.[CR]by Wannabe Tracers</plot>
+  </game>
+  <game name="MUSIC STUDIO">
+    <description>MUSIC STUDIO</description>
+    <rom name="MUSIC%20STUDIO.tic" size="7782"/>
+    <snapshot1>qKPFmBa.gif</snapshot1>
+    <studio>rainbowsillyfun</studio>
+    <plot>make your own music[CR]by rainbowsillyfun</plot>
+  </game>
+  <game name="MYSTERY HOUSE">
+    <description>MYSTERY HOUSE</description>
+    <rom name="MYSTERY%20HOUSE.tic" size="39197"/>
+    <snapshot1>Oz1gywZ.gif</snapshot1>
+    <studio>Kikeroga</studio>
+    <plot>Classic adventure game[CR]by Kikeroga</plot>
+  </game>
+  <game name="NEWTOTOTONE">
+    <description>NEWTOTOTONE</description>
+    <rom name="NEWTOTOTONE.tic" size="16013"/>
+    <snapshot1>TMXxrWy.gif</snapshot1>
+    <studio>mieki256</studio>
+    <plot>It's a game to catch an apple.[CR]by mieki256</plot>
+  </game>
+  <game name="NEXUS SPACE">
+    <description>NEXUS SPACE</description>
+    <rom name="NEXUS%20SPACE.tic" size="54148"/>
+    <snapshot1>KqY0z5r.gif</snapshot1>
+    <studio>auBergewohnlich</studio>
+    <plot>Touching the edge crashes the game" - Fixed[CR]Also, I added a main menu with a settings feature for customizing the walls and a new game mode.</plot>
+  </game>
+  <game name="NIGHTS SCORE ATTACK - TIC-80 VER">
+    <description>NIGHTS SCORE ATTACK - TIC-80 VER</description>
+    <rom name="NIGHTS%20SCORE%20ATTACK%20-%20TIC-80%20VER.tic" size="48905"/>
+    <snapshot1>aVgx9vI.gif</snapshot1>
+    <studio>NetNomad</studio>
+    <plot>Demake of NiGHTS into Dreams Score Attack originally for the GameBoy Advance, now on the TIC-80! Move with the direction keys or the d-pad/right analog stick and press Z (keyboard) or A (gamepad) to spin. Passing through loops grants 100 points, collecting a blue chip grants 500 points, and collecting a gold chip grants 1000 points. Each time 1000 points are earned, another second is added to the clock. [CR]Collision detection is still incredibly rough on this to say the least, but feel free to use this as the basis for a better version of your own or a completely different project. Code partially based on BearThorne's super rad tutorials on github.[CR]UPDATE 6/11/18: Collision detection has been unborked! </plot>
+  </game>
+  <game name="ONEMINUTEESCAPE">
+    <description>ONEMINUTEESCAPE</description>
+    <rom name="ONEMINUTEESCAPE.tic" size="33108"/>
+    <snapshot1>lu0B1ht.gif</snapshot1>
+    <studio>BadChosenName</studio>
+    <plot>Made for the itch.io Fantasy Console Jam #3 in a couple of days, oneminuteescape is a maze game done with the TIC80 fantasy console and javascript, with simple, retro styled graphics and gameplay.</plot>
+  </game>
+  <game name="ORBIS">
+    <description>ORBIS</description>
+    <rom name="ORBIS.tic" size="12362"/>
+    <snapshot1>f4eQHf6.gif</snapshot1>
+    <studio>Akssus</studio>
+    <plot>Go further by swing-by[CR]by Akssus</plot>
+  </game>
+  <game name="OSEO">
+    <description>OSEO</description>
+    <rom name="OSEO.tic" size="17745"/>
+    <snapshot1>qAAjbg5.gif</snapshot1>
+    <studio>msx80</studio>
+    <plot>A very simple game where you have to pop balloons with the beak. Every missed balloon is a life lost, you have three life, try to make your high score![CR]Not much else. My first game for fantasy consoles and my first dive in Lua. Gfx and Sfx by my, both terrible.[CR]Programmed in a couple of days while hospitalized to beat boredom.[CR]Feel free to leave positive or negative feedback![CR]Thanks to: [CR]-Fubuki for the graphics :)[CR]-jahodfra for player 2 support and difficulty setting</plot>
+  </game>
+  <game name="OURGAME ENGLISH TRANSLATION">
+    <description>OURGAME ENGLISH TRANSLATION</description>
+    <rom name="OURGAME%20ENGLISH%20TRANSLATION.tic" size="16904"/>
+    <snapshot1>qsqVJBX.gif</snapshot1>
+    <studio>Averok,Irene</studio>
+    <plot>A translation of a Spanish TIC-80 game[CR]by Averok and Irene, Translation Hack by StinkerB06</plot>
+  </game>
+  <game name="PAINT">
+    <description>PAINT</description>
+    <rom name="PAINT.tic" size="14370"/>
+    <snapshot1>pwU8nxI.gif</snapshot1>
+    <studio>Sammy6</studio>
+    <plot>A simple paint tool, also supported on mobile![CR]Take a screenshot to save.[CR]---------------------------------[CR]COMING SOON[CR]adjustable brush sizes[CR]Capture button[CR]Bug fixes</plot>
+  </game>
+  <game name="PASTRY CLICKER">
+    <description>PASTRY CLICKER</description>
+    <rom name="PASTRY%20CLICKER.tic" size="5288"/>
+    <snapshot1>LyqPoT5.gif</snapshot1>
+    <studio>Airglow Studios</studio>
+    <plot>Pastry Clicker by Airglow Studios. Incremental game complete with upgrades and clicking.</plot>
+  </game>
+  <game name="PATATO MAN">
+    <description>PATATO MAN</description>
+    <rom name="PATATO%20MAN.tic" size="130836"/>
+    <snapshot1>0XBts4F.gif</snapshot1>
+    <studio>niltic</studio>
+    <plot> From one day to another, your head turned into a patato (sic)! Because you are Patrick Atom, a creative chemist, you made a facial antidote. But when you were heating water for blending the antidote  to strenghten its effects, the bees stoled it! So, you must get it back before your head starts to ferment. Hurry up![CR]CONTROLS:[CR]Left and right buttons - Walk[CR]Down button - Duck[CR]A Button (Z key by default) - Start, use item[CR]B Button (X key by default) - Jump</plot>
+  </game>
+  <game name="PENGUIN ADVENTURE">
+    <description>PENGUIN ADVENTURE</description>
+    <rom name="PENGUIN%20ADVENTURE.tic" size="50938"/>
+    <snapshot1>EZq87sS.gif</snapshot1>
+    <studio>K_O_T_I_K</studio>
+    <plot>demo platformer to create a game[CR]by K_O_T_I_K</plot>
+  </game>
+  <game name="PIXEL JUMP II RELEASE">
+    <description>PIXEL JUMP II RELEASE</description>
+    <rom name="PIXEL%20JUMP%20II%20RELEASE.tic" size="2698"/>
+    <snapshot1>HdbGKg9.gif</snapshot1>
+    <studio>Cubee Games</studio>
+    <plot>Pixel Jump II[CR]itch.io link:[CR]https://shshock.itch.io/pixel-jump-ii</plot>
+  </game>
+  <game name="PIXEL JUMP">
+    <description>PIXEL JUMP</description>
+    <rom name="PIXEL%20JUMP.tic" size="21685"/>
+    <snapshot1>KiUOABX.gif</snapshot1>
+    <studio>Cubee</studio>
+    <plot>the first game from me[CR]Bounce Jumpy Guy on the pad for as long as possible</plot>
+  </game>
+  <game name="POKEMONGOL IGO">
+    <description>POKEMONGOL IGO</description>
+    <rom name="POKEMONGOL%20IGO.tic" size="86877"/>
+    <snapshot1>lGS38I2.gif</snapshot1>
+    <studio>Chentzilla</studio>
+    <plot>In the year 12XX, you are a baskak -- tribute collector for the Golden Horde. Serve for three years, bringing the tribute on time, and your name may live through history![CR]Use standalone version for better sound support and overall performance.</plot>
+  </game>
+  <game name="POKEY THE GOLDEN HEDGEHOG 2 ALPHA 2">
+    <description>POKEY THE GOLDEN HEDGEHOG 2 ALPHA 2</description>
+    <rom name="POKEY%20THE%20GOLDEN%20HEDGEHOG%202%20ALPHA%202.tic" size="87898"/>
+    <snapshot1>jsBKbju.gif</snapshot1>
+    <studio>Jackj106 Games, nonobou_31</studio>
+    <plot>ALPHA 2 of pokey the hedgehog2[CR]by Jackj106 games rexix by nonobou_31</plot>
+  </game>
+  <game name="POKEY THE HEDGEHOG">
+    <description>POKEY THE HEDGEHOG</description>
+    <rom name="POKEY%20THE%20HEDGEHOG.tic" size="52330"/>
+    <snapshot1>bxens6K.gif</snapshot1>
+    <studio>Jackj106 Games</studio>
+    <plot>version 1.4.0[CR]Welcome to pokey the hedgehog, a parody of sonic the hedgehog.[CR]collect rings to progress through levels and attempt to get to level 255.[CR]controls:[CR]^&amp;V:move[CR]X:mute music(i know the music is bad sorry.)[CR]Z:multiple functions. displayed on screen.[CR]this version is for playing offline (or at least once downloaded)[CR]if i get a lot of support for this game, i will update with more enemies as you go through more levels and new features. maybe even a sequel.[CR]also avalible on itch.io: https://jackj106.itch.io/pokey-the-hedgehog-[CR]Now available on Gamejolt! https://gamejolt.com/games/pokey-the-hedgehog/2359...</plot>
+  </game>
+  <game name="POLYLINES">
+    <description>POLYLINES</description>
+    <rom name="POLYLINES.tic" size="13429"/>
+    <snapshot1>184c4WW.gif</snapshot1>
+    <studio>Teodozjusz</studio>
+    <plot>Simple arcade game for 2-4 players. Goal is simple: survive as long as possible and block other player's lines. If you want more challenge, you can draw up to 7 your own maps in built-in Map Editor. Don't forget to bind keys on TIC-Gamepad for all players ;)[CR]Useful keys:[CR]1. Main Menu:[CR] &gt; Navigation: Up/Down on Player's 1 gamepad[CR]2. Map Editor:[CR] &gt; Changing color: '-' and '='[CR] &gt; Hiding net: H[CR] &gt; Changing map: 1-7[CR] &gt; Rubber: RMB[CR] &gt; Quit: Q[CR]NOTE: Game reads everything non-black as a obstacle. To select map, go to Map Editor, select map (1-7 on keyboard), go back to menu, and start game.</plot>
+  </game>
+  <game name="PONG IN TIC80">
+    <description>PONG IN TIC80</description>
+    <rom name="PONG%20IN%20TIC80.tic" size="6676"/>
+    <snapshot1>FOJPl4U.gif</snapshot1>
+    <studio>Jackj106 Games</studio>
+    <plot>A basic PONG game made in TIC (Tiny computer(i guess it goes by TIC-80 nowadays))[CR]hope you enjoy![CR]controls:[CR]P1:^&amp;V[CR]P2:Z&amp;X[CR]PLAY TO YOUR HEARTS CONTENT![CR]Please check out some of my other games too!</plot>
+  </game>
+  <game name="PONY PONG IS ACTUALLY BREAKOUT">
+    <description>PONY PONG IS ACTUALLY BREAKOUT</description>
+    <rom name="PONY%20PONG%20IS%20ACTUALLY%20BREAKOUT.tic" size="32394"/>
+    <snapshot1>oXqMNaj.gif</snapshot1>
+    <studio>ShaggyFox</studio>
+    <plot>This was my entry for 'FEMICOM Game Jam #4 (make cute pong)'[CR]Avoid missing Ball (and Hearts) for high score ;)[CR]https://itch.io/jam/makecutepong</plot>
+  </game>
+  <game name="POWDER GAME">
+    <description>POWDER GAME</description>
+    <rom name="POWDER%20GAME.tic" size="9270"/>
+    <snapshot1>s9lGufH.gif</snapshot1>
+    <studio>TylerDurden</studio>
+    <plot>A simple game based on POWDER SANDBOX V1.0:[CR]https://tic.computer/play?cart=273[CR]not yet complete[CR]right and left arrows change powder</plot>
+  </game>
+  <game name="POWDER SANDBOX">
+    <description>POWDER SANDBOX</description>
+    <rom name="POWDER%20SANDBOX.tic" size="4517"/>
+    <snapshot1>o5lucxf.gif</snapshot1>
+    <studio>RamiLego4Game</studio>
+    <plot>A powder sandbox doodle, based on this post: https://ramilego4game.github.io//LIKO-12-Doodle-1-Powder/[CR]Feel free to, copy, edit, re-upload (with changes), do what ever with it.[CR]Changelog:[CR]===========[CR]V1.0:[CR]Initial Release</plot>
+  </game>
+  <game name="PROBLEMS">
+    <description>PROBLEMS</description>
+    <rom name="PROBLEMS.tic" size="15735"/>
+    <snapshot1>26Ti8Ue.gif</snapshot1>
+    <studio>viza</studio>
+    <plot>My Ludum Dare 40 game[CR]Made in 6-7 hours, so adjust expectation accordingly. :)[CR]It is a kind of time-management-sokoban hybrid, with some social commentary. Or something. :)[CR]Go vote for it on the Ludum dare site: https://ldjam.com/events/ludum-dare/40/problems</plot>
+  </game>
+  <game name="PSEUDO-3D ROAD">
+    <description>PSEUDO-3D ROAD</description>
+    <rom name="PSEUDO-3D%20ROAD.tic" size="6899"/>
+    <snapshot1>pf2fa2P.gif</snapshot1>
+    <studio>Never</studio>
+    <plot>drawing lines so it looks like road idk?[CR]by Never</plot>
+  </game>
+  <game name="PUSH-EM">
+    <description>PUSH-EM</description>
+    <rom name="PUSH-EM.tic" size="51119"/>
+    <snapshot1>NA8gJkv.gif</snapshot1>
+    <studio>Bear Thorne</studio>
+    <plot>A mad dash to push all the buttons!</plot>
+  </game>
+  <game name="QUEST FOR GLORY">
+    <description>QUEST FOR GLORY</description>
+    <rom name="QUEST%20FOR%20GLORY.tic" size="67204"/>
+    <snapshot1>IJX1K4i.gif</snapshot1>
+    <studio>deck</studio>
+    <plot>Dive into the dungeon, defeat the evil wizard and recover the amulet of Izramil, to get the eternal glory!</plot>
+  </game>
+  <game name="RACER-Z">
+    <description>RACER-Z</description>
+    <rom name="RACER-Z.tic" size="14718"/>
+    <snapshot1>eHLbUXm.gif</snapshot1>
+    <studio>Andrew</studio>
+    <plot>High speed racing game inspired by Digital Derby mechanical game</plot>
+  </game>
+  <game name="RAYCAST RACER">
+    <description>RAYCAST RACER</description>
+    <rom name="RAYCAST%20RACER.tic" size="114376"/>
+    <snapshot1>Ed6xWJR.gif</snapshot1>
+    <studio>Nalquas</studio>
+    <plot>ATTENTION: IT IS RECOMMENDED TO CONFIGURE GRAPHICS SETTINGS TO IMPROVE PERFORMANCE[CR](especially on web!)[CR]Raycasters have been used for a lot of game styles - Shooters, roguelikes and even roleplaying games. But have you ever seen a raycast-based racer?[CR]Race against up to seven simultaneously running AI contrahents on two staggeringly impressive* raycasting environments.[CR]*All raycasters are impressive. Real 3d effects not included.[CR]Current Version: V1.1.0 (Made for TIC-80 Version 0.70.6)[CR]Controls: Arrow Keys for Movement, Z to select in menus (Customisable with ESC)[CR]Also available on itch.io: https://nalquas.itch.io/raycast-racer</plot>
+  </game>
+  <game name="RAYPORTAL">
+    <description>RAYPORTAL</description>
+    <rom name="RAYPORTAL.tic" size="17937"/>
+    <snapshot1>kzohUW6.gif</snapshot1>
+    <studio>Never</studio>
+    <plot>well yes[CR]it's portals in raycasting[CR]NOTE:[CR]You can't place portals on all walls, only on light ones.[CR]Quality will automatically change if FPS is low.[CR]UP,DOWN,LEFT,RIGHT - move[CR]A,B - rotate camera[CR]X - place blue portal[CR]Y - place orange portal</plot>
+  </game>
+  <game name="RC FLIGHT SIMULATOR">
+    <description>RC FLIGHT SIMULATOR</description>
+    <rom name="RC%20FLIGHT%20SIMULATOR.tic" size="53922"/>
+    <snapshot1>LCBZfAF.gif</snapshot1>
+    <studio>Time_Tripper</studio>
+    <plot>Operation is done with the mouse.[CR]Press the left button to raise the engine throttle.[CR]When you release the button, the throttle gradually goes down.[CR]Sometimes press the button to control the engine.[CR]The mouse cursor will be neutral at the center of the screen.[CR]If you lower it from the center of the screen, it will raise it up, then it will go down.[CR]Control the aileron from the center of the screen right or left.[CR]There is no ladder function.</plot>
+  </game>
+  <game name="REBONDE">
+    <description>REBONDE</description>
+    <rom name="REBONDE.tic" size="46766"/>
+    <snapshot1>I0siG8t.gif</snapshot1>
+    <studio>derverd</studio>
+    <plot>i mak gaem[CR]pls plai and enjoy gam[CR]dis gam i VER GUD, has 8 levl an keys an d flag n lokked bloks dat u need kee 2 opn[CR]control:[CR]up - movve up[CR]dwon - move dow[CR]lefft - mov in a direkshun i forgot wich[CR]rigth - sumun satan[CR]curnet vers 1.1[CR]changelog 1.1 lockde blox work proprly nao</plot>
+  </game>
+  <game name="REBOUND 2 2 REVELATIONS">
+    <description>REBOUND 2 2 REVELATIONS</description>
+    <rom name="REBOUND%202%202%20REVELATIONS.tic" size="291879"/>
+    <snapshot1>uiQ9aJn.gif</snapshot1>
+    <studio>DevEd</studio>
+    <plot>Originally submitted to Battle of the Bits Very Rare Formats. Entry link: http://battleofthebits.org/arena/Entry/Rebound+2+2_+Revelations/31384/[CR]Note: This game uses features provided by the pro version of TIC-80.[CR]It's finally here: REBOUND 2 2!!! The sequel to Rebound 2 that nobody asked for!!![CR]After the "events" of Rebound 2, our (still?) nameless hero sets out to do another thing. Along the way he'll encounter more things! Exciting![CR]Now with 50% more stuff, including:[CR]- Backtracking![CR]- Optional rooms! Some of which may or may not have coins![CR]- Final map completion percentage![CR]- A bigger map than Rebound 2![CR]- Tile animations![CR]- Stuff![CR]- Super fancy opening splash screen![CR]- Optional tutorial area![CR]Current version: 1.2[CR]Changelog for version 1.2:[CR] - Map completion is now properly capped at 100%.[CR]Changelog for v1.1:[CR] - Fixed an off-by-one error that made 100% map completion impossible.[CR] - Minor map tweaks and fixes.</plot>
+  </game>
+  <game name="REBOUND 2 ELECTRIC BOOGALOO">
+    <description>REBOUND 2 ELECTRIC BOOGALOO</description>
+    <rom name="REBOUND%202%20ELECTRIC%20BOOGALOO.tic" size="107415"/>
+    <snapshot1>PnXEYd6.gif</snapshot1>
+    <studio>DevEd</studio>
+    <plot>SEQUEL NOW AVAILABLE https://tic.computer/play?cart=803[CR]NOTE: This game was created for BotB Game Jam 3. View the original entry here: http://battleofthebits.org/arena/Entry/Rebound+2_+Electric+Boogaloo/29384/[CR]NOTE 2: This game is a sequel to a previous game I made. The original can be played at http://devnet.sonicgamesdimension.net/Rebound[CR]That... ball... thing... from the smash hit* Rebound is back in a new kinda-sorta Metroidvania style adventure with slightly wonky collision detection! Rebound through 5 different areas in your quest to... uhhh... what was the story I came up with again? No matter. YOU'RE A BALL. DO THE THING WHERE YOU BEAT THE GAME.[CR]*Probably not [CR]Current version: v1.9[CR]Changelog:[CR]v1.0 - Initial release.[CR]v1.1 - Fixed missing room name in The Iron Dungeon[CR]v1.2 - Fixed detonator in The Iron Dungeon leaving behind incorrect background tile when destroyed[CR]v1.3 - Made it more clear that you can go below the starting area.[CR]v1.4 - Fixed a mistake which made the area below the starting area inaccessible in v1.3.[CR]v1.5[CR]  - New sprite for spikes (thanks MovieMovies1)[CR]  - Code cleanup[CR]  - Right pyramid exit is no longer accessible without Spring Bounce[CR]  - Particles no longer persist on room change[CR]v1.6 - Made the final coin a bit easier to find.[CR]v1.7[CR]  - Fixed invisible solid tile in the room "Ascended".[CR]  - Made the underwater section in the Iron Dungeon easier.[CR]v1.8[CR]  - Fixed potential softlock in the room "Fakeout Pond" (thanks A-zu-ra for the heads-up)[CR]v1.9[CR]  - Game time now stops counting up when you hit the final detonator rather than when the ending screen comes up</plot>
+  </game>
+  <game name="RELEASE CHASING">
+    <description>RELEASE CHASING</description>
+    <rom name="RELEASE%20CHASING.tic" size="56124"/>
+    <snapshot1>w2d0dwu.gif</snapshot1>
+    <studio>Aleksandra, Ines, Peter, and Don</studio>
+    <plot>Simple game to score points by getting treasures before time expires.  Product of Reciprocity's engineering hackathon.[CR]Controls:[CR]- Arrow keys to move the hero towards the exit[CR]- Use the keyboard to type the treasure prompts or use the up/down arrows to select the next letter</plot>
+  </game>
+  <game name="RESCUECOPTER">
+    <description>RESCUECOPTER</description>
+    <rom name="RESCUECOPTER.tic" size="47774"/>
+    <snapshot1>Ncg1Iaj.gif</snapshot1>
+    <studio>CptnRoughnight</studio>
+    <plot>Rescue all the naked villagers from the evil island, but be carefull</plot>
+  </game>
+  <game name="RPG">
+    <description>RPG</description>
+    <rom name="RPG.tic" size="12929"/>
+    <snapshot1>nNOQ265.gif</snapshot1>
+    <studio>Charlito33</studio>
+    <plot>short description[CR]by Charlito33</plot>
+  </game>
+  <game name="RPS">
+    <description>RPS</description>
+    <rom name="RPS.tic" size="17049"/>
+    <snapshot1>eRgUz0W.gif</snapshot1>
+    <studio>jackj106/dan clarke</studio>
+    <plot>Rock paper siczors.[CR]enty for a game by its cover jam 2017.[CR]lol misspelled in metadata idc</plot>
+  </game>
+  <game name="RUN, RUN, RUN">
+    <description>RUN, RUN, RUN</description>
+    <rom name="RUN%2C%20RUN%2C%20RUN.tic" size="7879"/>
+    <snapshot1>KqjDZEI.gif</snapshot1>
+    <studio>TehShadowz</studio>
+    <plot>Inspired by the famous Google Chrome's little game, I've created a version of it on TIC-80.[CR]The control mechanics are a little bit different:[CR][UP] jump.[CR][UP (hold)] "long jump", the character takes slightly longer to fall.[CR][DOWN] slide, useless.[CR][DOWN (airbone)] small double-jump, kind of inspired by source-engine games, but different.[CR][DOWN (airbone) (hold)] the character falls faster.[CR]I know these controls make no sense, but I've decided to add them anyways...[CR]Different obstacles have different hitboxes.[CR]That's all...</plot>
+  </game>
+  <game name="SARDELNY">
+    <description>SARDELNY</description>
+    <rom name="SARDELNY.tic" size="47025"/>
+    <snapshot1>Idl8UoZ.gif</snapshot1>
+    <studio>iamtio</studio>
+    <plot>Sardelny. The Game.[CR]Just testing my coding skills. Enjoy)</plot>
+  </game>
+  <game name="SECRET AGENTS">
+    <description>SECRET AGENTS</description>
+    <rom name="SECRET%20AGENTS.tic" size="93733"/>
+    <snapshot1>rrEtmTK.gif</snapshot1>
+    <studio>msx80</studio>
+    <plot>A shoot em up game with full 2 players support! Four levels full of disgusting enemies and treacherous traps! (more levels to come!)[CR]Best played with arcade joystick![CR]PS Still searching for a musician :P</plot>
+  </game>
+  <game name="SHADOW OVER THE TWELVE LANDS">
+    <description>SHADOW OVER THE TWELVE LANDS</description>
+    <rom name="SHADOW%20OVER%20THE%20TWELVE%20LANDS.tic" size="328826"/>
+    <snapshot1>dUChnuX.gif</snapshot1>
+    <studio>Bruno Oliveira</studio>
+    <plot>Shadow Over the Twelve Lands[CR]By Bruno Oliveira (@btco_code)[CR]** UPDATE: PDF manual is here:[CR]https://drive.google.com/file/d/1SnYhs746W0-UF7pXWsxmwRnLmP8rE69r/view[CR]This is a retro CRPG game where you control a party of adventurers through an epic quest that starts out with a small mistake where you essentially doom the entire world to a decade of disasters. But worry not, because you are going to fix things now and defeat the great evil you unleashed upon the world.[CR]It's turn-based, so you have as long as you want to think things through and even in the heat of battle our monsters are well trained to wait, seemingly forever, until you have taken your turn.[CR]You start at the shores of Riverside with barely no equipment, a laughable budget and a desire for fame, fortune and making the world a better place. Let's see how this works out for you.[CR]Printable world map: https://drive.google.com/open?id=1-9d8MZCrX5cdGBQ0LVlgSxD2lK6vp_zd[CR]This project is open source. The source code is at:[CR]https://github.com/btco/so12l[CR]*** SAVEGAME WARNING: Depending on your browser, the save game feature might not work (known issue on Chrome)! To test that it's working, reload the page after the intro screen. If you see "Save OK" on the top left, savegames are working. In any case, if you are playing this seriously, consider downloading the cart and playing in the TIC-80 program.[CR][ CONTROLS ][CR]    arrow keys: move[CR]    [Z]: menu / confirm[CR]    [X]: cancel / close[CR]At any time while adventuring you can bring up the game menu by pressing [Z] to allow you to: rest, cast spell, manage inventory and see detailed party info.[CR][ TIPS ][CR]0. To interact with things, just walk into them (huts, fountains, doors, etc, etc).[CR]1. To rest, use food rations: press Z to open menu, select ITEMS, select the food ration, press Z and select USE.[CR]2. Always carry plenty of food. Buy them in General Stores.[CR]3. Always carry plenty of torches to light dark caves and dungeons. Also found in General Stores.[CR]4. Upgrade equipment! You won't go very far with just a dagger and no armor.[CR]5. Save at every opportunity. Fountains and inns allow you to save.[CR]6. Beware of unidentified items. They may be cursed, explode, release poison gas, and all sorts of other bad effects. Plus, if you equip a cursed item, you won't be able to remove it.[CR]7. When you get enough XP, go to a town to train to level up. You will know you have enough XP because the XP meter on the bottom right will be highlighted with an up arrow.[CR][ TECHNICAL DETAILS ][CR]The game engine is 64K of Lua code but the core of the game's logic is written in XL, an assembly-like language I created, which assembles to bytecode that gets put into the cart's Map memory banks (banks 6 and 7). You can look at the XL source code in https://github.com/btco/so12l/tree/master/xl . It looks something like this:[CR]PROC WRLD_RS_OldWizardHut[CR] TEST GM_R_MYRA; JNZ .quest_r[CR] TEST GM_C_MYRA; JNZ .quest_c[CR] SND 251 .old_wiz .quest_msg[CR] SYS SYSC_SPEAK[CR] SND 251 .old_wiz .quest_msg2[CR] SYS SYSC_SPEAK[CR] SND 0 0 .quest_narr[CR] SYS SYSC_SPEAK[CR] OR GM_A_MYRA[CR] ...[CR]END[CR]The assembler that takes that and converts to bytecode is in https://github.com/btco/so12l/blob/master/tools/xlasm . The VM that runs this is in https://github.com/btco/so12l/blob/master/src/xlvm.lua</plot>
+  </game>
+  <game name="SHEEP RUN">
+    <description>SHEEP RUN</description>
+    <rom name="SHEEP%20RUN.tic" size="68163"/>
+    <snapshot1>mBGpFZ3.gif</snapshot1>
+    <studio>Jamie Boyce</studio>
+    <plot>This is a Game Boy inspired endless runner which features parallax scrolling and a sheep from South Milton.</plot>
+  </game>
+  <game name="SHOOTANOID">
+    <description>SHOOTANOID</description>
+    <rom name="SHOOTANOID.tic" size="31384"/>
+    <snapshot1>7lGOv87.gif</snapshot1>
+    <studio>Dr.Ludos</studio>
+    <plot>Breakout meets Top-Down Shooters![CR]Using your laser gun, you'll have to "guide" balls so they break all the brick walls! But beware, if you get touched by a ball, you'll die![CR]- MOVE: Arrow Keys[CR]- SHOOT: X Key[CR]This game was made in about 15 hours from scratch, for the Ludum Dare 41 competition with the theme "Combine 2 Incompatible Genres". It was made using the wonderful TIC-80 tool, that I discovered during this jam![CR]My game lacks a bit in the audio and graphics area, but I tried to focus on the gameplay due to the limited time. There are 10 levels in total![CR]So I hope you'll enjoy my "Breakout+Top-Down Shooter" mashup!</plot>
+  </game>
+  <game name="SHREDDER BOY">
+    <description>SHREDDER BOY</description>
+    <rom name="SHREDDER%20BOY.tic" size="69753"/>
+    <snapshot1>REMOo3g.gif</snapshot1>
+    <studio>ShaggyFox</studio>
+    <plot>Shredder Boy is trying to not get out of space by using the shredder[CR]#ld42[CR]Use Arrow-Keys to Move and 'Z' for take/put objects[CR]Keep the left (yellow)  platform free, scan packets/documents using the 'computer' and put expired (red-labeled) packets/documents into the shredder. Put the resulting waste onto then garbage-platform and try to get not out of space.[CR]Game ends when not all new documents can arrive because the left (yellow) packets/documents is out of space[CR] * Green labeled documents/packets expire in more than 2 minutes[CR] * Yellow labeled documents/packets expire in less than 2 minutes[CR] * Red labeled documents/packets are expired and can be shredded[CR] * Grey labeled documents/packets needs to be scanned to see the colored label[CR] Post LD42 Changes:[CR] This version contains the following post-LD42 fixes:[CR] *   Fix reset-bug that effects second round (some values were not reset)[CR] * Make Game-Over-Screen Readable (change color + background + delay)[CR] * Make clean garbage-space as shown, not unpredictable[CR] * Shredder Boy is faster when not carrying packets[CR] * Make it easier to pick/put packets[CR] * Fix up control issues when more than one ctrl-key was pressed</plot>
+  </game>
+  <game name="SIMON">
+    <description>SIMON</description>
+    <rom name="SIMON.tic" size="5087"/>
+    <snapshot1>JqEeLPT.gif</snapshot1>
+    <studio>raydeejay</studio>
+    <plot>A very simple implementation of the classic Simon game</plot>
+  </game>
+  <game name="SIMPLE MAZE GAME">
+    <description>SIMPLE MAZE GAME</description>
+    <rom name="SIMPLE%20MAZE%20GAME.tic" size="7132"/>
+    <snapshot1>1PRo1kF.gif</snapshot1>
+    <studio>Sammy6</studio>
+    <plot>Use the arrow buttons to move, and try to get to the trophy![CR]Made to test collision.</plot>
+  </game>
+  <game name="SIMPLE SNAKE GAME">
+    <description>SIMPLE SNAKE GAME</description>
+    <rom name="SIMPLE%20SNAKE%20GAME.tic" size="10924"/>
+    <snapshot1>nBlwmxt.gif</snapshot1>
+    <studio>Julio Miguel Souza</studio>
+    <plot>Eat apples and don't hit the walls or yourself![CR]It's a classic game, i think everybody here played</plot>
+  </game>
+  <game name="SIMPLEPONG">
+    <description>SIMPLEPONG</description>
+    <rom name="SIMPLEPONG.tic" size="4004"/>
+    <snapshot1>vXfLBnP.gif</snapshot1>
+    <studio>infog</studio>
+    <plot>a simple 1 player pong clone[CR]by infog</plot>
+  </game>
+  <game name="SLIDE COLOR">
+    <description>SLIDE COLOR</description>
+    <rom name="SLIDE%20COLOR.tic" size="69691"/>
+    <snapshot1>SSin9Mg.gif</snapshot1>
+    <studio>wowods</studio>
+    <plot>- In menu[CR]Use UP and DOWN arrow to navigate, and change values using LEFT and RIGHT arrow. To START the game, navigate cursor to START and press RIGHT arrow.[CR]- In Game[CR]Use Up, DOWN, LEFT, and RIGHT arrow to slide around the color.[CR]If you're win, press Z to play again.</plot>
+  </game>
+  <game name="SLIDER">
+    <description>SLIDER</description>
+    <rom name="SLIDER.tic" size="21337"/>
+    <snapshot1>N05pERL.gif</snapshot1>
+    <studio>Rigachupe</studio>
+    <plot>Remember that funny sliding game when you were a kid? Well, now you can play it again on Tic-80! [CR]There are levels from 1 to 6 for you and your friends to conquer. Where level 1 has 3x3 pieces and level 6 has 9x9 pieces.[CR]Controls are easy, just use arrows or click with mouse (or touch the screen) on the piece you wish to slide towards empty space. Have fun.[CR]PS:If someone here could make a nice chiptune music or sfx for this game of mine i would be really happy. \(^_^)/</plot>
+  </game>
+  <game name="SMALL SNAKE">
+    <description>SMALL SNAKE</description>
+    <rom name="SMALL%20SNAKE.tic" size="7964"/>
+    <snapshot1>FgmgjfI.gif</snapshot1>
+    <studio>avevad</studio>
+    <plot>small snake game[CR]by avevad</plot>
+  </game>
+  <game name="SNAKE GAME">
+    <description>SNAKE GAME</description>
+    <rom name="SNAKE%20GAME.tic" size="9294"/>
+    <snapshot1>98JLdsP.gif</snapshot1>
+    <studio>Greatcode</studio>
+    <plot>simple snake game[CR]by Greatcode</plot>
+  </game>
+  <game name="SPACE PET RESCUE">
+    <description>SPACE PET RESCUE</description>
+    <rom name="SPACE%20PET%20RESCUE.tic" size="128352"/>
+    <snapshot1>LdBhg5F.gif</snapshot1>
+    <studio>Andrei Rudenko</studio>
+    <plot>You have 60 seconds to save all pets, and yourself on spaceship![CR]This game is made for Fantasy Console Game Jam 3[CR]Controls[CR]One player mode:[CR]    ARROWS / Z[CR]Two players mode[CR]    P1 : R,F,D,G / Z,N[CR]    P2 : ARROWS / CTLR,ENTER[CR]Restart 1 or Y (gamepad)[CR]Menu 0 or B (gamepad)[CR]You can select level in menu by pressing left or right arrow[CR]Have Fun!</plot>
+  </game>
+  <game name="SPACE RACE DF-9">
+    <description>SPACE RACE DF-9</description>
+    <rom name="SPACE%20RACE%20DF-9.tic" size="49052"/>
+    <snapshot1>BNUyBS4.gif</snapshot1>
+    <studio>Fubuki, prepdenile</studio>
+    <plot>Space Race but it actually works[CR]by Fubuki [modded by prepdenile]</plot>
+  </game>
+  <game name="SPACE THING">
+    <description>SPACE THING</description>
+    <rom name="SPACE%20THING.tic" size="87121"/>
+    <snapshot1>0InE3JK.gif</snapshot1>
+    <studio>MonstersGoBoom</studio>
+    <plot>Space game with mouse control . originally for #LDJAM but missed deadline . no sounds . unfinshed . [CR]the code could be useful to learn from. please just try and understand it rather than just take it. </plot>
+  </game>
+  <game name="SPACER SHIPER SHOOTER">
+    <description>SPACER SHIPER SHOOTER</description>
+    <rom name="SPACER%20SHIPER%20SHOOTER.tic" size="31450"/>
+    <snapshot1>vI8Sr1C.gif</snapshot1>
+    <studio>DSF100</studio>
+    <plot>My first game using Tic-80, enjoy :)[CR]controls:[CR]d-pad - move[CR]z/button A - shoot</plot>
+  </game>
+  <game name="STARSHIP">
+    <description>STARSHIP</description>
+    <rom name="STARSHIP.tic" size="58303"/>
+    <snapshot1>PZHWRHk.gif</snapshot1>
+    <studio>wesley werner</studio>
+    <plot>You pilot a starship exploring the galaxy. [CR]Z and X uses shields and phasers, aiming is automatic as long as you are in range. Hover over suns to recharge your power, and dock at planets to complete missions. You retire after 10 successful missions.[CR]The mini-map at the top-right shows your position in white, and your mission goal in red.[CR]This is my Ludum Dare #39 entry for the theme: Running out of Power.</plot>
+  </game>
+  <game name="STELE">
+    <description>STELE</description>
+    <rom name="STELE.tic" size="79281"/>
+    <snapshot1>EtS9C2p.gif</snapshot1>
+    <studio>Zus</studio>
+    <plot>A short platformer game. </plot>
+  </game>
+  <game name="STOP THE SLIMES">
+    <description>STOP THE SLIMES</description>
+    <rom name="STOP%20THE%20SLIMES.tic" size="15214"/>
+    <snapshot1>4mMmlVx.gif</snapshot1>
+    <studio>Mannzerhacker</studio>
+    <plot>Tower Defense[CR]by Mannzerhacker</plot>
+  </game>
+  <game name="STREET SHOOTER">
+    <description>STREET SHOOTER</description>
+    <rom name="STREET%20SHOOTER.tic" size="97973"/>
+    <snapshot1>fSG3Asr.gif</snapshot1>
+    <studio>zebirosca</studio>
+    <plot>A simple vertical shooter where you play as an secret agent working for an organization of serial killers.</plot>
+  </game>
+  <game name="STREKO">
+    <description>STREKO</description>
+    <rom name="STREKO.tic" size="7600"/>
+    <snapshot1>QCZXNL8.gif</snapshot1>
+    <studio>razzle_dazzle</studio>
+    <plot>Simple game about hungry dragon-fly originally made for Gaminator 17 Jam.[CR]Use up/down arrows to move the wings and z/x to move the body.[CR]Have fun!</plot>
+  </game>
+  <game name="STRUCTURE MANIA">
+    <description>STRUCTURE MANIA</description>
+    <rom name="STRUCTURE%20MANIA.tic" size="66622"/>
+    <snapshot1>fAc1pPK.gif</snapshot1>
+    <studio>Time_Tripper</studio>
+    <plot>Structure Mania[CR]Mouse click or drag for add point.[CR]Automatically connected to near point.[CR]When pressure is applied, the structure breaks.[CR]You can change gravity by clicking the bottom of the screen.[CR]Press Reset to create a new terrain.</plot>
+  </game>
+  <game name="STUCK IN A TIMELOOP">
+    <description>STUCK IN A TIMELOOP</description>
+    <rom name="STUCK%20IN%20A%20TIMELOOP.tic" size="44399"/>
+    <snapshot1>6Fi9p5k.gif</snapshot1>
+    <studio>Snrf</studio>
+    <plot>My first tic-80 game</plot>
+  </game>
+  <game name="SUPER HEXAGON">
+    <description>SUPER HEXAGON</description>
+    <rom name="SUPER%20HEXAGON.tic" size="25451"/>
+    <snapshot1>m8HcDlC.gif</snapshot1>
+    <studio>paranoid_android</studio>
+    <plot>A clone of the game Super Hexagon by Terry Cavanagh. Includes 3 difficulty modes and a leaderboard. No sfx or music yet, I might add some later. Hold X and DOWN in the title screen to wipe your leaderboard.[CR]Go support the actual, far superior game! http://superhexagon.com/[CR]Version History[CR]1.0 - Initial Release</plot>
+  </game>
+  <game name="SUPER MONKEYBALL">
+    <description>SUPER MONKEYBALL</description>
+    <rom name="SUPER%20MONKEYBALL.tic" size="55873"/>
+    <snapshot1>m3ep7W4.gif</snapshot1>
+    <studio>Monkeypatch</studio>
+    <plot>Super monkeyball is a humorous 2-player game crossing pong with brick-breaker.[CR]It was created to be an arcade game at Devfest Toulouse 2018</plot>
+  </game>
+  <game name="SUPERNOVA">
+    <description>SUPERNOVA</description>
+    <rom name="SUPERNOVA.tic" size="98311"/>
+    <snapshot1>TWm5tRd.gif</snapshot1>
+    <studio>Sintel</studio>
+    <plot>gotta go fast[CR]by Sintel</plot>
+  </game>
+  <game name="TAG">
+    <description>TAG</description>
+    <rom name="TAG.tic" size="42189"/>
+    <snapshot1>sSzQFex.gif</snapshot1>
+    <studio>Anoghastra</studio>
+    <plot>A simple 2-player game I made with my cousin in a week. It's still a bit unfinished, but I don't know if I'll keep working on it.</plot>
+  </game>
+  <game name="TANKS">
+    <description>TANKS</description>
+    <rom name="TANKS.tic" size="45245"/>
+    <snapshot1>32F7kiy.gif</snapshot1>
+    <studio>nickifr</studio>
+    <plot>Have tank fights with your friend in this simple Tank game! Only having the ability to shoot in 8 directions, you'll approach your opponent accusing him of spawn-camping and playing unfair while blaming the game for your losses - Even though you know you're simply not skilled enough to beat your opponent. Will YOU win against your friend?[CR]This is a 2-player game - Make sure you've got a friend to play with next to you![CR]Current Version: V1.0.1 (Made for TIC-80 Version 0.40.0)[CR]Controls: HAVE TO BE ASSIGNED MANUALLY when first starting the game since there doesn't seem to be a default keybinding for player #2.[CR]Also available on itch.io: https://nickifr.itch.io/tanks</plot>
+  </game>
+  <game name="TEN">
+    <description>TEN</description>
+    <rom name="TEN.tic" size="23408"/>
+    <snapshot1>vGgXQt9.gif</snapshot1>
+    <studio>Samy Bencherif</studio>
+    <plot>Hope you enjoy. This is a remake of http://tengame.info[CR]Mouse/Keyboard/Controller for menus. Keyboard/Controller for gameplay.</plot>
+  </game>
+  <game name="TERROR INSTINCT">
+    <description>TERROR INSTINCT</description>
+    <rom name="TERROR%20INSTINCT.tic" size="54532"/>
+    <snapshot1>FYfIcbG.gif</snapshot1>
+    <studio>everyone ever</studio>
+    <plot>Z/X - rotate[CR]A - hold[CR]left/right - move[CR]up - hard drop[CR]down - soft drop</plot>
+  </game>
+  <game name="TETRIS UPDATE 1">
+    <description>TETRIS UPDATE 1</description>
+    <rom name="TETRIS%20UPDATE%201.tic" size="27357"/>
+    <snapshot1>dj9WcnY.gif</snapshot1>
+    <studio>TheCreepy234</studio>
+    <plot>This is an update of the demo Tetris.</plot>
+  </game>
+  <game name="TEXT INVADERS WHITEOUT EDITION">
+    <description>TEXT INVADERS WHITEOUT EDITION</description>
+    <rom name="TEXT%20INVADERS%20WHITEOUT%20EDITION.tic" size="17004"/>
+    <snapshot1>zzmmTeZ.gif</snapshot1>
+    <studio>oshaboy</studio>
+    <plot>Yep. Whiteout Challenge. If you didn't realize the background is less than 1% darker than the characters. Changing a Palette won't work. The Escape Key is forbidden. </plot>
+  </game>
+  <game name="TEXT INVADERS">
+    <description>TEXT INVADERS</description>
+    <rom name="TEXT%20INVADERS.tic" size="17468"/>
+    <snapshot1>owcrZu3.gif</snapshot1>
+    <studio>oshaboy</studio>
+    <plot>Text Invaders. Back in the day the ROM font was a critical part of graphics. With Systems like the Tandy Color Computer and ZX81 relying on it. Back then it was to save RAM. Now... I guess it is just fun. Either way the TIC-80 has only 1 true screen mode. [CR]Anyway the game is a clone of Taito's Space Invaders using nothing but print() and font() for graphics (font() is limited to Block Elements which are are common feature in 8 bit computers but are absent from the tic. I feel like that is a fair compromise). [CR]The game has been minimally polished so criticism is welcome. Use X(A) and Y(S) to change palettes. Ernpu Yriry Zbq Sbhe.</plot>
+  </game>
+  <game name="THE DARK TOWER">
+    <description>THE DARK TOWER</description>
+    <rom name="THE%20DARK%20TOWER.tic" size="66095"/>
+    <snapshot1>cY5xTT7.gif</snapshot1>
+    <studio>Mannzerhacker</studio>
+    <plot>Based on the electronic board game from forever ago, but tweaked into a single player game.[CR]If you wait at the title screen there are descriptions of the items and tiles.[CR]Hints and Tips: [CR]*) stuff happens more often in henges and less often in plains - use that to your advantage.  You can't buy more than 2x your warriors in food until you find a beast.  [CR]*) If you run out of food your warriors die off.  [CR]*) Stay near towns[CR]*) Buy lots of warriors</plot>
+  </game>
+  <game name="THE HUNT FOR SOME GOLD">
+    <description>THE HUNT FOR SOME GOLD</description>
+    <rom name="THE%20HUNT%20FOR%20SOME%20GOLD.tic" size="45889"/>
+    <snapshot1>mPO9Z9I.gif</snapshot1>
+    <studio>dg125</studio>
+    <plot>You must get le treasures... i guess.[CR]I never explained... but you just need to get a bunch of gold i guess.[CR]Changelog: V1.0: Initial Release.[CR]V1.1: Minor polish, oh, and color. Also: trace command tells you your score if you win or lose in the console! Yaaaayy![CR]Follow my twitter. www.twitter.com/derpguy125</plot>
+  </game>
+  <game name="THE RIGHT COIN">
+    <description>THE RIGHT COIN</description>
+    <rom name="THE%20RIGHT%20COIN.tic" size="35205"/>
+    <snapshot1>CST17J7.gif</snapshot1>
+    <studio>Fabien Freling, Pascal Batty</studio>
+    <plot>You're dying, and medicine ain't cheap.[CR]Collect coins and buy medicine to extend your lifespan. Be careful of the current market values of your coins to optimize how much you can buy with what you have.[CR]This game has been developed for the Ludum Dare #44: "your life is currency".</plot>
+  </game>
+  <game name="THE SKY HOUSE">
+    <description>THE SKY HOUSE</description>
+    <rom name="THE%20SKY%20HOUSE.tic" size="74430"/>
+    <snapshot1>lke9zMw.gif</snapshot1>
+    <studio>Ahmed Khalifa</studio>
+    <plot>------------[CR]Description:[CR]------------[CR]The Sky House is a small metroidvania about a flying creature in a flying house. [CR]The game is inspired by REDDER and VVVVVV and take 30 mins to complete.[CR]Hope you will like the game.[CR]------------[CR]Controls:[CR]------------[CR]Arrows =&gt; Move[CR]X       =&gt; Jump[CR]X X     =&gt; Fly</plot>
+  </game>
+  <game name="THETEXTQUEST">
+    <description>THETEXTQUEST</description>
+    <rom name="THETEXTQUEST.tic" size="43252"/>
+    <snapshot1>2dxQQay.gif</snapshot1>
+    <studio>timonkot13</studio>
+    <plot>The story takes place in 2040 year[CR]You play as programmer, who chose a profession at what he is not the best. Its purpose is the destruction the new virus forms. To destroy them, you have to enter into the cyberspace. So, our programmer had already participated in that kind of operations and is going to another one. But it will be unusual, or maybe - fatal. It for you to decide dear "tic-80" user.</plot>
+  </game>
+  <game name="THIS IS MY MECH">
+    <description>THIS IS MY MECH</description>
+    <rom name="THIS%20IS%20MY%20MECH.tic" size="122576"/>
+    <snapshot1>002JBJE.gif</snapshot1>
+    <studio>emma bukaceck, phil hagelberg</studio>
+    <plot>When Earth is under attack, it's up to the pilot team of the Rhinocelator space mech to join forces and save the world![CR]Problem is, they can't really get their act together.[CR]Written in the Fennel programming language. Inspired by I'll Form the Head by MC Frontalot: https://m.youtube.com/watch?v=EMgsAD3D948</plot>
+  </game>
+  <game name="TIC PONG">
+    <description>TIC PONG</description>
+    <rom name="TIC%20PONG.tic" size="25312"/>
+    <snapshot1>Yb6kRIz.gif</snapshot1>
+    <studio>quocmai1107</studio>
+    <plot>This is my second TIC-80 game. I hope you enjoy.[CR]A: Select[CR]B: Return[CR]X: Exit[CR]P1: arrow buttons[CR]P2: button A and button Y </plot>
+  </game>
+  <game name="TIC TAC TOE">
+    <description>TIC TAC TOE</description>
+    <rom name="TIC%20TAC%20TOE.tic" size="39143"/>
+    <snapshot1>GSjqhTo.gif</snapshot1>
+    <studio>Enderto</studio>
+    <plot>Hello ![CR]this is my first game, a simple tictactoe[CR]i'm happy if you have fun with ^^</plot>
+  </game>
+  <game name="TIC WAR">
+    <description>TIC WAR</description>
+    <rom name="TIC%20WAR.tic" size="72591"/>
+    <snapshot1>u83tQHy.gif</snapshot1>
+    <studio>deemos</studio>
+    <plot>My first TIC-80 game! Run, jump, shoot and make things explode.[CR]Arrow keys to move, Z to shoot, X to jump.</plot>
+  </game>
+  <game name="TIC-COMMAND">
+    <description>TIC-COMMAND</description>
+    <rom name="TIC-COMMAND.tic" size="106293"/>
+    <snapshot1>DbKXEJ5.gif</snapshot1>
+    <studio>John Reder</studio>
+    <plot>TIC-COMMAND![CR]AN RTS FOR THE TIC-80 BY JOHN REDER (TACTICAL NEURONICS)[CR]YOU COMMAND AN ARMY THROUGH YOUR REMOTE COMMAND VEHICLE. YOUR GOAL IS TO DESTROY THE ENEMY'S COMMANDER BEFORE HIS ARMY DESTROYS YOURS. YOU HAVE A SATELLITE UPLINK, RADAR DRONES, AND A RADIO LINK TO GIVE ORDERS TO YOUR ROBOTIC SOLDIERS![CR]GAME-PLAY TIPS:[CR]NOTE THAT YOU ONLY SEE CLOAKED ENEMY UNITS WITHIN RANGE OF YOUR ROBOTS, OR WHEN THEY ATTACK, OR WITH YOUR DRONES AS YOU FLY OVER THEM. THEY RE-CLOAK AFTER A SHORT TIME IF YOU DO NOT HAVE ANY UNITS CLOSE BY TO TRACK THEM.[CR]CLOAKED ENEMY UNITS DO CAUSE MOVEMENT IN TREES AND IN WATER. IF YOU LOOK CLOSELY, YOU MAY LEARN WHERE THEY ARE HIDING.[CR]TREES AND WATER SLOW UNITS DOWN AS WELL AS LIMIT THEIR SIGHT RANGE FOR TARGETING.[CR]YOUR CANNONS HAVE THE BEST RANGE. IF YOU APPROACH ENEMY GROUPINGS SLOWLY AND FROM OPEN LAND YOU CAN PICK THEM OFF FROM OUTSIDE OF THEIR TARGETING RANGE.[CR]UPDATE v1.0.2 - ADDED SMITE BOMBS TO LOCAL RADAR - ONE HIT, ONE KILL![CR]UPDATE v1.0.3 - CHANGES TO TITLE AND LOAD SCREEN ART[CR]UPDATE v1.0.5 - INTERFACE IMPROVEMENTS / BARRIER ONLY MODE MORE INTERESTING. :)[CR]UPDATE v1.0.6 - ADDED ABORT OPTION TO PROBE FLIGHT. [CR]UPDATE v1.0.7 - ADDED FASTEST MODE FOR SLOWER DEVICES, HALF ARMY SIZE FASTEr PROBE FLIGHT.[CR]UPDATE v1.0.8 - ADDED SOME MUSIC TO THE INTRO AND BATTLE ENDING SCREENS.[CR]Enjoy!</plot>
+  </game>
+  <game name="TIC-SWEEPER">
+    <description>TIC-SWEEPER</description>
+    <rom name="TIC-SWEEPER.tic" size="64707"/>
+    <snapshot1>kkyCViq.gif</snapshot1>
+    <studio>Bentic</studio>
+    <plot>This is a Minesweeper clone made for practice for the Gamecodeur Gamejam #7.[CR]All code, graphics, sounds and music are made by myself with the included editors (with the exception of the title screen picture made with Pyxel Edit).[CR]More efficient code help for highscores storage in the game's cartridge persistent memory from Rami  (LIKO-12  developer).[CR]There is a secret mode accessible with the "Anokmi code"![CR]Can you find it ?</plot>
+  </game>
+  <game name="TICARUGA">
+    <description>TICARUGA</description>
+    <rom name="TICARUGA.tic" size="130970"/>
+    <snapshot1>WVKuaGr.gif</snapshot1>
+    <studio>Delta-key,Sklaiser</studio>
+    <plot>A Ikaruga demake shmup, made for the Demake Jam 2018: like the name says, we had to choose a game and "demake" it. Me and my friend Sklaiser decided to demake a game neither of us had ever played, that is, Ikaruga hahaha[CR] Still, its mechanics where so charming that we just had to choose it. [CR] Ticaruga is a bit rough in polish here and there, and the music isn't the greatest, but we could learn a lot. Feedback is welcome!</plot>
+  </game>
+  <game name="TICHESS">
+    <description>TICHESS</description>
+    <rom name="TICHESS.tic" size="47528"/>
+    <snapshot1>CcMPcMA.gif</snapshot1>
+    <studio>UmSingeloPugManco</studio>
+    <plot>TIChess[CR]Simple Chess game for TIC with random AI player (empty computer screen) and two Minimax players with stochastic choices on the branching paths and maximum branching set. Second minimax player explores the search tree more deeply than the first. Second minimax player (angry face) should take a while to compute his moves.[CR]Better played with between two human players. Putting two angry computers one against the other is not recommended. AI's may take some time to compute their actions (About 6 minutes for hard AI).[CR]The game's code is a mess but should be well commented enough so that you can understand it. If you want any help understanding it just send me a message on itch.[CR]Controls:[CR]* Arrow keys to move cursor on table and on menus.[CR]* A (z on keyboard) Selects pieces and selects options on menu[CR]* B (x on keyboard) cancels the selection of a piece and leaves in-game menu.[CR]* X (a on keyboard) opens in-game menu[CR]In-game Menu help:[CR]* Arrow resumes the game[CR]* Select a player's icon to cycle it between human, random AI, Easy Minimax AI and "Hard" Minimax AI.[CR]* Select the looping arrow to restart the game.[CR]* Click on the door if you're a heartless person.[CR]KNOWN BUGS:[CR]* When two AIs are battling it out, the "AI thinking" icon shows the faster AI, not the correct one.[CR]WON'T FIX:[CR]* No audio is intentional. Audio on these kinds of games tended to be what I hated most as a child.[CR]* Cursor points to where the AI moved its piece to help the player identify what move was made.[CR]* I don't plan on adding animations.[CR]Made by USPM (https://uspm.itch.io/) for the FFS2019 game jam (https://itch.io/jam/finally-finish-something-2019).[CR]Upload: Basic game, no en-passant, no checking[CR]Update#1: Added en-passant and checking.[CR]Update#2: Made AI choose moves weighted by whether it captured a piece.[CR]Update#3: Added further heuristics to minimax AI's choice.[CR]Update#4: Bugfixes.[CR]Update#5: Bugfixes, performance improvements, tested which "hard" AI was harder, implemented castling. Considering the game "finished".</plot>
+  </game>
+  <game name="TICLINES">
+    <description>TICLINES</description>
+    <rom name="TICLINES.tic" size="23707"/>
+    <snapshot1>2eiqQER.gif</snapshot1>
+    <studio>Librorumque</studio>
+    <plot>A ripof^w tribute to the Color Lines, possibly the first PC game I've played.[CR]If the game seems too hard, try lowering `colors`,`add_balls`, or `min_chain` at lines 12-14.[CR]Help flags are `show_next_cells` and `show_next_cols` at lines 26-27, for those who want to disable them by default.[CR]The rest of the code is in a rather pitiful state.</plot>
+  </game>
+  <game name="TICRIS">
+    <description>TICRIS</description>
+    <rom name="TICRIS.tic" size="27918"/>
+    <snapshot1>2B5DGAz.gif</snapshot1>
+    <studio>AlKau</studio>
+    <plot>Keyboard Controls: [CR]Move - Left Arrow, Right Arrow[CR]Rotation - Up Arrow, Z[CR]Soft Drop - Down Arrow[CR]Select/Pause - X</plot>
+  </game>
+  <game name="TIM and MIT">
+    <description>TIM and MIT</description>
+    <rom name="TIM%20and%20MIT.tic" size="72439"/>
+    <snapshot1>kkCSwHr.gif</snapshot1>
+    <studio>HomineLudens</studio>
+    <plot>TIM and MIT, my puzzle game FC_JAM[CR]also on[CR]https://homineludens.itch.io/timemit[CR]v004: change button layouts for a better mobile gameplay (you'll loose High Score!!!)</plot>
+  </game>
+  <game name="TINY DUNGEON">
+    <description>TINY DUNGEON</description>
+    <rom name="TINY%20DUNGEON.tic" size="170665"/>
+    <snapshot1>rvRDZRG.gif</snapshot1>
+    <studio>team slime</studio>
+    <plot>Enjoy your time in the TINY DUNGEON.[CR]Select music by Maxie Satan: http://twitter.com/MaxieSatan[CR]Itch.io: https://vriskaserket.itch.io/tiny-dungeon</plot>
+  </game>
+  <game name="TINY LIFE">
+    <description>TINY LIFE</description>
+    <rom name="TINY%20LIFE.tic" size="78077"/>
+    <snapshot1>8TLRkVv.gif</snapshot1>
+    <studio>MetalDudeBro</studio>
+    <plot>My personal interpretation of Conways Game of Life. You can play around with some drawing tools, or you can just zoom out, hit Enter to randomize the universal constants, and lean back and watch it all unfold.[CR](The performance is much better if you play it in your own TIC-80, instead of the website.)[CR]Also available on itch.io (https://metaldudebro.itch.io/tiny-life)[CR]Some of the controls are:[CR]    H - view help screens, for more info.[CR]    TAB - Hide/show the UI[CR]    SPACE - pause/unpause[CR]    ENTER - randomize the layout of all the cells[CR]    PAGE-UP/DOWN - cycle zoom levels (currently this kills all the cells and resets the game)[CR]    G - pass one generation (only works with the game paused)[CR]You can use several drawing tools to revive/kill cells using your mouse. [CR]    V/1 - Brush tool. Revives/kills a single cell (using left/right mouse buttons -- can be made bigger/smaller with W and S)[CR]    R/C/L - Rectangle/Circle/Line tools.[CR]    2-6 - Pattern tool, which gives you some premade patterns you can use.[CR]    F - Fill tool[CR]    E - Toggle draw/eraser mode.[CR]About the UI: top left is the number of generations that have passed. Top right is number of cells: living/dead/total. Bottom left is zoom level and mouse position.[CR]If you hate the spacing around the cells, press P, or edit the code in TIC-80 and change the 'use_padding' variable to 'false', to disable it permanently. I placed a few useful variables, like that one, near the top of the code.[CR]Have fun!</plot>
+  </game>
+  <game name="TINY TREK">
+    <description>TINY TREK</description>
+    <rom name="TINY%20TREK.tic" size="18843"/>
+    <snapshot1>jEygEjU.gif</snapshot1>
+    <studio>Kikeroga</studio>
+    <plot>Old-fashioned classic space war game.[CR]--- Key operation ---[CR]LEFT and RIGHT : Select Command[CR]UP and DOWN : Seting Value[CR]B or X : Execute Command[CR]A or Z : Help[CR]How to fire PHASER[CR]Use NRG to the right of PHASER to set the launch energy, move the cursor to PHASER and fire with the X key.[CR]How to fire TORPEDO[CR]Use COURCE to the right of TORPEDO to set the launch angle, move the cursor to TORPEDO and fire with the X key.[CR]How to do WARP[CR]Use SPEED and COURCE to the right of WARP ENGINE to set the distance and launch angle, move the cursor to WARP and warp with the X key.</plot>
+  </game>
+  <game name="TITLESCREEN">
+    <description>TITLESCREEN</description>
+    <rom name="TITLESCREEN.tic" size="79034"/>
+    <snapshot1>G3QIjAb.gif</snapshot1>
+    <studio>lemon</studio>
+    <plot>desktop users: use 'z', 'x' and the arrow keys</plot>
+  </game>
+  <game name="TOETAC TIC">
+    <description>TOETAC TIC</description>
+    <rom name="TOETAC%20TIC.tic" size="13915"/>
+    <snapshot1>xb5XqOB.gif</snapshot1>
+    <studio>wowods</studio>
+    <plot>Arrow keys to move cursor[CR]Z - Pick/Drop pawn[CR]X - Return picked pawn to its previous position[CR]S - Reset game[CR]Valid movement shown by the gray indicator at the edge of each grid.[CR]Pawns at the grid on the side of the board cannot move diagonally, only pawn in the corners and center of the board can move diagonally.[CR]A player who can make a row with his pawns win the game.[CR]-- Updated : Fix pressing X at first phase causing error/crash.</plot>
+  </game>
+  <game name="TSNAKE">
+    <description>TSNAKE</description>
+    <rom name="TSNAKE.tic" size="37251"/>
+    <snapshot1>JlvS2oT.gif</snapshot1>
+    <studio>Andrei Rudenko</studio>
+    <plot>This game is made for Ludum Dare 41[CR]Theme: Combine 2 Incompatible Genres[CR]Type letters to switch snake direction [CR]Game difficulty  = Words length[CR]Controls: Keyboard</plot>
+  </game>
+  <game name="TURNS OF WAR">
+    <description>TURNS OF WAR</description>
+    <rom name="TURNS%20OF%20WAR.tic" size="73936"/>
+    <snapshot1>FsF92ly.gif</snapshot1>
+    <studio>msx80, Stavros, Fubuki</studio>
+    <plot>A turn based fantasy strategy game! Over 26 levels and 28 unit types! Magic, effects, strategy, and more! Simple one button interface for seamless play experience on Android! [CR]Tutorial included![CR]Now with Music and sfx!! :)[CR]Code and design by MSX (&lt;a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4b263833737b0b3f3c223f3f2e39"&gt;[email protected]&lt;/a&gt;)[CR]Graphics by Stavros (&lt;a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="20454c4941434f414e6054574954544552"&gt;[email protected]&lt;/a&gt;)[CR]Music and sound by Fubuki</plot>
+  </game>
+  <game name="UNKNOWN GROUNDS">
+    <description>UNKNOWN GROUNDS</description>
+    <rom name="UNKNOWN%20GROUNDS.tic" size="48896"/>
+    <snapshot1>P9uRMod.gif</snapshot1>
+    <studio>dj_pale</studio>
+    <plot>LOWREZJAM 2017 Game[CR]by dj_pale</plot>
+  </game>
+  <game name="UNKO HUNTER YAKIU">
+    <description>UNKO HUNTER YAKIU</description>
+    <rom name="UNKO%20HUNTER%20YAKIU.tic" size="11468"/>
+    <snapshot1>twzbwFR.gif</snapshot1>
+    <studio>DeveloperFromOnj</studio>
+    <plot>score atack game[CR]by DeveloperFromOnj</plot>
+  </game>
+  <game name="VOGELJAGD">
+    <description>VOGELJAGD</description>
+    <rom name="VOGELJAGD.tic" size="29339"/>
+    <snapshot1>ADXVdVL.gif</snapshot1>
+    <studio>nickifr</studio>
+    <plot>A game about shooting birds from the sky, inspired by Moorhuhn and Duck Hunt.[CR]Shoot as many birds as you can to reach the highest score possible in 60 seconds![CR]Current Version: V1.2.1 (Made for TIC-80 Version 0.30.0)[CR]Controls: Mouse for aiming, Mouse-Button for shooting. F11 for fullscreen.[CR]Also available on itch.io: https://nickifr.itch.io/vogeljagd</plot>
+  </game>
+  <game name="VVVVVV TIC-80 DEMAKE">
+    <description>VVVVVV TIC-80 DEMAKE</description>
+    <rom name="VVVVVV%20TIC-80%20DEMAKE.tic" size="49384"/>
+    <snapshot1>oKE08MA.gif</snapshot1>
+    <studio>dg125</studio>
+    <plot>DEMO VERSION[CR]Wow! A remake of VVVVVV? Never even heard of! (coughcoughsarcasmcoughcough)[CR]But! It's Acceptable! Even if it has wonky collisions![CR](TRINKETS AVAILABLE: 2)[CR](UPDATE 1: Added a Commodore 64 Palette, finished off the first area.)</plot>
+  </game>
+  <game name="WALL BALL">
+    <description>WALL BALL</description>
+    <rom name="WALL%20BALL.tic" size="19994"/>
+    <snapshot1>djPubsC.gif</snapshot1>
+    <studio>Kasey Johnson - Hurt Man Studios</studio>
+    <plot>Welcome to Wall Ball![CR]+1 point for hitting the top. The ball gets faster every time, try to keep up![CR]Post your high score in the comments![CR]Arrow keys or gamepad to move left and right.[CR]Z on keyboard or A on gamepad to restart after losing.</plot>
+  </game>
+  <game name="WARG">
+    <description>WARG</description>
+    <rom name="WARG.tic" size="67149"/>
+    <snapshot1>Vbp1fsQ.gif</snapshot1>
+    <studio>cheap sunglasses crew</studio>
+    <plot>You were thrown to sewers to die. Try to survive as long as you can, using your trusty sword, magic dash skill and your dexterity.[CR]This is my first game.[CR]https://github.com/cheapsunglassescrew/warg - you will find source code here.[CR]https://github.com/cheapsunglassescrew/rosetic - there you will find RoseTIC, simple game framework with object management, collisions and levels. It was used to create Warg.[CR]This game was written in TypeScript, using https://github.com/scambier/tic80-typescript.</plot>
+  </game>
+  <game name="WARM WHEELS">
+    <description>WARM WHEELS</description>
+    <rom name="WARM%20WHEELS.tic" size="74508"/>
+    <snapshot1>UHYPa9h.gif</snapshot1>
+    <studio>msx80</studio>
+    <plot>A car racing game! Play against your friends or some CPU cars![CR]Three different tracks![CR]Car sprite and engine sound by @Fubuki!</plot>
+  </game>
+  <game name="WCQ NO 6">
+    <description>WCQ NO 6</description>
+    <rom name="WCQ%20NO%206.tic" size="34377"/>
+    <snapshot1>ejAlbWU.gif</snapshot1>
+    <studio>mieki256</studio>
+    <plot>Worst Cheap Quality Shoot 'em up exapmle No.6[CR]by mieki256</plot>
+  </game>
+  <game name="WEST TRADE">
+    <description>WEST TRADE</description>
+    <rom name="WEST%20TRADE.tic" size="15368"/>
+    <snapshot1>CvPoEZo.gif</snapshot1>
+    <studio>Marcuss2</studio>
+    <plot>A simple trading game for CGAjam.</plot>
+  </game>
+  <game name="WESTFARM">
+    <description>WESTFARM</description>
+    <rom name="WESTFARM.tic" size="28633"/>
+    <snapshot1>jVlzmN0.gif</snapshot1>
+    <studio>Marcuss2, Jusstas, Hepha</studio>
+    <plot>A simple-ish farming game for grow jam.[CR]Code by Marcuss2, Graphics by Jusstas, Music by Hepha Chronos[CR]Controls: [CR]Arrow keys/Dpad/Analog stick for movement, Z (Keyboard)/A (Gamepad) to select control scheme.[CR]Keep in mind AZERTY scheme doesn't work in browser. (Only affects UI)</plot>
+  </game>
+  <game name="WHERES DITTO">
+    <description>WHERES DITTO</description>
+    <rom name="WHERES%20DITTO.tic" size="78647"/>
+    <snapshot1>c65sgtq.gif</snapshot1>
+    <studio>Sh0rtCut457, Yurhi</studio>
+    <plot>Here is a little game made for the GameJam Pot-au-jeu #2, in which you play Ash, desperately looking for his Ditto lost in nature! And this one has the nasty habit of transforming himself into all the pokemons he encounters on his way... [CR]Will you be able to catch it on time with only 5 pokeballs in your pocket?  Good luck ![CR]Ressources :[CR]Assets  :[CR]http://pixeljoint.com/pixelart/120712.htm - Sprites pokemon by JerryPie[CR]Musics :[CR]https://tic.computer/play?cart=93 - FOUBARS Remix (Tromino) by Sh0rtCut457[CR]https://tic.computer/play?cart=348 - "SITTING IN THE SNOW" Jummit</plot>
+  </game>
+  <game name="WITCHEM UP">
+    <description>WITCHEM UP</description>
+    <rom name="WITCHEM%20UP.tic" size="66047"/>
+    <snapshot1>21JM0Ke.gif</snapshot1>
+    <studio>tinchetsu,RushJet1</studio>
+    <plot>Witch'Em Up![CR]Little witch shoot'em up.[CR]Entry for CGAJAM</plot>
+  </game>
+  <game name="WIZARDS">
+    <description>WIZARDS</description>
+    <rom name="WIZARDS.tic" size="22615"/>
+    <snapshot1>EDp60vO.gif</snapshot1>
+    <studio>Sammy6</studio>
+    <plot>Duck and jump around your opponent's spells and cast some of your own at them![CR]Press ESC and click GAMEPAD CONFIG to set up the controls.[CR]CONTROLS:[CR]LEFT and RIGHT to move[CR]A to jump[CR]DOWN to duck[CR]DOWN in air to land faster[CR]B to attack[CR]B + UP to high attack[CR]Q to reset[CR]Press A and S and Up to enter debug mode[CR]Made in 2 days for the 5th Alakajam.</plot>
+  </game>
+  <game name="WORM GAME">
+    <description>WORM GAME</description>
+    <rom name="WORM%20GAME.tic" size="4194"/>
+    <snapshot1>OiwPflR.gif</snapshot1>
+    <studio>Ark2000</studio>
+    <plot>Hi, I'm new to TIC-80, and it's my first game, classic worm, use z to hide/show mesh. </plot>
+  </game>
+  <game name="YITZI">
+    <description>YITZI</description>
+    <rom name="YITZI.tic" size="23386"/>
+    <snapshot1>hIzU87P.gif</snapshot1>
+    <studio>Poltergasm</studio>
+    <plot>Think of this as video yahtzee. If you find any bugs, please let me know.[CR]Controls are pretty simple. Press 'x' to roll dice, and click on the rest. No, I'm not going to explain the rules of Yahtzee, sorry.[CR]Once you've received your final score, just roll again to start a new game. You'll probably want to, because Yahtzee is wonderful.</plot>
+  </game>
+</datafile>
