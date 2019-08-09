@@ -250,8 +250,12 @@ class iagl_utils(object):
 			for ff in [x for x in files if 'xml' in x.lower()]:
 				with closing(xbmcvfs.File(os.path.join(self.get_addon_dat_folder_path(),ff))) as fo:
 					byte_string = bytes(fo.readBytes(10000)) #Read first ~10kb of dat file to get header
-				header_string = byte_string.decode('utf-8')
-				if '</header>' in header_string:
+				if b'</header>' in byte_string:
+					try:
+						header_string = byte_string.split(b'</header>')[0].decode('utf-8')
+					except Exception as exc:
+						xbmc.log(msg='IAGL Error:  Encoding error in file %(ff)s.  Exception %(exc)s' % {'ff': ff, 'exc': exc}, level=xbmc.LOGERROR)
+						header_string = byte_string.split(b'</header>')[0].decode('utf-8',errors='ignore') #Try again ignoring whatever character python doesnt like.  Probably not foolproof
 					for kk in new_game_lists.keys():
 						if kk in self.dat_file_header_keys:
 							new_game_lists[kk].append(header_string.split('<%(tag)s>' % {'tag':kk})[-1].split('</%(tag)s>' % {'tag':kk})[0])
