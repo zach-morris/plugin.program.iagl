@@ -3813,532 +3813,532 @@
 	</launcher>
 <!-- LibreElec "Remix" (5schatten Build) https://forum.libreelec.tv/thread/12662-libreelec-9-x-rr-emulationstation-retroarch-pegasus-dolphinqt-moonlight-chrome-s -->
 	<launcher name="RetroArch 4DO (3DO)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/4do_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/4do_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Citra Canary (3DS)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/citra_canary_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/citra_canary_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Citra (3DS)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/citra_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/citra_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch FSUAE (Amiga)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/fsuae_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/fsuae_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PUAE (Amiga)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/puae_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/puae_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch UAE4ARM (Amiga)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/uae4arm_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/uae4arm_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch CAP32 (Amstrad CPC)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/cap32_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/cap32_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch CrocoDS (Amstrad CPC)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/crocods_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/crocods_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch MAME 2010 (Arcade 0.135u4)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mame2009_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mame2009_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch MAME 2010 (Arcade 0.139)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mame2010_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mame2010_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch MAME 2014 (Arcade 0.159)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mame2014_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mame2014_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch MAME 2015 (Arcade 0.160)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mame2015_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mame2015_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch MAME 2016 (Arcade 0.174)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mame2016_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mame2016_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch FBA 2012 (Arcade 0.2.97.29)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/fbalpha2012_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/fbalpha2012_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch MAME 2000 (Arcade 0.37b5)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mame2000_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mame2000_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch MAME 2003 (Arcade 0.78)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mame2003_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mame2003_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch MAME 2003 Plus (Arcade 0.78)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mame2003_plus_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mame2003_plus_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch FBA CPS1 2012 (Arcade CPS1 0.2.97.29)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/fbalpha2012_cps1_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/fbalpha2012_cps1_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch FBA CPS2 2012 (Arcade CPS2 0.2.97.29)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/fbalpha2012_cps2_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/fbalpha2012_cps2_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch FBA CPS3 2012 (Arcade CPS3 0.2.97.29)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/fbalpha2012_cps3_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/fbalpha2012_cps3_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch FBA (Arcade Latest)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/fbalpha_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/fbalpha_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch FB Neo (Arcade Latest)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/fbneo_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/fbneo_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch MAME (Arcade Latest)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mame_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mame_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch MAME 2003 Midway (Arcade Midway 0.78)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mame2003_midway_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mame2003_midway_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/stella2014_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/stella2014_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Stella (Atari 2600)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/stella_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/stella_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch ProSystem (Atari 7800)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/prosystem_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/prosystem_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Atari800 (Atari 800/Atari 5200)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/atari800_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/atari800_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Hatari (Atari ST/STE/TT/Falcon)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/hatari_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/hatari_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch VICE C128 (C128)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/vice_x128_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vice_x128_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Frodo (C64)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/frodo_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/frodo_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch VICE C64 (C64)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/vice_x64_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vice_x64_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch VICE SDL C64 (C64)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/x64sdl_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/x64sdl_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PocketCDG (CDG Music)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/pocketcdg_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/pocketcdg_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch EMUX CHIP-8 (CHIP-8)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/emux_chip8_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/emux_chip8_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch ChaiLove Engine (ChaiLove)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/chailove_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/chailove_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch ChaiGame (ChaiScript)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/chaigame_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/chaigame_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch DOSBox (DOS)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/dosbox_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/dosbox_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch DOSBox SVN Glide (DOS)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/dosbox_svn_glide_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/dosbox_svn_glide_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch DOSBox SVN (DOS)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/dosbox_svn_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/dosbox_svn_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PrBoom (Doom)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/prboom_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/prboom_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BeetleDC (Dreamcast WinCE)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/beetledc_wince_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/beetledc_wince_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch FlyCast (Dreamcast WinCE)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/flycast_wince_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/flycast_wince_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/reicast_wince_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/reicast_wince_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Redream (Dreamcast)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/redream_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/redream_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Reicast (Dreamcast)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/reicast_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/reicast_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Reicast OIT (Dreamcast)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/reicast_oit_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/reicast_oit_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BeetleDC (Dreamcast/Naomi)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/beetledc_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/beetledc_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="Retroarch FlyCast (Dreamcast/Naomi)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/flycast_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/flycast_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch FreeChaF (Fairchild ChannelF)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/freechaf_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/freechaf_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch EMUX GB (GB/GBC)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/emux_gb_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/emux_gb_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch fixGB (GB/GBC)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/fixgb_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/fixgb_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Gambatte (GB/GBC)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/gambatte_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/gambatte_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Gearboy (GB/GBC)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/gearboy_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/gearboy_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch SameBoy (GB/GBC)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/sameboy_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/sameboy_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch TGBDual (GB/GBC)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/tgbdual_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/tgbdual_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch gpSP (GBA)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/gpsp_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/gpsp_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen GBA (GBA)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mednafen_gba_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mednafen_gba_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Meteor (GBA)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/meteor_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/meteor_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch mGBA (GBA)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mgba_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mgba_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch TempGBA (GBA)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/tempgba_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/tempgba_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch VBANext (GBA)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/vba_next_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vba_next_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch VBA-M (GBA)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/vbam_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vbam_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Gearsystem (GG/SMS)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/gearsystem_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/gearsystem_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Genesis Plus GX (GG/SMS/Gen/PICO/SG-1000)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/genesis_plus_gx_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/genesis_plus_gx_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Game and Watch (Game and Watch)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/gw_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/gw_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BlastEm (Gen/MD)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/blastem_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/blastem_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch FreeIntv (Intellivision)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/freeintv_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/freeintv_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Virtual Jaguar (Jaguar)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/virtualjaguar_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/virtualjaguar_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch FreeJ2ME (Java)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/freej2me_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/freej2me_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch SquirrelJME (Java)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/squirreljme_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/squirreljme_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Daphne (Laserdisc)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/daphne_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/daphne_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Lua Engine (Lutro)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/lutro_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/lutro_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Handy (Lynx)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/handy_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/handy_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen Lynx (Lynx)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mednafen_lynx_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mednafen_lynx_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch UME2014 (MAME/MESS 0.159)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/ume2014_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/ume2014_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch UME2015 (MAME/MESS 0.160)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/ume2015_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/ume2015_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch MESS 2014 (MESS 0.159)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mess2014_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mess2014_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch MESS 2014 (MESS 0.160)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mess2015_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mess2015_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BlueMSX (MSX)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/bluemsx_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/bluemsx_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch fMSX (MSX)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/fmsx_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/fmsx_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch FFmpeg (Media Player)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/ffmpeg_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/ffmpeg_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch MPV (Media Player)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mpv_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mpv_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Imageviewer (Media Viewer)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/imageviewer_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/imageviewer_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mupen64Plus GLES3 (N64)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mupen64plus_gles3_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mupen64plus_gles3_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mupen64Plus (N64)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mupen64plus_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mupen64plus_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mupen64Plus Next (N64)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mupen64plus_next_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mupen64plus_next_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch ParaLLEl (N64)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/parallel_n64_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/parallel_n64_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch DeSmuME 2015 (NDS)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/desmume2015_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/desmume2015_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch DeSmuME (NDS)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/desmume_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/desmume_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Neko Project II (NEC PC-98)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/nekop2_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/nekop2_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Neko Project II Kai (NEC PC-98)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/np2kai_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/np2kai_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BNES (NES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/bnes_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/bnes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch EMUX NES (NES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/emux_nes_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/emux_nes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch FCEUmm (NES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/fceumm_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/fceumm_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch fixNES (NES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/fixnes_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/fixnes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mesen (NES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mesen_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mesen_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Nestopia (NES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/nestopia_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/nestopia_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/quicknes_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/quicknes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mednafen_ngp_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mednafen_ngp_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch CaveStory (NXEngine)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/nxengine_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/nxengine_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Reicast Naomi (Naomi)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/reicast_naomi_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/reicast_naomi_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch FBA NEO 2012 (Neo Geo 0.2.97.29)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/fbalpha2012_neogeo_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/fbalpha2012_neogeo_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch melonDS (Nintendo DS)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/melonds_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/melonds_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch O2EM (Odyssey2/Videopac)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/o2em_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/o2em_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch 3D Engine (Other)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/3dengine_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/3dengine_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Game Music Emu (Other)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/gme_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/gme_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PCem (PC)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/pcem_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/pcem_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch QUASI88 (PC-8801)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/quasi88_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/quasi88_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mednafen_pcfx_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mednafen_pcfx_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen SuperGrafx (PCE SuperGrafx)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mednafen_supergrafx_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mednafen_supergrafx_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mednafen_pce_fast_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mednafen_pce_fast_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mednafen_pce_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mednafen_pce_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/vice_xplus4_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vice_xplus4_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen PSX HW (PS1)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mednafen_psx_hw_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mednafen_psx_hw_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen PSX (PS1)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mednafen_psx_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mednafen_psx_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PCSX1 (PS1)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/pcsx1_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/pcsx1_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PCSX ReArmed (PS1)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/pcsx_rearmed_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/pcsx_rearmed_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PCSX ReArmed NEON (PS1)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/pcsx_rearmed_libretro_neon.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/pcsx_rearmed_libretro_neon.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Rustation (PS1)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/rustation_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/rustation_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Play (PS2)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/play_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/play_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch RemoteJoy (PSP RemotePlay)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/remotejoy_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/remotejoy_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PPSSPP (PSP)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/ppsspp_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/ppsspp_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mu (Palm OS)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mu_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mu_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/pokemini_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/pokemini_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/tyrquake_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/tyrquake_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Oberon (RISC)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/oberon_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/oberon_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/easyrpg_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/easyrpg_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/xrick_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/xrick_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch SimCoupe (SAM coupe)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/simcp_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/simcp_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch EMUX SMS (SMS)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/emux_sms_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/emux_sms_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PicoDrive (SMS/Gen/Sega CD/32X)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/picodrive_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/picodrive_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch SNES9x 2002 (SNES 1.39)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/snes9x2002_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/snes9x2002_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch SNES9x 2005 (SNES 1.43)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/snes9x2005_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/snes9x2005_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch SNES9x 2005 Plus (SNES 1.43)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/snes9x2005_plus_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/snes9x2005_plus_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/snes9x2010_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/snes9x2010_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Accuracy (SNES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/bsnes_accuracy_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/bsnes_accuracy_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Balanced (SNES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/bsnes_balanced_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/bsnes_balanced_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Performance v085 (SNES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/bsnes_cplusplus98_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/bsnes_cplusplus98_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Mercury Accuracy (SNES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/bsnes_mercury_accuracy_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/bsnes_mercury_accuracy_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Mercury Balanced (SNES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/bsnes_mercury_balanced_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/bsnes_mercury_balanced_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Mercury Performance (SNES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/bsnes_mercury_performance_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/bsnes_mercury_performance_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Performance (SNES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/bsnes_performance_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/bsnes_performance_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch SNES Higan nSide Balanced (SNES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/higan_sfc_balanced_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/higan_sfc_balanced_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch SNES Higan (SNES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/higan_sfc_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/higan_sfc_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen SNES (SNES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mednafen_snes_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mednafen_snes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch SNES9x (SNES)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/snes9x_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/snes9x_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Kronos (Saturn)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/kronos_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/kronos_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen Saturn (Saturn)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mednafen_saturn_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mednafen_saturn_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Yabasanshiro (Saturn)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/yabasanshiro_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/yabasanshiro_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Yabuse (Saturn)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/yabause_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/yabause_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch VeMUlator (Sega VMU)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/vemulator_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vemulator_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch FUSE (Spectrum)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/fuse_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/fuse_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch 2048 (Standalone Game)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/2048_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/2048_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch CannonBall (Standalone Game)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/cannonball_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/cannonball_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Craft (Standalone Game)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/craft_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/craft_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Dinothawr (Standalone Game)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/dinothawr_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/dinothawr_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mrboom_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mrboom_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch OpenTyrian (Standalone Game)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/opentyrian_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/opentyrian_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PascalPong (Standalone Game)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/pascal_pong_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/pascal_pong_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch REminiscence (Standalone Game)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/reminiscence_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/reminiscence_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Dungeon Crawl Stone Soup (Standalone Game)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/stonesoup_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/stonesoup_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PowderToy (Standalone Game)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/thepowdertoy_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/thepowdertoy_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch TIC80 (TIC-80)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/tic80_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/tic80_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Theodore (Thomson TO8D)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/theodore_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/theodore_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch OpenLara (Tomb Raider)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/openlara_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/openlara_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="Retroarch Uzem (Uzebox)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/uzem_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/uzem_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Commodore VICE VIC20 (VIC20)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/vice_xvic_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vice_xvic_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch ScummVM (Various)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/scummvm_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/scummvm_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch VECX (Vectrex)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/vecx_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vecx_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen VB (VirtualBoy)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mednafen_vb_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mednafen_vb_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Dolphin (Wii/Gamecube)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/dolphin_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/dolphin_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Dolphin Ishiiruka (Wii/Gamecube)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/ishiiruka_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/ishiiruka_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen Cygne (WonderSwan/WonderSwan Color)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/mednafen_wswan_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mednafen_wswan_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Sharp X68000 (X68000)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/px68k_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/px68k_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch EightyOne (ZX81)" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start -L /tmp/cores/81_libretro.so "%ROM_PATH%"</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/81_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 <!-- LibreElec "Remix" (5schatten Build) Additional Emulator External Commands -->
 	<launcher name="Citra (3DS)" os="LibreElec Remix">
@@ -4360,7 +4360,7 @@
 		<launcher_command>/usr/bin/PPSSPP.start "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Launch App Only" os="LibreElec Remix">
-		<launcher_command>/usr/bin/retroarch.start</launcher_command>
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh"</launcher_command>
 	</launcher>
 	<launcher name="Vice (C64)" os="LibreElec Remix">
 		<launcher_command>/usr/bin/x64.start -autostart "%ROM_RAW%"</launcher_command>
