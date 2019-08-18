@@ -105,8 +105,8 @@ class iagl_utils(object):
 		self.change_search_terms_to_any = lambda nn: 'Any' if nn is None else nn
 		self.flatten_list = lambda l: [item for sublist in l for item in sublist]
 		self.game_label_settings = 'Title|Title, Genre|Title, Date|Title, Players|Title, Genre, Date|Title, Genre, Size|Title, Genre, Players|Title, Date, Size|Title, Date, Players|Genre, Title|Date, Title|Players, Title|Genre, Title, Date|Date, Title, Genre|Players, Title, Genre|Players, Title, Date|Title, Genre, Date, ROM Tag|Title, Genre, Date, Players|Title, Genre, Players, ROM Tag|Title, Genre, Date, Size'
-		self.archive_listing_settings = 'Choose from List|Browse All Lists|Browse by Category|Search|Random Play'
-		self.archive_listing_settings_routes = ['choose_from_list','all','categorized','search_menu','random_menu']
+		self.archive_listing_settings = 'Choose from List|Browse All Lists|Browse by Category|Favorites|Search|Random Play'
+		self.archive_listing_settings_routes = ['choose_from_list','all','categorized','categorized/Favorites','search_menu','random_menu']
 		self.archive_listing_settings_route = None
 		self.game_listing_settings = 'One Big List|Choose from List|Alphabetical|Group by Genre|Group by Year|Group by Players|Group by Studio'
 		self.game_listing_settings_routes = ['list_all','choose_from_list','alphabetical','list_by_genre','list_by_year','list_by_players','list_by_studio']

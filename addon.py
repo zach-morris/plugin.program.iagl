@@ -48,10 +48,13 @@ def iagl_main():
 def list_archives_browse():
 	list_method = 'choose_from_list'
 	for list_item in IAGL.get_browse_lists_as_listitems():
-		if (list_item.getLabel2() == 'search_menu' and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_setting_show_search'))) or (list_item.getLabel2() == 'random_menu' and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_setting_show_randomplay'))):
+		if (list_item.getLabel2() == 'search_menu' and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_setting_show_search'))) or (list_item.getLabel2() == 'random_menu' and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_setting_show_randomplay'))) or (list_item.getLabel2() == 'categorized/Favorites' and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_setting_show_favs'))):
 			xbmc.log(msg='IAGL:  Getting game item %(game_list_item)s is hidden per setting' % {'game_list_item': list_item.getLabel2()}, level=xbmc.LOGDEBUG)
 		else:
-			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/archives/'+url_quote(list_item.getLabel2())),list_item, True)
+			if (list_item.getLabel2() == 'categorized/Favorites'):
+				xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/archives/'+list_item.getLabel2()),list_item, True) #Dont urlquote favs url
+			else:
+				xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/archives/'+url_quote(list_item.getLabel2())),list_item, True)
 	if IAGL.check_to_show_history(): #Add history to the main choose menu as well
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/game_list/'+IAGL.current_game_listing_route+'/game_history/1'),IAGL.get_game_history_listitem(), True)
 	xbmcplugin.endOfDirectory(plugin.handle)
