@@ -738,7 +738,7 @@ class iagl_utils(object):
 		game_listitems = list()
 		game_lists_dict = self.get_game_lists()
 		#Ensure the return categories object is a list so it can be iterated on
-		if type(return_categories) is str:
+		if type(return_categories) is str or type(return_categories) is unicode:
 			return_cats = [return_categories]
 		else:
 			return_cats = return_categories
@@ -3821,7 +3821,7 @@ class iagl_launch(object):
 				self.external_launch_command = self.json.get('game').get('rom_override_cmd')
 			if self.external_launch_command is not None:
 				self.external_launch_command = self.IAGL.get_external_command(self.external_launch_command)
-		if type(filenames_in) is str:
+		if type(filenames_in) is str or type(filenames_in) is unicode:
 			self.launch_filenames = [filenames_in]
 		else:
 			self.launch_filenames = filenames_in
