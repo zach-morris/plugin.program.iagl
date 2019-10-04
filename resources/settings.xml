@@ -17,6 +17,7 @@
 		<setting id="iagl_setting_show_favs" type="select" label="30194" lvalues="30092|30093" default="0" visible="true"/>
 		<setting id="iagl_setting_show_extras" type="select" label="30094" lvalues="30092|30093" default="0" visible="false"/>
 		<setting id="iagl_setting_autoplay_trailer" type="select" label="30020" lvalues="30204|30200" default="0"/>
+		<setting id="iagl_append_emu_name_to_results" type="select" label="30195" lvalues="30200|30204" default="0"/>
 		<setting id="iagl_setting_dl_cache" type="select" label="30021" lvalues="30097|30098|30099|30100|30101|30102|30103|30104|30105|30106|30107|30108|30109|30110|30111|30112|30113|30114|30129|30130" default="0"/>
 		<setting id="iagl_setting_enable_login" type="select" label="30022" lvalues="30095|30096" default="1"/>
 		<setting id="iagl_setting_ia_username" type="text" label="30023" default="" visible="eq(-1,0)"/>

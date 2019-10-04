@@ -135,7 +135,7 @@ class iagl_utils(object):
 		self.possible_linux_core_directories = ['/usr/lib/libretro','/usr/lib/x86_64-linux-gnu/libretro','/usr/lib/i386-linux-gnu/libretro','/usr/lib/arm-linux-gnueabihf/libretro','/usr/lib/s390x-linux-gnu/libretro','/usr/local/lib/libretro','~/.config/retroarch/cores','/tmp/cores','/home/kodi/bin/libretro/']
 		self.default_linux_core_directory = '/usr/lib/libretro'
 		self.possible_retroarch_app_locations = [os.path.join('/Applications','RetroArch.app','Contents','MacOS','RetroArch'),os.path.join('usr','bin','retroarch'),os.path.join('C:','Program Files (x86)','Retroarch','retroarch.exe'),os.path.join('opt','retropie','emulators','retroarch','bin','retroarch'),os.path.join('home','kodi','bin','retroarch')]
-		self.possible_retroarch_config_locations = [os.path.join('mnt','internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('data','data','com.retroarch','retroarch.cfg'),os.path.join('data','data','com.retroarch','files','retroarch.cfg'),os.path.join('mnt','internal_sd','Android','data','com.retroarch.aarch64','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch.aarch64','files','retroarch.cfg'),os.path.join('data','user','0','com.retroarch.aarch64','retroarch.cfg'),os.path.join('data','user','0','com.retroarch.aarch64','files','retroarch.cfg')]
+		self.possible_retroarch_config_locations = [os.path.join('mnt','internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('data','data','com.retroarch','retroarch.cfg'),os.path.join('data','data','com.retroarch','files','retroarch.cfg'),os.path.join('mnt','internal_sd','Android','data','com.retroarch.aarch64','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch.aarch64','files','retroarch.cfg'),os.path.join('data','user','0','com.retroarch.aarch64','retroarch.cfg'),os.path.join('data','user','0','com.retroarch.aarch64','files','retroarch.cfg'),os.path.join('mnt','internal_sd','Android','data','com.retroarch.ra32','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch.ra32','files','retroarch.cfg'),os.path.join('data','data','com.retroarch.ra32','retroarch.cfg'),os.path.join('data','data','com.retroarch.ra32','files','retroarch.cfg')]
 		self.additional_supported_external_emulators = ['APP_PATH_FS_UAE','APP_PATH_PJ64','APP_PATH_DOLPHIN','APP_PATH_MAME','APP_PATH_DEMUL','APP_PATH_EPSXE']
 		self.additional_supported_external_emulator_settings = 'FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone|DEMUL (Win)|ePSXe'
 		self.windowid = xbmcgui.getCurrentWindowId()
@@ -1796,11 +1796,15 @@ class iagl_utils(object):
 		game_list = list()
 		page_info = dict()
 		games_dict = list()
+		append_emu_name_to_results = False
 		clean_label_option = self.get_setting_as_bool(self.handle.getSetting(id='iagl_setting_clean_list'))
 		label_naming_convention = self.handle.getSetting(id='iagl_setting_naming')
 		#1.  Get all games from all the lists
 		if current_query['lists'] is None: #Use all lists is the query is for None
 			current_query['lists'] = [x for x in self.get_game_lists().get('dat_filename')]
+		#If more than one list is searched, and the setting is enabled, append the emu_name to the label
+		if len(current_query['lists'])>1 and self.get_setting_as_bool(self.handle.getSetting(id='iagl_append_emu_name_to_results')):
+			append_emu_name_to_results = True
 		for game_list_id in current_query['lists']:
 			try:
 				games_dict = games_dict+self.get_games(game_list_id)
@@ -1834,13 +1838,9 @@ class iagl_utils(object):
 			games_dict = [x for x in games_dict if x.get('info').get('studio') is not None and any([y in x.get('info').get('studio') for y in current_query['studio']])]
 			# games_dict = [x for x in games_dict if x.get('info').get('studio') is not None and x.get('info').get('studio') in current_query['studio']]
 			xbmc.log(msg='IAGL:  Studio search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
-		
+
 		if games_dict is not None and len(games_dict)>0:
 			current_categories = 'Search Results'
-			# current_categories = None
-			# if games_dict[0].get('properties').get('iagl_json') is not None:
-			# 	current_categories = json.loads(games_dict[0].get('properties').get('iagl_json')).get('emu').get('emu_category')
-
 			if filter_method == 'list_all' or filter_method == None:
 				current_page = paginate.Page(games_dict, page=page_number, items_per_page=self.get_items_per_page())
 				page_info['page'] = current_page.page
@@ -1850,7 +1850,8 @@ class iagl_utils(object):
 				page_info['categories'] = current_categories
 				for game_item in current_page:
 					game_item['values']['label'] = self.update_game_label(self.get_clean_label(game_item['values']['label'],clean_label_option),game_item,label_naming_convention)
-					# game_list.append(xbmcgui.ListItem(label=game_item['values']['label'],label2=game_item['values']['label2'], offscreen=True))
+					if append_emu_name_to_results: #Append emu_name to search result, could slow down the query so it's off by default
+						game_item['values']['label'] = json.loads(game_item.get('properties').get('iagl_json')).get('emu').get('emu_name')+' - '+game_item['values']['label']
 					game_list.append(self.create_kodi_listitem(game_item['values']['label'],game_item['values']['label2']))
 					game_list[-1].setInfo(self.media_type,game_item['info'])
 					game_list[-1].setArt(game_item['art'])
@@ -1875,11 +1876,15 @@ class iagl_utils(object):
 		games_dict = list()
 		games_dict_random = list()
 		random_numbers_chosen = list()
+		append_emu_name_to_results = False
 		clean_label_option = self.get_setting_as_bool(self.handle.getSetting(id='iagl_setting_clean_list'))
 		label_naming_convention = self.handle.getSetting(id='iagl_setting_naming')
 		#1.  Get all games from all the lists
 		if current_query['lists'] is None: #Use all lists is the query is for None
 			current_query['lists'] = [x for x in self.get_game_lists().get('dat_filename')]
+		#If more than one list is searched, and the setting is enabled, append the emu_name to the label
+		if len(current_query['lists'])>1 and self.get_setting_as_bool(self.handle.getSetting(id='iagl_append_emu_name_to_results')):
+			append_emu_name_to_results = True
 		for game_list_id in current_query['lists']:
 			games_dict = games_dict+self.get_games(game_list_id)
 		xbmc.log(msg='IAGL:  Random play started from %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
@@ -1915,10 +1920,6 @@ class iagl_utils(object):
 
 		if games_dict_random is not None and len(games_dict_random)>0:
 			current_categories = 'Random Results'
-			# current_categories = None
-			# if games_dict[0].get('properties').get('iagl_json') is not None:
-			# 	current_categories = json.loads(games_dict[0].get('properties').get('iagl_json')).get('emu').get('emu_category')
-
 			if filter_method == 'list_all' or filter_method == None:
 				current_page = paginate.Page(games_dict_random, page=page_number, items_per_page=self.get_items_per_page())
 				page_info['page'] = current_page.page
@@ -1928,7 +1929,8 @@ class iagl_utils(object):
 				page_info['categories'] = current_categories
 				for game_item in current_page:
 					game_item['values']['label'] = self.update_game_label(self.get_clean_label(game_item['values']['label'],clean_label_option),game_item,label_naming_convention)
-					# game_list.append(xbmcgui.ListItem(label=game_item['values']['label'],label2=game_item['values']['label2'], offscreen=True))
+					if append_emu_name_to_results: #Append emu_name to search result, could slow down the query so it's off by default
+						game_item['values']['label'] = json.loads(game_item.get('properties').get('iagl_json')).get('emu').get('emu_name')+' - '+game_item['values']['label']
 					game_list.append(self.create_kodi_listitem(game_item['values']['label'],game_item['values']['label2']))
 					game_list[-1].setInfo(self.media_type,game_item['info'])
 					game_list[-1].setArt(game_item['art'])
@@ -3495,9 +3497,6 @@ class iagl_download(object):
 		if os.path.splitext(filename_in)[-1].lower() == '.bat': #Attempt to launch from file already locally available
 			if any([os.path.join(self.current_safe_filename,os.path.split(filename_in)[-1]) in x for x in current_files]): #If the bat was already found in the required folder, then this is a previously launched game
 				found_file = [x for x in current_files if os.path.join(self.current_safe_filename,os.path.split(filename_in)[-1]) in x][0]
-				# crc_string = get_crc32_from_string(os.path.split(filename_in)[-1].encode('utf-8',errors='ignore')) #Create a repeatable crc string for filename of correct 8.3 DOS format
-				# print('ztest')
-				# print(crc_string)
 				xbmc.log(msg='IAGL:  DOSBOX BAT file %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
@@ -4031,6 +4030,7 @@ class iagl_launch(object):
 				android_stop_command = '/system/bin/am force-stop com.retroarch.aarch64'  #Changed to add stop command in the external launch command arguments
 			else:
 				android_stop_command = '/system/bin/am force-stop com.retroarch'  #Changed to add stop command in the external launch command arguments
+				# android_stop_command = '/system/bin/am force-stop com.retroarch.ra32'  #Changed to add stop command in the external launch command arguments
 				
 			if int(self.IAGL.handle.getSetting(id='iagl_android_command_type')) == 1: #Subprocess normal
 				xbmc.log(msg='IAGL:  Android subprocess (normal shell) external launch selected', level=xbmc.LOGDEBUG)
