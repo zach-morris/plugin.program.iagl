@@ -3825,9 +3825,9 @@ class iagl_launch(object):
 		else:
 			self.launch_filenames = filenames_in
 
-	def launch(self):
+	def launch(self,return_home=False):
 		if self.launcher.lower() == 'retroplayer':
-			self.launch_success = self.launch_retroplayer()
+			self.launch_success = self.launch_retroplayer(return_home=return_home)
 		if self.launcher.lower() == 'external':
 			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android' or self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android Aarch64':
 				self.launch_success = self.launch_external_android()
@@ -3836,7 +3836,7 @@ class iagl_launch(object):
 		if self.launch_success:
 			self.IAGL.add_game_to_history(self.json,self.game_list_id,self.game_id)
 
-	def launch_retroplayer(self):
+	def launch_retroplayer(self,return_home=False):
 		# Infolabel	Description
 		# title	string (Super Mario Bros.)
 		# platform	string (Atari 2600)
@@ -3889,6 +3889,10 @@ class iagl_launch(object):
 		try:
 			xbmc.log(msg='IAGL:  Gameclient for Retroplayer set to: %(current_gameclient)s' % {'current_gameclient': current_gameclient}, level=xbmc.LOGNOTICE)
 			xbmc.log(msg='IAGL:  Attempting to play the following file through Retroplayer: %(url)s' % {'url': self.launch_filenames[0]}, level=xbmc.LOGNOTICE)
+			if return_home: #Go back to home page if its a widget
+				xbmc.log(msg='IAGL:  Returning to Home prior to playing', level=xbmc.LOGDEBUG)
+				xbmc.executebuiltin('Dialog.Close(all,true)') #Need to close the open dialogs (busy or infowindow) prior to going home and playing
+				xbmc.executebuiltin('ActivateWindow(home)')
 			xbmc.Player().play(xbmc.translatePath(self.launch_filenames[0]),game_listitem)
 			return True
 		except Exception as exc: #except Exception, (exc):
@@ -4223,7 +4227,6 @@ class iagl_infodialog(xbmcgui.WindowXMLDialog):
 		self.close()
 		if self.return_home:
 			xbmc.log(msg='IAGL:  Returning to Home', level=xbmc.LOGDEBUG)
-			self.close()
 			xbmc.executebuiltin('ActivateWindow(home)')
 			
 	def action_download_only(self):
@@ -4263,7 +4266,7 @@ class iagl_infodialog(xbmcgui.WindowXMLDialog):
 			download_and_process_success = [download_and_process_success]
 		if False not in download_and_process_success:
 			IAGL_LAUNCH = iagl_launch(self.current_json,IAGL_DL.current_processed_files,self.game_id) #Initialize launch object
-			IAGL_LAUNCH.launch() #Launch Game
+			IAGL_LAUNCH.launch(return_home=self.return_home) #Launch Game
 			if IAGL_LAUNCH.launch_success:
 				xbmc.log(msg='IAGL:  Game Launched: %(game_title)s' % {'game_title': IAGL_DL.current_game_title}, level=xbmc.LOGDEBUG)
 				self.closeDialog()
