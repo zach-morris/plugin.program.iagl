@@ -3934,7 +3934,10 @@ class iagl_launch(object):
 			self.external_launch_command = self.external_launch_command.replace('%CFG_PATH%',current_cfg_path) #Replace config path user setting
 			self.external_launch_command = self.external_launch_command.replace('%ROM_PATH%',xbmc.translatePath(self.launch_filenames[0])) #Replace ROM filepath
 			self.external_launch_command = self.external_launch_command.replace('%ROM_BASE_PATH%',os.path.join(os.path.split(xbmc.translatePath(self.launch_filenames[0]))[0],'')) #Replace ROM Base path
-			
+			if os.path.join('~','') in self.external_launch_command or os.path.join('~user','') in self.external_launch_command: #Expand user path in linux, need to do it a round about way to avoid expanding tildes in game title names
+				self.external_launch_command = self.external_launch_command.replace(os.path.join('~',''),os.path.expanduser(os.path.join('~','')))
+				self.external_launch_command = self.external_launch_command.replace(os.path.join('~user',''),os.path.expanduser(os.path.join('~user','')))
+
 			if any([x in self.external_launch_command for x in self.IAGL.additional_supported_external_emulators]): #Non Retroarch emulator requested
 				other_emulator_key = [x for x in self.IAGL.additional_supported_external_emulators if x in self.external_launch_command][0]
 				other_emulator = self.IAGL.additional_supported_external_emulator_settings.split('|')[self.IAGL.additional_supported_external_emulators.index(other_emulator_key)]
