@@ -5,7 +5,7 @@
 		<setting id="iagl_setting_mem_cache" type="bool" label="30008" default="true"/>
 		<setting id="iagl_setting_clean_list" type="bool" label="30009" default="true"/>
 		<setting id="iagl_setting_archive_listings" type="select" label="30010" lvalues="30058|30059|30060" default="0"/>
-		<setting id="iagl_setting_listing" type="select" label="30011" lvalues="30061|30058|30062|30063|30064|30065|30066" default="1"/>
+		<setting id="iagl_setting_listing" type="select" label="30011" lvalues="30061|30058|30062|30063|30064|30065|30066|30196" default="1"/>
 		<setting id="iagl_setting_naming" type="select" label="30012" lvalues="30414|30067|30068|30069|30070|30071|30072|30073|30074|30075|30076|30077|30078|30079|30080|30081|30082|30083|30084|30085" default="0"/>
 		<setting id="iagl_setting_items_pp" type="select" label="30013" values="10|25|50|100|150|200|250|300|350|400|450|500|List All" default="List All"/>
 		<setting id="iagl_setting_history" type="slider" label="30014" default="10" range="0,1,100" option="int"/>

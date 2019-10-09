@@ -86,6 +86,7 @@ class iagl_utils(object):
 		self.game_list_year_filename = 'years_database.xml'
 		self.game_list_player_filename = 'players_database.xml'
 		self.game_list_studio_filename = 'studio_database.xml'
+		self.game_list_tag_filename = 'tag_database.xml'
 		self.game_list_choose_filename = 'choose_database.xml'
 		self.mame_softlist_db_filename = 'mame_softlist_database.xml'
 		self.external_command_db_filename = ['resources','data','external_command_database.xml']
@@ -108,8 +109,8 @@ class iagl_utils(object):
 		self.archive_listing_settings = 'Choose from List|Browse All Lists|Browse by Category|Favorites|Search|Random Play'
 		self.archive_listing_settings_routes = ['choose_from_list','all','categorized','categorized/Favorites','search_menu','random_menu']
 		self.archive_listing_settings_route = None
-		self.game_listing_settings = 'One Big List|Choose from List|Alphabetical|Group by Genre|Group by Year|Group by Players|Group by Studio'
-		self.game_listing_settings_routes = ['list_all','choose_from_list','alphabetical','list_by_genre','list_by_year','list_by_players','list_by_studio']
+		self.game_listing_settings = 'One Big List|Choose from List|Alphabetical|Group by Genre|Group by Year|Group by Players|Group by Studio|Group by Tag'
+		self.game_listing_settings_routes = ['list_all','choose_from_list','alphabetical','list_by_genre','list_by_year','list_by_players','list_by_studio','list_by_tag']
 		self.current_game_listing_route = None
 		self.items_per_page_settings = self.handle.getSetting(id='iagl_setting_items_pp')
 		self.max_items_per_page = 99999
@@ -647,6 +648,9 @@ class iagl_utils(object):
 	def get_game_list_studio_file(self):
 		return os.path.join(self.get_databases_folder_path(),self.game_list_studio_filename)
 
+	def get_game_list_tag_file(self):
+		return os.path.join(self.get_databases_folder_path(),self.game_list_tag_filename)
+
 	def get_game_list_choose_file(self):
 		return os.path.join(self.get_databases_folder_path(),self.game_list_choose_filename)
 
@@ -838,6 +842,13 @@ class iagl_utils(object):
 			xbmc.log(msg='IAGL:  There was an error parsing the studio xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
 
+	def get_tag_game_listing(self):
+		try:
+			return etree_to_dict(ET.parse(self.get_game_list_tag_file()).getroot()) #No cache for this currently, since its small
+		except Exception as exc: #except Exception, (exc):
+			xbmc.log(msg='IAGL:  There was an error parsing the tag xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
+			return None
+
 	def get_choose_game_listing(self):
 		try:
 			return etree_to_dict(ET.parse(self.get_game_list_choose_file()).getroot()) #No cache for this currently, since its small
@@ -991,7 +1002,8 @@ class iagl_utils(object):
 			current_game_genres_unknown = [x.get('info').get('genre') for x in current_games_dict if x.get('info').get('genre') is None]
 			current_game_genres_sorted = sorted(list(set([y.strip() for y in self.flatten_list([x.get('info').get('genre').split(',') for x in current_games_dict if x.get('info').get('genre') is not None]) if len(y)>0])))
 			if len(current_game_genres_unknown)>0:
-				current_game_genres_sorted.append('Unknown')
+				if 'Unknown' not in current_game_genres_sorted:
+					current_game_genres_sorted.append('Unknown')
 			genre_list_temp = genre_list_temp+current_game_genres_sorted
 		genre_list_sorted = sorted(list(set(genre_list_temp)))
 		return genre_list_sorted
@@ -1004,7 +1016,8 @@ class iagl_utils(object):
 		current_game_genres_unknown = [x.get('info').get('genre') for x in games_dict if x.get('info').get('genre') is None]
 		current_game_genres_sorted = sorted(list(set([y.strip() for y in self.flatten_list([x.get('info').get('genre').split(',') for x in games_dict if x.get('info').get('genre') is not None]) if len(y)>0])))
 		if len(current_game_genres_unknown)>0:
-			current_game_genres_sorted.append('Unknown')
+			if 'Unknown' not in current_game_genres_sorted:
+				current_game_genres_sorted.append('Unknown')
 		genre_dict_labels = [x['label'] for x in genre_dict['categories']['category']]
 
 		for cats in current_game_genres_sorted:
@@ -1061,7 +1074,8 @@ class iagl_utils(object):
 			current_game_years_unknown = [x.get('info').get('year') for x in current_games_dict if x.get('info').get('year') is None]
 			current_game_years_sorted = sorted(list(set([str(y).strip() for y in [x.get('info').get('year') for x in current_games_dict if x.get('info').get('year') is not None] if len(y)>0])))
 			if len(current_game_years_unknown)>0:
-				current_game_years_sorted.append('Unknown')
+				if 'Unknown' not in current_game_years_sorted:
+					current_game_years_sorted.append('Unknown')
 			year_list_temp = year_list_temp+current_game_years_sorted
 		year_list_sorted = sorted(list(set(year_list_temp)))
 		return year_list_sorted
@@ -1074,7 +1088,8 @@ class iagl_utils(object):
 		current_game_years_unknown = [x.get('info').get('year') for x in games_dict if x.get('info').get('year') is None]
 		current_game_years_sorted = sorted(list(set([str(y).strip() for y in [x.get('info').get('year') for x in games_dict if x.get('info').get('year') is not None] if len(y)>0])))
 		if len(current_game_years_unknown)>0:
-			current_game_years_sorted.append('Unknown')
+			if 'Unknown' not in current_game_years_sorted:
+				current_game_years_sorted.append('Unknown')
 		year_dict_labels = [x['label'] for x in year_dict['categories']['category']]
 
 		for cats in current_game_years_sorted:
@@ -1131,7 +1146,8 @@ class iagl_utils(object):
 			current_game_players_unknown = [x.get('properties').get('nplayers') for x in current_games_dict if x.get('properties').get('nplayers') is None]
 			current_game_players_sorted = sorted(list(set(current_game_players)))
 			if len(current_game_players_unknown)>0:
-				current_game_players_sorted.append('Unknown')
+				if 'Unknown' not in current_game_players_sorted:
+					current_game_players_sorted.append('Unknown')
 			players_list_temp = players_list_temp+current_game_players_sorted
 		players_list_sorted = sorted(list(set(players_list_temp)))
 		return players_list_sorted
@@ -1144,7 +1160,8 @@ class iagl_utils(object):
 		current_game_players_unknown = [x.get('properties').get('nplayers') for x in games_dict if x.get('properties').get('nplayers') is None]
 		current_game_players_sorted = sorted(list(set(current_game_players)))
 		if len(current_game_players_unknown)>0:
-			current_game_players_sorted.append('Unknown')
+			if 'Unknown' not in current_game_players_sorted:
+				current_game_players_sorted.append('Unknown')
 		player_dict_labels = [x['label'] for x in player_dict['categories']['category']]
 
 		for cats in current_game_players_sorted:
@@ -1190,6 +1207,62 @@ class iagl_utils(object):
 
 		return player_listitems
 
+	def get_game_list_tags_as_listitems(self, game_list_id):
+		tags_listitems = list()
+		games_dict = self.get_games(game_list_id)
+		tags_dict = self.get_tag_game_listing()
+		current_game_tags = [y.strip() for y in self.flatten_list([x.get('properties').get('tag').split(',') for x in games_dict if x.get('properties').get('tag') is not None]) if len(y)>0]
+		current_game_tags_unknown = [x.get('properties').get('tag') for x in games_dict if x.get('properties').get('tag') is None]
+		current_game_tags_sorted = sorted(list(set(current_game_tags)))
+		if len(current_game_tags_unknown)>0:
+			if 'Unknown' not in current_game_tags_sorted:
+				current_game_tags_sorted.append('Unknown')
+		tags_dict_labels = [x['label'] for x in tags_dict['categories']['category']]
+		tags_dict_labels_lower = [x.lower() for x in tags_dict_labels]
+		for cats in current_game_tags_sorted:
+			try: #Find the current letter in the alphabetical database
+				# idx = tags_dict_labels.index(cats)
+				idx = tags_dict_labels_lower.index(cats.lower()) #Use all lower case to categorize tags
+			except:
+				try: #If the letter is not present in the database, use the default info
+					idx = tags_dict_labels.index('default')
+					xbmc.log(msg='IAGL:  The game tag %(cats)s was not found, using IAGL default info for that item' % {'cats': cats}, level=xbmc.LOGDEBUG)
+					default_idx = idx
+				except:
+					idx = None
+			if idx is not None: #Fill in listitem parameters
+				if idx == tags_dict_labels.index('Unknown'):
+					total_in_current_tag = len(current_game_tags_unknown)
+				else:
+					total_in_current_tag = current_game_tags.count(cats)
+				total_in_current_tag_label = cats+'    ('+str(total_in_current_tag)+')'
+				total_in_current_tag_label2 = cats
+				current_trailer = self.get_trailer(tags_dict['categories']['category'][idx].get('trailer'))
+				li = {'values': {'label' : total_in_current_tag_label,
+						'label2' : total_in_current_tag_label2,
+						},
+						'info': {'originaltitle' : total_in_current_tag_label2,
+						'title' : total_in_current_tag_label,
+						'plot' : tags_dict['categories']['category'][idx]['plot'],
+						'trailer' : current_trailer,
+						},
+						'art': {'poster' : self.choose_image(tags_dict['categories']['category'][idx]['thumb'],self.default_thumb,None),
+						'banner' : self.choose_image(tags_dict['categories']['category'][idx]['banner'],self.default_banner,None),
+						'fanart' : self.choose_image(tags_dict['categories']['category'][idx]['fanart'],self.default_fanart,None),
+						'clearlogo' : self.choose_image(tags_dict['categories']['category'][idx]['logo'],None,None),
+						'icon' : self.choose_image(tags_dict['categories']['category'][idx]['logo'],None,None),
+						'thumb' : self.choose_image(tags_dict['categories']['category'][idx]['thumb'],self.default_thumb,None),
+						},
+						}
+				# player_listitems.append(xbmcgui.ListItem(label=li['values']['label'],label2=li['values']['label2'], offscreen=True))
+				tags_listitems.append(self.create_kodi_listitem(li['values']['label'],li['values']['label2']))
+				tags_listitems[-1].setInfo(self.media_type,li['info'])
+				tags_listitems[-1].setArt(li['art'])
+			else:
+				xbmc.log(msg='IAGL Error:  An error occured and game tag %(cats)s could not be displayed' % {'cats': cats}, level=xbmc.LOGERROR)
+
+		return tags_listitems
+
 	def get_studios_from_game_lists(self, game_lists):
 		studio_list_temp = list()
 		studio_list_sorted = list()
@@ -1201,7 +1274,8 @@ class iagl_utils(object):
 			current_game_studios_unknown = [x.get('info').get('studio') for x in current_games_dict if x.get('info').get('studio') is None]
 			current_game_studios_sorted = sorted(list(set([y.strip() for y in self.flatten_list([x.get('info').get('studio').split(',') for x in current_games_dict if x.get('info').get('studio') is not None]) if len(y)>0])))
 			if len(current_game_studios_unknown)>0:
-				current_game_studios_sorted.append('Unknown')
+				if 'Unknown' not in current_game_studios_sorted:
+					current_game_studios_sorted.append('Unknown')
 			studio_list_temp = studio_list_temp+current_game_studios_sorted
 		studio_list_sorted = sorted(list(set(studio_list_temp)))
 		return studio_list_sorted
@@ -1214,7 +1288,8 @@ class iagl_utils(object):
 		current_game_studios_unknown = [x.get('info').get('studio') for x in games_dict if x.get('info').get('studio') is None]
 		current_game_studios_sorted = sorted(list(set([y.strip() for y in self.flatten_list([x.get('info').get('studio').split(',') for x in games_dict if x.get('info').get('studio') is not None]) if len(y)>0])))
 		if len(current_game_studios_unknown)>0:
-			current_game_studios_sorted.append('Unknown')
+			if 'Unknown' not in current_game_studios_sorted:
+				current_game_studios_sorted.append('Unknown')
 		studio_dict_labels = [x['label'] for x in studio_dict['categories']['category']]
 
 		for cats in current_game_studios_sorted:
@@ -1760,6 +1835,23 @@ class iagl_utils(object):
 					current_page = paginate.Page([x for x in games_dict if x.get('info').get('studio') is None], page=page_number, items_per_page=self.get_items_per_page())
 				else:
 					current_page = paginate.Page([x for x in games_dict if x.get('info').get('studio') is not None and filter_value.lower() in x.get('info').get('studio').lower()], page=page_number, items_per_page=self.get_items_per_page())
+				page_info['page'] = current_page.page
+				page_info['page_count'] = current_page.page_count
+				page_info['next_page'] = current_page.next_page
+				page_info['item_count'] = current_page.item_count
+				page_info['categories'] = current_categories
+				for game_item in current_page:
+					game_item['values']['label'] = self.update_game_label(self.get_clean_label(game_item['values']['label'],clean_label_option),game_item,label_naming_convention)
+					# game_list.append(xbmcgui.ListItem(label=game_item['values']['label'],label2=game_item['values']['label2'], offscreen=True))
+					game_list.append(self.create_kodi_listitem(game_item['values']['label'],game_item['values']['label2']))
+					game_list[-1].setInfo(self.media_type,game_item['info'])
+					game_list[-1].setArt(game_item['art'])
+					game_list[-1].setProperty('iagl_json',game_item['properties']['iagl_json'])
+			elif filter_method == 'list_by_tag':
+				if filter_value == 'Unknown' or filter_value == None:
+					current_page = paginate.Page([x for x in games_dict if x.get('properties').get('tag') is None], page=page_number, items_per_page=self.get_items_per_page())
+				else:
+					current_page = paginate.Page([x for x in games_dict if x.get('properties').get('tag') is not None and filter_value.lower() in x.get('properties').get('tag').lower()], page=page_number, items_per_page=self.get_items_per_page())
 				page_info['page'] = current_page.page
 				page_info['page_count'] = current_page.page_count
 				page_info['next_page'] = current_page.next_page
