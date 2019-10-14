@@ -5,7 +5,7 @@
 		<setting id="iagl_setting_mem_cache" type="bool" label="30008" default="true"/>
 		<setting id="iagl_setting_clean_list" type="bool" label="30009" default="true"/>
 		<setting id="iagl_setting_archive_listings" type="select" label="30010" lvalues="30058|30059|30060" default="0"/>
-		<setting id="iagl_setting_listing" type="select" label="30011" lvalues="30061|30058|30062|30063|30064|30065|30066" default="1"/>
+		<setting id="iagl_setting_listing" type="select" label="30011" lvalues="30061|30058|30062|30063|30064|30065|30066|30196" default="1"/>
 		<setting id="iagl_setting_naming" type="select" label="30012" lvalues="30414|30067|30068|30069|30070|30071|30072|30073|30074|30075|30076|30077|30078|30079|30080|30081|30082|30083|30084|30085" default="0"/>
 		<setting id="iagl_setting_items_pp" type="select" label="30013" values="10|25|50|100|150|200|250|300|350|400|450|500|List All" default="List All"/>
 		<setting id="iagl_setting_history" type="slider" label="30014" default="10" range="0,1,100" option="int"/>
@@ -14,8 +14,10 @@
 		<setting id="iagl_setting_show_search" type="select" label="30017" lvalues="30092|30093" default="0" visible="true"/>
 		<setting id="iagl_setting_show_randomplay" type="select" label="30018" lvalues="30092|30093" default="0" visible="true"/>
 		<setting id="iagl_setting_show_gamehistory" type="select" label="30019" lvalues="30092|30093" default="0" visible="true"/>
+		<setting id="iagl_setting_show_favs" type="select" label="30194" lvalues="30092|30093" default="0" visible="true"/>
 		<setting id="iagl_setting_show_extras" type="select" label="30094" lvalues="30092|30093" default="0" visible="false"/>
 		<setting id="iagl_setting_autoplay_trailer" type="select" label="30020" lvalues="30204|30200" default="0"/>
+		<setting id="iagl_append_emu_name_to_results" type="select" label="30195" lvalues="30200|30204" default="0"/>
 		<setting id="iagl_setting_dl_cache" type="select" label="30021" lvalues="30097|30098|30099|30100|30101|30102|30103|30104|30105|30106|30107|30108|30109|30110|30111|30112|30113|30114|30129|30130" default="0"/>
 		<setting id="iagl_setting_enable_login" type="select" label="30022" lvalues="30095|30096" default="1"/>
 		<setting id="iagl_setting_ia_username" type="text" label="30023" default="" visible="eq(-1,0)"/>

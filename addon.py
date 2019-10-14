@@ -48,10 +48,13 @@ def iagl_main():
 def list_archives_browse():
 	list_method = 'choose_from_list'
 	for list_item in IAGL.get_browse_lists_as_listitems():
-		if (list_item.getLabel2() == 'search_menu' and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_setting_show_search'))) or (list_item.getLabel2() == 'random_menu' and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_setting_show_randomplay'))):
+		if (list_item.getLabel2() == 'search_menu' and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_setting_show_search'))) or (list_item.getLabel2() == 'random_menu' and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_setting_show_randomplay'))) or (list_item.getLabel2() == 'categorized/Favorites' and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_setting_show_favs'))):
 			xbmc.log(msg='IAGL:  Getting game item %(game_list_item)s is hidden per setting' % {'game_list_item': list_item.getLabel2()}, level=xbmc.LOGDEBUG)
 		else:
-			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/archives/'+url_quote(list_item.getLabel2())),list_item, True)
+			if (list_item.getLabel2() == 'categorized/Favorites'):
+				xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/archives/'+list_item.getLabel2()),list_item, True) #Dont urlquote favs url
+			else:
+				xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/archives/'+url_quote(list_item.getLabel2())),list_item, True)
 	if IAGL.check_to_show_history(): #Add history to the main choose menu as well
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/game_list/'+IAGL.current_game_listing_route+'/game_history/1'),IAGL.get_game_history_listitem(), True)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -324,6 +327,42 @@ def get_games_with_studio(studio,game_list_id,page_number=1):
 	xbmcplugin.endOfDirectory(plugin.handle)
 	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4')) > 0:
 		xbmc.log(msg='IAGL:  Games List (by Studio) Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]})
+
+@plugin.route('/game_list/list_by_tag/<game_list_id>')
+def get_tags_list(game_list_id):
+	list_method = 'list_by_tag'
+	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s by game tag, display method %(list_method)s' % {'game_list_id': game_list_id,'list_method': list_method}, level=xbmc.LOGDEBUG)
+	for list_item in IAGL.get_game_list_tags_as_listitems(game_list_id):
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_tags, tag=url_quote(list_item.getLabel2()), game_list_id=game_list_id, page_number=1),list_item, True)	
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
+	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_8')) > 0:
+		xbmc.log(msg='IAGL:  Game Tag Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_8'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_8'))]})
+
+@plugin.route('/game_list/list_by_tag/<tag>/<game_list_id>/')
+def get_tags_redirect(tag,game_list_id):
+	plugin.redirect('/game_list/list_by_tag/'+tag+'/'+game_list_id+'/1')
+
+@plugin.route('/game_list/list_by_tag/<tag>/<game_list_id>/<page_number>')
+def get_games_with_tags(tag,game_list_id,page_number=1):
+	list_method = 'list_by_tag'
+	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s by game tag, display method %(list_method)s, with the game tag %(tag)s, with %(items_pp)s items per page, on page %(page_number)s' % {'game_list_id': game_list_id,'list_method': list_method, 'tag': url_unquote(tag), 'items_pp': str(IAGL.get_items_per_page()), 'page_number': page_number}, level=xbmc.LOGDEBUG)
+	current_page, page_info = IAGL.get_games_as_listitems(url_unquote(game_list_id),list_method,url_unquote(tag),page_number)
+	for list_item in current_page:
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2())),IAGL.add_game_context_menus(list_item,game_list_id,url_quote(list_item.getLabel2()),page_info['categories']), True) #Method 1, dont pass json as arg
+	next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
+	if next_page_li is not None:
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_tags, tag=tag, game_list_id=game_list_id, page_number=page_info['next_page']),next_page_li, True)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_DATE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_GENRE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_SIZE)
+	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4')) > 0:
+		xbmc.log(msg='IAGL:  Games List (by Game Tag) Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]}, level=xbmc.LOGDEBUG)
 		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]})
 
 @plugin.route('/game_list/list_all/<game_list_id>/')
