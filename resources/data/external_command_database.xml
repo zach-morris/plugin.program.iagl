@@ -96,8 +96,14 @@
 	<launcher name="RetroArch VICE C64 (C64)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vice_x64_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE C64 X64SC (C64)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vice_x64sc_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch VICE SDL C64 (C64)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/x64sdl_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VICE CBM 6x0 7x0 (CBM)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vice_xcbm2_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PocketCDG (CDG Music)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/pocketcdg_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -258,6 +264,9 @@
 	<launcher name="RetroArch Mupen64Plus (N64)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mupen64plus_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mupen64Plus Next GLES3 (N64)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mupen64plus_next_gles3_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mupen64Plus Next (N64)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mupen64plus_next_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -296,6 +305,9 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/quicknes_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch NeoCD (NGCD)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/libneocd_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mednafen_ngp_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -339,6 +351,9 @@
 	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mednafen_pce_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE xPET (PET)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vice_xpet_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vice_xplus4_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -375,6 +390,24 @@
 	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/pokemini_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VitaQuake2 Rogue (Quake 2)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vitaquake2-rogue_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 XAtrix (Quake 2)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vitaquake2-xatrix_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 ZAero (Quake 2)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vitaquake2-zaero_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 (Quake 2)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vitaquake2_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake3 (Quake 3)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vitaquake3_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch vitaVoyager (Quake 3)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vitavoyager_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/tyrquake_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -383,6 +416,9 @@
 	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/easyrpg_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Redbook (Redbook Audio Player)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/redbook_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/xrick_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -407,6 +443,15 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/snes9x2010_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Accuracy (SNES)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/bsnes2014_accuracy_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Balanced (SNES)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/bsnes2014_balanced_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Performance (SNES)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/bsnes2014_performance_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Accuracy (SNES)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/bsnes_accuracy_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -438,8 +483,14 @@
 	<launcher name="RetroArch Mednafen SNES (SNES)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mednafen_snes_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mesen-S (SNES)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mesen-s_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch SNES9x (SNES)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/snes9x_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES (SNES, Latest)" os="OSX">
+		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/bsnes_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Kronos (Saturn)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/kronos_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -638,8 +689,14 @@
 	<launcher name="RetroArch VICE C64 (C64)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vice_x64_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE C64 X64SC (C64)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vice_x64sc_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch VICE SDL C64 (C64)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/x64sdl_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VICE CBM 6x0 7x0 (CBM)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vice_xcbm2_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PocketCDG (CDG Music)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/pocketcdg_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -800,6 +857,9 @@
 	<launcher name="RetroArch Mupen64Plus (N64)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mupen64plus_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mupen64Plus Next GLES3 (N64)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mupen64plus_next_gles3_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mupen64Plus Next (N64)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mupen64plus_next_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -838,6 +898,9 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/quicknes_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch NeoCD (NGCD)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/libneocd_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mednafen_ngp_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -881,6 +944,9 @@
 	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mednafen_pce_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE xPET (PET)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vice_xpet_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vice_xplus4_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -917,6 +983,24 @@
 	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/pokemini_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VitaQuake2 Rogue (Quake 2)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vitaquake2-rogue_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 XAtrix (Quake 2)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vitaquake2-xatrix_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 ZAero (Quake 2)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vitaquake2-zaero_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 (Quake 2)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vitaquake2_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake3 (Quake 3)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vitaquake3_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch vitaVoyager (Quake 3)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/vitavoyager_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/tyrquake_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -925,6 +1009,9 @@
 	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/easyrpg_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Redbook (Redbook Audio Player)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/redbook_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/xrick_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -949,6 +1036,15 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/snes9x2010_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Accuracy (SNES)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/bsnes2014_accuracy_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Balanced (SNES)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/bsnes2014_balanced_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Performance (SNES)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/bsnes2014_performance_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Accuracy (SNES)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/bsnes_accuracy_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -980,8 +1076,14 @@
 	<launcher name="RetroArch Mednafen SNES (SNES)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mednafen_snes_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mesen-S (SNES)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mesen-s_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch SNES9x (SNES)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/snes9x_libretro.dylib" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES (SNES, Latest)" os="OSX Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/bsnes_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Kronos (Saturn)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/kronos_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -1180,8 +1282,14 @@
 	<launcher name="RetroArch VICE C64 (C64)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vice_x64_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE C64 X64SC (C64)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vice_x64sc_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch VICE SDL C64 (C64)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/x64sdl_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VICE CBM 6x0 7x0 (CBM)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vice_xcbm2_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PocketCDG (CDG Music)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/pocketcdg_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1342,6 +1450,9 @@
 	<launcher name="RetroArch Mupen64Plus (N64)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mupen64plus_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mupen64Plus Next GLES3 (N64)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mupen64plus_next_gles3_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mupen64Plus Next (N64)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mupen64plus_next_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -1380,6 +1491,9 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/quicknes_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch NeoCD (NGCD)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/libneocd_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_ngp_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1423,6 +1537,9 @@
 	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_pce_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE xPET (PET)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vice_xpet_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vice_xplus4_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -1459,6 +1576,24 @@
 	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/pokemini_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VitaQuake2 Rogue (Quake 2)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitaquake2-rogue_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 XAtrix (Quake 2)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitaquake2-xatrix_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 ZAero (Quake 2)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitaquake2-zaero_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 (Quake 2)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitaquake2_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake3 (Quake 3)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitaquake3_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch vitaVoyager (Quake 3)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitavoyager_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/tyrquake_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -1467,6 +1602,9 @@
 	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/easyrpg_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Redbook (Redbook Audio Player)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/redbook_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/xrick_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1491,6 +1629,15 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/snes9x2010_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Accuracy (SNES)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/bsnes2014_accuracy_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Balanced (SNES)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/bsnes2014_balanced_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Performance (SNES)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/bsnes2014_performance_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Accuracy (SNES)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/bsnes_accuracy_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1522,8 +1669,14 @@
 	<launcher name="RetroArch Mednafen SNES (SNES)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_snes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mesen-S (SNES)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mesen-s_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch SNES9x (SNES)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/snes9x_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES (SNES, Latest)" os="Linux/Kodibuntu">
+		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/bsnes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Kronos (Saturn)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/kronos_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1722,8 +1875,14 @@
 	<launcher name="RetroArch VICE C64 (C64)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vice_x64_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE C64 X64SC (C64)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vice_x64sc_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch VICE SDL C64 (C64)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/x64sdl_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VICE CBM 6x0 7x0 (CBM)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vice_xcbm2_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PocketCDG (CDG Music)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/pocketcdg_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1884,6 +2043,9 @@
 	<launcher name="RetroArch Mupen64Plus (N64)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mupen64plus_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mupen64Plus Next GLES3 (N64)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mupen64plus_next_gles3_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mupen64Plus Next (N64)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mupen64plus_next_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -1922,6 +2084,9 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/quicknes_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch NeoCD (NGCD)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/libneocd_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_ngp_libretro.so "%ROM_PATH%"</launcher_command>
@@ -1965,6 +2130,9 @@
 	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_pce_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE xPET (PET)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vice_xpet_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vice_xplus4_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -2001,6 +2169,24 @@
 	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/pokemini_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VitaQuake2 Rogue (Quake 2)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitaquake2-rogue_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 XAtrix (Quake 2)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitaquake2-xatrix_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 ZAero (Quake 2)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitaquake2-zaero_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 (Quake 2)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitaquake2_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake3 (Quake 3)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitaquake3_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch vitaVoyager (Quake 3)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitavoyager_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/tyrquake_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -2009,6 +2195,9 @@
 	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/easyrpg_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Redbook (Redbook Audio Player)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/redbook_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/xrick_libretro.so "%ROM_PATH%"</launcher_command>
@@ -2033,6 +2222,15 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/snes9x2010_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Accuracy (SNES)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/bsnes2014_accuracy_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Balanced (SNES)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/bsnes2014_balanced_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Performance (SNES)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/bsnes2014_performance_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Accuracy (SNES)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/bsnes_accuracy_libretro.so "%ROM_PATH%"</launcher_command>
@@ -2064,8 +2262,14 @@
 	<launcher name="RetroArch Mednafen SNES (SNES)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_snes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mesen-S (SNES)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mesen-s_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch SNES9x (SNES)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/snes9x_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES (SNES, Latest)" os="Linux/Kodibuntu Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/bsnes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Kronos (Saturn)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/kronos_libretro.so "%ROM_PATH%"</launcher_command>
@@ -2264,8 +2468,14 @@
 	<launcher name="RetroArch VICE C64 (C64)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vice_x64_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE C64 X64SC (C64)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vice_x64sc_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch VICE SDL C64 (C64)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/x64sdl_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VICE CBM 6x0 7x0 (CBM)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vice_xcbm2_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PocketCDG (CDG Music)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/pocketcdg_libretro.so "%ROM_PATH%"</launcher_command>
@@ -2426,6 +2636,9 @@
 	<launcher name="RetroArch Mupen64Plus (N64)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mupen64plus_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mupen64Plus Next GLES3 (N64)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mupen64plus_next_gles3_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mupen64Plus Next (N64)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mupen64plus_next_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -2464,6 +2677,9 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/quicknes_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch NeoCD (NGCD)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/libneocd_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_ngp_libretro.so "%ROM_PATH%"</launcher_command>
@@ -2507,6 +2723,9 @@
 	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_pce_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE xPET (PET)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vice_xpet_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vice_xplus4_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -2543,6 +2762,24 @@
 	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/pokemini_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VitaQuake2 Rogue (Quake 2)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitaquake2-rogue_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 XAtrix (Quake 2)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitaquake2-xatrix_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 ZAero (Quake 2)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitaquake2-zaero_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 (Quake 2)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitaquake2_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake3 (Quake 3)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitaquake3_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch vitaVoyager (Quake 3)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/vitavoyager_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/tyrquake_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -2551,6 +2788,9 @@
 	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/easyrpg_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Redbook (Redbook Audio Player)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/redbook_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/xrick_libretro.so "%ROM_PATH%"</launcher_command>
@@ -2575,6 +2815,15 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/snes9x2010_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Accuracy (SNES)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/bsnes2014_accuracy_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Balanced (SNES)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/bsnes2014_balanced_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Performance (SNES)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/bsnes2014_performance_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Accuracy (SNES)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/bsnes_accuracy_libretro.so "%ROM_PATH%"</launcher_command>
@@ -2606,8 +2855,14 @@
 	<launcher name="RetroArch Mednafen SNES (SNES)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_snes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mesen-S (SNES)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mesen-s_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch SNES9x (SNES)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/snes9x_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES (SNES, Latest)" os="Linux/Kodibuntu Pause_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/bsnes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Kronos (Saturn)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/kronos_libretro.so "%ROM_PATH%"</launcher_command>
@@ -2806,8 +3061,14 @@
 	<launcher name="RetroArch VICE C64 (C64)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vice_x64_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE C64 X64SC (C64)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vice_x64sc_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch VICE SDL C64 (C64)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\x64sdl_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VICE CBM 6x0 7x0 (CBM)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vice_xcbm2_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PocketCDG (CDG Music)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\pocketcdg_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -2968,6 +3229,9 @@
 	<launcher name="RetroArch Mupen64Plus (N64)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mupen64plus_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mupen64Plus Next GLES3 (N64)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mupen64plus_next_gles3_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mupen64Plus Next (N64)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mupen64plus_next_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3006,6 +3270,9 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\quicknes_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch NeoCD (NGCD)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\libneocd_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mednafen_ngp_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -3049,6 +3316,9 @@
 	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mednafen_pce_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE xPET (PET)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vice_xpet_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vice_xplus4_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3085,6 +3355,24 @@
 	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\pokemini_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VitaQuake2 Rogue (Quake 2)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vitaquake2-rogue_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 XAtrix (Quake 2)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vitaquake2-xatrix_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 ZAero (Quake 2)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vitaquake2-zaero_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 (Quake 2)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vitaquake2_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake3 (Quake 3)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vitaquake3_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch vitaVoyager (Quake 3)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vitavoyager_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\tyrquake_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3093,6 +3381,9 @@
 	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\easyrpg_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Redbook (Redbook Audio Player)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\redbook_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\xrick_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -3117,6 +3408,15 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\snes9x2010_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Accuracy (SNES)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\bsnes2014_accuracy_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Balanced (SNES)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\bsnes2014_balanced_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Performance (SNES)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\bsnes2014_performance_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Accuracy (SNES)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\bsnes_accuracy_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -3148,8 +3448,14 @@
 	<launcher name="RetroArch Mednafen SNES (SNES)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mednafen_snes_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mesen-S (SNES)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mesen-s_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch SNES9x (SNES)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\snes9x_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES (SNES, Latest)" os="Windows">
+		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\bsnes_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Kronos (Saturn)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\kronos_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -3357,8 +3663,14 @@
 	<launcher name="RetroArch VICE C64 (C64)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vice_x64_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE C64 X64SC (C64)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vice_x64sc_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch VICE SDL C64 (C64)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\x64sdl_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VICE CBM 6x0 7x0 (CBM)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vice_xcbm2_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PocketCDG (CDG Music)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\pocketcdg_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -3519,6 +3831,9 @@
 	<launcher name="RetroArch Mupen64Plus (N64)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mupen64plus_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mupen64Plus Next GLES3 (N64)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mupen64plus_next_gles3_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mupen64Plus Next (N64)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mupen64plus_next_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3557,6 +3872,9 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\quicknes_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch NeoCD (NGCD)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\libneocd_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mednafen_ngp_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -3600,6 +3918,9 @@
 	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mednafen_pce_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE xPET (PET)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vice_xpet_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vice_xplus4_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3636,6 +3957,24 @@
 	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\pokemini_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VitaQuake2 Rogue (Quake 2)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vitaquake2-rogue_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 XAtrix (Quake 2)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vitaquake2-xatrix_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 ZAero (Quake 2)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vitaquake2-zaero_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 (Quake 2)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vitaquake2_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake3 (Quake 3)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vitaquake3_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch vitaVoyager (Quake 3)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\vitavoyager_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\tyrquake_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3644,6 +3983,9 @@
 	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\easyrpg_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Redbook (Redbook Audio Player)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\redbook_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\xrick_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -3668,6 +4010,15 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\snes9x2010_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Accuracy (SNES)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\bsnes2014_accuracy_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Balanced (SNES)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\bsnes2014_balanced_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Performance (SNES)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\bsnes2014_performance_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Accuracy (SNES)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\bsnes_accuracy_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -3699,8 +4050,14 @@
 	<launcher name="RetroArch Mednafen SNES (SNES)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mednafen_snes_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mesen-S (SNES)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mesen-s_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch SNES9x (SNES)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\snes9x_libretro.dll" "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES (SNES, Latest)" os="Windows Close_Kodi">
+		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\bsnes_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Kronos (Saturn)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\kronos_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -3908,8 +4265,14 @@
 	<launcher name="RetroArch VICE C64 (C64)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vice_x64_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE C64 X64SC (C64)" os="LibreElec Remix">
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vice_x64sc_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch VICE SDL C64 (C64)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/x64sdl_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VICE CBM 6x0 7x0 (CBM)" os="LibreElec Remix">
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vice_xcbm2_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PocketCDG (CDG Music)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/pocketcdg_libretro.so "%ROM_PATH%"</launcher_command>
@@ -4070,6 +4433,9 @@
 	<launcher name="RetroArch Mupen64Plus (N64)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mupen64plus_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mupen64Plus Next GLES3 (N64)" os="LibreElec Remix">
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mupen64plus_next_gles3_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mupen64Plus Next (N64)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mupen64plus_next_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4108,6 +4474,9 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/quicknes_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch NeoCD (NGCD)" os="LibreElec Remix">
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/libneocd_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mednafen_ngp_libretro.so "%ROM_PATH%"</launcher_command>
@@ -4151,6 +4520,9 @@
 	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mednafen_pce_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE xPET (PET)" os="LibreElec Remix">
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vice_xpet_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vice_xplus4_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4187,6 +4559,24 @@
 	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/pokemini_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VitaQuake2 Rogue (Quake 2)" os="LibreElec Remix">
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vitaquake2-rogue_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 XAtrix (Quake 2)" os="LibreElec Remix">
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vitaquake2-xatrix_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 ZAero (Quake 2)" os="LibreElec Remix">
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vitaquake2-zaero_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 (Quake 2)" os="LibreElec Remix">
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vitaquake2_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake3 (Quake 3)" os="LibreElec Remix">
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vitaquake3_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch vitaVoyager (Quake 3)" os="LibreElec Remix">
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/vitavoyager_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/tyrquake_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4195,6 +4585,9 @@
 	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/easyrpg_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Redbook (Redbook Audio Player)" os="LibreElec Remix">
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/redbook_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/xrick_libretro.so "%ROM_PATH%"</launcher_command>
@@ -4219,6 +4612,15 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/snes9x2010_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Accuracy (SNES)" os="LibreElec Remix">
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/bsnes2014_accuracy_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Balanced (SNES)" os="LibreElec Remix">
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/bsnes2014_balanced_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Performance (SNES)" os="LibreElec Remix">
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/bsnes2014_performance_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Accuracy (SNES)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/bsnes_accuracy_libretro.so "%ROM_PATH%"</launcher_command>
@@ -4250,8 +4652,14 @@
 	<launcher name="RetroArch Mednafen SNES (SNES)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mednafen_snes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mesen-S (SNES)" os="LibreElec Remix">
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mesen-s_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch SNES9x (SNES)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/snes9x_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES (SNES, Latest)" os="LibreElec Remix">
+		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/bsnes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Kronos (Saturn)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/kronos_libretro.so "%ROM_PATH%"</launcher_command>
@@ -4462,8 +4870,14 @@
 	<launcher name="RetroArch VICE C64 (C64)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/vice_x64_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE C64 X64SC (C64)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/vice_x64sc_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch VICE SDL C64 (C64)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/x64sdl_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VICE CBM 6x0 7x0 (CBM)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/vice_xcbm2_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PocketCDG (CDG Music)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/pocketcdg_libretro.so "%ROM_PATH%"</launcher_command>
@@ -4624,6 +5038,9 @@
 	<launcher name="RetroArch Mupen64Plus (N64)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/mupen64plus_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mupen64Plus Next GLES3 (N64)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/mupen64plus_next_gles3_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mupen64Plus Next (N64)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/mupen64plus_next_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4662,6 +5079,9 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/quicknes_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch NeoCD (NGCD)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/libneocd_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/mednafen_ngp_libretro.so "%ROM_PATH%"</launcher_command>
@@ -4705,6 +5125,9 @@
 	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/mednafen_pce_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE xPET (PET)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/vice_xpet_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/vice_xplus4_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4741,6 +5164,24 @@
 	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/pokemini_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VitaQuake2 Rogue (Quake 2)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/vitaquake2-rogue_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 XAtrix (Quake 2)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/vitaquake2-xatrix_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 ZAero (Quake 2)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/vitaquake2-zaero_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 (Quake 2)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/vitaquake2_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake3 (Quake 3)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/vitaquake3_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch vitaVoyager (Quake 3)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/vitavoyager_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/tyrquake_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4749,6 +5190,9 @@
 	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/easyrpg_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Redbook (Redbook Audio Player)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/redbook_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/xrick_libretro.so "%ROM_PATH%"</launcher_command>
@@ -4773,6 +5217,15 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/snes9x2010_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Accuracy (SNES)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/bsnes2014_accuracy_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Balanced (SNES)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/bsnes2014_balanced_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Performance (SNES)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/bsnes2014_performance_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Accuracy (SNES)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/bsnes_accuracy_libretro.so "%ROM_PATH%"</launcher_command>
@@ -4804,8 +5257,14 @@
 	<launcher name="RetroArch Mednafen SNES (SNES)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/mednafen_snes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mesen-S (SNES)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/mesen-s_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch SNES9x (SNES)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/snes9x_libretro.so "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES (SNES, Latest)" os="RetroELEC">
+		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/bsnes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Kronos (Saturn)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/kronos_libretro.so "%ROM_PATH%"</launcher_command>
@@ -5007,8 +5466,14 @@
 	<launcher name="RetroArch VICE C64 (C64)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vice_x64 "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE C64 X64SC (C64)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vice_x64sc "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch VICE SDL C64 (C64)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" x64sdl "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VICE CBM 6x0 7x0 (CBM)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vice_xcbm2 "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PocketCDG (CDG Music)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" pocketcdg "%ROM_PATH%"</launcher_command>
@@ -5169,6 +5634,9 @@
 	<launcher name="RetroArch Mupen64Plus (N64)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mupen64plus "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mupen64Plus Next GLES3 (N64)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mupen64plus_next_gles3 "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mupen64Plus Next (N64)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mupen64plus_next "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -5207,6 +5675,9 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" quicknes "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch NeoCD (NGCD)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" libneocd "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_ngp "%ROM_PATH%"</launcher_command>
@@ -5250,6 +5721,9 @@
 	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_pce "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE xPET (PET)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vice_xpet "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vice_xplus4 "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -5286,6 +5760,24 @@
 	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" pokemini "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VitaQuake2 Rogue (Quake 2)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vitaquake2-rogue "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 XAtrix (Quake 2)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vitaquake2-xatrix "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 ZAero (Quake 2)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vitaquake2-zaero "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 (Quake 2)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vitaquake2 "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake3 (Quake 3)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vitaquake3 "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch vitaVoyager (Quake 3)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" vitavoyager "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" tyrquake "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -5294,6 +5786,9 @@
 	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" easyrpg "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Redbook (Redbook Audio Player)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" redbook "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" xrick "%ROM_PATH%"</launcher_command>
@@ -5318,6 +5813,15 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" snes9x2010 "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Accuracy (SNES)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" bsnes2014_accuracy "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Balanced (SNES)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" bsnes2014_balanced "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Performance (SNES)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" bsnes2014_performance "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Accuracy (SNES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" bsnes_accuracy "%ROM_PATH%"</launcher_command>
@@ -5349,8 +5853,14 @@
 	<launcher name="RetroArch Mednafen SNES (SNES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_snes "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mesen-S (SNES)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mesen-s "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch SNES9x (SNES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" snes9x "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES (SNES, Latest)" os="Sx05RE">
+		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" bsnes "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Kronos (Saturn)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" kronos "%ROM_PATH%"</launcher_command>
@@ -5540,8 +6050,14 @@
 	<launcher name="RetroArch VICE C64 (C64)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh vice_x64 "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE C64 X64SC (C64)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh vice_x64sc "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch VICE SDL C64 (C64)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh x64sdl "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VICE CBM 6x0 7x0 (CBM)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh vice_xcbm2 "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PocketCDG (CDG Music)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh pocketcdg "%ROM_PATH%"</launcher_command>
@@ -5702,6 +6218,9 @@
 	<launcher name="RetroArch Mupen64Plus (N64)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh mupen64plus "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mupen64Plus Next GLES3 (N64)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh mupen64plus_next_gles3 "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mupen64Plus Next (N64)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh mupen64plus_next "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -5740,6 +6259,9 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh quicknes "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch NeoCD (NGCD)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh libneocd "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh mednafen_ngp "%ROM_PATH%"</launcher_command>
@@ -5783,6 +6305,9 @@
 	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh mednafen_pce "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE xPET (PET)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh vice_xpet "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh vice_xplus4 "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -5819,6 +6344,24 @@
 	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh pokemini "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VitaQuake2 Rogue (Quake 2)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh vitaquake2-rogue "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 XAtrix (Quake 2)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh vitaquake2-xatrix "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 ZAero (Quake 2)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh vitaquake2-zaero "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 (Quake 2)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh vitaquake2 "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake3 (Quake 3)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh vitaquake3 "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch vitaVoyager (Quake 3)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh vitavoyager "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh tyrquake "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -5827,6 +6370,9 @@
 	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh easyrpg "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Redbook (Redbook Audio Player)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh redbook "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh xrick "%ROM_PATH%"</launcher_command>
@@ -5851,6 +6397,15 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh snes9x2010 "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Accuracy (SNES)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh bsnes2014_accuracy "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Balanced (SNES)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh bsnes2014_balanced "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Performance (SNES)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh bsnes2014_performance "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Accuracy (SNES)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh bsnes_accuracy "%ROM_PATH%"</launcher_command>
@@ -5882,8 +6437,14 @@
 	<launcher name="RetroArch Mednafen SNES (SNES)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh mednafen_snes "%ROM_PATH%"</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mesen-S (SNES)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh mesen-s "%ROM_PATH%"</launcher_command>
+	</launcher>
 	<launcher name="RetroArch SNES9x (SNES)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh snes9x "%ROM_PATH%"</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES (SNES, Latest)" os="Gamestarter Addon">
+		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh bsnes "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Kronos (Saturn)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh kronos "%ROM_PATH%"</launcher_command>
@@ -6082,8 +6643,14 @@
 	<launcher name="RetroArch VICE C64 (C64)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/vice_x64_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE C64 X64SC (C64)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/vice_x64sc_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
 	<launcher name="RetroArch VICE SDL C64 (C64)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/x64sdl_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VICE CBM 6x0 7x0 (CBM)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/vice_xcbm2_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PocketCDG (CDG Music)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/pocketcdg_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
@@ -6244,6 +6811,9 @@
 	<launcher name="RetroArch Mupen64Plus (N64)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/mupen64plus_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mupen64Plus Next GLES3 (N64)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/mupen64plus_next_gles3_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mupen64Plus Next (N64)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/mupen64plus_next_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
@@ -6282,6 +6852,9 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/quicknes_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch NeoCD (NGCD)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/libneocd_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/mednafen_ngp_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
@@ -6325,6 +6898,9 @@
 	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/mednafen_pce_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE xPET (PET)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/vice_xpet_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/vice_xplus4_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
@@ -6361,6 +6937,24 @@
 	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/pokemini_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VitaQuake2 Rogue (Quake 2)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/vitaquake2-rogue_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 XAtrix (Quake 2)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/vitaquake2-xatrix_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 ZAero (Quake 2)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/vitaquake2-zaero_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 (Quake 2)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/vitaquake2_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake3 (Quake 3)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/vitaquake3_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch vitaVoyager (Quake 3)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/vitavoyager_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/tyrquake_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
@@ -6369,6 +6963,9 @@
 	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/easyrpg_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Redbook (Redbook Audio Player)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/redbook_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/xrick_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
@@ -6393,6 +6990,15 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/snes9x2010_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Accuracy (SNES)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/bsnes2014_accuracy_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Balanced (SNES)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/bsnes2014_balanced_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Performance (SNES)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/bsnes2014_performance_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Accuracy (SNES)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/bsnes_accuracy_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
@@ -6424,8 +7030,14 @@
 	<launcher name="RetroArch Mednafen SNES (SNES)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/mednafen_snes_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mesen-S (SNES)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/mesen-s_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
 	<launcher name="RetroArch SNES9x (SNES)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/snes9x_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES (SNES, Latest)" os="Android">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/bsnes_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Kronos (Saturn)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/kronos_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
@@ -6528,7 +7140,7 @@
 		<launcher_command>/system/bin/am start -n com.dsemu.drastic/.DraSticActivity -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e GAMEPATH "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="ePSXe (PS1)" os="Android">
-		<launcher_command>/system/bin/am start -n com.epsxe.ePSXe/.ePSXe -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e com.epsxe.ePSXe.isoName "%ROM_PATH%"</launcher_command>
+		<launcher_command>/system/bin/am start --user 0 -n com.epsxe.ePSXe/.ePSXe -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e com.epsxe.ePSXe.isoName "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="GameBoid (GBA)" os="Android">
 		<launcher_command>/system/bin/am start -n com.androidemu.gba/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</launcher_command>
@@ -6708,8 +7320,14 @@
 	<launcher name="RetroArch VICE C64 (C64)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/vice_x64_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE C64 X64SC (C64)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/vice_x64sc_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
 	<launcher name="RetroArch VICE SDL C64 (C64)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/x64sdl_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VICE CBM 6x0 7x0 (CBM)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/vice_xcbm2_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch PocketCDG (CDG Music)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/pocketcdg_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
@@ -6870,6 +7488,9 @@
 	<launcher name="RetroArch Mupen64Plus (N64)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/mupen64plus_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mupen64Plus Next GLES3 (N64)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/mupen64plus_next_gles3_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Mupen64Plus Next (N64)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/mupen64plus_next_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
@@ -6908,6 +7529,9 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/quicknes_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch NeoCD (NGCD)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/libneocd_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/mednafen_ngp_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
@@ -6951,6 +7575,9 @@
 	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/mednafen_pce_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VICE xPET (PET)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/vice_xpet_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
 	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/vice_xplus4_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
@@ -6987,6 +7614,24 @@
 	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/pokemini_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
+	<launcher name="RetroArch VitaQuake2 Rogue (Quake 2)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/vitaquake2-rogue_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 XAtrix (Quake 2)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/vitaquake2-xatrix_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 ZAero (Quake 2)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/vitaquake2-zaero_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake2 (Quake 2)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/vitaquake2_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch VitaQuake3 (Quake 3)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/vitaquake3_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch vitaVoyager (Quake 3)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/vitavoyager_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
 	<launcher name="RetroArch TyrQuake (Quake)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/tyrquake_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
@@ -6995,6 +7640,9 @@
 	</launcher>
 	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/easyrpg_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch Redbook (Redbook Audio Player)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/redbook_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch XRick (Rick Dangerous)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/xrick_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
@@ -7019,6 +7667,15 @@
 	</launcher>
 	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/snes9x2010_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Accuracy (SNES)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/bsnes2014_accuracy_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Balanced (SNES)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/bsnes2014_balanced_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES 2014 Performance (SNES)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/bsnes2014_performance_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES Accuracy (SNES)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/bsnes_accuracy_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
@@ -7050,8 +7707,14 @@
 	<launcher name="RetroArch Mednafen SNES (SNES)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/mednafen_snes_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
+	<launcher name="RetroArch Mesen-S (SNES)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/mesen-s_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
 	<launcher name="RetroArch SNES9x (SNES)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/snes9x_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
+	</launcher>
+	<launcher name="RetroArch BSNES (SNES, Latest)" os="Android Aarch64">
+		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/bsnes_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Kronos (Saturn)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/kronos_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
@@ -7154,7 +7817,7 @@
 		<launcher_command>/system/bin/am start -n com.dsemu.drastic/.DraSticActivity -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e GAMEPATH "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="ePSXe (PS1)" os="Android Aarch64">
-		<launcher_command>/system/bin/am start -n com.epsxe.ePSXe/.ePSXe -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e com.epsxe.ePSXe.isoName "%ROM_PATH%"</launcher_command>
+		<launcher_command>/system/bin/am --user 0 start -n com.epsxe.ePSXe/.ePSXe -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e com.epsxe.ePSXe.isoName "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="GameBoid (GBA)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start -n com.androidemu.gba/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</launcher_command>
@@ -7238,534 +7901,6 @@
 		<launcher_command>/system/bin/am start --user 0 -n org.uoyabause.android/org.uoyabause.android.Yabause -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e org.uoyabause.android.FileNameEx "%ROM_PATH%"</launcher_command>
 	</launcher>
 <!-- RetroPie External Retroarch Commands -->
-	<launcher name="RetroArch 4DO (3DO)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Citra Canary (3DS)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Citra (3DS)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch FSUAE (Amiga)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch PUAE (Amiga)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch UAE4ARM (Amiga)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch CAP32 (Amstrad CPC)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch CrocoDS (Amstrad CPC)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME 2010 (Arcade 0.135u4)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME 2010 (Arcade 0.139)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME 2014 (Arcade 0.159)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME 2015 (Arcade 0.160)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME 2016 (Arcade 0.174)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch FBA 2012 (Arcade 0.2.97.29)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME 2000 (Arcade 0.37b5)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME 2003 (Arcade 0.78)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME 2003 Plus (Arcade 0.78)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch FBA CPS1 2012 (Arcade CPS1 0.2.97.29)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch FBA CPS2 2012 (Arcade CPS2 0.2.97.29)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch FBA CPS3 2012 (Arcade CPS3 0.2.97.29)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch FBA (Arcade Latest)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch FB Neo (Arcade Latest)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME (Arcade Latest)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch MAME 2003 Midway (Arcade Midway 0.78)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Stella 2014 (Atari 2600)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Stella (Atari 2600)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch ProSystem (Atari 7800)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Atari800 (Atari 800/Atari 5200)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Hatari (Atari ST/STE/TT/Falcon)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch VICE C128 (C128)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Frodo (C64)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch VICE C64 (C64)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch VICE SDL C64 (C64)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch PocketCDG (CDG Music)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch EMUX CHIP-8 (CHIP-8)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch ChaiLove Engine (ChaiLove)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch ChaiGame (ChaiScript)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch DOSBox (DOS)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch DOSBox SVN Glide (DOS)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch DOSBox SVN (DOS)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch PrBoom (Doom)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch BeetleDC (Dreamcast WinCE)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch FlyCast (Dreamcast WinCE)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Redream (Dreamcast)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Reicast (Dreamcast)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Reicast OIT (Dreamcast)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch BeetleDC (Dreamcast/Naomi)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="Retroarch FlyCast (Dreamcast/Naomi)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch FreeChaF (Fairchild ChannelF)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch EMUX GB (GB/GBC)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch fixGB (GB/GBC)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Gambatte (GB/GBC)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Gearboy (GB/GBC)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch SameBoy (GB/GBC)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch TGBDual (GB/GBC)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch gpSP (GBA)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen GBA (GBA)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Meteor (GBA)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch mGBA (GBA)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch TempGBA (GBA)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch VBANext (GBA)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch VBA-M (GBA)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Gearsystem (GG/SMS)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Genesis Plus GX (GG/SMS/Gen/PICO/SG-1000)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Game and Watch (Game and Watch)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch BlastEm (Gen/MD)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch FreeIntv (Intellivision)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Virtual Jaguar (Jaguar)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch FreeJ2ME (Java)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch SquirrelJME (Java)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Daphne (Laserdisc)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Lua Engine (Lutro)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Handy (Lynx)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen Lynx (Lynx)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch UME2014 (MAME/MESS 0.159)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch UME2015 (MAME/MESS 0.160)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch MESS 2014 (MESS 0.159)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch MESS 2014 (MESS 0.160)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch BlueMSX (MSX)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch fMSX (MSX)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch FFmpeg (Media Player)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch MPV (Media Player)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Imageviewer (Media Viewer)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mupen64Plus GLES3 (N64)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mupen64Plus (N64)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mupen64Plus Next (N64)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch ParaLLEl (N64)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch DeSmuME 2015 (NDS)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch DeSmuME (NDS)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Neko Project II (NEC PC-98)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Neko Project II Kai (NEC PC-98)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch BNES (NES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch EMUX NES (NES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch FCEUmm (NES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch fixNES (NES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mesen (NES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Nestopia (NES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch QuickNES (NES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch CaveStory (NXEngine)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Reicast Naomi (Naomi)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch FBA NEO 2012 (Neo Geo 0.2.97.29)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch melonDS (Nintendo DS)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch O2EM (Odyssey2/Videopac)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch 3D Engine (Other)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Game Music Emu (Other)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch PCem (PC)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch QUASI88 (PC-8801)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen PCFX (PC-FX)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen SuperGrafx (PCE SuperGrafx)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen PCE FAST (PCE/TG16)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen PCE (PCE/TG16)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Commodore VICE PLUS4 (PLUS4)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen PSX HW (PS1)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen PSX (PS1)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch PCSX1 (PS1)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch PCSX ReArmed (PS1)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch PCSX ReArmed NEON (PS1)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Rustation (PS1)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Play (PS2)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch RemoteJoy (PSP RemotePlay)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch PPSSPP (PSP)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mu (Palm OS)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Pokemon Mini (PokeMini)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch TyrQuake (Quake)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Oberon (RISC)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch EasyRPG (RPG Maker 2000/2003)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch XRick (Rick Dangerous)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch SimCoupe (SAM coupe)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch EMUX SMS (SMS)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch PicoDrive (SMS/Gen/Sega CD/32X)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch SNES9x 2002 (SNES 1.39)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch SNES9x 2005 (SNES 1.43)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch SNES9x 2005 Plus (SNES 1.43)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch SNES9x 2010 (SNES 1.52)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch BSNES Accuracy (SNES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch BSNES Balanced (SNES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch BSNES Performance v085 (SNES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch BSNES Mercury Accuracy (SNES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch BSNES Mercury Balanced (SNES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch BSNES Mercury Performance (SNES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch BSNES Performance (SNES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch SNES Higan nSide Balanced (SNES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch SNES Higan (SNES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen SNES (SNES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch SNES9x (SNES)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Kronos (Saturn)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen Saturn (Saturn)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Yabasanshiro (Saturn)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Yabuse (Saturn)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch VeMUlator (Sega VMU)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch FUSE (Spectrum)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch 2048 (Standalone Game)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch CannonBall (Standalone Game)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Craft (Standalone Game)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Dinothawr (Standalone Game)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch OpenTyrian (Standalone Game)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch PascalPong (Standalone Game)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch REminiscence (Standalone Game)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Dungeon Crawl Stone Soup (Standalone Game)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch PowderToy (Standalone Game)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch TIC80 (TIC-80)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Theodore (Thomson TO8D)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch OpenLara (Tomb Raider)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="Retroarch Uzem (Uzebox)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Commodore VICE VIC20 (VIC20)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch ScummVM (Various)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch VECX (Vectrex)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen VB (VirtualBoy)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Dolphin (Wii/Gamecube)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Dolphin Ishiiruka (Wii/Gamecube)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Mednafen Cygne (WonderSwan/WonderSwan Color)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch Sharp X68000 (X68000)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
-	<launcher name="RetroArch EightyOne (ZX81)" os="RetroPie">
-		<launcher_command></launcher_command>
-	</launcher>
 <!-- RetroPie External Retroarch Commands -->
 	<launcher name="RetroPie Port CannonBall" os="RetroPie">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch_retropie.sh" 0 _PORT_ cannonball "%ROM_PATH%"</launcher_command>
