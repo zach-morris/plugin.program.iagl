@@ -452,7 +452,7 @@ def get_game(game_list_id,game_id):
 		download_and_process_success = IAGL_DL.download_and_process_game_files() #Download files
 		if False not in download_and_process_success:
 			IAGL_LAUNCH = iagl_launch(current_game['json'],IAGL_DL.current_processed_files,current_game['game_id']) #Initialize launch object
-			launch_success = IAGL_LAUNCH.launch() #Launch Game
+			launch_success = IAGL_LAUNCH.launch(return_home=current_game['return_home']) #Launch Game
 			if launch_success:
 				xbmc.log(msg='IAGL:  Game Launched: %(game_title)s' % {'game_title': IAGL_DL.current_game_title}, level=xbmc.LOGDEBUG)
 		else:
