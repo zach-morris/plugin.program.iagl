@@ -403,7 +403,7 @@ def get_game(game_list_id,game_id):
 		current_game_json = None
 	return_to_home_from_infodialog = False
 
-	#No json is available from listitem, so this must be a link from a favorite
+	#No json is available from listitem, so this must be a link from a favorite or a widget
 	if current_game_json is None or len(current_game_json)<1:
 		current_page, page_info = IAGL.get_games_as_listitems(url_unquote(game_list_id),list_method,url_unquote(game_id),1)
 		current_game_json = current_page[0].getProperty('iagl_json')
@@ -435,6 +435,8 @@ def get_game(game_list_id,game_id):
 		del IAGL_Dialog
 	# elif IAGL.handle.getSetting(id='iagl_setting_default_action') == 'Download Only': #Old method pre language update
 	elif int(IAGL.handle.getSetting(id='iagl_setting_default_action')) == 1:
+		if current_game['return_home']:
+			go_to_home()
 		IAGL_DL = iagl_download(current_game['json']) #Initialize download object
 		download_and_process_success = IAGL_DL.download_and_process_game_files() #Download files
 		current_dialog = xbmcgui.Dialog()
@@ -448,6 +450,8 @@ def get_game(game_list_id,game_id):
 		del current_dialog
 	# elif IAGL.handle.getSetting(id='iagl_setting_default_action') == 'Download and Launch': #Old method pre language update
 	elif int(IAGL.handle.getSetting(id='iagl_setting_default_action')) == 0:
+		if current_game['return_home']:
+			go_to_home()
 		IAGL_DL = iagl_download(current_game['json']) #Initialize download object
 		download_and_process_success = IAGL_DL.download_and_process_game_files() #Download files
 		if False not in download_and_process_success:

@@ -3922,9 +3922,9 @@ class iagl_launch(object):
 			self.launch_success = self.launch_retroplayer(return_home=return_home)
 		if self.launcher.lower() == 'external':
 			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android' or self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android Aarch64':
-				self.launch_success = self.launch_external_android()
+				self.launch_success = self.launch_external_android(return_home=return_home)
 			else:
-				self.launch_success = self.launch_external()
+				self.launch_success = self.launch_external(return_home=return_home)
 		if self.launch_success:
 			self.IAGL.add_game_to_history(self.json,self.game_list_id,self.game_id)
 
@@ -3982,9 +3982,7 @@ class iagl_launch(object):
 			xbmc.log(msg='IAGL:  Gameclient for Retroplayer set to: %(current_gameclient)s' % {'current_gameclient': current_gameclient}, level=xbmc.LOGNOTICE)
 			xbmc.log(msg='IAGL:  Attempting to play the following file through Retroplayer: %(url)s' % {'url': self.launch_filenames[0]}, level=xbmc.LOGNOTICE)
 			if return_home: #Go back to home page if its a widget
-				xbmc.log(msg='IAGL:  Returning to Home prior to playing', level=xbmc.LOGDEBUG)
-				xbmc.executebuiltin('Dialog.Close(all,true)') #Need to close the open dialogs (busy or infowindow) prior to going home and playing
-				xbmc.executebuiltin('ActivateWindow(home)')
+				go_to_home()
 			xbmc.Player().play(xbmc.translatePath(self.launch_filenames[0]),game_listitem)
 			return True
 		except Exception as exc: #except Exception, (exc):
@@ -4097,7 +4095,7 @@ class iagl_launch(object):
 
 			self.external_launch_command = self.external_launch_command.replace('%NETPLAY_COMMAND%',current_netplay_command)
 
-	def launch_external(self):
+	def launch_external(self,return_home=False):
 		import subprocess
 		self.update_external_launch_command()
 		if self.external_launch_command != 'none':
@@ -4107,6 +4105,8 @@ class iagl_launch(object):
 			if not self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_stop_media_before_launch')):
 				xbmc.audioSuspend()
 				xbmc.enableNavSounds(False)
+			if return_home: #Go back to home page if its a widget
+				go_to_home()
 			xbmc.log(msg='IAGL:  Sending Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGNOTICE)
 			external_command = subprocess.call(self.external_launch_command,shell=True)
 			if not self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_stop_media_before_launch')):
@@ -4116,7 +4116,7 @@ class iagl_launch(object):
 		else:
 			return False
 
-	def launch_external_android(self):
+	def launch_external_android(self,return_home=False):
 		import subprocess
 		self.update_external_launch_command()
 		if self.external_launch_command != 'none':
@@ -4125,6 +4125,8 @@ class iagl_launch(object):
 				xbmc.sleep(500)
 			xbmc.audioSuspend()
 			xbmc.enableNavSounds(False)
+			if return_home: #Go back to home page if its a widget
+				go_to_home()
 			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android Aarch64':
 				android_stop_command = '/system/bin/am force-stop com.retroarch.aarch64'  #Changed to add stop command in the external launch command arguments
 			else:
@@ -4321,8 +4323,7 @@ class iagl_infodialog(xbmcgui.WindowXMLDialog):
 		xbmc.executebuiltin('Dialog.Close(busydialog)') #Try and close busy dialog if it is for some reason open
 		self.close()
 		if self.return_home:
-			xbmc.log(msg='IAGL:  Returning to Home', level=xbmc.LOGDEBUG)
-			xbmc.executebuiltin('ActivateWindow(home)')
+			go_to_home()
 			
 	def action_download_only(self):
 		#Temporarily disable these buttons to avoid double taps
@@ -4438,6 +4439,13 @@ def etree_to_dict(t):
 		else:
 			d[t.tag] = text
 	return d
+
+#Function to go to home screen (if not already there)
+def go_to_home():
+	if xbmcgui.getCurrentWindowId() != 10000:
+		xbmc.log(msg='IAGL:  Returning to Home', level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('ActivateWindow(home)')
+		xbmc.sleep(100)
 
 def dict_to_etree(d):
 	def _to_etree(d, root):
