@@ -85,6 +85,7 @@ class iagl_utils(object):
 		self.game_list_genre_filename = 'genres_database.xml'
 		self.game_list_year_filename = 'years_database.xml'
 		self.game_list_player_filename = 'players_database.xml'
+		self.game_list_groups_filename = 'groups_database.xml'
 		self.game_list_studio_filename = 'studio_database.xml'
 		self.game_list_tag_filename = 'tag_database.xml'
 		self.game_list_choose_filename = 'choose_database.xml'
@@ -109,8 +110,8 @@ class iagl_utils(object):
 		self.archive_listing_settings = 'Choose from List|Browse All Lists|Browse by Category|Favorites|Search|Random Play'
 		self.archive_listing_settings_routes = ['choose_from_list','all','categorized','categorized/Favorites','search_menu','random_menu']
 		self.archive_listing_settings_route = None
-		self.game_listing_settings = 'One Big List|Choose from List|Alphabetical|Group by Genre|Group by Year|Group by Players|Group by Studio|Group by Tag'
-		self.game_listing_settings_routes = ['list_all','choose_from_list','alphabetical','list_by_genre','list_by_year','list_by_players','list_by_studio','list_by_tag']
+		self.game_listing_settings = 'One Big List|Choose from List|Alphabetical|Group by Genre|Group by Year|Group by Players|Group by Studio|Group by Tag|Group by Custom Groups'
+		self.game_listing_settings_routes = ['list_all','choose_from_list','alphabetical','list_by_genre','list_by_year','list_by_players','list_by_studio','list_by_tag','list_by_groups']
 		self.current_game_listing_route = None
 		self.items_per_page_settings = self.handle.getSetting(id='iagl_setting_items_pp')
 		self.max_items_per_page = 99999
@@ -645,6 +646,9 @@ class iagl_utils(object):
 	def get_game_list_player_file(self):
 		return os.path.join(self.get_databases_folder_path(),self.game_list_player_filename)
 
+	def get_game_list_groups_file(self):
+		return os.path.join(self.get_databases_folder_path(),self.game_list_groups_filename)
+
 	def get_game_list_studio_file(self):
 		return os.path.join(self.get_databases_folder_path(),self.game_list_studio_filename)
 
@@ -833,6 +837,13 @@ class iagl_utils(object):
 			return etree_to_dict(ET.parse(self.get_game_list_player_file()).getroot()) #No cache for this currently, since its small
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  There was an error parsing the player xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
+			return None
+
+	def get_groups_game_listing(self):
+		try:
+			return etree_to_dict(ET.parse(self.get_game_list_groups_file()).getroot()) #No cache for this currently, since its small
+		except Exception as exc: #except Exception, (exc):
+			xbmc.log(msg='IAGL:  There was an error parsing the custom groups xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
 
 	def get_studio_game_listing(self):
@@ -1134,6 +1145,78 @@ class iagl_utils(object):
 				xbmc.log(msg='IAGL Error:  An error occured and year %(cats)s could not be displayed' % {'cats': cats}, level=xbmc.LOGERROR)
 
 		return year_listitems
+
+	def get_groups_from_game_lists(self, game_lists):
+		groups_list_temp = list()
+		groups_list_sorted = list()
+		if game_lists is None: #Use all lists is the query is for None
+			game_lists = [x for x in self.get_game_lists().get('dat_filename')]
+		for game_list_id in game_lists:
+			current_games_dict = self.get_games(game_list_id)
+			current_game_groups = [y.strip() for y in self.flatten_list([x.get('properties').get('groups').split(',') for x in current_games_dict if x.get('properties').get('groups') is not None]) if len(y)>0]
+			current_game_groups_unknown = [x.get('properties').get('groups') for x in current_games_dict if x.get('properties').get('groups') is None]
+			current_game_groups_sorted = sorted(list(set(current_game_groups)))
+			if len(current_game_groups_unknown)>0:
+				if 'Unknown' not in current_game_groups_sorted:
+					current_game_groups_sorted.append('Unknown')
+			groups_list_temp = groups_list_temp+current_game_groups_sorted
+		groups_list_sorted = sorted(list(set(groups_list_temp)))
+		return groups_list_sorted
+
+	def get_game_list_groups_as_listitems(self, game_list_id):
+		group_listitems = list()
+		games_dict = self.get_games(game_list_id)
+		group_dict = self.get_groups_game_listing()
+		current_game_groups = [y.strip() for y in self.flatten_list([x.get('properties').get('groups').split(',') for x in games_dict if x.get('properties').get('groups') is not None]) if len(y)>0]
+		current_game_groups_unknown = [x.get('properties').get('groups') for x in games_dict if x.get('properties').get('groups') is None]
+		current_game_groups_sorted = sorted(list(set(current_game_groups)))
+		if len(current_game_groups_unknown)>0:
+			if 'Unknown' not in current_game_groups_sorted:
+				current_game_groups_sorted.append('Unknown')
+		group_dict_labels = [x['label'] for x in group_dict['categories']['category']]
+
+		for cats in current_game_groups_sorted:
+			try: #Find the current letter in the alphabetical database
+				idx = group_dict_labels.index(cats)
+			except:
+				try: #If the letter is not present in the database, use the default info
+					idx = group_dict_labels.index('default')
+					xbmc.log(msg='IAGL:  The custom grouping %(cats)s was not found, using IAGL default info for that item' % {'cats': cats}, level=xbmc.LOGDEBUG)
+					default_idx = idx
+				except:
+					idx = None
+			if idx is not None: #Fill in listitem parameters
+				if idx == group_dict_labels.index('Unknown'):
+					total_in_current_group= len(current_game_groups_unknown)
+				else:
+					total_in_current_group = current_game_groups.count(cats)
+				total_in_current_group_label = cats+'    ('+str(total_in_current_group)+')'
+				total_in_current_group_label2 = cats
+				current_trailer = self.get_trailer(group_dict['categories']['category'][idx].get('trailer'))
+				li = {'values': {'label' : total_in_current_group_label,
+						'label2' : total_in_current_group_label2,
+						},
+						'info': {'originaltitle' : total_in_current_group_label2,
+						'title' : total_in_current_group_label,
+						'plot' : group_dict['categories']['category'][idx]['plot'],
+						'trailer' : current_trailer,
+						},
+						'art': {'poster' : self.choose_image(group_dict['categories']['category'][idx]['thumb'],self.default_thumb,None),
+						'banner' : self.choose_image(group_dict['categories']['category'][idx]['banner'],self.default_banner,None),
+						'fanart' : self.choose_image(group_dict['categories']['category'][idx]['fanart'],self.default_fanart,None),
+						'clearlogo' : self.choose_image(group_dict['categories']['category'][idx]['logo'],None,None),
+						'icon' : self.choose_image(group_dict['categories']['category'][idx]['logo'],None,None),
+						'thumb' : self.choose_image(group_dict['categories']['category'][idx]['thumb'],self.default_thumb,None),
+						},
+						}
+				# group_listitems.append(xbmcgui.ListItem(label=li['values']['label'],label2=li['values']['label2'], offscreen=True))
+				group_listitems.append(self.create_kodi_listitem(li['values']['label'],li['values']['label2']))
+				group_listitems[-1].setInfo(self.media_type,li['info'])
+				group_listitems[-1].setArt(li['art'])
+			else:
+				xbmc.log(msg='IAGL Error:  An error occured and custom grouping %(cats)s could not be displayed' % {'cats': cats}, level=xbmc.LOGERROR)
+
+		return group_listitems
 
 	def get_players_from_game_lists(self, game_lists):
 		players_list_temp = list()
@@ -1708,6 +1791,7 @@ class iagl_utils(object):
 							'properties': {'iagl_json' : json.dumps(json_item),
 							'tag': current_tag,
 							'nplayers': game_item.get('nplayers'),
+							'groups': game_item.get('groups'),
 							},
 							})
 						if current_date is None:
@@ -1818,6 +1902,24 @@ class iagl_utils(object):
 				else:
 					# current_page = paginate.Page([x for x in games_dict if x.get('properties').get('nplayers') is not None and x.get('properties').get('nplayers') == filter_value], page=page_number, items_per_page=self.get_items_per_page())
 					current_page = paginate.Page([x for x in games_dict if x.get('properties').get('nplayers') is not None and ((filter_value == x.get('properties').get('nplayers')) or (',' in x.get('properties').get('nplayers') and filter_value.lower() in x.get('properties').get('nplayers').lower()))], page=page_number, items_per_page=self.get_items_per_page())  #Players must exactly equal the filter value, or just be contained in the filter value in the case of a comma seperated list, example returning filter of 1-2 Alt and the item is 1-2 Sim, 3-4 Alt
+				page_info['page'] = current_page.page
+				page_info['page_count'] = current_page.page_count
+				page_info['next_page'] = current_page.next_page
+				page_info['item_count'] = current_page.item_count
+				page_info['categories'] = current_categories
+				for game_item in current_page:
+					game_item['values']['label'] = self.update_game_label(self.get_clean_label(game_item['values']['label'],clean_label_option),game_item,label_naming_convention)
+					# game_list.append(xbmcgui.ListItem(label=game_item['values']['label'],label2=game_item['values']['label2'], offscreen=True))
+					game_list.append(self.create_kodi_listitem(game_item['values']['label'],game_item['values']['label2']))
+					game_list[-1].setInfo(self.media_type,game_item['info'])
+					game_list[-1].setArt(game_item['art'])
+					game_list[-1].setProperty('iagl_json',game_item['properties']['iagl_json'])
+			elif filter_method == 'list_by_groups':
+				if filter_value == 'Unknown' or filter_value == None:
+					current_page = paginate.Page([x for x in games_dict if x.get('properties').get('groups') is None], page=page_number, items_per_page=self.get_items_per_page())
+				else:
+					# current_page = paginate.Page([x for x in games_dict if x.get('properties').get('groups') is not None and filter_value.lower() == x.get('properties').get('groups').lower()], page=page_number, items_per_page=self.get_items_per_page())
+					current_page = paginate.Page([x for x in games_dict if x.get('properties').get('groups') is not None and filter_value.lower() in x.get('properties').get('groups').lower()], page=page_number, items_per_page=self.get_items_per_page())
 				page_info['page'] = current_page.page
 				page_info['page_count'] = current_page.page_count
 				page_info['next_page'] = current_page.next_page
@@ -2087,6 +2189,7 @@ class iagl_utils(object):
 			'properties': {'iagl_json': json_in,
 			'tag': current_tag,
 			'nplayers': json_in.get('game').get('nplayers'),
+			'groups': json_in.get('game').get('groups'),
 			'rating': json_in.get('game').get('rating'),
 			'perspective': json_in.get('game').get('perspective'),
 			'esrb': json_in.get('game').get('ESRB'),
@@ -2230,6 +2333,7 @@ class iagl_utils(object):
 								'properties': {'iagl_json' : json.dumps(json_in),
 								'tag': current_tag,
 								'nplayers': json_in.get('game').get('nplayers'),
+								'groups': json_in.get('game').get('groups'),
 								},
 								})
 			history_dict = self.load_game_history()

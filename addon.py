@@ -365,6 +365,42 @@ def get_games_with_tags(tag,game_list_id,page_number=1):
 		xbmc.log(msg='IAGL:  Games List (by Game Tag) Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]}, level=xbmc.LOGDEBUG)
 		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]})
 
+@plugin.route('/game_list/list_by_groups/<game_list_id>')
+def get_groups_list(game_list_id):
+	list_method = 'list_by_groups'
+	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s by custom game groups, display method %(list_method)s' % {'game_list_id': game_list_id,'list_method': list_method}, level=xbmc.LOGDEBUG)
+	for list_item in IAGL.get_game_list_groups_as_listitems(game_list_id):
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_groups, groups=url_quote(list_item.getLabel2()), game_list_id=game_list_id, page_number=1),list_item, True)	
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
+	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_8')) > 0:
+		xbmc.log(msg='IAGL:  Game custom group Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_8'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_8'))]})
+
+@plugin.route('/game_list/list_by_groups/<groups>/<game_list_id>/')
+def get_groups_redirect(groups,game_list_id):
+	plugin.redirect('/game_list/list_by_groups/'+groups+'/'+game_list_id+'/1')
+
+@plugin.route('/game_list/list_by_groups/<groups>/<game_list_id>/<page_number>')
+def get_games_with_groups(groups,game_list_id,page_number=1):
+	list_method = 'list_by_groups'
+	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s by custom game groups, display method %(list_method)s, with the custom game grouping %(groups)s, with %(items_pp)s items per page, on page %(page_number)s' % {'game_list_id': game_list_id,'list_method': list_method, 'groups': url_unquote(groups), 'items_pp': str(IAGL.get_items_per_page()), 'page_number': page_number}, level=xbmc.LOGDEBUG)
+	current_page, page_info = IAGL.get_games_as_listitems(url_unquote(game_list_id),list_method,url_unquote(groups),page_number)
+	for list_item in current_page:
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2())),IAGL.add_game_context_menus(list_item,game_list_id,url_quote(list_item.getLabel2()),page_info['categories']), True) #Method 1, dont pass json as arg
+	next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
+	if next_page_li is not None:
+		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_groups, groups=groups, game_list_id=game_list_id, page_number=page_info['next_page']),next_page_li, True)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_DATE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_GENRE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE)
+	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_SIZE)
+	xbmcplugin.endOfDirectory(plugin.handle)
+	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4')) > 0:
+		xbmc.log(msg='IAGL:  Games List (by Custom Game Group) Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]}, level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_4'))]})
+
 @plugin.route('/game_list/list_all/<game_list_id>/')
 def get_all_games_redirect(game_list_id):
 	plugin.redirect('/game_list/list_all/'+game_list_id+'/1')
