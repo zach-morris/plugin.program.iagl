@@ -3682,7 +3682,7 @@ class iagl_download(object):
 				xbmc.log(msg='IAGL Error:  Unable to find the file %(requested_file_type)s.  You may have to try downloading the game again.'% {'requested_file_type': requested_file_type}, level=xbmc.LOGERROR)
 		else:
 			self.post_process_unarchive_files_to_folder(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
-			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the unarchive diectory
+			current_files = get_all_files_in_directory_xbmcvfs(os.path.join(os.path.split(filename_in)[0],self.current_safe_filename)) #Get a list of files in the unarchive diectory
 			if any([requested_file_type in x for x in current_files]): #cue files exist in the file list
 				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
 				found_file = [x for x in current_files if requested_file_type in x][0]
