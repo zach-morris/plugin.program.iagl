@@ -1918,8 +1918,7 @@ class iagl_utils(object):
 				if filter_value == 'Unknown' or filter_value == None:
 					current_page = paginate.Page([x for x in games_dict if x.get('properties').get('groups') is None], page=page_number, items_per_page=self.get_items_per_page())
 				else:
-					# current_page = paginate.Page([x for x in games_dict if x.get('properties').get('groups') is not None and filter_value.lower() == x.get('properties').get('groups').lower()], page=page_number, items_per_page=self.get_items_per_page())
-					current_page = paginate.Page([x for x in games_dict if x.get('properties').get('groups') is not None and filter_value.lower() in x.get('properties').get('groups').lower()], page=page_number, items_per_page=self.get_items_per_page())
+					current_page = paginate.Page([x for x in games_dict if x.get('properties').get('groups') is not None and ((filter_value == x.get('properties').get('groups')) or (',' in x.get('properties').get('groups') and (any([filter_value.lower() == y.lower().strip() for y in x.get('properties').get('groups').split(',')]))))], page=page_number, items_per_page=self.get_items_per_page())  #Groups must exactly equal the filter value, or match exactly any part of a comma seperated list of values
 				page_info['page'] = current_page.page
 				page_info['page_count'] = current_page.page_count
 				page_info['next_page'] = current_page.next_page
@@ -3207,7 +3206,10 @@ class iagl_download(object):
 					else:
 						self.current_post_download_actions = [self.emu_post_download_action for x in self.current_files_to_download]  #Use Emu Post DL Command
 				else:
-					self.current_post_download_actions = [None for x in self.current_files_to_download] #No Post DL Command
+					if self.game_post_download_action_override is not None:
+						self.current_post_download_actions = [self.game_post_download_action_override for x in self.current_files_to_download] #Use Game Post DL Override Command
+					else:
+						self.current_post_download_actions = [None for x in self.current_files_to_download] #No Post DL Command
 				if self.download_location is not None:
 					if self.game_download_location_override is not None:
 						self.current_download_locations = [self.game_download_location_override for x in self.current_files_to_download] #Use Game DL Override Location
@@ -3229,7 +3231,10 @@ class iagl_download(object):
 						else:
 							self.current_post_download_actions = [self.emu_post_download_action]  #Use Emu Post DL Command
 					else:
-						self.current_post_download_actions = [None] #No Post DL Command
+						if self.game_post_download_action_override is not None:
+							self.current_post_download_actions = [self.game_post_download_action_override] #Use Game Post DL Override Command
+						else:
+							self.current_post_download_actions = [None] #No Post DL Command
 					if self.download_location is not None:
 						if self.game_download_location_override is not None:
 							self.current_download_locations = [self.game_download_location_override] #Use Game DL Override Location
