@@ -4,17 +4,17 @@
 		<emu_name>Naomi</emu_name>
 		<emu_description>Arcade</emu_description>
 		<emu_category>Arcade</emu_category>
-		<emu_version>07012018</emu_version>
+		<emu_version>12212019</emu_version>
 		<emu_date>07/01/2018</emu_date>
 		<emu_author>Zach Morris</emu_author>
 		<emu_visibility>visible</emu_visibility>
-		<emu_homepage>https://archive.org</emu_homepage>
+		<emu_homepage>http://archive.org</emu_homepage>
 		<emu_baseurl>https://archive.org/download/</emu_baseurl>
-		<emu_launcher>retroplayer</emu_launcher>
+		<emu_launcher>external</emu_launcher>
 		<emu_default_addon>none</emu_default_addon>
 		<emu_ext_launch_cmd>none</emu_ext_launch_cmd>
 		<emu_downloadpath>default</emu_downloadpath>
-		<emu_postdlaction>unarchive_game_launch_lst</emu_postdlaction>
+		<emu_postdlaction>none</emu_postdlaction>
 		<emu_comment>The NAOMI (New Arcade Operation Machine Idea) is the successor to the Sega Model 3. Sega first demonstrated NAOMI publicly at the 1998 Amusement Machine Show (an annual trade show hosted in Tokyo by the Japan Amusement Machinery Manufacturers Association). After the show, Sega released the first NAOMI title to the Japanese market: The House of the Dead 2.[CR]NAOMI uses some of the same electronic components as the Dreamcast home game console.  However, NAOMI has twice as much system memory, twice as much video memory, and four times as much sound memory.[CR]Some NAOMI titles read game data from a GD-ROM optical disc, which is also the Dreamcast software medium. Game data can also be stored in a 168-megabyte bank of solid-state ROM. GD-ROM support requires a specialized DIMM board in addition to the GD-ROM drive.[CR]A modified version of the NAOMI was used for the Sammy Atomiswave.</emu_comment>
 		<emu_thumb>vrR0RcE.jpg</emu_thumb>
 		<emu_banner>Nwz95k4.jpg</emu_banner>
@@ -24,21 +24,7 @@
 	</header>
 	<game name="18 Wheeler (DLX)">
 		<description>18 Wheeler (DLX)</description>
-		<rom crc="5258e3d7" name="naomi_aw2naomi/naomi_1/18_Wheeler_DLX.zip" size="98495466" />
-		<title_clean>18 Wheeler</title_clean>
-		<plot>18 Wheeler: American Pro Trucker (also known as just 18 Wheeler) is an arcade game developed by Sega AM2 and distributed by Sega. The game was first released in arcades in 2000, then ported to the Dreamcast in 2001. It was later released for the PlayStation 2 in 2001 and Nintendo GameCube in 2002 by Acclaim Entertainment. Sega followed up on the success of 18 Wheeler with a sequel, The King of Route 66, which was released in the arcades around 2002 and ported to the PlayStation 2. This was one of the final arcade video games ports to be on the Dreamcast after its discontinuation before Sega became a third party developer.</plot>
-		<releasedate>7/26/2000</releasedate>
-		<year>2000</year>
-		<studio>Sega AM2</studio>
-		<nplayers>1</nplayers>
-		<wiki_url>https://en.wikipedia.org/wiki/18_Wheeler:_American_Pro_Trucker</wiki_url>
-		<boxart1>6etjyTN.jpg</boxart1>
-		<boxart2>W1NlbuM.png</boxart2>
-		<clearlogo1>Zxuzt01.png</clearlogo1>
-	</game>
-	<game name="18 Wheeler (STD)">
-		<description>18 Wheeler (STD)</description>
-		<rom crc="87edc9b4" name="naomi_aw2naomi/naomi_1/18_Wheeler_STD.zip" size="98491520" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2F18wheelr.7z" size="65903806" />
 		<title_clean>18 Wheeler</title_clean>
 		<plot>18 Wheeler: American Pro Trucker (also known as just 18 Wheeler) is an arcade game developed by Sega AM2 and distributed by Sega. The game was first released in arcades in 2000, then ported to the Dreamcast in 2001. It was later released for the PlayStation 2 in 2001 and Nintendo GameCube in 2002 by Acclaim Entertainment. Sega followed up on the success of 18 Wheeler with a sequel, The King of Route 66, which was released in the arcades around 2002 and ported to the PlayStation 2. This was one of the final arcade video games ports to be on the Dreamcast after its discontinuation before Sega became a third party developer.</plot>
 		<releasedate>7/26/2000</releasedate>
@@ -52,7 +38,7 @@
 	</game>
 	<game name="Airline Pilot">
 		<description>Airline Pilot</description>
-		<rom crc="9036e430" name="naomi_aw2naomi/naomi_1/Airline_Pilot.zip" size="42731819" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Falpilot.7z" size="23308658" />
 		<title_clean>Airline Pilot</title_clean>
 		<plot>Airline Pilots is a flight simulator released for Sega NAOMI arcade hardware in 1999. The game simulates flying a Boeing 777 aircraft, and was developed with the input of engineers and pilots from Japan Airlines. Two different cabinet models were manufactured. The default type is a typical sit down cabinet with one monitor, while the "DX type" cabinet features three side-by-side 29" monitors, which surround the player to create a "cockpit".[CR]The extreme difficulty of "Airline Pilots", combined with a lack of interest in realistic flight simulators, led Sega to manufacture a conversion kit which allowed owners to convert the units into the more popular Sega Strike Fighter. As a result, Airline Pilots cabinets are relatively rare.</plot>
 		<genre>Flying</genre>
@@ -70,7 +56,7 @@
 	</game>
 	<game name="Akatsuki Blitzkampf Auf Asche">
 		<description>Akatsuki Blitzkampf Auf Asche</description>
-		<rom crc="b9aed488" name="naomi_aw2naomi/naomi_1/Akatsuki_Blitzkampf_Auf_Asche.zip" size="68815151" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fausfache.7z" size="63825106" />
 		<title_clean>Akatsuki Blitzkampf Auf Asche</title_clean>
 		<plot>Akatsuki Blitzkampf Ausf Achse is based upon the original Akatsuki Blitzkampf Japanese PC dojin 2D fighting game from SUBTLE STYLE which was originally released on the 30th April 2007.  The original PC game got a lot of attention in Japan for its high-resolution sprites and older style gameplay similar to that of the older Samurai Showdown in the way that you can parry.  This Naomi arcade release features improved graphics as well as an extra character going under the name of Perfect.</plot>
 		<genre>Fighting</genre>
@@ -90,9 +76,9 @@
 	</game>
 	<game name="Alien Front">
 		<description>Alien Front</description>
-		<rom crc="f761c304" name="naomi_aw2naomi/naomi_1/Alien_Front.zip" size="38381688" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Falienfnt.7z" size="34976249" />
 		<title_clean>Alien Front</title_clean>
-		<plot>Alien Front Online is a 2001 video game released for the Sega Dreamcast exclusively in North America. Alien Front Online is an online version of the arcade game Alien Front, where it was bundled with the Dreamcast Microphone.</plot>
+		<plot>Alien Front is a video game released for Sega NAOMI arcade hardware in 2001. It is a team-based vehicluar combat game. In its original form, Alien Front was not brought to home consoles, however it was retooled and given an online focus in the form of Alien Front Online for the Sega Dreamcast. It is suspected both games are largely identical, with this arcade version merely relying on local multiplayer as opposed to battles played over the internet.</plot>
 		<genre>Action</genre>
 		<studio>WOW Entertainment</studio>
 		<wiki_url>https://en.wikipedia.org/wiki/Alien_Front_Online</wiki_url>
@@ -108,7 +94,8 @@
 	</game>
 	<game name="Azumanga Daioh Puzzle Bobble">
 		<description>Azumanga Daioh Puzzle Bobble</description>
-		<rom crc="1ec0c71e" name="naomi_aw2naomi/naomi_1/Azumanga_Daioh_Puzzle_Bobble.zip" size="64405817" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fazumanga.zip" size="1195" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fazumanga%2Fgdl-0018.chd" size="82557449" />
 		<title_clean>Azumanga Daioh Puzzle Bobble</title_clean>
 		<plot>Azumanga Daioh Puzzle Bobble is a game based on the Azumanga Daioh anime and manga which was released by Taito Corporation as an arcade-only Puzzle Bobble spin-off on June 1, 2002. It was developed by MOSS for the Sega NAOMI GD-ROM arcade and distributed in Japan exclusively. It also has a two-player mode and the original voice actors from the Azumanga Daioh anime reprise their roles. It is controlled using one joystick and two buttons</plot>
 		<genre>Puzzle</genre>
@@ -129,7 +116,8 @@
 	</game>
 	<game name="Border Down">
 		<description>Border Down</description>
-		<rom crc="05f93397" name="naomi_aw2naomi/naomi_1/Border_Down.zip" size="151030174" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fbdrdown.zip" size="1364" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fbdrdown%2Fgdl-0023a.chd" size="204812484" />
 		<title_clean>Border Down</title_clean>
 		<plot>Border Down is a horizontally scrolling shoot 'em up video game developed by G.rev and released in Japanese arcades in 2003. It is a spiritual sequel to Metal Black, a favorite game of creator Hiroyuki Maruyama. As with most other Sega NAOMI titles, the game was later released on the Dreamcast in September 2003 in two incarnations: a normal edition, and a limited edition that came bundled with a music CD and alternative cover art. Border Down was G.rev's second independent game (though they did subcontracted work on other titles, most notably Ikaruga and Gradius V), released after Sega's official discontinuation of the Dreamcast console.</plot>
 		<studio>G.Rev</studio>
@@ -146,16 +134,22 @@
 		<banner2>ihOOFvh.png</banner2>
 		<clearlogo1>vrtzME7.png</clearlogo1>
 	</game>
-	<game name="Burning Casino">
-		<description>Burning Casino</description>
-		<rom crc="fa4840e5" name="naomi_aw2naomi/naomi_1/Burning_Casino.zip" size="64277206" />
-		<title_clean>Burning Casino</title_clean>
-		<snapshot1>Ej7wKOw.jpg</snapshot1>
-		<videoid>p1Xmhn0zNWM</videoid>
-	</game>
 	<game name="Capcom VS SNK - Millenium Fight 2000">
 		<description>Capcom VS SNK - Millenium Fight 2000</description>
-		<rom crc="e6aa3bdc" name="naomi_aw2naomi/naomi_1/Capcom_VS_SNK_Millenium_Fight_2000.zip" size="89975967" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fcapsnk.7z" size="81720800" />
+		<title_clean>Capcom VS SNK - Millenium Fight 2000</title_clean>
+		<genre>Fighting</genre>
+		<studio>Capcom</studio>
+		<boxart1>CDzBvTB.jpg</boxart1>
+		<boxart2>tm3Uhgf.jpg</boxart2>
+		<boxart3>D4iQ2Mm.jpg</boxart3>
+		<boxart4>OsaLN2o.png</boxart4>
+		<boxart5>4emSojx.png</boxart5>
+	</game>
+	<game name="Capcom VS SNK Millennium Fight 2000 Pro (Japan)">
+		<description>Capcom VS SNK Millennium Fight 2000 Pro (Japan)</description>
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fcvsgd.zip" size="1197" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fcvsgd%2Fgdl-0004.chd" size="174474158" />
 		<title_clean>Capcom VS SNK - Millenium Fight 2000</title_clean>
 		<genre>Fighting</genre>
 		<studio>Capcom</studio>
@@ -167,7 +161,9 @@
 	</game>
 	<game name="Capcom VS SNK 2 - Mark of the Millennium 2001">
 		<description>Capcom VS SNK 2 - Mark of the Millennium 2001</description>
-		<rom crc="4fe65562" name="naomi_aw2naomi/naomi_1/Capcom_vs_SNK_2_Mark_of_the_Millennium_2001.zip" size="120976480" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fcvs2.zip" size="1175" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fcvs2%2Fgdl-0007a.chd" size="156733374" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fcvs2%2Fgdl-0008.chd" size="156736120" />
 		<title_clean>Capcom VS SNK 2 - Mark of the Millennium 2001</title_clean>
 		<plot>Capcom vs. SNK 2 combines characters and gameplay elements from various Capcom and SNK fighting games, mainly the Street Fighter and The King of Fighters series. Other elements, most noticeably different fighting styles, incorporated elements from other games as well, such as Street Fighter III, Garou: Mark of the Wolves, and the Samurai Shodown series.[CR]This game runs on the Sga NAOMI Arcade system which is based on Sega Dreamcast's hardware.</plot>
 		<releasedate>8/1/2001</releasedate>
@@ -193,7 +189,8 @@
 	</game>
 	<game name="Chaos Field">
 		<description>Chaos Field</description>
-		<rom crc="b1fe1d6c" name="naomi_aw2naomi/naomi_1/Chaos_Field.zip" size="104133921" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fcfield.zip" size="1325" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fcfield%2Fgdl-0025.chd" size="133299552" />
 		<title_clean>Chaos Field</title_clean>
 		<plot>The technological advancements of mankind discover a dimension of absolute chaos that its discoverers soon called the Chaos Field. Upon its discovery, the overly destructive inhabitants of the Chaos Field, known as the Abo, invaded Earth which is considered the Orderfield. The war raged so long that special pilots were selected to fly the best star fighters equipped with trans-dimensional technology to combat the Abo and save the Orderfield.</plot>
 		<releasedate>6/1/2004</releasedate>
@@ -215,7 +212,8 @@
 	</game>
 	<game name="Cleopatra Fortune Plus">
 		<description>Cleopatra Fortune Plus</description>
-		<rom crc="e7f5f309" name="naomi_aw2naomi/naomi_1/Cleopatra_Fortune_Plus.zip" size="29638542" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fcleoftp.zip" size="1195" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fcleoftp%2Fgdl-0012.chd" size="60728583" />
 		<title_clean>Cleopatra Fortune Plus</title_clean>
 		<genre>Puzzle</genre>
 		<studio>Altron</studio>
@@ -231,7 +229,8 @@
 	</game>
 	<game name="Confidential Mission">
 		<description>Confidential Mission</description>
-		<rom crc="486c5960" name="naomi_aw2naomi/naomi_1/Confidential_Mission.zip" size="72487886" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fconfmiss.7z" size="976499" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fconfmiss%2Fgds-0001.chd" size="124260152" />
 		<title_clean>Confidential Mission</title_clean>
 		<plot>Confidential Mission is a light gun game published by Sega, first available as an arcade game, then ported to the Dreamcast. The game is in the same style as the Virtua Cop series or The House of the Dead series, with support for one or two players. The game was developed by Sega's Hitmaker development team and first released in 2000. Its plot is of the same vein as James Bond and Mission: Impossible. Despite it also having an arcade release, it never enjoyed the popularity of the Virtua Cop nor The House of the Dead series, which were also produced by Sega.</plot>
 		<genre>Shooter</genre>
@@ -249,7 +248,7 @@
 	</game>
 	<game name="Cosmic Smash">
 		<description>Cosmic Smash</description>
-		<rom crc="9f5aa291" name="naomi_aw2naomi/naomi_1/Cosmic_Smash.zip" size="35562169" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fcsmash.7z" size="32008676" />
 		<title_clean>Cosmic Smash</title_clean>
 		<plot>Cosmic Smash is an arcade game that was later ported to the Dreamcast console. It is a futuristic combination of squash and Breakout, and is a single player game.</plot>
 		<genre>Sports</genre>
@@ -268,7 +267,7 @@
 	</game>
 	<game name="Crazy Taxi">
 		<description>Crazy Taxi</description>
-		<rom crc="c4724e43" name="naomi_aw2naomi/naomi_1/Crazy_Taxi.zip" size="55047397" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fcrzytaxi.7z" size="49077101" />
 		<title_clean>Crazy Taxi</title_clean>
 		<plot>Crazy Taxi is a series of score attack racing video games that was developed by Hitmaker and published by Sega. The first game appeared in arcades in 1999 and was very successful, prompting Sega to port the arcade version to their Dreamcast console in 2000. It is the third best-selling Dreamcast game in the United States, selling over a million copies. The game was later ported to the PlayStation 2, Nintendo GameCube, and PC with sequels also appearing on the Xbox, Game Boy Advance, and PlayStation Portable systems.</plot>
 		<nplayers>1</nplayers>
@@ -286,7 +285,7 @@
 	</game>
 	<game name="Dead or Alive 2">
 		<description>Dead or Alive 2</description>
-		<rom crc="8769df34" name="naomi_aw2naomi/naomi_1/Dead_or_Alive_2.zip" size="107406127" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fdoa2.7z" size="85434605" />
 		<title_clean>Dead or Alive 2</title_clean>
 		<plot>Dead or Alive 2 is a fighting game in the Dead or Alive series, developed by Team Ninja and published by Tecmo. It debuted in arcades in 1999 and was later ported for the Dreamcast and the PlayStation 2 in 2000. Several enhanced editions of the game were released, including the updates Dead or Alive 2 Hardcore and Dead or Alive 2 Hard*Core.</plot>
 		<genre>Fighting</genre>
@@ -305,7 +304,7 @@
 	</game>
 	<game name="Dead or Alive 2 - Millenium">
 		<description>Dead or Alive 2 - Millenium</description>
-		<rom crc="57c8d268" name="naomi_aw2naomi/naomi_1/Dead_or_Alive_2_Millenium.zip" size="107468984" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fdoa2m.7z" size="79301714" />
 		<title_clean>Dead or Alive 2 - Millenium</title_clean>
 		<plot>Dead or Alive 2 Millennium is an updated version of Dead or Alive 2, which includes features from the Dreamcast version that were not present in the arcade. The game was only released on the Sega NAOMI platform in arcades.</plot>
 		<genre>Fighting</genre>
@@ -324,7 +323,7 @@
 	</game>
 	<game name="Death Crimson OX">
 		<description>Death Crimson OX</description>
-		<rom crc="94cd1c53" name="naomi_aw2naomi/naomi_1/Death_Crimson_OX.zip" size="56020244" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fdeathcox.7z" size="43320319" />
 		<title_clean>Death Crimson OX</title_clean>
 		<genre>Shooter</genre>
 		<plot>Death Crimson OX is a light gun shooting game developed by Ecole. It was released in arcades in 2000 then ported to the Dreamcast console in 2001 (published by Sammy Entertainment), several months after Sega had dropped support for the console. It is the third game in the Death Crimson series, and the only one to be released outside Japan.</plot>
@@ -340,7 +339,8 @@
 	</game>
 	<game name="Doki Doki Idol Star Seeker">
 		<description>Doki Doki Idol Star Seeker</description>
-		<rom crc="eebdf5b3" name="naomi_aw2naomi/naomi_1/Doki_Doki_Idol_Star_Seeker.zip" size="14944123" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fstarseek.zip" size="1192" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fstarseek%2Fgdl-0005.chd" size="30693913" />
 		<title_clean>Doki Doki Idol Star Seeker</title_clean>
 		<plot>Doki Doki Idol Star Seeker is an arcade puzzle game for Sega NAOMI hardware.</plot>
 		<genre>Puzzle</genre>
@@ -356,7 +356,7 @@
 	</game>
 	<game name="Dynamite Deka Ex">
 		<description>Dynamite Deka Ex</description>
-		<rom crc="2f0d62ca" name="naomi_aw2naomi/naomi_1/Dynamite_Deka_Ex.zip" size="114346646" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fasndynmt.7z" size="119839091" />
 		<title_clean>Dynamite Deka Ex</title_clean>
 		<plot>Asian Dynamite is a Sega NAOMI arcade beat-'em-up game. It is known as Dynamite Deka EX in Japan, and is a direct sequel to Dynamite Deka, meaning in its localised form, Asian Dynamite is a direct sequel to Die Hard Arcade, with the references to the movie franchise removed.[CR]The game has not been ported to home platforms, nor has it even seen a US release. It is extremely similar to Dynamite Cop in design, simply sporting an updated Asian aesthetic and replacing Jean Ivy and Eddie Brown with Caroline Powell and Jennifer Genuine, respectively. Caroline is the president's daughter from the first game grown up.</plot>
 		<releasedate>7/30/2007</releasedate>
@@ -375,7 +375,7 @@
 	</game>
 	<game name="Giant Gram 2000 Zen-nihon Pro Wrestle 3">
 		<description>Giant Gram 2000 Zen-nihon Pro Wrestle 3</description>
-		<rom crc="6f495982" name="naomi_aw2naomi/naomi_1/Giant_Gram_2000_Zennihon_Pro_Wrestle_3.zip" size="122788944" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fgram2000.7z" size="63026258" />
 		<title_clean>Giant Gram 2000 Zen-nihon Pro Wrestle 3</title_clean>
 		<plot>Giant Gram is the sequel to the ST-V/Saturn "puroresu" title "All Japan Pro Wrestling Featuring Virtua". Both titles feature AJPW superstars, as well as Virtua Fighter characters. Japanese "puroresu" is all about fighting spirit and appeal. Gimmicks and soap opera theatrics do not get you "over" the way they do  in the US of A. It's all about ability, athleticism, and sportsmanship.</plot>
 		<releasedate>6/24/1999</releasedate>
@@ -389,7 +389,7 @@
 	</game>
 	<game name="Giant Gram Zen-nihon Pro Wrestle 2">
 		<description>Giant Gram Zen-nihon Pro Wrestle 2</description>
-		<rom crc="71acc44c" name="naomi_aw2naomi/naomi_1/Giant_Gram_Zennihon_Pro_Wrestle_2.zip" size="48333843" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fggram2.7z" size="32682966" />
 		<title_clean>Giant Gram Zen-nihon Pro Wrestle 2</title_clean>
 		<plot>Giant Gram is the sequel to the ST-V/Saturn "puroresu" title "All Japan Pro Wrestling Featuring Virtua". Both titles feature AJPW superstars, as well as Virtua Fighter characters. Japanese "puroresu" is all about fighting spirit and appeal. Gimmicks and soap opera theatrics do not get you "over" the way they do  in the US of A. It's all about ability, athleticism, and sportsmanship.</plot>
 		<releasedate>6/24/1999</releasedate>
@@ -403,7 +403,7 @@
 	</game>
 	<game name="Gigawing 2">
 		<description>Gigawing 2</description>
-		<rom crc="d8d0e30c" name="naomi_aw2naomi/naomi_1/Gigawing_2.zip" size="53210334" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fgwing2.7z" size="43942512" />
 		<title_clean>Gigawing 2</title_clean>
 		<plot>Giga Wing 2 is a 2000 vertical scrolling shooter arcade game developed by Takumi and published by Capcom on Sega's NAOMI arcade system board and later ported in 2001 to the Dreamcast console. The arcade version is notable both for its excessive scores (scores in the quintillions are not unheard of), and for using a horizontally aligned monitor (much like Treasure Co. Ltd's Radiant Silvergun), something that is considered rare for a vertical shooter.</plot>
 		<studio>Takumi Corporation</studio>
@@ -421,7 +421,7 @@
 	</game>
 	<game name="Guilty Gear X">
 		<description>Guilty Gear X</description>
-		<rom crc="9bd3fb0c" name="naomi_aw2naomi/naomi_1/Guilty_Gear_X.zip" size="80925440" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fggx.7z" size="66227227" />
 		<title_clean>Guilty Gear X</title_clean>
 		<plot>When the humans created artificial beings named "gears" in 22th century, they didn't expect that their creation will eventually turn against them. Because gears had no will of their own and could only obey humans. Only one gear, named Justice, was able to transfer his will onto other gears and to rebel against the humans. In year 2180, Justice was killed as a result of a bloody tournament organized by the Sacred Order of Holy Knights. Yet recently, a new gear was discovered. He showed no signs of hostility, yet he had no master and was roaming about free. It was impossible to capture or to kill him because he was immensely strong. Fearing a new Justice will grow out of this gear, the Order organized yet another tournament, this time with a solid prize: five hundred thousand world dollars for the winner.[CR]Guilty Gear X is a follow up to Guilty Gear, and is also a 2D fighting game. There are now 16 characters available for you to choose. The battle system became more complicated, thanks to the variety of moves you can perform. Beside special attacks which you can execute if you build up your Tension Gauge by attacking or advancing towards your opponent, there is also a variety of defensing moves to perform. The instant kill moves are back from the previous game.</plot>
 		<genre>Fighting</genre>
@@ -442,7 +442,7 @@
 	</game>
 	<game name="Guilty Gear XX">
 		<description>Guilty Gear XX</description>
-		<rom crc="4f47eb2c" name="naomi_aw2naomi/naomi_1/Guilty_Gear_XX.zip" size="219582602" />
+		<rom name="mame0215_chd/ggxx.7z" size="240600000" />
 		<title_clean>Guilty Gear XX</title_clean>
 		<plot>The third main installment (5th overall) of the Guilty Gear series, Guilty Gear X2 furthered the plot of the series, as well as introduced new characters and gameplay mechanics. Adds a new feature to the series: a burst gauge, which is fulfilled as the player causes or receives damage.[2] By pressing buttons in combination, the player character jump and unleash a blast of energy - a Psyche Burst.  It allows the player to break combinations and super moves in the middle of the opponent's offensive. Also, if the blast hit the adversary, the tension gauge is filled to its maximum capacity immediately.[CR]The game picks up the story approximately two weeks after the events of Guilty Gear X. A new organization called Post-War Administration Bureau is looking for and destroying Gears, descendants of Japanese, and those who are able to use qi energy in combat. To achieve their goals the organization has created several copies of Ky Kiske, the Robo-Kys. In addition, I-No sparks conflict as she wants to destroy all she perceived threats to her master, "That Man", the creator of the Gears. Each character provides a different ending.</plot>
 		<genre>Fighting</genre>
@@ -461,7 +461,8 @@
 	</game>
 	<game name="Guilty Gear XX Accent Core">
 		<description>Guilty Gear XX Accent Core</description>
-		<rom crc="cf797428" name="naomi_aw2naomi/naomi_1/Guilty_Gear_XX_Accent_Core.zip" size="227163115" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fggxxac.zip" size="1195" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fggxxac%2Fgdl-0041.chd" size="259219606" />
 		<title_clean>Guilty Gear XX Accent Core</title_clean>
 		<genre>Fighting</genre>
 		<nplayers>2</nplayers>
@@ -476,7 +477,8 @@
 	</game>
 	<game name="Guilty Gear XX Reload">
 		<description>Guilty Gear XX Reload</description>
-		<rom crc="348bf3d5" name="naomi_aw2naomi/naomi_1/Guilty_Gear_XX_Reload.zip" size="224154461" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fggxxrl.zip" size="1194" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fggxxrl%2Fgdl-0019a.chd" size="258901282" />
 		<title_clean>Guilty Gear XX Reload</title_clean>
 		<genre>Fighting</genre>
 		<nplayers>2</nplayers>
@@ -494,7 +496,8 @@
 	</game>
 	<game name="Guilty Gear XX Slash">
 		<description>Guilty Gear XX Slash</description>
-		<rom crc="bd6777eb" name="naomi_aw2naomi/naomi_1/Guilty_Gear_XX_Slash.zip" size="220153761" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fggxxsla.zip" size="1196" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fggxxsla%2Fgdl-0033a.chd" size="253461553" />
 		<title_clean>Guilty Gear XX Slash</title_clean>
 		<plot>Slash is the second update to Guilty Gear XX, after Reload. It again features a wide range of balance tweaks and other adjustments, along with two new characters: A.B.A (originally introduced in Isuka) and Order Sol, and a new canceling system called Force Roman Cancel.</plot>
 		<genre>Fighting</genre>
@@ -511,7 +514,7 @@
 	</game>
 	<game name="Gun Survivor 2">
 		<description>Gun Survivor 2</description>
-		<rom crc="9c685dd0" name="naomi_aw2naomi/naomi_1/Gun_Survivor_2.zip" size="173078733" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fgunsur2.7z" size="102059286" />
 		<title_clean>naomi_1/Gun_Survivor_2</title_clean>
 		<genre>Shooter</genre>
 		<studio>Namco</studio>
@@ -528,10 +531,10 @@
 		<banner1>T7wL3jw.png</banner1>
 		<clearlogo1>lWyUHGh.png</clearlogo1>
 	</game>
-	<game name="Gunspike">
-		<description>Gunspike</description>
-		<rom crc="4a5a2d88" name="naomi_aw2naomi/naomi_1/Gunspike.zip" size="57749602" />
-		<title_clean>Gunspike</title_clean>
+	<game name="Cannon Spike">
+		<description>Cannon Spike</description>
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fcspike.7z" size="38789981" />
+		<title_clean>Cannon Spike</title_clean>
 		<plot>Cannon Spike (Gunspike in Japan) is an overhead-camera shooting game in the vein of Smash TV and another Capcom creation, the Commando series. Released for the arcades, and later for the Sega Dreamcast,  it uses Capcom-designed characters and runs on Sega's Naomi Hardware.[CR]Cannon Spike is a linear game, heavily focused towards boss encounters. A main feature of the game is the ability to play as a number of familiar Capcom characters from other franchises. The international name of Cannon Spike is the name of a trademark attack performed by Cammy, a character from the Street Fighter series of video games and one of the protagonists of this title.</plot>
 		<genre>Action</genre>
 		<studio>Capcom</studio>
@@ -553,7 +556,7 @@
 	</game>
 	<game name="Heavy Metal Geomatrix">
 		<description>Heavy Metal Geomatrix</description>
-		<rom crc="d6dae0b9" name="naomi_aw2naomi/naomi_1/Heavy_Metal_Geomatrix.zip" size="68317536" />
+		<rom name="MAME_0.209_ROMs_merged/MAME_0.209_ROMs_merged.zip/hmgeo.zip" size="68679919" />
 		<title_clean>Heavy Metal Geomatrix</title_clean>
 		<plot>Heavy Metal: Geomatrix is a fully 3D arena fighting video game released in 2001 by both Sega and Capcom for the Sega NAOMI and Dreamcast, based upon the Heavy Metal license.</plot>
 		<genre>Fighting</genre>
@@ -570,9 +573,28 @@
 		<banner1>R5IJYv9.png</banner1>
 		<clearlogo1>QNM6G0l.png</clearlogo1>
 	</game>
+	<game name="House of the Dead 2">
+		<description>House of the Dead 2</description>
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fhotd2.7z" size="76407257" />
+		<title_clean>House of the Dead 2</title_clean>
+		<plot>The House of the Dead 2 is a rail shooter light gun game. It incorporates a branching path system that allows players to take a variety of different routes leading to the same point in the game's story.</plot>
+		<genre>Shooter</genre>
+		<studio>Sega</studio>
+		<nplayers>2</nplayers>
+		<boxart1>bIRH6mP.jpg</boxart1>
+		<boxart2>6pgoVX1.jpg</boxart2>
+		<boxart3>54m684t.png</boxart3>
+		<boxart4>3pDj0AZ.png</boxart4>
+		<snapshot1>kyBubJ0.png</snapshot1>
+		<snapshot2>wK90Jte.png</snapshot2>
+		<snapshot3>cMJmJlt.png</snapshot3>
+		<banner1>R5IJYv9.png</banner1>
+		<clearlogo1>QNM6G0l.png</clearlogo1>
+	</game>
 	<game name="Ikaruga">
 		<description>Ikaruga</description>
-		<rom crc="78c0d463" name="naomi_aw2naomi/naomi_1/Ikaruga.zip" size="10114516" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fikaruga.zip" size="1174" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fikaruga%2Fgdl-0010.chd" size="34167761" />
 		<title_clean>Ikaruga</title_clean>
 		<plot>Ikaruga is a shoot 'em up developed by Treasure. It is the spiritual sequel to Radiant Silvergun (1998) and was originally released in Japanese arcades in December 2001. The game's story follows a rebel pilot named Shinra as he battles an enemy nation using a specially designed fighter called the Ikaruga which can flip between two polarities, black and white. This polarity mechanism is the game's key feature and the foundation for its stage and enemy design. All enemies and bullets in the game are either black or white. Bullets which are the same color as the player are absorbed while the others will kill the player. The game features both single-player and cooperative modes.</plot>
 		<studio>Treasure</studio>
@@ -592,7 +614,7 @@
 	</game>
 	<game name="Illvelo">
 		<description>Illvelo</description>
-		<rom crc="a3b75a33" name="naomi_aw2naomi/naomi_1/Illvelo.zip" size="80750618" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fillvelo.7z" size="73937218" />
 		<title_clean>Illvelo</title_clean>
 		<plot>Illmatic Envelope, commonly abbreviated Illvelo, is a 2008 shoot-em-up for the Sega NAOMI arcade platform by Milestone. They ported it to the Nintendo Wii later that year as Illvelo Wii, with Sega partnering in its release.</plot>
 		<genre>Shooter</genre>
@@ -604,7 +626,7 @@
 	</game>
 	<game name="Jambo Safari">
 		<description>Jambo Safari</description>
-		<rom crc="a7f009c5" name="naomi_aw2naomi/naomi_1/Jambo_Safari.zip" size="23237341" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fjambo.7z" size="17916406" />
 		<title_clean>Jambo Safari</title_clean>
 		<plot>Jambo! Safari is a video game first released by Sega in 1999. The original arcade version of the game used the Naomi board, arcade hardware which was based on Sega's Dreamcast video game console. Despite the fact that other Naomi-based arcade games were released for the Dreamcast, Jambo! Safari was never ported to the Sega console. The UK version of the Official Dreamcast Magazine reported that the game was to be released in a 3-in-1 compilation along with other games in Sega's "Real Life Career Series", Brave Firefighters and Emergency Call Ambulance, but such a game was never released and neither of the other two games were ported either. Sega released versions of the game for the Wii and Nintendo DS, under the title Jambo! Safari: Animal Rescue on November 17, 2009.</plot>
 		<studio>AM2, TOSE</studio>
@@ -623,7 +645,7 @@
 	</game>
 	<game name="Mushiking: The King of Beetles 2k4">
 		<description>Mushiking: The King of Beetles 2k4</description>
-		<rom crc="d0f53534" name="naomi_aw2naomi/naomi_1/Japan_Mushikings_2004.zip" size="51610760" />
+		<rom name="MAME_0.209_ROMs_merged/MAME_0.209_ROMs_merged.zip/mushik2e.zip" size="67017099" />
 		<title_clean>naomi_1/Japan_Mushikings_2004</title_clean>
 		<plot>Mushiking: The King of Beetles 2k4 also called Mushiking: Battle of the Beetles 2004, is a combination arcade game and collectible card game developed by Sega and released in Japan and other Asian countries such as the Philippines. The game involves battles between cards describing various beetle species. The cards can be scanned in by a Mushiking arcade machine, which will both carry out battles and dispense new cards.[CR]The rock-paper-scissors-style battle game can be played by one player against CPU-controlled beetles, or with two or more players against each other in Tournament mode or Tag Battle mode. The game is played with cards representing beetles and skill cards related to three move types - Hitting, Pinching and Throwing. At the start of a match, players may scan one beetle card and up to three different skill cards with the card scanner in the middle of the machine before choosing one of the three move types to execute within a given time limit. The first player whose beetle reaches 0 stamina points loses.</plot>
 		<year>2004</year>
@@ -631,7 +653,7 @@
 	</game>
 	<game name="Mushiking: The King of Beetles 2k5 1ST">
 		<description>Mushiking: The King of Beetles 2k5 1ST</description>
-		<rom crc="dbb8dc53" name="naomi_aw2naomi/naomi_1/Japan_Mushikings_2005.zip" size="63666935" />
+		<rom name="MAME_0.209_ROMs_merged/MAME_0.209_ROMs_merged.zip/mushi2k5.zip" size="65152650" />
 		<title_clean>naomi_1/Japan_Mushikings_2005</title_clean>
 		<plot>Mushiking: The King of Beetles 2k5 1ST also called Mushiking: Battle of the Beetles 2005, is a combination arcade game and collectible card game developed by Sega and released in Japan and other Asian countries such as the Philippines. The game involves battles between cards describing various beetle species. The cards can be scanned in by a Mushiking arcade machine, which will both carry out battles and dispense new cards.[CR]The rock-paper-scissors-style battle game can be played by one player against CPU-controlled beetles, or with two or more players against each other in Tournament mode or Tag Battle mode. The game is played with cards representing beetles and skill cards related to three move types - Hitting, Pinching and Throwing. At the start of a match, players may scan one beetle card and up to three different skill cards with the card scanner in the middle of the machine before choosing one of the three move types to execute within a given time limit. The first player whose beetle reaches 0 stamina points loses.</plot>
 		<year>2005</year>
@@ -640,7 +662,8 @@
 	</game>
 	<game name="Jingy Storm - The Arcade">
 		<description>Jingy Storm - The Arcade</description>
-		<rom crc="2b776a64" name="naomi_aw2naomi/naomi_1/Jingy_Storm_The_Arcade.zip" size="111008195" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fjingystm.zip" size="1196" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fjingystm%2Fgdl-0037.chd" size="140003408" />
 		<title_clean>Jingy Storm - The Arcade</title_clean>
 		<plot>Jingi Storm is a 3D versus fighting game were each of the nine male fighters is paired up with a female, whose only purpose is to deliver the winning/losing lines at the end of each match.</plot>
 		<releasedate>9/20/2006</releasedate>
@@ -658,7 +681,8 @@
 	</game>
 	<game name="Karous">
 		<description>Karous</description>
-		<rom crc="0ce3cdf0" name="naomi_aw2naomi/naomi_1/Karous.zip" size="91046996" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fkarous.zip" size="1345" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fkarous%2Fgdl-0040.chd" size="124317202" />
 		<title_clean>Karous</title_clean>
 		<plot>Karous is a vertical-scrolling shooter video game developed by Milestone Inc. for the Sega NAOMI platform, and released in Japanese arcades on November 15, 2006. The game was later ported to the Sega Dreamcast, becoming the system's last officially licensed title when it was released in Japan on March 8, 2007.</plot>
 		<studio>MileStone Inc.</studio>
@@ -674,7 +698,8 @@
 	</game>
 	<game name="Kuru Kuru Chameleon">
 		<description>Kuru Kuru Chameleon</description>
-		<rom crc="ece12f6e" name="naomi_aw2naomi/naomi_1/Kuru_Kuru_Chameleon.zip" size="14066739" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fkurucham.zip" size="8311398" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fkurucham%2Fgdl-0034.chd" size="35342741" />
 		<title_clean>Kuru Kuru Chameleon</title_clean>
 		<plot>Kuru Kuru Chameleon is a 2006 puzzle game by Starfish for the Sega NAOMI GD-ROM arcade platform. It is thought to have been released exclusively in Japan.[CR]Two players take opposite corners of a rectangular playing field consisting of hexagonal tiles of various colors. Each player is in control of one set of tiles which all have the same color and all touch on at least one side. On each turn, the player chooses one of the remaining colors, which turns their current set of tiles into that color and adds all adjacent tiles of that color to their set. The first player to have a majority of the fields tiles in their control wins.</plot>
 		<year>2006</year>
@@ -692,7 +717,7 @@
 	</game>
 	<game name="La Keyboard XYU">
 		<description>La Keyboard XYU</description>
-		<rom crc="997ad607" name="naomi_aw2naomi/naomi_1/La_Keyboard_XYU.zip" size="8986912" />
+		<rom name="mame0215_chd/keyboard.7z" size="23600000" />
 		<title_clean>La Keyboard XYU</title_clean>
 		<genre>Quiz</genre>
 		<studio>Sega Rosso</studio>
@@ -707,19 +732,19 @@
 	</game>
 	<game name="Lupin 3 The Shooting">
 		<description>Lupin 3 The Shooting</description>
-		<rom crc="d9d5680b" name="naomi_aw2naomi/naomi_1/Lupin_3_The_Shooting.zip" size="160321012" />
+		<rom name="mame0215_chd/lupinsho.7z" size="379900000" />
 		<title_clean>Lupin 3 The Shooting</title_clean>
 		<plot>Players take the role of Lupin III as they shoot through fifteen of The Wolf's wackiest endeavors. Driving scenarios where the player has to shoot left or right in order to control their vehicle appear as special levels. The game also offers a co-op mode where a second player can take up the role of Jigen and assist Lupin throughout the adventure.</plot>
 		<genre>Shooter</genre>
 		<studio>WOW Entertainment</studio>
 		<nplayers>2</nplayers>
-		<wiki_url>https://lupin.wikia.com/wiki/Lupin_the_3rd:_The_Shooting</wiki_url>
+		<wiki_url>http://lupin.wikia.com/wiki/Lupin_the_3rd:_The_Shooting</wiki_url>
 		<boxart1>VPQ93hv.png</boxart1>
 		<boxart2>Q54G44I.jpg</boxart2>
 	</game>
 	<game name="Lupin - The Typing">
 		<description>Lupin - The Typing</description>
-		<rom crc="d4066cac" name="naomi_aw2naomi/naomi_1/Lupin_The_Typing.zip" size="112790639" />
+		<rom name="mame0215_chd/luptype.7z" size="144100000" />
 		<title_clean>Lupin - The Typing</title_clean>
 		<plot>Lupin the 3rd: The Typing is a keyboard game developed by Wow Entertainment and published by Sega for the Sega NAOMI arcade system. Similar to Typing of the Dead, it is based on the Lupin the 3rd: The Shooting game released in the previous year, but reworked for typing in words to perform shots rather than using a light gun.</plot>
 		<genre>Shooter</genre>
@@ -732,7 +757,7 @@
 	</game>
 	<game name="Mamoru-kun wa Norowarete Shimatta!">
 		<description>Mamoru-kun wa Norowarete Shimatta!</description>
-		<rom crc="983265b9" name="naomi_aw2naomi/naomi_1/Mamorukun_wa_Norowarete_Shimatta.zip" size="139326593" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fmamonoro.7z" size="125372711" />
 		<title_clean>Mamoru-kun wa Norowarete Shimatta!</title_clean>
 		<plot>Mamorukun Curse is a shoot 'em up arcade game developed by G.rev and Gulti. The game was released for arcade in Japan on July 30, 2008.[CR]The game puts the player in control of Mamoru in an overhead shooter. Different from most shooters, the scrolling is not forced. The player is able to move about as they please, although most movements end up being up and down.[CR]The "curse" part of the title comes from a special "curse bomb" attack which uses a separate button from the standard shot. These bombs can be used both to destroy the enemies' bullets, and to "curse" them, making them more powerful but opening up chances for a higher score.</plot>
 		<year>2008</year>
@@ -747,7 +772,7 @@
 	</game>
 	<game name="Marvel vs Capcom 2">
 		<description>Marvel vs Capcom 2</description>
-		<rom crc="a5b10d4c" name="naomi_aw2naomi/naomi_1/Marvel_vs_Capcom_2.zip" size="85158634" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fmvsc2.7z" size="71644432" />
 		<title_clean>Marvel vs Capcom 2</title_clean>
 		<plot>Marvel vs. Capcom 2: New Age of Heroes is a crossover fighting game developed and published by Capcom. It is the fourth installment in both the Marvel vs. Capcom series and Capcom's Vs. series respectively, which features characters from both Capcom's video game franchises and comic book series published by Marvel Comics. Originally released in Japanese arcades in 2000, the game received ports to the Dreamcast, PlayStation 2, PlayStation 3, Xbox, Xbox 360, and iOS devices over the span of twelve years.</plot>
 		<genre>Fighting</genre>
@@ -763,27 +788,10 @@
 		<banner1>V1iTFra.png</banner1>
 		<clearlogo1>eMGFlMh.png</clearlogo1>
 	</game>
-	<game name="Marvel vs Capcom 2 (Unlocked)">
-		<description>Marvel vs Capcom 2 (Unlocked)</description>
-		<rom crc="fa278d97" name="naomi_aw2naomi/naomi_1/Marvel_vs_Capcom_2_Unlocked.zip" size="85158664" />
-		<title_clean>Marvel vs Capcom 2</title_clean>
-		<plot>Marvel vs. Capcom 2: New Age of Heroes with all characters unlocked![CR]Marvel vs. Capcom 2: New Age of Heroes is a crossover fighting game developed and published by Capcom. It is the fourth installment in both the Marvel vs. Capcom series and Capcom's Vs. series respectively, which features characters from both Capcom's video game franchises and comic book series published by Marvel Comics. Originally released in Japanese arcades in 2000, the game received ports to the Dreamcast, PlayStation 2, PlayStation 3, Xbox, Xbox 360, and iOS devices over the span of twelve years.</plot>
-		<genre>Fighting</genre>
-		<studio>Capcom</studio>
-		<nplayers>2</nplayers>
-		<wiki_url>https://en.wikipedia.org/wiki/Marvel_vs._Capcom_2:_New_Age_of_Heroes</wiki_url>
-		<boxart1>KdM8Jyk.jpg</boxart1>
-		<boxart2>z5YhA8s.png</boxart2>
-		<boxart3>xi7NCNQ.jpg</boxart3>
-		<boxart4>VKNXm5z.png</boxart4>
-		<boxart5>MkWB4tv.png</boxart5>
-		<fanart1>dps5fbi.jpg</fanart1>
-		<banner1>V1iTFra.png</banner1>
-		<clearlogo1>eMGFlMh.png</clearlogo1>
-	</game>
 	<game name="Maze of the King">
 		<description>Maze of the King</description>
-		<rom crc="cf56f324" name="naomi_aw2naomi/naomi_1/Maze_of_the_King.zip" size="102863779" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fmok.zip" size="1198" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fmok%2Fgds-0022.chd" size="138444937" />
 		<title_clean>Maze of the King</title_clean>
 		<plot>A 1 to 2 player shooting game where each player assumes the role of an archaeological treasure hunter armed with a magical cane who travels across rivers and deserts and explores the insides of pyramids searching for lost treasure while killing mummies and other evil creatures. Each player gets a choice of what kind of firepwoer to use for his or her character's magical cane: Light, Spark, or Fire.</plot>
 		<genre>Shooter</genre>
@@ -799,45 +807,10 @@
 		<banner1>B8QD6gv.png</banner1>
 		<clearlogo1>U37bx2r.png</clearlogo1>
 	</game>
-	<game name="Melty Blood Act Cadenza (Rev A)">
-		<description>Melty Blood Act Cadenza (Rev A)</description>
-		<rom crc="7b5735b0" name="naomi_aw2naomi/naomi_1/Melty_Blood_Act_Cadenza_Rev_A.zip" size="133665741" />
-		<title_clean>Melty Blood Act Cadenza</title_clean>
-		<plot>Melty Blood follows one year after Tsukihime and some days after of Kagetsu Tohya. In the beginning of August 2001, Shiki Tohno hears of a new series of murders in Misaki Town, similar to the ones that took place Tsukihime, in the last weeks of October 1999. Whilst searching for the murderer he meets Sion Eltnam Atlasia who initiates a fight with him, attempting to capture him. After the fight she reveals that her reason for trying to capture him is to get in contact with the "True Ancestor" (referring to Arcueid) so that she may acquire information on the "cure for vampirism". Shiki then decides to help her with this task.</plot>
-		<genre>Fighting</genre>
-		<studio>Ecole Software</studio>
-		<nplayers>2</nplayers>
-		<wiki_url>https://en.wikipedia.org/wiki/Melty_Blood#Act_Cadenza</wiki_url>
-		<boxart1>lteTx0m.png</boxart1>
-		<boxart2>5oJM8Vj.jpg</boxart2>
-		<boxart3>LcO70fs.jpg</boxart3>
-		<boxart4>Azu9MyS.png</boxart4>
-		<snapshot1>DF8GTtO.png</snapshot1>
-		<snapshot2>VdgbTxO.png</snapshot2>
-		<snapshot3>RyGnMKM.png</snapshot3>
-		<snapshot4>s9mceg3.png</snapshot4>
-	</game>
-	<game name="Melty Blood Act Cadenza (Rev B)">
-		<description>Melty Blood Act Cadenza (Rev B)</description>
-		<rom crc="ca55fb25" name="naomi_aw2naomi/naomi_1/Melty_Blood_Act_Cadenza_Rev_B.zip" size="110005400" />
-		<title_clean>Melty Blood Act Cadenza</title_clean>
-		<plot>Melty Blood follows one year after Tsukihime and some days after of Kagetsu Tohya. In the beginning of August 2001, Shiki Tohno hears of a new series of murders in Misaki Town, similar to the ones that took place Tsukihime, in the last weeks of October 1999. Whilst searching for the murderer he meets Sion Eltnam Atlasia who initiates a fight with him, attempting to capture him. After the fight she reveals that her reason for trying to capture him is to get in contact with the "True Ancestor" (referring to Arcueid) so that she may acquire information on the "cure for vampirism". Shiki then decides to help her with this task.</plot>
-		<genre>Fighting</genre>
-		<studio>Ecole Software</studio>
-		<nplayers>2</nplayers>
-		<wiki_url>https://en.wikipedia.org/wiki/Melty_Blood#Act_Cadenza</wiki_url>
-		<boxart1>lteTx0m.png</boxart1>
-		<boxart2>5oJM8Vj.jpg</boxart2>
-		<boxart3>LcO70fs.jpg</boxart3>
-		<boxart4>Azu9MyS.png</boxart4>
-		<snapshot1>DF8GTtO.png</snapshot1>
-		<snapshot2>VdgbTxO.png</snapshot2>
-		<snapshot3>RyGnMKM.png</snapshot3>
-		<snapshot4>s9mceg3.png</snapshot4>
-	</game>
-	<game name="Melty Blood Act Cadenza (Rev B2)">
-		<description>Melty Blood Act Cadenza (Rev B2)</description>
-		<rom crc="c8c913bf" name="naomi_aw2naomi/naomi_1/Melty_Blood_Act_Cadenza_Rev_B2.zip" size="113102672" />
+	<game name="Melty Blood Act Cadenza">
+		<description>Melty Blood Act Cadenza</description>
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fmeltybld.zip" size="1197" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fmeltybld%2Fgdl-0028c.chd" size="217059477" />
 		<title_clean>Melty Blood Act Cadenza</title_clean>
 		<plot>Melty Blood follows one year after Tsukihime and some days after of Kagetsu Tohya. In the beginning of August 2001, Shiki Tohno hears of a new series of murders in Misaki Town, similar to the ones that took place Tsukihime, in the last weeks of October 1999. Whilst searching for the murderer he meets Sion Eltnam Atlasia who initiates a fight with him, attempting to capture him. After the fight she reveals that her reason for trying to capture him is to get in contact with the "True Ancestor" (referring to Arcueid) so that she may acquire information on the "cure for vampirism". Shiki then decides to help her with this task.</plot>
 		<genre>Fighting</genre>
@@ -855,7 +828,7 @@
 	</game>
 	<game name="Melty Blood Actress Again">
 		<description>Melty Blood Actress Again</description>
-		<rom crc="194131f6" name="naomi_aw2naomi/naomi_1/Melty_Blood_Actress_Again.zip" size="227524885" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fmbaa.7z" size="206290749" />
 		<title_clean>Melty Blood Actress Again</title_clean>
 		<plot>Melty Blood: Actress Again, is the third game in the Melty Blood fighting game series. It was released in the 4Q 2008 on Sega Naomi hardware. Compared to Act Cadenza, the game features three entirely new playable characters, as well as several new alternate versions of existing characters in the PS2 version. All characters now feature selection between three different fighting styles, known as Full Moon Style, Crescent Moon Style (most similar to Act Cadenza) and Half Moon Style, which changes not only the way in which life and Magic Circuit meters function, but also each characters' basic and special attacks.</plot>
 		<genre>Fighting</genre>
@@ -871,7 +844,7 @@
 	</game>
 	<game name="Mobile Suit Gundam - Federation Vs Zeon">
 		<description>Mobile Suit Gundam - Federation Vs Zeon</description>
-		<rom crc="702519c3" name="naomi_aw2naomi/naomi_1/Mobile_Suit_Gundam_Federation_Vs_Zeon.zip" size="91448860" />
+		<rom name="mame0215_chd/gundmgd.7z" size="132200000" />
 		<title_clean>Mobile Suit Gundam - Federation Vs Zeon</title_clean>
 		<plot>Mobile Suit Gundam: Federation vs. Zeon is a 2001 arcade video game based on the anime television series Mobile Suit Gundam. An upgraded edition of the game, Federation vs. Zeon DX (DX stands for "Deluxe"), includes 360-degree, zero-G space battlefields. Both versions were later ported to the Dreamcast and PlayStation 2 game consoles.</plot>
 		<genre>Action</genre>
@@ -890,7 +863,7 @@
 	</game>
 	<game name="Mobile Suit Gundam - Federation Vs Zeon (DX)">
 		<description>Mobile Suit Gundam - Federation Vs Zeon (DX)</description>
-		<rom crc="7afbe312" name="naomi_aw2naomi/naomi_1/Mobile_Suit_Gundam_Federation_Vs_Zeon_DX.zip" size="108200704" />
+		<rom name="mame0215_chd/gundmxgd.7z" size="162200000" />
 		<title_clean>Mobile Suit Gundam - Federation Vs Zeon</title_clean>
 		<plot>Mobile Suit Gundam: Federation vs. Zeon is a 2001 arcade video game based on the anime television series Mobile Suit Gundam. An upgraded edition of the game, Federation vs. Zeon DX (DX stands for "Deluxe"), includes 360-degree, zero-G space battlefields. Both versions were later ported to the Dreamcast and PlayStation 2 game consoles.</plot>
 		<genre>Action</genre>
@@ -909,7 +882,8 @@
 	</game>
 	<game name="Monkey Ball">
 		<description>Monkey Ball</description>
-		<rom crc="0d8d1819" name="naomi_aw2naomi/naomi_1/Monkey_Ball.zip" size="58287577" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fmonkeyba.zip" size="1194" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fmonkeyba%2Fgds-0008.chd" size="78175865" />
 		<title_clean>Monkey Ball</title_clean>
 		<plot>Monkey Ball is a Sega NAOMI arcade game, originally released in 2001. It is the first game in the Super Monkey Ball series.[CR]The arcade cabinet of Monkey Ball is unique for its banana-shaped joystick. All the bananas in the game are sponsored by Dole, a practise that would carry through to its successor, Super Monkey Ball and Super Monkey Ball 2. There are three characters, AiAi, MeeMee and Baby, three difficulty levels and numerous puzzles to complete.[CR]Monkey Ball was somewhat unique at the time of release. Though marble/ball rolling games had been done in the past, such as Marble Madness, these types of games are fairly rare, and none had ever been presented in 3D.[CR]Monkey Ball itself was not ported to consoles. Instead, an upgraded version titled Super Monkey Ball was released for the GameCube a few years later. It contains all the levels seen in Monkey Ball, plus enhanced graphics and extra features.</plot>
 		<year>2001</year>
@@ -925,7 +899,8 @@
 	</game>
 	<game name="Musapeys Choco Marker">
 		<description>Musapeys Choco Marker</description>
-		<rom crc="184fb48a" name="naomi_aw2naomi/naomi_1/Musapeys_Choco_Marker.zip" size="42113066" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fchocomk.zip" size="1175" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fchocomk%2Fgdl-0014a.chd" size="64983303" />
 		<title_clean>Musapeys Choco Marker</title_clean>
 		<plot>Musapey's Choco Marker is a Puzzle game, developed and published by Ecole, which was released in Japan in 2002.</plot>
 		<year>2002</year>
@@ -940,9 +915,26 @@
 		<banner1>FmU1fMc.png</banner1>
 		<clearlogo1>NwZZGRs.png</clearlogo1>
 	</game>
+	<game name="Ninja Assault">
+		<description>Ninja Assault</description>
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fninjaslt.7z" size="46016400" />
+		<title_clean>Ninja Assault</title_clean>
+		<plot>Ruling with an army of demonic soldiers, Shogun Kigai has conquered the innocent nation of Tenshin and kidnapped its beautiful Princess Koto. As violence and carnage tear apart the land, three great Ninjas rise to end the bloodshed and rescue the Princess. Armed with sacred weapons, the three Ninjas embark on a journey to destroy the evil Shogun and defeat his menacing army of demons..</plot>
+		<genre>Shooter</genre>
+		<year>2000</year>
+		<studio>Namco</studio>
+		<nplayers>2</nplayers>
+		<boxart1>https://imgur.com/i0ANipO.p</boxart1>
+		<boxart2>LajtRWD.jpg</boxart2>
+		<boxart3>eJhucOr.png</boxart3>
+		<banner1>rQMLyOS.png</banner1>
+		<clearlogo1>aJqS2X7.png</clearlogo1>
+		<videoid>wKDSTLLPMZo</videoid>
+	</game>
 	<game name="Nomiso Kone Kone Puzzle Takoron">
 		<description>Nomiso Kone Kone Puzzle Takoron</description>
-		<rom crc="641b9873" name="naomi_aw2naomi/naomi_1/Nomiso_Kone_Kone_Puzzle_Takoron.zip" size="26311320" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Ftakoron.zip" size="1195" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Ftakoron%2Fgdl-0042.chd" size="46796073" />
 		<title_clean>Nomiso Kone Kone Puzzle Takoron</title_clean>
 		<plot>Noumiso Konekone Puzzle Takoron is a puzzle game by Compile Heart.[CR]The player controls a 2x2 cursor over a field of colored octopuses. Pressing a button causes the octopuses under the cursor to rotate counter-clockwise. Numbered nets are scattered around the playing field. If the player arranges a number of same-colored octopuses under the net, the octopuses under the net, as well as any other octopuses of the same color which are connected orthogonally, are removed.[CR]By removing octopuses in this way, the player can send sea urchins to their opponents playing field. Sea urchins can not be removed using nets, but are removed if they are orthogonal to other octopuses being removed, similar to ojama puyos in Puyo Puyo. If the players field fills up for 3 seconds, they lose.</plot>
 		<genre>Puzzle</genre>
@@ -955,7 +947,7 @@
 	</game>
 	<game name="OutTrigger">
 		<description>OutTrigger</description>
-		<rom crc="fac842b5" name="naomi_aw2naomi/naomi_1/OutTrigger.zip" size="74921984" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fotrigger.7z" size="39743954" />
 		<title_clean>OutTrigger</title_clean>
 		<plot>Outtrigger is a first/third person shoot-em-up game originally released for Sega NAOMI arcade hardware before being ported to the Sega Dreamcast. It is compatible with the Dreamcast Mouse, and in Japan, came bundled with one.[CR]Developed by Sega AM2 and produced by Yu Suzuki, the game featured four unique characters, each with their own class and abilities. This makes it the first hero shooter.</plot>
 		<genre>Shooter</genre>
@@ -973,7 +965,7 @@
 	</game>
 	<game name="Powerstone">
 		<description>Powerstone</description>
-		<rom crc="6cc74e9d" name="naomi_aw2naomi/naomi_1/Powerstone.zip" size="33586975" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fpstone.7z" size="29080233" />
 		<title_clean>Powerstone</title_clean>
 		<plot>Power Stone is a fully 3D arena fighting game made by Capcom. Power Stone was initially released on the Sega NAOMI hardware and later ported to the Dreamcast. In 2006, Capcom ported the game and its sequel to the PlayStation Portable as Power Stone Collection. An anime TV series based on the game ran in 1999 from April 3 to September 25.</plot>
 		<genre>Fighting</genre>
@@ -992,7 +984,7 @@
 	</game>
 	<game name="Powerstone 2">
 		<description>Powerstone 2</description>
-		<rom crc="6fe27f97" name="naomi_aw2naomi/naomi_1/Powerstone_2.zip" size="52130001" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fpstone2.7z" size="31191788" />
 		<title_clean>Powerstone 2</title_clean>
 		<plot>Power Stone 2 is a multiplayer fighting game that built on the innovative gameplay introduced by its predecessor, Power Stone. Power Stone 2 allows up to four players to choose from multiple characters and utilize items such as tables, chairs, and rocks in battle.</plot>
 		<genre>Fighting</genre>
@@ -1009,7 +1001,7 @@
 	</game>
 	<game name="Project Justice - Rival School 2">
 		<description>Project Justice - Rival School 2</description>
-		<rom crc="71fe8765" name="naomi_aw2naomi/naomi_1/Project_Justice_Rival_School_2.zip" size="120742804" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fpjustic.7z" size="93017985" />
 		<title_clean>Project Justice - Rival School 2</title_clean>
 		<plot>A group of long time friends now unite in the pursuit of honor and excellence. Setting all past rivalries aside, they band together to uncover the mystery behind an unusual series of events. Join over 20 playable characters, each with their own unique skills and custom attacks, as they compete in 3-on-3 battles in beautifully rendered 3-D worlds. Assemble your team and perform incredible fighting combos all for one united goal...Project Justice!</plot>
 		<releasedate>5/16/2001</releasedate>
@@ -1018,40 +1010,7 @@
 		<studio>Capcom</studio>
 		<nplayers>2</nplayers>
 		<ESRB>T - Teen</ESRB>
-		<videoid>https://ZjfFw4NwqmQ</videoid>
-		<wiki_url>https://en.wikipedia.org/wiki/Project_Justice</wiki_url>
-		<boxart1>IX444i7.png</boxart1>
-		<boxart2>mvBnN5B.jpg</boxart2>
-		<boxart3>h849rP0.jpg</boxart3>
-		<boxart4>tx0A1Jc.jpg</boxart4>
-		<boxart5>JgWudcd.jpg</boxart5>
-		<boxart6>YYrlB0K.jpg</boxart6>
-		<boxart7>Ta33IkI.jpg</boxart7>
-		<boxart8>XMthcTI.png</boxart8>
-		<boxart9>EoslZk4.jpg</boxart9>
-		<snapshot1>3ufsBsN.png</snapshot1>
-		<snapshot2>NPjPqC0.jpg</snapshot2>
-		<snapshot3>hEjt1yP.jpg</snapshot3>
-		<snapshot4>ZN3HW1l.jpg</snapshot4>
-		<snapshot5>y8aAZbz.jpg</snapshot5>
-		<fanart1>Y7i0OsM.jpg</fanart1>
-		<fanart2>iRIePPc.jpg</fanart2>
-		<fanart3>OdLtDH3.jpg</fanart3>
-		<clearlogo1>5tIk2sw.png</clearlogo1>
-		<clearlogo2>PM5clr0.png</clearlogo2>
-	</game>
-	<game name="Project Justice - Rival School 2 (Unlocked)">
-		<description>Project Justice - Rival School 2 (Unlocked)</description>
-		<rom crc="0bcbdc60" name="naomi_aw2naomi/naomi_1/Project_Justice_Rival_School_2_Unlocked.zip" size="120742833" />
-		<title_clean>Project Justice - Rival School 2</title_clean>
-		<plot>Project Justice - Rival School 2 with all characters unlocked![CR]A group of long time friends now unite in the pursuit of honor and excellence. Setting all past rivalries aside, they band together to uncover the mystery behind an unusual series of events. Join over 20 playable characters, each with their own unique skills and custom attacks, as they compete in 3-on-3 battles in beautifully rendered 3-D worlds. Assemble your team and perform incredible fighting combos all for one united goal...Project Justice!</plot>
-		<releasedate>5/16/2001</releasedate>
-		<year>2001</year>
-		<genre>Fighting</genre>
-		<studio>Capcom</studio>
-		<nplayers>2</nplayers>
-		<ESRB>T - Teen</ESRB>
-		<videoid>https://ZjfFw4NwqmQ</videoid>
+		<videoid>ZjfFw4NwqmQ</videoid>
 		<wiki_url>https://en.wikipedia.org/wiki/Project_Justice</wiki_url>
 		<boxart1>IX444i7.png</boxart1>
 		<boxart2>mvBnN5B.jpg</boxart2>
@@ -1075,7 +1034,8 @@
 	</game>
 	<game name="Psyvariar 2">
 		<description>Psyvariar 2</description>
-		<rom crc="77a8691b" name="naomi_aw2naomi/naomi_1/Psyvariar_2.zip" size="107013500" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fpsyvar2.zip" size="1349" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fpsyvar2%2Fgdl-0024.chd" size="135053965" />
 		<title_clean>Psyvariar 2</title_clean>
 		<plot>Psyvariar 2: The Will to Fabricate is a vertically scrolling shoot em up developed by SKONEC Entertainment and distributed by Success. It is the sequel to the 2000 title, Psyvariar.[CR]The game was initially developed for the Sega NAOMI arcade platform, and was released in Japanese arcades in November 2003.</plot>
 		<year>2003</year>
@@ -1090,7 +1050,7 @@
 	</game>
 	<game name="Puyo Pop Fever">
 		<description>Puyo Pop Fever</description>
-		<rom crc="66b28aa0" name="naomi_aw2naomi/naomi_1/Puyo_Pop_Fever.zip" size="119684355" />
+		<rom name="https://archive.org/download/mame0215_chd/puyofev.7z" size="280000000" />
 		<title_clean>naomi_1/Puyo_Pop_Fever</title_clean>
 		<plot>Accord, teacher of the local magic school, has lost her magic flying cane. There is word of an award so the students are busy searching high and low for it. Naturally, our heroes Amitie and her school nemesis Raffine make their way toward the distant dark castle, challenging - and being challenged by - everyone you come across in a game of Puyo Pop.[CR]Puyo Pop Fever is a puzzle game of the falling-block variety, the goal of which is to clear your blocks (Puyos) by combining four or more of the same color, which will then vanish. This will produce Nuisance Puyos. These colorless Puyos will fall onto your opponents screen, thus blocking chains and combos they could create. These pesky Puyos can only be exterminated by removing neighboring Puyos.[CR]When an opponent sends Nuisance Puyos to your screen you can try to "offset" by clearing your own Puyos and limiting the number that would fall on your screen. This will also increase your Fever Meter. When this meter fills you will be given a set of prearranged Puyos with which you can wrack up giant combos and send tons of Nuisance Puyos to your opponent. When any player's field becomes so full that they can no longer drop Puyos they lose the game.[CR]The game features a two-player mode. Some versions allow for more people such as the DS version which allows up to eight players to compete in free-for-all or team modes.</plot>
 		<releasedate>2/4/2004</releasedate>
@@ -1103,7 +1063,7 @@
 	</game>
 	<game name="Puyo Puyo Da">
 		<description>Puyo Puyo Da</description>
-		<rom crc="d2c8f3c3" name="naomi_aw2naomi/naomi_1/Puyo_Puyo_Da.zip" size="105623782" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fpuyoda.7z" size="97184628" />
 		<title_clean>Puyo Puyo Da</title_clean>
 		<plot>Puyo Puyo DA! featuring Ellena System is a Puyo Puyo dancing game created in 1999 for Arcade and Dreamcast. The game was released only in Japan.[CR]Arle Nadja and her friends take some time off from Puyo fighting and challenge players to dance with them. The game features several dance stages similar to those of Dance Dance Revolution. It also introduces a new ELLENA system used to render the game as well as a new exclusive character featuring the same name (Ellena Stevens, the protagonist of the original Broadway Legend Ellena). One or two players can dance to a variety of J-pop tunes by using the controller buttons to copy their opponents moves. Based on how well a player copies the moves, Nuisance Puyos are sent to their opponent. The player not having Nuisance Puyos on their side of the screen when the song is over wins the stage.</plot>
 		<genre>Music</genre>
@@ -1111,21 +1071,21 @@
 	</game>
 	<game name="Quiz Keitai Q Mode">
 		<description>Quiz Keitai Q Mode</description>
-		<rom crc="5ac29506" name="naomi_aw2naomi/naomi_1/Quiz_Keitai_Q_Mode.zip" size="86870479" />
+		<rom name="mame0215_chd/quizqgd.7z" size="117900000" />
 		<title_clean>Quiz Keitai Q Mode</title_clean>
 		<genre>Quiz</genre>
 		<boxart1>zOGGaBq.png</boxart1>
 	</game>
 	<game name="Radirgy">
 		<description>Radirgy</description>
-		<rom crc="b954cb8b" name="naomi_aw2naomi/naomi_1/Radirgy.zip" size="92866865" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fradirgy.7z" size="86748430" />
 		<title_clean>Radirgy</title_clean>
 		<plot>Radirgy is a vertical-screen top-down bullet-hell shooter originally developed by Milestone for Naomi arcade system and later released on console systems. The game features bright, cartoony, cel-shaded graphics. At the beginning, the player is given choice among three different mecha-ships: one with a spread-gun, a weak homing laser, or a slow but powerful bubble gun. Additionally, each ship can use a sword for anything that gets too close, or specific enemies which can't be killed otherwise, a shield, which appears at the front of the ship once the player lets go of the fire button, and a smart-bomb-like field that can be extended around the player in a small circle, damaging enemies, absorbing their shots and turning them into points.</plot>
 		<boxart1>1mBogBg.jpg</boxart1>
 	</game>
 	<game name="Radirgy Noa">
 		<description>Radirgy Noa</description>
-		<rom crc="912fb272" name="naomi_aw2naomi/naomi_1/Radirgy_Noa.zip" size="101349013" />
+		<rom name="MAME_0.209_ROMs_merged/MAME_0.209_ROMs_merged.zip/radirgyn.zip" size="103342805" />
 		<title_clean>Radirgy Noa</title_clean>
 		<plot>Radirgy Noa (also written as Radirgynoa) is a vertically scrolling shoot em up that was released in June 2009 for the Sega Naomi arcade platform by Milestone Inc. and the sequel to Radirgy.[CR]Radirgy Noa features a cel-shaded graphical style very similar to that of its predecessor and 2-player co-op. Screen orientation is horizontal. Ruki Mishima, a reddemed villain of the first game, joins the cast as a player character.</plot>
 		<genre>Shooter</genre>
@@ -1138,15 +1098,25 @@
 	</game>
 	<game name="Rhythm Tengoku">
 		<description>Rhythm Tengoku</description>
-		<rom crc="6f1a26a1" name="naomi_aw2naomi/naomi_1/Rhythm_Tengoku.zip" size="112528158" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Frhytngk.7z" size="37877212" />
 		<title_clean>Rhythm Tengoku</title_clean>
 		<plot>Rhythm Tengoku is a rhythm game developed by Nintendo SPD and published by Nintendo. It was released on August 3, 2006, and was the last game developed by Nintendo for the Game Boy Advance. An arcade version of the game was reprogrammed and published by Sega on September 20, 2007. Both versions were released in Japan exclusively. The game has spawned three sequels; Rhythm Heaven, Rhythm Heaven Fever, and Rhythm Heaven Megamix. It began as an idea created by its composer and supervisor Tsunku who proposed it to Nintendo due to his belief that they could do a better job with it than he could.[CR]Rhythm Tengokus gameplay focuses on audio cues rather than visual cues to convey information to players. It features a number of unique stages which have their own type of rhythm and gameplay. Players follow the rhythm (in some rhythm games as a character) until the end where they are given a score based on their performance. The gameplay and music were both well received by critics and consumers. Parallels have been drawn between it and the developer's previous work on the WarioWare series.</plot>
 		<genre>Music</genre>
 		<boxart1>ZOF4mTZ.jpg</boxart1>
 	</game>
+	<game name="Ring Out 4x4">
+		<description>Ring Out 4x4</description>
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fringout.7z" size="24841798" />
+		<title_clean>Ring Out 4x4</title_clean>
+		<plot>A top-down 3D vehicular-combat arcade game where players attempt to knock each-other off the arena.</plot>
+		<year>1999</year>
+		<genre>Racing</genre>
+		<snapshot1>LnfC0bB.png</snapshot1>
+		<snapshot2>uMDm3hd.jpg</snapshot2>
+	</game>
 	<game name="Samba de Amigo">
 		<description>Samba de Amigo</description>
-		<rom crc="94bbf01e" name="naomi_aw2naomi/naomi_1/Samba_de_Amigo.zip" size="123461867" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fsamba.7z" size="113281999" />
 		<title_clean>Samba de Amigo</title_clean>
 		<plot>Samba de Amigo is a rhythm game developed by Sonic Team and published by Sega. The game was released in arcades in December 1999, and for the Dreamcast video game console in 2000.[CR]In Samba de Amigo, the player uses controllers shaped like maracas with the goal of matching a series of patterns displayed on-screen. The music in Samba de Amigo is made of primarily popular Latin music songs rather than common or traditional samba. The game also features non-Latin pop songs.</plot>
 		<year>1999</year>
@@ -1155,7 +1125,7 @@
 	</game>
 	<game name="Sega Marine Fishing">
 		<description>Sega Marine Fishing</description>
-		<rom crc="3475272d" name="naomi_aw2naomi/naomi_1/Sega_Marine_Fishing.zip" size="27078763" />
+		<rom name="MAME_0.209_ROMs_merged/MAME_0.209_ROMs_merged.zip/smarinef.zip" size="28015945" />
 		<title_clean>Sega Marine Fishing</title_clean>
 		<plot>Sega Marine Fishing is a fishing video game in which the player attempts to catch various marine sport fish. The gameplay's emphasis was on enticing fish to bite onto the lure and then successfully fighting the fish and reeling it to the boat.</plot>
 		<genre>Sports</genre>
@@ -1175,7 +1145,7 @@
 	</game>
 	<game name="Sega Strike Fighter">
 		<description>Sega Strike Fighter</description>
-		<rom crc="ebd4e15f" name="naomi_aw2naomi/naomi_1/Sega_Strike_Fighter.zip" size="69363606" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fsstrkfgt.7z" size="60118788" />
 		<title_clean>Sega Strike Fighter</title_clean>
 		<plot>As the pilot of an F/A-18 Hornet, a player embarks on a multitude of hair raising missions. These missions range from basic training to full fledged air-to-air and air-to-ground engagements.[CR]This game was released in two cabinet styles Deluxe and Standard. Both models have rudder pedals, throttle with a button for air brake, and flight stick with trigger guns and thumb button missles. However, the Deluxe model is slightly larger and is styled much like the cockpit of a fighter. It has three monitors one for forward headsupdisplay view and two that act as window views for left and right. The Standard model just has a seat and one monitor for forward headsupdisplay view.</plot>
 		<genre>Shooter</genre>
@@ -1198,7 +1168,7 @@
 	</game>
 	<game name="Sega Tetris">
 		<description>Sega Tetris</description>
-		<rom crc="e902cf2f" name="naomi_aw2naomi/naomi_1/Sega_Tetris.zip" size="27104928" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fsgtetris.7z" size="20828789" />
 		<title_clean>Sega Tetris</title_clean>
 		<plot>Ready to take a step into the surreal? Then welcome to Sega Tetris. Originally created by Sega AM1 as a NAOMI arcade game, the subsequently created Wow Entertainment ported Sega Tetris to the Dreamcast in 2000. A Japanese exclusive, Sega Tetris is a pretty interesting and original take on the original game, not least because of the bizarre imagery and settings it uses. The game naturally playes in a familiar manner with the usual gameplay mechanics in place, but it's the extra details that make Sega Tetris such a fun title. The addiction of bizarre cartoon characters that dance and gyrate by the play board as you move the Tetriminos around is interesting, and the way they hit the blocks to destroy any lines you make can be amusing.</plot>
 		<genre>Puzzle</genre>
@@ -1217,25 +1187,7 @@
 	</game>
 	<game name="Senko No Ronde">
 		<description>Senko No Ronde</description>
-		<rom crc="386417fc" name="naomi_aw2naomi/naomi_1/Senko_No_Ronde.zip" size="175019067" />
-		<title_clean>Senko No Ronde</title_clean>
-		<plot>Due to a past catastrophe on Earth, humanity was forced to live amongst the stars for several centuries, resulting in the creation of the S.D. calendar and the birth of the Aria Federation, an empire whose influence extends from Earth to Saturn. In S.D. 1478, an embassy located within the empires capital on Earths moon was seized by terrorists, and forces deployed by Aria's Special Space Service ended in disaster as the terrorists triggered a self-detonation device, killing themselves and several civilians in the process.[CR]The game begins six years after this event, with the player assuming the role of one of eight characters who will become involved in a mastermind's scheme to take control of the Aria Federation's superweapon and use it for his own purposes.[CR]Toward the Terra, a science fiction series created by Keiko Takemiya, has played a major influence for both Senko no Ronde's story and art style.</plot>
-		<genre>Shooter</genre>
-		<studio>G.Rev</studio>
-		<nplayers>2</nplayers>
-		<boxart1>e5cPlv2.jpg</boxart1>
-		<boxart2>Db2EtS7.jpg</boxart2>
-		<boxart3>dCykeYo.png</boxart3>
-		<snapshot1>sSfQzNp.png</snapshot1>
-		<snapshot2>z2Wf5fO.png</snapshot2>
-		<snapshot3>7A3iJWI.png</snapshot3>
-		<banner1>Nt5t2Sg.png</banner1>
-		<clearlogo1>Rj66IcM.png</clearlogo1>
-		<clearlogo2>ql4KFxb.png</clearlogo2>
-	</game>
-	<game name="Senko No Ronde (New Ver)">
-		<description>Senko No Ronde (New Ver)</description>
-		<rom crc="65d68ce5" name="naomi_aw2naomi/naomi_1/Senko_No_Ronde_New_Ver.zip" size="176090704" />
+		<rom name="mame0215_chd/senko.7z" size="442300000" />
 		<title_clean>Senko No Ronde</title_clean>
 		<plot>Due to a past catastrophe on Earth, humanity was forced to live amongst the stars for several centuries, resulting in the creation of the S.D. calendar and the birth of the Aria Federation, an empire whose influence extends from Earth to Saturn. In S.D. 1478, an embassy located within the empires capital on Earths moon was seized by terrorists, and forces deployed by Aria's Special Space Service ended in disaster as the terrorists triggered a self-detonation device, killing themselves and several civilians in the process.[CR]The game begins six years after this event, with the player assuming the role of one of eight characters who will become involved in a mastermind's scheme to take control of the Aria Federation's superweapon and use it for his own purposes.[CR]Toward the Terra, a science fiction series created by Keiko Takemiya, has played a major influence for both Senko no Ronde's story and art style.</plot>
 		<genre>Shooter</genre>
@@ -1253,7 +1205,8 @@
 	</game>
 	<game name="Senko No Ronde (SP)">
 		<description>Senko No Ronde (SP)</description>
-		<rom crc="1af1d5a3" name="naomi_aw2naomi/naomi_1/Senko_No_Ronde_SP.zip" size="190977579" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fsenkosp.zip" size="1195" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fsenkosp%2Fgdl-0038.chd" size="240903474" />
 		<title_clean>Senko No Ronde</title_clean>
 		<plot>Senko no Ronde SP is a fighting game developed by G.Rev and published by Sega for the Sega NAOMI arcade system.  It is the sequel to Senko no Ronde, and includes many features backported from the game Senko no Ronde Rev X.</plot>
 		<genre>Shooter</genre>
@@ -1271,7 +1224,8 @@
 	</game>
 	<game name="Shikigami No Shiro 2">
 		<description>Shikigami No Shiro 2</description>
-		<rom crc="a9394e27" name="naomi_aw2naomi/naomi_1/Shikigami_No_Shiro_2.zip" size="72425066" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fshikgam2.zip" size="1380" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fshikgam2%2Fgdl-0021.chd" size="108224953" />
 		<title_clean>Shikigami No Shiro 2</title_clean>
 		<plot>In the recent past, a band of champions gathered to engage this threat. Using weapons forged by the great magicians and masters of arcane sciences, the heroes managed to banished the demons, quelling their thirst for conquest!  The time: 2006, the distant future. The Demon Gods and their mystical castle have reappeared above the skies of Tokyo City with the goal of continuing the domination and conquest of humanity. Can the heroes of recent legend return to defeat the nemesis of all mankind? The tools for defeating the gods are trapped within the very castle in which the demons reside. The hope of the world lies on the shoulders of these heroes; they must succeed in this vertical shooter.</plot>
 		<releasedate>3/24/2004</releasedate>
@@ -1282,7 +1236,7 @@
 	</game>
 	<game name="Shin Nihon Prowrestling Toukon Retsuden 4">
 		<description>Shin Nihon Prowrestling Toukon Retsuden 4</description>
-		<rom crc="270c0edb" name="naomi_aw2naomi/naomi_1/Shin_Nihon_Prowrestling_Toukon_Retsuden_4.zip" size="216442420" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Ftoukon4.7z" size="216442420" />
 		<title_clean>Shin Nihon Prowrestling Toukon Retsuden 4</title_clean>
 		<plot>Toukon Retsuden 4 was developed by Yukes, and is mainly focused on providing a realistic representation of professional wrestling.  Toukon Retsuden's presentation is similar to real life broadcasts, including crowd noise and extravagant introductions.  The gameplay found in Toukon Retsuden is vastly different from traditional American/Japanese wrestling games</plot>
 		<releasedate>9/2/1999</releasedate>
@@ -1294,7 +1248,7 @@
 	</game>
 	<game name="Shooting Love 2007 - Exzeal">
 		<description>Shooting Love 2007 - Exzeal</description>
-		<rom crc="19a0d3b1" name="naomi_aw2naomi/naomi_1/Shooting_Love_2007_Exzeal.zip" size="102347985" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fsl2007.7z" size="83856610" />
 		<title_clean>Shooting Love 2007 - Exzeal</title_clean>
 		<plot>Shooting Love 2007 is a Sega NAOMI arcade shoot-'em-up game developed by Triangle Service. It contains two games; Exzeal, which is a sequel to Trizeal and Shmups Skills Test</plot>
 		<genre>Shooter</genre>
@@ -1306,7 +1260,7 @@
 	</game>
 	<game name="Shootout Pool">
 		<description>Shootout Pool</description>
-		<rom crc="1f716242" name="naomi_aw2naomi/naomi_1/Shootout_Pool.zip" size="7274548" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fshootopl.7z" size="5479818" />
 		<title_clean>Shootout Pool</title_clean>
 		<plot>Shootout Pool is an arcade billiards game released for Sega NAOMI arcade hardware</plot>
 		<genre>Sports</genre>
@@ -1324,7 +1278,7 @@
 	</game>
 	<game name="SlashOut">
 		<description>SlashOut</description>
-		<rom crc="cb1ce95d" name="naomi_aw2naomi/naomi_1/SlashOut.zip" size="107462151" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fslasho.7z" size="86466824" />
 		<title_clean>SlashOut</title_clean>
 		<plot>Slashout is the third installment to the Spikeout series, released for Sega NAOMI hardware in 2000. Unlike other games in the series, Slashout has a completely different setting, based in a fantasy world with different characters-gameplay remains similar, however.</plot>
 		<genre>Fighting</genre>
@@ -1346,7 +1300,7 @@
 	</game>
 	<game name="Spawn">
 		<description>Spawn</description>
-		<rom crc="38fefa04" name="naomi_aw2naomi/naomi_1/Spawn.zip" size="55853924" />
+		<rom name="MAME_0.209_ROMs_merged/MAME_0.209_ROMs_merged.zip/spawn.zip" size="52057228" />
 		<title_clean>Spawn</title_clean>
 		<plot>Spawn: In the Demon's Hand is a video game developed and published by Capcom for the Dreamcast and arcade. It is based on the comic book character Spawn created by Todd McFarlane and produced by Image Comics. A port was planned for the PlayStation 2 as a launch title but it was later canceled.</plot>
 		<genre>Action</genre>
@@ -1364,7 +1318,8 @@
 	</game>
 	<game name="Spikers Battle">
 		<description>Spikers Battle</description>
-		<rom crc="e7ee4f98" name="naomi_aw2naomi/naomi_1/Spikers_Battle.zip" size="104924539" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fspkrbtl.zip" size="1198" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fspkrbtl%2Fgds-0005.chd" size="146152633" />
 		<title_clean>Spikers Battle</title_clean>
 		<plot>Spikers Battle is a cross between a 3D beat 'em-up and versus fighting game. The game takes place in a urban setting and offers a total of eight playable streetfighter characters. Returning characters from the earlier 1998 arcade game Spikeout are Spike, Linda, Tenshin and White. The new fighters are Albelto, Hikaru, Fengli and Gorn.[CR]In the game you fight in several different arenas against three playable and/or non-playable characters in a best out of three round match. Aside from the kick and punch attacks weapons like a baseball bat, hammer and flame thrower can be picked up and used on the opponents. Beaten enemies sometimes drop boxes that replenish life.</plot>
 		<genre>Fighting</genre>
@@ -1382,7 +1337,8 @@
 	</game>
 	<game name="Sports Jam">
 		<description>Sports Jam</description>
-		<rom crc="b71d1dd8" name="naomi_aw2naomi/naomi_1/Sports_Jam.zip" size="87274124" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fsprtjam.zip" size="1195" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fsprtjam%2Fgds-0003.chd" size="122080832" />
 		<title_clean>Sports Jam</title_clean>
 		<plot>Sports Jam contains many sports games that can be played by a single player or as multi-player games. Players can select from a great range of sporting games.[CR]Sports include 3 point shoot out, a basketball game in which the player needs both speed and accuracy to sink as many 3 point shots as possible in the time allowed, and Touch down derby, an American football game where the player attempts to return a kickdown all the way for a touchdown.</plot>
 		<genre>Sports</genre>
@@ -1405,7 +1361,8 @@
 	</game>
 	<game name="Street Fighter Zero 3 Upper">
 		<description>Street Fighter Zero 3 Upper</description>
-		<rom crc="b657d4e5" name="naomi_aw2naomi/naomi_1/Street_Fighter_Zero_3_Upper.zip" size="69836855" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fsfz3ugd.zip" size="1370" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fsfz3ugd%2Fgdl-0002.chd" size="109224132" />
 		<title_clean>Street Fighter Zero 3 Upper</title_clean>
 		<plot>Street Fighter Zero 3 is the third game in the Street Fighter Alpha series, following Street Fighter Alpha: Warriors' Dreams and Street Fighter Alpha 2. The gameplay system from the previous Alpha games was given a complete overhaul with the addition of three selectable fighting styles based on Street Fighter Alpha: Warriors' Dreams (A-ism), Street Fighter Alpha 2 (V-ism), and Super Street Fighter II Turbo (X-ism), new stages, over 7 new and returning characters, and a new and exclusive soundtrack for the game.[CR]The game illustrations, select screens, soundtrack, sound effects, etc, all have a similar style to the Final Fight series, unlike the previous games.[CR]Street Fighter Zero 3 Upper discards the Manual and Auto modes from the previous Alpha games by offering the player three different playing styles known as "isms." The standard playing style, A-ism (or Z-ism in Japan), is based on the previous games, in which the player has a three-level Super Combo gauge with access to several Super Combo moves. X-ism is a simple style based on Super Street Fighter II Turbo, in which the player has a single-level Super Combo gauge and access to a single, but powerful, Super Combo move. The third style, V-ism (or variable style), a unique style that allows the player to perform Custom Combos similar to the ones in Street Fighter Alpha 2. In X-ism, players cannot air-block nor use Alpha Counters.  The game also introduces a Guard Power gauge which depletes each time the player blocks - everytime the gauge is completely depleted, the player suffers a "guard crush" (in which the gauge itself decreases in size, thus causing the player to gradatively lose ability to block attacks as the guard gauge keeps decreasing) which leaves him/her temporarily vulnerable for an attack.</plot>
 		<genre>Fighting</genre>
@@ -1424,21 +1381,8 @@
 	</game>
 	<game name="Super Shanghai 2005">
 		<description>Super Shanghai 2005</description>
-		<rom crc="7425ab60" name="naomi_aw2naomi/naomi_1/Super_Shanghai_2005.zip" size="32187370" />
+		<rom name="mame0215_chd/ss2005.7z" size="56800000" />
 		<title_clean>Super Shanghai 2005</title_clean>
-		<genre>Puzzle</genre>
-		<nplayers>2</nplayers>
-		<boxart1>bvcYqHs.jpg</boxart1>
-		<boxart2>g3Coyor.jpg</boxart2>
-		<boxart3>ZtckRVv.png</boxart3>
-		<banner1>d9dGugK.png</banner1>
-		<clearlogo1>mq0T0cr.png</clearlogo1>
-	</game>
-	<game name="Super Shanghai 2005 (Rev A)">
-		<description>Super Shanghai 2005 (Rev A)</description>
-		<rom crc="97ada8d9" name="naomi_aw2naomi/naomi_1/Super_Shanghai_2005_Rev_A.zip" size="32812996" />
-		<title_clean>Super Shanghai 2005</title_clean>
-		<plot>Super Shanghai 2005 is a mahjong game released for Sega NAOMI in 2005.</plot>
 		<genre>Puzzle</genre>
 		<nplayers>2</nplayers>
 		<boxart1>bvcYqHs.jpg</boxart1>
@@ -1449,7 +1393,8 @@
 	</game>
 	<game name="Tetris Kiwamemichi">
 		<description>Tetris Kiwamemichi</description>
-		<rom crc="7ef18bb3" name="naomi_aw2naomi/naomi_1/Tetris_Kiwamemichi.zip" size="33418862" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Ftetkiwam.zip" size="1348" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Ftetkiwam%2Fgdl-0020.chd" size="56972202" />
 		<title_clean>Tetris Kiwamemichi</title_clean>
 		<plot>Tetris Kiwamemichi looks very similar to Tetris DS, as well as Tetris Advance. The game includes a two player co-op and versus mode. Infinity is included, but can be disabled. Like the gameboy tetris versions, this game features a post entry delay, that lets you move and rotate a piece before it starts to drop. This significantly decreases the difficulty of 20G play.</plot>
 		<genre>Puzzle</genre>
@@ -1461,7 +1406,7 @@
 	</game>
 	<game name="The Typing Of The Dead">
 		<description>The Typing Of The Dead</description>
-		<rom crc="37a251e7" name="naomi_aw2naomi/naomi_1/The_Typing_Of_The_Dead.zip" size="82271140" />
+		<rom name="MAME_0.209_ROMs_merged/MAME_0.209_ROMs_merged.zip/totd.zip" size="85384446" />
 		<title_clean>The Typing Of The Dead</title_clean>
 		<plot>The Typing of the Dead is an arcade game that was developed by WOW Entertainment and published by Sega for the NAOMI hardware. The game was released in Japanese arcades in 1999 and was ported to the Sega Dreamcast in 2001 by Smilebit.[CR]The Typing of the Dead is a modification of Sega's 1998 light gun arcade game The House of the Dead 2 in which the gun is replaced by a computer keyboard. The player takes the role of a secret agent in a zombie-infested Venice and must quickly type letters, words and phrases in order to kill fast-advancing enemies.[CR]Despite falling under the criteria of 'edutainment', the game was lauded by mainstream game critics for its humor, difficulty and originality.</plot>
 		<genre>Shooter</genre>
@@ -1478,7 +1423,7 @@
 	</game>
 	<game name="Tokyo Bus Tour">
 		<description>Tokyo Bus Tour</description>
-		<rom crc="82d09668" name="naomi_aw2naomi/naomi_1/Tokyo_Bus_Tour.zip" size="75091973" />
+		<rom name="MAME_0.209_ROMs_merged/MAME_0.209_ROMs_merged.zip/tokyobus.zip" size="76437730" />
 		<title_clean>Tokyo Bus Tour</title_clean>
 		<plot>Tokyo Bus Tour is a driving game where the player assumes the role of a bus driver who gives passengers a tour of Tokyo, Japan.</plot>
 		<genre>Driving</genre>
@@ -1496,7 +1441,7 @@
 	</game>
 	<game name="Toy Fighter">
 		<description>Toy Fighter</description>
-		<rom crc="76add0c1" name="naomi_aw2naomi/naomi_1/Toy_Fighter.zip" size="37727313" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Ftoyfight.7z" size="30601992" />
 		<title_clean>Toy Fighter</title_clean>
 		<plot>Toy Fighter is a Sega NAOMI versus fighting game released in 1999. Plans were supposedly put in place to release this game on the Sega Dreamcast, though were shelved for unknown reasons</plot>
 		<genre>Fighting</genre>
@@ -1515,7 +1460,8 @@
 	</game>
 	<game name="Trigger Heart Exelica">
 		<description>Trigger Heart Exelica</description>
-		<rom crc="521110e6" name="naomi_aw2naomi/naomi_1/Trigger_Heart_Exelica.zip" size="55426946" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Ftrgheart.zip" size="1393" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Ftrgheart%2Fgdl-0036a.chd" size="87741450" />
 		<title_clean>Trigger Heart Exelica</title_clean>
 		<plot>Triggerheart Exelica is a vertically scrolling shoot 'em up developed by Warashi for the Sega NAOMI platform. The game was first released in Japanese arcades in May 2006, and was later ported to the Sega Dreamcast, becoming the system's penultimate licensed title when it was released in Japan on February 22, 2007-only two weeks prior to Karous.</plot>
 		<studio>Warashi</studio>
@@ -1530,7 +1476,8 @@
 	</game>
 	<game name="Trizeal">
 		<description>Trizeal</description>
-		<rom crc="ad7f7e27" name="naomi_aw2naomi/naomi_1/Trizeal.zip" size="82899940" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Ftrizeal.zip" size="1348" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Ftrizeal%2Fgdl-0026.chd" size="127400206" />
 		<title_clean>Trizeal</title_clean>
 		<plot>Trizeal is a Japanese shoot 'em up arcade game developed by Triangle Service.[CR]Players control and can transform a spaceship into three forms (which alternates weapon attacks), working through multiple levels and boss sequences. The game can be played in four different screen modes, with one mode mimicking the narrow arcade version. A ship from Triangle Service's previous release, XII Stag, is hidden in the game and can be unlocked by holding the X button before selecting a stage in Stage Attack mode. The power-ups can be used to upgrade each separate weapon respectively.[CR]There are 6 levels in the game, they get progressively harder until the last stage which consists of only two bosses. Two unlockable modes become available when the game is completed, they are Omake mode and Lifting mode. Omake mode is a short level which has denser bullet patterns than the normal game, lifting mode is where you have to juggle a stone on your ship to score points</plot>
 		<genre>Shooter</genre>
@@ -1542,7 +1489,8 @@
 	</game>
 	<game name="Under Defeat">
 		<description>Under Defeat</description>
-		<rom crc="8c952f31" name="naomi_aw2naomi/naomi_1/Under_Defeat.zip" size="112478643" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fundefeat.zip" size="1350" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fundefeat%2Fgdl-0035.chd" size="149967360" />
 		<title_clean>Under Defeat</title_clean>
 		<plot>Under Defeat is a shoot 'em up arcade game by G.rev. It was released for the Sega Dreamcast in March 2006. The game takes place in an alternate reality based on World War II, and, in a controversial twist, players control German-speaking characters (under the banner of "the Empire"), fighting against enemies ("the Union") that speak English and possess weapons patterned after those of both real-life Allied and Axis powers (for example, naval units in Level 2 bear heavy resemblance toward the Imperial Japanese warships). The game was released very late in the life of the Dreamcast, but sold much better than expected, probably because there were no other home ports planned in the foreseeable future.</plot>
 		<studio>G.Rev</studio>
@@ -1556,7 +1504,7 @@
 	</game>
 	<game name="Usagui - Yamashiro Mahjong Hen">
 		<description>Usagui - Yamashiro Mahjong Hen</description>
-		<rom crc="5a4f9241" name="naomi_aw2naomi/naomi_1/Usagui_Yamashiro_Mahjong_Hen.zip" size="66631604" />
+		<rom name="mame0215_chd/usagiym.7z" size="100300000" />
 		<title_clean>Usagui - Yamashiro Mahjong Hen</title_clean>
 		<plot>Usagi: Yasei no Touhai: Yamashiro Mahjong Hen is a mahjong game developed by Warashi and published by Taito for the Sega NAOMI arcade system. It is based on the manga Usagi Yasei no Tohai by Makoto Ito.</plot>
 		<genre>Board Games</genre>
@@ -1571,7 +1519,8 @@
 	</game>
 	<game name="Virtua Athlete">
 		<description>Virtua Athlete</description>
-		<rom crc="2d4abd21" name="naomi_aw2naomi/naomi_1/Virtua_Athlete.zip" size="42978590" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fvathlete.zip" size="1197" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fvathlete%2Fgds-0019.chd" size="82230189" />
 		<title_clean>Virtua Athlete</title_clean>
 		<plot>Virtua Athlete is a sports game developed by Hitmaker and published by Sega for the Sega NAOMI arcade system. It is based on the Dreamcast game Virtua Athlete 2K, released a year earlier.</plot>
 		<genre>Sports</genre>
@@ -1589,7 +1538,8 @@
 	</game>
 	<game name="Virtua Golf">
 		<description>Virtua Golf</description>
-		<rom crc="ebd0c10b" name="naomi_aw2naomi/naomi_1/Virtua_Golf.zip" size="39123599" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fdygolf.zip" size="3383" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fdygolf%2Fgds-0009a.chd" size="65670122" />
 		<title_clean>Virtua Golf</title_clean>
 		<plot>Dynamic Golf is a Sports game, developed by Wow Entertainment and published by Sega, which was released in 2001</plot>
 		<year>2001</year>
@@ -1605,7 +1555,7 @@
 	</game>
 	<game name="Virtua NBA">
 		<description>Virtua NBA</description>
-		<rom crc="4ea26eaa" name="naomi_aw2naomi/naomi_1/Virtua_NBA.zip" size="96853301" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fvirnba.7z" size="66986581" />
 		<title_clean>Virtua NBA</title_clean>
 		<plot>Virtua NBA is a basketball game released for Sega NAOMI arcade hardware in 2000.</plot>
 		<genre>Sports</genre>
@@ -1630,7 +1580,7 @@
 	</game>
 	<game name="Virtua Striker 2 (Ver 2000)">
 		<description>Virtua Striker 2 (Ver 2000)</description>
-		<rom crc="d76d8e4a" name="naomi_aw2naomi/naomi_1/Virtua_Striker_2_Ver_2000.zip" size="52312017" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fvs2_2k.7z" size="18093098" />
 		<title_clean>Virtua Striker 2</title_clean>
 		<plot>The Virtua Striker 2 is an arcade-style football/soccer sports games by Sega.[CR]A critic for Next Generation applauded the original Virtua Striker 2 as both excellent to play and watch. He cited the smooth and accurate control, realistic player moves, camera which consistently zooms in or out to the perfect frame at every moment of play, gorgeous texture-mapped players and backgrounds, and realistically strong defense.</plot>
 		<genre>Sports</genre>
@@ -1650,7 +1600,7 @@
 	</game>
 	<game name="Virtua Tennis">
 		<description>Virtua Tennis</description>
-		<rom crc="74458b8f" name="naomi_aw2naomi/naomi_1/Virtua_Tennis.zip" size="24354721" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fvtennis.7z" size="18082055" />
 		<title_clean>Virtua Tennis</title_clean>
 		<plot>Virtua Tennis (Power Smash in Japan) is a 1999 tennis arcade game created by Sega-AM3. The player competes through tennis tournaments in an arcade mode. For the home console market the game was expanded with the introduction of the campaign mode. It was later ported to Dreamcast in 2000, and for Microsoft Windows in 2002. A Game Boy Advance version was also released in 2002.</plot>
 		<genre>Sports</genre>
@@ -1669,7 +1619,8 @@
 	</game>
 	<game name="Virtua Tennis 2">
 		<description>Virtua Tennis 2</description>
-		<rom crc="3f34fbec" name="naomi_aw2naomi/naomi_1/Virtua_Tennis_2.zip" size="74613754" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fvtennis2.zip" size="1197" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fvtennis2%2Fgds-0015a.chd" size="119146869" />
 		<title_clean>Virtua Tennis 2</title_clean>
 		<plot>Virtua Tennis (Power Smash in Japan) is a 1999 tennis arcade game created by Sega-AM3. The player competes through tennis tournaments in an arcade mode. For the home console market the game was expanded with the introduction of the campaign mode. It was later ported to Dreamcast in 2000, and for Microsoft Windows in 2002. A Game Boy Advance version was also released in 2002.</plot>
 		<genre>Sports</genre>
@@ -1686,10 +1637,10 @@
 		<banner2>Syv2DjG.png</banner2>
 		<clearlogo1>ni4QXET.png</clearlogo1>
 	</game>
-	<game name="Virtual On Oratorio Tangram">
-		<description>Virtual On Oratorio Tangram</description>
-		<rom crc="6545e17b" name="naomi_aw2naomi/naomi_1/Virtual_On_Oratorio_Tangram.zip" size="86199141" />
-		<title_clean>Virtual On Oratorio Tangram</title_clean>
+	<game name="Cyber Troopers Virtual-On: Oratorio Tangram M.S.B.S">
+		<description>Cyber Troopers Virtual-On: Oratorio Tangram M.S.B.S</description>
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fvonot.7z" size="81871288" />
+		<title_clean>Cyber Troopers Virtual On Oratorio Tangram MSBS</title_clean>
 		<plot>Virtual-On Oratorio Tangram is an arcade game for the Sega NAOMI. Oratorio Tangram is a 3D fighting game where the player assumes control of a giant humanoid robot. It is a sequel to the 1995 video game Virtual On: Cyber Troopers.</plot>
 		<genre>Shooter</genre>
 		<boxart1>oTbIeu3.jpg</boxart1>
@@ -1702,7 +1653,7 @@
 	</game>
 	<game name="WWF Royal Rumble">
 		<description>WWF Royal Rumble</description>
-		<rom crc="88801c03" name="naomi_aw2naomi/naomi_1/WWF_Royal_Rumble.zip" size="99151674" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fwwfroyal.7z" size="91022436" />
 		<title_clean>WWF Royal Rumble</title_clean>
 		<plot>WWF Royal Rumble is a professional wrestling video game released by LJN in 1993 for the Super NES and Sega Genesis. Like its predecessor, WWF Super WrestleMania it is based on the World Wrestling Federation (WWF). It features a variety of match types, including the newly added Royal Rumble match. The game's roster consists of wrestlers who were top stars in the WWF at the time, and each version of the game has five exclusive playable characters.</plot>
 		<studio>Sculptured Software</studio>
@@ -1723,7 +1674,7 @@
 	</game>
 	<game name="Wave Runner GP">
 		<description>Wave Runner GP</description>
-		<rom crc="d8c98978" name="naomi_aw2naomi/naomi_1/Wave_Runner_GP.zip" size="39929183" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fwrungp.7z" size="28090188" />
 		<title_clean>Wave Runner GP</title_clean>
 		<plot>Wave Runner GP is a jet ski racing game by Sega and AM1 [CR]This is a racing game which does something different from other arcade racers, but does lack in areas and originality. You actually get to ride a replica of a Yamaha WaveRunner on water, while you race against other 7 other opponents. The game plays like Sega Rally Championship around some veins, but does something different which makes the game fresh, such as riding on a jet ski instead of cars. The game also relies on doing tricks on ramps which somewhat affects your scoring. There are three courses in game, ranging from Novice (beginner course), Intermediate (advanced course), and the Expert course.</plot>
 		<genre>Racing</genre>
@@ -1742,7 +1693,7 @@
 	</game>
 	<game name="World Series BaseBall">
 		<description>World Series BaseBall</description>
-		<rom crc="f13f777d" name="naomi_aw2naomi/naomi_1/World_Series_BaseBall.zip" size="127157584" />
+		<rom name="mame0215_chd/wsbbgd.7z" size="146300000" />
 		<title_clean>World Series BaseBall</title_clean>
 		<plot>World Series BaseBall is a baseball game released for Sega NAOMI arcade hardware in 2001.</plot>
 		<genre>Sports</genre>
@@ -1761,7 +1712,7 @@
 	</game>
 	<game name="Zero Gunner 2">
 		<description>Zero Gunner 2</description>
-		<rom crc="fb218c91" name="naomi_aw2naomi/naomi_1/Zero_Gunner_2.zip" size="39177742" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fzerogu2.7z" size="18946140" />
 		<title_clean>Zero Gunner 2</title_clean>
 		<plot>Zero Gunner 2 is a 3D multidirectional shooter developed by Psikyo as a sequel to Zero Gunner, the original arcade game. It was released for the Dreamcast in Japan in 2001.</plot>
 		<studio>Psikyo</studio>
@@ -1782,7 +1733,7 @@
 	</game>
 	<game name="Zombie Revenge">
 		<description>Zombie Revenge</description>
-		<rom crc="2b874eca" name="naomi_aw2naomi/naomi_1/Zombie_Revenge.zip" size="91296491" />
+		<rom name="bob_naomi_aw/BOB_NAOMI_AW.zip/naomi%2Fzombrvn.7z" size="72408166" />
 		<title_clean>Zombie Revenge</title_clean>
 		<plot>Zombie Revenge is an arcade and Sega Dreamcast video game released in 1999, a Beat Em Up game. Armed with their fists, feet, and whatever weapons they should find along the way, players are tasked with ridding an unnamed city of zombies. Originally titled Blood Bullet: The House of the Dead Side Story, the game was later renamed Zombies Nightmare before Sega decided on the name Zombie Revenge.</plot>
 		<genre>Beat Em Up</genre>
