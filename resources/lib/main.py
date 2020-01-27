@@ -133,7 +133,7 @@ class iagl_utils(object):
 		self.context_menu_art_choices = [self.loc_str(30421),self.loc_str(30422),self.loc_str(30423),self.loc_str(30424)]
 		self.context_menu_art_keys = ['emu_thumb', 'emu_logo', 'emu_banner', 'emu_fanart']
 		self.ignore_these_game_addons = ['game.libretro','game.libretro.2048','game.libretro.dinothawr','game.libretro.mrboom']
-		self.remove_these_filetypes = ['.srm','.sav','.fs','.state','.auto','.xml','.nfo']
+		self.remove_these_filetypes = ['.srm','.sav','.fs','.state','.auto','.xml','.nfo','.mp3']
 		self.possible_linux_core_directories = ['/usr/lib/libretro','/usr/lib/x86_64-linux-gnu/libretro','/usr/lib/i386-linux-gnu/libretro','/usr/lib/arm-linux-gnueabihf/libretro','/usr/lib/s390x-linux-gnu/libretro','/usr/local/lib/libretro','~/.config/retroarch/cores','/tmp/cores','/home/kodi/bin/libretro/']
 		self.default_linux_core_directory = '/usr/lib/libretro'
 		self.possible_retroarch_app_locations = [os.path.join('/Applications','RetroArch.app','Contents','MacOS','RetroArch'),os.path.join('usr','bin','retroarch'),os.path.join('C:','Program Files (x86)','Retroarch','retroarch.exe'),os.path.join('opt','retropie','emulators','retroarch','bin','retroarch'),os.path.join('home','kodi','bin','retroarch')]
