@@ -85,6 +85,7 @@ class iagl_utils(object):
 		self.game_list_genre_filename = 'genres_database.xml'
 		self.game_list_year_filename = 'years_database.xml'
 		self.game_list_player_filename = 'players_database.xml'
+		self.game_list_groups_filename = 'groups_database.xml'
 		self.game_list_studio_filename = 'studio_database.xml'
 		self.game_list_tag_filename = 'tag_database.xml'
 		self.game_list_choose_filename = 'choose_database.xml'
@@ -109,8 +110,8 @@ class iagl_utils(object):
 		self.archive_listing_settings = 'Choose from List|Browse All Lists|Browse by Category|Favorites|Search|Random Play'
 		self.archive_listing_settings_routes = ['choose_from_list','all','categorized','categorized/Favorites','search_menu','random_menu']
 		self.archive_listing_settings_route = None
-		self.game_listing_settings = 'One Big List|Choose from List|Alphabetical|Group by Genre|Group by Year|Group by Players|Group by Studio|Group by Tag'
-		self.game_listing_settings_routes = ['list_all','choose_from_list','alphabetical','list_by_genre','list_by_year','list_by_players','list_by_studio','list_by_tag']
+		self.game_listing_settings = 'One Big List|Choose from List|Alphabetical|Group by Genre|Group by Year|Group by Players|Group by Studio|Group by Tag|Group by Custom Groups'
+		self.game_listing_settings_routes = ['list_all','choose_from_list','alphabetical','list_by_genre','list_by_year','list_by_players','list_by_studio','list_by_tag','list_by_groups']
 		self.current_game_listing_route = None
 		self.items_per_page_settings = self.handle.getSetting(id='iagl_setting_items_pp')
 		self.max_items_per_page = 99999
@@ -132,7 +133,7 @@ class iagl_utils(object):
 		self.context_menu_art_choices = [self.loc_str(30421),self.loc_str(30422),self.loc_str(30423),self.loc_str(30424)]
 		self.context_menu_art_keys = ['emu_thumb', 'emu_logo', 'emu_banner', 'emu_fanart']
 		self.ignore_these_game_addons = ['game.libretro','game.libretro.2048','game.libretro.dinothawr','game.libretro.mrboom']
-		self.remove_these_filetypes = ['.srm','.sav','.fs','.state','.auto','.xml','.nfo']
+		self.remove_these_filetypes = ['.srm','.sav','.fs','.state','.auto','.xml','.nfo','.mp3']
 		self.possible_linux_core_directories = ['/usr/lib/libretro','/usr/lib/x86_64-linux-gnu/libretro','/usr/lib/i386-linux-gnu/libretro','/usr/lib/arm-linux-gnueabihf/libretro','/usr/lib/s390x-linux-gnu/libretro','/usr/local/lib/libretro','~/.config/retroarch/cores','/tmp/cores','/home/kodi/bin/libretro/']
 		self.default_linux_core_directory = '/usr/lib/libretro'
 		self.possible_retroarch_app_locations = [os.path.join('/Applications','RetroArch.app','Contents','MacOS','RetroArch'),os.path.join('usr','bin','retroarch'),os.path.join('C:','Program Files (x86)','Retroarch','retroarch.exe'),os.path.join('opt','retropie','emulators','retroarch','bin','retroarch'),os.path.join('home','kodi','bin','retroarch')]
@@ -407,8 +408,13 @@ class iagl_utils(object):
 		for ff in [x for x in files if 'xml' in x.lower()]:
 			with closing(xbmcvfs.File(os.path.join(self.get_dat_folder_path(),ff))) as fo:
 				byte_string = bytes(fo.readBytes(10000)) #Read first ~10kb of dat file to get header
-			header_string = byte_string.decode('utf-8')
-			if '</header>' in header_string and '<!-- IAGL Favorites List -->' in header_string:
+			# header_string = byte_string.decode('utf-8')
+			if b'</header>' in byte_string and b'<!-- IAGL Favorites List -->' in byte_string:
+				try:
+					header_string = byte_string.split(b'</header>')[0].decode('utf-8')
+				except Exception as exc:
+					xbmc.log(msg='IAGL Error:  Encoding error in file %(ff)s.  Exception %(exc)s' % {'ff': ff, 'exc': exc}, level=xbmc.LOGERROR)
+					header_string = byte_string.split(b'</header>')[0].decode('utf-8',errors='ignore') #Try again ignoring whatever character python doesnt like.  Probably not foolproof
 				for kk in favorites_lists.keys():
 					if kk in self.dat_file_header_keys:
 						favorites_lists[kk].append(header_string.split('<%(tag)s>' % {'tag':kk})[-1].split('</%(tag)s>' % {'tag':kk})[0])
@@ -645,6 +651,9 @@ class iagl_utils(object):
 	def get_game_list_player_file(self):
 		return os.path.join(self.get_databases_folder_path(),self.game_list_player_filename)
 
+	def get_game_list_groups_file(self):
+		return os.path.join(self.get_databases_folder_path(),self.game_list_groups_filename)
+
 	def get_game_list_studio_file(self):
 		return os.path.join(self.get_databases_folder_path(),self.game_list_studio_filename)
 
@@ -833,6 +842,13 @@ class iagl_utils(object):
 			return etree_to_dict(ET.parse(self.get_game_list_player_file()).getroot()) #No cache for this currently, since its small
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  There was an error parsing the player xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
+			return None
+
+	def get_groups_game_listing(self):
+		try:
+			return etree_to_dict(ET.parse(self.get_game_list_groups_file()).getroot()) #No cache for this currently, since its small
+		except Exception as exc: #except Exception, (exc):
+			xbmc.log(msg='IAGL:  There was an error parsing the custom groups xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
 
 	def get_studio_game_listing(self):
@@ -1134,6 +1150,78 @@ class iagl_utils(object):
 				xbmc.log(msg='IAGL Error:  An error occured and year %(cats)s could not be displayed' % {'cats': cats}, level=xbmc.LOGERROR)
 
 		return year_listitems
+
+	def get_groups_from_game_lists(self, game_lists):
+		groups_list_temp = list()
+		groups_list_sorted = list()
+		if game_lists is None: #Use all lists is the query is for None
+			game_lists = [x for x in self.get_game_lists().get('dat_filename')]
+		for game_list_id in game_lists:
+			current_games_dict = self.get_games(game_list_id)
+			current_game_groups = [y.strip() for y in self.flatten_list([x.get('properties').get('groups').split(',') for x in current_games_dict if x.get('properties').get('groups') is not None]) if len(y)>0]
+			current_game_groups_unknown = [x.get('properties').get('groups') for x in current_games_dict if x.get('properties').get('groups') is None]
+			current_game_groups_sorted = sorted(list(set(current_game_groups)))
+			if len(current_game_groups_unknown)>0:
+				if 'Unknown' not in current_game_groups_sorted:
+					current_game_groups_sorted.append('Unknown')
+			groups_list_temp = groups_list_temp+current_game_groups_sorted
+		groups_list_sorted = sorted(list(set(groups_list_temp)))
+		return groups_list_sorted
+
+	def get_game_list_groups_as_listitems(self, game_list_id):
+		group_listitems = list()
+		games_dict = self.get_games(game_list_id)
+		group_dict = self.get_groups_game_listing()
+		current_game_groups = [y.strip() for y in self.flatten_list([x.get('properties').get('groups').split(',') for x in games_dict if x.get('properties').get('groups') is not None]) if len(y)>0]
+		current_game_groups_unknown = [x.get('properties').get('groups') for x in games_dict if x.get('properties').get('groups') is None]
+		current_game_groups_sorted = sorted(list(set(current_game_groups)))
+		if len(current_game_groups_unknown)>0:
+			if 'Unknown' not in current_game_groups_sorted:
+				current_game_groups_sorted.append('Unknown')
+		group_dict_labels = [x['label'] for x in group_dict['categories']['category']]
+
+		for cats in current_game_groups_sorted:
+			try: #Find the current letter in the alphabetical database
+				idx = group_dict_labels.index(cats)
+			except:
+				try: #If the letter is not present in the database, use the default info
+					idx = group_dict_labels.index('default')
+					xbmc.log(msg='IAGL:  The custom grouping %(cats)s was not found, using IAGL default info for that item' % {'cats': cats}, level=xbmc.LOGDEBUG)
+					default_idx = idx
+				except:
+					idx = None
+			if idx is not None: #Fill in listitem parameters
+				if idx == group_dict_labels.index('Unknown'):
+					total_in_current_group= len(current_game_groups_unknown)
+				else:
+					total_in_current_group = current_game_groups.count(cats)
+				total_in_current_group_label = cats+'    ('+str(total_in_current_group)+')'
+				total_in_current_group_label2 = cats
+				current_trailer = self.get_trailer(group_dict['categories']['category'][idx].get('trailer'))
+				li = {'values': {'label' : total_in_current_group_label,
+						'label2' : total_in_current_group_label2,
+						},
+						'info': {'originaltitle' : total_in_current_group_label2,
+						'title' : total_in_current_group_label,
+						'plot' : group_dict['categories']['category'][idx]['plot'],
+						'trailer' : current_trailer,
+						},
+						'art': {'poster' : self.choose_image(group_dict['categories']['category'][idx]['thumb'],self.default_thumb,None),
+						'banner' : self.choose_image(group_dict['categories']['category'][idx]['banner'],self.default_banner,None),
+						'fanart' : self.choose_image(group_dict['categories']['category'][idx]['fanart'],self.default_fanart,None),
+						'clearlogo' : self.choose_image(group_dict['categories']['category'][idx]['logo'],None,None),
+						'icon' : self.choose_image(group_dict['categories']['category'][idx]['logo'],None,None),
+						'thumb' : self.choose_image(group_dict['categories']['category'][idx]['thumb'],self.default_thumb,None),
+						},
+						}
+				# group_listitems.append(xbmcgui.ListItem(label=li['values']['label'],label2=li['values']['label2'], offscreen=True))
+				group_listitems.append(self.create_kodi_listitem(li['values']['label'],li['values']['label2']))
+				group_listitems[-1].setInfo(self.media_type,li['info'])
+				group_listitems[-1].setArt(li['art'])
+			else:
+				xbmc.log(msg='IAGL Error:  An error occured and custom grouping %(cats)s could not be displayed' % {'cats': cats}, level=xbmc.LOGERROR)
+
+		return group_listitems
 
 	def get_players_from_game_lists(self, game_lists):
 		players_list_temp = list()
@@ -1708,6 +1796,7 @@ class iagl_utils(object):
 							'properties': {'iagl_json' : json.dumps(json_item),
 							'tag': current_tag,
 							'nplayers': game_item.get('nplayers'),
+							'groups': game_item.get('groups'),
 							},
 							})
 						if current_date is None:
@@ -1818,6 +1907,23 @@ class iagl_utils(object):
 				else:
 					# current_page = paginate.Page([x for x in games_dict if x.get('properties').get('nplayers') is not None and x.get('properties').get('nplayers') == filter_value], page=page_number, items_per_page=self.get_items_per_page())
 					current_page = paginate.Page([x for x in games_dict if x.get('properties').get('nplayers') is not None and ((filter_value == x.get('properties').get('nplayers')) or (',' in x.get('properties').get('nplayers') and filter_value.lower() in x.get('properties').get('nplayers').lower()))], page=page_number, items_per_page=self.get_items_per_page())  #Players must exactly equal the filter value, or just be contained in the filter value in the case of a comma seperated list, example returning filter of 1-2 Alt and the item is 1-2 Sim, 3-4 Alt
+				page_info['page'] = current_page.page
+				page_info['page_count'] = current_page.page_count
+				page_info['next_page'] = current_page.next_page
+				page_info['item_count'] = current_page.item_count
+				page_info['categories'] = current_categories
+				for game_item in current_page:
+					game_item['values']['label'] = self.update_game_label(self.get_clean_label(game_item['values']['label'],clean_label_option),game_item,label_naming_convention)
+					# game_list.append(xbmcgui.ListItem(label=game_item['values']['label'],label2=game_item['values']['label2'], offscreen=True))
+					game_list.append(self.create_kodi_listitem(game_item['values']['label'],game_item['values']['label2']))
+					game_list[-1].setInfo(self.media_type,game_item['info'])
+					game_list[-1].setArt(game_item['art'])
+					game_list[-1].setProperty('iagl_json',game_item['properties']['iagl_json'])
+			elif filter_method == 'list_by_groups':
+				if filter_value == 'Unknown' or filter_value == None:
+					current_page = paginate.Page([x for x in games_dict if x.get('properties').get('groups') is None], page=page_number, items_per_page=self.get_items_per_page())
+				else:
+					current_page = paginate.Page([x for x in games_dict if x.get('properties').get('groups') is not None and ((filter_value == x.get('properties').get('groups')) or (',' in x.get('properties').get('groups') and (any([filter_value.lower() == y.lower().strip() for y in x.get('properties').get('groups').split(',')]))))], page=page_number, items_per_page=self.get_items_per_page())  #Groups must exactly equal the filter value, or match exactly any part of a comma seperated list of values
 				page_info['page'] = current_page.page
 				page_info['page_count'] = current_page.page_count
 				page_info['next_page'] = current_page.next_page
@@ -2087,6 +2193,7 @@ class iagl_utils(object):
 			'properties': {'iagl_json': json_in,
 			'tag': current_tag,
 			'nplayers': json_in.get('game').get('nplayers'),
+			'groups': json_in.get('game').get('groups'),
 			'rating': json_in.get('game').get('rating'),
 			'perspective': json_in.get('game').get('perspective'),
 			'esrb': json_in.get('game').get('ESRB'),
@@ -2230,6 +2337,7 @@ class iagl_utils(object):
 								'properties': {'iagl_json' : json.dumps(json_in),
 								'tag': current_tag,
 								'nplayers': json_in.get('game').get('nplayers'),
+								'groups': json_in.get('game').get('groups'),
 								},
 								})
 			history_dict = self.load_game_history()
@@ -3103,7 +3211,10 @@ class iagl_download(object):
 					else:
 						self.current_post_download_actions = [self.emu_post_download_action for x in self.current_files_to_download]  #Use Emu Post DL Command
 				else:
-					self.current_post_download_actions = [None for x in self.current_files_to_download] #No Post DL Command
+					if self.game_post_download_action_override is not None:
+						self.current_post_download_actions = [self.game_post_download_action_override for x in self.current_files_to_download] #Use Game Post DL Override Command
+					else:
+						self.current_post_download_actions = [None for x in self.current_files_to_download] #No Post DL Command
 				if self.download_location is not None:
 					if self.game_download_location_override is not None:
 						self.current_download_locations = [self.game_download_location_override for x in self.current_files_to_download] #Use Game DL Override Location
@@ -3125,7 +3236,10 @@ class iagl_download(object):
 						else:
 							self.current_post_download_actions = [self.emu_post_download_action]  #Use Emu Post DL Command
 					else:
-						self.current_post_download_actions = [None] #No Post DL Command
+						if self.game_post_download_action_override is not None:
+							self.current_post_download_actions = [self.game_post_download_action_override] #Use Game Post DL Override Command
+						else:
+							self.current_post_download_actions = [None] #No Post DL Command
 					if self.download_location is not None:
 						if self.game_download_location_override is not None:
 							self.current_download_locations = [self.game_download_location_override] #Use Game DL Override Location
@@ -3573,7 +3687,7 @@ class iagl_download(object):
 				xbmc.log(msg='IAGL Error:  Unable to find the file %(requested_file_type)s.  You may have to try downloading the game again.'% {'requested_file_type': requested_file_type}, level=xbmc.LOGERROR)
 		else:
 			self.post_process_unarchive_files_to_folder(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
-			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the unarchive diectory
+			current_files = get_all_files_in_directory_xbmcvfs(os.path.join(os.path.split(filename_in)[0],self.current_safe_filename)) #Get a list of files in the unarchive diectory
 			if any([requested_file_type in x for x in current_files]): #cue files exist in the file list
 				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
 				found_file = [x for x in current_files if requested_file_type in x][0]
@@ -3922,9 +4036,9 @@ class iagl_launch(object):
 			self.launch_success = self.launch_retroplayer(return_home=return_home)
 		if self.launcher.lower() == 'external':
 			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android' or self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android Aarch64':
-				self.launch_success = self.launch_external_android()
+				self.launch_success = self.launch_external_android(return_home=return_home)
 			else:
-				self.launch_success = self.launch_external()
+				self.launch_success = self.launch_external(return_home=return_home)
 		if self.launch_success:
 			self.IAGL.add_game_to_history(self.json,self.game_list_id,self.game_id)
 
@@ -3982,9 +4096,7 @@ class iagl_launch(object):
 			xbmc.log(msg='IAGL:  Gameclient for Retroplayer set to: %(current_gameclient)s' % {'current_gameclient': current_gameclient}, level=xbmc.LOGNOTICE)
 			xbmc.log(msg='IAGL:  Attempting to play the following file through Retroplayer: %(url)s' % {'url': self.launch_filenames[0]}, level=xbmc.LOGNOTICE)
 			if return_home: #Go back to home page if its a widget
-				xbmc.log(msg='IAGL:  Returning to Home prior to playing', level=xbmc.LOGDEBUG)
-				xbmc.executebuiltin('Dialog.Close(all,true)') #Need to close the open dialogs (busy or infowindow) prior to going home and playing
-				xbmc.executebuiltin('ActivateWindow(home)')
+				go_to_home()
 			xbmc.Player().play(xbmc.translatePath(self.launch_filenames[0]),game_listitem)
 			return True
 		except Exception as exc: #except Exception, (exc):
@@ -4097,7 +4209,7 @@ class iagl_launch(object):
 
 			self.external_launch_command = self.external_launch_command.replace('%NETPLAY_COMMAND%',current_netplay_command)
 
-	def launch_external(self):
+	def launch_external(self,return_home=False):
 		import subprocess
 		self.update_external_launch_command()
 		if self.external_launch_command != 'none':
@@ -4107,6 +4219,8 @@ class iagl_launch(object):
 			if not self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_stop_media_before_launch')):
 				xbmc.audioSuspend()
 				xbmc.enableNavSounds(False)
+			if return_home: #Go back to home page if its a widget
+				go_to_home()
 			xbmc.log(msg='IAGL:  Sending Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGNOTICE)
 			external_command = subprocess.call(self.external_launch_command,shell=True)
 			if not self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_stop_media_before_launch')):
@@ -4116,7 +4230,7 @@ class iagl_launch(object):
 		else:
 			return False
 
-	def launch_external_android(self):
+	def launch_external_android(self,return_home=False):
 		import subprocess
 		self.update_external_launch_command()
 		if self.external_launch_command != 'none':
@@ -4125,6 +4239,8 @@ class iagl_launch(object):
 				xbmc.sleep(500)
 			xbmc.audioSuspend()
 			xbmc.enableNavSounds(False)
+			if return_home: #Go back to home page if its a widget
+				go_to_home()
 			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android Aarch64':
 				android_stop_command = '/system/bin/am force-stop com.retroarch.aarch64'  #Changed to add stop command in the external launch command arguments
 			else:
@@ -4321,8 +4437,7 @@ class iagl_infodialog(xbmcgui.WindowXMLDialog):
 		xbmc.executebuiltin('Dialog.Close(busydialog)') #Try and close busy dialog if it is for some reason open
 		self.close()
 		if self.return_home:
-			xbmc.log(msg='IAGL:  Returning to Home', level=xbmc.LOGDEBUG)
-			xbmc.executebuiltin('ActivateWindow(home)')
+			go_to_home()
 			
 	def action_download_only(self):
 		#Temporarily disable these buttons to avoid double taps
@@ -4438,6 +4553,13 @@ def etree_to_dict(t):
 		else:
 			d[t.tag] = text
 	return d
+
+#Function to go to home screen (if not already there)
+def go_to_home():
+	if xbmcgui.getCurrentWindowId() != 10000:
+		xbmc.log(msg='IAGL:  Returning to Home', level=xbmc.LOGDEBUG)
+		xbmc.executebuiltin('ActivateWindow(home)')
+		xbmc.sleep(100)
 
 def dict_to_etree(d):
 	def _to_etree(d, root):
