@@ -151,7 +151,7 @@ msgstr "Emulador adicional 2"
 
 msgctxt "#30035"
 msgid "Emulator 2 App Location"
-msgstr "Ubicación de la aplicación Emulator 2"
+msgstr "Ubicación de la aplicación Emulador 2"
 
 msgctxt "#30036"
 msgid "Additional Emulator 3"
@@ -159,7 +159,7 @@ msgstr "Emulador adicional 3"
 
 msgctxt "#30037"
 msgid "Emulator 3 App Location"
-msgstr "Ubicación de la aplicación Emulator 3"
+msgstr "Ubicación de la aplicación Emulador 3"
 
 msgctxt "#30038"
 msgid "Enable Netplay"
@@ -215,15 +215,15 @@ msgstr "Agregar a favoritos IAGL"
 
 msgctxt "#30051"
 msgid "Set addon to provide games (RetroPlayer Only)"
-msgstr "Establecer complemento para juegos (solo para RetroPlayer)"
+msgstr "Establecer complemento como proveedor de Juegos (solo para RetroPlayer)"
 
 msgctxt "#30052"
 msgid "Set addon to provide Video"
-msgstr "Establecer complemento para Vídeo"
+msgstr "Establecer complemento como proveedor de Vídeo"
 
 msgctxt "#30053"
 msgid "Set addon to provide Programs"
-msgstr "Establecer complemento para Programas"
+msgstr "Establecer complemento como proveedor de Programas"
 
 msgctxt "#30054"
 msgid "Addon Content Type"
@@ -387,7 +387,7 @@ msgstr "Ocultar"
 
 msgctxt "#30094"
 msgid "Show IAGL Extras Item"
-msgstr "Mostrar elementos IAGL Extras"
+msgstr "Mostrar elemento IAGL Extras"
 
 msgctxt "#30095"
 msgid "Enabled"
@@ -549,6 +549,258 @@ msgctxt "#30134"
 msgid "Python root subprocess"
 msgstr "Python root subprocess"
 
+msgctxt "#30135"
+msgid "Viewtypes"
+msgstr "Tipos de vista"
+
+msgctxt "#30136"
+msgid "Force IAGL Viewtypes"
+msgstr "Forzar tipos de vista IAGL"
+
+msgctxt "#30137"
+msgid "Frontpage Viewtype"
+msgstr "Tipo de vista para portada"
+
+msgctxt "#30138"
+msgid "Game Library Lists Viewtype"
+msgstr "Tipo de vista para biblioteca de juegos"
+
+msgctxt "#30139"
+msgid "Game Categories Viewtype"
+msgstr "Tipo de vista para categorias de juegos"
+
+msgctxt "#30140"
+msgid "Games List Viewtype"
+msgstr "Tipo de vista para listado de juegos"
+
+msgctxt "#30141"
+msgid "Alpha List Viewtype"
+msgstr "Tipo de vista para lista alfabética"
+
+msgctxt "#30142"
+msgid "Genre List Viewtype"
+msgstr "Tipo de vista para listado por genero"
+
+msgctxt "#30143"
+msgid "Year List Viewtype"
+msgstr "Tipo de vista para listado por año"
+
+msgctxt "#30144"
+msgid "Players List Viewtype"
+msgstr "Tipo de vista para listado de jugadores"
+
+msgctxt "#30145"
+msgid "Studio List Viewtype"
+msgstr "Tipo de vista para listado por estudio"
+
+msgctxt "#30146"
+msgid "Search Results Viewtype"
+msgstr "Tipo de vista para resultados de busqueda"
+
+msgctxt "#30147"
+msgid "Random Results Viewtype"
+msgstr "Tipo de vista para resultados aleatorios"
+
+msgctxt "#30148"
+msgid "Off (Default)"
+msgstr "Desactivado (Por defecto)"
+
+msgctxt "#30149"
+msgid "List / Poster (50)"
+msgstr "List / Poster (50)"
+
+msgctxt "#30150"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "Poster / Big List / Poster Wall (51)"
+
+msgctxt "#30151"
+msgid "Icon Wall / Horizontal Panel / LS Wall (52)"
+msgstr "Icon Wall / Horizontal Panel / LS Wall (52)"
+
+msgctxt "#30152"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "Banner / Landscape / Poster Info (501)"
+
+msgctxt "#30153"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "Fanart / Landscape Single / Episode List (502)"
+
+msgctxt "#30154"
+msgid "Logos / Big Square Wall (503)"
+msgstr "Logos / Big Square Wall (503)"
+
+msgctxt "#30155"
+msgid "Big List 2 (504)"
+msgstr "Big List 2 (504)"
+
+msgctxt "#30156"
+msgid "Landscape Details (505)"
+msgstr "Landscape Details (505)"
+
+msgctxt "#30157"
+msgid "Shift / Panel Details / Square Wall / Wrap Info (53)"
+msgstr "Shift / Panel Details / Square Wall / Wrap Info (53)"
+
+msgctxt "#30158"
+msgid "Info Wall / Panel / Banner Wall (54)"
+msgstr "Info Wall / Panel / Banner Wall (54)"
+
+msgctxt "#30159"
+msgid "Wide List / Banner List / Poster Showcase (55)"
+msgstr "Wide List / Banner List / Poster Showcase (55)"
+
+msgctxt "#30160"
+msgid "Extended List (506)"
+msgstr "Extended List (506)"
+
+msgctxt "#30161"
+msgid "Banner Plex / Landscape Showcase (56)"
+msgstr "Banner Plex / Landscape Showcase (56)"
+
+msgctxt "#30162"
+msgid "Big Panel / Square Showcase (57)"
+msgstr "Big Panel / Square Showcase (57)"
+
+msgctxt "#30163"
+msgid "Large Poster / List Info (58)"
+msgstr "Large Poster / List Info (58)"
+
+msgctxt "#30164"
+msgid "Big Panel Details / Lovefilm (59)"
+msgstr "Big Panel Details / Lovefilm (59)"
+
+msgctxt "#30165"
+msgid "FanArt (507)"
+msgstr "FanArt (507)"
+
+msgctxt "#30166"
+msgid "Single Poster (508)"
+msgstr "Single Poster (508)"
+
+msgctxt "#30167"
+msgid "Panel Square (509)"
+msgstr "Panel Square (509)"
+
+msgctxt "#30168"
+msgid "Panel Square Details (510)"
+msgstr "Panel Square Details (510)"
+
+msgctxt "#30169"
+msgid "Thumbs (511)"
+msgstr "Thumbs (511)"
+
+msgctxt "#30170"
+msgid "Thumbs Details (512)"
+msgstr "Thumbs Details (512)"
+
+msgctxt "#30171"
+msgid "Poster Row (513)"
+msgstr "Poster Row (513)"
+
+msgctxt "#30172"
+msgid "Poster Shift (514)"
+msgstr "Poster Shift (514)"
+
+msgctxt "#30173"
+msgid "Low List (515)"
+msgstr "Low List (515)"
+
+msgctxt "#30174"
+msgid "Slim List (516)"
+msgstr "Slim List (516)"
+
+msgctxt "#30175"
+msgid "Cards (517)"
+msgstr "Cards (517)"
+
+msgctxt "#30176"
+msgid "Wide (518)"
+msgstr "Wide (518)"
+
+msgctxt "#30177"
+msgid "Big Panel Wall (519)"
+msgstr "Big Panel Wall (519)"
+
+msgctxt "#30178"
+msgid "Panel Wall (520)"
+msgstr "Panel Wall (520)"
+
+msgctxt "#30179"
+msgid "Panel Low (521)"
+msgstr "Panel Low (521)"
+
+msgctxt "#30180"
+msgid "Right List (522)"
+msgstr "Right List (522)"
+
+msgctxt "#30181"
+msgid "Netflix (523)"
+msgstr "Netflix (523)"
+
+msgctxt "#30182"
+msgid "Showcase (524)"
+msgstr "Showcase (524)"
+
+msgctxt "#30183"
+msgid "Netflix Landscape (525)"
+msgstr "Netflix Landscape (525)"
+
+msgctxt "#30184"
+msgid "Wall / Media Info (500)"
+msgstr "Wall / Media Info (500)"
+
+msgctxt "#30185"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "Verifique que su skin tenga disponible la ID para el tipo de vista"
+
+msgctxt "#30186"
+msgid "Silence Search and Random Query Warnings"
+msgstr "Silenciar advertencias sobre búsqueda y consulta aleatoria"
+
+msgctxt "#30187"
+msgid "List Info 2 (66)"
+msgstr "List Info 2 (66)"
+
+msgctxt "#30188"
+msgid "List Info 3 (95)"
+msgstr "List Info 3 (95)"
+
+msgctxt "#30189"
+msgid "Thumbs Info (97)"
+msgstr "Thumbs Info (97)"
+
+msgctxt "#30190"
+msgid "Fanart View (583)"
+msgstr "Fanart View (583)"
+
+msgctxt "#30191"
+msgid "3D Wrap (588)"
+msgstr "3D Wrap (588)"
+
+msgctxt "#30192"
+msgid "Wall View (69)"
+msgstr "Wall View (69)"
+
+msgctxt "#30193"
+msgid "Organize Cache Folder using System Folders"
+msgstr "Organizar carpeta caché utilizando carpetas del sistema"
+
+msgctxt "#30194"
+msgid "Show Favorites Item on Front Page"
+msgstr "Mostrar el elemento Favoritos en portada"
+
+msgctxt "#30195"
+msgid "Append Game List Name to Search and Random Results"
+msgstr "Agregar nombre de la lista de juegos a búsqueda y resultados aleatorios"
+
+msgctxt "#30196"
+msgid "Group by Tag"
+msgstr "Por etiqueta"
+
+msgctxt "#30197"
+msgid "Group by Custom Groups"
+msgstr "Por grupos personalizados"
+
 #
 #General
 #
@@ -618,35 +870,35 @@ msgstr "Borrada caché para %(game_list_id)s"
 
 msgctxt "#30307"
 msgid "Filter genres for all lists?  This could take a while..."
-msgstr "¿Filtrar géneros para todas las listas?. Esto podría llevar un tiempo..."
+msgstr "¿Desea filtrar por géneros todas las listas?. Esto podría llevar un tiempo..."
 
 msgctxt "#30308"
 msgid "Filter genres for more than 10 lists?  This could take a while..."
-msgstr "¿Filtrar géneros para más de 10 listas?. Esto podría llevar un tiempo..."
+msgstr "¿Desea filtrar por géneros más de 10 listas?. Esto podría llevar un tiempo..."
 
 msgctxt "#30309"
 msgid "Filter number of players for all lists?  This could take a while..."
-msgstr "¿Filtrar número de jugadores para todas las listas?. Esto podría llevar un tiempo..."
+msgstr "¿Desea filtrar por número de jugadores todas las listas?. Esto podría llevar un tiempo..."
 
 msgctxt "#30310"
 msgid "Filter number of players for more than 10 lists?  This could take a while..."
-msgstr "¿Filtrar número de jugadores para más de 10 listas?. Esto podría llevar un tiempo..."
+msgstr "¿Desea filtrar por número de jugadores más de 10 listas?. Esto podría llevar un tiempo..."
 
 msgctxt "#30311"
 msgid "Filter years for all lists?  This could take a while..."
-msgstr "¿Filtrar años para todas las listas?. Esto podría llevar un tiempo..."
+msgstr "¿Desea filtrar por años todas las listas?. Esto podría llevar un tiempo..."
 
 msgctxt "#30312"
 msgid "Filter years for more than 10 lists?  This could take a while..."
-msgstr "¿Filtrar años para más de 10 listas?. Esto podría llevar un tiempo..."
+msgstr "¿Desea filtrar por años más de 10 listas?. Esto podría llevar un tiempo..."
 
 msgctxt "#30313"
 msgid "Filter studios for all lists?  This could take a while..."
-msgstr "¿Filtrar estudios para todas las listas?. Esto podría llevar un tiempo..."
+msgstr "¿Desea filtrar por estudios todas las listas?. Esto podría llevar un tiempo..."
 
 msgctxt "#30314"
 msgid "Filter studios for more than 10 lists?  This could take a while..."
-msgstr "¿Filtrar estudios para más de 10 listas?. Esto podría llevar un tiempo..."
+msgstr "¿Desea filtrar por estudios más de 10 listas?. Esto podría llevar un tiempo..."
 
 msgctxt "#30315"
 msgid "Query all lists?  This could take a while..."
@@ -658,11 +910,11 @@ msgstr "¿Desea consultar más de 10 listas?. Esto podría llevar un tiempo..."
 
 msgctxt "#30317"
 msgid "Create a query for all lists?  This could take a while..."
-msgstr "¿Crear una consulta para todas las listas?. Esto podría llevar un tiempo..."
+msgstr "¿Desea crear una consulta para todas las listas?. Esto podría llevar un tiempo..."
 
 msgctxt "#30318"
 msgid "Create a query for more than 10 lists?  This could take a while..."
-msgstr "¿Crear una consulta para más de 10 listas?. Esto podría llevar un tiempo..."
+msgstr "¿Desea crear una consulta para más de 10 listas?. Esto podría llevar un tiempo..."
 
 msgctxt "#30319"
 msgid "You must enter a title"
@@ -674,7 +926,7 @@ msgstr "Introduzca una etiqueta para su consulta"
 
 msgctxt "#30321"
 msgid "Choose number of random results to return"
-msgstr "Seleccione el número de resultados aleatorios"
+msgstr "Seleccione el número de resultados aleatorios a devolver"
 
 msgctxt "#30322"
 msgid "New Game List Version"
@@ -686,7 +938,7 @@ msgstr "Nueva versión %(new_game_list_version)s para %(dat_filename)s"
 
 msgctxt "#30324"
 msgid "Update to new version of %(dat_filename)s ?"
-msgstr "¿Actualizar a la nueva version de %(dat_filename)s ?"
+msgstr "¿Desea actualizar a la nueva version de %(dat_filename)s ?"
 
 msgctxt "#30325"
 msgid "Get updated list"
@@ -766,7 +1018,7 @@ msgstr "Introduzca el nuevo valor para %(current_choice)s"
 
 msgctxt "#30344"
 msgid "Are you sure you want to update %(current_choice)s?"
-msgstr "¿Seguro que quieres actualizar %(current_choice)s?"
+msgstr "¿Está seguro que quiere actualizar %(current_choice)s?"
 
 msgctxt "#30345"
 msgid "%(current_filename)s was updated and cache was cleared"
@@ -794,7 +1046,7 @@ msgstr "%(current_username)ss Lista de favoritos %(default_number)s"
 
 msgctxt "#30351"
 msgid "Enter New Favorites List Name:"
-msgstr "Introduzca el nuevo nombre para la lista de favoritos:"
+msgstr "Introduzca nuevo nombre para la lista de favoritos:"
 
 msgctxt "#30352"
 msgid "%(current_game)s added to %(current_filename)s and cache was cleared"
@@ -806,7 +1058,7 @@ msgstr "%(current_game)s agregado a %(current_filename)s"
 
 msgctxt "#30354"
 msgid "Are you sure you want to delete %(game_id_in)s from the list %(game_list_id_in)s?"
-msgstr "¿Seguro que quieres eliminar %(game_id_in)s de la lista %(game_list_id_in)s?"
+msgstr "¿Está seguro que quieres eliminar %(game_id_in)s de la lista %(game_list_id_in)s?"
 
 msgctxt "#30355"
 msgid "Download and overwrite local files?"
@@ -814,7 +1066,15 @@ msgstr "¿Desea descargar y sobrescribir los archivos locales?"
 
 msgctxt "#30356"
 msgid "No external command is defined.[CR]Please check settings."
-msgstr "Sin comando externo definido.[CR]Por favor, revise los ajustes."
+msgstr "Sin comando externo definido.[CR]Por favor, revise ajustes."
+
+msgctxt "#30357"
+msgid "You are removing the only game listed in %(game_list_id_in)s, do you want to delete the list?"
+msgstr "Estás eliminando el único juego que aparece en %(game_list_id_in)s, ¿Quieres eliminar la lista?"
+
+msgctxt "#30358"
+msgid "%(game_list_id_in)s was deleted."
+msgstr "%(game_list_id_in)s eliminado."
 
 #
 #Context Menus
@@ -841,7 +1101,7 @@ msgstr "Actualizar ruta de descarga"
 
 msgctxt "#30406"
 msgid "View List Settings"
-msgstr "Ver ajustes para la lista"
+msgstr "Ver ajustes para esta lista"
 
 msgctxt "#30407"
 msgid "Refresh Game List"
@@ -853,7 +1113,7 @@ msgstr "Actualizar comando lanzador"
 
 msgctxt "#30409"
 msgid "Update Default Game Addon"
-msgstr "Actualizar Add-on de juegos predeterminado"
+msgstr "Actualizar complemento de juegos predeterminado"
 
 msgctxt "#30410"
 msgid "Update Post DL Command"
