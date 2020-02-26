@@ -623,7 +623,7 @@ def update_search_query(search_id):
 
 	input_query_types = ['title','tag']
 	list_query_types = ['lists']
-	filter_query_types = ['year','nplayers','genre','studio']
+	filter_query_types = ['year','nplayers','genre','studio','groups']
 
 	if search_id in input_query_types:
 		current_dialog = xbmcgui.Dialog()
@@ -705,6 +705,49 @@ def update_search_query(search_id):
 					current_query['genre'] = None
 				else:
 					current_query['genre'] = [x for x in current_genre_lists if current_genre_lists.index(x) in ret1]
+		xbmcgui.Window(IAGL.windowid).setProperty('iagl_search_query',json.dumps(current_query))
+		xbmc.executebuiltin('Container.Refresh')
+
+	if search_id == 'groups':
+		current_groups_lists = None
+		if current_query['lists'] is None and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')):
+			current_dialog = xbmcgui.Dialog()
+			ret1 = current_dialog.select(IAGL.loc_str(30307), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
+			del current_dialog
+			if ret1 == 0:
+				current_groups_lists = IAGL.get_groups_from_game_lists(current_query['lists'])
+			else:
+				current_groups_lists = None
+				xbmc.log(msg='IAGL:  User cancelled large groups query', level=xbmc.LOGDEBUG)
+		else:
+			if not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')) and len(current_query['lists'])>10:
+				current_dialog = xbmcgui.Dialog()
+				ret1 = current_dialog.select(IAGL.loc_str(30308), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
+				del current_dialog
+				if ret1 == 0:
+					current_groups_lists = IAGL.get_groups_from_game_lists(current_query['lists'])
+				else:
+					current_groups_lists = None
+					xbmc.log(msg='IAGL:  User cancelled large groups query', level=xbmc.LOGDEBUG)
+			else:
+				current_groups_lists = IAGL.get_groups_from_game_lists(current_query['lists'])
+		if current_groups_lists is not None:
+			current_groups_lists = ['Any']+current_groups_lists
+			if current_query['groups'] is not None:
+				currently_selected_groups = [current_groups_lists.index(x) for x in current_query['groups']]
+			else:
+				currently_selected_groups = None
+			current_dialog = xbmcgui.Dialog()
+			if currently_selected_groups is not None:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_groups_lists,0,currently_selected_groups)
+			else:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_groups_lists)
+			del current_dialog
+			if ret1 is not None:
+				if 0 in ret1:
+					current_query['groups'] = None
+				else:
+					current_query['groups'] = [x for x in current_groups_lists if current_groups_lists.index(x) in ret1]
 		xbmcgui.Window(IAGL.windowid).setProperty('iagl_search_query',json.dumps(current_query))
 		xbmc.executebuiltin('Container.Refresh')
 
@@ -974,7 +1017,7 @@ def update_random_query(random_id):
 	choose_query_types = ['title']
 	input_query_types = ['tag']
 	list_query_types = ['lists']
-	filter_query_types = ['year','nplayers','genre','studio']
+	filter_query_types = ['year','nplayers','genre','studio','groups']
 
 	if random_id in choose_query_types:
 		current_dialog = xbmcgui.Dialog()
@@ -1070,6 +1113,49 @@ def update_random_query(random_id):
 					current_query['genre'] = None
 				else:
 					current_query['genre'] = [x for x in current_genre_lists if current_genre_lists.index(x) in ret1]
+		xbmcgui.Window(IAGL.windowid).setProperty('iagl_random_query',json.dumps(current_query))
+		xbmc.executebuiltin('Container.Refresh')
+
+	if random_id == 'groups':
+		current_groups_lists = None
+		if current_query['lists'] is None and not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')):
+			current_dialog = xbmcgui.Dialog()
+			ret1 = current_dialog.select(IAGL.loc_str(30307), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
+			del current_dialog
+			if ret1 == 0:
+				current_groups_lists = IAGL.get_groups_from_game_lists(current_query['lists'])
+			else:
+				current_groups_lists = None
+				xbmc.log(msg='IAGL:  User cancelled large groups query', level=xbmc.LOGDEBUG)
+		else:
+			if not IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_silence_query_warning')) and len(current_query['lists'])>10:
+				current_dialog = xbmcgui.Dialog()
+				ret1 = current_dialog.select(IAGL.loc_str(30308), [IAGL.loc_str(30200),IAGL.loc_str(30201)])
+				del current_dialog
+				if ret1 == 0:
+					current_groups_lists = IAGL.get_groups_from_game_lists(current_query['lists'])
+				else:
+					current_groups_lists = None
+					xbmc.log(msg='IAGL:  User cancelled large groups query', level=xbmc.LOGDEBUG)
+			else:
+				current_groups_lists = IAGL.get_groups_from_game_lists(current_query['lists'])
+		if current_groups_lists is not None:
+			current_groups_lists = ['Any']+current_groups_lists
+			if current_query['groups'] is not None:
+				currently_selected_groups = [current_groups_lists.index(x) for x in current_query['groups']]
+			else:
+				currently_selected_groups = None
+			current_dialog = xbmcgui.Dialog()
+			if currently_selected_groups is not None:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_groups_lists,0,currently_selected_groups)
+			else:
+				ret1 = current_dialog.multiselect(xbmc.getInfoLabel('ListItem.Label'), current_groups_lists)
+			del current_dialog
+			if ret1 is not None:
+				if 0 in ret1:
+					current_query['groups'] = None
+				else:
+					current_query['groups'] = [x for x in current_groups_lists if current_groups_lists.index(x) in ret1]
 		xbmcgui.Window(IAGL.windowid).setProperty('iagl_random_query',json.dumps(current_query))
 		xbmc.executebuiltin('Container.Refresh')
 

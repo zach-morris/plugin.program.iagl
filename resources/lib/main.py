@@ -529,6 +529,10 @@ class iagl_utils(object):
 			current_genres = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['genre']))
 		else:
 			current_genres = self.change_search_terms_to_any(current_query['genre'])
+		if type(self.change_search_terms_to_any(current_query['groups'])) is list:
+			current_groups = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['groups']))
+		else:
+			current_groups = self.change_search_terms_to_any(current_query['groups'])
 		if type(self.change_search_terms_to_any(current_query['nplayers'])) is list:
 			current_nplayers = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['nplayers']))
 		else:
@@ -541,7 +545,7 @@ class iagl_utils(object):
 			current_studios = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['studio']))
 		else:
 			current_studios = self.change_search_terms_to_any(current_query['studio'])		
-		current_plot = '[B]Current Query[/B][CR]Search Title: '+self.change_search_terms_to_any(current_query['title'])+'[CR]Search Lists: '+current_lists+'[CR]Search Genres: '+current_genres+'[CR]Search Players: '+current_nplayers+'[CR]Search Years: '+current_years+'[CR]Search Studios: '+current_studios+'[CR]Search Tags: '+self.change_search_terms_to_any(current_query['tag'])+'[CR]'
+		current_plot = '[B]Current Query[/B][CR]Search Title: '+self.change_search_terms_to_any(current_query['title'])+'[CR]Search Lists: '+current_lists+'[CR]Search Genres: '+current_genres+'[CR]Search Players: '+current_nplayers+'[CR]Search Years: '+current_years+'[CR]Search Studios: '+current_studios+'[CR]Search Tags: '+self.change_search_terms_to_any(current_query['tag'])+'[CR]Search Groups: '+current_groups+'[CR]'
 		#Generate json for IAGL favorites
 		json_item = dict()
 		json_item['game'] = dict()
@@ -590,6 +594,10 @@ class iagl_utils(object):
 			current_genres = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['genre']))
 		else:
 			current_genres = self.change_search_terms_to_any(current_query['genre'])
+		if type(self.change_search_terms_to_any(current_query['groups'])) is list:
+			current_groups = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['groups']))
+		else:
+			current_groups = self.change_search_terms_to_any(current_query['groups'])
 		if type(self.change_search_terms_to_any(current_query['nplayers'])) is list:
 			current_nplayers = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['nplayers']))
 		else:
@@ -602,7 +610,7 @@ class iagl_utils(object):
 			current_studios = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['studio']))
 		else:
 			current_studios = self.change_search_terms_to_any(current_query['studio'])		
-		current_plot = '[B]Random Play[/B][CR]Num of Results: '+current_num_results+'[CR]Search Lists: '+current_lists+'[CR]Search Genres: '+current_genres+'[CR]Search Players: '+current_nplayers+'[CR]Search Years: '+current_years+'[CR]Search Studios: '+current_studios+'[CR]Search Tags: '+self.change_search_terms_to_any(current_query['tag'])+'[CR]'
+		current_plot = '[B]Random Play[/B][CR]Num of Results: '+current_num_results+'[CR]Search Lists: '+current_lists+'[CR]Search Genres: '+current_genres+'[CR]Search Players: '+current_nplayers+'[CR]Search Years: '+current_years+'[CR]Search Studios: '+current_studios+'[CR]Search Tags: '+self.change_search_terms_to_any(current_query['tag'])+'[CR]Search Groups: '+current_groups+'[CR]'
 		#Generate json for IAGL favorites
 		json_item = dict()
 		json_item['game'] = dict()
@@ -1544,6 +1552,10 @@ class iagl_utils(object):
 					current_genres = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['genre']))
 				else:
 					current_genres = self.change_search_terms_to_any(current_query['genre'])
+				if type(self.change_search_terms_to_any(current_query['groups'])) is list:
+					current_groups = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['groups']))
+				else:
+					current_groups = self.change_search_terms_to_any(current_query['groups'])
 				if type(self.change_search_terms_to_any(current_query['nplayers'])) is list:
 					current_nplayers = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['nplayers']))
 				else:
@@ -1556,7 +1568,7 @@ class iagl_utils(object):
 					current_studios = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['studio']))
 				else:
 					current_studios = self.change_search_terms_to_any(current_query['studio'])		
-				current_plot = '[B]Current Query[/B][CR]Search Title: '+self.change_search_terms_to_any(current_query['title'])+'[CR]Search Lists: '+current_lists+'[CR]Search Genres: '+current_genres+'[CR]Search Players: '+current_nplayers+'[CR]Search Years: '+current_years+'[CR]Search Studios: '+current_studios+'[CR]Search Tags: '+self.change_search_terms_to_any(current_query['tag'])+'[CR]'
+				current_plot = '[B]Current Query[/B][CR]Search Title: '+self.change_search_terms_to_any(current_query['title'])+'[CR]Search Lists: '+current_lists+'[CR]Search Genres: '+current_genres+'[CR]Search Players: '+current_nplayers+'[CR]Search Years: '+current_years+'[CR]Search Studios: '+current_studios+'[CR]Search Tags: '+self.change_search_terms_to_any(current_query['tag'])+'[CR]Search Groups: '+current_groups+'[CR]'
 			else:
 				if current_value is not None:
 					current_plot = '[B]Current Entry[/B][CR]'+current_value
@@ -1617,6 +1629,10 @@ class iagl_utils(object):
 					current_genres = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['genre']))
 				else:
 					current_genres = self.change_search_terms_to_any(current_query['genre'])
+				if type(self.change_search_terms_to_any(current_query['groups'])) is list:
+					current_groups = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['groups']))
+				else:
+					current_groups = self.change_search_terms_to_any(current_query['groups'])
 				if type(self.change_search_terms_to_any(current_query['nplayers'])) is list:
 					current_nplayers = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['nplayers']))
 				else:
@@ -1629,7 +1645,7 @@ class iagl_utils(object):
 					current_studios = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['studio']))
 				else:
 					current_studios = self.change_search_terms_to_any(current_query['studio'])		
-				current_plot = '[B]Random Play[/B][CR]Num of Results: '+current_num_results+'[CR]Search Lists: '+current_lists+'[CR]Search Genres: '+current_genres+'[CR]Search Players: '+current_nplayers+'[CR]Search Years: '+current_years+'[CR]Search Studios: '+current_studios+'[CR]Search Tags: '+self.change_search_terms_to_any(current_query['tag'])+'[CR]'
+				current_plot = '[B]Random Play[/B][CR]Num of Results: '+current_num_results+'[CR]Search Lists: '+current_lists+'[CR]Search Genres: '+current_genres+'[CR]Search Players: '+current_nplayers+'[CR]Search Years: '+current_years+'[CR]Search Studios: '+current_studios+'[CR]Search Tags: '+self.change_search_terms_to_any(current_query['tag'])+'[CR]Search Groups: '+current_groups+'[CR]'
 			else:
 				if current_value is not None:
 					current_plot = '[B]Current Entry[/B][CR]'+current_value
@@ -1667,6 +1683,7 @@ class iagl_utils(object):
 		current_query['genre'] = None
 		current_query['nplayers'] = None
 		current_query['studio'] = None
+		current_query['groups'] = None
 		xbmcgui.Window(self.windowid).setProperty('iagl_search_query',json.dumps(current_query))
 
 	def initialize_random_query(self):
@@ -1678,6 +1695,7 @@ class iagl_utils(object):
 		current_query['genre'] = None
 		current_query['nplayers'] = None
 		current_query['studio'] = None
+		current_query['groups'] = None
 		xbmcgui.Window(self.windowid).setProperty('iagl_random_query',json.dumps(current_query))
 
 	def get_query_as_url(self,query_in):
@@ -1692,6 +1710,7 @@ class iagl_utils(object):
 		current_query['genre'] = None
 		current_query['nplayers'] = None
 		current_query['studio'] = None
+		current_query['groups'] = None
 		try:
 			current_query['title'] = args_in['title'][0]
 			if current_query['title'].lower() == 'none':
@@ -1710,6 +1729,10 @@ class iagl_utils(object):
 			pass
 		try:
 			current_query['genre'] = lit_eval(args_in['genre'][0])
+		except:
+			pass
+		try:
+			current_query['groups'] = lit_eval(args_in['groups'][0])
 		except:
 			pass
 		try:
@@ -2036,7 +2059,10 @@ class iagl_utils(object):
 			games_dict = [x for x in games_dict if x.get('info').get('studio') is not None and any([y in x.get('info').get('studio') for y in current_query['studio']])]
 			# games_dict = [x for x in games_dict if x.get('info').get('studio') is not None and x.get('info').get('studio') in current_query['studio']]
 			xbmc.log(msg='IAGL:  Studio search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
-
+		#8.  Filter by custom group
+		if current_query['groups'] is not None:
+			games_dict = [x for x in games_dict if x.get('properties').get('groups') is not None and any([y in x.get('properties').get('groups') for y in current_query['groups']])]
+			xbmc.log(msg='IAGL:  Groups search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
 		if games_dict is not None and len(games_dict)>0:
 			current_categories = 'Search Results'
 			if filter_method == 'list_all' or filter_method == None:
@@ -2107,7 +2133,11 @@ class iagl_utils(object):
 		if current_query['studio'] is not None:
 			games_dict = [x for x in games_dict if x.get('info').get('studio') is not None and any([y in x.get('info').get('studio') for y in current_query['studio']])]
 			xbmc.log(msg='IAGL:  Studio search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
-		#7.  Get number of results
+		#7.  Filter by groups
+		if current_query['groups'] is not None:
+			games_dict = [x for x in games_dict if x.get('properties').get('groups') is not None and any([y in x.get('properties').get('groups') for y in current_query['groups']])]
+			xbmc.log(msg='IAGL:  Groups search filtered results to %(game_number)s total games' % {'game_number': len(games_dict)}, level=xbmc.LOGDEBUG)
+		#8.  Get number of results
 		if current_query['title'] is None:
 			current_query['title'] = 1
 		if len(games_dict)>0:
@@ -3422,6 +3452,13 @@ class iagl_download(object):
 		else:
 			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,name_in)		
 
+	def post_process_unarchive_files_to_top_level_folder(self,filename_in,name_in):
+		#Check for libarchive and use that if available, otherwise try xbmc builtin extract
+		if self.libarchive_available:
+			self.post_process_unarchive_files_to_top_level_folder_libarchive(filename_in,name_in)
+		else:
+			self.post_process_unarchive_files_to_folder_name_xbmc_builtin(filename_in,name_in)		
+
 	def post_process_unarchive_files_to_folder_libarchive(self,filename_in,name_in):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unarchive files to folder %(name_in)s (vfs.libarchive)'% {'filename_in': filename_in, 'name_in': name_in}, level=xbmc.LOGDEBUG)
 		if any([x in filename_in.lower() for x in self.libarchive_extensions]):
@@ -3445,6 +3482,31 @@ class iagl_download(object):
 			self.current_processed_files.append(filename_in)
 			self.current_processed_files_success.append(True) #Set this to true regardless in this case...
 			xbmc.log(msg='IAGL:  The file %(filename_in)s does not appear to be an archive file and was not processed, pointing back to file in attempts to launch.'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
+
+	def post_process_unarchive_files_to_top_level_folder_libarchive(self,filename_in,name_in):
+		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unarchive files to top level folder %(name_in)s (vfs.libarchive)'% {'filename_in': filename_in, 'name_in': name_in}, level=xbmc.LOGDEBUG)
+		if any([x in filename_in.lower() for x in self.libarchive_extensions]):
+			folder_name = xbmc.translatePath(os.path.join(os.path.split(filename_in)[0],str(name_in)))
+			if xbmcvfs.exists(os.path.join(folder_name,'')) or xbmcvfs.mkdir(folder_name): #Create the folder to unarchive into if necessary
+				dp = xbmcgui.DialogProgressBG()
+				dp.create('Please Wait...','Extracting files')
+				files_extracted, files_extracted_success = extract_all_libarchive_to_top_level_folder(filename_in,folder_name)
+				dp.close()
+				if files_extracted_success:
+					self.current_processed_files.extend(files_extracted)
+					self.current_processed_files_success = [True for x in files_extracted]
+					xbmc.log(msg='IAGL:  The file %(filename_in)s was unarchived.  First file extracted: %(files_extracted)s'% {'filename_in': filename_in, 'files_extracted':files_extracted[0]}, level=xbmc.LOGDEBUG)
+					if not xbmcvfs.delete(filename_in):
+						xbmc.log(msg='IAGL:  The file %(filename_in)s could not be deleted after processing'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
+				else:
+					self.current_processed_files_success = False
+			else:
+				xbmc.log(msg='IAGL:  The folder %(folder_in)s could not be created for unarchiving.'% {'folder_in': folder_name}, level=xbmc.LOGERROR)
+		else:
+			self.current_processed_files.append(filename_in)
+			self.current_processed_files_success.append(True) #Set this to true regardless in this case...
+			xbmc.log(msg='IAGL:  The file %(filename_in)s does not appear to be an archive file and was not processed, pointing back to file in attempts to launch.'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
+
 
 	def post_process_unarchive_files_to_folder_name_xbmc_builtin(self,filename_in,name_in):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unzip files to folder %(name_in)s (builtin)'% {'filename_in': filename_in, 'name_in': name_in}, level=xbmc.LOGDEBUG)
@@ -3679,7 +3741,7 @@ class iagl_download(object):
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the directory
 			if any([requested_file_type in x for x in current_files]):
 				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
-				found_file = [x for x in current_files if requested_file_type in x][0]
+				found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(filename_in)[0] in x][0]
 				xbmc.log(msg='IAGL: File %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
@@ -3691,6 +3753,28 @@ class iagl_download(object):
 			if any([requested_file_type in x for x in current_files]): #cue files exist in the file list
 				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
 				found_file = [x for x in current_files if requested_file_type in x][0]
+				xbmc.log(msg='IAGL: File %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
+				self.current_processed_files.insert(0,found_file)
+				self.current_processed_files_success.insert(0,True)
+
+	def post_process_unarchive_to_specified_folder_and_launch_requested_file(self,requested_file_type,specified_folder,filename_in):
+		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unarchive to specified folder and point to %(requested_file_type)s file'% {'filename_in': self.current_saved_files[-1], 'requested_file_type': requested_file_type}, level=xbmc.LOGDEBUG)
+		if os.path.splitext(filename_in)[-1].lower() != '.zip' and os.path.splitext(filename_in)[-1].lower() != '.7z': #Attempt to launch from file already locally available
+			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the directory
+			if any([requested_file_type in x for x in current_files]):
+				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
+				found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(filename_in)[0] in x][0]
+				xbmc.log(msg='IAGL: File %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
+				self.current_processed_files.append(found_file)
+				self.current_processed_files_success.append(True)
+			else:
+				xbmc.log(msg='IAGL Error:  Unable to find the file %(requested_file_type)s.  You may have to try downloading the game again.'% {'requested_file_type': requested_file_type}, level=xbmc.LOGERROR)
+		else:
+			self.post_process_unarchive_files_to_top_level_folder(filename_in,specified_folder) #Unarchive to folder in current directory
+			current_files = get_all_files_in_directory_xbmcvfs(os.path.join(os.path.split(filename_in)[0],specified_folder)) #Get a list of files in the unarchive diectory
+			if any([requested_file_type in x for x in current_files]): #cue files exist in the file list
+				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
+				found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(filename_in)[0] in x][0]
 				xbmc.log(msg='IAGL: File %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.insert(0,found_file)
 				self.current_processed_files_success.insert(0,True)
@@ -3993,6 +4077,10 @@ class iagl_download(object):
 						self.post_process_unarchive_to_folder_and_launch_requested_file('.gdi',self.current_saved_files[ii])
 					if pda == 'unarchive_game_launch_lst':
 						self.post_process_unarchive_to_folder_and_launch_requested_file('.lst',self.current_saved_files[ii])
+					if pda == 'unarchive_game_launch_hdi':
+						self.post_process_unarchive_to_folder_and_launch_requested_file('.hdi',self.current_saved_files[ii])
+					if pda == 'unarchive_neocd_launch_cue':
+						self.post_process_unarchive_to_specified_folder_and_launch_requested_file('.cue','neocd',self.current_saved_files[ii])
 					if 'launch_mame_softlist' in pda:
 						self.post_process_launch_softlist_file(self.current_saved_files[ii],pda.split('(')[-1].split(')')[0].split(',')[0].replace("'",''),pda.split('(')[-1].split(')')[0].split(',')[-1].replace("'",''))
 					# xbmc.executebuiltin('Dialog.Close(busydialog)')
@@ -4690,6 +4778,18 @@ def get_all_files_in_directory_xbmcvfs(directory_in): #Twice as slow as the meth
 				current_files = current_files+[os.path.join(directory_in,dd,dd2,dd3,ff) for ff in files_in_dir4 if ff is not None]
 	return current_files
 
+# def move_all_files_up_one_directory(files_in):
+# 	overall_success = True
+# 	files_out = list()
+# 	directory_from = os.path.split(files_in[0])[0] #Need to assume all the files are in the same starting directory
+# 	directory_to = os.path.split(directory_from)[0]
+# 	xbmc.log(msg='IAGL:  Moving all files in the directory: %(directory_from)s, to: %(directory_to)s' % {'directory_from': directory_from, 'directory_to': directory_to}, level=xbmc.LOGDEBUG)
+# 	for ff in files_in:
+# 		files_out.append(move_file_to_directory(ff,directory_to))
+# 		if files_out[-1] is None:
+# 			overall_success = False
+# 	return files_out, overall_success
+
 def move_file_to_directory(file_in,directory_to):
 	overall_success = True
 	file_out = None
@@ -4779,6 +4879,39 @@ def extract_all_libarchive(archive_file,directory_to):
 		else:
 			overall_success = False
 			xbmc.log(msg='IAGL:  Unable to create the folder %(dir_from)s for libarchive extraction' % {'dir_from': os.path.join(xbmc.translatePath(directory_to),dd)}, level=xbmc.LOGDEBUG)
+	return files_out, overall_success
+
+def extract_all_libarchive_to_top_level_folder(archive_file,directory_to):
+	overall_success = True
+	files_out = list()
+	if 'archive://' in archive_file:
+		archive_path = archive_file
+	else:
+		archive_path = 'archive://%(archive_file)s' % {'archive_file': url_quote(xbmc.translatePath(archive_file))}
+	dirs_in_archive, files_in_archive = xbmcvfs.listdir(archive_path)
+	for ff in files_in_archive:
+		if not xbmcvfs.exists(os.path.join(xbmc.translatePath(directory_to),ff)):
+			file_from = os.path.join(archive_path,ff).replace('\\','/') #Windows unexpectadely requires a forward slash in the path
+			success = xbmcvfs.copy(file_from,os.path.join(xbmc.translatePath(directory_to),ff)) #Attempt to move the file first
+			if not success:
+				xbmc.log(msg='IAGL:  Error extracting file %(ff)s from archive %(archive_file)s' % {'ff': ff,'archive_file':archive_file}, level=xbmc.LOGDEBUG)
+				overall_success = False
+			else:
+				xbmc.log(msg='IAGL:  Extracted file %(ff)s from archive %(archive_file)s' % {'ff': ff,'archive_file':archive_file}, level=xbmc.LOGDEBUG)
+				files_out.append(os.path.join(xbmc.translatePath(directory_to),ff))
+		else:
+			xbmc.log(msg='IAGL:  File %(ff)s already exists and was not extracted from archive %(archive_file)s' % {'ff': ff,'archive_file':archive_file}, level=xbmc.LOGDEBUG)
+			files_out.append(os.path.join(xbmc.translatePath(directory_to),ff))
+	for dd in dirs_in_archive:
+		if xbmcvfs.exists(os.path.join(xbmc.translatePath(directory_to),'')): #Extract the lower level folder files to the top level
+			files_out2, success2 = extract_all_libarchive(os.path.join(archive_path,dd,'').replace('\\','/'),os.path.join(directory_to)) #Windows unexpectadely requires a forward slash in the path
+			if success2:
+				files_out = files_out + files_out2
+			else:
+				overall_success = False
+		else:
+			overall_success = False
+			xbmc.log(msg='IAGL:  The top level folder does not exist %(dir_from)s for libarchive extraction' % {'dir_from': xbmc.translatePath(directory_to)}, level=xbmc.LOGDEBUG)
 	return files_out, overall_success
 
 # def move_directory_contents_libarchive(directory_from,directory_to):
