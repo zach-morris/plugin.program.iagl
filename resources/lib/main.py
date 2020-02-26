@@ -3229,7 +3229,7 @@ class iagl_download(object):
 			else:
 				self.game_post_download_action_override = None
 			if type(self.json.get('game').get('rom')) is list: #Multiple files
-				self.current_files_to_download = [self.base_url+x.get('@name') for x in self.json['game']['rom']]
+				self.current_files_to_download = [self.base_url+x.get('@name') if 'http' not in x.get('@name') else x.get('@name') for x in self.json['game']['rom']]
 				self.current_files_to_download_skip = [False for x in self.current_files_to_download] #Used if the file is found to exist locally
 				self.current_files_to_save = [url_unquote(x.split('%2F')[-1].split('/')[-1]) for x in self.current_files_to_download]
 				self.current_files_to_save_no_ext = [os.path.splitext(x)[0] for x in self.current_files_to_save]
@@ -3254,7 +3254,7 @@ class iagl_download(object):
 					self.current_download_locations = [self.default_download_location for x in self.current_files_to_download] #Default Location
 			else: #One file
 				if self.json.get('game').get('rom') is not None:
-					self.current_files_to_download = [self.base_url+self.json['game']['rom']['@name']]
+					self.current_files_to_download = [self.base_url+self.json['game']['rom']['@name'] if 'http' not in self.json['game']['rom']['@name'] else self.json['game']['rom']['@name']]
 					self.current_files_to_download_skip = [False for x in self.current_files_to_download] #Used if the file is found to exist locally
 					self.current_files_to_save = [url_unquote(x.split('%2F')[-1].split('/')[-1]) for x in self.current_files_to_download]
 					self.current_files_to_save_no_ext = [os.path.splitext(x)[0] for x in self.current_files_to_save]
@@ -4777,18 +4777,6 @@ def get_all_files_in_directory_xbmcvfs(directory_in): #Twice as slow as the meth
 				dirs_in_dir4, files_in_dir4 = xbmcvfs.listdir(os.path.join(directory_in,dd,dd2,dd3,'')) #Go down 4 levels to look for various files for launching
 				current_files = current_files+[os.path.join(directory_in,dd,dd2,dd3,ff) for ff in files_in_dir4 if ff is not None]
 	return current_files
-
-# def move_all_files_up_one_directory(files_in):
-# 	overall_success = True
-# 	files_out = list()
-# 	directory_from = os.path.split(files_in[0])[0] #Need to assume all the files are in the same starting directory
-# 	directory_to = os.path.split(directory_from)[0]
-# 	xbmc.log(msg='IAGL:  Moving all files in the directory: %(directory_from)s, to: %(directory_to)s' % {'directory_from': directory_from, 'directory_to': directory_to}, level=xbmc.LOGDEBUG)
-# 	for ff in files_in:
-# 		files_out.append(move_file_to_directory(ff,directory_to))
-# 		if files_out[-1] is None:
-# 			overall_success = False
-# 	return files_out, overall_success
 
 def move_file_to_directory(file_in,directory_to):
 	overall_success = True
