@@ -122,8 +122,8 @@ class iagl_utils(object):
 		self.context_menu_ext_launch_cmd = [(self.loc_str(30408),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/launch_command)')]
 		self.context_menu_default_addon_launch_cmd = [(self.loc_str(30409),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/default_addon)')]
 		self.context_menu_items_post_dl = [(self.loc_str(30410),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/post_dl_command)')]
-		self.post_dl_actions = ['None','UnZIP Game','UnZIP Game, Rename file','UnZIP Game, Point to Launch File','UnZIP Game to Folder, Point to Launch File','Unarchive Game','Unarchive Game, Rename file','Unarchive Game, Update file extension','Unarchive Game, Generate M3U containing CUE files','Unarchive Game, Generate M3U containing CUE files','Unarchive Game, Generate M3U containing ST files','Unarchive Game, Generate M3U containing ADF files','Create Game Folder, Generate M3U containing ADF files','Create Game Folder, Generate M3U containing D64 files','Unarchive Game, Point to BIN','Unarchive Game, Point to CUE','Unarchive Game, Point to ISO','Unarchive Game, Point to GDI','Unarchive Game, Point to ADF','Unarchive DOSBox, Point to EXE','Unarchive DOSBox, Generate Conf','Unarchive SCUMMVm, Generate Conf','Unarchive eXoDOS, Generate BAT','Unarchive WIN31, Point to BAT','Process MAME / MESS Softlist Game',]
-		self.post_dl_action_keys = ['none','unzip_rom','unzip_and_rename_file','unzip_and_launch_file','unzip_to_folder_and_launch_file','unarchive_game','unarchive_game_rename_file','unarchive_game_rename_extension','unarchive_game_generate_m3u','unarchive_game_generate_m3u_cue','unarchive_game_generate_m3u_st','unarchive_game_generate_m3u_adf','save_adf_to_folder_and_launch_m3u_file','save_d64_to_folder_and_launch_m3u_file','unarchive_game_launch_bin','unarchive_game_launch_cue','unarchive_game_launch_iso','unarchive_game_launch_gdi','unarchive_game_launch_adf','unarchive_dosbox_launch_cmd','unarchive_dosbox_generate_conf','unzip_and_launch_scummvm_file','unzip_and_launch_exodos_file','unzip_and_launch_win31_file','launch_mame_softlist']
+		self.post_dl_actions = ['None','UnZIP Game','UnZIP Game, Rename file','UnZIP Game, Point to Launch File','UnZIP Game to Folder, Point to Launch File','Unarchive Game','Unarchive Game, Rename file','Unarchive Game, Update file extension','Unarchive Game, Generate M3U containing CUE files','Unarchive Game, Generate M3U containing CUE files','Unarchive Game, Generate M3U containing ST files','Unarchive Game, Generate M3U containing ADF files','Create Game Folder, Generate M3U containing ADF files','Create Game Folder, Generate M3U containing D64 files','Unarchive Game, Point to BIN','Unarchive Game, Point to CUE','Unarchive Game, Point to ISO','Unarchive Game, Point to GDI','Unarchive Game, Point to LST','Unarchive Game, Point to HDI','Unarchive Game to neocd folder, Point to CUE','Unarchive Game, Point to ADF','Unarchive DOSBox, Point to EXE','Unarchive DOSBox, Generate Conf','Unarchive SCUMMVm, Generate Conf','Unarchive eXoDOS, Generate BAT','Unarchive WIN31, Point to BAT','Process MAME / MESS Softlist Game',]
+		self.post_dl_action_keys = ['none','unzip_rom','unzip_and_rename_file','unzip_and_launch_file','unzip_to_folder_and_launch_file','unarchive_game','unarchive_game_rename_file','unarchive_game_rename_extension','unarchive_game_generate_m3u','unarchive_game_generate_m3u_cue','unarchive_game_generate_m3u_st','unarchive_game_generate_m3u_adf','save_adf_to_folder_and_launch_m3u_file','save_d64_to_folder_and_launch_m3u_file','unarchive_game_launch_bin','unarchive_game_launch_cue','unarchive_game_launch_iso','unarchive_game_launch_gdi','unarchive_game_launch_lst','unarchive_game_launch_hdi','unarchive_neocd_launch_cue','unarchive_game_launch_adf','unarchive_dosbox_launch_cmd','unarchive_dosbox_generate_conf','unzip_and_launch_scummvm_file','unzip_and_launch_exodos_file','unzip_and_launch_win31_file','launch_mame_softlist']
 		self.context_menu_items_favorites = [(self.loc_str(30411),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/share_favorite)')]
 		self.context_menu_items_games = [(self.loc_str(30412),'RunPlugin(plugin://plugin.program.iagl/games_context_menu/<game_list_id>/<game_id>/add)')]
 		self.context_menu_items_query = [(self.loc_str(30412),'RunPlugin(plugin://plugin.program.iagl/games_context_menu/query/<query_id>/add)')]
@@ -3740,8 +3740,11 @@ class iagl_download(object):
 		if os.path.splitext(filename_in)[-1].lower() != '.zip' and os.path.splitext(filename_in)[-1].lower() != '.7z': #Attempt to launch from file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the directory
 			if any([requested_file_type in x for x in current_files]):
-				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
-				found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(os.path.split(filename_in)[-1])[0] in x][0]
+				try:
+					found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(os.path.split(filename_in)[-1])[0] in x][0] #This should usually find the correct file.  If it doesn't find a file, it's because the file within the zip file is named differently.  In that case just look for the first file of the correct filetype
+				except:
+					xbmc.log(msg='IAGL: Exact filename %(found_file)s was not found for launching in the extracted files, defaulting to the correct file type'% {'found_file': os.path.splitext(os.path.split(filename_in)[-1])[0]}, level=xbmc.LOGDEBUG)
+					found_file = [x for x in current_files if requested_file_type in x][0]
 				xbmc.log(msg='IAGL: File %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
@@ -3751,8 +3754,11 @@ class iagl_download(object):
 			self.post_process_unarchive_files_to_folder(filename_in,self.current_safe_filename) #Unarchive to folder in current directory
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.join(os.path.split(filename_in)[0],self.current_safe_filename)) #Get a list of files in the unarchive diectory
 			if any([requested_file_type in x for x in current_files]): #cue files exist in the file list
-				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
-				found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(os.path.split(filename_in)[-1])[0] in x][0]
+				try:
+					found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(os.path.split(filename_in)[-1])[0] in x][0] #This should usually find the correct file.  If it doesn't find a file, it's because the file within the zip file is named differently.  In that case just look for the first file of the correct filetype
+				except:
+					xbmc.log(msg='IAGL: Exact filename %(found_file)s was not found for launching in the extracted files, defaulting to the correct file type'% {'found_file': os.path.splitext(os.path.split(filename_in)[-1])[0]}, level=xbmc.LOGDEBUG)
+					found_file = [x for x in current_files if requested_file_type in x][0]
 				xbmc.log(msg='IAGL: File %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.insert(0,found_file)
 				self.current_processed_files_success.insert(0,True)
@@ -3762,8 +3768,11 @@ class iagl_download(object):
 		if os.path.splitext(filename_in)[-1].lower() != '.zip' and os.path.splitext(filename_in)[-1].lower() != '.7z': #Attempt to launch from file already locally available
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the directory
 			if any([requested_file_type in x for x in current_files]):
-				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
-				found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(os.path.split(filename_in)[-1])[0] in x][0]
+				try:
+					found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(os.path.split(filename_in)[-1])[0] in x][0] #This should usually find the correct file.  If it doesn't find a file, it's because the file within the zip file is named differently.  In that case just look for the first file of the correct filetype
+				except:
+					xbmc.log(msg='IAGL: Exact filename %(found_file)s was not found for launching in the extracted files, defaulting to the correct file type'% {'found_file': os.path.splitext(os.path.split(filename_in)[-1])[0]}, level=xbmc.LOGDEBUG)
+					found_file = [x for x in current_files if requested_file_type in x][0]
 				xbmc.log(msg='IAGL: File %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
@@ -3773,8 +3782,11 @@ class iagl_download(object):
 			self.post_process_unarchive_files_to_top_level_folder(filename_in,specified_folder) #Unarchive to folder in current directory
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.join(os.path.split(filename_in)[0],specified_folder)) #Get a list of files in the unarchive diectory
 			if any([requested_file_type in x for x in current_files]): #cue files exist in the file list
-				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
-				found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(os.path.split(filename_in)[-1])[0] in x][0]
+				try:
+					found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(os.path.split(filename_in)[-1])[0] in x][0] #This should usually find the correct file.  If it doesn't find a file, it's because the file within the zip file is named differently.  In that case just look for the first file of the correct filetype
+				except:
+					xbmc.log(msg='IAGL: Exact filename %(found_file)s was not found for launching in the extracted files, defaulting to the correct file type'% {'found_file': os.path.splitext(os.path.split(filename_in)[-1])[0]}, level=xbmc.LOGDEBUG)
+					found_file = [x for x in current_files if requested_file_type in x][0]
 				xbmc.log(msg='IAGL: File %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.insert(0,found_file)
 				self.current_processed_files_success.insert(0,True)
