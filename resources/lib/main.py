@@ -3741,7 +3741,7 @@ class iagl_download(object):
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the directory
 			if any([requested_file_type in x for x in current_files]):
 				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
-				found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(filename_in)[0] in x][0]
+				found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(os.path.split(filename_in)[-1])[0] in x][0]
 				xbmc.log(msg='IAGL: File %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
@@ -3752,7 +3752,7 @@ class iagl_download(object):
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.join(os.path.split(filename_in)[0],self.current_safe_filename)) #Get a list of files in the unarchive diectory
 			if any([requested_file_type in x for x in current_files]): #cue files exist in the file list
 				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
-				found_file = [x for x in current_files if requested_file_type in x][0]
+				found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(os.path.split(filename_in)[-1])[0] in x][0]
 				xbmc.log(msg='IAGL: File %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.insert(0,found_file)
 				self.current_processed_files_success.insert(0,True)
@@ -3763,7 +3763,7 @@ class iagl_download(object):
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.split(filename_in)[0]) #Get a list of files in the directory
 			if any([requested_file_type in x for x in current_files]):
 				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
-				found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(filename_in)[0] in x][0]
+				found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(os.path.split(filename_in)[-1])[0] in x][0]
 				xbmc.log(msg='IAGL: File %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.append(found_file)
 				self.current_processed_files_success.append(True)
@@ -3774,7 +3774,7 @@ class iagl_download(object):
 			current_files = get_all_files_in_directory_xbmcvfs(os.path.join(os.path.split(filename_in)[0],specified_folder)) #Get a list of files in the unarchive diectory
 			if any([requested_file_type in x for x in current_files]): #cue files exist in the file list
 				# found_file = current_files[[requested_file_type in x for x in current_files].index(True)]
-				found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(filename_in)[0] in x][0]
+				found_file = [x for x in current_files if requested_file_type in x and os.path.splitext(os.path.split(filename_in)[-1])[0] in x][0]
 				xbmc.log(msg='IAGL: File %(found_file)s was found for launching.'% {'found_file': found_file}, level=xbmc.LOGDEBUG)
 				self.current_processed_files.insert(0,found_file)
 				self.current_processed_files_success.insert(0,True)
