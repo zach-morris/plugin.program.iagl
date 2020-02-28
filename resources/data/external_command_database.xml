@@ -324,9 +324,6 @@
 	<launcher name="RetroArch QuickNES (NES)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/quicknes_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch NeoCD (NGCD)" os="OSX">
-		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/libneocd_libretro.dylib" "%ROM_PATH%"</launcher_command>
-	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mednafen_ngp_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -943,9 +940,6 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/quicknes_libretro.dylib" "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch NeoCD (NGCD)" os="OSX Close_Kodi">
-		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/libneocd_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mednafen_ngp_libretro.dylib" "%ROM_PATH%"</launcher_command>
@@ -1564,9 +1558,6 @@
 	<launcher name="RetroArch QuickNES (NES)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/quicknes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch NeoCD (NGCD)" os="Linux/Kodibuntu">
-		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/libneocd_libretro.so "%ROM_PATH%"</launcher_command>
-	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_ngp_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -2183,9 +2174,6 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/quicknes_libretro.so "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch NeoCD (NGCD)" os="Linux/Kodibuntu Close_Kodi">
-		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/libneocd_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_ngp_libretro.so "%ROM_PATH%"</launcher_command>
@@ -2804,9 +2792,6 @@
 	<launcher name="RetroArch QuickNES (NES)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/quicknes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch NeoCD (NGCD)" os="Linux/Kodibuntu Pause_Kodi">
-		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/libneocd_libretro.so "%ROM_PATH%"</launcher_command>
-	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mednafen_ngp_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -3423,9 +3408,6 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\quicknes_libretro.dll" "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch NeoCD (NGCD)" os="Windows">
-		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\libneocd_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mednafen_ngp_libretro.dll" "%ROM_PATH%"</launcher_command>
@@ -4053,9 +4035,6 @@
 	<launcher name="RetroArch QuickNES (NES)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\quicknes_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch NeoCD (NGCD)" os="Windows Close_Kodi">
-		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\libneocd_libretro.dll" "%ROM_PATH%"</launcher_command>
-	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mednafen_ngp_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -4681,9 +4660,6 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/quicknes_libretro.so "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch NeoCD (NGCD)" os="LibreElec Remix">
-		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/libneocd_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mednafen_ngp_libretro.so "%ROM_PATH%"</launcher_command>
@@ -5314,9 +5290,6 @@
 	<launcher name="RetroArch QuickNES (NES)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/quicknes_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch NeoCD (NGCD)" os="RetroELEC">
-		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/libneocd_libretro.so "%ROM_PATH%"</launcher_command>
-	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/mednafen_ngp_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -5937,9 +5910,6 @@
 	<launcher name="RetroArch QuickNES (NES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" quicknes "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch NeoCD (NGCD)" os="Sx05RE">
-		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" libneocd "%ROM_PATH%"</launcher_command>
-	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mednafen_ngp "%ROM_PATH%"</launcher_command>
 	</launcher>
@@ -6547,9 +6517,6 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh quicknes "%ROM_PATH%"</launcher_command>
-	</launcher>
-	<launcher name="RetroArch NeoCD (NGCD)" os="Gamestarter Addon">
-		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh libneocd "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh mednafen_ngp "%ROM_PATH%"</launcher_command>
@@ -7167,9 +7134,6 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/quicknes_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
-	</launcher>
-	<launcher name="RetroArch NeoCD (NGCD)" os="Android">
-		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/libneocd_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/mednafen_ngp_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
@@ -7871,9 +7835,6 @@
 	</launcher>
 	<launcher name="RetroArch QuickNES (NES)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/quicknes_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
-	</launcher>
-	<launcher name="RetroArch NeoCD (NGCD)" os="Android Aarch64">
-		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/libneocd_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
 	</launcher>
 	<launcher name="RetroArch Mednafen NeoPop (NGP/NGPC)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/mednafen_ngp_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</launcher_command>
