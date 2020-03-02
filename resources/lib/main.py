@@ -2,14 +2,15 @@
 #Zach Morris
 #https://github.com/zach-morris/plugin.program.iagl
 import os, re, json, zlib, shutil, time, io
-# import random
-from kodi_six import xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
+# from kodi_six import xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
+import xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
 from contextlib import closing
 from collections import defaultdict
 from dateutil import parser as date_parser
 from ast import literal_eval as lit_eval
 import xml.etree.ElementTree as ET
-import paginate
+from . import paginate
+# import paginate
 import requests
 import requests.packages.urllib3
 requests.packages.urllib3.disable_warnings() #Silence uneeded warnings
@@ -196,10 +197,10 @@ class iagl_utils(object):
 		# possible_retroarch_config_locations = [os.path.join('mnt','internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('data','data','com.retroarch','retroarch.cfg'),os.path.join('data','data','com.retroarch','files','retroarch.cfg')]
 
 	def get_addon_install_path(self):
-		return xbmc.translatePath(self.handle.getAddonInfo('path')).decode('utf-8')
+		return xbmc.translatePath(self.handle.getAddonInfo('path'))
 
 	def get_addon_userdata_path(self):
-		return xbmc.translatePath(self.handle.getAddonInfo('profile')).decode('utf-8')
+		return xbmc.translatePath(self.handle.getAddonInfo('profile'))
 
 	def get_temp_cache_path(self):
 		current_path = os.path.join(self.get_addon_userdata_path(),self.temp_cache_folder_name)
@@ -254,7 +255,7 @@ class iagl_utils(object):
 					byte_string = bytes(fo.readBytes(10000)) #Read first ~10kb of dat file to get header
 				if b'</header>' in byte_string:
 					try:
-						header_string = byte_string.split(b'</header>')[0].decode('utf-8')
+						header_string = byte_string.split(b'</header>')[0].decode('utf-8') 
 					except Exception as exc:
 						xbmc.log(msg='IAGL Error:  Encoding error in file %(ff)s.  Exception %(exc)s' % {'ff': ff, 'exc': exc}, level=xbmc.LOGERROR)
 						header_string = byte_string.split(b'</header>')[0].decode('utf-8',errors='ignore') #Try again ignoring whatever character python doesnt like.  Probably not foolproof
@@ -585,7 +586,7 @@ class iagl_utils(object):
 		if current_query['title'] is None:
 			current_num_results = '1'
 		else:
-			current_num_results = str(current_query['title'])
+			current_num_results = current_query['title']
 		if type(self.change_search_terms_to_any(current_query['lists'])) is list:
 			current_lists = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['lists']))
 		else:
@@ -759,7 +760,8 @@ class iagl_utils(object):
 		game_listitems = list()
 		game_lists_dict = self.get_game_lists()
 		#Ensure the return categories object is a list so it can be iterated on
-		if type(return_categories) is str or type(return_categories) is unicode:
+		print(type(return_categories))
+		if type(return_categories) is str:
 			return_cats = [return_categories]
 		else:
 			return_cats = return_categories
@@ -811,9 +813,9 @@ class iagl_utils(object):
 					del(game_listitems[-1])
 
 		if return_categories is not None:
-			xbmc.log(msg='IAGL:  Returning %(num_lists)s game lists in categories %(game_cats)s' % {'num_lists':str(len(game_listitems)),'game_cats': ', '.join(return_cats)}, level=xbmc.LOGDEBUG)
+			xbmc.log(msg='IAGL:  Returning %(num_lists)s game lists in categories %(game_cats)s' % {'num_lists':len(game_listitems),'game_cats': ', '.join(return_cats)}, level=xbmc.LOGDEBUG)
 		else:
-			xbmc.log(msg='IAGL:  Returning %(num_lists)s (all) available game lists' % {'num_lists':str(len(game_listitems))}, level=xbmc.LOGDEBUG)
+			xbmc.log(msg='IAGL:  Returning %(num_lists)s (all) available game lists' % {'num_lists':len(game_listitems)}, level=xbmc.LOGDEBUG)
 
 		return game_listitems
 
@@ -979,11 +981,11 @@ class iagl_utils(object):
 			if idx is not None: #Fill in listitem parameters
 				if cats not in self.non_number_cat:
 					total_starting_with_current_letter = len(current_game_letters)-sum(self.flatten_list([[w.startswith(x) for x in self.non_number_cat] for w in current_game_letters]))
-					total_starting_with_current_letter_label = '#    ('+str(total_starting_with_current_letter)+')'
+					total_starting_with_current_letter_label = '#    (%(current_total)s)'%{'current_total':total_starting_with_current_letter}
 					total_starting_with_current_letter_label2 = '#'
 				else:
 					total_starting_with_current_letter = sum([w.startswith(cats) for w in current_game_letters])
-					total_starting_with_current_letter_label = cats+'    ('+str(total_starting_with_current_letter)+')'
+					total_starting_with_current_letter_label = '%(current_cats)s    (%(current_total)s)'%{'current_cats':cats,'current_total':total_starting_with_current_letter}
 					total_starting_with_current_letter_label2 = cats
 				current_trailer = self.get_trailer(alphabetical_dict['categories']['category'][idx].get('trailer'))
 				li = {'values': {'label' : total_starting_with_current_letter_label,
@@ -1059,7 +1061,7 @@ class iagl_utils(object):
 					total_in_current_genre = len(current_game_genres_unknown)
 				else:
 					total_in_current_genre = current_game_genres.count(cats.lower())
-				total_in_current_genre_label = cats+'    ('+str(total_in_current_genre)+')'
+				total_in_current_genre_label = '%(current_cats)s    (%(current_total)s)'%{'current_cats':cats,'current_total':total_in_current_genre}
 				total_in_current_genre_label2 = cats
 				current_trailer = self.get_trailer(genre_dict['categories']['category'][idx].get('trailer'))
 				li = {'values': {'label' : total_in_current_genre_label,
@@ -1094,9 +1096,9 @@ class iagl_utils(object):
 			game_lists = [x for x in self.get_game_lists().get('dat_filename')]
 		for game_list_id in game_lists:
 			current_games_dict = self.get_games(game_list_id)
-			current_game_years = [str(y).strip().lower() for y in [x.get('info').get('year') for x in current_games_dict if x.get('info').get('year') is not None] if len(y)>0]
+			current_game_years = [y.strip().lower() for y in [x.get('info').get('year') for x in current_games_dict if x.get('info').get('year') is not None] if len(y)>0]
 			current_game_years_unknown = [x.get('info').get('year') for x in current_games_dict if x.get('info').get('year') is None]
-			current_game_years_sorted = sorted(list(set([str(y).strip() for y in [x.get('info').get('year') for x in current_games_dict if x.get('info').get('year') is not None] if len(y)>0])))
+			current_game_years_sorted = sorted(list(set([y.strip() for y in [x.get('info').get('year') for x in current_games_dict if x.get('info').get('year') is not None] if len(y)>0])))
 			if len(current_game_years_unknown)>0:
 				if 'Unknown' not in current_game_years_sorted:
 					current_game_years_sorted.append('Unknown')
@@ -1108,9 +1110,9 @@ class iagl_utils(object):
 		year_listitems = list()
 		games_dict = self.get_games(game_list_id)
 		year_dict = self.get_year_game_listing()
-		current_game_years = [str(y).strip().lower() for y in [x.get('info').get('year') for x in games_dict if x.get('info').get('year') is not None] if len(y)>0]
+		current_game_years = [y.strip().lower() for y in [x.get('info').get('year') for x in games_dict if x.get('info').get('year') is not None] if len(y)>0]
 		current_game_years_unknown = [x.get('info').get('year') for x in games_dict if x.get('info').get('year') is None]
-		current_game_years_sorted = sorted(list(set([str(y).strip() for y in [x.get('info').get('year') for x in games_dict if x.get('info').get('year') is not None] if len(y)>0])))
+		current_game_years_sorted = sorted(list(set([y.strip() for y in [x.get('info').get('year') for x in games_dict if x.get('info').get('year') is not None] if len(y)>0])))
 		if len(current_game_years_unknown)>0:
 			if 'Unknown' not in current_game_years_sorted:
 				current_game_years_sorted.append('Unknown')
@@ -1131,7 +1133,7 @@ class iagl_utils(object):
 					total_in_current_year= len(current_game_years_unknown)
 				else:
 					total_in_current_year = current_game_years.count(cats.lower())
-				total_in_current_year_label = cats+'    ('+str(total_in_current_year)+')'
+				total_in_current_year_label = '%(current_cats)s    (%(current_total)s)'%{'current_cats':cats,'current_total':total_in_current_year}
 				total_in_current_year_label2 = cats
 				current_trailer = self.get_trailer(year_dict['categories']['category'][idx].get('trailer'))
 				li = {'values': {'label' : total_in_current_year_label,
@@ -1203,7 +1205,7 @@ class iagl_utils(object):
 					total_in_current_group= len(current_game_groups_unknown)
 				else:
 					total_in_current_group = current_game_groups.count(cats)
-				total_in_current_group_label = cats+'    ('+str(total_in_current_group)+')'
+				total_in_current_group_label = '%(current_cats)s    (%(current_total)s)'%{'current_cats':cats,'current_total':total_in_current_group}
 				total_in_current_group_label2 = cats
 				current_trailer = self.get_trailer(group_dict['categories']['category'][idx].get('trailer'))
 				li = {'values': {'label' : total_in_current_group_label,
@@ -1275,7 +1277,7 @@ class iagl_utils(object):
 					total_in_current_player= len(current_game_players_unknown)
 				else:
 					total_in_current_player = current_game_players.count(cats)
-				total_in_current_player_label = cats+'    ('+str(total_in_current_player)+')'
+				total_in_current_player_label = '%(current_cats)s    (%(current_total)s)'%{'current_cats':cats,'current_total':total_in_current_player}
 				total_in_current_player_label2 = cats
 				current_trailer = self.get_trailer(player_dict['categories']['category'][idx].get('trailer'))
 				li = {'values': {'label' : total_in_current_player_label,
@@ -1331,7 +1333,7 @@ class iagl_utils(object):
 					total_in_current_tag = len(current_game_tags_unknown)
 				else:
 					total_in_current_tag = current_game_tags.count(cats)
-				total_in_current_tag_label = cats+'    ('+str(total_in_current_tag)+')'
+				total_in_current_tag_label = '%(current_cats)s    (%(current_total)s)'%{'current_cats':cats,'current_total':total_in_current_tag}
 				total_in_current_tag_label2 = cats
 				current_trailer = self.get_trailer(tags_dict['categories']['category'][idx].get('trailer'))
 				li = {'values': {'label' : total_in_current_tag_label,
@@ -1403,7 +1405,7 @@ class iagl_utils(object):
 					total_in_current_studio = len(current_game_studios_unknown)
 				else:
 					total_in_current_studio = current_game_studios.count(cats.lower())
-				total_in_current_studio_label = cats+'    ('+str(total_in_current_studio)+')'
+				total_in_current_studio_label = '%(current_cats)s    (%(current_total)s)'%{'current_cats':cats,'current_total':total_in_current_studio}
 				total_in_current_studio_label2 = cats
 				current_trailer = self.get_trailer(studio_dict['categories']['category'][idx].get('trailer'))
 				li = {'values': {'label' : total_in_current_studio_label,
@@ -1620,7 +1622,7 @@ class iagl_utils(object):
 				if current_query['title'] is None:
 					current_num_results = '1'
 				else:
-					current_num_results = str(current_query['title'])
+					current_num_results = current_query['title']
 				if type(self.change_search_terms_to_any(current_query['lists'])) is list:
 					current_lists = '[CR]     '+'[CR]     '.join(self.change_search_terms_to_any(current_query['lists']))
 				else:
@@ -1762,7 +1764,7 @@ class iagl_utils(object):
 			try:
 				crc_compare = json.loads(str(xbmcgui.Window(self.windowid).getProperty('iagl_current_crc')))
 			except:
-				crc_compare = None
+				crc_compare = Nonek
 			if crc_compare is not None and crc_compare == current_crc32:
 				try:
 					games_dict = json.loads(xbmcgui.Window(self.windowid).getProperty('iagl_game_list'))
@@ -2700,8 +2702,11 @@ class iagl_utils(object):
 				if current_post_dl_command is not None and current_post_dl_command != 'none' and len(current_post_dl_command)>0:
 					favorite_dict['games']['game']['rom_override_postdl'] = current_post_dl_command
 			current_game_name = favorite_dict['games']['game'].get('@name')
-			favorite_xml = ET.tostring(dict_to_etree(favorite_dict))
-			crc_string = get_crc32_from_string(''.join([x.encode('utf-8',errors='ignore') for x in sorted(favorite_dict['games']['game'].values()) if type(x) is str or type(x) is unicode])) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
+			favorite_xml = ET.tostring(dict_to_etree(favorite_dict)).decode('utf-8')
+			crc_string = get_crc32_from_string(''.join(sorted([x for x in favorite_dict['games']['game'].values() if isinstance(x, str)]))) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
+			print('ztest')
+			print(type(favorite_xml))
+			print(favorite_xml)
 			if '<games>' in favorite_xml and '</games>' in favorite_xml:
 				favorite_header = '<!-- IAGL Favorite XXXCRCXXX -->'.replace('XXXCRCXXX',crc_string)
 				favorite_xml = favorite_xml.replace('<games>',favorite_header).replace('</games>',favorite_header).replace('><','>\r\n\t\t<').replace('\t\t<game ','\t<game ').replace('\t\t</game>','\t</game>').replace('\t\t<!--','<!--')+'\r\n</datafile>'
@@ -2754,7 +2759,7 @@ class iagl_utils(object):
 			favorite_dict = dict()
 			favorite_dict['games'] = dict()
 			favorite_dict['games']['game'] = json.loads(json_in).get('game')
-			crc_string = get_crc32_from_string(''.join([x.encode('utf-8',errors='ignore') for x in sorted(favorite_dict['games']['game'].values()) if type(x) is str or type(x) is unicode])) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
+			crc_string = get_crc32_from_string(''.join([x for x in sorted(favorite_dict['games']['game'].values()) if isinstance(x, str)])) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
 			current_filename = os.path.join(self.get_dat_folder_path(),url_unquote(game_list_id_in)+'.xml')
 			file_contents = None
 			if xbmcvfs.exists(current_filename):
@@ -3298,7 +3303,7 @@ class iagl_download(object):
 				r = s.get('https://archive.org/account/login.php')
 				data={'username': username,'password': password,'remember': 'CHECKED','action': 'login','submit': 'Log+in'}
 				r = s.post('https://archive.org/account/login.php', data=data)
-				if 'that password seems incorrect' in str(r.text.encode('utf-8')).lower():
+				if 'that password seems incorrect' in str(r.text).lower():
 					xbmc.log(msg='IAGL:  Login and Password were not accepted, we will try to download anyway', level=xbmc.LOGDEBUG)
 				r = s.get(url,verify=False,stream=True,timeout=self.download_timeout)
 				try:
@@ -3514,7 +3519,7 @@ class iagl_download(object):
 			temp_folder =  os.path.join(os.path.split(filename_in)[0],str(name_in))
 			dp = xbmcgui.DialogProgressBG()
 			dp.create('Please Wait...','Extracting files')
-			xbmc.executebuiltin(('XBMC.Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmc.translatePath(filename_in), 'location_to_extract_to':xbmc.translatePath(temp_folder)}).encode('utf-8'), True) #Unzip the file(s) to a temp folder
+			xbmc.executebuiltin(('XBMC.Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmc.translatePath(filename_in), 'location_to_extract_to':xbmc.translatePath(temp_folder)}), True) #Unzip the file(s) to a temp folder
 			dp.close()
 			if xbmcvfs.exists(os.path.join(temp_folder,'')): #Unzip generated a folder
 				self.current_processed_files.extend(get_all_files_in_directory_xbmcvfs(temp_folder))
@@ -3552,7 +3557,7 @@ class iagl_download(object):
 			temp_folder =  os.path.join(os.path.split(filename_in)[0],str(crc_in))
 			dp = xbmcgui.DialogProgressBG()
 			dp.create('Please Wait...','Extracting files')
-			xbmc.executebuiltin(('XBMC.Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmc.translatePath(filename_in), 'location_to_extract_to':xbmc.translatePath(temp_folder)}).encode('utf-8'), True) #Unzip the file(s) to a temp folder
+			xbmc.executebuiltin(('XBMC.Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmc.translatePath(filename_in), 'location_to_extract_to':xbmc.translatePath(temp_folder)}), True) #Unzip the file(s) to a temp folder
 			dp.close()
 			if xbmcvfs.exists(os.path.join(temp_folder,'')): #Unzip generated a folder
 				files_extracted, files_extracted_success = move_directory_contents_xbmcvfs(os.path.join(temp_folder,''),os.path.join(os.path.split(filename_in)[0],''))
@@ -3932,7 +3937,7 @@ class iagl_download(object):
 				# dont_include_these_addons = ['game.libretro','game.libretro.2048','game.libretro.dinothawr','game.libretro.mrboom']
 				current_game_addon_values = [x.get('addonid') for x in json.loads(addons_available).get('result').get('addons') if x.get('type') == 'kodi.gameclient' and x.get('addonid') not in self.IAGL.ignore_these_game_addons]
 				if 'game.libretro.%(emulator_in)s'%{'emulator_in':emulator_in} in current_game_addon_values:
-					current_game_libretro_hash_path = os.path.join(xbmc.translatePath(xbmcaddon.Addon(id='game.libretro.%(emulator_in)s'%{'emulator_in':emulator_in}).getAddonInfo('profile')).decode('utf-8'),'resources','system','hash')
+					current_game_libretro_hash_path = os.path.join(xbmc.translatePath(xbmcaddon.Addon(id='game.libretro.%(emulator_in)s'%{'emulator_in':emulator_in}).getAddonInfo('profile')),'resources','system','hash')
 					if current_softlist_url is not None: #Download the softlist to the retroarch system directory defined in IAGL settings
 						if not xbmcvfs.exists(os.path.join(current_game_libretro_hash_path,os.path.split(current_softlist_url)[-1])):
 							self.download_no_login(current_softlist_url,os.path.join(current_game_libretro_hash_path,os.path.split(current_softlist_url)[-1]),description='Softlist Hash: %(hashfile)s'%{'hashfile':os.path.split(current_softlist_url)[-1]},heading='Downloading, please wait...')
@@ -4126,7 +4131,7 @@ class iagl_launch(object):
 				self.external_launch_command = self.json.get('game').get('rom_override_cmd')
 			if self.external_launch_command is not None:
 				self.external_launch_command = self.IAGL.get_external_command(self.external_launch_command)
-		if type(filenames_in) is str or type(filenames_in) is unicode:
+		if type(filenames_in) is str:
 			self.launch_filenames = [filenames_in]
 		else:
 			self.launch_filenames = filenames_in
@@ -4665,16 +4670,16 @@ def dict_to_etree(d):
 	def _to_etree(d, root):
 		if not d:
 			pass
-		elif isinstance(d, str) or isinstance(d,unicode):
+		elif isinstance(d, str):
 			root.text = d
 		elif isinstance(d, dict):
 			for k,v in d.items():
-				assert isinstance(k, str) or isinstance(k, unicode)
+				assert isinstance(k, str)
 				if k.startswith('#'):
-					assert k == '#text' and isinstance(v, str) or isinstance(v, unicode)
+					assert k == '#text' and isinstance(v, str)
 					root.text = v
 				elif k.startswith('@'):
-					assert isinstance(v, str) or isinstance(v, unicode)
+					assert isinstance(v, str)
 					root.set(k[1:], v)
 				elif isinstance(v, list):
 					for e in v:
@@ -4690,7 +4695,7 @@ def dict_to_etree(d):
 	return node
 
 def get_crc32_from_string(string_in):
-	return '%X'%(zlib.crc32(str(string_in)) & 0xFFFFFFFF)
+	return '%X'%(zlib.crc32(bytes(string_in.encode('utf-8'))) & 0xFFFFFFFF)
 
 def get_crc32(filename):
 	# return zlib_csum(filename, zlib.crc32)
