@@ -3319,7 +3319,7 @@ class iagl_download(object):
 				else:
 					line2_description = ''
 				# f = open(dest, 'wb')
-				with closing(xbmcvfs.File(dest,'w')) as game_file:
+				with closing(xbmcvfs.File(dest,'wb')) as game_file:
 					size = 0
 					last_time = time.time()
 					for chunk in r.iter_content(self.chunk_size):
@@ -3330,7 +3330,7 @@ class iagl_download(object):
 						# size = size + self.chunk_size
 						size = size+len(chunk) #chunks may be a different size when streaming
 						percent = 100.0 * size / (est_filesize + 1) #Added 1 byte to avoid div by zero
-						game_file.write(chunk)
+						game_file.write(bytearray(chunk))
 						now = time.time()
 						diff = now - last_time
 						if diff > 1:
@@ -3392,7 +3392,7 @@ class iagl_download(object):
 			else:
 				line2_description = ''
 			# f = open(dest, 'wb')
-			with closing(xbmcvfs.File(dest,'w')) as game_file:
+			with closing(xbmcvfs.File(dest,'wb')) as game_file:
 				size = 0
 				last_time = time.time()
 				for chunk in r.iter_content(self.chunk_size):
@@ -3403,7 +3403,7 @@ class iagl_download(object):
 					# size = size + self.chunk_size
 					size = size+len(chunk) #chunks may be a different size when streaming
 					percent = 100.0 * size / (est_filesize + 1) #Added 1 byte to avoid div by zero
-					game_file.write(chunk)
+					game_file.write(bytearray(chunk))
 					now = time.time()
 					diff = now - last_time
 					if diff > 1:

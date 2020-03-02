@@ -1,4 +1,4 @@
-from kodi_six import xbmc, xbmcgui, xbmcvfs
+import xbmc, xbmcgui, xbmcvfs
 import os
 
 WIN = xbmcgui.Window(10000)
@@ -7,7 +7,7 @@ if not WIN.getProperty('iagl.script_started'):
 	try:
 		xbmc.log(msg='IAGL:  Clear cache script started', level=xbmc.LOGDEBUG)
 		import shutil
-		from main import iagl_utils
+		from resources.lib.main import iagl_utils
 		IAGL = iagl_utils() #IAGL utils Class
 		success = list()
 		try:
