@@ -16,11 +16,11 @@ import requests.packages.urllib3
 requests.packages.urllib3.disable_warnings() #Silence uneeded warnings
 
 try:
-	from scandir import scandir
-	scandir_import_success = True
+	from pathlib import Path
+	pathlib_import_success = True
 except:
-	xbmc.log(msg='IAGL:  Using XBMCVFS for directory size.  You suck Android.', level=xbmc.LOGDEBUG)
-	scandir_import_success = False
+	xbmc.log(msg='IAGL:  Using XBMCVFS for directory size.', level=xbmc.LOGDEBUG)
+	pathlib_import_success = False
 try:
 	from urllib.parse import quote_plus as url_quote
 	from urllib.parse import unquote_plus as url_unquote
@@ -31,10 +31,6 @@ except:
 	from urllib import unquote_plus as url_unquote
 	from urllib import urlencode as url_encode
 	xbmc.log(msg='IAGL:  Using python 2 urrlib', level=xbmc.LOGDEBUG)
-# try:
-#     import cPickle as pickle
-# except ImportError:
-# 	import pickle
 
 class iagl_utils(object):
 	def __init__(self):
@@ -251,14 +247,8 @@ class iagl_utils(object):
 			new_game_lists['dat_filesize'] = list()
 			new_game_lists['total_num_archives'] = None
 			for ff in [x for x in files if 'xml' in x.lower()]:
-				with closing(xbmcvfs.File(os.path.join(self.get_addon_dat_folder_path(),ff))) as fo:
-					byte_string = bytes(fo.readBytes(10000)) #Read first ~10kb of dat file to get header
-				if b'</header>' in byte_string:
-					try:
-						header_string = byte_string.split(b'</header>')[0].decode('utf-8') 
-					except Exception as exc:
-						xbmc.log(msg='IAGL Error:  Encoding error in file %(ff)s.  Exception %(exc)s' % {'ff': ff, 'exc': exc}, level=xbmc.LOGERROR)
-						header_string = byte_string.split(b'</header>')[0].decode('utf-8',errors='ignore') #Try again ignoring whatever character python doesnt like.  Probably not foolproof
+				header_string = self.get_xml_header_string(os.path.join(self.get_addon_dat_folder_path(),ff))
+				if header_string is not None:
 					for kk in new_game_lists.keys():
 						if kk in self.dat_file_header_keys:
 							new_game_lists[kk].append(header_string.split('<%(tag)s>' % {'tag':kk})[-1].split('</%(tag)s>' % {'tag':kk})[0])
@@ -395,6 +385,20 @@ class iagl_utils(object):
 		
 		return delete_success
 
+	def get_xml_header_string(self,filename_in):
+		header_string = None
+		with closing(xbmcvfs.File(xbmc.translatePath(filename_in),'r')) as file_in:
+			byte_string = bytes(file_in.readBytes(self.header_byte_size)) #Read first ~50kb of dat file to get header
+			if b'</header>' in byte_string:
+				try:
+					header_string = byte_string.split(b'</header>')[0].decode('utf-8')
+				except Exception as exc:
+					xbmc.log(msg='IAGL Error:  Error reading XML file header %(ff)s.  Exception %(exc)s' % {'ff': filename_in, 'exc': exc}, level=xbmc.LOGERROR)
+					header_string = byte_string.split(b'</header>')[0].decode('utf-8',errors='ignore') #Try again ignoring whatever character python doesnt like.  Probably not foolproof
+			else:
+				xbmc.log(msg='IAGL Error:  No XML header was found in file %(ff)s.  Exception %(exc)s' % {'ff': filename_in, 'exc': exc}, level=xbmc.LOGDEBUG)
+		return header_string
+
 	def get_list_of_favorites_lists(self):
 		dirs, files = xbmcvfs.listdir(self.get_dat_folder_path())
 
@@ -407,15 +411,8 @@ class iagl_utils(object):
 		favorites_lists['total_num_archives'] = None
 
 		for ff in [x for x in files if 'xml' in x.lower()]:
-			with closing(xbmcvfs.File(os.path.join(self.get_dat_folder_path(),ff))) as fo:
-				byte_string = bytes(fo.readBytes(10000)) #Read first ~10kb of dat file to get header
-			# header_string = byte_string.decode('utf-8')
-			if b'</header>' in byte_string and b'<!-- IAGL Favorites List -->' in byte_string:
-				try:
-					header_string = byte_string.split(b'</header>')[0].decode('utf-8')
-				except Exception as exc:
-					xbmc.log(msg='IAGL Error:  Encoding error in file %(ff)s.  Exception %(exc)s' % {'ff': ff, 'exc': exc}, level=xbmc.LOGERROR)
-					header_string = byte_string.split(b'</header>')[0].decode('utf-8',errors='ignore') #Try again ignoring whatever character python doesnt like.  Probably not foolproof
+			header_string = self.get_xml_header_string(os.path.join(self.get_dat_folder_path(),ff))
+			if header_string is not None and '<!-- IAGL Favorites List -->' in header_string:
 				for kk in favorites_lists.keys():
 					if kk in self.dat_file_header_keys:
 						favorites_lists[kk].append(header_string.split('<%(tag)s>' % {'tag':kk})[-1].split('</%(tag)s>' % {'tag':kk})[0])
@@ -446,21 +443,24 @@ class iagl_utils(object):
 		# cache_filename = os.path.join(self.get_list_cache_path(),game_list_id+'_'+current_crc32+'.pickle')
 		cache_filename = os.path.join(self.get_list_cache_path(),game_list_id+'_'+current_crc32+'.json')
 		try:
-			with open(cache_filename, 'wb') as fn:
-			    # Pickle the 'data' dictionary using the highest protocol available.
-			    # pickle.dump(game_dict, fn, pickle.HIGHEST_PROTOCOL)
-			    json.dump(game_dict,fn)
+			# with open(cache_filename, 'wb') as fn:
+			with closing(xbmcvfs.File(cache_filename,'wb')) as fn:
+				# Pickle the 'data' dictionary using the highest protocol available.
+				# pickle.dump(game_dict, fn, pickle.HIGHEST_PROTOCOL)
+				fn.write(bytearray(json.dumps(game_dict).encode('utf-8')))
+				# json.dump(game_dict,fn)
 			xbmc.log(msg='IAGL:  Saving disk cache for %(game_list_id)s, cache file %(cache_filename)s' % {'game_list_id': game_list_id, 'cache_filename': cache_filename}, level=xbmc.LOGDEBUG)
-		except:
+		except Exception as exc1: #except Exception, (exc):
 			try:
 				xbmcvfs.delete(cache_filename)
-			except Exception as exc: #except Exception, (exc):
-				xbmc.log(msg='IAGL Error:  The disk cache file %(cache_filename)s may be corrupted. Exception %(exc)s' % {'cache_filename': cache_filename, 'exc': exc}, level=xbmc.LOGERROR)
-			xbmc.log(msg='IAGL:  Unable to save disk cache for %(game_list_id)s, cache file %(cache_filename)s' % {'game_list_id': game_list_id, 'cache_filename': cache_filename}, level=xbmc.LOGERROR)
+			except Exception as exc2: #except Exception, (exc):
+				xbmc.log(msg='IAGL Error:  The disk cache file %(cache_filename)s may be corrupted. Exception %(exc)s' % {'cache_filename': cache_filename, 'exc': exc2}, level=xbmc.LOGERROR)
+			xbmc.log(msg='IAGL:  Unable to save disk cache for %(game_list_id)s, cache file %(cache_filename)s. Exception %(exc)s' % {'game_list_id': game_list_id, 'cache_filename': cache_filename, 'exc': exc1}, level=xbmc.LOGERROR)
 
 	def get_games_dict_from_cache(self,cache_filename):
 		try:
-			with open(os.path.join(self.get_list_cache_path(),cache_filename), 'rb') as fn:
+			# with open(os.path.join(self.get_list_cache_path(),cache_filename), 'rb') as fn:
+			with closing(xbmcvfs.File(os.path.join(self.get_list_cache_path(),cache_filename),'rb')) as fn:
 				# return pickle.load(fn)
 				return json.load(fn)
 		except Exception as exc: #except Exception, (exc):
@@ -699,7 +699,8 @@ class iagl_utils(object):
 
 		if cache_list_option and xbmcvfs.exists(dat_file_cachename):
 			try:
-				with open(dat_file_cachename, 'rb') as fn:
+				# with open(dat_file_cachename, 'rb') as fn:
+				with closing(xbmcvfs.File(dat_file_cachename,'rb')) as fn:
 					# game_lists = pickle.load(fn)
 					game_lists = json.load(fn)
 					xbmc.log(msg='IAGL:  DAT file list cache found, cache file %(dat_file_cachename)s' % {'dat_file_cachename': dat_file_cachename}, level=xbmc.LOGDEBUG)
@@ -720,14 +721,8 @@ class iagl_utils(object):
 			game_lists['total_num_archives'] = None
 
 			for ff in [x for x in files if 'xml' in x.lower()]:
-				with closing(xbmcvfs.File(os.path.join(self.get_dat_folder_path(),ff))) as fo:
-					byte_string = bytes(fo.readBytes(10000)) #Read first ~10kb of dat file to get header
-				if b'</header>' in byte_string:
-					try:
-						header_string = byte_string.split(b'</header>')[0].decode('utf-8')
-					except Exception as exc:
-						xbmc.log(msg='IAGL Error:  Encoding error in file %(ff)s.  Exception %(exc)s' % {'ff': ff, 'exc': exc}, level=xbmc.LOGERROR)
-						header_string = byte_string.split(b'</header>')[0].decode('utf-8',errors='ignore') #Try again ignoring whatever character python doesnt like.  Probably not foolproof
+				header_string = self.get_xml_header_string(os.path.join(self.get_dat_folder_path(),ff))
+				if header_string is not None:
 					for kk in game_lists.keys():
 						if kk in self.dat_file_header_keys:
 							game_lists[kk].append(header_string.split('<%(tag)s>' % {'tag':kk})[-1].split('</%(tag)s>' % {'tag':kk})[0])
@@ -745,8 +740,8 @@ class iagl_utils(object):
 
 			if cache_list_option:
 				try:
-					with open(dat_file_cachename, 'wb') as fn:
-					    json.dump(game_lists,fn)
+					with closing(xbmcvfs.File(dat_file_cachename,'wb')) as fn:
+						fn.write(bytearray(json.dumps(game_lists).encode('utf-8')))
 					xbmc.log(msg='IAGL:  Saving dat file listing to cache in cache file %(dat_file_cachename)s' % {'dat_file_cachename': dat_file_cachename}, level=xbmc.LOGDEBUG)
 				except:
 					try:
@@ -760,7 +755,6 @@ class iagl_utils(object):
 		game_listitems = list()
 		game_lists_dict = self.get_game_lists()
 		#Ensure the return categories object is a list so it can be iterated on
-		print(type(return_categories))
 		if type(return_categories) is str:
 			return_cats = [return_categories]
 		else:
@@ -1764,7 +1758,7 @@ class iagl_utils(object):
 			try:
 				crc_compare = json.loads(str(xbmcgui.Window(self.windowid).getProperty('iagl_current_crc')))
 			except:
-				crc_compare = Nonek
+				crc_compare = None
 			if crc_compare is not None and crc_compare == current_crc32:
 				try:
 					games_dict = json.loads(xbmcgui.Window(self.windowid).getProperty('iagl_game_list'))
@@ -2303,7 +2297,8 @@ class iagl_utils(object):
 		games_dict = list()
 		if xbmcvfs.exists(game_history_filename):
 			try:
-				with open(game_history_filename, 'rb') as fn:
+				# with open(game_history_filename, 'rb') as fn:
+				with closing(xbmcvfs.File(game_history_filename,'rb')) as fn:
 					# games_dict = pickle.load(fn)
 					games_dict = json.load(fn)
 					xbmc.log(msg='IAGL:  History file list cache found, cache file %(game_history_filename)s' % {'game_history_filename': game_history_filename}, level=xbmc.LOGDEBUG)
@@ -2314,10 +2309,12 @@ class iagl_utils(object):
 	def save_game_history(self,games_dict):
 		game_history_filename = os.path.join(self.get_list_cache_path(),self.game_history_filename)
 		try:
-			with open(game_history_filename, 'wb') as fn:
+			# with open(game_history_filename, 'w') as fn:
 				# Pickle the 'data' dictionary using the highest protocol available.
 				# pickle.dump(games_dict, fn, pickle.HIGHEST_PROTOCOL)
-				json.dump(games_dict,fn)
+				# json.dump(games_dict,fn)
+			with closing(xbmcvfs.File(game_history_filename,'wb')) as fn:
+				fn.write(bytearray(json.dumps(games_dict).encode('utf-8')))
 			xbmc.log(msg='IAGL:  Saving game history cache file', level=xbmc.LOGDEBUG)
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  Unable to save game history cache file %(cache_filename)s.  Exception %(exc)s' % {'cache_filename': game_history_filename,'exc': exc}, level=xbmc.LOGERROR)
@@ -2575,41 +2572,23 @@ class iagl_utils(object):
 
 	def update_xml_header(self,current_filename,current_key,new_value,silent_update=False):
 
-		starting_tag = '<%(current_key)s>'%{'current_key':current_key}
-		ending_tag = '</%(current_key)s>'%{'current_key':current_key}
-		file_ending_tag = '</datafile>'
-
+		tag_re = '<%(current_key)s>.*?</%(current_key)s>'%{'current_key':current_key}
 		new_value_line = '<%(current_key)s>%(new_value)s</%(current_key)s>'%{'current_key':current_key,'new_value':new_value.replace('\r\n','[CR]').replace('\r','[CR]').replace('\n','[CR]')}
 		value_updated = False
 		last_line_written = False
 
-		with open(current_filename,'r') as input_file, open(os.path.join(self.get_dat_folder_path(),'temp.xml'), 'w') as output_file:
-			for line in input_file:
-				if not value_updated:  #Only update the first instance of the requested tag
-					if starting_tag in line and ending_tag in line:
-						try:
-							output_file.write('%(start_value)s%(new_value)s%(end_value)s' % {'start_value': line.split(starting_tag)[0], 'new_value': new_value_line, 'end_value':line.split(ending_tag)[-1]})
-							value_updated = True
-							if file_ending_tag in line:  #Of course android does something totally unexpected with standard python code
-								last_line_written = True
-						except Exception as exc1: #except Exception, (exc):
-							try:
-								xbmc.log(msg='IAGL:  XML %(current_filename)s write error.  Exception %(exc)s.  Attempting to write again.' % {'current_filename': current_filename, 'exc': exc1}, level=xbmc.LOGERROR)
-								output_file.write(new_value_line)
-								value_updated = True
-								if file_ending_tag in line:  #Of course android does something totally unexpected with standard python code
-									last_line_written = True
-							except Exception as exc2: #except Exception, (exc):
-								value_updated = False
-								xbmc.log(msg='IAGL:  XML %(current_filename)s write error.  Exception %(exc)s' % {'current_filename': current_filename, 'exc': exc2}, level=xbmc.LOGERROR)
-					else:
-						output_file.write(line)
-						if file_ending_tag in line:
-							last_line_written = True
+		with closing(xbmcvfs.File(xbmc.translatePath(current_filename),'r')) as file_in, closing(xbmcvfs.File(xbmc.translatePath(os.path.join(self.get_dat_folder_path(),'temp.xml')),'w')) as output_file:
+			byte_string_1 = bytes(file_in.readBytes(50000)) #Read first ~50kb of dat file to get header
+			output_file.write(bytearray(re.sub(tag_re,new_value_line,byte_string_1.decode('utf-8')).encode('utf-8')))
+			if byte_string_1 and re.sub(tag_re,new_value_line,byte_string_1.decode('utf-8')) != byte_string_1.decode('utf-8'):
+				value_updated = True
+			while byte_string_1 or not last_line_written:
+				byte_string_2 = file_in.readBytes(50000)
+				if not byte_string_2:
+					last_line_written = True
+					break
 				else:
-					output_file.write(line)
-					if file_ending_tag in line:
-						last_line_written = True
+					output_file.write(bytearray(byte_string_2))
 
 		if value_updated and last_line_written: #Success
 			if xbmcvfs.delete(current_filename): #Current file was deleted
@@ -2704,9 +2683,6 @@ class iagl_utils(object):
 			current_game_name = favorite_dict['games']['game'].get('@name')
 			favorite_xml = ET.tostring(dict_to_etree(favorite_dict)).decode('utf-8')
 			crc_string = get_crc32_from_string(''.join(sorted([x for x in favorite_dict['games']['game'].values() if isinstance(x, str)]))) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
-			print('ztest')
-			print(type(favorite_xml))
-			print(favorite_xml)
 			if '<games>' in favorite_xml and '</games>' in favorite_xml:
 				favorite_header = '<!-- IAGL Favorite XXXCRCXXX -->'.replace('XXXCRCXXX',crc_string)
 				favorite_xml = favorite_xml.replace('<games>',favorite_header).replace('</games>',favorite_header).replace('><','>\r\n\t\t<').replace('\t\t<game ','\t<game ').replace('\t\t</game>','\t</game>').replace('\t\t<!--','<!--')+'\r\n</datafile>'
@@ -2763,7 +2739,7 @@ class iagl_utils(object):
 			current_filename = os.path.join(self.get_dat_folder_path(),url_unquote(game_list_id_in)+'.xml')
 			file_contents = None
 			if xbmcvfs.exists(current_filename):
-				with closing(xbmcvfs.File(current_filename)) as content_file:
+				with closing(xbmcvfs.File(current_filename,'r')) as content_file:
 					byte_string = bytes(content_file.readBytes())
 				try:
 					file_contents = byte_string.decode('utf-8',errors='ignore')
@@ -3953,7 +3929,7 @@ class iagl_download(object):
 
 	def read_pointer_file(self,filename_in):
 		xbmc.log(msg='IAGL:  Reading pointer file %(filename_in)s'% {'filename_in': filename_in}, level=xbmc.LOGDEBUG)
-		with closing(xbmcvfs.File(filename_in)) as content_file:
+		with closing(xbmcvfs.File(filename_in,'r')) as content_file:
 			byte_string = bytes(content_file.readBytes())
 		try:
 			file_contents = byte_string.decode('utf-8',errors='ignore')
@@ -3970,7 +3946,7 @@ class iagl_download(object):
 			xbmc.log(msg='IAGL:  The file %(filename_in)s was empty, deleted.'% {'filename_in': self.current_saved_files[-1]}, level=xbmc.LOGDEBUG)
 		if self.current_saved_files_size[-1] > self.zero_byte_file_size and self.current_saved_files_size[-1] <= self.small_file_byte_size:
 			try:
-				with closing(xbmcvfs.File(self.current_saved_files[-1])) as content_file:
+				with closing(xbmcvfs.File(self.current_saved_files[-1],'r')) as content_file:
 					byte_string = bytes(content_file.readBytes())
 				try:
 					file_contents = byte_string.decode('utf-8',errors='ignore')  #If this doesn't work, then it's binary data and likely a valid file
@@ -4705,6 +4681,7 @@ def zlib_csum(filename, func):
 	csum = None
 	# chunk_size = 1024
 	chunk_size = 10485760 #10MB
+	chunk_size = 524288 #Efficiency check
 	# with open(filename, 'rb') as f:
 	with io.FileIO(filename, 'rb') as f: #Using FileIO as open fails on Android
 		try:
@@ -4728,7 +4705,7 @@ def zlib_csum_xbmcvfs(filename, func):
 	csum = None
 	# chunk_size = 1024
 	chunk_size = 10485760 #10MB
-	with closing(xbmcvfs.File(filename)) as f:
+	with closing(xbmcvfs.File(filename,'r')) as f:
 		try:
 			chunk = bytes(f.readBytes(chunk_size))
 			if len(chunk)>0:
@@ -4748,37 +4725,37 @@ def zlib_csum_xbmcvfs(filename, func):
 		return '%X'%(csum & 0xFFFFFFFF)
 
 def get_directory_size(directory_in):
-	if scandir_import_success:
-		return get_directory_size_scandir(directory_in)
+	if pathlib_import_success:
+		return get_directory_size_pathlib(directory_in)
 	else:
 		return get_directory_size_xbmcvfs(directory_in)
 
-def get_directory_size_scandir(directory_in):
+def get_directory_size_pathlib(directory_in):
 	current_size = 0
-	for entry in scandir(directory_in):
-		if entry.is_file():
-			current_size += entry.stat().st_size
-		elif entry.is_dir():
-			current_size += get_directory_size(entry.path)
+	try:
+		current_size = sum(f.stat().st_size for f in Path(directory_in).glob('**/*') if f.is_file())
+	except Exception as exc: #except Exception, (exc):
+		xbmc.log(msg='IAGL:  Unable to get folder size %(directory_in)s using pathlib.  Exception %(exc)s' % {'directory_in': directory_in, 'exc': exc}, level=xbmc.LOGDEBUG)
+		current_size = get_directory_size_xbmcvfs(directory_in) #Attempting to get path size with xbmcvfs instead
 	return current_size
 
 def get_directory_size_xbmcvfs(directory_in): #Twice as slow as the method above, but maybe safer / more compatible?
 	current_size = 0
 	dirs_in_dir, files_in_dir = xbmcvfs.listdir(os.path.join(directory_in,''))
 	for ff in files_in_dir:
-		current_size += xbmcvfs.Stat(os.path.join(directory_in,ff)).st_size()
+		current_size += xbmcvfs.Stat(xbmc.translatePath(os.path.join(directory_in,ff))).st_size()
 	for dd in dirs_in_dir:
-		current_size += get_directory_size_xbmcvfs(os.path.join(directory_in,dd))
+		current_size += get_directory_size_xbmcvfs(xbmc.translatePath(os.path.join(directory_in,dd)))
 	return current_size
 
-def get_all_files_in_directory(directory_in): #Dont use this by default, assume it could be a 'special' path
-	current_files = list()
-	for entry in scandir(directory_in):
-		if entry.is_file():
-			current_files.append(entry.path)
-		elif entry.is_dir():
-			current_files = current_files+get_all_files_in_directory(entry.path)
-	return current_files
+# def get_all_files_in_directory(directory_in): #Dont use this by default, assume it could be a 'special' path
+# 	current_files = list()
+# 	for entry in scandir(directory_in):
+# 		if entry.is_file():
+# 			current_files.append(entry.path)
+# 		elif entry.is_dir():
+# 			current_files = current_files+get_all_files_in_directory(entry.path)
+# 	return current_files
 
 def get_all_files_in_directory_xbmcvfs(directory_in): #Twice as slow as the method above, but maybe safer / more compatible?
 	current_files = list()
