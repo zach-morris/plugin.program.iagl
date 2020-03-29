@@ -513,12 +513,12 @@ msgid "LibreElec Remix"
 msgstr "LibreElec Remix"
 
 msgctxt "#30120"
-msgid "LibreElec Sx05RE"
-msgstr "LibreElec Sx05RE"
+msgid "RetroELEC"
+msgstr "RetroELEC"
 
 msgctxt "#30121"
-msgid "LibreElec S905 Addon"
-msgstr "LibreElec S905 Addon"
+msgid "Sx05RE"
+msgstr "Sx05RE"
 
 msgctxt "#30122"
 msgid "Gamestarter Addon"
@@ -527,6 +527,38 @@ msgstr "Gamestarter Addon"
 msgctxt "#30123"
 msgid "Android"
 msgstr "Android"
+
+msgctxt "#30514"
+msgid "Android Aarch64"
+msgstr "Android Aarch64"
+
+msgctxt "#30515"
+msgid "RetroPie"
+msgstr "RetroPie"
+
+msgctxt "#30516"
+msgid "FS-UAE"
+msgstr "FS-UAE"
+
+msgctxt "#30517"
+msgid "Project 64 (Win)"
+msgstr "Project 64 (Win)"
+
+msgctxt "#30518"
+msgid "Dolphin"
+msgstr "Dolphin"
+
+msgctxt "#30519"
+msgid "MAME Standalone"
+msgstr "MAME Standalone"
+
+msgctxt "#30520"
+msgid "DEMUL (Win)"
+msgstr "DEMUL (Win)"
+
+msgctxt "#30521"
+msgid "ePSXe"
+msgstr "ePSXe"
 
 msgctxt "#30124"
 msgid "Start with Context"
@@ -800,6 +832,234 @@ msgctxt "#30193"
 msgid "Organize Cache Folder using System Folders"
 msgstr "Organize Cache Folder using System Folders"
 
+msgctxt "#30522"
+msgid "General format and launch settings"
+msgstr "General format and launch settings"
+
+msgctxt "#30523"
+msgid "External launch parameter settings"
+msgstr "External launch parameter settings"
+
+msgctxt "#30524"
+msgid "Force Kodi viewtypes"
+msgstr "Force Kodi viewtypes"
+
+msgctxt "#30525"
+msgid "External Retroarch Netplay settings"
+msgstr "External Retroarch Netplay settings"
+
+msgctxt "#30526"
+msgid "Run IAGL setup wizard"
+msgstr "Run IAGL setup wizard"
+
+msgctxt "#30527"
+msgid "Use Hyperlinks to other Lists"
+msgstr "Use Hyperlinks to other Lists"
+
+msgctxt "#30528"
+msgid "Copies all Data"
+msgstr "Copies all Data"
+
+msgctxt "#30529"
+msgid "Copies all Data, adds Post DL Command Override"
+msgstr "Copies all Data, adds Post DL Command Override"
+
+msgctxt "#30530"
+msgid "Enable cache lists to disk for faster loading.  Do not disable normally."
+msgstr "Enable cache lists to disk for faster loading.  Do not disable normally."
+
+msgctxt "#30531"
+msgid "Enable cache current list to RAM for faster loading.  Do not disable normally."
+msgstr "Enable cache current list to RAM for faster loading.  Do not disable normally."
+
+msgctxt "#30532"
+msgid "Define what is displayed on the addon front page"
+msgstr "Define what is displayed on the addon front page"
+
+msgctxt "#30533"
+msgid "Define what is displayed for each game lists front page"
+msgstr "Define what is displayed for each game lists front page"
+
+msgctxt "#30534"
+msgid "Define what is displayed for each game in a list"
+msgstr "Define what is displayed for each game in a list"
+
+msgctxt "#30535"
+msgid "Remove tags from a game titles. Ex:  [I]Mario (USA)[/I]  becomes  [I]Mario[/I]"
+msgstr "Remove tags from a game titles. Ex:  [I]Mario (USA)[/I]  becomes  [I]Mario[/I]"
+
+msgctxt "#30536"
+msgid "Define how many games are listed per page"
+msgstr "Define how many games are listed per page"
+
+msgctxt "#30537"
+msgid "Define how many games to save in last played history"
+msgstr "Define how many games to save in last played history"
+
+msgctxt "#30538"
+msgid "Define action to take if a game file is found to exist locally"
+msgstr "Define action to take if a game file is found to exist locally"
+
+msgctxt "#30539"
+msgid "Define action to take when a game is selected in a list"
+msgstr "Define action to take when a game is selected in a list"
+
+msgctxt "#30540"
+msgid "Show or hide the Search Function list item"
+msgstr "Show or hide the Search Function list item"
+
+msgctxt "#30541"
+msgid "Show or hide the Random Play Function list item"
+msgstr "Show or hide the Random Play Function list item
+
+msgctxt "#30542"
+msgid "Show or hide the Last Played History list item"
+msgstr "Show or hide the Last Played History list item"
+
+msgctxt "#30543"
+msgid "Show or hide the IAGL Favorites lists item on the front page"
+msgstr "Show or hide the IAGL Favorites lists item on the front page"
+
+msgctxt "#30544"
+msgid "Autoplay the game trailer video on the game info page.  Requires YouTube."
+msgstr "Autoplay the game trailer video on the game info page.  Requires YouTube."
+
+msgctxt "#30545"
+msgid "Append the source game list name to Search and Random results.  Ex:  [I]Mario[/I]  becomes  [I]NES - Mario[/I]"
+msgstr "Append the source game list name to Search and Random results.  Ex:  [I]Mario[/I]  becomes  [I]NES - Mario[/I]"
+
+msgctxt "#30546"
+msgid "Define the size of the downloaded game file cache.  The cache is purged when the limit is reached."
+msgstr "Define the size of the downloaded game file cache.  The cache is purged when the limit is reached."
+
+msgctxt "#30547"
+msgid "Some game archives require login.  Enable login to enter credentials"
+msgstr "Some game archives require login.  Enable login to enter credentials"
+
+msgctxt "#30548"
+msgid "Some game archives require login.  Enter your archive.org email address"
+msgstr "Some game archives require login.  Enter your archive.org email address"
+
+msgctxt "#30549"
+msgid "Some game archives require login.  Enter your archive.org password."
+msgstr "Some game archives require login.  Enter your archive.org password"
+
+msgctxt "#30550"
+msgid "Define the operating system or addon used to launch external emulators"
+msgstr "Define the operating system or addon used to launch external emulators"
+
+msgctxt "#30551"
+msgid "If enabled, a shell script will exit Kodi, launch the game, then restart Kodi"
+msgstr "If enabled, a shell script will exit Kodi, launch the game, then restart Kodi"
+
+msgctxt "#30552"
+msgid "If enabled, a shell script will pause Kodi, launch the game, then restart Kodi"
+msgstr "If enabled, a shell script will pause Kodi, launch the game, then restart Kodi"
+
+msgctxt "#30553"
+msgid "Point to where the retroarch executable is installed"
+msgstr "Point to where the retroarch executable is installed"
+
+msgctxt "#30554"
+msgid "Point to where the retroarch system folder is located"
+msgstr "Point to where the retroarch system folder is located"
+
+msgctxt "#30555"
+msgid "Point to where the retroarch config file is located"
+msgstr "Point to where the retroarch config file is located"
+
+msgctxt "#30556"
+msgid "Choose additional emulator application for launching"
+msgstr "Choose additional emulator application for launching"
+
+msgctxt "#30557"
+msgid "Point to where the additional emulator executable is installed"
+msgstr "Point to where the additional emulator executable is installed"
+
+msgctxt "#30558"
+msgid "Enable netplay commands when launching external retroarch"
+msgstr "Enable netplay commands when launching external retroarch"
+
+msgctxt "#30559"
+msgid "Choose to be the netplay host (player 1) or the client (player 2) or a spectator (just watching)"
+msgstr "Choose to be the netplay host (player 1) or the client (player 2) or a spectator (just watching)"
+
+msgctxt "#30560"
+msgid "Define your players name"
+msgstr "Define your players name"
+
+msgctxt "#30561"
+msgid "Define the netplay hosts IP address to connect to"
+msgstr "Define the netplay hosts IP address to connect to"
+
+msgctxt "#30562"
+msgid "Define the netplay hosts IP port to connect through (leave as default if unsure)"
+msgstr "Define the netplay hosts IP port to connect through (leave as default if unsure)"
+
+msgctxt "#30563"
+msgid "Enable or disable netplay sync frames (leave as default if unsure)"
+msgstr "Enable or disable netplay sync frames (leave as default if unsure)"
+
+msgctxt "#30564"
+msgid "Define External launching or Kodi Retroplayer for running the wizard"
+msgstr "Define External launching or Kodi Retroplayer for running the wizard"
+
+msgctxt "#30565"
+msgid "Run the wizard to change settings for all game lists for either external launching or Kodi Retroplayer"
+msgstr "Run the wizard to change settings for all game lists for either external launching or Kodi Retroplayer"
+
+msgctxt "#30566"
+msgid "Search and random queries will warn you if the query could take a while, you can disable that warning here"
+msgstr "Search and random queries will warn you if the query could take a while, you can disable that warning here""
+
+msgctxt "#30567"
+msgid "Post download processing commands are hidden by default, you can enable them here"
+msgstr "Post download processing commands are hidden by default, you can enable them here"
+
+msgctxt "#30568"
+msgid "If enabled, your temporary cache folder will be organized into folders (sometimes necessary for config override settings)"
+msgstr "If enabled, your temporary cache folder will be organized into folders (sometimes necessary for config override settings)"
+
+msgctxt "#30569"
+msgid "Change the launch command method for android here (do not change if unsure)"
+msgstr "Change the launch command method for android here (do not change if unsure)"
+
+msgctxt "#30570"
+msgid "If enabled, Retroarch will be closed first if running in the background (leave as default if unsure)"
+msgstr "If enabled, Retroarch will be closed first if running in the background (leave as default if unsure)"
+
+msgctxt "#30571"
+msgid "If enabled, Kodi videos and audio will be stopped before launching a game with Retroplayer (leave as default if unsure)"
+msgstr "If enabled, Kodi videos and audio will be stopped before launching a game with Retroplayer (leave as default if unsure)"
+
+msgctxt "#30572"
+msgid "Change how data is copied for IAGL favorites (leave as default if unsure)"
+msgstr "Change how data is copied for IAGL favorites (leave as default if unsure)"
+
+msgctxt "#30573"
+msgid "Change the addon definitions to provide games only (leave as default if unsure)"
+msgstr "Change the addon definitions to provide games only (leave as default if unsure)"
+
+msgctxt "#30574"
+msgid  "Change the addon definitions to provide videos and games (leave as default if unsure)"
+msgstr "Change the addon definitions to provide videos and games (leave as default if unsure)"
+
+msgctxt "#30575"
+msgid "Change the addon definitions to provide programs and games (leave as default if unsure)"
+msgstr "Change the addon definitions to provide programs and games (leave as default if unsure)"
+
+msgctxt "#30576"
+msgid "Change the addon definitions to provide a different content type (leave as default if unsure)"
+msgstr "Change the addon definitions to provide a different content type (leave as default if unsure)"
+
+msgctxt "#30577"
+msgid "Running this script will unhide all previously hidden game lists"
+msgstr "Running this script will unhide all previously hidden game lists"
+
+msgctxt "#30578"
+msgid "Running this script will clear all of the IAGL cache"
+msgstr "Running this script will clear all of the IAGL cache"
+
 #
 #General
 #
@@ -839,6 +1099,59 @@ msgstr "Default"
 msgctxt "#30208"
 msgid "Custom Path"
 msgstr "Custom Path"
+
+msgctxt "#30500"
+msgid "List All"
+msgstr "List All"
+
+msgctxt "#30501"
+msgid "10"
+msgstr "10"
+
+msgctxt "#30502"
+msgid "25"
+msgstr "25"
+
+msgctxt "#30503"
+msgid "50"
+msgstr "50"
+
+msgctxt "#30504"
+msgid "100"
+msgstr "100"
+
+msgctxt "#30505"
+msgid "150"
+msgstr "150"
+
+msgctxt "#30506"
+msgid "200"
+msgstr "200"
+
+msgctxt "#30507"
+msgid "250"
+msgstr "250"
+
+msgctxt "#30508"
+msgid "300"
+msgstr "300"
+
+msgctxt "#30509"
+msgid "350"
+msgstr "350"
+
+msgctxt "#30510"
+msgid "400"
+msgstr "400"
+
+msgctxt "#30511"
+msgid "450"
+msgstr "450"
+
+msgctxt "#30512"
+msgid "500"
+msgstr "500"
+
 
 #
 #Dialogs
