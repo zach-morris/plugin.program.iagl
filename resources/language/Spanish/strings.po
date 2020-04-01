@@ -247,11 +247,11 @@ msgstr "Seleccionar de un listado"
 
 msgctxt "#30059"
 msgid "Browse All Lists"
-msgstr "Explorar todas la listas"
+msgstr "Explorar todas las listas"
 
 msgctxt "#30060"
 msgid "Browse by Category"
-msgstr "Explorar categorias"
+msgstr "Explorar categorías"
 
 msgctxt "#30061"
 msgid "One Big List"
@@ -263,7 +263,7 @@ msgstr "Orden alfabético"
 
 msgctxt "#30063"
 msgid "Group by Genre"
-msgstr "Por genero"
+msgstr "Por género"
 
 msgctxt "#30064"
 msgid "Group by Year"
@@ -363,7 +363,7 @@ msgstr "No volver a descargar"
 
 msgctxt "#30088"
 msgid "ReDownload and Overwrite"
-msgstr "Volver a descargar y sobreescribir"
+msgstr "Volver a descargar y sobrescribir"
 
 msgctxt "#30089"
 msgid "Download and Launch"
@@ -535,7 +535,7 @@ msgstr "Retroplayer Kodi"
 
 msgctxt "#30131"
 msgid "Android External Launch Command Type"
-msgstr "Tipo de comando lanzador externo Android"
+msgstr "Tipo de comando Android para lanzador externo"
 
 msgctxt "#30132"
 msgid "Python os.system"
@@ -551,55 +551,55 @@ msgstr "Python root subprocess"
 
 msgctxt "#30135"
 msgid "Viewtypes"
-msgstr "Tipos de vista"
+msgstr "Tipo de vistas"
 
 msgctxt "#30136"
 msgid "Force IAGL Viewtypes"
-msgstr "Forzar tipos de vista IAGL"
+msgstr "Forzar tipo de vistas IAGL"
 
 msgctxt "#30137"
 msgid "Frontpage Viewtype"
-msgstr "Tipo de vista para portada"
+msgstr "Para menú de inicio"
 
 msgctxt "#30138"
 msgid "Game Library Lists Viewtype"
-msgstr "Tipo de vista para biblioteca de juegos"
+msgstr "Para lista de biblioteca de juegos"
 
 msgctxt "#30139"
 msgid "Game Categories Viewtype"
-msgstr "Tipo de vista para categorias de juegos"
+msgstr "Para categorías de juegos"
 
 msgctxt "#30140"
 msgid "Games List Viewtype"
-msgstr "Tipo de vista para listado de juegos"
+msgstr "Para listado de juegos"
 
 msgctxt "#30141"
 msgid "Alpha List Viewtype"
-msgstr "Tipo de vista para lista alfabética"
+msgstr "Para lista alfabética"
 
 msgctxt "#30142"
 msgid "Genre List Viewtype"
-msgstr "Tipo de vista para listado por genero"
+msgstr "Para listado por género"
 
 msgctxt "#30143"
 msgid "Year List Viewtype"
-msgstr "Tipo de vista para listado por año"
+msgstr "Para listado por año"
 
 msgctxt "#30144"
 msgid "Players List Viewtype"
-msgstr "Tipo de vista para listado de jugadores"
+msgstr "Para listado de jugadores"
 
 msgctxt "#30145"
 msgid "Studio List Viewtype"
-msgstr "Tipo de vista para listado por estudio"
+msgstr "Para listado por estudio"
 
 msgctxt "#30146"
 msgid "Search Results Viewtype"
-msgstr "Tipo de vista para resultados de busqueda"
+msgstr "Para resultados de búsqueda"
 
 msgctxt "#30147"
 msgid "Random Results Viewtype"
-msgstr "Tipo de vista para resultados aleatorios"
+msgstr "Para resultados aleatorios"
 
 msgctxt "#30148"
 msgid "Off (Default)"
@@ -934,11 +934,11 @@ msgstr "Nueva versión para lista de juegos"
 
 msgctxt "#30323"
 msgid "New version %(new_game_list_version)s for %(dat_filename)s"
-msgstr "Nueva versión %(new_game_list_version)s para %(dat_filename)s"
+msgstr "Encontrada versión %(new_game_list_version)s para %(dat_filename)s"
 
 msgctxt "#30324"
 msgid "Update to new version of %(dat_filename)s ?"
-msgstr "¿Desea actualizar a la nueva version de %(dat_filename)s ?"
+msgstr "¿Actualizar a la nueva versión de %(dat_filename)s ?"
 
 msgctxt "#30325"
 msgid "Get updated list"
@@ -946,7 +946,7 @@ msgstr "Obtener lista actualizada"
 
 msgctxt "#30326"
 msgid "Ask me again later"
-msgstr "Pregúntarme más tarde"
+msgstr "Preguntame más tarde"
 
 msgctxt "#30327"
 msgid "No, Never!"
