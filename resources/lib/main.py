@@ -110,8 +110,11 @@ class iagl_utils(object):
 		self.game_listing_settings = 'One Big List|Choose from List|Alphabetical|Group by Genre|Group by Year|Group by Players|Group by Studio|Group by Tag|Group by Custom Groups'
 		self.game_listing_settings_routes = ['list_all','choose_from_list','alphabetical','list_by_genre','list_by_year','list_by_players','list_by_studio','list_by_tag','list_by_groups']
 		self.current_game_listing_route = None
-		self.items_per_page_settings = self.handle.getSetting(id='iagl_setting_items_pp')
+		# self.items_per_page_settings = self.handle.getSetting(id='iagl_setting_items_pp')
 		self.max_items_per_page = 99999
+		self.items_per_page_setting = [10,25,50,100,150,200,250,300,350,400,450,50,self.max_items_per_page][int(self.handle.getSetting(id='iagl_setting_items_pp'))]
+		self.external_env_setting_choices = ['Select','OSX','Linux/Kodibuntu','Windows','LibreElec Remix','RetroELEC','Sx05RE','Gamestarter Addon','Android','Android Aarch64','RetroPie']
+		self.external_env_setting = self.external_env_setting_choices[int(self.handle.getSetting(id='iagl_external_user_external_env'))]
 		self.number_cat = ['0','1','2','3','4','5','6','7','8','9']
 		self.non_number_cat = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 		self.context_menu_items = [(self.loc_str(30400),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/metadata)'),(self.loc_str(30402),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/art)'),(self.loc_str(30403),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/visibility)'),(self.loc_str(30404),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/launcher)'),(self.loc_str(30405),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/download_path)'),(self.loc_str(30406),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/view_list_settings)'),(self.loc_str(30407),'RunPlugin(plugin://plugin.program.iagl/context_menu/<game_list_id>/refresh_list)')]
@@ -139,6 +142,7 @@ class iagl_utils(object):
 		self.additional_supported_external_emulator_settings = 'FS-UAE|Project 64 (Win)|Dolphin|MAME Standalone|DEMUL (Win)|ePSXe'
 		self.windowid = xbmcgui.getCurrentWindowId()
 		self.force_viewtype_options = [0,'50','51','52','501','502','503','504','505','53','54','55','506','56','57','58','59','66','69','95','97','507','508','509','510','511','512','513','514','515','516','517','518','519','520','521','522','523','524','525','500','583','588']
+		self.iagl_content_type = ['movies','tvshows','videos','mixed','games','None'][int(self.handle.getSetting(id='iagl_setting_setcontent'))]
 		#Define temp download cache size
 		cache_options = [0,10*1e6,25*1e6,50*1e6,100*1e6,150*1e6,200*1e6,250*1e6,300*1e6,350*1e6,400*1e6,450*1e6,500*1e6,1000*1e6,2000*1e6,5000*1e6,10000*1e6,20000*1e6,32000*1e6,64000*1e6]
 		cache_options_log = ['Zero (Current Game Only)','10 MB','25MB','50MB','100MB','150MB','200MB','250MB','300MB','350MB','400MB','450MB','500MB','1GB','2GB','5GB','10GB','20GB','32GB','64GB']
@@ -157,25 +161,25 @@ class iagl_utils(object):
 			return ''
 
 	def initialize_IAGL_settings(self):
-		if self.handle.getSetting(id='iagl_external_user_external_env') ==  'Select':  #Not yet defined, try and define for the user
+		if self.external_env_setting ==  'Select':  #Not yet defined, try and define for the user
 			current_OS = xbmc.getInfoLabel('System.OSVersionInfo')
 			xbmc.log(msg='IAGL:  OS found - %(current_OS)s' % {'current_OS': current_OS}, level=xbmc.LOGDEBUG)
 			if 'OS X' in current_OS:
-				self.handle.setSetting(id='iagl_external_user_external_env',value='OSX')
+				self.handle.setSetting(id='iagl_external_user_external_env',value=str(self.external_env_setting_choices.index('OSX')))
 				xbmc.log(msg='IAGL:  External Launch Environment auto selected to OSX', level=xbmc.LOGDEBUG)
 			elif 'Windows' in current_OS:
-				self.handle.setSetting(id='iagl_external_user_external_env',value='Windows')
+				self.handle.setSetting(id='iagl_external_user_external_env',value=str(self.external_env_setting_choices.index('Windows')))
 				xbmc.log(msg='IAGL:  External Launch Environment auto selected to Windows', level=xbmc.LOGDEBUG)
 			elif 'Android' in current_OS:
-				self.handle.setSetting(id='iagl_external_user_external_env',value='Android')
+				self.handle.setSetting(id='iagl_external_user_external_env',value=str(self.external_env_setting_choices.index('Android')))
 				xbmc.log(msg='IAGL:  External Launch Environment auto selected to Windows', level=xbmc.LOGDEBUG)
 			elif 'Linux' in current_OS:
-				self.handle.setSetting(id='iagl_external_user_external_env',value='Linux/Kodibuntu')
+				self.handle.setSetting(id='iagl_external_user_external_env',value=str(self.external_env_setting_choices.index('Linux/Kodibuntu')))
 				xbmc.log(msg='IAGL:  External Launch Environment auto selected to Linux/Kodibuntu', level=xbmc.LOGDEBUG)				
 			else:
 				xbmc.log(msg='IAGL:  External Launch Environment is unknown', level=xbmc.LOGDEBUG)
 
-		if self.handle.getSetting(id='iagl_external_user_external_env') in ['OSX','Windows','Linux/Kodibuntu']:  #External environment defined, try and find location of retroarch external app
+		if self.external_env_setting in ['OSX','Windows','Linux/Kodibuntu']:  #External environment defined, try and find location of retroarch external app
 			if len(self.handle.getSetting(id='iagl_external_path_to_retroarch'))<1:
 				# possible_retroarch_app_locations = [os.path.join('/Applications','RetroArch.app','Contents','MacOS','RetroArch'),os.path.join('usr','bin','retroarch'),os.path.join('C:','Program Files (x86)','Retroarch','retroarch.exe')]
 				pral_found = None
@@ -388,7 +392,7 @@ class iagl_utils(object):
 	def get_xml_header_string(self,filename_in):
 		header_string = None
 		with closing(xbmcvfs.File(xbmc.translatePath(filename_in),'r')) as file_in:
-			byte_string = bytes(file_in.readBytes(self.header_byte_size)) #Read first ~50kb of dat file to get header
+			byte_string = bytes(file_in.readBytes(50000)) #Read first ~50kb of dat file to get header
 			if b'</header>' in byte_string:
 				try:
 					header_string = byte_string.split(b'</header>')[0].decode('utf-8')
@@ -479,9 +483,9 @@ class iagl_utils(object):
 		return os.path.join(self.get_addon_install_path(),*self.scripts_folder_name)
 
 	def get_items_per_page(self):
-		items_per_page = self.max_items_per_page
+		items_per_page = self.max_items_per_page #Default to all
 		try:
-			items_per_page = int(self.items_per_page_settings.strip())
+			items_per_page = self.items_per_page_setting
 		except:
 			pass
 		return items_per_page
@@ -497,7 +501,7 @@ class iagl_utils(object):
 			'thumb' : os.path.join(self.get_media_folder_path(),'Next.png'),
 			},}
 			# next_page_listitem = xbmcgui.ListItem('\xc2\xa0Next >>', offscreen=True)
-			next_page_listitem = self.create_kodi_listitem('\xc2\xa0Next >>',None)
+			next_page_listitem = self.create_kodi_listitem('\u200B Next >>',None)
 			next_page_listitem.setInfo(self.media_type,li['info'])
 			next_page_listitem.setArt(li['art'])
 		return next_page_listitem
@@ -2513,22 +2517,22 @@ class iagl_utils(object):
 				new_value = None
 				xbmc.log(msg='IAGL:  The Kodi default game addon cannot be updated because none were found.', level=xbmc.LOGDEBUG)
 		elif current_key == 'emu_ext_launch_cmd':
-			current_external_environment = self.handle.getSetting(id='iagl_external_user_external_env')
-			if current_external_environment == 'Select':
+			# current_external_environment = self.external_env_setting
+			if self.external_env_setting == 'Select':
 				ok_ret = current_dialog.ok(self.loc_str(30203),self.loc_str(30340))
 			else:
 				if self.get_setting_as_bool(self.handle.getSetting(id='iagl_external_launch_close_kodi')):
-					if current_external_environment in ['OSX','Linux/Kodibuntu','Windows']: #Close Kodi option only available for these systems
-						current_ext_key = current_external_environment+' Close_Kodi'
+					if self.external_env_setting in ['OSX','Linux/Kodibuntu','Windows']: #Close Kodi option only available for these systems
+						current_ext_key = self.external_env_setting+' Close_Kodi'
 					else:
-						current_ext_key = current_external_environment
+						current_ext_key = self.external_env_setting
 				elif self.get_setting_as_bool(self.handle.getSetting(id='iagl_external_launch_pause_kodi')):
-					if current_external_environment in ['Linux/Kodibuntu']: #Pause Kodi option only available for these systems
-						current_ext_key = current_external_environment+' Pause_Kodi'
+					if self.external_env_setting in ['Linux/Kodibuntu']: #Pause Kodi option only available for these systems
+						current_ext_key = self.external_env_setting+' Pause_Kodi'
 					else:
-						current_ext_key = current_external_environment
+						current_ext_key = self.external_env_setting
 				else:
-					current_ext_key = current_external_environment
+					current_ext_key = self.external_env_setting
 				current_external_command_db = self.get_external_command_listing()
 				current_external_command_choices = [x.get('@name') for x in current_external_command_db.get('system').get('launcher') if x.get('@os') == current_ext_key]
 				current_external_command_values = [x.get('launcher_command') for x in current_external_command_db.get('system').get('launcher') if x.get('@os') == current_ext_key]
@@ -2580,9 +2584,10 @@ class iagl_utils(object):
 		with closing(xbmcvfs.File(xbmc.translatePath(current_filename),'r')) as file_in, closing(xbmcvfs.File(xbmc.translatePath(os.path.join(self.get_dat_folder_path(),'temp.xml')),'w')) as output_file:
 			byte_string_1 = bytes(file_in.readBytes(50000)) #Read first ~50kb of dat file to get header
 			output_file.write(bytearray(re.sub(tag_re,new_value_line,byte_string_1.decode('utf-8')).encode('utf-8')))
-			if byte_string_1 and re.sub(tag_re,new_value_line,byte_string_1.decode('utf-8')) != byte_string_1.decode('utf-8'):
-				value_updated = True
+			if byte_string_1 and re.sub(tag_re,new_value_line,byte_string_1.decode('utf-8')) == byte_string_1.decode('utf-8'):
+				xbmc.log(msg='IAGL:  It appears nothing was updated in the XML file %(current_filename)s for the tag %(current_key)s' % {'current_filename': os.path.split(current_filename)[-1], 'current_key': current_key}, level=xbmc.LOGDEBUG)
 			while byte_string_1 or not last_line_written:
+				value_updated = True
 				byte_string_2 = file_in.readBytes(50000)
 				if not byte_string_2:
 					last_line_written = True
@@ -2593,7 +2598,7 @@ class iagl_utils(object):
 		if value_updated and last_line_written: #Success
 			if xbmcvfs.delete(current_filename): #Current file was deleted
 				if xbmcvfs.rename(os.path.join(self.get_dat_folder_path(),'temp.xml'),current_filename):
-					xbmc.log(msg='IAGL:  XML %(current_filename)s updated with value %(new_value)s' % {'current_filename': os.path.split(current_filename)[-1], 'new_value': new_value}, level=xbmc.LOGDEBUG)
+					xbmc.log(msg='IAGL:  XML %(current_filename)s updated key %(current_key)s with value %(new_value)s' % {'current_filename': os.path.split(current_filename)[-1],'current_key':current_key, 'new_value': new_value}, level=xbmc.LOGNOTICE)
 					xbmcvfs.delete(os.path.join(self.get_list_cache_path(),self.dat_file_cache_filename)) #Delete dat file cache
 					if self.delete_list_cache(os.path.splitext(os.path.split(current_filename)[-1])[0]):
 						if not silent_update:
@@ -2671,12 +2676,12 @@ class iagl_utils(object):
 			else:
 				current_route = 'plugin://plugin.program.iagl/game/<game_list_id>/<game_id>'.replace('<game_list_id>',game_list_id_in).replace('<game_id>',game_id_in)
 			current_size = self.get_rom_size(favorite_dict['games']['game'])
-			if self.handle.getSetting(id='iagl_favorites_format') == 'Use Hyperlinks to other Lists': #Replace current game data with plugin route URL
+			if self.handle.getSetting(id='iagl_favorites_format') == '0': #Replace current game data with plugin route URL
 				favorite_dict['games']['game']['rom'] = dict()
 				favorite_dict['games']['game']['rom']['@name'] = current_route
 				if current_size is not None:
 					favorite_dict['games']['game']['rom']['@size'] = str(current_size)
-			if self.handle.getSetting(id='iagl_favorites_format') == 'Copies all Data, adds Post DL Command Override': #Add post DL override command to the game based on current emu Post DL command
+			if self.handle.getSetting(id='iagl_favorites_format') == '2': #Add post DL override command to the game based on current emu Post DL command
 				current_post_dl_command = json.loads(json_in).get('emu').get('emu_postdlaction')
 				if current_post_dl_command is not None and current_post_dl_command != 'none' and len(current_post_dl_command)>0:
 					favorite_dict['games']['game']['rom_override_postdl'] = current_post_dl_command
@@ -2688,20 +2693,20 @@ class iagl_utils(object):
 				favorite_xml = favorite_xml.replace('<games>',favorite_header).replace('</games>',favorite_header).replace('><','>\r\n\t\t<').replace('\t\t<game ','\t<game ').replace('\t\t</game>','\t</game>').replace('\t\t<!--','<!--')+'\r\n</datafile>'
 				favorite_xml = favorite_xml.replace('\n\n','\n').replace('\r\r','\r') #Remove extra newlines
 				value_updated = False
-				with open(filename_in,'r') as input_file, open(os.path.join(self.get_dat_folder_path(),'temp.xml'), 'w') as output_file:
-					for line in input_file:
-						if not value_updated:  #Only update the first instance of the requested tag
-							if '</datafile>' in line:
-								try:
-									output_file.write(favorite_xml)
-									value_updated = True
-								except Exception as exc: #except Exception, (exc):
-									value_updated = False
-									xbmc.log(msg='IAGL:  Favorites XML %(current_filename)s write error.  Exception %(exc)s' % {'current_filename': filename_in, 'exc': exc}, level=xbmc.LOGERROR)
-							else:
-								output_file.write(line)
+				
+				last_line_written = False
+				with closing(xbmcvfs.File(xbmc.translatePath(filename_in),'r')) as file_in, closing(xbmcvfs.File(xbmc.translatePath(os.path.join(self.get_dat_folder_path(),'temp.xml')),'w')) as output_file:
+					while not last_line_written:
+						byte_string = file_in.readBytes(50000)
+						if not byte_string:
+							last_line_written = True
+							break
 						else:
-							output_file.write(line)
+							if '</datafile>' in byte_string.decode('utf-8'):
+								value_updated = True
+								output_file.write(bytearray(byte_string.decode('utf-8').replace('</datafile>',favorite_xml).encode('utf-8')))
+							else:
+								output_file.write(bytearray(byte_string))
 				if value_updated: #Success
 					if xbmcvfs.delete(filename_in): #Current file was deleted
 						if xbmcvfs.rename(os.path.join(self.get_dat_folder_path(),'temp.xml'),filename_in):
@@ -3235,6 +3240,8 @@ class iagl_download(object):
 					self.current_download_locations = [self.default_download_location for x in self.current_files_to_download] #Default Location
 			else: #One file
 				if self.json.get('game').get('rom') is not None:
+					print('ztest')
+					print(self.base_url+self.json['game']['rom']['@name'])
 					self.current_files_to_download = [self.base_url+self.json['game']['rom']['@name'] if 'http' not in self.json['game']['rom']['@name'] else self.json['game']['rom']['@name']]
 					self.current_files_to_download_skip = [False for x in self.current_files_to_download] #Used if the file is found to exist locally
 					self.current_files_to_save = [url_unquote(x.split('%2F')[-1].split('/')[-1]) for x in self.current_files_to_download]
@@ -3270,7 +3277,7 @@ class iagl_download(object):
 		xbmc.log(msg='IAGL:  Attempting to download file %(url)s as logged in user' % {'url': url}, level=xbmc.LOGNOTICE)
 		xbmc.log(msg='IAGL:  Saving file to %(dest)s as logged in user' % {'dest': dest}, level=xbmc.LOGNOTICE)
 		dp = xbmcgui.DialogProgress()
-		dp.create(heading,description,'')
+		dp.create(heading,description)
 		dp.update(0)
 		if username is not None and len(username)>0 and password is not None and len(password)>0: #Attempt to login for downloading
 			try:
@@ -3312,7 +3319,7 @@ class iagl_download(object):
 						if diff > 1:
 							percent = int(percent)
 							last_time = now
-							dp.update(percent,description,line2_description.replace('current_size','%(current_estimated_size)s'% {'current_estimated_size': self.IAGL.bytes_to_string_size(size)}))
+							dp.update(percent,'%(current_description)s[CR]%(current_progress)s'%{'current_description':description,'current_progress':line2_description.replace('current_size','%(current_estimated_size)s'% {'current_estimated_size': self.IAGL.bytes_to_string_size(size)})})
 							if dp.iscanceled():
 								dp.close()
 								self.download_fail_reason = 'Download was cancelled.'
@@ -3349,7 +3356,7 @@ class iagl_download(object):
 		xbmc.log(msg='IAGL:  Attempting to download file %(url)s' % {'url': url}, level=xbmc.LOGNOTICE)
 		xbmc.log(msg='IAGL:  Saving file to %(dest)s' % {'dest': dest}, level=xbmc.LOGNOTICE)
 		dp = xbmcgui.DialogProgress()
-		dp.create(heading,description,'')
+		dp.create(heading,description)
 		dp.update(0)
 		try:
 			s = requests.Session()
@@ -3385,7 +3392,7 @@ class iagl_download(object):
 					if diff > 1:
 						percent = int(percent)
 						last_time = now
-						dp.update(percent,description,line2_description.replace('current_size','%(current_estimated_size)s'% {'current_estimated_size': self.IAGL.bytes_to_string_size(size)}))
+						dp.update(percent,'%(current_description)s[CR]%(current_progress)s'%{'current_description':description,'current_progress':line2_description.replace('current_size','%(current_estimated_size)s'% {'current_estimated_size': self.IAGL.bytes_to_string_size(size)})})
 						if dp.iscanceled():
 							dp.close()
 							self.download_fail_reason = 'Download was cancelled.'
@@ -3495,7 +3502,7 @@ class iagl_download(object):
 			temp_folder =  os.path.join(os.path.split(filename_in)[0],str(name_in))
 			dp = xbmcgui.DialogProgressBG()
 			dp.create('Please Wait...','Extracting files')
-			xbmc.executebuiltin(('XBMC.Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmc.translatePath(filename_in), 'location_to_extract_to':xbmc.translatePath(temp_folder)}), True) #Unzip the file(s) to a temp folder
+			xbmc.executebuiltin(('Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmc.translatePath(filename_in), 'location_to_extract_to':xbmc.translatePath(temp_folder)}), True) #Unzip the file(s) to a temp folder
 			dp.close()
 			if xbmcvfs.exists(os.path.join(temp_folder,'')): #Unzip generated a folder
 				self.current_processed_files.extend(get_all_files_in_directory_xbmcvfs(temp_folder))
@@ -3533,7 +3540,7 @@ class iagl_download(object):
 			temp_folder =  os.path.join(os.path.split(filename_in)[0],str(crc_in))
 			dp = xbmcgui.DialogProgressBG()
 			dp.create('Please Wait...','Extracting files')
-			xbmc.executebuiltin(('XBMC.Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmc.translatePath(filename_in), 'location_to_extract_to':xbmc.translatePath(temp_folder)}), True) #Unzip the file(s) to a temp folder
+			xbmc.executebuiltin(('Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmc.translatePath(filename_in), 'location_to_extract_to':xbmc.translatePath(temp_folder)}), True) #Unzip the file(s) to a temp folder
 			dp.close()
 			if xbmcvfs.exists(os.path.join(temp_folder,'')): #Unzip generated a folder
 				files_extracted, files_extracted_success = move_directory_contents_xbmcvfs(os.path.join(temp_folder,''),os.path.join(os.path.split(filename_in)[0],''))
@@ -4093,6 +4100,7 @@ class iagl_launch(object):
 		self.external_launch_command = None
 		self.launch_success = None #Default to unknown successfull launch
 		self.game_id = game_id_in
+		self.external_env_setting = self.IAGL.external_env_setting
 		try:
 			self.json = json.loads(json_in)
 		except Exception as exc: #except Exception, (exc):
@@ -4116,7 +4124,7 @@ class iagl_launch(object):
 		if self.launcher.lower() == 'retroplayer':
 			self.launch_success = self.launch_retroplayer(return_home=return_home)
 		if self.launcher.lower() == 'external':
-			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android' or self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android Aarch64':
+			if self.external_env_setting == 'Android' or self.external_env_setting == 'Android Aarch64':
 				self.launch_success = self.launch_external_android(return_home=return_home)
 			else:
 				self.launch_success = self.launch_external(return_home=return_home)
@@ -4192,16 +4200,16 @@ class iagl_launch(object):
 			return False
 		else:
 			#Define %APP_PATH% Variable
-			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'OSX':
+			if self.external_env_setting == 'OSX':
 				current_retroarch_path = xbmc.translatePath(self.IAGL.handle.getSetting(id='iagl_external_path_to_retroarch')).split('.app')[0]+'.app' #Make App Path for OSX only up to the container
-			elif self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Windows':
+			elif self.external_env_setting == 'Windows':
 				current_retroarch_path = os.path.split(xbmc.translatePath(self.IAGL.handle.getSetting(id='iagl_external_path_to_retroarch')))[0]
 			else: #Linux
 				current_retroarch_path = xbmc.translatePath(self.IAGL.handle.getSetting(id='iagl_external_path_to_retroarch'))
 
 			#Define %CFG_PATH% Variable for Android
 			current_cfg_path = ''
-			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android' or self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android Aarch64':
+			if self.external_env_setting == 'Android' or self.external_env_setting == 'Android Aarch64':
 				current_cfg_path = None
 				if len(self.IAGL.handle.getSetting(id='iagl_external_path_to_retroarch_cfg'))<1: #Config is not defined in settings, try to find it in one of the default locales
 					for cfg_files in self.IAGL.possible_retroarch_config_locations:
@@ -4223,6 +4231,7 @@ class iagl_launch(object):
 				self.external_launch_command = self.external_launch_command.replace(os.path.join('~',''),os.path.expanduser(os.path.join('~','')))
 				self.external_launch_command = self.external_launch_command.replace(os.path.join('~user',''),os.path.expanduser(os.path.join('~user','')))
 
+			#Need to update
 			if any([x in self.external_launch_command for x in self.IAGL.additional_supported_external_emulators]): #Non Retroarch emulator requested
 				other_emulator_key = [x for x in self.IAGL.additional_supported_external_emulators if x in self.external_launch_command][0]
 				other_emulator = self.IAGL.additional_supported_external_emulator_settings.split('|')[self.IAGL.additional_supported_external_emulators.index(other_emulator_key)]
@@ -4322,7 +4331,7 @@ class iagl_launch(object):
 			xbmc.enableNavSounds(False)
 			if return_home: #Go back to home page if its a widget
 				go_to_home()
-			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Android Aarch64':
+			if self.external_env_setting == 'Android Aarch64':
 				android_stop_command = '/system/bin/am force-stop com.retroarch.aarch64'  #Changed to add stop command in the external launch command arguments
 			else:
 				android_stop_command = '/system/bin/am force-stop com.retroarch'  #Changed to add stop command in the external launch command arguments
@@ -4748,14 +4757,6 @@ def get_directory_size_xbmcvfs(directory_in): #Twice as slow as the method above
 		current_size += get_directory_size_xbmcvfs(xbmc.translatePath(os.path.join(directory_in,dd)))
 	return current_size
 
-# def get_all_files_in_directory(directory_in): #Dont use this by default, assume it could be a 'special' path
-# 	current_files = list()
-# 	for entry in scandir(directory_in):
-# 		if entry.is_file():
-# 			current_files.append(entry.path)
-# 		elif entry.is_dir():
-# 			current_files = current_files+get_all_files_in_directory(entry.path)
-# 	return current_files
 
 def get_all_files_in_directory_xbmcvfs(directory_in): #Twice as slow as the method above, but maybe safer / more compatible?
 	current_files = list()
