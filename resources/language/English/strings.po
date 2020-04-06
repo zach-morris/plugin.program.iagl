@@ -76,6 +76,10 @@ msgctxt "#30016"
 msgid "Default Action on Selecting Game"
 msgstr "Default Action on Selecting Game"
 
+msgctxt "#30198"
+msgid "Redirect single game lists to game"
+msgstr "Redirect single game lists to game"
+
 msgctxt "#30017"
 msgid "Show Search Item"
 msgstr "Show Search Item"
@@ -1059,6 +1063,10 @@ msgstr "Running this script will unhide all previously hidden game lists"
 msgctxt "#30578"
 msgid "Running this script will clear all of the IAGL cache"
 msgstr "Running this script will clear all of the IAGL cache"
+
+msgctxt "#30579"
+msgid "If enabled, a game list with only one game will auto redirect directly to select the game"
+msgstr "If enabled, a game list with only one game will auto redirect directly to select the game"
 
 #
 #General

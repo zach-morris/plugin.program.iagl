@@ -20,10 +20,8 @@ except:
 plugin = routing.Plugin() #Plugin Handle
 IAGL = iagl_utils() #IAGL utils Class
 IAGL.initialize_IAGL_settings() #Initialize some addon stuff
-xbmcplugin.setContent(plugin.handle,IAGL.handle.getSetting(id='iagl_setting_setcontent')) #Define the content type per settings
-# IAGL.archive_listing_settings_route = IAGL.archive_listing_settings_routes[IAGL.archive_listing_settings.split('|').index(IAGL.handle.getSetting(id='iagl_setting_archive_listings'))] #Old method pre language update
+xbmcplugin.setContent(plugin.handle,IAGL.iagl_content_type) #Define the content type per settings
 IAGL.archive_listing_settings_route = IAGL.archive_listing_settings_routes[int(IAGL.handle.getSetting(id='iagl_setting_archive_listings'))]
-# IAGL.current_game_listing_route = IAGL.game_listing_settings_routes[IAGL.game_listing_settings.split('|').index(IAGL.handle.getSetting(id='iagl_setting_listing'))] #Old method pre language update
 IAGL.current_game_listing_route = IAGL.game_listing_settings_routes[int(IAGL.handle.getSetting(id='iagl_setting_listing'))]
 
 ## Plugin Routes ##
@@ -131,15 +129,25 @@ def get_choose_list_history_redirect():
 def get_choose_list(game_list_id):
 	list_method = 'choose_from_list'
 	xbmc.log(msg='IAGL:  Getting game list %(game_list_id)s, display method %(list_method)s' % {'game_list_id': game_list_id,'list_method': list_method}, level=xbmc.LOGDEBUG)
-	for list_item in IAGL.get_game_list_choose_as_listitems(game_list_id):
-		if url_quote(list_item.getLabel2()) == 'list_all':
-			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/game_list/'+url_quote(list_item.getLabel2())+'/'+game_list_id+'/1'),list_item, True)
-		else:
-			xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/game_list/'+url_quote(list_item.getLabel2())+'/'+game_list_id),list_item, True)
-	xbmcplugin.endOfDirectory(plugin.handle)
-	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_3')) > 0:
-		xbmc.log(msg='IAGL:  Games Categories (by Game List) Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_3'))]}, level=xbmc.LOGDEBUG)
-		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_3'))]})
+	single_game_check, single_game_id = IAGL.check_for_single_game_list(game_list_id)
+	if single_game_check and IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_single_game_redirect')):
+		xbmc.log(msg='IAGL:  Only one game found in game list %(game_list_id)s, redirecting to the single listitem' % {'game_list_id': game_list_id}, level=xbmc.LOGDEBUG)		
+		plugin.redirect('/game_list/list_all/'+game_list_id+'/1')
+		wid = xbmcgui.getCurrentWindowId()
+		win = xbmcgui.Window(wid)
+		control = win.getFocus()
+		control.selectItem(1) #The best I can figure right now is selecting the lone item, can't activate it
+		# plugin.redirect('/game/'+game_list_id+'/'+single_game_id)
+	else:
+		for list_item in IAGL.get_game_list_choose_as_listitems(game_list_id):
+			if url_quote(list_item.getLabel2()) == 'list_all':
+				xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/game_list/'+url_quote(list_item.getLabel2())+'/'+game_list_id+'/1'),list_item, True)
+			else:
+				xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/game_list/'+url_quote(list_item.getLabel2())+'/'+game_list_id),list_item, True)
+		xbmcplugin.endOfDirectory(plugin.handle)
+		if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_enable_forced_views')) and int(IAGL.handle.getSetting(id='iagl_enable_forced_views_3')) > 0:
+			xbmc.log(msg='IAGL:  Games Categories (by Game List) Viewtype forced to %(view_type)s' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_3'))]}, level=xbmc.LOGDEBUG)
+			xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)' % {'view_type': IAGL.force_viewtype_options[int(IAGL.handle.getSetting(id='iagl_enable_forced_views_3'))]})
 
 @plugin.route('/game_list/alphabetical/<game_list_id>')
 def get_alphabetical_list(game_list_id):

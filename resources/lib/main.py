@@ -400,8 +400,25 @@ class iagl_utils(object):
 					xbmc.log(msg='IAGL Error:  Error reading XML file header %(ff)s.  Exception %(exc)s' % {'ff': filename_in, 'exc': exc}, level=xbmc.LOGERROR)
 					header_string = byte_string.split(b'</header>')[0].decode('utf-8',errors='ignore') #Try again ignoring whatever character python doesnt like.  Probably not foolproof
 			else:
-				xbmc.log(msg='IAGL Error:  No XML header was found in file %(ff)s.  Exception %(exc)s' % {'ff': filename_in, 'exc': exc}, level=xbmc.LOGDEBUG)
+				xbmc.log(msg='IAGL Error:  No XML header was found in file %(ff)s' % {'ff': filename_in}, level=xbmc.LOGDEBUG)
 		return header_string
+
+	def check_for_single_game_list(self,game_list_id):
+		single_game=False
+		game_id = None
+		current_xml_file = os.path.join(self.get_dat_folder_path(),game_list_id+'.xml')
+		with closing(xbmcvfs.File(xbmc.translatePath(current_xml_file),'r')) as file_in:
+			byte_string = bytes(file_in.readBytes(50000)) #Read first ~50kb of dat file
+			if b'<game name' in byte_string:
+				try:
+					if len(byte_string.split(b'<game name'))==2: #If there's more than 2 splits, then theres more than one games
+						game_id=[x.get('values').get('label2') for x in self.get_games(game_list_id) if x.get('values').get('label2') is not None][0]
+						single_game=True
+				except Exception as exc:
+					xbmc.log(msg='IAGL Error:  Error reading XML file %(ff)s.  Exception %(exc)s' % {'ff': current_xml_file, 'exc': exc}, level=xbmc.LOGERROR)
+			else:
+				xbmc.log(msg='IAGL Error:  No game tags found in XML file %(ff)s.' % {'ff': current_xml_file}, level=xbmc.LOGDEBUG)
+		return single_game, game_id
 
 	def get_list_of_favorites_lists(self):
 		dirs, files = xbmcvfs.listdir(self.get_dat_folder_path())
@@ -3240,8 +3257,6 @@ class iagl_download(object):
 					self.current_download_locations = [self.default_download_location for x in self.current_files_to_download] #Default Location
 			else: #One file
 				if self.json.get('game').get('rom') is not None:
-					print('ztest')
-					print(self.base_url+self.json['game']['rom']['@name'])
 					self.current_files_to_download = [self.base_url+self.json['game']['rom']['@name'] if 'http' not in self.json['game']['rom']['@name'] else self.json['game']['rom']['@name']]
 					self.current_files_to_download_skip = [False for x in self.current_files_to_download] #Used if the file is found to exist locally
 					self.current_files_to_save = [url_unquote(x.split('%2F')[-1].split('/')[-1]) for x in self.current_files_to_download]

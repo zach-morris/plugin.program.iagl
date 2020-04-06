@@ -147,6 +147,11 @@
 						<heading>30016</heading>
 					</control>
 				</setting>
+				<setting help="30579" id="iagl_enable_single_game_redirect" label="30198" type="boolean">
+					<level>0</level>
+					<default>true</default>
+					<control type="toggle"/>
+				</setting>
 				<setting help="30540" id="iagl_setting_show_search" label="30017" type="integer">
 					<level>0</level>
 					<default>0</default>
