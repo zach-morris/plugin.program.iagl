@@ -34,6 +34,14 @@ and
 
 See the [FAQ](https://github.com/zach-morris/plugin.program.iagl/wiki/5.--FAQ)
 
+and
+
+Discuss in the [Kodi Forums](https://forum.kodi.tv/showthread.php?tid=332966)
+
+or 
+
+Discuss on [Discord](https://discord.gg/x74tJC)
+
 
 
 Licenses
