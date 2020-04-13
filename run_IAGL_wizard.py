@@ -24,8 +24,6 @@ if not WIN.getProperty('iagl.script_started'):
 	current_dialog = xbmcgui.Dialog()
 	
 	if IAGL.handle.getSetting('iagl_wizard_launcher') == 'External' or IAGL.handle.getSetting('iagl_wizard_launcher') == '0':
-		#wiz = IAGL.handle.getSetting('iagl_external_user_external_env')
-		#xbmc.log(msg='env %(launcher)s' % {'launcher': str(wiz)}, level=xbmc.LOGERROR)
 		if IAGL.handle.getSetting('iagl_external_user_external_env') == 'Select' or IAGL.handle.getSetting('iagl_external_user_external_env') == '0':
 			not_ready_to_run_wizard = True
 			not_ready_to_run_wizard_reason = not_ready_to_run_wizard_reason+', External system type is not defined in settings.'
@@ -164,6 +162,10 @@ if not WIN.getProperty('iagl.script_started'):
 				complete_message = '[CR]Game lists updated for Kodi Retroplayer'
 		else:
 			current_external_environment = IAGL.handle.getSetting(id='iagl_external_user_external_env')
+			if current_external_environment == '1':
+				current_external_environment = 'OSX'
+			if current_external_environment == '2':
+				current_external_environment = 'Linux/Kodibuntu'
 			if current_external_environment == '3':
 				current_external_environment = 'Windows'
 			if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_external_launch_close_kodi')):
@@ -186,7 +188,6 @@ if not WIN.getProperty('iagl.script_started'):
 				try:
 					current_wiz_setting =  wizard_data[current_ext_key.replace(' Close_Kodi','').replace(' Pause_Kodi','')][os.path.splitext(current_game_lists['dat_filename'][ii])[0]][0]
 				except:
-				#	xbmc.log(msg='iagl %(failed)s' % {'failed': sys.exc_info()[0]}, level=xbmc.LOGDEBUG)
 					xbmc.log(msg='IAGL:  No wizard value found for %(dat_filename)s, skipping'% {'dat_filename': current_game_lists['dat_filename'][ii]}, level=xbmc.LOGDEBUG)
 					current_wiz_setting = None
 				if current_wiz_setting is not None:
