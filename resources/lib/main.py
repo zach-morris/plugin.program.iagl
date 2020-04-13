@@ -2601,7 +2601,6 @@ class iagl_utils(object):
 		with closing(xbmcvfs.File(xbmc.translatePath(current_filename),'r')) as file_in, closing(xbmcvfs.File(xbmc.translatePath(os.path.join(self.get_dat_folder_path(),'temp.xml')),'w')) as output_file:
 			byte_string_1 = bytes(file_in.readBytes(50000)) #Read first ~50kb of dat file to get header
 			new_value_line = new_value_line.replace('\\', r'\\')
-			xbmc.log(msg=new_value_line,level=xbmc.LOGERROR)
 			output_file.write(bytearray(re.sub(tag_re,new_value_line,byte_string_1.decode('utf-8')),encoding='utf8'))
 			if byte_string_1 and re.sub(tag_re,new_value_line,byte_string_1.decode('utf-8')) == byte_string_1.decode('utf-8'):
 				xbmc.log(msg='IAGL:  It appears nothing was updated in the XML file %(current_filename)s for the tag %(current_key)s' % {'current_filename': os.path.split(current_filename)[-1], 'current_key': current_key}, level=xbmc.LOGDEBUG)
