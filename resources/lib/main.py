@@ -4,12 +4,17 @@
 import os, re, json, zlib, shutil, time, io
 # import random
 from kodi_six import xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
+import six
+from kodi_six.utils import py2_encode, py2_decode
 from contextlib import closing
-from collections import defaultdict
+# from collections import defaultdict
 from dateutil import parser as date_parser
 from ast import literal_eval as lit_eval
-import xml.etree.ElementTree as ET
+# import xml.etree.ElementTree as ET
 import paginate
+# https://github.com/Pylons/paginate
+import xmltodict
+# https://github.com/martinblech/xmltodict
 import requests
 import requests.packages.urllib3
 requests.packages.urllib3.disable_warnings() #Silence uneeded warnings
@@ -30,10 +35,6 @@ except:
 	from urllib import unquote_plus as url_unquote
 	from urllib import urlencode as url_encode
 	xbmc.log(msg='IAGL:  Using python 2 urrlib', level=xbmc.LOGDEBUG)
-# try:
-#     import cPickle as pickle
-# except ImportError:
-# 	import pickle
 
 class iagl_utils(object):
 	def __init__(self):
@@ -73,9 +74,7 @@ class iagl_utils(object):
 		self.templates_folder_name = ['resources','data','templates']
 		self.scripts_folder_name = ['resources','bin']
 		self.media_folder_name = ['resources','skins','Default','media']
-		# self.dat_file_cache_filename = 'dat_file_cache.pickle'
 		self.dat_file_cache_filename = 'dat_file_cache.json'
-		# self.game_history_filename = 'game_history.pickle'
 		self.game_history_filename = 'game_history.json'
 		self.browse_choose_filename = 'browse_database.xml'
 		self.search_menu_filename = 'search_database.xml'
@@ -196,10 +195,10 @@ class iagl_utils(object):
 		# possible_retroarch_config_locations = [os.path.join('mnt','internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('data','data','com.retroarch','retroarch.cfg'),os.path.join('data','data','com.retroarch','files','retroarch.cfg')]
 
 	def get_addon_install_path(self):
-		return xbmc.translatePath(self.handle.getAddonInfo('path')).decode('utf-8')
+		return py2_decode(xbmc.translatePath(self.handle.getAddonInfo('path')))
 
 	def get_addon_userdata_path(self):
-		return xbmc.translatePath(self.handle.getAddonInfo('profile')).decode('utf-8')
+		return py2_decode(xbmc.translatePath(self.handle.getAddonInfo('profile')))
 
 	def get_temp_cache_path(self):
 		current_path = os.path.join(self.get_addon_userdata_path(),self.temp_cache_folder_name)
@@ -253,20 +252,16 @@ class iagl_utils(object):
 				with closing(xbmcvfs.File(os.path.join(self.get_addon_dat_folder_path(),ff))) as fo:
 					byte_string = bytes(fo.readBytes(10000)) #Read first ~10kb of dat file to get header
 				if b'</header>' in byte_string:
-					try:
-						header_string = byte_string.split(b'</header>')[0].decode('utf-8')
-					except Exception as exc:
-						xbmc.log(msg='IAGL Error:  Encoding error in file %(ff)s.  Exception %(exc)s' % {'ff': ff, 'exc': exc}, level=xbmc.LOGERROR)
-						header_string = byte_string.split(b'</header>')[0].decode('utf-8',errors='ignore') #Try again ignoring whatever character python doesnt like.  Probably not foolproof
+					header_dict = xmltodict.parse(byte_string.split(b'</header>')[0]+b'</header></datafile>')
 					for kk in new_game_lists.keys():
 						if kk in self.dat_file_header_keys:
-							new_game_lists[kk].append(header_string.split('<%(tag)s>' % {'tag':kk})[-1].split('</%(tag)s>' % {'tag':kk})[0])
+							new_game_lists[kk].append(header_dict['datafile']['header'][kk])
 						if 'fullpath' in kk:
 							new_game_lists[kk].append(os.path.join(self.get_addon_dat_folder_path(),ff))
 						if 'dat_filesize' in kk:
 							new_game_lists[kk].append(xbmcvfs.Stat(os.path.join(self.get_addon_dat_folder_path(),ff)).st_size())
 						if 'dat_filename' in kk:
-							new_game_lists[kk].append(ff.split('.')[0])			
+							new_game_lists[kk].append(ff.split('.')[0])
 				else:
 					xbmc.log(msg='IAGL Error:  Unable to read file %(ff)s' % {'ff': ff}, level=xbmc.LOGERROR)
 			new_game_lists['total_num_archives'] = len([x for x in new_game_lists['fullpath']])
@@ -318,7 +313,7 @@ class iagl_utils(object):
 			if len([x for x in new_game_list_added if x])>0:
 				if xbmcvfs.exists(dat_file_cachename):
 					xbmcvfs.delete(dat_file_cachename)
-				if len([x for x in new_game_list_added if x])>2 and len(current_game_lists)>len([x for x in new_game_list_added if x]): #Only show new game list dialogs if addon is updated, do not show on initial install
+				if len([x for x in new_game_list_added if x])>2: #Only show new game list dialogs if addon is updated, do not show on initial install
 					current_dialog = xbmcgui.Dialog()
 					ok_ret = current_dialog.notification(self.loc_str(30328),self.loc_str(30329),xbmcgui.NOTIFICATION_INFO,self.notification_time)
 					del current_dialog
@@ -410,14 +405,16 @@ class iagl_utils(object):
 				byte_string = bytes(fo.readBytes(10000)) #Read first ~10kb of dat file to get header
 			# header_string = byte_string.decode('utf-8')
 			if b'</header>' in byte_string and b'<!-- IAGL Favorites List -->' in byte_string:
-				try:
-					header_string = byte_string.split(b'</header>')[0].decode('utf-8')
-				except Exception as exc:
-					xbmc.log(msg='IAGL Error:  Encoding error in file %(ff)s.  Exception %(exc)s' % {'ff': ff, 'exc': exc}, level=xbmc.LOGERROR)
-					header_string = byte_string.split(b'</header>')[0].decode('utf-8',errors='ignore') #Try again ignoring whatever character python doesnt like.  Probably not foolproof
+				header_dict = xmltodict.parse(byte_string.split(b'</header>')[0]+b'</header></datafile>')
+				# try:
+				# 	header_string = byte_string.split(b'</header>')[0].decode('utf-8')
+				# except Exception as exc:
+				# 	xbmc.log(msg='IAGL Error:  Encoding error in file %(ff)s.  Exception %(exc)s' % {'ff': ff, 'exc': exc}, level=xbmc.LOGERROR)
+				# 	header_string = byte_string.split(b'</header>')[0].decode('utf-8',errors='ignore') #Try again ignoring whatever character python doesnt like.  Probably not foolproof
 				for kk in favorites_lists.keys():
 					if kk in self.dat_file_header_keys:
-						favorites_lists[kk].append(header_string.split('<%(tag)s>' % {'tag':kk})[-1].split('</%(tag)s>' % {'tag':kk})[0])
+						favorites_lists[kk].append(header_dict['datafile']['header'][kk])
+						# favorites_lists[kk].append(header_string.split('<%(tag)s>' % {'tag':kk})[-1].split('</%(tag)s>' % {'tag':kk})[0])
 					if 'fullpath' in kk:
 						favorites_lists[kk].append(os.path.join(self.get_dat_folder_path(),ff))
 					if 'dat_filesize' in kk:
@@ -699,7 +696,6 @@ class iagl_utils(object):
 		if cache_list_option and xbmcvfs.exists(dat_file_cachename):
 			try:
 				with open(dat_file_cachename, 'rb') as fn:
-					# game_lists = pickle.load(fn)
 					game_lists = json.load(fn)
 					xbmc.log(msg='IAGL:  DAT file list cache found, cache file %(dat_file_cachename)s' % {'dat_file_cachename': dat_file_cachename}, level=xbmc.LOGDEBUG)
 				if len([x for x in files if 'xml' in x.lower() and os.path.splitext(x)[0] not in game_lists['dat_filename']])>0 or len([x for x in files if 'xml' in x.lower()]) != game_lists['total_num_archives']:
@@ -722,14 +718,16 @@ class iagl_utils(object):
 				with closing(xbmcvfs.File(os.path.join(self.get_dat_folder_path(),ff))) as fo:
 					byte_string = bytes(fo.readBytes(10000)) #Read first ~10kb of dat file to get header
 				if b'</header>' in byte_string:
-					try:
-						header_string = byte_string.split(b'</header>')[0].decode('utf-8')
-					except Exception as exc:
-						xbmc.log(msg='IAGL Error:  Encoding error in file %(ff)s.  Exception %(exc)s' % {'ff': ff, 'exc': exc}, level=xbmc.LOGERROR)
-						header_string = byte_string.split(b'</header>')[0].decode('utf-8',errors='ignore') #Try again ignoring whatever character python doesnt like.  Probably not foolproof
+					header_dict = xmltodict.parse(byte_string.split(b'</header>')[0]+b'</header></datafile>')
+					# try:
+					# 	header_string = byte_string.split(b'</header>')[0].decode('utf-8')
+					# except Exception as exc:
+					# 	xbmc.log(msg='IAGL Error:  Encoding error in file %(ff)s.  Exception %(exc)s' % {'ff': ff, 'exc': exc}, level=xbmc.LOGERROR)
+					# 	header_string = byte_string.split(b'</header>')[0].decode('utf-8',errors='ignore') #Try again ignoring whatever character python doesnt like.  Probably not foolproof
 					for kk in game_lists.keys():
 						if kk in self.dat_file_header_keys:
-							game_lists[kk].append(header_string.split('<%(tag)s>' % {'tag':kk})[-1].split('</%(tag)s>' % {'tag':kk})[0])
+							game_lists[kk].append(header_dict['datafile']['header'][kk])
+							# game_lists[kk].append(header_string.split('<%(tag)s>' % {'tag':kk})[-1].split('</%(tag)s>' % {'tag':kk})[0])
 						if 'fullpath' in kk:
 							game_lists[kk].append(os.path.join(self.get_dat_folder_path(),ff))
 						if 'dat_filesize' in kk:
@@ -759,7 +757,7 @@ class iagl_utils(object):
 		game_listitems = list()
 		game_lists_dict = self.get_game_lists()
 		#Ensure the return categories object is a list so it can be iterated on
-		if type(return_categories) is str or type(return_categories) is unicode:
+		if isinstance(return_categories, six.string_types):
 			return_cats = [return_categories]
 		else:
 			return_cats = return_categories
@@ -819,98 +817,126 @@ class iagl_utils(object):
 
 	def get_game_lists_categories(self):
 		try:
-			return etree_to_dict(ET.parse(self.get_game_list_categories_file()).getroot()) #No cache for this currently, since its small
+			# return etree_to_dict(ET.parse(self.get_game_list_categories_file()).getroot()) #No cache for this currently, since its small
+			with closing(xbmcvfs.File(self.get_game_list_categories_file())) as content_file:
+				return xmltodict.parse(bytes(content_file.readBytes()))
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  There was an error parsing the categories xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
 
 	def get_alphabetical_game_listing(self):
 		try:
-			return etree_to_dict(ET.parse(self.get_game_list_alphabetical_file()).getroot()) #No cache for this currently, since its small
+			# return etree_to_dict(ET.parse(self.get_game_list_alphabetical_file()).getroot()) #No cache for this currently, since its small
+			with closing(xbmcvfs.File(self.get_game_list_alphabetical_file())) as content_file:
+				return xmltodict.parse(bytes(content_file.readBytes()))
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  There was an error parsing the alphabetical xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
 
 	def get_genre_game_listing(self):
 		try:
-			return etree_to_dict(ET.parse(self.get_game_list_genre_file()).getroot()) #No cache for this currently, since its small
+			# return etree_to_dict(ET.parse(self.get_game_list_genre_file()).getroot()) #No cache for this currently, since its small
+			with closing(xbmcvfs.File(self.get_game_list_genre_file())) as content_file:
+				return xmltodict.parse(bytes(content_file.readBytes()))
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  There was an error parsing the genre xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
 
 	def get_year_game_listing(self):
 		try:
-			return etree_to_dict(ET.parse(self.get_game_list_year_file()).getroot()) #No cache for this currently, since its small
+			# return etree_to_dict(ET.parse(self.get_game_list_year_file()).getroot()) #No cache for this currently, since its small
+			with closing(xbmcvfs.File(self.get_game_list_year_file())) as content_file:
+				return xmltodict.parse(bytes(content_file.readBytes()))
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  There was an error parsing the year xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
 
 	def get_player_game_listing(self):
 		try:
-			return etree_to_dict(ET.parse(self.get_game_list_player_file()).getroot()) #No cache for this currently, since its small
+			# return etree_to_dict(ET.parse(self.get_game_list_player_file()).getroot()) #No cache for this currently, since its small
+			with closing(xbmcvfs.File(self.get_game_list_player_file())) as content_file:
+				return xmltodict.parse(bytes(content_file.readBytes()))
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  There was an error parsing the player xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
 
 	def get_groups_game_listing(self):
 		try:
-			return etree_to_dict(ET.parse(self.get_game_list_groups_file()).getroot()) #No cache for this currently, since its small
+			# return etree_to_dict(ET.parse(self.get_game_list_groups_file()).getroot()) #No cache for this currently, since its small
+			with closing(xbmcvfs.File(self.get_game_list_groups_file())) as content_file:
+				return xmltodict.parse(bytes(content_file.readBytes()))
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  There was an error parsing the custom groups xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
 
 	def get_studio_game_listing(self):
 		try:
-			return etree_to_dict(ET.parse(self.get_game_list_studio_file()).getroot()) #No cache for this currently, since its small
+			# return etree_to_dict(ET.parse(self.get_game_list_studio_file()).getroot()) #No cache for this currently, since its small
+			with closing(xbmcvfs.File(self.get_game_list_studio_file())) as content_file:
+				return xmltodict.parse(bytes(content_file.readBytes()))
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  There was an error parsing the studio xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
 
 	def get_tag_game_listing(self):
 		try:
-			return etree_to_dict(ET.parse(self.get_game_list_tag_file()).getroot()) #No cache for this currently, since its small
+			# return etree_to_dict(ET.parse(self.get_game_list_tag_file()).getroot()) #No cache for this currently, since its small
+			with closing(xbmcvfs.File(self.get_game_list_tag_file())) as content_file:
+				return xmltodict.parse(bytes(content_file.readBytes()))
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  There was an error parsing the tag xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
 
 	def get_choose_game_listing(self):
 		try:
-			return etree_to_dict(ET.parse(self.get_game_list_choose_file()).getroot()) #No cache for this currently, since its small
+			# return etree_to_dict(ET.parse(self.get_game_list_choose_file()).getroot()) #No cache for this currently, since its small
+			with closing(xbmcvfs.File(self.get_game_list_choose_file())) as content_file:
+				return xmltodict.parse(bytes(content_file.readBytes()))
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  There was an error parsing the choose xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
 
 	def get_browse_listing(self):
 		try:
-			return etree_to_dict(ET.parse(self.get_browse_choose_file()).getroot()) #No cache for this currently, since its small
+			# return etree_to_dict(ET.parse(self.get_browse_choose_file()).getroot()) #No cache for this currently, since its small
+			with closing(xbmcvfs.File(self.get_browse_choose_file())) as content_file:
+				return xmltodict.parse(bytes(content_file.readBytes()))
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  There was an error parsing the browse xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
 
 	def get_search_listing(self):
 		try:
-			return etree_to_dict(ET.parse(self.get_search_menu_file()).getroot()) #No cache for this currently, since its small
+			# return etree_to_dict(ET.parse(self.get_search_menu_file()).getroot()) #No cache for this currently, since its small
+			with closing(xbmcvfs.File(self.get_search_menu_file())) as content_file:
+				return xmltodict.parse(bytes(content_file.readBytes()))
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  There was an error parsing the search menu xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
 
 	def get_random_listing(self):
 		try:
-			return etree_to_dict(ET.parse(self.get_random_menu_file()).getroot()) #No cache for this currently, since its small
+			# return etree_to_dict(ET.parse(self.get_random_menu_file()).getroot()) #No cache for this currently, since its small
+			with closing(xbmcvfs.File(self.get_random_menu_file())) as content_file:
+				return xmltodict.parse(bytes(content_file.readBytes()))
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  There was an error parsing the random menu xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
 
 	def get_external_command_listing(self):
 		try:
-			return etree_to_dict(ET.parse(self.get_external_command_db_file()).getroot()) #No cache for this currently, since its small
+			# return etree_to_dict(ET.parse(self.get_external_command_db_file()).getroot()) #No cache for this currently, since its small
+			with closing(xbmcvfs.File(self.get_external_command_db_file())) as content_file:
+				return xmltodict.parse(bytes(content_file.readBytes()))
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  There was an error parsing the external command xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
 
 	def get_mame_softlist_listing(self):
 		try:
-			return etree_to_dict(ET.parse(self.get_mame_softlist_db_file()).getroot()) #No cache for this currently, since its small
+			# return etree_to_dict(ET.parse(self.get_mame_softlist_db_file()).getroot()) #No cache for this currently, since its small
+			with closing(xbmcvfs.File(self.get_mame_softlist_db_file())) as content_file:
+				return xmltodict.parse(bytes(content_file.readBytes()))
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL:  There was an error parsing the mame softlist xml file, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 			return None
@@ -1779,7 +1805,9 @@ class iagl_utils(object):
 			try:
 				if games_dict is None:
 					xbmc.log(msg='IAGL:  Parsing XMl file for %(game_list_id)s, file CRC %(current_crc)s' % {'game_list_id': game_list_id, 'current_crc': current_crc32}, level=xbmc.LOGDEBUG)
-					games_dict_etree = etree_to_dict(ET.parse(current_xml_file).getroot())
+					# games_dict_etree = etree_to_dict(ET.parse(current_xml_file).getroot())
+					with closing(xbmcvfs.File(current_xml_file)) as content_file:
+						games_dict_etree = xmltodict.parse(bytes(content_file.readBytes()))
 					games_dict = list()
 					if type(games_dict_etree['datafile']['game']) is not list:  #Needed to check for archives with only one item
 						games_dict_etree['datafile']['game'] = [games_dict_etree['datafile']['game']]
@@ -2701,7 +2729,7 @@ class iagl_utils(object):
 					favorite_dict['games']['game']['rom_override_postdl'] = current_post_dl_command
 			current_game_name = favorite_dict['games']['game'].get('@name')
 			favorite_xml = ET.tostring(dict_to_etree(favorite_dict))
-			crc_string = get_crc32_from_string(''.join([x.encode('utf-8',errors='ignore') for x in sorted(favorite_dict['games']['game'].values()) if type(x) is str or type(x) is unicode])) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
+			crc_string = get_crc32_from_string(''.join([py2_encode(x) for x in sorted(favorite_dict['games']['game'].values()) if isinstance(x, six.string_types)])) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
 			if '<games>' in favorite_xml and '</games>' in favorite_xml:
 				favorite_header = '<!-- IAGL Favorite XXXCRCXXX -->'.replace('XXXCRCXXX',crc_string)
 				favorite_xml = favorite_xml.replace('<games>',favorite_header).replace('</games>',favorite_header).replace('><','>\r\n\t\t<').replace('\t\t<game ','\t<game ').replace('\t\t</game>','\t</game>').replace('\t\t<!--','<!--')+'\r\n</datafile>'
@@ -2754,7 +2782,7 @@ class iagl_utils(object):
 			favorite_dict = dict()
 			favorite_dict['games'] = dict()
 			favorite_dict['games']['game'] = json.loads(json_in).get('game')
-			crc_string = get_crc32_from_string(''.join([x.encode('utf-8',errors='ignore') for x in sorted(favorite_dict['games']['game'].values()) if type(x) is str or type(x) is unicode])) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
+			crc_string = get_crc32_from_string(''.join([py2_encode(x) for x in sorted(favorite_dict['games']['game'].values()) if isinstance(x, six.string_types)])) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
 			current_filename = os.path.join(self.get_dat_folder_path(),url_unquote(game_list_id_in)+'.xml')
 			file_contents = None
 			if xbmcvfs.exists(current_filename):
@@ -3298,7 +3326,7 @@ class iagl_download(object):
 				r = s.get('https://archive.org/account/login.php')
 				data={'username': username,'password': password,'remember': 'CHECKED','action': 'login','submit': 'Log+in'}
 				r = s.post('https://archive.org/account/login.php', data=data)
-				if 'that password seems incorrect' in str(r.text.encode('utf-8')).lower():
+				if 'that password seems incorrect' in str(py2_encode(r.text)).lower():
 					xbmc.log(msg='IAGL:  Login and Password were not accepted, we will try to download anyway', level=xbmc.LOGDEBUG)
 				r = s.get(url,verify=False,stream=True,timeout=self.download_timeout)
 				try:
@@ -3514,7 +3542,7 @@ class iagl_download(object):
 			temp_folder =  os.path.join(os.path.split(filename_in)[0],str(name_in))
 			dp = xbmcgui.DialogProgressBG()
 			dp.create('Please Wait...','Extracting files')
-			xbmc.executebuiltin(('XBMC.Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmc.translatePath(filename_in), 'location_to_extract_to':xbmc.translatePath(temp_folder)}).encode('utf-8'), True) #Unzip the file(s) to a temp folder
+			xbmc.executebuiltin(py2_encode('XBMC.Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmc.translatePath(filename_in), 'location_to_extract_to':xbmc.translatePath(temp_folder)}), True) #Unzip the file(s) to a temp folder
 			dp.close()
 			if xbmcvfs.exists(os.path.join(temp_folder,'')): #Unzip generated a folder
 				self.current_processed_files.extend(get_all_files_in_directory_xbmcvfs(temp_folder))
@@ -3552,7 +3580,7 @@ class iagl_download(object):
 			temp_folder =  os.path.join(os.path.split(filename_in)[0],str(crc_in))
 			dp = xbmcgui.DialogProgressBG()
 			dp.create('Please Wait...','Extracting files')
-			xbmc.executebuiltin(('XBMC.Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmc.translatePath(filename_in), 'location_to_extract_to':xbmc.translatePath(temp_folder)}).encode('utf-8'), True) #Unzip the file(s) to a temp folder
+			xbmc.executebuiltin(py2_encode('XBMC.Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmc.translatePath(filename_in), 'location_to_extract_to':xbmc.translatePath(temp_folder)}), True) #Unzip the file(s) to a temp folder
 			dp.close()
 			if xbmcvfs.exists(os.path.join(temp_folder,'')): #Unzip generated a folder
 				files_extracted, files_extracted_success = move_directory_contents_xbmcvfs(os.path.join(temp_folder,''),os.path.join(os.path.split(filename_in)[0],''))
@@ -3932,7 +3960,7 @@ class iagl_download(object):
 				# dont_include_these_addons = ['game.libretro','game.libretro.2048','game.libretro.dinothawr','game.libretro.mrboom']
 				current_game_addon_values = [x.get('addonid') for x in json.loads(addons_available).get('result').get('addons') if x.get('type') == 'kodi.gameclient' and x.get('addonid') not in self.IAGL.ignore_these_game_addons]
 				if 'game.libretro.%(emulator_in)s'%{'emulator_in':emulator_in} in current_game_addon_values:
-					current_game_libretro_hash_path = os.path.join(xbmc.translatePath(xbmcaddon.Addon(id='game.libretro.%(emulator_in)s'%{'emulator_in':emulator_in}).getAddonInfo('profile')).decode('utf-8'),'resources','system','hash')
+					current_game_libretro_hash_path = os.path.join(py2_decode(xbmc.translatePath(xbmcaddon.Addon(id='game.libretro.%(emulator_in)s'%{'emulator_in':emulator_in}).getAddonInfo('profile'))),'resources','system','hash')
 					if current_softlist_url is not None: #Download the softlist to the retroarch system directory defined in IAGL settings
 						if not xbmcvfs.exists(os.path.join(current_game_libretro_hash_path,os.path.split(current_softlist_url)[-1])):
 							self.download_no_login(current_softlist_url,os.path.join(current_game_libretro_hash_path,os.path.split(current_softlist_url)[-1]),description='Softlist Hash: %(hashfile)s'%{'hashfile':os.path.split(current_softlist_url)[-1]},heading='Downloading, please wait...')
@@ -3951,7 +3979,7 @@ class iagl_download(object):
 		with closing(xbmcvfs.File(filename_in)) as content_file:
 			byte_string = bytes(content_file.readBytes())
 		try:
-			file_contents = byte_string.decode('utf-8',errors='ignore')
+			file_contents = py2_decode(byte_string)
 		except:
 			file_contents = None
 
@@ -3968,7 +3996,7 @@ class iagl_download(object):
 				with closing(xbmcvfs.File(self.current_saved_files[-1])) as content_file:
 					byte_string = bytes(content_file.readBytes())
 				try:
-					file_contents = byte_string.decode('utf-8',errors='ignore')  #If this doesn't work, then it's binary data and likely a valid file
+					file_contents = py2_decode(byte_string)  #If this doesn't work, then it's binary data and likely a valid file
 				except:
 					file_contents = ''
 				if self.small_file_text_check in file_contents.lower():
@@ -4126,7 +4154,7 @@ class iagl_launch(object):
 				self.external_launch_command = self.json.get('game').get('rom_override_cmd')
 			if self.external_launch_command is not None:
 				self.external_launch_command = self.IAGL.get_external_command(self.external_launch_command)
-		if type(filenames_in) is str or type(filenames_in) is unicode:
+		if isinstance(filenames_in, six.string_types)
 			self.launch_filenames = [filenames_in]
 		else:
 			self.launch_filenames = filenames_in
@@ -4634,25 +4662,25 @@ class iagl_textviewer_dialog(xbmcgui.WindowXMLDialog):
 		xbmcgui.Window(10000).clearProperty('TextViewer_Text')
 		self.close()
 
-def etree_to_dict(t):
-	d = {t.tag: {} if t.attrib else None}
-	children = list(t)
-	if children:
-		dd = defaultdict(list)
-		for dc in map(etree_to_dict, children):
-			for k, v in dc.items():
-				dd[k].append(v)
-		d = {t.tag: {k: v[0] if len(v) == 1 else v for k, v in dd.items()}}
-	if t.attrib:
-		d[t.tag].update(('@' + k, v) for k, v in t.attrib.items())
-	if t.text:
-		text = t.text.strip()
-		if children or t.attrib:
-			if text:
-				d[t.tag]['#text'] = text
-		else:
-			d[t.tag] = text
-	return d
+# def etree_to_dict(t):
+# 	d = {t.tag: {} if t.attrib else None}
+# 	children = list(t)
+# 	if children:
+# 		dd = defaultdict(list)
+# 		for dc in map(etree_to_dict, children):
+# 			for k, v in dc.items():
+# 				dd[k].append(v)
+# 		d = {t.tag: {k: v[0] if len(v) == 1 else v for k, v in dd.items()}}
+# 	if t.attrib:
+# 		d[t.tag].update(('@' + k, v) for k, v in t.attrib.items())
+# 	if t.text:
+# 		text = t.text.strip()
+# 		if children or t.attrib:
+# 			if text:
+# 				d[t.tag]['#text'] = text
+# 		else:
+# 			d[t.tag] = text
+# 	return d
 
 #Function to go to home screen (if not already there)
 def go_to_home():
@@ -4661,33 +4689,33 @@ def go_to_home():
 		xbmc.executebuiltin('ActivateWindow(home)')
 		xbmc.sleep(100)
 
-def dict_to_etree(d):
-	def _to_etree(d, root):
-		if not d:
-			pass
-		elif isinstance(d, str) or isinstance(d,unicode):
-			root.text = d
-		elif isinstance(d, dict):
-			for k,v in d.items():
-				assert isinstance(k, str) or isinstance(k, unicode)
-				if k.startswith('#'):
-					assert k == '#text' and isinstance(v, str) or isinstance(v, unicode)
-					root.text = v
-				elif k.startswith('@'):
-					assert isinstance(v, str) or isinstance(v, unicode)
-					root.set(k[1:], v)
-				elif isinstance(v, list):
-					for e in v:
-						_to_etree(e, ET.SubElement(root, k))
-				else:
-					_to_etree(v, ET.SubElement(root, k))
-		else:
-			assert d == 'invalid type', (type(d), d)
-	assert isinstance(d, dict) and len(d) == 1
-	tag, body = next(iter(d.items()))
-	node = ET.Element(tag)
-	_to_etree(body, node)
-	return node
+# def dict_to_etree(d):
+# 	def _to_etree(d, root):
+# 		if not d:
+# 			pass
+# 		elif isinstance(d, str) or isinstance(d,unicode):
+# 			root.text = d
+# 		elif isinstance(d, dict):
+# 			for k,v in d.items():
+# 				assert isinstance(k, str) or isinstance(k, unicode)
+# 				if k.startswith('#'):
+# 					assert k == '#text' and isinstance(v, str) or isinstance(v, unicode)
+# 					root.text = v
+# 				elif k.startswith('@'):
+# 					assert isinstance(v, str) or isinstance(v, unicode)
+# 					root.set(k[1:], v)
+# 				elif isinstance(v, list):
+# 					for e in v:
+# 						_to_etree(e, ET.SubElement(root, k))
+# 				else:
+# 					_to_etree(v, ET.SubElement(root, k))
+# 		else:
+# 			assert d == 'invalid type', (type(d), d)
+# 	assert isinstance(d, dict) and len(d) == 1
+# 	tag, body = next(iter(d.items()))
+# 	node = ET.Element(tag)
+# 	_to_etree(body, node)
+# 	return node
 
 def get_crc32_from_string(string_in):
 	return '%X'%(zlib.crc32(str(string_in)) & 0xFFFFFFFF)

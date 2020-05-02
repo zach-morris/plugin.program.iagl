@@ -21,9 +21,7 @@ plugin = routing.Plugin() #Plugin Handle
 IAGL = iagl_utils() #IAGL utils Class
 IAGL.initialize_IAGL_settings() #Initialize some addon stuff
 xbmcplugin.setContent(plugin.handle,IAGL.handle.getSetting(id='iagl_setting_setcontent')) #Define the content type per settings
-# IAGL.archive_listing_settings_route = IAGL.archive_listing_settings_routes[IAGL.archive_listing_settings.split('|').index(IAGL.handle.getSetting(id='iagl_setting_archive_listings'))] #Old method pre language update
 IAGL.archive_listing_settings_route = IAGL.archive_listing_settings_routes[int(IAGL.handle.getSetting(id='iagl_setting_archive_listings'))]
-# IAGL.current_game_listing_route = IAGL.game_listing_settings_routes[IAGL.game_listing_settings.split('|').index(IAGL.handle.getSetting(id='iagl_setting_listing'))] #Old method pre language update
 IAGL.current_game_listing_route = IAGL.game_listing_settings_routes[int(IAGL.handle.getSetting(id='iagl_setting_listing'))]
 
 ## Plugin Routes ##
@@ -64,9 +62,7 @@ def list_archives_browse():
 
 @plugin.route('/archives/all')
 def list_archives_all():
-	# IAGL.current_game_listing_route = IAGL.game_listing_settings_routes[IAGL.game_listing_settings.split('|').index(IAGL.handle.getSetting(id='iagl_setting_listing'))] #Old method pre language update
 	IAGL.current_game_listing_route = IAGL.game_listing_settings_routes[int(IAGL.handle.getSetting(id='iagl_setting_listing'))]
-	# for ii,list_item in enumerate(IAGL.get_game_lists_as_listitems()):
 	for list_item in IAGL.get_game_lists_as_listitems():
 		if IAGL.current_game_listing_route == 'list_all':
 			if list_item.getProperty('emu_visibility') != 'hidden':
@@ -74,7 +70,6 @@ def list_archives_all():
 		else:
 			if list_item.getProperty('emu_visibility') != 'hidden':
 				xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/game_list/'+IAGL.current_game_listing_route+'/'+url_quote(list_item.getProperty('dat_filename'))),IAGL.add_list_context_menus(list_item,url_quote(list_item.getProperty('dat_filename'))), True)
-		# xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game_list, game_list_id=url_quote(list_item.getProperty('dat_filename')), page_number=1),list_item, True)
 	search_and_browse_list_item = IAGL.get_browse_lists_as_listitems()
 	if IAGL.get_setting_as_bool(IAGL.handle.getSetting(id='iagl_setting_show_search')): #Add search to the bottom of the all page
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/archives/search_menu'),[x for x in search_and_browse_list_item if x.getLabel2()=='search_menu'][0], True)
@@ -93,7 +88,6 @@ def list_archives_all():
 
 @plugin.route('/archives/categorized')
 def list_archives_by_category():
-	# for ii,list_item in enumerate(IAGL.get_game_list_categories_as_listitems()):
 	for list_item in IAGL.get_game_list_categories_as_listitems():
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game_lists_in_category, category_id=url_quote(list_item.getLabel())),list_item, True)
 	
@@ -105,9 +99,7 @@ def list_archives_by_category():
 
 @plugin.route('/archives/categorized/<category_id>')
 def get_game_lists_in_category(category_id):
-	# IAGL.current_game_listing_route = IAGL.game_listing_settings_routes[IAGL.game_listing_settings.split('|').index(IAGL.handle.getSetting(id='iagl_setting_listing'))] #Old method pre language update
 	IAGL.current_game_listing_route = IAGL.game_listing_settings_routes[int(IAGL.handle.getSetting(id='iagl_setting_listing'))]
-	# for ii,list_item in enumerate(IAGL.get_game_lists_as_listitems(url_unquote(category_id))):
 	for list_item in IAGL.get_game_lists_as_listitems(url_unquote(category_id)):
 		if IAGL.current_game_listing_route == 'list_all':
 			if list_item.getProperty('emu_visibility') != 'hidden':
@@ -115,7 +107,6 @@ def get_game_lists_in_category(category_id):
 		else:
 			if list_item.getProperty('emu_visibility') != 'hidden':
 				xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/game_list/'+IAGL.current_game_listing_route+'/'+url_quote(list_item.getProperty('dat_filename'))),IAGL.add_list_context_menus(list_item,url_quote(list_item.getProperty('dat_filename'))), True)
-		# xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game_list, game_list_id=url_quote(list_item.getProperty('dat_filename')), page_number=1),list_item, True)
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
 	xbmcplugin.addSortMethod(plugin.handle,xbmcplugin.SORT_METHOD_DATE)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -165,7 +156,6 @@ def get_games_with_letter(letter,game_list_id,page_number=1):
 	current_page, page_info = IAGL.get_games_as_listitems(url_unquote(game_list_id),list_method,letter,page_number)
 	for list_item in current_page:
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2())),IAGL.add_game_context_menus(list_item,game_list_id,url_quote(list_item.getLabel2()),page_info['categories']), True) #Method 1, dont pass json as arg
-		# xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2()), json=list_item.getProperty('iagl_json')),list_item, True) #Method 2, pass json as arg, works well for Kodi favs, but is 'messy'
 	next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
 	if next_page_li is not None:
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_letter, letter=letter, game_list_id=game_list_id, page_number=page_info['next_page']),next_page_li, True)
@@ -204,7 +194,6 @@ def get_games_with_genre(genre,game_list_id,page_number=1):
 	current_page, page_info = IAGL.get_games_as_listitems(url_unquote(game_list_id),list_method,url_unquote(genre),page_number)
 	for list_item in current_page:
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2())),IAGL.add_game_context_menus(list_item,game_list_id,url_quote(list_item.getLabel2()),page_info['categories']), True) #Method 1, dont pass json as arg
-		# xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2()), json=list_item.getProperty('iagl_json')),list_item, True) #Method 2, pass json as arg, works well for Kodi favs, but is 'messy'
 	next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
 	if next_page_li is not None:
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_genre, genre=genre, game_list_id=game_list_id, page_number=page_info['next_page']),next_page_li, True)
@@ -242,7 +231,6 @@ def get_games_with_year(year,game_list_id,page_number=1):
 	current_page, page_info = IAGL.get_games_as_listitems(url_unquote(game_list_id),list_method,url_unquote(year),page_number)
 	for list_item in current_page:
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2())),IAGL.add_game_context_menus(list_item,game_list_id,url_quote(list_item.getLabel2()),page_info['categories']), True) #Method 1, dont pass json as arg
-		# xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_game, game_list_id=url_quote(game_list_id), game_id=url_quote(list_item.getLabel2()), json=list_item.getProperty('iagl_json')),list_item, True) #Method 2, pass json as arg, works well for Kodi favs, but is 'messy'
 	next_page_li = IAGL.get_next_page_listitem(page_info['page'],page_info['page_count'],page_info['next_page'],page_info['item_count'])
 	if next_page_li is not None:
 		xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for(get_games_with_year, year=year, game_list_id=game_list_id, page_number=page_info['next_page']),next_page_li, True)
@@ -429,7 +417,6 @@ def get_game_list(game_list_id,page_number=1):
 
 @plugin.route('/game/<game_list_id>/<game_id>')
 def get_game(game_list_id,game_id):
-	# xbmcplugin.endOfDirectory(plugin.handle, succeeded=False) #Seems like this is needed, some race condition on modal
 	list_method = 'list_single_game'
 	xbmc.log(msg='IAGL:  Getting game ID: %(game_id)s in game category %(game_list_id)s' % {'game_list_id': game_list_id, 'game_id': game_id}, level=xbmc.LOGDEBUG)
 	
@@ -501,7 +488,6 @@ def get_game(game_list_id,game_id):
 			del current_dialog
 	else:
 		xbmc.log(msg='IAGL:  Unkown default action in settings',level=xbmc.LOGERROR)
-	# xbmcplugin.endOfDirectory(plugin.handle, succeeded=False)
 
 @plugin.route('/context_menu/<game_list_id>/<setting_id>')
 def update_game_list(game_list_id,setting_id):
