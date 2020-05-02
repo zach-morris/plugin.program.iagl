@@ -4154,7 +4154,7 @@ class iagl_launch(object):
 				self.external_launch_command = self.json.get('game').get('rom_override_cmd')
 			if self.external_launch_command is not None:
 				self.external_launch_command = self.IAGL.get_external_command(self.external_launch_command)
-		if isinstance(filenames_in, six.string_types)
+		if isinstance(filenames_in, six.string_types):
 			self.launch_filenames = [filenames_in]
 		else:
 			self.launch_filenames = filenames_in

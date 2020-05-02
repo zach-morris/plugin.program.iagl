@@ -1,4 +1,5 @@
 from kodi_six import xbmc, xbmcgui, xbmcvfs
+from kodi_six.utils import py2_decode
 from contextlib import closing
 import os
 WIN = xbmcgui.Window(10000)
@@ -13,7 +14,7 @@ if not WIN.getProperty('iagl.script_started'):
 		with closing(xbmcvfs.File(addon_xml_path)) as content_file:
 			byte_string = bytes(content_file.readBytes())
 		try:
-			file_contents = byte_string.decode('utf-8',errors='ignore')
+			file_contents = py2_decode(byte_string)
 			success.append(True)
 		except Exception as exc1:
 			file_contents = None
