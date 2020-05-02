@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.program.iagl" name="Internet Archive Game Launcher" version="2.1.7">
   <requires>
-    <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.dateutil"/>
     <import addon="script.module.elementtree"/>
     <import addon="script.module.kodi-six"/>
@@ -9,7 +8,7 @@
     <import addon="script.module.requests"/>
     <import addon="script.module.routing"/>
     <import addon="plugin.video.youtube"/>
-    <import addon="vfs.libarchive" optional="true"/>
+    <import addon="vfs.libarchive"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video game</provides>
