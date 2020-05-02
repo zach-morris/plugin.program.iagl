@@ -11,16 +11,16 @@ from contextlib import closing
 from dateutil import parser as date_parser
 from ast import literal_eval as lit_eval
 # import xml.etree.ElementTree as ET
-import paginate
+from . import paginate
 # https://github.com/Pylons/paginate
-import xmltodict
+from . import xmltodict
 # https://github.com/martinblech/xmltodict
 import requests
 import requests.packages.urllib3
 requests.packages.urllib3.disable_warnings() #Silence uneeded warnings
 
 try:
-	from scandir import scandir
+	from . import scandir
 	scandir_import_success = True
 except:
 	xbmc.log(msg='IAGL:  Using XBMCVFS for directory size.  You suck Android.', level=xbmc.LOGDEBUG)
@@ -2601,46 +2601,29 @@ class iagl_utils(object):
 
 	def update_xml_header(self,current_filename,current_key,new_value,silent_update=False):
 
-		starting_tag = '<%(current_key)s>'%{'current_key':current_key}
-		ending_tag = '</%(current_key)s>'%{'current_key':current_key}
-		file_ending_tag = '</datafile>'
-
+		tag_re = '<%(current_key)s>.*?</%(current_key)s>'%{'current_key':current_key}
 		new_value_line = '<%(current_key)s>%(new_value)s</%(current_key)s>'%{'current_key':current_key,'new_value':new_value.replace('\r\n','[CR]').replace('\r','[CR]').replace('\n','[CR]')}
 		value_updated = False
 		last_line_written = False
 
-		with open(current_filename,'r') as input_file, open(os.path.join(self.get_dat_folder_path(),'temp.xml'), 'w') as output_file:
-			for line in input_file:
-				if not value_updated:  #Only update the first instance of the requested tag
-					if starting_tag in line and ending_tag in line:
-						try:
-							output_file.write('%(start_value)s%(new_value)s%(end_value)s' % {'start_value': line.split(starting_tag)[0], 'new_value': new_value_line, 'end_value':line.split(ending_tag)[-1]})
-							value_updated = True
-							if file_ending_tag in line:  #Of course android does something totally unexpected with standard python code
-								last_line_written = True
-						except Exception as exc1: #except Exception, (exc):
-							try:
-								xbmc.log(msg='IAGL:  XML %(current_filename)s write error.  Exception %(exc)s.  Attempting to write again.' % {'current_filename': current_filename, 'exc': exc1}, level=xbmc.LOGERROR)
-								output_file.write(new_value_line)
-								value_updated = True
-								if file_ending_tag in line:  #Of course android does something totally unexpected with standard python code
-									last_line_written = True
-							except Exception as exc2: #except Exception, (exc):
-								value_updated = False
-								xbmc.log(msg='IAGL:  XML %(current_filename)s write error.  Exception %(exc)s' % {'current_filename': current_filename, 'exc': exc2}, level=xbmc.LOGERROR)
-					else:
-						output_file.write(line)
-						if file_ending_tag in line:
-							last_line_written = True
+		with closing(xbmcvfs.File(xbmc.translatePath(current_filename),'r')) as file_in, closing(xbmcvfs.File(xbmc.translatePath(os.path.join(self.get_dat_folder_path(),'temp.xml')),'w')) as output_file:
+			byte_string_1 = bytes(file_in.readBytes(25000)) #Read first ~25kb of dat file to get header
+			output_file.write(bytearray(re.sub(tag_re,new_value_line,byte_string_1.decode('utf-8')).encode('utf-8')))
+			if byte_string_1 and re.sub(tag_re,new_value_line,byte_string_1.decode('utf-8')) == byte_string_1.decode('utf-8'):
+				xbmc.log(msg='IAGL:  It appears nothing was updated in the XML file %(current_filename)s for the tag %(current_key)s' % {'current_filename': os.path.split(current_filename)[-1], 'current_key': current_key}, level=xbmc.LOGDEBUG)
+			while byte_string_1 or not last_line_written:
+				value_updated = True
+				byte_string_2 = file_in.readBytes(25000)
+				if not byte_string_2:
+					last_line_written = True
+					break
 				else:
-					output_file.write(line)
-					if file_ending_tag in line:
-						last_line_written = True
+					output_file.write(bytearray(byte_string_2))
 
 		if value_updated and last_line_written: #Success
 			if xbmcvfs.delete(current_filename): #Current file was deleted
 				if xbmcvfs.rename(os.path.join(self.get_dat_folder_path(),'temp.xml'),current_filename):
-					xbmc.log(msg='IAGL:  XML %(current_filename)s updated with value %(new_value)s' % {'current_filename': os.path.split(current_filename)[-1], 'new_value': new_value}, level=xbmc.LOGDEBUG)
+					xbmc.log(msg='IAGL:  XML %(current_filename)s updated key %(current_key)s with value %(new_value)s' % {'current_filename': os.path.split(current_filename)[-1],'current_key':current_key, 'new_value': new_value}, level=xbmc.LOGNOTICE)
 					xbmcvfs.delete(os.path.join(self.get_list_cache_path(),self.dat_file_cache_filename)) #Delete dat file cache
 					if self.delete_list_cache(os.path.splitext(os.path.split(current_filename)[-1])[0]):
 						if not silent_update:
@@ -2718,37 +2701,38 @@ class iagl_utils(object):
 			else:
 				current_route = 'plugin://plugin.program.iagl/game/<game_list_id>/<game_id>'.replace('<game_list_id>',game_list_id_in).replace('<game_id>',game_id_in)
 			current_size = self.get_rom_size(favorite_dict['games']['game'])
-			if self.handle.getSetting(id='iagl_favorites_format') == 'Use Hyperlinks to other Lists': #Replace current game data with plugin route URL
+			if self.handle.getSetting(id='iagl_favorites_format') == '0': #Replace current game data with plugin route URL
 				favorite_dict['games']['game']['rom'] = dict()
 				favorite_dict['games']['game']['rom']['@name'] = current_route
 				if current_size is not None:
 					favorite_dict['games']['game']['rom']['@size'] = str(current_size)
-			if self.handle.getSetting(id='iagl_favorites_format') == 'Copies all Data, adds Post DL Command Override': #Add post DL override command to the game based on current emu Post DL command
+			if self.handle.getSetting(id='iagl_favorites_format') == '2': #Add post DL override command to the game based on current emu Post DL command
 				current_post_dl_command = json.loads(json_in).get('emu').get('emu_postdlaction')
 				if current_post_dl_command is not None and current_post_dl_command != 'none' and len(current_post_dl_command)>0:
 					favorite_dict['games']['game']['rom_override_postdl'] = current_post_dl_command
 			current_game_name = favorite_dict['games']['game'].get('@name')
-			favorite_xml = ET.tostring(dict_to_etree(favorite_dict))
-			crc_string = get_crc32_from_string(''.join([py2_encode(x) for x in sorted(favorite_dict['games']['game'].values()) if isinstance(x, six.string_types)])) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
+			# favorite_xml = ET.tostring(dict_to_etree(favorite_dict)).decode('utf-8')
+			favorite_xml = xmltodict.unparse(favorite_dict).replace('<?xml version="1.0" encoding="utf-8"?>','')
+			crc_string = get_crc32_from_string(''.join(sorted([py2_encode(x) for x in favorite_dict['games']['game'].values() if isinstance(x, six.string_types)]))) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
 			if '<games>' in favorite_xml and '</games>' in favorite_xml:
 				favorite_header = '<!-- IAGL Favorite XXXCRCXXX -->'.replace('XXXCRCXXX',crc_string)
 				favorite_xml = favorite_xml.replace('<games>',favorite_header).replace('</games>',favorite_header).replace('><','>\r\n\t\t<').replace('\t\t<game ','\t<game ').replace('\t\t</game>','\t</game>').replace('\t\t<!--','<!--')+'\r\n</datafile>'
 				favorite_xml = favorite_xml.replace('\n\n','\n').replace('\r\r','\r') #Remove extra newlines
 				value_updated = False
-				with open(filename_in,'r') as input_file, open(os.path.join(self.get_dat_folder_path(),'temp.xml'), 'w') as output_file:
-					for line in input_file:
-						if not value_updated:  #Only update the first instance of the requested tag
-							if '</datafile>' in line:
-								try:
-									output_file.write(favorite_xml)
-									value_updated = True
-								except Exception as exc: #except Exception, (exc):
-									value_updated = False
-									xbmc.log(msg='IAGL:  Favorites XML %(current_filename)s write error.  Exception %(exc)s' % {'current_filename': filename_in, 'exc': exc}, level=xbmc.LOGERROR)
-							else:
-								output_file.write(line)
+				
+				last_line_written = False
+				with closing(xbmcvfs.File(xbmc.translatePath(filename_in),'r')) as file_in, closing(xbmcvfs.File(xbmc.translatePath(os.path.join(self.get_dat_folder_path(),'temp.xml')),'w')) as output_file:
+					while not last_line_written:
+						byte_string = file_in.readBytes(50000)
+						if not byte_string:
+							last_line_written = True
+							break
 						else:
-							output_file.write(line)
+							if '</datafile>' in byte_string.decode('utf-8'):
+								value_updated = True
+								output_file.write(bytearray(byte_string.decode('utf-8').replace('</datafile>',favorite_xml).encode('utf-8')))
+							else:
+								output_file.write(bytearray(byte_string))
 				if value_updated: #Success
 					if xbmcvfs.delete(filename_in): #Current file was deleted
 						if xbmcvfs.rename(os.path.join(self.get_dat_folder_path(),'temp.xml'),filename_in):
@@ -2782,7 +2766,8 @@ class iagl_utils(object):
 			favorite_dict = dict()
 			favorite_dict['games'] = dict()
 			favorite_dict['games']['game'] = json.loads(json_in).get('game')
-			crc_string = get_crc32_from_string(''.join([py2_encode(x) for x in sorted(favorite_dict['games']['game'].values()) if isinstance(x, six.string_types)])) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
+			# crc_string = get_crc32_from_string(''.join([py2_encode(x) for x in sorted(favorite_dict['games']['game'].values()) if isinstance(x, six.string_types)])) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
+			crc_string = get_crc32_from_string(''.join(sorted([py2_encode(x) for x in favorite_dict['games']['game'].values() if isinstance(x, six.string_types)]))) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
 			current_filename = os.path.join(self.get_dat_folder_path(),url_unquote(game_list_id_in)+'.xml')
 			file_contents = None
 			if xbmcvfs.exists(current_filename):

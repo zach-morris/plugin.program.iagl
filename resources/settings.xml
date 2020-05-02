@@ -67,7 +67,7 @@
 		<setting label="30044" type="lsep" visible="true"/>
 		<setting id="iagl_wizard_launcher" type="select" label="30045" lvalues="30206|30128" default="1" visible="true"/>
 		<setting type="sep"/>
-		<setting visible="true" label="30046" type="action" option="close" action="RunScript(special://home/addons/plugin.program.iagl/resources/lib/run_IAGL_wizard.py)"/>
+		<setting visible="true" label="30046" type="action" option="close" action="RunScript(special://home/addons/plugin.program.iagl/run_IAGL_wizard.py)"/>
 	</category>
 	<category label="30006">
 		<setting label="30047" type="lsep"/>
@@ -78,14 +78,14 @@
 		<setting id="iagl_enable_android_stop_command" type="select" label="30049" lvalues="30095|30096" default="0"  visible="true"/>
 		<setting id="iagl_enable_stop_media_before_launch" type="select" label="30057" lvalues="30095|30096" default="0"  visible="true"/>
 		<setting id="iagl_favorites_format" type="select" label="30050" values="Use Hyperlinks to other Lists|Copies all Data|Copies all Data, adds Post DL Command Override" default="Use Hyperlinks to other Lists"  visible="true"/>
-		<setting visible="true" label="30051" type="action" action="RunScript(special://home/addons/plugin.program.iagl/resources/lib/update_addonxml_provides_games.py)"/>
-		<setting visible="true" label="30052" type="action" action="RunScript(special://home/addons/plugin.program.iagl/resources/lib/update_addonxml_provides_video.py)"/>
-		<setting visible="true" label="30053" type="action" action="RunScript(special://home/addons/plugin.program.iagl/resources/lib/update_addonxml_provides_program.py)"/>
+		<setting visible="true" label="30051" type="action" action="RunScript(special://home/addons/plugin.program.iagl/update_addonxml_provides_games.py)"/>
+		<setting visible="true" label="30052" type="action" action="RunScript(special://home/addons/plugin.program.iagl/update_addonxml_provides_video.py)"/>
+		<setting visible="true" label="30053" type="action" action="RunScript(special://home/addons/plugin.program.iagl/update_addonxml_provides_program.py)"/>
 		<setting id="iagl_setting_setcontent" type="select" label="30054" values="movies|tvshows|videos|mixed|games|None" default="tvshows"/>
 		<setting type="sep"/>
-		<setting visible="true" label="30055" type="action" action="RunScript(special://home/addons/plugin.program.iagl/resources/lib/unhide_all_archives.py)"/>
+		<setting visible="true" label="30055" type="action" action="RunScript(special://home/addons/plugin.program.iagl/unhide_all_archives.py)"/>
 		<setting type="sep"/>
-		<setting visible="true" label="30056" type="action" action="RunScript(special://home/addons/plugin.program.iagl/resources/lib/clear_IAGL_cache.py)"/>
+		<setting visible="true" label="30056" type="action" action="RunScript(special://home/addons/plugin.program.iagl/clear_IAGL_cache.py)"/>
 		<setting visible="false" id="iagl_hidden_bool_warn_size" type="bool" label="Display Size Warning" default="true"/>
 		<setting visible="false" id="iagl_hidden_bool_tou" type="bool" label="Agree to Terms of Use" default="false"/>
 		<setting visible="false" id="iagl_hidden_bool_warn_retroarch_sys_dir" type="bool" label="No System Dir Defined" default="true"/>

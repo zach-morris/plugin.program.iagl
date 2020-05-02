@@ -6,7 +6,7 @@ if not WIN.getProperty('iagl.script_started'):
 	WIN.setProperty('iagl.script_started','True')
 	# try:
 	xbmc.log(msg='IAGL:  Wizard script started.', level=xbmc.LOGDEBUG)
-	from main import iagl_utils
+	from resources.lib.main import iagl_utils
 	IAGL = iagl_utils() #IAGL utils Class
 	addon_xml_path = os.path.join(IAGL.get_addon_install_path(),'addon.xml')
 	success = list()
