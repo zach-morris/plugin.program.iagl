@@ -145,7 +145,7 @@ if not WIN.getProperty('iagl.script_started'):
 		IAGL.check_for_new_dat_files() #Update dat files if needed
 		current_game_lists = IAGL.get_game_lists() #Get current userdata game lists
 		dp = xbmcgui.DialogProgress()
-		dp.create('IAGL Wizard','Updating Game List Settings','')
+		dp.create('IAGL Wizard','Updating Game List Settings')
 		dp.update(0)
 		if IAGL.handle.getSetting('iagl_wizard_launcher') != 'External' and IAGL.handle.getSetting('iagl_wizard_launcher') != '0':
 			for dat_filename in current_game_lists['fullpath']:
@@ -194,7 +194,7 @@ if not WIN.getProperty('iagl.script_started'):
 						else:
 							IAGL.update_xml_header(dat_filename,'emu_launcher','external',True)
 							IAGL.update_xml_header(dat_filename,'emu_ext_launch_cmd',new_command,True)
-				dp.update(int(ii*100)/int(len(current_game_lists['fullpath'])))
+				dp.update(int(ii*100/len(current_game_lists['fullpath'])))
 				xbmc.sleep(100)
 				if dp.iscanceled():
 					run_was_cancelled = True

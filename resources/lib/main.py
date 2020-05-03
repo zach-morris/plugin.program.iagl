@@ -20,11 +20,12 @@ import requests.packages.urllib3
 requests.packages.urllib3.disable_warnings() #Silence uneeded warnings
 
 try:
-	from . import scandir
-	scandir_import_success = True
+	import pathlib
+	pathlib_import_success = True
+	xbmc.log(msg='IAGL:  Using pathlib for directory size.', level=xbmc.LOGDEBUG)
 except:
-	xbmc.log(msg='IAGL:  Using XBMCVFS for directory size.  You suck Android.', level=xbmc.LOGDEBUG)
-	scandir_import_success = False
+	xbmc.log(msg='IAGL:  Using XBMCVFS for directory size.', level=xbmc.LOGDEBUG)
+	pathlib_import_success = False
 try:
 	from urllib.parse import quote_plus as url_quote
 	from urllib.parse import unquote_plus as url_unquote
@@ -2601,29 +2602,46 @@ class iagl_utils(object):
 
 	def update_xml_header(self,current_filename,current_key,new_value,silent_update=False):
 
-		tag_re = '<%(current_key)s>.*?</%(current_key)s>'%{'current_key':current_key}
+		starting_tag = '<%(current_key)s>'%{'current_key':current_key}
+		ending_tag = '</%(current_key)s>'%{'current_key':current_key}
+		file_ending_tag = '</datafile>'
+
 		new_value_line = '<%(current_key)s>%(new_value)s</%(current_key)s>'%{'current_key':current_key,'new_value':new_value.replace('\r\n','[CR]').replace('\r','[CR]').replace('\n','[CR]')}
 		value_updated = False
 		last_line_written = False
 
-		with closing(xbmcvfs.File(xbmc.translatePath(current_filename),'r')) as file_in, closing(xbmcvfs.File(xbmc.translatePath(os.path.join(self.get_dat_folder_path(),'temp.xml')),'w')) as output_file:
-			byte_string_1 = bytes(file_in.readBytes(25000)) #Read first ~25kb of dat file to get header
-			output_file.write(bytearray(re.sub(tag_re,new_value_line,byte_string_1.decode('utf-8')).encode('utf-8')))
-			if byte_string_1 and re.sub(tag_re,new_value_line,byte_string_1.decode('utf-8')) == byte_string_1.decode('utf-8'):
-				xbmc.log(msg='IAGL:  It appears nothing was updated in the XML file %(current_filename)s for the tag %(current_key)s' % {'current_filename': os.path.split(current_filename)[-1], 'current_key': current_key}, level=xbmc.LOGDEBUG)
-			while byte_string_1 or not last_line_written:
-				value_updated = True
-				byte_string_2 = file_in.readBytes(25000)
-				if not byte_string_2:
-					last_line_written = True
-					break
+		with open(current_filename,'r') as input_file, open(os.path.join(self.get_dat_folder_path(),'temp.xml'), 'w') as output_file:
+			for line in input_file:
+				if not value_updated:  #Only update the first instance of the requested tag
+					if starting_tag in line and ending_tag in line:
+						try:
+							output_file.write('%(start_value)s%(new_value)s%(end_value)s' % {'start_value': line.split(starting_tag)[0], 'new_value': new_value_line, 'end_value':line.split(ending_tag)[-1]})
+							value_updated = True
+							if file_ending_tag in line:  #Of course android does something totally unexpected with standard python code
+								last_line_written = True
+						except Exception as exc1: #except Exception, (exc):
+							try:
+								xbmc.log(msg='IAGL:  XML %(current_filename)s write error.  Exception %(exc)s.  Attempting to write again.' % {'current_filename': current_filename, 'exc': exc1}, level=xbmc.LOGERROR)
+								output_file.write(new_value_line)
+								value_updated = True
+								if file_ending_tag in line:  #Of course android does something totally unexpected with standard python code
+									last_line_written = True
+							except Exception as exc2: #except Exception, (exc):
+								value_updated = False
+								xbmc.log(msg='IAGL:  XML %(current_filename)s write error.  Exception %(exc)s' % {'current_filename': current_filename, 'exc': exc2}, level=xbmc.LOGERROR)
+					else:
+						output_file.write(line)
+						if file_ending_tag in line:
+							last_line_written = True
 				else:
-					output_file.write(bytearray(byte_string_2))
+					output_file.write(line)
+					if file_ending_tag in line:
+						last_line_written = True
 
 		if value_updated and last_line_written: #Success
 			if xbmcvfs.delete(current_filename): #Current file was deleted
 				if xbmcvfs.rename(os.path.join(self.get_dat_folder_path(),'temp.xml'),current_filename):
-					xbmc.log(msg='IAGL:  XML %(current_filename)s updated key %(current_key)s with value %(new_value)s' % {'current_filename': os.path.split(current_filename)[-1],'current_key':current_key, 'new_value': new_value}, level=xbmc.LOGNOTICE)
+					xbmc.log(msg='IAGL:  XML %(current_filename)s updated with value %(new_value)s' % {'current_filename': os.path.split(current_filename)[-1], 'new_value': new_value}, level=xbmc.LOGDEBUG)
 					xbmcvfs.delete(os.path.join(self.get_list_cache_path(),self.dat_file_cache_filename)) #Delete dat file cache
 					if self.delete_list_cache(os.path.splitext(os.path.split(current_filename)[-1])[0]):
 						if not silent_update:
@@ -2701,38 +2719,38 @@ class iagl_utils(object):
 			else:
 				current_route = 'plugin://plugin.program.iagl/game/<game_list_id>/<game_id>'.replace('<game_list_id>',game_list_id_in).replace('<game_id>',game_id_in)
 			current_size = self.get_rom_size(favorite_dict['games']['game'])
-			if self.handle.getSetting(id='iagl_favorites_format') == '0': #Replace current game data with plugin route URL
+			if self.handle.getSetting(id='iagl_favorites_format') == 'Use Hyperlinks to other Lists': #Replace current game data with plugin route URL
 				favorite_dict['games']['game']['rom'] = dict()
 				favorite_dict['games']['game']['rom']['@name'] = current_route
 				if current_size is not None:
 					favorite_dict['games']['game']['rom']['@size'] = str(current_size)
-			if self.handle.getSetting(id='iagl_favorites_format') == '2': #Add post DL override command to the game based on current emu Post DL command
+			if self.handle.getSetting(id='iagl_favorites_format') == 'Copies all Data, adds Post DL Command Override': #Add post DL override command to the game based on current emu Post DL command
 				current_post_dl_command = json.loads(json_in).get('emu').get('emu_postdlaction')
 				if current_post_dl_command is not None and current_post_dl_command != 'none' and len(current_post_dl_command)>0:
 					favorite_dict['games']['game']['rom_override_postdl'] = current_post_dl_command
 			current_game_name = favorite_dict['games']['game'].get('@name')
-			# favorite_xml = ET.tostring(dict_to_etree(favorite_dict)).decode('utf-8')
+			# favorite_xml = ET.tostring(dict_to_etree(favorite_dict))
 			favorite_xml = xmltodict.unparse(favorite_dict).replace('<?xml version="1.0" encoding="utf-8"?>','')
-			crc_string = get_crc32_from_string(''.join(sorted([py2_encode(x) for x in favorite_dict['games']['game'].values() if isinstance(x, six.string_types)]))) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
+			crc_string = get_crc32_from_string(''.join([py2_encode(x) for x in sorted(favorite_dict['games']['game'].values()) if isinstance(x, six.string_types)])) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
 			if '<games>' in favorite_xml and '</games>' in favorite_xml:
 				favorite_header = '<!-- IAGL Favorite XXXCRCXXX -->'.replace('XXXCRCXXX',crc_string)
 				favorite_xml = favorite_xml.replace('<games>',favorite_header).replace('</games>',favorite_header).replace('><','>\r\n\t\t<').replace('\t\t<game ','\t<game ').replace('\t\t</game>','\t</game>').replace('\t\t<!--','<!--')+'\r\n</datafile>'
 				favorite_xml = favorite_xml.replace('\n\n','\n').replace('\r\r','\r') #Remove extra newlines
 				value_updated = False
-				
-				last_line_written = False
-				with closing(xbmcvfs.File(xbmc.translatePath(filename_in),'r')) as file_in, closing(xbmcvfs.File(xbmc.translatePath(os.path.join(self.get_dat_folder_path(),'temp.xml')),'w')) as output_file:
-					while not last_line_written:
-						byte_string = file_in.readBytes(50000)
-						if not byte_string:
-							last_line_written = True
-							break
-						else:
-							if '</datafile>' in byte_string.decode('utf-8'):
-								value_updated = True
-								output_file.write(bytearray(byte_string.decode('utf-8').replace('</datafile>',favorite_xml).encode('utf-8')))
+				with open(filename_in,'r') as input_file, open(os.path.join(self.get_dat_folder_path(),'temp.xml'), 'w') as output_file:
+					for line in input_file:
+						if not value_updated:  #Only update the first instance of the requested tag
+							if '</datafile>' in line:
+								try:
+									output_file.write(favorite_xml)
+									value_updated = True
+								except Exception as exc: #except Exception, (exc):
+									value_updated = False
+									xbmc.log(msg='IAGL:  Favorites XML %(current_filename)s write error.  Exception %(exc)s' % {'current_filename': filename_in, 'exc': exc}, level=xbmc.LOGERROR)
 							else:
-								output_file.write(bytearray(byte_string))
+								output_file.write(line)
+						else:
+							output_file.write(line)
 				if value_updated: #Success
 					if xbmcvfs.delete(filename_in): #Current file was deleted
 						if xbmcvfs.rename(os.path.join(self.get_dat_folder_path(),'temp.xml'),filename_in):
@@ -2766,8 +2784,7 @@ class iagl_utils(object):
 			favorite_dict = dict()
 			favorite_dict['games'] = dict()
 			favorite_dict['games']['game'] = json.loads(json_in).get('game')
-			# crc_string = get_crc32_from_string(''.join([py2_encode(x) for x in sorted(favorite_dict['games']['game'].values()) if isinstance(x, six.string_types)])) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
-			crc_string = get_crc32_from_string(''.join(sorted([py2_encode(x) for x in favorite_dict['games']['game'].values() if isinstance(x, six.string_types)]))) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
+			crc_string = get_crc32_from_string(''.join([py2_encode(x) for x in sorted(favorite_dict['games']['game'].values()) if isinstance(x, six.string_types)])) #Create a repeatable crc string to look for in the event the user attempts to delete the game from the list later
 			current_filename = os.path.join(self.get_dat_folder_path(),url_unquote(game_list_id_in)+'.xml')
 			file_contents = None
 			if xbmcvfs.exists(current_filename):
@@ -3302,7 +3319,7 @@ class iagl_download(object):
 		xbmc.log(msg='IAGL:  Attempting to download file %(url)s as logged in user' % {'url': url}, level=xbmc.LOGNOTICE)
 		xbmc.log(msg='IAGL:  Saving file to %(dest)s as logged in user' % {'dest': dest}, level=xbmc.LOGNOTICE)
 		dp = xbmcgui.DialogProgress()
-		dp.create(heading,description,'')
+		dp.create(heading,description)
 		dp.update(0)
 		if username is not None and len(username)>0 and password is not None and len(password)>0: #Attempt to login for downloading
 			try:
@@ -3327,7 +3344,7 @@ class iagl_download(object):
 				else:
 					line2_description = ''
 				# f = open(dest, 'wb')
-				with closing(xbmcvfs.File(dest,'w')) as game_file:
+				with closing(xbmcvfs.File(dest,'wb')) as game_file:
 					size = 0
 					last_time = time.time()
 					for chunk in r.iter_content(self.chunk_size):
@@ -3338,7 +3355,7 @@ class iagl_download(object):
 						# size = size + self.chunk_size
 						size = size+len(chunk) #chunks may be a different size when streaming
 						percent = 100.0 * size / (est_filesize + 1) #Added 1 byte to avoid div by zero
-						game_file.write(chunk)
+						game_file.write(bytearray(chunk))
 						now = time.time()
 						diff = now - last_time
 						if diff > 1:
@@ -3381,68 +3398,68 @@ class iagl_download(object):
 		xbmc.log(msg='IAGL:  Attempting to download file %(url)s' % {'url': url}, level=xbmc.LOGNOTICE)
 		xbmc.log(msg='IAGL:  Saving file to %(dest)s' % {'dest': dest}, level=xbmc.LOGNOTICE)
 		dp = xbmcgui.DialogProgress()
-		dp.create(heading,description,'')
+		dp.create(heading,description)
 		dp.update(0)
+		# try:
+		s = requests.Session()
+		# s.headers.update({'User-Agent': self.user_agent})
+		r = s.get(url,verify=False,stream=True,timeout=self.download_timeout)
 		try:
-			s = requests.Session()
-			# s.headers.update({'User-Agent': self.user_agent})
-			r = s.get(url,verify=False,stream=True,timeout=self.download_timeout)
-			try:
-				header_filesize = int(r.headers['Content-length'])
-				xbmc.log(msg='IAGL:  Source URL returned filesize of %(header_size)s'%{'header_size': header_filesize}, level=xbmc.LOGDEBUG)
-			except:
-				header_filesize = None
-				xbmc.log(msg='IAGL:  Source URL returned no filesize, current size estimate is %(est_filesize)s'%{'est_filesize': est_filesize}, level=xbmc.LOGDEBUG)
-			if header_filesize is not None:
-				est_filesize = header_filesize
-			if est_filesize is not None and est_filesize>0:
-				line2_description = 'current_size / %(estimated_size)s'% {'estimated_size': self.IAGL.bytes_to_string_size(est_filesize)}
-			else:
-				line2_description = ''
-			# f = open(dest, 'wb')
-			with closing(xbmcvfs.File(dest,'w')) as game_file:
-				size = 0
-				last_time = time.time()
-				for chunk in r.iter_content(self.chunk_size):
+			header_filesize = int(r.headers['Content-length'])
+			xbmc.log(msg='IAGL:  Source URL returned filesize of %(header_size)s'%{'header_size': header_filesize}, level=xbmc.LOGDEBUG)
+		except:
+			header_filesize = None
+			xbmc.log(msg='IAGL:  Source URL returned no filesize, current size estimate is %(est_filesize)s'%{'est_filesize': est_filesize}, level=xbmc.LOGDEBUG)
+		if header_filesize is not None:
+			est_filesize = header_filesize
+		if est_filesize is not None and est_filesize>0:
+			line2_description = 'current_size / %(estimated_size)s'% {'estimated_size': self.IAGL.bytes_to_string_size(est_filesize)}
+		else:
+			line2_description = ''
+		# f = open(dest, 'wb')
+		with closing(xbmcvfs.File(dest,'wb')) as game_file:
+			size = 0
+			last_time = time.time()
+			for chunk in r.iter_content(self.chunk_size):
+				if dp.iscanceled():
+					dp.close()
+					self.download_fail_reason = 'Download was cancelled.'
+					raise Exception('User Cancelled Download')
+				# size = size + self.chunk_size
+				size = size+len(chunk) #chunks may be a different size when streaming
+				percent = 100.0 * size / (est_filesize + 1) #Added 1 byte to avoid div by zero
+				game_file.write(bytearray(chunk))
+				now = time.time()
+				diff = now - last_time
+				if diff > 1:
+					percent = int(percent)
+					last_time = now
+					dp.update(percent,description,line2_description.replace('current_size','%(current_estimated_size)s'% {'current_estimated_size': self.IAGL.bytes_to_string_size(size)}))
 					if dp.iscanceled():
 						dp.close()
 						self.download_fail_reason = 'Download was cancelled.'
 						raise Exception('User Cancelled Download')
-					# size = size + self.chunk_size
-					size = size+len(chunk) #chunks may be a different size when streaming
-					percent = 100.0 * size / (est_filesize + 1) #Added 1 byte to avoid div by zero
-					game_file.write(chunk)
-					now = time.time()
-					diff = now - last_time
-					if diff > 1:
-						percent = int(percent)
-						last_time = now
-						dp.update(percent,description,line2_description.replace('current_size','%(current_estimated_size)s'% {'current_estimated_size': self.IAGL.bytes_to_string_size(size)}))
-						if dp.iscanceled():
-							dp.close()
-							self.download_fail_reason = 'Download was cancelled.'
-							raise Exception('User Cancelled Download')
-			# f.flush()
-			# f.close()
-			self.current_saved_files_success.append(True)
-			self.current_saved_files.append(dest)
-			self.current_saved_files_size.append(xbmcvfs.Stat(dest).st_size())
-			self.current_saved_files_crc.append(get_crc32(dest))
-			xbmc.log(msg='IAGL:  File saved to location %(dest)s, file size %(filesize)s, file crc %(filecrc)s' % {'dest': dest, 'filesize': self.current_saved_files_size[-1], 'filecrc': self.current_saved_files_crc[-1]}, level=xbmc.LOGNOTICE)
-			dp.close()
-		except Exception as web_except:
-			self.current_saved_files_success.append(False)
-			self.current_saved_files.append(None)
-			self.current_saved_files_size.append(None)
-			self.current_saved_files_crc.append(None)
-			if xbmcvfs.exists(dest): #Delete partial files if an error has occurred
-				if not xbmcvfs.delete(dest):
-					xbmc.log(msg='IAGL:  The file %(filename_in)s could not be deleted after a download error'% {'filename_in': dest}, level=xbmc.LOGDEBUG)
-				else:
-					xbmc.log(msg='IAGL:  The partially saved file %(filename_in)s was deleted after a download error occurred'% {'filename_in': dest}, level=xbmc.LOGDEBUG)
-			if 'Failed to establish a new connection' in str(web_except):
-				self.download_fail_reason = 'Failed to establish connection.'
-			xbmc.log(msg='IAGL:  There was a download error (no login): %(url)s - %(web_except)s' % {'url': url, 'web_except': web_except}, level=xbmc.LOGERROR)
+		# f.flush()
+		# f.close()
+		self.current_saved_files_success.append(True)
+		self.current_saved_files.append(dest)
+		self.current_saved_files_size.append(xbmcvfs.Stat(dest).st_size())
+		self.current_saved_files_crc.append(get_crc32(dest))
+		xbmc.log(msg='IAGL:  File saved to location %(dest)s, file size %(filesize)s, file crc %(filecrc)s' % {'dest': dest, 'filesize': self.current_saved_files_size[-1], 'filecrc': self.current_saved_files_crc[-1]}, level=xbmc.LOGNOTICE)
+		dp.close()
+		# except Exception as web_except:
+		# 	self.current_saved_files_success.append(False)
+		# 	self.current_saved_files.append(None)
+		# 	self.current_saved_files_size.append(None)
+		# 	self.current_saved_files_crc.append(None)
+		# 	if xbmcvfs.exists(dest): #Delete partial files if an error has occurred
+		# 		if not xbmcvfs.delete(dest):
+		# 			xbmc.log(msg='IAGL:  The file %(filename_in)s could not be deleted after a download error'% {'filename_in': dest}, level=xbmc.LOGDEBUG)
+		# 		else:
+		# 			xbmc.log(msg='IAGL:  The partially saved file %(filename_in)s was deleted after a download error occurred'% {'filename_in': dest}, level=xbmc.LOGDEBUG)
+		# 	if 'Failed to establish a new connection' in str(web_except):
+		# 		self.download_fail_reason = 'Failed to establish connection.'
+		# 	xbmc.log(msg='IAGL:  There was a download error (no login): %(url)s - %(web_except)s' % {'url': url, 'web_except': web_except}, level=xbmc.LOGERROR)
 
 	def post_process_unarchive_files(self,filename_in,crc_in):
 		#Check for libarchive and use that if available, otherwise try xbmc builtin extract
@@ -3964,7 +3981,8 @@ class iagl_download(object):
 		with closing(xbmcvfs.File(filename_in)) as content_file:
 			byte_string = bytes(content_file.readBytes())
 		try:
-			file_contents = py2_decode(byte_string)
+			file_contents = byte_string.decode('utf-8')
+
 		except:
 			file_contents = None
 
@@ -3981,7 +3999,7 @@ class iagl_download(object):
 				with closing(xbmcvfs.File(self.current_saved_files[-1])) as content_file:
 					byte_string = bytes(content_file.readBytes())
 				try:
-					file_contents = py2_decode(byte_string)  #If this doesn't work, then it's binary data and likely a valid file
+					file_contents = byte_string.decode('utf-8')  #If this doesn't work, then it's binary data and likely a valid file
 				except:
 					file_contents = ''
 				if self.small_file_text_check in file_contents.lower():
@@ -4756,19 +4774,21 @@ def zlib_csum_xbmcvfs(filename, func):
 		return '%X'%(csum & 0xFFFFFFFF)
 
 def get_directory_size(directory_in):
-	if scandir_import_success:
-		return get_directory_size_scandir(directory_in)
+	if pathlib_import_success:
+		return get_directory_size_pathlib(directory_in)
 	else:
 		return get_directory_size_xbmcvfs(directory_in)
 
-def get_directory_size_scandir(directory_in):
-	current_size = 0
-	for entry in scandir(directory_in):
-		if entry.is_file():
-			current_size += entry.stat().st_size
-		elif entry.is_dir():
-			current_size += get_directory_size(entry.path)
-	return current_size
+def get_directory_size_pathlib(directory_in):
+	root_directory = pathlib.Path(directory_in)
+	return sum(f.stat().st_size for f in root_directory.glob('**/*') if f.is_file())
+	# current_size = 0
+	# for entry in scandir(path=directory_in):
+	# 	if entry.is_file():
+	# 		current_size += entry.stat().st_size
+	# 	elif entry.is_dir():
+	# 		current_size += get_directory_size(entry.path)
+	# return current_size
 
 def get_directory_size_xbmcvfs(directory_in): #Twice as slow as the method above, but maybe safer / more compatible?
 	current_size = 0
@@ -4780,13 +4800,15 @@ def get_directory_size_xbmcvfs(directory_in): #Twice as slow as the method above
 	return current_size
 
 def get_all_files_in_directory(directory_in): #Dont use this by default, assume it could be a 'special' path
-	current_files = list()
-	for entry in scandir(directory_in):
-		if entry.is_file():
-			current_files.append(entry.path)
-		elif entry.is_dir():
-			current_files = current_files+get_all_files_in_directory(entry.path)
-	return current_files
+	root_directory = pathlib.Path(directory_in)
+	return root_directory.glob('**/*')
+	# current_files = list()
+	# for entry in scandir._walk(directory_in):
+	# 	if entry.is_file():
+	# 		current_files.append(entry.path)
+	# 	elif entry.is_dir():
+	# 		current_files = current_files+get_all_files_in_directory(entry.path)
+	# return current_files
 
 def get_all_files_in_directory_xbmcvfs(directory_in): #Twice as slow as the method above, but maybe safer / more compatible?
 	current_files = list()
