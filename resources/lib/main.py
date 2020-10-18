@@ -196,10 +196,10 @@ class iagl_utils(object):
 		# possible_retroarch_config_locations = [os.path.join('mnt','internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('data','data','com.retroarch','retroarch.cfg'),os.path.join('data','data','com.retroarch','files','retroarch.cfg')]
 
 	def get_addon_install_path(self):
-		return py2_decode(xbmc.translatePath(self.handle.getAddonInfo('path')))
+		return py2_decode(xbmcvfs.translatepath(self.handle.getAddonInfo('path')))
 
 	def get_addon_userdata_path(self):
-		return py2_decode(xbmc.translatePath(self.handle.getAddonInfo('profile')))
+		return py2_decode(xbmcvfs.translatepath(self.handle.getAddonInfo('profile')))
 
 	def get_temp_cache_path(self):
 		current_path = os.path.join(self.get_addon_userdata_path(),self.temp_cache_folder_name)
@@ -2837,7 +2837,7 @@ class iagl_utils(object):
 		if current_game_list.get('emu_downloadpath') == 'default':
 			download_parameter_string = '[COLOR FF12A0C7]Download Path: [/COLOR]Addon Default'
 		else:
-			download_parameter_string = '[COLOR FF12A0C7]Download Path: [/COLOR]%(emu_downloadpath)s'%{'emu_downloadpath':xbmc.translatePath(current_game_list.get('emu_downloadpath'))}
+			download_parameter_string = '[COLOR FF12A0C7]Download Path: [/COLOR]%(emu_downloadpath)s'%{'emu_downloadpath':xbmcvfs.translatepath(current_game_list.get('emu_downloadpath'))}
 		try:
 			if 'launch_mame_softlist' in current_game_list.get('emu_postdlaction'):
 				current_action_text = self.post_dl_actions[self.post_dl_action_keys.index(current_game_list.get('emu_postdlaction').split('(')[0])]+'[CR][COLOR FF12A0C7]Using: [/COLOR]%(mame_mess_choice)s  [COLOR FF12A0C7]Softlist: [/COLOR]%(softlist_choice)s'%{'mame_mess_choice':current_game_list.get('emu_postdlaction').split('(')[-1].split(')')[0].split(',')[0].replace("'",''),'softlist_choice':current_game_list.get('emu_postdlaction').split('(')[-1].split(')')[0].split(',')[-1].replace("'",'')}
@@ -3225,7 +3225,7 @@ class iagl_download(object):
 					else:
 						self.download_location = self.default_download_location
 				else:
-					self.download_location = xbmc.translatePath(self.json.get('emu').get('emu_downloadpath')) #Translate the download path if the user used a source:// path
+					self.download_location = xbmcvfs.translatepath(self.json.get('emu').get('emu_downloadpath')) #Translate the download path if the user used a source:// path
 			else:
 				self.download_location = None
 			if self.json.get('game').get('rom_override_downloadpath') is not None and len(self.json.get('game').get('rom_override_downloadpath'))>0:
@@ -3492,7 +3492,7 @@ class iagl_download(object):
 	def post_process_unarchive_files_to_folder_libarchive(self,filename_in,name_in):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unarchive files to folder %(name_in)s (vfs.libarchive)'% {'filename_in': filename_in, 'name_in': name_in}, level=xbmc.LOGDEBUG)
 		if any([x in filename_in.lower() for x in self.libarchive_extensions]):
-			folder_name = xbmc.translatePath(os.path.join(os.path.split(filename_in)[0],str(name_in)))
+			folder_name = xbmcvfs.translatepath(os.path.join(os.path.split(filename_in)[0],str(name_in)))
 			if xbmcvfs.mkdir(folder_name): #Create the folder to unarchive into
 				dp = xbmcgui.DialogProgressBG()
 				dp.create('Please Wait...','Extracting files')
@@ -3516,7 +3516,7 @@ class iagl_download(object):
 	def post_process_unarchive_files_to_top_level_folder_libarchive(self,filename_in,name_in):
 		xbmc.log(msg='IAGL:  Post Process file %(filename_in)s - unarchive files to top level folder %(name_in)s (vfs.libarchive)'% {'filename_in': filename_in, 'name_in': name_in}, level=xbmc.LOGDEBUG)
 		if any([x in filename_in.lower() for x in self.libarchive_extensions]):
-			folder_name = xbmc.translatePath(os.path.join(os.path.split(filename_in)[0],str(name_in)))
+			folder_name = xbmcvfs.translatepath(os.path.join(os.path.split(filename_in)[0],str(name_in)))
 			if xbmcvfs.exists(os.path.join(folder_name,'')) or xbmcvfs.mkdir(folder_name): #Create the folder to unarchive into if necessary
 				dp = xbmcgui.DialogProgressBG()
 				dp.create('Please Wait...','Extracting files')
@@ -3544,7 +3544,7 @@ class iagl_download(object):
 			temp_folder =  os.path.join(os.path.split(filename_in)[0],str(name_in))
 			dp = xbmcgui.DialogProgressBG()
 			dp.create('Please Wait...','Extracting files')
-			xbmc.executebuiltin(py2_encode('XBMC.Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmc.translatePath(filename_in), 'location_to_extract_to':xbmc.translatePath(temp_folder)}), True) #Unzip the file(s) to a temp folder
+			xbmc.executebuiltin(py2_encode('XBMC.Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmcvfs.translatepath(filename_in), 'location_to_extract_to':xbmcvfs.translatepath(temp_folder)}), True) #Unzip the file(s) to a temp folder
 			dp.close()
 			if xbmcvfs.exists(os.path.join(temp_folder,'')): #Unzip generated a folder
 				self.current_processed_files.extend(get_all_files_in_directory_xbmcvfs(temp_folder))
@@ -3582,7 +3582,7 @@ class iagl_download(object):
 			temp_folder =  os.path.join(os.path.split(filename_in)[0],str(crc_in))
 			dp = xbmcgui.DialogProgressBG()
 			dp.create('Please Wait...','Extracting files')
-			xbmc.executebuiltin(py2_encode('XBMC.Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmc.translatePath(filename_in), 'location_to_extract_to':xbmc.translatePath(temp_folder)}), True) #Unzip the file(s) to a temp folder
+			xbmc.executebuiltin(py2_encode('XBMC.Extract("%(file_to_unzip)s","%(location_to_extract_to)s")' % {'file_to_unzip': xbmcvfs.translatepath(filename_in), 'location_to_extract_to':xbmcvfs.translatepath(temp_folder)}), True) #Unzip the file(s) to a temp folder
 			dp.close()
 			if xbmcvfs.exists(os.path.join(temp_folder,'')): #Unzip generated a folder
 				files_extracted, files_extracted_success = move_directory_contents_xbmcvfs(os.path.join(temp_folder,''),os.path.join(os.path.split(filename_in)[0],''))
@@ -3962,7 +3962,7 @@ class iagl_download(object):
 				# dont_include_these_addons = ['game.libretro','game.libretro.2048','game.libretro.dinothawr','game.libretro.mrboom']
 				current_game_addon_values = [x.get('addonid') for x in json.loads(addons_available).get('result').get('addons') if x.get('type') == 'kodi.gameclient' and x.get('addonid') not in self.IAGL.ignore_these_game_addons]
 				if 'game.libretro.%(emulator_in)s'%{'emulator_in':emulator_in} in current_game_addon_values:
-					current_game_libretro_hash_path = os.path.join(py2_decode(xbmc.translatePath(xbmcaddon.Addon(id='game.libretro.%(emulator_in)s'%{'emulator_in':emulator_in}).getAddonInfo('profile'))),'resources','system','hash')
+					current_game_libretro_hash_path = os.path.join(py2_decode(xbmcvfs.translatepath(xbmcaddon.Addon(id='game.libretro.%(emulator_in)s'%{'emulator_in':emulator_in}).getAddonInfo('profile'))),'resources','system','hash')
 					if current_softlist_url is not None: #Download the softlist to the retroarch system directory defined in IAGL settings
 						if not xbmcvfs.exists(os.path.join(current_game_libretro_hash_path,os.path.split(current_softlist_url)[-1])):
 							self.download_no_login(current_softlist_url,os.path.join(current_game_libretro_hash_path,os.path.split(current_softlist_url)[-1]),description='Softlist Hash: %(hashfile)s'%{'hashfile':os.path.split(current_softlist_url)[-1]},heading='Downloading, please wait...')
@@ -4228,7 +4228,7 @@ class iagl_launch(object):
 			xbmc.log(msg='IAGL:  Attempting to play the following file through Retroplayer: %(url)s' % {'url': self.launch_filenames[0]}, level=xbmc.LOGNOTICE)
 			if return_home: #Go back to home page if its a widget
 				go_to_home()
-			xbmc.Player().play(xbmc.translatePath(self.launch_filenames[0]),game_listitem)
+			xbmc.Player().play(xbmcvfs.translatepath(self.launch_filenames[0]),game_listitem)
 			return True
 		except Exception as exc: #except Exception, (exc):
 			xbmc.log(msg='IAGL Error:  Attempt to play game failed with exception %(exc)s' % {'exc': exc}, level=xbmc.LOGDEBUG)
@@ -4243,11 +4243,11 @@ class iagl_launch(object):
 		else:
 			#Define %APP_PATH% Variable
 			if self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'OSX':
-				current_retroarch_path = xbmc.translatePath(self.IAGL.handle.getSetting(id='iagl_external_path_to_retroarch')).split('.app')[0]+'.app' #Make App Path for OSX only up to the container
+				current_retroarch_path = xbmcvfs.translatepath(self.IAGL.handle.getSetting(id='iagl_external_path_to_retroarch')).split('.app')[0]+'.app' #Make App Path for OSX only up to the container
 			elif self.IAGL.handle.getSetting(id='iagl_external_user_external_env') == 'Windows':
-				current_retroarch_path = os.path.split(xbmc.translatePath(self.IAGL.handle.getSetting(id='iagl_external_path_to_retroarch')))[0]
+				current_retroarch_path = os.path.split(xbmcvfs.translatepath(self.IAGL.handle.getSetting(id='iagl_external_path_to_retroarch')))[0]
 			else: #Linux
-				current_retroarch_path = xbmc.translatePath(self.IAGL.handle.getSetting(id='iagl_external_path_to_retroarch'))
+				current_retroarch_path = xbmcvfs.translatepath(self.IAGL.handle.getSetting(id='iagl_external_path_to_retroarch'))
 
 			#Define %CFG_PATH% Variable for Android
 			current_cfg_path = ''
@@ -4259,7 +4259,7 @@ class iagl_launch(object):
 							if current_cfg_path is None: #If the current config path is not yet defined and the file was found, then define it
 								current_cfg_path = cfg_files
 				else:
-					current_cfg_path = xbmc.translatePath(self.IAGL.handle.getSetting(id='iagl_external_path_to_retroarch_cfg')) #If the config path is defined in settings, use that
+					current_cfg_path = xbmcvfs.translatepath(self.IAGL.handle.getSetting(id='iagl_external_path_to_retroarch_cfg')) #If the config path is defined in settings, use that
 				if current_cfg_path is None:
 					current_cfg_path = ''
 					xbmc.log(msg='IAGL:  No Retroarch config file could be defined, please set your config file location in addon settings', level=xbmc.LOGERROR)
@@ -4267,8 +4267,8 @@ class iagl_launch(object):
 			self.external_launch_command = self.external_launch_command.replace('%APP_PATH%',current_retroarch_path) #Replace app path with user setting
 			self.external_launch_command = self.external_launch_command.replace('%ADDON_DIR%',self.IAGL.get_addon_install_path()) #Replace helper script with the more generic ADDON_DIR
 			self.external_launch_command = self.external_launch_command.replace('%CFG_PATH%',current_cfg_path) #Replace config path user setting
-			self.external_launch_command = self.external_launch_command.replace('%ROM_PATH%',xbmc.translatePath(self.launch_filenames[0])) #Replace ROM filepath
-			self.external_launch_command = self.external_launch_command.replace('%ROM_BASE_PATH%',os.path.join(os.path.split(xbmc.translatePath(self.launch_filenames[0]))[0],'')) #Replace ROM Base path
+			self.external_launch_command = self.external_launch_command.replace('%ROM_PATH%',xbmcvfs.translatepath(self.launch_filenames[0])) #Replace ROM filepath
+			self.external_launch_command = self.external_launch_command.replace('%ROM_BASE_PATH%',os.path.join(os.path.split(xbmcvfs.translatepath(self.launch_filenames[0]))[0],'')) #Replace ROM Base path
 			if os.path.join('~','') in self.external_launch_command or os.path.join('~user','') in self.external_launch_command: #Expand user path in linux, need to do it a round about way to avoid expanding tildes in game title names
 				self.external_launch_command = self.external_launch_command.replace(os.path.join('~',''),os.path.expanduser(os.path.join('~','')))
 				self.external_launch_command = self.external_launch_command.replace(os.path.join('~user',''),os.path.expanduser(os.path.join('~user','')))
@@ -4283,7 +4283,7 @@ class iagl_launch(object):
 						if other_emulator in self.IAGL.handle.getSetting(id='iagl_external_additional_emulator_%(em_idx)s_type'%{'em_idx': ii}): #Emulator setting found
 							if self.IAGL.handle.getSetting(id='iagl_external_additional_emulator_%(em_idx)s_path'%{'em_idx': ii}) is not None and len(self.IAGL.handle.getSetting(id='iagl_external_additional_emulator_%(em_idx)s_path'%{'em_idx': ii}))>0:
 								other_emulator_found = True
-								self.external_launch_command = self.external_launch_command.replace('%'+other_emulator_key+'%',xbmc.translatePath(self.IAGL.handle.getSetting(id='iagl_external_additional_emulator_%(em_idx)s_path'%{'em_idx': ii}))) #Replace app path with user setting
+								self.external_launch_command = self.external_launch_command.replace('%'+other_emulator_key+'%',xbmcvfs.translatepath(self.IAGL.handle.getSetting(id='iagl_external_additional_emulator_%(em_idx)s_path'%{'em_idx': ii}))) #Replace app path with user setting
 					except Exception as exc:
 						xbmc.log(msg='IAGL:  Unable to identify other emulator.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGDEBUG)
 				if not other_emulator_found:					
@@ -4888,24 +4888,24 @@ def extract_all_libarchive(archive_file,directory_to):
 	if 'archive://' in archive_file:
 		archive_path = archive_file
 	else:
-		archive_path = 'archive://%(archive_file)s' % {'archive_file': url_quote(xbmc.translatePath(archive_file))}
+		archive_path = 'archive://%(archive_file)s' % {'archive_file': url_quote(xbmcvfs.translatepath(archive_file))}
 	dirs_in_archive, files_in_archive = xbmcvfs.listdir(archive_path)
 	for ff in files_in_archive:
-		if not xbmcvfs.exists(os.path.join(xbmc.translatePath(directory_to),ff)):
+		if not xbmcvfs.exists(os.path.join(xbmcvfs.translatepath(directory_to),ff)):
 			file_from = os.path.join(archive_path,ff).replace('\\','/') #Windows unexpectadely requires a forward slash in the path
-			success = xbmcvfs.copy(file_from,os.path.join(xbmc.translatePath(directory_to),ff)) #Attempt to move the file first
+			success = xbmcvfs.copy(file_from,os.path.join(xbmcvfs.translatepath(directory_to),ff)) #Attempt to move the file first
 			if not success:
 				xbmc.log(msg='IAGL:  Error extracting file %(ff)s from archive %(archive_file)s' % {'ff': ff,'archive_file':archive_file}, level=xbmc.LOGDEBUG)
 				overall_success = False
 			else:
 				xbmc.log(msg='IAGL:  Extracted file %(ff)s from archive %(archive_file)s' % {'ff': ff,'archive_file':archive_file}, level=xbmc.LOGDEBUG)
-				files_out.append(os.path.join(xbmc.translatePath(directory_to),ff))
+				files_out.append(os.path.join(xbmcvfs.translatepath(directory_to),ff))
 		else:
 			xbmc.log(msg='IAGL:  File %(ff)s already exists and was not extracted from archive %(archive_file)s' % {'ff': ff,'archive_file':archive_file}, level=xbmc.LOGDEBUG)
-			files_out.append(os.path.join(xbmc.translatePath(directory_to),ff))
+			files_out.append(os.path.join(xbmcvfs.translatepath(directory_to),ff))
 	for dd in dirs_in_archive:
-		if xbmcvfs.exists(os.path.join(xbmc.translatePath(directory_to),dd)) or xbmcvfs.mkdir(os.path.join(xbmc.translatePath(directory_to),dd)):
-			xbmc.log(msg='IAGL:  Created folder %(dd)s for archive %(archive_file)s' % {'dd': os.path.join(xbmc.translatePath(directory_to),dd,''),'archive_file':archive_file}, level=xbmc.LOGDEBUG)
+		if xbmcvfs.exists(os.path.join(xbmcvfs.translatepath(directory_to),dd)) or xbmcvfs.mkdir(os.path.join(xbmcvfs.translatepath(directory_to),dd)):
+			xbmc.log(msg='IAGL:  Created folder %(dd)s for archive %(archive_file)s' % {'dd': os.path.join(xbmcvfs.translatepath(directory_to),dd,''),'archive_file':archive_file}, level=xbmc.LOGDEBUG)
 			files_out2, success2 = extract_all_libarchive(os.path.join(archive_path,dd,'').replace('\\','/'),os.path.join(directory_to,dd)) #Windows unexpectadely requires a forward slash in the path
 			if success2:
 				files_out = files_out + files_out2
@@ -4913,7 +4913,7 @@ def extract_all_libarchive(archive_file,directory_to):
 				overall_success = False
 		else:
 			overall_success = False
-			xbmc.log(msg='IAGL:  Unable to create the folder %(dir_from)s for libarchive extraction' % {'dir_from': os.path.join(xbmc.translatePath(directory_to),dd)}, level=xbmc.LOGDEBUG)
+			xbmc.log(msg='IAGL:  Unable to create the folder %(dir_from)s for libarchive extraction' % {'dir_from': os.path.join(xbmcvfs.translatepath(directory_to),dd)}, level=xbmc.LOGDEBUG)
 	return files_out, overall_success
 
 def extract_all_libarchive_to_top_level_folder(archive_file,directory_to):
@@ -4922,23 +4922,23 @@ def extract_all_libarchive_to_top_level_folder(archive_file,directory_to):
 	if 'archive://' in archive_file:
 		archive_path = archive_file
 	else:
-		archive_path = 'archive://%(archive_file)s' % {'archive_file': url_quote(xbmc.translatePath(archive_file))}
+		archive_path = 'archive://%(archive_file)s' % {'archive_file': url_quote(xbmcvfs.translatepath(archive_file))}
 	dirs_in_archive, files_in_archive = xbmcvfs.listdir(archive_path)
 	for ff in files_in_archive:
-		if not xbmcvfs.exists(os.path.join(xbmc.translatePath(directory_to),ff)):
+		if not xbmcvfs.exists(os.path.join(xbmcvfs.translatepath(directory_to),ff)):
 			file_from = os.path.join(archive_path,ff).replace('\\','/') #Windows unexpectadely requires a forward slash in the path
-			success = xbmcvfs.copy(file_from,os.path.join(xbmc.translatePath(directory_to),ff)) #Attempt to move the file first
+			success = xbmcvfs.copy(file_from,os.path.join(xbmcvfs.translatepath(directory_to),ff)) #Attempt to move the file first
 			if not success:
 				xbmc.log(msg='IAGL:  Error extracting file %(ff)s from archive %(archive_file)s' % {'ff': ff,'archive_file':archive_file}, level=xbmc.LOGDEBUG)
 				overall_success = False
 			else:
 				xbmc.log(msg='IAGL:  Extracted file %(ff)s from archive %(archive_file)s' % {'ff': ff,'archive_file':archive_file}, level=xbmc.LOGDEBUG)
-				files_out.append(os.path.join(xbmc.translatePath(directory_to),ff))
+				files_out.append(os.path.join(xbmcvfs.translatepath(directory_to),ff))
 		else:
 			xbmc.log(msg='IAGL:  File %(ff)s already exists and was not extracted from archive %(archive_file)s' % {'ff': ff,'archive_file':archive_file}, level=xbmc.LOGDEBUG)
-			files_out.append(os.path.join(xbmc.translatePath(directory_to),ff))
+			files_out.append(os.path.join(xbmcvfs.translatepath(directory_to),ff))
 	for dd in dirs_in_archive:
-		if xbmcvfs.exists(os.path.join(xbmc.translatePath(directory_to),'')): #Extract the lower level folder files to the top level
+		if xbmcvfs.exists(os.path.join(xbmcvfs.translatepath(directory_to),'')): #Extract the lower level folder files to the top level
 			files_out2, success2 = extract_all_libarchive(os.path.join(archive_path,dd,'').replace('\\','/'),os.path.join(directory_to)) #Windows unexpectadely requires a forward slash in the path
 			if success2:
 				files_out = files_out + files_out2
@@ -4946,7 +4946,7 @@ def extract_all_libarchive_to_top_level_folder(archive_file,directory_to):
 				overall_success = False
 		else:
 			overall_success = False
-			xbmc.log(msg='IAGL:  The top level folder does not exist %(dir_from)s for libarchive extraction' % {'dir_from': xbmc.translatePath(directory_to)}, level=xbmc.LOGDEBUG)
+			xbmc.log(msg='IAGL:  The top level folder does not exist %(dir_from)s for libarchive extraction' % {'dir_from': xbmcvfs.translatepath(directory_to)}, level=xbmc.LOGDEBUG)
 	return files_out, overall_success
 
 # def move_directory_contents_libarchive(directory_from,directory_to):
