@@ -2,7 +2,7 @@
 #Zach Morris
 #https://github.com/zach-morris/plugin.program.iagl
 import xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
-xbmc.log(msg='IAGL:  Lets Play!', level=xbmc.LOGNOTICE)
+xbmc.log(msg='IAGL:  Lets Play!', level=xbmc.LOGINFO)
 xbmc.log(msg='IAGL:  Version %(addon_version)s' % {'addon_version': xbmcaddon.Addon().getAddonInfo('version')}, level=xbmc.LOGDEBUG)
 import routing, sys
 from resources.lib.main import *
