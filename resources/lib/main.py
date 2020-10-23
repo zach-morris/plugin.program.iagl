@@ -2616,7 +2616,7 @@ class iagl_utils(object):
 		if value_updated and last_line_written: #Success
 			if xbmcvfs.delete(current_filename): #Current file was deleted
 				if xbmcvfs.rename(os.path.join(self.get_dat_folder_path(),'temp.xml'),current_filename):
-					xbmc.log(msg='IAGL:  XML %(current_filename)s updated key %(current_key)s with value %(new_value)s' % {'current_filename': os.path.split(current_filename)[-1],'current_key':current_key, 'new_value': new_value}, level=xbmc.LOGNOTICE)
+					xbmc.log(msg='IAGL:  XML %(current_filename)s updated key %(current_key)s with value %(new_value)s' % {'current_filename': os.path.split(current_filename)[-1],'current_key':current_key, 'new_value': new_value}, level=xbmc.LOGINFO)
 					xbmcvfs.delete(os.path.join(self.get_list_cache_path(),self.dat_file_cache_filename)) #Delete dat file cache
 					if self.delete_list_cache(os.path.splitext(os.path.split(current_filename)[-1])[0]):
 						if not silent_update:
@@ -3290,8 +3290,8 @@ class iagl_download(object):
 		self.download_fail_reason = ''
 
 	def download_with_login(self,url,dest,username=None,password=None,est_filesize=0,description='',heading='Downloading'):
-		xbmc.log(msg='IAGL:  Attempting to download file %(url)s as logged in user' % {'url': url}, level=xbmc.LOGNOTICE)
-		xbmc.log(msg='IAGL:  Saving file to %(dest)s as logged in user' % {'dest': dest}, level=xbmc.LOGNOTICE)
+		xbmc.log(msg='IAGL:  Attempting to download file %(url)s as logged in user' % {'url': url}, level=xbmc.LOGINFO)
+		xbmc.log(msg='IAGL:  Saving file to %(dest)s as logged in user' % {'dest': dest}, level=xbmc.LOGINFO)
 		dp = xbmcgui.DialogProgress()
 		dp.create(heading,description)
 		dp.update(0)
@@ -3345,7 +3345,7 @@ class iagl_download(object):
 				self.current_saved_files.append(dest)
 				self.current_saved_files_size.append(xbmcvfs.Stat(dest).st_size())
 				self.current_saved_files_crc.append(get_crc32(dest))
-				xbmc.log(msg='IAGL:  File saved to location %(dest)s, file size %(filesize)s, file crc %(filecrc)s' % {'dest': dest, 'filesize': self.current_saved_files_size[-1], 'filecrc': self.current_saved_files_crc[-1]}, level=xbmc.LOGNOTICE)
+				xbmc.log(msg='IAGL:  File saved to location %(dest)s, file size %(filesize)s, file crc %(filecrc)s' % {'dest': dest, 'filesize': self.current_saved_files_size[-1], 'filecrc': self.current_saved_files_crc[-1]}, level=xbmc.LOGINFO)
 				dp.close()
 				
 			except Exception as web_except:
@@ -3369,8 +3369,8 @@ class iagl_download(object):
 			xbmc.log(msg='IAGL:  User credentials are not entered in settings', level=xbmc.LOGERROR)
 
 	def download_no_login(self,url,dest,est_filesize=0,description='',heading='Downloading'):
-		xbmc.log(msg='IAGL:  Attempting to download file %(url)s' % {'url': url}, level=xbmc.LOGNOTICE)
-		xbmc.log(msg='IAGL:  Saving file to %(dest)s' % {'dest': dest}, level=xbmc.LOGNOTICE)
+		xbmc.log(msg='IAGL:  Attempting to download file %(url)s' % {'url': url}, level=xbmc.LOGINFO)
+		xbmc.log(msg='IAGL:  Saving file to %(dest)s' % {'dest': dest}, level=xbmc.LOGINFO)
 		dp = xbmcgui.DialogProgress()
 		dp.create(heading,description)
 		dp.update(0)
@@ -3419,7 +3419,7 @@ class iagl_download(object):
 			self.current_saved_files.append(dest)
 			self.current_saved_files_size.append(xbmcvfs.Stat(dest).st_size())
 			self.current_saved_files_crc.append(get_crc32(dest))
-			xbmc.log(msg='IAGL:  File saved to location %(dest)s, file size %(filesize)s, file crc %(filecrc)s' % {'dest': dest, 'filesize': self.current_saved_files_size[-1], 'filecrc': self.current_saved_files_crc[-1]}, level=xbmc.LOGNOTICE)
+			xbmc.log(msg='IAGL:  File saved to location %(dest)s, file size %(filesize)s, file crc %(filecrc)s' % {'dest': dest, 'filesize': self.current_saved_files_size[-1], 'filecrc': self.current_saved_files_crc[-1]}, level=xbmc.LOGINFO)
 			dp.close()
 		except Exception as web_except:
 			self.current_saved_files_success.append(False)
@@ -4198,8 +4198,8 @@ class iagl_launch(object):
 			xbmc.Player().stop()
 			xbmc.sleep(500) #If sleep is not called, Kodi will crash - does not like playing video and then swiching to a game
 		try:
-			xbmc.log(msg='IAGL:  Gameclient for Retroplayer set to: %(current_gameclient)s' % {'current_gameclient': current_gameclient}, level=xbmc.LOGNOTICE)
-			xbmc.log(msg='IAGL:  Attempting to play the following file through Retroplayer: %(url)s' % {'url': self.launch_filenames[0]}, level=xbmc.LOGNOTICE)
+			xbmc.log(msg='IAGL:  Gameclient for Retroplayer set to: %(current_gameclient)s' % {'current_gameclient': current_gameclient}, level=xbmc.LOGINFO)
+			xbmc.log(msg='IAGL:  Attempting to play the following file through Retroplayer: %(url)s' % {'url': self.launch_filenames[0]}, level=xbmc.LOGINFO)
 			if return_home: #Go back to home page if its a widget
 				go_to_home()
 			xbmc.Player().play(xbmc.translatePath(self.launch_filenames[0]),game_listitem)
@@ -4327,7 +4327,7 @@ class iagl_launch(object):
 				xbmc.enableNavSounds(False)
 			if return_home: #Go back to home page if its a widget
 				go_to_home()
-			xbmc.log(msg='IAGL:  Sending Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGNOTICE)
+			xbmc.log(msg='IAGL:  Sending Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGINFO)
 			external_command = subprocess.call(self.external_launch_command,shell=True)
 			if not self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_stop_media_before_launch')):
 				xbmc.audioResume()
@@ -4358,14 +4358,14 @@ class iagl_launch(object):
 				executable_path = '/system/bin/sh' #This is the path to the normal shell for most android installations
 				if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_android_stop_command')):
 					try:
-						xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGNOTICE)
+						xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGINFO)
 						retcode = subprocess.call(android_stop_command,shell=True,executable=executable_path)
 						xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
 					except Exception as exc:
 						xbmc.log(msg='IAGL: Error sending subprocess (normal shell) stop command, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 				xbmc.sleep(500)
 				try:
-					xbmc.log(msg='IAGL:  Sending Android Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGNOTICE)
+					xbmc.log(msg='IAGL:  Sending Android Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGINFO)
 					retcode = subprocess.call(self.external_launch_command,shell=True,executable=executable_path)
 					xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
 				except Exception as exc:
@@ -4375,14 +4375,14 @@ class iagl_launch(object):
 				executable_path = '/system/xbin/su' #This is the method for root shell for most rooted android installations
 				if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_android_stop_command')):
 					try:
-						xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGNOTICE)
+						xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGINFO)
 						retcode = subprocess.call(android_stop_command,shell=True,executable=executable_path)
 						xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
 					except Exception as exc:
 						xbmc.log(msg='IAGL: Error sending subprocess (root shell) stop command, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 				xbmc.sleep(500)
 				try:
-					xbmc.log(msg='IAGL:  Sending Android Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGNOTICE)
+					xbmc.log(msg='IAGL:  Sending Android Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGINFO)
 					retcode = subprocess.call(self.external_launch_command,shell=True,executable=executable_path)
 					xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
 				except Exception as exc:
@@ -4391,14 +4391,14 @@ class iagl_launch(object):
 				xbmc.log(msg='IAGL:  Android os.system external launch selected', level=xbmc.LOGDEBUG)
 				if self.IAGL.get_setting_as_bool(self.IAGL.handle.getSetting(id='iagl_enable_android_stop_command')):
 					try:
-						xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGNOTICE)
+						xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_command}, level=xbmc.LOGINFO)
 						retcode = os.system(android_stop_command)
 						xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
 					except Exception as exc:
 						xbmc.log(msg='IAGL: Error sending os.system stop command, Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 				xbmc.sleep(500)
 				try:
-					xbmc.log(msg='IAGL:  Sending Android Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGNOTICE)
+					xbmc.log(msg='IAGL:  Sending Android Launch Command: %(external_command)s' % {'external_command': self.external_launch_command}, level=xbmc.LOGINFO)
 					retcode = os.system(self.external_launch_command)
 					xbmc.log(msg='IAGL:  Android returned %(return_code)s' % {'return_code': retcode}, level=xbmc.LOGDEBUG)
 				except Exception as exc:
