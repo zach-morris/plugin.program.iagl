@@ -384,7 +384,13 @@ if console_mode:
 
     class ShowDialog():
         def ok(self, msg1, msg2):
-            print("Dialog: {} {} OK? Y/N: Y".format(msg1,msg2))
+            print("Dialog: {} {} [OK]".format(msg1,msg2))
+        def yesno(self, msg1, msg2):
+            q = "Dialog: {} {} [Yes] [No]: ".format(msg1,msg2)
+            answer = None
+            while answer is None:
+                answer = dict(y=True,n=False).get(input(q).lower().strip()[0])
+            return answer
 
     showDialog = ShowDialog()
 

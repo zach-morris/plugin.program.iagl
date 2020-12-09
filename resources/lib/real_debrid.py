@@ -43,6 +43,16 @@ class RealDebrid:
         self.OauthTimeStep = 0
         self.BaseUrl = "https://api.real-debrid.com/rest/1.0/"
         self.cache_check_results = {}
+        self._asked = tools.getSetting("rd.asked")
+
+    @property
+    def asked(self):
+        return self._asked
+
+    @asked.setter
+    def asked(self, var):
+        self._asked = var
+        tools.setSetting("rd.asked", var)
 
     def auth_loop(self):
         if tools.progressDialog.iscanceled():
@@ -319,7 +329,17 @@ class RealDebrid:
                     return torrent, files
         return None, None
 
-    def resolve_torrent(self, torrent_file, file_name):
+    def resolve_torrent(self, torrent_file, file_name, ask_auth=True):
+        if ask_auth and not rd.token and not self.asked:
+            if tools.showDialog.yesno("Real Debrid", 
+                    "Do you have a Real Debrid premium account and would like to authorise it now?"):
+                self.auth()
+            else:
+                tools.showDialog.ok("Real Debrid", "You can add Debrid support later in the settings")
+                self.asked = True
+        if not self.token:
+            return None
+
         #tools.progressDialog.create("Read Debrid")
         file_name = unquote(file_name)
         # first we need to the hash to check instant availability
@@ -396,8 +416,6 @@ if __name__ == "__main__":
     magnet = "magnet:?xt=urn:btih:b76aef3af2d6f8d754221b8feb62be9da4da6bc1&dn=PSP_EU_Arquivista"
     magnet = "magnet:?xt=urn:btih:W5VO6OXS234NOVBCDOH6WYV6TWSNU26B&dn=PSP_EU_Arquivista&tr=http://bt1.archive.org:6969/announce"
     rd = RealDebrid()
-    if not rd.token:
-        rd.auth()
     torrent_url, file_name = rd.ia_torrent_url(dl_url)
     torrent = tools.get_cached_url(torrent_url)
     link = rd.resolve_torrent(torrent, file_name)

@@ -4061,8 +4061,6 @@ class iagl_download(object):
 				current_file_size = self.default_file_size
 			if not self.current_files_to_download_skip[ii]:
 				rd = real_debrid.RealDebrid()
-				if not rd.token: # TODO: move to control panel
-					rd.auth()
 				torrent_url, file_name = rd.ia_torrent_url(current_file)
 				link = None
 				if torrent_url is not None:
