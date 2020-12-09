@@ -17,6 +17,8 @@ from . import xmltodict
 # https://github.com/martinblech/xmltodict
 import requests
 import requests.packages.urllib3
+from resources.lib import real_debrid
+from resources.lib import tools
 requests.packages.urllib3.disable_warnings() #Silence uneeded warnings
 
 try:
@@ -727,7 +729,7 @@ class iagl_utils(object):
 					# 	header_string = byte_string.split(b'</header>')[0].decode('utf-8',errors='ignore') #Try again ignoring whatever character python doesnt like.  Probably not foolproof
 					for kk in game_lists.keys():
 						if kk in self.dat_file_header_keys:
-							game_lists[kk].append(header_dict['datafile']['header'][kk])
+							game_lists[kk].append(header_dict['datafile']['header'].get(kk))
 							# game_lists[kk].append(header_string.split('<%(tag)s>' % {'tag':kk})[-1].split('</%(tag)s>' % {'tag':kk})[0])
 						if 'fullpath' in kk:
 							game_lists[kk].append(os.path.join(self.get_dat_folder_path(),ff))
@@ -3317,136 +3319,120 @@ class iagl_download(object):
 
 	def download_with_login(self,url,dest,username=None,password=None,est_filesize=0,description='',heading='Downloading'):
 		xbmc.log(msg='IAGL:  Attempting to download file %(url)s as logged in user' % {'url': url}, level=xbmc.LOGNOTICE)
-		xbmc.log(msg='IAGL:  Saving file to %(dest)s as logged in user' % {'dest': dest}, level=xbmc.LOGNOTICE)
-		dp = xbmcgui.DialogProgress()
-		dp.create(heading,description)
-		dp.update(0)
-		if username is not None and len(username)>0 and password is not None and len(password)>0: #Attempt to login for downloading
-			try:
-				s = requests.Session()
-				# s.headers.update({'User-Agent': self.user_agent})
-				r = s.get('https://archive.org/account/login.php')
-				data={'username': username,'password': password,'remember': 'CHECKED','action': 'login','submit': 'Log+in'}
-				r = s.post('https://archive.org/account/login.php', data=data)
-				if 'that password seems incorrect' in str(py2_encode(r.text)).lower():
-					xbmc.log(msg='IAGL:  Login and Password were not accepted, we will try to download anyway', level=xbmc.LOGDEBUG)
-				r = s.get(url,verify=False,stream=True,timeout=self.download_timeout)
-				try:
-					header_filesize = int(r.headers['Content-length'])
-					xbmc.log(msg='IAGL:  Source URL returned filesize of %(header_size)s'%{'header_size': header_filesize}, level=xbmc.LOGDEBUG)
-				except:
-					header_filesize = None
-					xbmc.log(msg='IAGL:  Source URL returned no filesize, current size estimate is %(est_filesize)s'%{'est_filesize': est_filesize}, level=xbmc.LOGDEBUG)
-				if header_filesize is not None:
-					est_filesize = header_filesize
-				if est_filesize is not None and est_filesize>0:
-					line2_description = 'current_size / %(estimated_size)s'% {'estimated_size': self.IAGL.bytes_to_string_size(est_filesize)}
-				else:
-					line2_description = ''
-				# f = open(dest, 'wb')
-				with closing(xbmcvfs.File(dest,'wb')) as game_file:
-					size = 0
-					last_time = time.time()
-					for chunk in r.iter_content(self.chunk_size):
-						if dp.iscanceled():
-							dp.close()
-							self.download_fail_reason = 'Download was cancelled.'
-							raise Exception('User Cancelled Download')
-						# size = size + self.chunk_size
-						size = size+len(chunk) #chunks may be a different size when streaming
-						percent = 100.0 * size / (est_filesize + 1) #Added 1 byte to avoid div by zero
-						game_file.write(bytearray(chunk))
-						now = time.time()
-						diff = now - last_time
-						if diff > 1:
-							percent = int(percent)
-							last_time = now
-							dp.update(percent,description,line2_description.replace('current_size','%(current_estimated_size)s'% {'current_estimated_size': self.IAGL.bytes_to_string_size(size)}))
-							if dp.iscanceled():
-								dp.close()
-								self.download_fail_reason = 'Download was cancelled.'
-								raise Exception('User Cancelled Download')
+		def login_session():
+			s = requests.Session()
+			if username is None or len(username)==0 or password is not None or len(password)==0: 
+				xbmc.log(msg='IAGL:  User credentials are not entered in settings', level=xbmc.LOGERROR)
+				return s # Will try normal download. Before this stopped download
+			# s.headers.update({'User-Agent': self.user_agent})
+			r = s.get('https://archive.org/account/login.php')
+			data={'username': username,'password': password,'remember': 'CHECKED','action': 'login','submit': 'Log+in'}
+			r = s.post('https://archive.org/account/login.php', data=data)
+			if 'that password seems incorrect' in str(py2_encode(r.text)).lower():
+				xbmc.log(msg='IAGL:  Login and Password were not accepted, we will try to download anyway', level=xbmc.LOGDEBUG)
+			return s
+		return self.download_no_login(url,dest,est_filesize, description, heading, session=login_session())
 
-				self.current_saved_files_success.append(True)
-				self.current_saved_files.append(dest)
-				self.current_saved_files_size.append(xbmcvfs.Stat(dest).st_size())
-				self.current_saved_files_crc.append(get_crc32(dest))
-				xbmc.log(msg='IAGL:  File saved to location %(dest)s, file size %(filesize)s, file crc %(filecrc)s' % {'dest': dest, 'filesize': self.current_saved_files_size[-1], 'filecrc': self.current_saved_files_crc[-1]}, level=xbmc.LOGNOTICE)
-				dp.close()
-				
-			except Exception as web_except:
-				self.current_saved_files_success.append(False)
-				self.current_saved_files.append(None)
-				self.current_saved_files_size.append(None)
-				self.current_saved_files_crc.append(None)
-				if xbmcvfs.exists(dest): #Delete partial files if an error has occurred
-					if not xbmcvfs.delete(dest):
-						xbmc.log(msg='IAGL:  The file %(filename_in)s could not be deleted after a download error'% {'filename_in': dest}, level=xbmc.LOGDEBUG)
-					else:
-						xbmc.log(msg='IAGL:  The partially saved file %(filename_in)s was deleted after a download error occurred'% {'filename_in': dest}, level=xbmc.LOGDEBUG)
-				if 'Failed to establish a new connection' in str(web_except):
-					self.download_fail_reason = 'Failed to establish connection.'
-				xbmc.log(msg='IAGL:  There was a download error (with login): %(url)s - %(web_except)s' % {'url': url, 'web_except': web_except}, level=xbmc.LOGERROR)
-		else:
-			self.current_saved_files_success.append(False)
-			self.current_saved_files.append(None)
-			self.current_saved_files_size.append(None)
-			self.current_saved_files_crc.append(None)
-			xbmc.log(msg='IAGL:  User credentials are not entered in settings', level=xbmc.LOGERROR)
+	# def download_no_login(self,url,dest,est_filesize=0,description='',heading='Downloading'):
+	# 	xbmc.log(msg='IAGL:  Attempting to download file %(url)s' % {'url': url}, level=xbmc.LOGNOTICE)
+	# 	xbmc.log(msg='IAGL:  Saving file to %(dest)s' % {'dest': dest}, level=xbmc.LOGNOTICE)
+	# 	dp = xbmcgui.DialogProgress()
+	# 	dp.create(heading,description)
+	# 	dp.update(0)
+	# 	# try:
+	# 	s = requests.Session()
+	# 	# s.headers.update({'User-Agent': self.user_agent})
+	# 	r = s.get(url,verify=False,stream=True,timeout=self.download_timeout)
+	# 	try:
+	# 		header_filesize = int(r.headers['Content-length'])
+	# 		xbmc.log(msg='IAGL:  Source URL returned filesize of %(header_size)s'%{'header_size': header_filesize}, level=xbmc.LOGDEBUG)
+	# 	except:
+	# 		header_filesize = None
+	# 		xbmc.log(msg='IAGL:  Source URL returned no filesize, current size estimate is %(est_filesize)s'%{'est_filesize': est_filesize}, level=xbmc.LOGDEBUG)
+	# 	if header_filesize is not None:
+	# 		est_filesize = header_filesize
+	# 	if est_filesize is not None and est_filesize>0:
+	# 		line2_description = 'current_size / %(estimated_size)s'% {'estimated_size': self.IAGL.bytes_to_string_size(est_filesize)}
+	# 	else:
+	# 		line2_description = ''
+	# 	# f = open(dest, 'wb')
+	# 	with closing(xbmcvfs.File(dest,'wb')) as game_file:
+	# 		size = 0
+	# 		last_time = time.time()
+	# 		for chunk in r.iter_content(self.chunk_size):
+	# 			if dp.iscanceled():
+	# 				dp.close()
+	# 				self.download_fail_reason = 'Download was cancelled.'
+	# 				raise Exception('User Cancelled Download')
+	# 			# size = size + self.chunk_size
+	# 			size = size+len(chunk) #chunks may be a different size when streaming
+	# 			percent = 100.0 * size / (est_filesize + 1) #Added 1 byte to avoid div by zero
+	# 			game_file.write(bytearray(chunk))
+	# 			now = time.time()
+	# 			diff = now - last_time
+	# 			if diff > 1:
+	# 				percent = int(percent)
+	# 				last_time = now
+	# 				dp.update(percent,description,line2_description.replace('current_size','%(current_estimated_size)s'% {'current_estimated_size': self.IAGL.bytes_to_string_size(size)}))
+	# 				if dp.iscanceled():
+	# 					dp.close()
+	# 					self.download_fail_reason = 'Download was cancelled.'
+	# 					raise Exception('User Cancelled Download')
+	# 	# f.flush()
+	# 	# f.close()
+	# 	self.current_saved_files_success.append(True)
+	# 	self.current_saved_files.append(dest)
+	# 	self.current_saved_files_size.append(xbmcvfs.Stat(dest).st_size())
+	# 	self.current_saved_files_crc.append(get_crc32(dest))
+	# 	xbmc.log(msg='IAGL:  File saved to location %(dest)s, file size %(filesize)s, file crc %(filecrc)s' % {'dest': dest, 'filesize': self.current_saved_files_size[-1], 'filecrc': self.current_saved_files_crc[-1]}, level=xbmc.LOGNOTICE)
+	# 	dp.close()
+	# 	# except Exception as web_except:
+	# 	# 	self.current_saved_files_success.append(False)
+	# 	# 	self.current_saved_files.append(None)
+	# 	# 	self.current_saved_files_size.append(None)
+	# 	# 	self.current_saved_files_crc.append(None)
+	# 	# 	if xbmcvfs.exists(dest): #Delete partial files if an error has occurred
+	# 	# 		if not xbmcvfs.delete(dest):
+	# 	# 			xbmc.log(msg='IAGL:  The file %(filename_in)s could not be deleted after a download error'% {'filename_in': dest}, level=xbmc.LOGDEBUG)
+	# 	# 		else:
+	# 	# 			xbmc.log(msg='IAGL:  The partially saved file %(filename_in)s was deleted after a download error occurred'% {'filename_in': dest}, level=xbmc.LOGDEBUG)
+	# 	# 	if 'Failed to establish a new connection' in str(web_except):
+	# 	# 		self.download_fail_reason = 'Failed to establish connection.'
+	# 	# 	xbmc.log(msg='IAGL:  There was a download error (no login): %(url)s - %(web_except)s' % {'url': url, 'web_except': web_except}, level=xbmc.LOGERROR)
 
-	def download_no_login(self,url,dest,est_filesize=0,description='',heading='Downloading'):
+	def download_no_login(self,url,dest,est_filesize=0,description='',heading='Downloading', session=None):
 		xbmc.log(msg='IAGL:  Attempting to download file %(url)s' % {'url': url}, level=xbmc.LOGNOTICE)
 		xbmc.log(msg='IAGL:  Saving file to %(dest)s' % {'dest': dest}, level=xbmc.LOGNOTICE)
 		dp = xbmcgui.DialogProgress()
 		dp.create(heading,description)
 		dp.update(0)
-		# try:
-		s = requests.Session()
-		# s.headers.update({'User-Agent': self.user_agent})
-		r = s.get(url,verify=False,stream=True,timeout=self.download_timeout)
-		try:
-			header_filesize = int(r.headers['Content-length'])
-			xbmc.log(msg='IAGL:  Source URL returned filesize of %(header_size)s'%{'header_size': header_filesize}, level=xbmc.LOGDEBUG)
-		except:
-			header_filesize = None
-			xbmc.log(msg='IAGL:  Source URL returned no filesize, current size estimate is %(est_filesize)s'%{'est_filesize': est_filesize}, level=xbmc.LOGDEBUG)
-		if header_filesize is not None:
-			est_filesize = header_filesize
-		if est_filesize is not None and est_filesize>0:
-			line2_description = 'current_size / %(estimated_size)s'% {'estimated_size': self.IAGL.bytes_to_string_size(est_filesize)}
-		else:
-			line2_description = ''
-		# f = open(dest, 'wb')
-		with closing(xbmcvfs.File(dest,'wb')) as game_file:
-			size = 0
-			last_time = time.time()
-			for chunk in r.iter_content(self.chunk_size):
-				if dp.iscanceled():
-					dp.close()
-					self.download_fail_reason = 'Download was cancelled.'
-					raise Exception('User Cancelled Download')
-				# size = size + self.chunk_size
-				size = size+len(chunk) #chunks may be a different size when streaming
-				percent = 100.0 * size / (est_filesize + 1) #Added 1 byte to avoid div by zero
-				game_file.write(bytearray(chunk))
-				now = time.time()
-				diff = now - last_time
-				if diff > 1:
-					percent = int(percent)
-					last_time = now
-					dp.update(percent,description,line2_description.replace('current_size','%(current_estimated_size)s'% {'current_estimated_size': self.IAGL.bytes_to_string_size(size)}))
-					if dp.iscanceled():
-						dp.close()
-						self.download_fail_reason = 'Download was cancelled.'
-						raise Exception('User Cancelled Download')
-		# f.flush()
-		# f.close()
-		self.current_saved_files_success.append(True)
-		self.current_saved_files.append(dest)
-		self.current_saved_files_size.append(xbmcvfs.Stat(dest).st_size())
-		self.current_saved_files_crc.append(get_crc32(dest))
-		xbmc.log(msg='IAGL:  File saved to location %(dest)s, file size %(filesize)s, file crc %(filecrc)s' % {'dest': dest, 'filesize': self.current_saved_files_size[-1], 'filecrc': self.current_saved_files_crc[-1]}, level=xbmc.LOGNOTICE)
+		def progress(size, filesize, msg, stats):
+			line2_description = 'current_size / %(estimated_size)s'% {'estimated_size': self.IAGL.bytes_to_string_size(filesize)}
+			if dp.iscanceled():
+				dp.close()
+				self.download_fail_reason = 'Download was cancelled.'
+				#raise Exception('User Cancelled Download')
+				return False
+			# size = size + self.chunk_size
+			percent = 100.0 * size / (filesize + 1) #Added 1 byte to avoid div by zero
+			percent = int(percent)
+			dp.update(percent,description,line2_description.replace('current_size','%(current_estimated_size)s'% {'current_estimated_size': self.IAGL.bytes_to_string_size(size)}))
+			return True
+		total = tools.download_file(url, dest, progress=progress, chunk_size=self.chunk_size, timeout=self.download_timeout,session=session)
 		dp.close()
+		if total:
+			self.current_saved_files_success.append(True)
+			self.current_saved_files.append(dest)
+			self.current_saved_files_size.append(xbmcvfs.Stat(dest).st_size())
+			self.current_saved_files_crc.append(get_crc32(dest))
+			xbmc.log(msg='IAGL:  File saved to location %(dest)s, file size %(filesize)s, file crc %(filecrc)s' % {'dest': dest, 'filesize': self.current_saved_files_size[-1], 'filecrc': self.current_saved_files_crc[-1]}, level=xbmc.LOGNOTICE)
+		else:
+			self.current_saved_files_success.append(False)
+			self.current_saved_files.append(None)
+			self.current_saved_files_size.append(None)
+			self.current_saved_files_crc.append(None)
+			#xbmc.log(msg='IAGL:  There was a download error (no login): %(url)s - %(web_except)s' % {'url': url, 'web_except': web_except}, level=xbmc.LOGERROR)
+
 		# except Exception as web_except:
 		# 	self.current_saved_files_success.append(False)
 		# 	self.current_saved_files.append(None)
@@ -3460,6 +3446,8 @@ class iagl_download(object):
 		# 	if 'Failed to establish a new connection' in str(web_except):
 		# 		self.download_fail_reason = 'Failed to establish connection.'
 		# 	xbmc.log(msg='IAGL:  There was a download error (no login): %(url)s - %(web_except)s' % {'url': url, 'web_except': web_except}, level=xbmc.LOGERROR)
+
+
 
 	def post_process_unarchive_files(self,filename_in,crc_in):
 		#Check for libarchive and use that if available, otherwise try xbmc builtin extract
@@ -4072,10 +4060,23 @@ class iagl_download(object):
 			else:
 				current_file_size = self.default_file_size
 			if not self.current_files_to_download_skip[ii]:
-				if self.login_setting:
-					self.download_with_login(current_file,current_file_to_save_fullpath,username=self.username_setting,password=self.password_setting,est_filesize=current_file_size,description=self.current_files_to_save_no_ext[ii],heading='Downloading, please wait...')
-				else:				
-					self.download_no_login(current_file,current_file_to_save_fullpath,est_filesize=current_file_size,description=self.current_files_to_save_no_ext[ii],heading='Downloading, please wait...')
+				rd = real_debrid.RealDebrid()
+				if not rd.token: # TODO: move to control panel
+					rd.auth()
+				torrent_url, file_name = rd.ia_torrent_url(current_file)
+				link = None
+				if torrent_url is not None:
+					downloader = lambda url, dst: self.download_no_login(url,dst, heading='Downloading torrent, please wait...')
+					torrent = tools.get_cached_url(torrent_url, self.current_download_locations[ii], downloader)
+					link = rd.resolve_torrent(torrent, file_name)
+				if link:
+					self.download_no_login(link,current_file_to_save_fullpath,est_filesize=current_file_size,description=self.current_files_to_save_no_ext[ii],heading='Debrid Cache, please wait...')
+				else:
+					# as a fallback, download the file the normal way
+					if self.login_setting:
+						self.download_with_login(current_file,current_file_to_save_fullpath,username=self.username_setting,password=self.password_setting,est_filesize=current_file_size,description=self.current_files_to_save_no_ext[ii],heading='Downloading, please wait...')
+					else:				
+						self.download_no_login(current_file,current_file_to_save_fullpath,est_filesize=current_file_size,description=self.current_files_to_save_no_ext[ii],heading='Downloading, please wait...')
 			else:
 				self.current_saved_files_success.append(True)
 				self.current_saved_files.append(self.current_files_to_save_exists_locally[ii])
