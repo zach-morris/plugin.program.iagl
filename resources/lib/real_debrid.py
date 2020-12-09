@@ -10,6 +10,8 @@ import os
 
 
 import sys
+
+from requests.api import delete
 import bencode
 import hashlib
 import base64
@@ -318,45 +320,55 @@ class RealDebrid:
         return None, None
 
     def resolve_torrent(self, torrent_file, file_name):
-        tools.progressDialog.create("Read Debrid")
+        #tools.progressDialog.create("Read Debrid")
         file_name = unquote(file_name)
         # first we need to the hash to check instant availability
         magnet, files = self.make_magnet_from_torrent(torrent_file)
         if not files or file_name not in files:
-            tools.progressDialog.update(-1, 'File "{}" no in IA torrent'.format(file_name), file_name)
+            #tools.progressDialog.update(-1, 'File "{}" no in IA torrent'.format(file_name), file_name)
             tools.log("""couldn't find "{}" in torrent""".format(file_name),'error')
             return None
         file = files[file_name]
         key_list = ','.join([str(file['id'])])
         hash = str(re.findall(r'btih:(.*?)(?:&|$)', magnet)[0].lower())
 
-        tools.progressDialog.update(-1, "Checking if available", file_name)
+        def start_caching(reuse_existing=True, delete_after=True):
+            # ensure we aren't already trying to cache it. if instant we don't need to bother
+            torrent, files = self.downloadingFiles(hash, file_name) if reuse_existing else (None,dict())
+            if torrent is None:
+                #tools.progressDialog.update(-1, "Initilising", file_name)
+                if reuse_existing:
+                    tools.log('Torrent for "{}" not uploaded to RD'.format(file_name), 'notice')
+                torrent = self.addMagnet(magnet)
+                self.torrentSelect(torrent['id'], key_list)
+
+                # if its instantly available we will now have a link. Refresh our info to see
+                # it its still resolving the magnet link (hasn't seen this torrent before), we won't get the file
+                file = self.torrentInfoFiles(torrent['id']).get(file_name, dict(link=None))
+            else:
+                # we have already started downloading it. See if its ready yet
+                file = files[file_name]
+            link = file.get('link')
+            if link:
+                #tools.progressDialog.update(-1, "Found!", file_name)
+                tools.log('"{}" cached on RD'.format(file_name), 'notice')
+                link = self.resolve_hoster(link)
+                if delete_after:
+                    self.deleteTorrent(torrent['id']) #TODO: do we only do this for a single select torrent?
+            else:
+                #tools.progressDialog.update(-1, "Uncached. Using IA instead.", file_name)
+                tools.log('"{}" caching in progress. Reverting to normal download'.format(file_name), 'notice')
+            return link
+
+        #tools.progressDialog.update(-1, "Checking if available", file_name)
         # do an instant check to see if we have this torrent. already.
-        # available = self.instantAvailabilityFiles(hash)
-        torrent, files = self.downloadingFiles(hash, file_name)
-        if torrent is None:
-            tools.progressDialog.update(-1, "Initilising", file_name)
-            tools.log('Torrent for "{}" not uploaded to RD'.format(file_name), 'notice')
-            torrent = self.addMagnet(magnet)
-            self.torrentSelect(torrent['id'], key_list)
-
-            # if its instantly available we will now have a link. Refresh our info to see
-            # it its still resolving the magnet link (hasn't seen this torrent before), we won't get the file
-            file = self.torrentInfoFiles(torrent['id']).get(file_name, dict(link=None))
+        instant = self.instantAvailabilityFiles(hash)
+        if file_name not in instant:
+            # setup the cache in the background so its faster next time or us or others
+            threading.Thread(target=start_caching, kwargs=dict(reuse_existing=True)).start()
+            return None
         else:
-            # we have already started downloading it. See if its ready yet
-            file = files[file_name]
-        link = file.get('link')
-        if link:
-            tools.progressDialog.update(-1, "Found!", file_name)
-            tools.log('"{}" cached on RD'.format(file_name), 'notice')
-            link = self.resolve_hoster(link)
-            self.deleteTorrent(torrent['id']) #TODO: do we only do this for a single select torrent?
-        else:
-            tools.progressDialog.update(-1, "Uncached. Using IA instead.", file_name)
-            tools.log('"{}" caching in progress. Reverting to normal download'.format(file_name), 'notice')
-
-        return link
+            return start_caching(reuse_existing=False)
 
     def ia_torrent_url(self, dl_url):
         "Get the torrent url for a file point into a IA collection"
@@ -371,7 +383,7 @@ class RealDebrid:
         else:
             return (None,rest)
 
-
+    
 
 
 if __name__ == "__main__":
@@ -379,7 +391,8 @@ if __name__ == "__main__":
     dl_url = "https://archive.org/download/PSP_EU_Arquivista/PaRappa%20the%20Rapper%20%28EU%20-%20AU%29.iso"
     dl_url = "https://archive.org/download/PSP_EU_Arquivista/Driver%2076%20%28EU%29.iso"
     #dl_url = "https://archive.org/download/PSP_EU_Arquivista/Disney%20TRON%20-%20Evolution%20%28EU%29.iso"
-    dl_url = "https://archive.org/download/RedumpSonyPlayStationAmerica20160617/Tony%20Hawk%27s%20Pro%20Skater%202%20%28USA%29.zip"
+    #dl_url = "https://archive.org/download/RedumpSonyPlayStationAmerica20160617/Tony%20Hawk%27s%20Pro%20Skater%202%20%28USA%29.zip"
+    #dl_url = "https://archive.org/download/PSP_EU_Arquivista/Aces%20of%20War%20%28EU%29.iso"
     magnet = "magnet:?xt=urn:btih:b76aef3af2d6f8d754221b8feb62be9da4da6bc1&dn=PSP_EU_Arquivista"
     magnet = "magnet:?xt=urn:btih:W5VO6OXS234NOVBCDOH6WYV6TWSNU26B&dn=PSP_EU_Arquivista&tr=http://bt1.archive.org:6969/announce"
     rd = RealDebrid()
@@ -392,5 +405,5 @@ if __name__ == "__main__":
     progress = lambda size, total, msg, *_: print(int(size/total*100), msg)
     if link:
         tools.download_file(link, progress=progress)
-    else:
-        tools.download_file(dl_url, progress=progress, number_of_threads=20)
+    # else:
+    #     tools.download_file(dl_url, progress=progress, number_of_threads=20)

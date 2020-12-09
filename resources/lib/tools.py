@@ -140,7 +140,7 @@ def Handler(start, end, url, filename, progress, session, chunk_size):
             log("IOError seeking to start of write {}-{}: {}".format(start, end, e),"error")
             progress(e)
             return
-        log("Starting Thread {}-{} fpos={}".format(start, end,fp.tell()),"notice")
+        log("Starting Thread {}-{} fpos={}".format(start, end,fp.tell()),"debug")
         saved=0
         last_update = time.time()
         for block in r.iter_content(chunk_size):
@@ -159,19 +159,19 @@ def Handler(start, end, url, filename, progress, session, chunk_size):
                 if new_start != start:
                     # We've been told to do another part
                     # TODO: flush or close?
-                    log("Switching Thread {}-{}({}/{}) to {}-{}(0/{})".format(start, end, saved, end-start, new_start, new_end, new_end-new_start),"notice")
+                    log("Switching Thread {}-{}({}/{}) to {}-{}(0/{})".format(start, end, saved, end-start, new_start, new_end, new_end-new_start),"debug")
                     Handler(new_start, new_end, url, filename, progress, session, chunk_size)
                     break
                 elif new_end <= new_start:
                     # User cancelled or exception in other thread
-                    log("Cancelling Thread {}-{}({}/{}) fpos={}".format(start, end, saved, end-start, fp.tell(), ),"notice")
+                    log("Cancelling Thread {}-{}({}/{}) fpos={}".format(start, end, saved, end-start, fp.tell(), ),"debug")
                     break
                 elif new_end == end and remain <= 0:
-                    log("Stopping Thread {}-{}({}/{}) fpos={}".format(start, end, saved, end-start, fp.tell(), ),"notice")
+                    log("Stopping Thread {}-{}({}/{}) fpos={}".format(start, end, saved, end-start, fp.tell(), ),"debug")
                     break
                 elif new_end < end:
                     # another thread is doing our work
-                    log("Shorten Thread {}-{}({}/{}) to {}-{}({}/{}) fpos={}".format(start, end, saved, end-start, new_start, new_end, saved, new_end-new_start, fp.tell()),"notice")
+                    log("Shorten Thread {}-{}({}/{}) to {}-{}({}/{}) fpos={}".format(start, end, saved, end-start, new_start, new_end, saved, new_end-new_start, fp.tell()),"debug")
                     end = new_end
                 else:
                     # Continue on
@@ -268,7 +268,8 @@ def download_file(url_of_file,name=None,number_of_threads=15, progress=None, chu
             total_speed = saved/(time.time()-started)
             weighted_speed = (total_speed + speed*2)/3
             remain = 1/weighted_speed  * (file_size-saved)
-            if progress(saved, file_size, "{:0.1f}MB/s {:0.0f}".format(speed, remain), dict(state=state)) is not False:
+            est = time.time()-started + remain
+            if progress(saved, file_size, "{:0.1f}MB/s {:0.0f}/{:0.0f}s".format(speed, remain, est), dict(state=state)) is not False:
                 history.append( (time.time(), saved))
                 return (start,end)
             else:
@@ -363,8 +364,9 @@ if console_mode:
     # def colorString(self, msg):
     #     return '{}'.format(msg)
 
-    def log(msg, level="debug"):
-        print("LOG {}: {}".format(level,msg))
+    def log(msg, level="info"):
+        if level != 'debug':
+            print("LOG {}: {}".format(level,msg))
 
     class ProgressDialog():
         def create(self, msg):
@@ -387,27 +389,52 @@ if console_mode:
     showDialog = ShowDialog()
 
 
+import zlib
+class crc32(object):
+    name = 'crc32'
+    digest_size = 4
+    block_size = 1
+
+    def __init__(self, arg=''):
+        self.__digest = 0
+        self.update(arg)
+
+    def copy(self):
+        copy = super(self.__class__, self).__new__(self.__class__)
+        copy.__digest = self.__digest
+        return copy
+
+    def digest(self):
+        return self.__digest
+
+    def hexdigest(self):
+        return '{:08x}'.format(self.__digest)
+
+    def update(self, arg):
+        self.__digest = zlib.crc32(arg, self.__digest) & 0xffffffff
+
+
 import hashlib
 def compare_hashes(filename, hashes):
     BUF_SIZE = 65536
     size = 0        
-    libs = dict(sha1=hashlib.sha1(), md5=hashlib.md5())
+    libs = dict(sha1=hashlib.sha1(), md5=hashlib.md5(),crc32=crc32())
     with open(file, 'rb') as f:
         while True:
             data = f.read(BUF_SIZE)
             size += len(data)
             if not data:
                 break
-            for lib in libs:
-                lib(data)
+            for lib in libs.values():
+                lib.update(data)
     for hash in hashes:
-        p,h = hash.split('=',2)
-        print (libs.get(p).hexdigest(), h)
+        p = hash.split('=')
+        print (libs.get(p[0]).hexdigest(), p[1])
 
 
 if __name__ == '__main__':
-    #url,hashmd5, hashsha1 = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", "yrCLNhle2xoSMdLQn6RQ4A","" # md5=yrCLNhle2xoSMdLQn6RQ4A==
-    url, hashes = "https://archive.org/download/RedumpSonyPlayStationAmerica20160617/Tony%20Hawk%27s%20Pro%20Skater%202%20%28USA%29.zip", ["md5=59b46cb4797b2d7cdd691c8e275d455f==", "sha1=3993a7b69818171f841a33a4fa93594052125b2b=="]
+    url,hashes = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", ["md5=yrCLNhle2xoSMdLQn6RQ4A=="]
+    #url, hashes = "https://archive.org/download/RedumpSonyPlayStationAmerica20160617/Tony%20Hawk%27s%20Pro%20Skater%202%20%28USA%29.zip", ["md5=59b46cb4797b2d7cdd691c8e275d455f==", "sha1=3993a7b69818171f841a33a4fa93594052125b2b=="]
     #url = "https://archive.org/download/3DO_Redump/3DO_Redump_archive.torrent"
     #url = "https://archive.org/download/MAME2003_Reference_Set_MAME0.78_ROMs_CHDs_Samples/roms/invaders.zip"
     #url = "https://archive.org/download/PSP_EU_Arquivista/Worms%20-%20Open%20Warfare%20%28EU%29.iso"
