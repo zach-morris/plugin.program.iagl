@@ -111,13 +111,10 @@ def get_cached_url(url, cache_path=".", downloader=requests_dl):
     a = urlparse(url)
     file_name = os.path.basename(a.path)
     path = os.path.join(cache_path,str(file_name))
-    if os.path.exists(path):
-        with open(path, "rb") as f:
-            return f.read()
-    else:
+    if not os.path.exists(path):
         downloader(url, path)
-        with open(path, "rb") as f:
-            return f.read()
+    if os.path.exists(path):
+        return path
 
   
 # based on https://www.geeksforgeeks.org/simple-multithreaded-download-manager-in-python/  
@@ -294,6 +291,7 @@ def download_file(url_of_file,name=None,number_of_threads=15, est_filesize=0, pr
     # TODO: if cancelled we should delete the file
     last_update, last_saved = history[-1]
     if last_update is None:
+        os.remove(file_name)
         return 0
     else:
         return last_saved

@@ -257,8 +257,10 @@ class RealDebrid:
 
 
     def make_magnet_from_torrent(self, torrent) :
+        with open(torrent, "rb") as fp:
+            torrent_data = fp.read()
         try:
-            metadata = bencode.bdecode(torrent)
+            metadata = bencode.bdecode(torrent_data)
         except bencode.BTFailure:
             # TODO: log error
             return None, None
@@ -285,7 +287,11 @@ class RealDebrid:
         hashCheck = self.checkHash(hash)
         # go through contents and find our file 
         files = {}
-        for storage_variant in hashCheck.get(hash,{}).get('rd',[]):
+        hosters = hashCheck.get(hash,{})
+        # for some reason this is sometimes [] instead of a dict?
+        if not hosters:
+            return files
+        for storage_variant in hosters.get('rd',[]):
             for key, value in storage_variant.items():
                 file_name = storage_variant[key]['filename']
                 files[file_name] = key
@@ -414,6 +420,8 @@ if __name__ == "__main__":
     #dl_url = "https://archive.org/download/RedumpSonyPlayStationAmerica20160617/Tony%20Hawk%27s%20Pro%20Skater%202%20%28USA%29.zip"
     #dl_url = "https://archive.org/download/PSP_EU_Arquivista/Aces%20of%20War%20%28EU%29.iso"
     dl_url = "http://archive.org/download/amigaromset/CommodoreAmigaRomset1.zip/3DGalax_v1.0.hdf"
+    dl_url = "https://archive.org/download/RedumpSonyPlayStationAmerica20160617/Ape%20Escape%20%28USA%29.zip"
+    dl_url = "https://archive.org/download/RedumpSonyPlayStationAmerica20160617/Ape%20Escape%20%28USA%29.zip"
     magnet = "magnet:?xt=urn:btih:b76aef3af2d6f8d754221b8feb62be9da4da6bc1&dn=PSP_EU_Arquivista"
     magnet = "magnet:?xt=urn:btih:W5VO6OXS234NOVBCDOH6WYV6TWSNU26B&dn=PSP_EU_Arquivista&tr=http://bt1.archive.org:6969/announce"
     progress = lambda size, total, msg, *_: print(int(size/total*100), msg)
