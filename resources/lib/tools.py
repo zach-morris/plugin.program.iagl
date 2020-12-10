@@ -110,7 +110,7 @@ def requests_dl(url, dst):
 def get_cached_url(url, cache_path=".", downloader=requests_dl):
     a = urlparse(url)
     file_name = os.path.basename(a.path)
-    path = os.path.join(cache_path,file_name)
+    path = os.path.join(cache_path,str(file_name))
     if os.path.exists(path):
         with open(path, "rb") as f:
             return f.read()
@@ -122,8 +122,7 @@ def get_cached_url(url, cache_path=".", downloader=requests_dl):
   
 # based on https://www.geeksforgeeks.org/simple-multithreaded-download-manager-in-python/  
 def Handler(start, end, url, filename, progress, session, chunk_size): 
-     
-    headers = {'Range': 'bytes=%d-%d' % (start, end)} 
+    headers = {'Range': 'bytes=%d-%d' % (start, end)} if end > -1 else {}
     try:
         r = session.get(url, headers=headers, stream=True, allow_redirects=True) 
     except requests.exceptions.ConnectionError as e:
@@ -162,11 +161,11 @@ def Handler(start, end, url, filename, progress, session, chunk_size):
                     log("Switching Thread {}-{}({}/{}) to {}-{}(0/{})".format(start, end, saved, end-start, new_start, new_end, new_end-new_start),"debug")
                     Handler(new_start, new_end, url, filename, progress, session, chunk_size)
                     break
-                elif new_end <= new_start:
+                elif new_end != -1 and new_end <= new_start:
                     # User cancelled or exception in other thread
                     log("Cancelling Thread {}-{}({}/{}) fpos={}".format(start, end, saved, end-start, fp.tell(), ),"debug")
                     break
-                elif new_end == end and remain <= 0:
+                elif new_end == end and remain <= 0 and new_end>-1:
                     log("Stopping Thread {}-{}({}/{}) fpos={}".format(start, end, saved, end-start, fp.tell(), ),"debug")
                     break
                 elif new_end < end:
@@ -177,32 +176,33 @@ def Handler(start, end, url, filename, progress, session, chunk_size):
                     # Continue on
                     pass
 
-def download_file(url_of_file,name=None,number_of_threads=15, progress=None, chunk_size=1024, timeout=10, session=None):
+def download_file(url_of_file,name=None,number_of_threads=15, est_filesize=0, progress=None, chunk_size=1024, timeout=10, session=None):
+    file_name = url_of_file.split('/')[-1] if not name else name  
     session = session if session is not None else requests.Session()
+    # Help make things more reliable esp if server is trying to block us or overloaded
+    # TODO: perhaps handle this better by coming back to these connections at the end of the dl
     retries = requests.adapters.Retry(total=5,
                 backoff_factor=0.1,
-                status_forcelist=[ 500, 502, 503, 504 ])
+                status_forcelist=[ 500, 502, 503, 504, 499])
     session.mount("http://", requests.adapters.HTTPAdapter(max_retries=retries))
     session.mount("https://", requests.adapters.HTTPAdapter(max_retries=retries))
+    # Get the size of the file
     r = session.head(url_of_file, allow_redirects=True, timeout=timeout) 
-    if name: 
-        file_name = name 
-    else: 
-        file_name = url_of_file.split('/')[-1] 
     try: 
         file_size = int(r.headers['content-length']) 
     except: 
-        return
-    if r.headers['accept-ranges'] != 'bytes':
-        return
+        log("No filesize reported by server so can't continue download {}".format(url_of_file), "error")
+        number_of_threads = 1 # TODO: might be able to still use multiple if we record parts that finish early?
+        #file_size = est_filesize # TODO: probably need to keep appending file instead?
+        file_size = -1
+    if r.headers.get('accept-ranges') != 'bytes':
+        log("No 'accept-ranges' so can't continue download {}".format(url_of_file), "error")
+        number_of_threads = 1
+        file_size=-1
     part = max(int(file_size / number_of_threads), 2*2**20)  # 2MB min so don't use lots of threads for small files
     with io.open(file_name, "wb") as fp:
-    #fp.write(b'\0' * file_size) 
-    #fp.truncate(file_size)  # TODO: might not be cross platform - https://stackoverflow.com/questions/8816059/create-file-of-particular-size-in-python
         try:
-            #fp.seek(file_size-1)
-            #fp.write(b'\0')
-            fp.truncate(file_size)
+            fp.truncate(max(file_size,0))
             log("Sparse file created {}bytes: {}".format(file_size, file_name), 'notice')
         except IOError:
             log("Sparse file unsupported. Blanking out {}bytes: {}".format(file_size, file_name), 'notice')
@@ -224,7 +224,7 @@ def download_file(url_of_file,name=None,number_of_threads=15, progress=None, chu
     for i in range(number_of_threads): 
         start = end + 1
         end = start + part
-        if start > file_size: # due to min part size
+        if start > file_size and file_size != -1: # due to min part size
             break
         if i+1 == number_of_threads or end > file_size:
             end = file_size 
@@ -244,7 +244,10 @@ def download_file(url_of_file,name=None,number_of_threads=15, progress=None, chu
             # threads part and tell that other part to get less. Prevents the slow down
             # caused by idle threads at the end.
             remain = lambda start: ends[start]-start-state[start]
-            if remain(start) <= 0:
+            if ends[start] == -1:
+                # special case where we aren't doing range requests and want to keep going until the end
+                pass
+            elif remain(start) <= 0:
                 # we finished. Find the slowest who has the most remaining and help them out
                 sstart= sorted(state.keys(),key=remain, reverse=False).pop()
                 # ensure slowest only gets half
@@ -417,14 +420,23 @@ class crc32(object):
         return '{:08x}'.format(self.__digest)
 
     def update(self, arg):
+        arg = bytes(arg,encoding='ascii') if type(arg) == str else arg
         self.__digest = zlib.crc32(arg, self.__digest) & 0xffffffff
+
+class size_hash(object):
+    def __init__(self):
+        self.size=0
+    def update(self, data):
+        self.size += len(data)
+    def hexdigest(self):
+        return str(self.size)
 
 
 import hashlib
 def compare_hashes(filename, hashes):
     BUF_SIZE = 65536
     size = 0        
-    libs = dict(sha1=hashlib.sha1(), md5=hashlib.md5(),crc32=crc32())
+    libs = dict(sha1=hashlib.sha1(), md5=hashlib.md5(),crc32=crc32(),size=size_hash())
     with open(file, 'rb') as f:
         while True:
             data = f.read(BUF_SIZE)
@@ -435,21 +447,26 @@ def compare_hashes(filename, hashes):
                 lib.update(data)
     for hash in hashes:
         p = hash.split('=')
-        print (libs.get(p[0]).hexdigest(), p[1])
+        if p[0] in libs:
+            print (libs.get(p[0]).hexdigest(), p[1])
 
 
 if __name__ == '__main__':
-    url,hashes = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", ["md5=yrCLNhle2xoSMdLQn6RQ4A=="]
-    #url, hashes = "https://archive.org/download/RedumpSonyPlayStationAmerica20160617/Tony%20Hawk%27s%20Pro%20Skater%202%20%28USA%29.zip", ["md5=59b46cb4797b2d7cdd691c8e275d455f==", "sha1=3993a7b69818171f841a33a4fa93594052125b2b=="]
+    hashes = []
+    url,hashes = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", ["md5=yrCLNhle2xoSMdLQn6RQ4A==","crc32c=x4GOmQ=="]
+    url, hashes = "https://archive.org/download/RedumpSonyPlayStationAmerica20160617/Tony%20Hawk%27s%20Pro%20Skater%202%20%28USA%29.zip", ["md5=59b46cb4797b2d7cdd691c8e275d455f==", "sha1=3993a7b69818171f841a33a4fa93594052125b2b=="]
     #url = "https://archive.org/download/3DO_Redump/3DO_Redump_archive.torrent"
     #url = "https://archive.org/download/MAME2003_Reference_Set_MAME0.78_ROMs_CHDs_Samples/roms/invaders.zip"
     #url = "https://archive.org/download/PSP_EU_Arquivista/Worms%20-%20Open%20Warfare%20%28EU%29.iso"
     #   <rom name="PSP_US_Arquivista/Aliens%20vs%20Predator%20-%20Requiem%20%28US%29.iso" size="396492800" md5="9568c2c27f0c9701f6f27a418b41d05a" sha1="f6802ce9225b132cf8b6514e369046c719c98283" />
     #url, hash = "https://archive.org/download/PSP_US_Arquivista/Aliens%20vs%20Predator%20-%20Requiem%20%28US%29.iso","f6802ce9225b132cf8b6514e369046c719c98283"
+    # has no file size
+    #url,hashes = "http://archive.org/download/amigaromset/CommodoreAmigaRomset1.zip/3DGalax_v1.0.hdf",["size=573440=="]
+
     progress = lambda size, total, msg, *_: print(int(size/total*100), msg)
     file = url.split('/')[-1]
-    download_file(url, file, progress=progress, number_of_threads=20)
-    compare_hashes(file, hashes)
+    if download_file(url, file, progress=progress, number_of_threads=20):
+        compare_hashes(file, hashes)
 
 
 
