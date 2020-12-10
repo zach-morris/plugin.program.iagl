@@ -330,7 +330,7 @@ class RealDebrid:
         return None, None
 
     def resolve_torrent(self, torrent_file, file_name, ask_auth=True):
-        if ask_auth and not rd.token and not self.asked:
+        if ask_auth and not self.token and not self.asked:
             if tools.showDialog.yesno("Real Debrid", 
                     "Do you have a Real Debrid premium account and would like to authorise it now?"):
                 self.auth()
@@ -413,15 +413,17 @@ if __name__ == "__main__":
     #dl_url = "https://archive.org/download/PSP_EU_Arquivista/Disney%20TRON%20-%20Evolution%20%28EU%29.iso"
     #dl_url = "https://archive.org/download/RedumpSonyPlayStationAmerica20160617/Tony%20Hawk%27s%20Pro%20Skater%202%20%28USA%29.zip"
     #dl_url = "https://archive.org/download/PSP_EU_Arquivista/Aces%20of%20War%20%28EU%29.iso"
+    dl_url = "http://archive.org/download/amigaromset/CommodoreAmigaRomset1.zip/3DGalax_v1.0.hdf"
     magnet = "magnet:?xt=urn:btih:b76aef3af2d6f8d754221b8feb62be9da4da6bc1&dn=PSP_EU_Arquivista"
     magnet = "magnet:?xt=urn:btih:W5VO6OXS234NOVBCDOH6WYV6TWSNU26B&dn=PSP_EU_Arquivista&tr=http://bt1.archive.org:6969/announce"
+    progress = lambda size, total, msg, *_: print(int(size/total*100), msg)
     rd = RealDebrid()
     torrent_url, file_name = rd.ia_torrent_url(dl_url)
-    torrent = tools.get_cached_url(torrent_url)
-    link = rd.resolve_torrent(torrent, file_name)
-    print(link)
-    progress = lambda size, total, msg, *_: print(int(size/total*100), msg)
-    if link:
-        tools.download_file(link, progress=progress)
-    # else:
-    #     tools.download_file(dl_url, progress=progress, number_of_threads=20)
+    if torrent_url:            
+        torrent = tools.get_cached_url(torrent_url)
+        link = rd.resolve_torrent(torrent, file_name)
+        print(link)
+        if link:
+            tools.download_file(link, progress=progress)
+    else:
+        tools.download_file(dl_url, progress=progress, number_of_threads=20)
