@@ -3409,17 +3409,21 @@ class iagl_download(object):
 		def progress(size, filesize, msg, stats):
 			line2_description = 'current_size / %(estimated_size)s'% {'estimated_size': self.IAGL.bytes_to_string_size(filesize)}
 			if dp.iscanceled():
-				dp.close()
-				self.download_fail_reason = 'Download was cancelled.'
-				#raise Exception('User Cancelled Download')
+				xbmc.log(msg='IAGL: User cancelled download', level=xbmc.LOGINFO)
 				return False
 			# size = size + self.chunk_size
-			percent = 100.0 * size / (filesize + 1) #Added 1 byte to avoid div by zero
+			percent = 100.0 * size / max(filesize + 1, est_filesize) #Added 1 byte to avoid div by zero
 			percent = int(percent)
 			dp.update(percent,description,line2_description.replace('current_size','%(current_estimated_size)s'% {'current_estimated_size': self.IAGL.bytes_to_string_size(size)}))
 			return True
-		total = tools.download_file(url, dest, progress=progress, chunk_size=self.chunk_size, timeout=self.download_timeout,session=session)
-		dp.close()
+		total = tools.download_file(url, dest, progress=progress, est_filesize=est_filesize, chunk_size=self.chunk_size, timeout=self.download_timeout,session=session)
+		if dp.iscanceled():
+			tools.log("User cancelled download","notice")
+			dp.close()
+			self.download_fail_reason = 'Download was cancelled.'
+			raise Exception('User Cancelled Download')
+		else:
+			dp.close()
 		if total:
 			self.current_saved_files_success.append(True)
 			self.current_saved_files.append(dest)
@@ -4060,21 +4064,24 @@ class iagl_download(object):
 			else:
 				current_file_size = self.default_file_size
 			if not self.current_files_to_download_skip[ii]:
+				login = self.login_setting
 				rd = real_debrid.RealDebrid()
 				torrent_url, file_name = rd.ia_torrent_url(current_file)
-				link = None
 				if torrent_url is not None:
 					downloader = lambda url, dst: self.download_no_login(url,dst, heading='Downloading torrent, please wait...')
+					tools.log("Trying to download torrent {} for {}".format(torrent_url, current_file),"notice")
 					torrent = tools.get_cached_url(torrent_url, self.current_download_locations[ii], downloader)
 					link = rd.resolve_torrent(torrent, file_name)
-				if link:
-					self.download_no_login(link,current_file_to_save_fullpath,est_filesize=current_file_size,description=self.current_files_to_save_no_ext[ii],heading='Debrid Cache, please wait...')
+					if link:
+						current_file, login = link, False
+					else:
+						tools.log("File not cached on Debrid yet {}".format(file_name),"notice")
 				else:
-					# as a fallback, download the file the normal way
-					if self.login_setting:
-						self.download_with_login(current_file,current_file_to_save_fullpath,username=self.username_setting,password=self.password_setting,est_filesize=current_file_size,description=self.current_files_to_save_no_ext[ii],heading='Downloading, please wait...')
-					else:				
-						self.download_no_login(current_file,current_file_to_save_fullpath,est_filesize=current_file_size,description=self.current_files_to_save_no_ext[ii],heading='Downloading, please wait...')
+					tools.log("No IA torrent found for {}".format(current_file),"notice")
+				if login:
+					self.download_with_login(current_file,current_file_to_save_fullpath,username=self.username_setting,password=self.password_setting,est_filesize=current_file_size,description=self.current_files_to_save_no_ext[ii],heading='Downloading, please wait...')
+				else:				
+					self.download_no_login(current_file,current_file_to_save_fullpath,est_filesize=current_file_size,description=self.current_files_to_save_no_ext[ii],heading='Downloading, please wait...')
 			else:
 				self.current_saved_files_success.append(True)
 				self.current_saved_files.append(self.current_files_to_save_exists_locally[ii])
