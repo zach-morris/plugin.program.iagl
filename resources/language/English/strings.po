@@ -109,8 +109,8 @@ msgid "Cache Size (MB)"
 msgstr "Cache Size (MB)"
 
 msgctxt "#30022"
-msgid "Enable Login"
-msgstr "Enable Login"
+msgid "Enable archive.org Login"
+msgstr "Enable archive.org Login"
 
 msgctxt "#30023"
 msgid "archive.org Email"
@@ -533,8 +533,12 @@ msgid "Android"
 msgstr "Android"
 
 msgctxt "#30514"
-msgid "Android Aarch64"
-msgstr "Android Aarch64"
+msgid "Android aarch64"
+msgstr "Android aarch64"
+
+msgctxt "#30582"
+msgid "Android ra32"
+msgstr "Android ra32"
 
 msgctxt "#30515"
 msgid "RetroPie"
@@ -643,6 +647,14 @@ msgstr "Players List Viewtype"
 msgctxt "#30145"
 msgid "Studio List Viewtype"
 msgstr "Studio List Viewtype"
+
+msgctxt "#30210"
+msgid "Tag List Viewtype"
+msgstr "Tag List Viewtype"
+
+msgctxt "#30211"
+msgid "Custom Group List Viewtype"
+msgstr "Custom Group List Viewtype"
 
 msgctxt "#30146"
 msgid "Search Results Viewtype"
@@ -937,8 +949,8 @@ msgid "Define the size of the downloaded game file cache.  The cache is purged w
 msgstr "Define the size of the downloaded game file cache.  The cache is purged when the limit is reached."
 
 msgctxt "#30547"
-msgid "Some game archives require login.  Enable login to enter credentials"
-msgstr "Some game archives require login.  Enable login to enter credentials"
+msgid "Some game archives require login.  Enable archive.org login to enter credentials"
+msgstr "Some game archives require login.  Enable archive.org login to enter credentials"
 
 msgctxt "#30548"
 msgid "Some game archives require login.  Enter your archive.org email address"
@@ -1068,6 +1080,30 @@ msgctxt "#30579"
 msgid "If enabled, a game list with only one game will auto redirect directly to select the game"
 msgstr "If enabled, a game list with only one game will auto redirect directly to select the game"
 
+msgctxt "#30580"
+msgid "If enabled, all available artwork will be parsed and included.  Disabling may speed up listing of large game lists in Kodi."
+msgstr "If enabled, all available artwork will be parsed and included.  Disabling may speed up listing of large game lists in Kodi."
+
+msgctxt "#30581"
+msgid "Download Options"
+msgstr "Download Options"
+
+msgctxt "#30583"
+msgid "Manually Entered Command Line"
+msgstr "Manually Entered Command Line"
+
+msgctxt "#30584"
+msgid "Login to archive.org succeeded"
+msgstr "Login to archive.org succeeded"
+
+msgctxt "#30585"
+msgid "Login to archive.org failed, please check your user EMAIL and PASSWORD are in addon settings"
+msgstr "Login to archive.org failed, please check your user EMAIL and PASSWORD are in addon settings"
+
+msgctxt "#30586"
+msgid "Login to archive.org failed, archive.org could not be reached"
+msgstr "Login to archive.org failed, archive.org could not be reached"
+
 #
 #General
 #
@@ -1107,6 +1143,10 @@ msgstr "Default"
 msgctxt "#30208"
 msgid "Custom Path"
 msgstr "Custom Path"
+
+msgctxt "#30209"
+msgid "Include all Artwork"
+msgstr "Include all Artwork"
 
 msgctxt "#30500"
 msgid "List All"
@@ -1159,6 +1199,10 @@ msgstr "450"
 msgctxt "#30512"
 msgid "500"
 msgstr "500"
+
+msgctxt "#30513"
+msgid "DL Path"
+msgstr "DL Path"
 
 
 #
@@ -1381,8 +1425,8 @@ msgid "Are you sure you want to delete %(game_id_in)s from the list %(game_list_
 msgstr "Are you sure you want to delete %(game_id_in)s from the list %(game_list_id_in)s?"
 
 msgctxt "#30355"
-msgid "Download and overwrite local files?"
-msgstr "Download and overwrite local files?"
+msgid "Download and overwrite local file %(filename)s?"
+msgstr "Download and overwrite local file %(filename)s?"
 
 msgctxt "#30356"
 msgid "No external command is defined.[CR]Please check settings."
@@ -1395,6 +1439,94 @@ msgstr "You are removing the only game listed in %(game_list_id_in)s, do you wan
 msgctxt "#30358"
 msgid "%(game_list_id_in)s was deleted."
 msgstr "%(game_list_id_in)s was deleted."
+
+msgctxt "#30359"
+msgid "%(game_id)s was not found in %(game_list_id)s"
+msgstr "%(game_id)s was not found in %(game_list_id)s"
+
+msgctxt "#30360"
+msgid "Select Game Lists"
+msgstr "Select Game Lists"
+
+msgctxt "#30361"
+msgid "Cache"
+msgstr "Cache"
+
+msgctxt "#30362"
+msgid "Settings for %(game_list_id)s"
+msgstr "Settings for %(game_list_id)s"
+
+msgctxt "#30363"
+msgid "External Launch Command"
+msgstr "External Launch Command"
+
+msgctxt "#30364"
+msgid "RetroPlayer"
+msgstr "RetroPlayer"
+
+msgctxt "#30365"
+msgid "Game List Name"
+msgstr "Game List Name"
+
+msgctxt "#30366"
+msgid "Download Parameters"
+msgstr "Download Parameters"
+
+msgctxt "#30367"
+msgid "Download Location"
+msgstr "Download Location"
+
+msgctxt "#30368"
+msgid "Source"
+msgstr "Source"
+
+msgctxt "#30369"
+msgid "Post DL Command"
+msgstr "Post DL Command"
+
+msgctxt "#30370"
+msgid "Launch Parameters"
+msgstr "Launch Parameters"
+
+msgctxt "#30371"
+msgid "Launch With"
+msgstr "Launch With"
+
+msgctxt "#30372"
+msgid "Metadata"
+msgstr "Metadata"
+
+msgctxt "#30373"
+msgid "A valid web or special image file path is required."
+msgstr "A valid web or special image file path is required."
+
+msgctxt "#30374"
+msgid "A valid youtube or special video file path is required."
+msgstr "A valid youtube or special video file path is required."
+
+msgctxt "#30375"
+msgid "External launchers are not yet defined in addon settings"
+msgstr "External launchers are not yet defined in addon settings"
+
+msgctxt "#30376"
+msgid "Downloading"
+msgstr "Downloading"
+
+msgctxt "#30377"
+msgid "Please wait"
+msgstr "Please wait"
+
+msgctxt "#30378"
+msgid "Attempting login"
+msgstr "Attempting login"
+
+msgctxt "#30379"
+msgid "Processing files"
+msgstr "Processing files"
+
+msgctxt "#30380"
+msgid "Waiting for game to exit..."
+msgstr "Waiting for game to exit...
 
 #
 #Context Menus

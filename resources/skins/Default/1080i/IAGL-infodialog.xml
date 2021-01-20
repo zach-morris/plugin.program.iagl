@@ -119,7 +119,7 @@ https://github.com/phil65/skin.estuary
 				<width>200</width>
 				<height>100</height>
 				<aspectratio aligny="center">keep</aspectratio>
-				<texture>$INFO[Container(113).ListItem.Property(emu_logo)]</texture>
+				<texture>$INFO[Container(113).ListItem.Property(platform_clearlogo)]</texture>
 			</control>
 			<control type="group">
 				<top>150</top>
@@ -157,7 +157,7 @@ https://github.com/phil65/skin.estuary
 					<height>801</height>
 					<aspectratio aligny="center">keep</aspectratio>
 					<fadetime>200</fadetime>
-					<texture>$INFO[Container(113).ListItem.Property(emu_boxart)]</texture>
+					<texture>$INFO[Container(113).ListItem.Property(platform_thumb)]</texture>
 					<visible>!Control.IsVisible(1151)</visible>
 				</control>
 			</control>
@@ -183,7 +183,7 @@ https://github.com/phil65/skin.estuary
 						<onright>138</onright>
 						<ondown>5000</ondown>
 						<texturenofocus border="21">special://home/addons/plugin.program.iagl/resources/skins/Default/media/dialog-bg.png</texturenofocus>
-						<visible>Integer.IsGreater(Container(4000).NumItems,0) + String.IsEqual(Window(HOME).Property(iagl.trailer_started),False)</visible>
+						<visible>Integer.IsGreater(Container(4000).NumItems,0) + String.IsEqual(Window(HOME).Property(iagl_trailer_started),False)</visible>
 					</control>
 					<control type="image">
 						<left>735</left>
@@ -191,7 +191,7 @@ https://github.com/phil65/skin.estuary
 						<height>418</height>
 						<aligny>bottom</aligny>
 						<texture border="21">special://home/addons/plugin.program.iagl/resources/skins/Default/media/dialog-bg.png</texture>
-						<visible>Integer.IsGreater(Container(4000).NumItems,0) + String.IsEqual(Window(HOME).Property(iagl.trailer_started),False)</visible>
+						<visible>Integer.IsGreater(Container(4000).NumItems,0) + String.IsEqual(Window(HOME).Property(iagl_trailer_started),False)</visible>
 					</control>
 					<control type="button" id="139">
 						<width>1245</width>
@@ -208,7 +208,7 @@ https://github.com/phil65/skin.estuary
 						<onright>139</onright>
 						<ondown>5000</ondown>
 						<texturenofocus border="21">special://home/addons/plugin.program.iagl/resources/skins/Default/media/dialog-bg.png</texturenofocus>
-						<visible>!Integer.IsGreater(Container(4000).NumItems,0) + String.IsEqual(Window(HOME).Property(iagl.trailer_started),False)</visible>
+						<visible>!Integer.IsGreater(Container(4000).NumItems,0) + String.IsEqual(Window(HOME).Property(iagl_trailer_started),False)</visible>
 					</control>
 					<control type="textbox">
 						<left>40</left>
@@ -220,11 +220,11 @@ https://github.com/phil65/skin.estuary
 						<texturefocus />
 						<label fallback="19055">$INFO[Container(113).ListItem.Plot]</label>
 						<autoscroll delay="8000" time="5000" repeat="10000">True</autoscroll>
-						<visible>Integer.IsGreater(Container(4000).NumItems,0)+String.IsEqual(Window(HOME).Property(iagl.trailer_started),False)</visible>
+						<visible>Integer.IsGreater(Container(4000).NumItems,0)+String.IsEqual(Window(HOME).Property(iagl_trailer_started),False)</visible>
 					</control>
 				</control>
 				<control type="grouplist" id="4000">
-					<visible>String.IsEqual(Window(HOME).Property(iagl.trailer_started),False)</visible>
+					<visible>String.IsEqual(Window(HOME).Property(iagl_trailer_started),False)</visible>
 					<orientation>vertical</orientation>
 					<align>left</align>
 					<scrolltime tween="sine" easing="out">200</scrolltime>
@@ -246,8 +246,8 @@ https://github.com/phil65/skin.estuary
 						<texturefocus />
 						<texturenofocus />
 						<onclick>noop</onclick>
-						<label>[COLOR FF12A0C7]Platform: [/COLOR]$INFO[Container(113).ListItem.Property(emu_description)]</label>
-						<visible>!String.IsEmpty(Container(113).ListItem.Property(emu_description))</visible>
+						<label>[COLOR FF12A0C7]Platform: [/COLOR]$INFO[Container(113).ListItem.Property(platform_description)]</label>
+						<visible>!String.IsEmpty(Container(113).ListItem.Property(platform_description))</visible>
 					</control>
 					<control type="button" id="151">
 						<width>505</width>
@@ -260,8 +260,8 @@ https://github.com/phil65/skin.estuary
 						<texturefocus />
 						<texturenofocus />
 						<onclick>noop</onclick>
-						<label>[COLOR FF12A0C7]Categories: [/COLOR]$INFO[Container(113).ListItem.Property(emu_category)]</label>
-						<visible>!String.IsEmpty(Container(113).ListItem.Property(emu_category))</visible>
+						<label>[COLOR FF12A0C7]Categories: [/COLOR]$INFO[Container(113).ListItem.Property(platform_category)]</label>
+						<visible>!String.IsEmpty(Container(113).ListItem.Property(platform_category))</visible>
 					</control>
 					<control type="button" id="152">
 						<width>505</width>
@@ -400,7 +400,7 @@ https://github.com/phil65/skin.estuary
 					<bordertexture border="6">special://home/addons/plugin.program.iagl/resources/skins/Default/media/semi_tranparent_1.png</bordertexture>
 					<bordersize>5</bordersize>
 					<texture>$INFO[Container(116).ListItem.Art(banner)]</texture>
-					<visible>!String.IsEmpty(Container(116).ListItem.Art(banner))+String.IsEqual(Window(HOME).Property(iagl.trailer_started),False)</visible>
+					<visible>!String.IsEmpty(Container(116).ListItem.Art(banner))+String.IsEqual(Window(HOME).Property(iagl_trailer_started),False)</visible>
 				</control>
 				<control type="image">
 					<left>77</left>
@@ -411,8 +411,8 @@ https://github.com/phil65/skin.estuary
 					<aspectratio>keep</aspectratio>
 					<bordertexture border="6">special://home/addons/plugin.program.iagl/resources/skins/Default/media/semi_tranparent_1.png</bordertexture>
 					<bordersize>5</bordersize>
-					<texture>$INFO[Container(113).ListItem.Property(emu_banner)]</texture>
-					<visible>String.IsEmpty(Container(113).ListItem.Art(banner))+String.IsEqual(Window(HOME).Property(iagl.trailer_started),False)</visible>
+					<texture>$INFO[Container(113).ListItem.Property(platform_banner)]</texture>
+					<visible>String.IsEmpty(Container(113).ListItem.Art(banner))+String.IsEqual(Window(HOME).Property(iagl_trailer_started),False)</visible>
 				</control>
 				<control type="panel" id="50">
 					<top>158</top>
@@ -579,9 +579,9 @@ https://github.com/phil65/skin.estuary
 						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradiooffdisabled>
 						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradioondisabled>
 						<label>Trailer</label>
-						<onclick>SetProperty(iagl.trailer_started,True,HOME)</onclick>
+						<onclick>SetProperty(iagl_trailer_started,True,HOME)</onclick>
 						<onclick>PlayMedia($INFO[Container(113).ListItem.Trailer],False,1)</onclick>
-						<visible>!String.IsEmpty(Container(113).ListItem.Trailer)+String.IsEqual(Window(HOME).Property(iagl.trailer_started),False)</visible>
+						<visible>!String.IsEmpty(Container(113).ListItem.Trailer)+String.IsEqual(Window(HOME).Property(iagl_trailer_started),False)</visible>
 						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
 					</control>
 					<control type="radiobutton" id="12">
@@ -608,7 +608,7 @@ https://github.com/phil65/skin.estuary
 						<label>Stop</label>
 						<onclick>PlayerControl(Stop)</onclick>
 						<onclick>PlayMedia($INFO[Container(113).ListItem.Trailer],False,1)</onclick>
-						<visible>SetProperty(iagl.trailer_started,False,HOME)</visible>
+						<visible>SetProperty(iagl_trailer_started,False,HOME)</visible>
 						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
 					</control>
 					<control type="radiobutton" id="3001">
@@ -698,7 +698,7 @@ https://github.com/phil65/skin.estuary
 				<width>1250</width>
 				<height>650</height>
 				<aspectratio aligny="center">scale</aspectratio>
-				<visible>String.IsEqual(Window(HOME).Property(iagl.trailer_started),True)</visible>
+				<visible>String.IsEqual(Window(HOME).Property(iagl_trailer_started),False)</visible>
 			</control>
 		</control>
 	</controls>

@@ -126,6 +126,15 @@
 		<plot>The Amiga is a family of personal computers introduced by Commodore in 1985. The original model was part of a wave of 16 and 32 bit computers that featured 256 KB or more of RAM, mouse-based GUIs, and significantly improved graphics and audio over 8-bit systems. This wave included the Atari ST—released the same year—Apple Macintosh, and later the Apple IIGS. Based on the Motorola 68000 microprocessor, the Amiga differed from its contemporaries through the inclusion of custom hardware to accelerate graphics and sound, including sprites and a blitter, and a pre-emptive multitasking operating system called AmigaOS.</plot>
 	</category>
 	<category>
+		<label>Amstrad</label>
+		<thumb>8RxpyRz.jpg</thumb>
+		<banner>PYuQxkM.jpg</banner>
+		<fanart>RWa3rZp.png</fanart>
+		<logo>TAW2ONn.png</logo>
+		<trailer>B-W_RqMbA6c</trailer>
+		<plot>The Amstrad CPC (short for Colour Personal Computer) is a series of 8-bit home computers produced by Amstrad between 1984 and 1990. It was designed to compete in the mid-1980s home computer market dominated by the Commodore 64 and the Sinclair ZX Spectrum.  The CPC models hardware is based on the Zilog Z80A CPU, complemented with either 64 or 128 kB of memory. Their computer-in-a-keyboard design prominently features an integrated storage device, either a compact cassette deck or 3 inch floppy disk drive.</plot>
+	</category>
+	<category>
 		<label>Atari</label>
 		<thumb>MfJMrHS.jpg</thumb>
 		<banner>Iu0p7z1.jpg</banner>
@@ -304,6 +313,27 @@
 		<logo>CSH9UpX.png</logo>
 		<trailer>NUx66ZEDjnQ</trailer>
 		<plot>The best of the best.[CR]These are collections of Favorites.</plot>
+		<sort>bottom</sort>
+	</category>
+	<category>
+		<label>Search</label>
+		<thumb>cyDWi3B.jpg</thumb>
+		<banner>jOdzRsq.jpg</banner>
+		<fanart>G5PYNPY.jpg</fanart>
+		<logo>B2CXrhk.png</logo>
+		<trailer>vScJLw_a5RM</trailer>
+		<plot>Search listings</plot>
+		<sort>bottom</sort>
+	</category>
+	<category>
+		<label>Random Play</label>
+		<thumb>IoNbf04.jpg</thumb>
+		<banner>CKXRDmR.jpg</banner>
+		<fanart>G5PYNPY.jpg</fanart>
+		<logo>E3mCXbV.png</logo>
+		<trailer>oP_Tk9WD_JI</trailer>
+		<plot>Play a random game</plot>
+		<sort>bottom</sort>
 	</category>
 	<category>
 		<label>default</label>

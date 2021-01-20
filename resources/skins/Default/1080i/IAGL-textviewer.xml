@@ -59,7 +59,7 @@
 				<height>70</height>
 				<font>font32_title</font>
 				<textcolor>white</textcolor>
-				<label>IAGL - $INFO[Window(home).Property(TextViewer_Header)]</label>
+				<label>IAGL - $INFO[Window(HOME).Property(TextViewer_Header)]</label>
 				<aligny>center</aligny>
 				<shadowcolor>black</shadowcolor>
 			</control>
@@ -110,7 +110,7 @@
 				<pagecontrol>3000</pagecontrol>
 				<font>font37</font>
 				<textcolor>white</textcolor>
-				<label>$INFO[Window(home).Property(TextViewer_Text)]</label>
+				<label>$INFO[Window(HOME).Property(TextViewer_Text)]</label>
 			</control>
 			<control type="scrollbar" id="3000">
 				<left>-3000</left>
