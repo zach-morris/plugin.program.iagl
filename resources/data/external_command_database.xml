@@ -34,55 +34,55 @@
 		<command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH_RA%"</command>
 	</launcher>
 <!-- Windows External Retroarch Commands -->
-	<launcher name="" os="Windows" default="true">
-		<launcher_command>"%APP_PATH_RA%" %NETPLAY_COMMAND% -L "%CORE_PATH%" "%ROM_PATH%"</launcher_command>
+	<launcher name="" os="windows" default="true">
+		<command>"%APP_PATH_RA%" %NETPLAY_COMMAND% -L "%CORE_PATH%" "%ROM_PATH%"</command>
 	</launcher>
 <!-- Windows Additional Emulator External Commands -->
-	<launcher name="DEmul (Dreamcast)" os="Windows">
-		<launcher_command>"%APP_PATH_DEMUL%" -run=dc -image="%ROM_PATH%"</launcher_command>
+	<launcher name="DEmul (Dreamcast)" os="windows">
+		<command>"%APP_PATH_DEMUL%" -run=dc -image="%ROM_PATH%"</command>
 	</launcher>
-	<launcher name="Dolphin (Wii/Gamecube)" os="Windows">
-		<launcher_command>"%APP_PATH_DOLPHIN%" --exec="%ROM_PATH%" --batch</launcher_command>
+	<launcher name="Dolphin (Wii/Gamecube)" os="windows">
+		<command>"%APP_PATH_DOLPHIN%" --exec="%ROM_PATH%" --batch</command>
 	</launcher>
-	<launcher name="ePSXe (PS1)" os="Windows">
-		<launcher_command>"%APP_PATH_EPSXE%" -nogui -slowboot -analog -loadbin "%ROM_PATH%"</launcher_command>
+	<launcher name="ePSXe (PS1)" os="windows">
+		<command>"%APP_PATH_EPSXE%" -nogui -slowboot -analog -loadbin "%ROM_PATH%"</command>
 	</launcher>
-	<launcher name="FS-UAE Launcher" os="Windows">
-		<launcher_command>"%APP_PATH_FS_UAE%" "%ROM_PATH%"</launcher_command>
+	<launcher name="FS-UAE Launcher" os="windows">
+		<command>"%APP_PATH_FS_UAE%" "%ROM_PATH%"</command>
 	</launcher>
-	<launcher name="MAME Standalone (Arcade)" os="Windows">
-		<launcher_command>"%APP_PATH_MAME%" "%ROM_PATH%"</launcher_command>
+	<launcher name="MAME Standalone (Arcade)" os="windows">
+		<command>"%APP_PATH_MAME%" "%ROM_PATH%"</command>
 	</launcher>
-	<launcher name="Project64 (N64)" os="Windows">
-		<launcher_command>"%APP_PATH_PJ64%" "%ROM_PATH%"</launcher_command>
+	<launcher name="Project64 (N64)" os="windows">
+		<command>"%APP_PATH_PJ64%" "%ROM_PATH%"</command>
 	</launcher>
-	<launcher name="RetroArch Launch App Only" os="Windows">
-		<launcher_command>"%APP_PATH_RA%"</launcher_command>
+	<launcher name="RetroArch Launch App Only" os="windows">
+		<command>"%APP_PATH_RA%"</command>
 	</launcher>
 <!-- Windows External Retroarch Commands, with script to close kodi before launch -->
-	<launcher name="" os="Windows" default="true" close_kodi="true">
-		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_RA%" %NETPLAY_COMMAND% -L "%CORE_PATH%" "%ROM_PATH%"</launcher_command>
+	<launcher name="" os="windows" default="true" close_kodi="true">
+		<command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_RA%" %NETPLAY_COMMAND% -L "%CORE_PATH%" "%ROM_PATH%"</command>
 	</launcher>
 <!-- Windows Additional Emulator External Commands, with script to close kodi before launch -->
-	<launcher name="DEmul (Dreamcast)" os="Windows" close_kodi="true">
-		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_DEMUL%" -run=dc -image="%ROM_PATH%"</launcher_command>
+	<launcher name="DEmul (Dreamcast)" os="windows" close_kodi="true">
+		<command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_DEMUL%" -run=dc -image="%ROM_PATH%"</command>
 	</launcher>
-	<launcher name="Dolphin (Wii/Gamecube)" os="Windows" close_kodi="true">
-		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_DOLPHIN%" --exec="%ROM_PATH%" --batch</launcher_command>
+	<launcher name="Dolphin (Wii/Gamecube)" os="windows" close_kodi="true">
+		<command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_DOLPHIN%" --exec="%ROM_PATH%" --batch</command>
 	</launcher>
-	<launcher name="ePSXe (PS1)" os="Windows" close_kodi="true">
-		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_EPSXE%" -nogui -slowboot -analog -loadbin "%ROM_PATH%"</launcher_command>
+	<launcher name="ePSXe (PS1)" os="windows" close_kodi="true">
+		<command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_EPSXE%" -nogui -slowboot -analog -loadbin "%ROM_PATH%"</command>
 	</launcher>
-	<launcher name="FS-UAE Launcher" os="Windows" close_kodi="true">
-		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_FS_UAE%" "%ROM_PATH%"</launcher_command>
+	<launcher name="FS-UAE Launcher" os="windows" close_kodi="true">
+		<command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_FS_UAE%" "%ROM_PATH%"</command>
 	</launcher>
-	<launcher name="MAME Standalone (Arcade)" os="Windows" close_kodi="true">
-		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_MAME%" "%ROM_PATH%"</launcher_command>
+	<launcher name="MAME Standalone (Arcade)" os="windows" close_kodi="true">
+		<command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_MAME%" "%ROM_PATH%"</command>
 	</launcher>
-	<launcher name="Project64 (N64)" os="Windows" close_kodi="true">
-		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_PJ64%" "%ROM_PATH%"</launcher_command>
+	<launcher name="Project64 (N64)" os="windows" close_kodi="true">
+		<command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_PJ64%" "%ROM_PATH%"</command>
 	</launcher>
-	<launcher name="RetroArch Launch App Only" os="Windows" close_kodi="true">
-		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_RA%"</launcher_command>
+	<launcher name="RetroArch Launch App Only" os="windows" close_kodi="true">
+		<command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_RA%"</command>
 	</launcher>
 </system>

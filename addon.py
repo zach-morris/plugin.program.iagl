@@ -120,7 +120,7 @@ def search_games():
 		for game_list_id in game_list_ids:
 			game_listitems = game_listitems+iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id,filter_in=filter_dict)
 
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game_list/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':game_list_id}),x,True) for x in game_listitems if x])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':game_list_id}),x,True) for x in game_listitems if x])
 		for sm in iagl_addon.get_sort_methods('Games'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -175,7 +175,7 @@ def random_games():
 			game_listitems = game_listitems+iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id,filter_in=filter_dict)
 		game_listitems = random_sample(game_listitems,num_of_results) #Get random listitems using random sample
 
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game_list/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':game_list_id}),x,True) for x in game_listitems if x])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':game_list_id}),x,True) for x in game_listitems if x])
 		for sm in iagl_addon.get_sort_methods('Games'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -394,6 +394,11 @@ def context_menu_edit(game_list_id,edit_id):
 				else:
 					ok_ret = current_dialog.ok(loc_str(30202),loc_str(30346)%{'current_filename':game_list_id})
 			xbmc.executebuiltin('Container.Refresh')
+	if edit_id in ['emu_launcher']: #Redirect to update the launch command if they updated the launch type
+		if choices.get('header_values')[new_value] == 'external':
+			plugin.redirect('/context_menu/select/'+game_list_id+'/emu_ext_launch_cmd')
+		elif choices.get('header_values')[new_value] == 'retroplayer':
+			plugin.redirect('/context_menu/edit/'+game_list_id+'/emu_default_addon')
 	else:
 		xbmc.log(msg='IAGL:  Unknown context edit selection %(edit_id)s'%{'edit_id':edit_id},level=xbmc.LOGERROR)
 	del current_dialog

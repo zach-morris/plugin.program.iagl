@@ -612,11 +612,16 @@ class iagl_addon(object):
 		dict_out['addon']['dat_files']['to_add'] = [x for x in dict_out['addon']['dat_files']['files'] if x.name not in [y.name for y in dict_out['userdata']['dat_files']['files']]] #These files are not yet in userdata and need to be moved
 		dict_out['addon']['dat_files']['to_add_from_query'] = self.query_user_for_updated_files(check_addondata_to_query(dict_out['addon']['dat_files'],dict_out['userdata']['dat_files']))
 		if self.add_new_dat_files(dict_out['addon']['dat_files']['to_add']+dict_out['addon']['dat_files']['to_add_from_query'],dict_out['userdata']['dat_files']['path']): #Recalc userdata after files were moved
+			self.clear_all_mem_cache()
 			dict_out['userdata']['dat_files']['path'] = check_userdata_directory(os.path.join(dict_out['userdata']['path'],'dat_files'))
 			dict_out['userdata']['dat_files']['files'] = [x for x in dict_out['userdata']['dat_files']['path'].glob('*.xml') if x.is_file()]
 			dict_out['userdata']['dat_files']['crc'] = [get_crc32(x) for x in dict_out['userdata']['dat_files']['files']]
 			dict_out['userdata']['dat_files']['header'] = [get_xml_header(x,default_dir=dict_out['userdata']['game_cache']['files']) for x in dict_out['userdata']['dat_files']['files']]
 			dict_out['userdata']['dat_files']['cache_name'] = ['%(fn)s_%(crc)s'%{'fn':x[0].name.replace(x[0].suffix,''),'crc':x[1]} for x in zip(dict_out['userdata']['dat_files']['files'],dict_out['userdata']['dat_files']['crc'])]
+			dict_out['userdata']['game_cache']['path'] = check_userdata_directory(os.path.join(dict_out['userdata']['path'],'game_cache'))
+			dict_out['userdata']['game_cache']['files'] = [x for x in dict_out['userdata']['game_cache']['path'].glob('**/*') if x.is_file()]
+			dict_out['userdata']['game_cache']['folders'] = [x for x in dict_out['userdata']['game_cache']['path'].glob('**/*') if x.is_dir()]
+			dict_out['userdata']['game_cache']['size'] = sum([x.stat().st_size for x in dict_out['userdata']['game_cache']['files']])
 		cache_files_to_delete = [delete_file_pathlib(x) for x in dict_out['userdata']['list_cache']['files'] if x.name.replace(x.suffix,'').replace('_stats','').split('_')[-1] not in dict_out['userdata']['dat_files']['crc']] #Delete old cache files if the crc does not match
 		dict_out['userdata']['settings'] = dict()
 		dict_out['userdata']['settings']['path'] = os.path.join(dict_out['userdata']['path'],'settings.xml')

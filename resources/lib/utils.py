@@ -1102,8 +1102,11 @@ def get_ra_libretro_config(ra_cfg_path,ra_app_path):
 		for kk in ['libretro_directory','libretro_info_path']:
 			current_value = ra_cfg.get(kk)
 			if current_value:
-				if ':/' in current_value:
-					dict_out[kk] = Path(str(ra_app_path).replace('/Contents/MacOS/RetroArch','')).joinpath(Path(xbmcvfs.translatePath(ra_cfg.get(kk).replace(':/','')))).expanduser()
+				if current_value.startswith(':'):
+					current_app_path = ra_app_path.parent
+					if str(current_app_path).endswith('MacOS'): #Special case for OSX
+						current_app_path = ra_app_path.parents[2]
+					dict_out[kk] = Path(current_app_path).joinpath(ra_cfg.get(kk).replace(':/','').replace(':\\','')).expanduser()
 				else:
 					dict_out[kk] = Path(xbmcvfs.translatePath(ra_cfg.get(kk))).expanduser()
 			else:
