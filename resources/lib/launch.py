@@ -89,7 +89,10 @@ class iagl_launch(object):
 					break
 			del dp
 			if self.settings.get('ext_launchers').get('stop_audio_controller'):
-				zachs_debug('restart audio and controller here')
+				xbmc.log(msg='IAGL:  Re-Enabling Audio and Controller Input',level=xbmc.LOGDEBUG)
+				xbmc.audioResume()
+				xbmc.enableNavSounds(True)
+				xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Settings.SetSettingValue","params":{"setting":"input.enablejoystick","value":true},"id":"1"}')
 
 	class retroplayer_launch(object):
 		def __init__(self,settings=dict(),directory=dict(),game_list=dict(),game=dict(),game_files=dict(),**kwargs):
@@ -177,7 +180,10 @@ class iagl_launch(object):
 					
 				if not any([x in self.current_command for x in ['%ADDON_DIR%','%APP_PATH_RA%','%APP_PATH_DEMUL%','%APP_PATH_DOLPHIN%','%APP_PATH_EPSXE%','%APP_PATH_FS_UAE%','%APP_PATH_MAME%','%APP_PATH_PJ64%','%CFG_PATH%','%NETPLAY_COMMAND%','%RETROARCH_CORE_DIR%','%ROM_PATH%','%ROM_RAW%']]):
 					if not self.settings.get('ext_launchers').get('close_kodi') and self.settings.get('ext_launchers').get('stop_audio_controller'):
-						zachs_debug('stop audio and controller here')
+						xbmc.log(msg='IAGL:  Disabling Audio and Controller Input',level=xbmc.LOGDEBUG)
+						xbmc.audioSuspend()
+						xbmc.enableNavSounds(False)
+						xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Settings.SetSettingValue","params":{"setting":"input.enablejoystick","value":false},"id":"1"}')
 					launch_process=subprocess.Popen(self.current_command,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,shell=True)
 					if not self.settings.get('ext_launchers').get('close_kodi') and capture_launch_log:
 						q = Queue()
