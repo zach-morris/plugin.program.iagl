@@ -85,6 +85,40 @@
 	<launcher name="RetroArch Launch App Only" os="windows" close_kodi="true">
 		<command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_RA%"</command>
 	</launcher>
+<!-- Linux External Retroarch Commands -->
+	<launcher name="" os="linux" default="true">
+		<command>"%APP_PATH_RA%" %NETPLAY_COMMAND% -L "%CORE_PATH%" "%ROM_PATH%"</command>
+	</launcher>
+<!-- Linux Additional Emulator External Commands -->
+	<launcher name="Dolphin (Wii/Gamecube)" os="linux">
+		<command>"%APP_PATH_DOLPHIN%" --exec="%ROM_PATH%" --batch</command>
+	</launcher>
+	<launcher name="FS-UAE Launcher" os="linux">
+		<command>"%APP_PATH_FS_UAE%" "%ROM_PATH%"</command>
+	</launcher>
+	<launcher name="MAME Standalone (Arcade)" os="linux">
+		<command>"%APP_PATH_MAME%" "%ROM_PATH%"</command>
+	</launcher>
+	<launcher name="RetroArch Launch App Only" os="linux">
+		<command>"%APP_PATH_RA%"</command>
+	</launcher>
+<!-- Linux External Retroarch Commands, with script to close kodi before launch -->
+	<launcher name="" os="linux" default="true" close_kodi="true">
+		<command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH_RA%" %NETPLAY_COMMAND% -L "%CORE_PATH%" "%ROM_PATH%"</command>
+	</launcher>
+<!-- Linux Additional Emulator External Commands, with script to close kodi before launch -->
+	<launcher name="Dolphin (Wii/Gamecube)" os="linux" close_kodi="true">
+		<command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH_DOLPHIN%" --exec="%ROM_PATH%" --batch</command>
+	</launcher>
+	<launcher name="FS-UAE Launcher" os="linux" close_kodi="true">
+		<command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH_FS_UAE%" "%ROM_PATH%"</command>
+	</launcher>
+	<launcher name="MAME Standalone (Arcade)" os="linux" close_kodi="true">
+		<command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH_MAME%" "%ROM_PATH%"</command>
+	</launcher>
+	<launcher name="RetroArch Launch App Only" os="linux" close_kodi="true">
+		<command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH_RA%"</command>
+	</launcher>
 <!-- Android External Retroarch Commands -->
 	<launcher name="RetroArch 4DO (3DO)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/4do_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</command>
