@@ -567,6 +567,18 @@ class iagl_addon(object):
 				for oec in other_ext_cmds:
 					oec['command'] = oec.get('command').replace(cc.get('app_path_cmd_replace'),str(cc.get('app_path')))
 			cmds_out = [x for x in ra_cmds if '%APP_PATH' not in x.get('command')]+[x for x in other_ext_cmds if '%APP_PATH' not in x.get('command')]  #Remove any commands that dont have a path defined
+		elif self.settings.get('ext_launchers').get('environment') and self.settings.get('ext_launchers').get('ra').get('cfg_path') and self.settings.get('ext_launchers').get('environment') in ['android','android_ra32','android_aarch64']:
+			ra_config = get_ra_libretro_config(self.settings.get('ext_launchers').get('ra').get('cfg_path'),None)
+			android_cmds = [x for x in self.directory['addon']['external_command_database'].get('system').get('launcher') if x.get('@os') == self.settings.get('ext_launchers').get('environment')]
+			if ra_config.get('libretro_directory'):
+				for ac in android_cmds:
+					ac['command'] = ac.get('command').replace('%CFG_PATH%',str(self.settings.get('ext_launchers').get('ra').get('cfg_path')))
+					ac['command'] = ac.get('command').replace('%CORE_BASE_PATH%',str(ra_config.get('libretro_directory')))
+				cmds_out = [x for x in android_cmds if '%CORE_BASE_PATH%' not in x.get('command')]		
+			else:
+				current_dialog = xbmcgui.Dialog()
+				ok_ret = current_dialog.ok(loc_str(30203),loc_str(30375))
+				del current_dialog
 		else:
 			current_dialog = xbmcgui.Dialog()
 			ok_ret = current_dialog.ok(loc_str(30203),loc_str(30375))

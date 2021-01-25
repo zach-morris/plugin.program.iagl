@@ -88,7 +88,7 @@ class iagl_launch(object):
 					dp.close()
 					break
 			del dp
-			if self.settings.get('ext_launchers').get('stop_audio_controller'):
+			if not self.settings.get('ext_launchers').get('close_kodi') and self.settings.get('ext_launchers').get('stop_audio_controller') and self.settings.get('ext_launchers').get('environment') not in ['android','android_ra32','android_aarch64']:
 				xbmc.log(msg='IAGL:  Re-Enabling Audio and Controller Input',level=xbmc.LOGDEBUG)
 				xbmc.audioResume()
 				xbmc.enableNavSounds(True)
@@ -179,7 +179,7 @@ class iagl_launch(object):
 					xbmc.sleep(500) #If sleep is not called, Kodi will crash - does not like playing video and then swiching to a game
 					
 				if not any([x in self.current_command for x in ['%ADDON_DIR%','%APP_PATH_RA%','%APP_PATH_DEMUL%','%APP_PATH_DOLPHIN%','%APP_PATH_EPSXE%','%APP_PATH_FS_UAE%','%APP_PATH_MAME%','%APP_PATH_PJ64%','%CFG_PATH%','%NETPLAY_COMMAND%','%RETROARCH_CORE_DIR%','%ROM_PATH%','%ROM_RAW%']]):
-					if not self.settings.get('ext_launchers').get('close_kodi') and self.settings.get('ext_launchers').get('stop_audio_controller'):
+					if not self.settings.get('ext_launchers').get('close_kodi') and self.settings.get('ext_launchers').get('stop_audio_controller') and self.settings.get('ext_launchers').get('environment') not in ['android','android_ra32','android_aarch64']:
 						xbmc.log(msg='IAGL:  Disabling Audio and Controller Input',level=xbmc.LOGDEBUG)
 						xbmc.audioSuspend()
 						xbmc.enableNavSounds(False)
