@@ -57,6 +57,8 @@ class iagl_launch(object):
 			game_launch_status = current_launch
 		else:
 			xbmc.log(msg='IAGL:  Badly formed game launch request.',level=xbmc.LOGERROR)
+		if current_launch.get('launch_process_success') and self.settings.get('game_list').get('game_history'):
+				success = add_game_to_history(self.game,self.directory.get('userdata').get('list_cache').get('path').joinpath('history.json'),self.settings.get('game_list').get('game_history'))
 		return game_launch_status
 
 	def post_launch_check(self,game_launch_status=None,**kwargs):

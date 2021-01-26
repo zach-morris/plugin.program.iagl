@@ -1,4 +1,4 @@
-import os, zlib, json, re
+import os, zlib, json, re, time
 from pathlib import Path
 # from kodi_six import xbmc, xbmcvfs, xbmcgui, xbmcaddon
 import xbmc, xbmcvfs, xbmcgui, xbmcaddon
@@ -14,6 +14,7 @@ WINDOW_ID = xbmcgui.getCurrentWindowId()
 HOME_ID = 10000
 ADDON_HANDLE = xbmcaddon.Addon(id=ADDON_NAME)
 ADDON_TITLE = ADDON_HANDLE.getAddonInfo('name')
+RESET_DIRECTORY_CACHE_TIME = 43200 #Rescan userdata directory every 12 hours unless otherwise updated, this to catch any game cache that needs to be purged
 # CHUNK_SIZE = 1024
 CHUNK_SIZE = 10485760 #10MB
 HEADER_SIZE = 6000 #6kb
@@ -22,6 +23,7 @@ TEXT_ENCODING='UTF-8'
 NOTIFICATION_DEINIT_TIME = 300 #Time to wait after closing a notification for it to de-init
 WAIT_FOR_PLAYER_TIME = 5000 #Time to wait after sending retroplayer play command to check status
 WAIT_FOR_PROCESS_EXIT = 3 #Time in seconds to wait for subprocess to exit
+IGNORE_THESE_FILETYPES = ['.srm','.sav','.fs','.state','.auto','.xml','.nfo','.mp3'] #Matching filetypes to ignore for re-launching
 
 re_game_tags = re.compile(r'\([^)]*\)')
 re_game_codes = re.compile(r'\[[^)]*\]')
@@ -46,7 +48,7 @@ def get_mem_cache(key):
 			dict_out['userdata']['dat_files']['path'] = Path(dict_out['userdata']['dat_files']['path'])
 			dict_out['userdata']['dat_files']['files'] = [Path(x) for x in dict_out['userdata']['dat_files']['files']]
 			return dict_out
-		elif key in ['iagl_current_games_list','iagl_current_games_stats_list','iagl_current_game_id','iagl_current_game_list_id','TextViewer_Header','TextViewer_Text','iagl_script_started']: #String props
+		elif key in ['iagl_current_games_list','iagl_current_games_stats_list','iagl_current_game_id','iagl_current_game_list_id','TextViewer_Header','TextViewer_Text','iagl_script_started','iagl_version','iagl_start_time']: #String props
 			return xbmcgui.Window(HOME_ID).getProperty(key)
 		else: #JSON Props
 			return json.loads(xbmcgui.Window(HOME_ID).getProperty(key))
@@ -109,15 +111,15 @@ class iagl_encoder(json.JSONEncoder):
 		return json.JSONEncoder.default(self, obj)
 
 def check_userdata_directory(dir_in):
-	if not check_if_dir_exists(dir_in):
-		if not xbmcvfs.mkdir(dir_in):
-			xbmc.log(msg='IAGL:  Unable to create directory %(value_in)s'%{'value_in':os.path.split(dir_in)[-1]}, level=xbmc.LOGERROR)
-			return None
-		else:
+	if check_if_dir_exists(dir_in):
+		return Path(xbmcvfs.translatePath(dir_in))
+	else:
+		if xbmcvfs.mkdir(dir_in):
 			xbmc.log(msg='IAGL:  Created directory %(value_in)s'%{'value_in':os.path.split(dir_in)[-1]}, level=xbmc.LOGDEBUG)
 			return Path(xbmcvfs.translatePath(dir_in))
-	else:
-		return Path(xbmcvfs.translatePath(dir_in))
+		else:
+			xbmc.log(msg='IAGL:  Unable to create directory %(value_in)s'%{'value_in':os.path.split(dir_in)[-1]}, level=xbmc.LOGERROR)
+			return None
 
 def check_if_dir_exists(dir_in):
 	if isinstance(dir_in,str):
@@ -622,23 +624,6 @@ def map_game_list_listitem_dict(dict_in,default_dict,fn_in,type_in=None):
 						'dat_filename' : fn_in},
 			}
 
-# def map_game_choose_list_listitem_dict(dict_in,default_dict,stats_in,game_list_name,type_in=None):
-# 	if dict_in.get('label') and dict_in.get('label') in stats_in.get('all'):
-# 		if type_in is None:
-# 			label2 = dict_in.get('label') #We will use label2 to carry the next route by default
-# 		return {'values': {'label':'%(value)s (%(total)s)'%{'value':dict_in.get('label'),'total':stats_in.get('count')[stats_in.get('all').index(dict_in.get('label'))]},'label2':label2},
-# 				'info':   {'originaltitle':dict_in.get('label'),'title':'%(value)s (%(total)s)'%{'value':dict_in[0].get('label'),'total':category_count},'plot':dict_in.get('plot'),'trailer':choose_trailer(dict_in.get('trailer'),default_dict.get('trailer'))},
-# 				'art':    {'poster':choose_image(dict_in.get('thumb'),default_dict.get('thumb')),
-# 						   'banner':choose_image(dict_in.get('banner'),default_dict.get('banner')),
-# 						   'fanart':choose_image(dict_in.get('fanart'),default_dict.get('fanart')),
-# 						   'clearlogo':choose_image(dict_in.get('logo'),default_dict.get('logo')),
-# 						   'icon':choose_image(dict_in.get('logo'),default_dict.get('logo')),
-# 						   'thumb':choose_image(dict_in.get('thumb'),default_dict.get('thumb')),
-# 						   },
-# 				}
-# 	else:
-# 		return None
-
 def map_game_choose_list_listitem_dict(category_label,category_count,default_dict,categories_in,game_list_name,type_in=None):
 	dict_in = [x for x in categories_in if x.get('label')==category_label]
 	if not dict_in:
@@ -768,6 +753,19 @@ def get_game_stat_set(game_stats_in=None,type_in=None):
 		return stats_out
 	else:
 		return []
+
+def get_history_listitem(media_type='video'):
+	li_dict = {'info':{'genre':'History','plot':'View the games you have previously played'},
+	'art':{'icon':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/icon.png',
+	'thumb':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/last_played.jpg',
+	'poster':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/last_played.jpg',
+	'banner':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/last_played_banner.jpg',
+	'fanart':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/fanart.jpg'}}
+	li = xbmcgui.ListItem(label='Last Played',offscreen=True)
+	li.setInfo(media_type,li_dict.get('info'))
+	li.setArt(li_dict.get('art'))
+	li.setProperties({'SpecialSort':'bottom'})
+	return li
 
 def get_next_page_listitem(current_page,page_count,next_page,total_items,media_type='video'):
 	li = xbmcgui.ListItem(label='Next >>',offscreen=True)
@@ -1076,6 +1074,115 @@ def get_ra_cmds(default_cmd,ra_cfg_path,ra_app_path):
 	else:
 		return None
 
+def get_game_list_stats(games):
+	stats_out = dict()
+	if games:
+		stats_out['alphabetical'] = dict()
+		stats_out['genres'] = dict()
+		stats_out['years'] = dict()
+		stats_out['players'] = dict()
+		stats_out['studio'] = dict()
+		stats_out['tag'] = dict()
+		stats_out['groups'] = dict()
+		stats_out['alphabetical']['all'] = ['#']+[chr(x) for x in range(ord('A'), ord('Z') + 1)]
+		stats_out['genres']['all'] = sorted(set(flatten_list([x.get('info').get('genre') for x in games if x.get('info').get('genre')])))
+		stats_out['years']['all'] = sorted(set([x.get('info').get('year') for x in games if x.get('info').get('year')]))
+		stats_out['players']['all'] = sorted(set([x.get('properties').get('nplayers') for x in games if x.get('properties').get('nplayers')]))
+		stats_out['studio']['all'] = sorted(set([x.get('info').get('studio') for x in games if x.get('info').get('studio')]))
+		stats_out['tag']['all'] = sorted(set(flatten_list([x.get('info').get('tag') for x in games if x.get('info').get('tag')])))
+		stats_out['groups']['all'] = sorted(set(flatten_list([x.get('info').get('showlink') for x in games if x.get('info').get('showlink')])))
+		if stats_out['alphabetical']['all']:
+			stats_out['alphabetical']['count'] = [sum([y.get('values').get('label').upper().startswith(x) for y in games]) for x in stats_out['alphabetical']['all']]
+			stats_out['alphabetical']['count'][0] = sum([not y.get('values').get('label')[0].isalpha() for y in games]) #Recalc the numerical stats
+			#Remove 0 count alphabetical
+			stats_out['alphabetical']['all'] = [x[0] for x in zip(stats_out['alphabetical']['all'],stats_out['alphabetical']['count']) if x[1]>0]
+			stats_out['alphabetical']['count'] = [x for x in stats_out['alphabetical']['count'] if x>0]
+		if stats_out['genres']['all']:
+			stats_out['genres']['count'] = [sum([x in y.get('info').get('genre') if y.get('info').get('genre') else False for y in games]) for x in stats_out['genres']['all']]
+		if stats_out['years']['all']:
+			stats_out['years']['count'] = [sum([x in y.get('info').get('year') if y.get('info').get('year') else False for y in games]) for x in stats_out['years']['all']]
+		if stats_out['players']['all']:
+			stats_out['players']['count'] = [sum([x in y.get('properties').get('nplayers') if y.get('properties').get('nplayers') else False for y in games]) for x in stats_out['players']['all']]
+		if stats_out['studio']['all']:
+			stats_out['studio']['count'] = [sum([x in y.get('info').get('studio') if y.get('info').get('studio') else False for y in games]) for x in stats_out['studio']['all']]
+		if stats_out['tag']['all']:
+			stats_out['tag']['count'] = [sum([x in y.get('info').get('tag') if y.get('info').get('tag') else False for y in games]) for x in stats_out['tag']['all']]
+		if stats_out['groups']['all']:
+			stats_out['groups']['count'] = [sum([x in y.get('info').get('showlink') if y.get('info').get('showlink') else False for y in games]) for x in stats_out['groups']['all']]
+		#Add uncategorized / unset counts
+		unknowns = dict()
+		unknowns['genres'] = sum([not y.get('info').get('genre') for y in games]) #Uncategorized, unset count
+		unknowns['years'] = sum([not y.get('info').get('year') for y in games]) #Uncategorized, unset count
+		unknowns['players'] = sum([not y.get('properties').get('nplayers') for y in games]) #Uncategorized, unset count
+		unknowns['studio'] = sum([not y.get('info').get('studio') for y in games]) #Uncategorized, unset count
+		unknowns['tag'] = sum([not y.get('info').get('tag') for y in games]) #Uncategorized, unset count
+		unknowns['groups'] = sum([not y.get('info').get('showlink') for y in games]) #Uncategorized, unset count
+		for kk in ['genres','years','players','studio','tag','groups']:
+			if unknowns[kk]>0:
+				if stats_out[kk].get('all'):
+					stats_out[kk]['all'].append('Unknown')
+					stats_out[kk]['count'].append(unknowns[kk])
+				else:
+					stats_out[kk]['all'] = ['Unknown']
+					stats_out[kk]['count'] = [unknowns[kk]]
+		#Add overall stats, totals for each grouping and total games in the list
+		stats_out['overall'] = dict()
+		stats_out['overall']['count'] = len(games)
+		stats_out['overall']['alphabetical'] = 0
+		stats_out['overall']['genres'] = 0
+		stats_out['overall']['years'] = 0
+		stats_out['overall']['players'] = 0
+		stats_out['overall']['studio'] = 0
+		stats_out['overall']['tag'] = 0
+		stats_out['overall']['groups'] = 0
+		if stats_out['alphabetical'].get('all'):
+			stats_out['overall']['alphabetical'] = len(stats_out['alphabetical']['all'])
+		if stats_out['genres'].get('all'):
+			stats_out['overall']['genres'] = len(stats_out['genres']['all'])
+		if stats_out['years'].get('all'):
+			stats_out['overall']['years'] = len(stats_out['years']['all'])
+		if stats_out['players'].get('all'):
+			stats_out['overall']['players'] = len(stats_out['players']['all'])
+		if stats_out['studio'].get('all'):
+			stats_out['overall']['studio'] = len(stats_out['studio']['all'])
+		if stats_out['tag'].get('all'):
+			stats_out['overall']['tag'] = len(stats_out['tag']['all'])
+		if stats_out['groups'].get('all'):
+			stats_out['overall']['groups'] = len(stats_out['groups']['all'])
+	return stats_out
+
+def add_game_to_history(dict_in,file_in,max_history):
+	success = False
+	if isinstance(dict_in,dict):
+		dict_in['info']['lastplayed'] = time.strftime('%Y-%m-%d %H:%M:%S') #lastplayed	string (Y-m-d h:m:s = 2009-04-05 23:16:04)
+		if check_if_file_exists(file_in):
+			with xbmcvfs.File(str(file_in),'rb') as fi:
+				history = json.load(fi)
+			prev_history = [x for x in history[0] if not (x.get('values').get('label2') == dict_in.get('values').get('label2') and x.get('properties').get('route') == dict_in.get('properties').get('route'))]
+			if len(prev_history) == len(history[0]): #Game was not previously in history
+				with xbmcvfs.File(str(file_in),'wb') as fi:
+					json.dump([[x for x in [dict_in]+history[0]][0:max_history],get_game_list_stats([x for x in [dict_in]+history[0]][0:max_history])],fi)
+					# [games_in,stats_in]
+					xbmc.log(msg='IAGL:  Added %(game)s to history file' % {'game': dict_in.get('info').get('originaltitle')}, level=xbmc.LOGDEBUG)
+				with xbmcvfs.File(str(file_in).replace('.json','_stats.json'),'wb') as fi:
+					json.dump(get_game_list_stats([x for x in [dict_in]+history[0]][0:max_history]),fi)
+					success = True
+			else: #Game was already in history, so remove old instance and replace it with new instance
+				with xbmcvfs.File(str(file_in),'wb') as fi:
+					json.dump([[x for x in [dict_in]+prev_history][0:max_history],get_game_list_stats([x for x in [dict_in]+prev_history][0:max_history])],fi)
+					xbmc.log(msg='IAGL:  Updated %(game)s to last played game in history file' % {'game': dict_in.get('info').get('originaltitle')}, level=xbmc.LOGDEBUG)
+				with xbmcvfs.File(str(file_in).replace('.json','_stats.json'),'wb') as fi:
+					json.dump(get_game_list_stats([x for x in [dict_in]+prev_history][0:max_history]),fi)
+					success = True
+		else:
+			with xbmcvfs.File(str(file_in),'wb') as fi:
+				json.dump([[dict_in],get_game_list_stats([dict_in])],fi)
+				xbmc.log(msg='IAGL:  Added %(game)s to new history file' % {'game': dict_in.get('info').get('originaltitle')}, level=xbmc.LOGDEBUG)
+			with xbmcvfs.File(str(file_in).replace('.json','_stats.json'),'wb') as fi:
+				json.dump(get_game_list_stats([dict_in]),fi)
+				success = True
+	return success
+
 def define_ra_cmd(core_name,core_path,default_dict,ra_app_path):
 	default_dict['@name'] = core_name
 	default_dict['command'] = default_dict.get('command').replace("%APP_PATH_RA%",str(ra_app_path)).replace('%CORE_PATH%',str(core_path))
@@ -1164,9 +1271,9 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 					'emu_command':game_emu_command,
 					'downloadpath_resolved':Path(emu_downloadpath).joinpath(game_filename).expanduser(),
 					}
-		game_dl_dict['matching_existing_files'] = [x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+game_dl_dict.get('downloadpath_resolved').stem+'*')]
+		game_dl_dict['matching_existing_files'] = [x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+game_dl_dict.get('downloadpath_resolved').stem+'*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES]
 		if game_dl_dict.get('emu_command'):
-			game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+game_dl_dict.get('emu_command')+'*')]))
+			game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+game_dl_dict.get('emu_command')+'*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES]))
 		if game_dl_dict.get('dl_source') in ['Archive.org']:
 			game_dl_dict['downloader'] = 'archive_org'
 		elif 'http' in game_dl_dict.get('dl_source'):

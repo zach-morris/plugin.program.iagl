@@ -12,6 +12,12 @@ class iagl_addon(object):
 		# last_time = time.time()
 		self.name = ADDON_NAME
 		self.handle = ADDON_HANDLE
+		self.version = str(ADDON_HANDLE.getAddonInfo('version')) #The current version number that the addon is being run at
+		self.start_time = str(time.time()) #The current time that the addon was run
+		self.last_version = get_mem_cache('iagl_version') #The last version number that the addon was run at
+		self.last_start_time = get_mem_cache('iagl_start_time') #The last time the addon was run
+		set_mem_cache('iagl_version',self.version)
+		set_mem_cache('iagl_start_time',self.start_time)
 		self.title = ADDON_TITLE
 		self.kodi_user = dict()
 		#Add this if it ever is merged https://github.com/xbmc/xbmc/pull/17265
@@ -39,6 +45,7 @@ class iagl_addon(object):
 		self.settings['game_list']['force_viewtypes'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_forced_views'))
 		self.settings['game_list']['include_all_art'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_setting_include_all_art'))
 		self.settings['game_list']['enable_post_dl_edit'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_post_dl_edit'))
+		self.settings['game_list']['game_history'] = get_setting_as(setting_type='int',setting=self.handle.getSetting(id='iagl_setting_history'))
 		self.settings['game_list']['forced_views'] = dict()
 		self.settings['game_list']['forced_views']['Alphabetical'] = 'iagl_enable_forced_views_5'
 		self.settings['game_list']['forced_views']['Group by Genres'] = 'iagl_enable_forced_views_6'
@@ -88,7 +95,9 @@ class iagl_addon(object):
 			xbmc.log(msg='IAGL:  Cache Size set to is unknown - defaulting to zero', level=xbmc.LOGDEBUG)
 
 		#Directories / Files
-		self.directory = get_mem_cache('iagl_directory') #First attempt to load directory info from cache
+		self.directory = None
+		if self.last_version and self.last_start_time and self.version == self.last_version and float(self.start_time)-float(self.last_start_time)<RESET_DIRECTORY_CACHE_TIME:
+			self.directory = get_mem_cache('iagl_directory') #First attempt to load directory info from cache if the last time the addon was run is less than X hours and the version is the same, otherwise rescan the directories
 		if self.directory is None:
 			self.directory = self.get_directories() #If cache isn't available, then parse it from files
 			if self.directory.get('userdata').get('game_cache').get('size') and self.directory.get('userdata').get('game_cache').get('size')>self.cache_folder_size:
@@ -173,9 +182,9 @@ class iagl_addon(object):
 				route_keys = [x.name.replace(x.suffix,'') for x in files_in.get('files')]
 				self.file = dict(zip(route_keys,files_in.get('files')))
 				self.crc = dict(zip(route_keys,files_in.get('crc')))
-				self.cache_name = dict(zip(route_keys,files_in.get('cache_name')))
+				self.cache_name = dict(zip(route_keys+['history'],files_in.get('cache_name')+['history']))
 				self.list_cache_path = directories.get('userdata').get('list_cache').get('path')
-				self.route = dict(zip(route_keys,[x for x in files_in.get('header')]))
+				self.route = dict(zip(route_keys+['history'],[x for x in files_in.get('header')]+[dict()]))
 
 			if settings is not None:
 				self.settings = settings
@@ -320,7 +329,7 @@ class iagl_addon(object):
 			if games and games_list:
 				set_mem_cache('iagl_current_games_list',games_list)
 				set_mem_cache('iagl_current_games',games)
-				game_stats = self.get_game_list_stats(games)
+				game_stats = get_game_list_stats(games)
 				set_mem_cache('iagl_current_games_stats_list',games_list)
 				set_mem_cache('iagl_current_games_stats',game_stats)
 				set_disc_cache(os.path.join(self.list_cache_path,games_list+'.json'),games,game_stats)
@@ -338,83 +347,6 @@ class iagl_addon(object):
 				clear_mem_cache('iagl_current_games_stats_list')
 				clear_mem_cache('iagl_current_games_stats')
 				return None
-
-		def get_game_list_stats(self,games):
-			stats_out = dict()
-			if games:
-				stats_out['alphabetical'] = dict()
-				stats_out['genres'] = dict()
-				stats_out['years'] = dict()
-				stats_out['players'] = dict()
-				stats_out['studio'] = dict()
-				stats_out['tag'] = dict()
-				stats_out['groups'] = dict()
-				stats_out['alphabetical']['all'] = ['#']+[chr(x) for x in range(ord('A'), ord('Z') + 1)]
-				stats_out['genres']['all'] = sorted(set(flatten_list([x.get('info').get('genre') for x in games if x.get('info').get('genre')])))
-				stats_out['years']['all'] = sorted(set([x.get('info').get('year') for x in games if x.get('info').get('year')]))
-				stats_out['players']['all'] = sorted(set([x.get('properties').get('nplayers') for x in games if x.get('properties').get('nplayers')]))
-				stats_out['studio']['all'] = sorted(set([x.get('info').get('studio') for x in games if x.get('info').get('studio')]))
-				stats_out['tag']['all'] = sorted(set(flatten_list([x.get('info').get('tag') for x in games if x.get('info').get('tag')])))
-				stats_out['groups']['all'] = sorted(set(flatten_list([x.get('info').get('showlink') for x in games if x.get('info').get('showlink')])))
-				if stats_out['alphabetical']['all']:
-					stats_out['alphabetical']['count'] = [sum([y.get('values').get('label').upper().startswith(x) for y in games]) for x in stats_out['alphabetical']['all']]
-					stats_out['alphabetical']['count'][0] = sum([not y.get('values').get('label')[0].isalpha() for y in games]) #Recalc the numerical stats
-					#Remove 0 count alphabetical
-					stats_out['alphabetical']['all'] = [x[0] for x in zip(stats_out['alphabetical']['all'],stats_out['alphabetical']['count']) if x[1]>0]
-					stats_out['alphabetical']['count'] = [x for x in stats_out['alphabetical']['count'] if x>0]
-				if stats_out['genres']['all']:
-					stats_out['genres']['count'] = [sum([x in y.get('info').get('genre') if y.get('info').get('genre') else False for y in games]) for x in stats_out['genres']['all']]
-				if stats_out['years']['all']:
-					stats_out['years']['count'] = [sum([x in y.get('info').get('year') if y.get('info').get('year') else False for y in games]) for x in stats_out['years']['all']]
-				if stats_out['players']['all']:
-					stats_out['players']['count'] = [sum([x in y.get('properties').get('nplayers') if y.get('properties').get('nplayers') else False for y in games]) for x in stats_out['players']['all']]
-				if stats_out['studio']['all']:
-					stats_out['studio']['count'] = [sum([x in y.get('info').get('studio') if y.get('info').get('studio') else False for y in games]) for x in stats_out['studio']['all']]
-				if stats_out['tag']['all']:
-					stats_out['tag']['count'] = [sum([x in y.get('info').get('tag') if y.get('info').get('tag') else False for y in games]) for x in stats_out['tag']['all']]
-				if stats_out['groups']['all']:
-					stats_out['groups']['count'] = [sum([x in y.get('info').get('showlink') if y.get('info').get('showlink') else False for y in games]) for x in stats_out['groups']['all']]
-				#Add uncategorized / unset counts
-				unknowns = dict()
-				unknowns['genres'] = sum([not y.get('info').get('genre') for y in games]) #Uncategorized, unset count
-				unknowns['years'] = sum([not y.get('info').get('year') for y in games]) #Uncategorized, unset count
-				unknowns['players'] = sum([not y.get('properties').get('nplayers') for y in games]) #Uncategorized, unset count
-				unknowns['studio'] = sum([not y.get('info').get('studio') for y in games]) #Uncategorized, unset count
-				unknowns['tag'] = sum([not y.get('info').get('tag') for y in games]) #Uncategorized, unset count
-				unknowns['groups'] = sum([not y.get('info').get('showlink') for y in games]) #Uncategorized, unset count
-				for kk in ['genres','years','players','studio','tag','groups']:
-					if unknowns[kk]>0:
-						if stats_out[kk].get('all'):
-							stats_out[kk]['all'].append('Unknown')
-							stats_out[kk]['count'].append(unknowns[kk])
-						else:
-							stats_out[kk]['all'] = ['Unknown']
-							stats_out[kk]['count'] = [unknowns[kk]]
-				#Add overall stats, totals for each grouping and total games in the list
-				stats_out['overall'] = dict()
-				stats_out['overall']['count'] = len(games)
-				stats_out['overall']['alphabetical'] = 0
-				stats_out['overall']['genres'] = 0
-				stats_out['overall']['years'] = 0
-				stats_out['overall']['players'] = 0
-				stats_out['overall']['studio'] = 0
-				stats_out['overall']['tag'] = 0
-				stats_out['overall']['groups'] = 0
-				if stats_out['alphabetical'].get('all'):
-					stats_out['overall']['alphabetical'] = len(stats_out['alphabetical']['all'])
-				if stats_out['genres'].get('all'):
-					stats_out['overall']['genres'] = len(stats_out['genres']['all'])
-				if stats_out['years'].get('all'):
-					stats_out['overall']['years'] = len(stats_out['years']['all'])
-				if stats_out['players'].get('all'):
-					stats_out['overall']['players'] = len(stats_out['players']['all'])
-				if stats_out['studio'].get('all'):
-					stats_out['overall']['studio'] = len(stats_out['studio']['all'])
-				if stats_out['tag'].get('all'):
-					stats_out['overall']['tag'] = len(stats_out['tag']['all'])
-				if stats_out['groups'].get('all'):
-					stats_out['overall']['groups'] = len(stats_out['groups']['all'])
-			return stats_out
 		
 		def update_search_random_query(self,value_in):
 			current_dialog = xbmcgui.Dialog()
@@ -490,6 +422,8 @@ class iagl_addon(object):
 			return [xbmcplugin.SORT_METHOD_NONE]
 		if route_in == 'Games':
 			return [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE,xbmcplugin.SORT_METHOD_LABEL,xbmcplugin.SORT_METHOD_TITLE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_GENRE,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE,xbmcplugin.SORT_METHOD_SIZE]
+		if route_in == 'History':
+			return [xbmcplugin.SORT_METHOD_LASTPLAYED,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE,xbmcplugin.SORT_METHOD_LABEL,xbmcplugin.SORT_METHOD_TITLE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_GENRE,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE,xbmcplugin.SORT_METHOD_SIZE]
 		else:
 			return [xbmcplugin.SORT_METHOD_LABEL]
 
@@ -634,7 +568,7 @@ class iagl_addon(object):
 			dict_out['userdata']['game_cache']['files'] = [x for x in dict_out['userdata']['game_cache']['path'].glob('**/*') if x.is_file()]
 			dict_out['userdata']['game_cache']['folders'] = [x for x in dict_out['userdata']['game_cache']['path'].glob('**/*') if x.is_dir()]
 			dict_out['userdata']['game_cache']['size'] = sum([x.stat().st_size for x in dict_out['userdata']['game_cache']['files']])
-		cache_files_to_delete = [delete_file_pathlib(x) for x in dict_out['userdata']['list_cache']['files'] if x.name.replace(x.suffix,'').replace('_stats','').split('_')[-1] not in dict_out['userdata']['dat_files']['crc']] #Delete old cache files if the crc does not match
+		cache_files_to_delete = [delete_file_pathlib(x) for x in dict_out['userdata']['list_cache']['files'] if (x.name.replace(x.suffix,'').replace('_stats','').split('_')[-1] not in dict_out['userdata']['dat_files']['crc'] and x.name not in ['history.json','history_stats.json'])] #Delete old cache files if the crc does not match
 		dict_out['userdata']['settings'] = dict()
 		dict_out['userdata']['settings']['path'] = os.path.join(dict_out['userdata']['path'],'settings.xml')
 		set_mem_cache('iagl_directory',dict_out)

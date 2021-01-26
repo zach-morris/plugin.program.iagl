@@ -10,7 +10,7 @@ import routing, sys, json, re
 from random import sample as random_sample
 from resources.lib.main import iagl_addon
 from resources.lib import paginate
-from resources.lib.utils import clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, check_if_dir_exists, clean_image_entry, clean_trailer_entry, loc_str, check_and_close_notification, zachs_debug
+from resources.lib.utils import clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, check_if_file_exists, check_if_dir_exists, clean_image_entry, clean_trailer_entry, loc_str, check_and_close_notification, get_history_listitem, zachs_debug
 
 ## Plugin Initialization Stuff ##
 SLEEP_HACK=50  #https://github.com/xbmc/xbmc/issues/18576
@@ -44,7 +44,7 @@ def show_tou():
 @plugin.route('/archives/Browse All Lists')
 def archives_browse_all_route():
 	# xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/'),xbmcgui.ListItem('Browse All',offscreen=True), True) #Test li
-	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game_list/%(game_list_route)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_route':iagl_addon.settings.get('game_list').get('route')}),x,True) for x in iagl_addon.game_lists.get_game_lists_as_listitems() if x])
+	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game_list/%(game_list_route)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_route':iagl_addon.settings.get('game_list').get('route')}),x,True) for x in iagl_addon.game_lists.get_game_lists_as_listitems() if x and x.getLabel2()!='history'])
 	for sm in iagl_addon.get_sort_methods('Browse All Lists'):
 		xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -56,6 +56,8 @@ def archives_browse_all_route():
 def archives_choose_from_list_route():
 	clear_mem_cache('iagl_current_query')
 	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/archives/%(label2)s'%{'label2':x.getLabel2()}),x,True) for x in iagl_addon.routes.get_route_as_listitems('browse')])
+	if check_if_file_exists(iagl_addon.directory.get('userdata').get('list_cache').get('path').joinpath('history.json')): #Add history listitem
+		xbmcplugin.addDirectoryItem(plugin.handle,plugin.url_for_path('/game_history/list_all/%(label2)s'%{'label2':'history'}),get_history_listitem(),True)
 	xbmcplugin.endOfDirectory(plugin.handle)
 	if iagl_addon.settings.get('game_list').get('force_viewtypes') and get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_1')):
 		xbmc.sleep(SLEEP_HACK)
@@ -65,6 +67,8 @@ def archives_choose_from_list_route():
 def archives_browse_by_category_route():
 	clear_mem_cache('iagl_current_query')
 	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/archives/by_category/%(label2)s'%{'label2':x.getLabel2()}),x,True) for x in iagl_addon.routes.get_route_as_listitems('categories')])
+	if check_if_file_exists(iagl_addon.directory.get('userdata').get('list_cache').get('path').joinpath('history.json')): #Add history listitem
+		xbmcplugin.addDirectoryItem(plugin.handle,plugin.url_for_path('/game_history/list_all/%(label2)s'%{'label2':'history'}),get_history_listitem(),True)
 	for sm in iagl_addon.get_sort_methods('Browse by Category'):
 		xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -217,6 +221,27 @@ def game_list_list_all_route(game_list_id,page_number):
 	if iagl_addon.settings.get('game_list').get('force_viewtypes') and get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_4')):
 		xbmc.sleep(SLEEP_HACK)
 		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)'%{'view_type': get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_4'))})
+
+@plugin.route('/game_history/list_all/<game_list_id>/')
+def get_all_games_redirect(game_list_id):
+	plugin.redirect('/game_history/list_all/'+game_list_id+'/1')
+
+@plugin.route('/game_history/list_all/<game_list_id>/<page_number>')
+def game_list_list_all_route(game_list_id,page_number):
+	if iagl_addon.settings.get('game_list').get('games_per_page'):
+		current_page = paginate.Page([(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':x.getProperty('route')}),x,True) for x in iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id) if x], page=int(page_number), items_per_page=iagl_addon.settings.get('game_list').get('games_per_page'))
+		if current_page.next_page and current_page.page<current_page.next_page:
+			current_page.append((plugin.url_for_path('/game_history/list_all/%(game_list_id)s/%(label2)s'%{'label2':current_page.next_page,'game_list_id':game_list_id}),get_next_page_listitem(current_page=current_page.page,page_count=current_page.page_count,next_page=current_page.next_page,total_items=current_page.item_count),True))
+		xbmcplugin.addDirectoryItems(plugin.handle,current_page)
+	else:
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':x.getProperty('route')}),x,True) for x in iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id) if x])
+	for sm in iagl_addon.get_sort_methods('History'):
+		xbmcplugin.addSortMethod(plugin.handle,sm)
+	xbmcplugin.endOfDirectory(plugin.handle)
+	if iagl_addon.settings.get('game_list').get('force_viewtypes') and get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_4')):
+		xbmc.sleep(SLEEP_HACK)
+		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)'%{'view_type': get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_4'))})
+
 
 @plugin.route('/game_list/choose_from_list/<game_list_id>')
 def game_list_choose_from_list_route(game_list_id):
@@ -545,4 +570,4 @@ def iagl_text_viewer():
 
 if __name__ == '__main__':
 	plugin.run(sys.argv)
-	del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_dir_exists, check_and_close_notification, zachs_debug #Delete all locally imported stuff to avoid memory leaks
+	del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_file_exists, check_if_dir_exists, check_and_close_notification, get_history_listitem, zachs_debug #Delete all locally imported stuff to avoid memory leaks
