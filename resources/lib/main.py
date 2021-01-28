@@ -45,6 +45,7 @@ class iagl_addon(object):
 		self.settings['game_list']['force_viewtypes'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_forced_views'))
 		self.settings['game_list']['include_all_art'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_setting_include_all_art'))
 		self.settings['game_list']['enable_post_dl_edit'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_post_dl_edit'))
+		self.settings['game_list']['append_emu_name'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_append_emu_name_to_results'))
 		self.settings['game_list']['game_history'] = get_setting_as(setting_type='int',setting=self.handle.getSetting(id='iagl_setting_history'))
 		self.settings['game_list']['forced_views'] = dict()
 		self.settings['game_list']['forced_views']['Alphabetical'] = 'iagl_enable_forced_views_5'
@@ -66,6 +67,7 @@ class iagl_addon(object):
 		self.settings['ext_launchers']['environment'] = get_setting_as(setting_type='ext_launch_env',setting=self.handle.getSetting(id='iagl_external_user_external_env'))
 		self.settings['ext_launchers']['close_kodi'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_external_launch_close_kodi'))
 		self.settings['ext_launchers']['stop_audio_controller'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_stop_media_before_launch'))
+		self.settings['ext_launchers']['send_stop_command'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_android_stop_command'))
 		self.settings['ext_launchers']['ra'] = dict()
 		self.settings['ext_launchers']['ra']['name'] = 'RetroArch'
 		self.settings['ext_launchers']['ra']['app_path'] = get_setting_as(setting_type='file_path',setting=self.handle.getSetting(id='iagl_external_path_to_retroarch'))

@@ -125,7 +125,7 @@ def check_if_dir_exists(dir_in):
 	if isinstance(dir_in,str):
 		return xbmcvfs.exists(os.path.join(dir_in,''))
 	elif isinstance(dir_in,Path):
-		return dir_in.is_dir()
+		return dir_in.exists()
 	else:
 		return False
 
@@ -133,7 +133,7 @@ def check_if_file_exists(file_in):
 	if isinstance(file_in,str):
 		return xbmcvfs.exists(file_in)
 	elif isinstance(file_in,Path):
-		return file_in.is_file()
+		return file_in.exists()
 	else:
 		return False
 
@@ -811,6 +811,14 @@ def get_game_choose_list_listitem(dict_in,filter_in=None,media_type='video'):
 	else:
 		return None
 
+def update_listitem_title(li_in,update_item,media_type='video'):
+	if update_item:
+		li_in.setInfo(media_type,{'title':'%(emu_name)s - %(label)s'%{'emu_name':li_in.getProperty('platform_description'),'label':li_in.getLabel()}})
+		li_in.setLabel('%(emu_name)s - %(label)s'%{'emu_name':li_in.getProperty('platform_description'),'label':li_in.getLabel()})
+		return li_in
+	else:
+		return li_in
+
 def game_filter(dict_in,filter_in):
 	include = list()
 	if filter_in is not None: #Game must match all filter query props
@@ -968,6 +976,7 @@ def get_xml_header_path_et_fromstring(file_in):
 def get_calculated_header_values(dict_in,default_dir=None):
 	dict_in['download_source'] = 'Unknown'
 	dict_in['emu_downloadpath_resolved'] = default_dir
+	dict_in['download_destination'] = 'Cache'
 	if all([x in dict_in.get('emu_baseurl') for x in ['http','archive.org']]):
 		dict_in['download_source'] = 'Archive.org'
 	elif any([x in dict_in.get('emu_baseurl') for x in ['http:','https:']]):
@@ -976,10 +985,14 @@ def get_calculated_header_values(dict_in,default_dir=None):
 		dict_in['download_source'] = 'Local Network Source'
 	elif any([x in dict_in.get('emu_baseurl') for x in ['special:','library:']]):
 		dict_in['download_source'] = 'Kodi Library Source'
-	elif check_if_dir_exists(dict_in.get('emu_baseurl')):
+	elif Path(dict_in.get('emu_baseurl')).exists():
 		dict_in['download_source'] = 'Local File Source'
-	if dict_in.get('emu_downloadpath') != 'default':
+	if dict_in.get('emu_downloadpath') != 'default' and check_if_dir_exists(Path(dict_in.get('emu_downloadpath'))):
 		dict_in['emu_downloadpath_resolved'] = Path(xbmcvfs.translatePath(dict_in.get('emu_downloadpath'))).expanduser()
+		dict_in['download_destination'] = 'Local File Destination'
+	elif dict_in.get('emu_downloadpath') != 'default' and check_if_dir_exists(str(dict_in.get('emu_downloadpath'))):
+		dict_in['emu_downloadpath_resolved'] = xbmcvfs.translatePath(dict_in.get('emu_downloadpath'))
+		dict_in['download_destination'] = 'Kodi Library Destination'
 	return dict_in
 
 # def get_xml_header_path_xmltodict(file_in):
@@ -1271,7 +1284,12 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 					'emu_command':game_emu_command,
 					'downloadpath_resolved':Path(emu_downloadpath).joinpath(game_filename).expanduser(),
 					}
-		game_dl_dict['matching_existing_files'] = [x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+game_dl_dict.get('downloadpath_resolved').stem+'*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES]
+		if game_dl_dict.get('downloadpath_resolved').parent.exists():
+			game_dl_dict['matching_existing_files'] = [x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+game_dl_dict.get('downloadpath_resolved').stem+'*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES]
+		elif xbmcvfs.exists(str(game_dl_dict.get('downloadpath'))): #Kodi network source save spot (like smb address) need to use xbmcvfs to get files
+			game_dl_dict['matching_existing_files'] = [x for x in get_all_files_in_directory_xbmcvfs(str(game_dl_dict.get('downloadpath'))) if os.path.split(os.path.splitext(x)[0])[-1] == game_dl_dict.get('filename_no_ext') and os.path.splitext(x)[-1].lower() not in IGNORE_THESE_FILETYPES]
+		else:
+			game_dl_dict['matching_existing_files'] = None
 		if game_dl_dict.get('emu_command'):
 			game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+game_dl_dict.get('emu_command')+'*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES]))
 		if game_dl_dict.get('dl_source') in ['Archive.org']:
@@ -1298,6 +1316,32 @@ def bytes_to_string_size(value, format='%.1f'):
 		return (format + ' %s') % ((base * value_bytes / unit), s)
 	else:
 		return None
+
+# def get_all_files_in_directory_xbmcvfs(directory_in,current_files=None):
+# 	dirs_in_dir, files_in_dir = xbmcvfs.listdir(os.path.join(directory_in,''))
+# 	if isinstance(current_files,list):
+# 		current_files = current_files+[os.path.join(directory_in,ff) for ff in files_in_dir if ff]
+# 	else:
+# 		current_files = [os.path.join(directory_in,ff) for ff in files_in_dir if ff]
+# 	for dd in dirs_in_dir:
+# 		current_files = get_all_files_in_directory_xbmcvfs(os.path.join(directory_in,dd,''),current_files)
+# 	return current_files
+
+def get_all_files_in_directory_xbmcvfs(directory_in):
+	directory_in = directory_in
+	current_files = list()
+	dirs_in_dir, files_in_dir = xbmcvfs.listdir(os.path.join(directory_in,''))
+	current_files = [os.path.join(directory_in,ff) for ff in files_in_dir if ff is not None]
+	for dd in dirs_in_dir:
+		dirs_in_dir2, files_in_dir2 = xbmcvfs.listdir(os.path.join(directory_in,dd,''))
+		current_files = current_files+[os.path.join(directory_in,dd,ff) for ff in files_in_dir2 if ff is not None]
+		for dd2 in dirs_in_dir2:
+			dirs_in_dir3, files_in_dir3 = xbmcvfs.listdir(os.path.join(directory_in,dd,dd2,''))
+			current_files = current_files+[os.path.join(directory_in,dd,dd2,ff) for ff in files_in_dir3 if ff is not None]
+			for dd3 in dirs_in_dir3:
+				dirs_in_dir4, files_in_dir4 = xbmcvfs.listdir(os.path.join(directory_in,dd,dd2,dd3,'')) #Go down 4 levels to look for various files for launching
+				current_files = current_files+[os.path.join(directory_in,dd,dd2,dd3,ff) for ff in files_in_dir4 if ff is not None]
+	return current_files
 
 def clean_file_folder_name(text_in):
 	text_out = text_in

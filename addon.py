@@ -10,7 +10,7 @@ import routing, sys, json, re
 from random import sample as random_sample
 from resources.lib.main import iagl_addon
 from resources.lib import paginate
-from resources.lib.utils import clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, check_if_file_exists, check_if_dir_exists, clean_image_entry, clean_trailer_entry, loc_str, check_and_close_notification, get_history_listitem, zachs_debug
+from resources.lib.utils import clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, check_if_file_exists, check_if_dir_exists, clean_image_entry, clean_trailer_entry, loc_str, check_and_close_notification, get_history_listitem, update_listitem_title, zachs_debug
 
 ## Plugin Initialization Stuff ##
 SLEEP_HACK=50  #https://github.com/xbmc/xbmc/issues/18576
@@ -124,7 +124,7 @@ def search_games():
 		for game_list_id in game_list_ids:
 			game_listitems = game_listitems+iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id,filter_in=filter_dict)
 
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':game_list_id}),x,True) for x in game_listitems if x])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':game_list_id}),update_listitem_title(x,iagl_addon.settings.get('game_list').get('append_emu_name')),True) for x in game_listitems if x])
 		for sm in iagl_addon.get_sort_methods('Games'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -179,7 +179,7 @@ def random_games():
 			game_listitems = game_listitems+iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id,filter_in=filter_dict)
 		game_listitems = random_sample(game_listitems,num_of_results) #Get random listitems using random sample
 
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':game_list_id}),x,True) for x in game_listitems if x])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':game_list_id}),update_listitem_title(x,iagl_addon.settings.get('game_list').get('append_emu_name')),True) for x in game_listitems if x])
 		for sm in iagl_addon.get_sort_methods('Games'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -570,4 +570,4 @@ def iagl_text_viewer():
 
 if __name__ == '__main__':
 	plugin.run(sys.argv)
-	del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_file_exists, check_if_dir_exists, check_and_close_notification, get_history_listitem, zachs_debug #Delete all locally imported stuff to avoid memory leaks
+	del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_file_exists, check_if_dir_exists, check_and_close_notification, get_history_listitem, update_listitem_title, zachs_debug #Delete all locally imported stuff to avoid memory leaks

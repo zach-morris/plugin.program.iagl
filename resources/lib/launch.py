@@ -186,6 +186,13 @@ class iagl_launch(object):
 						xbmc.audioSuspend()
 						xbmc.enableNavSounds(False)
 						xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Settings.SetSettingValue","params":{"setting":"input.enablejoystick","value":false},"id":"1"}')
+					
+					if self.settings.get('ext_launchers').get('environment') in ['android','android_ra32','android_aarch64'] and self.settings.get('ext_launchers').get('send_stop_command'):
+						android_stop_commands = dict(zip(['android','android_ra32','android_aarch64'],['/system/bin/am force-stop com.retroarch','/system/bin/am force-stop com.retroarch','/system/bin/am force-stop com.retroarch.ra32','/system/bin/am force-stop com.retroarch.aarch64']))
+						xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_commands.get(self.settings.get('ext_launchers').get('environment'))}, level=xbmc.LOGDEBUG)
+						stop_process=subprocess.call(android_stop_commands.get(self.settings.get('ext_launchers').get('environment')),stdout=subprocess.PIPE,stderr=subprocess.STDOUT,shell=True)
+						xbmc.log(msg='IAGL:  Android returned %(stop_process)s' % {'stop_process': stop_process}, level=xbmc.LOGDEBUG)
+
 					launch_process=subprocess.Popen(self.current_command,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,shell=True)
 					if not self.settings.get('ext_launchers').get('close_kodi') and capture_launch_log:
 						q = Queue()
