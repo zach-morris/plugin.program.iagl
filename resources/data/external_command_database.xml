@@ -1,7 +1,7 @@
 <system>
 <!-- OSX External Retroarch Commands -->
 	<launcher name="" os="OSX" default="true">
-		<command>"%APP_PATH_RA%" %NETPLAY_COMMAND% -L "%CORE_PATH%" "%ROM_PATH%"</command>
+		<command>"%APP_PATH_RA%" %NETPLAY_COMMAND% -L "%CORE_PATH%" "%ROM_PATH%" --verbose</command>
 	</launcher>
 <!-- OSX Additional Emulator External Commands -->
 	<launcher name="Dolphin (Wii/Gamecube)" os="OSX">
@@ -18,7 +18,7 @@
 	</launcher>
 <!-- OSX External Retroarch Commands, with script to close kodi before launch -->
 	<launcher name="" os="OSX" default="true" close_kodi="true">
-		<command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH_RA%" %NETPLAY_COMMAND% -L "%CORE_PATH%" "%ROM_PATH%"</command>
+		<command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH_RA%" %NETPLAY_COMMAND% -L "%CORE_PATH%" "%ROM_PATH%" --verbose</command>
 	</launcher>
 <!-- OSX Additional Emulator External Commands, with script to close kodi before launch -->
 	<launcher name="Dolphin (Wii/Gamecube)" os="OSX" close_kodi="true">
@@ -35,7 +35,7 @@
 	</launcher>
 <!-- Windows External Retroarch Commands -->
 	<launcher name="" os="windows" default="true">
-		<command>"%APP_PATH_RA%" %NETPLAY_COMMAND% -L "%CORE_PATH%" "%ROM_PATH%"</command>
+		<command>"%APP_PATH_RA%" %NETPLAY_COMMAND% -L "%CORE_PATH%" "%ROM_PATH%" --verbose</command>
 	</launcher>
 <!-- Windows Additional Emulator External Commands -->
 	<launcher name="DEmul (Dreamcast)" os="windows">
@@ -61,7 +61,7 @@
 	</launcher>
 <!-- Windows External Retroarch Commands, with script to close kodi before launch -->
 	<launcher name="" os="windows" default="true" close_kodi="true">
-		<command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_RA%" %NETPLAY_COMMAND% -L "%CORE_PATH%" "%ROM_PATH%"</command>
+		<command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH_RA%" %NETPLAY_COMMAND% -L "%CORE_PATH%" "%ROM_PATH%" --verbose</command>
 	</launcher>
 <!-- Windows Additional Emulator External Commands, with script to close kodi before launch -->
 	<launcher name="DEmul (Dreamcast)" os="windows" close_kodi="true">
@@ -104,7 +104,7 @@
 	</launcher>
 <!-- Linux External Retroarch Commands, with script to close kodi before launch -->
 	<launcher name="" os="linux" default="true" close_kodi="true">
-		<command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH_RA%" %NETPLAY_COMMAND% -L "%CORE_PATH%" "%ROM_PATH%"</command>
+		<command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH_RA%" %NETPLAY_COMMAND% -L "%CORE_PATH%" "%ROM_PATH%" --verbose</command>
 	</launcher>
 <!-- Linux Additional Emulator External Commands, with script to close kodi before launch -->
 	<launcher name="Dolphin (Wii/Gamecube)" os="linux" close_kodi="true">
@@ -117,7 +117,7 @@
 		<command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH_MAME%" "%ROM_PATH%"</command>
 	</launcher>
 	<launcher name="RetroArch Launch App Only" os="linux" close_kodi="true">
-		<command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH_RA%"</command>
+		<command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH_RA%" --verbose</command>
 	</launcher>
 <!-- Android External Retroarch Commands -->
 	<launcher name="RetroArch 4DO (3DO)" os="android">

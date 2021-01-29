@@ -29,6 +29,9 @@ class iagl_post_process(object):
 			elif post_processor == 'unzip_and_launch_file':
 				xbmc.log(msg='IAGL:  Post processor set to UNZIP and launch file',level=xbmc.LOGDEBUG)
 				self.post_processor = self.unzip(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,to_folder=False,use_emu_command=True)
+			elif post_processor == 'unarchive_game_launch_cue':
+				xbmc.log(msg='IAGL:  Post processor set to UNZIP and launch CUE file',level=xbmc.LOGDEBUG)
+				self.post_processor = self.unzip(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,point_to_file='.cue')
 			else:
 				xbmc.log(msg='IAGL:  Post processor is unknown, setting to NONE to attempt launching',level=xbmc.LOGERROR)
 				self.post_processor = None
@@ -71,7 +74,8 @@ class iagl_post_process(object):
 					current_pp['post_process_message'] = 'Download check failed, post processing skipped'
 				self.current_pp_status = current_pp
 				game_pp_status.append(current_pp)
-				current_dialog.update(int(100*(ii+1)/(len(self.game_files)+.001)),loc_str(30377),loc_str(30379))
+				if show_progress:
+					current_dialog.update(int(100*(ii+1)/(len(self.game_files)+.001)),loc_str(30377),loc_str(30379))
 			if show_progress:
 				xbmc.executebuiltin('Dialog.Close(%(heading)s,true)'%{'heading':loc_str(30377)})
 				check_and_close_notification(notification_id=loc_str(30377))
@@ -101,6 +105,10 @@ class iagl_post_process(object):
 				self.use_emu_command = kwargs.get('use_emu_command')
 			else:
 				self.use_emu_command = None
+			if kwargs and kwargs.get('point_to_file'):
+				self.point_to_file = kwargs.get('point_to_file')
+			else:
+				self.point_to_file = None
 			if kwargs and kwargs.get('do_not_delete_archive'):
 				self.delete_archive = False
 			else:
@@ -120,6 +128,11 @@ class iagl_post_process(object):
 					self.pp_status['post_process_message'] = 'Existing emu command file found'
 					self.pp_status['post_process_launch_file'] = [x for x in matching_files if kwargs.get('emu_command') in str(x)][0]
 					xbmc.log(msg='IAGL:  Pointing to the existing emu_command file %(value)s'%{'value':self.pp_status.get('post_process_launch_file')},level=xbmc.LOGDEBUG)
+				elif self.point_to_file and any([self.point_to_file==x.suffix.lower() for x in matching_files]):
+					self.pp_status['post_process_success'] = True
+					self.pp_status['post_process_message'] = 'Existing %(type)s file type found'%{'type':self.point_to_file}
+					self.pp_status['post_process_launch_file'] = [x for x in matching_files if self.point_to_file==x.suffix.lower()][0]
+					xbmc.log(msg='IAGL:  Pointing to the existing file %(value)s'%{'value':self.pp_status.get('post_process_launch_file')},level=xbmc.LOGDEBUG)
 				elif any(['.zip' not in str(x).lower() for x in matching_files]): #Pick the non-zipped matching file
 					self.pp_status['post_process_success'] = True
 					self.pp_status['post_process_message'] = 'Existing non zipped file found'
@@ -147,6 +160,14 @@ class iagl_post_process(object):
 							if kwargs and kwargs.get('emu_command') and any([os.path.join(*kwargs.get('emu_command').split('/')) in x for x in extracted_files]):
 								self.pp_status['post_process_launch_file'] = [x for x in extracted_files if os.path.join(*kwargs.get('emu_command').split('/')) in x][0]
 								xbmc.log(msg='IAGL:  Pointing to the extracted emu_command file %(value)s'%{'value':self.pp_status.get('post_process_launch_file')},level=xbmc.LOGDEBUG)
+							else:
+								xbmc.log(msg='IAGL:  Unable to find the file %(value)s in the extracted files'%{'value':kwargs.get('emu_command')},level=xbmc.LOGERROR)
+						elif self.point_to_file:
+							if any([self.point_to_file in x.lower() for x in extracted_files]):
+								self.pp_status['post_process_launch_file'] = [x for x in extracted_files if self.point_to_file in x.lower()][0]
+								xbmc.log(msg='IAGL:  Pointing to the extracted %(type)s file %(value)s'%{'type':self.point_to_file,'value':self.pp_status.get('post_process_launch_file')},level=xbmc.LOGDEBUG)
+							else:
+								xbmc.log(msg='IAGL:  Unable to find the file type %(value)s in the extracted files'%{'value':self.point_to_file},level=xbmc.LOGERROR)
 						else:
 							if len(extracted_files)==1:
 								self.pp_status['post_process_launch_file'] = extracted_files[0]
