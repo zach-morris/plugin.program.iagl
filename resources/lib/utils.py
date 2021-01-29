@@ -1266,7 +1266,7 @@ def check_addondata_to_query(addon_files,userdata_files):
 			delete_file(af[0]) #The file already exists and is of the same version, so delete it
 	return query_out
 
-def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=None,emu_post_processor=None,emu_launcher=None,emu_default_addon=None,emu_ext_launch_cmd=None,game_url=None,game_downloadpath=None,game_post_processor=None,game_launcher=None,game_default_addon=None,game_ext_launch_cmd=None,game_emu_command=None):
+def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=None,emu_post_processor=None,emu_launcher=None,emu_default_addon=None,emu_ext_launch_cmd=None,game_url=None,game_downloadpath=None,game_post_processor=None,game_launcher=None,game_default_addon=None,game_ext_launch_cmd=None,game_emu_command=None,organize_default_dir=False,default_dir=None,emu_name=None):
 	game_dl_dict = dict()
 	if emu_dl_source and emu_baseurl and game_url and (emu_dl_source in ['Archive.org','Local Network Source','Kodi Library Source','Local File Source'] or 'http' in emu_dl_source):
 		game_filename = url_unquote(game_url.split('/')[-1].split('%2F')[-1])
@@ -1284,6 +1284,11 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 					'emu_command':game_emu_command,
 					'downloadpath_resolved':Path(emu_downloadpath).joinpath(game_filename).expanduser(),
 					}
+		if organize_default_dir and game_dl_dict.get('downloadpath') == 'default' or str(game_dl_dict.get('downloadpath')) == str(default_dir) and emu_name:
+			new_default_dir = check_userdata_directory(os.path.join(str(default_dir),emu_name))
+			if new_default_dir:
+				game_dl_dict['downloadpath'] = str(new_default_dir)
+				game_dl_dict['downloadpath_resolved'] = Path(game_dl_dict.get('downloadpath')).joinpath(game_filename).expanduser()
 		if game_dl_dict.get('downloadpath_resolved').parent.exists():
 			game_dl_dict['matching_existing_files'] = [x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+game_dl_dict.get('downloadpath_resolved').stem+'*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES]
 		elif xbmcvfs.exists(str(game_dl_dict.get('downloadpath'))): #Kodi network source save spot (like smb address) need to use xbmcvfs to get files

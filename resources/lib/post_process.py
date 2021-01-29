@@ -2,6 +2,7 @@
 #Zach Morris
 #https://github.com/zach-morris/plugin.program.iagl
 # from kodi_six import xbmc, xbmcplugin, xbmcgui, xbmcvfs
+import os
 import xbmc, xbmcplugin, xbmcgui, xbmcvfs
 from . utils import *
 import archive_tool
@@ -25,6 +26,9 @@ class iagl_post_process(object):
 			elif post_processor == 'unzip_to_folder_and_launch_file': #Unarchive to a folder and point to the file specified in the emu_command which is already known to be contained the archive
 				xbmc.log(msg='IAGL:  Post processor set to UNZIP to folder and launch file',level=xbmc.LOGDEBUG)
 				self.post_processor = self.unzip(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,to_folder=True,use_emu_command=True)
+			elif post_processor == 'unzip_and_launch_file':
+				xbmc.log(msg='IAGL:  Post processor set to UNZIP and launch file',level=xbmc.LOGDEBUG)
+				self.post_processor = self.unzip(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,to_folder=False,use_emu_command=True)
 			else:
 				xbmc.log(msg='IAGL:  Post processor is unknown, setting to NONE to attempt launching',level=xbmc.LOGERROR)
 				self.post_processor = None
@@ -39,9 +43,9 @@ class iagl_post_process(object):
 	def post_process_game(self,show_progress=True):
 		game_pp_status = list()
 		if self.game_list and self.game_files:
-			# if show_progress:
-			# 	current_dialog = xbmcgui.Dialog()
-			# 	current_dialog.notification(loc_str(30377),loc_str(30379),xbmcgui.NOTIFICATION_INFO,self.settings.get('notifications').get('background_notification_time'),sound=False)
+			if show_progress:
+				current_dialog = xbmcgui.Dialog()
+				current_dialog.notification(loc_str(30377),loc_str(30379),xbmcgui.NOTIFICATION_INFO,self.settings.get('notifications').get('background_notification_time'),sound=False)
 			for gf in self.game_files:
 				current_pp = gf.copy()
 				if gf.get('download_success'):
@@ -64,10 +68,10 @@ class iagl_post_process(object):
 					current_pp['post_process_message'] = 'Download check failed, post processing skipped'
 				self.current_pp_status = current_pp
 				game_pp_status.append(current_pp)
-			# if show_progress:
-			# 	xbmc.executebuiltin('Dialog.Close(notification,true)')
-			# 	xbmc.sleep(NOTIFICATION_DEINIT_TIME) #Close the notification and wait for de-init to ensure any follow on notification are correctly shown, unsure if there's a better way to do this
-			# 	del current_dialog
+			if show_progress:
+				xbmc.executebuiltin('Dialog.Close(notification,true)')
+				xbmc.sleep(NOTIFICATION_DEINIT_TIME) #Close the notification and wait for de-init to ensure any follow on notification are correctly shown, unsure if there's a better way to do this
+				del current_dialog
 		else:
 			xbmc.log(msg='IAGL:  Badly formed game post process request.',level=xbmc.LOGERROR)
 			return None
@@ -132,8 +136,8 @@ class iagl_post_process(object):
 						self.pp_status['post_process_success'] = True
 						self.pp_status['post_process_message'] = 'Unzip complete'
 						if self.use_emu_command:
-							if kwargs and kwargs.get('emu_command') and any([kwargs.get('emu_command') in x for x in extracted_files]):
-								self.pp_status['post_process_launch_file'] = [x for x in extracted_files if kwargs.get('emu_command') in x][0]
+							if kwargs and kwargs.get('emu_command') and any([os.path.join(*kwargs.get('emu_command').split('/')) in x for x in extracted_files]):
+								self.pp_status['post_process_launch_file'] = [x for x in extracted_files if os.path.join(*kwargs.get('emu_command').split('/')) in x][0]
 								xbmc.log(msg='IAGL:  Pointing to the extracted emu_command file %(value)s'%{'value':self.pp_status.get('post_process_launch_file')},level=xbmc.LOGDEBUG)
 						else:
 							if len(extracted_files)==1:

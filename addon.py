@@ -370,7 +370,7 @@ def download_only_game(game_list_id,game_id):
 
 		iagl_download = iagl_download(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game)
 		downloaded_files = iagl_download.download_game()
-
+		check_and_close_notification()
 		iagl_post_process = iagl_post_process(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game,game_files=downloaded_files)
 		post_processed_files = iagl_post_process.post_process_game()
 
@@ -523,6 +523,9 @@ def context_menu_select(game_list_id,select_id):
 def context_menu_action(game_list_id,action_id):
 	if action_id == 'view_list_settings':
 		current_game_list = iagl_addon.game_lists.get_game_list(game_list_id)
+		current_emu_postdlaction = dict(zip(['none','unzip_rom','unzip_and_launch_file','unzip_to_folder_and_launch_file'],['None (Direct File Launch)','UnArchive Game','UnArchive Game, Launch File','UnArchive Game to Folder, Launch File'])).get(current_game_list.get('emu_postdlaction'))
+		if not current_emu_postdlaction:
+			current_emu_postdlaction = current_game_list.get('emu_postdlaction')
 		launch_command_string = ''
 		download_path_string = loc_str(30361)
 		current_header = loc_str(30362)%{'game_list_id':game_list_id}
@@ -538,7 +541,7 @@ def context_menu_action(game_list_id,action_id):
 				launch_command_string = '[COLOR FF12A0C7]%(rp)s:  [/COLOR]%(lc)s'%{'rp':loc_str(30364),'lc':current_game_list.get('emu_default_addon')}
 		if current_game_list.get('emu_downloadpath') != 'default':
 			download_path_string = current_game_list.get('emu_downloadpath_resolved')
-		current_text = '[B]%(md)s[/B][CR][COLOR FF12A0C7]%(gln)s:  [/COLOR]%(emu_name)s[CR][COLOR FF12A0C7]%(cat)s:  [/COLOR]%(emu_category)s[CR][COLOR FF12A0C7]%(platform_string)s:  [/COLOR]%(emu_description)s[CR][COLOR FF12A0C7]%(author_string)s:  [/COLOR]%(emu_author)s[CR][CR][B]%(dp)s[/B][CR][COLOR FF12A0C7]%(source)s:  [/COLOR]%(download_source)s[CR][COLOR FF12A0C7]%(dl)s:  [/COLOR]%(download_path_string)s[CR][COLOR FF12A0C7]%(pdlc)s:  [/COLOR]%(emu_postdlaction)s[CR][CR][B]%(lp)s[/B][CR][COLOR FF12A0C7]%(lw)s:  [/COLOR]%(emu_launcher)s[CR]%(launch_command_string)s'%{'emu_name':current_game_list.get('emu_name'),'emu_category':current_game_list.get('emu_category'),'emu_description':current_game_list.get('emu_description'),'emu_author':current_game_list.get('emu_author'),'download_source':current_game_list.get('download_source'),'emu_postdlaction':'Test','emu_launcher':{'retroplayer':loc_str(30128),'external':loc_str(30003)}.get(current_game_list.get('emu_launcher')),'launch_command_string':launch_command_string,'download_path_string':download_path_string,'platform_string':loc_str(30416),'author_string':loc_str(30419),'gln':loc_str(30365),'cat':loc_str(30415),'dp':loc_str(30366),'source':loc_str(30368),'dl':loc_str(30367),'pdlc':loc_str(30369),'lp':loc_str(30370),'lw':loc_str(30371),'md':loc_str(30372)}
+		current_text = '[B]%(md)s[/B][CR][COLOR FF12A0C7]%(gln)s:  [/COLOR]%(emu_name)s[CR][COLOR FF12A0C7]%(cat)s:  [/COLOR]%(emu_category)s[CR][COLOR FF12A0C7]%(platform_string)s:  [/COLOR]%(emu_description)s[CR][COLOR FF12A0C7]%(author_string)s:  [/COLOR]%(emu_author)s[CR][CR][B]%(dp)s[/B][CR][COLOR FF12A0C7]%(source)s:  [/COLOR]%(download_source)s[CR][COLOR FF12A0C7]%(dl)s:  [/COLOR]%(download_path_string)s[CR][COLOR FF12A0C7]%(pdlc)s:  [/COLOR]%(emu_postdlaction)s[CR][CR][B]%(lp)s[/B][CR][COLOR FF12A0C7]%(lw)s:  [/COLOR]%(emu_launcher)s[CR]%(launch_command_string)s'%{'emu_name':current_game_list.get('emu_name'),'emu_category':current_game_list.get('emu_category'),'emu_description':current_game_list.get('emu_description'),'emu_author':current_game_list.get('emu_author'),'download_source':current_game_list.get('download_source'),'emu_postdlaction':current_emu_postdlaction,'emu_launcher':{'retroplayer':loc_str(30128),'external':loc_str(30003)}.get(current_game_list.get('emu_launcher')),'launch_command_string':launch_command_string,'download_path_string':download_path_string,'platform_string':loc_str(30416),'author_string':loc_str(30419),'gln':loc_str(30365),'cat':loc_str(30415),'dp':loc_str(30366),'source':loc_str(30368),'dl':loc_str(30367),'pdlc':loc_str(30369),'lp':loc_str(30370),'lw':loc_str(30371),'md':loc_str(30372)}
 		set_mem_cache('TextViewer_Header',current_header)
 		set_mem_cache('TextViewer_Text',current_text)
 		plugin.redirect('/text_viewer')
