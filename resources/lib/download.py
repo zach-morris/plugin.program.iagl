@@ -163,6 +163,7 @@ class iagl_download(object):
 						xbmc.log(msg='IAGL:  Login exception for %(url)s.  Exception %(exc)s'%{'url':self.check_account_url,'exc':exc},level=xbmc.LOGERROR)
 				if show_progress:
 					xbmc.executebuiltin('Dialog.Close(notification,true)')
+					check_and_close_notification()
 					del current_dialog
 			else:
 				self.cookie = None

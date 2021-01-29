@@ -1356,13 +1356,15 @@ def clean_file_folder_name(text_in):
 		text_out = re.sub(' +','_',text_out)
 	return text_out
 
-def check_and_close_notification():
+def check_and_close_notification(notification_id=None):
+	if not notification_id:
+		notification_id = 'notification'
 	is_closed = False
 	for ii in range(4):
-		if xbmc.getCondVisibility('Window.IsActive(notification)'):
-			xbmc.executebuiltin('Dialog.Close(notification,true)')
+		if xbmc.getCondVisibility('Window.IsActive(%(notification_id)s)'%{'notification_id':notification_id}):
+			xbmc.executebuiltin('Dialog.Close(%(notification_id)s,true)'%{'notification_id':notification_id})
 			xbmc.sleep(NOTIFICATION_DEINIT_TIME)
-			if not xbmc.getCondVisibility('Window.IsActive(notification)'):	
+			if not xbmc.getCondVisibility('Window.IsActive(%(notification_id)s)'%{'notification_id':notification_id}):	
 				is_closed=True
 				break
 		else:

@@ -43,10 +43,13 @@ class iagl_post_process(object):
 	def post_process_game(self,show_progress=True):
 		game_pp_status = list()
 		if self.game_list and self.game_files:
+			# if show_progress:
+			# 	current_dialog = xbmcgui.Dialog()
+			# 	current_dialog.notification(loc_str(30377),loc_str(30379),xbmcgui.NOTIFICATION_INFO,self.settings.get('notifications').get('background_notification_time'),sound=False)
 			if show_progress:
-				current_dialog = xbmcgui.Dialog()
-				current_dialog.notification(loc_str(30377),loc_str(30379),xbmcgui.NOTIFICATION_INFO,self.settings.get('notifications').get('background_notification_time'),sound=False)
-			for gf in self.game_files:
+				current_dialog = xbmcgui.DialogProgressBG()
+				current_dialog.create(loc_str(30377),loc_str(30379))
+			for ii,gf in enumerate(self.game_files):
 				current_pp = gf.copy()
 				if gf.get('download_success'):
 					if gf.get('post_processor') and gf.get('post_processor') != self.current_post_processor:
@@ -68,10 +71,15 @@ class iagl_post_process(object):
 					current_pp['post_process_message'] = 'Download check failed, post processing skipped'
 				self.current_pp_status = current_pp
 				game_pp_status.append(current_pp)
+				current_dialog.update(int(100*(ii+1)/(len(self.game_files)+.001)),loc_str(30377),loc_str(30379))
 			if show_progress:
-				xbmc.executebuiltin('Dialog.Close(notification,true)')
-				xbmc.sleep(NOTIFICATION_DEINIT_TIME) #Close the notification and wait for de-init to ensure any follow on notification are correctly shown, unsure if there's a better way to do this
+				xbmc.executebuiltin('Dialog.Close(%(heading)s,true)'%{'heading':loc_str(30377)})
+				check_and_close_notification(notification_id=loc_str(30377))
 				del current_dialog
+			# if show_progress:
+			# 	xbmc.executebuiltin('Dialog.Close(notification,true)')
+			# 	xbmc.sleep(NOTIFICATION_DEINIT_TIME) #Close the notification and wait for de-init to ensure any follow on notification are correctly shown, unsure if there's a better way to do this
+			# 	del current_dialog
 		else:
 			xbmc.log(msg='IAGL:  Badly formed game post process request.',level=xbmc.LOGERROR)
 			return None

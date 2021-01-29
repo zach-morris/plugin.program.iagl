@@ -337,7 +337,7 @@ def download_and_launch_game(game_list_id,game_id):
 		iagl_download = iagl_download(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game)
 		downloaded_files = iagl_download.download_game()
 		iagl_post_process = iagl_post_process(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game,game_files=downloaded_files)
-		post_processed_files = iagl_post_process.post_process_game()
+		post_processed_files = iagl_post_process.post_process_game(show_progress=(current_game_list.get('emu_postdlaction') in ['none']))
 		iagl_launch = iagl_launch(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game,game_files=post_processed_files)
 		launched_files = iagl_launch.launch_game()
 
@@ -370,9 +370,9 @@ def download_only_game(game_list_id,game_id):
 
 		iagl_download = iagl_download(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game)
 		downloaded_files = iagl_download.download_game()
-		check_and_close_notification()
+
 		iagl_post_process = iagl_post_process(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game,game_files=downloaded_files)
-		post_processed_files = iagl_post_process.post_process_game()
+		post_processed_files = iagl_post_process.post_process_game(show_progress=(current_game_list.get('emu_postdlaction') in ['none']))
 
 		if check_and_close_notification():
 			current_dialog = xbmcgui.Dialog()
