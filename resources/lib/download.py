@@ -27,8 +27,11 @@ class iagl_download(object):
 		elif downloader == 'archive_org':
 			xbmc.log(msg='IAGL:  Downloader set to archive.org',level=xbmc.LOGDEBUG)
 			self.downloader = self.archive_org(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game)
+		elif downloader == 'local_source':
+			xbmc.log(msg='IAGL:  Downloader set to Local File Source',level=xbmc.LOGDEBUG)
+			self.downloader = self.local_source(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game)
 		else:
-			xbmc.log(msg='IAGL:  Downloader set to archive.org (default)',level=xbmc.LOGDEBUG)
+			xbmc.log(msg='IAGL:  Downloader %(downloader)s is unknown, defaulting to archive.org'%{'downloader':downloader},level=xbmc.LOGDEBUG)
 			self.downloader = self.archive_org(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,show_login_progress=False)
 		self.current_downloader = downloader
 
@@ -73,6 +76,17 @@ class iagl_download(object):
 						current_dl['download_message'] = download_status.get('message')
 						if download_status.get('success'):
 							current_dl['downloaded_file'] = True
+							if current_dl.get('dl_source') in ['Local File Source'] and download_status.get('updated_dest'): #The file was found locally, so point to that source location
+								current_dl['downloadpath_resolved'] = download_status.get('updated_dest')
+							if current_dl.get('dl_source') in ['Local Network Source'] and download_status.get('updated_dest'): #The file was found locally, so point to that kodi location if launching with retroplayer
+								if current_dl.get('launcher') == 'retroplayer':
+									current_dl['downloadpath_resolved'] = download_status.get('updated_dest')
+								else:
+									current_dl['downloaded_file'] = False
+									current_dl['downloadpath_resolved'] = None
+									current_dl['download_success'] = False
+									current_dl['download_message'] = 'Unable to externally launch games from a Kodi source'
+									xbmc.log(msg='IAGL:  Unable to externally launch games from a Kodi source',level=xbmc.LOGERROR)
 					game_download_status.append(current_dl)
 		else:
 			xbmc.log(msg='IAGL:  Badly formed game download request.',level=xbmc.LOGERROR)
@@ -233,6 +247,99 @@ class iagl_download(object):
 			else:
 				xbmc.log(msg='IAGL:  Badly formed download request.  URL %(url)s, Dest %(dest)s'%{'url':url,'dest':dest},level=xbmc.LOGDEBUG)
 				return None
+
+	class local_source(object):
+		def __init__(self,settings=dict(),directory=dict(),game_list=dict(),game=dict(),show_progress=False):
+			self.settings = settings
+			self.directory = directory
+			self.game_list = game_list
+			self.game = game
+			self.download_status = dict()
+
+		def download(self,url=None,dest=None,est_size=None,show_progress=False):
+			if url and check_if_file_exists(Path(url_unquote(url))):
+				self.download_status['success'] = True
+				self.download_status['message'] = 'File was accessible via local filesystem'
+				xbmc.log(msg='IAGL:  Game was found to exists on the local filesystem: %(url)s'%{'url':url},level=xbmc.LOGDEBUG)
+				self.download_status['updated_dest'] = Path(url_unquote(url))
+			elif url and check_if_file_exists(url_unquote(url)):
+				self.download_status['success'] = True
+				self.download_status['message'] = 'File was accessible via Kodi Source'
+				xbmc.log(msg='IAGL:  Game was found to exists at a Kodi Source: %(url)s'%{'url':url},level=xbmc.LOGDEBUG)
+				self.download_status['updated_dest'] = url_unquote(url)
+			else:
+				self.download_status['success'] = False
+				self.download_status['message'] = 'File was not accessible'
+				xbmc.log(msg='IAGL:  Game was not accessible: %(url)s'%{'url':url},level=xbmc.LOGERROR)
+			return self.download_status
+			# 	if self.cookies and isinstance(self.cookies,dict):
+			# 		domain = self.cookies.get('domain')
+			# 		for k,v in self.cookie.items():
+			# 			if k!='domain':
+			# 				self.session.cookies.set(k,v,domain=domain)
+			# 	xbmc.log(msg='IAGL:  Attempting download file',level=xbmc.LOGDEBUG)
+			# 	xbmc.log(msg='IAGL:  URL: %(value)s'%{'value':url},level=xbmc.LOGDEBUG)
+			# 	xbmc.log(msg='IAGL:  Dest: %(value)s'%{'value':dest},level=xbmc.LOGDEBUG)
+			# 	if show_progress:
+			# 		dp = xbmcgui.DialogProgress()
+			# 		description = next(iter([str(x) for x in [dest.name,url_unquote(os.path.split(url)[-1].split('%2F')[-1])] if x]),'Unknown File')
+			# 		dp.create(loc_str(30376),description)
+			# 		dp.update(0,description)
+			# 	try:
+			# 		with self.session.get(url,verify=False,stream=True,timeout=self.timeout,headers=self.header) as self.r:
+			# 			self.r.raise_for_status()
+			# 			filesize = next(iter([int(x) for x in [self.r.headers.get('Content-length'),est_size] if x]),0)
+			# 			filesize_str = bytes_to_string_size(filesize)
+			# 			with xbmcvfs.File(str(dest),'wb') as ff:
+			# 				size = 0
+			# 				last_time = time.time()
+			# 				for chunk in self.r.iter_content(chunk_size=self.chunk_size):
+			# 					ff.write(bytearray(chunk))
+			# 					if show_progress and dp.iscanceled():
+			# 						dp.close()
+			# 						raise Exception('User Cancelled Download')
+			# 					if show_progress:
+			# 						size = size+len(chunk) #chunks may be a different size when streaming
+			# 						percent = int(100.0 * size / (filesize + 1)) #Added 1 byte to avoid div by zero
+			# 						now = time.time()
+			# 						diff = now - last_time
+			# 						if diff > 1: #Only show progress updates in 1 second or greater intervals
+			# 							last_time = now
+			# 							if filesize:
+			# 								dp.update(percent,'%(fn)s[CR]%(current_size)s / %(estimated_size)s'%{'current_size':bytes_to_string_size(size),'fn':description,'estimated_size':filesize_str})
+			# 							else:
+			# 								dp.update(percent,'%(fn)s[CR]%(current_size)s / Unknown Size'%{'current_size':bytes_to_string_size(size),'fn':description})
+			# 	except requests.exceptions.RequestException as rexc:
+			# 		self.download_status['success'] = False
+			# 		if self.r.status_code == 403:
+			# 			self.download_status['message'] = 'Download Request Exception.  Access is forbidden (login required).'
+			# 		else:
+			# 			self.download_status['message'] = 'Download Request Exception.  See Kodi Log.'
+			# 		xbmc.log(msg='IAGL:  Download request exception for %(url)s.  Request Exception %(exc)s'%{'url':url,'exc':rexc},level=xbmc.LOGERROR)
+			# 	except requests.exceptions.HTTPError as hexc:
+			# 		self.download_status['success'] = False
+			# 		self.download_status['message'] = 'Download HTTP error %(exc)s'%{'exc':hexc}
+			# 		xbmc.log(msg='IAGL:  Download HTTP exception for %(url)s.  HTTP Exception %(exc)s'%{'url':url,'exc':hexc},level=xbmc.LOGERROR)
+			# 	except requests.exceptions.ConnectionError as cexc:
+			# 		self.download_status['success'] = False
+			# 		self.download_status['message'] = 'Download Connection error %(exc)s'%{'exc':cexc}
+			# 		xbmc.log(msg='IAGL:  Download connection exception for %(url)s.  Connection Exception %(exc)s'%{'url':url,'exc':cexc},level=xbmc.LOGERROR)
+			# 	except requests.exceptions.Timeout as texc:
+			# 		self.download_status['success'] = False
+			# 		self.download_status['message'] = 'Download Timeout error %(exc)s'%{'exc':texc}
+			# 		xbmc.log(msg='IAGL:  Download timeout exception for %(url)s.  Timeout Exception %(exc)s'%{'url':url,'exc':texc},level=xbmc.LOGERROR)
+			# 	except Exception as exc:
+			# 		self.download_status['success'] = False
+			# 		self.download_status['message'] = 'Download failed or was cancelled'
+			# 		xbmc.log(msg='IAGL:  Download exception for %(url)s.  Exception %(exc)s'%{'url':url,'exc':exc},level=xbmc.LOGERROR)
+			# 	self.download_status['success'] = True
+			# 	self.download_status['message'] = 'Download complete'
+			# 	dp.close()
+			# 	del dp
+			# 	return self.download_status
+			# else:
+			# 	xbmc.log(msg='IAGL:  Badly formed download request.  URL %(url)s, Dest %(dest)s'%{'url':url,'dest':dest},level=xbmc.LOGDEBUG)
+			# 	return None
 
 	class generic_downloader(object):
 		def __init__(self,header=None,cookies=None):
