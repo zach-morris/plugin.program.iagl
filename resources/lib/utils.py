@@ -24,7 +24,7 @@ NOTIFICATION_DEINIT_TIME = 300 #Time to wait after closing a notification for it
 WAIT_FOR_PLAYER_TIME = 5000 #Time to wait after sending retroplayer play command to check status
 WAIT_FOR_PROCESS_EXIT = 3 #Time in seconds to wait for subprocess to exit
 IGNORE_THESE_FILETYPES = ['.srm','.sav','.fs','.state','.auto','.xml','.nfo','.mp3'] #Matching filetypes to ignore for re-launching
-
+IGNORE_THESE_FILES = ['win31.bat'] #Matching files to ignore for re-launching
 re_game_tags = re.compile(r'\([^)]*\)')
 re_game_codes = re.compile(r'\[[^)]*\]')
 re_clean_alphanumeric = re.compile(r'([^\s\w]|_)+')
@@ -1290,13 +1290,13 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 				game_dl_dict['downloadpath'] = str(new_default_dir)
 				game_dl_dict['downloadpath_resolved'] = Path(game_dl_dict.get('downloadpath')).joinpath(game_filename).expanduser()
 		if game_dl_dict.get('downloadpath_resolved').parent.exists():
-			game_dl_dict['matching_existing_files'] = [x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+game_dl_dict.get('downloadpath_resolved').stem+'*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES]
+			game_dl_dict['matching_existing_files'] = [x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+game_dl_dict.get('downloadpath_resolved').stem+'*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES and x.name.lower() not in IGNORE_THESE_FILES]
 		elif xbmcvfs.exists(str(game_dl_dict.get('downloadpath'))): #Kodi network source save spot (like smb address) need to use xbmcvfs to get files
-			game_dl_dict['matching_existing_files'] = [x for x in get_all_files_in_directory_xbmcvfs(str(game_dl_dict.get('downloadpath'))) if os.path.split(os.path.splitext(x)[0])[-1] == game_dl_dict.get('filename_no_ext') and os.path.splitext(x)[-1].lower() not in IGNORE_THESE_FILETYPES]
+			game_dl_dict['matching_existing_files'] = [x for x in get_all_files_in_directory_xbmcvfs(str(game_dl_dict.get('downloadpath'))) if os.path.split(os.path.splitext(x)[0])[-1] == game_dl_dict.get('filename_no_ext') and os.path.splitext(x)[-1].lower() not in IGNORE_THESE_FILETYPES and os.path.split(os.path.splitext(x)[0])[-1] not in IGNORE_THESE_FILES]
 		else:
 			game_dl_dict['matching_existing_files'] = None
 		if game_dl_dict.get('emu_command'):
-			game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+game_dl_dict.get('emu_command')+'*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES]))
+			game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+game_dl_dict.get('emu_command')+'*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES and x.name.lower() not in IGNORE_THESE_FILES]))
 		if game_dl_dict.get('dl_source') in ['Archive.org']:
 			game_dl_dict['downloader'] = 'archive_org'
 		elif 'http' in game_dl_dict.get('dl_source'):
@@ -1332,6 +1332,20 @@ def bytes_to_string_size(value, format='%.1f'):
 # 		current_files = get_all_files_in_directory_xbmcvfs(os.path.join(directory_in,dd,''),current_files)
 # 	return current_files
 
+def generate_pointer_file(filename_in=None,pointer_file_type=None,pointer_contents=None,directory=None,default_dir=None):
+	filename_out = None
+	if filename_in and pointer_file_type:
+		if directory:
+			filename_out = os.path.join(directory,filename_in.stem+pointer_file_type)
+		else:
+			filename_out = os.path.join(str(default_dir),filename_in.stem+pointer_file_type)
+		if not pointer_contents:
+			pointer_contents = ''
+		if write_text_to_file(text_in=pointer_contents,filename_in=filename_out):
+			return filename_out
+		else:
+			return None
+
 def get_all_files_in_directory_xbmcvfs(directory_in):
 	directory_in = directory_in
 	current_files = list()
@@ -1351,7 +1365,7 @@ def get_all_files_in_directory_xbmcvfs(directory_in):
 def clean_file_folder_name(text_in):
 	text_out = text_in
 	if isinstance(text_in,str):
-		text_out = re.sub(' +',' ',''.join(c for c in text_out if c.isalnum() or c in [' ','_']).rstrip())
+		text_out = re.sub(' +',' ',''.join(c for c in url_unquote(text_out) if c.isalnum() or c in [' ','_']).rstrip())
 		text_out = re.sub('dis[ck] [0-9]+','',text_out,flags=re.I)
 		text_out = re.sub(' +','_',text_out)
 	return text_out
@@ -1392,6 +1406,26 @@ def get_crc32(filename):
 	else:
 		return zlib_csum_xbmcvfs(str(filename), zlib.crc32) #If it fails try xbmcvfs (slower)
 
+
+def write_text_to_file(text_in,filename_in):
+	success = False
+	if filename_in and Path(filename_in):
+		try:
+			Path(filename_in).write_text(text_in,encoding=TEXT_ENCODING)
+			success = True
+		except Exception as exc:
+			xbmc.log(msg='IAGL:  Error writing text file %(value_in)s.  Exception %(exc)s' % {'value_in': file_in, 'exc': exc}, level=xbmc.LOGERROR)
+	elif filename_in and check_if_file_exists(filename_in):
+		try:
+			with xbmcvfs.File(str(filename_in), 'w') as fo:
+			    fo.write(bytearray(text_in.encode('utf-8')))
+			    success = True
+		except:
+			xbmc.log(msg='IAGL:  Error writing text file %(value_in)s.  Exception %(exc)s' % {'value_in': file_in, 'exc': exc}, level=xbmc.LOGERROR)
+
+	else:
+		success = False
+	return success
 # def zlib_csum(filename, func):
 # 	csum = None
 # 	last_read = False
