@@ -10,6 +10,7 @@ if not get_mem_cache('iagl_script_started'):
 		ok_ret = current_dialog.ok(loc_str(30202),loc_str(30306)%{'game_list_id':'All Lists and Games'})
 		del current_dialog
 	iagl_addon.clear_all_mem_cache()
+	xbmc.executebuiltin('Container.Refresh')
 	clear_mem_cache('iagl_script_started')
 	xbmc.log(msg='IAGL:  Clear cache script completed', level=xbmc.LOGDEBUG)
 else:

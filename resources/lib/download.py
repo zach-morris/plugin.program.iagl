@@ -31,8 +31,10 @@ class iagl_download(object):
 			xbmc.log(msg='IAGL:  Downloader set to Local File Source',level=xbmc.LOGDEBUG)
 			self.downloader = self.local_source(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game)
 		else:
-			xbmc.log(msg='IAGL:  Downloader %(downloader)s is unknown, defaulting to archive.org'%{'downloader':downloader},level=xbmc.LOGDEBUG)
-			self.downloader = self.archive_org(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,show_login_progress=False)
+			xbmc.log(msg='IAGL:  Downloader %(downloader)s is unknown, defaulting to NONE'%{'downloader':downloader},level=xbmc.LOGDEBUG)
+			self.downloader = None #Default downloader to NONE unless otherwise specified, saves unecessary login attempt
+			downloader = 'Unknown'
+			# self.downloader = self.archive_org(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,show_login_progress=False) #Default to archive.org unless otherwise specified
 		self.current_downloader = downloader
 
 	def download_game(self,show_progress=True):

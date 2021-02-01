@@ -783,7 +783,7 @@ def get_database_listitem(dict_in,media_type='video'):
 
 def get_game_list_listitem(dict_in,filter_in=None,media_type='video'):
 	li=None
-	if dict_in.get('properties').get('emu_visibility') != 'hidden' and filter_in is None or (all([filter_in.get('info').get(kk) in dict_in.get('info').get(kk) if dict_in.get('info').get(kk) else False for kk in filter_in.get('info').keys()]) and all([filter_in.get('properties').get(kk) in dict_in.get('properties').get(kk) if dict_in.get('properties').get(kk) else False for kk in filter_in.get('properties').keys()])):
+	if dict_in.get('properties').get('emu_visibility') != 'hidden' and (filter_in is None or (all([filter_in.get('info').get(kk) in dict_in.get('info').get(kk) if dict_in.get('info').get(kk) else False for kk in filter_in.get('info').keys()]) and all([filter_in.get('properties').get(kk) in dict_in.get('properties').get(kk) if dict_in.get('properties').get(kk) else False for kk in filter_in.get('properties').keys()]))):
 		li = xbmcgui.ListItem(label=dict_in.get('values').get('label'),label2=dict_in.get('values').get('label2'),offscreen=True)
 		li.setInfo(media_type,dict_in.get('info'))
 		li.setArt(dict_in.get('art'))
