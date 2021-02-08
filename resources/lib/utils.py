@@ -321,6 +321,9 @@ def get_setting_as(setting_type=None,setting=None):
 	else:
 		return None
 
+def get_post_dl_commands():
+	return dict(zip(['none','unzip_rom','unzip_and_launch_file','unzip_to_folder_and_launch_file','unzip_and_launch_scummvm_file','unzip_and_launch_win31_file'],['None (Direct File Launch)','UnArchive Game','UnArchive Game, Launch File','UnArchive Game to Folder, Launch File','UnArchive Game, Generate SCUMMVM File','UnArchive Game, Generate WIN31 BAT File']))
+
 def get_downloadpath(path=None,default=None):
 	if path=='default' or path is None:
 		return default
@@ -746,6 +749,20 @@ def map_retroplayer_listitem_dict(dict_in,launch_dict_in): #https://codedocs.xyz
 					   'thumb':dict_in.get('art').get('thumb')},
 			}
 	return dict_out
+
+def map_wizard_report_listitem_dict(dict_in,media_type='video'):
+	if isinstance(dict_in,dict):
+		lis = list()
+		for ii,dd in enumerate(dict_in.get('label')):
+			li = xbmcgui.ListItem(label=dd,offscreen=True)
+			if dict_in.get('info'):
+				li.setInfo(media_type,dict_in.get('info')[ii])
+			if dict_in.get('art'):
+				li.setArt(dict_in.get('art')[ii])
+			lis.append(li)
+		return lis
+	else:
+		return None
 
 def get_game_stat_set(game_stats_in=None,type_in=None):
 	if isinstance(game_stats_in,list) and type_in:

@@ -1,0 +1,301 @@
+import xbmc, xbmcgui, xbmcvfs, xbmcaddon, xbmcplugin, re, os, shutil, json
+from resources.lib.utils import loc_str, get_mem_cache, set_mem_cache, clear_mem_cache, check_and_close_notification, choose_image, get_post_dl_commands
+from resources.lib.main import iagl_addon
+iagl_addon_wizard = iagl_addon()
+EMAIL_RE = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
+START_SOUND = 'special://home/addons/plugin.program.iagl/resources/skins/Default/media/wizard_start.wav'
+POS_SOUND = 'special://home/addons/plugin.program.iagl/resources/skins/Default/media/coin.wav'
+NEG_SOUND = 'special://home/addons/plugin.program.iagl/resources/skins/Default/media/kick.wav'
+DONE_SOUND = 'special://home/addons/plugin.program.iagl/resources/skins/Default/media/wizard_done.wav'
+EXT_DEFAULTS = {'32X_ZachMorris':['RetroArch Sega - MS/MD/CD/32X (PicoDrive)'],'3DO_ZachMorris':['RetroArch The 3DO Company - 3DO (Opera)','RetroArch The 3DO Company - 3DO (4DO)'],'Amiga_Bestof':['RetroArch Commodore - Amiga (PUAE)'],'Amiga_CD32_ZachMorris':['RetroArch Commodore - Amiga (PUAE)'],'Amiga_ZachMorris':['RetroArch Commodore - Amiga (PUAE)'],'Amstrad_CPC_ZachMorris':['RetroArch Amstrad - CPC (Caprice32)','RetroArch Amstrad - CPC (CrocoDS)'],'Atari_2600_Bestof_ZachMorris':['RetroArch Atari - 2600 (Stella)','RetroArch Atari - 2600 (Stella 2014)'],'Atari_2600_ZachMorris':['RetroArch Atari - 2600 (Stella)','RetroArch Atari - 2600 (Stella 2014)'],'Atari_5200_ZachMorris':['RetroArch Atari - 5200 (Atari800)'],'Atari_7800_ZachMorris':['RetroArch Atari - 7800 (ProSystem)'],'Atari_800_ZachMorris':['RetroArch Atari - 5200 (Atari800)'],'Atari_Jaguar_ZachMorris':['RetroArch Atari - Jaguar (Virtual Jaguar)'],'Atari_Lynx_ZachMorris':['RetroArch Atari - Lynx (Beetle Lynx)','RetroArch Atari - Lynx (Handy)'],'Atari_ST_ZachMorris':['RetroArch Atari - ST/STE/TT/Falcon (Hatari)'],'Atomiswave_ZachMorris':['RetroArch Sega - Dreamcast/NAOMI (Flycast)'],'C64_ZachMorris':['RetroArch Commodore - C64 (VICE x64, fast)','RetroArch Commodore - C64 (Frodo)'],'CDI_ZachMorris':['RetroArch Arcade (MAME - Current)','RetroArch Multi (MESS 2015)'],'CannonBall_ZachMorris':['RetroArch Cannonball'],'Cavestory_Lefty420':['RetroArch Cave Story (NXEngine)'],'Colecovision_ZachMorris':['RetroArch MSX/SVI/ColecoVision/SG-1000 (blueMSX)','RetroArch Sega - MS/GG (SMS Plus GX)'],'Dinothawr_Lefty420':['RetroArch Dinothawr'],'Doom_Lefty420':['RetroArch Doom (PrBoom)'],'EasyRPG_ZachMorris':['RetroArch RPG Maker 2000/2003 (EasyRPG)'],'FBN_ZachMorris':['RetroArch Arcade (FinalBurn Neo)'],'GBA_Bestof_ZachMorris':['RetroArch Nintendo - Game Boy Advance (mGBA)','RetroArch Nintendo - Game Boy Advance (Beetle GBA)'],'GBA_Hacks_ZachMorris':['RetroArch Nintendo - Game Boy Advance (mGBA)','RetroArch Nintendo - Game Boy Advance (Beetle GBA)'],'GBA_Translations_ZachMorris':['RetroArch Nintendo - Game Boy Advance (mGBA)','RetroArch Nintendo - Game Boy Advance (Beetle GBA)'],'GBA_ZachMorris':['RetroArch Nintendo - Game Boy Advance (mGBA)','RetroArch Nintendo - Game Boy Advance (Beetle GBA)'],'GBC_Bestof_ZachMorris':['RetroArch Nintendo - Game Boy / Color (Gambatte)','RetroArch Nintendo - Game Boy / Color (fixGB)'],'GBC_ZachMorris':['RetroArch Nintendo - Game Boy / Color (Gambatte)','RetroArch Nintendo - Game Boy / Color (fixGB)'],'GB_Classic_Bestof_ZachMorris':['RetroArch Nintendo - Game Boy / Color (Gambatte)','RetroArch Nintendo - Game Boy / Color (fixGB)'],'GB_Classic_ZachMorris':['RetroArch Nintendo - Game Boy / Color (Gambatte)','RetroArch Nintendo - Game Boy / Color (fixGB)'],'GameCube_Bestof_ZachMorris':['RetroArch Nintendo - GameCube / Wii (Dolphin)'],'GameCube_ZachMorris':['RetroArch Nintendo - GameCube / Wii (Dolphin)'],'Game_Gear_Bestof_ZachMorris':['RetroArch Sega - MS/GG/MD/CD (Genesis Plus GX)','RetroArch Sega - MS/GG/SG-1000 (Gearsystem)'],'Game_Gear_ZachMorris':['RetroArch Sega - MS/GG/MD/CD (Genesis Plus GX)','RetroArch Sega - MS/GG/SG-1000 (Gearsystem)'],'Game_and_Watch_ZachMorris':['RetroArch Handheld Electronic (GW)'],'Genesis_Bestof_ZachMorris':['RetroArch Sega - MS/GG/MD/CD (Genesis Plus GX)','RetroArch Sega - MS/MD/CD/32X (PicoDrive)'],'Genesis_Hacks_ZachMorris':['RetroArch Sega - MS/GG/MD/CD (Genesis Plus GX)','RetroArch Sega - MS/MD/CD/32X (PicoDrive)'],'Genesis_Translations_ZachMorris':['RetroArch Sega - MS/GG/MD/CD (Genesis Plus GX)','RetroArch Sega - MS/MD/CD/32X (PicoDrive)'],'Genesis_ZachMorris':['RetroArch Sega - MS/GG/MD/CD (Genesis Plus GX)','RetroArch Sega - MS/MD/CD/32X (PicoDrive)'],'Intellivision_ZachMorris':['RetroArch Mattel - Intellivision (FreeIntv)'],'Karaoke_ZachMorris':['RetroArch PocketCDG'],'Lutro_ZachMorris':['RetroArch Lua Engine (Lutro)'],'MAME_2003_Bestof_ZachMorris':['RetroArch Arcade (MAME 2003-Plus)','RetroArch Arcade (MAME 2003)'],'MAME_2003_Plus_ZachMorris':['RetroArch Arcade (MAME 2003-Plus)','RetroArch Arcade (MAME 2003)'],'MAME_2003_ZachMorris':['RetroArch Arcade (MAME 2003-Plus)','RetroArch Arcade (MAME 2003)'],'MAME_Bestof_ZachMorris':['RetroArch Arcade (MAME - Current)','RetroArch Arcade (MAME 2015)'],'MAME_ZachMorris':['RetroArch Arcade (MAME - Current)','RetroArch Arcade (MAME 2015)'],'MSDOS_ZachMorris':['RetroArch DOS (DOSBox)','RetroArch DOS (DOSBox-core)'],'MSX1_ZachMorris':['RetroArch MSX/SVI/ColecoVision/SG-1000 (blueMSX)','RetroArch Microsoft - MSX (fMSX)'],'MSX2_ZachMorris':['RetroArch MSX/SVI/ColecoVision/SG-1000 (blueMSX)','RetroArch Microsoft - MSX (fMSX)'],'Magnavox_O2_ZachMorris':['RetroArch Magnavox - Odyssey2 / Phillips Videopac+ (O2EM)'],'Master_System_Bestof_ZachMorris':['RetroArch Sega - MS/GG/MD/CD (Genesis Plus GX)','RetroArch Sega - MS/GG/SG-1000 (Gearsystem)'],'Master_System_ZachMorris':['RetroArch Sega - MS/GG/MD/CD (Genesis Plus GX)','RetroArch Sega - MS/GG/SG-1000 (Gearsystem)'],'N64_Bestof_ZachMorris':['RetroArch Nintendo - Nintendo 64 (Mupen64Plus-Next)','RetroArch Nintendo - Nintendo 64 (ParaLLEl N64)'],'N64_ZachMorris':['RetroArch Nintendo - Nintendo 64 (Mupen64Plus-Next)','RetroArch Nintendo - Nintendo 64 (ParaLLEl N64)'],'NDS_ZachMorris':['RetroArch Nintendo - DS (DeSmuME)','RetroArch Nintendo - DS (melonDS)'],'NES_Bestof_ZachMorris':['RetroArch Nintendo - NES / Famicom (bnes)','RetroArch Nintendo - NES / Famicom (FCEUmm)'],'NES_Hacks_ZachMorris':['RetroArch Nintendo - NES / Famicom (bnes)','RetroArch Nintendo - NES / Famicom (FCEUmm)'],'NES_Translations_ZachMorris':['RetroArch Nintendo - NES / Famicom (bnes)','RetroArch Nintendo - NES / Famicom (FCEUmm)'],'NES_ZachMorris':['RetroArch Nintendo - NES / Famicom (bnes)','RetroArch Nintendo - NES / Famicom (FCEUmm)'],'NGPC_ZachMorris':['RetroArch SNK - Neo Geo Pocket / Color (Beetle NeoPop)','RetroArch SNK - Neo Geo Pocket / Color (RACE)'],'Naomi1_ZachMorris':['RetroArch Sega - Dreamcast/NAOMI (Flycast)'],'Neo_Geo_CD_ZachMorris':['RetroArch Arcade (FinalBurn Neo)','RetroArch SNK - Neo Geo CD (NeoCD)'],'OpenLara_ZachMorris':['RetroArch Tomb Raider (OpenLara)'],'PCE_CD_ZachMorris':['RetroArch NEC - PC Engine / SuperGrafx / CD (Beetle PCE)','RetroArch NEC - PC Engine / CD (Beetle PCE FAST)'],'PCE_SuperGrafx_ZachMorris':['RetroArch NEC - PC Engine / SuperGrafx / CD (Beetle PCE)','RetroArch NEC - PC Engine SuperGrafx (Beetle SuperGrafx)'],'PS1_Bestof_ZachMorris':['RetroArch Sony - PlayStation (Beetle PSX HW)','RetroArch Sony - PlayStation (Beetle PSX)'],'PS1_ZachMorris':['RetroArch Sony - PlayStation (Beetle PSX HW)','RetroArch Sony - PlayStation (Beetle PSX)'],'PSP_ZachMorris':['RetroArch Sony - PlayStation Portable (PPSSPP)'],'Pokemon_Mini_ZachMorris':['RetroArch Nintendo - Pokemon Mini (PokeMini)'],'PowderToy_ZachMorris':['RetroArch The Powder Toy'],'Quake_Lefty420':['RetroArch Quake (TyrQuake)'],'REminiscence_ZachMorris':['RetroArch Flashback (REminiscence)'],'RickDangerous_ZachMorris':['RetroArch Rick Dangerous (XRick)'],'SCUMMVM_Bestof_ZachMorris':['RetroArch ScummVM'],'SCUMMVM_ZachMorris':['RetroArch ScummVM'],'SNES_Bestof_ZachMorris':['RetroArch Nintendo - SNES / SFC (bsnes)','RetroArch Nintendo - SNES / SFC (Snes9x - Current)'],'SNES_Hacks_ZachMorris':['RetroArch Nintendo - SNES / SFC (bsnes)','RetroArch Nintendo - SNES / SFC (Snes9x - Current)'],'SNES_Translations_ZachMorris':['RetroArch Nintendo - SNES / SFC (bsnes)','RetroArch Nintendo - SNES / SFC (Snes9x - Current)'],'SNES_ZachMorris':['RetroArch Nintendo - SNES / SFC (bsnes)','RetroArch Nintendo - SNES / SFC (Snes9x - Current)'],'Satellaview_ZachMorris':['RetroArch Nintendo - SNES / SFC (bsnes)','RetroArch Nintendo - SNES / SFC (Snes9x - Current)'],'Sega_CD_ZachMorris':['RetroArch Sega - MS/GG/MD/CD (Genesis Plus GX)','RetroArch Sega - MS/MD/CD/32X (PicoDrive)'],'Sega_Dreamcast_ZachMorris':['RetroArch Sega - Dreamcast/NAOMI (Flycast)'],'Sega_SG1000_ZachMorris':['RetroArch Sega - MS/GG/MD/CD (Genesis Plus GX)','RetroArch Sega - MS/GG (SMS Plus GX)'],'Sega_Saturn_ZachMorris':['RetroArch Sega - Saturn (Beetle Saturn)','RetroArch Sega - Saturn (Yabause)'],'TG16_Bestof_ZachMorris':['RetroArch NEC - PC Engine / SuperGrafx / CD (Beetle PCE)','RetroArch NEC - PC Engine / CD (Beetle PCE FAST)'],'TG16_ZachMorris':['RetroArch NEC - PC Engine / SuperGrafx / CD (Beetle PCE)','RetroArch NEC - PC Engine / CD (Beetle PCE FAST)'],'TIC80_ZachMorris':['RetroArch TIC-80'],'Vectrex_ZachMorris':['RetroArch GCE - Vectrex (vecx)'],'VirtualBoy_ZachMorris':['RetroArch Nintendo - Virtual Boy (Beetle VB)'],'Wii_Bestof_ZachMorris':['RetroArch Nintendo - GameCube / Wii (Dolphin)'],'Wii_ZachMorris':['RetroArch Nintendo - GameCube / Wii (Dolphin)'],'Win31_ZachMorris':['RetroArch DOS (DOSBox)','RetroArch DOS (DOSBox-core)'],'Wolfenstein_ZachMorris':['RetroArch Wolfenstein 3D (ECWolf)'],'Wonderswan_Color_ZachMorris':['RetroArch Bandai - WonderSwan/Color (Beetle Cygne)'],'Wonderswan_ZachMorris':['RetroArch Bandai - WonderSwan/Color (Beetle Cygne)'],'ZX_Spectrum_ZachMorris':['RetroArch Sinclair - ZX Spectrum (Fuse)'],'eXoDOS_ZachMorris':['RetroArch DOS (DOSBox)','RetroArch DOS (DOSBox-core)']}
+RP_DEFAULTS = {'32X_ZachMorris':['game.libretro.picodrive'],'3DO_ZachMorris':['game.libretro.opera'],'Amiga_Bestof':['game.libretro.uae','game.libretro.uae4arm'],'Amiga_CD32_ZachMorris':['game.libretro.uae','game.libretro.uae4arm'],'Amiga_ZachMorris':['game.libretro.uae','game.libretro.uae4arm'],'Amstrad_CPC_ZachMorris':['game.libretro.cap32','game.libretro.crocods'],'Atari_2600_Bestof_ZachMorris':['game.libretro.stella'],'Atari_2600_ZachMorris':['game.libretro.stella'],'Atari_5200_ZachMorris':['game.libretro.atari800'],'Atari_7800_ZachMorris':['game.libretro.prosystem'],'Atari_800_ZachMorris':['game.libretro.atari800'],'Atari_Jaguar_ZachMorris':['game.libretro.virtualjaguar'],'Atari_Lynx_ZachMorris':['game.libretro.beetle-lynx','game.libretro.handy'],'Atari_ST_ZachMorris':['game.libretro.hatari'],'Atomiswave_ZachMorris':['game.libretro.flycast'],'C64_ZachMorris':['game.libretro.vice','game.libretro.frodo'],'CDI_ZachMorris':['game.libretro.mame'],'CannonBall_ZachMorris':['game.libretro.cannonball'],'Cavestory_Lefty420':['game.libretro.nx'],'Colecovision_ZachMorris':['game.libretro.bluemsx','game.libretro.smsplus-gx'],'Dinothawr_Lefty420':['game.libretro.dinothawr'],'Doom_Lefty420':['game.libretro.prboom'],'EasyRPG_ZachMorris':['game.libretro.easyrpg'],'FBN_ZachMorris':['game.libretro.fbneo','game.libretro.fbalpha2012'],'GBA_Bestof_ZachMorris':['game.libretro.mgba','game.libretro.beetle-gba'],'GBA_Hacks_ZachMorris':['game.libretro.mgba','game.libretro.beetle-gba'],'GBA_Translations_ZachMorris':['game.libretro.mgba','game.libretro.beetle-gba'],'GBA_ZachMorris':['game.libretro.mgba','game.libretro.beetle-gba'],'GBC_Bestof_ZachMorris':['game.libretro.gambatte','game.libretro.tgbdual'],'GBC_ZachMorris':['game.libretro.gambatte','game.libretro.tgbdual'],'GB_Classic_Bestof_ZachMorris':['game.libretro.gambatte','game.libretro.tgbdual'],'GB_Classic_ZachMorris':['game.libretro.gambatte','game.libretro.tgbdual'],'GameCube_Bestof_ZachMorris':['game.libretro.dolphin'],'GameCube_ZachMorris':['game.libretro.dolphin'],'Game_Gear_Bestof_ZachMorris':['game.libretro.genplus','game.libretro.smsplus-gx'],'Game_Gear_ZachMorris':['game.libretro.genplus','game.libretro.smsplus-gx'],'Game_and_Watch_ZachMorris':['game.libretro.gw'],'Genesis_Bestof_ZachMorris':['game.libretro.genplus','game.libretro.picodrive'],'Genesis_Hacks_ZachMorris':['game.libretro.genplus','game.libretro.picodrive'],'Genesis_Translations_ZachMorris':['game.libretro.genplus','game.libretro.picodrive'],'Genesis_ZachMorris':['game.libretro.genplus','game.libretro.picodrive'],'Intellivision_ZachMorris':['game.libretro.freeintv'],'Karaoke_ZachMorris':['game.libretro.pocketcdg'],'Lutro_ZachMorris':['game.libretro.lutro'],'MAME_2003_Bestof_ZachMorris':['game.libretro.mame2003_plus','game.libretro.mame2003'],'MAME_2003_Plus_ZachMorris':['game.libretro.mame2003_plus','game.libretro.mame2003'],'MAME_2003_ZachMorris':['game.libretro.mame2003_plus','game.libretro.mame2003'],'MAME_Bestof_ZachMorris':['game.libretro.mame','game.libretro.mame2015'],'MAME_ZachMorris':['game.libretro.mame','game.libretro.mame2015'],'MSDOS_ZachMorris':['game.libretro.dosbox','game.libretro.dosbox-pure'],'MSX1_ZachMorris':['game.libretro.bluemsx','game.libretro.fmsx'],'MSX2_ZachMorris':['game.libretro.bluemsx','game.libretro.fmsx'],'Magnavox_O2_ZachMorris':['game.libretro.o2em'],'Master_System_Bestof_ZachMorris':['game.libretro.genplus','game.libretro.smsplus-gx'],'Master_System_ZachMorris':['game.libretro.genplus','game.libretro.smsplus-gx'],'N64_Bestof_ZachMorris':['game.libretro.parallel_n64','game.libretro.mupen64plus-nx'],'N64_ZachMorris':['game.libretro.parallel_n64','game.libretro.mupen64plus-nx'],'NDS_ZachMorris':['game.libretro.desmume','game.libretro.melonds'],'NES_Bestof_ZachMorris':['game.libretro.bnes','game.libretro.fceumm'],'NES_Hacks_ZachMorris':['game.libretro.bnes','game.libretro.fceumm'],'NES_Translations_ZachMorris':['game.libretro.bnes','game.libretro.fceumm'],'NES_ZachMorris':['game.libretro.bnes','game.libretro.fceumm'],'NGPC_ZachMorris':['game.libretro.beetle-ngp','game.libretro.race'],'Naomi1_ZachMorris':['game.libretro.flycast'],'Neo_Geo_CD_ZachMorris':['game.libretro.fbneo'],'OpenLara_ZachMorris':['game.libretro.openlara'],'PCE_CD_ZachMorris':['game.libretro.beetle-pce-fast'],'PCE_SuperGrafx_ZachMorris':['game.libretro.beetle-pce-fast'],'PS1_Bestof_ZachMorris':['game.libretro.beetle-psx','game.libretro.pcsx-rearmed'],'PS1_ZachMorris':['game.libretro.beetle-psx','game.libretro.pcsx-rearmed'],'PSP_ZachMorris':['game.libretro.ppsspp'],'Pokemon_Mini_ZachMorris':['game.libretro.pokemini'],'PowderToy_ZachMorris':['game.libretro.thepowdertoy'],'Quake_Lefty420':['game.libretro.tyrquake'],'REminiscence_ZachMorris':['game.libretro.reminiscence'],'RickDangerous_ZachMorris':[],'SCUMMVM_Bestof_ZachMorris':['game.libretro.scummvm'],'SCUMMVM_ZachMorris':['game.libretro.scummvm'],'SNES_Bestof_ZachMorris':['game.libretro.snes9x','game.libretro.bsnes-mercury-balanced'],'SNES_Hacks_ZachMorris':['game.libretro.snes9x','game.libretro.bsnes-mercury-balanced'],'SNES_Translations_ZachMorris':['game.libretro.snes9x','game.libretro.bsnes-mercury-balanced'],'SNES_ZachMorris':['game.libretro.snes9x','game.libretro.bsnes-mercury-balanced'],'Satellaview_ZachMorris':['game.libretro.snes9x','game.libretro.bsnes-mercury-balanced'],'Sega_CD_ZachMorris':['game.libretro.genplus','game.libretro.picodrive'],'Sega_Dreamcast_ZachMorris':['game.libretro.flycast'],'Sega_SG1000_ZachMorris':['game.libretro.genplus','game.libretro.smsplus-gx'],'Sega_Saturn_ZachMorris':['game.libretro.beetle-saturn','game.libretro.yabause'],'TG16_Bestof_ZachMorris':['game.libretro.beetle-pce-fast'],'TG16_ZachMorris':['game.libretro.beetle-pce-fast'],'TIC80_ZachMorris':[],'Vectrex_ZachMorris':['game.libretro.vecx'],'VirtualBoy_ZachMorris':['game.libretro.beetle-vb'],'Wii_Bestof_ZachMorris':['game.libretro.dolphin'],'Wii_ZachMorris':['game.libretro.dolphin'],'Win31_ZachMorris':['game.libretro.dosbox','game.libretro.dosbox-pure'],'Wolfenstein_ZachMorris':['game.libretro.ecwolf'],'Wonderswan_Color_ZachMorris':['game.libretro.beetle-wswan'],'Wonderswan_ZachMorris':['game.libretro.beetle-wswan'],'ZX_Spectrum_ZachMorris':['game.libretro.fuse'],'eXoDOS_ZachMorris':['game.libretro.dosbox','game.libretro.dosbox-pure']}
+
+clear_mem_cache('iagl_script_started') #For testing
+if not get_mem_cache('iagl_script_started'):
+	set_mem_cache('iagl_script_started','true')
+	xbmc.log(msg='IAGL:  Wizard script started', level=xbmc.LOGDEBUG)
+	wizard_settings = dict()
+	current_dialog = xbmcgui.Dialog()
+	xbmc.playSFX(START_SOUND,False)
+	ok_ret = current_dialog.ok(loc_str(30005),loc_str(30382))
+	if not (iagl_addon_wizard.handle.getSetting(id='iagl_setting_enable_login')=='0' and iagl_addon_wizard.handle.getSetting(id='iagl_setting_ia_username') and iagl_addon_wizard.handle.getSetting(id='iagl_setting_ia_password') and re.match(EMAIL_RE,iagl_addon_wizard.handle.getSetting(id='iagl_setting_ia_username'))):
+		wizard_settings['enter_credentials'] = current_dialog.select(loc_str(30383),[loc_str(30200),loc_str(30204)])
+		if wizard_settings.get('enter_credentials')==0:
+			xbmc.playSFX(POS_SOUND,False)
+			if iagl_addon_wizard.handle.getSetting(id='iagl_setting_ia_username'):
+				wizard_settings['archive_org_email'] = current_dialog.input(heading=loc_str(30023),defaultt=iagl_addon_wizard.handle.getSetting(id='iagl_setting_ia_username'))
+			else:
+				wizard_settings['archive_org_email'] = current_dialog.input(heading=loc_str(30023))
+			if wizard_settings.get('archive_org_email') and re.match(EMAIL_RE,wizard_settings.get('archive_org_email')):
+				wizard_settings['archive_org_password'] = current_dialog.input(heading=loc_str(30024),option=xbmcgui.ALPHANUM_HIDE_INPUT)
+			else:
+				xbmc.playSFX(NEG_SOUND,False)
+				ok_ret = current_dialog.ok(loc_str(30005),loc_str(30384))
+				if iagl_addon_wizard.handle.getSetting(id='iagl_setting_ia_username'):
+					wizard_settings['archive_org_email'] = current_dialog.input(heading=loc_str(30023),defaultt=iagl_addon_wizard.handle.getSetting(id='iagl_setting_ia_username'))
+				else:
+					wizard_settings['archive_org_email'] = current_dialog.input(heading=loc_str(30023))
+				if iagl_addon_wizard.handle.getSetting(id='iagl_setting_ia_password'):
+					wizard_settings['archive_org_password'] = current_dialog.input(heading=loc_str(30024),defaultt=iagl_addon_wizard.handle.getSetting(id='iagl_setting_ia_password'),option=xbmcgui.ALPHANUM_HIDE_INPUT)
+				else:
+					wizard_settings['archive_org_password'] = current_dialog.input(heading=loc_str(30024),option=xbmcgui.ALPHANUM_HIDE_INPUT)
+		if wizard_settings.get('archive_org_email') and wizard_settings.get('archive_org_password') and re.match(EMAIL_RE,wizard_settings.get('archive_org_email')): 
+			xbmc.log(msg='IAGL:  Wizard enabled login', level=xbmc.LOGDEBUG)
+			iagl_addon_wizard.handle.setSetting(id='iagl_setting_enable_login',value='0')
+			iagl_addon_wizard.handle.setSetting(id='iagl_setting_ia_username',value=wizard_settings.get('archive_org_email'))
+			iagl_addon_wizard.handle.setSetting(id='iagl_setting_ia_password',value=wizard_settings.get('archive_org_password'))
+		else:
+			xbmc.log(msg='IAGL:  Wizard did not enable login', level=xbmc.LOGDEBUG)
+			xbmc.playSFX(NEG_SOUND,False)
+			iagl_addon_wizard.handle.setSetting(id='iagl_setting_enable_login',value='1')
+			ok_ret = current_dialog.ok(loc_str(30005),loc_str(30385))
+	else:
+		xbmc.log(msg='IAGL:  Wizard found existing login settings', level=xbmc.LOGDEBUG)
+	if iagl_addon_wizard.handle.getSetting(id='iagl_wizard_launcher')=='0': #External
+		xbmc.log(msg='IAGL:  Wizard script running for external launching', level=xbmc.LOGDEBUG)
+		options = [loc_str(30116),loc_str(30117),loc_str(30118),loc_str(30123),loc_str(30514),loc_str(30582)]
+		if iagl_addon_wizard.handle.getSetting(id='iagl_external_user_external_env')=='0':
+			loop = True
+			while loop:
+				wizard_settings['ext_env'] = current_dialog.select(loc_str(30025),options)
+				if wizard_settings.get('ext_env') != -1:
+					xbmc.log(msg='IAGL:  Wizard external environment set to %(env)s'%{'env':options[wizard_settings.get('ext_env')]}, level=xbmc.LOGDEBUG)
+					iagl_addon_wizard.handle.setSetting(id='iagl_external_user_external_env',value=str(wizard_settings.get('ext_env')+1))
+					loop = False
+					break
+				else:
+					if current_dialog.yesno(loc_str(30386),loc_str(30386)):
+						loop = False
+		else:
+			xbmc.log(msg='IAGL:  External environment already set to %(env)s'%{'env':options[int(iagl_addon_wizard.handle.getSetting(id='iagl_external_user_external_env'))-1]}, level=xbmc.LOGDEBUG)
+		if iagl_addon_wizard.handle.getSetting(id='iagl_external_user_external_env')!='0' and int(iagl_addon_wizard.handle.getSetting(id='iagl_external_user_external_env')) in [1,2,3] and not iagl_addon_wizard.handle.getSetting(id='iagl_external_path_to_retroarch'):
+			start_path = ''
+			POSSIBLE_RA_LOCATIONS = [os.path.join('/Applications','RetroArch.app','Contents','MacOS','RetroArch'),os.path.join('usr','bin','retroarch'),os.path.join('usr','local','bin','retroarch'),os.path.join(os.path.expanduser('~'),'bin','retroarch'),os.path.join(os.path.expanduser('~'),'ra','usr','local','bin','retroarch'),os.path.join('var','lib','flatpak','app','org.libretro.RetroArch','current','active','files','bin','retroarch'),os.path.join('C:','Program Files (x86)','Retroarch','retroarch.exe'),os.path.join('C:','Program Files','Retroarch','retroarch.exe'),os.path.join('home','kodi','bin','retroarch'),os.path.join('opt','retropie','emulators','retroarch','bin','retroarch'),os.path.join('opt','retroarch','bin','retroarch')]
+			try:
+				POSSIBLE_RA_LOCATIONS = [shutil.which('retroarch')]+POSSIBLE_RA_LOCATIONS
+			except:
+				xbmc.log(msg='IAGL:  shutil which failed', level=xbmc.LOGDEBUG)
+			if any([os.path.exists(x) for x in POSSIBLE_RA_LOCATIONS if x]):
+				start_path = [x for x in POSSIBLE_RA_LOCATIONS if x and os.path.exists(x)][0]
+			loop = True
+			while loop:
+				wizard_settings['ra_app_location'] = current_dialog.browse(type=1,heading=loc_str(30028),shares='',defaultt=start_path)
+				if wizard_settings.get('ra_app_location') and os.path.exists(str(wizard_settings.get('ra_app_location'))):
+					xbmc.log(msg='IAGL:  Wizard RA app location set to %(value)s'%{'value':wizard_settings.get('ra_app_location')}, level=xbmc.LOGDEBUG)
+					iagl_addon_wizard.handle.setSetting(id='iagl_external_path_to_retroarch',value=str(wizard_settings.get('ra_app_location')))
+					loop = False
+					break
+				else:
+					if current_dialog.yesno(loc_str(30386),loc_str(30386)):
+						loop = False
+		elif iagl_addon_wizard.handle.getSetting(id='iagl_external_user_external_env')!='0' and int(iagl_addon_wizard.handle.getSetting(id='iagl_external_user_external_env')) in [1,2,3] and iagl_addon_wizard.handle.getSetting(id='iagl_external_path_to_retroarch'):
+			xbmc.log(msg='IAGL:  Retroarch app location already set to %(value)s'%{'value':iagl_addon_wizard.handle.getSetting(id='iagl_external_path_to_retroarch')}, level=xbmc.LOGDEBUG)
+		if iagl_addon_wizard.handle.getSetting(id='iagl_external_user_external_env')!='0' and int(iagl_addon_wizard.handle.getSetting(id='iagl_external_user_external_env')) in [1,2,3,4,5,6] and not iagl_addon_wizard.handle.getSetting(id='iagl_external_path_to_retroarch_cfg'):
+			start_path = ''
+			POSSIBLE_CFG_LOCATIONS = [os.path.join(os.path.expanduser('~'),'Library','Application Support','RetroArch','config','retroarch.cfg'),os.path.join('C:','Program Files (x86)','Retroarch','retroarch.cfg'),os.path.join('C:','Program Files','Retroarch','retroarch.cfg'),os.path.join(os.path.expanduser('~'),'.config','retroarch','retroarch.cfg'),os.path.join(os.path.expanduser('~'),'AppData','Roaming','RetroArch','retroarch.cfg'),os.path.join(os.path.expanduser('~'),'.var','app','org.libretro.RetroArch','config','retroarch','retroarch.cfg'),os.path.join('opt','retropie','configs','all','retroarch.cfg'),os.path.join('mnt','internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch','files','retroarch.cfg'),os.path.join('data','data','com.retroarch','retroarch.cfg'),os.path.join('data','data','com.retroarch','files','retroarch.cfg'),os.path.join('mnt','internal_sd','Android','data','com.retroarch.aarch64','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch.aarch64','files','retroarch.cfg'),os.path.join('data','user','0','com.retroarch.aarch64','retroarch.cfg'),os.path.join('data','user','0','com.retroarch.aarch64','files','retroarch.cfg'),os.path.join('mnt','internal_sd','Android','data','com.retroarch.ra32','files','retroarch.cfg'),os.path.join('sdcard','Android','data','com.retroarch.ra32','files','retroarch.cfg'),os.path.join('data','data','com.retroarch.ra32','retroarch.cfg'),os.path.join('data','data','com.retroarch.ra32','files','retroarch.cfg')]
+			if any([os.path.exists(x) for x in POSSIBLE_CFG_LOCATIONS if x]):
+				start_path = [x for x in POSSIBLE_CFG_LOCATIONS if x and os.path.exists(x)][0]
+			loop = True
+			while loop:
+				wizard_settings['ra_cfg_location'] = current_dialog.browse(type=1,heading=loc_str(30030),shares='',defaultt=start_path)
+				if wizard_settings.get('ra_cfg_location') and os.path.exists(str(wizard_settings.get('ra_cfg_location'))):
+					xbmc.log(msg='IAGL:  Wizard RA CFG location set to %(value)s'%{'value':wizard_settings.get('ra_cfg_location')}, level=xbmc.LOGDEBUG)
+					iagl_addon_wizard.handle.setSetting(id='iagl_external_path_to_retroarch_cfg',value=str(wizard_settings.get('ra_cfg_location')))
+					loop = False
+					break
+				else:
+					if current_dialog.yesno(loc_str(30386),loc_str(30386)):
+						loop = False
+		elif iagl_addon_wizard.handle.getSetting(id='iagl_external_user_external_env')!='0' and int(iagl_addon_wizard.handle.getSetting(id='iagl_external_user_external_env')) in [1,2,3,4,5,6] and iagl_addon_wizard.handle.getSetting(id='iagl_external_path_to_retroarch_cfg'):
+			xbmc.log(msg='IAGL:  Retroarch CFG location already set to %(value)s'%{'value':iagl_addon_wizard.handle.getSetting(id='iagl_external_path_to_retroarch_cfg')}, level=xbmc.LOGDEBUG)
+		if current_dialog.yesno(loc_str(30005),loc_str(30387)):
+			wizard_settings['game_list'] = dict()
+			iagl_addon_wizard = iagl_addon() #Reload settings based on wizard entries
+			ext_commands = iagl_addon_wizard.get_ext_launch_cmds()
+			if ext_commands:
+				current_bg_dialog = xbmcgui.DialogProgressBG()
+				current_bg_dialog.create(loc_str(30377),loc_str(30379))
+				for ii,hh in enumerate(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header')):
+					if hh and hh.get('emu_visibility') and hh.get('emu_visibility') != 'hidden':
+						current_fn = iagl_addon_wizard.directory.get('userdata').get('dat_files').get('files')[ii]
+						game_list_id = current_fn.name.replace(current_fn.suffix,'')
+						wizard_settings['game_list'][game_list_id] = dict()
+						wizard_settings['game_list'][game_list_id]['success'] = False
+						wizard_settings['game_list'][game_list_id]['command'] = None
+						wizard_settings['game_list'][game_list_id]['command_name'] = None
+						current_bg_dialog.update(int(100*(ii+1)/(len(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header'))+.001)),loc_str(30377),loc_str(30379))
+						if EXT_DEFAULTS.get(game_list_id) and any([any([x.get('@name')==y for y in EXT_DEFAULTS.get(game_list_id)]) for x in ext_commands if x and x.get('@name')]):
+							current_command = [x.get('command') for x in ext_commands if x and x.get('command') and x.get('@name') and any([x.get('@name')==y for y in EXT_DEFAULTS.get(game_list_id)])][0]
+							current_command_name = [x.get('@name') for x in ext_commands if x and x.get('command') and x.get('@name') and any([x.get('@name')==y for y in EXT_DEFAULTS.get(game_list_id)])][0]
+							if iagl_addon_wizard.game_lists.update_game_list_header(game_list_id,header_key='emu_launcher',header_value='external',confirm_update=False):
+								xbmc.log(msg='IAGL:  Wizard update launcher for game list %(value)s to External'%{'value':game_list_id}, level=xbmc.LOGDEBUG)
+								if iagl_addon_wizard.game_lists.update_game_list_header(game_list_id,header_key='emu_ext_launch_cmd',header_value=current_command,confirm_update=False):
+									xbmc.log(msg='IAGL:  Wizard update launch command for game list %(value)s to %(ext_command)s'%{'value':game_list_id,'ext_command':current_command}, level=xbmc.LOGDEBUG)
+									wizard_settings['game_list'][game_list_id]['success'] = True
+									wizard_settings['game_list'][game_list_id]['command'] = current_command
+									wizard_settings['game_list'][game_list_id]['command_name'] = current_command_name
+						else:
+							xbmc.log(msg='IAGL:  Wizard did not find a default external launch command for %(value)s'%{'value':game_list_id}, level=xbmc.LOGERROR)
+				current_bg_dialog.close()
+				check_and_close_notification(notification_id=loc_str(30377))
+				del current_bg_dialog
+			else:
+				ok_ret = current_dialog.ok(loc_str(30005),loc_str(30388))
+	else: #Retroplayer
+		xbmc.log(msg='IAGL:  Wizard script running for Retroplayer launching', level=xbmc.LOGDEBUG)
+		yesno_ret = current_dialog.yesnocustom(loc_str(30005),loc_str(30390),loc_str(30389))
+		if yesno_ret in [1,2]:
+			wizard_settings['game_list'] = dict()
+			iagl_addon_wizard = iagl_addon() #Reload settings based on wizard entries
+		if yesno_ret == 1:
+			addons_available = None
+			try:
+				json_query = json.loads(xbmc.executeJSONRPC('{ "jsonrpc": "2.0", "method": "Addons.GetAddons","params":{"type":"kodi.gameclient"}, "id": "1"}'))
+			except Exception as exc:
+				xbmc.log(msg='IAGL:  Error executing JSONRPC command.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
+				json_query = None
+			if json_query and json_query.get('result') and json_query.get('result').get('addons'):
+				addons_available = sorted([x.get('addonid') for x in json_query.get('result').get('addons') if x.get('addonid')!='game.libretro'])
+			current_bg_dialog = xbmcgui.DialogProgressBG()
+			current_bg_dialog.create(loc_str(30377),loc_str(30379))
+			for ii,hh in enumerate(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header')):
+				if hh and hh.get('emu_visibility') and hh.get('emu_visibility') != 'hidden':
+					current_fn = iagl_addon_wizard.directory.get('userdata').get('dat_files').get('files')[ii]
+					game_list_id = current_fn.name.replace(current_fn.suffix,'')
+					wizard_settings['game_list'][game_list_id] = dict()
+					wizard_settings['game_list'][game_list_id]['success'] = False
+					wizard_settings['game_list'][game_list_id]['command'] = None
+					wizard_settings['game_list'][game_list_id]['command_name'] = None
+					current_bg_dialog.update(int(100*(ii+1)/(len(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header'))+.001)),loc_str(30377),loc_str(30379))
+					if RP_DEFAULTS.get(game_list_id):
+						if not any([y in addons_available for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y]):
+							xbmc.log(msg='IAGL:  Wizard did not find a default addon available for %(value)s, attempting to install.'%{'value':game_list_id}, level=xbmc.LOGERROR)
+							for aa in RP_DEFAULTS.get(game_list_id):
+								xbmc.executebuiltin('InstallAddon(%(value)s)'%{'value':aa})
+								wait = True
+								while wait:
+									if not (xbmc.getCondVisibility('Window.IsActive(%(notification_id)s)'%{'notification_id':'yesnodialog'}) or xbmc.getCondVisibility('Window.IsActive(%(notification_id)s)'%{'notification_id':'progressdialog'})):
+										xbmc.sleep(1000)
+										if not (xbmc.getCondVisibility('Window.IsActive(%(notification_id)s)'%{'notification_id':'yesnodialog'}) or xbmc.getCondVisibility('Window.IsActive(%(notification_id)s)'%{'notification_id':'progressdialog'})):
+											wait = False
+											break
+									xbmc.sleep(3000)
+						if any([y in addons_available for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y]):
+							current_command = [y for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y in addons_available][0]
+							if iagl_addon_wizard.game_lists.update_game_list_header(game_list_id,header_key='emu_launcher',header_value='retroplayer',confirm_update=False):
+								xbmc.log(msg='IAGL:  Wizard update launcher for game list %(value)s to Retroplayer'%{'value':game_list_id}, level=xbmc.LOGDEBUG)
+								if iagl_addon_wizard.game_lists.update_game_list_header(game_list_id,header_key='emu_default_addon',header_value=current_command,confirm_update=False):
+									xbmc.log(msg='IAGL:  Wizard update default addon for game list %(value)s to %(ext_command)s'%{'value':game_list_id,'ext_command':current_command}, level=xbmc.LOGDEBUG)
+									wizard_settings['game_list'][game_list_id]['success'] = True
+									wizard_settings['game_list'][game_list_id]['command'] = current_command
+									wizard_settings['game_list'][game_list_id]['command_name'] = xbmcaddon.Addon(id=current_command).getAddonInfo('name')
+						else:
+							xbmc.log(msg='IAGL:  Wizard could not install a default addon for %(value)s'%{'value':game_list_id}, level=xbmc.LOGERROR)
+					else:
+						xbmc.log(msg='IAGL:  Wizard did not find a default addon for %(value)s'%{'value':game_list_id}, level=xbmc.LOGERROR)
+			current_bg_dialog.close()
+			check_and_close_notification(notification_id=loc_str(30377))
+			del current_bg_dialog
+		elif yesno_ret == 2:
+			current_bg_dialog = xbmcgui.DialogProgressBG()
+			current_bg_dialog.create(loc_str(30377),loc_str(30379))
+			for ii,hh in enumerate(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header')):
+				if hh and hh.get('emu_visibility') and hh.get('emu_visibility') != 'hidden':
+					current_fn = iagl_addon_wizard.directory.get('userdata').get('dat_files').get('files')[ii]
+					game_list_id = current_fn.name.replace(current_fn.suffix,'')
+					wizard_settings['game_list'][game_list_id] = dict()
+					wizard_settings['game_list'][game_list_id]['success'] = False
+					wizard_settings['game_list'][game_list_id]['command'] = None
+					wizard_settings['game_list'][game_list_id]['command_name'] = None
+					current_bg_dialog.update(int(100*(ii+1)/(len(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header'))+.001)),loc_str(30377),loc_str(30379))
+					current_command = 'none'
+					if iagl_addon_wizard.game_lists.update_game_list_header(game_list_id,header_key='emu_launcher',header_value='retroplayer',confirm_update=False):
+						xbmc.log(msg='IAGL:  Wizard update launcher for game list %(value)s to Retroplayer'%{'value':game_list_id}, level=xbmc.LOGDEBUG)
+						if iagl_addon_wizard.game_lists.update_game_list_header(game_list_id,header_key='emu_default_addon',header_value=current_command,confirm_update=False):
+							xbmc.log(msg='IAGL:  Wizard update default addon for game list %(value)s to Auto'%{'value':game_list_id}, level=xbmc.LOGDEBUG)
+							wizard_settings['game_list'][game_list_id]['success'] = True
+							wizard_settings['game_list'][game_list_id]['command'] = current_command
+							wizard_settings['game_list'][game_list_id]['command_name'] = loc_str(30338)
+			current_bg_dialog.close()
+			check_and_close_notification(notification_id=loc_str(30377))
+			del current_bg_dialog
+	if iagl_addon_wizard.handle.getSetting(id='iagl_wizard_launcher_report')=='0':
+		xbmc.log(msg='IAGL:  Generating Wizard Report', level=xbmc.LOGDEBUG)
+		report_items = dict()
+		report_items['label'] = list()
+		report_items['art'] = list()
+		report_items['info'] = list()
+		report_items['label'].append('IAGL Wizard Report ([COLOR green]UPDATED[/COLOR], [COLOR red]NOT UPDATED[/COLOR], [COLOR dimgray]HIDDEN[/COLOR])')
+		report_items['art'].append(None)
+		report_items['info'].append(None)
+		if iagl_addon_wizard.handle.getSetting(id='iagl_wizard_launcher')=='0':
+			report_items['label'].append('Settings updated for [B]External Launching[/B]')
+			report_items['art'].append(None)
+			report_items['info'].append(None)
+			launch_type = 'External Launcher'
+		else:
+			report_items['label'].append('Settings updated for [B]Kodi Retroplayer[/B]')
+			report_items['art'].append(None)
+			report_items['info'].append(None)
+			launch_type = 'Game Addon'
+		iagl_addon_wizard.clear_list_cache_folder()
+		clear_mem_cache('iagl_directory')
+		iagl_addon_wizard = iagl_addon() #Reload settings based on wizard entries
+		for ii,hh in enumerate(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header')):
+			if hh:
+				current_fn = iagl_addon_wizard.directory.get('userdata').get('dat_files').get('files')[ii]
+				game_list_id = current_fn.name.replace(current_fn.suffix,'')
+				current_launcher = 'Unknown'
+				if wizard_settings.get('game_list') and wizard_settings.get('game_list').get(game_list_id) and wizard_settings.get('game_list').get(game_list_id).get('command_name'):
+					current_launcher = wizard_settings.get('game_list').get(game_list_id).get('command_name')
+				else:
+					if iagl_addon_wizard.handle.getSetting(id='iagl_wizard_launcher_report')=='0':
+						current_launcher = hh.get('emu_ext_launch_cmd')
+					else:
+						current_launcher = hh.get('emu_default_addon')
+				current_color = 'red'
+				current_status = 'NOT UPDATED'
+				if hh.get('emu_visibility') and hh.get('emu_visibility') == 'hidden':
+					current_color = 'dimgray'
+					current_status = 'HIDDEN'
+				elif wizard_settings.get('game_list') and wizard_settings.get('game_list').get(game_list_id) and wizard_settings.get('game_list').get(game_list_id).get('success'):
+					current_color = 'green'
+					current_status = 'UPDATED'
+				elif wizard_settings.get('game_list') and wizard_settings.get('game_list').get(game_list_id) and wizard_settings.get('game_list').get(game_list_id).get('success')==False:
+					current_color = 'red'
+					current_status = 'NOT UPDATED'
+				report_item = 'Game List: %(current_game_list)s, Status: [COLOR %(current_color)s]%(current_status)s[/COLOR], %(launch_type)s: %(current_launcher)s'%{'current_color':current_color,'current_status':current_status,'current_game_list':hh.get('emu_name'),'launch_type':launch_type,'current_launcher':current_launcher}
+				report_items['label'].append(report_item)
+				report_items['art'].append({'poster':choose_image(hh.get('emu_thumb')),'banner':choose_image(hh.get('emu_banner')),'fanart':choose_image(hh.get('emu_fanart')),'clearlogo':choose_image(hh.get('emu_logo')),'icon':choose_image(hh.get('emu_logo')),'thumb':choose_image(hh.get('emu_thumb'))})
+				current_emu_postdlaction = get_post_dl_commands().get(hh.get('emu_postdlaction'))
+				if not current_emu_postdlaction:
+					current_emu_postdlaction = hh.get('emu_postdlaction')
+				launch_command_string = ''
+				download_path_string = loc_str(30361)
+				current_header = loc_str(30362)%{'game_list_id':game_list_id}
+				if hh.get('emu_launcher') == 'external':
+					if hh.get('emu_ext_launch_cmd') == 'none':
+						launch_command_string = '[COLOR FF12A0C7]%(elc)s:  [/COLOR]Not Set!'%{'elc':loc_str(30363)}
+					else:
+						launch_command_string = '[COLOR FF12A0C7]%(elc)s:  [/COLOR]%(lc)s'%{'elc':loc_str(30363),'lc':hh.get('emu_ext_launch_cmd')}
+				if hh.get('emu_launcher') == 'retroplayer':
+					print('ztest')
+					print(game_list_id)
+					print(hh)
+					if hh.get('emu_default_addon') == 'none':
+						launch_command_string = '[COLOR FF12A0C7]%(rp)s:  [/COLOR]%(auto)s'%{'rp':loc_str(30364),'auto':loc_str(30338)}
+					else:
+						launch_command_string = '[COLOR FF12A0C7]%(rp)s:  [/COLOR]%(lc)s'%{'rp':loc_str(30364),'lc':hh.get('emu_default_addon')}
+				if hh.get('emu_downloadpath') != 'default':
+					download_path_string = hh.get('emu_downloadpath_resolved')
+				current_text = '[B]%(md)s[/B][CR][COLOR FF12A0C7]%(gln)s:  [/COLOR]%(emu_name)s[CR][COLOR FF12A0C7]%(cat)s:  [/COLOR]%(emu_category)s[CR][COLOR FF12A0C7]%(platform_string)s:  [/COLOR]%(emu_description)s[CR][COLOR FF12A0C7]%(author_string)s:  [/COLOR]%(emu_author)s[CR][CR][B]%(dp)s[/B][CR][COLOR FF12A0C7]%(source)s:  [/COLOR]%(download_source)s[CR][COLOR FF12A0C7]%(dl)s:  [/COLOR]%(download_path_string)s[CR][COLOR FF12A0C7]%(pdlc)s:  [/COLOR]%(emu_postdlaction)s[CR][CR][B]%(lp)s[/B][CR][COLOR FF12A0C7]%(lw)s:  [/COLOR]%(emu_launcher)s[CR]%(launch_command_string)s'%{'emu_name':hh.get('emu_name'),'emu_category':hh.get('emu_category'),'emu_description':hh.get('emu_description'),'emu_author':hh.get('emu_author'),'download_source':hh.get('download_source'),'emu_postdlaction':current_emu_postdlaction,'emu_launcher':{'retroplayer':loc_str(30128),'external':loc_str(30003)}.get(hh.get('emu_launcher')),'launch_command_string':launch_command_string,'download_path_string':download_path_string,'platform_string':loc_str(30416),'author_string':loc_str(30419),'gln':loc_str(30365),'cat':loc_str(30415),'dp':loc_str(30366),'source':loc_str(30368),'dl':loc_str(30367),'pdlc':loc_str(30369),'lp':loc_str(30370),'lw':loc_str(30371),'md':loc_str(30372)}
+				report_items['info'].append({'plot':current_text})
+		set_mem_cache('iagl_wizard_results',report_items)
+		xbmc.executebuiltin('ActivateWindow(10025,"plugin://plugin.program.iagl/wizard_report")')
+	else:
+		xbmc.log(msg='IAGL:  Wizard Report Skipped', level=xbmc.LOGDEBUG)
+	clear_mem_cache('iagl_script_started')
+	xbmc.log(msg='IAGL:  Wizard script completed', level=xbmc.LOGDEBUG)
+else:
+	xbmc.log(msg='IAGL:  Script already running', level=xbmc.LOGDEBUG)
+del iagl_addon_wizard, loc_str, get_mem_cache, set_mem_cache, clear_mem_cache, check_and_close_notification, choose_image, get_post_dl_commands

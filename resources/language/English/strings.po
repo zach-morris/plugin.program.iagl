@@ -121,8 +121,8 @@ msgid "archive.org Password"
 msgstr "archive.org Password"
 
 msgctxt "#30025"
-msgid "My System Type"
-msgstr "My System Type"
+msgid "System Type"
+msgstr "System Type"
 
 msgctxt "#30026"
 msgid "Close Kodi on Launch"
@@ -1108,6 +1108,14 @@ msgctxt "#30587"
 msgid "Check login credentials"
 msgstr "Check login credentials"
 
+msgctxt "#30588"
+msgid "Display the wizard results in a list report after completed."
+msgstr "Display the wizard results in a list report after completed."
+
+msgctxt "#30589"
+msgid "Display Wizard Report"
+msgstr "Display Wizard Report"
+
 #
 #General
 #
@@ -1535,6 +1543,42 @@ msgstr "Waiting for game to exit...
 msgctxt "#30381"
 msgid "All game lists set to visible"
 msgstr "All game lists set to visible"
+
+msgctxt "#30382"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Welcome to the IAGL Setup Wizard[CR]Lets run you through all the settings to get you playing!"
+
+msgctxt "#30383"
+msgid "Some game lists require an archive.org account[CR]Do you want to enter your account info?"
+msgstr "Some game lists require an archive.org account[CR]Do you want to enter your account info?"
+
+msgctxt "#30384"
+msgid "Your entry does not appear to be a valid email address"
+msgstr "Your entry does not appear to be a valid email address"
+
+msgctxt "#30385"
+msgid "Some game lists may not work without account info."
+msgstr "Some game lists may not work without account info."
+
+msgctxt "#30386"
+msgid "Cancel Wizard?"
+msgstr "Cancel Wizard?"
+
+msgctxt "#30387"
+msgid "Do you want IAGL to pick default emulators for each game list?"
+msgstr "Do you want IAGL to pick default emulators for each game list?"
+
+msgctxt "#30388"
+msgid "Wizard did not set external launch commands[CR]See Kodi Log"
+msgstr "Wizard did not set external launch commands[CR]See Kodi Log"
+
+msgctxt "#30389"
+msgid "Choose on launch (Auto)"
+msgstr "Choose on launch (Auto)"
+
+msgctxt "#30390"
+msgid "Do you want IAGL to pick and install default emulators for each game list?"
+msgstr "Do you want IAGL to pick and install default emulators for each game list?"
 
 #
 #Context Menus

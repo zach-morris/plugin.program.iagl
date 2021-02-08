@@ -523,7 +523,7 @@ def context_menu_select(game_list_id,select_id):
 def context_menu_action(game_list_id,action_id):
 	if action_id == 'view_list_settings':
 		current_game_list = iagl_addon.game_lists.get_game_list(game_list_id)
-		current_emu_postdlaction = dict(zip(['none','unzip_rom','unzip_and_launch_file','unzip_to_folder_and_launch_file','unzip_and_launch_scummvm_file','unzip_and_launch_win31_file'],['None (Direct File Launch)','UnArchive Game','UnArchive Game, Launch File','UnArchive Game to Folder, Launch File','UnArchive Game, Generate SCUMMVM File','UnArchive Game, Generate WIN31 BAT File'])).get(current_game_list.get('emu_postdlaction'))
+		current_emu_postdlaction = get_post_dl_commands().get(current_game_list.get('emu_postdlaction'))
 		if not current_emu_postdlaction:
 			current_emu_postdlaction = current_game_list.get('emu_postdlaction')
 		launch_command_string = ''
@@ -570,6 +570,12 @@ def iagl_text_viewer():
 	IAGL_text_Dialog = iagl_dialog_text_viewer('IAGL-textviewer.xml',iagl_addon.directory.get('addon').get('path'),'Default','1080i')
 	IAGL_text_Dialog.doModal()
 	del IAGL_text_Dialog
+
+@plugin.route('/wizard_report')
+def iagl_wizard_report():
+	xbmcplugin.addDirectoryItems(plugin.handle,[('',x,True) for x in iagl_addon.game_lists.get_wizard_report_as_listitems() if x])
+	xbmcplugin.endOfDirectory(plugin.handle)
+	clear_mem_cache('iagl_wizard_results')
 
 if __name__ == '__main__':
 	plugin.run(sys.argv)

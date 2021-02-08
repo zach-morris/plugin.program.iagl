@@ -22,7 +22,7 @@ class iagl_addon(object):
 		self.kodi_user = dict()
 		#Add this if it ever is merged https://github.com/xbmc/xbmc/pull/17265
 		self.kodi_user['os'] = xbmc.getInfoLabel('System.OSVersionInfo')
-		self.kodi_user['verion'] = xbmc.getInfoLabel('System.BuildVersion')
+		self.kodi_user['version'] = xbmc.getInfoLabel('System.BuildVersion')
 		self.kodi_user['username'] = xbmc.getInfoLabel('System.ProfileName')
 		#Network information for netplay
 		self.kodi_user['IP'] = xbmc.getInfoLabel('Network.IPAddress').replace('\n','')
@@ -417,6 +417,12 @@ class iagl_addon(object):
 		def list_game_choose_lists(self):
 			return list(self.choose_routes.route.keys())
 
+		def get_wizard_report_as_listitems(self):
+			if get_mem_cache('iagl_wizard_results'):
+				return map_wizard_report_listitem_dict(get_mem_cache('iagl_wizard_results'))
+			else:
+				return []
+
 	def get_sort_methods(self,route_in):
 		if route_in == 'Browse All Lists':
 			return [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_SIZE]
@@ -580,7 +586,7 @@ class iagl_addon(object):
 
 	def clear_all_mem_cache(self):
 		xbmc.log(msg='IAGL:  Clearing all Memory Cache values', level=xbmc.LOGDEBUG)
-		return all([clear_mem_cache(x) for x in ['iagl_current_games_list','iagl_current_games_stats_list','iagl_current_games','iagl_current_games_stats','iagl_current_game_id','iagl_current_game_list_id','iagl_current_game','iagl_directory','TextViewer_Header','TextViewer_Text','iagl_archive_org_login']])
+		return all([clear_mem_cache(x) for x in ['iagl_current_games_list','iagl_current_games_stats_list','iagl_current_games','iagl_current_games_stats','iagl_current_game_id','iagl_current_game_list_id','iagl_current_game','iagl_directory','TextViewer_Header','TextViewer_Text','iagl_archive_org_login','iagl_wizard_results']])
 
 #TOU Dialog, only shown on first run and prior to agreeing to TOU
 class iagl_dialog_TOU(xbmcgui.WindowXMLDialog):

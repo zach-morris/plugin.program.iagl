@@ -255,6 +255,21 @@
 						<hidden>true</hidden>
 					</control>
 				</setting>
+				<setting help="30549" id="iagl_run_check_login" label="30587" type="action">
+					<level>0</level>
+					<data>RunScript(special://home/addons/plugin.program.iagl/check_archive_org_login.py)</data>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="iagl_setting_enable_login">0</condition>
+						</dependency>
+					</dependencies>
+					<control format="action" type="button">
+						<close>true</close>
+					</control>
+				</setting>
 			</group>
 		</category>
 		<category help="30523" id="external_launchers" label="30003">
@@ -1479,6 +1494,24 @@
 						<heading>30045</heading>
 					</control>
 				</setting>
+				<setting help="30588" id="iagl_wizard_launcher_report" label="30589" type="integer">
+					<level>0</level>
+					<default>1</default>
+					<constraints>
+						<options>
+							<option label="30200">0</option>
+							<option label="30204">1</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition name="InfoBool" on="property">true</condition>
+						</dependency>
+					</dependencies>
+					<control format="string" type="list">
+						<heading>30045</heading>
+					</control>
+				</setting>
 			</group>
 			<group id="8">
 				<setting help="30565" id="iagl_run_script_wizard" label="30046" type="action">
@@ -1554,7 +1587,7 @@
 						<heading>30193</heading>
 					</control>
 				</setting>
-				<setting help="30569" id="iagl_android_command_type" label="30131" type="integer">
+				<!-- <setting help="30569" id="iagl_android_command_type" label="30131" type="integer">
 					<level>3</level>
 					<default>0</default>
 					<constraints>
@@ -1572,7 +1605,7 @@
 					<control format="string" type="list">
 						<heading>30131</heading>
 					</control>
-				</setting>
+				</setting> -->
 				<setting help="30570" id="iagl_enable_android_stop_command" label="30049" type="integer">
 					<level>3</level>
 					<default>0</default>
