@@ -10,7 +10,7 @@ import routing, sys, json, re
 from random import sample as random_sample
 from resources.lib.main import iagl_addon
 from resources.lib import paginate
-from resources.lib.utils import clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, check_if_file_exists, check_if_dir_exists, clean_image_entry, clean_trailer_entry, loc_str, check_and_close_notification, get_history_listitem, update_listitem_title, zachs_debug
+from resources.lib.utils import clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, check_if_file_exists, check_if_dir_exists, clean_image_entry, clean_trailer_entry, loc_str, check_and_close_notification, get_history_listitem, update_listitem_title, get_post_dl_commands, zachs_debug
 
 ## Plugin Initialization Stuff ##
 SLEEP_HACK=50  #https://github.com/xbmc/xbmc/issues/18576
@@ -579,4 +579,4 @@ def iagl_wizard_report():
 
 if __name__ == '__main__':
 	plugin.run(sys.argv)
-	del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_file_exists, check_if_dir_exists, check_and_close_notification, get_history_listitem, update_listitem_title, zachs_debug #Delete all locally imported stuff to avoid memory leaks
+	del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_file_exists, check_if_dir_exists, check_and_close_notification, get_history_listitem, update_listitem_title, get_post_dl_commands, zachs_debug #Delete all locally imported stuff to avoid memory leaks

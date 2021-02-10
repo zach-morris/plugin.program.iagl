@@ -210,7 +210,7 @@ class iagl_launch(object):
 								current_output.append(current_line.decode('utf-8').replace('\n','').replace('\r',''))
 							else:
 								break
-					if launch_process.poll() is None:
+					if launch_process.poll() is None or (current_output and any(['starting: intent' in x.lower() for x in current_output]) and not any(['error: activity' in x.lower() for x in current_output])):
 						self.launch_status['launch_process_success'] = True
 						self.launch_status['launch_process_message'] = 'Sent launch command for %(game)s'%{'game':self.game.get('info').get('originaltitle')}
 						self.launch_status['launch_process'] = launch_process
