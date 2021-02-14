@@ -54,7 +54,7 @@ Supplementary databases released with IAGL, in [this folder](https://github.com/
 Media files in the skin folder are licensed under the Creative Commons Attribution-ShareAlike 4.0 Unported License
 You can find the license details [here](http://creativecommons.org/licenses/by-sa/4.0/)
 Some artwork in this folder is attributed to [Estuary by phil65 (Team Kodi)](https://github.com/phil65/skin.estuary)
-
+Some audio files in this folder were provided by [freesound.org](https://freesound.org/help/about/) and are licensed under the Creative Commons license
 
 
 IAGL in Action
