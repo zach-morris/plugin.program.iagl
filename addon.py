@@ -24,6 +24,13 @@ xbmcplugin.setContent(plugin.handle,iagl_addon.settings.get('views').get('conten
 ## Plugin Routes ##
 @plugin.route('/')
 def index_route():
+	if iagl_addon.settings.get('run_wizard'):
+		if xbmcgui.Dialog().yesno(loc_str(30005),loc_str(30046)+'?'):
+			xbmc.log(msg='IAGL:  Wizard was selected to be run on first launch', level=xbmc.LOGDEBUG)
+			xbmc.executebuiltin('RunScript(special://home/addons/plugin.program.iagl/run_IAGL_wizard.py)')
+		else:
+			xbmc.log(msg='IAGL:  Wizard was selected to not be run on first launch', level=xbmc.LOGDEBUG)
+			xbmcaddon.Addon(id=iagl_addon.name).setSetting(id='iagl_run_wizard',value='false')
 	if iagl_addon.settings.get('tou'):
 		plugin.redirect(iagl_addon.settings.get('index_list').get('route'))
 	else:

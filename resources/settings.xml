@@ -1476,7 +1476,17 @@
 		</category> -->
 		<category help="30526" id="setup wizard" label="30005">
 			<group id="7" label="30044">
-				<setting help="30564" id="iagl_wizard_launcher" label="30045" type="integer">
+				<setting help="" id="iagl_run_wizard" label="Run Wizard Flag" type="boolean">
+					<level>4</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition name="InfoBool" on="property">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<!-- <setting help="30564" id="iagl_wizard_launcher" label="30045" type="integer">
 					<level>0</level>
 					<default>1</default>
 					<constraints>
@@ -1493,7 +1503,7 @@
 					<control format="string" type="list">
 						<heading>30045</heading>
 					</control>
-				</setting>
+				</setting> -->
 				<setting help="30588" id="iagl_wizard_launcher_report" label="30589" type="integer">
 					<level>0</level>
 					<default>1</default>

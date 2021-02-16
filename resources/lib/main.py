@@ -34,6 +34,7 @@ class iagl_addon(object):
 		#Resolved Settings
 		self.settings = dict()
 		self.settings['tou'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_hidden_bool_tou'))
+		self.settings['run_wizard'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_run_wizard'))
 		self.settings['index_list'] = dict()
 		self.settings['index_list']['route'] = get_setting_as(setting_type='index_list_route',setting=self.handle.getSetting(id='iagl_setting_archive_listings'))
 		self.settings['game_list'] = dict()
