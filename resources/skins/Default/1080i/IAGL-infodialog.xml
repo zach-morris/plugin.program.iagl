@@ -246,7 +246,7 @@ https://github.com/phil65/skin.estuary
 						<texturefocus />
 						<texturenofocus />
 						<onclick>noop</onclick>
-						<label>[COLOR FF12A0C7]Platform: [/COLOR]$INFO[Container(113).ListItem.Property(platform_description)]</label>
+						<label>[COLOR FF12A0C7]$ADDON[plugin.program.iagl 30416]: [/COLOR]$INFO[Container(113).ListItem.Property(platform_description)]</label>
 						<visible>!String.IsEmpty(Container(113).ListItem.Property(platform_description))</visible>
 					</control>
 					<control type="button" id="151">
@@ -260,7 +260,7 @@ https://github.com/phil65/skin.estuary
 						<texturefocus />
 						<texturenofocus />
 						<onclick>noop</onclick>
-						<label>[COLOR FF12A0C7]Categories: [/COLOR]$INFO[Container(113).ListItem.Property(platform_category)]</label>
+						<label>[COLOR FF12A0C7]$ADDON[plugin.program.iagl 30415]: [/COLOR]$INFO[Container(113).ListItem.Property(platform_category)]</label>
 						<visible>!String.IsEmpty(Container(113).ListItem.Property(platform_category))</visible>
 					</control>
 					<control type="button" id="152">
@@ -274,7 +274,7 @@ https://github.com/phil65/skin.estuary
 						<texturefocus />
 						<texturenofocus />
 						<onclick>noop</onclick>
-						<label>[COLOR FF12A0C7]Date: [/COLOR]$INFO[Container(113).ListItem.Date]</label>
+						<label>[COLOR FF12A0C7]$ADDON[plugin.program.iagl 30420]: [/COLOR]$INFO[Container(113).ListItem.Date]</label>
 						<visible>!String.IsEmpty(Container(113).ListItem.Date)</visible>
 					</control>
 					<control type="button" id="153">
@@ -288,7 +288,7 @@ https://github.com/phil65/skin.estuary
 						<texturefocus />
 						<texturenofocus />
 						<onclick>noop</onclick>
-						<label>[COLOR FF12A0C7]Genre: [/COLOR]$INFO[Container(113).ListItem.Genre]</label>
+						<label>[COLOR FF12A0C7]$ADDON[plugin.program.iagl 30426]: [/COLOR]$INFO[Container(113).ListItem.Genre]</label>
 						<visible>!String.IsEmpty(Container(113).ListItem.Genre)</visible>
 					</control>
 					<control type="button" id="154">
@@ -302,7 +302,7 @@ https://github.com/phil65/skin.estuary
 						<texturefocus />
 						<texturenofocus />
 						<onclick>noop</onclick>
-						<label>[COLOR FF12A0C7]Studio: [/COLOR]$INFO[Container(113).ListItem.Studio]</label>
+						<label>[COLOR FF12A0C7]$ADDON[plugin.program.iagl 30427]: [/COLOR]$INFO[Container(113).ListItem.Studio]</label>
 						<visible>!String.IsEmpty(Container(113).ListItem.Studio)</visible>
 					</control>
 					<control type="button" id="155">
@@ -316,7 +316,7 @@ https://github.com/phil65/skin.estuary
 						<texturefocus />
 						<texturenofocus />
 						<onclick>noop</onclick>
-						<label>[COLOR FF12A0C7]Rating: [/COLOR]$INFO[Container(113).ListItem.RatingAndVotes]</label>
+						<label>[COLOR FF12A0C7]$ADDON[plugin.program.iagl 30428]: [/COLOR]$INFO[Container(113).ListItem.RatingAndVotes]</label>
 						<visible>!String.IsEmpty(Container(113).ListItem.RatingAndVotes)</visible>
 					</control>
 					<control type="button" id="156">
@@ -330,7 +330,7 @@ https://github.com/phil65/skin.estuary
 						<texturefocus />
 						<texturenofocus />
 						<onclick>noop</onclick>
-						<label>[COLOR FF12A0C7]Players: [/COLOR]$INFO[Container(113).ListItem.Property(nplayers)]</label>
+						<label>[COLOR FF12A0C7]$ADDON[plugin.program.iagl 30429]: [/COLOR]$INFO[Container(113).ListItem.Property(nplayers)]</label>
 						<visible>!String.IsEmpty(Container(113).ListItem.Property(nplayers))</visible>
 					</control>
 					<control type="button" id="157">
@@ -344,7 +344,7 @@ https://github.com/phil65/skin.estuary
 						<texturefocus />
 						<texturenofocus />
 						<onclick>noop</onclick>
-						<label>[COLOR FF12A0C7]Perspective: [/COLOR]$INFO[Container(113).ListItem.Property(perspective)]</label>
+						<label>[COLOR FF12A0C7]$ADDON[plugin.program.iagl 30430]: [/COLOR]$INFO[Container(113).ListItem.Property(perspective)]</label>
 						<visible>!String.IsEmpty(Container(113).ListItem.Property(perspective))</visible>
 					</control>
 					<control type="button" id="158">
@@ -358,7 +358,7 @@ https://github.com/phil65/skin.estuary
 						<texturefocus />
 						<texturenofocus />
 						<onclick>noop</onclick>
-						<label>[COLOR FF12A0C7]ESRB: [/COLOR]$INFO[Container(113).ListItem.Mpaa]</label>
+						<label>[COLOR FF12A0C7]$ADDON[plugin.program.iagl 30431]: [/COLOR]$INFO[Container(113).ListItem.Mpaa]</label>
 						<visible>!String.IsEmpty(Container(113).ListItem.Mpaa)</visible>
 					</control>
 					<control type="button" id="159">
@@ -372,7 +372,7 @@ https://github.com/phil65/skin.estuary
 						<texturefocus />
 						<texturenofocus />
 						<onclick>noop</onclick>
-						<label>[COLOR FF12A0C7]Tag: [/COLOR]$INFO[Container(113).ListItem.Property(tag)]</label>
+						<label>[COLOR FF12A0C7]$ADDON[plugin.program.iagl 30432]: [/COLOR]$INFO[Container(113).ListItem.Property(tag)]</label>
 						<visible>!String.IsEmpty(Container(113).ListItem.Property(tag))</visible>
 					</control>
 					<control type="button" id="160">
@@ -386,7 +386,7 @@ https://github.com/phil65/skin.estuary
 						<texturefocus />
 						<texturenofocus />
 						<onclick>noop</onclick>
-						<label>[COLOR FF12A0C7]Size: [/COLOR]$INFO[Container(113).ListItem.Size]</label>
+						<label>[COLOR FF12A0C7]$ADDON[plugin.program.iagl 30433]: [/COLOR]$INFO[Container(113).ListItem.Size]</label>
 						<visible>!String.IsEmpty(Container(113).ListItem.Size)</visible>
 					</control>
 				</control>
@@ -553,7 +553,7 @@ https://github.com/phil65/skin.estuary
 						<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/launch.png</textureradiooffnofocus>
 						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/launch.png</textureradiooffdisabled>
 						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/launch.png</textureradioondisabled>
-						<label>Launch</label>
+						<label>$ADDON[plugin.program.iagl 30434]</label>
 						<visible>True</visible>
 						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
 					</control>
@@ -578,7 +578,7 @@ https://github.com/phil65/skin.estuary
 						<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradiooffnofocus>
 						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradiooffdisabled>
 						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradioondisabled>
-						<label>Trailer</label>
+						<label>$ADDON[plugin.program.iagl 30435]</label>
 						<onclick>SetProperty(iagl_trailer_started,True,HOME)</onclick>
 						<onclick>PlayMedia($INFO[Container(113).ListItem.Trailer],False,1)</onclick>
 						<visible>!String.IsEmpty(Container(113).ListItem.Trailer)+String.IsEqual(Window(HOME).Property(iagl_trailer_started),False)</visible>
@@ -605,7 +605,7 @@ https://github.com/phil65/skin.estuary
 						<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/stop.png</textureradiooffnofocus>
 						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/stop.png</textureradiooffdisabled>
 						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/stop.png</textureradioondisabled>
-						<label>Stop</label>
+						<label>$ADDON[plugin.program.iagl 30436]</label>
 						<onclick>PlayerControl(Stop)</onclick>
 						<onclick>PlayMedia($INFO[Container(113).ListItem.Trailer],False,1)</onclick>
 						<visible>SetProperty(iagl_trailer_started,False,HOME)</visible>
@@ -632,7 +632,7 @@ https://github.com/phil65/skin.estuary
 						<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/download.png</textureradiooffnofocus>
 						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/download.png</textureradiooffdisabled>
 						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/download.png</textureradioondisabled>
-						<label>Download</label>
+						<label>$ADDON[plugin.program.iagl 30437]</label>
 						<visible>True</visible>
 						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
 					</control>
@@ -657,7 +657,7 @@ https://github.com/phil65/skin.estuary
 						<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradiooffnofocus>
 						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradiooffdisabled>
 						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioondisabled>
-						<label>Close</label>
+						<label>$ADDON[plugin.program.iagl 30438]</label>
 						<visible>True</visible>
 						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
 					</control>
