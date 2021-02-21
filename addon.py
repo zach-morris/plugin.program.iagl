@@ -501,6 +501,7 @@ def context_menu_select(game_list_id,select_id):
 				ok_ret = current_dialog.ok(loc_str(30203),loc_str(30373))
 	elif select_id == 'emu_ext_launch_cmd':
 		current_choices = iagl_addon.get_ext_launch_cmds() #Generate list of commands to use based on RA and other EXT launch settings
+		current_choices=sorted([x for x in current_choices if x.get('@name').lower().startswith('retro')],key=lambda x: x.get('@name'))+sorted([x for x in current_choices if not x.get('@name').lower().startswith('retro')],key=lambda x: x.get('@name')) #Sort commands by name
 		if current_choices:
 			new_value = current_dialog.select(loc_str(30363),[x.get('@name') for x in current_choices]+[loc_str(30583)])
 			if new_value in [ii for ii,x in enumerate(current_choices)]:
