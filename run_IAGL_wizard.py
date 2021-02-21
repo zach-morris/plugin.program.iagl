@@ -141,8 +141,8 @@ if not get_mem_cache('iagl_script_started'):
 						wizard_settings['game_list'][game_list_id]['command_name'] = None
 						current_bg_dialog.update(int(100*(ii+1)/(len(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header'))+.001)),loc_str(30377),loc_str(30379))
 						if EXT_DEFAULTS.get(game_list_id) and any([any([x.get('@name')==y for y in EXT_DEFAULTS.get(game_list_id)]) for x in ext_commands if x and x.get('@name')]):
-							current_command = [x.get('command') for x in ext_commands if x and x.get('command') and x.get('@name') and any([x.get('@name')==y for y in EXT_DEFAULTS.get(game_list_id)])][0]
-							current_command_name = [x.get('@name') for x in ext_commands if x and x.get('command') and x.get('@name') and any([x.get('@name')==y for y in EXT_DEFAULTS.get(game_list_id)])][0]
+							current_command_name = next(iter([x for x in EXT_DEFAULTS.get(game_list_id) if x in [y.get('@name') for y in ext_commands] if x]),'none')
+							current_command = next(iter([x.get('command') for x in ext_commands if x and x.get('@name') == current_command_name]),'none')
 							if iagl_addon_wizard.game_lists.update_game_list_header(game_list_id,header_key='emu_launcher',header_value='external',confirm_update=False):
 								xbmc.log(msg='IAGL:  Wizard update launcher for game list %(value)s to External'%{'value':game_list_id}, level=xbmc.LOGDEBUG)
 								if iagl_addon_wizard.game_lists.update_game_list_header(game_list_id,header_key='emu_ext_launch_cmd',header_value=current_command,confirm_update=False):
@@ -153,7 +153,8 @@ if not get_mem_cache('iagl_script_started'):
 						else:
 							xbmc.log(msg='IAGL:  Wizard did not find a default external launch command for %(value)s'%{'value':game_list_id}, level=xbmc.LOGERROR)
 				current_bg_dialog.close()
-				check_and_close_notification(notification_id=loc_str(30377))
+				xbmc.executebuiltin('Dialog.Close(extendedprogressdialog,true)')
+				check_and_close_notification(notification_id='extendedprogressdialog')
 				del current_bg_dialog
 			else:
 				ok_ret = current_dialog.ok(loc_str(30005),loc_str(30388))
@@ -198,7 +199,7 @@ if not get_mem_cache('iagl_script_started'):
 											break
 									xbmc.sleep(3000)
 						if any([y in addons_available for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y]):
-							current_command = [y for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y in addons_available][0]
+							current_command = next(iter([y for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y in addons_available]),'none')
 							if iagl_addon_wizard.game_lists.update_game_list_header(game_list_id,header_key='emu_launcher',header_value='retroplayer',confirm_update=False):
 								xbmc.log(msg='IAGL:  Wizard update launcher for game list %(value)s to Retroplayer'%{'value':game_list_id}, level=xbmc.LOGDEBUG)
 								if iagl_addon_wizard.game_lists.update_game_list_header(game_list_id,header_key='emu_default_addon',header_value=current_command,confirm_update=False):
@@ -211,7 +212,8 @@ if not get_mem_cache('iagl_script_started'):
 					else:
 						xbmc.log(msg='IAGL:  Wizard did not find a default addon for %(value)s'%{'value':game_list_id}, level=xbmc.LOGERROR)
 			current_bg_dialog.close()
-			check_and_close_notification(notification_id=loc_str(30377))
+			xbmc.executebuiltin('Dialog.Close(extendedprogressdialog,true)')
+			check_and_close_notification(notification_id='extendedprogressdialog')
 			del current_bg_dialog
 		elif yesno_ret == 2:
 			current_bg_dialog = xbmcgui.DialogProgressBG()
