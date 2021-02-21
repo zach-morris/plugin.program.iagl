@@ -4,7 +4,7 @@
 		<emu_name>Atari ST</emu_name>
 		<emu_description>Atari</emu_description>
 		<emu_category>Atari, 1980s, PC, 16 Bit</emu_category>
-		<emu_version>032419</emu_version>
+		<emu_version>022121</emu_version>
 		<emu_date>04/23/2012</emu_date>
 		<emu_author>Zach Morris</emu_author>
 		<emu_visibility>visible</emu_visibility>
@@ -14,7 +14,7 @@
 		<emu_default_addon>none</emu_default_addon>
 		<emu_ext_launch_cmd>none</emu_ext_launch_cmd>
 		<emu_downloadpath>default</emu_downloadpath>
-		<emu_postdlaction>unarchive_game_generate_m3u_st</emu_postdlaction>
+		<emu_postdlaction>none</emu_postdlaction>
 		<emu_comment>Atari ST list.  This is a filtered list, attempting to capture playable games from the TOSEC archive.[CR].The Atari ST is a line of home computers from Atari Corporation and the successor to the Atari 8-bit family. The ST enjoyed success in gaming due to low cost, fast performance and colorful graphics.[CR]An early real-time 3D role-playing video game, Dungeon Master, was first developed and released on the ST, and was the best-selling software ever produced for the platform. Simulation games like Falcon and Flight Simulator II made use of the enhanced graphics found in the ST machines, as did many arcade ports. One game, MIDI Maze, uses the MIDI ports to connect up to 16 machines for interactive networked play. Games simultaneously released on the Amiga that had identical graphics and sound were often accused by video game magazines of simply being ST ports. The critically acclaimed game Another World was originally released for ST and Amiga in 1991 with the Polygonal engine developed on the ST and the rotoscoped animations created on the Amiga (the two games are very similar on both systems).[CR]Developer:  Atari Corporation[CR]Manufacturer:  Atari Corporation[CR]CPU:  Motorola 680x0 @ 8 MHz and higher[CR]Memory:  512 Kibibytes to 4 Mebibytes[CR]Media:  Floppy</emu_comment>
 		<emu_thumb>0n2XKYN.jpg</emu_thumb>
 		<emu_banner>PGKZkkB.jpg</emu_banner>
