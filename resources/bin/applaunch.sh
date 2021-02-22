@@ -40,7 +40,7 @@ then
 	KODI_BIN_LINUX="kodi"
 fi
 
-#Sleep to let Kodi write to log
+#Sleep to let Kodi write to log and whatnot prior to shutdown
 sleep 1
 
 #Start OSX Exit
@@ -142,7 +142,7 @@ fi
 
 
 #Start Linux X11
-if ! [ -z $KODI_PID_LINUX_X11 ]
+if ! [ -z $KODI_PID_LINUX_X11 ] && [ -z $KODI_EXIT ]
 then
 	echo "Linux X11 Detected"
 	echo "Attempting to exit Kodi via JSONRPC"
@@ -188,7 +188,7 @@ fi
 #End Linux X11
 
 #Start Linux X11
-if ! [ -z $KODI_PID_LINUX ]
+if ! [ -z $KODI_PID_LINUX ] && [ -z $KODI_EXIT ]
 then
 	echo "Linux Detected"
 	echo "Attempting to exit Kodi via JSONRPC"
@@ -236,10 +236,13 @@ fi
 # Start Emulator Launch
 if ! [ -z $KODI_EXIT ]
 then
-	if ps -p $KODI_PID_DARWIN_HELPER > /dev/null
+	if ! [ -z $KODI_PID_DARWIN_HELPER ]
 	then
-		echo "Stopping XBMCHelper for OSX"
-		kill -s SIGKILL $KODI_PID_DARWIN_HELPER
+		if ps -p $KODI_PID_DARWIN_HELPER > /dev/null
+		then
+			echo "Stopping XBMCHelper for OSX"
+			kill -s SIGKILL $KODI_PID_DARWIN_HELPER
+		fi
 	fi
 	echo "Kodi Exited, Launching Emulator with command: $@"
 	# Launch app - escaped!
