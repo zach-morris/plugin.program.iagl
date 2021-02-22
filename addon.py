@@ -353,9 +353,9 @@ def download_and_launch_game(game_list_id,game_id):
 			if all([x.get('download_success') for x in downloaded_files]) and all([x.get('post_process_success') for x in post_processed_files]) and launched_files.get('launch_process_success'):
 				current_dialog.notification(loc_str(30202),launched_files.get('launch_process_message'),xbmcgui.NOTIFICATION_INFO,iagl_addon.settings.get('notifications').get('background_notification_time'),sound=False)
 			elif all([not x.get('download_success') for x in downloaded_files]):
-				current_dialog.notification(loc_str(30203),loc_str(30304) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':[x.get('download_message') for x in downloaded_files if not x.get('download_success')][0]},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
+				current_dialog.notification(loc_str(30203),loc_str(30304) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':next(iter([x.get('download_message') for x in downloaded_files if not x.get('download_success')]),'Unknown')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
 			elif all([not x.get('post_process_success') for x in post_processed_files]):
-				current_dialog.notification(loc_str(30203),loc_str(30304) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':[x.get('post_process_message') for x in post_processed_files if not x.get('post_process_success')][0]},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
+				current_dialog.notification(loc_str(30203),loc_str(30304) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':next(iter([x.get('post_process_message') for x in post_processed_files if not x.get('post_process_success')]),'Unknown')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
 			elif not launched_files.get('launch_process_success'):
 				current_dialog.notification(loc_str(30203),loc_str(30305) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':launched_files.get('launch_process_message')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
 			else:
@@ -386,11 +386,11 @@ def download_only_game(game_list_id,game_id):
 			if all([x.get('download_success') for x in downloaded_files]) and all([x.get('post_process_success') for x in post_processed_files]):
 				current_dialog.notification(loc_str(30202),loc_str(30302) % {'game_title': game.get('info').get('originaltitle')},xbmcgui.NOTIFICATION_INFO,iagl_addon.settings.get('notifications').get('background_notification_time'))
 			elif all([not x.get('download_success') for x in downloaded_files]):
-				current_dialog.notification(loc_str(30203),loc_str(30304) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':[x.get('download_message') for x in downloaded_files if not x.get('download_success')][0]},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
+				current_dialog.notification(loc_str(30203),loc_str(30304) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':next(iter([x.get('download_message') for x in downloaded_files if not x.get('download_success')]),'Unknown')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
 			elif all([not x.get('post_process_success') for x in post_processed_files]):
-				current_dialog.notification(loc_str(30203),loc_str(30304) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':[x.get('post_process_message') for x in post_processed_files if not x.get('post_process_success')][0]},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
+				current_dialog.notification(loc_str(30203),loc_str(30304) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':next(iter([x.get('post_process_message') for x in post_processed_files if not x.get('post_process_success')]),'Unkown')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
 			else:
-				current_dialog.notification(loc_str(30203),loc_str(30303) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':[x.get('download_message') for x in downloaded_files if not x.get('download_success')][0]},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
+				current_dialog.notification(loc_str(30203),loc_str(30303) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':next(iter([x.get('download_message') for x in downloaded_files if not x.get('download_success')]),'Unkown')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
 	else:
 		current_dialog = xbmcgui.Dialog()
 		ok_ret = current_dialog.ok(loc_str(30203),loc_str(30359) % {'game_id': game_id, 'game_list_id': game_list_id})

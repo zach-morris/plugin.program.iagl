@@ -236,7 +236,8 @@ if not get_mem_cache('iagl_script_started'):
 							wizard_settings['game_list'][game_list_id]['command'] = current_command
 							wizard_settings['game_list'][game_list_id]['command_name'] = loc_str(30338)
 			current_bg_dialog.close()
-			check_and_close_notification(notification_id=loc_str(30377))
+			xbmc.executebuiltin('Dialog.Close(extendedprogressdialog,true)')
+			check_and_close_notification(notification_id='extendedprogressdialog')
 			del current_bg_dialog
 	if wizard_settings.get('game_list') and wizard_settings.get('game_list').keys() and all([wizard_settings.get('game_list').get(kk).get('success') for kk in wizard_settings.get('game_list').keys()]):
 		xbmc.playSFX(DONE_SOUND,False)
@@ -247,6 +248,31 @@ if not get_mem_cache('iagl_script_started'):
 	else:
 		xbmc.playSFX(DONE_SOUND2,False)
 		ok_ret = current_dialog.ok(loc_str(30005),loc_str(30592)%{'launch_type':launch_type})
+
+	#Clear list cache and directory cache given updates completed above
+	iagl_addon_wizard.clear_list_cache_folder()
+	clear_mem_cache('iagl_directory')
+
+	if current_dialog.yesno(loc_str(30007),loc_str(30391)):
+		dp = xbmcgui.DialogProgress()
+		iagl_addon_wizard = iagl_addon() #Reload settings based on wizard entries
+		dp.create(loc_str(30377),loc_str(30379))
+		dp.update(0,loc_str(30379))
+		total_files = len(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('files'))
+		continue_processing = True
+		for ii,current_fn in enumerate(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('files')):
+			if continue_processing:
+				game_list_id = current_fn.name.replace(current_fn.suffix,'')
+				percent = int(100.0 * ii / (total_files + .001))
+				current_game_list = iagl_addon_wizard.game_lists.get_game_list(game_list_id)
+				dp.update(percent,loc_str(30392)%{'game_list':current_game_list.get('emu_name')})
+				if dp.iscanceled():
+					continue_processing = False
+					xbmc.log(msg='IAGL:  User cancelled pre-cache processing', level=xbmc.LOGDEBUG)
+					break
+				_ = iagl_addon_wizard.game_lists.get_games_from_cache(game_list_id=current_fn.name.replace(current_fn.suffix,''))
+		dp.close()
+		del dp
 
 	if iagl_addon_wizard.handle.getSetting(id='iagl_wizard_launcher_report')=='0':
 		xbmc.log(msg='IAGL:  Generating Wizard Report', level=xbmc.LOGDEBUG)
@@ -267,8 +293,6 @@ if not get_mem_cache('iagl_script_started'):
 			report_items['art'].append(None)
 			report_items['info'].append(None)
 			launch_type = 'Game Addon'
-		iagl_addon_wizard.clear_list_cache_folder()
-		clear_mem_cache('iagl_directory')
 		iagl_addon_wizard = iagl_addon() #Reload settings based on wizard entries
 		for ii,hh in enumerate(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header')):
 			if hh:
@@ -319,7 +343,7 @@ if not get_mem_cache('iagl_script_started'):
 		set_mem_cache('iagl_wizard_results',report_items)
 		xbmc.executebuiltin('ActivateWindow(10025,"plugin://plugin.program.iagl/wizard_report")')
 	else:
-		xbmc.log(msg='IAGL:  Wizard Report Skipped', level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Wizard Report Skipped', level=xbmc.LOGDEBUG)		
 	clear_mem_cache('iagl_script_started')
 	xbmc.log(msg='IAGL:  Wizard script completed', level=xbmc.LOGDEBUG)
 else:

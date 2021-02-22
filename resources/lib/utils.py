@@ -689,7 +689,7 @@ def map_game_listitem_dict(dict_in,parent_dict_in,default_dict,game_list_id,clea
 					   'clearlogo':choose_image(dict_in.get('clearlogo1')),
 					   'icon':choose_image(dict_in.get('icon'),dict_in.get('clearlogo1')),
 					   'thumb':choose_image(dict_in.get('boxart1'),dict_in.get('snapshot1'),default_dict.get('thumb'))},
-		'properties': {'route' : game_list_id,
+		'properties': {'route' : next(iter([x for x in [dict_in.get('route'),game_list_id] if x]),game_list_id),  #Look for favorite hyperlink first, then default to current game list id
 					   'nplayers':dict_in.get('nplayers'),
 					   'starts_with':starts_with,
 					   'platform_name':parent_dict_in.get('emu_name'),
@@ -703,7 +703,7 @@ def map_game_listitem_dict(dict_in,parent_dict_in,default_dict,game_list_id,clea
 					   'emu_command':dict_in.get('emu_command'),
 					   'emu_baseurl':parent_dict_in.get('emu_baseurl'),
 					   'emu_launcher':parent_dict_in.get('emu_launcher'),
-					   'emu_ext_launch_cmd':next(iter([x for x in [dict_in.get('rom_override_cmd'),parent_dict_in.get('emu_ext_launch_cmd')] if x]),'none'),
+					   'emu_ext_launch_cmd':next(iter([x for x in [dict_in.get('rom_override_cmd'),parent_dict_in.get('emu_ext_launch_cmd')] if x]),'none'), #Look for override commands first, then default to game list settings
 					   'emu_default_addon':next(iter([x for x in [dict_in.get('rom_override_cmd'),parent_dict_in.get('emu_default_addon')] if x]),'default'),
 					   'emu_downloadpath':next(iter([x for x in [dict_in.get('rom_override_downloadpath'),parent_dict_in.get('emu_downloadpath')] if x]),'default'),
 					   'emu_postdlaction':next(iter([x for x in [dict_in.get('rom_override_postdl'),parent_dict_in.get('emu_postdlaction')] if x]),'none'),

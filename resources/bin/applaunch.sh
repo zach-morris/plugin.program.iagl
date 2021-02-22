@@ -91,11 +91,20 @@ then
 		echo "JSONRPC Exit Success"
 		KODI_EXIT="1"
 	fi
+	#Check if helper is still running, it may have been closed with JSON.  If not, kill it manually
+	if ! [ -z $KODI_PID_DARWIN_HELPER ]
+	then
+		if ps -p $KODI_PID_DARWIN_HELPER > /dev/null
+		then
+			echo "Stopping XBMCHelper for OSX"
+			kill -s SIGKILL $KODI_PID_DARWIN_HELPER
+		fi
+	fi
 fi
 #End OSX Exit
 
 #Start Linux Standalone
-if ! [ -z $KODI_PID_LINUX_STANDALONE ]
+if ! [ -z $KODI_PID_LINUX_STANDALONE ] && [ -z $KODI_EXIT ]
 then
 	echo "Linux Standalone Detected"
 	echo "Attempting to exit Kodi via JSONRPC"
@@ -236,14 +245,6 @@ fi
 # Start Emulator Launch
 if ! [ -z $KODI_EXIT ]
 then
-	if ! [ -z $KODI_PID_DARWIN_HELPER ]
-	then
-		if ps -p $KODI_PID_DARWIN_HELPER > /dev/null
-		then
-			echo "Stopping XBMCHelper for OSX"
-			kill -s SIGKILL $KODI_PID_DARWIN_HELPER
-		fi
-	fi
 	echo "Kodi Exited, Launching Emulator with command: $@"
 	# Launch app - escaped!
 	"$@" &

@@ -345,21 +345,28 @@ class iagl_download(object):
 			# 	return None
 
 	class generic_downloader(object):
-		def __init__(self,header=None,cookies=None):
+		def __init__(self,settings=None,directory=None,game_list=None,game=None,header=None,cookies=None):
 			self.session = requests.Session()
 			self.header=header
 			self.cookies=cookies
+			self.settings=settings
+			self.directory=directory
+			self.game_list=game_list
+			self.game=game
+			self.download_status = dict()
+			self.chunk_size = 102400 #100 KB chunks
+			self.timeout = (12.1,27)
 
 		def set_header(self,header=None):
 			self.header=header
 		def set_cookies(self,cookies=None):
 			self.cookies=cookies
 
-		def download_file(self,url=None,dest=None,est_size=None,show_progress=True):
+		def download(self,url=None,dest=None,est_size=None,show_progress=True):
 			if url and dest:
 				if self.cookies and isinstance(self.cookies,dict):
 					domain = self.cookies.get('domain')
-					for k,v in self.cookie.items():
+					for k,v in self.cookies.items():
 						if k!='domain':
 							self.session.cookies.set(k,v,domain=domain)
 				xbmc.log(msg='IAGL:  Attempting download file',level=xbmc.LOGDEBUG)

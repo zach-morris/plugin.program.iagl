@@ -137,7 +137,8 @@ class iagl_addon(object):
 
 		def get_route_default(self,route_in):
 			if 'default' in [x.get('label') for x in self.route.get(route_in)]:
-				return [x for x in self.route.get(route_in) if x.get('label')=='default'][0]
+				# return [x for x in self.route.get(route_in) if x.get('label')=='default'][0]
+				return next(iter([x for x in self.route.get(route_in) if x.get('label')=='default']),dict())
 			else:
 				return dict()
 
@@ -277,10 +278,12 @@ class iagl_addon(object):
 				set_mem_cache('iagl_current_game',game)
 			if len(game)==1: #Should always be here
 				xbmc.log(msg='IAGL:  Found game %(game_id)s in list %(game_list_id)s'%{'game_id':game_id,'game_list_id':game_list_id},level=xbmc.LOGDEBUG)
-				return game[0]
+				# return game[0]
+				return next(iter(game),None)
 			elif len(game)>1:
 				xbmc.log(msg='IAGL:  Found more than one game matching %(game_id)s in list %(game_list_id)s, returning first match'%{'game_id':game_id,'game_list_id':game_list_id},level=xbmc.LOGWARNING)
-				return game[0]
+				# return game[0]
+				return next(iter(game),None)
 			else:
 				xbmc.log(msg='IAGL:  Unable to find game matching %(game_id)s in list %(game_list_id)s, returning None'%{'game_id':game_id,'game_list_id':game_list_id},level=xbmc.LOGERROR)
 				return None
