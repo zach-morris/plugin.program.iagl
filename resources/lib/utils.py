@@ -23,8 +23,9 @@ TEXT_ENCODING='UTF-8'
 NOTIFICATION_DEINIT_TIME = 300 #Time to wait after closing a notification for it to de-init
 WAIT_FOR_PLAYER_TIME = 5000 #Time to wait after sending retroplayer play command to check status
 WAIT_FOR_PROCESS_EXIT = 3 #Time in seconds to wait for subprocess to exit
-IGNORE_THESE_FILETYPES = ['.srm','.sav','.fs','.state','.auto','.xml','.nfo','.mp3'] #Matching filetypes to ignore for re-launching
+IGNORE_THESE_FILETYPES = ['.srm','.sav','.fs','.state','.auto','.xml','.nfo'] #Matching filetypes to ignore for re-launching
 IGNORE_THESE_FILES = ['win31.bat'] #Matching files to ignore for re-launching
+ARCHIVE_FILETYPES = ['001','7z','bz2','cbr','gz','iso','rar','tar','tarbz2','targz','tarxz','tbz2','tgz','xz','zip']
 re_game_tags = re.compile(r'\([^)]*\)')
 re_game_codes = re.compile(r'\[[^)]*\]')
 re_clean_alphanumeric = re.compile(r'([^\s\w]|_)+')
@@ -1294,6 +1295,7 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 					'url_resolved':os.path.join(emu_baseurl,game_url.strip(os.sep).strip('/')),
 					'filename':game_filename,
 					'filename_no_ext':game_filename.split('.')[0],
+					'filename_ext':game_filename.split('.')[-1].lower(),
 					'post_processor':next(iter([x for x in [game_post_processor,emu_post_processor] if x]),'none'),
 					'launcher':next(iter([x for x in [game_launcher,emu_launcher] if x]),'retroplayer'),
 					'default_addon':next(iter([x for x in [game_default_addon,emu_default_addon] if x]),'none'),
@@ -1307,11 +1309,23 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 				game_dl_dict['downloadpath'] = str(new_default_dir)
 				game_dl_dict['downloadpath_resolved'] = Path(game_dl_dict.get('downloadpath')).joinpath(game_filename).expanduser()
 		if game_dl_dict.get('downloadpath_resolved').parent.exists():
-			game_dl_dict['matching_existing_files'] = [x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+glob.escape(game_dl_dict.get('downloadpath_resolved').stem)+'*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES and x.name.lower() not in IGNORE_THESE_FILES]
-		elif xbmcvfs.exists(str(game_dl_dict.get('downloadpath'))): #Kodi network source save spot (like smb address) need to use xbmcvfs to get files
-			game_dl_dict['matching_existing_files'] = [x for x in get_all_files_in_directory_xbmcvfs(str(game_dl_dict.get('downloadpath'))) if os.path.split(os.path.splitext(x)[0])[-1] == game_dl_dict.get('filename_no_ext') and os.path.splitext(x)[-1].lower() not in IGNORE_THESE_FILETYPES and os.path.split(os.path.splitext(x)[0])[-1] not in IGNORE_THESE_FILES]
+			if game_dl_dict.get('filename_ext') not in ARCHIVE_FILETYPES: #If file to be downloaded is not an archive, it should match exactly with a local file
+				if check_if_file_exists(game_dl_dict.get('downloadpath_resolved')):
+					game_dl_dict['matching_existing_files'] = [game_dl_dict.get('downloadpath_resolved')]
+				else:
+					game_dl_dict['matching_existing_files'] = []
+			else: #If the file to be downloaded is an archive, the name without extension should match with a local file
+				game_dl_dict['matching_existing_files'] = [x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+glob.escape(game_dl_dict.get('downloadpath_resolved').stem)+'*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES and x.name.lower() not in IGNORE_THESE_FILES]
+		elif xbmcvfs.exists(str(game_dl_dict.get('downloadpath'))): #Kodi network source save spot (like smb address) need to use xbmcvfs to check local files
+			if game_dl_dict.get('filename_ext') not in ARCHIVE_FILETYPES:
+				if check_if_file_exists(str(game_dl_dict.get('downloadpath_resolved'))):
+					game_dl_dict['matching_existing_files'] = [str(game_dl_dict.get('downloadpath_resolved'))]
+				else:
+					game_dl_dict['matching_existing_files'] = []
+			else:
+				game_dl_dict['matching_existing_files'] = [x for x in get_all_files_in_directory_xbmcvfs(str(game_dl_dict.get('downloadpath'))) if os.path.split(os.path.splitext(x)[0])[-1] == game_dl_dict.get('filename_no_ext') and os.path.splitext(x)[-1].lower() not in IGNORE_THESE_FILETYPES and os.path.split(os.path.splitext(x)[0])[-1] not in IGNORE_THESE_FILES]
 		else:
-			game_dl_dict['matching_existing_files'] = None
+			game_dl_dict['matching_existing_files'] = []
 		if game_dl_dict.get('emu_command'):
 			game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+glob.escape(game_dl_dict.get('emu_command'))+'*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES and x.name.lower() not in IGNORE_THESE_FILES]))
 		if game_dl_dict.get('dl_source') in ['Archive.org']:
