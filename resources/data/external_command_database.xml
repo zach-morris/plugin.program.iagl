@@ -507,7 +507,7 @@
 	<launcher name="RetroArch Mesen-S (SNES)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mesen-s_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x (SNES)" os="OSX">
+	<launcher name="RetroArch SNES9x (SNES Latest)" os="OSX">
 		<launcher_command>"%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/snes9x_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES (SNES, Latest)" os="OSX">
@@ -1124,7 +1124,7 @@
 	<launcher name="RetroArch Mesen-S (SNES)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/mesen-s_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x (SNES)" os="OSX Close_Kodi">
+	<launcher name="RetroArch SNES9x (SNES Latest)" os="OSX Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%/Contents/MacOS/RetroArch" %NETPLAY_COMMAND% -L "%APP_PATH%/Contents/Resources/cores/snes9x_libretro.dylib" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES (SNES, Latest)" os="OSX Close_Kodi">
@@ -1741,7 +1741,7 @@
 	<launcher name="RetroArch Mesen-S (SNES)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mesen-s_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x (SNES)" os="Linux/Kodibuntu">
+	<launcher name="RetroArch SNES9x (SNES Latest)" os="Linux/Kodibuntu">
 		<launcher_command>"%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/snes9x_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES (SNES, Latest)" os="Linux/Kodibuntu">
@@ -2358,7 +2358,7 @@
 	<launcher name="RetroArch Mesen-S (SNES)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mesen-s_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x (SNES)" os="Linux/Kodibuntu Close_Kodi">
+	<launcher name="RetroArch SNES9x (SNES Latest)" os="Linux/Kodibuntu Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/snes9x_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES (SNES, Latest)" os="Linux/Kodibuntu Close_Kodi">
@@ -2975,7 +2975,7 @@
 	<launcher name="RetroArch Mesen-S (SNES)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/mesen-s_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x (SNES)" os="Linux/Kodibuntu Pause_Kodi">
+	<launcher name="RetroArch SNES9x (SNES Latest)" os="Linux/Kodibuntu Pause_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/apppause.sh" "%APP_PATH%" %NETPLAY_COMMAND% -L %RETROARCH_CORE_DIR%/snes9x_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES (SNES, Latest)" os="Linux/Kodibuntu Pause_Kodi">
@@ -3592,7 +3592,7 @@
 	<launcher name="RetroArch Mesen-S (SNES)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mesen-s_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x (SNES)" os="Windows">
+	<launcher name="RetroArch SNES9x (SNES Latest)" os="Windows">
 		<launcher_command>"%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\snes9x_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES (SNES, Latest)" os="Windows">
@@ -4218,7 +4218,7 @@
 	<launcher name="RetroArch Mesen-S (SNES)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\mesen-s_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x (SNES)" os="Windows Close_Kodi">
+	<launcher name="RetroArch SNES9x (SNES Latest)" os="Windows Close_Kodi">
 		<launcher_command>"%ADDON_DIR%/resources/bin/applaunch-vbs.bat" "%APP_PATH%\retroarch.exe" %NETPLAY_COMMAND% -L "%APP_PATH%\cores\snes9x_libretro.dll" "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES (SNES, Latest)" os="Windows Close_Kodi">
@@ -4844,7 +4844,7 @@
 	<launcher name="RetroArch Mesen-S (SNES)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/mesen-s_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x (SNES)" os="LibreElec Remix">
+	<launcher name="RetroArch SNES9x (SNES Latest)" os="LibreElec Remix">
 		<launcher_command>"%ADDON_DIR%/resources/bin/remix_launch.sh" -L /tmp/cores/snes9x_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES (SNES, Latest)" os="LibreElec Remix">
@@ -5473,7 +5473,7 @@
 	<launcher name="RetroArch Mesen-S (SNES)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/mesen-s_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x (SNES)" os="RetroELEC">
+	<launcher name="RetroArch SNES9x (SNES Latest)" os="RetroELEC">
 		<launcher_command>/usr/bin/retroarch.sh /tmp/cores/snes9x_libretro.so "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES (SNES, Latest)" os="RetroELEC">
@@ -6093,7 +6093,7 @@
 	<launcher name="RetroArch Mesen-S (SNES)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" mesen-s "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x (SNES)" os="Sx05RE">
+	<launcher name="RetroArch SNES9x (SNES Latest)" os="Sx05RE">
 		<launcher_command>"%ADDON_DIR%/resources/bin/sx05re_launch.sh" snes9x "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES (SNES, Latest)" os="Sx05RE">
@@ -6701,7 +6701,7 @@
 	<launcher name="RetroArch Mesen-S (SNES)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh mesen-s "%ROM_PATH%"</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x (SNES)" os="Gamestarter Addon">
+	<launcher name="RetroArch SNES9x (SNES Latest)" os="Gamestarter Addon">
 		<launcher_command>/storage/.kodi/addons/game.retroarch/addon.sh snes9x "%ROM_PATH%"</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES (SNES, Latest)" os="Gamestarter Addon">
@@ -7318,7 +7318,7 @@
 	<launcher name="RetroArch Mesen-S (SNES)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/mesen-s_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-top</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x (SNES)" os="Android">
+	<launcher name="RetroArch SNES9x (SNES Latest)" os="Android">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/data/com.retroarch/cores/snes9x_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-top</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES (SNES, Latest)" os="Android">
@@ -8019,7 +8019,7 @@
 	<launcher name="RetroArch Mesen-S (SNES)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/mesen-s_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-top</launcher_command>
 	</launcher>
-	<launcher name="RetroArch SNES9x (SNES)" os="Android Aarch64">
+	<launcher name="RetroArch SNES9x (SNES Latest)" os="Android Aarch64">
 		<launcher_command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "/data/user/0/com.retroarch.aarch64/cores/snes9x_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-top</launcher_command>
 	</launcher>
 	<launcher name="RetroArch BSNES (SNES, Latest)" os="Android Aarch64">
