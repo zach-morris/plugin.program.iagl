@@ -186,7 +186,7 @@ if not get_mem_cache('iagl_script_started'):
 					wizard_settings['game_list'][game_list_id]['command_name'] = None
 					current_bg_dialog.update(int(100*(ii+1)/(len(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header'))+.001)),loc_str(30377),loc_str(30379))
 					if RP_DEFAULTS.get(game_list_id):
-						if not any([y in addons_available for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y]):
+						if not addons_available or any([y in addons_available for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y]):
 							xbmc.log(msg='IAGL:  Wizard did not find a default addon available for %(value)s, attempting to install.'%{'value':game_list_id}, level=xbmc.LOGERROR)
 							for aa in RP_DEFAULTS.get(game_list_id):
 								xbmc.executebuiltin('InstallAddon(%(value)s)'%{'value':aa})
