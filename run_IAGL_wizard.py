@@ -166,14 +166,14 @@ if not get_mem_cache('iagl_script_started'):
 			wizard_settings['game_list'] = dict()
 			iagl_addon_wizard = iagl_addon() #Reload settings based on wizard entries
 		if yesno_ret == 1:
-			addons_available = None
+			addons_available = []
 			try:
 				json_query = json.loads(xbmc.executeJSONRPC('{ "jsonrpc": "2.0", "method": "Addons.GetAddons","params":{"type":"kodi.gameclient", "enabled": true}, "id": "1"}'))
 			except Exception as exc:
 				xbmc.log(msg='IAGL:  Error executing JSONRPC command.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 				json_query = None
 			if json_query and json_query.get('result') and json_query.get('result').get('addons'):
-				addons_available = sorted([x.get('addonid') for x in json_query.get('result').get('addons') if x.get('addonid')!='game.libretro'])
+				addons_available = sorted([x.get('addonid') for x in json_query.get('result').get('addons') if x and x.get('addonid')!='game.libretro'])
 			current_bg_dialog = xbmcgui.DialogProgressBG()
 			current_bg_dialog.create(loc_str(30377),loc_str(30379))
 			for ii,hh in enumerate(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header')):
@@ -186,7 +186,7 @@ if not get_mem_cache('iagl_script_started'):
 					wizard_settings['game_list'][game_list_id]['command_name'] = None
 					current_bg_dialog.update(int(100*(ii+1)/(len(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header'))+.001)),loc_str(30377),loc_str(30379))
 					if RP_DEFAULTS.get(game_list_id):
-						if not addons_available or any([y in addons_available for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y]):
+						if not any([y in addons_available for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y]):
 							xbmc.log(msg='IAGL:  Wizard did not find a default addon available for %(value)s, attempting to install.'%{'value':game_list_id}, level=xbmc.LOGERROR)
 							for aa in RP_DEFAULTS.get(game_list_id):
 								xbmc.executebuiltin('InstallAddon(%(value)s)'%{'value':aa})
@@ -198,7 +198,7 @@ if not get_mem_cache('iagl_script_started'):
 											wait = False
 											break
 									xbmc.sleep(3000)
-						if addons_available and any([y in addons_available for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y]):
+						if any([y in addons_available for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y]):
 							current_command = next(iter([y for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y in addons_available]),'none')
 							if iagl_addon_wizard.game_lists.update_game_list_header(game_list_id,header_key='emu_launcher',header_value='retroplayer',confirm_update=False):
 								xbmc.log(msg='IAGL:  Wizard update launcher for game list %(value)s to Retroplayer'%{'value':game_list_id}, level=xbmc.LOGDEBUG)
