@@ -4,7 +4,7 @@
 		<emu_name>MSX1</emu_name>
 		<emu_description>MSX</emu_description>
 		<emu_category>Microsoft, PC, 8 Bit, 1980s</emu_category>
-		<emu_version>04012018</emu_version>
+		<emu_version>022221</emu_version>
 		<emu_date>09/06/2016</emu_date>
 		<emu_author>Zach Morris</emu_author>
 		<emu_visibility>visible</emu_visibility>
@@ -206,7 +206,7 @@
 			<rom name="No-Intro-Collection_2016-09-06/Microsoft-Msx.zip/Alpha%20Roid%20%28Japan%29.zip" size="21917" />
 			<title_clean>Alpha Roid</title_clean>
 			<plot>Alpha Roid is an Action game, developed and published by Pony Canyon, which was released in Japan in 1986.</plot>
-			<genre>Action; Shooter</genre>
+			<genre>Action,Shooter</genre>
 			<studio>Pony Canyon</studio>
 			<nplayers>1</nplayers>
 			<ESRB>Not Rated</ESRB>
@@ -356,7 +356,7 @@
 			<rom name="No-Intro-Collection_2016-09-06/Microsoft-Msx.zip/Aramo%20%28Japan%29.zip" size="22966" />
 			<title_clean>Aramo</title_clean>
 			<plot>Far away from galaxy. It's possible exit in safety from the labyrinth?</plot>
-			<genre>Action; Role-Playing</genre>
+			<genre>Action,RPG</genre>
 			<studio>Sein Soft</studio>
 			<nplayers>1</nplayers>
 			<ESRB>Not Rated</ESRB>
@@ -1185,7 +1185,7 @@
 			<description>Castle, The (Japan)</description>
 			<rom name="No-Intro-Collection_2016-09-06/Microsoft-Msx.zip/Castle%2C%20The%20%28Japan%29.zip" size="22544" />
 			<title_clean>Castle, The</title_clean>
-			<genre>Adventure; Puzzle</genre>
+			<genre>Adventure,Puzzle</genre>
 			<studio>ASCII Corporation</studio>
 			<nplayers>1</nplayers>
 			<wiki_url>https://en.wikipedia.org/wiki/The_Castle_(video_game)</wiki_url>
@@ -1198,7 +1198,7 @@
 			<rom name="No-Intro-Collection_2016-09-06/Microsoft-Msx.zip/Chack%27n%20Pop%20%28Japan%29.zip" size="12427" />
 			<title_clean>Chack'n Pop</title_clean>
 			<plot>Chack'n, a small yellow creature with extendable legs must traverse a series of single-screen mazes. He is capable of walking on floors or ceilings but not walls. He can climb steps and traverse high walls by extending his legs until he is tall enough to pass onto the next step. He is capable of throwing hand grenades to his left or right which, after a short period, explode into a cloud of smoke. Separate fire buttons control rolling to the left or right. Chack'n is killed if caught by the explosion cloud.</plot>
-			<genre>Action; Puzzle</genre>
+			<genre>Action,Puzzle</genre>
 			<studio>Taito</studio>
 			<nplayers>1</nplayers>
 			<ESRB>Not Rated</ESRB>
@@ -1756,7 +1756,7 @@
 			<title_clean>Daidasso</title_clean>
 			<plot>The player takes the role of Giana, a girl who suffers from a nightmare, in which she travels through 32 dungeons full of monsters, while collecting ominous diamonds and looking for her sister Maria. If the player wins the final battle, Giana will be awakened by her sister</plot>
 			<releasedate>1/1/1985</releasedate>
-			<genre>ActionPlatform</genre>
+			<genre>Action,Platform</genre>
 			<studio>Carry Lab</studio>
 			<nplayers>1</nplayers>
 			<boxart1>whJ5zht.jpg</boxart1>
@@ -2784,7 +2784,7 @@
 			<rom name="No-Intro-Collection_2016-09-06/Microsoft-Msx.zip/Glider%20%28Japan%29.zip" size="10687" />
 			<title_clean>Glider</title_clean>
 			<plot>Glider is a Strategy game, developed and published by Zap, which was released in Japan in 1985.</plot>
-			<genre>Flight Simulator; Strategy</genre>
+			<genre>Flight Simulator,Strategy</genre>
 			<studio>Zap</studio>
 			<nplayers>1</nplayers>
 			<ESRB>Not Rated</ESRB>
@@ -3364,7 +3364,7 @@
 			<rom name="No-Intro-Collection_2016-09-06/Microsoft-Msx.zip/Kick%20It%20%28Japan%29.zip" size="12440" />
 			<title_clean>Kick It</title_clean>
 			<plot>You are a pair of trousers. The screen is filled with a board game that has been subdivided into blue tiles. You can walk over them, but only once! The will disappear when you've walked over them. Remember that! You have to collect them all... and don't get stuck! The randomly placed green rolling dam stones-like objects are also to be collected. But that's not all. The board contains three types of hazards. The first ones are the purple monsters, don't step on them or you 'll get killed. The second hazard is the Man With The Hat, who is moving around the board. Don't let him catch you! The third danger are the randomly placed bombs on the board. You have thirty seconds to disarm them by grabbing them. If all tiles have been collected and you didn't get stuck: congratulations! Your off to the next level! The game contains digitized speech, which you will hear when the game starts, when your walked into an hazard and at Game Over.</plot>
-			<genre>Action; Strategy</genre>
+			<genre>Action,Strategy</genre>
 			<studio>Aackosoft</studio>
 			<nplayers>1</nplayers>
 			<ESRB>Not Rated</ESRB>
@@ -3416,7 +3416,7 @@
 			<plot>King&#8217;s Valley is a platform/maze game from Konami, released for the MSX computer and MS-DOS in 1985. The game plays is like Lode Runner except it takes place in pyramids instead of Egyptian ruins. As an intrepid adventurer, the player's goal is to collect various gems, while evading angry mummies and other monsters long enough to find the exit to the next level.</plot>
 			<releasedate>1/3/1985</releasedate>
 			<year>1985</year>
-			<genre>Platform; Puzzle</genre>
+			<genre>Platform,Puzzle</genre>
 			<studio>Konami</studio>
 			<nplayers>1</nplayers>
 			<ESRB>Not Rated</ESRB>
@@ -3448,7 +3448,7 @@
 			<title_clean>Knightmare II - The Maze of Galious</title_clean>
 			<plot>Knightmare 2:Maze of Galious/Majou Densetsu 2:Daimashikyou Galious is a [CR]Japanese game which was released back in 1987 for MSX. It is a sequel to Knightmare. I've never played Knightmare 1 before. All I know is that it is a shooter type of game in which you play as [CR]Popolon who tried to rescue his wife Aphrodite from a villain named Hudnos. The[CR]sequel takes place right after you rescued Aphrodite.  Now you play as both [CR]Popolon and Aphrodite, who will try to to rescue their future baby kidnapped [CR]by a dark priest named Galious. The gameplay is a mix between action and RPG.[CR]You have the side-scrolling actions throughout six worlds and yet at the same[CR]time there are some RPG elements included such as having to find certain items[CR]to complete certain tasks. Maze of Galious stays true to its name with its huge[CR]and sometimes confusing maze-like worlds to be explored.Majou Densetsu II: Daimashikyou Galious is a Role-Playing game, developed and published by Konami, which was released in Japan in 1987.</plot>
 			<releasedate>1/1/1987</releasedate>
-			<genre>ActionRole-Playing</genre>
+			<genre>Action,RPG</genre>
 			<studio>Konami</studio>
 			<nplayers>1</nplayers>
 			<boxart1>0Rodw9S.jpg</boxart1>
@@ -4575,7 +4575,7 @@
 			<plot>Despite it's name, this Q*Bert installment is not a port of the first game, rather it's based on Q*Bert's Qubes. The player doesn't even control Q*Bert, but rather the dragon Wrappy. The gameplay is still focused on forming lines of blocks that match a target color, while enemies constantly enter the playfield. However there are now many different layouts in 50 different stages. Also added are differently colored blobs that function as power-ups when touched. Blue ones for example grant invincibility.[CR]Another addition are two-player simultaneous modes, where both players compete against each other, with or without enemies. The first player to complete a line of five of his target alignment wins. If the time runs out, the relevant blocks are counted, a draw leads to a round of rock-paper-scissors with a random result.</plot>
 			<releasedate>1/1/1986</releasedate>
 			<year>1986</year>
-			<genre>Action; Platform; Puzzle</genre>
+			<genre>Action,Platform,Puzzle</genre>
 			<studio>Konami</studio>
 			<nplayers>2</nplayers>
 			<videoid>WsNsHniC91I</videoid>
@@ -4968,7 +4968,7 @@
 			<title_clean>Snake It</title_clean>
 			<plot>Solid Snake, now retired from Fox-Hound, returns in this sequel to Metal Gear. Dr. Kio Marv, the inventor of OILIX, was taken hostage. The new commander of Fox-Hound, Colonel Roy Campbell, calls Snake back to active duty to infiltrate Zanzibar and rescue Dr. Marv.</plot>
 			<releasedate>1/1/1986</releasedate>
-			<genre>ActionStealth</genre>
+			<genre>Action,Stealth</genre>
 			<studio>Eaglesoft</studio>
 			<nplayers>1</nplayers>
 			<boxart1>200P5Jh.jpg</boxart1>
@@ -5031,7 +5031,7 @@
 			<title_clean>Space Maze Attack</title_clean>
 			<plot>Knightmare 2:Maze of Galious/Majou Densetsu 2:Daimashikyou Galious is a [CR]Japanese game which was released back in 1987 for MSX. It is a sequel to Knightmare. I've never played Knightmare 1 before. All I know is that it is a shooter type of game in which you play as [CR]Popolon who tried to rescue his wife Aphrodite from a villain named Hudnos. The[CR]sequel takes place right after you rescued Aphrodite.  Now you play as both [CR]Popolon and Aphrodite, who will try to to rescue their future baby kidnapped [CR]by a dark priest named Galious. The gameplay is a mix between action and RPG.[CR]You have the side-scrolling actions throughout six worlds and yet at the same[CR]time there are some RPG elements included such as having to find certain items[CR]to complete certain tasks. Maze of Galious stays true to its name with its huge[CR]and sometimes confusing maze-like worlds to be explored.Majou Densetsu II: Daimashikyou Galious is a Role-Playing game, developed and published by Konami, which was released in Japan in 1987.</plot>
 			<releasedate>1/1/1983</releasedate>
-			<genre>ActionRole-Playing</genre>
+			<genre>Action,RPG</genre>
 			<studio>HAL Kenkyuujo</studio>
 			<nplayers>1</nplayers>
 			<boxart1>0Rodw9S.jpg</boxart1>
@@ -5464,7 +5464,7 @@
 			<title_clean>Super Snake</title_clean>
 			<plot>Solid Snake, now retired from Fox-Hound, returns in this sequel to Metal Gear. Dr. Kio Marv, the inventor of OILIX, was taken hostage. The new commander of Fox-Hound, Colonel Roy Campbell, calls Snake back to active duty to infiltrate Zanzibar and rescue Dr. Marv.</plot>
 			<releasedate>1/1/1983</releasedate>
-			<genre>ActionStealth</genre>
+			<genre>Action,Stealth</genre>
 			<studio>HAL Kenkyuujo</studio>
 			<nplayers>1</nplayers>
 			<boxart1>200P5Jh.jpg</boxart1>

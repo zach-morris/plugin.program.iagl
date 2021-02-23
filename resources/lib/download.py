@@ -53,6 +53,7 @@ class iagl_download(object):
 					download_file = True
 					current_dl['downloaded_file'] = False
 					if len(current_dl.get('matching_existing_files'))>0:
+						xbmc.log(msg='IAGL: Matching files found locally: %(value)s'%{'value':current_dl.get('matching_existing_files')},level=xbmc.LOGDEBUG)
 						if self.settings.get('game_action').get('local_file_found') == 0: #Prompt
 							current_dialog = xbmcgui.Dialog()
 							ret1 = current_dialog.select(loc_str(30355)%{'filename':current_dl.get('filename_no_ext')}, [loc_str(30204),loc_str(30200)])

@@ -1309,7 +1309,7 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 				game_dl_dict['downloadpath'] = str(new_default_dir)
 				game_dl_dict['downloadpath_resolved'] = Path(game_dl_dict.get('downloadpath')).joinpath(game_filename).expanduser()
 		if game_dl_dict.get('downloadpath_resolved').parent.exists():
-			if game_dl_dict.get('filename_ext') not in ARCHIVE_FILETYPES: #If file to be downloaded is not an archive, it should match exactly with a local file
+			if game_dl_dict.get('filename_ext') not in ARCHIVE_FILETYPES: #If file to be downloaded is not an archive, it should match exactly with a local file - currenly works because all post processed filetypes are archives.  This may have to be updated in the future
 				if check_if_file_exists(game_dl_dict.get('downloadpath_resolved')):
 					game_dl_dict['matching_existing_files'] = [game_dl_dict.get('downloadpath_resolved')]
 				else:
