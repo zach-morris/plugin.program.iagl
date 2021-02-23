@@ -1309,8 +1309,8 @@ msgid "You must enter a title"
 msgstr "You must enter a title"
 
 msgctxt "#30320"
-msgid "Enter a label for your query"
-msgstr "Enter a label for your query"
+msgid "Enter a search query"
+msgstr "Enter a search query"
 
 msgctxt "#30321"
 msgid "Choose number of random results to return"
@@ -1599,6 +1599,10 @@ msgstr "Do you want IAGL to pre-cache all game lists?[CR]This process takes seve
 msgctxt "#30392"
 msgid "Processing Game List:[CR]%(game_list)s"
 msgstr "Processing Game List:[CR]%(game_list)s"
+
+msgctxt "#30393"
+msgid "Select Filters"
+msgstr "Select Filters"
 
 #
 #Context Menus

@@ -367,15 +367,14 @@ class iagl_addon(object):
 					current_query['num_of_results'] = ['1','2','5','10','25','100'][new_value]
 					set_mem_cache('iagl_current_query',current_query)
 			if value_in == 'title':
-				new_value = current_dialog.input(loc_str(30359),current_query.get('title'))
+				new_value = current_dialog.input(loc_str(30320),current_query.get('title'))
 				if new_value.strip():
 					current_query['title'] = new_value
 					set_mem_cache('iagl_current_query',current_query)
 			if value_in == 'lists':
-				current_game_list_ids = sorted(self.list_game_lists())
-				current_game_list_titles = [self.get_game_list(x).get('emu_name') for x in current_game_list_ids]
-				current_game_list_ids = ['All']+current_game_list_ids
-				current_game_list_titles = ['All']+current_game_list_titles
+				current_game_list_options = sorted([x for x in zip(self.list_game_lists(),[self.get_game_list(x).get('emu_name') for x in self.list_game_lists()]) if x[1]],key=lambda x:x[1])
+				current_game_list_ids = ['All']+[x[0] for x in current_game_list_options]
+				current_game_list_titles = ['All']+[x[1] for x in current_game_list_options]
 				if current_query.get('lists'):
 					current_selection = [ii for ii,x in enumerate(current_game_list_ids) if x in current_query.get('lists')]
 				else:
@@ -400,7 +399,7 @@ class iagl_addon(object):
 					else:
 						current_selection = []
 					if value_set:
-						new_value = current_dialog.multiselect(loc_str(30360),value_set,0,current_selection)
+						new_value = current_dialog.multiselect(loc_str(30393),value_set,0,current_selection)
 					if new_value is not None:
 						current_query[value_in] = [x for ii,x in enumerate(value_set) if ii in new_value]
 						set_mem_cache('iagl_current_query',current_query)
