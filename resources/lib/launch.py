@@ -199,8 +199,9 @@ class iagl_launch(object):
 						t = Thread(target=enqueue_output, args=(launch_process.stdout, q))
 						t.daemon = True # thread dies with the program
 						t.start()
-					xbmc.sleep(WAIT_FOR_PLAYER_TIME)
+					
 					if not self.settings.get('ext_launchers').get('close_kodi') and capture_launch_log:
+						xbmc.sleep(WAIT_FOR_PLAYER_TIME)
 						while True:
 							try:
 								current_line = q.get_nowait()

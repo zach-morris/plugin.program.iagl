@@ -198,7 +198,7 @@ if not get_mem_cache('iagl_script_started'):
 											wait = False
 											break
 									xbmc.sleep(3000)
-						if any([y in addons_available for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y]):
+						if addons_available and any([y in addons_available for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y]):
 							current_command = next(iter([y for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y in addons_available]),'none')
 							if iagl_addon_wizard.game_lists.update_game_list_header(game_list_id,header_key='emu_launcher',header_value='retroplayer',confirm_update=False):
 								xbmc.log(msg='IAGL:  Wizard update launcher for game list %(value)s to Retroplayer'%{'value':game_list_id}, level=xbmc.LOGDEBUG)

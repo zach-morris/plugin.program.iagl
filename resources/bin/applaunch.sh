@@ -40,8 +40,8 @@ then
 	KODI_BIN_LINUX="kodi"
 fi
 
-#Sleep to let Kodi write to log and whatnot prior to shutdown
-sleep 1
+#Sleep to let Kodi write to log, IAGL to complete, and whatnot prior to shutdown
+sleep 1s
 
 #Start OSX Exit
 if ! [ -z $KODI_PID_DARWIN ]
@@ -50,7 +50,7 @@ then
 	echo "Attempting to exit Kodi via JSONRPC"
 	JSON_RPC_COMMAND=$(curl -s --data-binary '{"jsonrpc": "2.0", "method": "Application.Quit", "id":1}' -H 'content-type: application/json;' http://127.0.0.1:8080/jsonrpc)
 	# Wait for the quit
-	sleep 5
+	sleep 5s
 	if ! [ -z $JSON_RPC_COMMAND ]
 	then
 		if ! [[ $JSON_RPC_COMMAND == *"$RPC_RESULT"* ]]
@@ -71,13 +71,13 @@ then
 		echo "JSONRPC exit failed, attempting SIGHUP"
 		kill -s SIGHUP $KODI_PID_DARWIN 
 		# Wait for the quit
-		sleep 2
+		sleep 2s
 		if ps -p $KODI_PID_DARWIN > /dev/null
 		then
 			echo "SIGHUP exit failed, attempting SIGKILL"
 			kill -s SIGKILL $KODI_PID_DARWIN
 			# Wait for the kill
-			sleep 2
+			sleep 2s
 			if ! ps -p $KODI_PID_DARWIN > /dev/null
 			then
 				echo "SIGKILL Exit Success"
@@ -110,7 +110,7 @@ then
 	echo "Attempting to exit Kodi via JSONRPC"
 	JSON_RPC_COMMAND=$(curl -s --data-binary '{"jsonrpc": "2.0", "method": "Application.Quit", "id":1}' -H 'content-type: application/json;' http://127.0.0.1:8080/jsonrpc)
 	# Wait for the quit
-	sleep 5
+	sleep 5s
 	if ! [ -z $JSON_RPC_COMMAND ]
 	then
 		if ! [[ $JSON_RPC_COMMAND == *"$RPC_RESULT"* ]]
@@ -126,13 +126,13 @@ then
 		echo "JSONRPC exit failed, attempting SIGHUP"
 		kill -s SIGHUP $KODI_PID_LINUX_STANDALONE 
 		# Wait for the quit
-		sleep 2
+		sleep 2s
 		if ps -p $KODI_PID_LINUX_STANDALONE > /dev/null
 		then
 			echo "SIGHUP exit failed, attempting SIGKILL"
 			kill -s SIGKILL $KODI_PID_LINUX_STANDALONE
 			# Wait for the kill
-			sleep 2
+			sleep 2s
 			if ! ps -p $KODI_PID_LINUX_STANDALONE > /dev/null
 			then
 				echo "SIGKILL Exit Success"
@@ -157,7 +157,7 @@ then
 	echo "Attempting to exit Kodi via JSONRPC"
 	JSON_RPC_COMMAND=$(curl -s --data-binary '{"jsonrpc": "2.0", "method": "Application.Quit", "id":1}' -H 'content-type: application/json;' http://127.0.0.1:8080/jsonrpc)
 	# Wait for the quit
-	sleep 5
+	sleep 5s
 	if ! [ -z $JSON_RPC_COMMAND ]
 	then
 		if ! [[ $JSON_RPC_COMMAND == *"$RPC_RESULT"* ]]
@@ -173,13 +173,13 @@ then
 		echo "JSONRPC exit failed, attempting SIGHUP"
 		kill -s SIGHUP $KODI_PID_LINUX_X11 
 		# Wait for the quit
-		sleep 2
+		sleep 2s
 		if ps -p $KODI_PID_LINUX_X11 > /dev/null
 		then
 			echo "SIGHUP exit failed, attempting SIGKILL"
 			kill -s SIGKILL $KODI_PID_LINUX_X11
 			# Wait for the kill
-			sleep 2
+			sleep 2s
 			if ! ps -p $KODI_PID_LINUX_X11 > /dev/null
 			then
 				echo "SIGKILL Exit Success"
@@ -203,7 +203,7 @@ then
 	echo "Attempting to exit Kodi via JSONRPC"
 	JSON_RPC_COMMAND=$(curl -s --data-binary '{"jsonrpc": "2.0", "method": "Application.Quit", "id":1}' -H 'content-type: application/json;' http://127.0.0.1:8080/jsonrpc)
 	# Wait for the quit
-	sleep 5
+	sleep 5s
 	if ! [ -z $JSON_RPC_COMMAND ]
 	then
 		if ! [[ $JSON_RPC_COMMAND == *"$RPC_RESULT"* ]]
@@ -219,13 +219,13 @@ then
 		echo "JSONRPC exit failed, attempting SIGHUP"
 		kill -s SIGHUP $KODI_PID_LINUX 
 		# Wait for the quit
-		sleep 2
+		sleep 2s
 		if ps -p $KODI_PID_LINUX > /dev/null
 		then
 			echo "SIGHUP exit failed, attempting SIGKILL"
 			kill -s SIGKILL $KODI_PID_LINUX
 			# Wait for the kill
-			sleep 2
+			sleep 2s
 			if ! ps -p $KODI_PID_LINUX > /dev/null
 			then
 				echo "SIGKILL Exit Success"
@@ -255,7 +255,7 @@ then
 	then
 		#Something is wrong because it all happened too fast
 		echo "There was likely an error while launching, waiting 10 seconds before restarting Kodi"
-		sleep 10
+		sleep 10s
 	fi
 	# Done? Restart Kodi
 	sleep 1
@@ -270,7 +270,7 @@ then
 		nohup $KODI_BIN_LINUX &
 	fi
 	#Attempt to restart IAGL after relaunching Kodi
-	sleep 3
+	sleep 5s
 	RESTART_IAGL_RPC_COMMAND=$(curl -s --data-binary '{"jsonrpc": "2.0", "method": "Addons.ExecuteAddon", "params": { "addonid": "plugin.program.iagl" },  "id":1}' -H 'content-type: application/json;' http://127.0.0.1:8080/jsonrpc)
 	echo "JSONRPC response to restart IAGL was $RESTART_IAGL_RPC_COMMAND"
 else
