@@ -5,7 +5,7 @@
     <import addon="script.module.requests"/>
     <import addon="script.module.routing"/>
     <import addon="script.module.archive_tool"/>
-    <import addon="plugin.video.youtube"/>
+    <import addon="plugin.video.youtube" version="6.8.7"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video game</provides>
