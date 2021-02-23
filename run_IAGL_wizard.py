@@ -168,7 +168,7 @@ if not get_mem_cache('iagl_script_started'):
 		if yesno_ret == 1:
 			addons_available = None
 			try:
-				json_query = json.loads(xbmc.executeJSONRPC('{ "jsonrpc": "2.0", "method": "Addons.GetAddons","params":{"type":"kodi.gameclient"}, "id": "1"}'))
+				json_query = json.loads(xbmc.executeJSONRPC('{ "jsonrpc": "2.0", "method": "Addons.GetAddons","params":{"type":"kodi.gameclient", "enabled": true}, "id": "1"}'))
 			except Exception as exc:
 				xbmc.log(msg='IAGL:  Error executing JSONRPC command.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 				json_query = None

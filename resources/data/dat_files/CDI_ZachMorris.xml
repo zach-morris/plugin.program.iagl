@@ -14,7 +14,7 @@
 		<emu_default_addon>none</emu_default_addon>
 		<emu_ext_launch_cmd>none</emu_ext_launch_cmd>
 		<emu_downloadpath>default</emu_downloadpath>
-		<emu_postdlaction>launch_mame_softlist(mess2014,cdi)</emu_postdlaction>
+		<emu_postdlaction>launch_mame_softlist_cdimono1</emu_postdlaction>
 		<emu_comment>Philips CD-i List based on the MAME / MESS 0.149 romset.  This list is filtered to remove duplicates, betas, etc.[CR][CR]The Philips CD-i (Compact Disc Interactive) is an interactive multimedia CD player developed and marketed by Royal Philips Electronics.[CR]This category of device was created to provide more functionality than an audio CD player or game console, but at a lower price than a personal computer with CD-ROM drive at the time. The cost savings were due to the lack of a hard drive, floppy drive, keyboard, mouse, monitor (a standard television was used), and less operating system software. In addition to games, educational and multimedia reference titles were produced, such as interactive encyclopedias, museum tours, etc. before public Internet access was widespread. Competitors included the Tandy VIS and Commodore CDTV. CD-i also refers to the multimedia Compact Disc standard used by the CD-i console, also known as Green Book, which was developed by Philips and Sony. Work on the CD-i began in 1984 and it was first publicly announced in 1986.[CR]Manufacturer: Philips[CR]CPU: Philips SCC68070[CR]Memory: 1 MB of main RAM[CR]Graphics: SCC66470, later MCD 212[CR]Sound: MCD 221 16-bit stereo sound[CR]Display: 384x280 to 768x560[CR]Media: Disc[CR]Max Controllers:  1</emu_comment>
 		<emu_thumb>ATEnUbj.jpg</emu_thumb>
 		<emu_banner>0jYAh05.jpg</emu_banner>
@@ -26,9 +26,9 @@
 		<description>3rd Degree (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2F3degree.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2F3degree%2F3rd%20degree%20%281993%29%28philips%29%28us%29%5B%21%5D.chd" size="261858115" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>3rd Degree</title_clean>
 		<plot>3rd Degree is a multiplayer party game. The object of the game is to earn points by correctly predicting how other people would behave in embarrassing situations. Each player takes turns being in the "hot seat." The game displays a narrated slideshow of an amusing but awkward situation, then asks how the player would respond. He enters his response secretly, and another player (the "challenger") tries to predict what it was. Situations are drawn from the categories Love, Career, Money, and Family. Correct guesses earn points, but there's an element of bluffing, too. The game is aimed at adults and teenagers.</plot>
 		<releasedate>1/1/1992</releasedate>
@@ -45,9 +45,9 @@
 		<description>A Great Day at the Races (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fdayrace.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fdayrace%2Fa%20great%20day%20at%20the%20races%20%281993%29%28philips%29%28us%29%5B%21%5D.chd" size="337298408" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>A Great Day at the Races</title_clean>
 		<plot>A Great Day at the Races is an interactive tutorial for an aspiring gambler wanting to learn how to bet on horse races and learn advanced handicapping methods. It also features lessons on the history of horse racing and a dictionary where players can learn track jargon.  It also features simulated races where players, six total, can try out their newly learned skills and try their hand at FMV races before trying it out on the real thing.</plot>
 		<releasedate>1/1/1993</releasedate>
@@ -66,9 +66,9 @@
 		<description>A Visit To Sesame Street - Letters (Euro, USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fsesamel.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fsesamel%2Fa%20visit%20to%20sesame%20street%20-%20letters%20%281992%29%28philips%29%28eu-us%29%5B%21%5D.chd" size="280659015" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>A Visit To Sesame Street - Letters</title_clean>
 		<plot>A Visit to Sesame Street: Letters is an edutainment title for young children. It tries to familiarize them with the alphabet. The game is similar to Sesame Street: Numbers except for the content.[CR]There are various (inter)activities and games to be played with well known Sesame Street characters such as Bert and Ernie. Additionally the game comes with over an hour of footage from the show, including songs about letters. Jim Henson himself voices Ernie who also gives hints throughout the entire game.[CR]The main area is Sesame street itself. Various doors lead to various locations. Oscar accompanies the player. In the Windows version of the game Oscar is replaced with the Telly Monster. Included locations are Big Bird's nest, Snuffy's cave and Bert and Ernie's apartment.[CR]In each room the player can find a radio that allows him to play various songs and video clips from the show. Radio messages are read by Jerry Nelson, Marty Robinson and Jim Henson as Kermit the Frog.</plot>
 		<releasedate>1/1/1991</releasedate>
@@ -85,9 +85,9 @@
 		<description>A Visit To Sesame Street - Numbers (USA)[3106900192 50239 141 01]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fsesamena.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fsesamena%2Fa%20visit%20to%20sesame%20street%20-%20numbers%20%281992%29%28philips%29%28us%29%5B3106900192%2050239%20141%2001%5D.chd" size="260580610" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>A Visit To Sesame Street - Numbers [3106900192 50239 141 01]</title_clean>
 		<releasedate>1/1/1992</releasedate>
 		<year>1992</year>
@@ -99,9 +99,9 @@
 		<description>Alice in Wonderland (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Falice.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Falice%2Falice%20in%20wonderland%20%281992%29%28philips%29%28us%29%5B%21%5D.chd" size="378446970" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Alice in Wonderland</title_clean>
 		<plot>Alice in Wonderland is a game based on Lewis Carrol's classic story. The game is a side-scrolling adventure game in which the player controls Alice in her quest to return home from Wonderland. There's over 40 different characters to speak with including important characters from the book such as the Mad Hatter, the Cheshire Cat and the Queen of Spade. Not all the characters are all to willing to help you from getting home.</plot>
 		<releasedate>1/1/1992</releasedate>
@@ -120,9 +120,9 @@
 		<description>Alien Gate [CDi Ready]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Faliengat.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Faliengat%2Falien%20gate%20%28cdi-ready%29.chd" size="45917347" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Alien Gate [CDi Ready]</title_clean>
 		<plot>Alien Gate is a vertical scrolling shoot 'em up in which you fly a spacecraft over alien terrain while shooting down enemies. The game comes with 25 levels. The enemies are spawned by a giant head that spits them out. The game sports a large variety of different enemies such as birds, bees, bombs, centipedes, UFOs and knives. When you defeat the head-boss the level is over.</plot>
 		<releasedate>1/1/1992</releasedate>
@@ -142,9 +142,9 @@
 		<description>Arcade Classics (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Farcadecl.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Farcadecl%2Farcade%20classics%20%281996%29%28namco%20-%20philips%29%28eu%29%5B%21%5D%5Bcompilation%5D.chd" size="7289089" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Arcade Classics</title_clean>
 		<plot>Arcade Classics is a collection of three classic Namco arcade games converted to the CD-i:[CR]1. Ms. Pac-Man[CR]Galaxian[CR]Galaga</plot>
 		<releasedate>1/1/1996</releasedate>
@@ -163,9 +163,9 @@
 		<description>Asterix - Caesar's Challenge v3.9 (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fasterix.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fasterix%2Fasterix%20-%20caesar%27s%20challenge%20v3.9%20%281995%29%28pathe%20-%20philips%29%28eu%29%5B%21%5D.chd" size="117189840" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Asterix - Caesar's Challenge v3.9</title_clean>
 		<plot>Caesar challenges our indomitable Gauls to wander the Roman Empire freely. This provocation is bound to make Gaulish blood boil: after the Tour of Gaul, here comes the Tour of the Roman Empire.[CR]The expedition is led by the druid Getafix, and each player chooses a character to play from a cast including Asterix, Obelix, Impedimenta, Panacea, Justforkix and Geriatrix.</plot>
 		<releasedate>1/1/1995</releasedate>
@@ -180,9 +180,9 @@
 		<description>Axis and Allies (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Faxisall.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Faxisall%2Faxis%20and%20allies%20%281994%29%28philips%29%28us%29%5B%21%5D.chd" size="130869045" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Axis and Allies</title_clean>
 		<plot>Axis and Allies is a digital conversion of the board game of the same name. The game takes place during World War II and up to five players take on the different superpowers of that time (Germany, Japan, USSR, USA and UK). With less than five players the AI takes care of the remaining superpowers. Players can work together cooperatively or battle each other in this World War II simulation.[CR]In this turn based strategy games the players' objectives is to conquer enemy territories. Conflicts are fought through the rolling of dice. The game comes with numerous stock footage of actual combat in World War II. This is displayed during said conflicts.</plot>
 		<releasedate>1/1/1994</releasedate>
@@ -201,9 +201,9 @@
 		<description>BURN-CYCLE (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fburncycl.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fburncycl%2Fburn-cycle%20%281994%29%28philips%29%28eu%29%5B%21%5D.chd" size="450659646" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>BURN-CYCLE</title_clean>
 		<plot>You play data thief Sol Cutter in a very Johnny Mnemonic -like plot. You have just pulled off a major data theft, but in doing so you've infected yourself with a neural virus, named Burn:Cycle, which will literally turn your brain into goo in 2 hours. Unless, that is, you can find a cure while you simultaneously try to avoid the people whom you stole the data from.[CR]Why are they chasing you if you're gonna die anyway? How do you get rid of this virus? What does it all mean? You'll try to figure that out in this  game which plays like a Cyberpunk Journeyman Project, in full screen and with more action sequences. Gameplay consists of first-person action and puzzle sequences spiced up with video in-between.</plot>
 		<releasedate>21/11/1994</releasedate>
@@ -226,9 +226,9 @@
 		<description>Backgammon (Euro, USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fbackgamm.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fbackgamm%2Fbackgammon%20%281992%29%28philips%29%28eu-us%29%5B%21%5D.chd" size="97211631" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Backgammon</title_clean>
 		<plot>Backgammon is a translation of the classical board game for the CD-i. The game allows the player to chose between three different opponents with each their own skill level. The game can be played in a first person perspective in which the opponents are displayed in an animated cartoon style. You can also play against a friend and choose for a top down view of the game board. A hint system is available when you don't know what to do and it is also possible to undo a turn when you change your mind.</plot>
 		<releasedate>1/1/1992</releasedate>
@@ -246,9 +246,9 @@
 		<description>Battleship (Euro, USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fbship.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fbship%2Fbattleship%20%281991%29%28philips%29%28eu-us%29%5B%21%5D.chd" size="39846823" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Battleship</title_clean>
 		<plot>Battleship is a conversion of the classic board game for the CD-i. The game plays exactly like the original board game. You take turns to fire on certain coordinates in the hope of hitting enemy ships. On the side of the screen there's a little window that shows short naval archive footage whenever you are firing or get hit. You can play against the computer or against a friend.</plot>
 		<releasedate>1/1/1991</releasedate>
@@ -268,9 +268,9 @@
 		<description>Beauty and the Beast (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fbeauty.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fbeauty%2Fbeauty%20%26%20the%20beast%20%281992%29%28philips%29%28us%29.chd" size="181511562" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Beauty and the Beast</title_clean>
 		<releasedate>1/1/1992</releasedate>
 		<year>1992</year>
@@ -283,9 +283,9 @@
 		<description>Brer Rabbit and the Wonderful Tar Baby (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fbrerrabb.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fbrerrabb%2Fbrer%20rabbit%20and%20the%20wonderful%20tar%20baby%20%281991%29%28philips%29%28us%29%5B%21%5D.chd" size="158913076" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Brer Rabbit and the Wonderful Tar Baby</title_clean>
 		<plot>Brer Rabbit and the Wonderful Tar Baby is an audio book with activities and games for children of ages 3 to 7. The story which comes from a compilation of southern US folktales is completely visualized and narrated by famous movie star Danny Glover. The text can be displayed while it is pronounced for early readers to learn the words.[CR]Aside from the story itself there's also games to be played. Parents can select games of an appropriate age level for their children. The games teach the children visual discrimination, classification, positional concepts and more.[CR]The game is part of the Storybook Adventures series and features the exact same interface as the other titles in the series: a magic bookmark that turns into a wizard as your guide.</plot>
 		<releasedate>1/1/1992</releasedate>
@@ -309,9 +309,9 @@
 		<description>CD Shoot (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fcdshoot.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fcdshoot%2Fcd%20shoot%20%281992%29%28philips%29%28eu%29%28m8%29%5B%21%5D.chd" size="101871798" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>CD Shoot</title_clean>
 		<plot>Cd Shoot is a clay dove shooting game for the CD-i. The game has four game modes: sporting, Olympic trap, balltrap and English skeet. In the game clay doves are launched in the air and using a targeting crosshair you have to shoot them out of the sky.</plot>
 		<releasedate>1/1/1992</releasedate>
@@ -330,9 +330,9 @@
 		<description>Caesars World of Boxing (USA)[18621217 03]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fcboxing.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fcboxing%2Fcaesars%20world%20of%20boxing%20%281993%29%28philips%29%28us%29%5B18621217%2003%5D.chd" size="513027913" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Caesars World of Boxing [18621217 03]</title_clean>
 		<plot>Caesars World of Boxing is a boxing game that lets you box at Caesars Palace in Las Vegas.[CR]There's two parts to this game an arcade boxing game in which you have to win matches. And a strategic part where you are approached by managers, trainers, reporters, high rollers and groupies and have to make decisions on their advice, proposals and temptations.</plot>
 		<releasedate>1/1/1991</releasedate>
@@ -350,9 +350,9 @@
 		<description>Caesars World of Gambling (Euro, USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fcgambl.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fcgambl%2Fcaesars%20world%20of%20gambling%20%281992%29%28philips%29%28eu-us%29%5B%21%5D.chd" size="98089258" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Caesars World of Gambling</title_clean>
 		<plot>Caesars World of Gambling is much like the many other iterations. The player starts out with $500 to gamble in the famed Caesar's Palace in a variety of games such as Blackjack, Roulette, Craps, Slot Machines, etc. The game boasts photo realistic graphics of an actual casino, dealers and slot machines and has real-life odds applied to the game to give it a more realistic feel.  It also features the ability for four different players to compete against each other.</plot>
 		<releasedate>1/1/1990</releasedate>
@@ -371,9 +371,9 @@
 		<description>Cartoon Jukebox (USA)[310690001-2 50228 730 01]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fcartoonj.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fcartoonj%2Fcartoon%20jukebox%20%281991%29%28philips%29%28us%29%5B310690001-2%2050228%20730%2001%5D.chd" size="101846090" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Cartoon Jukebox [310690001-2 50228 730 01]</title_clean>
 		<plot>Cartoon Jukebox is a game for children age 4 and up. The game is presented by Frank Zander and comes with drawings which can be colored and come to life in animation, ten songs that can be listened and a variety of games. All the games and songs are represented with colourful cartoon graphics and animations. Songs in the game include "Row, Row, Row your Boat", "Pop Goes the Weasel" and "Wheels on the Bus". The German version of the game includes German versions of the included children's songs.</plot>
 		<releasedate>25/10/1991</releasedate>
@@ -389,9 +389,9 @@
 		<description>Children's Musical Theatre (USA)[00821015 01]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fcmt.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fcmt%2Fchildren%27s%20musical%20theatre%20%281992%29%28philips%29%28us%29%5B00821015%2001%5D.chd" size="233573042" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Children's Musical Theatre [00821015 01]</title_clean>
 		<releasedate>1/1/1992</releasedate>
 		<year>1992</year>
@@ -403,9 +403,9 @@
 		<description>Compton's Interactive Encyclopedia - CD-Interactive (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fcompton.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fcompton%2Fcompton%27s%20interactive%20encyclopedia%20-%20cd-interactive%20%281992%29%28compton%27s%20newmedia%29%28eu%29%5B%21%5D.chd" size="376715973" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Compton's Interactive Encyclopedia - CD-Interactive</title_clean>
 		<plot>Interactive Encyclopedia with interactive articles, video documentaries, a "time machine" feature which lets you see events organized by area, a world atlas and a interactive version of Webster's Intermediate Dictionary.</plot>
 		<studio>Compton's NewMedia</studio>
@@ -416,9 +416,9 @@
 		<description>Connect Four v1 (Euro, USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fconnect4.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fconnect4%2Fconnect%20four%20v1%20%281991%29%28philips%29%28eu-us%29%5B%21%5D.chd" size="24804457" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Connect Four v1</title_clean>
 		<plot>Connect Four is a digital version of the 1974 Milton Bradley board game of the same name. In the game players take turn dropping coloured discs on a vertical playing field while trying to get four of them in a row either horizontally, vertically or diagonally.[CR]This version can be played against a friend or against the computer. There are three difficulty levels for the computer opponent. Players can pick their own colour of choice.</plot>
 		<releasedate>1/1/1991</releasedate>
@@ -437,9 +437,9 @@
 		<description>Create your own Caricature with Spitting Image (Euro)[8110001 50274 188 01]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fcreatcar.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fcreatcar%2Fcreate%20your%20own%20caricature%20with%20spitting%20image%20%281992%29%28philips%29%28eu%29%5B%21%5D%5B8110001%2050274%20188%2001%5D.chd" size="136888438" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Create your own Caricature with Spitting Image [8110001 50274 188 01]</title_clean>
 		<plot>A CD-i Title that allowed you to make caricatures of celebrities and your own photos.</plot>
 		<studio>Philips</studio>
@@ -452,9 +452,9 @@
 		<description>Dark Castle (Euro, USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fdarkcstl.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fdarkcstl%2Fdark%20castle%20%281992%29%28philips%29%28eu-us%29%5B%21%5D.chd" size="34736203" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Dark Castle</title_clean>
 		<plot>The Black Knight has brought misery to the land, and the end way to end this is to enter his haunted house to slay him. You are the brave adventurer taking on this quest through 14 increasingly-tough zones.[CR]The bulk of the game is side-viewed, involving single screens to pass through, which incorporate ropes, cages and trapdoor. There are enemies walking, flying and hovering through this, and many of them respawn. Unusually your weapon to take them on (rocks) can be thrown through 360 degrees, which aims to make the gameplay more realistic and methodical. The screens were linked by hub screens, which the player passes through simply by clicking on a door.</plot>
 		<releasedate>9/8/1993</releasedate>
@@ -477,9 +477,9 @@
 		<description>Defender of the Crown (Euro, USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fdefcrown.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fdefcrown%2Fdefender%20of%20the%20crown%20%281992%29%28philips%29%28eu-us%29%5B%21%5D.chd" size="125513276" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Defender of the Crown</title_clean>
 		<plot>Defender of the Crown puts you in the role of one of four Saxon knights in medieval England, in a time where the land is in turmoil as the King is dead and his crown was stolen. The Saxons and the Normans blame each other and fight for control of England.[CR]After a short introduction by Robin of Locksley himself, you start the game with a single castle and 10 soldiers at your command. From there, you have to build your army, take control of additional territories and fight the three Norman lords - and sometimes your Saxon friends as well.[CR]The game has several different styles: You may either engage in a jousting contest where you have to knock your opponent off his horse using a lance, you can go raid a castle for loot or you can attack another territory/castle.[CR]The game was originally created on the Amiga platform in 1986 by Cinemaware with wonderful graphics by James D. Sachs and great music by Jim Cuomo, then ported to the PC whilst keeping its original appeal and quality.</plot>
 		<releasedate>1/1/1991</releasedate>
@@ -499,9 +499,9 @@
 		<description>Dimo's Quest [CDi Ready]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fdimos.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fdimos%2Fdimo%27s%20quest%20%28cdi-ready%29.chd" size="360570661" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Dimo's Quest [CDi Ready]</title_clean>
 		<plot>To be able to marry Princess Dori, Dimo the frog have to collect all the sweets her father King Greenfoot wants throughout the kingdom! That means over 50 levels; so help Dimo in his quest in this cute puzzle game...</plot>
 		<releasedate>1/1/1994</releasedate>
@@ -519,9 +519,9 @@
 		<description>Dragon's Lair II - Time Warp (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fdlair2.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fdlair2%2Fdragon%27s%20lair%20ii%20-%20time%20warp%20%281994%29%28philips%29%28eu%29.chd" size="444499496" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Dragon's Lair II - Time Warp</title_clean>
 		<plot>Princess Daphne has been spirited away to a wrinkle in time by the evil wizard Mordroc, who plans to force her into marriage. Only you, Dirk the Daring, can save her. Transported by a bumbling old time machine, you begin the rescue mission. But you must hurry, for once the Casket of Doom has opened, Mordroc will place the Death Ring upon Daphne's finger and she will be lost forever in the Time Warp. Dragon's Lair II: Time Warp is a fully animated arcade classic from legendary animator Don Bluth. [CR]Beware of your foes, for they are numerous. Only you can save Princess Daphne.</plot>
 		<releasedate>16/6/1991</releasedate>
@@ -542,9 +542,9 @@
 		<description>Earth Command - The Future of Our World is in Your Hands v1.05 (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fearthc.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fearthc%2Fearth%20command%20-%20the%20future%20of%20our%20world%20is%20in%20your%20hands%20v1.05%20%281994%29%28philips%29%28us%29.chd" size="435588352" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Earth Command - The Future of Our World is in Your Hands v1.05</title_clean>
 		<releasedate>1/1/1993</releasedate>
 		<year>1993</year>
@@ -557,9 +557,9 @@
 		<description>Effacer - Hangman of the 25th Century (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Feffacer.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Feffacer%2Feffacer%20-%20hangman%20of%20the%2025th%20century%20%281994%29%28philips%29%28us%29.chd" size="224633566" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Effacer - Hangman of the 25th Century</title_clean>
 		<releasedate>1/1/1994</releasedate>
 		<year>1994</year>
@@ -573,9 +573,9 @@
 		<description>Escape from CyberCity (Euro, USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fcybrcity.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fcybrcity%2Fescape%20from%20cybercity%20%281992%29%28philips%29%28eu-us%29%5B%21%5D.chd" size="107956894" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Escape from CyberCity</title_clean>
 		<plot>In the near future, the Earth is under attack by the evil Guardian Forces.[CR]After the attack, only a few people can continue the fight against the invaders and only you can help them. [CR]Your mission is to survive the dangers of CyberCity and to destroy the Guardian's planet.[CR]Escape From CyberCity a full interactive action adventure in style of Space Ace, which allows a complete interactive gameplay to the player.[CR]Very nice drawn graphics and a tight story awake the impression to be even a part of the story.[CR]The game is only for one player and there is only one difficulty level.</plot>
 		<releasedate>1/1/1992</releasedate>
@@ -597,9 +597,9 @@
 		<description>Face Kitchen (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Ffacekitc.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Ffacekitc%2Fface%20kitchen%20%281992%29%28philips%29%28eu%29.chd" size="117682068" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Face Kitchen</title_clean>
 		<plot>Face Kitchen allows players to cook up faces. In Uby the French chef's kitchen players will find an abundance of ears, noses, mouths and facial accessories in the cupboards and refrigerator. Uby will mix up whatever you choose to create a new face. There are thousands of different faces that can be made. Each face sings a song, tells a tale, cracks a joke or tells a tale after being baked in the oven. Face Kitchen is meant for children but can be enjoyed by people of all ages.</plot>
 		<releasedate>25/10/1992</releasedate>
@@ -616,9 +616,9 @@
 		<description>Family Games I (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Ffamilyg1.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Ffamilyg1%2Ffamily%20games%20i%20%281995%29%28philips%29%28eu%29%5B%21%5D%5Bcompilation%5D.chd" size="48870063" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Family Games I</title_clean>
 		<plot>Family Games I is a collection of mini games for the whole family. The game features 10 different games from various different genres such as action and puzzle games. The games are:[CR]1. Full Attack[CR]Jokisen[CR]Where's That Sound[CR]Skid Kart[CR]Captain Alphabet[CR]Draw Stamp Color[CR]Superslide[CR]Morphon Invasion[CR]Wizard[CR]Hot Rocks</plot>
 		<releasedate>1/1/1995</releasedate>
@@ -636,9 +636,9 @@
 		<description>Family Games II - Junk Food Jive (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Ffamilyg2.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Ffamilyg2%2Ffamily%20games%20ii%20-%20junk%20food%20jive%20%281995%29%28philips%29%28eu%29%5B%21%5D%5Bcompilation%5D.chd" size="125250950" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Family Games II - Junk Food Jive</title_clean>
 		<plot>If you like to flit around like a fly along dirty food residue, have to fight over the bill with your partner, if you want to invent your own clever pizza topping, have had greater ambitions than smaller people or have painted (yes) your masterpieces on thick place mats, then you will feel quite at home here!</plot>
 		<releasedate>1/1/1995</releasedate>
@@ -652,9 +652,9 @@
 		<description>Flashback (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fflashb.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fflashb%2Fflashback%20%281995%29%28philips%29%28eu%29%28m7%29%5B%21%5D.chd" size="83513923" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Flashback</title_clean>
 		<plot>You're Conrad B. Hart, Galaxis Bureau of Investigation Agent and right now you're stranded on a far-away planet after discovering an alien plot to overtake Earth. You must travel and find your way through four planets back to Earth and foil the aliens' sinister and deadly plans. This is truly the most explosive and intriguing Flashback experience. And it's gonna rip you right out of your comfortable little century and hurl you smack into a time and place that'll have you begging for a nap!</plot>
 		<releasedate>1/1/1995</releasedate>
@@ -670,9 +670,9 @@
 		<description>Flintstones &amp; Jetsons - Timewarp (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fflintjet.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fflintjet%2Fflintstones%20%26%20jetsons%20-%20timewarp%20%281994%29%28philips%29%28us%29.chd" size="133491049" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Flintstones &amp; Jetsons - Timewarp</title_clean>
 		<releasedate>1/1/1994</releasedate>
 		<year>1994</year>
@@ -686,9 +686,9 @@
 		<description>Frog Feast (Demo)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Ffrogfeas.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Ffrogfeas%2Ffrog%20feast.chd" size="60032" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Frog Feast</title_clean>
 		<plot>Frog Feast is a 16-bit version of the classic Frog Bog game featuring improved graphics, sound, AI, and more. The game made its launch at both the Classic Gaming Expo 2005 and VGXPO, Dallas events on the same day.[CR]The gameplay itself is quite simple and easy to figure out. In the single player version your goal is to catch as many flies floating about the top of the screen within the time allowed and to beat the AI's frogs score. In the 2-player version, you do the same but go head-2-head against another player which makes snagging those flies at the last minute, just before your competitor does, a real treat.</plot>
 		<releasedate>1/1/2007</releasedate>
@@ -705,9 +705,9 @@
 		<description>Gardening by Choice - Flowers &amp; Foliage (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fgardenin.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fgardenin%2Fgardening%20by%20choice%20-%20flowers%20%26%20foliage%20%281992%29%28philips%29%28us%29%5B%21%5D.chd" size="195021149" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Gardening by Choice - Flowers &amp; Foliage</title_clean>
 		<plot>An interactive guide that takes the guesswork out of gardening</plot>
 		<studio>Philips</studio>
@@ -719,9 +719,9 @@
 		<description>Gnomes v2.10 (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fgnomes.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fgnomes%2Fgnomes%20v2.10%20%281995%29%28philips%29%28us%29%5B%21%5D.chd" size="188516763" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Gnomes v2.10</title_clean>
 		<releasedate>1/1/1995</releasedate>
 		<year>1995</year>
@@ -734,9 +734,9 @@
 		<description>Go - Special Edition</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fgose.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fgose%2Fgo%20-%20special%20edition.chd" size="226444497" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Go - Special Edition</title_clean>
 		<plot>Go: Special Edition is a digital version of the classic Chinese board game. The game is played with two players or against an AI. Like in the board game players take turns to place white or black markers on intersections of the game grid. The goal is to gain a majority control of the board. Players can remove an opponents markers by completely surrounding them with their own.[CR]The game includes video tutorials from professional Go players and a complete history behind the game Go and a strategy guide.</plot>
 		<releasedate>1/1/2002</releasedate>
@@ -753,9 +753,9 @@
 		<description>Golden Oldies I (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fgolden1.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fgolden1%2Fgolden%20oldies%20i%20%281997%29%28spc%20vision%29%28eu%29%5Bcompilation%5D.chd" size="22741807" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Golden Oldies I</title_clean>
 		<plot>Golden Oldies I is collection of two games that mimic the game mechanics of classic arcade games. The games are:[CR]1. Guardian, a remake of Defender.[CR]2. Invaders, a remake of Space Invaders[CR]Both games have modernized graphics over the original, while the gameplay stays mostly the same. In Guardian you fly around on a horizontally scrolling background shooting at enemies. In Invaders you hover about at the bottom of the screen and shoot enemies that come descending from the sky. There are three bunkers to hide in, until they are shot to bits.</plot>
 		<releasedate>1/1/1997</releasedate>
@@ -772,9 +772,9 @@
 		<description>Golden Oldies II (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fgolden2.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fgolden2%2Fgolden%20oldies%20ii%20%281997%29%28spc%20vision%29%28eu%29%5B%21%5D%5Bcompilation%5D.chd" size="20738462" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Golden Oldies II</title_clean>
 		<plot>Golden Oldies II is a sequel to Golden Oldies I. Like the previous title it is a collection of two games that mimic the game mechanics of classic arcade games. For part II the games are:[CR]1. Blockbuster, a remake of Arkanoid.[CR]2. Bughunt, a remake of Centipede[CR]Both games have modernized graphics over the original, while the gameplay stays mostly the same. In Blockbuster the player moves a paddle left and right to bounce a ball against blocks at the top of the screen. Blocks are destroyed when hit by the ball and in order to win all blocks have to be destroyed. Some blocks contain powerups that make it easier for the player. [CR]In Bughunt the player tries to kill centipedes by shooting it from the bottom of the screen. Whenever shot the centipedes lose parts of their body, making them harder to hit for a successive hit.</plot>
 		<releasedate>1/1/1997</releasedate>
@@ -791,9 +791,9 @@
 		<description>Golden Oldies Jukebox (USA)[310690006-2 50240 109 01]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fgoldoldj.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fgoldoldj%2Fgolden%20oldies%20jukebox%20%281991%29%28philips%29%28us%29%5B%21%5D%5B310690006-2%2050240%20109%2001%5D.chd" size="398499326" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Golden Oldies Jukebox [310690006-2 50240 109 01]</title_clean>
 		<plot>Jump n jam to the bop tunes of the 50's &amp; 60's. The best of the golden oldies and the artists who sang them come alive on your TV screen. Original hits by the original artists with several delux features;Over 50 minutes of re-mastered digital audio*Over one &amp; one half hours of video*Song lyrics cued in sync with music*Song shuffle for random play* Create your own customized playlist for parties or personal listening!</plot>
 		<studio>Philips</studio>
@@ -808,9 +808,9 @@
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fglfmyway%2Fgolf%20my%20way%20%281994%29%28philips%29%28us%29%28disc%203%20of%205%29%5Bpart%20ii%5D.chd" size="474318386" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fglfmyway%2Fgolf%20my%20way%20%281994%29%28philips%29%28us%29%28disc%204%20of%205%29%5Bpart%20ii%5D.chd" size="522768463" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fglfmyway%2Fgolf%20my%20way%20%281994%29%28philips%29%28us%29%28disc%205%20of%205%29%5Bpart%20ii%5D.chd" size="449606169" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Golf My Way</title_clean>
 		<releasedate>1/1/1994</releasedate>
 		<year>1994</year>
@@ -823,9 +823,9 @@
 		<description>Harvest of the Sun - Vincent Van Gogh Revisited (USA)[028294 01]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fvangogh.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fvangogh%2Fharvest%20of%20the%20sun%20-%20vincent%20van%20gogh%20revisited%20%281991%29%28philips%29%28us%29%5B%21%5D%5B028294%2001%5D.chd" size="183889012" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Harvest of the Sun - Vincent Van Gogh Revisited [028294 01]</title_clean>
 		<plot>An Interactive Journey through the world of Van Gogh</plot>
 		<studio>Philips</studio>
@@ -836,9 +836,9 @@
 		<description>Hotel Mario (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fhotmario.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fhotmario%2Fhotel%20mario%20%281994%29%28philips%29%28eu%29%5B%21%5D.chd" size="119766916" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Hotel Mario</title_clean>
 		<plot>This is a puzzle game based on the Nintendo character Mario. The Princess has invited Mario and Luigi to a picnic in the Mushroom Kingdom. But when the Mario Brothers arrive, they learn that King Bowser Koopa is making over the kingdom into his personal resort and the princess has been kidnapped, again. [CR]Mario and Luigi must stop him and rescue the princess by closing doors in the hotels.[CR]Most hotel stages have 10 levels, other stages have less, others more. You close doors by pressing button 2. Enemies will come through some doors and will try to open doors to prevent you from succeeding. You can jump on some enemies by pressing button 1.[CR]Behind some doors, you will find a mushroom that will allow you to take a hit without dying. If you already got a mushroom, you will find a fire flower that will allow you to shoot fireballs by pressing buttons 1 &amp; 2 simultaneously. This will take out some enemies easier and other enemies can only be defeated with the fireball.[CR]When you reach the top level of your current hotel, you will need to close the doors here while avoiding one of the Koopalings. Once you succeed, there will be an animated FMV cutscene then it is off to the next hotel (stage).[CR]All the stages are plays on real hotels, like Morton's WoodDoor-Hysteria Hotel, Roy's HardBrick Hotel, Lemmy's High-ate Regency Hotel, Bowser's Seizures Palace Hotel, etc.</plot>
 		<releasedate>8/5/1994</releasedate>
@@ -863,9 +863,9 @@
 		<description>Inca (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Finca.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Finca%2Finca%20%281994%29%28coktel%20vision%20-%20philips%29%28eu%29%28m4%29%5B%21%5D%5Bes-fr-it-pt%5D.chd" size="174327649" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Inca</title_clean>
 		<plot>You are a space pilot who can travel through time. Now your mission is to land in South America at the time of the European invasion, and find the mysterious treasure of the great Inca civilization.[CR]Inca is a game that combines adventure and action, or to put it more correctly, it's an adventure games with many action elements (such as space combat).</plot>
 		<releasedate>1/1/1993</releasedate>
@@ -891,9 +891,9 @@
 		<description>International Tennis Open v3.03 (Euro)[2 players]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Ftennisop.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Ftennisop%2Finternational%20tennis%20open%20v3.03%20%281994%29%28pathe%20-%20philips%29%28eu%29%28en-fr%29%5B%21%5D%5B2%20players%5D.chd" size="189528978" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>International Tennis Open v3.03 [2 players]</title_clean>
 		<releasedate>1/1/1993</releasedate>
 		<year>1993</year>
@@ -907,9 +907,9 @@
 		<description>Jeopardy! (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fjeopardy.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fjeopardy%2Fjeopardy%21%20%281994%29%28philips%29%28us%29%5B%21%5D.chd" size="180459111" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Jeopardy!</title_clean>
 		<plot>Another version of the many Jeopardy! games released, this edition features full-motion video and the actual voice of Alex Trebek, but only shows him in the opening sequence and in the final round. The gameplay is like that of the TV show; two rounds of play with six categories with a final round at the end.[CR]To answer the question the player must buzz in and put in the answer by using letters on the side of the screen. However, different from the other games is that there is no computer opponent to play against and Final Jeopardy doesn't have the answering system like the previous rounds. Instead it requires you to write it down using paper and a pen or pencil.</plot>
 		<releasedate>1/1/1994</releasedate>
@@ -926,9 +926,9 @@
 		<description>Jigsaw - The Ultimate Electronic Challenge (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fjigsaw.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fjigsaw%2Fjigsaw%20-%20the%20ultimate%20electronic%20challenge%20%281992%29%28philips%29%28us%29%5B%21%5D.chd" size="99037530" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Jigsaw - The Ultimate Electronic Challenge</title_clean>
 		<releasedate>1/1/1991</releasedate>
 		<year>1991</year>
@@ -941,9 +941,9 @@
 		<description>Karaoke Klassics 1 - Family Favorites (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fkaraoke1.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fkaraoke1%2Fkaraoke%20klassics%201%20-%20family%20favorites%20%281993%29%28philips%29%28eu%29%28m6%29.chd" size="313308603" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Karaoke Klassics 1 - Family Favorites</title_clean>
 		<releasedate>1/1/1993</releasedate>
 		<year>1993</year>
@@ -955,9 +955,9 @@
 		<description>Kether v3.11 (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fkether.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fkether%2Fkether%20v3.11%20%281994%29%28philips%29%28eu%29%28en-fr%29%5B%21%5D.chd" size="139801295" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Kether v3.11</title_clean>
 		<releasedate>1/1/1993</releasedate>
 		<year>1993</year>
@@ -971,9 +971,9 @@
 		<description>Laser Lords (USA)[07420911 01]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Flasrlord.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Flasrlord%2Flaser%20lords%20%281992%29%28philips%29%28us%29%5B07420911%2001%5D.chd" size="391386236" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Laser Lords [07420911 01]</title_clean>
 		<plot>Laser Lords is a comedic adventure game that takes place in space.[CR]In the game the player takes on the role of a human hitchhiker who is abducted from a desert road by a space ship. The plot will unfold to have the player save the universe. An evil and ancient being called Sarpedon is trying to obtain a certain crystal that will allow him to possess the entire universe. Needless to say the player has to prevent this from happening. The game requires you to explore seven planets, each of which has settings that resemble our own mythology and history such as the planet Argos that looks much like ancient Greece. Each world is full of references to historic events and stories.[CR]The game combines adventure game elements with platform game elements. The player has 9 lives. When you run out the game is over, but you can save and load the game to prevent from having to start the game over completely. You can collect and trade items to solve puzzles. When talking to NPCs highlighted words in their dialogue can be remembered. This places them in your "word bank" and allows you to ask other NPCs about those subjects. All the NPCs are fully voiced. Actors often impersonated famous voices like those of Arnold Schwarzenegger, John Wayne and Gregory Peck.[CR]In spite of its "Ages 12 and up" rating, the game is filled with dark humor, sex, drugs, homosexuality and gambling references. It is even possible to play Russian Roulette in the game.</plot>
 		<releasedate>4/3/1992</releasedate>
@@ -992,9 +992,9 @@
 		<description>Lemmings (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Flemmings.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Flemmings%2Flemmings%20%281994%29%28philips%29%28eu%29%5B%21%5D.chd" size="33155732" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Lemmings</title_clean>
 		<plot>Your task is to rescue the Lemmings across 120 levels of fast-paced puzzling. These creatures simply walk blindly through the world in the hope of reaching safety at the end of the level - unfortunately these levels include steep drops, gaps in the ground, barriers and rivers amongst other hazards.[CR]You are in control not of any individual Lemming, but of a cross-hair, which can be moved over any of the Lemmings. Along the bottom are a selection of functions which can be assigned to a Lemming, including climbing, floating and bashing. You must click to select the appropriate function, then click on the Lemming to activate it. Each level has a different range of skills on offer, a different amount of Lemmings, and a different percentage target in order to progress.</plot>
 		<releasedate>1/1/1994</releasedate>
@@ -1016,9 +1016,9 @@
 		<description>Lingo v1.07 (Ned)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Flingo.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Flingo%2Flingo%20v1.07%20%281995%29%28philips%29%28nl%29%5B%21%5D.chd" size="44377036" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Lingo v1.07</title_clean>
 		<releasedate>1/1/1994</releasedate>
 		<year>1994</year>
@@ -1032,9 +1032,9 @@
 		<description>Link - The Faces of Evil (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Flinkfoe.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Flinkfoe%2Flink%20-%20the%20faces%20of%20evil%20%281993%29%28philips%29%28eu%29%5B%21%5D.chd" size="116977830" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Link - The Faces of Evil</title_clean>
 		<plot>This is one of three Zelda-based games released for the CD-i. Ganon and his cronies have seized the island of Koridai and kidnapped Princess Zelda. Link must fight through Ganon's minions to defeat the Faces of Evil, one at a time. He must also destroy Ganon, free Zelda, and bring peace back to Koridai. This is a side-scrolling platform game with animated cut scenes like Zelda: The Wand of Gamelon.</plot>
 		<releasedate>10/10/1993</releasedate>
@@ -1064,9 +1064,9 @@
 		<description>Lords of the Rising Sun (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Flordrsun.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Flordrsun%2Flords%20of%20the%20rising%20sun%20%281992%29%28philips%29%28us%29%5B%21%5D.chd" size="149702081" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Lords of the Rising Sun</title_clean>
 		<plot>Japan, 12th century. After your father has been murdered, you set out on a quest to become Shogun to restore the honor of your family.[CR]You'll have to defeat all your enemies - including your brother.[CR]Most of the time, you'll move your troops through the big map of Japan - as soon as something happens, you'll have to fight your enemies in action sequences, such as a Gauntlet-like fortress attack or defending against a Ninja assassin. If two troops collide, a battle might ensue in which you'll have to use all your strategical wits to guide your men to victory.[CR]In the CD-i version the informative sequences include life actor FMVs and voice acting as well as new background art.</plot>
 		<releasedate>1/1/1992</releasedate>
@@ -1097,9 +1097,9 @@
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fmarcpolo.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fmarcpolo%2Fmarco%20polo%20%281995%29%28philips%29%28eu%29%28disc%201%20of%202%29%5B%21%5D%5Bthe%20game%5D.chd" size="465144661" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fmarcpolo%2Fmarco%20polo%20%281995%29%28philips%29%28eu%29%28disc%202%20of%202%29%5B%21%5D%5Bthe%20documentation%5D.chd" size="138510644" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Marco Polo</title_clean>
 		<plot>Marco Polo is both an adventure and business simulation game. You act as Marco Polo, the young Venetian merchant, and travel in Asia. Your goal is to become rich in making business in native markets. You can also accomplish missions. These missions are illustrated by numerous pictures from Italian TV series. Bonus: A historical data base about Marco Polo and ancient China.</plot>
 		<releasedate>1/1/1994</releasedate>
@@ -1121,9 +1121,9 @@
 		<description>Max Magic (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fmaxmagic.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fmaxmagic%2Fmax%20magic%20%281994%29%28philips%29%28us%29.chd" size="133936037" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Max Magic</title_clean>
 		<plot>Learn magic from Max the Magician in Max Magic. In this title suitable for the whole family, renown magician Max Maven teaches 14 customizable magic tricks to the players. You can let Max perform his own show, or create a show together with Max, where the player secretly controls the actions with the CDi's remote controller to baffle the audience. Tricks include mind reading and guessing someones Zodiac sign. The player can setup Max to address him by his first name.</plot>
 		<releasedate>1/1/1994</releasedate>
@@ -1138,9 +1138,9 @@
 		<description>Mega Maze v1.06 (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fmegamaze.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fmegamaze%2Fmega%20maze%20v1.06%20%281994%29%28philips%29%28eu%29%5B%21%5D.chd" size="17892259" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Mega Maze v1.06</title_clean>
 		<releasedate>1/1/1993</releasedate>
 		<year>1993</year>
@@ -1153,9 +1153,9 @@
 		<description>Merlin's Apprentice v1.2 (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fmerlinap.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fmerlinap%2Fmerlin%27s%20apprentice%20v1.2%20%281995%29%28philips%29%28us%29.chd" size="99627021" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Merlin's Apprentice v1.2</title_clean>
 		<releasedate>1/1/1995</releasedate>
 		<year>1995</year>
@@ -1168,9 +1168,9 @@
 		<description>Micro Machines (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fmicromac.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fmicromac%2Fmicro%20machines%20%281995%29%28philips%29%28eu%29%5B%21%5D.chd" size="113114507" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Micro Machines</title_clean>
 		<plot>If you're bored of racing Formula 1 cars, rally cars or MotoGP bikes in their natural habitats, the Micro Machines series could be for you. It involves racing miniatures representing particular vehicle types across a particular terrain found around the house. The Sports Cars race on the desktop, 4x4s in the sandpit, Formula 1 cars on a snooker table, and so on.[CR]These levels were packed with variation. The Snooker tables has the track painted on, although this is open to deviation (as are most levels), and had you racing through the pockets and across the rim of the table. Tanks raced as well, with the chance of shooting out your opponent if they got directly in front of you. The desktop levels include binders to jump across, pencil-sharpeners to avoid, and lots of visual jokes in the open homework.[CR]Viewed from overhead with small graphics, the races include up to 4 cars. In one player challenge mode you race through the 21 tracks in a set order, selecting your 3 opponents as you go along (adding a fair amount of strategy - ideally you should aim to eliminate the better CPU cars early on), eliminating one after every third race (assuming that you can finish in the top 2 of a race within your 3 lives). If you win 3 races in a row without using a continue you get a time-trial race which can earn you an extra life.[CR]The real innovation of the game was in the multiplayer modes. You started with 4 points each, and when one car gets far enough ahead to force the other car off-screen, the slider moves in their favour. Once it reached the end (which involved beating them 4 times more than they beat you) you win the level, although if 3 laps were completed, the person leading at that point is declared the winner - with a sudden death play off if scores are level. 9 of the tracks are available in this mode, although you can also play this Head to Head system as a 1-player game across all the tracks.</plot>
 		<releasedate>1/1/1995</releasedate>
@@ -1191,9 +1191,9 @@
 		<description>Mother Goose - Hidden Pictures (USA)[0152911 01]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fmgoosehp.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fmgoosehp%2Fmother%20goose%20-%20hidden%20pictures%20%281991%29%28philips%29%28us%29%5B%21%5D%5B0152911%2001%5D.chd" size="64921889" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Mother Goose - Hidden Pictures [0152911 01]</title_clean>
 		<plot>Mother Goose: Hidden Pictures is an animated activity book for children. Linda Arnold sings twenty-six popular Mother Goose nursery rhymes. Each rhyme is accompanied with a hidden object puzzle. Players have to find a selection of hidden objects in the illustrated backgrounds. When all the objects are found the background begins to animate to reward the player.[CR]Included songs: Jack Be Nimble, Hickory Dickory Dock, Little Miss Muffet, Wee Willie Winkie, Old King Cole and others.</plot>
 		<releasedate>25/10/1991</releasedate>
@@ -1209,9 +1209,9 @@
 		<description>Mother Goose - Rhymes to Color (USA)[MGRTC392 03!]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fmgooserc.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fmgooserc%2Fmother%20goose%20-%20rhymes%20to%20color%20%281991%29%28philips%29%28us%29%5Bmgrtc392%2003%21%5D.chd" size="66113047" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Mother Goose - Rhymes to Color [MGRTC392 03!]</title_clean>
 		<plot>Mother Goose: Rhymes to Color is an animated activity book for children. Linda Arnold sings twenty-six popular Mother Goose nursery rhymes. Each rhyme is accompanied with a coloring puzzle. Players use the controller to colour in the pictures, once this is done the picture becomes animated to reward the player.[CR]Songs include: Little Bo-Peep, Old Woman Who Loves In A Shoe, Humpty Dumpty, Simple Simon and Pat-a-Cake.</plot>
 		<releasedate>25/10/1991</releasedate>
@@ -1227,9 +1227,9 @@
 		<description>Myst (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fmyst.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fmyst%2Fmyst%20%281996%29%28philips%29%28eu%29%5B%21%5D.chd" size="334699376" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Myst</title_clean>
 		<plot>You have just stumbled upon a most intriguing book, a book titled Myst. You have no idea where it came from, who wrote it, or how old it is. Reading through its pages provides you with only a superbly crafted description of an island world. But it's just a book, isn't it? As you reach the end of the book, you lay your hand on a page. Suddenly your own world dissolves into blackness, replaced with the island world the pages described. Now you're here, wherever here is, with no option but to explore.[CR]Myst is a first-person point-and-click adventure where the player controls a character known as The Stranger. Magically transported into the world described in the book, he needs to explore Myst Island and solve its mysteries. The game is presented as a series of static scenes where the player acts with the environment by clicking and manipulating objects. There are no enemies and it is not possible to die. Through Myst Island, the game is further divided into mini-worlds set in different ages accessed through different books.[CR]The PSP version adds new adventure scenarios and includes widescreen support.[CR]The DS version includes a completely new age, the Rime Age, and, next to a code rewrite, includes new and re-mastered sound effects and video clips.</plot>
 		<releasedate>1/1/1996</releasedate>
@@ -1251,9 +1251,9 @@
 		<description>Mystic Midway - Phantom Express (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fmystmidw.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fmystmidw%2Fmystic%20midway%20-%20phantom%20express%20%281993%29%28philips%29%28eu%29%5B%21%5D.chd" size="174718715" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Mystic Midway - Phantom Express</title_clean>
 		<plot>Mystic Midway: Phantom Express is a gallery shooter and spin off from the game Mystic Midway: Rest in Pieces. In the game each level represents a period of your life, which is presented as a rollercoaster ride where you are assaulted by various objects from that period (baby toys, braces, etc.) The goal is to shoot as many of them as possible to get a high enough score to advance to the next level. During the rides there's also parts of conversations you can hear where people argue about you or blame you for problems. In between levels you are greeted by an unfriendly host that only tries to insult you.</plot>
 		<releasedate>1/1/1993</releasedate>
@@ -1271,9 +1271,9 @@
 		<description>Mystic Midway - Rest in Pieces (Euro, USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fmystmidw.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fmystmidw%2Fmystic%20midway%20-%20rest%20in%20pieces%20%281992%29%28philips%29%28eu-us%29%5B%21%5D.chd" size="68749263" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Mystic Midway - Rest in Pieces</title_clean>
 		<plot>"Mystic Midway: Rest In Pieces" is basically a shooting gallery with a B-movies/TV horror theme - complete with a demonic host called Dr. Death, zombies, and other spooky things that glow in the dark. Like a typical shooting gallery game, your goal is to move a gun across the screen, shooting skulls, bugs, ghosts, and other creeps that pop up at random intervals. Every time you hit a target, you score points. Shooting a target usually results in an animation and sound effect. In some stages, gravestones move across the bottom of the screen to block you shots. Each stage requires a certain number of points to advance, but they will get harder as you advance through the game.</plot>
 		<releasedate>1/1/1992</releasedate>
@@ -1292,9 +1292,9 @@
 		<description>NFL Football Trivia Challenge (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fnfltriv.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fnfltriv%2Fnfl%20football%20trivia%20challenge%20%281993%29%28philips%29%28us%29%5B%21%5D.chd" size="371297846" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>NFL Football Trivia Challenge</title_clean>
 		<plot>NFL Football Trivia Challenge is a trivia game with an National Football League license. Either player can pick his favourite team to play with. TV commentators Pat Summerall and Tom Bookshier describe various situations in play accompanied by 1200 images and 300 Full Motion Video clips. 1500 multiple choice questions are waiting to be answered in the game. For each correct answer the player gains yardage in the game and increases his chances of scoring a point. The player with most points after 60 questions wins the game. There are three different difficulty levels to play at.</plot>
 		<releasedate>1/1/1993</releasedate>
@@ -1309,9 +1309,9 @@
 		<description>Name That Tune (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fnamethat.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fnamethat%2Fname%20that%20tune%20%281993%29%28philips%29%28us%29%5B%21%5D.chd" size="448756602" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Name That Tune</title_clean>
 		<plot>Name That Tune is a musical pop quiz hosted by Bob Green. It is a direct adaptation of the US TV show of the same name. In this game the player is quizzed on 160 different categories and will hear 600 different songs from the '50s to the '90s. The show features four different rounds with different gameplay.</plot>
 		<releasedate>1/1/1993</releasedate>
@@ -1328,9 +1328,9 @@
 		<description>Noah's Ark (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fnoahsark.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fnoahsark%2Fnoah%27s%20ark%20%281992%29%28philips%29%28us%29.chd" size="181551942" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Noah's Ark</title_clean>
 		<plot>Noah's Ark is a an educational title for children in which they learn about the classic story from the old Testament. Aside from the actual story, it comes with some games, more information about the time frame in which the story takes place, scripture from the Bible and a play room. [CR]The play room features sing along songs, connect the dots, a sliding puzzle and a coloring book.</plot>
 		<releasedate>1/1/1994</releasedate>
@@ -1346,9 +1346,9 @@
 		<description>Othello (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fothello.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fothello%2Fothello%20%281993%29%28philips%29%28eu%29%5B%21%5D.chd" size="283139170" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Othello</title_clean>
 		<plot>Othello is a digital conversion of the classic board game of the same name (also known as Reversi).[CR]The game is played with two players who in their turn place a marker on the 8x8 grid. a marker must border to at least one enemy marker. When a player encloses enemy markers between two of his own the enclosed markers change colour. When there's no possible move for a player he has to skip a turn. The game ends when the entire board is full. The player with the most markers on the board wins.[CR]This version of the game allows you to play against another player, or the CD-i. Included are two AIs who represent Einstein and Leonardo da Vinci. The game is shown from a first person perspective so you can see your opponent.</plot>
 		<releasedate>1/1/1993</releasedate>
@@ -1367,9 +1367,9 @@
 		<description>P.A.W.S. - Personal Automated Wagging System (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fpaws.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fpaws%2Fp.a.w.s.%20-%20personal%20automated%20wagging%20system%20%281998%29%28philips%29%28eu%29.chd" size="98530842" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>P.A.W.S. - Personal Automated Wagging System</title_clean>
 		<plot>P.A.W.S. - Personal Automated Wagging System is a comical dog simulator. The game includes various activities for players to partake in.[CR]In one you play as the dog who is searching for bones and a cat in the backyard of a house. You view the world from the dog's perspective, but can also get an overview on a map. The dog can perform various actions such as digging, looking down, eating and three kinds of barks. When the dog encounters the cat he'll automatically start chasing it. There's a lot of territory to explore and players can find typical backyard stuff like a pond and a gate.[CR]In another activity the player controls a dog with a jet pack. The goal is to deliver bones to various inhabitants of dog town.[CR]The final activity is called Anatomy. Here the player is presented with the insides of a robot dog. Various hot spots can be clicked on to start an animation. This teaches the player about what certain parts are for. The robot dog can also sniff items and try to guess what it is.</plot>
 		<releasedate>1/1/1998</releasedate>
@@ -1385,9 +1385,9 @@
 		<description>Pac-Panic (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fpacpanic.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fpacpanic%2Fpac-panic%20%281995%29%28namco%20-%20philips%29%28eu%29%5B%21%5D.chd" size="14979054" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Pac-Panic</title_clean>
 		<plot>Much more than the return of the ghost-chompin' legend, PAC-PANIC is a think-fast challenge and a puzzle game, too. As the blocks, you gotta think quick and move quicker, to line 'em up and make 'em vanish.</plot>
 		<releasedate>1/1/1995</releasedate>
@@ -1402,9 +1402,9 @@
 		<description>Paint School I v1.0 (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fpaintsc.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fpaintsc%2Fpaint%20school%20i%20v1.0%20%281991%29%28philips%29%28us%29.chd" size="92878533" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Paint School I v1.0</title_clean>
 		<releasedate>1/1/1991</releasedate>
 		<year>1991</year>
@@ -1416,9 +1416,9 @@
 		<description>Paint School II v1.0 (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fpaintsc2.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fpaintsc2%2Fpaint%20school%20ii%20v1.0%20%281991%29%28philips%29%28us%29.chd" size="76519483" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Paint School II v1.0</title_clean>
 		<releasedate>1/1/1990</releasedate>
 		<year>1990</year>
@@ -1430,9 +1430,9 @@
 		<description>Pecos Bill (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fpecosbil.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fpecosbil%2Fpecos%20bill%20%281992%29%28philips%29%28us%29.chd" size="154877125" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Pecos Bill</title_clean>
 		<releasedate>1/1/1991</releasedate>
 		<year>1991</year>
@@ -1444,9 +1444,9 @@
 		<description>Pegasus (Euro, USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fpegasus.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fpegasus%2Fpegasus%20%281992%29%28philips%29%28eu-us%29%5B%21%5D.chd" size="166494683" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Pegasus</title_clean>
 		<releasedate>1/1/1992</releasedate>
 		<year>1992</year>
@@ -1458,9 +1458,9 @@
 		<description>Pinball (USA)[3106900342 50238 037 03]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fpinball.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fpinball%2Fpinball%20%281992%29%28philips%29%28us%29%5B%21%5D%5B3106900342%2050238%20037%2003%5D.chd" size="34773542" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Pinball [3106900342 50238 037 03]</title_clean>
 		<plot>Pinball is an aptly named pinball game for the CD-i. The game features four different tables: Cyber, Meltdown, Spring Break and Dogfight.[CR]Cyber features a magnetic strip in the centre of the table which can hold your ball in its field at certain times. When it is you can try to deactivate it at the right time to guide your ball to the target you want to hit.[CR]Meltdown features various chutes in a reactor that can be opened for more points.[CR]Spring Break has a beach theme where you need to spell the words Spring Break.[CR]Dogfight has a World War I airplane theme. At the table you are required to refuel your flippers from time to time or else they go dead.</plot>
 		<releasedate>1/1/1991</releasedate>
@@ -1481,9 +1481,9 @@
 		<description>Plunderball</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fplunder.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fplunder%2Fplunderball.chd" size="145398212" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Plunderball</title_clean>
 		<releasedate>1/1/2002</releasedate>
 		<year>2002</year>
@@ -1495,9 +1495,9 @@
 		<description>Power Hitter (USA)[08120804 01]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fpowerhit.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fpowerhit%2Fpower%20hitter%20%281993%29%28philips%29%28us%29%5B08120804%2001%5D.chd" size="125972809" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Power Hitter [08120804 01]</title_clean>
 		<plot>It's just you against baseball's great pitchers. Your hands tighten around the bat. He winds. The ball screams towards the plate. You swing, and the crack of the bat signals a hard grounder through the infield. It's a hit!</plot>
 		<releasedate>3/12/1993</releasedate>
@@ -1512,9 +1512,9 @@
 		<description>Rand McNally's America - United States Atlas (USA)[01420320 03]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fusatlas.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fusatlas%2Frand%20mcnally%27s%20america%20-%20united%20states%20atlas%20%281991%29%28philips%29%28us%29%5B01420320%2003%5D.chd" size="217584162" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Rand McNally's America - United States Atlas [01420320 03]</title_clean>
 		<plot>An electronic reference guide to the USA.</plot>
 		<studio>Philips</studio>
@@ -1526,9 +1526,9 @@
 		<description>Rhythm Maker (USA)[17220326 01]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Frhythm.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Frhythm%2Frhythm%20maker%20%281993%29%28philips%29%28us%29%5B17220326%2001%5D.chd" size="18050533" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Rhythm Maker [17220326 01]</title_clean>
 		<plot>Based on the popular Rhythm Box from the award-winning "Private Lesson Series," Rhythm Maker provides a whole set of musical instruments that will play any rhythm you want. [CR]Use drums, cymbals, congas, and much more in Rock, Metal, Jazz, Latin, Rap &amp; Novelty kits.  [CR]Choose from 25 premade popular rhythm patterns --from Afro-Cuban to Waltz-- or create your own.[CR]Speed up any rhythm, slow it down, or even change the meter, all while the Rhythm Maker plays.[CR]Review the combinations and save the ones you like,  [CR]Add punch to any song or dance tune, with Rhythm Maker.</plot>
 		<studio>Philips</studio>
@@ -1540,9 +1540,9 @@
 		<description>Richard Scarry's Best Neighborhood Disc Ever! (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fscarrybe.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fscarrybe%2Frichard%20scarry%27s%20best%20neighborhood%20disc%20ever%21%20%281992%29%28philips%29%28us%29%5B%21%5D.chd" size="52765858" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Richard Scarry's Best Neighborhood Disc Ever!</title_clean>
 		<plot>Richard Scarry's Best Neighborhood Disc Ever! is an edutainment title for children based on a book by Richard Scarry. In the game players explore Busytown, a fictional place where there's always a lot going on. The whole town comes to life in cartoon animations. Players choose places and characters to visit. At these places players can practice and learn important pre-reading skills and listen to stories. Taught skills include memory, color recognition, vocabulary, pattern recognition and counting.</plot>
 		<releasedate>25/10/1991</releasedate>
@@ -1560,9 +1560,9 @@
 		<description>Sandy's Circus Adventure (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fsandyadv.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fsandyadv%2Fsandy%27s%20circus%20adventure%20%281991%29%28philips%29%28us%29%5B%21%5D.chd" size="121861866" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Sandy's Circus Adventure</title_clean>
 		<plot>Sandy's Circus Adventure is a children's title about a friendly sea lion called Sandy. Sandy is lost in the circus and together with the player she will explore it. Sandy can have fun with the clowns, be launched out of a giant cannon, disappear inside a magician's hat, juggle and much more circus related activities. Every activity is accompanied with cartoon animations and digital music and sound effects. Furthermore there are some more active and creative activities such as color drawings, creating short animations and creating clowns faces by making combinations of facial features.</plot>
 		<releasedate>1/1/1990</releasedate>
@@ -1578,9 +1578,9 @@
 		<description>Sargon Chess (USA)[03020320 01]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fsargon.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fsargon%2Fsargon%20chess%20%281992%29%28philips%29%28us%29%5B03020320%2001%5D.chd" size="95552179" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Sargon Chess [03020320 01]</title_clean>
 		<plot>Sargon Chess is a chess engine inspired by the Mesopotamian king Sargon that allows you to play a game of chess.[CR]The game features 16 different difficulty levels. A special Novice level gives you starter tips and allows you to take back moves and changes sides. It is also possible to construct Chess challenges and let "Sargon" solve them.[CR]The game can  be played with 3 distinct chess sets which are displayed in a quasi-3D perspective.</plot>
 		<releasedate>8/1/1991</releasedate>
@@ -1598,9 +1598,9 @@
 		<description>Scotland Yard - Interactive v1.03 (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fscotland.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fscotland%2Fscotland%20yard%20-%20interactive%20v1.03%20%281994%29%28philips%29%28eu%29.chd" size="115792854" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Scotland Yard - Interactive v1.03</title_clean>
 		<releasedate>1/1/1993</releasedate>
 		<year>1993</year>
@@ -1614,9 +1614,9 @@
 		<description>Secret Mission v1.03 (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fsecretm.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fsecretm%2Fsecret%20mission%20v1.03%20%281996%29%28philips%29%28eu%29%5B%21%5D.chd" size="166432796" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Secret Mission v1.03</title_clean>
 		<plot>It's the 1950's. The place is the Indo-Chinese country of Opalia. Opalia has become the target of the USSR and the United States and its geographic position has made it a real hot spot in the Cold War battle of the superpowers. Networks of underground informants and foreign spies have totally destabilized this once peaceful country and local rebels, led by the devious Prime Minister, Vishaka, are trying to topple the king. The safety of Opalia is in your hands alone... you can't let them down!</plot>
 		<releasedate>1/1/1996</releasedate>
@@ -1631,9 +1631,9 @@
 		<description>Shaolin's Road (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fshaolin.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fshaolin%2Fshaolin%27s%20road%20%281995%29%28philips%29%28eu%29%28en-fr%29.chd" size="191006806" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Shaolin's Road</title_clean>
 		<plot>Shaolin's Road is a action adventure that takes place in medieval China. When Tsu Yu's father, a powerful warlord, is murdered and his sword stolen, Tsu Yu vows to avenge his father's murder. The player (as Tsu Yu) will have to learn Shaolin Kung Fu to do so. [CR]The player has to roam the land and speak with other Kung Fu heroes, who will most likely only scoff at the player. Occasionally they will send the player on a trial which comes in the form of a mini game, such as shooting a snake with a bow and arrow, engaging in Kung Fu fighting and karate, throwing stars, performing calligraphy and playing memory to learn Chinese symbols. [CR]Completing challenges changes the color of the player's belt and gives him more recognition with the other fighters allowing him to progress further. It also unlocks new pieces of the map you can use to travel to new areas.</plot>
 		<releasedate>1/1/1995</releasedate>
@@ -1650,9 +1650,9 @@
 		<description>Sport Freaks (Ned)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fsportfrk.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fsportfrk%2Fsport%20freaks%20%281996%29%28philips%29%28nl%29.chd" size="18034029" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Sport Freaks</title_clean>
 		<plot>Sport Freaks is a sports quiz game based on a Dutch television game show of the same name. The game includes all the questions that were written for the show but were never used. All the questions relate to a selection of 45 sports in 50 countries since the year 1900. The number of questions in the game (1250) equals 60 game show episodes. Using a sort of slot machine each turn a sport, year and country is chosen which you receive a question about. The emphasis lies on Dutch sports history.</plot>
 		<releasedate>1/1/1996</releasedate>
@@ -1667,9 +1667,9 @@
 		<description>Stickybear Math (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fstickymu.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fstickymu%2Fstickybear%20math%20%281994%29%28philips%29%28us%29%28en-es%29.chd" size="99758213" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Stickybear Math</title_clean>
 		<plot>Stickybear: Math is an educational title for children ages 6 and up based on Richard Hefter's Stickybear character. In the game Stickybear helps teach the player mathematics with the help of a variety of math games. Including simple graphical sums to an arcade platform game.</plot>
 		<releasedate>1/1/1994</releasedate>
@@ -1686,9 +1686,9 @@
 		<description>Stickybear Preschool (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fstickyp.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fstickyp%2Fstickybear%20preschool%20%281994%29%28philips%29%28eu%29%28en-es%29.chd" size="92305834" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Stickybear Preschool</title_clean>
 		<plot>Stickybear: Preschool is an educational title for children ages three through six, based on Richard Hefter's Stickybear character. In this game players learn and improve basic skills such as recognizing shapes or opposites, learning the alphabet and counting and grouping items and colors. Each of the simple games is accompanied with cartoon animations and sound effects of Stickybear and his friends. The game is bilingual in English and Spanish.</plot>
 		<releasedate>1/1/1994</releasedate>
@@ -1703,9 +1703,9 @@
 		<description>Stickybear Reading (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fstickyr.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fstickyr%2Fstickybear%20reading%20%281993%29%28philips%29%28us%29%28en-es%29.chd" size="94352122" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Stickybear Reading</title_clean>
 		<plot>Stickybear: Reading is an educational title for children ages four to eight, based on Richard Hefter's Stickybear character. The game features three different reading activities, all accompanied with cartoon animations, music and comical sound effects.[CR]Using the Sentence Builder players can create their own sentences from nouns and verbs, which will be read out loud by Stickybear. Each sentence features an animation. In Sarah's Word Book players can click on items which then animate, their names are said and displayed textually. Finally in Word Bop, players use a magical cannon that turns items into words and vice versa. The game features both the English and Spanish language to play in.</plot>
 		<releasedate>1/1/1993</releasedate>
@@ -1721,9 +1721,9 @@
 		<description>Striker Pro (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fstriker.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fstriker%2Fstriker%20pro%20%281994%29%28philips%29%28us%29%28m6%29.chd" size="19935059" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Striker Pro</title_clean>
 		<plot>Striker Pro is a soccer game for the CD-i. The game has a top-down view with the goals at the top and bottom of the playing field. In the game you can choose from 64 national teams to play with. There are various game modes such as friendly, world league and world cup. Optionally the game can be played in a 6 vs 6 mode. The game can be played against the AI or another player.</plot>
 		<releasedate>1/1/1994</releasedate>
@@ -1742,9 +1742,9 @@
 		<description>Super Mario's Wacky Worlds (Prototype v0.11, 19930303)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fsmww.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fsmww%2Fsuper%20mario%20wacky%20worlds%20%28prototype%29.chd" size="8063877" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Super Mario's Wacky Worlds</title_clean>
 		<genre>Platform</genre>
 		<studio>Philips</studio>
@@ -1757,9 +1757,9 @@
 		<description>Surf City (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fsurfcity.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fsurfcity%2Fsurf%20city%20%281994%29%28philips%29%28eu%29.chd" size="174907738" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Surf City</title_clean>
 		<plot>Surf City is an interactive musical with songs from the Beach Boys. [CR]In the game the player is presented with an overview map of the beach town aptly named Surf City. The player can click on various streets, which triggers a scene where the street scrolls by and the player can click on the various buildings he wants to visit. Inside the building the player can talk to people and interact with items. The scenes are accompanied with Beach Boys music from the 60s and help tell the story of the main characters of the game.[CR]There's various games and activities to be played as well such as:[CR]1. Build a hot rod[CR]2. Go bowling at the Beach Bowl[CR]3. Design a surfboard[CR]4. Play the video jukebox[CR]5. Race cars at the arcade speedway[CR]6. Take a pizza order[CR]7. Learn surf lingo from Tiki[CR]8. Visit the love teller[CR]9. Take a pop quiz at the high school[CR]10. Watch fireworks on the pier[CR]11. Order a burger-to-go[CR]12. Play spin-the-bottle at Wendy's house</plot>
 		<releasedate>1/1/1994</releasedate>
@@ -1776,9 +1776,9 @@
 		<description>Surf City (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fsurfcity.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fsurfcity%2Fsurf%20city%20%281994%29%28philips%29%28us%29.chd" size="174913864" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Surf City</title_clean>
 		<plot>Surf City is an interactive musical with songs from the Beach Boys. [CR]In the game the player is presented with an overview map of the beach town aptly named Surf City. The player can click on various streets, which triggers a scene where the street scrolls by and the player can click on the various buildings he wants to visit. Inside the building the player can talk to people and interact with items. The scenes are accompanied with Beach Boys music from the 60s and help tell the story of the main characters of the game.[CR]There's various games and activities to be played as well such as:[CR]1. Build a hot rod[CR]2. Go bowling at the Beach Bowl[CR]3. Design a surfboard[CR]4. Play the video jukebox[CR]5. Race cars at the arcade speedway[CR]6. Take a pizza order[CR]7. Learn surf lingo from Tiki[CR]8. Visit the love teller[CR]9. Take a pop quiz at the high school[CR]10. Watch fireworks on the pier[CR]11. Order a burger-to-go[CR]12. Play spin-the-bottle at Wendy's house</plot>
 		<releasedate>1/1/1994</releasedate>
@@ -1795,9 +1795,9 @@
 		<description>Tell Me Why One (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Ftellmeu1.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Ftellmeu1%2Ftell%20me%20why%20one%20%281991%29%28philips%29%28us%29%5B%21%5D.chd" size="269841387" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Tell Me Why One</title_clean>
 		<plot>Tell Me Why One is an interactive trivia game. There are over 175 questions that need answering. Questions in the game are typical questions that curious children might ask. They come in five categories: our world, how things work, the zoo, how things began and the human body. Questions are supported with audio and visuals. The game comes with over 3 hours of fact filled presentations and interactive exhibits.</plot>
 		<releasedate>1/1/1990</releasedate>
@@ -1812,9 +1812,9 @@
 		<description>Tell Me Why Two (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Ftellmey2.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Ftellmey2%2Ftell%20me%20why%20two%20%281991%29%28philips%29%28us%29.chd" size="275009576" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Tell Me Why Two</title_clean>
 		<plot>Tell Me Why Two is an interactive trivia game and sequel to Tell Me Why One. The game comes with an additional 175+ questions that need answering. Questions in the game are typical questions that curious children might ask. They come in five categories: our world, how things work, the zoo, how things began and the human body. Questions are supported with audio and visuals. The game comes with over 3 hours of fact filled presentations and interactive exhibits.</plot>
 		<releasedate>1/1/1990</releasedate>
@@ -1831,9 +1831,9 @@
 		<description>Tetris (Euro, USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Ftetris.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Ftetris%2Ftetris%20%281992%29%28philips%29%28eu-us%29%5B%21%5D.chd" size="348788611" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Tetris</title_clean>
 		<plot>Tetris for the CD-i is a conversion of the classic puzzle game. Geometric shapes fall from the top of a playfield to rest on the bottom; fit the pieces together, and the line they form disappears. If the pieces don't form lines and eventually stack up to the top of the playfield, the game is over. Difficulty increases by dropping the pieces faster and faster over time.[CR]Tetris is a verifiable classic game, translated to well over 200 electronic and computer platforms. It takes 2 minutes to learn, but a lifetime to master.[CR]This CD-i version of the game features slightly different graphics, video nature scenes at the background while you play and a relaxing soundtrack  by Jim Andron. The game play stays exactly identical to the classic.</plot>
 		<releasedate>1/1/1992</releasedate>
@@ -1852,9 +1852,9 @@
 		<description>TextTiles v1 (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Ftexttile.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Ftexttile%2Ftexttiles%20v1%20%281992%29%28philips%29%28us%29%5B%21%5D.chd" size="65959785" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>TextTiles v1</title_clean>
 		<releasedate>1/1/1992</releasedate>
 		<year>1992</year>
@@ -1867,9 +1867,9 @@
 		<description>The Apprentice [CDi Ready]</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fapprentc.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fapprentc%2Fthe%20apprentice%20%28cdi-ready%29.chd" size="342144912" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>The Apprentice [CDi Ready]</title_clean>
 		<plot>Far from the "multimedia" titles that formed the stock of the CDi's software library, the Apprentice is a plain old platform game with cartoony sprites that would not look out of place on contemporary 16-bit platforms. As Marvin, a wizard's apprentice, your master Mr. Wandburner gives you a series of tasks to complete (basically fetching an object found at the end of a level), spread out on six levels with three stages each, taking place on land, in the sea and in the air. In order to make your life in the aquatic levels easier, the wizard will turn you into a frog. In order to fly, you're equipped with a special flying helmet. Each level has a new weapon for you to use, ranging from the traditional magic wand to a rubber ball, a water pistol or even a laser gun. As in any normal platform game, each level has an end-boss, and between levels are bonus rounds.</plot>
 		<releasedate>1/1/1994</releasedate>
@@ -1899,9 +1899,9 @@
 		<description>The Berenstain Bears - On Their Own and You On Your Own (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fberenst.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fberenst%2Fberenstain%20bears%2C%20the%20-%20on%20their%20own%20and%20you%20on%20your%20own%20%281993%29%28philips%29%28us%29%5B%21%5D.chd" size="142213577" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>The Berenstain Bears - On Their Own and You On Your Own</title_clean>
 		<releasedate>1/1/1993</releasedate>
 		<year>1993</year>
@@ -1913,9 +1913,9 @@
 		<description>The Best of Draw-50 with Lee Ames (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fbestdraw.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fbestdraw%2Fbest%20of%20draw-50%20with%20lee%20ames%2C%20the%20%281993%29%28philips%29%28us%29%5B%21%5D.chd" size="193010262" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>The Best of Draw-50 with Lee Ames</title_clean>
 		<plot>Artist-cartoonist Lee Ames teaches you to draw 50 fabulous drawings in 8 favorite categories form animals to athletes. Set your own pace, one stroke at a time, stopping and starting whenever you want, from the first to the finishing touches.</plot>
 		<studio>Philips</studio>
@@ -1926,9 +1926,9 @@
 		<description>The Joker's Wild! (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fjokers.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fjokers%2Fjoker%27s%20wild%21%2C%20the%20%281994%29%28philips%29%28us%29%5B%21%5D.chd" size="366634316" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>The Joker's Wild!</title_clean>
 		<plot>The Joker's Wild! is a trivia game based on the 70-80s game show of the same name. The game is hosted by Wink Martindale.[CR]In the game players answer multiple choice questions stated by the host. Categories for the questions are determined by a giant slot machine with three wheels. Each wheel features five categories and a joker. Each round a player pulls the lever and picks one of the resulting categories. The joker counts as a wild card.[CR]When an answer is correctly given to a question the player receives a certain amount of money. If the category is shown on the slot machine two or three times (2 or 3 of a kind) the scores are multiplied. When a player answers incorrectly his opponent may give a shot at the question and steal the money.[CR]Unlike the original show this video game adaptation can be played with up to four players. Of course no money can be won with this video game, but there is a high score list that keeps track of all the best scores.</plot>
 		<releasedate>1/1/1993</releasedate>
@@ -1944,9 +1944,9 @@
 		<description>The Joker's Wild! Jr. (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fjokersjr.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fjokersjr%2Fjoker%27s%20wild%21%20jr.%2C%20the%20%281994%29%28philips%29%28us%29.chd" size="353419547" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>The Joker's Wild! Jr.</title_clean>
 		<plot>The Joker's Wild Jr. is a trivia game based on the 70-80s game show The Joker's Wild. The game is hosted by Marc Summers.[CR][B]Gameplay:[/B] is the same as for the adult version The Joker's Wild.[CR]In the game players answer multiple choice questions stated by the host. Categories for the questions are determined by a giant slot machine with three wheels. Each wheel features five categories and a joker. Each round a player pulls the lever and picks one of the resulting categories. The joker counts as a wild card.[CR]When an answer is correctly given to a question the player receives a certain amount of money. If the category is shown on the slot machine two or three times (2 or 3 of a kind) the scores are multiplied. When a player answers incorrectly his opponent may give a shot at the question and steal the money.[CR]Unlike the original show this video game adaptation can be played with up to four players. Of course no money can be won with this video game, but there is a high score list that keeps track of all the best scores. Major differences with the adult version are the change of host, easier questions and some more children friendly graphics.</plot>
 		<releasedate>25/10/1994</releasedate>
@@ -1961,9 +1961,9 @@
 		<description>The Last Bounty Hunter (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Flastboun.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Flastboun%2Flast%20bounty%20hunter%2C%20the%20%281996%29%28philips%29%28eu%29.chd" size="310148447" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>The Last Bounty Hunter</title_clean>
 		<plot>The Last Bounty Hunter is a simple shooter in the tradition of American Laser Games's Mad Dog McCree. Fairly simple in design, it features a video background with which you interact - you use your mouse or a light gun to literally shoot your foes and protect the innocent.[CR]The story is this: you're a bounty hunter, one of the last, who come to a crime-infested Wild Western town to aid its Sheriff in getting rid of the criminals.</plot>
 		<releasedate>1/1/1996</releasedate>
@@ -1980,9 +1980,9 @@
 		<description>The Palm Springs Open (Euro, USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fpalmsprg.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fpalmsprg%2Fpalm%20springs%20open%2C%20the%20%281991%29%28philips%29%28eu-us%29%5B%21%5D.chd" size="131891452" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>The Palm Springs Open</title_clean>
 		<releasedate>1/1/1991</releasedate>
 		<year>1991</year>
@@ -1995,9 +1995,9 @@
 		<description>The Ultimate Noah's Ark (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fnoahark.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fnoahark%2Fultimate%20noah%27s%20ark%2C%20the%20%281994%29%28philips%29%28us%29.chd" size="197381725" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>The Ultimate Noah's Ark</title_clean>
 		<plot>The Ultimate Noah's Ark is a digital version of the picture-book of the same name by artist Mike Wilks. Like the book the player is presented with a large drawing of Noah's Ark. On the Ark are 354 different animal species to be found. All but one of them have a mate. It's up to the user to find which animal is missing his mate.[CR]The original drawing can be broken up into 256 different screen-wide detail close-ups. In addition to the drawing this software title comes with additional information for all the animals including videos of them in their natural habitats.</plot>
 		<releasedate>1/1/1994</releasedate>
@@ -2012,9 +2012,9 @@
 		<description>The Wacky World of Minature Golf - With Eugene Levy (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fwackyglf.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fwackyglf%2Fwacky%20world%20of%20minature%20golf%2C%20the%20-%20with%20eugene%20levy%20%281993%29%28philips%29%28eu%29.chd" size="163683084" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>The Wacky World of Minature Golf - With Eugene Levy</title_clean>
 		<releasedate>1/1/1993</releasedate>
 		<year>1993</year>
@@ -2028,9 +2028,9 @@
 		<description>Tim &amp; Bear at the Airport (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Ftimbeara.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Ftimbeara%2Ftim%20%26%20bear%20at%20the%20airport%20%281995%29%28philips%29%28eu%29.chd" size="123152404" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Tim &amp; Bear at the Airport</title_clean>
 		<plot>Unlike the first title in the series (Tim &amp; Beer in het Ziekenhuis) which didn't feature interaction (beyond choosing which of the two characters to follow), this second Tim &amp; Beer title is fully interactive. Tim and his teddy bear are visiting their cousin Tina who lives far away. Because of this they have to go by plane. Of course it's not easy to navigate around an airport.Tim &amp; Beer op het Vliegveld is an interactive cartoon film in which the viewer watches Tim &amp; Beer explore the airport and the airplane. Viewers can opt to let the cartoon roll, or at times interfere and tell Tim or Bear what to do by choosing from several preset options. This creates tiny differences in how the story progresses.The title is completely in Dutch.</plot>
 		<year>1994</year>
@@ -2044,9 +2044,9 @@
 		<description>Treasures of the Smithsonian (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fsmithson.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fsmithson%2Ftreasures%20of%20the%20smithsonian%20%281991%29%28philips%29%28us%29%5B%21%5D.chd" size="322472538" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Treasures of the Smithsonian</title_clean>
 		<plot>Explore the highlights of a dozen museums in this unique, interactive compact disc! From the Air and Space Museum to the National Zoo, treasures range from the World War 1 Albatross Fighter Plane to Zande Harp from Africa. Along the way, you&#8217;ll find everything from the Hope Diamonds to Howdy Doody. From Lincoln&#8217;s Last Photograph to the famous Pandas. Art works by Picasso and Pollock a Stradivari Cello and a pair of Washington&#8217;s Teeth. You can browse through the treasures by museum, category, date or theme. Popular columnist Edward Park provides interesting commentary. Special features let you walk around an object, play its sounds or zoom in on it.</plot>
 		<studio>Philips</studio>
@@ -2057,9 +2057,9 @@
 		<description>Video Speedway - The Ultimate Racing Experience (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fvideospd.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fvideospd%2Fvideo%20speedway%20-%20the%20ultimate%20racing%20experience%20%281993%29%28philips%29%28eu%29%5B%21%5D.chd" size="289157517" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Video Speedway - The Ultimate Racing Experience</title_clean>
 		<releasedate>1/1/1992</releasedate>
 		<year>1992</year>
@@ -2073,9 +2073,9 @@
 		<description>Whack a Bubble (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fwhackbub.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fwhackbub%2Fwhack%20a%20bubble%20%281997%29%28new%20frontier%29%28eu%29.chd" size="71440459" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Whack a Bubble</title_clean>
 		<plot>Whack a Bubble is a paddle and ball game in the vein of Breakout. You control a paddle at the bottom of the screen and have to remove bubbles at the top by bouncing a ball against them. If the ball leaves the screen at the bottom you loose a life.[CR]The game comes with a 100 levels and 3 difficulties. The game also features a two player mode where players play against each other.</plot>
 		<releasedate>1/1/1997</releasedate>
@@ -2092,9 +2092,9 @@
 		<description>Wordplay (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fwordplay.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fwordplay%2Fwordplay%20%281994%29%28philips%29%28eu%29.chd" size="393866521" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Wordplay</title_clean>
 		<plot>Wordplay is a word game for up to four players. The virtual host Bob continuously presents new letters in a pool. Players select a letter to place in their own collection each turn. It is up to the players to create words with their collected letters. Forming words scores the players points, the first player to reach 200 points wins the match. Players score more points for words that use all of their letters. If a player can't make any words from the letters in the pool he or she can opt to reshuffle it completely but losing a turn. The game recognizes 35,000 words of both British and American spelling.</plot>
 		<releasedate>1/1/1994</releasedate>
@@ -2110,9 +2110,9 @@
 		<description>Yearn 2 Learn - Peanuts (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fyearn2le.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fyearn2le%2Fyearn%202%20learn%20-%20peanuts%20%281994%29%28philips%29%28eu%29%28m4%29%5B%21%5D.chd" size="50123756" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Yearn 2 Learn - Peanuts</title_clean>
 		<plot>Edutainment software for kids ages 3 to 10 hosted by Snoopy and the Peanuts gang. You get a series of independent activities such as a math game, a geography game, a reading game (which consists of animated Peanuts strips), a visual coordination game and an electronic coloring book. The game boasts full voice-overs explaining every feature in the game and also spelling words and locations, plus the game has lots of "hotspots" which trigger animations, sounds, etc.</plot>
 		<releasedate>1/1/1994</releasedate>
@@ -2128,9 +2128,9 @@
 		<description>Zelda - The Wand of Gamelon (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fzeldgam.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fzeldgam%2Fzelda%20-%20the%20wand%20of%20gamelon%20%281993%29%28philips%29%28us%29.chd" size="115258204" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Zelda - The Wand of Gamelon</title_clean>
 		<plot>This is one of the three  Zelda-based games developed by Philips exclusively for the CD-i platform. In the game you control princess Zelda. Her father, the king, went to the land of Gamelon to help Duke Onkled in his battle against the evil Ganon. A month has passed, but there is no news from the king. The brave hero Link decides to find him but then disappears. The young princess travels to Gamelon by herself to find and to free both her father and Link...[CR]Unlike classic Zelda games, "Wand of Gamelon" is viewed from a platform perspective. In the beginning you are given a map with several accessible locations. Once you choose a location, you enter a platform level where you must fight enemies in real-time combat, as well as meet people who will send you on quests. At any time there are several locations accessible, and many quests can be completed in a non-linear fashion.</plot>
 		<releasedate>10/10/1993</releasedate>
@@ -2161,9 +2161,9 @@
 		<description>Zelda's Adventure (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fzeldaadv.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fzeldaadv%2Fzelda%27s%20adventure%20%281995%29%28philips%29%28eu%29.chd" size="185976849" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Zelda's Adventure</title_clean>
 		<plot>This is the third game in the row of Philips' action adventures set in  Zelda universe. In this game, you play the princess Zelda herself. The evil Gannon has captured and imprisoned the brave hero Link. In order to save him, Zelda has to venture into Tolemac, an uncharted southeastern region of the land of Hyrule, and to collect seven celestial signs, which is the only way to defeat Gannon.[CR]Unlike the two previous Zelda games for CD-i, which were platformers, "Zelda's Adventure" returns to the traditional top-down view of the series. You navigate Zelda over the world map, visiting towns, talking to townspeople for clues, and descending into dangerous dungeons. You can equip swords, shields, and various kinds of gear. The combat is entirely in real time.</plot>
 		<releasedate>6/5/1994</releasedate>
@@ -2184,9 +2184,9 @@
 		<description>Zenith (Euro)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fzenith.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fzenith%2Fzenith%20%281997%29%28philips%29%28eu%29.chd" size="9351585" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Zenith</title_clean>
 		<plot>Zenith is a pinball game. Controlling the flippers at the bottom of the machine the player has to keep the ball in play. There are many bonuses and specials to be gained such as extra balls, shields, fly mode and low gravity. The player must be on the lookout for acid that can destroy the ball. There are six levels and the game allows up to four players to compete.</plot>
 		<releasedate>1/1/1997</releasedate>
@@ -2206,9 +2206,9 @@
 		<description>Zombie Dinos from Planet Zeltoid (USA)</description>
 		<rom name="MAME_078/CDI_blank.zip/CDI_blank%2Fzombie.zip" size="8" />
 		<rom name="MESS_0.149_CHD_cdi/MESS_0.149_CHD_cdi.zip/MESS_0.149_CHD_cdi%2Fzombie%2Fzombie%20dinos%20from%20planet%20zeltoid%20%281992%29%28philips%29%28us%29%5B%21%5D.chd" size="423224109" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono1.zip" size="650931" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdimono2.zip" size="244291" />
-		<rom name="MAME_0.185_ROMs_non-merged/MAME_0.185_ROMs_non-merged.zip/MAME%200.185%20ROMs%20%28non-merged%29%2Fcdibios.zip" size="468682" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono1.zip" size="650931" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdimono2.zip" size="244291" />
+		<rom name="MAME_0.228_ROMs_merged/MAME_0.228_ROMs_merged.zip/cdibios.zip" size="468682" />
 		<title_clean>Zombie Dinos from Planet Zeltoid</title_clean>
 		<plot>Innocent dinosaurs have become mindless zombies, controlled by the evil Harry the Harrier and his alien Brain Blobs. But all is not lost. Wise-cracking Dexter the Dinodroid has managed to escape, bringing to Earth the incredible Time Machine. His goal: "Let's kick some brain!" Travel back in the Time Machine 200 million years. Locate each dinosaur before the Brain Blobs take control. Stop them from destroying unsuspecting humans in your hometown. Dexter will help you, along with the Time Machine's invaluable Dino Encyclopedia containing everything you need to know to save the planet.</plot>
 		<releasedate>1/1/1992</releasedate>

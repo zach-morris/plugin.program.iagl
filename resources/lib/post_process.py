@@ -36,11 +36,9 @@ class iagl_post_process(object):
 				self.post_processor = self.unzip(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,point_to_file='.cue')
 			elif post_processor == 'unzip_and_launch_scummvm_file':
 				xbmc.log(msg='IAGL:  Post processor set to UNZIP and launch SCUMMVM file',level=xbmc.LOGDEBUG)
-				# folder_name=[x.get('filename_no_ext') for x in self.game_files if x and x.get('filename_no_ext')][0]
 				self.post_processor = self.unzip(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,to_folder=True,generate_pointer_file='.scummvm')
 			elif post_processor == 'unzip_and_launch_win31_file':
 				xbmc.log(msg='IAGL:  Post processor set to UNZIP and launch WIN31 BAT file',level=xbmc.LOGDEBUG)
-				# folder_name=[x.get('filename_no_ext') for x in self.game_files if x and x.get('filename_no_ext')][0]
 				self.post_processor = self.unzip(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,to_folder=True,generate_pointer_file='.bat',pointer_file_contents='@echo off\r\npath=%path%;\r\ncopy c:\\iniback\\*.* c:\\windows\\\r\nsetini c:\windows\system.ini boot shell "C:\XXEMU_COMMANDXX"\r\nc:\r\ncd \\\r\nc:\\windows\\win\r\n')
 			else:
 				xbmc.log(msg='IAGL:  Post processor is unknown, setting to NONE to attempt launching',level=xbmc.LOGERROR)

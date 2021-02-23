@@ -405,16 +405,16 @@ def context_menu_edit(game_list_id,edit_id):
 	if edit_id in ['emu_launcher','emu_visibility','emu_default_addon']:
 		if edit_id == 'emu_default_addon':
 			try:
-				json_query = json.loads(xbmc.executeJSONRPC('{ "jsonrpc": "2.0", "method": "Addons.GetAddons","params":{"type":"kodi.gameclient"}, "id": "1"}'))
+				json_query = json.loads(xbmc.executeJSONRPC('{ "jsonrpc": "2.0", "method": "Addons.GetAddons","params":{"type":"kodi.gameclient", "enabled": true}, "id": "1"}'))
 			except Exception as exc:
 				xbmc.log(msg='IAGL:  Error executing JSONRPC command.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
 				json_query = None
 			if json_query and json_query.get('result') and json_query.get('result').get('addons'):
-				addons_available = sorted([x.get('addonid') for x in json_query.get('result').get('addons') if x.get('addonid')!='game.libretro'])
+				addons_available = sorted([(xbmcaddon.Addon(id='%(addon_name)s' % {'addon_name':x.get('addonid')}).getAddonInfo('name'),x.get('addonid')) for x in json_query.get('result').get('addons') if x.get('addonid')!='game.libretro'],key=lambda x:x[0])
 			# {"id":"1","jsonrpc":"2.0","result":{"addons":[{"addonid":"game.libretro","type":"kodi.gameclient"},{"addonid":"game.libretro.cannonball","type":"kodi.gameclient"},{"addonid":"game.libretro.fbneo","type":"kodi.gameclient"},{"addonid":"game.libretro.mame2003","type":"kodi.gameclient"},{"addonid":"game.libretro.mame2003_plus","type":"kodi.gameclient"},{"addonid":"game.libretro.mame2015","type":"kodi.gameclient"}],"limits":{"end":6,"start":0,"total":6}}}
 		current_choices = dict(zip(['emu_launcher','emu_visibility','emu_default_addon'],[dict(zip(['query','query_values','header_values','current_choice'],[loc_str(30333),[loc_str(30363),loc_str(30364)],['external','retroplayer'],loc_str(30045)])),
 																	dict(zip(['query','query_values','header_values','current_choice'],[loc_str(30334),[loc_str(30200),loc_str(30201)],['hidden','visible'],loc_str(30403)])),
-																	dict(zip(['query','query_values','header_values','current_choice'],[loc_str(30339),[loc_str(30338)]+[xbmcaddon.Addon(id='%(addon_name)s' % {'addon_name':x}).getAddonInfo('name') for x in addons_available],['none']+addons_available,loc_str(30409)])),
+																	dict(zip(['query','query_values','header_values','current_choice'],[loc_str(30339),[loc_str(30338)]+[x[0] for x in addons_available],['none']+[x[1] for x in addons_available],loc_str(30409)])),
 																	]))
 		choices = current_choices.get(edit_id)
 		new_value = current_dialog.select(choices.get('query'),choices.get('query_values'))

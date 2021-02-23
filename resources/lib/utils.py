@@ -113,11 +113,11 @@ class iagl_encoder(json.JSONEncoder):
 
 def check_userdata_directory(dir_in):
 	if check_if_dir_exists(dir_in):
-		return Path(xbmcvfs.translatePath(dir_in))
+		return Path(xbmcvfs.translatePath(str(dir_in)))
 	else:
-		if xbmcvfs.mkdir(dir_in):
-			xbmc.log(msg='IAGL:  Created directory %(value_in)s'%{'value_in':os.path.split(dir_in)[-1]}, level=xbmc.LOGDEBUG)
-			return Path(xbmcvfs.translatePath(dir_in))
+		if xbmcvfs.mkdir(str(dir_in)):
+			xbmc.log(msg='IAGL:  Created directory %(value_in)s'%{'value_in':os.path.split(str(dir_in))[-1]}, level=xbmc.LOGDEBUG)
+			return Path(xbmcvfs.translatePath(str(dir_in)))
 		else:
 			xbmc.log(msg='IAGL:  Unable to create directory %(value_in)s'%{'value_in':os.path.split(dir_in)[-1]}, level=xbmc.LOGERROR)
 			return None
@@ -1308,6 +1308,10 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 			if new_default_dir:
 				game_dl_dict['downloadpath'] = str(new_default_dir)
 				game_dl_dict['downloadpath_resolved'] = Path(game_dl_dict.get('downloadpath')).joinpath(game_filename).expanduser()
+		if emu_post_processor in ['launch_mame_softlist_cdimono1']: #Download to a specific folder depending on the post process command
+			post_process_dir = dict(zip(['launch_mame_softlist_cdimono1'],['cdimono1']))
+			game_dl_dict['downloadpath_resolved'] = Path(game_dl_dict.get('downloadpath_resolved').parent).joinpath(post_process_dir.get(emu_post_processor),game_dl_dict.get('downloadpath_resolved').name).expanduser()
+			check_userdata_directory(game_dl_dict.get('downloadpath_resolved').parent)
 		if game_dl_dict.get('downloadpath_resolved').parent.exists():
 			if game_dl_dict.get('filename_ext') not in ARCHIVE_FILETYPES: #If file to be downloaded is not an archive, it should match exactly with a local file - currenly works because all post processed filetypes are archives.  This may have to be updated in the future
 				if check_if_file_exists(game_dl_dict.get('downloadpath_resolved')):
