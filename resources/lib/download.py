@@ -128,8 +128,10 @@ class iagl_download(object):
 						with self.session.get(self.check_account_url,verify=False,timeout=self.timeout) as self.r:
 							self.r.raise_for_status()
 							if self.r.ok and '<title>cannot find account</title>' not in self.r.text.lower():
+								self.logged_in = True
 								xbmc.log(msg='IAGL:  Login check passed for archive.org',level=xbmc.LOGDEBUG)
 							elif self.r.ok and '<title>cannot find account</title>' in self.r.text.lower():
+								self.logged_in = False
 								xbmc.log(msg='IAGL:  First Login check failed for archive.org, attempting to re-login',level=xbmc.LOGDEBUG)
 								clear_mem_cache('iagl_archive_org_login')
 								self.login()
