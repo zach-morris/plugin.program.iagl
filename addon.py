@@ -94,11 +94,12 @@ def archives_search_route():
 			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(search_games,query=json.dumps(get_mem_cache('iagl_current_query'))),x,True)])
 		else:
 			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/archives/Search/%(label2)s'%{'label2':x.getLabel2()}),x,True)])
-	xbmcplugin.endOfDirectory(plugin.handle)
+	xbmcplugin.endOfDirectory(plugin.handle,cacheToDisc=False)
 
 @plugin.route('/archives/Search/<value_in>')
 def archives_search_update_title(value_in):
 	iagl_addon.game_lists.update_search_random_query(value_in)
+	xbmc.sleep(500)
 	xbmc.executebuiltin('Container.Refresh')
 
 @plugin.route('/Search')
@@ -146,7 +147,7 @@ def archives_search_route():
 			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(random_games,query=json.dumps(get_mem_cache('iagl_current_query'))),x,True)])
 		else:
 			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/archives/Random Play/%(label2)s'%{'label2':x.getLabel2()}),x,True)])
-	xbmcplugin.endOfDirectory(plugin.handle)
+	xbmcplugin.endOfDirectory(plugin.handle,cacheToDisc=False)
 
 @plugin.route('/archives/Random Play/<value_in>')
 def archives_search_update_title(value_in):
@@ -216,12 +217,12 @@ def get_all_games_redirect(game_list_id):
 @plugin.route('/game_list/list_all/<game_list_id>/<page_number>')
 def game_list_list_all_route(game_list_id,page_number):
 	if iagl_addon.settings.get('game_list').get('games_per_page'):
-		current_page = paginate.Page([(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':game_list_id}),x,True) for x in iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id) if x], page=int(page_number), items_per_page=iagl_addon.settings.get('game_list').get('games_per_page'))
+		current_page = paginate.Page([(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':x.getProperty('route')}),x,True) for x in iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id) if x], page=int(page_number), items_per_page=iagl_addon.settings.get('game_list').get('games_per_page'))
 		if current_page.next_page and current_page.page<current_page.next_page:
 			current_page.append((plugin.url_for_path('/game_list/list_all/%(game_list_id)s/%(label2)s'%{'label2':current_page.next_page,'game_list_id':game_list_id}),get_next_page_listitem(current_page=current_page.page,page_count=current_page.page_count,next_page=current_page.next_page,total_items=current_page.item_count),True))
 		xbmcplugin.addDirectoryItems(plugin.handle,current_page)
 	else:
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':game_list_id}),x,True) for x in iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id) if x])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':x.getProperty('route')}),x,True) for x in iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id) if x])
 	for sm in iagl_addon.get_sort_methods('Games'):
 		xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -289,12 +290,12 @@ def game_list_in_category_route(category_choice,category_value,game_list_id,page
 	else:
 		filter_dict = None
 	if iagl_addon.settings.get('game_list').get('games_per_page'):
-		current_page = paginate.Page([(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':game_list_id}),x,True) for x in iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id,filter_in=filter_dict) if x], page=int(page_number), items_per_page=iagl_addon.settings.get('game_list').get('games_per_page'))
+		current_page = paginate.Page([(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':x.getProperty('route')}),x,True) for x in iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id,filter_in=filter_dict) if x], page=int(page_number), items_per_page=iagl_addon.settings.get('game_list').get('games_per_page'))
 		if current_page.next_page and current_page.page<current_page.next_page:
 			current_page.append((plugin.url_for_path('/game_list/category/%(category_choice)s/%(category_value)s/%(game_list_id)s/%(page_number)s'%{'category_choice':category_choice,'category_value':category_value,'game_list_id':game_list_id,'page_number':current_page.next_page}),get_next_page_listitem(current_page=current_page.page,page_count=current_page.page_count,next_page=current_page.next_page,total_items=current_page.item_count),True))
 		xbmcplugin.addDirectoryItems(plugin.handle,current_page)
 	else:
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':game_list_id}),x,True) for x in iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id,filter_in=filter_dict) if x])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':x.getProperty('route')}),x,True) for x in iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id,filter_in=filter_dict) if x])
 	for sm in iagl_addon.get_sort_methods('Games'):
 		xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -317,16 +318,21 @@ def show_info_game(game_list_id,game_id):
 		info_page.doModal()
 		action_requested = info_page.action_requested
 		del info_page
+		if iagl_addon.kodi_user.get('current_folder') != iagl_addon.title: #There has to be a better way to know what the parentpath is
+			if xbmcgui.getCurrentWindowId() != 10000:
+				xbmc.log(msg='IAGL:  Returning to Home', level=xbmc.LOGDEBUG)
+				xbmc.executebuiltin('ActivateWindow(home)')
+				xbmc.sleep(100)
 		if action_requested == 0:  #Download and launch
 			plugin.redirect('/game_launch/'+game_list_id+'/'+game_id)
 		elif action_requested == 1:  #Download only 
 			plugin.redirect('/game_download_only/'+game_list_id+'/'+game_id)
-		else:
-			if iagl_addon.kodi_user.get('current_folder') != iagl_addon.title: #There has to be a better way to know what the parentpath is
-				if xbmcgui.getCurrentWindowId() != 10000:
-					xbmc.log(msg='IAGL:  Returning to Home', level=xbmc.LOGDEBUG)
-					xbmc.executebuiltin('ActivateWindow(home)')
-					xbmc.sleep(100)
+		# else:
+		# 	if iagl_addon.kodi_user.get('current_folder') != iagl_addon.title: #There has to be a better way to know what the parentpath is
+		# 		if xbmcgui.getCurrentWindowId() != 10000:
+		# 			xbmc.log(msg='IAGL:  Returning to Home', level=xbmc.LOGDEBUG)
+		# 			xbmc.executebuiltin('ActivateWindow(home)')
+		# 			xbmc.sleep(100)
 	else:
 		current_dialog = xbmcgui.Dialog()
 		ok_ret = current_dialog.ok(loc_str(30203),loc_str(30359) % {'game_id': game_id, 'game_list_id': game_list_id})
@@ -571,6 +577,25 @@ def category_context_menu_action(category_choice,game_list_id,action_id):
 		zachs_debug(action_id)
 	else:
 		xbmc.log(msg='IAGL:  Unknown category context action %(action_id)s'%{'action_id':action_id},level=xbmc.LOGERROR)
+
+@plugin.route('/game_context_menu/action/<game_list_id>/<game_id>/<action_id>')
+def category_context_menu_action(game_list_id,game_id,action_id):
+	if action_id == 'add_to_favs':
+		current_dialog = xbmcgui.Dialog()
+		available_fav_lists = [x for x in iagl_addon.game_lists.get_all_game_lists() if x and x.get('emu_category') and 'favorites' in x.get('emu_category').lower()]
+		available_fav_choices = [x.get('emu_name') for x in available_fav_lists]+[loc_str(30347)]
+		new_value = current_dialog.select(loc_str(30349),available_fav_choices)
+		if new_value in range(len(available_fav_choices)):
+			if new_value == len(available_fav_choices)-1:
+				xbmc.log(msg='IAGL:  User selected to generate new favorites list', level=xbmc.LOGDEBUG)
+			else:
+				xbmc.log(msg='IAGL:  User adding %(game_id)s from %(game_list_id)s to favorites list %(fav_list_id)s'%{'game_id':game_id,'game_list_id':game_list_id,'fav_list_id':available_fav_lists[new_value].get('game_list_id')}, level=xbmc.LOGDEBUG)
+		# game = iagl_addon.game_lists.get_game_as_dict(game_list_id=game_list_id,game_id=game_id)
+		# print(game)
+		del current_dialog
+	else:
+		xbmc.log(msg='IAGL:  Unknown game context action %(action_id)s'%{'action_id':action_id},level=xbmc.LOGERROR)
+
 
 @plugin.route('/text_viewer')
 def iagl_text_viewer():

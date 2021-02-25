@@ -569,6 +569,8 @@ def map_search_random_listitem_dict(dict_in,default_dict,search_query,type_in=No
 	if dict_in.get('label2') in ['execute','execute_link']:
 		query_summary_map = {'lists':'Game Lists','genre':'Genres','nplayers':'Players','year':'Years','studio':'Studios','tag':'Tags','groups':'Custom Groups','title':'Title','num_of_results':'Number of Results'}
 		if isinstance(search_query,dict):
+			xbmc.log(msg='IAGL:  Search Query Mapping:', level=xbmc.LOGDEBUG)
+			xbmc.log(msg='IAGL:  %(mapping)s'%{'mapping':['%(item)s: %(values)s'%{'item':query_summary_map.get(k),'values':clean_query_values(v)} for k,v in search_query.items()]}, level=xbmc.LOGDEBUG)
 			label_value = '[CR]'.join(['%(item)s: %(values)s'%{'item':query_summary_map.get(k),'values':clean_query_values(v)} for k,v in search_query.items()])
 			plot = '%(label)s[CR]Current Query:[CR]%(value)s'%{'label':dict_in.get('plot'),'value':label_value}
 		return {'values': {'label':label,'label2':label2},
@@ -964,12 +966,12 @@ def get_date(*args,format_in='%d.%m.%Y'):
 		return None
 
 def get_xml_header(file_in,default_dir=None):
-	header_out = get_calculated_header_values(get_xml_header_path_et_fromstring(file_in),default_dir=default_dir) #Try getting xml header from path (fast)
+	header_out = get_calculated_header_values(get_xml_header_path_et_fromstring(file_in),filename_in=file_in,default_dir=default_dir) #Try getting xml header from path (fast)
 	# header_out = get_xml_header_path_xmltodict(file_in) #Try getting xml header from path (fast)
 	if header_out:
 		return header_out
 	else:
-		return get_calculated_header_values(get_xml_header_xbmcvfs_et_fromstring(str(file_in)),default_dir=default_dir) #If it fails, use xbmcvfs (slower)
+		return get_calculated_header_values(get_xml_header_xbmcvfs_et_fromstring(str(file_in)),filename_in=file_in,default_dir=default_dir) #If it fails, use xbmcvfs (slower)
 		# return get_xml_header_xbmcvfs_xmltodict(str(file_in)) #If it fails, use xbmcvfs (slower)
 
 def get_xml_header_path_et_fromstring(file_in):
@@ -991,10 +993,14 @@ def get_xml_header_path_et_fromstring(file_in):
 		xbmc.log(msg='IAGL:  Error xml file %(value_in)s does not exist' % {'value_in': file_in.name}, level=xbmc.LOGERROR)
 		return None
 
-def get_calculated_header_values(dict_in,default_dir=None):
+def get_calculated_header_values(dict_in,filename_in=None,default_dir=None):
 	dict_in['download_source'] = 'Unknown'
 	dict_in['emu_downloadpath_resolved'] = default_dir
 	dict_in['download_destination'] = 'Cache'
+	if filename_in:
+		dict_in['game_list_id'] = os.path.splitext(os.path.split(filename_in)[-1])[0]
+	else:
+		dict_in['game_list_id'] = None
 	if all([x in dict_in.get('emu_baseurl') for x in ['http','archive.org']]):
 		dict_in['download_source'] = 'Archive.org'
 	elif any([x in dict_in.get('emu_baseurl') for x in ['http:','https:']]):
@@ -1343,7 +1349,7 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 	return game_dl_dict
 
 def bytes_to_string_size(value, format='%.1f'):
-	if isinstance(value,int) or isinstance(num,float): # or (isinstance(num,str) and num.isdigit())
+	if isinstance(value,int) or isinstance(value,float): # or (isinstance(num,str) and num.isdigit())
 		suffix = ('kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB')
 		base = 1024
 		value_bytes = float(value)

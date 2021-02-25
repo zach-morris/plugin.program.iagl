@@ -182,6 +182,8 @@ class iagl_addon(object):
 			self.game_list_context_menu_items['retroplayer'] = [(loc_str(30409),'RunPlugin(plugin://plugin.program.iagl/context_menu/edit/<game_list_id>/emu_default_addon)')]
 			self.game_list_context_menu_items['favorites'] = [(loc_str(30411),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/<game_list_id>/share_favorite)')]
 			self.game_list_context_menu_items['post_dl'] = [(loc_str(30410),'RunPlugin(plugin://plugin.program.iagl/context_menu/edit/<game_list_id>/emu_postdlaction)')]
+			self.game_context_menu_items = dict()
+			self.game_context_menu_items['add_to_favs'] = [(loc_str(30412),'RunPlugin(plugin://plugin.program.iagl/game_context_menu/action/<game_list_id>/<game_id>/add_to_favs)')]
 
 			if directories is not None:
 				files_in = directories.get('userdata').get('dat_files')
@@ -265,8 +267,14 @@ class iagl_addon(object):
 				listitem_in.addContextMenuItems(current_context_menus)
 			return listitem_in
 
+		def add_game_context_menus(self,listitem_in=None,game_list_id=None,game_id=None):
+			if listitem_in and game_list_id and game_id:
+				current_context_menus = [(labels,actions.replace('<game_list_id>',game_list_id).replace('<game_id>',game_id)) for labels, actions in self.game_context_menu_items.get('add_to_favs')]
+				listitem_in.addContextMenuItems(current_context_menus)
+			return listitem_in
+
 		def get_games_as_listitems(self,game_list_id=None,filter_in=None):
-			return [get_game_listitem(dict_in=x,filter_in=filter_in) for x in self.get_games_from_cache(game_list_id=game_list_id) if x]
+			return [self.add_game_context_menus(listitem_in=get_game_listitem(dict_in=x,filter_in=filter_in),game_list_id=game_list_id,game_id=x.get('values').get('label2')) for x in self.get_games_from_cache(game_list_id=game_list_id) if x]
 
 		def get_game_as_dict(self,game_list_id=None,game_id=None):
 			if game_list_id == get_mem_cache('iagl_current_game_list_id') and game_id == get_mem_cache('iagl_current_game_id'):
@@ -365,12 +373,12 @@ class iagl_addon(object):
 				new_value = current_dialog.select(loc_str(30321),['1','2','5','10','25','100'],0,0)
 				if new_value>-1:
 					current_query['num_of_results'] = ['1','2','5','10','25','100'][new_value]
-					set_mem_cache('iagl_current_query',current_query)
+					# set_mem_cache('iagl_current_query',current_query)
 			if value_in == 'title':
 				new_value = current_dialog.input(loc_str(30320),current_query.get('title'))
 				if new_value.strip():
 					current_query['title'] = new_value
-					set_mem_cache('iagl_current_query',current_query)
+					# set_mem_cache('iagl_current_query',current_query)
 			if value_in == 'lists':
 				current_game_list_options = sorted([x for x in zip(self.list_game_lists(),[self.get_game_list(x).get('emu_name') for x in self.list_game_lists()]) if x[1]],key=lambda x:x[1])
 				current_game_list_ids = ['All']+[x[0] for x in current_game_list_options]
@@ -382,7 +390,7 @@ class iagl_addon(object):
 				new_value = current_dialog.multiselect(loc_str(30360),current_game_list_titles,0,current_selection)
 				if new_value:
 					current_query['lists'] = [x for ii,x in enumerate(current_game_list_ids) if ii in new_value]
-					set_mem_cache('iagl_current_query',current_query)
+					# set_mem_cache('iagl_current_query',current_query)
 			if value_in in ['genre','nplayers','year','studio','tag','groups']:
 				value_map = {'genre':'genres','nplayers':'players','year':'years','studio':'studio','tag':'tag','groups':'groups'}
 				perform_query = True
@@ -402,7 +410,7 @@ class iagl_addon(object):
 						new_value = current_dialog.multiselect(loc_str(30393),value_set,0,current_selection)
 					if new_value is not None:
 						current_query[value_in] = [x for ii,x in enumerate(value_set) if ii in new_value]
-						set_mem_cache('iagl_current_query',current_query)
+			set_mem_cache('iagl_current_query',current_query)
 			del current_dialog
 
 		def list_filenames(self):
