@@ -10,7 +10,7 @@ import routing, sys, json, re
 from random import sample as random_sample
 from resources.lib.main import iagl_addon
 from resources.lib import paginate
-from resources.lib.utils import clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, check_if_file_exists, check_if_dir_exists, clean_image_entry, clean_trailer_entry, loc_str, check_and_close_notification, get_history_listitem, update_listitem_title, get_post_dl_commands, zachs_debug
+from resources.lib.utils import clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, check_if_file_exists, check_if_dir_exists, clean_image_entry, clean_trailer_entry, loc_str, check_and_close_notification, get_history_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, zachs_debug
 
 ## Plugin Initialization Stuff ##
 SLEEP_HACK=50  #https://github.com/xbmc/xbmc/issues/18576
@@ -581,17 +581,44 @@ def category_context_menu_action(category_choice,game_list_id,action_id):
 @plugin.route('/game_context_menu/action/<game_list_id>/<game_id>/<action_id>')
 def category_context_menu_action(game_list_id,game_id,action_id):
 	if action_id == 'add_to_favs':
+		success = False
 		current_dialog = xbmcgui.Dialog()
 		available_fav_lists = [x for x in iagl_addon.game_lists.get_all_game_lists() if x and x.get('emu_category') and 'favorites' in x.get('emu_category').lower()]
 		available_fav_choices = [x.get('emu_name') for x in available_fav_lists]+[loc_str(30347)]
 		new_value = current_dialog.select(loc_str(30349),available_fav_choices)
+		fav_list_id = None
 		if new_value in range(len(available_fav_choices)):
+			current_game = iagl_addon.game_lists.get_game_as_dict(game_list_id=game_list_id,game_id=game_id)
 			if new_value == len(available_fav_choices)-1:
 				xbmc.log(msg='IAGL:  User selected to generate new favorites list', level=xbmc.LOGDEBUG)
+				favorites_name = current_dialog.input(loc_str(30351),'%(name)s Favorites'%{'name':next(iter([x for x in [iagl_addon.kodi_user.get('username')] if x]),'My')})
+				favorites_filename = clean_file_folder_name(favorites_name)
+				if favorites_name and favorites_filename:
+					if favorites_filename not in [x.get('game_list_id') for x in iagl_addon.game_lists.get_all_game_lists()]:
+						new_favorites_file = iagl_addon.game_lists.create_favorites_list(name_in=favorites_name,filename_in=favorites_filename)
+						if new_favorites_file:
+							success = add_game_to_favorites(filename_in=new_favorites_file,game=current_game)
+							if success:
+								xbmc.log(msg='IAGL:  User adding %(game_id)s from %(game_list_id)s to favorites list %(fav_list_id)s'%{'game_id':game_id,'game_list_id':game_list_id,'fav_list_id':new_favorites_file}, level=xbmc.LOGDEBUG)
+								ok_ret = current_dialog.ok(loc_str(30202),loc_str(30353) % {'current_game': next(iter([x for x in [current_game.get('info').get('originaltitle'),current_game.get('values').get('label')] if x]),game_id), 'current_filename': favorites_name})
+								clear_mem_cache('iagl_directory')
+								xbmc.executebuiltin('Container.Refresh')
+							else:
+								ok_ret = current_dialog.ok(loc_str(30203),loc_str(30593))
+					else:
+						ok_ret = current_dialog.ok(loc_str(30203),loc_str(30594)%{'filename_in':favorites_name})
+						xbmc.log(msg='IAGL:  Favorites file %(filename_in)s already exists.  User must choose a different name.'%{'filename_in':favorites_name},level=xbmc.LOGERROR)
 			else:
-				xbmc.log(msg='IAGL:  User adding %(game_id)s from %(game_list_id)s to favorites list %(fav_list_id)s'%{'game_id':game_id,'game_list_id':game_list_id,'fav_list_id':available_fav_lists[new_value].get('game_list_id')}, level=xbmc.LOGDEBUG)
-		# game = iagl_addon.game_lists.get_game_as_dict(game_list_id=game_list_id,game_id=game_id)
-		# print(game)
+				fav_list_id = available_fav_lists[new_value].get('game_list_id')
+				fav_list_name = available_fav_lists[new_value].get('emu_name')
+				xbmc.log(msg='IAGL:  User adding %(game_id)s from %(game_list_id)s to favorites list %(fav_list_id)s'%{'game_id':game_id,'game_list_id':game_list_id,'fav_list_id':fav_list_id}, level=xbmc.LOGDEBUG)
+				if fav_list_id:
+					success = add_game_to_favorites(filename_in=iagl_addon.game_lists.get_file(fav_list_id),game=current_game)
+				if success:
+					iagl_addon.refresh_list(iagl_addon.game_lists.get_crc(fav_list_id))
+					ok_ret = current_dialog.ok(loc_str(30202),loc_str(30353) % {'current_game': next(iter([x for x in [current_game.get('info').get('originaltitle'),current_game.get('values').get('label')] if x]),game_id), 'current_filename': fav_list_name})
+				else:
+					ok_ret = current_dialog.ok(loc_str(30203),loc_str(30593))
 		del current_dialog
 	else:
 		xbmc.log(msg='IAGL:  Unknown game context action %(action_id)s'%{'action_id':action_id},level=xbmc.LOGERROR)
@@ -612,4 +639,4 @@ def iagl_wizard_report():
 
 if __name__ == '__main__':
 	plugin.run(sys.argv)
-	del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_file_exists, check_if_dir_exists, check_and_close_notification, get_history_listitem, update_listitem_title, get_post_dl_commands, zachs_debug #Delete all locally imported stuff to avoid memory leaks
+	del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_file_exists, check_if_dir_exists, check_and_close_notification, get_history_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, zachs_debug #Delete all locally imported stuff to avoid memory leaks

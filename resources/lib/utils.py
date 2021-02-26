@@ -694,6 +694,8 @@ def map_game_listitem_dict(dict_in,parent_dict_in,default_dict,game_list_id,clea
 					   'thumb':choose_image(dict_in.get('boxart1'),dict_in.get('snapshot1'),default_dict.get('thumb'))},
 		'properties': {'route' : next(iter([x for x in [dict_in.get('route'),game_list_id] if x]),game_list_id),  #Look for favorite hyperlink first, then default to current game list id
 					   'nplayers':dict_in.get('nplayers'),
+					   'perspective':dict_in.get('perspective'),
+					   'description':dict_in.get('description'), #Need to carry a clean version of this for favorites if necessary
 					   'starts_with':starts_with,
 					   'platform_name':parent_dict_in.get('emu_name'),
 					   'platform_description':parent_dict_in.get('emu_description'),
@@ -1347,6 +1349,49 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 		else:
 			game_dl_dict['downloader'] = None
 	return game_dl_dict
+
+
+def dict_to_game_xml(game=None):
+	xml_out = None
+	if isinstance(game,dict) and game.get('values') and game.get('info'):
+		dict_out_keys = ['@name','plot','releasedate','year','studio','genre','rating','ESRB','videoid','description','route','nplayers','perspective']+['boxart%(nn)s'%{'nn':x} for x in range(1,11)]+['snapshot%(nn)s'%{'nn':x} for x in range(1,11)]+['banner%(nn)s'%{'nn':x} for x in range(1,11)]+['fanart%(nn)s'%{'nn':x} for x in range(1,11)]+['clearlogo%(nn)s'%{'nn':x} for x in range(1,11)]
+		dict_out = {'game': dict(zip(dict_out_keys,[None for x in dict_out_keys]))}
+		dict_out_mapping = dict()
+		dict_out_mapping['values'] = dict(zip(['@name'],['label2']))
+		dict_out_mapping['info'] = dict(zip(['plot','releasedate','year','studio','genre','rating','ESRB','videoid'],['plot','date','year','studio','genre','rating','mpaa','trailer']))
+		dict_out_mapping['properties'] = dict(zip(['description','route','nplayers','perspective'],['description','route','nplayers','perspective']))
+		dict_out_art_mapping = dict(zip(['game_boxarts','game_banners','game_snapshots','game_logos','game_fanarts'],['boxart','banner','snapshot','clearlogo','fanart']))
+		for kk in dict_out_mapping.keys():
+			for k,v in dict_out_mapping.get(kk).items():
+				if isinstance(game.get(kk).get(v),str):
+					if k in ['@name']:
+						dict_out['game'][k] = url_unquote(game.get(kk).get(v))
+					else:
+						dict_out['game'][k] = game.get(kk).get(v)
+				elif isinstance(game.get(kk).get(v),list):
+					dict_out['game'][k] = ','.join(game.get(kk).get(v))
+		if dict_out.get('game').get('videoid'):
+			dict_out['game']['videoid'] = dict_out.get('game').get('videoid').split('=')[-1]
+		for k,v in dict_out_art_mapping.items():
+			if game.get('properties') and isinstance(game.get('properties').get(k),str):
+				for ii,art in enumerate(json.loads(game.get('properties').get(k))):
+					dict_out['game']['%(type)s%(nn)s'%{'type':v,'nn':ii+1}] = art
+		for kk in dict_out_keys:
+			if not dict_out.get('game').get(kk):
+				dict_out['game'].pop(kk, None)
+		try:
+			xml_out = xmltodict.unparse(dict_out, pretty=True).replace('<?xml version="1.0" encoding="utf-8"?>\n','')
+		except Exception as exc:
+			xbmc.log(msg='IAGL:  Error generating favorites xml.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
+	return xml_out
+
+def add_game_to_favorites(filename_in=None,game=None):
+	success = False
+	if isinstance(game,dict) and check_if_file_exists(filename_in):
+		xml_out = dict_to_game_xml(game=game)+'\n</datafile>'
+		if isinstance(xml_out,str) and '<game ' in xml_out and '</game>' in xml_out:
+			success = write_text_to_file(filename_in.read_text(encoding=TEXT_ENCODING).replace('</datafile>',xml_out),filename_in)
+	return success
 
 def bytes_to_string_size(value, format='%.1f'):
 	if isinstance(value,int) or isinstance(value,float): # or (isinstance(num,str) and num.isdigit())

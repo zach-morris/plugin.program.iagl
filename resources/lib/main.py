@@ -192,7 +192,9 @@ class iagl_addon(object):
 				self.crc = dict(zip(route_keys,files_in.get('crc')))
 				self.cache_name = dict(zip(route_keys+['history'],files_in.get('cache_name')+['history']))
 				self.list_cache_path = directories.get('userdata').get('list_cache').get('path')
+				self.userdata_dat_files_path = files_in.get('path')
 				self.route = dict(zip(route_keys+['history'],[x for x in files_in.get('header')]+[dict()]))
+				self.favorites_template = next(iter([x for x in directories.get('addon').get('templates').get('files') if x.name == 'Favorites_Template.xml']),None)
 
 			if settings is not None:
 				self.settings = settings
@@ -216,6 +218,13 @@ class iagl_addon(object):
 
 		def get_game_list(self,route_in):
 			return self.route.get(route_in)
+
+		def create_favorites_list(self,name_in=None,filename_in=None):
+			file_out=None
+			if self.favorites_template and name_in and filename_in:
+				if write_text_to_file(self.favorites_template.read_text(encoding=TEXT_ENCODING).replace('<emu_name>Favorites</emu_name>','<emu_name>%(name)s</emu_name>'%{'name':name_in}),self.userdata_dat_files_path.joinpath('%(name)s.xml'%{'name':filename_in})):
+					file_out=self.userdata_dat_files_path.joinpath('%(name)s.xml'%{'name':filename_in})
+			return file_out
 
 		def update_game_list_header(self,game_list_id,header_key=None,header_value=None,confirm_update=True,current_choice=None):
 			success = False

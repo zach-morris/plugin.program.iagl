@@ -1652,7 +1652,7 @@
 						<heading>30057</heading>
 					</control>
 				</setting>
-				<setting help="30572" id="iagl_favorites_format" label="30050" type="integer">
+				<!-- <setting help="30572" id="iagl_favorites_format" label="30050" type="integer">
 					<level>3</level>
 					<default>0</default>
 					<constraints>
@@ -1670,7 +1670,7 @@
 					<control format="string" type="list">
 						<heading>30050</heading>
 					</control>
-				</setting>
+				</setting> -->
 				<!-- <setting help="30573" id="iagl_run_script_prov_games" label="30051" type="action">
 					<level>3</level>
 					<data>RunScript(special://home/addons/plugin.program.iagl/update_addonxml_provides_games.py)</data>
