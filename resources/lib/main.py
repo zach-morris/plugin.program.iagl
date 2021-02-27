@@ -69,6 +69,7 @@ class iagl_addon(object):
 		self.settings['ext_launchers'] = dict()
 		self.settings['ext_launchers']['environment'] = get_setting_as(setting_type='ext_launch_env',setting=self.handle.getSetting(id='iagl_external_user_external_env'))
 		self.settings['ext_launchers']['close_kodi'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_external_launch_close_kodi'))
+		self.settings['ext_launchers']['pause_kodi'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_external_launch_pause_kodi'))
 		self.settings['ext_launchers']['stop_audio_controller'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_stop_media_before_launch'))
 		self.settings['ext_launchers']['send_stop_command'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_android_stop_command'))
 		self.settings['ext_launchers']['ra'] = dict()
@@ -521,8 +522,12 @@ class iagl_addon(object):
 		cmds_out = None
 		if self.settings.get('ext_launchers').get('environment') and self.settings.get('ext_launchers').get('ra').get('app_path') and self.settings.get('ext_launchers').get('ra').get('cfg_path'):
 			if self.settings.get('ext_launchers').get('close_kodi') and self.settings.get('ext_launchers').get('environment') in ['OSX','linux','windows']:
-				default_ra_cmd = [x for x in self.directory['addon']['external_command_database'].get('system').get('launcher') if x.get('@os') == self.settings.get('ext_launchers').get('environment') and x.get('@close_kodi') and x.get('@default')]
-				other_ext_cmds = [x for x in self.directory['addon']['external_command_database'].get('system').get('launcher') if x.get('@os') == self.settings.get('ext_launchers').get('environment') and x.get('@close_kodi') and not x.get('@default')]
+				if self.settings.get('ext_launchers').get('pause_kodi') and self.settings.get('ext_launchers').get('environment') in ['linux']:
+					default_ra_cmd = [x for x in self.directory['addon']['external_command_database'].get('system').get('launcher') if x.get('@os') == self.settings.get('ext_launchers').get('environment') and x.get('@pause_kodi') and x.get('@default')]
+					other_ext_cmds = [x for x in self.directory['addon']['external_command_database'].get('system').get('launcher') if x.get('@os') == self.settings.get('ext_launchers').get('environment') and x.get('@pause_kodi') and not x.get('@default')]
+				else:
+					default_ra_cmd = [x for x in self.directory['addon']['external_command_database'].get('system').get('launcher') if x.get('@os') == self.settings.get('ext_launchers').get('environment') and x.get('@close_kodi') and x.get('@default')]
+					other_ext_cmds = [x for x in self.directory['addon']['external_command_database'].get('system').get('launcher') if x.get('@os') == self.settings.get('ext_launchers').get('environment') and x.get('@close_kodi') and not x.get('@default')]
 			else:
 				default_ra_cmd = [x for x in self.directory['addon']['external_command_database'].get('system').get('launcher') if x.get('@os') == self.settings.get('ext_launchers').get('environment') and not x.get('@close_kodi') and x.get('@default')]
 				other_ext_cmds = [x for x in self.directory['addon']['external_command_database'].get('system').get('launcher') if x.get('@os') == self.settings.get('ext_launchers').get('environment') and not x.get('@close_kodi') and not x.get('@default')]

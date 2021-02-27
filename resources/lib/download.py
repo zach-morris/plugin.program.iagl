@@ -16,17 +16,16 @@ class iagl_download(object):
 		self.directory = directory
 		self.game_list = game_list
 		self.game = game
-		#Default downloader is archive.org
-		self.set_downloader(downloader=downloader)
+		#Default downloader is archive.org without logging in
+		self.set_downloader(downloader=downloader,auto_login=False)
 
-	def set_downloader(self,downloader='archive_org'):
-		#Currently the only downloader is archive.org (the default), this is where other downloader options would go if they were added based on the settings, game and game list
+	def set_downloader(self,downloader='archive_org',auto_login=True):
 		if downloader == 'generic':
 			xbmc.log(msg='IAGL:  Downloader set to generic http downloader',level=xbmc.LOGDEBUG)
 			self.downloader = self.generic_downloader(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game)
 		elif downloader == 'archive_org':
 			xbmc.log(msg='IAGL:  Downloader set to archive.org',level=xbmc.LOGDEBUG)
-			self.downloader = self.archive_org(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game)
+			self.downloader = self.archive_org(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,auto_login=auto_login)
 		elif downloader == 'local_source':
 			xbmc.log(msg='IAGL:  Downloader set to Local File Source',level=xbmc.LOGDEBUG)
 			self.downloader = self.local_source(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game)
@@ -34,7 +33,6 @@ class iagl_download(object):
 			xbmc.log(msg='IAGL:  Downloader %(downloader)s is unknown, defaulting to NONE'%{'downloader':downloader},level=xbmc.LOGDEBUG)
 			self.downloader = None #Default downloader to NONE unless otherwise specified, saves unecessary login attempt
 			downloader = 'Unknown'
-			# self.downloader = self.archive_org(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,show_login_progress=False) #Default to archive.org unless otherwise specified
 		self.current_downloader = downloader
 
 	def download_game(self,show_progress=True):
@@ -97,7 +95,7 @@ class iagl_download(object):
 		return game_download_status
 
 	class archive_org(object):
-		def __init__(self,settings=dict(),directory=dict(),game_list=dict(),game=dict(),show_login_progress=True):
+		def __init__(self,settings=dict(),directory=dict(),game_list=dict(),game=dict(),auto_login=True,show_login_progress=True):
 			self.session = None
 			self.r = None
 			self.settings = settings
@@ -111,7 +109,8 @@ class iagl_download(object):
 			self.download_status = dict()
 			self.login_url = 'https://archive.org/account/login.php'
 			self.check_account_url = 'https://archive.org/account/index.php'
-			self.login(show_progress=show_login_progress)
+			if auto_login:
+				self.login(show_progress=show_login_progress)
 
 		def login(self,show_progress=True):
 			self.session = requests.Session()
