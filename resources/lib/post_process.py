@@ -40,6 +40,9 @@ class iagl_post_process(object):
 			elif post_processor == 'unzip_and_launch_win31_file':
 				xbmc.log(msg='IAGL:  Post processor set to UNZIP and launch WIN31 BAT file',level=xbmc.LOGDEBUG)
 				self.post_processor = self.unzip(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,to_folder=True,generate_pointer_file='.bat',pointer_file_contents='@echo off\r\npath=%path%;\r\ncopy c:\\iniback\\*.* c:\\windows\\\r\nsetini c:\windows\system.ini boot shell "C:\XXEMU_COMMANDXX"\r\nc:\r\ncd \\\r\nc:\\windows\\win\r\n')
+			elif post_processor == 'unzip_and_launch_exodos_file':
+				xbmc.log(msg='IAGL:  Post processor set to UNZIP and launch EXODOS conf file',level=xbmc.LOGDEBUG)
+				self.post_processor = self.unzip(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,to_folder=True,generate_pointer_file='.conf',pointer_file_contents=self.game.get('emu_command'))
 			else:
 				xbmc.log(msg='IAGL:  Post processor is unknown, setting to NONE to attempt launching',level=xbmc.LOGERROR)
 				self.post_processor = None
@@ -194,6 +197,8 @@ class iagl_post_process(object):
 								current_pointer_file_contents = self.pointer_file_contents.replace('XXEMU_COMMANDXX',kwargs.get('emu_command'))
 							else:
 								current_pointer_file_contents = kwargs.get('emu_command')
+							if self.pointer_file == '.conf' and 'XXGAME_DIRXX' in current_pointer_file_contents:
+								current_pointer_file_contents = '\n'.join([x.replace('\\',os.path.sep) if '%GAMEDIR%' in x else x.replace('XXGAME_DIRXX',str(next(iter([x for x in [directory_out,self.directory.get('userdata').get('game_cache').get('path')]]),None))) for x in current_pointer_file_contents.split('[CR]')])
 							current_pointer_file = generate_pointer_file(filename_in=file,pointer_file_type=self.pointer_file,pointer_contents=current_pointer_file_contents,directory=directory_out,default_dir=self.directory.get('userdata').get('game_cache').get('path'))
 							if current_pointer_file:
 								self.pp_status['post_process_launch_file'] = current_pointer_file
