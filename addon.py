@@ -446,6 +446,8 @@ def context_menu_select(game_list_id,select_id):
 	current_dialog = xbmcgui.Dialog()
 	current_crc = iagl_addon.game_lists.get_crc(game_list_id)
 	if select_id == 'emu_downloadpath':
+		if iagl_addon.settings.get('ext_launchers').get('environment') in ['android','android_ra32','android_aarch64']:
+			current_dialog.ok(loc_str(30337),loc_str(30595))
 		current_choices = dict(zip(['emu_downloadpath'],[dict(zip(['query','query_values','header_values','current_choice'],[loc_str(30336),[loc_str(30207),loc_str(30208),loc_str(30201)],[0,1,2],''])),]))
 		choices = current_choices.get(select_id)
 		new_value = current_dialog.select(choices.get('query'),choices.get('query_values'))

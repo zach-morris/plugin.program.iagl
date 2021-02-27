@@ -249,8 +249,8 @@ msgid "Clear Cache"
 msgstr "Clear Cache"
 
 msgctxt "#30057"
-msgid "Stop Media before Launch"
-msgstr "Stop Media before Launch"
+msgid "Suspend Kodi Input and Audio during External Launch"
+msgstr "Suspend Kodi Input and Audio during External Launch"
 
 msgctxt "#30058"
 msgid "Choose from List"
@@ -1136,6 +1136,9 @@ msgctxt "#30594"
 msgid "The favorites file %(filename_in)s already exists.[CR]Please choose a unique name."
 msgstr "The favorites file %(filename_in)s already exists.[CR]Please choose a unique name."
 
+msgctxt "#30595"
+msgid "Android security requires specific paths for download.[CR]See the IAGL FAQ for more info."
+msgstr "Android security requires specific paths for download.[CR]See the IAGL FAQ for more info."
 
 #
 #General
