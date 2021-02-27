@@ -570,9 +570,9 @@ def map_search_random_listitem_dict(dict_in,default_dict,search_query,type_in=No
 		query_summary_map = {'lists':'Game Lists','genre':'Genres','nplayers':'Players','year':'Years','studio':'Studios','tag':'Tags','groups':'Custom Groups','title':'Title','num_of_results':'Number of Results'}
 		if isinstance(search_query,dict):
 			xbmc.log(msg='IAGL:  Search Query Mapping:', level=xbmc.LOGDEBUG)
-			xbmc.log(msg='IAGL:  %(mapping)s'%{'mapping':['%(item)s: %(values)s'%{'item':query_summary_map.get(k),'values':clean_query_values(v)} for k,v in search_query.items()]}, level=xbmc.LOGDEBUG)
-			label_value = '[CR]'.join(['%(item)s: %(values)s'%{'item':query_summary_map.get(k),'values':clean_query_values(v)} for k,v in search_query.items()])
-			plot = '%(label)s[CR]Current Query:[CR]%(value)s'%{'label':dict_in.get('plot'),'value':label_value}
+			xbmc.log(msg='IAGL:  %(mapping)s'%{'mapping':['%(item)s: %(values)s'%{'item':query_summary_map.get(k),'values':clean_query_values(v)} for k,v in search_query.items() if k in query_summary_map.keys()]}, level=xbmc.LOGDEBUG)
+			label_value = '[CR]'.join(['%(item)s: %(values)s'%{'item':query_summary_map.get(k),'values':clean_query_values(v)} for k,v in search_query.items() if k in query_summary_map.keys()])
+			plot = '%(label)s%(query_string)s %(total)s[CR][CR]%(value)s'%{'label':dict_in.get('plot'),'query_string':loc_str(30394),'total':next(iter([x for x in [search_query.get('game_count')] if x]),'Unknown'),'value':label_value}
 		return {'values': {'label':label,'label2':label2},
 				'info':   {'originaltitle':dict_in.get('label'),'title':dict_in.get('label'),'plot':plot,'trailer':choose_trailer(dict_in.get('trailer'),default_dict.get('trailer'))},
 				'art':    {'poster':choose_image(dict_in.get('thumb'),default_dict.get('thumb')),

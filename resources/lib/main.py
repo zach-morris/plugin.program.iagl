@@ -400,6 +400,7 @@ class iagl_addon(object):
 				new_value = current_dialog.multiselect(loc_str(30360),current_game_list_titles,0,current_selection)
 				if new_value:
 					current_query['lists'] = [x for ii,x in enumerate(current_game_list_ids) if ii in new_value]
+					current_query['game_count'] = sum([y.get('overall').get('count') for y in [self.get_game_stats(game_list_id=x) for ii,x in enumerate(current_game_list_ids) if x and ii in new_value] if y and y.get('overall') and isinstance(y.get('overall').get('count'),int)])
 					# set_mem_cache('iagl_current_query',current_query)
 			if value_in in ['genre','nplayers','year','studio','tag','groups']:
 				value_map = {'genre':'genres','nplayers':'players','year':'years','studio':'studio','tag':'tag','groups':'groups'}

@@ -24,14 +24,14 @@ xbmcplugin.setContent(plugin.handle,iagl_addon.settings.get('views').get('conten
 ## Plugin Routes ##
 @plugin.route('/')
 def index_route():
-	if iagl_addon.settings.get('run_wizard'):
-		if xbmcgui.Dialog().yesno(loc_str(30005),loc_str(30046)+'?'):
-			xbmc.log(msg='IAGL:  Wizard was selected to be run on first launch', level=xbmc.LOGDEBUG)
-			xbmc.executebuiltin('RunScript(special://home/addons/plugin.program.iagl/run_IAGL_wizard.py)')
-		else:
-			xbmc.log(msg='IAGL:  Wizard was selected to not be run on first launch', level=xbmc.LOGDEBUG)
-			xbmcaddon.Addon(id=iagl_addon.name).setSetting(id='iagl_run_wizard',value='false')
 	if iagl_addon.settings.get('tou'):
+		if iagl_addon.settings.get('run_wizard'):
+			if xbmcgui.Dialog().yesno(loc_str(30005),loc_str(30046)+'?'):
+				xbmc.log(msg='IAGL:  Wizard was selected to be run on first launch', level=xbmc.LOGDEBUG)
+				xbmc.executebuiltin('RunScript(special://home/addons/plugin.program.iagl/run_IAGL_wizard.py)')
+			else:
+				xbmc.log(msg='IAGL:  Wizard was selected to not be run on first launch', level=xbmc.LOGDEBUG)
+				xbmcaddon.Addon(id=iagl_addon.name).setSetting(id='iagl_run_wizard',value='false')
 		plugin.redirect(iagl_addon.settings.get('index_list').get('route'))
 	else:
 		plugin.redirect('/tou')
@@ -44,6 +44,13 @@ def show_tou():
 	del TOU_Dialog
 	xbmc.sleep(500) #Small sleep call here to ensure the new setting is written to file
 	if get_setting_as(setting_type='bool',setting=xbmcaddon.Addon(id=iagl_addon.name).getSetting(id='iagl_hidden_bool_tou')): #Need to recall setting to get the new value instead of the old
+		if iagl_addon.settings.get('run_wizard'):
+			if xbmcgui.Dialog().yesno(loc_str(30005),loc_str(30046)+'?'):
+				xbmc.log(msg='IAGL:  Wizard was selected to be run on first launch', level=xbmc.LOGDEBUG)
+				xbmc.executebuiltin('RunScript(special://home/addons/plugin.program.iagl/run_IAGL_wizard.py)')
+			else:
+				xbmc.log(msg='IAGL:  Wizard was selected to not be run on first launch', level=xbmc.LOGDEBUG)
+				xbmcaddon.Addon(id=iagl_addon.name).setSetting(id='iagl_run_wizard',value='false')
 		plugin.redirect(iagl_addon.settings.get('index_list').get('route'))
 	else:
 		xbmcplugin.endOfDirectory(plugin.handle)
