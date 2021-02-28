@@ -168,8 +168,8 @@ class iagl_launch(object):
 									'%APP_PATH_PJ64%':next(iter([str(x.get('app_path')) for x in self.settings.get('ext_launchers').get('other_ext_cmds') if x.get('app_path_cmd_replace')=='%APP_PATH_PJ64%']),'%APP_PATH_PJ64%'),
 									'%CFG_PATH%':get_launch_parameter(self.settings.get('ext_launchers').get('ra').get('cfg_path'),'%CFG_PATH%'),
 									'%ROM_PATH%':str(launch_files.get('post_process_launch_file')),
-									'%ROM_FILENAME%':str(launch_files.get('post_process_launch_file').name),
-									'%ROM_BASE_PATH%':str(launch_files.get('post_process_launch_file').parent)}
+									'%ROM_FILENAME%':os.path.split(str(launch_files.get('post_process_launch_file')))[-1],
+									'%ROM_BASE_PATH%':os.path.split(str(launch_files.get('post_process_launch_file')))[0]}
 					for k,v in command_map.items():
 						self.current_command = self.current_command.replace(k,v)
 					if '%RETROARCH_CORE_DIR%' in self.current_command: #Check this seperately because polling the RA config takes time, and it's rarely used

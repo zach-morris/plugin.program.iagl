@@ -1103,6 +1103,7 @@ def get_ra_cmds(default_cmd,ra_cfg_path,ra_app_path):
 		ra_cores = dict()
 		ra_cfg = get_ra_libretro_config(ra_cfg_path,ra_app_path)
 		if ra_cfg.get('libretro_directory') and ra_cfg.get('libretro_info_path'):
+			xbmc.log(msg='IAGL:  The libretro directory is identified as %(libretro_directory)s and the core info path is %(libretro_info_path)s' % {'libretro_directory':ra_cfg.get('libretro_directory'),'libretro_info_path': ra_cfg.get('libretro_info_path')}, level=xbmc.LOGDEBUG)
 			ra_cores['cores'] = sorted([x for x in ra_cfg.get('libretro_directory').glob('**/*') if x.is_file() and x.suffix in ['.dylib','.dll','.so']])
 			info_files = [y for y in ra_cfg.get('libretro_info_path').glob('*.info') if y.is_file()]
 			ra_cores['name'] = ['RetroArch %(core_name)s'%{'core_name':x[0].get('display_name')} if x[0].get('display_name') else 'RetroArch %(core_name)s'%{'core_name':x[1].stem} for x in zip([get_ra_info(x.stem,info_files) for x in ra_cores.get('cores')],ra_cores['cores'])]
