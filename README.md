@@ -51,9 +51,10 @@ IAGL code is released under the [GNU GENERAL PUBLIC LICENSE Version 3](https://w
 
 Supplementary databases released with IAGL, in [this folder](https://github.com/zach-morris/plugin.program.iagl/tree/main/resources/data/databases), are released under the [Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) license. This allows for *non-commercial* use as long as credit is given and that derivative works (works based on the CC licensed data) are also made available under the same license.
 
-Media files in the skin folder are licensed under the Creative Commons Attribution-ShareAlike 4.0 Unported License
-You can find the license details [here](http://creativecommons.org/licenses/by-sa/4.0/)
+Media files in the skin folder are licensed under the Creative Commons Attribution-ShareAlike 4.0 Unported License.  You can find the license details [here](http://creativecommons.org/licenses/by-sa/4.0/)
+
 Some artwork in this folder is attributed to [Estuary by phil65 (Team Kodi)](https://github.com/phil65/skin.estuary)
+
 Some audio files in this folder were provided by [freesound.org](https://freesound.org/help/about/) and are licensed under the Creative Commons license
 
 
