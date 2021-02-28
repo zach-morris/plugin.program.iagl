@@ -385,4 +385,4 @@ if not get_mem_cache('iagl_script_started'):
 	xbmc.log(msg='IAGL:  Wizard script completed', level=xbmc.LOGDEBUG)
 else:
 	xbmc.log(msg='IAGL:  Script already running', level=xbmc.LOGDEBUG)
-del iagl_addon, iagl_addon_wizard, loc_str, get_mem_cache, set_mem_cache, clear_mem_cache, check_and_close_notification, choose_image, get_post_dl_commands
+del iagl_addon_wizard, loc_str, get_mem_cache, set_mem_cache, clear_mem_cache, check_and_close_notification, choose_image, get_post_dl_commands
