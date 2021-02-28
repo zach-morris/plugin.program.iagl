@@ -19,7 +19,11 @@ KODI_BIN_DARWIN=""
 KODI_PID_LINUX_STANDALONE=$(ps -A | grep [k]odi-standalone | head -1 | awk '{print $1}')
 KODI_PID_LINUX_X11=$(ps -A | grep [k]odi-x11 | head -1 | awk '{print $1}')
 KODI_PID_LINUX=$(ps -A | grep [k]odi | head -1 | awk '{print $1}')
+KODI_PID_RPI=$(ps -A | grep [k]odi-rbp | head -1 | awk '{print $1}')
+KODI_PID_RPI3=$(ps -A | grep [k]odi-rbp3 | head -1 | awk '{print $1}')
+KODI_PID_RPI4=$(ps -A | grep [k]odi-rbp4 | head -1 | awk '{print $1}')
 KODI_BIN_LINUX=""
+KODI_BIN_RPI=""
 KODI_EXIT=""
 RPC_RESULT="\x22result\x22:\x22OK\x22"
 
@@ -38,6 +42,18 @@ fi
 if ! [ -z $KODI_PID_LINUX ]
 then
 	KODI_BIN_LINUX="kodi"
+fi
+if ! [ -z $KODI_PID_RPI ]
+then
+	KODI_BIN_RPI="kodi-rbp"
+fi
+if ! [ -z $KODI_PID_RPI3 ]
+then
+	KODI_BIN_RPI="kodi-rbp3"
+fi
+if ! [ -z $KODI_PID_RPI4 ]
+then
+	KODI_BIN_RPI="kodi-rbp4"
 fi
 
 #Sleep to let Kodi write to log, IAGL to complete, and whatnot prior to shutdown
@@ -196,7 +212,7 @@ then
 fi
 #End Linux X11
 
-#Start Linux X11
+#Start Linux
 if ! [ -z $KODI_PID_LINUX ] && [ -z $KODI_EXIT ]
 then
 	echo "Linux Detected"
@@ -240,7 +256,145 @@ then
 		KODI_EXIT="1"
 	fi
 fi
-#End Linux X11
+#End Linux
+
+#Start RPi
+if ! [ -z $KODI_PID_RPI ] && [ -z $KODI_EXIT ]
+then
+	echo "Raspberry Pi Detected"
+	echo "Attempting to exit Kodi via JSONRPC"
+	JSON_RPC_COMMAND=$(curl -s --data-binary '{"jsonrpc": "2.0", "method": "Application.Quit", "id":1}' -H 'content-type: application/json;' http://127.0.0.1:8080/jsonrpc)
+	# Wait for the quit
+	sleep 5s
+	if ! [ -z $JSON_RPC_COMMAND ]
+	then
+		if ! [[ $JSON_RPC_COMMAND == *"$RPC_RESULT"* ]]
+		then
+			KODI_EXIT="1"
+		else
+			echo "JSONRPC response was $JSON_RPC_COMMAND"
+		fi
+
+	fi
+	if [ -z $KODI_EXIT ]
+	then
+		echo "JSONRPC exit failed, attempting SIGHUP"
+		kill -s SIGHUP $KODI_PID_RPI 
+		# Wait for the quit
+		sleep 2s
+		if ps -p $KODI_PID_RPI > /dev/null
+		then
+			echo "SIGHUP exit failed, attempting SIGKILL"
+			kill -s SIGKILL $KODI_PID_RPI
+			# Wait for the kill
+			sleep 2s
+			if ! ps -p $KODI_PID_RPI > /dev/null
+			then
+				echo "SIGKILL Exit Success"
+				KODI_EXIT="1"
+			fi
+		else
+			echo "SIGHUP Exit Success"
+			KODI_EXIT="1"
+		fi
+	else
+		echo "JSONRPC Exit Success"
+		KODI_EXIT="1"
+	fi
+fi
+#End RPi
+
+#Start RPi3
+if ! [ -z $KODI_PID_RPI3 ] && [ -z $KODI_EXIT ]
+then
+	echo "Raspberry Pi 3 Detected"
+	echo "Attempting to exit Kodi via JSONRPC"
+	JSON_RPC_COMMAND=$(curl -s --data-binary '{"jsonrpc": "2.0", "method": "Application.Quit", "id":1}' -H 'content-type: application/json;' http://127.0.0.1:8080/jsonrpc)
+	# Wait for the quit
+	sleep 5s
+	if ! [ -z $JSON_RPC_COMMAND ]
+	then
+		if ! [[ $JSON_RPC_COMMAND == *"$RPC_RESULT"* ]]
+		then
+			KODI_EXIT="1"
+		else
+			echo "JSONRPC response was $JSON_RPC_COMMAND"
+		fi
+
+	fi
+	if [ -z $KODI_EXIT ]
+	then
+		echo "JSONRPC exit failed, attempting SIGHUP"
+		kill -s SIGHUP $KODI_PID_RPI3 
+		# Wait for the quit
+		sleep 2s
+		if ps -p $KODI_PID_RPI3 > /dev/null
+		then
+			echo "SIGHUP exit failed, attempting SIGKILL"
+			kill -s SIGKILL $KODI_PID_RPI3
+			# Wait for the kill
+			sleep 2s
+			if ! ps -p $KODI_PID_RPI3 > /dev/null
+			then
+				echo "SIGKILL Exit Success"
+				KODI_EXIT="1"
+			fi
+		else
+			echo "SIGHUP Exit Success"
+			KODI_EXIT="1"
+		fi
+	else
+		echo "JSONRPC Exit Success"
+		KODI_EXIT="1"
+	fi
+fi
+#End RPi3
+
+#Start RPi4
+if ! [ -z $KODI_PID_RPI4 ] && [ -z $KODI_EXIT ]
+then
+	echo "Raspberry Pi 4 Detected"
+	echo "Attempting to exit Kodi via JSONRPC"
+	JSON_RPC_COMMAND=$(curl -s --data-binary '{"jsonrpc": "2.0", "method": "Application.Quit", "id":1}' -H 'content-type: application/json;' http://127.0.0.1:8080/jsonrpc)
+	# Wait for the quit
+	sleep 5s
+	if ! [ -z $JSON_RPC_COMMAND ]
+	then
+		if ! [[ $JSON_RPC_COMMAND == *"$RPC_RESULT"* ]]
+		then
+			KODI_EXIT="1"
+		else
+			echo "JSONRPC response was $JSON_RPC_COMMAND"
+		fi
+
+	fi
+	if [ -z $KODI_EXIT ]
+	then
+		echo "JSONRPC exit failed, attempting SIGHUP"
+		kill -s SIGHUP $KODI_PID_RPI4 
+		# Wait for the quit
+		sleep 2s
+		if ps -p $KODI_PID_RPI4 > /dev/null
+		then
+			echo "SIGHUP exit failed, attempting SIGKILL"
+			kill -s SIGKILL $KODI_PID_RPI4
+			# Wait for the kill
+			sleep 2s
+			if ! ps -p $KODI_PID_RPI4 > /dev/null
+			then
+				echo "SIGKILL Exit Success"
+				KODI_EXIT="1"
+			fi
+		else
+			echo "SIGHUP Exit Success"
+			KODI_EXIT="1"
+		fi
+	else
+		echo "JSONRPC Exit Success"
+		KODI_EXIT="1"
+	fi
+fi
+#End RPi4
 
 # Start Emulator Launch
 if ! [ -z $KODI_EXIT ]
@@ -268,6 +422,11 @@ then
 	then
 		echo "Restarting Linux Kodi with: $KODI_BIN_LINUX"
 		nohup $KODI_BIN_LINUX &
+	fi
+	if ! [ -z $KODI_BIN_RPI ]
+	then
+		echo "Restarting RPi Kodi with: $KODI_BIN_RPI"
+		nohup $KODI_BIN_RPI &
 	fi
 	#Attempt to restart IAGL after relaunching Kodi
 	sleep 5s
