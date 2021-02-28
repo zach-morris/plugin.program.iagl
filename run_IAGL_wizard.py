@@ -129,8 +129,11 @@ if not get_mem_cache('iagl_script_started'):
 			iagl_addon_wizard = iagl_addon() #Reload settings based on wizard entries
 			ext_commands = iagl_addon_wizard.get_ext_launch_cmds()
 			if ext_commands:
-				current_bg_dialog = xbmcgui.DialogProgressBG()
-				current_bg_dialog.create(loc_str(30377),loc_str(30379))
+				dp = xbmcgui.DialogProgress()
+				dp.create(loc_str(30377),loc_str(30379))
+				dp.update(0,loc_str(30379))
+				# current_bg_dialog = xbmcgui.DialogProgressBG()
+				# current_bg_dialog.create(loc_str(30377),loc_str(30379))
 				for ii,hh in enumerate(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header')):
 					if hh and hh.get('emu_visibility') and hh.get('emu_visibility') != 'hidden':
 						current_fn = iagl_addon_wizard.directory.get('userdata').get('dat_files').get('files')[ii]
@@ -139,7 +142,14 @@ if not get_mem_cache('iagl_script_started'):
 						wizard_settings['game_list'][game_list_id]['success'] = False
 						wizard_settings['game_list'][game_list_id]['command'] = None
 						wizard_settings['game_list'][game_list_id]['command_name'] = None
-						current_bg_dialog.update(int(100*(ii+1)/(len(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header'))+.001)),loc_str(30377),loc_str(30379))
+						dp.update(int(100*(ii+1)/(len(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header'))+.001)),loc_str(30377)+'[CR]'+loc_str(30379))
+						# current_bg_dialog.update(int(100*(ii+1)/(len(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header'))+.001)),loc_str(30377),loc_str(30379))
+						if dp.iscanceled():
+							xbmc.log(msg='IAGL:  User cancelled the wizard mid process', level=xbmc.LOGDEBUG)
+							wizard_settings['game_list'][game_list_id]['success'] = False
+							wizard_settings['game_list'][game_list_id]['command'] = None
+							wizard_settings['game_list'][game_list_id]['command_name'] = None
+							break
 						if EXT_DEFAULTS.get(game_list_id) and any([any([x.get('@name')==y for y in EXT_DEFAULTS.get(game_list_id)]) for x in ext_commands if x and x.get('@name')]):
 							current_command_name = next(iter([x for x in EXT_DEFAULTS.get(game_list_id) if x in [y.get('@name') for y in ext_commands] if x]),'none')
 							current_command = next(iter([x.get('command') for x in ext_commands if x and x.get('@name') == current_command_name]),'none')
@@ -152,10 +162,12 @@ if not get_mem_cache('iagl_script_started'):
 									wizard_settings['game_list'][game_list_id]['command_name'] = current_command_name
 						else:
 							xbmc.log(msg='IAGL:  Wizard did not find a default external launch command for %(value)s'%{'value':game_list_id}, level=xbmc.LOGERROR)
-				current_bg_dialog.close()
-				xbmc.executebuiltin('Dialog.Close(extendedprogressdialog,true)')
-				check_and_close_notification(notification_id='extendedprogressdialog')
-				del current_bg_dialog
+				dp.close()
+				del dp
+				# current_bg_dialog.close()
+				# xbmc.executebuiltin('Dialog.Close(extendedprogressdialog,true)')
+				# check_and_close_notification(notification_id='extendedprogressdialog')
+				# del current_bg_dialog
 			else:
 				ok_ret = current_dialog.ok(loc_str(30005),loc_str(30388))
 	elif wizard_settings.get('wizard_launcher')==0:
@@ -174,8 +186,11 @@ if not get_mem_cache('iagl_script_started'):
 				json_query = None
 			if json_query and json_query.get('result') and json_query.get('result').get('addons'):
 				addons_available = sorted([x.get('addonid') for x in json_query.get('result').get('addons') if x and x.get('addonid')!='game.libretro'])
-			current_bg_dialog = xbmcgui.DialogProgressBG()
-			current_bg_dialog.create(loc_str(30377),loc_str(30379))
+			# current_bg_dialog = xbmcgui.DialogProgressBG()
+			# current_bg_dialog.create(loc_str(30377),loc_str(30379))
+			dp = xbmcgui.DialogProgress()
+			dp.create(loc_str(30377),loc_str(30379))
+			dp.update(0,loc_str(30379))
 			for ii,hh in enumerate(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header')):
 				if hh and hh.get('emu_visibility') and hh.get('emu_visibility') != 'hidden':
 					current_fn = iagl_addon_wizard.directory.get('userdata').get('dat_files').get('files')[ii]
@@ -184,7 +199,14 @@ if not get_mem_cache('iagl_script_started'):
 					wizard_settings['game_list'][game_list_id]['success'] = False
 					wizard_settings['game_list'][game_list_id]['command'] = None
 					wizard_settings['game_list'][game_list_id]['command_name'] = None
-					current_bg_dialog.update(int(100*(ii+1)/(len(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header'))+.001)),loc_str(30377),loc_str(30379))
+					dp.update(int(100*(ii+1)/(len(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header'))+.001)),loc_str(30377)+'[CR]'+loc_str(30379))
+					if dp.iscanceled():
+						xbmc.log(msg='IAGL:  User cancelled the wizard mid process', level=xbmc.LOGDEBUG)
+						wizard_settings['game_list'][game_list_id]['success'] = False
+						wizard_settings['game_list'][game_list_id]['command'] = None
+						wizard_settings['game_list'][game_list_id]['command_name'] = None
+						break
+					# current_bg_dialog.update(int(100*(ii+1)/(len(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header'))+.001)),loc_str(30377),loc_str(30379))
 					if RP_DEFAULTS.get(game_list_id):
 						if not any([y in addons_available for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y]):
 							xbmc.log(msg='IAGL:  Wizard did not find a default addon available for %(value)s, attempting to install.'%{'value':game_list_id}, level=xbmc.LOGERROR)
@@ -211,13 +233,18 @@ if not get_mem_cache('iagl_script_started'):
 							xbmc.log(msg='IAGL:  Wizard could not install a default addon for %(value)s'%{'value':game_list_id}, level=xbmc.LOGERROR)
 					else:
 						xbmc.log(msg='IAGL:  Wizard did not find a default addon for %(value)s'%{'value':game_list_id}, level=xbmc.LOGERROR)
-			current_bg_dialog.close()
-			xbmc.executebuiltin('Dialog.Close(extendedprogressdialog,true)')
-			check_and_close_notification(notification_id='extendedprogressdialog')
-			del current_bg_dialog
+			dp.close()
+			del dp
+			# current_bg_dialog.close()
+			# xbmc.executebuiltin('Dialog.Close(extendedprogressdialog,true)')
+			# check_and_close_notification(notification_id='extendedprogressdialog')
+			# del current_bg_dialog
 		elif yesno_ret == 2:
-			current_bg_dialog = xbmcgui.DialogProgressBG()
-			current_bg_dialog.create(loc_str(30377),loc_str(30379))
+			dp = xbmcgui.DialogProgress()
+			dp.create(loc_str(30377),loc_str(30379))
+			dp.update(0,loc_str(30379))
+			# current_bg_dialog = xbmcgui.DialogProgressBG()
+			# current_bg_dialog.create(loc_str(30377),loc_str(30379))
 			for ii,hh in enumerate(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header')):
 				if hh and hh.get('emu_visibility') and hh.get('emu_visibility') != 'hidden':
 					current_fn = iagl_addon_wizard.directory.get('userdata').get('dat_files').get('files')[ii]
@@ -226,7 +253,14 @@ if not get_mem_cache('iagl_script_started'):
 					wizard_settings['game_list'][game_list_id]['success'] = False
 					wizard_settings['game_list'][game_list_id]['command'] = None
 					wizard_settings['game_list'][game_list_id]['command_name'] = None
-					current_bg_dialog.update(int(100*(ii+1)/(len(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header'))+.001)),loc_str(30377),loc_str(30379))
+					dp.update(int(100*(ii+1)/(len(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header'))+.001)),loc_str(30377)+'[CR]'+loc_str(30379))
+					if dp.iscanceled():
+						xbmc.log(msg='IAGL:  User cancelled the wizard mid process', level=xbmc.LOGDEBUG)
+						wizard_settings['game_list'][game_list_id]['success'] = False
+						wizard_settings['game_list'][game_list_id]['command'] = None
+						wizard_settings['game_list'][game_list_id]['command_name'] = None
+						break
+					# current_bg_dialog.update(int(100*(ii+1)/(len(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header'))+.001)),loc_str(30377),loc_str(30379))
 					current_command = 'none'
 					if iagl_addon_wizard.game_lists.update_game_list_header(game_list_id,header_key='emu_launcher',header_value='retroplayer',confirm_update=False):
 						xbmc.log(msg='IAGL:  Wizard update launcher for game list %(value)s to Retroplayer'%{'value':game_list_id}, level=xbmc.LOGDEBUG)
@@ -235,10 +269,12 @@ if not get_mem_cache('iagl_script_started'):
 							wizard_settings['game_list'][game_list_id]['success'] = True
 							wizard_settings['game_list'][game_list_id]['command'] = current_command
 							wizard_settings['game_list'][game_list_id]['command_name'] = loc_str(30338)
-			current_bg_dialog.close()
-			xbmc.executebuiltin('Dialog.Close(extendedprogressdialog,true)')
-			check_and_close_notification(notification_id='extendedprogressdialog')
-			del current_bg_dialog
+			dp.close()
+			del dp
+			# current_bg_dialog.close()
+			# xbmc.executebuiltin('Dialog.Close(extendedprogressdialog,true)')
+			# check_and_close_notification(notification_id='extendedprogressdialog')
+			# del current_bg_dialog
 	if wizard_settings.get('game_list') and wizard_settings.get('game_list').keys() and all([wizard_settings.get('game_list').get(kk).get('success') for kk in wizard_settings.get('game_list').keys()]):
 		xbmc.playSFX(DONE_SOUND,False)
 		ok_ret = current_dialog.ok(loc_str(30005),loc_str(30590)%{'launch_type':launch_type})
