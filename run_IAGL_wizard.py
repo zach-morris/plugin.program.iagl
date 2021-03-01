@@ -190,6 +190,7 @@ if not get_mem_cache('iagl_script_started'):
 			# current_bg_dialog.create(loc_str(30377),loc_str(30379))
 			dp = xbmcgui.DialogProgress()
 			dp.create(loc_str(30377),loc_str(30379))
+			# xbmcgui.Window(xbmcgui.getCurrentWindowDialogId()).setProperty('iagl_wizard_progress','true') #Keep track of which window this is
 			dp.update(0,loc_str(30379))
 			for ii,hh in enumerate(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header')):
 				if hh and hh.get('emu_visibility') and hh.get('emu_visibility') != 'hidden':
@@ -209,17 +210,11 @@ if not get_mem_cache('iagl_script_started'):
 					# current_bg_dialog.update(int(100*(ii+1)/(len(iagl_addon_wizard.directory.get('userdata').get('dat_files').get('header'))+.001)),loc_str(30377),loc_str(30379))
 					if RP_DEFAULTS.get(game_list_id):
 						if not any([y in addons_available for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y]):
-							xbmc.log(msg='IAGL:  Wizard did not find a default addon available for %(value)s, attempting to install.'%{'value':game_list_id}, level=xbmc.LOGERROR)
+							xbmc.log(msg='IAGL:  Wizard did not find a default addon available for %(value)s, attempting to install.'%{'value':game_list_id}, level=xbmc.LOGDEBUG)
 							for aa in RP_DEFAULTS.get(game_list_id):
-								xbmc.executebuiltin('InstallAddon(%(value)s)'%{'value':aa})
-								wait = True
-								while wait:
-									if not (xbmc.getCondVisibility('Window.IsActive(%(notification_id)s)'%{'notification_id':'yesnodialog'}) or xbmc.getCondVisibility('Window.IsActive(%(notification_id)s)'%{'notification_id':'progressdialog'})):
-										xbmc.sleep(1000)
-										if not (xbmc.getCondVisibility('Window.IsActive(%(notification_id)s)'%{'notification_id':'yesnodialog'}) or xbmc.getCondVisibility('Window.IsActive(%(notification_id)s)'%{'notification_id':'progressdialog'})):
-											wait = False
-											break
-									xbmc.sleep(3000)
+								xbmc.log(msg='IAGL:  Start install for %(value)s'%{'value':aa}, level=xbmc.LOGDEBUG)
+								xbmc.executebuiltin('InstallAddon(%(value)s)'%{'value':aa},True)
+								xbmc.log(msg='IAGL:  Complete install execution for %(value)s'%{'value':aa}, level=xbmc.LOGDEBUG)
 						if any([y in addons_available for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y]):
 							current_command = next(iter([y for y in [x for x in RP_DEFAULTS.get(game_list_id) if x] if y in addons_available]),'none')
 							if iagl_addon_wizard.game_lists.update_game_list_header(game_list_id,header_key='emu_launcher',header_value='retroplayer',confirm_update=False):
@@ -230,7 +225,7 @@ if not get_mem_cache('iagl_script_started'):
 									wizard_settings['game_list'][game_list_id]['command'] = current_command
 									wizard_settings['game_list'][game_list_id]['command_name'] = xbmcaddon.Addon(id=current_command).getAddonInfo('name')
 						else:
-							xbmc.log(msg='IAGL:  Wizard could not install a default addon for %(value)s'%{'value':game_list_id}, level=xbmc.LOGERROR)
+							xbmc.log(msg='IAGL:  Wizard could not install a default addon for %(value)s'%{'value':game_list_id}, level=xbmc.LOGDEBUG)
 					else:
 						xbmc.log(msg='IAGL:  Wizard did not find a default addon for %(value)s'%{'value':game_list_id}, level=xbmc.LOGERROR)
 			dp.close()
