@@ -139,7 +139,19 @@ then
 	fi
 	if [ -z $KODI_EXIT ]
 	then
-		echo "JSONRPC exit failed, attempting SIGHUP"
+		if command -v kodi-send &> /dev/null
+		then
+			echo "JSON RPC exit failed, attempting kodi-send"
+			kodi-send -a "ShutDown()"
+			sleep 5s
+		fi
+	else
+		echo "JSONRPC Exit Success"
+		KODI_EXIT="1"
+	fi
+	if [ -z $KODI_EXIT ]
+	then
+		echo "JSON RPC / kodi-send exit failed, attempting SIGHUP"
 		kill -s SIGHUP $KODI_PID_LINUX_STANDALONE 
 		# Wait for the quit
 		sleep 2s
@@ -159,7 +171,7 @@ then
 			KODI_EXIT="1"
 		fi
 	else
-		echo "JSONRPC Exit Success"
+		echo "JSON RPC / kodi-send Exit Success"
 		KODI_EXIT="1"
 	fi
 fi
@@ -186,7 +198,19 @@ then
 	fi
 	if [ -z $KODI_EXIT ]
 	then
-		echo "JSONRPC exit failed, attempting SIGHUP"
+		if command -v kodi-send &> /dev/null
+		then
+			echo "JSON RPC exit failed, attempting kodi-send"
+			kodi-send -a "ShutDown()"
+			sleep 5s
+		fi
+	else
+		echo "JSONRPC Exit Success"
+		KODI_EXIT="1"
+	fi
+	if [ -z $KODI_EXIT ]
+	then
+		echo "JSON RPC / kodi-send exit failed, attempting SIGHUP"
 		kill -s SIGHUP $KODI_PID_LINUX_X11 
 		# Wait for the quit
 		sleep 2s
@@ -206,7 +230,7 @@ then
 			KODI_EXIT="1"
 		fi
 	else
-		echo "JSONRPC Exit Success"
+		echo "JSON RPC / kodi-send Exit Success"
 		KODI_EXIT="1"
 	fi
 fi
@@ -232,7 +256,19 @@ then
 	fi
 	if [ -z $KODI_EXIT ]
 	then
-		echo "JSONRPC exit failed, attempting SIGHUP"
+		if command -v kodi-send &> /dev/null
+		then
+			echo "JSON RPC exit failed, attempting kodi-send"
+			kodi-send -a "ShutDown()"
+			sleep 5s
+		fi
+	else
+		echo "JSONRPC Exit Success"
+		KODI_EXIT="1"
+	fi
+	if [ -z $KODI_EXIT ]
+	then
+		echo "JSON RPC / kodi-send exit failed, attempting SIGHUP"
 		kill -s SIGHUP $KODI_PID_LINUX 
 		# Wait for the quit
 		sleep 2s
@@ -252,7 +288,7 @@ then
 			KODI_EXIT="1"
 		fi
 	else
-		echo "JSONRPC Exit Success"
+		echo "JSON RPC / kodi-send Exit Success"
 		KODI_EXIT="1"
 	fi
 fi
@@ -278,7 +314,19 @@ then
 	fi
 	if [ -z $KODI_EXIT ]
 	then
-		echo "JSONRPC exit failed, attempting SIGHUP"
+		if command -v kodi-send &> /dev/null
+		then
+			echo "JSON RPC exit failed, attempting kodi-send"
+			kodi-send -a "ShutDown()"
+			sleep 5s
+		fi
+	else
+		echo "JSONRPC Exit Success"
+		KODI_EXIT="1"
+	fi
+	if [ -z $KODI_EXIT ]
+	then
+		echo "JSON RPC / kodi-send exit failed, attempting SIGHUP"
 		kill -s SIGHUP $KODI_PID_RPI 
 		# Wait for the quit
 		sleep 2s
@@ -298,7 +346,7 @@ then
 			KODI_EXIT="1"
 		fi
 	else
-		echo "JSONRPC Exit Success"
+		echo "JSON RPC / kodi-send Exit Success"
 		KODI_EXIT="1"
 	fi
 fi
@@ -324,7 +372,19 @@ then
 	fi
 	if [ -z $KODI_EXIT ]
 	then
-		echo "JSONRPC exit failed, attempting SIGHUP"
+		if command -v kodi-send &> /dev/null
+		then
+			echo "JSON RPC exit failed, attempting kodi-send"
+			kodi-send -a "ShutDown()"
+			sleep 5s
+		fi
+	else
+		echo "JSONRPC Exit Success"
+		KODI_EXIT="1"
+	fi
+	if [ -z $KODI_EXIT ]
+	then
+		echo "JSON RPC / kodi-send  exit failed, attempting SIGHUP"
 		kill -s SIGHUP $KODI_PID_RPI3 
 		# Wait for the quit
 		sleep 2s
@@ -344,7 +404,7 @@ then
 			KODI_EXIT="1"
 		fi
 	else
-		echo "JSONRPC Exit Success"
+		echo "JSON RPC / kodi-send  Exit Success"
 		KODI_EXIT="1"
 	fi
 fi
@@ -370,7 +430,19 @@ then
 	fi
 	if [ -z $KODI_EXIT ]
 	then
-		echo "JSONRPC exit failed, attempting SIGHUP"
+		if command -v kodi-send &> /dev/null
+		then
+			echo "JSON RPC exit failed, attempting kodi-send"
+			kodi-send -a "ShutDown()"
+			sleep 5s
+		fi
+	else
+		echo "JSONRPC Exit Success"
+		KODI_EXIT="1"
+	fi
+	if [ -z $KODI_EXIT ]
+	then
+		echo "JSON RPC / kodi-send exit failed, attempting SIGHUP"
 		kill -s SIGHUP $KODI_PID_RPI4 
 		# Wait for the quit
 		sleep 2s
@@ -390,7 +462,7 @@ then
 			KODI_EXIT="1"
 		fi
 	else
-		echo "JSONRPC Exit Success"
+		echo "JSON RPC / kodi-send Exit Success"
 		KODI_EXIT="1"
 	fi
 fi
