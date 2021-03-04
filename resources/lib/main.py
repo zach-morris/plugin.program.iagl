@@ -48,6 +48,8 @@ class iagl_addon(object):
 		self.settings['game_list']['enable_post_dl_edit'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_post_dl_edit'))
 		self.settings['game_list']['append_emu_name'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_append_emu_name_to_results'))
 		self.settings['game_list']['game_history'] = get_setting_as(setting_type='int',setting=self.handle.getSetting(id='iagl_setting_history'))
+		self.settings['game_list']['show_netplay'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_netplay_show_netplay_lobby'))
+		self.settings['game_list']['filter_lobby'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_netplay_filter_lobby'))
 		self.settings['game_list']['forced_views'] = dict()
 		self.settings['game_list']['forced_views']['Alphabetical'] = 'iagl_enable_forced_views_5'
 		self.settings['game_list']['forced_views']['Group by Genres'] = 'iagl_enable_forced_views_6'
@@ -60,6 +62,11 @@ class iagl_addon(object):
 		self.settings['game_action']['select'] = get_setting_as(setting_type='int',setting=self.handle.getSetting(id='iagl_setting_default_action'))
 		self.settings['game_action']['local_file_found'] = get_setting_as(setting_type='int',setting=self.handle.getSetting(id='iagl_setting_localfile_action'))
 		self.settings['game_action']['autoplay_trailer'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_setting_autoplay_trailer'))
+		self.settings['game_action']['show_netplay'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_netplay_enable_netplay_launch'))
+		self.settings['game_action']['netplay_launch_action'] = get_setting_as(setting_type='int',setting=self.handle.getSetting(id='iagl_netplay_netplay_launch_choose'))
+		self.settings['game_action']['netplay_nick'] = self.handle.getSetting(id='iagl_netplay_nickname')
+		self.settings['game_action']['netplay_port'] = self.handle.getSetting(id='iagl_netplay_port')
+		self.settings['game_action']['netplay_checkframes'] = self.handle.getSetting(id='iagl_netplay_frames')
 		self.settings['archive_org'] = dict()
 		self.settings['archive_org']['enabled'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_setting_enable_login'))
 		self.settings['archive_org']['username'] = self.handle.getSetting(id='iagl_setting_ia_username')
@@ -445,6 +452,10 @@ class iagl_addon(object):
 			else:
 				return []
 
+		def get_netplay_lobby_as_listitems(self,filter_lobby=True):
+			discord_dict = get_discord_dict()
+			return [get_database_listitem(dict_in=map_lobby_listitem_dict(libretro_dict=x,discord_dict=discord_dict,filter_lobby=filter_lobby)) for x in [y.get('fields') for y in get_libretro_dict()] if x]	
+
 	def get_sort_methods(self,route_in):
 		if route_in == 'Browse All Lists':
 			return [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_SIZE]
@@ -667,17 +678,21 @@ class iagl_dialog_info_page(xbmcgui.WindowXMLDialog):
 		self.game = kwargs.get('game')
 		self.game_listitem = kwargs.get('game_listitem')
 		self.autoplay_trailer = kwargs.get('autoplay_trailer')
+		self.show_netplay = kwargs.get('show_netplay')
+		self.netplay_launch_action = kwargs.get('netplay_launch_action')
 		self.art = dict()
 		for kk in ['game_boxarts','game_banners','game_snapshots','game_logos','game_fanarts']:
 			if self.game.get('properties') and self.game.get('properties').get(kk):
 				self.art[kk] = json.loads(self.game.get('properties').get(kk))
 		self.action_requested = None
+		self.netplay_options = None
 		if xbmc.Player().isPlaying():
 			xbmc.Player().stop()
 			xbmc.sleep(100)
 		self.onaction_id_exit = [10, 13, 92] #Default exit keys to close window via keyboard / controller
 		self.onclick_id_download = 3001
 		self.onclick_id_launch = 3002
+		self.onclick_id_netplay = 3004
 		self.onclick_id_exit = 3003
 		self.listitem_id = dict()
 		self.listitem_id['game'] = 113 #Invisible listitem for game metadata
@@ -686,7 +701,17 @@ class iagl_dialog_info_page(xbmcgui.WindowXMLDialog):
 		self.listitem_id['game_snapshots'] = 115 #Invisible listitem for game snapshots, same as boxarts
 		self.listitem_id['game_banners'] = 116 #Invisible listitem for game banners
 		self.listitem_id['game_logos'] = None #Invisible listitem for game logos
-		set_mem_cache('iagl_trailer_started','False')
+		# set_mem_cache('iagl_trailer_started','False')
+		#Auto play trailer if settings are defined
+		if self.autoplay_trailer:
+			if self.game.get('info').get('trailer') is not None:
+				if xbmc.Player().isPlaying():
+					xbmc.Player().stop()
+					xbmc.sleep(100)
+				set_mem_cache('iagl_trailer_started','True')
+				# xbmc.Player().play(self.game.get('info').get('trailer'),windowed=True)
+		else:
+			set_mem_cache('iagl_trailer_started','False')
 		xbmc.log(msg='IAGL:  Info Page Initialized for game %(game_id)s in list %(game_list_id)s'%{'game_id':self.game_id,'game_list_id':self.game_list_id}, level=xbmc.LOGDEBUG)
 
 	def onInit(self):
@@ -694,6 +719,13 @@ class iagl_dialog_info_page(xbmcgui.WindowXMLDialog):
 		self.download_button.setEnabled(True)
 		self.launch_button = self.getControl(self.onclick_id_launch)
 		self.launch_button.setEnabled(True)
+		self.netplay_button = self.getControl(self.onclick_id_netplay)
+		if self.show_netplay:
+			self.netplay_button.setEnabled(True)
+			self.netplay_button.setVisible(True)
+		else:
+			self.netplay_button.setEnabled(False)
+			self.netplay_button.setVisible(False)
 		self.exit_button = self.getControl(self.onclick_id_exit)
 		self.exit_button.setEnabled(True)
 		self.current_game_listitem = self.getControl(self.listitem_id.get('game'))
@@ -709,17 +741,9 @@ class iagl_dialog_info_page(xbmcgui.WindowXMLDialog):
 					current_listitems.append(li)
 				current_control.addItems(current_listitems)
 
-		#Auto play trailer if settings are defined
 		if self.autoplay_trailer:
-			if self.game.get('info').get('trailer') is not None:
-				if xbmc.Player().isPlaying():
-					xbmc.Player().stop()
-					xbmc.sleep(100)
-				set_mem_cache('iagl_trailer_started','True')
-				xbmc.sleep(250)
+				xbmc.sleep(100)
 				xbmc.Player().play(self.game.get('info').get('trailer'),windowed=True)
-		else:
-			set_mem_cache('iagl_trailer_started','False')
 
 	def onAction(self, action):
 		if action in self.onaction_id_exit:
@@ -734,6 +758,17 @@ class iagl_dialog_info_page(xbmcgui.WindowXMLDialog):
 		if controlId == self.onclick_id_download:
 			self.action_requested = 1
 			self.closeDialog()
+		if controlId == self.onclick_id_netplay:
+			if self.netplay_launch_action == 0:
+				choose_dialog = xbmcgui.Dialog()
+				ret1 = choose_dialog.select(loc_str(30607),[loc_str(30608),loc_str(30609),loc_str(30610)])
+				if ret1 in [0,1,2]:
+					self.action_requested = 2+ret1
+					self.closeDialog()
+				del choose_dialog
+			else:
+				self.action_requested = 1+self.netplay_launch_action
+				self.closeDialog()
 
 	def closeDialog(self):
 		xbmc.executebuiltin('Dialog.Close(busydialog)') #Try and close busy dialog if it is for some reason open

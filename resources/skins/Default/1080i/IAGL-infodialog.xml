@@ -557,6 +557,30 @@ https://github.com/phil65/skin.estuary
 						<visible>True</visible>
 						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
 					</control>
+					<control type="radiobutton" id="3004">
+						<width>262</width>
+						<height>142</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<texturefocus border="21" colordiffuse="FF12A0C7">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-fo.png</texturefocus>
+						<texturenofocus border="21">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-nofo.png</texturenofocus>
+						<textoffsetx>35</textoffsetx>
+						<textoffsety>78</textoffsety>
+						<radioposx>108</radioposx>
+						<radioposy>16</radioposy>
+						<radiowidth>48</radiowidth>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<focusedcolor>FF12A0C7</focusedcolor>
+						<textureradioonfocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradiooffnofocus>
+						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradiooffdisabled>
+						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradioondisabled>
+						<label>$ADDON[plugin.program.iagl 30004]</label>
+						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
+					</control>
 					<control type="radiobutton" id="11">
 						<width>262</width>
 						<height>142</height>

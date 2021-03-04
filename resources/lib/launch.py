@@ -6,19 +6,22 @@ import xbmc, xbmcplugin, xbmcgui, xbmcvfs
 from . utils import *
 
 class iagl_launch(object):
-	def __init__(self,settings=dict(),directory=dict(),game_list=dict(),game=dict(),game_files=dict(),launcher=None):
+	def __init__(self,settings=dict(),directory=dict(),game_list=dict(),game=dict(),game_files=dict(),launcher=None,netplay=False,netplay_query=None,uuid=None):
 		self.settings = settings
 		self.directory = directory
 		self.game_list = game_list
 		self.game = game
 		self.game_files = game_files
+		self.netplay = netplay
+		self.netplay_query = netplay_query
+		self.uuid=uuid
 		#Default launcher is retroplayer
 		self.set_launcher(launcher=launcher)
 
 	def set_launcher(self,launcher=None):
 		if isinstance(launcher,str) and launcher == 'external':
 			xbmc.log(msg='IAGL:  Launcher set to EXTERNAL',level=xbmc.LOGDEBUG)
-			self.launcher = self.external_launch(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files)
+			self.launcher = self.external_launch(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,netplay=self.netplay,netplay_query=self.netplay_query,uuid=self.uuid)
 		elif isinstance(launcher,str) and launcher == 'retroplayer':
 			xbmc.log(msg='IAGL:  Launcher set to RETROPLAYER',level=xbmc.LOGDEBUG)
 			self.launcher = self.retroplayer_launch(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files)
@@ -131,7 +134,7 @@ class iagl_launch(object):
 			return self.launch_status
 
 	class external_launch(object):
-		def __init__(self,settings=dict(),directory=dict(),game_list=dict(),game=dict(),game_files=dict(),**kwargs):
+		def __init__(self,settings=dict(),directory=dict(),game_list=dict(),game=dict(),game_files=dict(),netplay=False,uuid=None,netplay_query=None,**kwargs):
 			self.settings = settings
 			self.directory= directory
 			self.game_list = game_list
@@ -139,10 +142,12 @@ class iagl_launch(object):
 			self.game_files = game_files
 			self.launch_status = dict()
 			self.current_command = None
+			self.netplay = netplay
+			self.uuid = uuid
+			self.netplay_query = netplay_query
 
 		def launch(self,launch_files=None,**kwargs):
 			import subprocess
-			netplay_command = False #Hard code for now, add context menu and windowxml button to launch with netplay
 			capture_launch_log = True #Hard code for now, to add as an advanced setting
 			current_output = list()
 			if capture_launch_log:
@@ -151,8 +156,24 @@ class iagl_launch(object):
 			if launch_files and launch_files.get('post_process_launch_file') and launch_files.get('ext_launch_cmd') and launch_files.get('ext_launch_cmd')!='none':
 				self.current_command = launch_files.get('ext_launch_cmd').replace('%ROM_PATH%',str(launch_files.get('post_process_launch_file')))
 
-				if netplay_command: #To be implemented soon
-					xbmc.log(msg='IAGL:  Launch game with netplay requested',level=xbmc.LOGDEBUG)
+				if self.netplay and self.netplay_query is None:
+					xbmc.log(msg='IAGL:  Launch game with netplay host requested',level=xbmc.LOGDEBUG)
+					netplay_command = ' --host --nick="%(nn)s (%(ss)s)"'%{'nn':next(iter([x for x in [self.settings.get('game_action').get('netplay_nick'),xbmc.getInfoLabel('System.ProfileName')] if x]),'Kodi Player 1')[0:22],'ss':self.uuid}
+					if self.settings.get('game_action').get('netplay_port') and len(self.settings.get('game_action').get('netplay_port')) and self.settings.get('game_action').get('netplay_port').isdigit():
+						netplay_command = netplay_command+' --port=%(pp)s'%{'pp':self.settings.get('game_action').get('netplay_port')}
+					if self.settings.get('game_action').get('netplay_checkframes') and len(self.settings.get('game_action').get('netplay_checkframes')) and self.settings.get('game_action').get('netplay_checkframes').isdigit():
+						netplay_command = netplay_command+' --check-frames=%(pp)s'%{'pp':self.settings.get('game_action').get('netplay_checkframes')}
+					self.current_command = self.current_command.replace(' %NETPLAY_COMMAND%',netplay_command)
+				elif self.netplay and self.netplay_query:
+					xbmc.log(msg='IAGL:  Launch game with netplay user 2+ requested',level=xbmc.LOGDEBUG)
+					current_host = next(iter([x for x in [self.netplay_query.get('mitm_ip'),self.netplay_query.get('ip')] if x and len(x)>7]),self.netplay_query.get('ip'))
+					current_port = next(iter([x for x in [self.netplay_query.get('mitm_port'),self.netplay_query.get('port')] if x and x != '0']),'55435')
+					netplay_command = ' --connect=%(host)s --port=%(pp)s --nick="%(nn)s (%(ss)s)"'%{'host':current_host,'pp':current_port,'nn':next(iter([x for x in [self.settings.get('game_action').get('netplay_nick'),xbmc.getInfoLabel('System.ProfileName')] if x]),'Kodi Player 1')[0:22],'ss':self.uuid}
+					# if self.settings.get('game_action').get('netplay_port') and len(self.settings.get('game_action').get('netplay_port')) and self.settings.get('game_action').get('netplay_port').isdigit():
+						# netplay_command = netplay_command+' --port=%(pp)s'%{'pp':self.settings.get('game_action').get('netplay_port')}
+					if self.settings.get('game_action').get('netplay_checkframes') and len(self.settings.get('game_action').get('netplay_checkframes')) and self.settings.get('game_action').get('netplay_checkframes').isdigit():
+						netplay_command = netplay_command+' --check-frames=%(pp)s'%{'pp':self.settings.get('game_action').get('netplay_checkframes')}
+					self.current_command = self.current_command.replace(' %NETPLAY_COMMAND%',netplay_command)
 				else:
 					xbmc.log(msg='IAGL:  Launch game without netplay requested',level=xbmc.LOGDEBUG)
 					self.current_command = self.current_command.replace(' %NETPLAY_COMMAND%','')

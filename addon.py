@@ -10,7 +10,7 @@ import routing, sys, json, re
 from random import sample as random_sample
 from resources.lib.main import iagl_addon
 from resources.lib import paginate
-from resources.lib.utils import clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, check_if_file_exists, check_if_dir_exists, clean_image_entry, clean_trailer_entry, loc_str, check_and_close_notification, get_history_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, zachs_debug
+from resources.lib.utils import clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, check_if_file_exists, check_if_dir_exists, clean_image_entry, clean_trailer_entry, loc_str, check_and_close_notification, get_history_listitem, get_netplay_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, get_uuid, generate_discord_announcement, zachs_debug
 
 ## Plugin Initialization Stuff ##
 SLEEP_HACK=50  #https://github.com/xbmc/xbmc/issues/18576
@@ -70,6 +70,8 @@ def archives_browse_all_route():
 def archives_choose_from_list_route():
 	clear_mem_cache('iagl_current_query')
 	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/archives/%(label2)s'%{'label2':x.getLabel2()}),x,True) for x in iagl_addon.routes.get_route_as_listitems('browse')])
+	if iagl_addon.settings.get('game_list').get('show_netplay'):
+		xbmcplugin.addDirectoryItem(plugin.handle,plugin.url_for_path('/netplay/lobby'),get_netplay_listitem(),True)
 	if check_if_file_exists(iagl_addon.directory.get('userdata').get('list_cache').get('path').joinpath('history.json')): #Add history listitem
 		xbmcplugin.addDirectoryItem(plugin.handle,plugin.url_for_path('/game_history/list_all/%(label2)s'%{'label2':'history'}),get_history_listitem(),True)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -307,6 +309,11 @@ def game_list_in_category_route(category_choice,category_value,game_list_id,page
 		xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
+@plugin.route('/netplay/lobby')
+def get_netplay_lobby():
+	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(download_and_launch_game_netplay,game_list_id=x.getProperty('route'),game_id=x.getLabel2(),query=x.getProperty('query')),x,True) for x in iagl_addon.game_lists.get_netplay_lobby_as_listitems(filter_lobby=iagl_addon.settings.get('game_list').get('filter_lobby')) if x])
+	xbmcplugin.endOfDirectory(plugin.handle)
+
 @plugin.route('/game/<game_list_id>/<game_id>')
 def get_game(game_list_id,game_id):
 	if iagl_addon.settings.get('game_action').get('select')==0: #Download and launch
@@ -321,10 +328,12 @@ def show_info_game(game_list_id,game_id):
 	game = iagl_addon.game_lists.get_game_as_dict(game_list_id=game_list_id,game_id=game_id)
 	if isinstance(game,dict):
 		from resources.lib.main import iagl_dialog_info_page
-		info_page = iagl_dialog_info_page('IAGL-infodialog.xml',iagl_addon.directory.get('addon').get('path'),'Default','1080i',game_list_id=game_list_id,game_id=game_id,game=game,game_listitem=get_game_listitem(dict_in=game,filter_in=None),autoplay_trailer=iagl_addon.settings.get('game_action').get('autoplay_trailer'))
+		# iagl_addon.settings.get('game_action').get('show_netplay') and
+		info_page = iagl_dialog_info_page('IAGL-infodialog.xml',iagl_addon.directory.get('addon').get('path'),'Default','1080i',game_list_id=game_list_id,game_id=game_id,game=game,game_listitem=get_game_listitem(dict_in=game,filter_in=None),show_netplay=(iagl_addon.settings.get('game_action').get('show_netplay') and game.get('properties').get('emu_launcher') == 'external' and iagl_addon.settings.get('ext_launchers').get('environment') not in ['android','android_ra32','android_aarch64']),autoplay_trailer=iagl_addon.settings.get('game_action').get('autoplay_trailer'),netplay_launch_action=iagl_addon.settings.get('game_action').get('netplay_launch_action'))
 		info_page.doModal()
 		action_requested = info_page.action_requested
 		del info_page
+		print(action_requested)
 		if iagl_addon.kodi_user.get('current_folder') != iagl_addon.title: #There has to be a better way to know what the parentpath is
 			if xbmcgui.getCurrentWindowId() != 10000:
 				xbmc.log(msg='IAGL:  Returning to Home', level=xbmc.LOGDEBUG)
@@ -334,6 +343,8 @@ def show_info_game(game_list_id,game_id):
 			plugin.redirect('/game_launch/'+game_list_id+'/'+game_id)
 		elif action_requested == 1:  #Download only 
 			plugin.redirect('/game_download_only/'+game_list_id+'/'+game_id)
+		elif action_requested == 2:  #Launch with netplay 
+			plugin.redirect('/netplay_game_launch/'+game_list_id+'/'+game_id)
 		# else:
 		# 	if iagl_addon.kodi_user.get('current_folder') != iagl_addon.title: #There has to be a better way to know what the parentpath is
 		# 		if xbmcgui.getCurrentWindowId() != 10000:
@@ -374,6 +385,47 @@ def download_and_launch_game(game_list_id,game_id):
 			else:
 				current_dialog.notification(loc_str(30203),loc_str(30303) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':launched_files.get('launch_process_message')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
 		
+		iagl_post_launch = iagl_launch.post_launch_check(game_launch_status=launched_files)
+	else:
+		current_dialog = xbmcgui.Dialog()
+		ok_ret = current_dialog.ok(loc_str(30203),loc_str(30359) % {'game_id': game_id, 'game_list_id': game_list_id})
+		del current_dialog
+
+@plugin.route('/netplay_game_launch/<game_list_id>/<game_id>')
+def download_and_launch_game_netplay(game_list_id,game_id):
+	game = iagl_addon.game_lists.get_game_as_dict(game_list_id=game_list_id,game_id=game_id)
+	current_game_list = iagl_addon.game_lists.get_game_list(game_list_id)
+	uuid = get_uuid()
+	netplay_query = None
+	if plugin.args.get('query'):
+		netplay_query=json.loads(plugin.args['query'][0])
+	if isinstance(game,dict) and isinstance(current_game_list,dict):
+		from resources.lib.download import iagl_download
+		from resources.lib.post_process import iagl_post_process
+		from resources.lib.launch import iagl_launch
+
+		iagl_download = iagl_download(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game)
+		downloaded_files = iagl_download.download_game()
+		iagl_post_process = iagl_post_process(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game,game_files=downloaded_files)
+		post_processed_files = iagl_post_process.post_process_game(show_progress=(current_game_list.get('emu_postdlaction') not in ['none']))
+		iagl_launch = iagl_launch(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game,game_files=post_processed_files,netplay=True,uuid=uuid,netplay_query=netplay_query)
+		launched_files = iagl_launch.launch_game()
+
+		if not iagl_addon.settings.get('ext_launchers').get('close_kodi') and check_and_close_notification():
+			current_dialog = xbmcgui.Dialog()
+			if all([x.get('download_success') for x in downloaded_files]) and all([x.get('post_process_success') for x in post_processed_files]) and launched_files.get('launch_process_success'):
+				discord_post_success = generate_discord_announcement(discord_id=iagl_addon.handle.getSetting(id='iagl_discord_id'),username=iagl_addon.handle.getSetting(id='iagl_netplay_nickname'),uuid=uuid,game=game)
+				current_dialog.notification(loc_str(30202),launched_files.get('launch_process_message'),xbmcgui.NOTIFICATION_INFO,iagl_addon.settings.get('notifications').get('background_notification_time'),sound=False)
+				if discord_post_success:
+					xbmc.log(msg='IAGL:  Game session id %(uid)s was successfully posted to discord'%{'uid':uuid}, level=xbmc.LOGDEBUG)
+			elif all([not x.get('download_success') for x in downloaded_files]):
+				current_dialog.notification(loc_str(30203),loc_str(30304) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':next(iter([x.get('download_message') for x in downloaded_files if not x.get('download_success')]),'Unknown')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
+			elif all([not x.get('post_process_success') for x in post_processed_files]):
+				current_dialog.notification(loc_str(30203),loc_str(30304) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':next(iter([x.get('post_process_message') for x in post_processed_files if not x.get('post_process_success')]),'Unknown')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
+			elif not launched_files.get('launch_process_success'):
+				current_dialog.notification(loc_str(30203),loc_str(30305) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':launched_files.get('launch_process_message')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
+			else:
+				current_dialog.notification(loc_str(30203),loc_str(30303) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':launched_files.get('launch_process_message')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
 		iagl_post_launch = iagl_launch.post_launch_check(game_launch_status=launched_files)
 	else:
 		current_dialog = xbmcgui.Dialog()
@@ -648,4 +700,4 @@ def iagl_wizard_report():
 
 if __name__ == '__main__':
 	plugin.run(sys.argv)
-	del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_file_exists, check_if_dir_exists, check_and_close_notification, get_history_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, zachs_debug #Delete all locally imported stuff to avoid memory leaks
+	del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_file_exists, check_if_dir_exists, check_and_close_notification, get_history_listitem, get_netplay_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, generate_discord_announcement, get_uuid, zachs_debug #Delete all locally imported stuff to avoid memory leaks

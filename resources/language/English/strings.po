@@ -173,8 +173,8 @@ msgid "Emulator 3 App Location"
 msgstr "Emulator 3 App Location"
 
 msgctxt "#30038"
-msgid "Enable Netplay"
-msgstr "Enable Netplay"
+msgid "Show Netplay Launching on Info Page"
+msgstr "Show Netplay Launching on Info Page"
 
 msgctxt "#30039"
 msgid "Player Connection Type"
@@ -189,12 +189,12 @@ msgid "Host IP Address"
 msgstr "Host IP Address"
 
 msgctxt "#30042"
-msgid "Host IP Port"
-msgstr "Host IP Port"
+msgid "Netplay Port"
+msgstr "Netplay Port"
 
 msgctxt "#30043"
-msgid "Sync Frames"
-msgstr "Sync Frames"
+msgid "Check Frames"
+msgstr "Check Frames"
 
 msgctxt "#30044"
 msgid "Game List quick setup tool for IAGL"
@@ -1001,20 +1001,20 @@ msgid "Choose to be the netplay host (player 1) or the client (player 2) or a sp
 msgstr "Choose to be the netplay host (player 1) or the client (player 2) or a spectator (just watching)"
 
 msgctxt "#30560"
-msgid "Define your players name"
-msgstr "Define your players name"
+msgid "Define your players name (20 chars or less)"
+msgstr "Define your players name (20 chars or less)"
 
 msgctxt "#30561"
 msgid "Define the netplay hosts IP address to connect to"
 msgstr "Define the netplay hosts IP address to connect to"
 
 msgctxt "#30562"
-msgid "Define the netplay hosts IP port to connect through (leave as default if unsure)"
-msgstr "Define the netplay hosts IP port to connect through (leave as default if unsure)"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "Define the netplay IP port to connect through (leave blank for default)"
 
 msgctxt "#30563"
-msgid "Enable or disable netplay sync frames (leave as default if unsure)"
-msgstr "Enable or disable netplay sync frames (leave as default if unsure)"
+msgid "Define the number of netplay sync frames (leave blank for default)"
+msgstr "Define the number of netplay sync frames (leave blank for default)"
 
 msgctxt "#30564"
 msgid "Define External launching or Kodi Retroplayer for running the wizard"
@@ -1139,6 +1139,87 @@ msgstr "The favorites file %(filename_in)s already exists.[CR]Please choose a un
 msgctxt "#30595"
 msgid "Android security requires specific paths for download.[CR]See the IAGL FAQ for more info."
 msgstr "Android security requires specific paths for download.[CR]See the IAGL FAQ for more info."
+
+msgctxt "#30596"
+msgid "Show or hide Netplay Launch on Game Info Page"
+msgstr "Show or hide Netplay Launch on Game Info Page"
+
+msgctxt "#30597"
+msgid "Show Netplay Lobby"
+msgstr "Show Netplay Lobby"
+
+msgctxt "#30598"
+msgid "View the Netplay Lobby"
+msgstr "View the Netplay Lobby"
+
+msgctxt "#30599"
+msgid "Last Played"
+msgstr "Last Played"
+
+msgctxt "#30600"
+msgid "History"
+msgstr "History"
+
+msgctxt "#30601"
+msgid "View the games you have previously played"
+msgstr "View the games you have previously played"
+
+msgctxt "#30602"
+msgid "Next >>"
+msgstr "Next >>"
+
+msgctxt "#30603"
+msgid "Page %(current_page)s of %(page_count)s.  Next page is %(next_page)s.  Total of %(total_items)s games in this archive."
+msgstr "Page %(current_page)s of %(page_count)s.  Next page is %(next_page)s.  Total of %(total_items)s games in this archive."
+
+msgctxt "#30604"
+msgid "Filter Game Lobby to IAGL Auto Launch Games"
+msgstr "Filter Game Lobby to IAGL Auto Launch Games"
+
+msgctxt "#30605"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "If enabled, the netplay lobby will only show auto launchable games"
+
+msgctxt "#30606"
+msgid "User: %(username)s[CR]Country: %(country)s[CR]Game: %(game_name)s[CR]Password Protected Netplay:  %(pp)s[CR]Spectators Allowed:  %(spectate)s[CR]Core: %(core_name)s[CR]Frontend: %(frontend)s"
+msgstr "User: %(username)s[CR]Country: %(country)s[CR]Game: %(game_name)s[CR]Password Protected Netplay:  %(pp)s[CR]Spectators Allowed:  %(spectate)s[CR]Core: %(core_name)s[CR]Frontend: %(frontend)s"
+
+msgctxt "#30607"
+msgid "Choose Netplay Option"
+msgstr "Choose Netplay Option"
+
+msgctxt "#30608"
+msgid "Start Game As Host"
+msgstr "Start Game As Host"
+
+msgctxt "#30609"
+msgid "Manually Connect as Player 2+"
+msgstr "Manually Connect as Player 2+"
+
+msgctxt "#30610"
+msgid "Manually Connect as Observer"
+msgstr "Manually Connect as Observer"
+
+msgctxt "#30611"
+msgid "Netplay Launch Action"
+msgstr "Netplay Launch Action"
+
+msgctxt "#30612"
+msgid "Define action when choosing netplay from the info page"
+msgstr "Define action when choosing netplay from the info page"
+
+msgctxt "#30613"
+msgid "Show or hide Netplay Lobby on the front page"
+msgstr "Show or hide Netplay Lobby on the front page"
+
+msgctxt "#30614"
+msgid "Discord User Account ID"
+msgstr "Discord User Account ID"
+
+msgctxt "#30615"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
+msgstr "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
+
 
 #
 #General
