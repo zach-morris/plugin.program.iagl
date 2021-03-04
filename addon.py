@@ -70,7 +70,7 @@ def archives_browse_all_route():
 def archives_choose_from_list_route():
 	clear_mem_cache('iagl_current_query')
 	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/archives/%(label2)s'%{'label2':x.getLabel2()}),x,True) for x in iagl_addon.routes.get_route_as_listitems('browse')])
-	if iagl_addon.settings.get('game_list').get('show_netplay'):
+	if iagl_addon.settings.get('game_list').get('show_netplay') and game.get('properties').get('emu_launcher') == 'external' and iagl_addon.settings.get('ext_launchers').get('environment') not in ['android','android_ra32','android_aarch64']:
 		xbmcplugin.addDirectoryItem(plugin.handle,plugin.url_for_path('/netplay/lobby'),get_netplay_listitem(),True)
 	if check_if_file_exists(iagl_addon.directory.get('userdata').get('list_cache').get('path').joinpath('history.json')): #Add history listitem
 		xbmcplugin.addDirectoryItem(plugin.handle,plugin.url_for_path('/game_history/list_all/%(label2)s'%{'label2':'history'}),get_history_listitem(),True)
@@ -431,6 +431,12 @@ def download_and_launch_game_netplay(game_list_id,game_id):
 		current_dialog = xbmcgui.Dialog()
 		ok_ret = current_dialog.ok(loc_str(30203),loc_str(30359) % {'game_id': game_id, 'game_list_id': game_list_id})
 		del current_dialog
+
+@plugin.route('/netplay_game_launch/game_search/<core_id>/<game_id>')
+def copy_game_netplay_info(core_id,game_id):
+	print('ztest')
+	print(core_id)
+	print(game_id)
 
 @plugin.route('/game_download_only/<game_list_id>/<game_id>')
 def download_only_game(game_list_id,game_id):

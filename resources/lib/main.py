@@ -761,7 +761,7 @@ class iagl_dialog_info_page(xbmcgui.WindowXMLDialog):
 		if controlId == self.onclick_id_netplay:
 			if self.netplay_launch_action == 0:
 				choose_dialog = xbmcgui.Dialog()
-				ret1 = choose_dialog.select(loc_str(30607),[loc_str(30608),loc_str(30609),loc_str(30610)])
+				ret1 = choose_dialog.select(loc_str(30607),[loc_str(30608),loc_str(30609)]) #,loc_str(30610)
 				if ret1 in [0,1,2]:
 					self.action_requested = 2+ret1
 					self.closeDialog()
