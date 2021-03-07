@@ -1005,8 +1005,8 @@ msgid "Define your players name (20 chars or less)"
 msgstr "Define your players name (20 chars or less)"
 
 msgctxt "#30561"
-msgid "Define the netplay hosts IP address to connect to"
-msgstr "Define the netplay hosts IP address to connect to"
+msgid "Define a default netplay hostname/IP (useful for local network netplay, leave blank for default)"
+msgstr "Define a default netplay hostname/IP (useful for local network netplay, leave blank for default)"
 
 msgctxt "#30562"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
@@ -1219,6 +1219,15 @@ msgstr "Discord User Account ID"
 msgctxt "#30615"
 msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
 msgstr "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
+
+msgctxt "#30616"
+msgid "Unable to auto launch this session.[CR]Netplay parameters were copied.[CR]Manually launch this game to utilize these parameters."
+msgstr "Unable to auto launch this session.[CR]Netplay parameters were copied.[CR]Manually launch this game to utilize these parameters."
+
+msgctxt "#30617"
+msgid "Do you want to enable Netplay features?"
+msgstr "Do you want to enable Netplay features?"
+
 
 
 #
@@ -1836,6 +1845,41 @@ msgctxt "#30438"
 msgid "Close"
 msgstr "Close"
 
+msgctxt "#30439"
+msgid "Favorites"
+msgstr "Favorites"
+
+msgctxt "#30440"
+msgid "Search"
+msgstr "Search"
+
+msgctxt "#30441"
+msgid "Random Play"
+msgstr "Random Play"
+
+msgctxt "#30442"
+msgid "Enter a title for your item"
+msgstr "Enter a title for your item"
+
+msgctxt "#30443"
+msgid "Select art assets for your item"
+msgstr "Select art assets for your item"
+
+msgctxt "#30444"
+msgid "Enter a description for your item"
+msgstr "Enter a description for your item"
+
+msgctxt "#30445"
+msgid "You must enter a hostname for manual netplay launching"
+msgstr "You must enter a hostname for manual netplay launching"
+
+msgctxt "#30446"
+msgid "Default Player 2+ Hostname"
+msgstr "Default Player 2+ Hostname"
+
+msgctxt "#30447"
+msgid "D"
+msgstr "Default Player 2+ Hostname"
 
 msgctxt "#30421"
 msgid "Thumb / Poster"

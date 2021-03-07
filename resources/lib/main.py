@@ -66,6 +66,7 @@ class iagl_addon(object):
 		self.settings['game_action']['netplay_launch_action'] = get_setting_as(setting_type='int',setting=self.handle.getSetting(id='iagl_netplay_netplay_launch_choose'))
 		self.settings['game_action']['netplay_nick'] = self.handle.getSetting(id='iagl_netplay_nickname')
 		self.settings['game_action']['netplay_port'] = self.handle.getSetting(id='iagl_netplay_port')
+		self.settings['game_action']['netplay_default_host'] = self.handle.getSetting(id='iagl_default_manual_ip')
 		self.settings['game_action']['netplay_checkframes'] = self.handle.getSetting(id='iagl_netplay_frames')
 		self.settings['archive_org'] = dict()
 		self.settings['archive_org']['enabled'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_setting_enable_login'))
@@ -130,6 +131,9 @@ class iagl_addon(object):
 				self.route = dict(zip(route_keys,[x.get('categories').get('category') if 'categories' in x.keys() else None for x in directories.get('addon').get('databases').get('dict')]))
 			self.route_context_menu_items = dict()
 			self.route_context_menu_items['add_to_favs'] = [(loc_str(30412),'RunPlugin(plugin://plugin.program.iagl/category_context_menu/action/<category_choice>/<game_list_id>/add_to_favs)')]
+			self.query_context_menu_items = dict()
+			self.query_context_menu_items['add_to_favs_search'] = [(loc_str(30412),'RunPlugin(plugin://plugin.program.iagl/query_context_menu/action/add_to_favs_search?query=<query>&list=<list>)')]
+			self.query_context_menu_items['add_to_favs_random'] = [(loc_str(30412),'RunPlugin(plugin://plugin.program.iagl/query_context_menu/action/add_to_favs_random?query=<query>&list=<list>)')]
 
 		def get_file(self,route_in):
 			return self.file.get(route_in)
@@ -152,11 +156,24 @@ class iagl_addon(object):
 
 		def get_route_as_listitems(self,route_in,game_list_name=None,game_list_id=None):
 			default_dict = self.get_route_default(route_in)
-			return [self.add_game_listitem_context_menus(listitem_in=get_database_listitem(dict_in=map_database_listitem_dict(dict_in=x,default_dict=default_dict,game_list_name=game_list_name)),route_in=x,game_list_id=game_list_id) for x in self.get_route(route_in) if x is not None]
+			# return [self.add_game_listitem_context_menus(listitem_in=get_database_listitem(dict_in=map_database_listitem_dict(dict_in=x,default_dict=default_dict,game_list_name=game_list_name)),route_in=x,game_list_id=game_list_id) for x in self.get_route(route_in) if x is not None] #Remove IAGL favorites from here for now
+			return [get_database_listitem(dict_in=map_database_listitem_dict(dict_in=x,default_dict=default_dict,game_list_name=game_list_name)) for x in self.get_route(route_in) if x is not None]
+
 
 		def add_game_listitem_context_menus(self,listitem_in=None,route_in=None,game_list_id=None):
 			if game_list_id:
 				current_context_menus = [(labels,actions.replace('<game_list_id>',game_list_id).replace('<category_choice>',route_in.get('label'))) for labels, actions in self.route_context_menu_items.get('add_to_favs')]
+				listitem_in.addContextMenuItems(current_context_menus)
+			return listitem_in
+
+		def add_query_listitem_context_menus(self,listitem_in=None,query_in=None,list_in=None,type_in='search'):
+			if query_in and list_in:
+				if list_in.get('art'):
+					for kk in list_in['art']:
+						list_in['art'][kk] = list_in['art'][kk].replace('https://i.imgur.com/','')
+					for k,v in dict(zip(['thumb','banner','landscape','clearlogo','fanart'],['game_boxarts','game_banners','game_snapshots','game_logos','game_fanarts'])).items():
+						list_in['properties'][v] = json.dumps([list_in.get('art').get(k)])
+				current_context_menus = [(labels,actions.replace('<query>',url_quote_query(query_in)).replace('<list>',url_quote_query(list_in))) for labels, actions in self.query_context_menu_items.get('add_to_favs_%(type)s'%{'type':type_in})]
 				listitem_in.addContextMenuItems(current_context_menus)
 			return listitem_in
 
@@ -772,4 +789,69 @@ class iagl_dialog_info_page(xbmcgui.WindowXMLDialog):
 
 	def closeDialog(self):
 		xbmc.executebuiltin('Dialog.Close(busydialog)') #Try and close busy dialog if it is for some reason open
+		self.close()
+
+class iagl_dialog_netplay_settings_page(xbmcgui.WindowXMLDialog):
+	def __init__(self, *args, **kwargs):
+		self.netplay_inputs = kwargs.get('netplay_inputs')
+		self.default_host = kwargs.get('default_host')
+		self.default_port = kwargs.get('default_port')
+		self.manual_netplay_parameters = get_mem_cache('iagl_netplay_parameters')
+		self.onaction_id_exit = [10, 13, 92] #Default exit keys to close window via keyboard / controller
+		self.onclick_id_netplay = 3007
+		self.onclick_id_exit = 3008
+		self.value_id = dict()
+		self.value_id['host'] = 3003
+		self.value_id['port'] = 3004
+		self.value_id['password'] = 3005
+		self.value_id['spectate'] = 3006
+		self.values_out = None
+		xbmc.log(msg='IAGL:  Netplay manual settings page Initialized', level=xbmc.LOGDEBUG)
+
+	def onInit(self):
+		self.dialog_values = dict()
+		self.dialog_values['host'] = self.getControl(self.value_id['host'])
+		self.dialog_values['port'] = self.getControl(self.value_id['port'])
+		self.dialog_values['password'] = self.getControl(self.value_id['password'])
+		self.dialog_buttons = dict()
+		self.dialog_buttons['spectate'] = self.getControl(self.value_id['spectate'])
+		if self.manual_netplay_parameters:
+			current_host = next(iter([x for x in [self.manual_netplay_parameters.get('mitm_ip'),self.manual_netplay_parameters.get('ip'),self.default_host] if x and len(str(x))>1 and x!='0']),None)
+			current_port = next(iter([x for x in [self.manual_netplay_parameters.get('mitm_port'),self.manual_netplay_parameters.get('port'),self.default_port] if x and len(str(x))>1 and x!='0']),'55435')
+		else:
+			current_host = next(iter([x for x in [self.default_host] if x and len(str(x))>1 and x!='0']),None)
+			current_port = next(iter([x for x in [self.default_port] if x and len(str(x))>1 and x!='0']),'55435')
+		if current_host:
+			self.dialog_values.get('host').setText(str(current_host))
+		if current_port:
+			self.dialog_values.get('port').setText(str(current_port))
+
+	def onAction(self, action):
+		if action in self.onaction_id_exit:
+			self.closeDialog()
+
+	def onClick(self, controlId):
+		if controlId == self.onclick_id_exit:
+			self.closeDialog()
+		if controlId == self.onclick_id_netplay:
+			netplay_settings = dict()
+			for kk in self.dialog_values.keys():
+				value = self.dialog_values.get(kk).getText()
+				netplay_settings[kk] = value
+			for kk in self.dialog_buttons.keys():
+				value = self.dialog_buttons.get(kk).isSelected()
+				netplay_settings[kk] = value
+			if not netplay_settings.get('host') or len(netplay_settings.get('host'))<1:
+				current_dialog = xbmcgui.Dialog()
+				ok_ret = current_dialog.ok(loc_str(30203),loc_str(30445))
+			else:
+				if not netplay_settings.get('port') or len(netplay_settings.get('port'))<1:
+					netplay_settings[kk] = self.default_port
+				if not netplay_settings.get('password') or len(netplay_settings.get('password'))<1:
+					netplay_settings[kk] = None
+				self.values_out = netplay_settings
+				self.closeDialog()
+
+	def closeDialog(self):
+		xbmc.executebuiltin('Dialog.Close(busydialog)')
 		self.close()

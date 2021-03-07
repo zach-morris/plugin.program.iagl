@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1103">
+	<defaultcontrol always="true">3003</defaultcontrol>
+		<depth>0.50</depth>
+	<controls>
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>60%</width>
+			<height>60%</height>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<right>0</right>
+				<bottom>0</bottom>
+				<texture colordiffuse="FF1A2123">special://home/addons/plugin.program.iagl/resources/skins/Default/media/white.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<right>0</right>
+				<height>70</height>
+				<texture colordiffuse="FF12A0C7" border="2">special://home/addons/plugin.program.iagl/resources/skins/Default/media/white70.png</texture>
+			</control>
+			<control type="label" id="1">
+				<left>40</left>
+				<top>0</top>
+				<right>100</right>
+				<height>70</height>
+				<font>font32_title</font>
+				<textcolor>white</textcolor>
+				<label>$ADDON[plugin.program.iagl 30004]</label>
+				<aligny>center</aligny>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="radiobutton" id="3001">
+				<right>10</right>
+				<top>11</top>
+				<width>48</width>
+				<height>48</height>
+				<radiowidth>48</radiowidth>
+				<radioheight>48</radioheight>
+				<texturefocus />
+				<texturenofocus />
+				<label></label>
+				<textureradioofffocus colordiffuse="EEFFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="EEFFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/logo.png</textureradiooffnofocus>
+				<textureradioonfocus colordiffuse="EEFFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="EEFFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/logo.png</textureradioonnofocus>
+				<onclick>Action(Close)</onclick>
+				<visible>!Skin.HasSetting(touchmode)</visible>
+			</control>
+			<control type="button" id="3002">
+				<right>10</right>
+				<top>11</top>
+				<width>48</width>
+				<height>48</height>
+				<texturefocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</texturefocus>
+				<texturenofocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</texturenofocus>
+				<onclick>Action(Close)</onclick>
+				<visible>Skin.HasSetting(touchmode)</visible>
+			</control>
+			<control type="label">
+				<left>10%</left>
+				<top>21%</top>
+				<width>50%</width>
+				<height>8%</height>
+				<visible>true</visible>
+				<alignx>left</alignx>
+				<font>font32_title</font>
+				<textcolor>white</textcolor>
+				<label>Host Address</label>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="edit" id="3003">
+				<left>33%</left>
+				<top>20%</top>
+				<width>50%</width>
+				<height>8%</height>
+				<visible>true</visible>
+				<alignx>left</alignx>
+				<hinttext>(Required)</hinttext>
+				<font>font14</font>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<disabledcolor>grey</disabledcolor>
+				<invalidcolor>red</invalidcolor>
+				<texturefocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/white.png</texturefocus>
+				<texturenofocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/white70.png</texturenofocus>
+				<pulseonselect>no</pulseonselect>
+				<onup>3007</onup>
+				<ondown>3004</ondown>
+			</control>
+			<control type="label">
+				<left>10%</left>
+				<top>36%</top>
+				<width>50%</width>
+				<height>8%</height>
+				<visible>true</visible>
+				<alignx>left</alignx>
+				<font>font32_title</font>
+				<textcolor>white</textcolor>
+				<label>Host Port</label>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="edit" id="3004">
+				<left>33%</left>
+				<top>35%</top>
+				<width>50%</width>
+				<height>8%</height>
+				<visible>true</visible>
+				<alignx>left</alignx>
+				<hinttext>(Default 55435)</hinttext>
+				<font>font14</font>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<disabledcolor>grey</disabledcolor>
+				<invalidcolor>red</invalidcolor>
+				<texturefocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/white.png</texturefocus>
+				<texturenofocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/white70.png</texturenofocus>
+				<pulseonselect>no</pulseonselect>
+				<onup>3003</onup>
+				<ondown>3005</ondown>
+			</control>
+			<control type="label">
+				<left>10%</left>
+				<top>51%</top>
+				<width>50%</width>
+				<height>8%</height>
+				<visible>true</visible>
+				<alignx>left</alignx>
+				<font>font32_title</font>
+				<textcolor>white</textcolor>
+				<label>Host Password</label>
+				<shadowcolor>black</shadowcolor>
+				<visible>False</visible>
+			</control>
+			<control type="edit" id="3005">
+				<left>33%</left>
+				<top>50%</top>
+				<width>50%</width>
+				<height>8%</height>
+				<visible>true</visible>
+				<alignx>left</alignx>
+				<hinttext>(Default None)</hinttext>
+				<font>font14</font>
+				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<disabledcolor>grey</disabledcolor>
+				<invalidcolor>red</invalidcolor>
+				<texturefocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/white.png</texturefocus>
+				<texturenofocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/white70.png</texturenofocus>
+				<pulseonselect>no</pulseonselect>
+				<onup>3004</onup>
+				<ondown>3006</ondown>
+				<visible>False</visible>
+			</control>
+				<control type="radiobutton" id="3006">
+				<left>10%</left>
+				<top>60%</top>
+				<width>40%</width>
+				<height>15%</height>
+				<alignx>left</alignx>
+				<radioheight>90%</radioheight>
+				<font>font32_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>Spectate</label>
+				<texturefocus colordiffuse="ff3e5055">special://home/addons/plugin.program.iagl/resources/skins/Default/media/white.png</texturefocus>
+				<texturenofocus colordiffuse="FF1A2123">special://home/addons/plugin.program.iagl/resources/skins/Default/media/white.png</texturenofocus>
+				<pulseonselect>yes</pulseonselect>
+				<onup>3005</onup>
+				<ondown>3007</ondown>
+				<visible>False</visible>
+			</control>
+			<control type="radiobutton" id="3007">
+				<width>200</width>
+				<height>150</height>
+				<left>25%</left>
+				<top>75%</top>
+				<aligny>top</aligny>
+				<texturefocus border="21" colordiffuse="FF12A0C7">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-fo.png</texturefocus>
+				<texturenofocus border="21">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-nofo.png</texturenofocus>
+				<textoffsetx>55%</textoffsetx>
+				<textoffsety>95%</textoffsety>
+				<radioposx>64%</radioposx>
+				<radioposy>25%</radioposy>
+				<radiowidth>80%</radiowidth>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>FF12A0C7</focusedcolor>
+				<textureradioonfocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradiooffnofocus>
+				<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradiooffdisabled>
+				<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradioondisabled>
+				<label>$ADDON[plugin.program.iagl 30434]</label>
+				<visible>True</visible>
+				<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
+				<onup>3006</onup>
+				<ondown>3003</ondown>
+				<onleft>3008</onleft>
+				<onright>3008</onright>
+			</control>
+			<control type="radiobutton" id="3008">
+				<width>200</width>
+				<height>150</height>
+				<left>60%</left>
+				<top>75%</top>
+				<aligny>top</aligny>
+				<texturefocus border="21" colordiffuse="FF12A0C7">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-fo.png</texturefocus>
+				<texturenofocus border="21">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-nofo.png</texturenofocus>
+				<textoffsetx>66%</textoffsetx>
+				<textoffsety>95%</textoffsety>
+				<radioposx>63%</radioposx>
+				<radioposy>25%</radioposy>
+				<radiowidth>75%</radiowidth>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>FF12A0C7</focusedcolor>
+				<textureradioonfocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradiooffnofocus>
+				<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradiooffdisabled>
+				<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioondisabled>
+				<label>$ADDON[plugin.program.iagl 30438]</label>
+				<visible>True</visible>
+				<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
+				<onup>3006</onup>
+				<ondown>3003</ondown>
+				<onleft>3007</onleft>
+				<onright>3007</onright>
+			</control>
+		</control>
+	</controls>
+</window>

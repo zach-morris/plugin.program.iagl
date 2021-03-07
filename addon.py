@@ -10,7 +10,7 @@ import routing, sys, json, re
 from random import sample as random_sample
 from resources.lib.main import iagl_addon
 from resources.lib import paginate
-from resources.lib.utils import clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, check_if_file_exists, check_if_dir_exists, clean_image_entry, clean_trailer_entry, loc_str, check_and_close_notification, get_history_listitem, get_netplay_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, get_uuid, generate_discord_announcement, zachs_debug
+from resources.lib.utils import clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, check_if_file_exists, check_if_dir_exists, clean_image_entry, clean_trailer_entry, loc_str, check_and_close_notification, get_history_listitem, get_netplay_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, get_uuid, generate_discord_announcement, get_blank_favorites_listitem, get_database_listitem, url_quote_query, zachs_debug
 
 ## Plugin Initialization Stuff ##
 SLEEP_HACK=50  #https://github.com/xbmc/xbmc/issues/18576
@@ -101,6 +101,8 @@ def archives_search_route():
 	for x in iagl_addon.routes.get_search_random_route_as_listitems('search'):
 		if x.getLabel2() == 'execute':
 			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(search_games,query=json.dumps(get_mem_cache('iagl_current_query'))),x,True)])
+		elif x.getLabel2() == 'execute_link':
+			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(search_games_link,query=json.dumps(get_mem_cache('iagl_current_query'))),x,True)])
 		else:
 			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/archives/Search/%(label2)s'%{'label2':x.getLabel2()}),x,True)])
 	xbmcplugin.endOfDirectory(plugin.handle,cacheToDisc=False)
@@ -110,6 +112,31 @@ def archives_search_update_title(value_in):
 	iagl_addon.game_lists.update_search_random_query(value_in)
 	xbmc.sleep(500)
 	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/Search_Link')
+def search_games_link():
+	query = None
+	if plugin.args.get('query'):
+		query=json.loads(plugin.args['query'][0])
+	if query and query.get('title'):
+		default_input = 'My %(title)s Search'%{'title':query.get('title')}
+	else:
+		default_input = 'My Game Search'
+	current_dialog = xbmcgui.Dialog()
+	new_value = current_dialog.input(loc_str(30442),default_input)
+	if new_value:
+		new_value2 = current_dialog.input(loc_str(30444))
+		if 'lists' in query.keys() and query.get('lists'):
+			game_list_ids = query.get('lists')
+		else:
+			game_list_ids = iagl_addon.game_lists.list_game_lists()
+		game_list_items_art = [x for x in iagl_addon.game_lists.get_game_lists_as_listitems() if x and x.getLabel2() in game_list_ids]+[get_blank_favorites_listitem()]
+		new_value3 = current_dialog.select(loc_str(30443),game_list_items_art, useDetails=True)
+		if new_value3 in range(0,len(game_list_items_art)):
+			query_dict = {'values':{'label':new_value,'label2':new_value},'info':{'title':new_value,'originaltitle':new_value,'plot':new_value2},'properties':{'description':new_value},'art':{'thumb':game_list_items_art[new_value3].getArt('thumb'),'poster':game_list_items_art[new_value3].getArt('poster'),'banner':game_list_items_art[new_value3].getArt('banner'),'fanart':game_list_items_art[new_value3].getArt('fanart'),'clearlogo':game_list_items_art[new_value3].getArt('icon'),}}
+			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(search_games,query=json.dumps(get_mem_cache('iagl_current_query'))),iagl_addon.routes.add_query_listitem_context_menus(get_database_listitem(query_dict),query_in=query,list_in=query_dict,type_in='search'),True)])
+	xbmcplugin.endOfDirectory(plugin.handle)
+	del current_dialog
 
 @plugin.route('/Search')
 def search_games():
@@ -149,11 +176,20 @@ def search_games():
 		xbmc.sleep(SLEEP_HACK)
 		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)'%{'view_type': get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_12'))})
 
+@plugin.route('/game/Search_Link')
+def forward_search_link():
+	query = None
+	if plugin.args.get('query'):
+		if '}/' in plugin.args['query'][0]:
+			plugin.run(['plugin://plugin.program.iagl/Search/','0','query=%(qq)s'%{'qq':plugin.args['query'][0].split('}/')[0]+'}'}]) #Why doesn't redirect work here?
+
 @plugin.route('/archives/Random Play')
 def archives_search_route():
 	for x in iagl_addon.routes.get_search_random_route_as_listitems('random'):
 		if x.getLabel2() == 'execute':
 			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(random_games,query=json.dumps(get_mem_cache('iagl_current_query'))),x,True)])
+		elif x.getLabel2() == 'execute_link':
+			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(random_games_link,query=json.dumps(get_mem_cache('iagl_current_query'))),x,True)])
 		else:
 			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/archives/Random Play/%(label2)s'%{'label2':x.getLabel2()}),x,True)])
 	xbmcplugin.endOfDirectory(plugin.handle,cacheToDisc=False)
@@ -162,6 +198,28 @@ def archives_search_route():
 def archives_search_update_title(value_in):
 	iagl_addon.game_lists.update_search_random_query(value_in)
 	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/Random_Play_Link')
+def random_games_link():
+	query = None
+	if plugin.args.get('query'):
+		query=json.loads(plugin.args['query'][0])
+	default_input = 'My Random Play List'
+	current_dialog = xbmcgui.Dialog()
+	new_value = current_dialog.input(loc_str(30442),default_input)
+	if new_value:
+		new_value2 = current_dialog.input(loc_str(30444))
+		if 'lists' in query.keys() and query.get('lists'):
+			game_list_ids = query.get('lists')
+		else:
+			game_list_ids = iagl_addon.game_lists.list_game_lists()
+		game_list_items_art = [x for x in iagl_addon.game_lists.get_game_lists_as_listitems() if x and x.getLabel2() in game_list_ids]+[get_blank_favorites_listitem()]
+		new_value3 = current_dialog.select(loc_str(30443),game_list_items_art, useDetails=True)
+		if new_value3 in range(0,len(game_list_items_art)):
+			query_dict = {'values':{'label':new_value,'label2':new_value},'info':{'title':new_value,'originaltitle':new_value,'plot':new_value2},'properties':{'description':new_value},'art':{'thumb':game_list_items_art[new_value3].getArt('thumb'),'poster':game_list_items_art[new_value3].getArt('poster'),'banner':game_list_items_art[new_value3].getArt('banner'),'fanart':game_list_items_art[new_value3].getArt('fanart'),'clearlogo':game_list_items_art[new_value3].getArt('icon'),}}
+			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(random_games,query=json.dumps(get_mem_cache('iagl_current_query'))),iagl_addon.routes.add_query_listitem_context_menus(get_database_listitem(query_dict),query_in=query,list_in=query_dict,type_in='random'),True)])
+	xbmcplugin.endOfDirectory(plugin.handle)
+	del current_dialog
 
 @plugin.route('/Random Play')
 def random_games():
@@ -333,7 +391,6 @@ def show_info_game(game_list_id,game_id):
 		info_page.doModal()
 		action_requested = info_page.action_requested
 		del info_page
-		print(action_requested)
 		if iagl_addon.kodi_user.get('current_folder') != iagl_addon.title: #There has to be a better way to know what the parentpath is
 			if xbmcgui.getCurrentWindowId() != 10000:
 				xbmc.log(msg='IAGL:  Returning to Home', level=xbmc.LOGDEBUG)
@@ -345,6 +402,11 @@ def show_info_game(game_list_id,game_id):
 			plugin.redirect('/game_download_only/'+game_list_id+'/'+game_id)
 		elif action_requested == 2:  #Launch with netplay 
 			plugin.redirect('/netplay_game_launch/'+game_list_id+'/'+game_id)
+		elif action_requested == 3:
+			from resources.lib.main import iagl_dialog_netplay_settings_page
+			netplay_settings_page = iagl_dialog_netplay_settings_page('IAGL-netplay-input.xml',iagl_addon.directory.get('addon').get('path'),'Default','1080i',netplay_inputs=None,default_host=iagl_addon.settings.get('game_action').get('netplay_default_host'),default_port=iagl_addon.settings.get('game_action').get('netplay_port'))
+			netplay_settings_page.doModal()
+			del netplay_settings_page
 		# else:
 		# 	if iagl_addon.kodi_user.get('current_folder') != iagl_addon.title: #There has to be a better way to know what the parentpath is
 		# 		if xbmcgui.getCurrentWindowId() != 10000:
@@ -432,11 +494,17 @@ def download_and_launch_game_netplay(game_list_id,game_id):
 		ok_ret = current_dialog.ok(loc_str(30203),loc_str(30359) % {'game_id': game_id, 'game_list_id': game_list_id})
 		del current_dialog
 
-@plugin.route('/netplay_game_launch/game_search/<core_id>/<game_id>')
-def copy_game_netplay_info(core_id,game_id):
-	print('ztest')
-	print(core_id)
-	print(game_id)
+@plugin.route('/netplay_game_launch/game_search')
+def copy_game_netplay_info():
+	query = None
+	if plugin.args.get('query'):
+		if '}/' in plugin.args.get('query')[0]:
+			query=json.loads(plugin.args.get('query')[0].split('}/')[0]+'}')
+	if query:
+		set_mem_cache('iagl_netplay_parameters',query)
+		current_dialog = xbmcgui.Dialog()
+		ok_ret = current_dialog.ok(loc_str(30004),loc_str(30616))
+		del current_dialog
 
 @plugin.route('/game_download_only/<game_list_id>/<game_id>')
 def download_only_game(game_list_id,game_id):
@@ -635,13 +703,59 @@ def context_menu_action(game_list_id,action_id):
 	else:
 		xbmc.log(msg='IAGL:  Unknown context action %(action_id)s'%{'action_id':action_id},level=xbmc.LOGERROR)
 
-@plugin.route('/category_context_menu/action/<category_choice>/<game_list_id>/<action_id>')
-def category_context_menu_action(category_choice,game_list_id,action_id):
-	if action_id == 'add_to_favs':
-		zachs_debug('ztest')
-		zachs_debug(category_choice)
-		zachs_debug(game_list_id)
-		zachs_debug(action_id)
+@plugin.route('/query_context_menu/action/<action_id>')
+def category_context_menu_action(action_id):
+	if action_id in ['add_to_favs_search','add_to_favs_random']:
+		query = None
+		list_item = None
+		if plugin.args.get('query'):
+			query=json.loads(plugin.args.get('query')[0])
+		if plugin.args.get('list'):
+			list_item=json.loads(plugin.args.get('list')[0])
+
+		if query and list_item and list_item.get('properties'):
+			if action_id == 'add_to_favs_search':
+				list_item['properties']['route'] = 'Search_Link?query=%(qq)s'%{'qq':url_quote_query(query)}
+			if action_id == 'add_to_favs_random':
+				list_item['properties']['route'] = 'Random_Link?query=%(qq)s'%{'qq':url_quote_query(query)}
+			success = False
+			current_dialog = xbmcgui.Dialog()
+			available_fav_lists = [x for x in iagl_addon.game_lists.get_all_game_lists() if x and x.get('emu_category') and 'favorites' in x.get('emu_category').lower()]
+			available_fav_choices = [x.get('emu_name') for x in available_fav_lists]+[loc_str(30347)]
+			new_value = current_dialog.select(loc_str(30349),available_fav_choices)
+			fav_list_id = None
+			if new_value in range(len(available_fav_choices)):
+				if new_value == len(available_fav_choices)-1:
+					xbmc.log(msg='IAGL:  User selected to generate new favorites list', level=xbmc.LOGDEBUG)
+					favorites_name = current_dialog.input(loc_str(30351),'%(name)s Favorites'%{'name':next(iter([x for x in [iagl_addon.kodi_user.get('username')] if x]),'My')})
+					favorites_filename = clean_file_folder_name(favorites_name)
+					if favorites_name and favorites_filename:
+						if favorites_filename not in [x.get('game_list_id') for x in iagl_addon.game_lists.get_all_game_lists()]:
+							new_favorites_file = iagl_addon.game_lists.create_favorites_list(name_in=favorites_name,filename_in=favorites_filename)
+							if new_favorites_file:
+								success = add_game_to_favorites(filename_in=new_favorites_file,game=list_item)
+								if success:
+									xbmc.log(msg='IAGL:  User adding Query to favorites list %(fav_list_id)s'%{'fav_list_id':new_favorites_file}, level=xbmc.LOGDEBUG)
+									ok_ret = current_dialog.ok(loc_str(30202),loc_str(30353) % {'current_game': next(iter([x for x in [list_item.get('info').get('originaltitle'),list_item.get('values').get('label')] if x]),game_id), 'current_filename': favorites_name})
+									clear_mem_cache('iagl_directory')
+									xbmc.executebuiltin('Container.Refresh')
+								else:
+									ok_ret = current_dialog.ok(loc_str(30203),loc_str(30593))
+						else:
+							ok_ret = current_dialog.ok(loc_str(30203),loc_str(30594)%{'filename_in':favorites_name})
+							xbmc.log(msg='IAGL:  Favorites file %(filename_in)s already exists.  User must choose a different name.'%{'filename_in':favorites_name},level=xbmc.LOGERROR)
+				else:
+					fav_list_id = available_fav_lists[new_value].get('game_list_id')
+					fav_list_name = available_fav_lists[new_value].get('emu_name')
+					xbmc.log(msg='IAGL:  User adding Query to favorites list %(fav_list_id)s'%{'fav_list_id':fav_list_id}, level=xbmc.LOGDEBUG)
+					if fav_list_id:
+						success = add_game_to_favorites(filename_in=iagl_addon.game_lists.get_file(fav_list_id),game=list_item)
+					if success:
+						iagl_addon.refresh_list(iagl_addon.game_lists.get_crc(fav_list_id))
+						ok_ret = current_dialog.ok(loc_str(30202),loc_str(30353) % {'current_game': next(iter([x for x in [list_item.get('info').get('originaltitle'),list_item.get('values').get('label')] if x]),'Query'), 'current_filename': fav_list_name})
+					else:
+						ok_ret = current_dialog.ok(loc_str(30203),loc_str(30593))
+			del current_dialog
 	else:
 		xbmc.log(msg='IAGL:  Unknown category context action %(action_id)s'%{'action_id':action_id},level=xbmc.LOGERROR)
 
@@ -706,4 +820,4 @@ def iagl_wizard_report():
 
 if __name__ == '__main__':
 	plugin.run(sys.argv)
-	del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_file_exists, check_if_dir_exists, check_and_close_notification, get_history_listitem, get_netplay_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, generate_discord_announcement, get_uuid, zachs_debug #Delete all locally imported stuff to avoid memory leaks
+	del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_file_exists, check_if_dir_exists, check_and_close_notification, get_history_listitem, get_netplay_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, generate_discord_announcement, get_uuid, get_blank_favorites_listitem, get_database_listitem, url_quote_query, zachs_debug #Delete all locally imported stuff to avoid memory leaks

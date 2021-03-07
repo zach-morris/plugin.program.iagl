@@ -124,6 +124,13 @@ if not get_mem_cache('iagl_script_started'):
 						loop = False
 		elif iagl_addon_wizard.handle.getSetting(id='iagl_external_user_external_env')!='0' and int(iagl_addon_wizard.handle.getSetting(id='iagl_external_user_external_env')) in [1,2,3,4,5,6] and iagl_addon_wizard.handle.getSetting(id='iagl_external_path_to_retroarch_cfg'):
 			xbmc.log(msg='IAGL:  Retroarch CFG location already set to %(value)s'%{'value':iagl_addon_wizard.handle.getSetting(id='iagl_external_path_to_retroarch_cfg')}, level=xbmc.LOGDEBUG)
+		if current_dialog.yesno(loc_str(30005),loc_str(30617)):
+			iagl_addon_wizard.handle.setSetting(id='iagl_netplay_enable_netplay_launch',value='0')
+			iagl_addon_wizard.handle.setSetting(id='iagl_netplay_show_netplay_lobby',value='0')
+			wizard_settings['netplay_nickname'] = current_dialog.input(heading=loc_str(30040),defaultt=iagl_addon_wizard.handle.getSetting(id='iagl_netplay_nickname'))
+			if wizard_settings.get('netplay_nickname'):
+				iagl_addon_wizard.handle.setSetting(id='iagl_netplay_nickname',value=wizard_settings.get('netplay_nickname'))
+
 		if current_dialog.yesno(loc_str(30005),loc_str(30387)):
 			wizard_settings['game_list'] = dict()
 			iagl_addon_wizard = iagl_addon() #Reload settings based on wizard entries
@@ -173,6 +180,9 @@ if not get_mem_cache('iagl_script_started'):
 	elif wizard_settings.get('wizard_launcher')==0:
 		launch_type = loc_str(30364)
 		xbmc.log(msg='IAGL:  Wizard script running for Retroplayer launching', level=xbmc.LOGDEBUG)
+		#Turn off netplay for Retroplayer setup for now
+		iagl_addon_wizard.handle.setSetting(id='iagl_netplay_enable_netplay_launch',value='1')
+		iagl_addon_wizard.handle.setSetting(id='iagl_netplay_show_netplay_lobby',value='1')
 		yesno_ret = current_dialog.yesnocustom(loc_str(30005),loc_str(30390),loc_str(30389))
 		if yesno_ret in [1,2]:
 			wizard_settings['game_list'] = dict()

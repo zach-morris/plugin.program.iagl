@@ -693,6 +693,25 @@
 						<heading>30042</heading>
 					</control>
 				</setting>
+				<setting help="30561" id="iagl_default_manual_ip" label="30446" type="string">
+					<level>0</level>
+					<default/>
+					<dependencies>
+						<dependency type="visible">
+							<or>
+								<condition operator="is" setting="iagl_external_user_external_env">1</condition>
+								<condition operator="is" setting="iagl_external_user_external_env">3</condition>
+								<condition operator="is" setting="iagl_external_user_external_env">2</condition>
+							</or>
+						</dependency>
+					</dependencies>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control format="string" type="edit">
+						<heading>30043</heading>
+					</control>
+				</setting>
 				<setting help="30563" id="iagl_netplay_frames" label="30043" type="string">
 					<level>0</level>
 					<default/>

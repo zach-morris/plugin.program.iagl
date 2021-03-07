@@ -525,16 +525,24 @@ def map_database_listitem_dict(dict_in,default_dict,game_list_name,type_in=None)
 	props = None
 	if type_in is None:
 		label2 = dict_in.get('label') #We will use label2 to carry the next route by default
-	if game_list_name is None:
-		# label = dict_in.get('label')
-		plot = dict_in.get('plot')
+	if dict_in.get('localization'):
+		localized_label = loc_str(int(dict_in.get('localization')))
 	else:
-		# label = '%(label)s for %(game_list_name)s'%{'label':dict_in.get('label'),'game_list_name':game_list_name}
-		plot = '%(label)s for %(game_list_name)s'%{'label':dict_in.get('plot'),'game_list_name':game_list_name}
+		localized_label = dict_in.get('label')
+	if game_list_name is None:
+		if dict_in.get('plot') and dict_in.get('plot').isdigit():
+			plot = loc_str(int(dict_in.get('plot')))
+		else:
+			plot = dict_in.get('plot')
+	else:
+		if dict_in.get('plot') and dict_in.get('plot').isdigit():
+			plot = '%(label)s for %(game_list_name)s'%{'label':loc_str(int(dict_in.get('plot'))),'game_list_name':game_list_name}
+		else:
+			plot = '%(label)s for %(game_list_name)s'%{'label':dict_in.get('plot'),'game_list_name':game_list_name}
 	if dict_in.get('sort'):
 		props = {'SpecialSort':dict_in.get('sort')}
-	return {'values': {'label':dict_in.get('label'),'label2':label2},
-			'info':   {'originaltitle':dict_in.get('label'),'title':dict_in.get('label'),'plot':plot,'trailer':choose_trailer(dict_in.get('trailer'),default_dict.get('trailer'))},
+	return {'values': {'label':localized_label,'label2':label2},
+			'info':   {'originaltitle':localized_label,'title':localized_label,'plot':plot,'trailer':choose_trailer(dict_in.get('trailer'),default_dict.get('trailer'))},
 			'art':    {'poster':choose_image(dict_in.get('thumb'),default_dict.get('thumb')),
 					   'banner':choose_image(dict_in.get('banner'),default_dict.get('banner')),
 					   'fanart':choose_image(dict_in.get('fanart'),default_dict.get('fanart')),
@@ -796,6 +804,16 @@ def get_next_page_listitem(current_page,page_count,next_page,total_items,media_t
 	li.setProperties({'SpecialSort':'bottom'})
 	return li
 
+def get_blank_favorites_listitem(media_type='video'):
+	li = xbmcgui.ListItem(label=loc_str(30439),offscreen=True)
+	li.setArt({'icon':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/favorites_logo.png',
+				'thumb':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/favorites.png',
+				'poster':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/favorites.png',
+				'banner':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/favorites_banner.png',
+				'fanart':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/fanart.jpg'})
+	return li
+
+
 def get_netplay_listitem(media_type='video'):
 	li_dict = {'info':{'genre':loc_str(30004),'plot':loc_str(30598)},
 	'art':{'icon':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/netplay_logo.png',
@@ -903,6 +921,12 @@ def game_filter(dict_in,filter_in):
 	else:
 		include.append(True)
 	return include
+
+def url_quote_query(query_in):
+	if isinstance(query_in,dict):
+		return url_quote(json.dumps(query_in))
+	else:
+		return None
 
 def get_game_listitem(dict_in,filter_in,media_type='video'):
 	li=None
@@ -1580,9 +1604,11 @@ def map_lobby_listitem_dict(libretro_dict=None,discord_dict=None,filter_lobby=Tr
 					  'poster':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/netplay_box.jpg',
 					  'banner':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/netplay_banner.jpg',
 					  'fanart':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/fanart.jpg'},
-				'properties': {'route':'game_search/%(game_id)s'%{'game_id':libretro_dict.get('core_name')},
+				'properties': {'route':'game_search?query=%(query)s'%{'query':url_quote_query(libretro_dict)},
 							   'query': json.dumps(current_query)},
 				}
+				
+				# /%(game_id)s'%{'game_id':libretro_dict.get('core_name')}
 	return dict_out
 
 def get_libretro_dict():
