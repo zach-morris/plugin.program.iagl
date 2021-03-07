@@ -603,6 +603,7 @@ https://github.com/phil65/skin.estuary
 						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradiooffdisabled>
 						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradioondisabled>
 						<label>$ADDON[plugin.program.iagl 30435]</label>
+						<onclick>Dialog.Close(busydialog,true)</onclick>
 						<onclick>SetProperty(iagl_trailer_started,True,HOME)</onclick>
 						<onclick>PlayMedia($INFO[Container(113).ListItem.Trailer],False,1)</onclick>
 						<visible>!String.IsEmpty(Container(113).ListItem.Trailer)+String.IsEqual(Window(HOME).Property(iagl_trailer_started),False)</visible>
@@ -722,7 +723,7 @@ https://github.com/phil65/skin.estuary
 				<width>1250</width>
 				<height>650</height>
 				<aspectratio aligny="center">scale</aspectratio>
-				<visible>String.IsEqual(Window(HOME).Property(iagl_trailer_started),False)</visible>
+				<visible>true</visible>
 			</control>
 		</control>
 	</controls>
