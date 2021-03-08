@@ -2,7 +2,7 @@ import xbmc, xbmcgui, xbmcvfs, xbmcaddon, xbmcplugin, re, os, shutil, json
 from resources.lib.utils import loc_str, get_mem_cache, set_mem_cache, clear_mem_cache, check_and_close_notification, choose_image, get_post_dl_commands
 from resources.lib.main import iagl_addon
 iagl_addon_wizard = iagl_addon()
-EMAIL_RE = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
+EMAIL_RE = '.+[@]\w+[.]\w+'
 START_SOUND = 'special://home/addons/plugin.program.iagl/resources/skins/Default/media/wizard_start.wav'
 POS_SOUND = 'special://home/addons/plugin.program.iagl/resources/skins/Default/media/coin.wav'
 NEG_SOUND = 'special://home/addons/plugin.program.iagl/resources/skins/Default/media/kick.wav'

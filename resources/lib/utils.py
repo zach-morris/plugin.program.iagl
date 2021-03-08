@@ -1352,6 +1352,7 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 					'emu_command':game_emu_command,
 					'downloadpath_resolved':Path(emu_downloadpath).joinpath(game_filename).expanduser(),
 					}
+		xbmc.log(msg='IAGL:  Current game download parameters %(game_dl_dict)s' % {'game_dl_dict': game_dl_dict}, level=xbmc.LOGDEBUG)
 		if organize_default_dir and game_dl_dict.get('downloadpath') == 'default' or str(game_dl_dict.get('downloadpath')) == str(default_dir) and emu_name:
 			new_default_dir = check_userdata_directory(os.path.join(str(default_dir),emu_name))
 			if new_default_dir:
