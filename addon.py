@@ -183,6 +183,14 @@ def forward_search_link():
 		if '}/' in plugin.args['query'][0]:
 			plugin.run(['plugin://plugin.program.iagl/Search/','0','query=%(qq)s'%{'qq':plugin.args['query'][0].split('}/')[0]+'}'}]) #Why doesn't redirect work here?
 
+@plugin.route('/game/Random_Link')
+def forward_random_link():
+	query = None
+	if plugin.args.get('query'):
+		if '}/' in plugin.args['query'][0]:
+			plugin.run(['plugin://plugin.program.iagl/Random Play/','0','query=%(qq)s'%{'qq':plugin.args['query'][0].split('}/')[0]+'}'}]) #Why doesn't redirect work here?
+
+
 @plugin.route('/archives/Random Play')
 def archives_search_route():
 	for x in iagl_addon.routes.get_search_random_route_as_listitems('random'):
@@ -733,9 +741,8 @@ def category_context_menu_action(action_id):
 								success = add_game_to_favorites(filename_in=new_favorites_file,game=list_item)
 								if success:
 									xbmc.log(msg='IAGL:  User adding Query to favorites list %(fav_list_id)s'%{'fav_list_id':new_favorites_file}, level=xbmc.LOGDEBUG)
-									ok_ret = current_dialog.ok(loc_str(30202),loc_str(30353) % {'current_game': next(iter([x for x in [list_item.get('info').get('originaltitle'),list_item.get('values').get('label')] if x]),game_id), 'current_filename': favorites_name})
+									ok_ret = current_dialog.ok(loc_str(30202),loc_str(30353) % {'current_game': next(iter([x for x in [list_item.get('info').get('originaltitle'),list_item.get('values').get('label')] if x]),'Game Query'), 'current_filename': favorites_name})
 									clear_mem_cache('iagl_directory')
-									xbmc.executebuiltin('Container.Refresh')
 								else:
 									ok_ret = current_dialog.ok(loc_str(30203),loc_str(30593))
 						else:
