@@ -213,10 +213,17 @@ class iagl_download(object):
 											dp.update(percent,'%(fn)s[CR]%(current_size)s / %(estimated_size)s'%{'current_size':bytes_to_string_size(size),'fn':description,'estimated_size':filesize_str})
 										else:
 											dp.update(percent,'%(fn)s[CR]%(current_size)s / Unknown Size'%{'current_size':bytes_to_string_size(size),'fn':description})
-					self.download_status['success'] = True
-					self.download_status['message'] = 'Download complete'
-					self.download_status['download_size'] = size
-					xbmc.log(msg='IAGL:  Download complete for %(url)s.  File size %(size)s'%{'url':url,'size':size},level=xbmc.LOGINFO)
+					if size<1:
+						self.download_status['success'] = False
+						self.download_status['message'] = 'Download returned file of size 0'
+						self.download_status['download_size'] = size
+						delete_file(str(dest))
+						xbmc.log(msg='IAGL:  Download failed for %(url)s.  Archive returned an empty file'%{'url':url,'size':size},level=xbmc.LOGERROR)
+					else:
+						self.download_status['success'] = True
+						self.download_status['message'] = 'Download complete'
+						self.download_status['download_size'] = size
+						xbmc.log(msg='IAGL:  Download complete for %(url)s.  File size %(size)s'%{'url':url,'size':size},level=xbmc.LOGINFO)
 				except requests.exceptions.RequestException as rexc:
 					self.download_status['success'] = False
 					if self.r and self.r.status_code == 403:
