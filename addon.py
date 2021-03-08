@@ -166,7 +166,8 @@ def search_games():
 
 		game_listitems = list()
 		for game_list_id in game_list_ids:
-			game_listitems = game_listitems+iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id,filter_in=filter_dict)
+			if game_list_id not in ['history']:
+				game_listitems = game_listitems+iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id,filter_in=filter_dict)
 
 		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':x.getProperty('route')}),update_listitem_title(x,iagl_addon.settings.get('game_list').get('append_emu_name')),True) for x in game_listitems if x])
 		for sm in iagl_addon.get_sort_methods('Games'):
@@ -259,7 +260,8 @@ def random_games():
 
 		game_listitems = list()
 		for game_list_id in game_list_ids:
-			game_listitems = game_listitems+iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id,filter_in=filter_dict)
+			if game_list_id not in ['history']:
+				game_listitems = game_listitems+iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id,filter_in=filter_dict)
 		game_listitems = random_sample(game_listitems,num_of_results) #Get random listitems using random sample
 
 		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':x.getProperty('route')}),update_listitem_title(x,iagl_addon.settings.get('game_list').get('append_emu_name')),True) for x in game_listitems if x])

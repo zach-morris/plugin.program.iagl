@@ -1172,8 +1172,9 @@ def get_game_list_stats(games):
 		stats_out['tag']['all'] = sorted(set(flatten_list([x.get('info').get('tag') for x in games if x.get('info').get('tag')])))
 		stats_out['groups']['all'] = sorted(set(flatten_list([x.get('info').get('showlink') for x in games if x.get('info').get('showlink')])))
 		if stats_out['alphabetical']['all']:
-			stats_out['alphabetical']['count'] = [sum([y.get('values').get('label').upper().startswith(x) for y in games]) for x in stats_out['alphabetical']['all']]
-			stats_out['alphabetical']['count'][0] = sum([not y.get('values').get('label')[0].isalpha() for y in games]) #Recalc the numerical stats
+			# stats_out['alphabetical']['count'] = [sum([y.get('values').get('label').upper().startswith(x) for y in games]) for x in stats_out['alphabetical']['all']]
+			# stats_out['alphabetical']['count'][0] = sum([not y.get('values').get('label')[0].isalpha() for y in games if isinstance(y.get('values').get('label'),str) and len()]) #Recalc the numerical stats
+			stats_out['alphabetical']['count'] = [sum([y.get('properties').get('starts_with').startswith(x) for y in games if y.get('properties').get('starts_with')]) for x in stats_out['alphabetical']['all']]
 			#Remove 0 count alphabetical
 			stats_out['alphabetical']['all'] = [x[0] for x in zip(stats_out['alphabetical']['all'],stats_out['alphabetical']['count']) if x[1]>0]
 			stats_out['alphabetical']['count'] = [x for x in stats_out['alphabetical']['count'] if x>0]
