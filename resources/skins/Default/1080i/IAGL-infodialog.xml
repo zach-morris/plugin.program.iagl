@@ -632,8 +632,8 @@ https://github.com/phil65/skin.estuary
 						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/stop.png</textureradioondisabled>
 						<label>$ADDON[plugin.program.iagl 30436]</label>
 						<onclick>PlayerControl(Stop)</onclick>
-						<onclick>PlayMedia($INFO[Container(113).ListItem.Trailer],False,1)</onclick>
-						<visible>SetProperty(iagl_trailer_started,False,HOME)</visible>
+						<onclick>SetProperty(iagl_trailer_started,False,HOME)</onclick>
+						<visible>!String.IsEmpty(Container(113).ListItem.Trailer)+String.IsEqual(Window(HOME).Property(iagl_trailer_started),True)</visible>
 						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
 					</control>
 					<control type="radiobutton" id="3001">
