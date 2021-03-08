@@ -406,13 +406,10 @@ def show_info_game(game_list_id,game_id):
 			from resources.lib.main import iagl_dialog_netplay_settings_page
 			netplay_settings_page = iagl_dialog_netplay_settings_page('IAGL-netplay-input.xml',iagl_addon.directory.get('addon').get('path'),'Default','1080i',netplay_inputs=None,default_host=iagl_addon.settings.get('game_action').get('netplay_default_host'),default_port=iagl_addon.settings.get('game_action').get('netplay_port'))
 			netplay_settings_page.doModal()
+			netplay_settings = netplay_settings_page.values_out
 			del netplay_settings_page
-		# else:
-		# 	if iagl_addon.kodi_user.get('current_folder') != iagl_addon.title: #There has to be a better way to know what the parentpath is
-		# 		if xbmcgui.getCurrentWindowId() != 10000:
-		# 			xbmc.log(msg='IAGL:  Returning to Home', level=xbmc.LOGDEBUG)
-		# 			xbmc.executebuiltin('ActivateWindow(home)')
-		# 			xbmc.sleep(100)
+			plugin.run(['plugin://plugin.program.iagl/netplay_game_launch/'+game_list_id+'/'+game_id,'0','query=%(qq)s'%{'qq':url_quote_query(netplay_settings)}]) #Why doesn't redirect work here?
+
 	else:
 		current_dialog = xbmcgui.Dialog()
 		ok_ret = current_dialog.ok(loc_str(30203),loc_str(30359) % {'game_id': game_id, 'game_list_id': game_list_id})
