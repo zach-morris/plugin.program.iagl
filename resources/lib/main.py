@@ -577,6 +577,19 @@ class iagl_addon(object):
 				current_dialog = xbmcgui.Dialog()
 				ok_ret = current_dialog.ok(loc_str(30203),loc_str(30375))
 				del current_dialog
+		elif self.settings.get('ext_launchers').get('environment') and not (self.settings.get('ext_launchers').get('ra').get('app_path') or self.settings.get('ext_launchers').get('ra').get('cfg_path')) and len(self.settings.get('ext_launchers').get('other_ext_cmds')) > 0:
+			if self.settings.get('ext_launchers').get('close_kodi') and self.settings.get('ext_launchers').get('environment') in ['OSX','linux','windows']:
+				if self.settings.get('ext_launchers').get('pause_kodi') and self.settings.get('ext_launchers').get('environment') in ['linux']:
+					other_ext_cmds = [x for x in self.directory['addon']['external_command_database'].get('system').get('launcher') if x.get('@os') == self.settings.get('ext_launchers').get('environment') and x.get('@pause_kodi') and not x.get('@default')]
+				else:
+					other_ext_cmds = [x for x in self.directory['addon']['external_command_database'].get('system').get('launcher') if x.get('@os') == self.settings.get('ext_launchers').get('environment') and x.get('@close_kodi') and not x.get('@default')]
+			else:
+				other_ext_cmds = [x for x in self.directory['addon']['external_command_database'].get('system').get('launcher') if x.get('@os') == self.settings.get('ext_launchers').get('environment') and not x.get('@close_kodi') and not x.get('@pause_kodi') and not x.get('@default')]
+			for cc in self.settings.get('ext_launchers').get('other_ext_cmds'):
+				for oec in other_ext_cmds:
+					oec['command'] = oec.get('command').replace(cc.get('app_path_cmd_replace'),str(cc.get('app_path')))
+			cmds_out = [x for x in other_ext_cmds if '%APP_PATH' not in x.get('command')]  #Remove any commands that dont have a path defined
+		#Add another option here - RA not defined but other emulators are defined
 		else:
 			current_dialog = xbmcgui.Dialog()
 			ok_ret = current_dialog.ok(loc_str(30203),loc_str(30375))
