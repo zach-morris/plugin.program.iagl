@@ -2,7 +2,6 @@ import xbmc, xbmcgui, xbmcvfs
 from resources.lib.utils import loc_str, get_mem_cache, set_mem_cache, clear_mem_cache
 from resources.lib.main import iagl_addon
 iagl_addon_handle = iagl_addon()
-clear_mem_cache('iagl_script_started')
 if not get_mem_cache('iagl_script_started'):
 	set_mem_cache('iagl_script_started','true')
 	xbmc.log(msg='IAGL:  Set game lists to visible script started', level=xbmc.LOGDEBUG)

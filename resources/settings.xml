@@ -1690,6 +1690,19 @@
 					</dependencies>
 					<control format="action" type="button"/>
 				</setting>
+				<setting help="30619" id="iagl_convert_old_favorites" label="30618" type="action">
+					<level>2</level>
+					<data>RunScript(special://home/addons/plugin.program.iagl/convert_old_favorites.py)</data>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition name="InfoBool" on="property">true</condition>
+						</dependency>
+					</dependencies>
+					<control format="action" type="button"/>
+				</setting>
 			</group>
 			<group id="11">
 				<setting help="30578" id="iagl_run_script_clear_cache" label="30056" type="action">
