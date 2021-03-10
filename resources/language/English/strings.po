@@ -1181,8 +1181,8 @@ msgid "If enabled, the netplay lobby will only show auto launchable games"
 msgstr "If enabled, the netplay lobby will only show auto launchable games"
 
 msgctxt "#30606"
-msgid "User: %(username)s[CR]Country: %(country)s[CR]Game: %(game_name)s[CR]Password Protected Netplay:  %(pp)s[CR]Spectators Allowed:  %(spectate)s[CR]Core: %(core_name)s[CR]Frontend: %(frontend)s"
-msgstr "User: %(username)s[CR]Country: %(country)s[CR]Game: %(game_name)s[CR]Password Protected Netplay:  %(pp)s[CR]Spectators Allowed:  %(spectate)s[CR]Core: %(core_name)s[CR]Frontend: %(frontend)s"
+msgid "User: %(username)s[CR]Country: %(country)s[CR]Game: %(game_name)s[CR]Password Protected Netplay:  %(pp)s[CR]Spectators Allowed:  %(spectate)s[CR]Core: %(core_name)s[CR]Core Version: %(core_version)s[CR]Frontend: %(frontend)s"
+msgstr "User: %(username)s[CR]Country: %(country)s[CR]Game: %(game_name)s[CR]Password Protected Netplay:  %(pp)s[CR]Spectators Allowed:  %(spectate)s[CR]Core: %(core_name)s[CR]Core Version: %(core_version)s[CR]Frontend: %(frontend)s"
 
 msgctxt "#30607"
 msgid "Choose Netplay Option"
@@ -1723,6 +1723,18 @@ msgstr "Select Filters"
 msgctxt "#30394"
 msgid "[CR]Current Query:[CR]Total Games Unfiltered:"
 msgstr "[CR]Current Query:[CR]Total Games Unfiltered:"
+
+msgctxt "#30395"
+msgid "Confirm Delete"
+msgstr "Confirm Delete"
+
+msgctxt "#30396"
+msgid "Are you sure you want to delete %(game_list)s?[CR]This cannot be undone."
+msgstr "Are you sure you want to delete %(game_list)s?[CR]This cannot be undone."
+
+msgctxt "#30397"
+msgid "Error while attempting to delete.  Please check Kodi Log."
+msgstr "Error while attempting to delete.  Please check Kodi Log."
 
 #
 #Context Menus

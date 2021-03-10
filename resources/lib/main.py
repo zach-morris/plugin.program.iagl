@@ -205,8 +205,9 @@ class iagl_addon(object):
 			self.game_list_context_menu_items['defaults'] = [(loc_str(30406),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/<game_list_id>/view_list_settings)'),(loc_str(30404),'RunPlugin(plugin://plugin.program.iagl/context_menu/edit/<game_list_id>/emu_launcher)'),(loc_str(30405),'RunPlugin(plugin://plugin.program.iagl/context_menu/select/<game_list_id>/emu_downloadpath)'),(loc_str(30400),'RunPlugin(plugin://plugin.program.iagl/context_menu/select/<game_list_id>/metadata)'),(loc_str(30402),'RunPlugin(plugin://plugin.program.iagl/context_menu/select/<game_list_id>/art)'),(loc_str(30403),'RunPlugin(plugin://plugin.program.iagl/context_menu/edit/<game_list_id>/emu_visibility)'),(loc_str(30407),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/<game_list_id>/refresh_list)')]
 			self.game_list_context_menu_items['external'] = [(loc_str(30408),'RunPlugin(plugin://plugin.program.iagl/context_menu/select/<game_list_id>/emu_ext_launch_cmd)')]
 			self.game_list_context_menu_items['retroplayer'] = [(loc_str(30409),'RunPlugin(plugin://plugin.program.iagl/context_menu/edit/<game_list_id>/emu_default_addon)')]
-			self.game_list_context_menu_items['favorites'] = [(loc_str(30411),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/<game_list_id>/share_favorite)')]
+			self.game_list_context_menu_items['favorites'] = [(loc_str(30413),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/<game_list_id>/delete_favorite)')]
 			self.game_list_context_menu_items['post_dl'] = [(loc_str(30410),'RunPlugin(plugin://plugin.program.iagl/context_menu/edit/<game_list_id>/emu_postdlaction)')]
+
 			self.game_context_menu_items = dict()
 			self.game_context_menu_items['add_to_favs'] = [(loc_str(30412),'RunPlugin(plugin://plugin.program.iagl/game_context_menu/action/<game_list_id>/<game_id>/add_to_favs)')]
 
@@ -296,8 +297,8 @@ class iagl_addon(object):
 					current_context_menus = current_context_menus+[(labels,actions.replace('<game_list_id>',game_list_id)) for labels, actions in self.game_list_context_menu_items.get(list_in.get('emu_launcher'))]
 				if self.settings.get('game_list').get('enable_post_dl_edit'):
 					current_context_menus = current_context_menus+[(labels,actions.replace('<game_list_id>',game_list_id)) for labels, actions in self.game_list_context_menu_items.get('post_dl')]
-				# if list_in.get('emu_description') == 'Favorites':
-				# 	current_context_menus = current_context_menus+[(labels,actions.replace('<game_list_id>',game_list_id)) for labels, actions in self.game_list_context_menu_items.get('favorites')]
+				if 'favorites' in list_in.get('emu_category').lower():
+					current_context_menus = current_context_menus+[(labels,actions.replace('<game_list_id>',game_list_id)) for labels, actions in self.game_list_context_menu_items.get('favorites')]
 				listitem_in.addContextMenuItems(current_context_menus)
 			return listitem_in
 

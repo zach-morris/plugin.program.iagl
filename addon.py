@@ -10,7 +10,7 @@ import routing, sys, json, re
 from random import sample as random_sample
 from resources.lib.main import iagl_addon
 from resources.lib import paginate
-from resources.lib.utils import clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, check_if_file_exists, check_if_dir_exists, clean_image_entry, clean_trailer_entry, loc_str, check_and_close_notification, get_history_listitem, get_netplay_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, get_uuid, generate_discord_announcement, get_blank_favorites_listitem, get_database_listitem, url_quote_query, zachs_debug
+from resources.lib.utils import clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, check_if_file_exists, check_if_dir_exists, clean_image_entry, clean_trailer_entry, loc_str, check_and_close_notification, get_history_listitem, get_netplay_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, get_uuid, generate_discord_announcement, get_blank_favorites_listitem, get_database_listitem, url_quote_query, delete_file_pathlib, zachs_debug
 
 ## Plugin Initialization Stuff ##
 SLEEP_HACK=50  #https://github.com/xbmc/xbmc/issues/18576
@@ -707,6 +707,17 @@ def context_menu_action(game_list_id,action_id):
 			ok_ret = current_dialog.ok(loc_str(30202),loc_str(30306)%{'game_list_id': game_list_id})
 			del current_dialog
 			xbmc.executebuiltin('Container.Refresh')
+	elif action_id == 'delete_favorite':
+		current_game_list = iagl_addon.game_lists.get_game_list(game_list_id)
+		current_dialog = xbmcgui.Dialog()
+		if current_dialog.yesno(loc_str(30395),loc_str(30396)%{'game_list':current_game_list.get('emu_name')}):
+			if delete_file_pathlib(iagl_addon.game_lists.get_file(game_list_id)):
+				current_dialog.ok(loc_str(30202),loc_str(30358)%{'game_list_id_in':current_game_list.get('emu_name')})
+				iagl_addon.refresh_list(iagl_addon.game_lists.get_crc(game_list_id))
+				xbmc.executebuiltin('Container.Refresh')
+			else:
+				current_dialog.ok(loc_str(30203),loc_str(30397))
+		del current_dialog
 	else:
 		xbmc.log(msg='IAGL:  Unknown context action %(action_id)s'%{'action_id':action_id},level=xbmc.LOGERROR)
 
@@ -826,4 +837,4 @@ def iagl_wizard_report():
 
 if __name__ == '__main__':
 	plugin.run(sys.argv)
-	del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_file_exists, check_if_dir_exists, check_and_close_notification, get_history_listitem, get_netplay_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, generate_discord_announcement, get_uuid, get_blank_favorites_listitem, get_database_listitem, url_quote_query, zachs_debug #Delete all locally imported stuff to avoid memory leaks
+	del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_file_exists, check_if_dir_exists, check_and_close_notification, get_history_listitem, get_netplay_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, generate_discord_announcement, get_uuid, get_blank_favorites_listitem, get_database_listitem, url_quote_query, delete_file_pathlib, zachs_debug #Delete all locally imported stuff to avoid memory leaks
