@@ -176,6 +176,19 @@
 						<heading>30195</heading>
 					</control>
 				</setting>
+				<setting help="30623" id="iagl_netplay_enable_list_sharing" label="30622" type="integer">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="30095">0</option>
+							<option label="30096">1</option>
+						</options>
+					</constraints>
+					<control format="string" type="list">
+						<heading>30622</heading>
+					</control>
+				</setting>
 				<setting help="30546" id="iagl_setting_dl_cache" label="30021" type="integer">
 					<level>0</level>
 					<default>0</default>
@@ -547,6 +560,45 @@
 				</setting>
 			</group>
 		</category>
+		<category help="30625" id="user" label="30624">
+			<group id="13">
+			<setting help="30560" id="iagl_netplay_nickname" label="30040" type="string">
+					<level>0</level>
+					<dependencies>
+						<dependency type="visible">
+							<or>
+								<condition operator="is" setting="iagl_external_user_external_env">1</condition>
+								<condition operator="is" setting="iagl_external_user_external_env">3</condition>
+								<condition operator="is" setting="iagl_external_user_external_env">2</condition>
+							</or>
+						</dependency>
+					</dependencies>
+					<default>Kodi Player 1</default>
+					<control format="string" type="edit">
+						<heading>30040</heading>
+					</control>
+				</setting>
+				<setting help="30615" id="iagl_discord_id" label="30614" type="string">
+					<level>0</level>
+					<default/>
+					<dependencies>
+						<dependency type="visible">
+							<or>
+								<condition operator="is" setting="iagl_external_user_external_env">1</condition>
+								<condition operator="is" setting="iagl_external_user_external_env">3</condition>
+								<condition operator="is" setting="iagl_external_user_external_env">2</condition>
+							</or>
+						</dependency>
+					</dependencies>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control format="string" type="edit">
+						<heading>30614</heading>
+					</control>
+				</setting>
+			</group>
+		</category>
 		<category help="30525" id="netplay" label="30004">
 			<group id="6">
 				<setting help="30596" id="iagl_netplay_enable_netplay_launch" label="30038" type="integer">
@@ -639,41 +691,7 @@
 						<heading>30596</heading>
 					</control>
 				</setting>
-				<setting help="30560" id="iagl_netplay_nickname" label="30040" type="string">
-					<level>0</level>
-					<dependencies>
-						<dependency type="visible">
-							<or>
-								<condition operator="is" setting="iagl_external_user_external_env">1</condition>
-								<condition operator="is" setting="iagl_external_user_external_env">3</condition>
-								<condition operator="is" setting="iagl_external_user_external_env">2</condition>
-							</or>
-						</dependency>
-					</dependencies>
-					<default>Kodi Player 1</default>
-					<control format="string" type="edit">
-						<heading>30040</heading>
-					</control>
-				</setting>
-				<setting help="30615" id="iagl_discord_id" label="30614" type="string">
-					<level>0</level>
-					<default/>
-					<dependencies>
-						<dependency type="visible">
-							<or>
-								<condition operator="is" setting="iagl_external_user_external_env">1</condition>
-								<condition operator="is" setting="iagl_external_user_external_env">3</condition>
-								<condition operator="is" setting="iagl_external_user_external_env">2</condition>
-							</or>
-						</dependency>
-					</dependencies>
-					<constraints>
-						<allowempty>true</allowempty>
-					</constraints>
-					<control format="string" type="edit">
-						<heading>30614</heading>
-					</control>
-				</setting>
+				
 				<setting help="30562" id="iagl_netplay_port" label="30042" type="string">
 					<level>0</level>
 					<default/>

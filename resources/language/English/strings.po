@@ -1244,6 +1244,22 @@ msgctxt "#30621"
 msgid "Error converting file, see Kodi log"
 msgstr "Error converting file, see Kodi log"
 
+msgctxt "#30622"
+msgid "Game List Sharing"
+msgstr "Game List Sharing"
+
+msgctxt "#30623"
+msgid "Show or hide Game List Sharing on the front page, enable sharing of your lists"
+msgstr "Show or hide Game List Sharing on the front page, enable sharing of your lists"
+
+msgctxt "#30624"
+msgid "User Info"
+msgstr "User Info"
+
+msgctxt "#30625"
+msgid "Set your netplay nickname and list author name"
+msgstr "Set your netplay nickname and list author name"
+
 #
 #General
 #
@@ -1725,8 +1741,8 @@ msgid "[CR]Current Query:[CR]Total Games Unfiltered:"
 msgstr "[CR]Current Query:[CR]Total Games Unfiltered:"
 
 msgctxt "#30395"
-msgid "Confirm Delete"
-msgstr "Confirm Delete"
+msgid "Confirm"
+msgstr "Confirm"
 
 msgctxt "#30396"
 msgid "Are you sure you want to delete %(game_list)s?[CR]This cannot be undone."
@@ -1735,6 +1751,62 @@ msgstr "Are you sure you want to delete %(game_list)s?[CR]This cannot be undone.
 msgctxt "#30397"
 msgid "Error while attempting to delete.  Please check Kodi Log."
 msgstr "Error while attempting to delete.  Please check Kodi Log."
+
+msgctxt "#30398"
+msgid "Are you sure you want to share %(game_list)s?[CR]This file will be published and publicly available."
+msgstr "Are you sure you want to delete %(game_list)s?[CR]This file will be published and publicly available."
+
+msgctxt "#30626"
+msgid "Choose Number of Results"
+msgstr "Choose Number of Results"
+
+msgctxt "#30627"
+msgid "Choose Game Lists"
+msgstr "Choose Game Lists"
+
+msgctxt "#30628"
+msgid "Filter Genres"
+msgstr "Filter Genres"
+
+msgctxt "#30629"
+msgid "Filter Players"
+msgstr "Filter Players"
+
+msgctxt "#30630"
+msgid "Filter Years"
+msgstr "Filter Years"
+
+msgctxt "#30631"
+msgid "Filter Studios"
+msgstr "Filter Studios"
+
+msgctxt "#30632"
+msgid "Filter Tags"
+msgstr "Filter Tags"
+
+msgctxt "#30633"
+msgid "Filter Groups"
+msgstr "Filter Groups"
+
+msgctxt "#30634"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+
+msgctxt "#30635"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+
+msgctxt "#30636"
+msgid "Enter Title"
+msgstr "Enter Title"
+
+msgctxt "#30637"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Execute Search[/COLOR]"
+
+msgctxt "#30638"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Create Search Link[/COLOR]"
 
 #
 #Context Menus
