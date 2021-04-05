@@ -6,6 +6,8 @@
     <import addon="script.module.requests"/>
     <import addon="script.module.routing"/>
     <import addon="script.module.archive_tool" version="2.0.2"/>
+    <import addon="vfs.libarchive"/>
+    <import addon="vfs.rar" optional="true"/>
     <import addon="plugin.video.youtube" version="6.8.7"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
