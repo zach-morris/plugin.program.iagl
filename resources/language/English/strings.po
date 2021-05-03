@@ -1129,8 +1129,8 @@ msgid "Setup could not be completed to launch games with %(launch_type)s"
 msgstr "Setup could not be completed to launch games with %(launch_type)s"
 
 msgctxt "#30593"
-msgid "There was an error adding the favorite.  Please see Kodi Log."
-msgstr "There was an error adding the favorite.  Please see Kodi Log."
+msgid "There was an error performing the requested command.  Please see Kodi Log."
+msgstr "There was an error performing the requested command.  Please see Kodi Log."
 
 msgctxt "#30594"
 msgid "The favorites file %(filename_in)s already exists.[CR]Please choose a unique name."
@@ -1259,6 +1259,16 @@ msgstr "User Info"
 msgctxt "#30625"
 msgid "Set your netplay nickname and list author name"
 msgstr "Set your netplay nickname and list author name"
+
+msgctxt "#30639"
+msgid "Always filter one big list to 1 Game 1 Rom set"
+msgstr "Always filter one big list to 1 Game 1 Rom set"
+
+msgctxt "#30640"
+msgid "If available, game lists will be prefiltered to a 1G1R set when browsing all"
+msgstr "If available, game lists will be prefiltered to a 1G1R set when browsing all"
+
+
 
 #
 #General

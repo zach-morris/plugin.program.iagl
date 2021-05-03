@@ -23,9 +23,9 @@ TEXT_ENCODING='UTF-8'
 NOTIFICATION_DEINIT_TIME = 300 #Time to wait after closing a notification for it to de-init
 WAIT_FOR_PLAYER_TIME = 5000 #Time to wait after sending retroplayer play command to check status
 WAIT_FOR_PROCESS_EXIT = 3 #Time in seconds to wait for subprocess to exit
-IGNORE_THESE_FILETYPES = ['.srm','.sav','.fs','.state','.auto','.xml','.nfo'] #Matching filetypes to ignore for re-launching
+IGNORE_THESE_FILETYPES = ['srm','sav','fs','state','auto','xml','nfo','.srm','.sav','.fs','.state','.auto','.xml','.nfo'] #Matching filetypes to ignore for re-launching
 IGNORE_THESE_FILES = ['win31.bat'] #Matching files to ignore for re-launching
-ARCHIVE_FILETYPES = ['001','7z','bz2','cbr','gz','iso','rar','tar','tarbz2','targz','tarxz','tbz2','tgz','xz','zip']
+ARCHIVE_FILETYPES = ['001','7z','bz2','cbr','gz','iso','rar','tar','tarbz2','targz','tarxz','tbz2','tgz','xz','zip','.001', '.7z', '.bz2', '.cbr', '.gz', '.iso', '.rar', '.tar', '.tarbz2', '.targz', '.tarxz', '.tbz2', '.tgz', '.xz', '.zip']
 re_game_tags = re.compile(r'\([^)]*\)')
 re_game_codes = re.compile(r'\[[^)]*\]')
 re_clean_alphanumeric = re.compile(r'([^\s\w]|_)+')
@@ -1370,7 +1370,7 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 				else:
 					game_dl_dict['matching_existing_files'] = []
 			else: #If the file to be downloaded is an archive, the name without extension should match with a local file
-				game_dl_dict['matching_existing_files'] = [x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+glob.escape(game_dl_dict.get('downloadpath_resolved').stem)+'*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES and x.name.lower() not in IGNORE_THESE_FILES]
+				game_dl_dict['matching_existing_files'] = [x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+glob.escape(game_dl_dict.get('downloadpath_resolved').stem)+'[.]*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES and x.name.lower() not in IGNORE_THESE_FILES]
 		elif xbmcvfs.exists(str(game_dl_dict.get('downloadpath'))): #Kodi network source save spot (like smb address) need to use xbmcvfs to check local files
 			if game_dl_dict.get('filename_ext') not in ARCHIVE_FILETYPES:
 				if check_if_file_exists(str(game_dl_dict.get('downloadpath_resolved'))):
@@ -1434,6 +1434,27 @@ def add_game_to_favorites(filename_in=None,game=None):
 		xml_out = dict_to_game_xml(game=game)+'\n</datafile>'
 		if isinstance(xml_out,str) and '<game ' in xml_out and '</game>' in xml_out:
 			success = write_text_to_file(filename_in.read_text(encoding=TEXT_ENCODING).replace('</datafile>',xml_out),filename_in)
+	return success
+
+def remove_game_from_favorites(filename_in=None,game=None):
+	success = False
+	if isinstance(game,str) and check_if_file_exists(filename_in):
+		games = get_xml_games(filename_in)
+		if game in [x.get('@name') for x in games]:
+			if len([x for x in games if x.get('@name')!=game])>=1:
+				games_header = get_xml_header_path_et_fromstring(filename_in)
+				if games_header:
+					xml_out = xmltodict.unparse({'datafile':{'header':games_header}}, pretty=True).replace('</datafile>',''.join([xmltodict.unparse({'game':x},pretty=True).replace('<?xml version="1.0" encoding="utf-8"?>','') for x in games if x and x.get('@name') != game]))+'\n</datafile>'
+					if '<datafile>' in xml_out and '</datafile>' in xml_out:
+						success = write_text_to_file(xml_out,filename_in)
+					else:
+						xbmc.log(msg='IAGL:  The xml appears malformed so it will not be updated.', level=xbmc.LOGERROR)
+				else:
+					xbmc.log(msg='IAGL:  Unable to parse the header in the file %(filename_in)s'%{'filename_in':filename_in}, level=xbmc.LOGERROR)
+			else:
+				xbmc.log(msg='IAGL:  Unable to delete the game from the file because there is only one game listed.  Delete the list if desired.', level=xbmc.LOGERROR)
+		else:
+			xbmc.log(msg='IAGL:  Unable find the game %(game)s in the file %(filename_in)s'%{'game':game, 'filename_in':filename_in}, level=xbmc.LOGERROR)
 	return success
 
 def bytes_to_string_size(value, format='%.1f'):

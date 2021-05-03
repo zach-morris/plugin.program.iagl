@@ -1,0 +1,1139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datafile>
+	<header>
+		<emu_name>Watara Supervision</emu_name>
+		<emu_description>Watara Supervision</emu_description>
+		<emu_category>Handheld, 1990s, 8 Bit</emu_category>
+		<emu_version>042821</emu_version>
+		<emu_date>01/26/2020</emu_date>
+		<emu_author>Zach Morris</emu_author>
+		<emu_visibility>visible</emu_visibility>
+		<emu_homepage>https://archive.org</emu_homepage>
+		<emu_baseurl>https://archive.org/download/</emu_baseurl>
+		<emu_launcher>retroplayer</emu_launcher>
+		<emu_default_addon>none</emu_default_addon>
+		<emu_ext_launch_cmd>none</emu_ext_launch_cmd>
+		<emu_downloadpath>default</emu_downloadpath>
+		<emu_postdlaction>unzip_rom</emu_postdlaction>
+		<emu_comment>The Watara Supervision (also known as the QuickShot Supervision in the UK) is a monochrome handheld game console, originating from Asia, and introduced in 1992 as a cut-price competitor for Nintendo's Game Boy. It came packaged with a game called Crystball, which is similar to Breakout. One unique feature of the Supervision was that it could be linked up to a television via a link cable. Games played in this way would display in four colors, much like Nintendo's Super Game Boy add-on for the SNES.[CR]Up against Nintendo's list of popular franchises (Zelda, Mario, Metroid) and those of its third parties (Castlevania, Mega Man) - all of which eventually surfaced on the Game Boy - the Supervision's games were of little interest to most.[CR]Developer:  Watara[CR]Manufacturer:  Watara[CR]CPU:  8-bit 65C02 clocked at 4MHz[CR]Sound:  2 Tonal and 1 Noise Channel plus additional audio DMA stereo output channel[CR]Display:  160×160 pixel resolution, 4 shades of grey[CR]Media:  Cartridge[CR]Max. Controllers:  1</emu_comment>
+		<emu_thumb>GaKgWUk.jpg</emu_thumb>
+		<emu_banner>AKshFCI.jpg</emu_banner>
+		<emu_fanart>q17Wg81.jpg</emu_fanart>
+		<emu_logo>0s95auh.png</emu_logo>
+		<emu_trailer>8FpeRPsfpoA</emu_trailer>
+	</header>
+	<game name="2 in 1 - Block Buster + Cross High (USA, Europe)">
+		<description>2 in 1 - Block Buster + Cross High (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/2%20in%201%20-%20Block%20Buster%20%2B%20Cross%20High%20%28USA%2C%20Europe%29.zip" size="19878"/>
+		<plot>2 in 1: Block Buster/Cross High was released in Europe in 1992 for the Watara Supervision. It contained Tetris clone Block Buster, as well as a motocross game called Cross High. It is unknown if Cross High ever received a standalone release.</plot>
+		<studio>Watara</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/2%20in%201%20-%20Block%20Buster%20+%20Cross%20High%20(USA,%20Europe).png</boxart1>
+		<boxart3>daIFoem.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/2%20in%201%20-%20Block%20Buster%20+%20Cross%20High%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/2%20in%201%20-%20Block%20Buster%20+%20Cross%20High%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/e09ce5ac-15f4-4289-b100-45b201a58f8f.png</snapshot3>
+		<clearlogo1>rbOhg9S.png</clearlogo1>
+		<genre>Puzzle,Racing</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="2 in 1 - Hash Blocks + Eagle Plan (USA, Europe)">
+		<description>2 in 1 - Hash Blocks + Eagle Plan (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/2%20in%201%20-%20Hash%20Blocks%20%2B%20Eagle%20Plan%20%28USA%2C%20Europe%29.zip" size="22677"/>
+		<plot>2 in 1: Hash Block and Eagle Plan is a compilation of games published by Watara for the Watara Supervision. The game contains both Hash Block and Eagle Plan on a single cartridge. The games have reduced feature sets over their stand alone counterparts. When starting the game there is a menu screen that allows players to choose which game to play.</plot>
+		<studio>Watara</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/2%20in%201%20-%20Hash%20Blocks%20+%20Eagle%20Plan%20(USA,%20Europe).png</boxart1>
+		<boxart3>vM4YYYR.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/2%20in%201%20-%20Hash%20Blocks%20+%20Eagle%20Plan%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/2%20in%201%20-%20Hash%20Blocks%20+%20Eagle%20Plan%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/da0795c4-1863-451b-96a7-92ccf8f0c73e.png</snapshot3>
+		<clearlogo1>g0CRKJR.png</clearlogo1>
+		<genre>Puzzle</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Alien (USA, Europe)">
+		<description>Alien (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Alien%20%28USA%2C%20Europe%29.zip" size="17057"/>
+		<plot>Alien is a horizontal scrolling shooter where the player controls a spaceship that is out to destroy other spaceships.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Watara</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Alien%20(USA,%20Europe).png</boxart1>
+		<boxart3>cTnpFZV.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Alien%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Alien%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>F9pFhDe.png</snapshot3>
+		<clearlogo1>XXzb73x.png</clearlogo1>
+		<genre>Action,Shooter</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Balloon Fight (USA, Europe)">
+		<description>Balloon Fight (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Balloon%20Fight%20%28USA%2C%20Europe%29.zip" size="17506"/>
+		<plot>Essentially a ripoff of Nintendo's Balloon Fight. An action game where you must defeat your opponents by popping the balloons they use to fly. The enemies will also try to burst your two balloons. Unlike Nintendo's version of the game, there are also vents that will blow you and your opponents around.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Thin Chen Enterprise</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<videoid>QT9GbA3oYLU</videoid>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Balloon%20Fight%20(USA,%20Europe).png</boxart1>
+		<boxart3>2ULtCl1.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Balloon%20Fight%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Balloon%20Fight%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>j0biOW7.png</snapshot3>
+		<clearlogo1>NOZnRlH.png</clearlogo1>
+		<genre>Action,Platform</genre>
+		<groups>1G1R,Joust variants</groups>
+	</game>
+	<game name="Block Buster (USA, Europe)">
+		<description>Block Buster (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Block%20Buster%20%28USA%2C%20Europe%29.zip" size="8897"/>
+		<plot>Block Buster is a Tetris clone.</plot>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Block%20Buster%20(USA,%20Europe).png</boxart1>
+		<boxart3>Gs8Oq0I.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Block%20Buster%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Block%20Buster%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>XJWY6mk.png</snapshot3>
+		<clearlogo1>UKxbYZQ.png</clearlogo1>
+		<genre>Puzzle</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Brain Power (USA, Europe)">
+		<description>Brain Power (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Brain%20Power%20%28USA%2C%20Europe%29.zip" size="16513"/>
+		<plot>[I]Brain Power[/I] is a collection of four primarily logic-and-puzzle minigames:[CR]
+  * [I]Mine Detector[/I], a clone of Minesweeper. The player is presented with a board filled with mines, and must find all of the open squares without clicking on any of the mines. Open squares contain a number, which indicates how many of the adjacent squares contains a mine. There are easy (55 mines), medium (66 mines), and hard (77 mines) modes.
+[CR]
+  * [I]Fortune Four[/I], a version of the board game [I]Qubic[/I], also known as 3-D Tic-Tac-Toe. The player takes turn with the computer placing stones on a 4x4x4 grid, the goal being to create a chain of four stones in any direction.
+[CR]
+  * [I]Caterpillar[/I], a clone of Snake. The player controls a snake that must avoid obstacles and eat food placed around the level. When the snake eats a piece of food, it grows longer, but if it runs into an obstacle or its own body, it dies.
+[CR]
+  * [I]Hopper[/I], a version of the board game [I]Peg Solitaire[/I]. The player is given a grid with marbles arranged on it, and can remove marbles by "jumping" over them with an adjacent marble. The goal is to only have a single marble remaining. There are seven different layouts to choose from.
+
+</plot>
+		<studio>Watara</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Brain%20Power%20(USA,%20Europe).png</boxart1>
+		<boxart3>y1bgGXn.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Brain%20Power%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Brain%20Power%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/cf171050-78bf-4663-8a92-2fbc8fc227a2.png</snapshot3>
+		<clearlogo1>ekCv3bc.png</clearlogo1>
+		<genre>Puzzle</genre>
+		<groups>1G1R,Genre: Board game - Peg solitaire,Minesweeper variants,Qubic translations,Snake variants,Tic-Tac-Toe games</groups>
+	</game>
+	<game name="Bubble World (USA, Europe)">
+		<description>Bubble World (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Bubble%20World%20%28USA%2C%20Europe%29.zip" size="14807"/>
+		<plot>Bubble World is a simple arcade action game similar to Bubble Bobble. The player controls a small creature that can jump and shoot bubbles. The objective is to use the bubbles to capture and destroy all the enemies on each stage. Defeated enemies will often release items that may award bonus points, or even destroy all enemies on the screen. When all enemies have been defeated, the player moves on to the next stage. However, if the player touches an enemy or a flame bubble, a life is lost.</plot>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Bubble%20World%20(USA,%20Europe).png</boxart1>
+		<boxart3>https://images.launchbox-app.com/5da69524-f4b7-4367-9015-531450e52ca5.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Bubble%20World%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Bubble%20World%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/bdde41da-d386-4f50-a009-d6f5a159eae5.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/53493a5d-eb58-4ea9-969d-a066172cd6ad.PNG</clearlogo1>
+		<genre>Platform</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Carrier (USA, Europe)">
+		<description>Carrier (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Carrier%20%28USA%2C%20Europe%29.zip" size="12364"/>
+		<plot>Carrier is a variant of the logic puzzle game Soko-Ban. The player controls a warehouse manager who must rearrange crates in a confined space, moving them all into the designated locations. It is possible to rewind a single move, as well as reset the puzzle or switch to any other puzzle in the set.[CR]Stages are grouped in sets of ten, and the player must clear all ten stages to move on to the next stage. There are five stages, for a total of 50 puzzles. Many of the puzzles are taken directly from the Game Boy version of Soko-Ban, Boxxle.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Carrier%20(USA,%20Europe).png</boxart1>
+		<boxart3>QFVWZNh.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Carrier%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Carrier%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>ONJRja5.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/ccdd7762-7363-4c6b-9137-610a9241236c.png</snapshot4>
+		<clearlogo1>qCQ4vco.png</clearlogo1>
+		<genre>Puzzle</genre>
+		<groups>1G1R,Soko-Ban / Sokoban variants</groups>
+	</game>
+	<game name="Cave Wonders (USA, Europe)">
+		<description>Cave Wonders (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Cave%20Wonders%20%28USA%2C%20Europe%29.zip" size="27545"/>
+		<plot>Cave Wonders is a roguelike set in a cave. The player must explore a randomly-generated labyrinth in search of treasures, moving from screen to screen or by using teleporters. There are many enemies in the cave, which must be either fought or avoided, as well as treasure chests that contain useful items such as fire to destroy enemies, a small plane to move elsewhere in the room, and hearts to refill the player's health. There are four different caves to choose from, each with multiple difficulty levels; increasing the difficulty will increase the complexity of the generated cave, as well as the number of treasures that must be collected before the exit will appear.</plot>
+		<releasedate>30/12/1992</releasedate>
+		<year>1992</year>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<videoid>fnhxEA_c6W4</videoid>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Cave%20Wonders%20(USA,%20Europe).png</boxart1>
+		<boxart3>7LS0m4W.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Cave%20Wonders%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Cave%20Wonders%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>YqRE0ls.png</snapshot3>
+		<clearlogo1>PBz7Lfp.png</clearlogo1>
+		<genre>Strategy</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Challenger Tank (USA, Europe)">
+		<description>Challenger Tank (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Challenger%20Tank%20%28USA%2C%20Europe%29.zip" size="19343"/>
+		<plot>Challenger Tank is a vertically-scrolling action game similar to Ikari Warriors. The player controls a tank which moves continually forward, and can freely move about the screen firing in any direction; the tank's cannon can be rotated independently of its movement. Enemy tanks appear from all sides, shooting at the player, and must be destroyed or avoided. At the end of each stage, a large boss appears that must be defeated to continue. Power-ups will occasionally appear that will allow the tank to fire in multiple directions simultaneously, but these are lost if the tank takes a hit.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Watara</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Challenger%20Tank%20(USA,%20Europe).png</boxart1>
+		<boxart3>vDwjJaf.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Challenger%20Tank%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Challenger%20Tank%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>bw1outM.png</snapshot3>
+		<snapshot4>JJPuu0f.jpg</snapshot4>
+		<clearlogo1>CKbjdOs.png</clearlogo1>
+		<genre>Action,Driving</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Chimera (USA, Europe)">
+		<description>Chimera (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Chimera%20%28USA%2C%20Europe%29.zip" size="22323"/>
+		<plot>A strange alien spacecraft has been discovered orbiting the Earth, it its weaponry primed and ready to destroy the planet. Your mission: To infiltrate the craft, disable the weapons, initiate the self-destruct sequence, and escape with your life.[CR]Chimera is an isometric adventure game set on an uninhabited space ship. The player must explore the ship, which is divided into a grid of rooms. There are various items scattered around the maze-like craft, which will be either a help or a hindrance. For example, food and water will keep the player alive, while radiators will quickly deplete water reserves while standing in the same room.[CR]The only actions the player can perform are to move and to interact with objects. Many objects — such as electric fences, or the aforementioned radiators — are deadly to the touch unless the player has the correct item in their possession. The ultimate goal is to prime and activate the four-stage self destruct sequence in the correct order by using items found on the ship. A scrolling message indicator at the bottom of the screen provides useful status information.</plot>
+		<studio>B.I.T.S.</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<videoid>ESNK3_Z-7MI</videoid>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Chimera%20(USA,%20Europe).png</boxart1>
+		<boxart3>lkFjDpI.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Chimera%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Chimera%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>w1ikf2V.png</snapshot3>
+		<clearlogo1>kkSqnjz.png</clearlogo1>
+		<genre>Adventure</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Chinese Checkers (USA, Europe)">
+		<description>Chinese Checkers (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Chinese%20Checkers%20%28USA%2C%20Europe%29.zip" size="30645"/>
+		<plot>[I]Chinese Checkers[/I] is a digital version of the popular German board game originally known as [I]Stern-Halma[/I]. The objective is to be the first player to move a group of 10 pieces to the opposite side of a star-shaped board; pieces can either be moved a single space, or 'jumped' over adjacent pieces. The game can be played in either its 2-player or 3-player variant, but only a single human player can play in a given game; other slots are filled by computer-controlled opponents. It is possible to set the number of rounds in the game, as well as also watch the computer play against itself.</plot>
+		<studio>Sachen</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Chinese%20Checkers%20(USA,%20Europe).png</boxart1>
+		<boxart3>1SghiKd.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Chinese%20Checkers%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Chinese%20Checkers%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>6hSqaU6.png</snapshot3>
+		<clearlogo1>IIErRtM.png</clearlogo1>
+		<groups>1G1R,Genre: Board game - Chinese checkers</groups>
+	</game>
+	<game name="Classic Casino (USA, Europe)">
+		<description>Classic Casino (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Classic%20Casino%20%28USA%2C%20Europe%29.zip" size="27072"/>
+		<plot>Classic Casino is a collection featuring three different casino games: Blackjack, Poker, and Slots. Each game gives the player a certain number of credits, which they must use to acquire more in the chosen game. Blackjack is played against the house, while Poker and Slots are solo endeavors.</plot>
+		<studio>Bon Treasure</studio>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Classic%20Casino%20(USA,%20Europe).png</boxart1>
+		<boxart3>GDeRMTs.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Classic%20Casino%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Classic%20Casino%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>SSQHF6y.png</snapshot3>
+		<clearlogo1>R5cXJmC.png</clearlogo1>
+		<genre>Casino</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Climber (USA, Europe)">
+		<description>Climber (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Climber%20%28USA%2C%20Europe%29.zip" size="13689"/>
+		<plot>Climber is an action platform game starring a boy with a seemingly-endless supply of throwing knives. In addition to making excellent deadly projectiles, these knives will also stick into any surface they hit for a short time. While stuck, they can be used as platforms to reach further areas, or even to destroy certain blocks on the stage. The object of each stage is to reach a goal flag while avoiding the enemies and hazards through careful use of the player's knives.</plot>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Climber%20(USA,%20Europe).png</boxart1>
+		<boxart3>XNKx2Ba.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Climber%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Climber%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>b9zRWg2.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/db076830-5703-4a9a-93bb-a99f6ca6ab9c.png</clearlogo1>
+		<genre>Action,Platform</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Cross High (USA, Europe)">
+		<description>Cross High (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Cross%20High%20%28USA%2C%20Europe%29.zip" size="15958"/>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Crystball (USA, Europe)">
+		<description>Crystball (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Crystball%20%28USA%2C%20Europe%29.zip" size="12619"/>
+		<plot>Crystball is a Breakout clone in the tradition of Arkanoid. The player controls a paddle at the bottom of the screen, and must bounce a ball off the bricks on the screen, with the goal of destroying them all. Destroying certain bricks will release power-ups or release enemies that wander the screen. If the ball falls out the bottom of the screen, a life is lost, and if all lives are lost, the game is over.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Crystball%20(USA,%20Europe).png</boxart1>
+		<boxart3>Ee1vIDB.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Crystball%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Crystball%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>rghDBx2.png</snapshot3>
+		<snapshot4>xKIGO53.jpg</snapshot4>
+		<clearlogo1>https://images.launchbox-app.com/f8f3132e-a7c7-4853-b187-6f879e2dab98.png</clearlogo1>
+		<genre>Action,Puzzle</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Dancing Block (USA, Europe)">
+		<description>Dancing Block (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Dancing%20Block%20%28USA%2C%20Europe%29.zip" size="14108"/>
+		<plot>[I]Dancing Block[/I] is a simple arcade action game starring a sentient cube. This cube has a curious feature: a cannon on one side that can shoot pellets. However, as the cube moves by rotating onto different sides, the cannon will reorient whenever the cube moves. The goal of each stage is to collect all the fruit, while avoiding insects. Insects can be destroyed by the cannon... but only if it's firing in the right direction! Some stages feature power-ups that will allow the cube to fire in multiple directions simultaneously, or to shoot larger pellets that can hit multiple targets.[CR]The NES release also includes a stage edit mode.</plot>
+		<studio>Thin Chen Enterprise</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Dancing%20Block%20(USA,%20Europe).png</boxart1>
+		<boxart3>pfcVPqs.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Dancing%20Block%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Dancing%20Block%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>oyqtNlm.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/d6f73060-d169-4657-914a-a4970c0b135b.png</clearlogo1>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Delta Hero (USA, Europe)">
+		<description>Delta Hero (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Delta%20Hero%20%28USA%2C%20Europe%29.zip" size="19113"/>
+		<plot>Delta Hero is an action maze game starring a young soldier trapped in a strange land. The goal of each stage is to collect enough bags of money and then reach the goal. The hero's only mode of defense against the strange creatures he encounters is a rather short-range gun. There are many items and enemies strewn around each stage, including food that will replenish the player's life, x-ray glasses that will reveal the many hidden items and pathways, and the money required to exit the stage. It is also possible to reveal hidden areas by shooting at them.</plot>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<videoid>Pti15JYFNbU</videoid>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Delta%20Hero%20(USA,%20Europe).png</boxart1>
+		<boxart3>eCDuYv1.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Delta%20Hero%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Delta%20Hero%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>9CdDBb2.png</snapshot3>
+		<clearlogo1>SVE6qOn.png</clearlogo1>
+		<genre>Action</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Dream World (USA, Europe)">
+		<description>Dream World (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Dream%20World%20%28USA%2C%20Europe%29.zip" size="15338"/>
+		<plot>Dream World is a side-scrolling platform game starring a girl with psychic powers. She begins with only a regular energy shot, but additional weapons can be found throughout the game. Curiously, using the girl's ESP powers does not consume energy; rather, switching between shot types does, meaning she can only switch a certain number of times on each stage. Different enemies are weak to different weapons, and each stage ends with a large boss that must be defeated to continue.</plot>
+		<studio>Bon Treasure</studio>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Dream%20World%20(USA,%20Europe).png</boxart1>
+		<boxart3>XVg8zJu.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Dream%20World%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Dream%20World%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>APaOiwj.png</snapshot3>
+		<clearlogo1>GX8w7kh.png</clearlogo1>
+		<genre>Platform</genre>
+		<groups>1G1R,Theme: Psychic powers / Psionics</groups>
+	</game>
+	<game name="Eagle Plan (USA, Europe)">
+		<description>Eagle Plan (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Eagle%20Plan%20%28USA%2C%20Europe%29.zip" size="18487"/>
+		<plot>Eagle Plan is an arcade-style flight sim game in the tradition of After Burner. Each mission tasks the player with destroying a certain number of enemies of specific types – fighter planes, tanks, and warships – and ends immediately once the conditions have been met. The player's craft has a gun with infinite ammo, as well as a limited number of missiles, tough certain enemies can only be destroyed with a specific type of weapon. Completing missions will earn money, which can be spent between missions to upgrade the player's craft, as well as replenish missiles and fuel. If the player runs out of fuel, which is also depleted from taking hits, the game is over.</plot>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Eagle%20Plan%20(USA,%20Europe).png</boxart1>
+		<boxart3>https://images.launchbox-app.com/d20a30a1-e374-41d8-aa64-2695b85d5059.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Eagle%20Plan%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Eagle%20Plan%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>BT8SBHE.png</snapshot3>
+		<clearlogo1>IbyH3JS.png</clearlogo1>
+		<genre>Driving,Flight Simulator</genre>
+		<groups>1G1R,Genre: Chase-view / Space Harrier-style shooter</groups>
+	</game>
+	<game name="Earth Defender (USA, Europe)">
+		<description>Earth Defender (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Earth%20Defender%20%28USA%2C%20Europe%29.zip" size="22057"/>
+		<plot>Earth Defender is an action shooting game, and a clone of Data East's Atomic Runner. The player controls an armored superhero fighting an alien invasion, and can freely move about the screen, even hovering in place using a jetpack. However, the screen is always scrolling forward, and it is impossible to backtrack. Each stage consists of a lengthy onslaught of flying enemies, followed by a boss at the end. There are also several power-ups that can be collected to increase the hero's firepower or refill his life.</plot>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<videoid>2VjIbht-Rew</videoid>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Earth%20Defender%20(USA,%20Europe).png</boxart1>
+		<boxart3>RtZpanJ.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Earth%20Defender%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Earth%20Defender%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>mbMGbu1.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/d15c5525-6626-431e-89cd-d229f4a8fe5b.png</clearlogo1>
+		<genre>Shooter</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Fatal Craft (USA, Europe)">
+		<description>Fatal Craft (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Fatal%20Craft%20%28USA%2C%20Europe%29.zip" size="20449"/>
+		<plot>Fatal Craft is a horizontally-scrolling shooter modeled after Konami's seminal arcade classic Gradius, right down to the enemy formations and power-up system. As in most any scrolling shoot-'em-up, the goal is to reach the end of each stage and destroy the boss, defeating enemies and collecting power-ups along the way. Some enemies drop capsules, which when collected will increment the power-up bar at the bottom of the screen; press the power-up button to collect the selected item and reset the bar. There are six types of upgrades available, including a speed-up, a shield, three types of weapon upgrades, and an Option unit that mimic's the ship's movement, providing another source of fire.</plot>
+		<studio>Bon Treasure</studio>
+		<ESRB>Other - NR (Not Rated)</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Fatal%20Craft%20(USA,%20Europe).png</boxart1>
+		<boxart3>3DNvPBO.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Fatal%20Craft%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Fatal%20Craft%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>kK0wOms.png</snapshot3>
+		<clearlogo1>cwhKbfy.png</clearlogo1>
+		<genre>Shooter</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Final Combat (USA, Europe)">
+		<description>Final Combat (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Final%20Combat%20%28USA%2C%20Europe%29.zip" size="18676"/>
+		<plot>Final Combat is a top-view tank action game similar to Namco's Battle City. Each stage contains a large number of enemy units and other objects to destroy. The goal is to destroy the fortified enemy base in each area, though the base cannot be damaged until enough enemy units -- tanks and turrets -- are destroyed. When the OK is given, destroy the base to complete the stage. If the player's tank takes too much damage, it will be destroyed.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Thin Chen Enterprise</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Final%20Combat%20(USA,%20Europe).png</boxart1>
+		<boxart3>1qKL2dE.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Final%20Combat%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Final%20Combat%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>qD14suk.png</snapshot3>
+		<snapshot4>lqcsnJF.png</snapshot4>
+		<clearlogo1>3ubEuqM.png</clearlogo1>
+		<genre>Action,Driving</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Galactic Crusader (USA, Europe)">
+		<description>Galactic Crusader (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Galactic%20Crusader%20%28USA%2C%20Europe%29.zip" size="29359"/>
+		<plot>Your starship is alive! A metamorphic creature that can transform from a huge flying insect into a metallic destroyer. Face squadron after squadron of alien fighters, marching ever onward towards a final confrontation with an all-powerful enemy.[CR]This is basically a scrolling, shoot-it-if-it-moves, action game. As your ship scrolls up the screen, you fire on ships coming from the top of the screen. Occasionally, after ships have been destroyed, you can pick up a power up to increase your firing ability. At the end of each level is a boss you must defeat to move onward.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Joy Van</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<videoid>p-bkmRtCJDA</videoid>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Galactic%20Crusader%20(USA,%20Europe).png</boxart1>
+		<boxart3>SswqPjL.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Galactic%20Crusader%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Galactic%20Crusader%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>z0CpfjT.png</snapshot3>
+		<snapshot4>Ue8VrB7.png</snapshot4>
+		<clearlogo1>zG5RtM0.png</clearlogo1>
+		<genre>Action,Driving,Shooter</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Galaxy Fighter (USA, Europe)">
+		<description>Galaxy Fighter (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Galaxy%20Fighter%20%28USA%2C%20Europe%29.zip" size="26095"/>
+		<plot>Galaxy Fighter is a vertically-scrolling space shooter. Many kinds of enemies appear in waves to attack the player, piloting an advanced fighter ship. When destroyed, enemies will sometimes drop power-up items, which include firepower upgrades and three different types of sub weapon: small homing missiles, large forward-firing missiles, and a rotating shield that damages nearby enemies. Every so often, a large boss enemy will appear, which must be destroyed in order to proceed. Similar to Toaplan's Truxton, there are no breaks between stages; the entire game scrolls continuously forward, only interrupted when the player's ship is destroyed.</plot>
+		<studio>Thin Chen Enterprise</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<videoid>A887C2L9sQI</videoid>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Galaxy%20Fighter%20(USA,%20Europe).png</boxart1>
+		<boxart3>O3xUY5B.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Galaxy%20Fighter%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Galaxy%20Fighter%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>5gSWABW.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/ff4fe1b3-60c2-4f53-ba7d-17f2d163cea9.png</clearlogo1>
+		<genre>Shooter</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Grand Prix (USA, Europe)">
+		<description>Grand Prix (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Grand%20Prix%20%28USA%2C%20Europe%29.zip" size="27601"/>
+		<plot>Grand Prix is a simple F1 racing game for one player. The player's car has a turbo boost that can be used to pass other vehicles. The goal is simply to win each race by coming in first, continuing on to the next course. There are eight courses in total, each taking place in a different country.</plot>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Grand%20Prix%20(USA,%20Europe).png</boxart1>
+		<boxart3>https://images.launchbox-app.com/d7f6d8a5-3a64-4b78-8539-216fc9766f92.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Grand%20Prix%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Grand%20Prix%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/e1062daa-afb3-4b70-968e-dbf42aede982.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/e951b966-05e3-45f5-bc32-6354ff0f836d.png</clearlogo1>
+		<genre>Driving,Racing</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Happy Pairs (USA, Europe)">
+		<description>Happy Pairs (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Happy%20Pairs%20%28USA%2C%20Europe%29.zip" size="35089"/>
+		<plot>[I]Happy Pairs[/I] is a tile-matching puzzle game based on the Japanese game [I]Shisenshō[/I]. Similar to the well-known Shanghai, the object is to remove tiles from the board in matching pairs until the entire board is clear. Pairs can only be removed if they can be connected by a line with no more than two turns. The game is timed, and if the time runs out, the puzzle must be restarted. It is also possible to have the computer find a match for you, but this can only be done a limited number of times. The game includes more than a dozen different backgrounds, each representing a different location around the world, and several dozen different puzzle layouts to solve.</plot>
+		<studio>Sachen</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Happy%20Pairs%20(USA,%20Europe).png</boxart1>
+		<boxart3>VWZWZhT.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Happy%20Pairs%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Happy%20Pairs%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>oUrDHFu.png</snapshot3>
+		<clearlogo1>2Zl1lvT.png</clearlogo1>
+		<groups>1G1R,Genre: Card / Tile game - Shisen-Sho / Four Rivers</groups>
+	</game>
+	<game name="Happy Race (USA, Europe)">
+		<description>Happy Race (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Happy%20Race%20%28USA%2C%20Europe%29.zip" size="20955"/>
+		<plot>[I]Happy Race[/I] is a top-down arcade driving game, strikingly similar to Namco's Rally-X sans the scrolling. Each stage consists of an assortment of passageways, obstacles, and flags; the goal of each stage is to collect all of the flags. Impeding the player are a pair of enemy buggies which will chase the player, but it is possible to use part of the car's fuel reserves to kick up dust clouds that will stun the enemies. There are several bonus flags on each stage, and also many bonus food items that will appear randomly and aware extra points. The game offers three difficulty settings.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Sachen</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Happy%20Race%20(USA,%20Europe).png</boxart1>
+		<boxart3>27VMTZn.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Happy%20Race%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Happy%20Race%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>1p1eCw9.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/dbf13d95-fdd7-4569-9c87-80f452dd010e.png</clearlogo1>
+		<genre>Racing</genre>
+		<groups>1G1R,Rally-X variants</groups>
+	</game>
+	<game name="Hash Blocks (USA, Europe)">
+		<description>Hash Blocks (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Hash%20Blocks%20%28USA%2C%20Europe%29.zip" size="11059"/>
+		<plot>Hash Blocks is a falling-blocks puzzle game similar to Columns. Blocks fall in sets of three from the top of the well, and can be cycled and rotated freely. If four blocks of the same type are lined up horizontally, vertically, or diagonally, they are cleared and removed from the playfield, causing any blocks above them to fall into the open space. If the blocks reach the top of the screen, the game is over.[CR]The game includes two modes. Normal mode tasks the player with clearing a certain number of blocks before the playfield fills up. Flash mode requires the player to clear a specific, flashing block, which may be buried under multiple other blocks. Both modes offer three levels of difficulty, as well as multiple different block graphic sets to use.</plot>
+		<studio>GTC</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<videoid>wBkSBLPT3bI</videoid>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Hash%20Blocks%20(USA,%20Europe).png</boxart1>
+		<boxart3>oAseNTR.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Hash%20Blocks%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Hash%20Blocks%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>S3o738Y.png</snapshot3>
+		<clearlogo1>d3zNUfs.png</clearlogo1>
+		<genre>Puzzle</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Hero Hawk (USA, Europe)">
+		<description>Hero Hawk (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Hero%20Hawk%20%28USA%2C%20Europe%29.zip" size="34442"/>
+		<plot>Hero Hawk is a top-down action game similar to Sega's Crack Down, in which the player must infiltrate enemy strongholds and plant bombs at certain locations. Each mission is divided into interconnected rooms, which each contain various hazards, enemy soldiers, item containers, and of course bomb markers. When all bombs on a stage have been planted, the boss area opens up, and the player must defeat the boss to complete the mission.[CR]There are a large variety of items that can be found within missions. Food will refill the player's life, grenades will grant an extra screen-clearing bomb, ammunition will let the player shoot faster, boots will increase walking speed, and the ever-useful SuperVision console will let the player access a map of the stage, which indicates which rooms still need bombs placed. However, if the player takes too many hits and dies, all power-ups are lost. There are only a limited number of continues.</plot>
+		<studio>Thin Chen Enterprise</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<videoid>G6JHmvAjfOM</videoid>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Hero%20Hawk%20(USA,%20Europe).png</boxart1>
+		<boxart3>pKlM6p2.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Hero%20Hawk%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Hero%20Hawk%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>9i6xrWa.png</snapshot3>
+		<clearlogo1>CtdpomN.png</clearlogo1>
+		<genre>Shooter</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Hero Kid (USA, Europe)">
+		<description>Hero Kid (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Hero%20Kid%20%28USA%2C%20Europe%29.zip" size="19827"/>
+		<plot>[I]Hero Kid[/I] is a side-scrolling platform game starring a young man who must rescue his girlfriend. Each stage scrolls from left to right, and is filled with enemies and obstacles that must be overcome. Hero Kid's energy is continually depleting, and he must collect fruit to replenish it. The many enemies in his way are quite deadly, and will kill our hero in only one hit. However, it is also possible to gain the ability to throw hammers to destroy enemies by collecting floating hearts. Hero Kid only has three lives, and if he runs out, he is sent back to the beginning of the current area.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Watara</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Hero%20Kid%20(USA,%20Europe).png</boxart1>
+		<boxart3>lsKcULw.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Hero%20Kid%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Hero%20Kid%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>rOVmeWJ.png</snapshot3>
+		<clearlogo1>hDjjAQ6.png</clearlogo1>
+		<genre>Action,Adventure</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Honey Bee (USA, Europe)">
+		<description>Honey Bee (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Honey%20Bee%20%28USA%2C%20Europe%29.zip" size="26337"/>
+		<plot>Honey Bee is a vertically-scrolling shooter that bears a striking similarity to Konami's TwinBee. The player controls a cute-looking ship with arms and legs, which can fire both at flying enemies and ground-based enemies. Destroyed ground enemies will drop hearts that give points, and it is also possible to shoot clouds to release items which will also give additional points. There are no power-ups to increase the ship's firepower. At the end of each stage, there is a boss that must be destroyed in order to continue.</plot>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Other - NR (Not Rated)</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Honey%20Bee%20(USA,%20Europe).png</boxart1>
+		<boxart2>https://images.launchbox-app.com/d15b8877-bfee-41fc-8dd5-a9cdf4e899c9.jpg</boxart2>
+		<boxart3>https://images.launchbox-app.com/df6bc12b-a911-4fc8-8a29-b67c3d50cf2b.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Honey%20Bee%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Honey%20Bee%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/c5c8cf1b-2ae2-4054-ad17-86e75a0063e4.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/456e0e39-7b48-4a88-b64d-612bf4d40d86.png</clearlogo1>
+		<genre>Shooter</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Jacky Lucky (USA, Europe)">
+		<description>Jacky Lucky (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Jacky%20Lucky%20%28USA%2C%20Europe%29.zip" size="16706"/>
+		<plot>Jacky Lucky is a side-scrolling platformer starring a man who carries a big stick. The player controls this man as he makes his way through each stage filled with enemies, most of which can be defeated with the stick but will also defeat our hero in a single hit, as well as destructible blocks that contain various items, including limited amounts of projectiles that can be thrown at enemies. At the end of each stage is a boss that must be defeated. There is also a bonus game between stages where the player can trade any coins they found for extra lives.</plot>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Jacky%20Lucky%20(USA,%20Europe).png</boxart1>
+		<boxart3>YU90sq6.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Jacky%20Lucky%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Jacky%20Lucky%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>EDCgcAe.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/f4541001-a620-47d8-aefd-a68253e379b4.png</clearlogo1>
+		<genre>Platform</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Jaguar Bomber (USA, Europe)">
+		<description>Jaguar Bomber (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Jaguar%20Bomber%20%28USA%2C%20Europe%29.zip" size="19701"/>
+		<plot>Jaguar Bomber is a vertically-scrolling shooter where the player pilots a fighter jet against an invading alien army. Various types of enemies attack from all sides, and the player must avoid their attacks and destroy as many as possible. The game is very straightforward, and there are no power-ups to increase the ship's firepower. At the end of each stage, there is a large boss that must be destroyed to proceed.</plot>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Jaguar%20Bomber%20(USA,%20Europe).png</boxart1>
+		<boxart3>SKiBnca.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Jaguar%20Bomber%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Jaguar%20Bomber%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>b5vjv1M.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/df6e2957-5194-492a-95b8-b5fa240045b8.png</clearlogo1>
+		<genre>Shooter</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="John Adventure (USA, Europe)">
+		<description>John Adventure (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/John%20Adventure%20%28USA%2C%20Europe%29.zip" size="21878"/>
+		<plot>John Adventure is a falling-block puzzle game cloned from Dr. Mario. Each stage presents the player with a bottle filled with dancing objects that must be destroyed. Pairs of pieces fall from the top of the bottle; line four of the same color in a row to cause them to disappear. Destroy all the target pieces to clear the stage, but reach the top of the bottle and it's game over! There are 20 stages and three play speeds available.</plot>
+		<studio>Sachen</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/John%20Adventure%20(USA,%20Europe).png</boxart1>
+		<boxart3>t5wEFmB.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/John%20Adventure%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/John%20Adventure%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>AGWwAGp.png</snapshot3>
+		<snapshot4>vYD8vDB.png</snapshot4>
+		<clearlogo1>https://images.launchbox-app.com/e89ef37f-a576-4227-9fd4-ee0fcbae0ff4.png</clearlogo1>
+		<genre>Puzzle</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Journey to the West (USA)">
+		<description>Journey to the West (USA)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Journey%20to%20the%20West%20%28USA%29.zip" size="158554"/>
+		<studio>TXC Corp</studio>
+		<nplayers>1</nplayers>
+		<videoid>su_gB1WRtNg</videoid>
+		<boxart3>https://images.launchbox-app.com/281a7ec8-a831-43ec-a09e-550c25697ef5.jpg</boxart3>
+		<snapshot1>https://images.launchbox-app.com/a347f9c3-3210-4296-afa2-135968d96fe2.png</snapshot1>
+		<snapshot2>https://images.launchbox-app.com/1fba08f5-0925-496a-bd2b-1b975e6aeb16.png</snapshot2>
+		<genre>Action,Platform,RPG</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Juggler (USA, Europe)">
+		<description>Juggler (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Juggler%20%28USA%2C%20Europe%29.zip" size="19555"/>
+		<plot>Juggler is an action game where the player controls a magician who can create large floating bubbles. The object of the game is to keep the bubble bouncing long enough for it to grow larger, then pop it to cause pieces to fall on the enemies wandering each stage. Defeated enemies will release power-ups, but the magician must also be careful to keep away from the enemies, as one hit will knock him out.</plot>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Juggler%20(USA,%20Europe).png</boxart1>
+		<boxart3>npAtdKg.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Juggler%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Juggler%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>cyjGGRs.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/d15b92b9-71ef-4f2c-99f9-aaff5b656509.png</clearlogo1>
+		<genre>Platform</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Kabi Island - Gold in Island (USA, Europe)">
+		<description>Kabi Island - Gold in Island (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Kabi%20Island%20-%20Gold%20in%20Island%20%28USA%2C%20Europe%29.zip" size="28456"/>
+		<plot>Kabi-Island is a top-down action game that plays like Bomberman. Each stage is filled with blocks and enemies, both of which can be blown up using bombs. Blocks may contain power-ups -- such as power boosts, additional bombs, speed shoes, or remote bombs -- or one of the gold bars that are needed to complete each stage. The goal of each stage is to collect enough gold bars, which will end the stage immediately. Enemies can be defeated with a single bomb blast, but can also defeat the hero just as easily. The game includes five different worlds, each with their own enemy types and setting.</plot>
+		<studio>Thin Chen Enterprise</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<videoid>jnsHkD1AvgI</videoid>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Kabi%20Island%20-%20Gold%20in%20Island%20(USA,%20Europe).png</boxart1>
+		<boxart3>wOVlrLw.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Kabi%20Island%20-%20Gold%20in%20Island%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Kabi%20Island%20-%20Gold%20in%20Island%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>3Z2my6y.png</snapshot3>
+		<clearlogo1>A6sQsP3.png</clearlogo1>
+		<genre>Action</genre>
+		<groups>1G1R,Dynablaster/Bomberman variants</groups>
+	</game>
+	<game name="Kitchen War (USA, Europe)">
+		<description>Kitchen War (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Kitchen%20War%20%28USA%2C%20Europe%29.zip" size="15798"/>
+		<plot>Kitchen War is an arcade platform game with a food theme. The player controls a tomato chef whose kitchen has become overrun by insects and other vermin. Using weapons such as plates, forks, and ladles -- found in rooms through out the kitchen -- the player must defeat enough of a certain type of pest, such as a snail, spider, or mouse, to proceed to the next stage. Touching enemies will hurt the chef, though he can recover by finding bottles of ketchup which are also hidden within the rooms. Each weapon can only be used a certain number of times before another must be found.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Kitchen%20War%20(USA,%20Europe).png</boxart1>
+		<boxart3>vfJuWYg.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Kitchen%20War%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Kitchen%20War%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>zTVyHZu.png</snapshot3>
+		<clearlogo1>nW9dgKv.png</clearlogo1>
+		<genre>Action,Platform</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Kung-Fu Street (USA, Europe)">
+		<description>Kung-Fu Street (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Kung-Fu%20Street%20%28USA%2C%20Europe%29.zip" size="17604"/>
+		<plot>Kung-Fu Street is a 1-on-1 martial arts fighting game very similar to Konami's Yie Ar Kung-Fu. The game plays similarly to the NES version of Konami's classic, offering punches and kicks at two different heights, plus flying jump kicks and wall bounces. A variety of different opponents must be defeated, including a ninja, a fencer, and a boxer, who each have their own fighting styles and techniques. If the player loses too many bouts, the game is over with no option to continue.</plot>
+		<studio>Thin Chen Enterprise</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<videoid>CeaLF9slCcA</videoid>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Kung-Fu%20Street%20(USA,%20Europe).png</boxart1>
+		<boxart3>uLlrQN1.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Kung-Fu%20Street%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Kung-Fu%20Street%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>f9drxvo.png</snapshot3>
+		<snapshot4>F9BRyzX.png</snapshot4>
+		<clearlogo1>XqQokc1.png</clearlogo1>
+		<genre>Fighter</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Linear Racing (USA, Europe)">
+		<description>Linear Racing (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Linear%20Racing%20%28USA%2C%20Europe%29.zip" size="16737"/>
+		<plot>Linear Racing is a video puzzle game. A short animation is shown, then scrambled into 16 tiles, which must be rearranged to recreate the original image. Tiles may be swapped around, as well as flipped vertically or horizontally, to rebuild the animation. There are six different animations to choose from, and three difficulty settings for each.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Watara</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Linear%20Racing%20(USA,%20Europe).png</boxart1>
+		<boxart3>x4CkXCd.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Linear%20Racing%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Linear%20Racing%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/da58dc36-9bc2-48d1-9cc5-32825cfc7cd3.png</snapshot3>
+		<snapshot4>c99mTVz.jpg</snapshot4>
+		<clearlogo1>FwYdk5F.png</clearlogo1>
+		<genre>Puzzle</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Magincross (USA, Europe)">
+		<description>Magincross (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Magincross%20%28USA%2C%20Europe%29.zip" size="28839"/>
+		<plot>In A.D. 2X00 alien Saya Empire secretly built a "Time space" Frontier Post on the Moon, intentionally intrude the earth... In order to defeat the alien's intrusion, the Earth Defense Arms has launched an unprecedented outer space war with the alien Saya Empire..."[CR]Magincross is a horizontally-scrolling space shooter. The player shoots down waves of alien ships until the boss of each stage is reached. Instead of the usual lives system in most shooters, the player's ship instead has a power bar, which will deplete when the player takes a hit, but can be replenished by collecting power-ups that occasionally appear. After defeating the stage boss, the player moves on to the next stage. There are three stages total.</plot>
+		<studio>Thin Chen Enterprise</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<videoid>ORqmL0ubYc0</videoid>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Magincross%20(USA,%20Europe).png</boxart1>
+		<boxart3>j1rH6vS.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Magincross%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Magincross%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>8JBWGVm.png</snapshot3>
+		<clearlogo1>33vJ3Kl.png</clearlogo1>
+		<genre>Shooter</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Majong (USA, Europe)">
+		<description>Majong (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Majong%20%28USA%2C%20Europe%29.zip" size="21547"/>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Matta Blatta (USA, Europe)">
+		<description>Matta Blatta (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Matta%20Blatta%20%28USA%2C%20Europe%29.zip" size="20211"/>
+		<plot>[I]Matta Blatta[/I] is a simple side-scrolling shoot-'em'-up. The player controls a space ship traveling down a long corridor against endless waves of erratically-moving enemies. Each wave consists of a different type of enemy with a different movement and firing pattern. There are two types of power-ups that appear; one will increase the ship's firepower and movement speed, while the other will grant a temporary shield.</plot>
+		<studio>BIITS</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Matta%20Blatta%20(USA,%20Europe).png</boxart1>
+		<boxart3>itDzIM3.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Matta%20Blatta%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Matta%20Blatta%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/e3ec2a80-d562-49c6-bf58-1c653ff1e790.png</snapshot3>
+		<snapshot4>pwFMsqm.png</snapshot4>
+		<clearlogo1>bx6V74a.png</clearlogo1>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Olympic Trials (USA, Europe)">
+		<description>Olympic Trials (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Olympic%20Trials%20%28USA%2C%20Europe%29.zip" size="26408"/>
+		<plot>Olympic Trials is a track and field sports game for up to four players. The game features six events: Hurdles, Long Jump, Archery, Shot Put, Rowing, and Cycling. It is possible to choose a single event, or to play all six events in order. Success in each game is determined by either quick button mashing, rhythm, or precise timing.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Bits Studios</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Olympic%20Trials%20(USA,%20Europe).png</boxart1>
+		<boxart3>YIlkCnY.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Olympic%20Trials%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Olympic%20Trials%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>zga8mJN.png</snapshot3>
+		<clearlogo1>wWFuHkL.png</clearlogo1>
+		<genre>Driving,Sports</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="P-52 Sea Battle (USA, Europe)">
+		<description>P-52 Sea Battle (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/P-52%20Sea%20Battle%20%28USA%2C%20Europe%29.zip" size="15975"/>
+		<plot>[I]P52 Sea Battle[/I] is an arcade naval battle game with four types of targets: Destroyer, Torpedo (Submarines), Aircraft (Carrier), and Cruiser. Choosing either a British, American, or USSR sub, the goal is to destroy all the given targets without running out of torpedoes or being sunk. There are four difficulty levels of each mode available, and clearing missions will earn points which can be used to purchase upgrades for the player's sub, including stronger armor and higher torpedo capacity.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Watara</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/P-52%20Sea%20Battle%20(USA,%20Europe).png</boxart1>
+		<boxart3>gXBO6nw.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/P-52%20Sea%20Battle%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/P-52%20Sea%20Battle%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>iXRS3s6.png</snapshot3>
+		<clearlogo1>Fmyh4pT.png</clearlogo1>
+		<genre>Action,Adventure,Driving</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="PacBoy &amp; Mouse (USA, Europe)">
+		<description>PacBoy &amp; Mouse (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/PacBoy%20%26%20Mouse%20%28USA%2C%20Europe%29.zip" size="16288"/>
+		<plot>[I]Pacboy and Mouse[/I] in an arcade action game similar to Pengo. A young boy's lady friend has been accosted by mice, and it's up to him to catch them. The player controls the boy in a maze made up of blocks, which can be kicked to make them slide. The goal is to use the blocks to crush all the mice on the stage, but if the player takes too long more mice will appear. It is also possible to kick the walls, which will stun any mice next to that wall. Touching a mouse directly will cause the player to lose a life. Once all the mice have been killed, the player moves on to the next stage.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Watara</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://images.launchbox-app.com/f370ac64-43f4-4d06-a77c-c295a9a7b924.png</boxart1>
+		<boxart3>UqQEBfw.png</boxart3>
+		<snapshot1>Ric0Ng8.png</snapshot1>
+		<snapshot2>W2FGYgI.png</snapshot2>
+		<clearlogo1>Ilkq97M.png</clearlogo1>
+		<genre>Action,Adventure</genre>
+		<groups>1G1R,Pengo variants</groups>
+	</game>
+	<game name="Pacific Battle (USA, Europe)">
+		<description>Pacific Battle (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Pacific%20Battle%20%28USA%2C%20Europe%29.zip" size="23189"/>
+		<plot>Pacific Battle is a turn-based naval tactics game. The player controls a fleet of ships and aircraft, including submarines, destroyers, and fighter jets, against a similarly-equipped enemy fleet on a tile-based map. Each unit type has different abilities and attacks; jets for example are quick and capable of long-range attack, but have little armor and are weak to gunfire, while submarines are invisible except to submarines, and are effective against surface ships. The goal of each map is to destroy the enemy fleet while keeping the player's fleet intact. It is only possible to play against the computer, and the game is saved with passwords.</plot>
+		<studio>Bon Treasure</studio>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Pacific%20Battle%20(USA,%20Europe).png</boxart1>
+		<boxart3>Tbpm79B.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Pacific%20Battle%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Pacific%20Battle%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>fwo2iC8.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/f9ef1955-6660-44b4-ab8c-42bf0d660480.png</clearlogo1>
+		<genre>Driving,Strategy</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Penguin Hideout (USA, Europe)">
+		<description>Penguin Hideout (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Penguin%20Hideout%20%28USA%2C%20Europe%29.zip" size="23625"/>
+		<plot>Basically Pengo with a few twists. As a penguin, you must bring diamonds to the goal area and kick them through while avoiding seals. You can kick snowballs and ice blocks to stop them but they'll always come back soon. Unlike Pengo, there are no walls to kick.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Thin Chen Enterprise</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<videoid>gOaSgzJaCYc</videoid>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Penguin%20Hideout%20(USA,%20Europe).png</boxart1>
+		<boxart3>yvwtrd6.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Penguin%20Hideout%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Penguin%20Hideout%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>rc6Y89y.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/f5a94e21-e60e-45af-bfdd-f42f5bae8708.png</snapshot4>
+		<clearlogo1>7e0KvjK.png</clearlogo1>
+		<genre>Action</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Police Bust (USA, Europe)">
+		<description>Police Bust (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Police%20Bust%20%28USA%2C%20Europe%29.zip" size="12997"/>
+		<plot>Police Bust is a dot-collecting maze game in the tradition of Pac-Man. The player controls a fugitive who is being chased by two police officers. He must collect all the dots strewn about a maze while avoiding capture. To aid in the escape, the player has access to barriers which will block the officers' path, as well as bombs which will stun them for a short time, but both items are in limited supply. Collect all the dots to move on to the next stage.</plot>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<videoid>ldBDAkmjNpw</videoid>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Police%20Bust%20(USA,%20Europe).png</boxart1>
+		<boxart3>n8t5mST.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Police%20Bust%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Police%20Bust%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>BFdlGzn.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/db94ca61-b5e9-417b-8422-21d3579acf6e.png</clearlogo1>
+		<genre>Action</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Popo Team (USA, Europe)">
+		<description>Popo Team (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Popo%20Team%20%28USA%2C%20Europe%29.zip" size="34737"/>
+		<plot>[I]Popo Team[/I] is an arcade-style action game similar to Anteater or Oil's Well. The player controls a curiously-sentient underground pump which must collect food and objects hidden within a variety of mazes. There are various objects that move around the maze to help or hinder the player: food items can be eaten for bonus points; creatures can be eaten with the head, but will kill the player if they touch the body; and bombs are harmless to the body, but will kill the head if eaten. The only controls are to extend the head in an open direction, and to quickly retract the tube to the surface.</plot>
+		<studio>Sachen</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Popo%20Team%20(USA,%20Europe).png</boxart1>
+		<boxart3>https://images.launchbox-app.com/d733dc39-7a29-43dc-a3bc-12d7f445a5ec.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Popo%20Team%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Popo%20Team%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>5FtLY8z.png</snapshot3>
+		<clearlogo1>https://images.launchbox-app.com/f1cddbf8-4747-4f1f-82ce-c272d73f3741.png</clearlogo1>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Pyramid (USA, Europe)">
+		<description>Pyramid (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Pyramid%20%28USA%2C%20Europe%29.zip" size="13489"/>
+		<plot>[I]Pyramid[/I] is a real-time puzzle game similar to Tetris. Stones of various shapes and sizes fall from the top of the screen, and you need to move and rotate the stones so they fill complete lines at the bottom of the screen. Should the stones reach the top of the screen the game is over. If you get in trouble, there are a limited number of bombs that can be used to clear a small section of stones at the bottom hopefully giving you more room to work with. Unlike the square and rectangular shaped pieces found in [I]Tetris[/I], each of the shapes in [I]Pyramid[/I] have one or more angles to them making complete lines more difficult to form.</plot>
+		<studio>Thin Chen Enterprise</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Pyramid%20(USA,%20Europe).png</boxart1>
+		<boxart3>Uhhg5cR.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Pyramid%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Pyramid%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>jxTTisM.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/dcc7224f-0c3d-4356-8874-b6b13bd52ec5.png</snapshot4>
+		<clearlogo1>lbHhUiQ.png</clearlogo1>
+		<groups>1G1R,Setting: Egyptian</groups>
+	</game>
+	<game name="Recycle Design (USA, Europe)">
+		<description>Recycle Design (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Recycle%20Design%20%28USA%2C%20Europe%29.zip" size="14868"/>
+		<plot>Recycle Design is a clone of the popular puzzle game Pipe Dream. The player controls a plumber who must connect two ends of a pipe before the water within overflows. The player can place pipe tiles on the screen toward this end, though each piece of pipe costs money which must also be collected on each stage. There are several other differences from the game's inspiration: there are no cross pieces, the only penalty for replacing a piece is the cost of the pipe, two different pipe pieces are held at any time, and there are also rocks which can be pushed around that playfield that will block the path and destroy pipes.</plot>
+		<studio>Bon Treasure</studio>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Recycle%20Design%20(USA,%20Europe).png</boxart1>
+		<boxart3>5TW7Hp6.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Recycle%20Design%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Recycle%20Design%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>bo0RTNn.png</snapshot3>
+		<clearlogo1>uO4d66u.png</clearlogo1>
+		<genre>Puzzle</genre>
+		<groups>1G1R,Pipe Dream / Pipe Mania variants</groups>
+	</game>
+	<game name="SSSnake (USA, Europe)">
+		<description>SSSnake (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/SSSnake%20%28USA%2C%20Europe%29.zip" size="22741"/>
+		<plot>Sssnake is a basic Snake game. The player controls a snake in a small room filled with food and obstacles. The goal is to eat all the food while avoiding the obstacles, but whenever the snake eats a piece of food, it grows longer, making it more difficult to maneuver. The snake moves forward at a constant speed and can be turned in the four cardinal directions. Holding a button will make the snake move faster, making it harder to control, but increasing the potential for a time bonus.[CR]In this particular version, there are a number of apples on each stage. When an apple is eaten, it disappears, and an apple core appears elsewhere on the stage, and when the apple core is eaten, a deadly skull appears somewhere else. The player must eat all of the apples and apple cores in one run; they will all be reset if the snake touches an obstacle. The player will also earn bonus points if all the normal apples are eaten before any apple core is eaten.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>BITS</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/SSSnake%20(USA,%20Europe).png</boxart1>
+		<boxart3>GdjTL56.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/SSSnake%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/SSSnake%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>dZuyM4H.png</snapshot3>
+		<snapshot4>2HLsrBZ.jpg</snapshot4>
+		<clearlogo1>p6jL8GQ.png</clearlogo1>
+		<genre>Puzzle</genre>
+		<groups>1G1R,Animals: Snakes,Snake variants</groups>
+	</game>
+	<game name="Scaffolder (USA, Europe)">
+		<description>Scaffolder (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Scaffolder%20%28USA%2C%20Europe%29.zip" size="12714"/>
+		<plot>Scaffolder is a block puzzle game. Each puzzle consists of a set of blocks, which must be disassembled so that every block lies directly on the floor. The blocks are fragile, and if they fall more than one tile at a time, they will break and the puzzle will be failed. The player controls a man who can push and pull these blocks, as well as jump around the stage, who must also be careful not to let himself be crushed by the blocks. There are two different modes: beginner mode features relatively easy puzzles with no time limit, while skilled mode includes harder puzzles that must be completed within a time limit. Game progress is saved using passwords.</plot>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Scaffolder%20(USA,%20Europe).png</boxart1>
+		<boxart3>LGhJQQp.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Scaffolder%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Scaffolder%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>FL7J42n.png</snapshot3>
+		<clearlogo1>kblnkq2.png</clearlogo1>
+		<genre>Puzzle</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Soccer Champion (USA, Europe)">
+		<description>Soccer Champion (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Soccer%20Champion%20%28USA%2C%20Europe%29.zip" size="17896"/>
+		<plot>[I]Soccer Champion[/I] is an overhead-view soccer game for one player. The player automatically controls the player closest to the ball, or the goalkeeper when he is visible. There are eight national teams to choose from, and two different modes. Exercise mode is a regular exhibition match against the computer, while Champion mode is a tournament where the player must defeat all the other teams in sequence. It is possible to choose between a three-minute, five-minute, and eight-minute game.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Watara</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Soccer%20Champion%20(USA,%20Europe).png</boxart1>
+		<boxart3>Ge4GKBT.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Soccer%20Champion%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Soccer%20Champion%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>DZvHHEC.png</snapshot3>
+		<clearlogo1>WJtA3kP.png</clearlogo1>
+		<genre>Sports</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Sonny X'Press (USA, Europe)">
+		<description>Sonny X'Press (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Sonny%20X%27Press%20%28USA%2C%20Europe%29.zip" size="24247"/>
+		<plot>[I]Sonny Xpress[/I] is a mail-delivery action game starring the titular Sonny, a monkey who rides a moped. The player controls Sonny as he rides around town delivering packages. To do so, he must first go to the post office and pick up a package, then check the map for his destination, and then finally ride there and make the delivery before starting over again. He must also be mindful of his surroundings, as there are dangerous cars and many other obstacles, and one hit will wreck his ride.[CR]Delivering packages earns money, which must be deposited in the bank in order to save it. Money can also be used to refuel the moped, and also to pay traffic fines at the police office. Ignoring traffic signs such as red lights and stop signs will land Sonny with a stiff fine that must be repaid.</plot>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Space Fighter (USA, Europe)">
+		<description>Space Fighter (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Space%20Fighter%20%28USA%2C%20Europe%29.zip" size="25083"/>
+		<plot>Space Fighter is an action shooting game starring a team of three robot soldiers, who must defend their cities from an enemy robot army. Each stage consists of a small scrolling top-down map filled with enemy robots. The player must shoot and destroy a certain number of enemies on each stage in order to move on to the next.[CR]There are three different robots to choose from, each with their own different abilities. HUNT is the quickest, but can only shoot straight forward; DALE is the slowest but has a powerful spread shot; and OWEN is average pm speed, but can fire in four directions simultaneously. On each stage, there is also a base that can be used to switch robots and refill their energy.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Space%20Fighter%20(USA,%20Europe).png</boxart1>
+		<boxart3>qK57ZFw.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Space%20Fighter%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Space%20Fighter%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>Mo9Yk0V.png</snapshot3>
+		<snapshot4>1QSRVNv.jpg</snapshot4>
+		<clearlogo1>S1AcYiW.png</clearlogo1>
+		<genre>Action,Shooter</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Super Block (USA, Europe)">
+		<description>Super Block (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Super%20Block%20%28USA%2C%20Europe%29.zip" size="10513"/>
+		<plot>Super Block is a collection of three block puzzle games:[CR]1) Play Block is a clone of Flipull. The objective is to launch blocks at other blocks with matching patterns to clear them from the field. Clear enough blocks without running out of moves to move to the next stage.[CR]2)Fill Block is a clone of Quarth. Groups of blocks fall from the top of the screen, and the objective is to shoot additional blocks at them to create rectangles, causing the blocks to clear. If a block passes the line at the bottom of the screen, the game is over.[CR]3) Hit Block is a mixture of the two other games. Blocks of varying types fall from the top of the screen, and the player must launch a matching block at it to remove it from play. Launching the wrong type will add it to the stack. If a block passes the line at the bottom of the screen, the game is over.</plot>
+		<releasedate>12/04/2020</releasedate>
+		<year>2020</year>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Super%20Block%20(USA,%20Europe).png</boxart1>
+		<boxart3>Dw0BTpF.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Super%20Block%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Super%20Block%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>wmJ1WDV.png</snapshot3>
+		<clearlogo1>LMnvCeb.png</clearlogo1>
+		<genre>Puzzle</genre>
+		<groups>1G1R,Plotting variants</groups>
+	</game>
+	<game name="Super Kong (USA, Europe)">
+		<description>Super Kong (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Super%20Kong%20%28USA%2C%20Europe%29.zip" size="32024"/>
+		<plot>Super Kong is a simple action game that plays like a cross between Pooyan and Donkey Kong 3. The titular Super Kong slowly climbs a vine on the left edge of the screen, while the player controls a young child on a vine at the right edge. The object is to throw balls at Kong to knock him down the vine, ultimately knocking him out at the bottom. However, many obstructions fall from the top of the screen, and Kong himself can throw a large projectile that can knock the child out, losing a life. There are a handful of power-ups to assist the player, and it is also possible to jump off the vine to avoid Kong's attacks. The game includes three stages of increasing difficulty.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Thin Chen Enterprise</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<videoid>XQymQcQ29_s</videoid>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Super%20Kong%20(USA,%20Europe).png</boxart1>
+		<boxart3>nyjLNdE.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Super%20Kong%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Super%20Kong%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/cc492149-0d51-4f34-9d4a-6285f6f2e3d9.png</snapshot3>
+		<snapshot4>kmTrjMH.png</snapshot4>
+		<clearlogo1>TOTWBU4.png</clearlogo1>
+		<genre>Action</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Super Pang (USA, Europe)">
+		<description>Super Pang (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Super%20Pang%20%28USA%2C%20Europe%29.zip" size="27993"/>
+		<plot>[I]Super Pang[/I] is a clone of the arcade game of the same title. The premise is simple: there are balloons bouncing around a room, and you must shoot and destroy them without getting hit. However, it's not that simple; when shot, the balloons will split into two smaller balloons, and only the smallest size will be destroyed when hit. There are several power-ups that will randomly appear to aid the player, including long-lasting shots, quick-fire shots, and scrolls that instantly reduce all balloons on the screen to the smallest size. Pop enough balloons to move onto the next stage.</plot>
+		<studio>Sachen</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Super%20Pang%20(USA,%20Europe).png</boxart1>
+		<boxart3>jcnJz6o.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Super%20Pang%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Super%20Pang%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>vOfFRSN.png</snapshot3>
+		<clearlogo1>EFxrRl4.png</clearlogo1>
+		<groups>1G1R,Pang variants</groups>
+	</game>
+	<game name="TV-Link (USA, Europe)">
+		<description>TV-Link (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/TV-Link%20%28USA%2C%20Europe%29.zip" size="2596"/>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/TV-Link%20(USA,%20Europe).png</snapshot1>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Tasac 2010 (USA, Europe)">
+		<description>Tasac 2010 (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Tasac%202010%20%28USA%2C%20Europe%29.zip" size="32652"/>
+		<plot>[I]Tasac 2010[/I] is a vertically-scrolling space shoot-'em-up game. The player controls a high-powered space fighter through ten stages, which each consist of several waves of smaller enemies followed by a large boss that must be destroyed. There are several power-ups to increase the ship's power, but one hit will destroy it causing all upgrades to be lost. There are two different shot types, and ten stages in total.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Thin Chen Enterprise</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Tasac%202010%20(USA,%20Europe).png</boxart1>
+		<boxart3>YG5isMY.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Tasac%202010%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Tasac%202010%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>iQ1lfiE.png</snapshot3>
+		<clearlogo1>aye95F7.png</clearlogo1>
+		<genre>Shooter</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Tennis Pro '92 (USA, Europe)">
+		<description>Tennis Pro '92 (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Tennis%20Pro%20%2792%20%28USA%2C%20Europe%29.zip" size="24096"/>
+		<plot>Tennis Pro '92 is a sports game developed by Bits Studios and was released for Watara Supervision on 12/30/1992</plot>
+		<releasedate>30/12/1992</releasedate>
+		<year>1992</year>
+		<studio>BITS</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<videoid>sJ2pVE-pVfk</videoid>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Tennis%20Pro%20'92%20(USA,%20Europe).png</boxart1>
+		<boxart3>etISmwr.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Tennis%20Pro%20'92%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Tennis%20Pro%20'92%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>LuRaqjw.png</snapshot3>
+		<snapshot4>8JldBBu.jpg</snapshot4>
+		<clearlogo1>22cvQZL.png</clearlogo1>
+		<genre>Sports</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Thunder Shooting (USA, Europe)">
+		<description>Thunder Shooting (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Thunder%20Shooting%20%28USA%2C%20Europe%29.zip" size="49261"/>
+		<plot>In the enormous galaxy, there are many stars facing the crisis of overpopulation. For example, the Alexander Empire is typical nation. To resolve this problem, Alexander is launching 4 fleets and looking for the heaven in the legend: 'The Earth'.[CR]Thunder Shooting is a side-scrolling space shooter. The player controls an advanced starfighter, blasting through waves of enemy ships and asteroids. Numerous power-ups appear throughout each stage, which will upgrade or change the player's weaponry, or alter the behavior of the ship's options. At the end of each stage, there is a boss that must be destroyed. It is possible to choose from any of the four stages in order.</plot>
+		<studio>Thin Chen Enterprise</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Thunder%20Shooting%20(USA,%20Europe).png</boxart1>
+		<boxart3>KVEcI8z.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Thunder%20Shooting%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Thunder%20Shooting%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>https://images.launchbox-app.com/fe1cd582-9975-411a-8387-20eb667f4615.png</snapshot3>
+		<snapshot4>https://images.launchbox-app.com/ee68d705-4cd9-491b-aef6-b70abfca6b83.png</snapshot4>
+		<clearlogo1>3Qe0r3n.png</clearlogo1>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Treasure Hunter (USA, Europe)">
+		<description>Treasure Hunter (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Treasure%20Hunter%20%28USA%2C%20Europe%29.zip" size="11481"/>
+		<plot>Treasure Hunter is a basic Boulder Dash clone. The player controls an explorer who digs through an underground cave in search of treasure. Each stage contains a number of boulders and treasures. Boulders will fall downward if there is nothing supporting them, and the player must be careful not to get crushed or trapped. The goal is to collect a certain number of treasures, which will open the gate to the next stage. There is also a strict time limit.</plot>
+		<releasedate>01/01/1992</releasedate>
+		<year>1992</year>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Treasure%20Hunter%20(USA,%20Europe).png</boxart1>
+		<boxart3>7iZUgCn.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Treasure%20Hunter%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Treasure%20Hunter%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>262IX4f.png</snapshot3>
+		<clearlogo1>dnvutDV.png</clearlogo1>
+		<genre>Action,Adventure,Puzzle</genre>
+		<groups>1G1R,Boulder Dash variants</groups>
+	</game>
+	<game name="Untouchable (USA, Europe)">
+		<description>Untouchable (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Untouchable%20%28USA%2C%20Europe%29.zip" size="25283"/>
+		<plot>Untouchable is a bizarre side-scrolling shooter starring a young man who flies with with an autogyro backpack. Each stage sees the player fighting through waves of strange enemies, such as flying sea creatures or household objects, culminating in a boss fight at the end. Every so often, another man flies past, and reaching him allows the player to choose from one of six different power-ups, which change each time the man appears. Different shot power-ups are available including double and triple shots, as well as health refills and additional bombs.</plot>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Untouchable%20(USA,%20Europe).png</boxart1>
+		<boxart3>24wK8qq.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Untouchable%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Untouchable%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>g0dH1Mn.png</snapshot3>
+		<clearlogo1>fQQ2yhZ.png</clearlogo1>
+		<genre>Shooter</genre>
+		<groups>1G1R</groups>
+	</game>
+	<game name="Witty Cat (USA, Europe)">
+		<description>Witty Cat (USA, Europe)</description>
+		<rom name="No_Intro_Sept_2016/No_Intro_W1.zip/Witty%20Cat%20%28USA%2C%20Europe%29.zip" size="12843"/>
+		<plot>Witty Cat is a clone of the 1984 Namco coin-op Mappy. The game stars a mouse in a house full of cats, who must steal all the food in the house without getting caught. The house is divided into floors, which can be reached by using trampolines set up in vertical passages. Both the cats and the mouse can use the trampolines to move around, though the cats are only dangerous when the mouse is on solid ground. If the mouse is able to collect all the food, the stage is cleared and the player moves on to the next area.</plot>
+		<studio>Bon Treasure</studio>
+		<nplayers>1</nplayers>
+		<ESRB>Not Rated</ESRB>
+		<boxart1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Boxarts/Witty%20Cat%20(USA,%20Europe).png</boxart1>
+		<boxart3>xCdPx1m.png</boxart3>
+		<snapshot1>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Titles/Witty%20Cat%20(USA,%20Europe).png</snapshot1>
+		<snapshot2>https://github.com/libretro-thumbnails/Watara_-_Supervision/raw/master/Named_Snaps/Witty%20Cat%20(USA,%20Europe).png</snapshot2>
+		<snapshot3>xKChS7C.png</snapshot3>
+		<clearlogo1>mAWGclV.png</clearlogo1>
+		<genre>Platform</genre>
+		<groups>1G1R</groups>
+	</game>
+</datafile>

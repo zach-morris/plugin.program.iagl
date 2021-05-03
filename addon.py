@@ -6,11 +6,11 @@ import xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
 xbmc.log(msg='IAGL:  Lets Play!',level=xbmc.LOGINFO)
 xbmc.log(msg='IAGL:  Version %(addon_version)s'%{'addon_version':xbmcaddon.Addon().getAddonInfo('version')},level=xbmc.LOGDEBUG)
 import routing, sys, json, re
-# from urllib.parse import unquote_plus as url_unquote
+from urllib.parse import unquote_plus as url_unquote
 from random import sample as random_sample
 from resources.lib.main import iagl_addon
 from resources.lib import paginate
-from resources.lib.utils import clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, check_if_file_exists, check_if_dir_exists, clean_image_entry, clean_trailer_entry, loc_str, check_and_close_notification, get_history_listitem, get_netplay_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, get_uuid, generate_discord_announcement, get_blank_favorites_listitem, get_database_listitem, url_quote_query, delete_file_pathlib, zachs_debug
+from resources.lib.utils import clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, check_if_file_exists, check_if_dir_exists, clean_image_entry, clean_trailer_entry, loc_str, check_and_close_notification, get_history_listitem, get_netplay_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, get_uuid, generate_discord_announcement, get_blank_favorites_listitem, get_database_listitem, url_quote_query, delete_file_pathlib, remove_game_from_favorites, zachs_debug
 
 ## Plugin Initialization Stuff ##
 SLEEP_HACK=50  #https://github.com/xbmc/xbmc/issues/18576
@@ -338,7 +338,14 @@ def game_list_choose_from_list_route(game_list_id):
 @plugin.route('/game_list/<category_choice>/<game_list_id>')
 def game_list_choose_category_from_list_route(category_choice,game_list_id):
 	if category_choice=='One Big List':
-		plugin.redirect('/game_list/list_all/'+game_list_id+'/1')
+		if iagl_addon.settings.get('game_list').get('filter_to_1g1r'):
+			game_stats = iagl_addon.game_lists.get_game_stats(game_list_id=game_list_id)
+			if game_stats and game_stats.get('groups') and '1G1R' in game_stats.get('groups').get('all'):
+				plugin.redirect('/game_list/category/Group by Custom Groups/1G1R/%(game_list_id)s/1'%{'game_list_id':game_list_id})
+			else:
+				plugin.redirect('/game_list/list_all/'+game_list_id+'/1')
+		else:
+			plugin.redirect('/game_list/list_all/'+game_list_id+'/1')
 	else:
 		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game_list/category/%(category_choice)s/%(label2)s/%(game_list_id)s/1'%{'label2':x.getLabel2().replace('#','%23'),'category_choice':category_choice,'game_list_id':game_list_id}),x,True) for x in iagl_addon.game_lists.get_game_choose_categories_as_listitems(game_list_id=game_list_id,category_choice=category_choice,game_list_name=iagl_addon.game_lists.get_game_list(game_list_id).get('emu_name')) if x])
 		for sm in iagl_addon.get_sort_methods('Choose from List'):
@@ -718,6 +725,36 @@ def context_menu_action(game_list_id,action_id):
 			else:
 				current_dialog.ok(loc_str(30203),loc_str(30397))
 		del current_dialog
+	elif action_id == 'share_favorite':
+		current_game_list = iagl_addon.game_lists.get_game_list(game_list_id)
+		current_dialog = xbmcgui.Dialog()
+		if current_dialog.yesno(loc_str(30395),loc_str(30398)%{'game_list':current_game_list.get('emu_name')}):
+			current_crc = iagl_addon.game_lists.get_crc(game_list_id)
+			#Have user update template values if they're not already updated
+			current_choices = dict(zip(['metadata'],[dict(zip(['query','query_values','header_values','current_choice'],[loc_str(30331),[loc_str(30414),loc_str(30415),loc_str(30416),loc_str(30417),loc_str(30418),loc_str(30419),loc_str(30420)],['emu_name','emu_category','emu_description', 'emu_comment', 'emu_trailer', 'emu_author', 'emu_date'],''])),])).get('metadata')
+			if current_game_list.get('emu_name') == 'Favorites':
+				new_value = current_dialog.input(loc_str(30343)%{'current_choice':current_choices.get('query_values')[0]},current_game_list.get(current_choices.get('header_values')[0]))
+				if new_value:
+					success = iagl_addon.game_lists.update_game_list_header(game_list_id,header_key=current_choices.get('header_values')[0],header_value=new_value,confirm_update=False)
+					if success:
+						if iagl_addon.refresh_list(current_crc):
+							xbmc.executebuiltin('Container.Refresh')
+			if current_game_list.get('emu_author') == 'Zach Morris':
+				new_value = current_dialog.input(loc_str(30343)%{'current_choice':current_choices.get('query_values')[5]},current_game_list.get(current_choices.get('header_values')[5]))
+				if new_value:
+					success = iagl_addon.game_lists.update_game_list_header(game_list_id,header_key=current_choices.get('header_values')[5],header_value=new_value,confirm_update=False)
+					if success:
+						if iagl_addon.refresh_list(current_crc):
+							xbmc.executebuiltin('Container.Refresh')
+			if current_game_list.get('emu_comment') == 'Your Favorites List':
+				new_value = current_dialog.input(loc_str(30343)%{'current_choice':current_choices.get('query_values')[3]},current_game_list.get(current_choices.get('header_values')[3]))
+				if new_value:
+					success = iagl_addon.game_lists.update_game_list_header(game_list_id,header_key=current_choices.get('header_values')[3],header_value=new_value,confirm_update=False)
+					if success:
+						if iagl_addon.refresh_list(current_crc):
+							xbmc.executebuiltin('Container.Refresh')
+			current_file = iagl_addon.game_lists.get_file(game_list_id)
+
 	else:
 		xbmc.log(msg='IAGL:  Unknown context action %(action_id)s'%{'action_id':action_id},level=xbmc.LOGERROR)
 
@@ -818,9 +855,20 @@ def category_context_menu_action(game_list_id,game_id,action_id):
 				else:
 					ok_ret = current_dialog.ok(loc_str(30203),loc_str(30593))
 		del current_dialog
+	elif action_id == 'remove_from_favs':
+		current_dialog = xbmcgui.Dialog()
+		current_game = url_unquote(game_id)
+		if current_dialog.yesno(loc_str(30395),loc_str(30396)%{'game_list':current_game}):
+			xbmc.log(msg='IAGL:  User deleting %(game_id)s from %(game_list_id)s'%{'game_id':current_game,'game_list_id':game_list_id}, level=xbmc.LOGDEBUG)
+			if remove_game_from_favorites(filename_in=iagl_addon.game_lists.get_file(game_list_id),game=current_game):
+				ok_ret = current_dialog.ok(loc_str(30202),loc_str(30358)%{'game_list_id_in':current_game})
+				iagl_addon.refresh_list(iagl_addon.game_lists.get_crc(game_list_id))
+				xbmc.executebuiltin('Container.Refresh')
+			else:
+				ok_ret = current_dialog.ok(loc_str(30203),loc_str(30593))
+		del current_dialog
 	else:
 		xbmc.log(msg='IAGL:  Unknown game context action %(action_id)s'%{'action_id':action_id},level=xbmc.LOGERROR)
-
 
 @plugin.route('/text_viewer')
 def iagl_text_viewer():
@@ -837,4 +885,4 @@ def iagl_wizard_report():
 
 if __name__ == '__main__':
 	plugin.run(sys.argv)
-	del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_file_exists, check_if_dir_exists, check_and_close_notification, get_history_listitem, get_netplay_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, generate_discord_announcement, get_uuid, get_blank_favorites_listitem, get_database_listitem, url_quote_query, delete_file_pathlib, zachs_debug #Delete all locally imported stuff to avoid memory leaks
+	del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_file_exists, check_if_dir_exists, check_and_close_notification, get_history_listitem, get_netplay_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, generate_discord_announcement, get_uuid, get_blank_favorites_listitem, get_database_listitem, url_quote_query, delete_file_pathlib, remove_game_from_favorites, zachs_debug #Delete all locally imported stuff to avoid memory leaks
