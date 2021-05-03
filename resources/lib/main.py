@@ -512,12 +512,24 @@ class iagl_addon(object):
 
 	def add_new_dat_files(self,files_to_add,userdata_path):
 		files_moved = False
-		if len(files_to_add)>0:
-			if any([move_file(x,userdata_path) for x in files_to_add]):
+		copy_settings = False
+		if isinstance(files_to_add,list) and len(files_to_add)>0:
+			for ff in files_to_add:
+				old_settings = get_xml_header(userdata_path.joinpath(ff.name),userdata_path)
+				new_settings = get_xml_header(ff,userdata_path)
+				for kk in ['emu_visibility','emu_launcher','emu_default_addon','emu_ext_launch_cmd','emu_downloadpath']:
+					if new_settings.get(kk) != old_settings.get(kk):
+						copy_settings = True
+						new_settings[kk] = old_settings.get(kk)
+				if move_file(ff,userdata_path):
+					files_moved = True
+					if copy_settings: #Copy over settings from old file if necessary
+						xbmc.log(msg='IAGL:  Copying old settings over to new data file %(value_in)s'%{'value_in':ff.name},level=xbmc.LOGDEBUG)
+						settings_updated = update_xml_file(file_in=userdata_path.joinpath(ff.name),dict_in=new_settings)
+			if files_moved:
 				current_dialog = xbmcgui.Dialog()
 				ok_ret = current_dialog.notification(loc_str(30328),loc_str(30329),xbmcgui.NOTIFICATION_INFO,self.settings.get('notifications').get('background_notification_time'))
 				del current_dialog
-				files_moved = True
 		return files_moved
 
 	def refresh_list(self,crc_in):
