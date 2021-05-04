@@ -719,6 +719,10 @@ class iagl_dialog_text_viewer(xbmcgui.WindowXMLDialog):
 		clear_mem_cache('TextViewer_Text')
 		self.close()
 
+class IAGLPlayer(xbmc.Player):
+	def onPlayBackEnded(self):
+		set_mem_cache('iagl_trailer_started','False')
+
 #InfoDialog class
 class iagl_dialog_info_page(xbmcgui.WindowXMLDialog):
 	def __init__(self, *args, **kwargs):
@@ -735,9 +739,8 @@ class iagl_dialog_info_page(xbmcgui.WindowXMLDialog):
 				self.art[kk] = json.loads(self.game.get('properties').get(kk))
 		self.action_requested = None
 		self.netplay_options = None
-		# if xbmc.Player().isPlaying():
-		# 	xbmc.Player().stop()
-		# 	xbmc.sleep(100)
+		self.dialog_player = IAGLPlayer()
+
 		self.onaction_id_exit = [10, 13, 92] #Default exit keys to close window via keyboard / controller
 		self.onclick_id_download = 3001
 		self.onclick_id_launch = 3002
@@ -750,21 +753,6 @@ class iagl_dialog_info_page(xbmcgui.WindowXMLDialog):
 		self.listitem_id['game_snapshots'] = 115 #Invisible listitem for game snapshots, same as boxarts
 		self.listitem_id['game_banners'] = 116 #Invisible listitem for game banners
 		self.listitem_id['game_logos'] = None #Invisible listitem for game logos
-		# set_mem_cache('iagl_trailer_started','False')
-		# #Auto play trailer if settings are defined
-		# if self.autoplay_trailer:
-		# 	if xbmc.Player().isPlaying():
-		# 		xbmc.Player().stop()
-		# 		xbmc.sleep(100)
-		# 	if self.game.get('info').get('trailer') is not None:
-		# 		if xbmc.Player().isPlaying():
-		# 			xbmc.Player().stop()
-		# 			xbmc.sleep(100)
-		# 		set_mem_cache('iagl_trailer_started','True')
-		# 		xbmc.executebuiltin('Dialog.Close(busydialog,true)')
-		# 		xbmc.Player().play(self.game.get('info').get('trailer'),windowed=True)
-		# else:
-		# 	set_mem_cache('iagl_trailer_started','False')
 		xbmc.log(msg='IAGL:  Info Page Initialized for game %(game_id)s in list %(game_list_id)s'%{'game_id':self.game_id,'game_list_id':self.game_list_id}, level=xbmc.LOGDEBUG)
 
 	def onInit(self):
@@ -795,13 +783,13 @@ class iagl_dialog_info_page(xbmcgui.WindowXMLDialog):
 				current_control.addItems(current_listitems)
 
 		if self.autoplay_trailer and self.game.get('info').get('trailer'):
-			if xbmc.Player().isPlaying():
-				xbmc.Player().stop()
+			if self.dialog_player.isPlaying():
+				self.dialog_player.stop()
 				xbmc.sleep(100)
 			set_mem_cache('iagl_trailer_started','True')
 			xbmc.executebuiltin('Dialog.Close(busydialog,true)')
 			xbmc.sleep(100)
-			xbmc.Player().play(self.game.get('info').get('trailer'),windowed=True)
+			self.dialog_player.play(self.game.get('info').get('trailer'),windowed=True)
 		else:
 			set_mem_cache('iagl_trailer_started','False')
 
@@ -833,8 +821,8 @@ class iagl_dialog_info_page(xbmcgui.WindowXMLDialog):
 	def closeDialog(self):
 		xbmc.executebuiltin('Dialog.Close(busydialog,true)') #Try and close busy dialog if it is for some reason open
 		if self.autoplay_trailer and self.game.get('info').get('trailer'):
-			if xbmc.Player().isPlaying():
-				xbmc.Player().stop()
+			if self.dialog_player.isPlaying():
+				self.dialog_player.stop()
 				xbmc.sleep(100)
 			set_mem_cache('iagl_trailer_started','False')
 		self.close()
