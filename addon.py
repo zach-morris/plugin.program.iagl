@@ -289,7 +289,14 @@ def archives_game_lists_in_category_route(category_id):
 
 @plugin.route('/game_list/list_all/<game_list_id>/')
 def get_all_games_redirect(game_list_id):
-	plugin.redirect('/game_list/list_all/'+game_list_id+'/1')
+	if iagl_addon.settings.get('game_list').get('filter_to_1g1r'):
+		game_stats = iagl_addon.game_lists.get_game_stats(game_list_id=game_list_id)
+		if game_stats and game_stats.get('groups') and '1G1R' in game_stats.get('groups').get('all'):
+			plugin.redirect('/game_list/category/Group by Custom Groups/1G1R/%(game_list_id)s/1'%{'game_list_id':game_list_id})
+		else:
+			plugin.redirect('/game_list/list_all/'+game_list_id+'/1')
+	else:
+		plugin.redirect('/game_list/list_all/'+game_list_id+'/1')
 
 @plugin.route('/game_list/list_all/<game_list_id>/<page_number>')
 def game_list_list_all_route(game_list_id,page_number):
