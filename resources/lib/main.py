@@ -512,15 +512,17 @@ class iagl_addon(object):
 
 	def add_new_dat_files(self,files_to_add,userdata_path):
 		files_moved = False
-		copy_settings = False
 		if isinstance(files_to_add,list) and len(files_to_add)>0:
 			for ff in files_to_add:
-				old_settings = get_xml_header(userdata_path.joinpath(ff.name),userdata_path)
-				new_settings = get_xml_header(ff,userdata_path)
-				for kk in ['emu_visibility','emu_launcher','emu_default_addon','emu_ext_launch_cmd','emu_downloadpath']:
-					if new_settings.get(kk) != old_settings.get(kk):
-						copy_settings = True
-						new_settings[kk] = old_settings.get(kk)
+				copy_settings = False
+				if check_if_file_exists(userdata_path.joinpath(ff.name)):
+					old_settings = get_xml_header(userdata_path.joinpath(ff.name),userdata_path)
+					new_settings = get_xml_header(ff,userdata_path)
+					if old_settings is not None:
+						for kk in ['emu_visibility','emu_launcher','emu_default_addon','emu_ext_launch_cmd','emu_downloadpath']:
+							if new_settings.get(kk) != old_settings.get(kk):
+								copy_settings = True
+								new_settings[kk] = old_settings.get(kk)
 				if move_file(ff,userdata_path):
 					files_moved = True
 					if copy_settings: #Copy over settings from old file if necessary
