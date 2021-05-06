@@ -143,6 +143,9 @@
 	<launcher name="RetroArch Opera (3DO)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/opera_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
+	<launcher name="RetroArch Citra 2018 (3DS)" os="android">
+		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/citra2018_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
+	</launcher>
 	<launcher name="RetroArch Citra Canary (3DS)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/citra_canary_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -170,9 +173,6 @@
 	<launcher name="RetroArch MAME 2010 (Arcade 0.139)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mame2010_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
-	<launcher name="RetroArch MAME 2014 (Arcade 0.159)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mame2014_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
 	<launcher name="RetroArch MAME 2015 (Arcade 0.160)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mame2015_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -199,9 +199,6 @@
 	</launcher>
 	<launcher name="RetroArch FBA CPS3 2012 (Arcade CPS3 0.2.97.29)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/fbalpha2012_cps3_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch FBA (Arcade Latest)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/fbalpha_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch FB Neo (Arcade Latest)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/fbneo_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -269,9 +266,6 @@
 	<launcher name="RetroArch ChaiLove Engine (ChaiLove)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/chailove_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
-	<launcher name="RetroArch ChaiGame (ChaiScript)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/chaigame_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
 	<launcher name="RetroArch DOSBOX-CORE (DOS)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dosbox_core_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -283,9 +277,6 @@
 	</launcher>
 	<launcher name="RetroArch DOSBox SVN CE (DOS)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dosbox_svn_ce_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch DOSBox SVN Glide (DOS)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dosbox_svn_glide_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch DOSBox SVN (DOS)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dosbox_svn_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -299,29 +290,8 @@
 	<launcher name="RetroArch PrBoom (Doom)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/prboom_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
-	<launcher name="RetroArch BeetleDC (Dreamcast WinCE)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/beetledc_wince_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch FlyCast (Dreamcast WinCE)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/flycast_wince_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/reicast_wince_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Redream (Dreamcast)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/redream_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Reicast (Dreamcast)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/reicast_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Reicast OIT (Dreamcast)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/reicast_oit_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
 	<launcher name="RetroArch RetroDream (Dreamcast)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/retrodream_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch BeetleDC (Dreamcast/Naomi)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/beetledc_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="Retroarch FlyCast GLES2 (Dreamcast/Naomi)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/flycast_gles2_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -380,6 +350,9 @@
 	<launcher name="RetroArch Genesis Plus GX (GG/SMS/Gen/PICO/SG-1000)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/genesis_plus_gx_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
+	<launcher name="RetroArch Genesis Plus GX Wide (GG/SMS/Gen/PICO/SG-1000)" os="android">
+		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/genesis_plus_gx_wide_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
+	</launcher>
 	<launcher name="RetroArch Game and Watch (Game and Watch)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/gw_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -410,14 +383,8 @@
 	<launcher name="RetroArch Mednafen Lynx (Lynx)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mednafen_lynx_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
-	<launcher name="RetroArch UME2014 (MAME/MESS 0.159)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/ume2014_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
 	<launcher name="RetroArch UME2015 (MAME/MESS 0.160)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/ume2015_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch MESS 2014 (MESS 0.159)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mess2014_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch MESS 2014 (MESS 0.160)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mess2015_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -436,12 +403,6 @@
 	</launcher>
 	<launcher name="RetroArch Imageviewer (Media Viewer)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/imageviewer_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Mupen64Plus GLES3 (N64)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mupen64plus_gles3_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Mupen64Plus (N64)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mupen64plus_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch Mupen64Plus NEXT Dev (N64)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mupen64plus_next_develop_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -499,9 +460,6 @@
 	</launcher>
 	<launcher name="RetroArch CaveStory (NXEngine)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/nxengine_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Reicast Naomi (Naomi)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/reicast_naomi_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch FBA NEO 2012 (Neo Geo 0.2.97.29)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/fbalpha2012_neogeo_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -647,12 +605,6 @@
 	<launcher name="RetroArch BSNES 2014 Performance (SNES)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes2014_performance_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
-	<launcher name="RetroArch BSNES Accuracy (SNES)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes_accuracy_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch BSNES Balanced (SNES)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes_balanced_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
 	<launcher name="RetroArch BSNES Performance v085 (SNES)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes_cplusplus98_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -667,9 +619,6 @@
 	</launcher>
 	<launcher name="RetroArch BSNES Mercury Performance (SNES)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes_mercury_performance_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch BSNES Performance (SNES)" os="android">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes_performance_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch SNES Higan nSide Balanced (SNES)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/higan_sfc_balanced_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -725,6 +674,9 @@
 	<launcher name="RetroArch Dinothawr (Standalone Game)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dinothawr_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
+	<launcher name="RetroArch Gong (Standalone Game)" os="android">
+		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/gong_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
+	</launcher>
 	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mrboom_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -761,6 +713,9 @@
 	<launcher name="RetroArch Commodore VICE VIC20 (VIC20)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/vice_xvic_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
+	<launcher name="RetroArch LowRes NX (Various)" os="android">
+		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/lowresnx_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
+	</launcher>
 	<launcher name="RetroArch ScummVM (Various)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/scummvm_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -769,6 +724,9 @@
 	</launcher>
 	<launcher name="RetroArch Mednafen VB (VirtualBoy)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mednafen_vb_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
+	</launcher>
+	<launcher name="RetroArch Potator (Watara Supervision)" os="android">
+		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/potator_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch Dolphin (Wii/Gamecube)" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dolphin_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -906,12 +864,15 @@
 	<launcher name="redream (Dreamcast)" os="android">
 		<command>/system/bin/am start --user 0 -n io.recompiled.redream/.MainActivity -a android.intent.action.VIEW -d "file://%ROM_PATH%"</command>
 	</launcher>
-<!-- Android AARCH64 External Retroarch Commands -->
+<!-- Android Aarch64 External Retroarch Commands -->
 	<launcher name="RetroArch 4DO (3DO)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/4do_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch Opera (3DO)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/opera_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
+	</launcher>
+	<launcher name="RetroArch Citra 2018 (3DS)" os="android_aarch64">
+		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/citra2018_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch Citra Canary (3DS)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/citra_canary_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -940,9 +901,6 @@
 	<launcher name="RetroArch MAME 2010 (Arcade 0.139)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mame2010_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
-	<launcher name="RetroArch MAME 2014 (Arcade 0.159)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mame2014_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
 	<launcher name="RetroArch MAME 2015 (Arcade 0.160)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mame2015_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -969,9 +927,6 @@
 	</launcher>
 	<launcher name="RetroArch FBA CPS3 2012 (Arcade CPS3 0.2.97.29)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/fbalpha2012_cps3_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch FBA (Arcade Latest)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/fbalpha_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch FB Neo (Arcade Latest)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/fbneo_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -1039,9 +994,6 @@
 	<launcher name="RetroArch ChaiLove Engine (ChaiLove)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/chailove_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
-	<launcher name="RetroArch ChaiGame (ChaiScript)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/chaigame_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
 	<launcher name="RetroArch DOSBOX-CORE (DOS)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dosbox_core_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -1053,9 +1005,6 @@
 	</launcher>
 	<launcher name="RetroArch DOSBox SVN CE (DOS)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dosbox_svn_ce_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch DOSBox SVN Glide (DOS)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dosbox_svn_glide_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch DOSBox SVN (DOS)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dosbox_svn_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -1069,29 +1018,8 @@
 	<launcher name="RetroArch PrBoom (Doom)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/prboom_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
-	<launcher name="RetroArch BeetleDC (Dreamcast WinCE)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/beetledc_wince_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch FlyCast (Dreamcast WinCE)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/flycast_wince_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/reicast_wince_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Redream (Dreamcast)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/redream_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Reicast (Dreamcast)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/reicast_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Reicast OIT (Dreamcast)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/reicast_oit_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
 	<launcher name="RetroArch RetroDream (Dreamcast)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/retrodream_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch BeetleDC (Dreamcast/Naomi)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/beetledc_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="Retroarch FlyCast GLES2 (Dreamcast/Naomi)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/flycast_gles2_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -1150,6 +1078,9 @@
 	<launcher name="RetroArch Genesis Plus GX (GG/SMS/Gen/PICO/SG-1000)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/genesis_plus_gx_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
+	<launcher name="RetroArch Genesis Plus GX Wide (GG/SMS/Gen/PICO/SG-1000)" os="android_aarch64">
+		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/genesis_plus_gx_wide_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
+	</launcher>
 	<launcher name="RetroArch Game and Watch (Game and Watch)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/gw_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -1180,14 +1111,8 @@
 	<launcher name="RetroArch Mednafen Lynx (Lynx)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mednafen_lynx_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
-	<launcher name="RetroArch UME2014 (MAME/MESS 0.159)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/ume2014_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
 	<launcher name="RetroArch UME2015 (MAME/MESS 0.160)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/ume2015_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch MESS 2014 (MESS 0.159)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mess2014_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch MESS 2014 (MESS 0.160)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mess2015_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -1206,12 +1131,6 @@
 	</launcher>
 	<launcher name="RetroArch Imageviewer (Media Viewer)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/imageviewer_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Mupen64Plus GLES3 (N64)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mupen64plus_gles3_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Mupen64Plus (N64)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mupen64plus_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch Mupen64Plus NEXT Dev (N64)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mupen64plus_next_develop_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -1269,9 +1188,6 @@
 	</launcher>
 	<launcher name="RetroArch CaveStory (NXEngine)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/nxengine_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Reicast Naomi (Naomi)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/reicast_naomi_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch FBA NEO 2012 (Neo Geo 0.2.97.29)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/fbalpha2012_neogeo_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -1417,12 +1333,6 @@
 	<launcher name="RetroArch BSNES 2014 Performance (SNES)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes2014_performance_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
-	<launcher name="RetroArch BSNES Accuracy (SNES)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes_accuracy_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch BSNES Balanced (SNES)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes_balanced_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
 	<launcher name="RetroArch BSNES Performance v085 (SNES)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes_cplusplus98_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -1437,9 +1347,6 @@
 	</launcher>
 	<launcher name="RetroArch BSNES Mercury Performance (SNES)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes_mercury_performance_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch BSNES Performance (SNES)" os="android_aarch64">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes_performance_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch SNES Higan nSide Balanced (SNES)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/higan_sfc_balanced_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -1495,6 +1402,9 @@
 	<launcher name="RetroArch Dinothawr (Standalone Game)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dinothawr_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
+	<launcher name="RetroArch Gong (Standalone Game)" os="android_aarch64">
+		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/gong_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
+	</launcher>
 	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mrboom_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -1531,6 +1441,9 @@
 	<launcher name="RetroArch Commodore VICE VIC20 (VIC20)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/vice_xvic_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
+	<launcher name="RetroArch LowRes NX (Various)" os="android_aarch64">
+		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/lowresnx_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
+	</launcher>
 	<launcher name="RetroArch ScummVM (Various)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/scummvm_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -1539,6 +1452,9 @@
 	</launcher>
 	<launcher name="RetroArch Mednafen VB (VirtualBoy)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mednafen_vb_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
+	</launcher>
+	<launcher name="RetroArch Potator (Watara Supervision)" os="android_aarch64">
+		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/potator_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch Dolphin (Wii/Gamecube)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dolphin_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -1683,6 +1599,9 @@
 	<launcher name="RetroArch Opera (3DO)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/opera_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
+	<launcher name="RetroArch Citra 2018 (3DS)" os="android_ra32">
+		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/citra2018_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
+	</launcher>
 	<launcher name="RetroArch Citra Canary (3DS)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/citra_canary_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -1710,9 +1629,6 @@
 	<launcher name="RetroArch MAME 2010 (Arcade 0.139)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mame2010_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
-	<launcher name="RetroArch MAME 2014 (Arcade 0.159)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mame2014_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
 	<launcher name="RetroArch MAME 2015 (Arcade 0.160)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mame2015_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -1739,9 +1655,6 @@
 	</launcher>
 	<launcher name="RetroArch FBA CPS3 2012 (Arcade CPS3 0.2.97.29)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/fbalpha2012_cps3_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch FBA (Arcade Latest)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/fbalpha_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch FB Neo (Arcade Latest)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/fbneo_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -1809,9 +1722,6 @@
 	<launcher name="RetroArch ChaiLove Engine (ChaiLove)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/chailove_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
-	<launcher name="RetroArch ChaiGame (ChaiScript)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/chaigame_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
 	<launcher name="RetroArch DOSBOX-CORE (DOS)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dosbox_core_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -1823,9 +1733,6 @@
 	</launcher>
 	<launcher name="RetroArch DOSBox SVN CE (DOS)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dosbox_svn_ce_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch DOSBox SVN Glide (DOS)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dosbox_svn_glide_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch DOSBox SVN (DOS)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dosbox_svn_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -1839,29 +1746,8 @@
 	<launcher name="RetroArch PrBoom (Doom)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/prboom_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
-	<launcher name="RetroArch BeetleDC (Dreamcast WinCE)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/beetledc_wince_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch FlyCast (Dreamcast WinCE)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/flycast_wince_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Reicast WinCE (Dreamcast WinCE)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/reicast_wince_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Redream (Dreamcast)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/redream_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Reicast (Dreamcast)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/reicast_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Reicast OIT (Dreamcast)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/reicast_oit_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
 	<launcher name="RetroArch RetroDream (Dreamcast)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/retrodream_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch BeetleDC (Dreamcast/Naomi)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/beetledc_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="Retroarch FlyCast GLES2 (Dreamcast/Naomi)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/flycast_gles2_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -1920,6 +1806,9 @@
 	<launcher name="RetroArch Genesis Plus GX (GG/SMS/Gen/PICO/SG-1000)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/genesis_plus_gx_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
+	<launcher name="RetroArch Genesis Plus GX Wide (GG/SMS/Gen/PICO/SG-1000)" os="android_ra32">
+		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/genesis_plus_gx_wide_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
+	</launcher>
 	<launcher name="RetroArch Game and Watch (Game and Watch)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/gw_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -1950,14 +1839,8 @@
 	<launcher name="RetroArch Mednafen Lynx (Lynx)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mednafen_lynx_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
-	<launcher name="RetroArch UME2014 (MAME/MESS 0.159)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/ume2014_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
 	<launcher name="RetroArch UME2015 (MAME/MESS 0.160)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/ume2015_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch MESS 2014 (MESS 0.159)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mess2014_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch MESS 2014 (MESS 0.160)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mess2015_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -1976,12 +1859,6 @@
 	</launcher>
 	<launcher name="RetroArch Imageviewer (Media Viewer)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/imageviewer_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Mupen64Plus GLES3 (N64)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mupen64plus_gles3_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Mupen64Plus (N64)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mupen64plus_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch Mupen64Plus NEXT Dev (N64)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mupen64plus_next_develop_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -2039,9 +1916,6 @@
 	</launcher>
 	<launcher name="RetroArch CaveStory (NXEngine)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/nxengine_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch Reicast Naomi (Naomi)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/reicast_naomi_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch FBA NEO 2012 (Neo Geo 0.2.97.29)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/fbalpha2012_neogeo_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -2187,12 +2061,6 @@
 	<launcher name="RetroArch BSNES 2014 Performance (SNES)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes2014_performance_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
-	<launcher name="RetroArch BSNES Accuracy (SNES)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes_accuracy_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch BSNES Balanced (SNES)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes_balanced_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
 	<launcher name="RetroArch BSNES Performance v085 (SNES)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes_cplusplus98_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -2207,9 +2075,6 @@
 	</launcher>
 	<launcher name="RetroArch BSNES Mercury Performance (SNES)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes_mercury_performance_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
-	</launcher>
-	<launcher name="RetroArch BSNES Performance (SNES)" os="android_ra32">
-		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/bsnes_performance_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch SNES Higan nSide Balanced (SNES)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/higan_sfc_balanced_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -2265,6 +2130,9 @@
 	<launcher name="RetroArch Dinothawr (Standalone Game)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dinothawr_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
+	<launcher name="RetroArch Gong (Standalone Game)" os="android_ra32">
+		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/gong_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
+	</launcher>
 	<launcher name="RetroArch Mr.Boom (Standalone Game)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mrboom_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -2301,6 +2169,9 @@
 	<launcher name="RetroArch Commodore VICE VIC20 (VIC20)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/vice_xvic_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
+	<launcher name="RetroArch LowRes NX (Various)" os="android_ra32">
+		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/lowresnx_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
+	</launcher>
 	<launcher name="RetroArch ScummVM (Various)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/scummvm_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
@@ -2309,6 +2180,9 @@
 	</launcher>
 	<launcher name="RetroArch Mednafen VB (VirtualBoy)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/mednafen_vb_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
+	</launcher>
+	<launcher name="RetroArch Potator (Watara Supervision)" os="android_ra32">
+		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/potator_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
 	</launcher>
 	<launcher name="RetroArch Dolphin (Wii/Gamecube)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/dolphin_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
