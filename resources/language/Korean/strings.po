@@ -215,7 +215,7 @@ msgid "Note:  You should not use these settings unless you're sure of what you a
 msgstr "참고: 수행중인 작업이 확실하지 않으면 이러한 설정을 사용하지 마십시오!"
 
 msgctxt "#30048"
-msgid "Enable Editing for Post Download Command"
+msgid "Enable Editing for Post DL Command"
 msgstr "다운로드 후 명령 편집 활성화"
 
 msgctxt "#30049"
@@ -243,16 +243,16 @@ msgid "Addon Content Type"
 msgstr "애드온 콘텐츠 유형"
 
 msgctxt "#30055"
-msgid "Unhide All Game Lists"
-msgstr "모든 게임 목록 숨기기 해제"
+msgid "Unhide Game Lists"
+msgstr "게임 목록 숨기기 해제"
 
 msgctxt "#30056"
 msgid "Clear Cache"
 msgstr "캐시 지우기"
 
 msgctxt "#30057"
-msgid "Stop Media before Launch"
-msgstr "시작하기 전에 미디어 중지"
+msgid "Suspend Kodi Input and Audio during External Launch"
+msgstr "외부 실행 중 Kodi 입력 및 오디오 일시 중단"
 
 msgctxt "#30058"
 msgid "Choose from List"
@@ -268,31 +268,31 @@ msgstr "카테고리로 찾아보기"
 
 msgctxt "#30061"
 msgid "One Big List"
-msgstr "하나의 대형 목록"
+msgstr "전체 목록"
 
 msgctxt "#30062"
 msgid "Alphabetical"
-msgstr "알파벳 순서"
+msgstr "알파벳 앞글자로 분류"
 
 msgctxt "#30063"
 msgid "Group by Genre"
-msgstr "그룹 별 장르"
+msgstr "장르로 분류"
 
 msgctxt "#30064"
 msgid "Group by Year"
-msgstr "그룹 별 연도"
+msgstr "연도로 분류"
 
 msgctxt "#30065"
 msgid "Group by Players"
-msgstr "그룹 별 플레이어"
+msgstr "플레이인원 수로 분류"
 
 msgctxt "#30066"
 msgid "Group by Studio"
-msgstr "그룹 별 개발사"
+msgstr "개발사로 분류"
 
 msgctxt "#30196"
 msgid "Group by Tag"
-msgstr "그룹 별 태그"
+msgstr "태그로 분류"
 
 msgctxt "#30197"
 msgid "Group by Custom Groups"
@@ -423,80 +423,80 @@ msgid "Zero (Current Game Only)"
 msgstr "제로 (현재 게임 만 해당)"
 
 msgctxt "#30098"
-msgid "10 MB"
-msgstr "10 MB"
+msgid "10MB"
+msgstr "10MB"
 
 msgctxt "#30099"
-msgid "25 MB"
-msgstr "25 MB"
+msgid "25MB"
+msgstr "25MB"
 
 msgctxt "#30100"
-msgid "50 MB"
-msgstr "50 MB"
+msgid "50MB"
+msgstr "50MB"
 
 msgctxt "#30101"
-msgid "100 MB"
-msgstr "100 MB"
+msgid "100MB"
+msgstr "100MB"
 
 msgctxt "#30102"
-msgid "150 MB"
-msgstr "150 MB"
+msgid "150MB"
+msgstr "150MB"
 
 msgctxt "#30103"
-msgid "200 MB"
-msgstr "200 MB"
+msgid "200MB"
+msgstr "200MB"
 
 msgctxt "#30104"
-msgid "250 MB"
-msgstr "250 MB"
+msgid "250MB"
+msgstr "250MB"
 
 msgctxt "#30105"
-msgid "300 MB"
-msgstr "300 MB"
+msgid "300MB"
+msgstr "300MB"
 
 msgctxt "#30106"
-msgid "350 MB"
-msgstr "350 MB"
+msgid "350MB"
+msgstr "350MB"
 
 msgctxt "#30107"
-msgid "400 MB"
-msgstr "400 MB"
+msgid "400MB"
+msgstr "400MB"
 
 msgctxt "#30108"
-msgid "450 MB"
-msgstr "450 MB"
+msgid "450MB"
+msgstr "450MB"
 
 msgctxt "#30109"
-msgid "500 MB"
-msgstr "500 MB"
+msgid "500MB"
+msgstr "500MB"
 
 msgctxt "#30110"
-msgid "1 GB"
-msgstr "1 GB"
+msgid "1GB"
+msgstr "1GB"
 
 msgctxt "#30111"
-msgid "2 GB"
-msgstr "2 GB"
+msgid "2GB"
+msgstr "2GB"
 
 msgctxt "#30112"
-msgid "5 GB"
-msgstr "5 GB"
+msgid "5GB"
+msgstr "5GB"
 
 msgctxt "#30113"
-msgid "10 GB"
-msgstr "10 GB"
+msgid "10GB"
+msgstr "10GB"
 
 msgctxt "#30114"
-msgid "20 GB"
-msgstr "20 GB"
+msgid "20GB"
+msgstr "20GB"
 
 msgctxt "#30129"
-msgid "32 GB"
-msgstr "32 GB"
+msgid "32GB"
+msgstr "32GB"
 
 msgctxt "#30130"
-msgid "64 GB"
-msgstr "64 GB"
+msgid "64GB"
+msgstr "64GB"
 
 msgctxt "#30115"
 msgid "Select"
@@ -1222,6 +1222,56 @@ msgctxt "#30615"
 msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
 msgstr "플레이시 언급 할 디스코드 ID (사용자 설정>내 계정>ID 복사)를 제공하십시오.(선택 사항)"
 
+msgctxt "#30616"
+msgid "Unable to auto launch this session.[CR]Netplay parameters were copied.[CR]Manually launch this game to utilize these parameters."
+msgstr "이 세션을 자동으로 시작할 수 없습니다.[CR]Netplay 매개변수가 복사되었습니다.[CR]이 매개변수를 활용하려면 이 게임을 수동으로 시작하십시오."
+
+msgctxt "#30617"
+msgid "Do you want to enable Netplay features?"
+msgstr "넷플레이 기능을 활성화하시겠습니까?"
+
+msgctxt "#30618"
+msgid "Convert old IAGL Favorites File"
+msgstr "이전 IAGL 즐겨찾기 파일 변환"
+
+msgctxt "#30619"
+msgid "Convert an IAGL v2.x Favorites File to use with IAGL 3.x"
+msgstr "IAGL 3.x에서 사용할 IAGL v2.x 즐겨찾기 파일 변환"
+
+msgctxt "#30620"
+msgid "File converted and saved to game lists"
+msgstr "파일 변환 및 게임 목록에 저장"
+
+msgctxt "#30621"
+msgid "Error converting file, see Kodi log"
+msgstr "파일 변환 중 오류가 발생 했습니다. Kodi 로그를 확인하십시오."
+
+msgctxt "#30622"
+msgid "Game List Sharing"
+msgstr "게임 목록 공유"
+
+msgctxt "#30623"
+msgid "Show or hide Game List Sharing on the front page, enable sharing of your lists"
+msgstr "첫 페이지에서 게임 목록 공유 표시 또는 숨기기, 목록 공유 활성화"
+
+msgctxt "#30624"
+msgid "User Info"
+msgstr "사용자 정보"
+
+msgctxt "#30625"
+msgid "Set your netplay nickname and list author name"
+msgstr "넷플레이시 닉네임을 설정하고 작성자 이름을 나열하십시오."
+
+msgctxt "#30639"
+msgid "Always filter one big list to 1 Game 1 Rom set"
+msgstr "항상 전체 목록을 1게임 1롬 세트로 필터링"
+
+msgctxt "#30640"
+msgid "If available, game lists will be prefiltered to a 1G1R set when browsing all"
+msgstr "가능한 경우 게임 목록은 모두 탐색할 때 1G1R 세트로 사전 필터링됩니다."
+
+
+
 
 #
 #General
@@ -1703,6 +1753,74 @@ msgctxt "#30394"
 msgid "[CR]Current Query:[CR]Total Games Unfiltered:"
 msgstr "[CR] 현재 검색어:[CR]필터링되지 않은 총 게임:"
 
+msgctxt "#30395"
+msgid "Confirm"
+msgstr "확인"
+
+msgctxt "#30396"
+msgid "Are you sure you want to delete %(game_list)s?[CR]This cannot be undone."
+msgstr "%(game_list)s을(를) 삭제하시겠습니까?[CR]이 작업은 취소할 수 없습니다."
+
+msgctxt "#30397"
+msgid "Error while attempting to delete.  Please check Kodi Log."
+msgstr "삭제를 시도하는 동안 오류가 발생했습니다. Kodi 로그를 확인하십시오."
+
+msgctxt "#30398"
+msgid "Are you sure you want to share %(game_list)s?[CR]This file will be published and publicly available."
+msgstr "%(game_list)s을(를) 삭제하시겠습니까?[CR]이 파일은 게시되어 공개적으로 사용 가능합니다."
+
+msgctxt "#30626"
+msgid "Choose Number of Results"
+msgstr "결과 수 선택"
+
+msgctxt "#30627"
+msgid "Choose Game Lists"
+msgstr "게임 목록 선택"
+
+msgctxt "#30628"
+msgid "Filter Genres"
+msgstr "필터 : 장르"
+
+msgctxt "#30629"
+msgid "Filter Players"
+msgstr "필터 : 플레이어"
+
+msgctxt "#30630"
+msgid "Filter Years"
+msgstr "필터 : 연도"
+
+msgctxt "#30631"
+msgid "Filter Studios"
+msgstr "필터 : 스튜디오"
+
+msgctxt "#30632"
+msgid "Filter Tags"
+msgstr "필터 : 태그"
+
+msgctxt "#30633"
+msgid "Filter Groups"
+msgstr "필터 : 그룹"
+
+msgctxt "#30634"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]무작위 검색 실행[/COLOR]"
+
+msgctxt "#30635"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]무작위 검색 링크 생성[/COLOR]"
+
+msgctxt "#30636"
+msgid "Enter Title"
+msgstr "제목 입력"
+
+msgctxt "#30637"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]검색 실행[/COLOR]"
+
+msgctxt "#30638"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]검색 링크 생성[/COLOR]"
+
 #
 #Context Menus
 #
@@ -1837,6 +1955,42 @@ msgstr "다운로드"
 msgctxt "#30438"
 msgid "Close"
 msgstr "닫기"
+
+msgctxt "#30439"
+msgid "Favorites"
+msgstr "즐겨찾기"
+
+msgctxt "#30440"
+msgid "Search"
+msgstr "검색"
+
+msgctxt "#30441"
+msgid "Random Play"
+msgstr "무작위 플레이"
+
+msgctxt "#30442"
+msgid "Enter a title for your item"
+msgstr "항목의 제목을 입력하세요."
+
+msgctxt "#30443"
+msgid "Select art assets for your item"
+msgstr "항목에 대한 예술 자산 선택"
+
+msgctxt "#30444"
+msgid "Enter a description for your item"
+msgstr "항목에 대한 설명을 입력하세요."
+
+msgctxt "#30445"
+msgid "You must enter a hostname for manual netplay launching"
+msgstr "수동으로 넷플레이를 실행하려면 호스트 이름을 입력해야 합니다."
+
+msgctxt "#30446"
+msgid "Default Player 2+ Hostname"
+msgstr "기본 플레이어 2+ 호스트 이름"
+
+msgctxt "#30447"
+msgid "D"
+msgstr "기본 플레이어 2+ 호스트 이름"
 
 msgctxt "#30421"
 msgid "Thumb / Poster"
