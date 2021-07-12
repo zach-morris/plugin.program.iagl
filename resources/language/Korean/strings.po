@@ -68,7 +68,7 @@ msgstr "페이지 당 항목 수"
 
 msgctxt "#30014"
 msgid "Last Played History"
-msgstr "마지막 플레이 기록"
+msgstr "최근 플레이 기록"
 
 msgctxt "#30015"
 msgid "If Game Already Exists Locally"
@@ -260,15 +260,15 @@ msgstr "목록에서 선택"
 
 msgctxt "#30059"
 msgid "Browse All Lists"
-msgstr "모든 목록 찾아보기"
+msgstr "전체 기종 목록"
 
 msgctxt "#30060"
 msgid "Browse by Category"
-msgstr "카테고리로 찾아보기"
+msgstr "카테고리 목록"
 
 msgctxt "#30061"
 msgid "One Big List"
-msgstr "전체 목록"
+msgstr "전체 게임 목록"
 
 msgctxt "#30062"
 msgid "Alphabetical"
@@ -912,7 +912,7 @@ msgstr "페이지 당 나열되는 게임 수 정의"
 
 msgctxt "#30537"
 msgid "Define how many games to save in last played history"
-msgstr "마지막 플레이 기록에 저장할 게임 수 정의"
+msgstr "최근 플레이 기록에 저장할 게임 수 정의"
 
 msgctxt "#30538"
 msgid "Define action to take if a game file is found to exist locally"
@@ -932,7 +932,7 @@ msgstr "임의 재생 기능 목록 항목 표시 또는 숨기기"
 
 msgctxt "#30542"
 msgid "Show or hide the Last Played History list item"
-msgstr "마지막 재생 기록 목록 항목 표시 또는 숨기기"
+msgstr "최근 플레이 기록 목록 항목 표시 또는 숨기기"
 
 msgctxt "#30543"
 msgid "Show or hide the IAGL Favorites lists item on the front page"
@@ -1156,7 +1156,7 @@ msgstr "뷰어에서 넷플레이 로비 보기"
 
 msgctxt "#30599"
 msgid "Last Played"
-msgstr "마지막 플레이"
+msgstr "최근 플레이"
 
 msgctxt "#30600"
 msgid "History"
