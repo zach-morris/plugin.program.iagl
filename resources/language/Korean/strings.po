@@ -68,7 +68,7 @@ msgstr "페이지 당 항목 수"
 
 msgctxt "#30014"
 msgid "Last Played History"
-msgstr "마지막 플레이 기록"
+msgstr "최근 플레이 기록"
 
 msgctxt "#30015"
 msgid "If Game Already Exists Locally"
@@ -260,15 +260,15 @@ msgstr "목록에서 선택"
 
 msgctxt "#30059"
 msgid "Browse All Lists"
-msgstr "모든 목록 찾아보기"
+msgstr "전체 기종 목록"
 
 msgctxt "#30060"
 msgid "Browse by Category"
-msgstr "카테고리로 찾아보기"
+msgstr "카테고리 목록"
 
 msgctxt "#30061"
 msgid "One Big List"
-msgstr "전체 목록"
+msgstr "전체 게임 목록"
 
 msgctxt "#30062"
 msgid "Alphabetical"
@@ -912,7 +912,7 @@ msgstr "페이지 당 나열되는 게임 수 정의"
 
 msgctxt "#30537"
 msgid "Define how many games to save in last played history"
-msgstr "마지막 플레이 기록에 저장할 게임 수 정의"
+msgstr "최근 플레이 기록에 저장할 게임 수 정의"
 
 msgctxt "#30538"
 msgid "Define action to take if a game file is found to exist locally"
@@ -932,7 +932,7 @@ msgstr "임의 재생 기능 목록 항목 표시 또는 숨기기"
 
 msgctxt "#30542"
 msgid "Show or hide the Last Played History list item"
-msgstr "마지막 재생 기록 목록 항목 표시 또는 숨기기"
+msgstr "최근 플레이 기록 목록 항목 표시 또는 숨기기"
 
 msgctxt "#30543"
 msgid "Show or hide the IAGL Favorites lists item on the front page"
@@ -1156,7 +1156,7 @@ msgstr "뷰어에서 넷플레이 로비 보기"
 
 msgctxt "#30599"
 msgid "Last Played"
-msgstr "마지막 플레이"
+msgstr "최근 플레이"
 
 msgctxt "#30600"
 msgid "History"
@@ -1269,7 +1269,6 @@ msgstr "항상 전체 목록을 1게임 1롬 세트로 필터링"
 msgctxt "#30640"
 msgid "If available, game lists will be prefiltered to a 1G1R set when browsing all"
 msgstr "가능한 경우 게임 목록은 모두 탐색할 때 1G1R 세트로 사전 필터링됩니다."
-
 
 
 
@@ -1407,7 +1406,7 @@ msgstr "모든 목록에 대해 장르를 필터링 하시겠습니까? 시간�
 
 msgctxt "#30308"
 msgid "Filter genres for more than 10 lists?  This could take a while..."
-msgstr "10 개 이상의 목록에 대한 장르를 필터링 하시겠습니까? 시간이 좀 걸릴 수 있습니다."
+msgstr "10개 이상의 목록에 대한 장르를 필터링 하시겠습니까? 시간이 좀 걸릴 수 있습니다."
 
 msgctxt "#30309"
 msgid "Filter number of players for all lists?  This could take a while..."
@@ -1415,7 +1414,7 @@ msgstr "모든 목록의 플레이어 수를 필터링 하시겠습니까? 시�
 
 msgctxt "#30310"
 msgid "Filter number of players for more than 10 lists?  This could take a while..."
-msgstr "10 개 이상의 목록에 대해 플레이어 수를 필터링 하시겠습니까? 시간이 좀 걸릴 수 있습니다."
+msgstr "10개 이상의 목록에 대해 플레이어 수를 필터링 하시겠습니까? 시간이 좀 걸릴 수 있습니다."
 
 msgctxt "#30311"
 msgid "Filter years for all lists?  This could take a while..."
@@ -1423,7 +1422,7 @@ msgstr "모든 목록에서 연도를 필터링 하시겠습니까? 시간이 �
 
 msgctxt "#30312"
 msgid "Filter years for more than 10 lists?  This could take a while..."
-msgstr "10 개 이상의 목록에 대해 연도를 필터링 하시겠습니까? 시간이 좀 걸릴 수 있습니다."
+msgstr "10개 이상의 목록에 대해 연도를 필터링 하시겠습니까? 시간이 좀 걸릴 수 있습니다."
 
 msgctxt "#30313"
 msgid "Filter studios for all lists?  This could take a while..."
@@ -1431,7 +1430,7 @@ msgstr "모든 목록에 대해 스튜디오를 필터링 하시겠습니까? �
 
 msgctxt "#30314"
 msgid "Filter studios for more than 10 lists?  This could take a while..."
-msgstr "10 개 이상의 목록을 위해 스튜디오를 필터링 하시겠습니까? 시간이 좀 걸릴 수 있습니다."
+msgstr "10개 이상의 목록을 위해 스튜디오를 필터링 하시겠습니까? 시간이 좀 걸릴 수 있습니다."
 
 msgctxt "#30315"
 msgid "Query all lists?  This could take a while..."
@@ -1439,7 +1438,7 @@ msgstr "모든 목록을 검색 하시겠습니까? 시간이 좀 걸릴 수 있
 
 msgctxt "#30316"
 msgid "Query more than 10 lists?  This could take a while..."
-msgstr "10 개 이상의 목록을 검색 하시겠습니까? 시간이 좀 걸릴 수 있습니다."
+msgstr "10개 이상의 목록을 검색 하시겠습니까? 시간이 좀 걸릴 수 있습니다."
 
 msgctxt "#30317"
 msgid "Create a query for all lists?  This could take a while..."
@@ -1447,7 +1446,7 @@ msgstr "모든 목록에 대한 검색을 만드시겠습니까? 시간이 좀 �
 
 msgctxt "#30318"
 msgid "Create a query for more than 10 lists?  This could take a while..."
-msgstr "10 개 이상의 목록에 대한 검색을 만드시겠습니까? 시간이 좀 걸릴 수 있습니다."
+msgstr "10개 이상의 목록에 대한 검색을 만드시겠습니까? 시간이 좀 걸릴 수 있습니다."
 
 msgctxt "#30319"
 msgid "You must enter a title"
