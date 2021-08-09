@@ -196,15 +196,13 @@ class iagl_download(object):
 								if dp_in:
 									current_size=int(xbmcgui.Window(10101).getProperty('current_size'))+len(chunk) if xbmcgui.Window(10101).getProperty('current_size') else 0
 									xbmcgui.Window(10101).setProperty('current_size',str(current_size))
-									filesize=int(xbmcgui.Window(10101).getProperty('file_size')) if xbmcgui.Window(10101).getProperty('file_size') else 0
-									filesize_str = bytes_to_string_size(filesize)
-									percent = int(100.0 * (current_size) / (filesize + 1)) #Added 1 byte to avoid div by zero
+									percent = int(100.0 * (current_size) / (total_size + 1)) #Added 1 byte to avoid div by zero
 									now = time.time()
 									diff = now - last_time
-									if diff > 1: #Only show progress updates in 1 second or greater intervals
+									if diff > 2: #Only show progress updates in 2 second or greater intervals
 										last_time = now
-										if filesize:
-											dp_in.update(percent,'%(fn)s[CR]%(current_size)s / %(estimated_size)s'%{'current_size':bytes_to_string_size(current_size),'fn':dp_description,'estimated_size':filesize_str})
+										if total_size:
+											dp_in.update(percent,'%(fn)s[CR]%(current_size)s / %(estimated_size)s'%{'current_size':bytes_to_string_size(current_size),'fn':dp_description,'estimated_size':bytes_to_string_size(total_size)})
 										else:
 											dp_in.update(percent,'%(fn)s[CR]%(current_size)s / Unknown Size'%{'current_size':bytes_to_string_size(current_size),'fn':dp_description})
 					if size<1:

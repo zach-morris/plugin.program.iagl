@@ -75,6 +75,7 @@ class iagl_addon(object):
 		self.settings['archive_org']['password'] = self.handle.getSetting(id='iagl_setting_ia_password')
 		self.settings['download'] = dict()
 		self.settings['download']['organize_cache'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_organize_temp_files'))
+		self.settings['download']['max_threads'] = get_setting_as(setting_type='int',setting=self.handle.getSetting(id='iagl_max_download_threads'))
 		self.settings['ext_launchers'] = dict()
 		self.settings['ext_launchers']['environment'] = get_setting_as(setting_type='ext_launch_env',setting=self.handle.getSetting(id='iagl_external_user_external_env'))
 		self.settings['ext_launchers']['close_kodi'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_external_launch_close_kodi'))

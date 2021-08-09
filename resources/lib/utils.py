@@ -1699,6 +1699,66 @@ def write_text_to_file(text_in,filename_in):
 	else:
 		success = False
 	return success
+
+def write_sparse_file(filename_in,file_size_in=0):
+	success = False
+	file_size = max(file_size_in,0)
+
+	if filename_in and file_size>0:
+		try:
+			filename_in.write_bytes(b'\0' * file_size)
+			success = True
+			xbmc.log(msg='IAGL:  Sparse file of size %(value_in)s was created with pathlib'%{'value_in':file_size}, level=xbmc.LOGDEBUG)
+		except Exception as exc:
+			xbmc.log(msg='IAGL:  Error writing sparse file %(value_in)s with pathlib, will attempt xbmcvfs.  Exception %(exc)s' % {'value_in': file_in, 'exc': exc}, level=xbmc.LOGERROR)
+			try:
+				with xbmcvfs.File(str(filename_in), 'w') as fo:
+					fo.write(bytearray(file_size))
+					success = True
+					xbmc.log(msg='IAGL:  Sparse file of size %(value_in)s was created with xbmcvfs'%{'value_in':file_size}, level=xbmc.LOGDEBUG)
+			except:
+				xbmc.log(msg='IAGL:  Error writing sparse file %(value_in)s.  Exception %(exc)s' % {'value_in': file_in, 'exc': exc}, level=xbmc.LOGERROR)
+
+	return success
+
+def combine_chunks(files_in,dest_file):
+	success = False
+	try:
+		xbmc.log(msg='IAGL:  Combining chunk files into file %(dest_file)s using pathlib' % {'dest_file': dest_file}, level=xbmc.LOGDEBUG)
+		with dest_file.open('ab') as fo:
+			for ff in files_in:
+				xbmc.log(msg='IAGL:  Combining chunk file %(ff)s' % {'ff': ff}, level=xbmc.LOGDEBUG)
+				fo.write(ff.read_bytes()) #Read each file into memory?  This may be too much
+				delete_file(str(ff))
+		success = True
+	except Exception as exc1:
+		xbmc.log(msg='IAGL:  Pathlib failed %(exc1)s, attempting xbmcvfs' % {'exc1': exc1}, level=xbmc.LOGDEBUG)
+		try:
+			with xbmcvfs.File(str(dest_file), 'wb') as fo:
+				for ff in files_in:
+					xbmc.log(msg='IAGL:  Combining chunk file %(ff)s' % {'ff': ff}, level=xbmc.LOGDEBUG)
+					last_read = False
+					with xbmcvfs.File(str(ff)) as f:
+						while not last_read:
+							chunk = f.readBytes(CHUNK_SIZE)
+							if chunk:
+								fo.write(chunk)
+							else:
+								last_read=True
+								break
+					delete_file(str(ff))
+			success = True
+		except Exception as exc2:
+			xbmc.log(msg='IAGL:  Combining chunk files failed %(exc)s' % {'exc': exc2}, level=xbmc.LOGERROR)
+	return success
+
+def calculate_chunk_range(l, n):
+#Yield n successive chunks from l.
+	newn = int(l / n)
+	for i in range(0, n-1):
+		yield range(l)[i*newn:i*newn+newn]
+	yield range(l)[n*newn-newn:]
+
 # def zlib_csum(filename, func):
 # 	csum = None
 # 	last_read = False
