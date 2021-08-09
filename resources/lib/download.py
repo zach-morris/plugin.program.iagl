@@ -5,6 +5,7 @@ import os, json
 # from kodi_six import xbmc, xbmcplugin, xbmcgui, xbmcvfs
 import xbmc, xbmcplugin, xbmcgui, xbmcvfs
 from . utils import *
+from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import unquote_plus as url_unquote
 import requests, time
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
@@ -103,6 +104,7 @@ class iagl_download(object):
 			self.game_list = game_list
 			self.game = game
 			self.chunk_size = 102400 #100 KB chunks
+			self.min_file_size = 2097152 #If file is smaller than 2MB, then use only 1 thread
 			self.timeout = (12.1,27)
 			self.logged_in = False
 			self.cookie = None
@@ -174,7 +176,207 @@ class iagl_download(object):
 				self.logged_in = False
 				xbmc.log(msg='IAGL:  Login information was not provided in addon settings',level=xbmc.LOGDEBUG)
 
-		def download(self,url=None,dest=None,est_size=None,show_progress=True):
+		def download_chunk(self,url_in=None,filename_in=None,range_in=None,thread_in=None,dp_in=None,dp_description='',total_size=None):
+			chunk_download_status = dict()
+			if url_in and filename_in and range_in and thread_in is not None:
+				chunk_filename = filename_in.parent.joinpath(filename_in.stem+'.{0:0=3d}'.format(thread_in)+filename_in.suffix)
+				xbmc.log(msg='IAGL:  Thread %(num)s downloading %(start)s-%(end)s to %(filename)s'%{'num':thread_in,'start':range_in[0],'end':range_in[-1],'filename':chunk_filename.name},level=xbmc.LOGDEBUG)
+				try:
+					with self.session.get(url_in,headers={'Range':'bytes=%(start)s-%(end)s'%{'start':range_in[0],'end':range_in[-1]}},verify=False,stream=True,timeout=self.timeout) as r:
+						r.raise_for_status()
+						with xbmcvfs.File(str(chunk_filename),'wb') as game_file:
+							size = 0
+							last_time = time.time()
+							for chunk in r.iter_content(chunk_size=self.chunk_size):
+								game_file.write(bytearray(chunk))
+								size = size+len(chunk) #chunks may be a different size when streaming
+								if dp_in and dp_in.iscanceled():
+									dp_in.close()
+									raise Exception('User Cancelled Download')
+								if dp_in:
+									current_size=int(xbmcgui.Window(10101).getProperty('current_size'))+len(chunk) if xbmcgui.Window(10101).getProperty('current_size') else 0
+									xbmcgui.Window(10101).setProperty('current_size',str(current_size))
+									filesize=int(xbmcgui.Window(10101).getProperty('file_size')) if xbmcgui.Window(10101).getProperty('file_size') else 0
+									filesize_str = bytes_to_string_size(filesize)
+									percent = int(100.0 * (current_size) / (filesize + 1)) #Added 1 byte to avoid div by zero
+									now = time.time()
+									diff = now - last_time
+									if diff > 1: #Only show progress updates in 1 second or greater intervals
+										last_time = now
+										if filesize:
+											dp_in.update(percent,'%(fn)s[CR]%(current_size)s / %(estimated_size)s'%{'current_size':bytes_to_string_size(current_size),'fn':dp_description,'estimated_size':filesize_str})
+										else:
+											dp_in.update(percent,'%(fn)s[CR]%(current_size)s / Unknown Size'%{'current_size':bytes_to_string_size(current_size),'fn':dp_description})
+					if size<1:
+						chunk_download_status['success'] = False
+						chunk_download_status['message'] = 'Download returned file of size 0'
+						chunk_download_status['download_size'] = size
+						delete_file(str(chunk_filename))
+						xbmc.log(msg='IAGL:  Download failed for thread %(num)s, %(url)s.  Archive returned an empty file'%{'num':thread_in,'url':url_in},level=xbmc.LOGERROR)
+					else:
+						chunk_download_status['success'] = True
+						chunk_download_status['message'] = 'Download complete'
+						chunk_download_status['file'] = chunk_filename
+						chunk_download_status['download_size'] = size
+						xbmc.log(msg='IAGL:  Download complete for thread %(num)s, %(url)s.  File size %(size)s'%{'num':thread_in,'url':url_in,'size':size},level=xbmc.LOGDEBUG)
+				except requests.exceptions.RequestException as rexc:
+					chunk_download_status['success'] = False
+					if r and r.status_code == 403:
+						chunk_download_status['message'] = 'Download Request Exception.  Archive requires login.'
+					else:
+						chunk_download_status['message'] = 'Download Request Exception.  See Kodi Log.'
+					xbmc.log(msg='IAGL:  Download request exception for thread %(num)s, %(url)s.  Request Exception %(exc)s'%{'num':thread_in,'url':url_in,'exc':rexc},level=xbmc.LOGERROR)
+					delete_file(str(chunk_filename))
+				except requests.exceptions.HTTPError as hexc:
+					chunk_download_status['success'] = False
+					chunk_download_status['message'] = 'Download HTTP error %(exc)s'%{'exc':hexc}
+					xbmc.log(msg='IAGL:  Download HTTP exception for thread %(num)s, %(url)s.  HTTP Exception %(exc)s'%{'num':thread_in,'url':url_in,'exc':hexc},level=xbmc.LOGERROR)
+					delete_file(str(chunk_filename))
+				except requests.exceptions.ConnectionError as cexc:
+					chunk_download_status['success'] = False
+					chunk_download_status['message'] = 'Download Connection error %(exc)s'%{'exc':cexc}
+					xbmc.log(msg='IAGL:  Download connection exception for thread %(num)s, %(url)s.  Connection Exception %(exc)s'%{'num':thread_in,'url':url_in,'exc':cexc},level=xbmc.LOGERROR)
+					delete_file(str(chunk_filename))
+				except requests.exceptions.Timeout as texc:
+					chunk_download_status['success'] = False
+					chunk_download_status['message'] = 'Download Timeout error %(exc)s'%{'exc':texc}
+					xbmc.log(msg='IAGL:  Download timeout exception for thread %(num)s, %(url)s.  Timeout Exception %(exc)s'%{'num':thread_in,'url':url_in,'exc':texc},level=xbmc.LOGERROR)
+					delete_file(str(chunk_filename))
+				except Exception as exc:
+					chunk_download_status['success'] = False
+					chunk_download_status['download_size'] = None
+					chunk_download_status['message'] = 'Download failed or was cancelled'
+					xbmc.log(msg='IAGL:  Download exception for thread %(num)s, %(url)s.  Exception %(exc)s'%{'num':thread_in,'url':url_in,'exc':exc},level=xbmc.LOGERROR)
+					delete_file(str(chunk_filename))
+			return chunk_download_status
+
+		def download(self,url=None,dest=None,est_size=None,num_of_threads=1,show_progress=True):
+			if url and dest:
+				if not self.session:
+					self.login()
+				if self.settings.get('archive_org') and self.settings.get('archive_org').get('username') and self.settings.get('archive_org').get('password') and self.settings.get('archive_org').get('enabled'):
+					xbmc.log(msg='IAGL:  Attempting download with login credentials',level=xbmc.LOGDEBUG)
+				else:
+					xbmc.log(msg='IAGL:  Attempting download without login credentials',level=xbmc.LOGDEBUG)
+				xbmc.log(msg='IAGL:  URL: %(value)s'%{'value':url},level=xbmc.LOGDEBUG)
+				xbmc.log(msg='IAGL:  Dest: %(value)s'%{'value':dest},level=xbmc.LOGDEBUG)
+				if show_progress:
+					dp = xbmcgui.DialogProgress()
+					description = next(iter([str(x) for x in [dest.name,url_unquote(os.path.split(url)[-1].split('%2F')[-1])] if x]),'Unknown File')
+					dp.create(loc_str(30376),description)
+					dp.update(0,description)
+				try:
+					with self.session.get(url,verify=False,stream=True,timeout=self.timeout) as self.r:
+						self.r.raise_for_status()
+						if self.r.headers.get('Content-length') and self.r.headers.get('Content-length').isdigit():
+							content_length=max(int(self.r.headers.get('Content-length')),0)
+						else:
+							content_length = None
+				except Exception as exc:
+					xbmc.log(msg='IAGL:  Download exception for %(url)s.  Exception %(exc)s'%{'url':url,'exc':exc},level=xbmc.LOGERROR)
+					content_length = None
+				if content_length and content_length>self.min_file_size and self.settings.get('download').get('max_threads')>1: #  and write_sparse_file(dest,file_size_in=content_length) The filesize was found in the header, and the filesize is larger than the min, so use multiple threads
+					xbmcgui.Window(10101).setProperty('file_size',str(content_length))
+					xbmcgui.Window(10101).setProperty('current_size',str(0))
+					num_workers = max([x for x in range(1,self.settings.get('download').get('max_threads')+1) if content_length/x>self.min_file_size]) #Determine max number of workers to use that will create chunks as small as ~2MB in size, up to max threads
+					xbmc.log(msg='IAGL:  Multi-threaded download initiated for %(url)s, file size %(file_size)s using %(num_workers)s workers'%{'url':url,'file_size':content_length,'num_workers':num_workers},level=xbmc.LOGDEBUG)
+					threaded_ranges = [list((x[0],x[-1])) for x in calculate_chunk_range(content_length,num_workers)] #Generate the byte ranges for each worker
+					threaded_ranges[-1][-1] = content_length #Last byte in last range is off by 1, so define it to be up to the last byte					
+					executor = ThreadPoolExecutor(max_workers=num_workers)
+					futures=[executor.submit(self.download_chunk,url_in=url,filename_in=dest,range_in=rr,thread_in=ii,dp_in=dp,dp_description=description,total_size=content_length) for ii,rr in enumerate(threaded_ranges)]
+					futures_results = [f.result() for f in futures]
+					if all([x.get('success') for x in futures_results]):
+						if combine_chunks(files_in=sorted([x.get('file') for x in futures_results]),dest_file=dest):
+							self.download_status['success'] = True
+							self.download_status['download_size'] = sum([x.get('download_size') for x in futures_results])
+							self.download_status['message'] = 'Download complete'					
+						else:
+							self.download_status['success'] = False
+							self.download_status['download_size'] = None
+							self.download_status['message'] = 'Chunk file merge failed'
+					else:
+						self.download_status['success'] = False
+						self.download_status['download_size'] = None
+						self.download_status['message'] = [x.get('message') for x in futures_results if not x.get('success')][0] #Use the first failure reason
+						delete_file(str(dest))
+					dp.close()
+					del dp
+					return self.download_status
+
+				else: #Non threaded download because the size of the file is either too small, or the size of the file could not be determined
+					xbmc.log(msg='IAGL:  Single-threaded download initiated for %(url)s. File size %(file_size)s'%{'url':url,'file_size':(content_length or 'Unknown')},level=xbmc.LOGDEBUG)
+					try:
+						with self.session.get(url,verify=False,stream=True,timeout=self.timeout) as self.r:
+							self.r.raise_for_status()
+							filesize = next(iter([int(x) for x in [self.r.headers.get('Content-length'),est_size] if x]),0)
+							filesize_str = bytes_to_string_size(filesize)
+							with xbmcvfs.File(str(dest),'wb') as game_file:
+								size = 0
+								last_time = time.time()
+								for chunk in self.r.iter_content(chunk_size=self.chunk_size):
+									game_file.write(bytearray(chunk))
+									if show_progress and dp.iscanceled():
+										dp.close()
+										raise Exception('User Cancelled Download')
+									if show_progress:
+										size = size+len(chunk) #chunks may be a different size when streaming
+										percent = int(100.0 * size / (filesize + 1)) #Added 1 byte to avoid div by zero
+										now = time.time()
+										diff = now - last_time
+										if diff > 1: #Only show progress updates in 1 second or greater intervals
+											last_time = now
+											if filesize:
+												dp.update(percent,'%(fn)s[CR]%(current_size)s / %(estimated_size)s'%{'current_size':bytes_to_string_size(size),'fn':description,'estimated_size':filesize_str})
+											else:
+												dp.update(percent,'%(fn)s[CR]%(current_size)s / Unknown Size'%{'current_size':bytes_to_string_size(size),'fn':description})
+						if size<1:
+							self.download_status['success'] = False
+							self.download_status['message'] = 'Download returned file of size 0'
+							self.download_status['download_size'] = size
+							delete_file(str(dest))
+							xbmc.log(msg='IAGL:  Download failed for %(url)s.  Archive returned an empty file'%{'url':url,'size':size},level=xbmc.LOGERROR)
+						else:
+							self.download_status['success'] = True
+							self.download_status['message'] = 'Download complete'
+							self.download_status['download_size'] = size
+							xbmc.log(msg='IAGL:  Download complete for %(url)s.  File size %(size)s'%{'url':url,'size':size},level=xbmc.LOGINFO)
+					except requests.exceptions.RequestException as rexc:
+						self.download_status['success'] = False
+						if self.r and self.r.status_code == 403:
+							self.download_status['message'] = 'Download Request Exception.  Archive requires login.'
+						else:
+							self.download_status['message'] = 'Download Request Exception.  See Kodi Log.'
+						xbmc.log(msg='IAGL:  Download request exception for %(url)s.  Request Exception %(exc)s'%{'url':url,'exc':rexc},level=xbmc.LOGERROR)
+						delete_file(str(dest))
+					except requests.exceptions.HTTPError as hexc:
+						self.download_status['success'] = False
+						self.download_status['message'] = 'Download HTTP error %(exc)s'%{'exc':hexc}
+						xbmc.log(msg='IAGL:  Download HTTP exception for %(url)s.  HTTP Exception %(exc)s'%{'url':url,'exc':hexc},level=xbmc.LOGERROR)
+						delete_file(str(dest))
+					except requests.exceptions.ConnectionError as cexc:
+						self.download_status['success'] = False
+						self.download_status['message'] = 'Download Connection error %(exc)s'%{'exc':cexc}
+						xbmc.log(msg='IAGL:  Download connection exception for %(url)s.  Connection Exception %(exc)s'%{'url':url,'exc':cexc},level=xbmc.LOGERROR)
+						delete_file(str(dest))
+					except requests.exceptions.Timeout as texc:
+						self.download_status['success'] = False
+						self.download_status['message'] = 'Download Timeout error %(exc)s'%{'exc':texc}
+						xbmc.log(msg='IAGL:  Download timeout exception for %(url)s.  Timeout Exception %(exc)s'%{'url':url,'exc':texc},level=xbmc.LOGERROR)
+						delete_file(str(dest))
+					except Exception as exc:
+						self.download_status['success'] = False
+						self.download_status['download_size'] = None
+						self.download_status['message'] = 'Download failed or was cancelled'
+						xbmc.log(msg='IAGL:  Download exception for %(url)s.  Exception %(exc)s'%{'url':url,'exc':exc},level=xbmc.LOGERROR)
+						delete_file(str(dest))
+					dp.close()
+					del dp
+					return self.download_status
+			else:
+				xbmc.log(msg='IAGL:  Badly formed download request.  URL %(url)s, Dest %(dest)s'%{'url':url,'dest':dest},level=xbmc.LOGDEBUG)
+				return None
+
+		def download_old(self,url=None,dest=None,est_size=None,show_progress=True):
 			if url and dest:
 				if not self.session:
 					self.login()

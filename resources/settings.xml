@@ -1706,6 +1706,18 @@
 						<heading>30054</heading>
 					</control>
 				</setting>
+				<setting help="30642" id="iagl_max_download_threads" label="30641" type="integer">
+					<level>3</level>
+					<default>5</default>
+					<constraints>
+						<minimum>1</minimum>
+						<step>1</step>
+						<maximum>10</maximum>
+					</constraints>
+					<control format="integer" type="slider">
+						<popup>false</popup>
+					</control>
+				</setting>
 			</group>
 			<group id="10">
 				<setting help="30577" id="iagl_run_script_unhide_all" label="30055" type="action">
@@ -1779,6 +1791,15 @@
 					</dependencies>
 					<control type="toggle"/>
 				</setting>
+<!-- 				<setting help="" id="iagl_hidden_int_max_download_threads" label="Download Threads" type="integer">
+					<level>4</level>
+					<default>5</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition name="InfoBool" on="property">false</condition>
+						</dependency>
+					</dependencies>
+				</setting> -->
 			</group>
 		</category>
 	</section>
