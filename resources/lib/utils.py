@@ -1728,7 +1728,16 @@ def combine_chunks(files_in,dest_file):
 		with dest_file.open('ab') as fo:
 			for ff in files_in:
 				xbmc.log(msg='IAGL:  Combining chunk file %(ff)s' % {'ff': ff}, level=xbmc.LOGDEBUG)
-				fo.write(ff.read_bytes()) #Read each file into memory?  This may be too much
+				last_read = False
+				with ff.open('rb') as f:
+					while not last_read:
+						chunk = f.read(CHUNK_SIZE)
+						if chunk:
+							fo.write(chunk)
+						else:
+							last_read=True
+							break
+				# fo.write(ff.read_bytes()) #Read each file into memory?  This may be too much
 				delete_file(str(ff))
 		success = True
 	except Exception as exc1:
@@ -1753,7 +1762,6 @@ def combine_chunks(files_in,dest_file):
 	return success
 
 def calculate_chunk_range(l, n):
-#Yield n successive chunks from l.
 	newn = int(l / n)
 	for i in range(0, n-1):
 		yield range(l)[i*newn:i*newn+newn]
