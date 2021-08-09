@@ -199,7 +199,7 @@ class iagl_download(object):
 									percent = int(100.0 * (current_size) / (total_size + 1)) #Added 1 byte to avoid div by zero
 									now = time.time()
 									diff = now - last_time
-									if diff > 2: #Only show progress updates in 2 second or greater intervals
+									if time.localtime().tm_sec in range(0,60)[thread_in::self.settings.get('download').get('max_threads')] and diff>1: #split up DP updates on any given second to each thread and only update once per second
 										last_time = now
 										if total_size:
 											dp_in.update(percent,'%(fn)s[CR]%(current_size)s / %(estimated_size)s'%{'current_size':bytes_to_string_size(current_size),'fn':dp_description,'estimated_size':bytes_to_string_size(total_size)})

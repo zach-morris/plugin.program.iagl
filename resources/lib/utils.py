@@ -1737,7 +1737,6 @@ def combine_chunks(files_in,dest_file):
 						else:
 							last_read=True
 							break
-				# fo.write(ff.read_bytes()) #Read each file into memory?  This may be too much
 				delete_file(str(ff))
 		success = True
 	except Exception as exc1:
