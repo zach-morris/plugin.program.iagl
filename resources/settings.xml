@@ -1712,7 +1712,7 @@
 					<constraints>
 						<minimum>1</minimum>
 						<step>1</step>
-						<maximum>10</maximum>
+						<maximum>12</maximum>
 					</constraints>
 					<control format="integer" type="slider">
 						<popup>false</popup>
