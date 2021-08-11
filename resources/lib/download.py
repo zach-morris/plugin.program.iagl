@@ -116,6 +116,9 @@ class iagl_download(object):
 
 		def login(self,show_progress=True):
 			self.session = requests.Session()
+			retries = requests.adapters.Retry(total=5,backoff_factor=0.1,status_forcelist=[500,502,503,504,499])
+			self.session.mount("http://",requests.adapters.HTTPAdapter(max_retries=retries))
+			self.session.mount("https://",requests.adapters.HTTPAdapter(max_retries=retries))
 			if self.settings.get('archive_org') and self.settings.get('archive_org').get('username') and self.settings.get('archive_org').get('password') and self.settings.get('archive_org').get('enabled'):
 				if show_progress:
 					current_dialog = xbmcgui.Dialog()
@@ -247,7 +250,7 @@ class iagl_download(object):
 					delete_file(str(chunk_filename_in))
 			return chunk_download_status
 
-		def download(self,url=None,dest=None,est_size=None,num_of_threads=1,show_progress=True):
+		def download(self,url=None,dest=None,est_size=None,show_progress=True):
 			if url and dest:
 				if not self.session:
 					self.login()
@@ -272,14 +275,14 @@ class iagl_download(object):
 				except Exception as exc:
 					xbmc.log(msg='IAGL:  Download exception for %(url)s.  Exception %(exc)s'%{'url':url,'exc':exc},level=xbmc.LOGERROR)
 					content_length = None
-				if content_length and content_length>self.min_file_size and self.settings.get('download').get('max_threads')>1: #  and write_sparse_file(dest,file_size_in=content_length) The filesize was found in the header, and the filesize is larger than the min, so use multiple threads
+				if content_length and content_length>self.min_file_size and self.settings.get('download').get('max_threads')>1 and max([x for x in range(1,self.settings.get('download').get('max_threads')+1) if content_length/x>self.min_file_size])>1: #The filesize was found in the header, and the filesize is larger than the min, so use multiple threads
 					xbmcgui.Window(10101).setProperty('file_size',str(content_length))
 					xbmcgui.Window(10101).setProperty('current_size',str(0))
 					num_workers = max([x for x in range(1,self.settings.get('download').get('max_threads')+1) if content_length/x>self.min_file_size]) #Determine max number of workers to use that will create chunks as small as ~2MB in size, up to max threads
 					xbmc.log(msg='IAGL:  Multi-threaded download initiated for %(url)s, file size %(file_size)s using %(num_workers)s workers'%{'url':url,'file_size':content_length,'num_workers':num_workers},level=xbmc.LOGDEBUG)
 					threaded_ranges = [list((x[0],x[-1])) for x in calculate_chunk_range(content_length,num_workers)] #Generate the byte ranges for each worker
-					threaded_ranges[-1][-1] = content_length #Last byte in last range is off by 1, so define it to be up to the last byte					
-					chunk_filenames = [dest.parent.joinpath(dest.stem+'.{0:0=3d}'.format(ii)+dest.suffix) for ii,rr in enumerate(threaded_ranges)]
+					threaded_ranges[-1][-1] = content_length #Last byte in last range is off by 1 sometimes, so ensure the last range is up to the last byte					
+					chunk_filenames = [dest.parent.joinpath(dest.stem+'.{0:0=3d}'.format(ii)+dest.suffix) for ii,rr in enumerate(threaded_ranges)] #Define chunk filenames in order
 					executor = ThreadPoolExecutor(max_workers=num_workers)
 					futures=[executor.submit(self.download_chunk,url_in=url,filename_in=dest,chunk_filename_in=chunk_filenames[ii],range_in=rr,thread_in=ii,dp_in=dp,dp_description=description,total_size=content_length) for ii,rr in enumerate(threaded_ranges)]
 					futures_results = [f.result() for f in futures]
@@ -300,6 +303,9 @@ class iagl_download(object):
 						self.download_status['message'] = [x.get('message') for x in futures_results if not x.get('success')][0] #Use the first failure reason
 						delete_file(str(dest))
 						delete_results=[delete_file(str(xx)) for xx in chunk_filenames]
+					#Clean up
+					xbmcgui.Window(10101).clearProperty('file_size')
+					xbmcgui.Window(10101).clearProperty('current_size')
 					dp.close()
 					del dp
 					return self.download_status
