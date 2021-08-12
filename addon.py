@@ -467,8 +467,10 @@ def download_and_launch_game(game_list_id,game_id):
 				current_dialog.notification(loc_str(30203),loc_str(30305) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':launched_files.get('launch_process_message')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
 			else:
 				current_dialog.notification(loc_str(30203),loc_str(30303) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':launched_files.get('launch_process_message')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
-		
-		iagl_post_launch = iagl_launch.post_launch_check(game_launch_status=launched_files)
+		if iagl_addon.settings.get('ext_launchers').get('wait_for_return'):
+			iagl_post_launch = iagl_launch.post_launch_check(game_launch_status=launched_files)
+		else:
+			xbmc.log(msg='IAGL:  Post launch wait is disabled, finishing.', level=xbmc.LOGDEBUG)
 	else:
 		current_dialog = xbmcgui.Dialog()
 		ok_ret = current_dialog.ok(loc_str(30203),loc_str(30359) % {'game_id': game_id, 'game_list_id': game_list_id})
@@ -509,7 +511,10 @@ def download_and_launch_game_netplay(game_list_id,game_id):
 				current_dialog.notification(loc_str(30203),loc_str(30305) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':launched_files.get('launch_process_message')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
 			else:
 				current_dialog.notification(loc_str(30203),loc_str(30303) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':launched_files.get('launch_process_message')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
-		iagl_post_launch = iagl_launch.post_launch_check(game_launch_status=launched_files)
+		if iagl_addon.settings.get('ext_launchers').get('wait_for_return'):
+			iagl_post_launch = iagl_launch.post_launch_check(game_launch_status=launched_files)
+		else:
+			xbmc.log(msg='IAGL:  Post launch wait is disabled, finishing.', level=xbmc.LOGDEBUG)
 	else:
 		current_dialog = xbmcgui.Dialog()
 		ok_ret = current_dialog.ok(loc_str(30203),loc_str(30359) % {'game_id': game_id, 'game_list_id': game_list_id})

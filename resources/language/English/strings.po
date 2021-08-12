@@ -1045,8 +1045,8 @@ msgid "If enabled, Retroarch will be closed first if running in the background (
 msgstr "If enabled, Retroarch will be closed first if running in the background (leave as default if unsure)"
 
 msgctxt "#30571"
-msgid "If enabled, Kodi videos and audio will be stopped before launching a game with Retroplayer (leave as default if unsure)"
-msgstr "If enabled, Kodi videos and audio will be stopped before launching a game with Retroplayer (leave as default if unsure)"
+msgid "If enabled, Kodi input and audio output will be stopped before launching a game Externally (leave as default if unsure)"
+msgstr "If enabled, Kodi input and audio output will be stopped before launching a game Externally (leave as default if unsure)"
 
 msgctxt "#30572"
 msgid "Change how data is copied for IAGL favorites (leave as default if unsure)"
@@ -1273,8 +1273,17 @@ msgid "Download Threads"
 msgstr "Download Threads"
 
 msgctxt "#30642"
-msgid "Number of threads to utilize for downloading"
-msgstr "Number of threads to utilize for downloading"
+msgid "Number of threads to utilize for downloading, if unsure do not change"
+msgstr "Number of threads to utilize for downloading, if unsure do not change"
+
+msgctxt "#30645"
+msgid "If enabled, Kodi media playback will be stopped before launching a game Externally (leave as default if unsure)"
+msgstr "If enabled, Kodi media playback will be stopped before launching a game Externally (leave as default if unsure)"
+
+msgctxt "#30646"
+msgid "If enabled, Kodi will provide a wait progress until the Externally launch game is exited (leave as default if unsure)"
+msgstr "If enabled, Kodi will provide a wait progress until the Externally launch game is exited (leave as default if unsure)"
+
 
 #
 #General
@@ -1823,6 +1832,14 @@ msgstr "[COLOR FF12A0C7]Execute Search[/COLOR]"
 msgctxt "#30638"
 msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
 msgstr "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+
+msgctxt "#30643"
+msgid "Stop Kodi playing media before External Launch"
+msgstr "Stop Kodi playing media before External Launch"
+
+msgctxt "#30644"
+msgid "Wait for return to Kodi after External Launch"
+msgstr "Wait for return to Kodi after External Launch"
 
 #
 #Context Menus

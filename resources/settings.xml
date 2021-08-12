@@ -1671,7 +1671,43 @@
 						<heading>30049</heading>
 					</control>
 				</setting>
-				<setting help="30571" id="iagl_enable_stop_media_before_launch" label="30057" type="integer">
+				<setting help="30571" id="iagl_suspend_audio_and_input" label="30057" type="integer">
+					<level>3</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="30095">0</option>
+							<option label="30096">1</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition name="InfoBool" on="property">true</condition>
+						</dependency>
+					</dependencies>
+					<control format="string" type="list">
+						<heading>30057</heading>
+					</control>
+				</setting>
+				<setting help="30645" id="iagl_enable_stop_media_before_launch" label="30643" type="integer">
+					<level>3</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="30095">0</option>
+							<option label="30096">1</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition name="InfoBool" on="property">true</condition>
+						</dependency>
+					</dependencies>
+					<control format="string" type="list">
+						<heading>30057</heading>
+					</control>
+				</setting>
+				<setting help="30646" id="iagl_enable_wait_for_return" label="30644" type="integer">
 					<level>3</level>
 					<default>0</default>
 					<constraints>

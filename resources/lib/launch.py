@@ -197,7 +197,7 @@ class iagl_launch(object):
 						ra_cfg = get_ra_libretro_config(self.settings.get('ext_launchers').get('ra').get('cfg_path'),self.settings.get('ext_launchers').get('ra').get('app_path'))
 						self.current_command = self.current_command.replace('%RETROARCH_CORE_DIR%',ra_cfg.get('libretro_directory'))		
 
-				if xbmc.Player().isPlaying():
+				if xbmc.Player().isPlaying() and self.settings.get('ext_launchers').get('stop_media_before_launch'):
 					xbmc.Player().stop()
 					xbmc.sleep(500) #If sleep is not called, Kodi will crash - does not like playing video and then swiching to a game
 					

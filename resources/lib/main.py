@@ -80,8 +80,10 @@ class iagl_addon(object):
 		self.settings['ext_launchers']['environment'] = get_setting_as(setting_type='ext_launch_env',setting=self.handle.getSetting(id='iagl_external_user_external_env'))
 		self.settings['ext_launchers']['close_kodi'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_external_launch_close_kodi'))
 		self.settings['ext_launchers']['pause_kodi'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_external_launch_pause_kodi'))
-		self.settings['ext_launchers']['stop_audio_controller'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_stop_media_before_launch'))
+		self.settings['ext_launchers']['stop_audio_controller'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_suspend_audio_and_input'))
+		self.settings['ext_launchers']['stop_media_before_launch'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_stop_media_before_launch'))
 		self.settings['ext_launchers']['send_stop_command'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_android_stop_command'))
+		self.settings['ext_launchers']['wait_for_return'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_wait_for_return'))
 		self.settings['ext_launchers']['ra'] = dict()
 		self.settings['ext_launchers']['ra']['name'] = 'RetroArch'
 		self.settings['ext_launchers']['ra']['app_path'] = get_setting_as(setting_type='file_path',setting=self.handle.getSetting(id='iagl_external_path_to_retroarch'))
@@ -316,6 +318,7 @@ class iagl_addon(object):
 			return listitem_in
 
 		def get_games_as_listitems(self,game_list_id=None,filter_in=None):
+			#Possilbly add multiprocessing at this step
 			return [self.add_game_context_menus(listitem_in=get_game_listitem(dict_in=x,filter_in=filter_in),game_list_id=game_list_id,game_id=x.get('values').get('label2'),is_favorite=(isinstance(x.get('properties').get('platform_category'),str) and 'favorites' in x.get('properties').get('platform_category').lower())) for x in self.get_games_from_cache(game_list_id=game_list_id) if x]
 
 		def get_game_as_dict(self,game_list_id=None,game_id=None):
