@@ -1338,6 +1338,10 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 	game_dl_dict = dict()
 	if emu_dl_source and emu_baseurl and game_url and (emu_dl_source in ['Archive.org','Local Network Source','Kodi Library Source','Local File Source'] or 'http' in emu_dl_source):
 		game_filename = url_unquote(game_url.split('/')[-1].split('%2F')[-1])
+		xbmc.log(msg='IAGL:  Debug testing game_filename %(game_filename)s, type %(tt)s' % {'game_filename': game_filename,'tt':type(game_filename)}, level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Debug testing emu_downloadpath %(emu_downloadpath)s, type %(tt)s' % {'emu_downloadpath': emu_downloadpath,'tt':type(emu_downloadpath)}, level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Debug testing game_downloadpath %(game_downloadpath)s, type %(tt)s' % {'game_downloadpath': game_downloadpath,'tt':type(game_downloadpath)}, level=xbmc.LOGDEBUG)
+
 		game_dl_dict = {'dl_source':emu_dl_source,
 					'baseurl':emu_baseurl,
 					'url':game_url,
@@ -1765,6 +1769,10 @@ def calculate_chunk_range(l, n):
 	for i in range(0, n-1):
 		yield range(l)[i*newn:i*newn+newn]
 	yield range(l)[n*newn-newn:]
+
+def split_list_into_parts(lst, n):
+	for i in range(0, len(lst), n):
+		yield lst[i:i + n]
 
 # def zlib_csum(filename, func):
 # 	csum = None
