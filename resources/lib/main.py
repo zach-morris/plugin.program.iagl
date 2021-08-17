@@ -664,7 +664,7 @@ class iagl_addon(object):
 			dict_out['userdata']['dat_files']['path'] = check_userdata_directory(os.path.join(dict_out['userdata']['path'],'dat_files'))
 			dict_out['userdata']['dat_files']['files'] = [x for x in dict_out['userdata']['dat_files']['path'].glob('*.xml') if x.is_file()]
 			dict_out['userdata']['dat_files']['crc'] = [get_crc32(x) for x in dict_out['userdata']['dat_files']['files']]
-			dict_out['userdata']['dat_files']['header'] = [get_xml_header(x,default_dir=dict_out['userdata']['game_cache']['files']) for x in dict_out['userdata']['dat_files']['files']]
+			dict_out['userdata']['dat_files']['header'] = [get_xml_header(x,default_dir=dict_out['userdata']['game_cache']['path']) for x in dict_out['userdata']['dat_files']['files']]
 			dict_out['userdata']['dat_files']['cache_name'] = ['%(fn)s_%(crc)s'%{'fn':x[0].name.replace(x[0].suffix,''),'crc':x[1]} for x in zip(dict_out['userdata']['dat_files']['files'],dict_out['userdata']['dat_files']['crc'])]
 			dict_out['userdata']['game_cache']['path'] = check_userdata_directory(os.path.join(dict_out['userdata']['path'],'game_cache'))
 			dict_out['userdata']['game_cache']['files'] = [x for x in dict_out['userdata']['game_cache']['path'].glob('**/*') if x.is_file()]
