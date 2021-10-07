@@ -158,21 +158,21 @@ class iagl_launch(object):
 
 				if self.netplay and self.netplay_query is None:
 					xbmc.log(msg='IAGL:  Launch game with netplay host requested',level=xbmc.LOGDEBUG)
-					netplay_command = ' --host --nick="%(nn)s (%(ss)s)"'%{'nn':next(iter([x for x in [self.settings.get('game_action').get('netplay_nick'),xbmc.getInfoLabel('System.ProfileName')] if x]),'Kodi Player 1')[0:22],'ss':self.uuid}
+					netplay_command = ' --host --nick "%(nn)s (%(ss)s)"'%{'nn':next(iter([x for x in [self.settings.get('game_action').get('netplay_nick'),xbmc.getInfoLabel('System.ProfileName')] if x]),'Kodi Player 1')[0:22],'ss':self.uuid}
 					if self.settings.get('game_action').get('netplay_port') and len(self.settings.get('game_action').get('netplay_port')) and self.settings.get('game_action').get('netplay_port').isdigit():
-						netplay_command = netplay_command+' --port=%(pp)s'%{'pp':self.settings.get('game_action').get('netplay_port')}
+						netplay_command = netplay_command+' --port %(pp)s'%{'pp':self.settings.get('game_action').get('netplay_port')}
 					if self.settings.get('game_action').get('netplay_checkframes') and len(self.settings.get('game_action').get('netplay_checkframes')) and self.settings.get('game_action').get('netplay_checkframes').isdigit():
-						netplay_command = netplay_command+' --check-frames=%(pp)s'%{'pp':self.settings.get('game_action').get('netplay_checkframes')}
+						netplay_command = netplay_command+' --check-frames %(pp)s'%{'pp':self.settings.get('game_action').get('netplay_checkframes')}
 					self.current_command = self.current_command.replace(' %NETPLAY_COMMAND%',netplay_command)
 				elif self.netplay and self.netplay_query:
 					xbmc.log(msg='IAGL:  Launch game with netplay user 2+ requested',level=xbmc.LOGDEBUG)
 					current_host = next(iter([x for x in [self.netplay_query.get('mitm_ip'),self.netplay_query.get('ip'),self.netplay_query.get('host')] if x and len(x)>7]),self.netplay_query.get('ip'))
 					current_port = next(iter([x for x in [self.netplay_query.get('mitm_port'),self.netplay_query.get('port')] if x and x != '0']),'55435')
-					netplay_command = ' --connect=%(host)s --port=%(pp)s --nick="%(nn)s (%(ss)s)"'%{'host':current_host,'pp':current_port,'nn':next(iter([x for x in [self.settings.get('game_action').get('netplay_nick'),xbmc.getInfoLabel('System.ProfileName')] if x]),'Kodi Player 1')[0:22],'ss':self.uuid}
+					netplay_command = ' --connect %(host)s --port %(pp)s --nick "%(nn)s (%(ss)s)"'%{'host':current_host,'pp':current_port,'nn':next(iter([x for x in [self.settings.get('game_action').get('netplay_nick'),xbmc.getInfoLabel('System.ProfileName')] if x]),'Kodi Player 1')[0:22],'ss':self.uuid}
 					# if self.settings.get('game_action').get('netplay_port') and len(self.settings.get('game_action').get('netplay_port')) and self.settings.get('game_action').get('netplay_port').isdigit():
 						# netplay_command = netplay_command+' --port=%(pp)s'%{'pp':self.settings.get('game_action').get('netplay_port')}
 					if self.settings.get('game_action').get('netplay_checkframes') and len(self.settings.get('game_action').get('netplay_checkframes')) and self.settings.get('game_action').get('netplay_checkframes').isdigit():
-						netplay_command = netplay_command+' --check-frames=%(pp)s'%{'pp':self.settings.get('game_action').get('netplay_checkframes')}
+						netplay_command = netplay_command+' --check-frames %(pp)s'%{'pp':self.settings.get('game_action').get('netplay_checkframes')}
 					self.current_command = self.current_command.replace(' %NETPLAY_COMMAND%',netplay_command)
 				else:
 					xbmc.log(msg='IAGL:  Launch game without netplay requested',level=xbmc.LOGDEBUG)
