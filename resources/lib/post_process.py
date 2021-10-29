@@ -91,6 +91,67 @@ class iagl_post_process(object):
 		else:
 			xbmc.log(msg='IAGL:  Badly formed game post process request.',level=xbmc.LOGERROR)
 			return None
+
+		#After download and post process, if the file(s) need to be copied to the local filesystem, do it here
+		if self.settings.get('download').get('copy_network_to_local') and any([x for x in game_pp_status if (isinstance(x.get('post_process_launch_file'),str) or isinstance(x.get('post_process_launch_file'),Path)) and ('smb:' in str(x.get('post_process_launch_file')) or 'nfs:' in str(x.get('post_process_launch_file')))]):
+			if game_pp_status[0].get('post_processor') in ['unzip_to_folder_and_launch_file','unzip_and_launch_file','unzip_and_launch_scummvm_file','unzip_and_launch_win31_file','unzip_and_launch_exodos_file']:
+				#Copy parent directory, point to same file
+				xbmc.log(msg='IAGL:  Copying Kodi Network sourced folder %(value)s to local filesystem temporary cache for launching'%{'value':Path(game_pp_status[0].get('post_process_launch_file')).parent},level=xbmc.LOGDEBUG)
+				network_folder_name = Path(game_pp_status[0].get('post_process_launch_file')).parent.name
+				files_to_copy = get_all_files_in_directory_xbmcvfs(game_pp_status[0].get('post_process_launch_file').rsplit(network_folder_name,1)[0])
+				overall_copy_success = all([copy_file_xbmcvfs(file_in=ftc,path_in=self.directory.get('userdata').get('game_cache').get('path').joinpath(network_folder_name)) for ftc in files_to_copy])
+				if overall_copy_success:
+					game_pp_status[0]['post_process_success'] = True
+					game_pp_status[0]['post_process_message'] = 'Copied folder to local filesystem'
+					game_pp_status[0]['post_process_launch_file'] = self.directory.get('userdata').get('game_cache').get('path').joinpath(network_folder_name,Path(game_pp_status[0].get('post_process_launch_file')).name)
+				else:
+					game_pp_status[0]['post_process_success'] = False
+					game_pp_status[0]['post_process_message'] = 'Copied folder to local filesystem failed'
+			elif game_pp_status[0].get('post_processor') in ['unarchive_game_launch_cue']:
+				#Copy cue and bin, point to cue
+				xbmc.log(msg='IAGL:  Copying Kodi Network sourced BIN and CUE files %(value)s to local filesystem temporary cache for launching'%{'value':game_pp_status[0].get('post_process_launch_file')},level=xbmc.LOGDEBUG)
+				files_to_copy = [x for x in get_all_files_in_directory_xbmcvfs(get_dest_as_str(Path(game_pp_status[0].get('post_process_launch_file')).parent)) if Path(game_pp_status[0].get('post_process_launch_file')).stem in os.path.split(os.path.splitext(x)[0])[-1] and 'bin' in os.path.splitext(x)[-1].lower()]
+				if len(files_to_copy) > 0:
+					files_to_copy.append(game_pp_status[0].get('post_process_launch_file'))
+					overall_copy_success = all([copy_file_xbmcvfs(file_in=ftc,path_in=self.directory.get('userdata').get('game_cache').get('path')) for ftc in files_to_copy])
+					if overall_copy_success:
+						game_pp_status[0]['post_process_success'] = True
+						game_pp_status[0]['post_process_message'] = 'Copied folder to local filesystem'
+						game_pp_status[0]['post_process_launch_file'] = self.directory.get('userdata').get('game_cache').get('path').joinpath(Path(game_pp_status[0].get('post_process_launch_file')).name)
+					else:
+						game_pp_status[0]['post_process_success'] = False
+						game_pp_status[0]['post_process_message'] = 'Copied folder to local filesystem failed'
+				else:
+					game_pp_status[0]['post_process_success'] = False
+					game_pp_status[0]['post_process_message'] = 'Unable to locate BIN files on the Network Share'
+			elif game_pp_status[0].get('post_processor') in ['unarchive_neocd_launch_cue']:
+				#Copy cue and bin to a neocd folder, point to cue
+				xbmc.log(msg='IAGL:  Copying Kodi Network sourced NEOCD BIN and CUE files %(value)s to local filesystem temporary cache for launching'%{'value':game_pp_status[0].get('post_process_launch_file')},level=xbmc.LOGDEBUG)
+				files_to_copy = [x for x in get_all_files_in_directory_xbmcvfs(get_dest_as_str(Path(game_pp_status[0].get('post_process_launch_file')).parent)) if Path(game_pp_status[0].get('post_process_launch_file')).stem in os.path.split(os.path.splitext(x)[0])[-1] and 'bin' in os.path.splitext(x)[-1].lower()]
+				if len(files_to_copy) > 0:
+					files_to_copy.append(game_pp_status[0].get('post_process_launch_file'))
+					overall_copy_success = all([copy_file_xbmcvfs(file_in=ftc,path_in=self.directory.get('userdata').get('game_cache').get('path').joinpath('neocd')) for ftc in files_to_copy])
+					if overall_copy_success:
+						game_pp_status[0]['post_process_success'] = True
+						game_pp_status[0]['post_process_message'] = 'Copied folder to local filesystem'
+						game_pp_status[0]['post_process_launch_file'] = self.directory.get('userdata').get('game_cache').get('path').joinpath('neocd',Path(game_pp_status[0].get('post_process_launch_file')).name)
+					else:
+						game_pp_status[0]['post_process_success'] = False
+						game_pp_status[0]['post_process_message'] = 'Copied folder to local filesystem failed'
+				else:
+					game_pp_status[0]['post_process_success'] = False
+					game_pp_status[0]['post_process_message'] = 'Unable to locate BIN files on the Network Share'
+			else:
+				for ii in range(len(game_pp_status)):
+					xbmc.log(msg='IAGL:  Copying Kodi Network sourced file %(value)s to local filesystem temporary cache for launching'%{'value':game_pp_status[ii].get('post_process_launch_file')},level=xbmc.LOGDEBUG)
+					if copy_file_xbmcvfs(file_in=game_pp_status[ii].get('post_process_launch_file'),path_in=self.directory.get('userdata').get('game_cache').get('path')):
+						game_pp_status[ii]['post_process_success'] = True
+						game_pp_status[ii]['post_process_message'] = 'Copied file to local filesystem'
+						game_pp_status[ii]['post_process_launch_file'] = self.directory.get('userdata').get('game_cache').get('path').joinpath(Path(game_pp_status[ii].get('post_process_launch_file')).name)
+					else:
+						game_pp_status[ii]['post_process_success'] = False
+						game_pp_status[ii]['post_process_message'] = 'Copy to local filesystem failed'
+
 		return game_pp_status
 
 	class unzip(object):
@@ -141,21 +202,22 @@ class iagl_post_process(object):
 			matching_files = None
 			if isinstance(self.game_files,list):
 				matching_files = flatten_list([x.get('matching_existing_files') for x in self.game_files if x.get('download_message') == 'File exists locally']) #Identify matching files if they were not redownloaded
+				
 			if matching_files and len(matching_files)>0:
 				if self.use_emu_command and kwargs and kwargs.get('emu_command') and any([kwargs.get('emu_command') in str(x) for x in matching_files]):
 					self.pp_status['post_process_success'] = True
 					self.pp_status['post_process_message'] = 'Existing emu command file found'
 					self.pp_status['post_process_launch_file'] = [x for x in matching_files if kwargs.get('emu_command') in str(x)][0]
 					xbmc.log(msg='IAGL:  Pointing to the existing emu_command file %(value)s'%{'value':self.pp_status.get('post_process_launch_file')},level=xbmc.LOGDEBUG)
-				elif self.point_to_file and any([self.point_to_file==x.suffix.lower() for x in matching_files]):
+				elif self.point_to_file and any([self.point_to_file==get_file_suffix(x) for x in matching_files]):
 					self.pp_status['post_process_success'] = True
 					self.pp_status['post_process_message'] = 'Existing %(type)s file type found'%{'type':self.point_to_file}
-					self.pp_status['post_process_launch_file'] = [x for x in matching_files if self.point_to_file==x.suffix.lower()][0]
+					self.pp_status['post_process_launch_file'] = [x for x in matching_files if self.point_to_file==get_file_suffix(x)][0]
 					xbmc.log(msg='IAGL:  Pointing to the existing file %(value)s'%{'value':self.pp_status.get('post_process_launch_file')},level=xbmc.LOGDEBUG)
-				elif self.pointer_file and any([self.pointer_file==x.suffix.lower() for x in matching_files]):
+				elif self.pointer_file and any([self.pointer_file==get_file_suffix(x) for x in matching_files]):
 					self.pp_status['post_process_success'] = True
 					self.pp_status['post_process_message'] = 'Existing %(type)s file type found'%{'type':self.pointer_file}
-					self.pp_status['post_process_launch_file'] = [x for x in matching_files if self.pointer_file==x.suffix.lower()][0]
+					self.pp_status['post_process_launch_file'] = [x for x in matching_files if self.pointer_file==get_file_suffix(x)][0]
 					xbmc.log(msg='IAGL:  Pointing to the existing pointer file %(value)s'%{'value':self.pp_status.get('post_process_launch_file')},level=xbmc.LOGDEBUG)
 				elif any(['.zip' not in str(x).lower() for x in matching_files]): #Pick the non-zipped matching file
 					self.pp_status['post_process_success'] = True
@@ -172,10 +234,10 @@ class iagl_post_process(object):
 					directory_out = None #Unzip to the folder the archive is located in
 					if self.unzip_to_folder:
 						if self.folder_name:
-							directory_out = str(Path(file).parent.joinpath(self.folder_name)) #Unzip to the specified folder
+							directory_out = get_dest_as_str(Path(file).parent.joinpath(self.folder_name)) #Unzip to the specified folder
 						else:
-							directory_out = str(Path(file).parent.joinpath(clean_file_folder_name(self.game.get('values').get('label2')))) #Unzip to a 'safe name' folder
-					my_archive = archive_tool.archive_tool(archive_file=str(file),directory_out=directory_out,flatten_archive=self.flatten_archive)
+							directory_out = get_dest_as_str(Path(file).parent.joinpath(clean_file_folder_name(self.game.get('values').get('label2')))) #Unzip to a 'safe name' folder
+					my_archive = archive_tool.archive_tool(archive_file=get_dest_as_str(file),directory_out=directory_out,flatten_archive=self.flatten_archive)
 					extracted_files, success = my_archive.extract()
 					if success:
 						self.pp_status['post_process_success'] = True

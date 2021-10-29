@@ -1754,6 +1754,24 @@
 						<popup>false</popup>
 					</control>
 				</setting>
+				<setting help="30648" id="iagl_copy_network_to_local" label="30647" type="integer">
+					<level>3</level>
+					<default>1</default>
+					<constraints>
+						<options>
+							<option label="30095">0</option>
+							<option label="30096">1</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition name="InfoBool" on="property">true</condition>
+						</dependency>
+					</dependencies>
+					<control format="string" type="list">
+						<heading>30647</heading>
+					</control>
+				</setting>
 			</group>
 			<group id="10">
 				<setting help="30577" id="iagl_run_script_unhide_all" label="30055" type="action">

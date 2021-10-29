@@ -401,12 +401,12 @@ def delete_folder_pathlib(folder_in=None,confirm_delete=False):
 def delete_file(file_in=None,confirm_delete=False):
 	success = False
 	if file_in is not None:
-		if check_if_file_exists(file_in):
+		if check_if_file_exists(get_dest_as_str(file_in)):
 			if not confirm_delete:
-				success = xbmcvfs.delete(str(file_in))
+				success = xbmcvfs.delete(get_dest_as_str(file_in))
 			else:
 				if xbmcgui.Dialog().yesno('Confirm Deletion','Are you sure you want to delete %(file_in)s'%{'file_in':file_in.name},'Cancel','Delete'): #Need to localize this eventually
-					success = xbmcvfs.delete(str(file_in))
+					success = xbmcvfs.delete(get_dest_as_str(file_in))
 	if success:
 		xbmc.log(msg='IAGL:  Deleted file %(value_in_1)s'%{'value_in_1':file_in}, level=xbmc.LOGDEBUG)
 	return success
@@ -1338,10 +1338,6 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 	game_dl_dict = dict()
 	if emu_dl_source and emu_baseurl and game_url and (emu_dl_source in ['Archive.org','Local Network Source','Kodi Library Source','Local File Source'] or 'http' in emu_dl_source):
 		game_filename = url_unquote(game_url.split('/')[-1].split('%2F')[-1])
-		xbmc.log(msg='IAGL:  Debug testing game_filename %(game_filename)s, type %(tt)s' % {'game_filename': game_filename,'tt':type(game_filename)}, level=xbmc.LOGDEBUG)
-		xbmc.log(msg='IAGL:  Debug testing emu_downloadpath %(emu_downloadpath)s, type %(tt)s' % {'emu_downloadpath': emu_downloadpath,'tt':type(emu_downloadpath)}, level=xbmc.LOGDEBUG)
-		xbmc.log(msg='IAGL:  Debug testing game_downloadpath %(game_downloadpath)s, type %(tt)s' % {'game_downloadpath': game_downloadpath,'tt':type(game_downloadpath)}, level=xbmc.LOGDEBUG)
-
 		game_dl_dict = {'dl_source':emu_dl_source,
 					'baseurl':emu_baseurl,
 					'url':game_url,
@@ -1375,14 +1371,14 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 					game_dl_dict['matching_existing_files'] = []
 			else: #If the file to be downloaded is an archive, the name without extension should match with a local file
 				game_dl_dict['matching_existing_files'] = [x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+glob.escape(game_dl_dict.get('downloadpath_resolved').stem)+'[.]*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES and x.name.lower() not in IGNORE_THESE_FILES]
-		elif xbmcvfs.exists(str(game_dl_dict.get('downloadpath'))): #Kodi network source save spot (like smb address) need to use xbmcvfs to check local files
+		elif xbmcvfs.exists(get_dest_as_str(game_dl_dict.get('downloadpath'))): #Kodi network source save spot (like smb address) need to use xbmcvfs to check local files
 			if game_dl_dict.get('filename_ext') not in ARCHIVE_FILETYPES:
-				if check_if_file_exists(str(game_dl_dict.get('downloadpath_resolved'))):
-					game_dl_dict['matching_existing_files'] = [str(game_dl_dict.get('downloadpath_resolved'))]
+				if check_if_file_exists(get_dest_as_str(game_dl_dict.get('downloadpath_resolved'))):
+					game_dl_dict['matching_existing_files'] = [get_dest_as_str(game_dl_dict.get('downloadpath_resolved'))]
 				else:
 					game_dl_dict['matching_existing_files'] = []
 			else:
-				game_dl_dict['matching_existing_files'] = [x for x in get_all_files_in_directory_xbmcvfs(str(game_dl_dict.get('downloadpath'))) if os.path.split(os.path.splitext(x)[0])[-1] == game_dl_dict.get('filename_no_ext') and os.path.splitext(x)[-1].lower() not in IGNORE_THESE_FILETYPES and os.path.split(os.path.splitext(x)[0])[-1] not in IGNORE_THESE_FILES]
+				game_dl_dict['matching_existing_files'] = [x for x in get_all_files_in_directory_xbmcvfs(get_dest_as_str(game_dl_dict.get('downloadpath'))) if os.path.split(os.path.splitext(x)[0])[-1] == game_dl_dict.get('filename_no_ext') and os.path.splitext(x)[-1].lower() not in IGNORE_THESE_FILETYPES and os.path.split(os.path.splitext(x)[0])[-1] not in IGNORE_THESE_FILES]
 		else:
 			game_dl_dict['matching_existing_files'] = []
 		if game_dl_dict.get('emu_command'):
@@ -1515,6 +1511,42 @@ def get_all_files_in_directory_xbmcvfs(directory_in):
 				dirs_in_dir4, files_in_dir4 = xbmcvfs.listdir(os.path.join(directory_in,dd,dd2,dd3,'')) #Go down 4 levels to look for various files for launching
 				current_files = current_files+[os.path.join(directory_in,dd,dd2,dd3,ff) for ff in files_in_dir4 if ff is not None]
 	return current_files
+
+def copy_file_xbmcvfs(file_in=None,path_in=None):
+	success = False
+	if isinstance(file_in,Path):
+		file_in = get_dest_as_str(file_in) #Make this a string for xbmcvfs copying
+	if file_in is not None and path_in is not None:
+		if check_if_file_exists(file_in):
+			if not check_if_file_exists(path_in.joinpath(Path(file_in).name)):
+				success = xbmcvfs.copy(file_in,str(path_in.joinpath(Path(file_in).name)))
+				if not success: #Per docs note moving files between different filesystem (eg. local to nfs://) is not possible on all platforms. You may have to do it manually by using the copy and deleteFile functions.
+					xbmc.log(msg='IAGL:  Unable to copy file %(value_in_1)s to %(value_in_2)s'%{'value_in_1':file_in,'value_in_2':path_in}, level=xbmc.LOGDEBUG)
+			else:
+				xbmc.log(msg='IAGL:  The file %(value_in_1)s was found to already exist at the location requested'%{'value_in_1':Path(file_in).name}, level=xbmc.LOGDEBUG)
+				success = True
+		else:
+			xbmc.log(msg='IAGL:  Unable to copy file %(value_in_1)s, could not be found.'%{'value_in_1':file_in}, level=xbmc.LOGDEBUG)
+	if success:
+		xbmc.log(msg='IAGL:  Copied file %(value_in_1)s to %(value_in_2)s'%{'value_in_1':file_in,'value_in_2':path_in}, level=xbmc.LOGDEBUG)
+	return success
+
+def get_file_suffix(file_in):
+	if isinstance(file_in,Path):
+		return file_in.suffix.lower()
+	elif isinstance(file_in,str):
+		return Path(file_in).suffix.lower()
+	else:
+		return None
+
+def get_dest_as_str(dest):
+	dest_str = str(dest)
+	#Fix network share Kodi Path truncation
+	if dest_str.startswith('smb:/') and not dest_str.startswith('smb://'):
+		dest_str = dest_str.replace('smb:/','smb://')
+	if dest_str.startswith('nfs:/') and not dest_str.startswith('nfs://'):
+		dest_str = dest_str.replace('nfs:/','nfs://')
+	return dest_str
 
 def clean_file_folder_name(text_in):
 	text_out = text_in
@@ -1741,16 +1773,17 @@ def combine_chunks(files_in,dest_file):
 						else:
 							last_read=True
 							break
-				delete_file(str(ff))
+				delete_file(ff)
 		success = True
 	except Exception as exc1:
 		xbmc.log(msg='IAGL:  Pathlib failed %(exc1)s, attempting xbmcvfs' % {'exc1': exc1}, level=xbmc.LOGDEBUG)
+		xbmc.log(msg='IAGL:  Combining chunk files into file %(dest_file)s using xbmcvfs' % {'dest_file': get_dest_as_str(dest_file)}, level=xbmc.LOGDEBUG)
 		try:
-			with xbmcvfs.File(str(dest_file), 'wb') as fo:
+			with xbmcvfs.File(get_dest_as_str(dest_file), 'wb') as fo:
 				for ff in files_in:
-					xbmc.log(msg='IAGL:  Combining chunk file %(ff)s' % {'ff': ff}, level=xbmc.LOGDEBUG)
+					xbmc.log(msg='IAGL:  Combining chunk file %(ff)s' % {'ff': get_dest_as_str(ff)}, level=xbmc.LOGDEBUG)
 					last_read = False
-					with xbmcvfs.File(str(ff)) as f:
+					with xbmcvfs.File(get_dest_as_str(ff)) as f:
 						while not last_read:
 							chunk = f.readBytes(CHUNK_SIZE)
 							if chunk:
@@ -1758,7 +1791,7 @@ def combine_chunks(files_in,dest_file):
 							else:
 								last_read=True
 								break
-					delete_file(str(ff))
+					delete_file(ff)
 			success = True
 		except Exception as exc2:
 			xbmc.log(msg='IAGL:  Combining chunk files failed %(exc)s' % {'exc': exc2}, level=xbmc.LOGERROR)
@@ -1769,10 +1802,6 @@ def calculate_chunk_range(l, n):
 	for i in range(0, n-1):
 		yield range(l)[i*newn:i*newn+newn]
 	yield range(l)[n*newn-newn:]
-
-def split_list_into_parts(lst, n):
-	for i in range(0, len(lst), n):
-		yield lst[i:i + n]
 
 # def zlib_csum(filename, func):
 # 	csum = None

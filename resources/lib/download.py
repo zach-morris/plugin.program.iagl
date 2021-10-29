@@ -187,7 +187,7 @@ class iagl_download(object):
 				try:
 					with self.session.get(url_in,headers={'Range':'bytes=%(start)s-%(end)s'%{'start':range_in[0],'end':range_in[-1]}},verify=False,stream=True,timeout=self.timeout) as r:
 						r.raise_for_status()
-						with xbmcvfs.File(str(chunk_filename_in),'wb') as game_file:
+						with xbmcvfs.File(get_dest_as_str(chunk_filename_in),'wb') as game_file:
 							size = 0
 							last_time = time.time()
 							for chunk in r.iter_content(chunk_size=self.chunk_size):
@@ -211,7 +211,7 @@ class iagl_download(object):
 						chunk_download_status['success'] = False
 						chunk_download_status['message'] = 'Download returned file of size 0'
 						chunk_download_status['download_size'] = size
-						delete_file(str(chunk_filename_in))
+						delete_file(chunk_filename_in)
 						xbmc.log(msg='IAGL:  Download failed for thread %(num)s, %(url)s.  Archive returned an empty file'%{'num':thread_in,'url':url_in},level=xbmc.LOGERROR)
 					else:
 						chunk_download_status['success'] = True
@@ -226,28 +226,28 @@ class iagl_download(object):
 					else:
 						chunk_download_status['message'] = 'Download Request Exception.  See Kodi Log.'
 					xbmc.log(msg='IAGL:  Download request exception for thread %(num)s, %(url)s.  Request Exception %(exc)s'%{'num':thread_in,'url':url_in,'exc':rexc},level=xbmc.LOGERROR)
-					delete_file(str(chunk_filename_in))
+					delete_file(chunk_filename_in)
 				except requests.exceptions.HTTPError as hexc:
 					chunk_download_status['success'] = False
 					chunk_download_status['message'] = 'Download HTTP error %(exc)s'%{'exc':hexc}
 					xbmc.log(msg='IAGL:  Download HTTP exception for thread %(num)s, %(url)s.  HTTP Exception %(exc)s'%{'num':thread_in,'url':url_in,'exc':hexc},level=xbmc.LOGERROR)
-					delete_file(str(chunk_filename_in))
+					delete_file(chunk_filename_in)
 				except requests.exceptions.ConnectionError as cexc:
 					chunk_download_status['success'] = False
 					chunk_download_status['message'] = 'Download Connection error %(exc)s'%{'exc':cexc}
 					xbmc.log(msg='IAGL:  Download connection exception for thread %(num)s, %(url)s.  Connection Exception %(exc)s'%{'num':thread_in,'url':url_in,'exc':cexc},level=xbmc.LOGERROR)
-					delete_file(str(chunk_filename_in))
+					delete_file(chunk_filename_in)
 				except requests.exceptions.Timeout as texc:
 					chunk_download_status['success'] = False
 					chunk_download_status['message'] = 'Download Timeout error %(exc)s'%{'exc':texc}
 					xbmc.log(msg='IAGL:  Download timeout exception for thread %(num)s, %(url)s.  Timeout Exception %(exc)s'%{'num':thread_in,'url':url_in,'exc':texc},level=xbmc.LOGERROR)
-					delete_file(str(chunk_filename_in))
+					delete_file(chunk_filename_in)
 				except Exception as exc:
 					chunk_download_status['success'] = False
 					chunk_download_status['download_size'] = None
 					chunk_download_status['message'] = 'Download failed or was cancelled'
 					xbmc.log(msg='IAGL:  Download exception for thread %(num)s, %(url)s.  Exception %(exc)s'%{'num':thread_in,'url':url_in,'exc':exc},level=xbmc.LOGERROR)
-					delete_file(str(chunk_filename_in))
+					delete_file(chunk_filename_in)
 			return chunk_download_status
 
 		def download(self,url=None,dest=None,est_size=None,show_progress=True):
@@ -295,14 +295,14 @@ class iagl_download(object):
 							self.download_status['success'] = False
 							self.download_status['download_size'] = None
 							self.download_status['message'] = 'Chunk file merge failed'
-							delete_file(str(dest))
-							delete_results = [delete_file(str(xx)) for xx in chunk_filenames]
+							delete_file(dest)
+							delete_results = [delete_file(xx) for xx in chunk_filenames]
 					else:
 						self.download_status['success'] = False
 						self.download_status['download_size'] = None
 						self.download_status['message'] = [x.get('message') for x in futures_results if not x.get('success')][0] #Use the first failure reason
-						delete_file(str(dest))
-						delete_results=[delete_file(str(xx)) for xx in chunk_filenames]
+						delete_file(dest)
+						delete_results=[delete_file(xx) for xx in chunk_filenames]
 					#Clean up
 					xbmcgui.Window(10101).clearProperty('file_size')
 					xbmcgui.Window(10101).clearProperty('current_size')
@@ -317,7 +317,7 @@ class iagl_download(object):
 							self.r.raise_for_status()
 							filesize = next(iter([int(x) for x in [self.r.headers.get('Content-length'),est_size] if x]),0)
 							filesize_str = bytes_to_string_size(filesize)
-							with xbmcvfs.File(str(dest),'wb') as game_file:
+							with xbmcvfs.File(get_dest_as_str(dest),'wb') as game_file:
 								size = 0
 								last_time = time.time()
 								for chunk in self.r.iter_content(chunk_size=self.chunk_size):
@@ -340,7 +340,7 @@ class iagl_download(object):
 							self.download_status['success'] = False
 							self.download_status['message'] = 'Download returned file of size 0'
 							self.download_status['download_size'] = size
-							delete_file(str(dest))
+							delete_file(dest)
 							xbmc.log(msg='IAGL:  Download failed for %(url)s.  Archive returned an empty file'%{'url':url,'size':size},level=xbmc.LOGERROR)
 						else:
 							self.download_status['success'] = True
@@ -354,28 +354,28 @@ class iagl_download(object):
 						else:
 							self.download_status['message'] = 'Download Request Exception.  See Kodi Log.'
 						xbmc.log(msg='IAGL:  Download request exception for %(url)s.  Request Exception %(exc)s'%{'url':url,'exc':rexc},level=xbmc.LOGERROR)
-						delete_file(str(dest))
+						delete_file(dest)
 					except requests.exceptions.HTTPError as hexc:
 						self.download_status['success'] = False
 						self.download_status['message'] = 'Download HTTP error %(exc)s'%{'exc':hexc}
 						xbmc.log(msg='IAGL:  Download HTTP exception for %(url)s.  HTTP Exception %(exc)s'%{'url':url,'exc':hexc},level=xbmc.LOGERROR)
-						delete_file(str(dest))
+						delete_file(dest)
 					except requests.exceptions.ConnectionError as cexc:
 						self.download_status['success'] = False
 						self.download_status['message'] = 'Download Connection error %(exc)s'%{'exc':cexc}
 						xbmc.log(msg='IAGL:  Download connection exception for %(url)s.  Connection Exception %(exc)s'%{'url':url,'exc':cexc},level=xbmc.LOGERROR)
-						delete_file(str(dest))
+						delete_file(dest)
 					except requests.exceptions.Timeout as texc:
 						self.download_status['success'] = False
 						self.download_status['message'] = 'Download Timeout error %(exc)s'%{'exc':texc}
 						xbmc.log(msg='IAGL:  Download timeout exception for %(url)s.  Timeout Exception %(exc)s'%{'url':url,'exc':texc},level=xbmc.LOGERROR)
-						delete_file(str(dest))
+						delete_file(dest)
 					except Exception as exc:
 						self.download_status['success'] = False
 						self.download_status['download_size'] = None
 						self.download_status['message'] = 'Download failed or was cancelled'
 						xbmc.log(msg='IAGL:  Download exception for %(url)s.  Exception %(exc)s'%{'url':url,'exc':exc},level=xbmc.LOGERROR)
-						delete_file(str(dest))
+						delete_file(dest)
 					dp.close()
 					del dp
 					return self.download_status
@@ -589,7 +589,7 @@ class iagl_download(object):
 							self.session.cookies.set(k,v,domain=domain)
 				xbmc.log(msg='IAGL:  Attempting download file',level=xbmc.LOGDEBUG)
 				xbmc.log(msg='IAGL:  URL: %(value)s'%{'value':url},level=xbmc.LOGDEBUG)
-				xbmc.log(msg='IAGL:  Dest: %(value)s'%{'value':dest},level=xbmc.LOGDEBUG)
+				xbmc.log(msg='IAGL:  Dest: %(value)s'%{'value':get_dest_as_str(dest)},level=xbmc.LOGDEBUG)
 				if show_progress:
 					dp = xbmcgui.DialogProgress()
 					description = next(iter([str(x) for x in [dest.name,url_unquote(os.path.split(url)[-1].split('%2F')[-1])] if x]),'Unknown File')
@@ -600,7 +600,7 @@ class iagl_download(object):
 						self.r.raise_for_status()
 						filesize = next(iter([int(x) for x in [self.r.headers.get('Content-length'),est_size] if x]),0)
 						filesize_str = bytes_to_string_size(filesize)
-						with xbmcvfs.File(str(dest),'wb') as ff:
+						with xbmcvfs.File(get_dest_as_str(dest),'wb') as ff:
 							size = 0
 							last_time = time.time()
 							for chunk in self.r.iter_content(chunk_size=self.chunk_size):
