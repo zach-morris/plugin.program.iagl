@@ -1382,7 +1382,12 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 		else:
 			game_dl_dict['matching_existing_files'] = []
 		if game_dl_dict.get('emu_command'):
-			game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+glob.escape(game_dl_dict.get('emu_command'))+'*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES and x.name.lower() not in IGNORE_THESE_FILES]))
+			if 'smb:' not in game_dl_dict.get('downloadpath') and 'nfs:' not in game_dl_dict.get('downloadpath'):
+				#Faster search if not a network share
+				game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+glob.escape(game_dl_dict.get('emu_command'))+'*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES and x.name.lower() not in IGNORE_THESE_FILES]))
+			else:
+				#Slower search if a network share
+				game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[x for x in get_all_files_in_directory_xbmcvfs(get_dest_as_str(game_dl_dict.get('downloadpath'))) if game_dl_dict.get('emu_command').lower() in x.lower() and Path(x).suffix.lower() not in IGNORE_THESE_FILETYPES and Path(x).name.lower() not in IGNORE_THESE_FILES]))
 		if game_dl_dict.get('dl_source') in ['Archive.org']:
 			game_dl_dict['downloader'] = 'archive_org'
 		elif 'http' in game_dl_dict.get('dl_source'):
@@ -1530,6 +1535,45 @@ def copy_file_xbmcvfs(file_in=None,path_in=None):
 	if success:
 		xbmc.log(msg='IAGL:  Copied file %(value_in_1)s to %(value_in_2)s'%{'value_in_1':file_in,'value_in_2':path_in}, level=xbmc.LOGDEBUG)
 	return success
+
+def copy_directory_xbmcvfs(directory_in=None,directory_out=None):
+	files_out = list()
+	overall_success = True
+
+	if not xbmcvfs.exists(directory_out):
+		if xbmcvfs.mkdir(directory_out):
+			xbmc.log(msg='IAGL:  Requested directory %(dd)s created' % {'dd': directory_out}, level=xbmc.LOGDEBUG)
+		else:
+			xbmc.log(msg='IAGL:  Requested directory %(dd)s failed to be created, copy may fail' % {'dd': directory_out}, level=xbmc.LOGERROR)
+
+	dirs_in_archive, files_in_archive = xbmcvfs.listdir(directory_in)
+
+	for ff in files_in_archive:
+		file_from = os.path.join(directory_in,ff)
+		if not xbmcvfs.exists(os.path.join(xbmcvfs.translatePath(directory_out),ff)):
+			success = xbmcvfs.copy(file_from,os.path.join(xbmcvfs.translatePath(directory_out),ff)) #Extract the file to the correct directory
+		else:
+			xbmc.log(msg='IAGL: File %(ff)s already exists in the directory %(directory_in)s' % {'ff': ff,'directory_in':directory_in}, level=xbmc.LOGDEBUG)
+			success = True
+		if not success:
+			xbmc.log(msg='IAGL:  Error copying file %(ff)s from directory %(directory_in)s' % {'ff': ff,'directory_in':directory_in}, level=xbmc.LOGERROR)
+			overall_success = False
+		else:
+			xbmc.log(msg='IAGL: Copied file %(ff)s from directory %(directory_in)s' % {'ff': ff,'directory_in':directory_in}, level=xbmc.LOGDEBUG)
+			files_out.append(os.path.join(xbmcvfs.translatePath(directory_out),ff)) #Append the file to the list of extracted files
+	for dd in dirs_in_archive:
+		if xbmcvfs.exists(os.path.join(xbmcvfs.translatePath(directory_out),dd)) or xbmcvfs.mkdir(os.path.join(xbmcvfs.translatePath(directory_out),dd)): #Make the archive directory in the directory_out
+			files_out2, success2 = copy_directory_xbmcvfs(directory_in=os.path.join(directory_in,dd,''),directory_out=os.path.join(directory_out,dd))
+			if success2:
+				files_out = files_out + files_out2 #Append the files in the subdir to the list of extracted files
+			else:
+				xbmc.log(msg='IAGL:  Error copying files from the subdirectory %(dd)s in the directory %(directory_in)s' % {'dd': dd,'directory_in':directory_in}, level=xbmc.LOGERROR)
+				overall_success = False
+		else:
+			overall_success = False
+			xbmc.log(msg='IAGL:  Unable to create the subdirectory %(dir_from)s in the directory %(directory_in)s' % {'dir_from': os.path.join(xbmcvfs.translatePath(directory_out),dd),'archive_file':directory_in}, level=xbmc.LOGERROR)
+
+	return files_out, overall_success
 
 def get_file_suffix(file_in):
 	if isinstance(file_in,Path):
