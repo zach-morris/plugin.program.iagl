@@ -13,6 +13,7 @@ class iagl_addon(object):
 		self.name = ADDON_NAME
 		self.handle = ADDON_HANDLE
 		self.version = str(ADDON_HANDLE.getAddonInfo('version')) #The current version number that the addon is being run at
+		self.addon_path = ADDON_PATH
 		self.start_time = str(time.time()) #The current time that the addon was run
 		self.last_version = get_mem_cache('iagl_version') #The last version number that the addon was run at
 		self.last_start_time = get_mem_cache('iagl_start_time') #The last time the addon was run
@@ -76,6 +77,7 @@ class iagl_addon(object):
 		self.settings['download'] = dict()
 		self.settings['download']['organize_cache'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_organize_temp_files'))
 		self.settings['download']['max_threads'] = get_setting_as(setting_type='int',setting=self.handle.getSetting(id='iagl_max_download_threads'))
+		self.settings['download']['copy_network_to_local'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_copy_network_to_local'))
 		self.settings['ext_launchers'] = dict()
 		self.settings['ext_launchers']['environment'] = get_setting_as(setting_type='ext_launch_env',setting=self.handle.getSetting(id='iagl_external_user_external_env'))
 		self.settings['ext_launchers']['close_kodi'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_external_launch_close_kodi'))
@@ -201,10 +203,10 @@ class iagl_addon(object):
 			#Default Values
 			self.defaults = dict()
 			self.settings = dict()
-			self.defaults['thumb'] = 'special://home/addons/plugin.program.iagl/resources/skins/Default/media/default_thumb.jpg'
-			self.defaults['banner'] = 'special://home/addons/plugin.program.iagl/resources/skins/Default/media/default_banner.jpg'
-			self.defaults['icon'] = 'special://home/addons/plugin.program.iagl/resources/skins/Default/media/icon.png'
-			self.defaults['fanart'] = 'special://home/addons/plugin.program.iagl/fanart.jpg'
+			self.defaults['thumb'] = MEDIA_SPECIAL_PATH%{'filename':'default_thumb.jpg'}
+			self.defaults['banner'] = MEDIA_SPECIAL_PATH%{'filename':'default_banner.jpg'}
+			self.defaults['icon'] = MEDIA_SPECIAL_PATH%{'filename':'icon.png'}
+			self.defaults['fanart'] = MEDIA_SPECIAL_PATH%{'filename':'fanart.jpg'}
 			self.game_list_context_menu_items = dict()
 			self.game_list_context_menu_items['defaults'] = [(loc_str(30406),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/<game_list_id>/view_list_settings)'),(loc_str(30404),'RunPlugin(plugin://plugin.program.iagl/context_menu/edit/<game_list_id>/emu_launcher)'),(loc_str(30405),'RunPlugin(plugin://plugin.program.iagl/context_menu/select/<game_list_id>/emu_downloadpath)'),(loc_str(30400),'RunPlugin(plugin://plugin.program.iagl/context_menu/select/<game_list_id>/metadata)'),(loc_str(30402),'RunPlugin(plugin://plugin.program.iagl/context_menu/select/<game_list_id>/art)'),(loc_str(30403),'RunPlugin(plugin://plugin.program.iagl/context_menu/edit/<game_list_id>/emu_visibility)'),(loc_str(30407),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/<game_list_id>/refresh_list)')]
 			self.game_list_context_menu_items['external'] = [(loc_str(30408),'RunPlugin(plugin://plugin.program.iagl/context_menu/select/<game_list_id>/emu_ext_launch_cmd)')]

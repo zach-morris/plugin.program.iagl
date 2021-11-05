@@ -12,7 +12,7 @@ https://github.com/phil65/skin.estuary
 			<width>100%</width>
 			<height>100%</height>
 			<aspectratio>scale</aspectratio>
-			<texture background="true">special://home/addons/plugin.program.iagl/resources/skins/Default/media/fanart.jpg</texture>
+			<texture background="true">fanart.jpg</texture>
 			<visible>true</visible>
 		</control>
         <control type="button" id="3011">
@@ -21,8 +21,8 @@ https://github.com/phil65/skin.estuary
             <posy>1</posy>
             <width>1</width>
             <height>1</height>
-            <texturefocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/transparent.png</texturefocus>
-            <texturenofocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/transparent.png</texturenofocus>
+            <texturefocus>transparent.png</texturefocus>
+            <texturenofocus>transparent.png</texturenofocus>
             <onleft>3003</onleft>
             <onright>3003</onright>
             <onup>3003</onup>
@@ -86,7 +86,7 @@ https://github.com/phil65/skin.estuary
 			<width>100%</width>
 			<height>100%</height>
 			<aspectratio>stretch</aspectratio>
-			<texture border="25" background="true" colordiffuse="96FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/grey.png</texture>
+			<texture border="25" background="true" colordiffuse="96FFFFFF">grey.png</texture>
 			<visible>True</visible>
 		</control>
 		<control type="image">
@@ -95,7 +95,7 @@ https://github.com/phil65/skin.estuary
 			<width>100%</width>
 			<height>100%</height>
 			<aspectratio>scale</aspectratio>
-			<texture background="true">special://home/addons/plugin.program.iagl/resources/skins/Default/media/fanart.jpg</texture>
+			<texture background="true">fanart.jpg</texture>
 			<visible>!Control.IsVisible(1141)</visible>
 		</control>
 		<control type="group">
@@ -131,8 +131,8 @@ https://github.com/phil65/skin.estuary
 					<left>-16</left>
 					<width>566</width>
 					<height>841</height>
-					<texture>special://home/addons/plugin.program.iagl/resources/skins/Default/media/black.png</texture>
-					<bordertexture border="21">special://home/addons/plugin.program.iagl/resources/skins/Default/media/shadow.png</bordertexture>
+					<texture>black.png</texture>
+					<bordertexture border="21">shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 					<visible>False</visible>
 				</control>
@@ -144,7 +144,7 @@ https://github.com/phil65/skin.estuary
 					<height>801</height>
 					<aspectratio aligny="center">keep</aspectratio>
 					<fadetime>200</fadetime>
-					<bordertexture border="6">special://home/addons/plugin.program.iagl/resources/skins/Default/media/semi_tranparent_1.png</bordertexture>
+					<bordertexture border="6">semi_tranparent_1.png</bordertexture>
 					<bordersize>5</bordersize>
 					<texture>$INFO[Container(115).ListItem.Art(poster)]</texture>
 					<visible>!String.IsEmpty(Container(115).ListItem.Art(poster))</visible>
@@ -182,7 +182,7 @@ https://github.com/phil65/skin.estuary
 						<onleft>138</onleft>
 						<onright>138</onright>
 						<ondown>5000</ondown>
-						<texturenofocus border="21">special://home/addons/plugin.program.iagl/resources/skins/Default/media/dialog-bg.png</texturenofocus>
+						<texturenofocus border="21">dialog-bg.png</texturenofocus>
 						<visible>Integer.IsGreater(Container(4000).NumItems,0) + String.IsEqual(Window(HOME).Property(iagl_trailer_started),False)</visible>
 					</control>
 					<control type="image">
@@ -190,7 +190,7 @@ https://github.com/phil65/skin.estuary
 						<width>512</width>
 						<height>418</height>
 						<aligny>bottom</aligny>
-						<texture border="21">special://home/addons/plugin.program.iagl/resources/skins/Default/media/dialog-bg.png</texture>
+						<texture border="21">dialog-bg.png</texture>
 						<visible>Integer.IsGreater(Container(4000).NumItems,0) + String.IsEqual(Window(HOME).Property(iagl_trailer_started),False)</visible>
 					</control>
 					<control type="button" id="139">
@@ -207,7 +207,7 @@ https://github.com/phil65/skin.estuary
 						<onleft>139</onleft>
 						<onright>139</onright>
 						<ondown>5000</ondown>
-						<texturenofocus border="21">special://home/addons/plugin.program.iagl/resources/skins/Default/media/dialog-bg.png</texturenofocus>
+						<texturenofocus border="21">dialog-bg.png</texturenofocus>
 						<visible>!Integer.IsGreater(Container(4000).NumItems,0) + String.IsEqual(Window(HOME).Property(iagl_trailer_started),False)</visible>
 					</control>
 					<control type="textbox">
@@ -397,7 +397,7 @@ https://github.com/phil65/skin.estuary
 					<height>283</height>
 					<fadetime>150</fadetime>
 					<aspectratio>keep</aspectratio>
-					<bordertexture border="6">special://home/addons/plugin.program.iagl/resources/skins/Default/media/semi_tranparent_1.png</bordertexture>
+					<bordertexture border="6">semi_tranparent_1.png</bordertexture>
 					<bordersize>5</bordersize>
 					<texture>$INFO[Container(116).ListItem.Art(banner)]</texture>
 					<visible>!String.IsEmpty(Container(116).ListItem.Art(banner))+String.IsEqual(Window(HOME).Property(iagl_trailer_started),False)</visible>
@@ -409,7 +409,7 @@ https://github.com/phil65/skin.estuary
 					<height>283</height>
 					<fadetime>150</fadetime>
 					<aspectratio>keep</aspectratio>
-					<bordertexture border="6">special://home/addons/plugin.program.iagl/resources/skins/Default/media/semi_tranparent_1.png</bordertexture>
+					<bordertexture border="6">semi_tranparent_1.png</bordertexture>
 					<bordersize>5</bordersize>
 					<texture>$INFO[Container(113).ListItem.Property(platform_banner)]</texture>
 					<visible>String.IsEmpty(Container(113).ListItem.Art(banner))+String.IsEqual(Window(HOME).Property(iagl_trailer_started),False)</visible>
@@ -439,7 +439,7 @@ https://github.com/phil65/skin.estuary
 								<width>224</width>
 								<height>80</height>
 								<bottom>10</bottom>
-								<texture>special://home/addons/plugin.program.iagl/resources/skins/Default/media/overlayfade.png</texture>
+								<texture>overlayfade.png</texture>
 								<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
 							</control>
 							<control type="label">
@@ -482,7 +482,7 @@ https://github.com/phil65/skin.estuary
 								<width>224</width>
 								<height>80</height>
 								<bottom>10</bottom>
-								<texture>special://home/addons/plugin.program.iagl/resources/skins/Default/media/overlayfade.png</texture>
+								<texture>overlayfade.png</texture>
 								<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
 							</control>
 							<control type="label">
@@ -513,7 +513,7 @@ https://github.com/phil65/skin.estuary
 								<top>16</top>
 								<width>232</width>
 								<height>285</height>
-								<texture border="8" colordiffuse="FF12A0C7">special://home/addons/plugin.program.iagl/resources/skins/Default/media/thumbnail_focused.png</texture>
+								<texture border="8" colordiffuse="FF12A0C7">thumbnail_focused.png</texture>
 							</control>
 						</control>
 					</focusedlayout>
@@ -537,8 +537,8 @@ https://github.com/phil65/skin.estuary
 						<height>142</height>
 						<align>center</align>
 						<aligny>top</aligny>
-						<texturefocus border="21" colordiffuse="FF12A0C7">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-fo.png</texturefocus>
-						<texturenofocus border="21">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-nofo.png</texturenofocus>
+						<texturefocus border="21" colordiffuse="FF12A0C7">button-fo.png</texturefocus>
+						<texturenofocus border="21">button-nofo.png</texturenofocus>
 						<textoffsetx>35</textoffsetx>
 						<textoffsety>78</textoffsety>
 						<radioposx>108</radioposx>
@@ -547,12 +547,12 @@ https://github.com/phil65/skin.estuary
 						<font>font12</font>
 						<textcolor>white</textcolor>
 						<focusedcolor>FF12A0C7</focusedcolor>
-						<textureradioonfocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/launch.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/launch.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/launch.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/launch.png</textureradiooffnofocus>
-						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/launch.png</textureradiooffdisabled>
-						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/launch.png</textureradioondisabled>
+						<textureradioonfocus colordiffuse="D0FFFFFF">icons/launch.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="D0FFFFFF">icons/launch.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="D0FFFFFF">icons/launch.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="D0FFFFFF">icons/launch.png</textureradiooffnofocus>
+						<textureradiooffdisabled colordiffuse="disabled">icons/launch.png</textureradiooffdisabled>
+						<textureradioondisabled colordiffuse="disabled">icons/launch.png</textureradioondisabled>
 						<label>$ADDON[plugin.program.iagl 30434]</label>
 						<visible>True</visible>
 						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
@@ -562,8 +562,8 @@ https://github.com/phil65/skin.estuary
 						<height>142</height>
 						<align>center</align>
 						<aligny>top</aligny>
-						<texturefocus border="21" colordiffuse="FF12A0C7">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-fo.png</texturefocus>
-						<texturenofocus border="21">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-nofo.png</texturenofocus>
+						<texturefocus border="21" colordiffuse="FF12A0C7">button-fo.png</texturefocus>
+						<texturenofocus border="21">button-nofo.png</texturenofocus>
 						<textoffsetx>35</textoffsetx>
 						<textoffsety>78</textoffsety>
 						<radioposx>108</radioposx>
@@ -572,12 +572,12 @@ https://github.com/phil65/skin.estuary
 						<font>font12</font>
 						<textcolor>white</textcolor>
 						<focusedcolor>FF12A0C7</focusedcolor>
-						<textureradioonfocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradiooffnofocus>
-						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradiooffdisabled>
-						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/netplay.png</textureradioondisabled>
+						<textureradioonfocus colordiffuse="D0FFFFFF">icons/netplay.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="D0FFFFFF">icons/netplay.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="D0FFFFFF">icons/netplay.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="D0FFFFFF">icons/netplay.png</textureradiooffnofocus>
+						<textureradiooffdisabled colordiffuse="disabled">icons/netplay.png</textureradiooffdisabled>
+						<textureradioondisabled colordiffuse="disabled">icons/netplay.png</textureradioondisabled>
 						<label>$ADDON[plugin.program.iagl 30004]</label>
 						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
 					</control>
@@ -586,8 +586,8 @@ https://github.com/phil65/skin.estuary
 						<height>142</height>
 						<align>center</align>
 						<aligny>top</aligny>
-						<texturefocus border="21" colordiffuse="FF12A0C7">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-fo.png</texturefocus>
-						<texturenofocus border="21">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-nofo.png</texturenofocus>
+						<texturefocus border="21" colordiffuse="FF12A0C7">button-fo.png</texturefocus>
+						<texturenofocus border="21">button-nofo.png</texturenofocus>
 						<textoffsetx>35</textoffsetx>
 						<textoffsety>78</textoffsety>
 						<radioposx>108</radioposx>
@@ -596,12 +596,12 @@ https://github.com/phil65/skin.estuary
 						<font>font12</font>
 						<textcolor>white</textcolor>
 						<focusedcolor>FF12A0C7</focusedcolor>
-						<textureradioonfocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradiooffnofocus>
-						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradiooffdisabled>
-						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/trailer.png</textureradioondisabled>
+						<textureradioonfocus colordiffuse="D0FFFFFF">icons/trailer.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="D0FFFFFF">icons/trailer.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="D0FFFFFF">icons/trailer.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="D0FFFFFF">icons/trailer.png</textureradiooffnofocus>
+						<textureradiooffdisabled colordiffuse="disabled">icons/trailer.png</textureradiooffdisabled>
+						<textureradioondisabled colordiffuse="disabled">icons/trailer.png</textureradioondisabled>
 						<label>$ADDON[plugin.program.iagl 30435]</label>
 						<onclick>Dialog.Close(busydialog,true)</onclick>
 						<onclick>SetProperty(iagl_trailer_started,True,HOME)</onclick>
@@ -614,8 +614,8 @@ https://github.com/phil65/skin.estuary
 						<height>142</height>
 						<align>center</align>
 						<aligny>top</aligny>
-						<texturefocus border="21" colordiffuse="FF12A0C7">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-fo.png</texturefocus>
-						<texturenofocus border="21">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-nofo.png</texturenofocus>
+						<texturefocus border="21" colordiffuse="FF12A0C7">button-fo.png</texturefocus>
+						<texturenofocus border="21">button-nofo.png</texturenofocus>
 						<textoffsetx>35</textoffsetx>
 						<textoffsety>78</textoffsety>
 						<radioposx>108</radioposx>
@@ -624,12 +624,12 @@ https://github.com/phil65/skin.estuary
 						<font>font12</font>
 						<textcolor>white</textcolor>
 						<focusedcolor>FF12A0C7</focusedcolor>
-						<textureradioonfocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/stop.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/stop.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/stop.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/stop.png</textureradiooffnofocus>
-						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/stop.png</textureradiooffdisabled>
-						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/stop.png</textureradioondisabled>
+						<textureradioonfocus colordiffuse="D0FFFFFF">icons/stop.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="D0FFFFFF">icons/stop.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="D0FFFFFF">icons/stop.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="D0FFFFFF">icons/stop.png</textureradiooffnofocus>
+						<textureradiooffdisabled colordiffuse="disabled">icons/stop.png</textureradiooffdisabled>
+						<textureradioondisabled colordiffuse="disabled">icons/stop.png</textureradioondisabled>
 						<label>$ADDON[plugin.program.iagl 30436]</label>
 						<onclick>PlayerControl(Stop)</onclick>
 						<onclick>SetProperty(iagl_trailer_started,False,HOME)</onclick>
@@ -641,8 +641,8 @@ https://github.com/phil65/skin.estuary
 						<height>142</height>
 						<align>center</align>
 						<aligny>top</aligny>
-						<texturefocus border="21" colordiffuse="FF12A0C7">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-fo.png</texturefocus>
-						<texturenofocus border="21">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-nofo.png</texturenofocus>
+						<texturefocus border="21" colordiffuse="FF12A0C7">button-fo.png</texturefocus>
+						<texturenofocus border="21">button-nofo.png</texturenofocus>
 						<textoffsetx>35</textoffsetx>
 						<textoffsety>78</textoffsety>
 						<radioposx>108</radioposx>
@@ -651,12 +651,12 @@ https://github.com/phil65/skin.estuary
 						<font>font12</font>
 						<textcolor>white</textcolor>
 						<focusedcolor>FF12A0C7</focusedcolor>
-						<textureradioonfocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/download.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/download.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/download.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/download.png</textureradiooffnofocus>
-						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/download.png</textureradiooffdisabled>
-						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/download.png</textureradioondisabled>
+						<textureradioonfocus colordiffuse="D0FFFFFF">icons/download.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="D0FFFFFF">icons/download.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="D0FFFFFF">icons/download.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="D0FFFFFF">icons/download.png</textureradiooffnofocus>
+						<textureradiooffdisabled colordiffuse="disabled">icons/download.png</textureradiooffdisabled>
+						<textureradioondisabled colordiffuse="disabled">icons/download.png</textureradioondisabled>
 						<label>$ADDON[plugin.program.iagl 30437]</label>
 						<visible>True</visible>
 						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
@@ -666,8 +666,8 @@ https://github.com/phil65/skin.estuary
 						<height>142</height>
 						<align>center</align>
 						<aligny>top</aligny>
-						<texturefocus border="21" colordiffuse="FF12A0C7">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-fo.png</texturefocus>
-						<texturenofocus border="21">special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-nofo.png</texturenofocus>
+						<texturefocus border="21" colordiffuse="FF12A0C7">button-fo.png</texturefocus>
+						<texturenofocus border="21">button-nofo.png</texturenofocus>
 						<textoffsetx>35</textoffsetx>
 						<textoffsety>78</textoffsety>
 						<radioposx>108</radioposx>
@@ -676,12 +676,12 @@ https://github.com/phil65/skin.estuary
 						<font>font12</font>
 						<textcolor>white</textcolor>
 						<focusedcolor>FF12A0C7</focusedcolor>
-						<textureradioonfocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="D0FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradiooffnofocus>
-						<textureradiooffdisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradiooffdisabled>
-						<textureradioondisabled colordiffuse="disabled">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioondisabled>
+						<textureradioonfocus colordiffuse="D0FFFFFF">icons/close.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="D0FFFFFF">icons/close.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="D0FFFFFF">icons/close.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="D0FFFFFF">icons/close.png</textureradiooffnofocus>
+						<textureradiooffdisabled colordiffuse="disabled">icons/close.png</textureradiooffdisabled>
+						<textureradioondisabled colordiffuse="disabled">icons/close.png</textureradioondisabled>
 						<label>$ADDON[plugin.program.iagl 30438]</label>
 						<visible>True</visible>
 						<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>

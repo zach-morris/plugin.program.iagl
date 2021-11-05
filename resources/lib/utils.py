@@ -13,6 +13,9 @@ ADDON_NAME = 'plugin.program.iagl'
 WINDOW_ID = xbmcgui.getCurrentWindowId()
 HOME_ID = 10000
 ADDON_HANDLE = xbmcaddon.Addon(id=ADDON_NAME)
+ADDON_PATH = ADDON_HANDLE.getAddonInfo('path')
+ADDON_SPECIAL_PATH = 'special://xbmc/addons/plugin.program.iagl/' if xbmcvfs.translatePath('special://xbmc/addons/plugin.program.iagl/') == ADDON_PATH else 'special://home/addons/plugin.program.iagl/'
+MEDIA_SPECIAL_PATH = ADDON_SPECIAL_PATH+'resources/skins/Default/media/%(filename)s'
 ADDON_TITLE = ADDON_HANDLE.getAddonInfo('name')
 RESET_DIRECTORY_CACHE_TIME = 43200 #Rescan userdata directory every 12 hours unless otherwise updated, this to catch any game cache that needs to be purged
 # CHUNK_SIZE = 1024
@@ -345,11 +348,11 @@ def move_file(file_in=None,path_in=None):
 	success = False
 	if file_in is not None and path_in is not None:
 		if check_if_file_exists(file_in):
-			success = xbmcvfs.rename(str(file_in),os.path.join(path_in,file_in.name))
+			success = xbmcvfs.rename(get_dest_as_str(file_in),os.path.join(path_in,file_in.name))
 			if not success: #Per docs note moving files between different filesystem (eg. local to nfs://) is not possible on all platforms. You may have to do it manually by using the copy and deleteFile functions.
 				xbmc.log(msg='IAGL:  Unable to move file %(value_in_1)s to %(value_in_2)s, attempting copy / delete'%{'value_in_1':file_in,'value_in_2':path_in}, level=xbmc.LOGDEBUG)
-				if xbmcvfs.copy(str(file_in),os.path.join(path_in,file_in.name)):
-					success = xbmcvfs.delete(str(file_in))
+				if xbmcvfs.copy(get_dest_as_str(file_in),os.path.join(path_in,file_in.name)):
+					success = xbmcvfs.delete(get_dest_as_str(file_in))
 	if success:
 		xbmc.log(msg='IAGL:  Moved file %(value_in_1)s to %(value_in_2)s'%{'value_in_1':file_in,'value_in_2':path_in}, level=xbmc.LOGDEBUG)
 	return success
@@ -786,11 +789,11 @@ def get_game_stat_set(game_stats_in=None,type_in=None):
 
 def get_history_listitem(media_type='video'):
 	li_dict = {'info':{'genre':loc_str(30600),'plot':loc_str(30601)},
-	'art':{'icon':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/icon.png',
-	'thumb':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/last_played.jpg',
-	'poster':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/last_played.jpg',
-	'banner':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/last_played_banner.jpg',
-	'fanart':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/fanart.jpg'}}
+	'art':{'icon':MEDIA_SPECIAL_PATH%{'filename':'icon.png'},
+	'thumb':MEDIA_SPECIAL_PATH%{'filename':'last_played.jpg'},
+	'poster':MEDIA_SPECIAL_PATH%{'filename':'last_played.jpg'},
+	'banner':MEDIA_SPECIAL_PATH%{'filename':'last_played_banner.jpg'},
+	'fanart':MEDIA_SPECIAL_PATH%{'filename':'fanart.jpg'}}}
 	li = xbmcgui.ListItem(label=loc_str(30599),offscreen=True)
 	li.setInfo(media_type,li_dict.get('info'))
 	li.setArt(li_dict.get('art'))
@@ -800,27 +803,27 @@ def get_history_listitem(media_type='video'):
 def get_next_page_listitem(current_page,page_count,next_page,total_items,media_type='video'):
 	li = xbmcgui.ListItem(label=loc_str(30602),offscreen=True)
 	li.setInfo(media_type,{'plot':loc_str(30603)%{'current_page':current_page,'page_count':page_count,'next_page':next_page,'total_items':total_items}})
-	li.setArt({'icon':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/next.png','thumb':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/next.png'})
+	li.setArt({'icon':MEDIA_SPECIAL_PATH%{'filename':'next.png'},'thumb':MEDIA_SPECIAL_PATH%{'filename':'next.png'}})
 	li.setProperties({'SpecialSort':'bottom'})
 	return li
 
 def get_blank_favorites_listitem(media_type='video'):
 	li = xbmcgui.ListItem(label=loc_str(30439),offscreen=True)
-	li.setArt({'icon':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/favorites_logo.png',
-				'thumb':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/favorites.png',
-				'poster':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/favorites.png',
-				'banner':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/favorites_banner.png',
-				'fanart':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/fanart.jpg'})
+	li.setArt({'icon':MEDIA_SPECIAL_PATH%{'filename':'favorites_logo.png'},
+				'thumb':MEDIA_SPECIAL_PATH%{'filename':'favorites.png'},
+				'poster':MEDIA_SPECIAL_PATH%{'filename':'favorites.png'},
+				'banner':MEDIA_SPECIAL_PATH%{'filename':'favorites_banner.png'},
+				'fanart':MEDIA_SPECIAL_PATH%{'filename':'fanart.jpg'}})
 	return li
 
 
 def get_netplay_listitem(media_type='video'):
 	li_dict = {'info':{'genre':loc_str(30004),'plot':loc_str(30598)},
-	'art':{'icon':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/netplay_logo.png',
-	'thumb':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/netplay_box.jpg',
-	'poster':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/netplay_box.jpg',
-	'banner':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/netplay_banner.jpg',
-	'fanart':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/fanart.jpg'}}
+	'art':{'icon':MEDIA_SPECIAL_PATH%{'filename':'netplay_logo.png'},
+	'thumb':MEDIA_SPECIAL_PATH%{'filename':'netplay_box.jpg'},
+	'poster':MEDIA_SPECIAL_PATH%{'filename':'netplay_box.jpg'},
+	'banner':MEDIA_SPECIAL_PATH%{'filename':'last_played_banner.jpg'},
+	'fanart':MEDIA_SPECIAL_PATH%{'filename':'fanart.jpg'}}}
 	li = xbmcgui.ListItem(label=loc_str(30004),offscreen=True)
 	li.setInfo(media_type,li_dict.get('info'))
 	li.setArt(li_dict.get('art'))
@@ -1353,7 +1356,6 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 					'emu_command':game_emu_command,
 					'downloadpath_resolved':Path(emu_downloadpath).joinpath(game_filename).expanduser(),
 					}
-		xbmc.log(msg='IAGL:  Current game download parameters %(game_dl_dict)s' % {'game_dl_dict': game_dl_dict}, level=xbmc.LOGDEBUG)
 		if organize_default_dir and game_dl_dict.get('downloadpath') == 'default' or str(game_dl_dict.get('downloadpath')) == str(default_dir) and emu_name:
 			new_default_dir = check_userdata_directory(os.path.join(str(default_dir),emu_name))
 			if new_default_dir:
@@ -1388,6 +1390,13 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 			else:
 				#Slower search if a network share
 				game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[x for x in get_all_files_in_directory_xbmcvfs(get_dest_as_str(game_dl_dict.get('downloadpath'))) if game_dl_dict.get('emu_command').lower() in x.lower() and Path(x).suffix.lower() not in IGNORE_THESE_FILETYPES and Path(x).name.lower() not in IGNORE_THESE_FILES]))
+		if game_dl_dict.get('post_processor') in ['process_chd_games'] and game_dl_dict.get('filename_ext') in ['chd']: #Special case where chd files might be moved to a lower directory already, look for matching files there
+			if game_dl_dict.get('downloadpath_resolved').parent.exists():
+				if check_if_file_exists(game_dl_dict.get('downloadpath_resolved').parent.joinpath(Path(game_dl_dict.get('url_resolved')).parent.name,game_dl_dict.get('downloadpath_resolved').name)):
+					game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[game_dl_dict.get('downloadpath_resolved').parent.joinpath(Path(game_dl_dict.get('url_resolved')).parent.name,game_dl_dict.get('downloadpath_resolved').name)]))
+			elif xbmcvfs.exists(get_dest_as_str(game_dl_dict.get('downloadpath'))): #Kodi network source save spot (like smb address) need to use xbmcvfs to check local files
+				if check_if_file_exists(get_dest_as_str(game_dl_dict.get('downloadpath_resolved').parent.joinpath(Path(game_dl_dict.get('url_resolved')).parent.name,game_dl_dict.get('downloadpath_resolved').name))):
+					game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[get_dest_as_str(game_dl_dict.get('downloadpath_resolved').parent.joinpath(Path(game_dl_dict.get('url_resolved')).parent.name,game_dl_dict.get('downloadpath_resolved').name))]))
 		if game_dl_dict.get('dl_source') in ['Archive.org']:
 			game_dl_dict['downloader'] = 'archive_org'
 		elif 'http' in game_dl_dict.get('dl_source'):
@@ -1396,8 +1405,9 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 			game_dl_dict['downloader'] = 'local_source'
 		else:
 			game_dl_dict['downloader'] = None
-	return game_dl_dict
 
+	xbmc.log(msg='IAGL:  Current game download parameters %(game_dl_dict)s' % {'game_dl_dict': game_dl_dict}, level=xbmc.LOGDEBUG)
+	return game_dl_dict
 
 def dict_to_game_xml(game=None):
 	xml_out = None
@@ -1682,11 +1692,11 @@ def map_lobby_listitem_dict(libretro_dict=None,discord_dict=None,filter_lobby=Tr
 						   'genre':split_value(discord_match.get('genre')),
 						   'lastplayed':discord_match.get('timestamp'),
 						   'plot':discord_match.get('description')+'[CR][CR]'+loc_str(30606)%{'username':re_game_tags.sub('',libretro_dict.get('username')).strip(),'country':next(iter([x.get('name') for x in country_codes if x and x.get('alpha-2').lower() == libretro_dict.get('country')]),'Unknown'),'game_name':libretro_dict.get('game_name'),'pp':libretro_dict.get('has_password'),'spectate':next(iter([not x for x in [libretro_dict.get('has_spectate_password')] if isinstance(x,bool)]),False),'core_name':libretro_dict.get('core_name'),'core_version':libretro_dict.get('core_version'),'frontend':libretro_dict.get('frontend')}},
-			    'art':{'icon':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/netplay_logo.png',
-					  'thumb':choose_image(discord_match.get('image'),'special://home/addons/plugin.program.iagl/resources/skins/Default/media/netplay_box.jpg'),
-					  'poster':choose_image(discord_match.get('image'),'special://home/addons/plugin.program.iagl/resources/skins/Default/media/netplay_box.jpg'),
-					  'banner':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/netplay_banner.jpg',
-					  'fanart':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/fanart.jpg'},
+			    'art':{'icon':MEDIA_SPECIAL_PATH%{'filename':'netplay_logo.png'},
+					  'thumb':choose_image(discord_match.get('image'),MEDIA_SPECIAL_PATH%{'filename':'netplay_box.jpg'}),
+					  'poster':choose_image(discord_match.get('image'),MEDIA_SPECIAL_PATH%{'filename':'netplay_box.jpg'}),
+					  'banner':MEDIA_SPECIAL_PATH%{'filename':'netplay_banner.jpg'},
+					  'fanart':MEDIA_SPECIAL_PATH%{'filename':'fanart.jpg'}},
 				'properties': {'route':discord_match.get('route'),
 							   'query': json.dumps(current_query)},
 				}
@@ -1702,11 +1712,11 @@ def map_lobby_listitem_dict(libretro_dict=None,discord_dict=None,filter_lobby=Tr
 						   'credits':re_game_tags.sub('',libretro_dict.get('username')).strip(),
 						   'lastplayed':libretro_dict.get('created'),
 						   'plot':loc_str(30606)%{'username':re_game_tags.sub('',libretro_dict.get('username')).strip(),'country':next(iter([x.get('name') for x in country_codes if x and x.get('alpha-2').lower() == libretro_dict.get('country')]),'Unknown'),'game_name':libretro_dict.get('game_name'),'pp':libretro_dict.get('has_password'),'spectate':next(iter([not x for x in [libretro_dict.get('has_spectate_password')] if isinstance(x,bool)]),False),'core_name':libretro_dict.get('core_name'),'core_version':libretro_dict.get('core_version'),'frontend':libretro_dict.get('frontend')}},
-			    'art':{'icon':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/netplay_logo.png',
-					  'thumb':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/netplay_box.jpg',
-					  'poster':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/netplay_box.jpg',
-					  'banner':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/netplay_banner.jpg',
-					  'fanart':'special://home/addons/plugin.program.iagl/resources/skins/Default/media/fanart.jpg'},
+			    'art':{'icon':MEDIA_SPECIAL_PATH%{'filename':'netplay_logo.png'},
+					  'thumb':MEDIA_SPECIAL_PATH%{'filename':'netplay_box.jpg'},
+					  'poster':MEDIA_SPECIAL_PATH%{'filename':'netplay_box.jpg'},
+					  'banner':MEDIA_SPECIAL_PATH%{'filename':'netplay_banner.jpg'},
+					  'fanart':MEDIA_SPECIAL_PATH%{'filename':'fanart.jpg'}},
 				'properties': {'route':'game_search?query=%(query)s'%{'query':url_quote_query(libretro_dict)},
 							   'query': json.dumps(current_query)},
 				}

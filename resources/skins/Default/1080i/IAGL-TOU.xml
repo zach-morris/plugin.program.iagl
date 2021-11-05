@@ -15,7 +15,7 @@
             <posy>0</posy>
             <width>100%</width>
             <height>100%</height>
-            <texture>special://home/addons/plugin.program.iagl/resources/skins/Default/media/black.png</texture>
+            <texture>black.png</texture>
             <ondown>3001</ondown>
             <onup>3001</onup>
             <onleft>3001</onleft>
@@ -59,8 +59,8 @@
             <textoffsetx>12</textoffsetx>
             <align>center</align>
             <aligny>center</aligny>
-            <texturenofocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-nofocus2.png</texturenofocus>
-            <texturefocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-highlight1.png</texturefocus>
+            <texturenofocus>button-nofocus2.png</texturenofocus>
+            <texturefocus>button-highlight1.png</texturefocus>
             <onleft>3003</onleft>
             <onright>3003</onright>
             <onup>3003</onup>
@@ -76,8 +76,8 @@
             <textoffsetx>12</textoffsetx>
             <align>center</align>
             <aligny>center</aligny>
-            <texturenofocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-nofocus2.png</texturenofocus>
-            <texturefocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/button-highlight1.png</texturefocus>
+            <texturenofocus>button-nofocus2.png</texturenofocus>
+            <texturefocus>button-highlight1.png</texturefocus>
             <onleft>3001</onleft>
             <onright>3001</onright>
             <onup>3001</onup>
@@ -89,8 +89,8 @@
             <posy>1</posy>
             <width>1</width>
             <height>1</height>
-            <texturefocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/transparent.png</texturefocus>
-            <texturenofocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/transparent.png</texturenofocus>
+            <texturefocus>transparent.png</texturefocus>
+            <texturenofocus>transparent.png</texturenofocus>
             <onleft>3003</onleft>
             <onright>3003</onright>
             <onup>3003</onup>

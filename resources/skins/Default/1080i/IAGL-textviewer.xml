@@ -23,7 +23,7 @@
 			<animation effect="fade" time="300">VisibleChange</animation>
 			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-			<texture colordiffuse="C2FFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/black.png</texture>
+			<texture colordiffuse="C2FFFFFF">black.png</texture>
 			<visible>true</visible>
 		</control>
 		<control type="button">
@@ -43,14 +43,14 @@
 				<top>0</top>
 				<right>0</right>
 				<bottom>0</bottom>
-				<texture colordiffuse="FF1A2123">special://home/addons/plugin.program.iagl/resources/skins/Default/media/white.png</texture>
+				<texture colordiffuse="FF1A2123">white.png</texture>
 			</control>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
 				<right>0</right>
 				<height>70</height>
-				<texture colordiffuse="FF12A0C7" border="2">special://home/addons/plugin.program.iagl/resources/skins/Default/media/white70.png</texture>
+				<texture colordiffuse="FF12A0C7" border="2">white70.png</texture>
 			</control>
 			<control type="label" id="1">
 				<left>40</left>
@@ -83,10 +83,10 @@
 				<texturefocus />
 				<texturenofocus />
 				<label></label>
-				<textureradioofffocus colordiffuse="EEFFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="EEFFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/logo.png</textureradiooffnofocus>
-				<textureradioonfocus colordiffuse="EEFFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="EEFFFFFF">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/logo.png</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="EEFFFFFF">icons/close.png</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradiooffnofocus>
+				<textureradioonfocus colordiffuse="EEFFFFFF">icons/close.png</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradioonnofocus>
 				<onclick>Action(Close)</onclick>
 				<visible>!Skin.HasSetting(touchmode)</visible>
 			</control>
@@ -95,8 +95,8 @@
 				<top>11</top>
 				<width>48</width>
 				<height>48</height>
-				<texturefocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</texturefocus>
-				<texturenofocus>special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/close.png</texturenofocus>
+				<texturefocus>icons/close.png</texturefocus>
+				<texturenofocus>icons/close.png</texturenofocus>
 				<onclick>Action(Close)</onclick>
 				<visible>Skin.HasSetting(touchmode)</visible>
 			</control>
@@ -145,8 +145,8 @@
 			<height>20</height>
 			<onclick>SetFocus(3000)</onclick>
 			<onclick>Up</onclick>
-			<texturefocus colordiffuse="FF12A0C7" flipy="true">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/arrowdown.png</texturefocus>
-			<texturenofocus colordiffuse="FF12A0C7" flipy="true">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/arrowdown.png</texturenofocus>
+			<texturefocus colordiffuse="FF12A0C7" flipy="true">icons/arrowdown.png</texturefocus>
+			<texturenofocus colordiffuse="FF12A0C7" flipy="true">icons/arrowdown.png</texturenofocus>
 			<visible>Control.IsVisible(3000) + Integer.IsGreater(Container(2000).CurrentPage,1)</visible>
 			<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 		</control>
@@ -157,8 +157,8 @@
 			<height>20</height>
 			<onclick>SetFocus(3000)</onclick>
 			<onclick>Down</onclick>
-			<texturefocus colordiffuse="FF12A0C7">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/arrowdown.png</texturefocus>
-			<texturenofocus colordiffuse="FF12A0C7">special://home/addons/plugin.program.iagl/resources/skins/Default/media/icons/arrowdown.png</texturenofocus>
+			<texturefocus colordiffuse="FF12A0C7">icons/arrowdown.png</texturefocus>
+			<texturenofocus colordiffuse="FF12A0C7">icons/arrowdown.png</texturenofocus>
 			<visible>Control.IsVisible(3000) + !String.IsEqual(Container(2000).CurrentPage,Container(2000).NumPages)</visible>
 			<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 		</control>

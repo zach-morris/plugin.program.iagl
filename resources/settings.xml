@@ -283,7 +283,7 @@
 				</setting>
 				<setting help="30549" id="iagl_run_check_login" label="30587" type="action">
 					<level>0</level>
-					<data>RunScript(special://home/addons/plugin.program.iagl/check_archive_org_login.py)</data>
+					<data>RunScript($CWD/check_archive_org_login.py)</data>
 					<constraints>
 						<allowempty>true</allowempty>
 					</constraints>
@@ -1582,7 +1582,7 @@
 			<group id="8">
 				<setting help="30565" id="iagl_run_script_wizard" label="30046" type="action">
 					<level>0</level>
-					<data>RunScript(special://home/addons/plugin.program.iagl/run_IAGL_wizard.py)</data>
+					<data>RunScript($CWD/run_IAGL_wizard.py)</data>
 					<constraints>
 						<allowempty>true</allowempty>
 					</constraints>
@@ -1776,7 +1776,7 @@
 			<group id="10">
 				<setting help="30577" id="iagl_run_script_unhide_all" label="30055" type="action">
 					<level>2</level>
-					<data>RunScript(special://home/addons/plugin.program.iagl/unhide_all_archives.py)</data>
+					<data>RunScript($CWD/unhide_all_archives.py)</data>
 					<constraints>
 						<allowempty>true</allowempty>
 					</constraints>
@@ -1789,7 +1789,7 @@
 				</setting>
 				<setting help="30619" id="iagl_convert_old_favorites" label="30618" type="action">
 					<level>2</level>
-					<data>RunScript(special://home/addons/plugin.program.iagl/convert_old_favorites.py)</data>
+					<data>RunScript($CWD/convert_old_favorites.py)</data>
 					<constraints>
 						<allowempty>true</allowempty>
 					</constraints>
@@ -1804,7 +1804,7 @@
 			<group id="11">
 				<setting help="30578" id="iagl_run_script_clear_cache" label="30056" type="action">
 					<level>2</level>
-					<data>RunScript(special://home/addons/plugin.program.iagl/clear_IAGL_cache.py)</data>
+					<data>RunScript($CWD/clear_IAGL_cache.py)</data>
 					<constraints>
 						<allowempty>true</allowempty>
 					</constraints>
