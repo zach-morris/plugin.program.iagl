@@ -1,13 +1,8 @@
 import xbmc, xbmcgui, xbmcvfs, xbmcaddon, xbmcplugin, re, os, shutil, json
-from resources.lib.utils import loc_str, get_mem_cache, set_mem_cache, clear_mem_cache, check_and_close_notification, choose_image, get_post_dl_commands
+from resources.lib.utils import loc_str, get_mem_cache, set_mem_cache, clear_mem_cache, check_and_close_notification, choose_image, get_post_dl_commands,MEDIA_SPECIAL_PATH
 from resources.lib.main import iagl_addon
 iagl_addon_wizard = iagl_addon()
 
-ADDON_NAME = 'plugin.program.iagl'
-ADDON_HANDLE = xbmcaddon.Addon(id=ADDON_NAME)
-ADDON_PATH = ADDON_HANDLE.getAddonInfo('path')
-ADDON_SPECIAL_PATH = 'special://xbmc/addons/plugin.program.iagl/' if xbmcvfs.translatePath('special://xbmc/addons/plugin.program.iagl/') == ADDON_PATH else 'special://home/addons/plugin.program.iagl/'
-MEDIA_SPECIAL_PATH = ADDON_SPECIAL_PATH+'resources/skins/Default/media/%(filename)s'
 EMAIL_RE = '.+[@]\w+[.]\w+'
 START_SOUND = MEDIA_SPECIAL_PATH%{'filename':'wizard_start.wav'}
 POS_SOUND = MEDIA_SPECIAL_PATH%{'filename':'coin.wav'}
@@ -403,4 +398,4 @@ if not get_mem_cache('iagl_script_started'):
 	xbmc.log(msg='IAGL:  Wizard script completed', level=xbmc.LOGDEBUG)
 else:
 	xbmc.log(msg='IAGL:  Script already running', level=xbmc.LOGDEBUG)
-del iagl_addon_wizard, loc_str, get_mem_cache, set_mem_cache, clear_mem_cache, check_and_close_notification, choose_image, get_post_dl_commands
+del iagl_addon_wizard, loc_str, get_mem_cache, set_mem_cache, clear_mem_cache, check_and_close_notification, choose_image, get_post_dl_commands,MEDIA_SPECIAL_PATH
