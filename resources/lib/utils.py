@@ -326,7 +326,7 @@ def get_setting_as(setting_type=None,setting=None):
 		return None
 
 def get_post_dl_commands():
-	return dict(zip(['none','unzip_rom','unzip_and_launch_file','unzip_to_folder_and_launch_file','unzip_and_launch_scummvm_file','unzip_and_launch_win31_file'],['None (Direct File Launch)','UnArchive Game','UnArchive Game, Launch File','UnArchive Game to Folder, Launch File','UnArchive Game, Generate SCUMMVM File','UnArchive Game, Generate WIN31 BAT File']))
+	return dict(zip(['none','unzip_rom','unzip_and_launch_file','unzip_to_folder_and_launch_file','unzip_and_launch_scummvm_file','unzip_and_launch_win31_file','unarchive_neocd_launch_cue','unarchive_game_launch_cue','unzip_and_launch_exodos_file','process_chd_games','move_to_folder_cdimono1','move_to_folder_spectrum','move_to_folder_fmtowns_cd'],['None (Direct File Launch)','UnArchive Game','UnArchive Game, Launch File','UnArchive Game to Folder, Launch File','UnArchive Game, Generate SCUMMVM File','UnArchive Game, Generate WIN31 BAT File','UnArchive Game, Launch NeoCD CUE File','UnArchive Game, Launch CUE File','UnArchive Game, Generate ExoDOS Launch File','Process MAME and MAME CHD Files','Move Files to cdimono1 Folder','Move Files to spectrum Folder','Move Files to fmtowns_cd Folder']))
 
 def get_downloadpath(path=None,default=None):
 	if path=='default' or path is None:
@@ -348,10 +348,10 @@ def move_file(file_in=None,path_in=None):
 	success = False
 	if file_in is not None and path_in is not None:
 		if check_if_file_exists(file_in):
-			success = xbmcvfs.rename(get_dest_as_str(file_in),os.path.join(path_in,file_in.name))
+			success = xbmcvfs.rename(get_dest_as_str(file_in),os.path.join(path_in,Path(file_in).name))
 			if not success: #Per docs note moving files between different filesystem (eg. local to nfs://) is not possible on all platforms. You may have to do it manually by using the copy and deleteFile functions.
 				xbmc.log(msg='IAGL:  Unable to move file %(value_in_1)s to %(value_in_2)s, attempting copy / delete'%{'value_in_1':file_in,'value_in_2':path_in}, level=xbmc.LOGDEBUG)
-				if xbmcvfs.copy(get_dest_as_str(file_in),os.path.join(path_in,file_in.name)):
+				if xbmcvfs.copy(get_dest_as_str(file_in),os.path.join(path_in,Path(file_in).name)):
 					success = xbmcvfs.delete(get_dest_as_str(file_in))
 	if success:
 		xbmc.log(msg='IAGL:  Moved file %(value_in_1)s to %(value_in_2)s'%{'value_in_1':file_in,'value_in_2':path_in}, level=xbmc.LOGDEBUG)
@@ -1392,11 +1392,19 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 				game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[x for x in get_all_files_in_directory_xbmcvfs(get_dest_as_str(game_dl_dict.get('downloadpath'))) if game_dl_dict.get('emu_command').lower() in x.lower() and Path(x).suffix.lower() not in IGNORE_THESE_FILETYPES and Path(x).name.lower() not in IGNORE_THESE_FILES]))
 		if game_dl_dict.get('post_processor') in ['process_chd_games'] and game_dl_dict.get('filename_ext') in ['chd']: #Special case where chd files might be moved to a lower directory already, look for matching files there
 			if game_dl_dict.get('downloadpath_resolved').parent.exists():
-				if check_if_file_exists(game_dl_dict.get('downloadpath_resolved').parent.joinpath(Path(game_dl_dict.get('url_resolved')).parent.name,game_dl_dict.get('downloadpath_resolved').name)):
+				if check_if_file_exists(Path(game_dl_dict.get('downloadpath_resolved')).parent.joinpath(Path(game_dl_dict.get('url_resolved')).parent.name,Path(game_dl_dict.get('downloadpath_resolved')).name)):
 					game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[game_dl_dict.get('downloadpath_resolved').parent.joinpath(Path(game_dl_dict.get('url_resolved')).parent.name,game_dl_dict.get('downloadpath_resolved').name)]))
 			elif xbmcvfs.exists(get_dest_as_str(game_dl_dict.get('downloadpath'))): #Kodi network source save spot (like smb address) need to use xbmcvfs to check local files
-				if check_if_file_exists(get_dest_as_str(game_dl_dict.get('downloadpath_resolved').parent.joinpath(Path(game_dl_dict.get('url_resolved')).parent.name,game_dl_dict.get('downloadpath_resolved').name))):
+				if check_if_file_exists(get_dest_as_str(Path(game_dl_dict.get('downloadpath_resolved')).parent.joinpath(Path(game_dl_dict.get('url_resolved')).parent.name,Path(game_dl_dict.get('downloadpath_resolved')).name))):
 					game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[get_dest_as_str(game_dl_dict.get('downloadpath_resolved').parent.joinpath(Path(game_dl_dict.get('url_resolved')).parent.name,game_dl_dict.get('downloadpath_resolved').name))]))
+		if game_dl_dict.get('post_processor') in ['move_to_folder_cdimono1','move_to_folder_spectrum','move_to_folder_fmtowns_cd']: #Special case where files might be moved to a lower directory already, look for matching files there
+			folder_to_check = game_dl_dict.get('post_processor').replace('move_to_folder_','')
+			if game_dl_dict.get('downloadpath_resolved').parent.exists():
+				if check_if_file_exists(Path(game_dl_dict.get('downloadpath_resolved')).parent.joinpath(folder_to_check,Path(game_dl_dict.get('downloadpath_resolved')).name)):
+					game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[game_dl_dict.get('downloadpath_resolved').parent.joinpath(folder_to_check,game_dl_dict.get('downloadpath_resolved').name)]))
+			elif xbmcvfs.exists(get_dest_as_str(game_dl_dict.get('downloadpath'))): #Kodi network source save spot (like smb address) need to use xbmcvfs to check local files
+				if check_if_file_exists(get_dest_as_str(Path(game_dl_dict.get('downloadpath_resolved')).parent.joinpath(folder_to_check,Path(game_dl_dict.get('downloadpath_resolved')).name))):
+					game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[get_dest_as_str(game_dl_dict.get('downloadpath_resolved').parent.joinpath(folder_to_check,game_dl_dict.get('downloadpath_resolved').name))]))
 		if game_dl_dict.get('dl_source') in ['Archive.org']:
 			game_dl_dict['downloader'] = 'archive_org'
 		elif 'http' in game_dl_dict.get('dl_source'):
