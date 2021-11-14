@@ -1397,7 +1397,7 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 			elif xbmcvfs.exists(get_dest_as_str(game_dl_dict.get('downloadpath'))): #Kodi network source save spot (like smb address) need to use xbmcvfs to check local files
 				if check_if_file_exists(get_dest_as_str(Path(game_dl_dict.get('downloadpath_resolved')).parent.joinpath(Path(game_dl_dict.get('url_resolved')).parent.name,Path(game_dl_dict.get('downloadpath_resolved')).name))):
 					game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[get_dest_as_str(game_dl_dict.get('downloadpath_resolved').parent.joinpath(Path(game_dl_dict.get('url_resolved')).parent.name,game_dl_dict.get('downloadpath_resolved').name))]))
-		if game_dl_dict.get('post_processor') in ['move_to_folder_cdimono1','move_to_folder_spectrum','move_to_folder_fmtowns_cd']: #Special case where files might be moved to a lower directory already, look for matching files there
+		if game_dl_dict.get('post_processor').startswith('move_to_folder_'): #Special case where files might be moved to a lower directory already, look for matching files there
 			folder_to_check = game_dl_dict.get('post_processor').replace('move_to_folder_','')
 			if game_dl_dict.get('downloadpath_resolved').parent.exists():
 				if check_if_file_exists(Path(game_dl_dict.get('downloadpath_resolved')).parent.joinpath(folder_to_check,Path(game_dl_dict.get('downloadpath_resolved')).name)):

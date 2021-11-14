@@ -34,6 +34,9 @@ class iagl_post_process(object):
 			elif post_processor == 'unarchive_game_launch_cue':
 				xbmc.log(msg='IAGL:  Post processor set to UNZIP and launch CUE file',level=xbmc.LOGDEBUG)
 				self.post_processor = self.unzip(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,point_to_file='.cue')
+			elif post_processor == 'unarchive_game_launch_iso':
+				xbmc.log(msg='IAGL:  Post processor set to UNZIP and launch ISO file',level=xbmc.LOGDEBUG)
+				self.post_processor = self.unzip(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,point_to_file='.iso')
 			elif post_processor == 'unzip_and_launch_scummvm_file':
 				xbmc.log(msg='IAGL:  Post processor set to UNZIP and launch SCUMMVM file',level=xbmc.LOGDEBUG)
 				self.post_processor = self.unzip(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,to_folder=True,generate_pointer_file='.scummvm')
@@ -103,7 +106,6 @@ class iagl_post_process(object):
 		else:
 			xbmc.log(msg='IAGL:  Badly formed game post process request.',level=xbmc.LOGERROR)
 			return None
-
 		#After download and post process, if the file(s) need to be copied to the local filesystem, do it here
 		if self.settings.get('download').get('copy_network_to_local') and any([x for x in game_pp_status if (isinstance(x.get('post_process_launch_file'),str) or isinstance(x.get('post_process_launch_file'),Path)) and ('smb:' in str(x.get('post_process_launch_file')) or 'nfs:' in str(x.get('post_process_launch_file')))]):
 			if game_pp_status[0].get('post_processor') in ['unzip_and_launch_file','unzip_and_launch_scummvm_file','unzip_and_launch_win31_file','unzip_and_launch_exodos_file']:
@@ -137,7 +139,7 @@ class iagl_post_process(object):
 				else:
 					game_pp_status[0]['post_process_success'] = False
 					game_pp_status[0]['post_process_message'] = 'Copied folder to local filesystem failed'
-			elif game_pp_status[0].get('post_processor') in ['unarchive_game_launch_cue']:
+			elif game_pp_status[0].get('post_processor') in ['unarchive_game_launch_cue','unarchive_game_launch_iso']:
 				#Copy cue and iso/bin, point to cue
 				xbmc.log(msg='IAGL:  Copying Kodi Network sourced ISO/BIN and CUE files %(value)s to local filesystem temporary cache for launching'%{'value':game_pp_status[0].get('post_process_launch_file')},level=xbmc.LOGDEBUG)
 				files_to_copy = [x for x in get_all_files_in_directory_xbmcvfs(get_dest_as_str(Path(game_pp_status[0].get('post_process_launch_file')).parent)) if Path(game_pp_status[0].get('post_process_launch_file')).stem in os.path.split(os.path.splitext(x)[0])[-1] and ('bin' in os.path.splitext(x)[-1].lower() or 'iso' in os.path.splitext(x)[-1].lower())]
@@ -171,6 +173,24 @@ class iagl_post_process(object):
 				else:
 					game_pp_status[0]['post_process_success'] = False
 					game_pp_status[0]['post_process_message'] = 'Unable to locate BIN files on the Network Share'
+			elif isinstance(game_pp_status[0].get('post_processor'),str) and game_pp_status[0].get('post_processor').startswith('move_to_folder_'):
+				#Copy parent directory, point to same file
+				xbmc.log(msg='IAGL:  Copying Kodi Network files within sourced folder %(value)s to local filesystem temporary cache for launching'%{'value':Path(game_pp_status[0].get('post_process_launch_file')).parent},level=xbmc.LOGDEBUG)
+				network_folder_name = Path(game_pp_status[0].get('post_process_launch_file')).parent.name #The game files are in one directory, get the top directory
+				files_to_copy = [x for x in get_all_files_in_directory_xbmcvfs(get_dest_as_str(Path(game_pp_status[0].get('post_process_launch_file')).parent)) if Path(x).name in [y.get('filename') for y in self.game_files]]
+				if len(files_to_copy) > 0:
+					files_to_copy.append(game_pp_status[0].get('post_process_launch_file'))
+					overall_copy_success = all([copy_file_xbmcvfs(file_in=ftc,path_in=self.directory.get('userdata').get('game_cache').get('path').joinpath(network_folder_name)) for ftc in files_to_copy])
+					if overall_copy_success:
+						game_pp_status[0]['post_process_success'] = True
+						game_pp_status[0]['post_process_message'] = 'Copied files from folder to local filesystem'
+						game_pp_status[0]['post_process_launch_file'] = self.directory.get('userdata').get('game_cache').get('path').joinpath(network_folder_name,Path(game_pp_status[0].get('post_process_launch_file')).name)
+					else:
+						game_pp_status[0]['post_process_success'] = False
+						game_pp_status[0]['post_process_message'] = 'Copied files from folder to local filesystem failed'
+				else:
+					game_pp_status[0]['post_process_success'] = False
+					game_pp_status[0]['post_process_message'] = 'Unable to locate files in the folder %(value)s on the Network Share'%{'value':network_folder_name}
 			else:
 				for ii in range(len(game_pp_status)):
 					xbmc.log(msg='IAGL:  Copying Kodi Network sourced file %(value)s to local filesystem temporary cache for launching'%{'value':game_pp_status[ii].get('post_process_launch_file')},level=xbmc.LOGDEBUG)
@@ -405,36 +425,11 @@ class iagl_post_process(object):
 				self.folder_name = None
 			
 		def process(self,file=None,**kwargs):
-			matching_files = None
+			matching_files = []
 			if isinstance(self.game_files,list):
 				matching_files = flatten_list([x.get('matching_existing_files') for x in self.game_files if x.get('download_message') == 'File exists locally']) #Identify matching files if they were not redownloaded
-				
-			if matching_files and len(matching_files)>0:
-				for mf in matching_files:
-					if Path(mf).name == Path(file).name:			
-						if Path(mf).parent.name == self.folder_name:
-							self.pp_status['post_process_success'] = True
-							self.pp_status['post_process_message'] = 'Existing file found'
-							self.pp_status['post_process_launch_file'] = mf
-							xbmc.log(msg='IAGL:  Matching file is in the correct folder, and does not require further processing: %(value)s'%{'value':mf},level=xbmc.LOGDEBUG)
-						else:
-							if not Path(mf).parent.joinpath(self.folder_name).exists() or not check_if_dir_exists(get_dest_as_str(Path(mf).parent.joinpath(self.folder_name))):
-								if move_file(file_in=get_dest_as_str(mf),path_in=get_dest_as_str(Path(mf).parent.joinpath(self.folder_name))):
-									self.pp_status['post_process_success'] = True
-									self.pp_status['post_process_message'] = 'Processing complete'
-									self.pp_status['post_process_launch_file'] = Path(mf).parent.joinpath(self.folder_name,Path(mf).name)
-									xbmc.log(msg='IAGL:  Matching file %(value)s was moved to the created folder %(value2)s'%{'value':Path(mf).name,'value2':self.folder_name},level=xbmc.LOGDEBUG)
-								else:
-									xbmc.log(msg='IAGL:  The requested matching file could not be moved: %(value)s'%{'value':get_dest_as_str(mf)},level=xbmc.LOGERROR)
-									self.pp_status['post_process_success'] = False
-									self.pp_status['post_process_message'] = 'Unable to move file to folder'
-									self.pp_status['post_process_launch_file'] = None
-							else:
-								xbmc.log(msg='IAGL:  The requested directory could not be created for the matching file: %(value)s'%{'value':get_dest_as_str(Path(mf).parent.joinpath(self.folder_name))},level=xbmc.LOGERROR)
-								self.pp_status['post_process_success'] = False
-								self.pp_status['post_process_message'] = 'Unable to create folder'
-								self.pp_status['post_process_launch_file'] = None
-			elif file and self.folder_name:
+
+			if file and self.folder_name and Path(file).name not in [Path(x).name for x in matching_files]:
 				if Path(file).parent.name != self.folder_name:
 					if not Path(file).parent.joinpath(self.folder_name).exists() or not check_if_dir_exists(get_dest_as_str(Path(file).parent.joinpath(self.folder_name))):
 						if xbmcvfs.mkdir(get_dest_as_str(Path(file).parent.joinpath(self.folder_name))): #Folder doesnt exist yet so make it
@@ -469,8 +464,31 @@ class iagl_post_process(object):
 					self.pp_status['post_process_success'] = True
 					self.pp_status['post_process_message'] = 'Processing complete'
 					self.pp_status['post_process_launch_file'] = file
-			else:
-				xbmc.log(msg='IAGL:  Badly formed Move To Folder Processing request',level=xbmc.LOGDEBUG)
-				return None
+
+			if len(matching_files)>0:
+				for mf in matching_files:
+					if Path(mf).name == Path(file).name:	
+						if Path(mf).parent.name == self.folder_name:
+							self.pp_status['post_process_success'] = True
+							self.pp_status['post_process_message'] = 'Existing file found'
+							self.pp_status['post_process_launch_file'] = mf
+							xbmc.log(msg='IAGL:  Matching file is in the correct folder, and does not require further processing: %(value)s'%{'value':mf},level=xbmc.LOGDEBUG)
+						else:
+							if not Path(mf).parent.joinpath(self.folder_name).exists() or not check_if_dir_exists(get_dest_as_str(Path(mf).parent.joinpath(self.folder_name))):
+								if move_file(file_in=get_dest_as_str(mf),path_in=get_dest_as_str(Path(mf).parent.joinpath(self.folder_name))):
+									self.pp_status['post_process_success'] = True
+									self.pp_status['post_process_message'] = 'Processing complete'
+									self.pp_status['post_process_launch_file'] = Path(mf).parent.joinpath(self.folder_name,Path(mf).name)
+									xbmc.log(msg='IAGL:  Matching file %(value)s was moved to the created folder %(value2)s'%{'value':Path(mf).name,'value2':self.folder_name},level=xbmc.LOGDEBUG)
+								else:
+									xbmc.log(msg='IAGL:  The requested matching file could not be moved: %(value)s'%{'value':get_dest_as_str(mf)},level=xbmc.LOGERROR)
+									self.pp_status['post_process_success'] = False
+									self.pp_status['post_process_message'] = 'Unable to move file to folder'
+									self.pp_status['post_process_launch_file'] = None
+							else:
+								xbmc.log(msg='IAGL:  The requested directory could not be created for the matching file: %(value)s'%{'value':get_dest_as_str(Path(mf).parent.joinpath(self.folder_name))},level=xbmc.LOGERROR)
+								self.pp_status['post_process_success'] = False
+								self.pp_status['post_process_message'] = 'Unable to create folder'
+								self.pp_status['post_process_launch_file'] = None
 
 			return self.pp_status
