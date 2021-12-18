@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datafile>
+	<header>
+		<emu_name>Quake II</emu_name>
+		<emu_description>Standalone Game</emu_description>
+		<emu_category>Port</emu_category>
+		<emu_version>121821</emu_version>
+		<emu_date>12/18/2021</emu_date>
+		<emu_author>Zach Morris</emu_author>
+		<emu_visibility>visible</emu_visibility>
+		<emu_homepage>https://archive.org</emu_homepage>
+		<emu_baseurl>https://archive.org/download/</emu_baseurl>
+		<emu_launcher>retroplayer</emu_launcher>
+		<emu_default_addon>none</emu_default_addon>
+		<emu_ext_launch_cmd>none</emu_ext_launch_cmd>
+		<emu_downloadpath>default</emu_downloadpath>
+		<emu_postdlaction>unzip_and_launch_file</emu_postdlaction>
+		<emu_comment>Quake II is a 1997 first-person shooter video game. It was developed by id Software and published by Activision. It is not a direct sequel to Quake; id decided to revert to an existing trademark when the games fast-paced, tactile feel felt closer to a Quake game than a new franchise.[CR]The soundtrack for Quake II was mainly provided by Sonic Mayhem, with some additional tracks by Bill Brown; the main theme was also composed by Bill Brown and Rob Zombie, and one track by Jer Sypult. The soundtrack for the Nintendo 64 version of the game was composed by Aubrey Hodges, credited as Ken Razor Richmond.</emu_comment>
+		<emu_thumb>avVEk3C.jpg</emu_thumb>
+		<emu_banner>RZBKCEm.jpg</emu_banner>
+		<emu_fanart>JYEbhiw.jpg</emu_fanart>
+		<emu_logo>RL4CasH.png</emu_logo>
+		<emu_trailer>cakkSAhLclo</emu_trailer>
+	</header>
+	<game name="Quake II">
+		<description>Quake II</description>
+		<rom name="quakeresources/QuakeResources/quake2/gamedata/baseq2.zip" size="218100000" />
+		<plot>Quake II is a 1997 first-person shooter video game. It was developed by id Software and published by Activision. It is not a direct sequel to Quake; id decided to revert to an existing trademark when the games fast-paced, tactile feel felt closer to a Quake game than a new franchise.[CR]The soundtrack for Quake II was mainly provided by Sonic Mayhem, with some additional tracks by Bill Brown; the main theme was also composed by Bill Brown and Rob Zombie, and one track by Jer Sypult. The soundtrack for the Nintendo 64 version of the game was composed by Aubrey Hodges, credited as Ken Razor Richmond.</plot>
+		<releasedate>12/09/1997</releasedate>
+		<year>1997</year>
+		<genre>Shooter</genre>
+		<videoid>fExTxueBVZQ</videoid>
+		<boxart1>avVEk3C.jpg</boxart1>
+		<banner1>RZBKCEm.jpg</banner1>
+		<fanart1>JYEbhiw.jpg</fanart1>
+		<emu_command>pak0.pak</emu_command>
+	</game>
+</datafile>
