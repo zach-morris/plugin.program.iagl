@@ -51,13 +51,13 @@ class iagl_post_process(object):
 				self.post_processor = self.mame_chd_process(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files)
 			elif post_processor == 'move_to_folder_cdimono1': #Move all downloads to a folder
 				xbmc.log(msg='IAGL:  Post processor set to MOVE to folder cdimono1',level=xbmc.LOGDEBUG)
-				self.post_processor = self.move_to_folder(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,folder_name='cdimono1')
+				self.post_processor = self.move_to_folder_softlist(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,folder_name='cdimono1',generate_pointer_file=self.game.get('properties').get('emu_command'))
 			elif post_processor == 'move_to_folder_spectrum': #Move all downloads to a folder
 				xbmc.log(msg='IAGL:  Post processor set to MOVE to folder spectrum',level=xbmc.LOGDEBUG)
 				self.post_processor = self.move_to_folder(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,folder_name='spectrum')
 			elif post_processor == 'move_to_folder_fmtowns_cd': #Move all downloads to a folder
-				xbmc.log(msg='IAGL:  Post processor set to MOVE to folder fmtowns_cd',level=xbmc.LOGDEBUG)
-				self.post_processor = self.move_to_folder(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,folder_name='fmtowns_cd')
+				xbmc.log(msg='IAGL:  Post processor set to MOVE to folder fmtowns',level=xbmc.LOGDEBUG)
+				self.post_processor = self.move_to_folder_softlist(settings=self.settings,directory=self.directory,game_list=self.game_list,game=self.game,game_files=self.game_files,folder_name='fmtowns',generate_pointer_file=self.game.get('properties').get('emu_command'))
 			else:
 				xbmc.log(msg='IAGL:  Post processor is unknown, setting to NONE to attempt launching',level=xbmc.LOGERROR)
 				self.post_processor = None
@@ -464,6 +464,160 @@ class iagl_post_process(object):
 					self.pp_status['post_process_success'] = True
 					self.pp_status['post_process_message'] = 'Processing complete'
 					self.pp_status['post_process_launch_file'] = file
+
+			if len(matching_files)>0:
+				for mf in matching_files:
+					if Path(mf).name == Path(file).name:	
+						if Path(mf).parent.name == self.folder_name:
+							self.pp_status['post_process_success'] = True
+							self.pp_status['post_process_message'] = 'Existing file found'
+							self.pp_status['post_process_launch_file'] = mf
+							xbmc.log(msg='IAGL:  Matching file is in the correct folder, and does not require further processing: %(value)s'%{'value':mf},level=xbmc.LOGDEBUG)
+						else:
+							if not Path(mf).parent.joinpath(self.folder_name).exists() or not check_if_dir_exists(get_dest_as_str(Path(mf).parent.joinpath(self.folder_name))):
+								if move_file(file_in=get_dest_as_str(mf),path_in=get_dest_as_str(Path(mf).parent.joinpath(self.folder_name))):
+									self.pp_status['post_process_success'] = True
+									self.pp_status['post_process_message'] = 'Processing complete'
+									self.pp_status['post_process_launch_file'] = Path(mf).parent.joinpath(self.folder_name,Path(mf).name)
+									xbmc.log(msg='IAGL:  Matching file %(value)s was moved to the created folder %(value2)s'%{'value':Path(mf).name,'value2':self.folder_name},level=xbmc.LOGDEBUG)
+								else:
+									xbmc.log(msg='IAGL:  The requested matching file could not be moved: %(value)s'%{'value':get_dest_as_str(mf)},level=xbmc.LOGERROR)
+									self.pp_status['post_process_success'] = False
+									self.pp_status['post_process_message'] = 'Unable to move file to folder'
+									self.pp_status['post_process_launch_file'] = None
+							else:
+								xbmc.log(msg='IAGL:  The requested directory could not be created for the matching file: %(value)s'%{'value':get_dest_as_str(Path(mf).parent.joinpath(self.folder_name))},level=xbmc.LOGERROR)
+								self.pp_status['post_process_success'] = False
+								self.pp_status['post_process_message'] = 'Unable to create folder'
+								self.pp_status['post_process_launch_file'] = None
+
+			return self.pp_status
+
+	class move_to_folder_softlist(object):
+		def __init__(self,settings=dict(),directory=dict(),game_list=dict(),game=dict(),game_files=dict(),**kwargs):
+			self.settings = settings
+			self.directory= directory
+			self.game_list = game_list
+			self.game = game
+			self.game_files = game_files
+			self.pp_status = dict()
+			if kwargs and kwargs.get('folder_name'):
+				self.folder_name = kwargs.get('folder_name')
+			else:
+				self.folder_name = None
+			if kwargs and kwargs.get('generate_pointer_file'):
+				self.pointer_file = kwargs.get('generate_pointer_file')
+			else:
+				self.pointer_file = None
+			
+		def process(self,file=None,**kwargs):
+			matching_files = []
+			if isinstance(self.game_files,list):
+				matching_files = flatten_list([x.get('matching_existing_files') for x in self.game_files if x.get('download_message') == 'File exists locally']) #Identify matching files if they were not redownloaded
+			if file and self.folder_name and self.pointer_file:
+				if check_if_file_exists(str(Path(file).parent.joinpath(self.folder_name,self.pointer_file+'.zip'))):
+					self.pp_status['post_process_launch_file'] = Path(file).parent.joinpath(self.folder_name,self.pointer_file+'.zip')
+					xbmc.log(msg='IAGL:  The requested pointer file already exists %(value)s'%{'value':self.pointer_file+'.zip'},level=xbmc.LOGERROR)
+				else:
+					if not Path(file).parent.joinpath(self.folder_name).exists() or not check_if_dir_exists(get_dest_as_str(Path(file).parent.joinpath(self.folder_name))):
+						if xbmcvfs.mkdir(get_dest_as_str(Path(file).parent.joinpath(self.folder_name))): #Folder doesnt exist yet so make it
+							current_pointer_file = generate_pointer_file(filename_in=Path(file).parent.joinpath(self.folder_name,self.pointer_file+'.zip'),pointer_file_type='.zip',directory=str(Path(file).parent.joinpath(self.folder_name)),default_dir=self.directory.get('userdata').get('game_cache').get('path'))
+							if current_pointer_file:
+								self.pp_status['post_process_launch_file'] = current_pointer_file
+								self.pp_status['post_process_success'] = True
+								self.pp_status['post_process_message'] = 'Processing complete'
+								xbmc.log(msg='IAGL:  Pointing to the generated %(type)s file %(value)s'%{'type':'dummy softlist','value':self.pp_status.get('post_process_launch_file')},level=xbmc.LOGDEBUG)
+							else:
+								xbmc.log(msg='IAGL:  Unable to generate the requested pointer file type %(value)s'%{'value':self.pointer_file+'.zip'},level=xbmc.LOGERROR)
+						else:
+								xbmc.log(msg='IAGL:  The requested directory could not be created: %(value)s'%{'value':get_dest_as_str(Path(file).parent.joinpath(self.folder_name))},level=xbmc.LOGERROR)
+								self.pp_status['post_process_success'] = False
+								self.pp_status['post_process_message'] = 'Unable to create folder'
+								self.pp_status['post_process_launch_file'] = None
+					else:
+						current_pointer_file = generate_pointer_file(filename_in=Path(file).parent.joinpath(self.folder_name,self.pointer_file+'.zip'),pointer_file_type='.zip',directory=str(Path(file).parent.joinpath(self.folder_name)),default_dir=self.directory.get('userdata').get('game_cache').get('path'))
+						if current_pointer_file:
+							self.pp_status['post_process_launch_file'] = current_pointer_file
+							self.pp_status['post_process_success'] = True
+							self.pp_status['post_process_message'] = 'Processing complete'
+							xbmc.log(msg='IAGL:  Pointing to the generated %(type)s file %(value)s'%{'type':'dummy softlist','value':self.pp_status.get('post_process_launch_file')},level=xbmc.LOGDEBUG)
+						else:
+							xbmc.log(msg='IAGL:  Unable to generate the requested pointer file type %(value)s'%{'value':self.pointer_file+'.zip'},level=xbmc.LOGERROR)
+				if Path(file).suffix in ['.chd','.CHD'] and Path(file).name not in [Path(x).name for x in matching_files]:
+					if Path(file).parent.name != self.pointer_file:
+						if not Path(file).parent.joinpath(self.folder_name,self.pointer_file).exists() or not check_if_dir_exists(get_dest_as_str(Path(file).parent.joinpath(self.folder_name,self.pointer_file))):
+							if xbmcvfs.mkdir(get_dest_as_str(Path(file).parent.joinpath(self.folder_name,self.pointer_file))): #Folder doesnt exist yet so make it
+								if move_file(file_in=get_dest_as_str(file),path_in=get_dest_as_str(Path(file).parent.joinpath(self.folder_name,self.pointer_file))):
+									self.pp_status['post_process_success'] = True
+									self.pp_status['post_process_message'] = 'Processing complete'
+									self.pp_status['post_process_launch_file'] = Path(file).parent.joinpath(self.folder_name,self.pointer_file+'.zip')
+									xbmc.log(msg='IAGL:  File %(value)s was moved to the created folder %(value2)s/%(value3)s'%{'value':Path(file).name,'value2':self.folder_name,'value3':self.pointer_file},level=xbmc.LOGDEBUG)
+								else:
+									xbmc.log(msg='IAGL:  The requested file could not be moved: %(value)s'%{'value':get_dest_as_str(file)},level=xbmc.LOGERROR)
+									self.pp_status['post_process_success'] = False
+									self.pp_status['post_process_message'] = 'Unable to move file to folder'
+									self.pp_status['post_process_launch_file'] = None
+							else:
+								xbmc.log(msg='IAGL:  The requested directory could not be created: %(value)s'%{'value':get_dest_as_str(Path(file).parent.joinpath(self.folder_name,self.pointer_file))},level=xbmc.LOGERROR)
+								self.pp_status['post_process_success'] = False
+								self.pp_status['post_process_message'] = 'Unable to create folder'
+								self.pp_status['post_process_launch_file'] = None
+						else:
+							if move_file(file_in=get_dest_as_str(file),path_in=get_dest_as_str(Path(file).parent.joinpath(self.folder_name,self.pointer_file))):
+									self.pp_status['post_process_success'] = True
+									self.pp_status['post_process_message'] = 'Processing complete'
+									self.pp_status['post_process_launch_file'] = Path(file).parent.joinpath(self.folder_name,self.pointer_file+'.zip')
+									xbmc.log(msg='IAGL:  File %(value)s was moved to the existing folder %(value2)s/%(value3)s'%{'value':Path(file).name,'value2':self.folder_name,'value3':self.pointer_file},level=xbmc.LOGDEBUG)
+							else:
+								xbmc.log(msg='IAGL:  The requested file could not be moved: %(value)s'%{'value':get_dest_as_str(file)},level=xbmc.LOGERROR)
+								self.pp_status['post_process_success'] = False
+								self.pp_status['post_process_message'] = 'Unable to move file to folder'
+								self.pp_status['post_process_launch_file'] = None
+					else:
+						xbmc.log(msg='IAGL:  File is in the correct folder, and does not require further processing: %(value)s'%{'value':file},level=xbmc.LOGDEBUG)
+						self.pp_status['post_process_success'] = True
+						self.pp_status['post_process_message'] = 'Processing complete'
+						self.pp_status['post_process_launch_file'] = file
+				elif Path(file).name not in [Path(x).name for x in matching_files]:
+					if Path(file).parent.name != self.folder_name:
+						if not Path(file).parent.joinpath(self.folder_name).exists() or not check_if_dir_exists(get_dest_as_str(Path(file).parent.joinpath(self.folder_name))):
+							if xbmcvfs.mkdir(get_dest_as_str(Path(file).parent.joinpath(self.folder_name))): #Folder doesnt exist yet so make it
+								if move_file(file_in=get_dest_as_str(file),path_in=get_dest_as_str(Path(file).parent.joinpath(self.folder_name))):
+									self.pp_status['post_process_success'] = True
+									self.pp_status['post_process_message'] = 'Processing complete'
+									self.pp_status['post_process_launch_file'] = Path(file).parent.joinpath(self.folder_name,self.pointer_file+'.zip')
+									xbmc.log(msg='IAGL:  File %(value)s was moved to the created folder %(value2)s'%{'value':Path(file).name,'value2':self.folder_name},level=xbmc.LOGDEBUG)
+								else:
+									xbmc.log(msg='IAGL:  The requested file could not be moved: %(value)s'%{'value':get_dest_as_str(file)},level=xbmc.LOGERROR)
+									self.pp_status['post_process_success'] = False
+									self.pp_status['post_process_message'] = 'Unable to move file to folder'
+									self.pp_status['post_process_launch_file'] = None
+							else:
+								xbmc.log(msg='IAGL:  The requested directory could not be created: %(value)s'%{'value':get_dest_as_str(Path(file).parent.joinpath(self.folder_name))},level=xbmc.LOGERROR)
+								self.pp_status['post_process_success'] = False
+								self.pp_status['post_process_message'] = 'Unable to create folder'
+								self.pp_status['post_process_launch_file'] = None
+						else:
+							if move_file(file_in=get_dest_as_str(file),path_in=get_dest_as_str(Path(file).parent.joinpath(self.folder_name))):
+									self.pp_status['post_process_success'] = True
+									self.pp_status['post_process_message'] = 'Processing complete'
+									self.pp_status['post_process_launch_file'] = Path(file).parent.joinpath(self.folder_name,self.pointer_file+'.zip')
+									xbmc.log(msg='IAGL:  File %(value)s was moved to the existing folder %(value2)s'%{'value':Path(file).name,'value2':self.folder_name},level=xbmc.LOGDEBUG)
+							else:
+								xbmc.log(msg='IAGL:  The requested file could not be moved: %(value)s'%{'value':get_dest_as_str(file)},level=xbmc.LOGERROR)
+								self.pp_status['post_process_success'] = False
+								self.pp_status['post_process_message'] = 'Unable to move file to folder'
+								self.pp_status['post_process_launch_file'] = None
+					else:
+						xbmc.log(msg='IAGL:  File is in the correct folder, and does not require further processing: %(value)s'%{'value':file},level=xbmc.LOGDEBUG)
+						self.pp_status['post_process_success'] = True
+						self.pp_status['post_process_message'] = 'Processing complete'
+						self.pp_status['post_process_launch_file'] = Path(file).parent.joinpath(self.folder_name,self.pointer_file+'.zip')
+				else:
+					xbmc.log(msg='IAGL:  File is in the correct folder, and does not require further processing: %(value)s'%{'value':file},level=xbmc.LOGDEBUG)
+					self.pp_status['post_process_success'] = True
+					self.pp_status['post_process_message'] = 'Processing complete'
+					self.pp_status['post_process_launch_file'] = Path(file).parent.joinpath(self.folder_name,self.pointer_file+'.zip')
 
 			if len(matching_files)>0:
 				for mf in matching_files:
