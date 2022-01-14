@@ -170,7 +170,7 @@ class iagl_launch(object):
 					current_port = next(iter([x for x in [self.netplay_query.get('mitm_port'),self.netplay_query.get('port')] if x and x != '0']),'55435')
 					netplay_command = ' --connect %(host)s --port %(pp)s --nick "%(nn)s (%(ss)s)"'%{'host':current_host,'pp':current_port,'nn':next(iter([x for x in [self.settings.get('game_action').get('netplay_nick'),xbmc.getInfoLabel('System.ProfileName')] if x]),'Kodi Player 1')[0:22],'ss':self.uuid}
 					# if self.settings.get('game_action').get('netplay_port') and len(self.settings.get('game_action').get('netplay_port')) and self.settings.get('game_action').get('netplay_port').isdigit():
-						# netplay_command = netplay_command+' --port=%(pp)s'%{'pp':self.settings.get('game_action').get('netplay_port')}
+						# netplay_command = netplay_command+' --port %(pp)s'%{'pp':self.settings.get('game_action').get('netplay_port')}
 					if self.settings.get('game_action').get('netplay_checkframes') and len(self.settings.get('game_action').get('netplay_checkframes')) and self.settings.get('game_action').get('netplay_checkframes').isdigit():
 						netplay_command = netplay_command+' --check-frames %(pp)s'%{'pp':self.settings.get('game_action').get('netplay_checkframes')}
 					self.current_command = self.current_command.replace(' %NETPLAY_COMMAND%',netplay_command)
@@ -229,7 +229,7 @@ class iagl_launch(object):
 							except:
 								current_line = None
 							if current_line and len(current_output)<500: #Read up to first 500 lines of output if available
-								current_output.append(current_line.decode('utf-8').replace('\n','').replace('\r',''))
+								current_output.append(current_line.decode('utf-8',errors='ignore').replace('\n','').replace('\r',''))
 							else:
 								break
 					if launch_process.poll() is None or (current_output and any(['starting: intent' in x.lower() for x in current_output]) and not any(['error: activity' in x.lower() for x in current_output])):

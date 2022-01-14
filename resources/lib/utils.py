@@ -1361,18 +1361,17 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 			if new_default_dir:
 				game_dl_dict['downloadpath'] = str(new_default_dir)
 				game_dl_dict['downloadpath_resolved'] = Path(game_dl_dict.get('downloadpath')).joinpath(game_filename).expanduser()
-		if emu_post_processor in ['launch_mame_softlist_cdimono1']: #Download to a specific folder depending on the post process command
-			post_process_dir = dict(zip(['launch_mame_softlist_cdimono1'],['cdimono1']))
-			game_dl_dict['downloadpath_resolved'] = Path(game_dl_dict.get('downloadpath_resolved').parent).joinpath(post_process_dir.get(emu_post_processor),game_dl_dict.get('downloadpath_resolved').name).expanduser()
-			check_userdata_directory(game_dl_dict.get('downloadpath_resolved').parent)
 		if game_dl_dict.get('downloadpath_resolved').parent.exists():
-			if game_dl_dict.get('filename_ext') not in ARCHIVE_FILETYPES: #If file to be downloaded is not an archive, it should match exactly with a local file - currenly works because all post processed filetypes are archives.  This may have to be updated in the future
-				if check_if_file_exists(game_dl_dict.get('downloadpath_resolved')):
-					game_dl_dict['matching_existing_files'] = [game_dl_dict.get('downloadpath_resolved')]
-				else:
-					game_dl_dict['matching_existing_files'] = []
-			else: #If the file to be downloaded is an archive, the name without extension should match with a local file
-				game_dl_dict['matching_existing_files'] = [x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+glob.escape(game_dl_dict.get('downloadpath_resolved').stem)+'[.]*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES and x.name.lower() not in IGNORE_THESE_FILES]
+			if emu_post_processor in ['move_to_folder_cdimono1','move_to_folder_fmtowns_cd']: #Downloaded to a specific folder for softlists
+				game_dl_dict['matching_existing_files'] = [x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+glob.escape(game_dl_dict.get('downloadpath_resolved').stem)+'[.]*') if x.suffix.lower() in ['.zip','.ZIP','.chd','CHD']]
+			else:
+				if game_dl_dict.get('filename_ext') not in ARCHIVE_FILETYPES: #If file to be downloaded is not an archive, it should match exactly with a local file - currenly works because all post processed filetypes are archives.  This may have to be updated in the future
+					if check_if_file_exists(game_dl_dict.get('downloadpath_resolved')):
+						game_dl_dict['matching_existing_files'] = [game_dl_dict.get('downloadpath_resolved')]
+					else:
+						game_dl_dict['matching_existing_files'] = []
+				else: #If the file to be downloaded is an archive, the name without extension should match with a local file
+					game_dl_dict['matching_existing_files'] = [x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+glob.escape(game_dl_dict.get('downloadpath_resolved').stem)+'[.]*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES and x.name.lower() not in IGNORE_THESE_FILES]
 		elif xbmcvfs.exists(get_dest_as_str(game_dl_dict.get('downloadpath'))): #Kodi network source save spot (like smb address) need to use xbmcvfs to check local files
 			if game_dl_dict.get('filename_ext') not in ARCHIVE_FILETYPES:
 				if check_if_file_exists(get_dest_as_str(game_dl_dict.get('downloadpath_resolved'))):
@@ -1383,7 +1382,7 @@ def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=
 				game_dl_dict['matching_existing_files'] = [x for x in get_all_files_in_directory_xbmcvfs(get_dest_as_str(game_dl_dict.get('downloadpath'))) if os.path.split(os.path.splitext(x)[0])[-1] == game_dl_dict.get('filename_no_ext') and os.path.splitext(x)[-1].lower() not in IGNORE_THESE_FILETYPES and os.path.split(os.path.splitext(x)[0])[-1] not in IGNORE_THESE_FILES]
 		else:
 			game_dl_dict['matching_existing_files'] = []
-		if game_dl_dict.get('emu_command'):
+		if game_dl_dict.get('emu_command') and emu_post_processor not in ['move_to_folder_cdimono1','move_to_folder_fmtowns_cd']:
 			if 'smb:' not in game_dl_dict.get('downloadpath') and 'nfs:' not in game_dl_dict.get('downloadpath'):
 				#Faster search if not a network share
 				game_dl_dict['matching_existing_files'] = list(set(game_dl_dict.get('matching_existing_files')+[x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+glob.escape(game_dl_dict.get('emu_command'))+'*') if x.suffix.lower() not in IGNORE_THESE_FILETYPES and x.name.lower() not in IGNORE_THESE_FILES]))
