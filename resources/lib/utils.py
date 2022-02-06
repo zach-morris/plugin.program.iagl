@@ -1340,27 +1340,28 @@ def check_addondata_to_query(addon_files,userdata_files):
 def get_game_download_dict(emu_baseurl=None,emu_downloadpath=None,emu_dl_source=None,emu_post_processor=None,emu_launcher=None,emu_default_addon=None,emu_ext_launch_cmd=None,game_url=None,game_downloadpath=None,game_post_processor=None,game_launcher=None,game_default_addon=None,game_ext_launch_cmd=None,game_emu_command=None,organize_default_dir=False,default_dir=None,emu_name=None):
 	game_dl_dict = dict()
 	if emu_dl_source and emu_baseurl and game_url and (emu_dl_source in ['Archive.org','Local Network Source','Kodi Library Source','Local File Source'] or 'http' in emu_dl_source):
-		game_filename = url_unquote(game_url.split('/')[-1].split('%2F')[-1])
+		# game_filename = url_unquote(game_url.split('/')[-1].split('%2F')[-1])
+		game_filename_path = Path(url_unquote(game_url))
 		game_dl_dict = {'dl_source':emu_dl_source,
 					'baseurl':emu_baseurl,
 					'url':game_url,
 					'downloadpath':next(iter([x for x in [game_downloadpath,emu_downloadpath] if x]),'default'),
 					'url_resolved':os.path.join(emu_baseurl,game_url.strip(os.sep).strip('/')),
-					'filename':game_filename,
-					'filename_no_ext':game_filename.split('.')[0],
-					'filename_ext':game_filename.split('.')[-1].lower(),
+					'filename':game_filename_path.name,
+					'filename_no_ext':game_filename_path.stem,
+					'filename_ext':game_filename_path.suffix.replace('.','').lower(),
 					'post_processor':next(iter([x for x in [game_post_processor,emu_post_processor] if x]),'none'),
 					'launcher':next(iter([x for x in [game_launcher,emu_launcher] if x]),'retroplayer'),
 					'default_addon':next(iter([x for x in [game_default_addon,emu_default_addon] if x]),'none'),
 					'ext_launch_cmd':next(iter([x for x in [game_ext_launch_cmd,emu_ext_launch_cmd] if x]),'none'),
 					'emu_command':game_emu_command,
-					'downloadpath_resolved':Path(emu_downloadpath).joinpath(game_filename).expanduser(),
+					'downloadpath_resolved':Path(emu_downloadpath).joinpath(game_filename_path.name).expanduser(),
 					}
 		if organize_default_dir and game_dl_dict.get('downloadpath') == 'default' or str(game_dl_dict.get('downloadpath')) == str(default_dir) and emu_name:
 			new_default_dir = check_userdata_directory(os.path.join(str(default_dir),emu_name))
 			if new_default_dir:
 				game_dl_dict['downloadpath'] = str(new_default_dir)
-				game_dl_dict['downloadpath_resolved'] = Path(game_dl_dict.get('downloadpath')).joinpath(game_filename).expanduser()
+				game_dl_dict['downloadpath_resolved'] = Path(game_dl_dict.get('downloadpath')).joinpath(game_filename_path.name).expanduser()
 		if game_dl_dict.get('downloadpath_resolved').parent.exists():
 			if emu_post_processor in ['move_to_folder_cdimono1','move_to_folder_fmtowns_cd']: #Downloaded to a specific folder for softlists
 				game_dl_dict['matching_existing_files'] = [x for x in game_dl_dict.get('downloadpath_resolved').parent.glob('**/'+glob.escape(game_dl_dict.get('downloadpath_resolved').stem)+'[.]*') if x.suffix.lower() in ['.zip','.ZIP','.chd','CHD']]
