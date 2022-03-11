@@ -864,6 +864,9 @@
 	<launcher name="redream (Dreamcast)" os="android">
 		<command>/system/bin/am start --user 0 -n io.recompiled.redream/.MainActivity -a android.intent.action.VIEW -d "file://%ROM_PATH%"</command>
 	</launcher>
+	<launcher name="AetherSX2 (PS2)" os="android">
+		<command>am start --user 0 -n xyz.aethersx2.android/xyz.aethersx2.android.EmulationActivity --es "bootPath" "%ROM_PATH%"</command>
+	</launcher>
 <!-- Android Aarch64 External Retroarch Commands -->
 	<launcher name="RetroArch 4DO (3DO)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/4do_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -1592,6 +1595,9 @@
 	<launcher name="redream (Dreamcast)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -n io.recompiled.redream/.MainActivity -a android.intent.action.VIEW -d "file://%ROM_PATH%"</command>
 	</launcher>
+	<launcher name="AetherSX2 (PS2)" os="android_aarch64">
+		<command>am start --user 0 -n xyz.aethersx2.android/xyz.aethersx2.android.EmulationActivity --es "bootPath" "%ROM_PATH%"</command>
+	</launcher>
 <!-- Android RA32 External Retroarch Commands -->
 	<launcher name="RetroArch 4DO (3DO)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es "LIBRETRO" "%CORE_BASE_PATH%/4do_libretro_android.so" --es "CONFIGFILE" "%CFG_PATH%" --es "ROM" "%ROM_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -2319,5 +2325,8 @@
 	</launcher>
 	<launcher name="redream (Dreamcast)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -n io.recompiled.redream/.MainActivity -a android.intent.action.VIEW -d "file://%ROM_PATH%"</command>
+	</launcher>
+	<launcher name="AetherSX2 (PS2)" os="android_ra32">
+		<command>am start --user 0 -n xyz.aethersx2.android/xyz.aethersx2.android.EmulationActivity --es "bootPath" "%ROM_PATH%"</command>
 	</launcher>
 </system>
