@@ -338,7 +338,7 @@ def zachs_debug(message=None,level_in=xbmc.LOGWARNING):
 	if message is not None:
 		xbmc.log(msg='*IAGL TEST*:  %(value_in)s' % {'value_in': message}, level=level_in)
 
-def get_launch_parameter(setting_in=None,retun_val=None):
+def get_launch_parameter(setting_in=None,return_val=None):
 	if isinstance(setting_in,str) or isinstance(setting_in,Path):
 		return str(setting_in)
 	else:
