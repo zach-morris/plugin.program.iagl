@@ -93,11 +93,11 @@ class iagl_launch(object):
 					dp.close()
 					break
 			del dp
-			if not self.settings.get('ext_launchers').get('close_kodi') and self.settings.get('ext_launchers').get('stop_audio_controller') and self.settings.get('ext_launchers').get('environment') not in ['android','android_ra32','android_aarch64']:
-				xbmc.log(msg='IAGL:  Re-Enabling Audio and Controller Input',level=xbmc.LOGDEBUG)
-				xbmc.audioResume()
-				xbmc.enableNavSounds(True)
-				xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Settings.SetSettingValue","params":{"setting":"input.enablejoystick","value":true},"id":"1"}')
+		if not self.settings.get('ext_launchers').get('close_kodi') and self.settings.get('ext_launchers').get('stop_audio_controller') and self.settings.get('ext_launchers').get('environment') not in ['android','android_ra32','android_aarch64']:
+			xbmc.log(msg='IAGL:  Re-Enabling Audio and Controller Input',level=xbmc.LOGDEBUG)
+			xbmc.audioResume()
+			xbmc.enableNavSounds(True)
+			xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Settings.SetSettingValue","params":{"setting":"input.enablejoystick","value":true},"id":"1"}')
 
 	class retroplayer_launch(object):
 		def __init__(self,settings=dict(),directory=dict(),game_list=dict(),game=dict(),game_files=dict(),**kwargs):
