@@ -93,11 +93,11 @@ class iagl_launch(object):
 					dp.close()
 					break
 			del dp
-		if not self.settings.get('ext_launchers').get('close_kodi') and self.settings.get('ext_launchers').get('stop_audio_controller') and self.settings.get('ext_launchers').get('environment') not in ['android','android_ra32','android_aarch64']:
-			xbmc.log(msg='IAGL:  Re-Enabling Audio and Controller Input',level=xbmc.LOGDEBUG)
-			xbmc.audioResume()
-			xbmc.enableNavSounds(True)
-			xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Settings.SetSettingValue","params":{"setting":"input.enablejoystick","value":true},"id":"1"}')
+			if not self.settings.get('ext_launchers').get('close_kodi') and self.settings.get('ext_launchers').get('stop_audio_controller') and self.settings.get('ext_launchers').get('environment') not in ['android','android_ra32','android_aarch64']:
+				xbmc.log(msg='IAGL:  Re-Enabling Audio and Controller Input',level=xbmc.LOGDEBUG)
+				xbmc.audioResume()
+				xbmc.enableNavSounds(True)
+				xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Settings.SetSettingValue","params":{"setting":"input.enablejoystick","value":true},"id":"1"}')
 
 	class retroplayer_launch(object):
 		def __init__(self,settings=dict(),directory=dict(),game_list=dict(),game=dict(),game_files=dict(),**kwargs):
@@ -180,7 +180,7 @@ class iagl_launch(object):
 
 				if any([x in self.current_command for x in ['%ADDON_DIR%','%APP_PATH_RA%','%APP_PATH_DEMUL%','%APP_PATH_DOLPHIN%','%APP_PATH_EPSXE%','%APP_PATH_FS_UAE%','%APP_PATH_MAME%','%APP_PATH_PJ64%','%CFG_PATH%','%RETROARCH_CORE_DIR%','%ROM_PATH%','%ROM_RAW%']]):
 					command_map = {'%ADDON_DIR%':self.directory.get('addon').get('path'),
-									'%APP_PATH_RA%':get_launch_parameter(self.settings.get('ext_launchers').get('ra').get('app_path'),'%APP_PATH_RA%'),
+									'%APP_PATH_RA%':get_launch_parameter(setting_in=self.settings.get('ext_launchers').get('ra').get('app_path'),return_val='%APP_PATH_RA%'),
 									'%APP_PATH_DEMUL%':next(iter([str(x.get('app_path')) for x in self.settings.get('ext_launchers').get('other_ext_cmds') if x.get('app_path_cmd_replace')=='%APP_PATH_DEMUL%']),'%APP_PATH_DEMUL%'),
 									'%APP_PATH_DOLPHIN%':next(iter([str(x.get('app_path')) for x in self.settings.get('ext_launchers').get('other_ext_cmds') if x.get('app_path_cmd_replace')=='%APP_PATH_DOLPHIN%']),'%APP_PATH_DOLPHIN%'),
 									'%APP_PATH_EPSXE%':next(iter([str(x.get('app_path')) for x in self.settings.get('ext_launchers').get('other_ext_cmds') if x.get('app_path_cmd_replace')=='%APP_PATH_EPSXE%']),'%APP_PATH_EPSXE%'),
@@ -208,52 +208,60 @@ class iagl_launch(object):
 						xbmc.enableNavSounds(False)
 						xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Settings.SetSettingValue","params":{"setting":"input.enablejoystick","value":false},"id":"1"}')
 					
-					if self.settings.get('ext_launchers').get('environment') in ['android','android_ra32','android_aarch64'] and self.settings.get('ext_launchers').get('send_stop_command'):
-						android_stop_commands = dict(zip(['android','android_ra32','android_aarch64'],['/system/bin/am force-stop com.retroarch','/system/bin/am force-stop com.retroarch','/system/bin/am force-stop com.retroarch.ra32','/system/bin/am force-stop com.retroarch.aarch64']))
-						xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_commands.get(self.settings.get('ext_launchers').get('environment'))}, level=xbmc.LOGDEBUG)
-						stop_process=subprocess.call(android_stop_commands.get(self.settings.get('ext_launchers').get('environment')),stdout=subprocess.PIPE,stderr=subprocess.STDOUT,shell=True)
-						xbmc.log(msg='IAGL:  Android returned %(stop_process)s' % {'stop_process': stop_process}, level=xbmc.LOGDEBUG)
-
-					launch_process=subprocess.Popen(self.current_command,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,shell=True)
-					if not self.settings.get('ext_launchers').get('close_kodi') and capture_launch_log:
-						q = Queue()
-						t = Thread(target=enqueue_output, args=(launch_process.stdout, q))
-						t.daemon = True # thread dies with the program
-						t.start()
+					#No longer needed for kodi v20
+					# if self.settings.get('ext_launchers').get('environment') in ['android','android_ra32','android_aarch64'] and self.settings.get('ext_launchers').get('send_stop_command'):
+					# 	android_stop_commands = dict(zip(['android','android_ra32','android_aarch64'],['/system/bin/am force-stop com.retroarch','/system/bin/am force-stop com.retroarch','/system/bin/am force-stop com.retroarch.ra32','/system/bin/am force-stop com.retroarch.aarch64']))
+					# 	xbmc.log(msg='IAGL:  Sending Android Stop Command: %(android_stop_command)s' % {'android_stop_command': android_stop_commands.get(self.settings.get('ext_launchers').get('environment'))}, level=xbmc.LOGDEBUG)
+					# 	stop_process=subprocess.call(android_stop_commands.get(self.settings.get('ext_launchers').get('environment')),stdout=subprocess.PIPE,stderr=subprocess.STDOUT,shell=True)
+					# 	xbmc.log(msg='IAGL:  Android returned %(stop_process)s' % {'stop_process': stop_process}, level=xbmc.LOGDEBUG)
 					
-					if not self.settings.get('ext_launchers').get('close_kodi') and capture_launch_log:
-						xbmc.sleep(WAIT_FOR_PLAYER_TIME)
-						while True:
-							try:
-								current_line = q.get_nowait()
-							except:
-								current_line = None
-							if current_line and len(current_output)<500: #Read up to first 500 lines of output if available
-								current_output.append(current_line.decode('utf-8',errors='ignore').replace('\n','').replace('\r',''))
-							else:
-								break
-					if launch_process.poll() is None or (current_output and any(['starting: intent' in x.lower() for x in current_output]) and not any(['error: activity' in x.lower() for x in current_output])):
+					if self.settings.get('ext_launchers').get('environment') in ['android','android_ra32','android_aarch64'] and 'am start' not in self.current_command.lower():
+						xbmc.executebuiltin('StartAndroidActivity({})'.format(self.current_command),True) #Kodi v20 start android activity, modeled after https://github.com/chrisism/plugin.test.androidcmd/blob/main/addon.py
 						self.launch_status['launch_process_success'] = True
 						self.launch_status['launch_process_message'] = 'Sent launch command for %(game)s'%{'game':self.game.get('info').get('originaltitle')}
-						self.launch_status['launch_process'] = launch_process
-						self.launch_status['launch_log'] = current_output
-						xbmc.log(msg='IAGL:  Sent external launch command for game %(game)s'%{'game':self.game.get('info').get('originaltitle')},level=xbmc.LOGINFO)
-						xbmc.log(msg='IAGL:  %(command)s'%{'command':self.current_command},level=xbmc.LOGINFO)
-						if capture_launch_log and current_output:
-							xbmc.log(msg='IAGL:  External launch log for %(game)s'%{'game':self.game.get('info').get('originaltitle')},level=xbmc.LOGDEBUG)
-							for co in current_output:
-								xbmc.log(msg='IAGL:  %(log)s'%{'log':co},level=xbmc.LOGDEBUG)
-					else:
-						self.launch_status['launch_process_success'] = False
-						self.launch_status['launch_process_message'] = 'Sent launch command for %(game)s but it is not running'%{'game':self.game.get('info').get('originaltitle')}
 						self.launch_status['launch_process'] = None
-						self.launch_status['launch_log'] = current_output
-						xbmc.log(msg='IAGL:  Sent external launch command for game %(game)s but it does not appear to be running'%{'game':self.game.get('info').get('originaltitle')},level=xbmc.LOGERROR)
-						xbmc.log(msg='IAGL:  %(command)s'%{'command':self.current_command},level=xbmc.LOGERROR)
-						if capture_launch_log and current_output:
-							xbmc.log(msg='IAGL:  External launch for %(game)s'%{'game':self.game.get('info').get('originaltitle')},level=xbmc.LOGDEBUG)
-							for co in current_output:
-								xbmc.log(msg='IAGL:  %(log)s'%{'log':co},level=xbmc.LOGDEBUG)
+						self.launch_status['launch_log'] = None
+					else:
+						launch_process=subprocess.Popen(self.current_command,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,shell=True)
+						if not self.settings.get('ext_launchers').get('close_kodi') and capture_launch_log:
+							q = Queue()
+							t = Thread(target=enqueue_output, args=(launch_process.stdout, q))
+							t.daemon = True # thread dies with the program
+							t.start()
+						
+						if not self.settings.get('ext_launchers').get('close_kodi') and capture_launch_log:
+							xbmc.sleep(WAIT_FOR_PLAYER_TIME)
+							while True:
+								try:
+									current_line = q.get_nowait()
+								except:
+									current_line = None
+								if current_line and len(current_output)<500: #Read up to first 500 lines of output if available
+									current_output.append(current_line.decode('utf-8',errors='ignore').replace('\n','').replace('\r',''))
+								else:
+									break
+						if launch_process.poll() is None or (current_output and any(['starting: intent' in x.lower() for x in current_output]) and not any(['error: activity' in x.lower() for x in current_output])):
+							self.launch_status['launch_process_success'] = True
+							self.launch_status['launch_process_message'] = 'Sent launch command for %(game)s'%{'game':self.game.get('info').get('originaltitle')}
+							self.launch_status['launch_process'] = launch_process
+							self.launch_status['launch_log'] = current_output
+							xbmc.log(msg='IAGL:  Sent external launch command for game %(game)s'%{'game':self.game.get('info').get('originaltitle')},level=xbmc.LOGINFO)
+							xbmc.log(msg='IAGL:  %(command)s'%{'command':self.current_command},level=xbmc.LOGINFO)
+							if capture_launch_log and current_output:
+								xbmc.log(msg='IAGL:  External launch log for %(game)s'%{'game':self.game.get('info').get('originaltitle')},level=xbmc.LOGDEBUG)
+								for co in current_output:
+									xbmc.log(msg='IAGL:  %(log)s'%{'log':co},level=xbmc.LOGDEBUG)
+						else:
+							self.launch_status['launch_process_success'] = False
+							self.launch_status['launch_process_message'] = 'Sent launch command for %(game)s but it is not running'%{'game':self.game.get('info').get('originaltitle')}
+							self.launch_status['launch_process'] = None
+							self.launch_status['launch_log'] = current_output
+							xbmc.log(msg='IAGL:  Sent external launch command for game %(game)s but it does not appear to be running'%{'game':self.game.get('info').get('originaltitle')},level=xbmc.LOGERROR)
+							xbmc.log(msg='IAGL:  %(command)s'%{'command':self.current_command},level=xbmc.LOGERROR)
+							if capture_launch_log and current_output:
+								xbmc.log(msg='IAGL:  External launch for %(game)s'%{'game':self.game.get('info').get('originaltitle')},level=xbmc.LOGDEBUG)
+								for co in current_output:
+									xbmc.log(msg='IAGL:  %(log)s'%{'log':co},level=xbmc.LOGDEBUG)
 				else:
 					self.launch_status['launch_process_success'] = False
 					self.launch_status['launch_process_message'] = 'Launch command malformed for %(game)s'%{'game':self.game.get('info').get('originaltitle')}
