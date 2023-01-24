@@ -215,7 +215,7 @@ class iagl_launch(object):
 					# 	stop_process=subprocess.call(android_stop_commands.get(self.settings.get('ext_launchers').get('environment')),stdout=subprocess.PIPE,stderr=subprocess.STDOUT,shell=True)
 					# 	xbmc.log(msg='IAGL:  Android returned %(stop_process)s' % {'stop_process': stop_process}, level=xbmc.LOGDEBUG)
 					
-					if self.settings.get('ext_launchers').get('environment') in ['android','android_ra32','android_aarch64'] and 'am start' not in self.current_command.lower():
+					if self.settings.get('ext_launchers').get('environment') in ['android','android_ra32','android_aarch64'] and self.settings.get('ext_launchers').get('use_startactivity') and 'am start' not in self.current_command.lower():
 						xbmc.executebuiltin('StartAndroidActivity({})'.format(self.current_command),True) #Kodi v20 start android activity, modeled after https://github.com/chrisism/plugin.test.androidcmd/blob/main/addon.py
 						self.launch_status['launch_process_success'] = True
 						self.launch_status['launch_process_message'] = 'Sent launch command for %(game)s'%{'game':self.game.get('info').get('originaltitle')}

@@ -85,6 +85,7 @@ class iagl_addon(object):
 		self.settings['ext_launchers']['stop_audio_controller'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_suspend_audio_and_input'))
 		self.settings['ext_launchers']['stop_media_before_launch'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_stop_media_before_launch'))
 		self.settings['ext_launchers']['send_stop_command'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_android_stop_command'))
+		self.settings['ext_launchers']['use_startactivity'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_android_startactivity'))
 		self.settings['ext_launchers']['wait_for_return'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_wait_for_return'))
 		self.settings['ext_launchers']['ra'] = dict()
 		self.settings['ext_launchers']['ra']['name'] = 'RetroArch'

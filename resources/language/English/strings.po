@@ -848,6 +848,10 @@ msgctxt "#30193"
 msgid "Organize Cache Folder using System Folders"
 msgstr "Organize Cache Folder using System Folders"
 
+msgctxt "#30199"
+msgid "Use StartAndroidActivity"
+msgstr "Use StartAndroidActivity"
+
 msgctxt "#30522"
 msgid "General format and launch settings"
 msgstr "General format and launch settings"
@@ -1292,6 +1296,9 @@ msgctxt "#30648"
 msgid "If enabled, IAGL will copy files saved to Kodi Network Sources to the local filesystem before launching (leave as default if unsure)"
 msgstr "If enabled, IAGL will copy files saved to Kodi Network Sources to the local filesystem before launching (leave as default if unsure)"
 
+msgctxt "#30649"
+msgid "If enabled, Kodi will start Android Processes with StartAndroidActivity (leave as default if unsure)"
+msgstr "If enabled, Kodi will start Android Processes with StartAndroidActivity (leave as default if unsure)"
 
 #
 #General
