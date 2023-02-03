@@ -1653,7 +1653,7 @@
 						<heading>30193</heading>
 					</control>
 				</setting>
-				<setting help="30570" id="iagl_enable_android_stop_command" label="30049" type="integer">
+				<!-- <setting help="30570" id="iagl_enable_android_stop_command" label="30049" type="integer">
 					<level>3</level>
 					<default>1</default>
 					<constraints>
@@ -1670,7 +1670,7 @@
 					<control format="string" type="list">
 						<heading>30049</heading>
 					</control>
-				</setting>
+				</setting> -->
 				<setting help="30570" id="iagl_enable_android_startactivity" label="30199" type="integer">
 					<level>3</level>
 					<default>0</default>
