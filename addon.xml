@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.program.iagl" name="Internet Archive Game Launcher" version="3.0.7">
   <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="xbmc.python" version="3.0.1"/>
+    <import addon="script.module.infotagger"/>
     <import addon="script.module.dateutil"/>
     <import addon="script.module.requests"/>
     <import addon="script.module.routing"/>

@@ -2,6 +2,7 @@ import os, zlib, json, re, time, glob, requests, uuid
 from pathlib import Path
 # from kodi_six import xbmc, xbmcvfs, xbmcgui, xbmcaddon
 import xbmc, xbmcvfs, xbmcgui, xbmcaddon
+from infotagger.listitem import ListItemInfoTag
 from dateutil import parser as date_parser
 from collections import defaultdict
 import xml.etree.ElementTree as ET
@@ -614,9 +615,9 @@ def map_game_list_listitem_dict(dict_in,default_dict,fn_in,type_in=None):
 			'info':   {'title':dict_in.get('emu_name'),
 					   'originaltitle':dict_in.get('emu_name'),
 					   'date':get_date(dict_in.get('emu_date')),
-					   'credits':dict_in.get('emu_author'),
+					   'credits':[dict_in.get('emu_author')],
 					   'plot':dict_in.get('emu_comment'),
-					   'tag':'Launch using %(value_in)s'%{'value_in':dict_in.get('emu_launcher')},
+					   'tag':['Launch using %(value_in)s'%{'value_in':dict_in.get('emu_launcher')}],
 					   'genre':split_value(dict_in.get('emu_category')),
 					   'trailer':choose_trailer(dict_in.get('emu_trailer'))},
 						# 'size' : game_lists_dict.get('dat_filesize')[aa]
@@ -677,7 +678,7 @@ def map_game_listitem_dict(dict_in,parent_dict_in,default_dict,game_list_id,clea
 					   'originaltitle':re_game_codes.sub('',re_game_tags.sub('',dict_in.get('description')).strip()).strip(), #Clean name
 					   'date':get_date(dict_in.get('releasedate'),dict_in.get('year')),
 					   'year':get_date(dict_in.get('releasedate'),dict_in.get('year'),format_in='%Y'),
-					   'studio':dict_in.get('studio'),
+					   'studio':[dict_in.get('studio')],
 					   'genre':split_value(dict_in.get('genre')),
 					   'showlink':split_value(dict_in.get('groups')),
 					   'rating':dict_in.get('rating'),
@@ -772,7 +773,10 @@ def map_wizard_report_listitem_dict(dict_in,media_type='video'):
 		for ii,dd in enumerate(dict_in.get('label')):
 			li = xbmcgui.ListItem(label=dd,offscreen=True)
 			if dict_in.get('info'):
-				li.setInfo(media_type,dict_in.get('info')[ii])
+				#script.module.infotagger v20
+				info_tag = ListItemInfoTag(li,media_type)
+				info_tag.set_info(dict_in.get('info')[ii])
+				# li.setInfo(media_type,dict_in.get('info')[ii])
 			if dict_in.get('art'):
 				li.setArt(dict_in.get('art')[ii])
 			lis.append(li)
@@ -795,14 +799,20 @@ def get_history_listitem(media_type='video'):
 	'banner':MEDIA_SPECIAL_PATH%{'filename':'last_played_banner.jpg'},
 	'fanart':MEDIA_SPECIAL_PATH%{'filename':'fanart.jpg'}}}
 	li = xbmcgui.ListItem(label=loc_str(30599),offscreen=True)
-	li.setInfo(media_type,li_dict.get('info'))
+	#script.module.infotagger v20
+	info_tag = ListItemInfoTag(li,media_type)
+	info_tag.set_info(li_dict.get('info'))
+	# li.setInfo(media_type,li_dict.get('info'))
 	li.setArt(li_dict.get('art'))
 	li.setProperties({'SpecialSort':'bottom'})
 	return li
 
 def get_next_page_listitem(current_page,page_count,next_page,total_items,media_type='video'):
 	li = xbmcgui.ListItem(label=loc_str(30602),offscreen=True)
-	li.setInfo(media_type,{'plot':loc_str(30603)%{'current_page':current_page,'page_count':page_count,'next_page':next_page,'total_items':total_items}})
+	#script.module.infotagger v20
+	info_tag = ListItemInfoTag(li,media_type)
+	info_tag.set_info({'plot':loc_str(30603)%{'current_page':current_page,'page_count':page_count,'next_page':next_page,'total_items':total_items}})
+	# li.setInfo(media_type,{'plot':loc_str(30603)%{'current_page':current_page,'page_count':page_count,'next_page':next_page,'total_items':total_items}})
 	li.setArt({'icon':MEDIA_SPECIAL_PATH%{'filename':'next.png'},'thumb':MEDIA_SPECIAL_PATH%{'filename':'next.png'}})
 	li.setProperties({'SpecialSort':'bottom'})
 	return li
@@ -825,7 +835,10 @@ def get_netplay_listitem(media_type='video'):
 	'banner':MEDIA_SPECIAL_PATH%{'filename':'last_played_banner.jpg'},
 	'fanart':MEDIA_SPECIAL_PATH%{'filename':'fanart.jpg'}}}
 	li = xbmcgui.ListItem(label=loc_str(30004),offscreen=True)
-	li.setInfo(media_type,li_dict.get('info'))
+	#script.module.infotagger v20
+	info_tag = ListItemInfoTag(li,media_type)
+	info_tag.set_info(li_dict.get('info'))
+	# li.setInfo(media_type,li_dict.get('info'))
 	li.setArt(li_dict.get('art'))
 	li.setProperties({'SpecialSort':'bottom'})
 	return li
@@ -833,7 +846,10 @@ def get_netplay_listitem(media_type='video'):
 def get_database_listitem(dict_in,media_type='video'):
 	if isinstance(dict_in,dict):
 		li = xbmcgui.ListItem(label=dict_in.get('values').get('label'),label2=dict_in.get('values').get('label2'),offscreen=True)
-		li.setInfo(media_type,dict_in.get('info'))
+		#script.module.infotagger v20
+		info_tag = ListItemInfoTag(li,media_type)
+		info_tag.set_info(dict_in.get('info'))
+		# li.setInfo(media_type,dict_in.get('info'))
 		li.setArt(dict_in.get('art'))
 		li.setProperties(dict_in.get('properties'))
 		return li
@@ -844,7 +860,10 @@ def get_game_list_listitem(dict_in,filter_in=None,media_type='video'):
 	li=None
 	if dict_in.get('properties').get('emu_visibility') != 'hidden' and (filter_in is None or (all([filter_in.get('info').get(kk) in dict_in.get('info').get(kk) if dict_in.get('info').get(kk) else False for kk in filter_in.get('info').keys()]) and all([filter_in.get('properties').get(kk) in dict_in.get('properties').get(kk) if dict_in.get('properties').get(kk) else False for kk in filter_in.get('properties').keys()]))):
 		li = xbmcgui.ListItem(label=dict_in.get('values').get('label'),label2=dict_in.get('values').get('label2'),offscreen=True)
-		li.setInfo(media_type,dict_in.get('info'))
+		#script.module.infotagger v20
+		info_tag = ListItemInfoTag(li,media_type)
+		info_tag.set_info(dict_in.get('info'))
+		# li.setInfo(media_type,dict_in.get('info'))
 		li.setArt(dict_in.get('art'))
 	return li
 
@@ -855,7 +874,10 @@ def get_retroplayer_item_and_listitem(dict_in,launch_file,media_type='game'):
 	# 	launch_item = str(launch_file)
 	if launch_file and dict_in:
 		launch_li = xbmcgui.ListItem(label=dict_in.get('values').get('label'),label2=dict_in.get('values').get('label2'),offscreen=True)
-		launch_li.setInfo(media_type,dict_in.get('info'))
+		#script.module.infotagger v20
+		info_tag = ListItemInfoTag(launch_li,media_type)
+		info_tag.set_info(dict_in.get('info'))
+		# launch_li.setInfo(media_type,dict_in.get('info'))
 		launch_li.setArt(dict_in.get('art'))
 		launch_li.setPath(path=str(launch_file))
 	return launch_li
@@ -863,7 +885,10 @@ def get_retroplayer_item_and_listitem(dict_in,launch_file,media_type='game'):
 def get_game_choose_list_listitem(dict_in,filter_in=None,media_type='video'):
 	if isinstance(dict_in,dict):
 		li = xbmcgui.ListItem(label=dict_in.get('values').get('label'),label2=dict_in.get('values').get('label2'),offscreen=True)
-		li.setInfo(media_type,dict_in.get('info'))
+		#script.module.infotagger v20
+		info_tag = ListItemInfoTag(li,media_type)
+		info_tag.set_info(dict_in.get('info'))
+		# li.setInfo(media_type,dict_in.get('info'))
 		li.setArt(dict_in.get('art'))
 		li.setProperties(dict_in.get('properties'))
 		return li
@@ -872,7 +897,9 @@ def get_game_choose_list_listitem(dict_in,filter_in=None,media_type='video'):
 
 def update_listitem_title(li_in,update_item,media_type='video'):
 	if update_item:
-		li_in.setInfo(media_type,{'title':'%(emu_name)s - %(label)s'%{'emu_name':li_in.getProperty('platform_description'),'label':li_in.getLabel()}})
+		info_tag = ListItemInfoTag(li_in,media_type)
+		info_tag.set_info({'title':'%(emu_name)s - %(label)s'%{'emu_name':li_in.getProperty('platform_description'),'label':li_in.getLabel()}})
+		# li_in.setInfo(media_type,{'title':'%(emu_name)s - %(label)s'%{'emu_name':li_in.getProperty('platform_description'),'label':li_in.getLabel()}})
 		li_in.setLabel('%(emu_name)s - %(label)s'%{'emu_name':li_in.getProperty('platform_description'),'label':li_in.getLabel()})
 		return li_in
 	else:
@@ -949,7 +976,10 @@ def get_game_listitem(dict_in,filter_in,media_type='video'):
 	# if filter_in is None or (all([v in dict_in.get('info').get(k) if (v is not None and dict_in.get('info').get(k) is not None) else False for k,v in filter_in.get('info').items() if v!='Unknown']) and all([v in dict_in.get('properties').get(k) if (v is not None and dict_in.get('properties').get(k) is not None) else False for k,v in filter_in.get('properties').items() if v!='Unknown']) and all([True if not dict_in.get('info').get(k) else False for k,v in filter_in.get('info').items() if v=='Unknown']) and all([True if not dict_in.get('properties').get(k) else False for k,v in filter_in.get('properties').items() if v=='Unknown'])):
 	if all(include):
 		li = xbmcgui.ListItem(label=dict_in.get('values').get('label'),label2=dict_in.get('values').get('label2'),offscreen=True)
-		li.setInfo(media_type,dict_in.get('info'))
+		#script.module.infotagger v20
+		info_tag = ListItemInfoTag(li,media_type)
+		info_tag.set_info(dict_in.get('info'))
+		# li.setInfo(media_type,dict_in.get('info'))
 		li.setArt(dict_in.get('art'))
 		li.setProperties(dict_in.get('properties'))
 	return li
@@ -1171,9 +1201,9 @@ def get_game_list_stats(games):
 		stats_out['genres']['all'] = sorted(set(flatten_list([x.get('info').get('genre') for x in games if x.get('info').get('genre')])))
 		stats_out['years']['all'] = sorted(set([x.get('info').get('year') for x in games if x.get('info').get('year')]))
 		stats_out['players']['all'] = sorted(set([x.get('properties').get('nplayers') for x in games if x.get('properties').get('nplayers')]))
-		stats_out['studio']['all'] = sorted(set([x.get('info').get('studio') for x in games if x.get('info').get('studio')]))
-		stats_out['tag']['all'] = sorted(set(flatten_list([x.get('info').get('tag') for x in games if x.get('info').get('tag')])))
-		stats_out['groups']['all'] = sorted(set(flatten_list([x.get('info').get('showlink') for x in games if x.get('info').get('showlink')])))
+		stats_out['studio']['all'] = sorted(set(flatten_list([x.get('info').get('studio') for x in games if x.get('info').get('studio') and x.get('info').get('studio') not in [[],[None]]])))
+		stats_out['tag']['all'] = sorted(set(flatten_list([x.get('info').get('tag') for x in games if x.get('info').get('tag') and x.get('info').get('tag') not in [[],[None]]])))
+		stats_out['groups']['all'] = sorted(set(flatten_list([x.get('info').get('showlink') for x in games if x.get('info').get('showlink') and x.get('info').get('showlink') not in [[],[None]]])))
 		if stats_out['alphabetical']['all']:
 			# stats_out['alphabetical']['count'] = [sum([y.get('values').get('label').upper().startswith(x) for y in games]) for x in stats_out['alphabetical']['all']]
 			# stats_out['alphabetical']['count'][0] = sum([not y.get('values').get('label')[0].isalpha() for y in games if isinstance(y.get('values').get('label'),str) and len()]) #Recalc the numerical stats
@@ -1696,7 +1726,7 @@ def map_lobby_listitem_dict(libretro_dict=None,discord_dict=None,filter_lobby=Tr
 				'info':   {'title':'%(title)s on %(system)s'%{'title':libretro_dict.get('game_name'),'system':discord_match.get('system')},
 						   'originaltitle':libretro_dict.get('game_name'),
 						   'date':get_date(libretro_dict.get('updated'),format_in='%Y-%m-%dT%H:%M:%SZ'),
-						   'credits':re_game_tags.sub('',libretro_dict.get('username')).strip(),
+						   'credits':[re_game_tags.sub('',libretro_dict.get('username')).strip()],
 						   'genre':split_value(discord_match.get('genre')),
 						   'lastplayed':discord_match.get('timestamp'),
 						   'plot':discord_match.get('description')+'[CR][CR]'+loc_str(30606)%{'username':re_game_tags.sub('',libretro_dict.get('username')).strip(),'country':next(iter([x.get('name') for x in country_codes if x and x.get('alpha-2').lower() == libretro_dict.get('country')]),'Unknown'),'game_name':libretro_dict.get('game_name'),'pp':libretro_dict.get('has_password'),'spectate':next(iter([not x for x in [libretro_dict.get('has_spectate_password')] if isinstance(x,bool)]),False),'core_name':libretro_dict.get('core_name'),'core_version':libretro_dict.get('core_version'),'frontend':libretro_dict.get('frontend')}},
@@ -1717,7 +1747,7 @@ def map_lobby_listitem_dict(libretro_dict=None,discord_dict=None,filter_lobby=Tr
 				'info':   {'title':libretro_dict.get('game_name'),
 						   'originaltitle':libretro_dict.get('game_name'),
 						   'date':get_date(libretro_dict.get('updated'),format_in='%Y-%m-%dT%H:%M:%SZ'),
-						   'credits':re_game_tags.sub('',libretro_dict.get('username')).strip(),
+						   'credits':[re_game_tags.sub('',libretro_dict.get('username')).strip()],
 						   'lastplayed':libretro_dict.get('created'),
 						   'plot':loc_str(30606)%{'username':re_game_tags.sub('',libretro_dict.get('username')).strip(),'country':next(iter([x.get('name') for x in country_codes if x and x.get('alpha-2').lower() == libretro_dict.get('country')]),'Unknown'),'game_name':libretro_dict.get('game_name'),'pp':libretro_dict.get('has_password'),'spectate':next(iter([not x for x in [libretro_dict.get('has_spectate_password')] if isinstance(x,bool)]),False),'core_name':libretro_dict.get('core_name'),'core_version':libretro_dict.get('core_version'),'frontend':libretro_dict.get('frontend')}},
 			    'art':{'icon':MEDIA_SPECIAL_PATH%{'filename':'netplay_logo.png'},

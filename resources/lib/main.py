@@ -84,7 +84,7 @@ class iagl_addon(object):
 		self.settings['ext_launchers']['pause_kodi'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_external_launch_pause_kodi'))
 		self.settings['ext_launchers']['stop_audio_controller'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_suspend_audio_and_input'))
 		self.settings['ext_launchers']['stop_media_before_launch'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_stop_media_before_launch'))
-		self.settings['ext_launchers']['send_stop_command'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_android_stop_command'))
+		# self.settings['ext_launchers']['send_stop_command'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_android_stop_command')) #No longer used
 		self.settings['ext_launchers']['use_startactivity'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_android_startactivity'))
 		self.settings['ext_launchers']['wait_for_return'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_wait_for_return'))
 		self.settings['ext_launchers']['ra'] = dict()
@@ -287,7 +287,6 @@ class iagl_addon(object):
 
 		def get_games(self,route_in):
 			return get_xml_games(self.get_file(route_in))
-			# return read_xml_games_et(str(self.get_file(route_in)))
 
 		def get_all_game_lists(self):
 			return [self.get_game_list(x) for x in self.list_game_lists()]
@@ -354,19 +353,13 @@ class iagl_addon(object):
 			games = None
 			existing_cached_games_list = get_mem_cache('iagl_current_games_list') #First attempt to load games from cache
 			if existing_cached_games_list and existing_cached_games_list==self.get_cache_name(game_list_id): #Check to verify result matches current crc for RAM cache
-				# last_time = time.time()
 				games = get_mem_cache('iagl_current_games')
 				# game_stats = get_mem_cache('iagl_current_games_stats')
-				# zachs_debug('Retrieved game RAM cache in %(value)s'%{'value':time.time() - last_time})
 			elif self.list_cache_path.joinpath(self.get_cache_name(game_list_id)+'.json').is_file():
-				# last_time = time.time()
 				games,game_stats = get_disc_cache(os.path.join(self.list_cache_path,self.get_cache_name(game_list_id)+'.json'))
 				self.update_cached_game_list(games=games,game_stats=game_stats,games_list=self.get_cache_name(game_list_id))
-				# zachs_debug('Retrieved game DISK cache in %(value)s'%{'value':time.time() - last_time})
 			else: #Parse from xml
-				# last_time = time.time()
 				games = self.set_cached_game_list(games=[map_game_listitem_dict(dict_in=x,parent_dict_in=self.get_game_list(game_list_id),default_dict=self.defaults,game_list_id=game_list_id,clean_titles=self.settings.get('game_list').get('clean_titles'),naming_convention=self.settings.get('game_list').get('naming_convention'),date_convention=self.settings.get('game_list').get('date_format'),include_extra_art=self.settings.get('game_list').get('include_all_art')) for x in self.get_games(game_list_id) if x is not None],games_list=self.get_cache_name(game_list_id),type_in='games')
-				# zachs_debug('Parsed game xml in %(value)s'%{'value':time.time() - last_time})
 			return games
 
 		def get_game_stats(self,game_list_id=None):
