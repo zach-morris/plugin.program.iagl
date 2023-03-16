@@ -772,7 +772,7 @@ def map_wizard_report_listitem_dict(dict_in,media_type='video'):
 		lis = list()
 		for ii,dd in enumerate(dict_in.get('label')):
 			li = xbmcgui.ListItem(label=dd,offscreen=True)
-			if dict_in.get('info'):
+			if dict_in.get('info')[ii]:
 				#script.module.infotagger v20
 				info_tag = ListItemInfoTag(li,media_type)
 				info_tag.set_info(dict_in.get('info')[ii])

@@ -1030,7 +1030,7 @@ msgstr "Run the wizard to change settings for all game lists for either external
 
 msgctxt "#30566"
 msgid "Search and random queries will warn you if the query could take a while, you can disable that warning here"
-msgstr "Search and random queries will warn you if the query could take a while, you can disable that warning here""
+msgstr "Search and random queries will warn you if the query could take a while, you can disable that warning here"
 
 msgctxt "#30567"
 msgid "Post download processing commands are hidden by default, you can enable them here"
@@ -1299,6 +1299,46 @@ msgstr "If enabled, IAGL will copy files saved to Kodi Network Sources to the lo
 msgctxt "#30649"
 msgid "If enabled, Kodi will start Android Processes with StartAndroidActivity (leave as default if unsure)"
 msgstr "If enabled, Kodi will start Android Processes with StartAndroidActivity (leave as default if unsure)"
+
+msgctxt "#30650"
+msgid "Install Game Addons and Set Default Players"
+msgstr "Install Game Addons and Set Default Players"
+
+msgctxt "#30651"
+msgid "Set a default addon for each list, and install the addon if necessary.  Warning this can take some time!"
+msgstr "Set a default addon for each list, and install the addon if necessary.  Warning this can take some time!"
+
+msgctxt "#30652"
+msgid "Skip and do not change launcher settings"
+msgstr "Skip and do not change launcher settings"
+
+msgctxt "#30653"
+msgid "The launcher setting will not be modified.  Defaults to Auto if never set"
+msgstr "The launcher setting will not be modified.  Defaults to Auto if never set"
+
+msgctxt "#30654"
+msgid "Player options will be provided when you launch a game"
+msgstr "Player options will be provided when you launch a game"
+
+msgctxt "#30655"
+msgid "Games will be launched using Kodi Retroplayer"
+msgstr "Games will be launched using Kodi Retroplayer"
+
+msgctxt "#30656"
+msgid "Games will be launched using and external application"
+msgstr "Games will be launched using and external application"
+
+msgctxt "#30657"
+msgid "Entering credentials will allow access to all game lists"
+msgstr "Entering credentials will allow access to all game lists"
+
+msgctxt "#30658"
+msgid "Default retroarch cores will be set for each game list"
+msgstr "Default retroarch cores will be set for each game list"
+
+msgctxt "#30659"
+msgid "You can manually set the launch command to use for each game list later"
+msgstr "You can manually set the launch command to use for each game list later"
 
 #
 #General
@@ -1733,8 +1773,8 @@ msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to 
 msgstr "Welcome to the IAGL Setup Wizard[CR]Lets run you through all the settings to get you playing!"
 
 msgctxt "#30383"
-msgid "Some game lists require an archive.org account[CR]Do you want to enter your account info?"
-msgstr "Some game lists require an archive.org account[CR]Do you want to enter your account info?"
+msgid "Do you want to enter your archive.org account info?"
+msgstr "Do you want to enter your archive.org account info?"
 
 msgctxt "#30384"
 msgid "Your entry does not appear to be a valid email address"
