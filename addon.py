@@ -498,10 +498,11 @@ def download_and_launch_game_netplay(game_list_id,game_id):
 		if not iagl_addon.settings.get('ext_launchers').get('close_kodi') and check_and_close_notification():
 			current_dialog = xbmcgui.Dialog()
 			if all([x.get('download_success') for x in downloaded_files]) and all([x.get('post_process_success') for x in post_processed_files]) and launched_files.get('launch_process_success'):
-				discord_post_success = generate_discord_announcement(discord_id=iagl_addon.handle.getSetting(id='iagl_discord_id'),username=iagl_addon.handle.getSetting(id='iagl_netplay_nickname'),uuid=uuid,game=game)
+				if iagl_addon.settings.get('game_list').get('announce_netplay'):
+					discord_post_success = generate_discord_announcement(discord_id=iagl_addon.handle.getSetting(id='iagl_discord_id'),username=iagl_addon.handle.getSetting(id='iagl_netplay_nickname'),uuid=uuid,game=game)
+					if discord_post_success:
+						xbmc.log(msg='IAGL:  Game session id %(uid)s was successfully posted to discord'%{'uid':uuid}, level=xbmc.LOGDEBUG)
 				current_dialog.notification(loc_str(30202),launched_files.get('launch_process_message'),xbmcgui.NOTIFICATION_INFO,iagl_addon.settings.get('notifications').get('background_notification_time'),sound=False)
-				if discord_post_success:
-					xbmc.log(msg='IAGL:  Game session id %(uid)s was successfully posted to discord'%{'uid':uuid}, level=xbmc.LOGDEBUG)
 			elif all([not x.get('download_success') for x in downloaded_files]):
 				current_dialog.notification(loc_str(30203),loc_str(30304) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':next(iter([x.get('download_message') for x in downloaded_files if not x.get('download_success')]),'Unknown')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
 			elif all([not x.get('post_process_success') for x in post_processed_files]):

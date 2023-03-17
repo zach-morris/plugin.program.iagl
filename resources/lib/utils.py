@@ -664,7 +664,7 @@ def map_game_choose_list_listitem_dict(category_label,category_count,default_dic
 					   },
 			}
 
-def map_game_listitem_dict(dict_in,parent_dict_in,default_dict,game_list_id,clean_titles,naming_convention,date_convention,type_in=None,include_extra_art=True):
+def map_game_listitem_dict(dict_in,parent_dict_in,default_dict,game_list_id,clean_titles,naming_convention,date_convention,type_in=None,include_extra_art=True,boxart_or_snapshot=True):
 	if type_in is None:
 		label2 = dict_in.get('@name') #We will use label2 to carry the next route by default
 	starts_with = None
@@ -688,7 +688,7 @@ def map_game_listitem_dict(dict_in,parent_dict_in,default_dict,game_list_id,clea
 					   'trailer':choose_trailer(dict_in.get('videoid')),
 					   # 'path':'plugin://plugin.program.iagl/game/%(game_list_id)s/%(label2)s'%{'game_list_id':game_list_id,'label2':label2},
 					   'size':get_game_size(dict_in.get('rom'))},
-			'art':    {'poster':choose_image(dict_in.get('boxart1'),dict_in.get('snapshot1'),default_dict.get('thumb')),
+			'art':    {'poster':choose_image(dict_in.get('boxart1'),dict_in.get('snapshot1'),default_dict.get('thumb')) if boxart_or_snapshot else choose_image(dict_in.get('snapshot1'),dict_in.get('boxart1'),default_dict.get('thumb')),
 					   'banner':choose_image(dict_in.get('banner1'),default_dict.get('banner')),
 					   'fanart':choose_image(dict_in.get('fanart1'),default_dict.get('fanart')),
 					   #Possibly to be added later if I clean up the xml format
@@ -703,7 +703,7 @@ def map_game_listitem_dict(dict_in,parent_dict_in,default_dict,game_list_id,clea
 					   'landscape':choose_image(dict_in.get('snapshot1')),
 					   'clearlogo':choose_image(dict_in.get('clearlogo1')),
 					   'icon':choose_image(dict_in.get('icon'),dict_in.get('clearlogo1')),
-					   'thumb':choose_image(dict_in.get('boxart1'),dict_in.get('snapshot1'),default_dict.get('thumb'))},
+					   'thumb':choose_image(dict_in.get('boxart1'),dict_in.get('snapshot1'),default_dict.get('thumb')) if boxart_or_snapshot else choose_image(dict_in.get('snapshot1'),dict_in.get('boxart1'),default_dict.get('thumb'))},
 		'properties': {'route' : next(iter([x for x in [dict_in.get('route'),game_list_id] if x]),game_list_id),  #Look for favorite hyperlink first, then default to current game list id
 					   'nplayers':dict_in.get('nplayers'),
 					   'perspective':dict_in.get('perspective'),

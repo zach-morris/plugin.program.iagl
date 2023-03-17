@@ -173,7 +173,20 @@
 						</options>
 					</constraints>
 					<control format="string" type="list">
-						<heading>30020</heading>
+						<heading>30209</heading>
+					</control>
+				</setting>
+				<setting help="30674" id="iagl_setting_poster_thumb" label="30671" type="integer">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="30672">0</option>
+							<option label="30673">1</option>
+						</options>
+					</constraints>
+					<control format="string" type="list">
+						<heading>30671</heading>
 					</control>
 				</setting>
 				<setting help="30545" id="iagl_append_emu_name_to_results" label="30195" type="integer">
@@ -676,6 +689,28 @@
 						<options>
 							<option label="30092">0</option>
 							<option label="30093">1</option>
+						</options>
+					</constraints>
+					<control format="string" type="list">
+						<heading>30597</heading>
+					</control>
+				</setting>
+				<setting help="30613" id="iagl_netplay_announce_netplay" label="30670" type="integer">
+					<level>0</level>
+					<default>0</default>
+					<dependencies>
+						<dependency type="visible">
+							<or>
+								<condition operator="is" setting="iagl_external_user_external_env">1</condition>
+								<condition operator="is" setting="iagl_external_user_external_env">3</condition>
+								<condition operator="is" setting="iagl_external_user_external_env">2</condition>
+							</or>
+						</dependency>
+					</dependencies>
+					<constraints>
+						<options>
+							<option label="30095">0</option>
+							<option label="30096">1</option>
 						</options>
 					</constraints>
 					<control format="string" type="list">

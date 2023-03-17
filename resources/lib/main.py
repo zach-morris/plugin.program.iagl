@@ -46,11 +46,13 @@ class iagl_addon(object):
 		self.settings['game_list']['games_per_page'] = get_setting_as(setting_type='games_per_page',setting=self.handle.getSetting(id='iagl_setting_items_pp'))
 		self.settings['game_list']['force_viewtypes'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_forced_views'))
 		self.settings['game_list']['include_all_art'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_setting_include_all_art'))
+		self.settings['game_list']['boxart_or_snapshot'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_setting_poster_thumb'))
 		self.settings['game_list']['enable_post_dl_edit'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_enable_post_dl_edit'))
 		self.settings['game_list']['append_emu_name'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_append_emu_name_to_results'))
 		self.settings['game_list']['game_history'] = get_setting_as(setting_type='int',setting=self.handle.getSetting(id='iagl_setting_history'))
 		self.settings['game_list']['show_netplay'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_netplay_show_netplay_lobby'))
 		self.settings['game_list']['filter_lobby'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_netplay_filter_lobby'))
+		self.settings['game_list']['announce_netplay'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_netplay_announce_netplay'))
 		self.settings['game_list']['filter_to_1g1r'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_setting_filter_to_1g1r'))
 		self.settings['game_list']['forced_views'] = dict()
 		self.settings['game_list']['forced_views']['Alphabetical'] = 'iagl_enable_forced_views_5'
@@ -359,7 +361,7 @@ class iagl_addon(object):
 				games,game_stats = get_disc_cache(os.path.join(self.list_cache_path,self.get_cache_name(game_list_id)+'.json'))
 				self.update_cached_game_list(games=games,game_stats=game_stats,games_list=self.get_cache_name(game_list_id))
 			else: #Parse from xml
-				games = self.set_cached_game_list(games=[map_game_listitem_dict(dict_in=x,parent_dict_in=self.get_game_list(game_list_id),default_dict=self.defaults,game_list_id=game_list_id,clean_titles=self.settings.get('game_list').get('clean_titles'),naming_convention=self.settings.get('game_list').get('naming_convention'),date_convention=self.settings.get('game_list').get('date_format'),include_extra_art=self.settings.get('game_list').get('include_all_art')) for x in self.get_games(game_list_id) if x is not None],games_list=self.get_cache_name(game_list_id),type_in='games')
+				games = self.set_cached_game_list(games=[map_game_listitem_dict(dict_in=x,parent_dict_in=self.get_game_list(game_list_id),default_dict=self.defaults,game_list_id=game_list_id,clean_titles=self.settings.get('game_list').get('clean_titles'),naming_convention=self.settings.get('game_list').get('naming_convention'),date_convention=self.settings.get('game_list').get('date_format'),include_extra_art=self.settings.get('game_list').get('include_all_art'),boxart_or_snapshot=self.settings.get('game_list').get('boxart_or_snapshot')) for x in self.get_games(game_list_id) if x is not None],games_list=self.get_cache_name(game_list_id),type_in='games')
 			return games
 
 		def get_game_stats(self,game_list_id=None):
