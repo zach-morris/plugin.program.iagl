@@ -206,12 +206,12 @@ class iagl_download(object):
 									if time.localtime().tm_sec in range(0,60)[thread_in::self.settings.get('download').get('max_threads')] and diff>1: #split up DP updates on any given second to each thread and only update once per second
 										last_time = now
 										if total_size:
-											if bytes_per_sec>1 and bytes_per_sec<1e11:
+											if bytes_per_sec>1 and bytes_per_sec<1e11: #Check for a sane xfer rate
 												dp_in.update(percent,'%(fn)s[CR]%(current_size)s / %(estimated_size)s[CR]%(xfer_speed)s/s'%{'current_size':bytes_to_string_size(current_size),'fn':dp_description,'estimated_size':bytes_to_string_size(total_size),'xfer_speed':bytes_to_string_size(bytes_per_sec)})
 											else:
 												dp_in.update(percent,'%(fn)s[CR]%(current_size)s / %(estimated_size)s'%{'current_size':bytes_to_string_size(current_size),'fn':dp_description,'estimated_size':bytes_to_string_size(total_size)})
 										else:
-											if bytes_per_sec>1 and bytes_per_sec<1e11:
+											if bytes_per_sec>1 and bytes_per_sec<1e11: #Check for a sane xfer rate
 												dp_in.update(percent,'%(fn)s[CR]%(current_size)s / Unknown Size[CR]%(xfer_speed)s/s'%{'current_size':bytes_to_string_size(current_size),'fn':dp_description,'xfer_speed':bytes_to_string_size(bytes_per_sec)})
 											else:
 												dp_in.update(percent,'%(fn)s[CR]%(current_size)s / Unknown Size'%{'current_size':bytes_to_string_size(current_size),'fn':dp_description})
@@ -328,6 +328,7 @@ class iagl_download(object):
 							with xbmcvfs.File(get_dest_as_str(dest),'wb') as game_file:
 								size = 0
 								last_time = time.time()
+								start_time = last_time
 								for chunk in self.r.iter_content(chunk_size=self.chunk_size):
 									game_file.write(bytearray(chunk))
 									if show_progress and dp.iscanceled():
@@ -338,12 +339,19 @@ class iagl_download(object):
 										percent = int(100.0 * size / (filesize + 1)) #Added 1 byte to avoid div by zero
 										now = time.time()
 										diff = now - last_time
+										bytes_per_sec = size/(now - start_time + 0.000001)
 										if diff > 1: #Only show progress updates in 1 second or greater intervals
 											last_time = now
 											if filesize:
-												dp.update(percent,'%(fn)s[CR]%(current_size)s / %(estimated_size)s'%{'current_size':bytes_to_string_size(size),'fn':description,'estimated_size':filesize_str})
+												if bytes_per_sec>1 and bytes_per_sec<1e11: #Check for a sane xfer rate
+													dp.update(percent,'%(fn)s[CR]%(current_size)s / %(estimated_size)s[CR]%(xfer_speed)s/s'%{'current_size':bytes_to_string_size(size),'fn':description,'estimated_size':filesize_str,'xfer_speed':bytes_to_string_size(bytes_per_sec)})
+												else:
+													dp.update(percent,'%(fn)s[CR]%(current_size)s / %(estimated_size)s'%{'current_size':bytes_to_string_size(size),'fn':description,'estimated_size':filesize_str})
 											else:
-												dp.update(percent,'%(fn)s[CR]%(current_size)s / Unknown Size'%{'current_size':bytes_to_string_size(size),'fn':description})
+												if bytes_per_sec>1 and bytes_per_sec<1e11: #Check for a sane xfer rate
+													dp.update(percent,'%(fn)s[CR]%(current_size)s / Unknown Size[CR]%(xfer_speed)s/s'%{'current_size':bytes_to_string_size(size),'fn':description,'xfer_speed':bytes_to_string_size(bytes_per_sec)})
+												else:
+													dp.update(percent,'%(fn)s[CR]%(current_size)s / Unknown Size'%{'current_size':bytes_to_string_size(size),'fn':description})
 						if size<1:
 							self.download_status['success'] = False
 							self.download_status['message'] = 'Download returned file of size 0'
