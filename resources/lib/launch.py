@@ -157,7 +157,7 @@ class iagl_launch(object):
 				self.current_command = launch_files.get('ext_launch_cmd').replace('%ROM_PATH%',str(launch_files.get('post_process_launch_file')))
 
 				if self.netplay and self.netplay_query is None:
-					xbmc.log(msg='IAGL:  Launch game with netplay host requested',level=xbmc.LOGDEBUG)
+					xbmc.log(msg='IAGL:  Launch game with netplay as host requested',level=xbmc.LOGDEBUG)
 					netplay_command = ' --host --nick "%(nn)s (%(ss)s)"'%{'nn':next(iter([x for x in [self.settings.get('game_action').get('netplay_nick'),xbmc.getInfoLabel('System.ProfileName')] if x]),'Kodi Player 1')[0:22],'ss':self.uuid}
 					if self.settings.get('game_action').get('netplay_port') and len(self.settings.get('game_action').get('netplay_port')) and self.settings.get('game_action').get('netplay_port').isdigit():
 						netplay_command = netplay_command+' --port %(pp)s'%{'pp':self.settings.get('game_action').get('netplay_port')}
@@ -165,9 +165,14 @@ class iagl_launch(object):
 						netplay_command = netplay_command+' --check-frames %(pp)s'%{'pp':self.settings.get('game_action').get('netplay_checkframes')}
 					self.current_command = self.current_command.replace(' %NETPLAY_COMMAND%',netplay_command)
 				elif self.netplay and self.netplay_query:
-					xbmc.log(msg='IAGL:  Launch game with netplay user 2+ requested',level=xbmc.LOGDEBUG)
-					current_host = next(iter([x for x in [self.netplay_query.get('mitm_ip'),self.netplay_query.get('ip'),self.netplay_query.get('host')] if x and len(x)>7]),self.netplay_query.get('ip'))
-					current_port = next(iter([x for x in [self.netplay_query.get('mitm_port'),self.netplay_query.get('port')] if x and x != '0']),'55435')
+					xbmc.log(msg='IAGL:  Launch game with netplay as client requested',level=xbmc.LOGDEBUG)
+					if self.settings.get('game_action').get('use_relay'):
+						current_host = next(iter([x for x in [self.netplay_query.get('mitm_ip'),self.netplay_query.get('ip'),self.netplay_query.get('host')] if x and len(x)>7]),self.netplay_query.get('ip'))
+						current_port = next(iter([x for x in [self.netplay_query.get('mitm_port'),self.netplay_query.get('port')] if x and x != '0']),'55435')
+					else:
+						current_host = next(iter([x for x in [self.netplay_query.get('ip'),self.netplay_query.get('mitm_ip'),self.netplay_query.get('host')] if x and len(x)>7]),self.netplay_query.get('ip'))
+						current_port = next(iter([x for x in [self.netplay_query.get('port'),self.netplay_query.get('mitm_port')] if x and x != '0']),'55435')
+					xbmc.log(msg='IAGL:  Netplay Host is {}, Port is {}'.format(str(current_host),str(current_port)),level=xbmc.LOGDEBUG)
 					netplay_command = ' --connect %(host)s --port %(pp)s --nick "%(nn)s (%(ss)s)"'%{'host':current_host,'pp':current_port,'nn':next(iter([x for x in [self.settings.get('game_action').get('netplay_nick'),xbmc.getInfoLabel('System.ProfileName')] if x]),'Kodi Player 1')[0:22],'ss':self.uuid}
 					# if self.settings.get('game_action').get('netplay_port') and len(self.settings.get('game_action').get('netplay_port')) and self.settings.get('game_action').get('netplay_port').isdigit():
 						# netplay_command = netplay_command+' --port %(pp)s'%{'pp':self.settings.get('game_action').get('netplay_port')}

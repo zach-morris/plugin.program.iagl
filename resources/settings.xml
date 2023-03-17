@@ -673,6 +673,19 @@
 						<heading>30010</heading>
 					</control>
 				</setting>
+				<setting help="30678" id="iagl_netplay_use_relay" label="30675" type="integer">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="30677">0</option>
+							<option label="30676">1</option>
+						</options>
+					</constraints>
+					<control format="string" type="list">
+						<heading>30675</heading>
+					</control>
+				</setting>
 				<setting help="30613" id="iagl_netplay_show_netplay_lobby" label="30597" type="integer">
 					<level>0</level>
 					<default>0</default>

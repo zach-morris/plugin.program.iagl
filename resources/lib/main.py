@@ -68,6 +68,7 @@ class iagl_addon(object):
 		self.settings['game_action']['autoplay_trailer'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_setting_autoplay_trailer'))
 		self.settings['game_action']['show_netplay'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_netplay_enable_netplay_launch'))
 		self.settings['game_action']['netplay_launch_action'] = get_setting_as(setting_type='int',setting=self.handle.getSetting(id='iagl_netplay_netplay_launch_choose'))
+		self.settings['game_action']['use_relay'] = get_setting_as(setting_type='bool',setting=self.handle.getSetting(id='iagl_netplay_use_relay'))
 		self.settings['game_action']['netplay_nick'] = self.handle.getSetting(id='iagl_netplay_nickname')
 		self.settings['game_action']['netplay_port'] = self.handle.getSetting(id='iagl_netplay_port')
 		self.settings['game_action']['netplay_default_host'] = self.handle.getSetting(id='iagl_default_manual_ip')
