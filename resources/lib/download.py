@@ -190,6 +190,7 @@ class iagl_download(object):
 						with xbmcvfs.File(get_dest_as_str(chunk_filename_in),'wb') as game_file:
 							size = 0
 							last_time = time.time()
+							start_time = last_time
 							for chunk in r.iter_content(chunk_size=self.chunk_size):
 								game_file.write(bytearray(chunk))
 								size = size+len(chunk) #chunks may be a different size when streaming
@@ -201,12 +202,19 @@ class iagl_download(object):
 									percent = int(100.0 * (current_size) / (total_size + 1)) #Added 1 byte to avoid div by zero
 									now = time.time()
 									diff = now - last_time
+									bytes_per_sec = current_size/(now - start_time + 0.000001)
 									if time.localtime().tm_sec in range(0,60)[thread_in::self.settings.get('download').get('max_threads')] and diff>1: #split up DP updates on any given second to each thread and only update once per second
 										last_time = now
 										if total_size:
-											dp_in.update(percent,'%(fn)s[CR]%(current_size)s / %(estimated_size)s'%{'current_size':bytes_to_string_size(current_size),'fn':dp_description,'estimated_size':bytes_to_string_size(total_size)})
+											if bytes_per_sec>1 and bytes_per_sec<1e11:
+												dp_in.update(percent,'%(fn)s[CR]%(current_size)s / %(estimated_size)s[CR]%(xfer_speed)s/s'%{'current_size':bytes_to_string_size(current_size),'fn':dp_description,'estimated_size':bytes_to_string_size(total_size),'xfer_speed':bytes_to_string_size(bytes_per_sec)})
+											else:
+												dp_in.update(percent,'%(fn)s[CR]%(current_size)s / %(estimated_size)s'%{'current_size':bytes_to_string_size(current_size),'fn':dp_description,'estimated_size':bytes_to_string_size(total_size)})
 										else:
-											dp_in.update(percent,'%(fn)s[CR]%(current_size)s / Unknown Size'%{'current_size':bytes_to_string_size(current_size),'fn':dp_description})
+											if bytes_per_sec>1 and bytes_per_sec<1e11:
+												dp_in.update(percent,'%(fn)s[CR]%(current_size)s / Unknown Size[CR]%(xfer_speed)s/s'%{'current_size':bytes_to_string_size(current_size),'fn':dp_description,'xfer_speed':bytes_to_string_size(bytes_per_sec)})
+											else:
+												dp_in.update(percent,'%(fn)s[CR]%(current_size)s / Unknown Size'%{'current_size':bytes_to_string_size(current_size),'fn':dp_description})
 					if size<1:
 						chunk_download_status['success'] = False
 						chunk_download_status['message'] = 'Download returned file of size 0'
