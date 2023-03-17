@@ -18,7 +18,7 @@ Do *NOT* use a third party installer, build, TVA Link, fusion installer, or othe
 
 Install IAGL in one of these ways:
 
-- Download the repository zipfile from [here](https://github.com/zach-morris/repository.zachmorris/raw/master/repository.zachmorris/repository.zachmorris-1.0.0.zip) to install the addon and get automatic updates.
+- Download the repository zipfile from [here](https://github.com/zach-morris/repository.zachmorris/raw/master/repository.zachmorris/repository.zachmorris-1.0.4.zip) to install the addon and get automatic updates.
 
 or
 
