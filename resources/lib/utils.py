@@ -752,7 +752,7 @@ def map_retroplayer_listitem_dict(dict_in,launch_dict_in): #https://codedocs.xyz
 	dict_out = {'values': {'label':dict_in.get('values').get('label'),'label2':dict_in.get('values').get('label2')},
 			'info':   {'title':dict_in.get('info').get('originaltitle'),
 					   'platform':dict_in.get('properties').get('platform_description'),
-					   'genre':dict_in.get('info').get('genre'),
+					   'genres':dict_in.get('info').get('genre'),
 					   'publisher':dict_in.get('info').get('studio'),
 					   'overview':dict_in.get('info').get('plot'),
 					   'year':dict_in.get('info').get('year'),
@@ -875,9 +875,9 @@ def get_retroplayer_item_and_listitem(dict_in,launch_file,media_type='game'):
 	if launch_file and dict_in:
 		launch_li = xbmcgui.ListItem(label=dict_in.get('values').get('label'),label2=dict_in.get('values').get('label2'),offscreen=True)
 		#script.module.infotagger v20
-		info_tag = ListItemInfoTag(launch_li,media_type)
-		info_tag.set_info(dict_in.get('info'))
-		# launch_li.setInfo(media_type,dict_in.get('info'))
+		# info_tag = ListItemInfoTag(launch_li,media_type)
+		# info_tag.set_info(dict_in.get('info'))
+		launch_li.setInfo(media_type,dict_in.get('info')) #ListitemInfoTag doesnt seem to work, need to set it for the player after the fact, to be fixed
 		launch_li.setArt(dict_in.get('art'))
 		launch_li.setPath(path=str(launch_file))
 	return launch_li
