@@ -672,7 +672,7 @@ def context_menu_select(game_list_id,select_id):
 			current_choices=sorted([x for x in current_choices if x.get('@name').lower().startswith('retro')],key=lambda x: x.get('@name'))+sorted([x for x in current_choices if not x.get('@name').lower().startswith('retro')],key=lambda x: x.get('@name')) #Sort commands by name
 			new_value = current_dialog.select(loc_str(30363),[x.get('@name') for x in current_choices]+[loc_str(30583)])
 			if new_value in [ii for ii,x in enumerate(current_choices)]:
-				if iagl_addon.settings.get('ext_launchers').get('environment') in ['android','android_ra32','android_aarch64'] and self.settings.get('ext_launchers').get('use_startactivity') and isinstance(current_choices[new_value].get('activity'),str):
+				if iagl_addon.settings.get('ext_launchers').get('environment') in ['android','android_ra32','android_aarch64'] and iagl_addon.settings.get('ext_launchers').get('use_startactivity') and isinstance(current_choices[new_value].get('activity'),str):
 					success = iagl_addon.game_lists.update_game_list_header(game_list_id,header_key='emu_ext_launch_cmd',header_value=current_choices[new_value].get('activity'),current_choice=loc_str(30363)) #Use StartAndroidActivity
 				else:
 					success = iagl_addon.game_lists.update_game_list_header(game_list_id,header_key='emu_ext_launch_cmd',header_value=current_choices[new_value].get('command'),current_choice=loc_str(30363))	#Use Python subprocess
