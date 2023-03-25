@@ -1052,103 +1052,103 @@
 <!-- Android Additional Emulator External Commands -->
 	<launcher name="2600.EMU (Atari 2600)" os="android">
 		<command>/system/bin/am start -n com.explusalpha.A2600Emu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.A2600Emu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.A2600Emu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="Ataroid (Atari 2600)" os="android">
 		<command>/system/bin/am start -n com.androidemu.atari/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.atari","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.atari","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="C64.EMU (Commodore 64)" os="android">
 		<command>/system/bin/am start -n com.explusalpha.C64Emu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.C64Emu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.C64Emu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="DraStic (Nintendo DS)" os="android">
 		<command>/system/bin/am start -n com.dsemu.drastic/.DraSticActivity -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e GAMEPATH "%ROM_PATH%"</command>
-		<activity>"com.dsemu.drastic","android.intent.action.MAIN","","","270532608","[{"key":"GAMEPATH","value":"%ROM_PATH%"","type": "string"}]","","android.intent.category.LAUNCHER",".DraSticActivity"</activity>
+		<activity>"com.dsemu.drastic","android.intent.action.MAIN","","","270532608","[{"key":"GAMEPATH","value":"%ROM_PATH%","type": "string"}]","","android.intent.category.LAUNCHER",".DraSticActivity"</activity>
 	</launcher>
 	<launcher name="ePSXe (PS1)" os="android">
 		<command>/system/bin/am start --user 0 -n com.epsxe.ePSXe/.ePSXe -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e com.epsxe.ePSXe.isoName "%ROM_PATH%"</command>
-		<activity>"com.epsxe.ePSXe","android.intent.action.MAIN","","","270532608","[{"key":"com.epsxe.ePSXe.isoName","value":"%ROM_PATH%"","type": "string"}]","","android.intent.category.LAUNCHER",".ePSXe"</activity>
+		<activity>"com.epsxe.ePSXe","android.intent.action.MAIN","","","270532608","[{"key":"com.epsxe.ePSXe.isoName","value":"%ROM_PATH%","type": "string"}]","","android.intent.category.LAUNCHER",".ePSXe"</activity>
 	</launcher>
 	<launcher name="GameBoid (GBA)" os="android">
 		<command>/system/bin/am start -n com.androidemu.gba/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.gba","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.gba","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="GBA.EMU (GBA)" os="android">
 		<command>/system/bin/am start -n com.explusalpha.GbaEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.GbaEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.GbaEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="GBC.EMU (GBC)" os="android">
 		<command>/system/bin/am start -n com.explusalpha.GbcEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.GbcEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.GbcEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="GBCoid (GBC)" os="android">
 		<command>/system/bin/am start -n com.androidemu.gbc/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.gbc","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.gbc","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="Gearoid (Sega GG)" os="android">
 		<command>/system/bin/am start -n com.androidemu.gg/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.gg","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.gg","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="Gensoid (Sega Gen)" os="android">
 		<command>/system/bin/am start -n com.androidemu.gens/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.gens,"android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.gens,"android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="MAME4droid (Arcade 0.139u1)" os="android">
 		<command>/system/bin/am start --user 0 -n com.seleuco.mame4droid/com.seleuco.mame4droid.MAME4droid -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.seleuco.mame4droid","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.seleuco.mame4droid.MAME4droid"</activity>
+		<activity>"com.seleuco.mame4droid","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.seleuco.mame4droid.MAME4droid"</activity>
 	</launcher>
 	<launcher name="MD.EMU (Sega MD)" os="android">
 		<command>/system/bin/am start -n com.explusalpha.MdEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.MdEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.MdEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="MSX.EMU (MSX)" os="android">
 		<command>/system/bin/am start -n com.explusalpha.MsxEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.MsxEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.MsxEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="Mupen64Plus AE Free Non-Root (N64)" os="android">
 		<command>/system/bin/am start -n paulscode.android.mupen64plus.free/paulscode.android.mupen64plusae.MainActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"paulscode.android.mupen64plus.free","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","paulscode.android.mupen64plusae.MainActivity"</activity>
+		<activity>"paulscode.android.mupen64plus.free","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","paulscode.android.mupen64plusae.MainActivity"</activity>
 	</launcher>
 	<launcher name="Mupen64Plus FZ (N64)" os="android">
 		<command>/system/bin/am start --user 0 -n org.mupen64plusae.v3.fzurita/paulscode.android.mupen64plusae.SplashActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"org.mupen64plusae.v3.fzurita","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","paulscode.android.mupen64plusae.SplashActivity"</activity>
+		<activity>"org.mupen64plusae.v3.fzurita","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","paulscode.android.mupen64plusae.SplashActivity"</activity>
 	</launcher>
 	<launcher name="My Boy (GBA)" os="android">
 		<command>/system/bin/am start --user 0 -n com.fastemulator.gba/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.fastemulator.gba","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.fastemulator.gba","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="N64oid (N64)" os="android">
 		<command>/system/bin/am start -n com.androidemu.n64/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.n64","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.n64","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="NEO.EMU (Neo Geo)" os="android">
 		<command>/system/bin/am start -n com.explusalpha.NeoEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.NeoEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.NeoEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="NES.EMU (NES)" os="android">
 		<command>/system/bin/am start -n com.explusalpha.NesEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.NesEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.NesEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="NESoid (NES)" os="android">
 		<command>/system/bin/am start -n com.androidemu.nes/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.nes","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.nes","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="NGP.EMU (NGP)" os="android">
 		<command>/system/bin/am start -n com.explusalpha.NgpEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.NgpEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.NgpEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="PCE.EMU (PCE/TG16)" os="android">
 		<command>/system/bin/am start -n com.PceEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.PceEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.PceEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="PPSSPP (PSP)" os="android">
 		<command>/system/bin/am start -n org.ppsspp.ppsspp/.PpssppActivity -e org.ppsspp.ppsspp.Shortcuts "%ROM_PATH%"</command>
-		<activity>"org.ppsspp.ppsspp","android.intent.action.VIEW","","","270532608","[{"key":"org.ppsspp.ppsspp.Shortcuts","value":"file://%ROM_PATH%"","type": "string"}]","","",".PpssppActivity"</activity>
+		<activity>"org.ppsspp.ppsspp","android.intent.action.VIEW","","","270532608","[{"key":"org.ppsspp.ppsspp.Shortcuts","value":"file://%ROM_PATH%","type": "string"}]","","",".PpssppActivity"</activity>
 	</launcher>
 	<launcher name="Reicast (Dreamcast)" os="android">
 		<command>/system/bin/am start -n com.reicast.emulator/.GL2JNIActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.reicast.emulator","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".GL2JNIActivity"</activity>
+		<activity>"com.reicast.emulator","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".GL2JNIActivity"</activity>
 	</launcher>
 	<launcher name="RetroArch Launch App Only" os="android">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e CONFIGFILE %CFG_PATH% -e IME com.android.inputmethod.latin/.LatinIME -n com.retroarch/.browser.retroactivity.RetroActivityFuture  --activity-clear-task --activity-clear-top --activity-no-history</command>
@@ -1156,27 +1156,27 @@
 	</launcher>
 	<launcher name="Snes9x EX+ (SNES)" os="android">
 		<command>/system/bin/am start -n com.explusalpha.Snes9xPlus/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.Snes9xPlus","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.Snes9xPlus","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="SNesoid (SNES)" os="android">
 		<command>/system/bin/am start -n com.androidemu.snes/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.snes","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.snes","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="SuperGNES lite (SNES)" os="android">
 		<command>/system/bin/am start -n com.bubblezapgames.supergnes_lite/.SuperGNES -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.bubblezapgames.supergnes_lite","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".SuperGNES"</activity>
+		<activity>"com.bubblezapgames.supergnes_lite","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".SuperGNES"</activity>
 	</launcher>
 	<launcher name="UAE4ARM (Amiga)" os="android">
 		<command>/system/bin/am start --user 0 -n atua.anddev.uae4arm/atua.anddev.uae4arm.MainActivity -a android.intent.action.VIEW -e v "%ROM_PATH%"</command>
-		<activity>"atua.anddev.uae4arm","android.intent.action.VIEW","","","270532608","[{"key":"v","value":"file://%ROM_PATH%"","type": "string"}]","","","atua.anddev.uae4arm.MainActivity"</activity>
+		<activity>"atua.anddev.uae4arm","android.intent.action.VIEW","","","270532608","[{"key":"v","value":"file://%ROM_PATH%","type": "string"}]","","","atua.anddev.uae4arm.MainActivity"</activity>
 	</launcher>
 	<launcher name="UAE4droid (Amiga)" os="android">
 		<command>/system/bin/am start --user 0 -n org.ab.uae/.StartActivity -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e v "%ROM_PATH%"</command>
-		<activity>"org.ab.uae","android.intent.action.MAIN","","","270532608","[{"key":"v","value":"%ROM_PATH%"","type": "string"}]","","android.intent.category.LAUNCHER",".StartActivity"</activity>
+		<activity>"org.ab.uae","android.intent.action.MAIN","","","270532608","[{"key":"v","value":"%ROM_PATH%","type": "string"}]","","android.intent.category.LAUNCHER",".StartActivity"</activity>
 	</launcher>
 	<launcher name="uoYabause (Saturn)" os="android">
 		<command>/system/bin/am start --user 0 -n org.uoyabause.android/org.uoyabause.android.Yabause -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e org.uoyabause.android.FileNameEx "%ROM_PATH%"</command>
-		<activity>"org.uoyabause.android","android.intent.action.MAIN","","","270532608","[{"key":"org.uoyabause.android.FileNameEx","value":"%ROM_PATH%"","type": "string"}]","","android.intent.category.LAUNCHER","org.uoyabause.android.Yabause"</activity>
+		<activity>"org.uoyabause.android","android.intent.action.MAIN","","","270532608","[{"key":"org.uoyabause.android.FileNameEx","value":"%ROM_PATH%","type": "string"}]","","android.intent.category.LAUNCHER","org.uoyabause.android.Yabause"</activity>
 	</launcher>
 <!-- Android Aarch64 External Retroarch Commands -->
 	<launcher name="RetroArch 4DO (3DO)" os="android_aarch64">
@@ -2094,103 +2094,103 @@
 <!-- Android Aarch64 Additional Emulator External Commands -->
 	<launcher name="2600.EMU (Atari 2600)" os="android_aarch64">
 		<command>/system/bin/am start -n com.explusalpha.A2600Emu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.A2600Emu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.A2600Emu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="Ataroid (Atari 2600)" os="android_aarch64">
 		<command>/system/bin/am start -n com.androidemu.atari/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.atari","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.atari","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="C64.EMU (Commodore 64)" os="android_aarch64">
 		<command>/system/bin/am start -n com.explusalpha.C64Emu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.C64Emu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.C64Emu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="DraStic (Nintendo DS)" os="android_aarch64">
 		<command>/system/bin/am start -n com.dsemu.drastic/.DraSticActivity -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e GAMEPATH "%ROM_PATH%"</command>
-		<activity>"com.dsemu.drastic","android.intent.action.MAIN","","","270532608","[{"key":"GAMEPATH","value":"%ROM_PATH%"","type": "string"}]","","android.intent.category.LAUNCHER",".DraSticActivity"</activity>
+		<activity>"com.dsemu.drastic","android.intent.action.MAIN","","","270532608","[{"key":"GAMEPATH","value":"%ROM_PATH%","type": "string"}]","","android.intent.category.LAUNCHER",".DraSticActivity"</activity>
 	</launcher>
 	<launcher name="ePSXe (PS1)" os="android_aarch64">
 		<command>/system/bin/am --user 0 start -n com.epsxe.ePSXe/.ePSXe -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e com.epsxe.ePSXe.isoName "%ROM_PATH%"</command>
-		<activity>"com.epsxe.ePSXe","android.intent.action.MAIN","","","270532608","[{"key":"com.epsxe.ePSXe.isoName","value":"%ROM_PATH%"","type": "string"}]","","android.intent.category.LAUNCHER",".ePSXe"</activity>
+		<activity>"com.epsxe.ePSXe","android.intent.action.MAIN","","","270532608","[{"key":"com.epsxe.ePSXe.isoName","value":"%ROM_PATH%","type": "string"}]","","android.intent.category.LAUNCHER",".ePSXe"</activity>
 	</launcher>
 	<launcher name="GameBoid (GBA)" os="android_aarch64">
 		<command>/system/bin/am start -n com.androidemu.gba/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.gba","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.gba","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="GBA.EMU (GBA)" os="android_aarch64">
 		<command>/system/bin/am start -n com.explusalpha.GbaEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.GbaEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.GbaEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="GBC.EMU (GBC)" os="android_aarch64">
 		<command>/system/bin/am start -n com.explusalpha.GbcEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.GbcEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.GbcEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="GBCoid (GBC)" os="android_aarch64">
 		<command>/system/bin/am start -n com.androidemu.gbc/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.gbc","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.gbc","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="Gearoid (Sega GG)" os="android_aarch64">
 		<command>/system/bin/am start -n com.androidemu.gg/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.gg","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.gg","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="Gensoid (Sega Gen)" os="android_aarch64">
 		<command>/system/bin/am start -n com.androidemu.gens/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.gens,"android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.gens,"android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="MAME4droid (Arcade 0.139u1)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -n com.seleuco.mame4droid/com.seleuco.mame4droid.MAME4droid -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.seleuco.mame4droid","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.seleuco.mame4droid.MAME4droid"</activity>
+		<activity>"com.seleuco.mame4droid","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.seleuco.mame4droid.MAME4droid"</activity>
 	</launcher>
 	<launcher name="MD.EMU (Sega MD)" os="android_aarch64">
 		<command>/system/bin/am start -n com.explusalpha.MdEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.MdEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.MdEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="MSX.EMU (MSX)" os="android_aarch64">
 		<command>/system/bin/am start -n com.explusalpha.MsxEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.MsxEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.MsxEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="Mupen64Plus AE Free Non-Root (N64)" os="android_aarch64">
 		<command>/system/bin/am start -n paulscode.android.mupen64plus.free/paulscode.android.mupen64plusae.MainActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"paulscode.android.mupen64plus.free","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","paulscode.android.mupen64plusae.MainActivity"</activity>
+		<activity>"paulscode.android.mupen64plus.free","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","paulscode.android.mupen64plusae.MainActivity"</activity>
 	</launcher>
 	<launcher name="Mupen64Plus FZ (N64)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -n org.mupen64plusae.v3.fzurita/paulscode.android.mupen64plusae.SplashActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"org.mupen64plusae.v3.fzurita","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","paulscode.android.mupen64plusae.SplashActivity"</activity>
+		<activity>"org.mupen64plusae.v3.fzurita","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","paulscode.android.mupen64plusae.SplashActivity"</activity>
 	</launcher>
 	<launcher name="My Boy (GBA)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -n com.fastemulator.gba/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.fastemulator.gba","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.fastemulator.gba","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="N64oid (N64)" os="android_aarch64">
 		<command>/system/bin/am start -n com.androidemu.n64/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.n64","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.n64","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="NEO.EMU (Neo Geo)" os="android_aarch64">
 		<command>/system/bin/am start -n com.explusalpha.NeoEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.NeoEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.NeoEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="NES.EMU (NES)" os="android_aarch64">
 		<command>/system/bin/am start -n com.explusalpha.NesEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.NesEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.NesEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="NESoid (NES)" os="android_aarch64">
 		<command>/system/bin/am start -n com.androidemu.nes/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.nes","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.nes","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="NGP.EMU (NGP)" os="android_aarch64">
 		<command>/system/bin/am start -n com.explusalpha.NgpEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.NgpEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.NgpEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="PCE.EMU (PCE/TG16)" os="android_aarch64">
 		<command>/system/bin/am start -n com.PceEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.PceEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.PceEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="PPSSPP (PSP)" os="android_aarch64">
 		<command>/system/bin/am start -n org.ppsspp.ppsspp/.PpssppActivity -e org.ppsspp.ppsspp.Shortcuts "%ROM_PATH%"</command>
-		<activity>"org.ppsspp.ppsspp","android.intent.action.VIEW","","","270532608","[{"key":"org.ppsspp.ppsspp.Shortcuts","value":"file://%ROM_PATH%"","type": "string"}]","","",".PpssppActivity"</activity>
+		<activity>"org.ppsspp.ppsspp","android.intent.action.VIEW","","","270532608","[{"key":"org.ppsspp.ppsspp.Shortcuts","value":"file://%ROM_PATH%","type": "string"}]","","",".PpssppActivity"</activity>
 	</launcher>
 	<launcher name="Reicast (Dreamcast)" os="android_aarch64">
 		<command>/system/bin/am start -n com.reicast.emulator/.GL2JNIActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.reicast.emulator","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".GL2JNIActivity"</activity>
+		<activity>"com.reicast.emulator","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".GL2JNIActivity"</activity>
 	</launcher>
 	<launcher name="RetroArch Launch App Only" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "CONFIGFILE" "%CFG_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</command>
@@ -2198,27 +2198,27 @@
 	</launcher>
 	<launcher name="Snes9x EX+ (SNES)" os="android_aarch64">
 		<command>/system/bin/am start -n com.explusalpha.Snes9xPlus/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.Snes9xPlus","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.Snes9xPlus","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="SNesoid (SNES)" os="android_aarch64">
 		<command>/system/bin/am start -n com.androidemu.snes/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.snes","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.snes","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="SuperGNES lite (SNES)" os="android_aarch64">
 		<command>/system/bin/am start -n com.bubblezapgames.supergnes_lite/.SuperGNES -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.bubblezapgames.supergnes_lite","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".SuperGNES"</activity>
+		<activity>"com.bubblezapgames.supergnes_lite","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".SuperGNES"</activity>
 	</launcher>
 	<launcher name="UAE4ARM (Amiga)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -n atua.anddev.uae4arm/atua.anddev.uae4arm.MainActivity -a android.intent.action.VIEW -e v "%ROM_PATH%"</command>
-		<activity>"atua.anddev.uae4arm","android.intent.action.VIEW","","","270532608","[{"key":"v","value":"file://%ROM_PATH%"","type": "string"}]","","","atua.anddev.uae4arm.MainActivity"</activity>
+		<activity>"atua.anddev.uae4arm","android.intent.action.VIEW","","","270532608","[{"key":"v","value":"file://%ROM_PATH%","type": "string"}]","","","atua.anddev.uae4arm.MainActivity"</activity>
 	</launcher>
 	<launcher name="UAE4droid (Amiga)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -n org.ab.uae/.StartActivity -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e v "%ROM_PATH%"</command>
-		<activity>"org.ab.uae","android.intent.action.MAIN","","","270532608","[{"key":"v","value":"%ROM_PATH%"","type": "string"}]","","android.intent.category.LAUNCHER",".StartActivity"</activity>
+		<activity>"org.ab.uae","android.intent.action.MAIN","","","270532608","[{"key":"v","value":"%ROM_PATH%","type": "string"}]","","android.intent.category.LAUNCHER",".StartActivity"</activity>
 	</launcher>
 	<launcher name="uoYabause (Saturn)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -n org.uoyabause.android/org.uoyabause.android.Yabause -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e org.uoyabause.android.FileNameEx "%ROM_PATH%"</command>
-		<activity>"org.uoyabause.android","android.intent.action.MAIN","","","270532608","[{"key":"org.uoyabause.android.FileNameEx","value":"%ROM_PATH%"","type": "string"}]","","android.intent.category.LAUNCHER","org.uoyabause.android.Yabause"</activity>
+		<activity>"org.uoyabause.android","android.intent.action.MAIN","","","270532608","[{"key":"org.uoyabause.android.FileNameEx","value":"%ROM_PATH%","type": "string"}]","","android.intent.category.LAUNCHER","org.uoyabause.android.Yabause"</activity>
 	</launcher>
 <!-- Android Aarch64 External Retroarch Commands -->
 	<launcher name="RetroArch 4DO (3DO)" os="android_ra32">
@@ -3136,103 +3136,103 @@
 <!-- Android Aarch64 Additional Emulator External Commands -->
 	<launcher name="2600.EMU (Atari 2600)" os="android_ra32">
 		<command>/system/bin/am start -n com.explusalpha.A2600Emu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.A2600Emu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.A2600Emu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="Ataroid (Atari 2600)" os="android_ra32">
 		<command>/system/bin/am start -n com.androidemu.atari/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.atari","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.atari","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="C64.EMU (Commodore 64)" os="android_ra32">
 		<command>/system/bin/am start -n com.explusalpha.C64Emu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.C64Emu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.C64Emu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="DraStic (Nintendo DS)" os="android_ra32">
 		<command>/system/bin/am start -n com.dsemu.drastic/.DraSticActivity -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e GAMEPATH "%ROM_PATH%"</command>
-		<activity>"com.dsemu.drastic","android.intent.action.MAIN","","","270532608","[{"key":"GAMEPATH","value":"%ROM_PATH%"","type": "string"}]","","android.intent.category.LAUNCHER",".DraSticActivity"</activity>
+		<activity>"com.dsemu.drastic","android.intent.action.MAIN","","","270532608","[{"key":"GAMEPATH","value":"%ROM_PATH%","type": "string"}]","","android.intent.category.LAUNCHER",".DraSticActivity"</activity>
 	</launcher>
 	<launcher name="ePSXe (PS1)" os="android_ra32">
 		<command>/system/bin/am --user 0 start -n com.epsxe.ePSXe/.ePSXe -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e com.epsxe.ePSXe.isoName "%ROM_PATH%"</command>
-		<activity>"com.epsxe.ePSXe","android.intent.action.MAIN","","","270532608","[{"key":"com.epsxe.ePSXe.isoName","value":"%ROM_PATH%"","type": "string"}]","","android.intent.category.LAUNCHER",".ePSXe"</activity>
+		<activity>"com.epsxe.ePSXe","android.intent.action.MAIN","","","270532608","[{"key":"com.epsxe.ePSXe.isoName","value":"%ROM_PATH%","type": "string"}]","","android.intent.category.LAUNCHER",".ePSXe"</activity>
 	</launcher>
 	<launcher name="GameBoid (GBA)" os="android_ra32">
 		<command>/system/bin/am start -n com.androidemu.gba/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.gba","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.gba","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="GBA.EMU (GBA)" os="android_ra32">
 		<command>/system/bin/am start -n com.explusalpha.GbaEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.GbaEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.GbaEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="GBC.EMU (GBC)" os="android_ra32">
 		<command>/system/bin/am start -n com.explusalpha.GbcEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.GbcEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.GbcEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="GBCoid (GBC)" os="android_ra32">
 		<command>/system/bin/am start -n com.androidemu.gbc/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.gbc","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.gbc","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="Gearoid (Sega GG)" os="android_ra32">
 		<command>/system/bin/am start -n com.androidemu.gg/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.gg","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.gg","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="Gensoid (Sega Gen)" os="android_ra32">
 		<command>/system/bin/am start -n com.androidemu.gens/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.gens,"android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.gens,"android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="MAME4droid (Arcade 0.139u1)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -n com.seleuco.mame4droid/com.seleuco.mame4droid.MAME4droid -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.seleuco.mame4droid","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.seleuco.mame4droid.MAME4droid"</activity>
+		<activity>"com.seleuco.mame4droid","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.seleuco.mame4droid.MAME4droid"</activity>
 	</launcher>
 	<launcher name="MD.EMU (Sega MD)" os="android_ra32">
 		<command>/system/bin/am start -n com.explusalpha.MdEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.MdEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.MdEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="MSX.EMU (MSX)" os="android_ra32">
 		<command>/system/bin/am start -n com.explusalpha.MsxEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.MsxEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.MsxEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="Mupen64Plus AE Free Non-Root (N64)" os="android_ra32">
 		<command>/system/bin/am start -n paulscode.android.mupen64plus.free/paulscode.android.mupen64plusae.MainActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"paulscode.android.mupen64plus.free","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","paulscode.android.mupen64plusae.MainActivity"</activity>
+		<activity>"paulscode.android.mupen64plus.free","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","paulscode.android.mupen64plusae.MainActivity"</activity>
 	</launcher>
 	<launcher name="Mupen64Plus FZ (N64)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -n org.mupen64plusae.v3.fzurita/paulscode.android.mupen64plusae.SplashActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"org.mupen64plusae.v3.fzurita","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","paulscode.android.mupen64plusae.SplashActivity"</activity>
+		<activity>"org.mupen64plusae.v3.fzurita","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","paulscode.android.mupen64plusae.SplashActivity"</activity>
 	</launcher>
 	<launcher name="My Boy (GBA)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -n com.fastemulator.gba/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.fastemulator.gba","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.fastemulator.gba","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="N64oid (N64)" os="android_ra32">
 		<command>/system/bin/am start -n com.androidemu.n64/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.n64","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.n64","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="NEO.EMU (Neo Geo)" os="android_ra32">
 		<command>/system/bin/am start -n com.explusalpha.NeoEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.NeoEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.NeoEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="NES.EMU (NES)" os="android_ra32">
 		<command>/system/bin/am start -n com.explusalpha.NesEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.NesEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.NesEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="NESoid (NES)" os="android_ra32">
 		<command>/system/bin/am start -n com.androidemu.nes/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.nes","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.nes","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="NGP.EMU (NGP)" os="android_ra32">
 		<command>/system/bin/am start -n com.explusalpha.NgpEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.NgpEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.NgpEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="PCE.EMU (PCE/TG16)" os="android_ra32">
 		<command>/system/bin/am start -n com.PceEmu/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.PceEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.PceEmu","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="PPSSPP (PSP)" os="android_ra32">
 		<command>/system/bin/am start -n org.ppsspp.ppsspp/.PpssppActivity -e org.ppsspp.ppsspp.Shortcuts "%ROM_PATH%"</command>
-		<activity>"org.ppsspp.ppsspp","android.intent.action.VIEW","","","270532608","[{"key":"org.ppsspp.ppsspp.Shortcuts","value":"file://%ROM_PATH%"","type": "string"}]","","",".PpssppActivity"</activity>
+		<activity>"org.ppsspp.ppsspp","android.intent.action.VIEW","","","270532608","[{"key":"org.ppsspp.ppsspp.Shortcuts","value":"file://%ROM_PATH%","type": "string"}]","","",".PpssppActivity"</activity>
 	</launcher>
 	<launcher name="Reicast (Dreamcast)" os="android_ra32">
 		<command>/system/bin/am start -n com.reicast.emulator/.GL2JNIActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.reicast.emulator","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".GL2JNIActivity"</activity>
+		<activity>"com.reicast.emulator","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".GL2JNIActivity"</activity>
 	</launcher>
 	<launcher name="RetroArch Launch App Only" os="android_ra32">
 		<command>/system/bin/am start --user 0 -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es "CONFIGFILE" "%CFG_PATH%" --es "IME" com.android.inputmethod.latin/.LatinIME</command>
@@ -3240,26 +3240,26 @@
 	</launcher>
 	<launcher name="Snes9x EX+ (SNES)" os="android_ra32">
 		<command>/system/bin/am start -n com.explusalpha.Snes9xPlus/com.imagine.BaseActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.explusalpha.Snes9xPlus","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","","com.imagine.BaseActivity"</activity>
+		<activity>"com.explusalpha.Snes9xPlus","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","com.imagine.BaseActivity"</activity>
 	</launcher>
 	<launcher name="SNesoid (SNES)" os="android_ra32">
 		<command>/system/bin/am start -n com.androidemu.snes/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.androidemu.snes","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".EmulatorActivity"</activity>
+		<activity>"com.androidemu.snes","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".EmulatorActivity"</activity>
 	</launcher>
 	<launcher name="SuperGNES lite (SNES)" os="android_ra32">
 		<command>/system/bin/am start -n com.bubblezapgames.supergnes_lite/.SuperGNES -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"com.bubblezapgames.supergnes_lite","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%"","type": "string"}]","","",".SuperGNES"</activity>
+		<activity>"com.bubblezapgames.supergnes_lite","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","",".SuperGNES"</activity>
 	</launcher>
 	<launcher name="UAE4ARM (Amiga)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -n atua.anddev.uae4arm/atua.anddev.uae4arm.MainActivity -a android.intent.action.VIEW -e v "%ROM_PATH%"</command>
-		<activity>"atua.anddev.uae4arm","android.intent.action.VIEW","","","270532608","[{"key":"v","value":"file://%ROM_PATH%"","type": "string"}]","","","atua.anddev.uae4arm.MainActivity"</activity>
+		<activity>"atua.anddev.uae4arm","android.intent.action.VIEW","","","270532608","[{"key":"v","value":"file://%ROM_PATH%","type": "string"}]","","","atua.anddev.uae4arm.MainActivity"</activity>
 	</launcher>
 	<launcher name="UAE4droid (Amiga)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -n org.ab.uae/.StartActivity -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e v "%ROM_PATH%"</command>
-		<activity>"org.ab.uae","android.intent.action.MAIN","","","270532608","[{"key":"v","value":"%ROM_PATH%"","type": "string"}]","","android.intent.category.LAUNCHER",".StartActivity"</activity>
+		<activity>"org.ab.uae","android.intent.action.MAIN","","","270532608","[{"key":"v","value":"%ROM_PATH%","type": "string"}]","","android.intent.category.LAUNCHER",".StartActivity"</activity>
 	</launcher>
 	<launcher name="uoYabause (Saturn)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -n org.uoyabause.android/org.uoyabause.android.Yabause -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e org.uoyabause.android.FileNameEx "%ROM_PATH%"</command>
-		<activity>"org.uoyabause.android","android.intent.action.MAIN","","","270532608","[{"key":"org.uoyabause.android.FileNameEx","value":"%ROM_PATH%"","type": "string"}]","","android.intent.category.LAUNCHER","org.uoyabause.android.Yabause"</activity>
+		<activity>"org.uoyabause.android","android.intent.action.MAIN","","","270532608","[{"key":"org.uoyabause.android.FileNameEx","value":"%ROM_PATH%","type": "string"}]","","android.intent.category.LAUNCHER","org.uoyabause.android.Yabause"</activity>
 	</launcher>
 </system>
