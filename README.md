@@ -25,8 +25,8 @@ or
 - Download the latest version zipfile from [here](https://github.com/zach-morris/repository.zachmorris/tree/master/plugin.program.iagl) to install by zipfile.
 
 **NOTE**
-The addon in the repository is for Kodi v19 now.
-Users of Kodi v18 or earlier have to manually install v2.X of the addon from [here](https://github.com/zach-morris/repository.zachmorris/tree/master/plugin.program.iagl) (there is no more repository for the old version).
+The addon in the repository is for the lastest major version of Kodi now.
+Users of earlier versions of Kodi can still manually install older versions from here:  [here](https://github.com/zach-morris/repository.zachmorris/tree/master/plugin.program.iagl) (there is no more repository for the old version).
 
 Help
 -------------
