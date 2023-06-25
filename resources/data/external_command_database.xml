@@ -1112,7 +1112,7 @@
 	</launcher>
 	<launcher name="Mupen64Plus FZ (N64)" os="android">
 		<command>/system/bin/am start --user 0 -n org.mupen64plusae.v3.fzurita/paulscode.android.mupen64plusae.SplashActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"org.mupen64plusae.v3.fzurita","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","paulscode.android.mupen64plusae.SplashActivity"</activity>
+		<activity>"org.mupen64plusae.v3.fzurita","android.intent.action.VIEW","","%ROM_PATH%","270532608","","","","paulscode.android.mupen64plusae.SplashActivity"</activity>
 	</launcher>
 	<launcher name="My Boy (GBA)" os="android">
 		<command>/system/bin/am start --user 0 -n com.fastemulator.gba/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
@@ -2154,7 +2154,7 @@
 	</launcher>
 	<launcher name="Mupen64Plus FZ (N64)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -n org.mupen64plusae.v3.fzurita/paulscode.android.mupen64plusae.SplashActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"org.mupen64plusae.v3.fzurita","android.intent.action.VIEW","","","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "string"}]","","","paulscode.android.mupen64plusae.SplashActivity"</activity>
+		<activity>"org.mupen64plusae.v3.fzurita","android.intent.action.VIEW","","%ROM_PATH%","270532608","","","","paulscode.android.mupen64plusae.SplashActivity"</activity>
 	</launcher>
 	<launcher name="My Boy (GBA)" os="android_aarch64">
 		<command>/system/bin/am start --user 0 -n com.fastemulator.gba/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
@@ -3196,7 +3196,7 @@
 	</launcher>
 	<launcher name="Mupen64Plus FZ (N64)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -n org.mupen64plusae.v3.fzurita/paulscode.android.mupen64plusae.SplashActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
-		<activity>"org.mupen64plusae.v3.fzurita","android.intent.action.VIEW","","%ROM_PATH%","270532608","[{"key":"Uri","value":"file://%ROM_PATH%","type": "uri"}]","","","paulscode.android.mupen64plusae.SplashActivity"</activity>
+		<activity>"org.mupen64plusae.v3.fzurita","android.intent.action.VIEW","","%ROM_PATH%","270532608","","","","paulscode.android.mupen64plusae.SplashActivity"</activity>
 	</launcher>
 	<launcher name="My Boy (GBA)" os="android_ra32">
 		<command>/system/bin/am start --user 0 -n com.fastemulator.gba/.EmulatorActivity -a android.intent.action.VIEW -eu Uri "file://%ROM_PATH%"</command>
