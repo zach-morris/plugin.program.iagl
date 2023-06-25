@@ -1064,7 +1064,7 @@
 	</launcher>
 	<launcher name="DraStic (Nintendo DS)" os="android">
 		<command>/system/bin/am start -n com.dsemu.drastic/.DraSticActivity -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e GAMEPATH "%ROM_PATH%"</command>
-		<activity>"com.dsemu.drastic","android.intent.action.MAIN","","","270532608","[{"key":"GAMEPATH","value":"%ROM_PATH%","type": "string"}]","","android.intent.category.LAUNCHER","com.dsemu.drastic.DraSticActivity"</activity>
+		<activity>"com.dsemu.drastic","android.intent.action.VIEW","","file://%ROM_PATH%","270532608","","","","com.dsemu.drastic.DraSticActivity"</activity>
 	</launcher>
 	<launcher name="ePSXe (PS1)" os="android">
 		<command>/system/bin/am start --user 0 -n com.epsxe.ePSXe/.ePSXe -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e com.epsxe.ePSXe.isoName "%ROM_PATH%"</command>
@@ -3148,7 +3148,7 @@
 	</launcher>
 	<launcher name="DraStic (Nintendo DS)" os="android_ra32">
 		<command>/system/bin/am start -n com.dsemu.drastic/.DraSticActivity -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e GAMEPATH "%ROM_PATH%"</command>
-		<activity>"com.dsemu.drastic","android.intent.action.MAIN","","","270532608","[{"key":"GAMEPATH","value":"%ROM_PATH%","type": "string"}]","","android.intent.category.LAUNCHER","com.dsemu.drastic.DraSticActivity"</activity>
+		<activity>"com.dsemu.drastic","android.intent.action.VIEW","","file://%ROM_PATH%","270532608","","","","com.dsemu.drastic.DraSticActivity"</activity>
 	</launcher>
 	<launcher name="ePSXe (PS1)" os="android_ra32">
 		<command>/system/bin/am --user 0 start -n com.epsxe.ePSXe/.ePSXe -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -e com.epsxe.ePSXe.isoName "%ROM_PATH%"</command>
