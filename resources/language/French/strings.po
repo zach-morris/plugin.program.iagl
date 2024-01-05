@@ -25,6 +25,7 @@ msgstr "Internet Archive Game Launcher"
 #
 # Settings
 #
+
 msgctxt "#30002"
 msgid "General"
 msgstr "Général"
@@ -85,6 +86,10 @@ msgctxt "#30016"
 msgid "Default Action on Selecting Game"
 msgstr "Action par défaut sur le jeu sélectionné"
 
+msgctxt "#30198"
+msgid "Redirect single game lists to game"
+msgstr "Rediriger les listes avec un seul jeux vers jeux"									   
+
 msgctxt "#30017"
 msgid "Show Search Item"
 msgstr "Montrer l'icône Recherche"
@@ -126,8 +131,8 @@ msgid "archive.org Password"
 msgstr "Mot de passe archive.org"
 
 msgctxt "#30025"
-msgid "My System Type"
-msgstr "Mon type de système"
+msgid "System Type"
+msgstr "Type de système"
 
 msgctxt "#30026"
 msgid "Close Kodi on Launch"
@@ -178,8 +183,8 @@ msgid "Emulator 3 App Location"
 msgstr "Emplacement de l'application de l'Emulateur 3"
 
 msgctxt "#30038"
-msgid "Enable Netplay"
-msgstr "Activer Netplay"
+msgid "Show Netplay Launching on Info Page"
+msgstr "Afficher le lancement de Netplay sur la page d'information"
 
 msgctxt "#30039"
 msgid "Player Connection Type"
@@ -510,8 +515,8 @@ msgid "OSX"
 msgstr "OSX"
 
 msgctxt "#30117"
-msgid "Linux/Kodibuntu"
-msgstr "Linux/Kodibuntu"
+msgid "Linux"
+msgstr "Linux"
 
 msgctxt "#30118"
 msgid "Windows"
@@ -522,12 +527,12 @@ msgid "LibreElec Remix"
 msgstr "LibreElec Remix"
 
 msgctxt "#30120"
-msgid "LibreElec Sx05RE"
-msgstr "LibreElec Sx05RE"
+msgid "RetroELEC"
+msgstr "RetroELEC"
 
 msgctxt "#30121"
-msgid "LibreElec S905 Addon"
-msgstr "LibreElec S905 Addon"
+msgid "Sx05RE"
+msgstr "Sx05RE"
 
 msgctxt "#30122"
 msgid "Gamestarter Addon"
@@ -677,6 +682,18 @@ msgctxt "#30149"
 msgid "List / Poster (50)"
 msgstr "Liste / Affiche (50)"
 
+msgctxt "#30150"
+msgid "Poster / Big List / Poster Wall (51)"
+msgctxt "Affiche / Grande Liste / Mur d'affiche (51)"
+
+msgctxt "#30151"
+msgid "Icon Wall / Horizontal Panel / LS Wall (52)"
+msgctxt "Mur d'Icône / Panneau horizontal / Mur LS (52)"
+
+msgctxt "#30152"
+msgid "Banner / Landscape / Poster Info (501)"
+msgctxt "Bannière / Paysage / Affiche avec information (501)"										   
+
 msgctxt "#30153"
 msgid "Fanart / Landscape Single / Episode List (502)"
 msgstr "Fanart / Paysage Seul / Liste d'Episode (502)"
@@ -693,6 +710,18 @@ msgctxt "#30156"
 msgid "Landscape Details (505)"
 msgstr "Paysage avec détail (505)"
 
+msgctxt "#30157"
+msgid "Shift / Panel Details / Square Wall / Wrap Info (53)"
+msgctxt "Déplacement / Panneau détails / Mur de carrés / Informations repliées (53)"
+
+msgctxt "#30158"
+msgid "Info Wall / Panel / Banner Wall (54)"
+msgctxt "Mur d'information / Panneau / Mur de bannière (54)"
+
+msgctxt "#30159"
+msgid "Wide List / Banner List / Poster Showcase (55)"
+msgctxt "Liste large / Liste de bannière / Vitrine d'affiche (55)"
+
 msgctxt "#30160"
 msgid "Extended List (506)"
 msgstr "Liste étendue (506)"
@@ -700,6 +729,10 @@ msgstr "Liste étendue (506)"
 msgctxt "#30161"
 msgid "Banner Plex / Landscape Showcase (56)"
 msgstr "Bannière Plex / Vitrine de Paysage (56)"
+
+msgctxt "#30162"
+msgid "Big Panel / Square Showcase (57)"
+msgctxt "Grand panneau / Vitrine de carrés (57)"	
 
 msgctxt "#30163"
 msgid "Large Poster / List Info (58)"
@@ -720,6 +753,10 @@ msgstr "Affiche seule (508)"
 msgctxt "#30167"
 msgid "Panel Square (509)"
 msgstr "Panneau de carrés (509)"
+
+msgctxt "#30168"
+msgid "Panel Square Details (510)"
+msgctxt "Panneau de carrés avec détails (510)"	
 
 msgctxt "#30169"
 msgid "Thumbs (511)"
@@ -817,9 +854,9 @@ msgctxt "#30192"
 msgid "Wall View (69)"
 msgstr "Vue Mur (69)"
 
-msgctxt "#30198"
-msgid "Redirect single game lists to game"
-msgstr "Rediriger les listes avec un seul jeux vers jeux"
+msgctxt "#30193"
+msgid "Organize Cache Folder using System Folders"
+msgctxt "Organiser le dossier Cache à l'aide des dossiers système"
 
 msgctxt "#30199"
 msgid "Use StartAndroidActivity"
@@ -853,6 +890,26 @@ msgctxt "#30528"
 msgid "Copies all Data"
 msgstr "Copie de toutes les données"
 
+msgctxt "#30529"
+msgid "Copies all Data, adds Post DL Command Override"
+msgctxt "Copie toutes les données, ajoute l'annulation de la commande d'après téléchargement"
+
+msgctxt "#30530"
+msgid "Enable cache lists to disk for faster loading.  Do not disable normally."
+msgctxt "Permet de mettre en cache les listes sur le disque pour un chargement plus rapide.  Ne pas désactiver normalement."
+
+msgctxt "#30531"
+msgid "Enable cache current list to RAM for faster loading.  Do not disable normally."
+msgctxt "Active la mise en cache de la liste actuelle dans la RAM pour un chargement plus rapide.  Ne pas désactiver normalement."
+
+msgctxt "#30532"
+msgid "Define what is displayed on the addon front page"
+msgctxt "Définir ce qui est affiché sur la page d'accueil de l'extension"
+
+msgctxt "#30533"
+msgid "Define what is displayed for each game lists front page"
+msgctxt "Définir ce qui est affiché pour la page d'accueil de chaque liste de jeux"
+
 msgctxt "#30534"
 msgid "Define what is displayed for each game in a list"
 msgstr "Définir ce qui est affiché pour chaque jeu dans une liste"
@@ -861,37 +918,121 @@ msgctxt "#30535"
 msgid "Remove tags from a game titles. Ex:  [I]Mario (USA)[/I]  becomes  [I]Mario[/I]"
 msgstr "Supprimer les balises d'un titre de jeu. Ex : [I]Mario (USA)[/I] devient [I]Mario[/I]"
 
+msgctxt "#30536"
+msgid "Define how many games are listed per page"
+msgctxt "Définir le nombre de jeux listés par page"
+
 msgctxt "#30537"
 msgid "Define how many games to save in last played history"
 msgstr "Définir le nombre de parties à sauvegarder dans l'historique des dernières parties jouées"
+
+msgctxt "#30538"
+msgid "Define action to take if a game file is found to exist locally"
+msgctxt "Définir l'action à entreprendre si un fichier de jeu existe localement."
+
+msgctxt "#30539"
+msgid "Define action to take when a game is selected in a list"
+msgctxt "Définir l'action à entreprendre lorsqu'un jeu est sélectionné dans une liste"
 
 msgctxt "#30540"
 msgid "Show or hide the Search Function list item"
 msgstr "Afficher ou masquer l'élément Recherche de la liste des éléments"
 
+msgctxt "#30541"
+msgid "Show or hide the Random Play Function list item"
+msgctxt "Afficher ou masquer l'élément Lecture Aléatoirede de la liste des éléments"
+
 msgctxt "#30542"
 msgid "Show or hide the Last Played History list item"
 msgstr "Afficher ou masquer l'historique des dernières lectures de la liste des éléments"
+
+msgctxt "#30543"
+msgid "Show or hide the IAGL Favorites lists item on the front page"
+msgctxt "Afficher ou masquer la liste des favoris de l'IAGL sur la page d'accueil"
+
+msgctxt "#30544"
+msgid "Autoplay the game trailer video on the game info page.  Requires YouTube."
+msgctxt "Lecture automatique de la vidéo de la bande-annonce du jeu sur la page d'information du jeu.  Requiert YouTube."
 
 msgctxt "#30545"
 msgid "Append the source game list name to Search and Random results.  Ex:  [I]Mario[/I]  becomes  [I]NES - Mario[/I]"
 msgstr "Ajouter le nom de la liste de jeux source aux résultats de la recherche et de l'aléatoire.  Ex : [I]Mario[/I] devient [I]NES - Mario[/I]"
 
+msgctxt "#30546"
+msgid "Define the size of the downloaded game file cache.  The cache is purged when the limit is reached."
+msgctxt "Définit la taille du cache des fichiers de jeu téléchargés.  Le cache est purgé lorsque la limite est atteinte."
+
 msgctxt "#30547"
 msgid "Some game archives require login.  Enable archive.org login to enter credentials"
 msgstr "Certaines archives de jeux nécessitent d'être connecté.  Activer le login archive.org pour entrer vos informations d'identification"
 
+msgctxt "#30548"
+msgid "Some game archives require login.  Enter your archive.org email address"
+msgctxt "Certaines archives de jeux nécessitent d'être connecté.  Saisissez votre adresse mail archive.org"
+
 msgctxt "#30549"
 msgid "Some game archives require login.  Enter your archive.org password."
-msgstr "Certaines archives de jeux nécessitent d'être connecté. Saisissez votre mot de passe archive.org."
+msgstr "Certaines archives de jeux nécessitent d'être connecté.  Saisissez votre mot de passe archive.org"
+
+msgctxt "#30550"
+msgid "Define the operating system or addon used to launch external emulators"
+msgctxt "Définir le système d'exploitation ou l'addon utilisé pour lancer les émulateurs externes"
+
+msgctxt "#30551"
+msgid "If enabled, a shell script will exit Kodi, launch the game, then restart Kodi"
+msgctxt "Si cette option est activée, un script shell quittera Kodi, lancera le jeu, puis redémarrera Kodi."
+
+msgctxt "#30552"
+msgid "If enabled, a shell script will pause Kodi, launch the game, then restart Kodi"
+msgctxt "Si cette option est activée, un script shell mettra Kodi en pause, lancera le jeu, puis redémarrera Kodi."
+
+msgctxt "#30553"
+msgid "Point to where the retroarch executable is installed"
+msgctxt "Indiquer l'endroit où l'exécutable retroarch est installé"
+
+msgctxt "#30554"
+msgid "Point to where the retroarch system folder is located"
+msgctxt "Indiquer l'endroit où se trouve le dossier système de retroarch"
+
+msgctxt "#30555"
+msgid "Point to where the retroarch config file is located"
+msgctxt "Indique l'endroit où se trouve le fichier de configuration de retroarch"
+
+msgctxt "#30556"
+msgid "Choose additional emulator application for launching"
+msgctxt "Choisissez une application d'émulation supplémentaire pour le lancement"
 
 msgctxt "#30557"
 msgid "Point to where the additional emulator executable is installed"
-msgstr "Indiquer l'endroit où l'exécutable de l'émulateur supplémentaire est installé"
+msgstr "Indiquer l'endroit où l'exécutable de l'émulateur supplémentaire est installé."
 
 msgctxt "#30558"
 msgid "Enable netplay commands when launching external retroarch"
 msgstr "Activer les commandes netplay lors du lancement d'un retroarch externe"
+
+msgctxt "#30559"
+msgid "Choose to be the netplay host (player 1) or the client (player 2) or a spectator (just watching)"
+msgctxt "Choisissez d'être l'hôte du jeu (joueur 1) ou le client (joueur 2) ou un spectateur (qui ne fait que regarder)."
+
+msgctxt "#30560"
+msgid "Define your players name (20 chars or less)"
+msgctxt "Définissez le nom de votre joueur (20 caractères ou moins)"
+
+msgctxt "#30561"
+msgid "Define a default netplay hostname/IP (useful for local network netplay, leave blank for default)"
+msgctxt "Définir un nom d'hôte/IP netplay par défaut (utile pour le netplay en réseau local, laisser vide pour la valeur par défaut)"
+
+msgctxt "#30562"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgctxt "Définir le port IP netplay par lequel se connecter (laisser vide pour la valeur par défaut)"
+
+msgctxt "#30563"
+msgid "Define the number of netplay sync frames (leave blank for default)"
+msgctxt "Définir le nombre de trames de synchronisation netplay (laisser vide pour la valeur par défaut)"
+
+msgctxt "#30564"
+msgid "Define External launching or Kodi Retroplayer for running the wizard"
+msgctxt "Définir le lancement externe ou Kodi Retroplayer pour l'exécution de l'assistant"
 
 msgctxt "#30565"
 msgid "Run the wizard to change settings for all game lists for either external launching or Kodi Retroplayer"
@@ -1285,9 +1426,11 @@ msgctxt "#30678"
 msgid "Define which Host Address to connect to as the primary connection.  If the primary is not available, the secondary will be used."
 msgstr "Définir l'adresse d'hôte à laquelle se connecter en tant que connexion principale. Si la connexion principale n'est pas disponible, la connexion secondaire sera utilisée."
 
+
 #
 # General
 #
+
 msgctxt "#30200"
 msgid "Yes"
 msgstr "Oui"
@@ -1350,6 +1493,7 @@ msgstr "100"
 
 msgctxt "#30505"
 msgid "150"
+
 msgstr "150"
 
 msgctxt "#30506"
@@ -1384,12 +1528,14 @@ msgctxt "#30513"
 msgid "DL Path"
 msgstr "Dossier de téléchargement"
 
+
 #
 # Dialogs
 #
 #
 # Note, do not change portions of the message with '%(variable)s' in the text, the addon automatically enters this information
 #
+
 msgctxt "#30302"
 msgid "%(game_title)s was successfully downloaded"
 msgstr "%(game_title)s téléchargé avec succès"
@@ -1837,6 +1983,7 @@ msgstr "Arrêter la lecture des médias par Kodi avant le lancement externe"
 msgctxt "#30644"
 msgid "Wait for return to Kodi after External Launch"
 msgstr "Attendre le retour à Kodi après le lancement externe"
+
 
 #
 # Context Menus
