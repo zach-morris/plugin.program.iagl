@@ -1,0 +1,799 @@
+import os, sys
+from pathlib import Path
+import xbmcaddon,xbmcplugin,xbmcvfs
+
+class config(object):
+	def __init__(self):
+		self.addon = dict()
+		self.paths = dict()
+		self.files = dict()
+		self.database = dict()
+		self.media = dict()
+		self.listitem = dict()
+		self.debug = dict()
+		self.defaults = dict()
+		self.settings = dict()
+		self.dialogs = dict()
+		self.downloads = dict()
+
+		#Handle
+		self.addon['addon_name'] = 'plugin.program.iagl'
+		self.addon['addon_url'] = 'plugin://{}'.format(self.addon.get('addon_name'))
+		self.addon['addon_handle'] = xbmcaddon.Addon(id=self.addon.get('addon_name'))	
+		#Debug
+		self.debug['print_query'] = True
+		self.debug['factory_debug'] = False
+		#Paths
+		self.paths['self'] = Path(__file__)
+		self.paths['addon'] = Path(xbmcvfs.translatePath(self.addon.get('addon_handle').getAddonInfo('path')))
+		self.paths['addon_resources'] = self.paths['addon'].joinpath('resources')
+		self.paths['addon_data'] = self.paths['addon_resources'].joinpath('data')
+		self.paths['addon_skins'] = self.paths['addon_resources'].joinpath('skins')
+		self.paths['userdata'] = Path(xbmcvfs.translatePath(self.addon.get('addon_handle').getAddonInfo('profile')))
+		self.paths['default_temp_dl'] = self.paths.get('userdata').joinpath('game_cache')
+		self.paths['assets_url'] = 'special://xbmc/addons/plugin.program.iagl/assets/default/{}'
+		#Files
+		self.files['addon_data_db'] = self.paths['addon_data'].joinpath('iagl.db')
+		self.files['db'] = self.paths['userdata'].joinpath('iagl.db')
+		self.files['ia_cookie'] = self.paths['userdata'].joinpath('ia.cookie')
+		#Default Values
+		self.defaults['home_id'] = 10000
+		self.defaults['random_num_result_options'] = list(range(10,60,10))+list(range(100,251,50))+list(range(350,951,100))
+		self.defaults['infinit_results_char'] = ['∞']
+		self.defaults['default_num_results'] = '10'
+		self.defaults['sleep'] = 500
+		self.defaults['launcher'] = 'retroplayer'
+		self.defaults['threads'] = 5
+		self.defaults['config_available_systems'] = ['windows','linux','OSX']
+		self.defaults['other_emulator_settings'] = ['app_path_dolphin','app_path_mame','app_path_pj64','app_path_expsxe','app_path_demul','app_path_fsuae']
+		self.defaults['android_activity_keys'] = ['package','intent','dataType','dataURI','flags','extras','action','category','className']
+		#Media
+		self.media['default_type'] = 'video'
+		#Listitems
+		self.listitem['art_keys'] = ['thumb','poster','banner','fanart','clearlogo','fanart1','fanart2'] #https://alwinesch.github.io/group__python__xbmcgui__listitem.html#ga92f9aeb062ff50badcb8792d14a37394
+		self.listitem['property_keys'] = ['SpecialSort','table_filter','total_games','is_1g1r_list','total_1g1r_games'] #https://alwinesch.github.io/group__python__xbmcgui__listitem.html#ga96f1976952584c91e6d59c310ce86a25
+		self.listitem['info_keys'] = ['size','count','date'] #https://xbmc.github.io/docs.kodi.tv/master/kodi-base/d8/d29/group__python__xbmcgui__listitem.html#ga0b71166869bda87ad744942888fb5f14
+		self.listitem['non_string_to_list_keys'] = ['studio'] #Remove these keys from json serializable list due to database encoding
+		self.listitem['sort_methods'] = dict()
+		self.listitem['sort_methods']['all'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_SIZE]
+		self.listitem['sort_methods']['categories'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE]
+		self.listitem['sort_methods']['playlists'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE]
+		self.listitem['sort_methods']['by_category'] = [xbmcplugin.SORT_METHOD_NONE]
+		self.listitem['sort_methods']['by_playlist'] = [xbmcplugin.SORT_METHOD_NONE]
+		self.listitem['sort_methods']['search'] = [xbmcplugin.SORT_METHOD_NONE]
+		self.listitem['sort_methods']['random'] = [xbmcplugin.SORT_METHOD_NONE]
+		self.listitem['sort_methods']['game_list_choice'] = [xbmcplugin.SORT_METHOD_NONE]
+		self.listitem['sort_methods']['game_list_choice_by'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE]
+		self.listitem['sort_methods']['games'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE,xbmcplugin.SORT_METHOD_LABEL,xbmcplugin.SORT_METHOD_TITLE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_GENRE,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE,xbmcplugin.SORT_METHOD_SIZE]
+		self.listitem['sort_methods']['favorites'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE,xbmcplugin.SORT_METHOD_LABEL,xbmcplugin.SORT_METHOD_TITLE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_GENRE,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE,xbmcplugin.SORT_METHOD_SIZE]
+		self.listitem['sort_methods']['history'] = [xbmcplugin.SORT_METHOD_NONE,xbmcplugin.SORT_METHOD_LASTPLAYED,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE,xbmcplugin.SORT_METHOD_LABEL,xbmcplugin.SORT_METHOD_TITLE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_GENRE,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE,xbmcplugin.SORT_METHOD_SIZE]
+		self.listitem['max_label_length'] = 15 #Truncate long search labels
+		#Settings
+		self.settings['front_page_display'] = dict() 
+		self.settings['front_page_display']['options'] = dict(zip(['0','1','2','3','4','5','6','7'],['/browse','/all','/categories','/playlists','/favorites','/history','/search','/random']))
+		self.settings['front_page_display']['default'] = '/browse'
+		self.settings['favorites_page_display'] = dict() 
+		self.settings['favorites_page_display']['options'] = dict(zip(['0','1','2'],['/favorites','/view_favorites/by_all','/view_favorites/by_group']))
+		self.settings['favorites_page_display']['default'] = '/browse'
+		self.settings['media_type_game'] = dict() 
+		self.settings['media_type_game']['options'] = dict(zip(['0','1','2'],['tvshows','movies','games']))
+		self.settings['media_type_game']['default'] = 'tvshows'
+		self.settings['media_type_game']['listitem_type'] = dict(zip(['tvshows','movies','games'],['video','video','game']))
+		self.settings['media_types'] = dict()
+		self.settings['media_types']['by_genre'] = 'genres'
+		self.settings['media_types']['by_studio'] = 'studios'
+		self.settings['media_types']['by_tag'] = 'tags'
+		self.settings['media_types']['by_code'] = 'tags'
+		self.settings['media_types']['by_year'] = 'years'
+		self.settings['game_title_setting'] = dict() 
+		self.settings['game_title_setting']['options'] = dict(zip(['0','1'],['games_table.name_clean','games_table.originaltitle']))
+		self.settings['game_title_setting']['default'] = 'games_table.originaltitle'
+		self.settings['games_pagination'] = dict()
+		self.settings['games_pagination']['options'] = dict(zip(['0','1','2','3','4','5','6'],[None,10,25,50,100,250,500]))
+		self.settings['games_pagination']['default'] = None
+		self.settings['filter_to_1g1r'] = dict()
+		self.settings['filter_to_1g1r']['options'] = dict(zip(['0','1'],[' and (games_table."1g1r_game" IS NOT NULL or game_lists_table.is_1g1r_list = 0)','']))
+		self.settings['filter_to_1g1r']['default'] = ''
+		self.settings['append_game_list_to_search_results'] = dict()
+		self.settings['append_game_list_to_search_results']['options'] = dict(zip(['0','1'],['||" ("||games_table.game_list||")"','']))
+		self.settings['append_game_list_to_search_results']['default'] = ''
+		self.settings['append_game_list_to_playlist_results'] = dict()
+		self.settings['append_game_list_to_playlist_results']['options'] = dict(zip(['0','1'],['||" ("||games_table.game_list||")"','']))
+		self.settings['append_game_list_to_playlist_results']['default'] = ''
+		self.settings['thumbnail_to_game_art'] = dict()
+		self.settings['thumbnail_to_game_art']['options'] = dict(zip(['0','1'],['title_paths.url||games_table.art_title','snapshot_paths.url||games_table.art_snapshot']))
+		self.settings['thumbnail_to_game_art']['default'] = 'snapshot_paths.url||games_table.art_snapshot'
+		self.settings['landscape_to_game_art'] = dict()
+		self.settings['landscape_to_game_art']['options'] = dict(zip(['0','1'],['title_paths.url||games_table.art_title','snapshot_paths.url||games_table.art_snapshot']))
+		self.settings['landscape_to_game_art']['default'] = 'title_paths.url||games_table.art_title'
+		self.settings['game_list_clearlogo_to_art'] = dict()
+		self.settings['game_list_clearlogo_to_art']['options'] = dict(zip(['0','1','2'],['clearlogo_paths.url||game_lists_table.clearlogo','console_paths.url||game_lists_table.console','controller_paths.url||game_lists_table.controller']))
+		self.settings['game_list_clearlogo_to_art']['default'] = 'clearlogo_paths.url||game_lists_table.clearlogo'
+		self.settings['user_launch_os'] = dict()
+		self.settings['user_launch_os']['options'] = dict(zip(['0','1','2','3','4','5','6'],[None,'windows','linux','OSX','android','android_aarch64','android_ra32']))
+		self.settings['user_launch_os']['default'] = None
+		self.settings['force_viewtypes'] = dict()
+		self.settings['force_viewtypes']['options'] = dict(zip(['0','1'],[True,False]))
+		self.settings['force_viewtypes']['default'] = False
+		self.settings['page_viewtype_options'] = dict()
+		self.settings['page_viewtype_options']['viewtype_settings'] = ['front_page_viewtype','game_lists_viewtype','game_categories_viewtype','games_viewtype','search_random_viewtype']
+		self.settings['page_viewtype_options']['options'] = dict(zip(['0','1','2','3','4','5','6','7','8'],[None,'50','51','52','501','502','503','504','505']))
+		self.settings['page_viewtype_options']['default'] = None
+		self.settings['tou'] = dict()
+		self.settings['tou']['options'] = dict(zip(['true','false'],[True,False]))
+		self.settings['tou']['default'] = False
+		self.settings['wizard_run'] = dict()
+		self.settings['wizard_run']['options'] = dict(zip(['true','false'],[True,False]))
+		self.settings['wizard_run']['default'] = False
+		self.settings['uses_applaunch'] = dict()
+		self.settings['uses_applaunch']['options'] = dict(zip(['0','1','2'],['0','1','0']))
+		self.settings['uses_applaunch']['default'] = '0'
+		self.settings['uses_appause'] = dict()
+		self.settings['uses_appause']['options'] = dict(zip(['0','1','2'],['0','0','1']))
+		self.settings['uses_appause']['default'] = '0'
+		self.settings['kodi_saa'] = dict()
+		self.settings['kodi_saa']['options'] = dict(zip(['0','1'],['activities','commands']))
+		self.settings['kodi_saa']['default'] = 'activities'
+		self.settings['game_cache_size'] = dict()
+		self.settings['game_cache_size']['options'] = dict(zip(['0','1','2','3','4','5','6','7','8','9','10'],[0,1024*1024*25,1024*1024*50,1024*1024*100,1024*1024*200,1024*1024*500,1024*1024*1000,1024*1024*2000,1024*1024*5000,1024*1024*10000,1024*1024*20000]))
+		self.settings['game_cache_size']['default'] = 0
+		#Dialogs
+		self.dialogs['tou'] = dict()
+		self.dialogs['tou']['actions'] = dict()
+		self.dialogs['tou']['actions']['do_not_agree'] = [10,13,92]
+		self.dialogs['tou']['buttons'] = dict()
+		self.dialogs['tou']['buttons']['do_not_agree'] = 3003
+		self.dialogs['tou']['buttons']['agree'] = 3001
+
+		#Downloads
+		self.downloads['archive_org_login_url'] = 'https://archive.org/account/login'
+		self.downloads['archive_org_check_acct'] = 'https://archive.org/services/user.php?op=whoami'
+		self.downloads['chunk_size'] = 500000 #500 kb chunks
+		self.downloads['min_file_size'] = 2000000 #If a file is smaller than 2MB, only use 1 thread
+		self.downloads['timeout'] = (12.1,27)
+
+		#Database
+		self.database['process'] = dict()
+		self.database['process']['game'] = dict()
+		self.database['process']['game']['from_json'] = ['rom','extra_art']
+		self.database['query'] = dict()
+		self.database['query']['browse'] = ('SELECT browse_table.label,browse_table.next_path,browse_table.localization,thumb_paths.url||browse_table.thumb as thumb,poster_paths.url||browse_table.poster as poster,banner_paths.url||browse_table.banner as banner,(SELECT url FROM default_art WHERE art_type="fanart") as fanart,clearlogo_paths.url||browse_table.clearlogo as clearlogo,browse_table.plot,browse_table.SpecialSort\n'
+											'FROM browse as browse_table\n'
+											'LEFT JOIN paths as thumb_paths\n'
+											'ON thumb_paths."path" = browse_table.thumb_path\n'
+											'LEFT JOIN paths as poster_paths\n'
+											'ON poster_paths."path" = browse_table.poster_path\n'
+											'LEFT JOIN paths as banner_paths\n'
+											'ON banner_paths."path" = browse_table.banner_path\n'
+											'LEFT JOIN paths as clearlogo_paths\n'
+											'ON clearlogo_paths."path" = browse_table.clearlogo_path')
+		self.database['query']['search'] = ('SELECT search_table.label,search_table.next_path,search_table.localization,thumb_paths.url||search_table.thumb as thumb,poster_paths.url||search_table.poster as poster,banner_paths.url||search_table.banner as banner,(SELECT url FROM default_art WHERE art_type="fanart") as fanart,clearlogo_paths.url||search_table.clearlogo as clearlogo,search_table.plot,search_table.SpecialSort\n'
+											'FROM search as search_table\n'
+											'LEFT JOIN paths as thumb_paths\n'
+											'ON thumb_paths."path" = search_table.thumb_path\n'
+											'LEFT JOIN paths as poster_paths\n'
+											'ON poster_paths."path" = search_table.poster_path\n'
+											'LEFT JOIN paths as banner_paths\n'
+											'ON banner_paths."path" = search_table.banner_path\n'
+											'LEFT JOIN paths as clearlogo_paths\n'
+											'ON clearlogo_paths."path" = search_table.clearlogo_path')
+		self.database['query']['random'] = ('SELECT random_table.label,random_table.next_path,random_table.localization,thumb_paths.url||random_table.thumb as thumb,poster_paths.url||random_table.poster as poster,banner_paths.url||random_table.banner as banner,(SELECT url FROM default_art WHERE art_type="fanart") as fanart,clearlogo_paths.url||random_table.clearlogo as clearlogo,random_table.plot,random_table.SpecialSort\n'
+											'FROM random as random_table\n'
+											'LEFT JOIN paths as thumb_paths\n'
+											'ON thumb_paths."path" = random_table.thumb_path\n'
+											'LEFT JOIN paths as poster_paths\n'
+											'ON poster_paths."path" = random_table.poster_path\n'
+											'LEFT JOIN paths as banner_paths\n'
+											'ON banner_paths."path" = random_table.banner_path\n'
+											'LEFT JOIN paths as clearlogo_paths\n'
+											'ON clearlogo_paths."path" = random_table.clearlogo_path')
+		self.database['query']['categories'] = ('SELECT categories_table.label||" ("||CAST(categories_table.total_count as TEXT)||")" as label,categories_table.next_path,categories_table.table_filter,thumb_paths.url||categories_table.thumb as thumb,poster_paths.url||categories_table.poster as poster,banner_paths.url||categories_table.banner as banner,(SELECT url FROM default_art WHERE art_type="fanart") as fanart,clearlogo_paths.url||categories_table.clearlogo as clearlogo,categories_table.plot||"[CR]"||CAST(categories_table.total_count as TEXT)||" game lists in this category" as plot\n'
+												'FROM categories as categories_table\n'
+												'LEFT JOIN paths as thumb_paths\n'
+												'ON thumb_paths."path" = categories_table.thumb_path\n'
+												'LEFT JOIN paths as poster_paths\n'
+												'ON poster_paths."path" = categories_table.poster_path\n'
+												'LEFT JOIN paths as banner_paths\n'
+												'ON banner_paths."path" = categories_table.banner_path\n'
+												'LEFT JOIN paths as clearlogo_paths\n'
+												'ON clearlogo_paths."path" = categories_table.clearlogo_path\n'
+												'ORDER BY categories_table.label COLLATE NOCASE ASC')
+		self.database['query']['playlists'] = ('SELECT groups_table.label||" ("||CAST(groups_table.total_count as TEXT)||")" as label,"/by_playlist/"||groups_table.next_path as next_path,groups_table.table_filter,thumb_paths.url||groups_table.thumb as thumb,poster_paths.url||groups_table.poster as poster,banner_paths.url||groups_table.banner as banner,(SELECT url FROM default_art WHERE art_type="fanart") as fanart,clearlogo_paths.url||groups_table.clearlogo as clearlogo,groups_table.plot,groups_table.plot||"[CR]"||CAST(groups_table.total_count as TEXT)||" games in this playlist" as plot\n'
+											'FROM groups as groups_table\n'
+											'LEFT JOIN paths as thumb_paths\n'
+											'ON thumb_paths."path" = groups_table.thumb_path\n'
+											'LEFT JOIN paths as poster_paths\n'
+											'ON poster_paths."path" = groups_table.poster_path\n'
+											'LEFT JOIN paths as banner_paths\n'
+											'ON banner_paths."path" = groups_table.banner_path\n'
+											'LEFT JOIN paths as clearlogo_paths\n'
+											'ON clearlogo_paths."path" = groups_table.clearlogo_path\n'
+											'WHERE groups_table.total_count<5000\n' #Remove huge playlists as they return too many games
+											'ORDER BY groups_table.label COLLATE NOCASE ASC')
+		self.database['query']['all_game_lists'] = ('SELECT game_lists_table.label,game_lists_table.next_path,game_lists_table.table_filter,thumb_paths.url||game_lists_table.thumb as thumb,poster_paths.url||game_lists_table.poster as poster,banner_paths.url||game_lists_table.banner as banner,fanart_paths.url||game_lists_table.fanart_collage as fanart,{game_list_clearlogo_to_art} as clearlogo,"plugin://plugin.video.youtube/play/?video_id="||game_lists_table.trailer as trailer,game_lists_table.plot,DATE(game_lists_table.date) as premiered,game_lists_table.total_games,game_lists_table.is_1g1r_list,game_lists_table.total_1g1r_games\n'
+													'FROM game_list as game_lists_table\n'
+													'LEFT JOIN paths as thumb_paths\n'
+													'ON thumb_paths."path" = game_lists_table.thumb_path\n'
+													'LEFT JOIN paths as poster_paths\n'
+													'ON poster_paths."path" = game_lists_table.poster_path\n'
+													'LEFT JOIN paths as banner_paths\n'
+													'ON banner_paths."path" = game_lists_table.banner_path\n'
+													'LEFT JOIN paths as clearlogo_paths\n'
+													'ON clearlogo_paths."path" = game_lists_table.clearlogo_path\n'
+													'LEFT JOIN paths as console_paths\n'
+													'ON console_paths."path" = game_lists_table.console_path\n'
+													'LEFT JOIN paths as controller_paths\n'
+													'ON controller_paths."path" = game_lists_table.controller_path\n'
+													'LEFT JOIN paths as fanart_paths\n'
+													'ON fanart_paths."path" = game_lists_table.fanart_collage_path\n'
+													'WHERE game_lists_table.user_global_visibility is NULL and game_lists_table.label IN (SELECT DISTINCT(games_table.game_list) as available_lists FROM games AS games_table)'
+													'ORDER BY game_lists_table.label COLLATE NOCASE ASC') #Checked
+		self.database['query']['game_lists_by_category'] = ('SELECT game_lists_table.label,game_lists_table.next_path,game_lists_table.table_filter,thumb_paths.url||game_lists_table.thumb as thumb,poster_paths.url||game_lists_table.poster as poster,banner_paths.url||game_lists_table.banner as banner,fanart_paths.url||game_lists_table.fanart_collage as fanart,{game_list_clearlogo_to_art} as clearlogo,"plugin://plugin.video.youtube/play/?video_id="||game_lists_table.trailer as trailer,game_lists_table.plot,DATE(game_lists_table.date) as date,DATE(game_lists_table.date) as premiered,game_lists_table.total_games,game_lists_table.is_1g1r_list,game_lists_table.total_1g1r_games\n'
+													'FROM game_list as game_lists_table\n'
+													'LEFT JOIN paths as thumb_paths\n'
+													'ON thumb_paths."path" = game_lists_table.thumb_path\n'
+													'LEFT JOIN paths as poster_paths\n'
+													'ON poster_paths."path" = game_lists_table.poster_path\n'
+													'LEFT JOIN paths as banner_paths\n'
+													'ON banner_paths."path" = game_lists_table.banner_path\n'
+													'LEFT JOIN paths as clearlogo_paths\n'
+													'ON clearlogo_paths."path" = game_lists_table.clearlogo_path\n'
+													'LEFT JOIN paths as console_paths\n'
+													'ON console_paths."path" = game_lists_table.console_path\n'
+													'LEFT JOIN paths as controller_paths\n'
+													'ON controller_paths."path" = game_lists_table.controller_path\n'
+													'LEFT JOIN paths as fanart_paths\n'
+													'ON fanart_paths."path" = game_lists_table.fanart_collage_path\n'
+													'WHERE game_lists_table.user_global_visibility is NULL and game_lists_table.label IN (SELECT DISTINCT(games_table.game_list) as available_lists FROM games AS games_table) and game_lists_table.categories LIKE "%{category_id}%"'
+													'ORDER BY game_lists_table.label COLLATE NOCASE ASC') #Checked
+		self.database['query']['game_lists_by_playlist_no_page'] = ('SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
+																	'FROM games as games_table\n'
+																	'LEFT JOIN paths as banner_paths\n'
+																	'ON banner_paths."path" = games_table.art_banner_path\n'
+																	'LEFT JOIN paths as box_paths\n'
+																	'ON box_paths."path" = games_table.art_box_path\n'
+																	'LEFT JOIN paths as clearlogo_paths\n'
+																	'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+																	'LEFT JOIN paths as title_paths\n'
+																	'ON title_paths."path" = games_table.art_title_path\n'
+																	'LEFT JOIN paths as snapshot_paths\n'
+																	'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+																	'LEFT JOIN paths as fanart_paths\n'
+																	'ON fanart_paths."path" = games_table.art_fanart_path\n'
+																	'WHERE games_table.groups  LIKE "%""{playlist_id}""%"')
+		self.database['query']['game_lists_by_playlist_page'] = ('SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
+																'FROM games as games_table\n'
+																'LEFT JOIN paths as banner_paths\n'
+																'ON banner_paths."path" = games_table.art_banner_path\n'
+																'LEFT JOIN paths as box_paths\n'
+																'ON box_paths."path" = games_table.art_box_path\n'
+																'LEFT JOIN paths as clearlogo_paths\n'
+																'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+																'LEFT JOIN paths as title_paths\n'
+																'ON title_paths."path" = games_table.art_title_path\n'
+																'LEFT JOIN paths as snapshot_paths\n'
+																'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+																'LEFT JOIN paths as fanart_paths\n'
+																'ON fanart_paths."path" = games_table.art_fanart_path\n'
+																'WHERE games_table.groups  LIKE "%""{playlist_id}""%"'
+																'ORDER BY games_table.originaltitle COLLATE NOCASE ASC\n'
+																'LIMIT {items_per_page} OFFSET {starting_number}')
+		self.database['query']['choose_from_list'] = ('SELECT choose_table.label,choose_table.next_path,choose_table.localization as localization,choose_table.choice_table as choice_table,thumb_paths.url||choose_table.thumb as thumb,poster_paths.url||choose_table.poster as poster,banner_paths.url||choose_table.banner as banner,(SELECT url FROM default_art WHERE art_type="fanart") as fanart,clearlogo_paths.url||choose_table.clearlogo as clearlogo,choose_table.plot\n'
+														'FROM choose as choose_table\n'
+														'LEFT JOIN paths as thumb_paths\n'
+														'ON thumb_paths."path" = choose_table.thumb_path\n'
+														'LEFT JOIN paths as poster_paths\n'
+														'ON poster_paths."path" = choose_table.poster_path\n'
+														'LEFT JOIN paths as banner_paths\n'
+														'ON banner_paths."path" = choose_table.banner_path\n'
+														'LEFT JOIN paths as clearlogo_paths\n'
+														'ON clearlogo_paths."path" = choose_table.clearlogo_path')
+		self.database['query']['by_alpha'] = ('SELECT choose_table.label,choose_table.next_path,choose_table.table_filter,thumb_paths.url||choose_table.thumb as thumb,poster_paths.url||choose_table.poster as poster,banner_paths.url||choose_table.banner as banner,(SELECT url FROM default_art WHERE art_type="fanart") as fanart,clearlogo_paths.url||choose_table.clearlogo as clearlogo,choose_table.plot\n'
+												'FROM alphabetical as choose_table\n'
+												'LEFT JOIN paths as thumb_paths\n'
+												'ON thumb_paths."path" = choose_table.thumb_path\n'
+												'LEFT JOIN paths as poster_paths\n'
+												'ON poster_paths."path" = choose_table.poster_path\n'
+												'LEFT JOIN paths as banner_paths\n'
+												'ON banner_paths."path" = choose_table.banner_path\n'
+												'LEFT JOIN paths as clearlogo_paths\n'
+												'ON clearlogo_paths."path" = choose_table.clearlogo_path\n'
+												'WHERE choose_table.matching_lists LIKE "%""{game_list_id}""%"')
+		self.database['query']['by_genre'] = ('SELECT choose_table.label,choose_table.next_path,choose_table.table_filter,thumb_paths.url||choose_table.thumb as thumb,poster_paths.url||choose_table.poster as poster,banner_paths.url||choose_table.banner as banner,(SELECT url FROM default_art WHERE art_type="fanart") as fanart,clearlogo_paths.url||choose_table.clearlogo as clearlogo,choose_table.plot\n'
+												'FROM genre as choose_table\n'
+												'LEFT JOIN paths as thumb_paths\n'
+												'ON thumb_paths."path" = choose_table.thumb_path\n'
+												'LEFT JOIN paths as poster_paths\n'
+												'ON poster_paths."path" = choose_table.poster_path\n'
+												'LEFT JOIN paths as banner_paths\n'
+												'ON banner_paths."path" = choose_table.banner_path\n'
+												'LEFT JOIN paths as clearlogo_paths\n'
+												'ON clearlogo_paths."path" = choose_table.clearlogo_path\n'
+												'WHERE choose_table.matching_lists LIKE "%""{game_list_id}""%"')
+		self.database['query']['by_year'] = ('SELECT choose_table.label,choose_table.next_path,choose_table.table_filter,thumb_paths.url||choose_table.thumb as thumb,poster_paths.url||choose_table.poster as poster,banner_paths.url||choose_table.banner as banner,(SELECT url FROM default_art WHERE art_type="fanart") as fanart,clearlogo_paths.url||choose_table.clearlogo as clearlogo,choose_table.plot\n'
+												'FROM year as choose_table\n'
+												'LEFT JOIN paths as thumb_paths\n'
+												'ON thumb_paths."path" = choose_table.thumb_path\n'
+												'LEFT JOIN paths as poster_paths\n'
+												'ON poster_paths."path" = choose_table.poster_path\n'
+												'LEFT JOIN paths as banner_paths\n'
+												'ON banner_paths."path" = choose_table.banner_path\n'
+												'LEFT JOIN paths as clearlogo_paths\n'
+												'ON clearlogo_paths."path" = choose_table.clearlogo_path\n'
+												'WHERE choose_table.matching_lists LIKE "%""{game_list_id}""%"')
+		self.database['query']['by_players'] = ('SELECT choose_table.label,choose_table.next_path,choose_table.table_filter,thumb_paths.url||choose_table.thumb as thumb,poster_paths.url||choose_table.poster as poster,banner_paths.url||choose_table.banner as banner,(SELECT url FROM default_art WHERE art_type="fanart") as fanart,clearlogo_paths.url||choose_table.clearlogo as clearlogo,choose_table.plot\n'
+												'FROM nplayers as choose_table\n'
+												'LEFT JOIN paths as thumb_paths\n'
+												'ON thumb_paths."path" = choose_table.thumb_path\n'
+												'LEFT JOIN paths as poster_paths\n'
+												'ON poster_paths."path" = choose_table.poster_path\n'
+												'LEFT JOIN paths as banner_paths\n'
+												'ON banner_paths."path" = choose_table.banner_path\n'
+												'LEFT JOIN paths as clearlogo_paths\n'
+												'ON clearlogo_paths."path" = choose_table.clearlogo_path\n'
+												'WHERE choose_table.matching_lists LIKE "%""{game_list_id}""%"')
+		self.database['query']['by_studio'] = ('SELECT choose_table.label,choose_table.next_path,choose_table.table_filter,thumb_paths.url||choose_table.thumb as thumb,poster_paths.url||choose_table.poster as poster,banner_paths.url||choose_table.banner as banner,(SELECT url FROM default_art WHERE art_type="fanart") as fanart,clearlogo_paths.url||choose_table.clearlogo as clearlogo,choose_table.plot\n'
+												'FROM studio as choose_table\n'
+												'LEFT JOIN paths as thumb_paths\n'
+												'ON thumb_paths."path" = choose_table.thumb_path\n'
+												'LEFT JOIN paths as poster_paths\n'
+												'ON poster_paths."path" = choose_table.poster_path\n'
+												'LEFT JOIN paths as banner_paths\n'
+												'ON banner_paths."path" = choose_table.banner_path\n'
+												'LEFT JOIN paths as clearlogo_paths\n'
+												'ON clearlogo_paths."path" = choose_table.clearlogo_path\n'
+												'WHERE choose_table.matching_lists LIKE "%""{game_list_id}""%"')
+		self.database['query']['by_tag'] = ('SELECT choose_table.label,choose_table.next_path,choose_table.table_filter,thumb_paths.url||choose_table.thumb as thumb,poster_paths.url||choose_table.poster as poster,banner_paths.url||choose_table.banner as banner,(SELECT url FROM default_art WHERE art_type="fanart") as fanart,clearlogo_paths.url||choose_table.clearlogo as clearlogo,choose_table.plot\n'
+												'FROM tag as choose_table\n'
+												'LEFT JOIN paths as thumb_paths\n'
+												'ON thumb_paths."path" = choose_table.thumb_path\n'
+												'LEFT JOIN paths as poster_paths\n'
+												'ON poster_paths."path" = choose_table.poster_path\n'
+												'LEFT JOIN paths as banner_paths\n'
+												'ON banner_paths."path" = choose_table.banner_path\n'
+												'LEFT JOIN paths as clearlogo_paths\n'
+												'ON clearlogo_paths."path" = choose_table.clearlogo_path\n'
+												'WHERE choose_table.matching_lists LIKE "%""{game_list_id}""%"')
+		self.database['query']['by_group'] = ('SELECT choose_table.label,choose_table.next_path,choose_table.table_filter,thumb_paths.url||choose_table.thumb as thumb,poster_paths.url||choose_table.poster as poster,banner_paths.url||choose_table.banner as banner,(SELECT url FROM default_art WHERE art_type="fanart") as fanart,clearlogo_paths.url||choose_table.clearlogo as clearlogo,choose_table.plot\n'
+												'FROM groups as choose_table\n'
+												'LEFT JOIN paths as thumb_paths\n'
+												'ON thumb_paths."path" = choose_table.thumb_path\n'
+												'LEFT JOIN paths as poster_paths\n'
+												'ON poster_paths."path" = choose_table.poster_path\n'
+												'LEFT JOIN paths as banner_paths\n'
+												'ON banner_paths."path" = choose_table.banner_path\n'
+												'LEFT JOIN paths as clearlogo_paths\n'
+												'ON clearlogo_paths."path" = choose_table.clearlogo_path\n'
+												'WHERE choose_table.matching_lists LIKE "%""{game_list_id}""%"') 
+		self.database['query']['by_all_no_page'] = ('SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.system as "tvshowtitle",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,{landscape_to_game_art} as landscape,{thumbnail_to_game_art} as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
+													'FROM games as games_table\n'
+													'LEFT JOIN game_list as game_lists_table\n'
+													'ON game_lists_table.label = games_table.game_list\n'
+													'LEFT JOIN paths as banner_paths\n'
+													'ON banner_paths."path" = games_table.art_banner_path\n'
+													'LEFT JOIN paths as box_paths\n'
+													'ON box_paths."path" = games_table.art_box_path\n'
+													'LEFT JOIN paths as clearlogo_paths\n'
+													'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+													'LEFT JOIN paths as title_paths\n'
+													'ON title_paths."path" = games_table.art_title_path\n'
+													'LEFT JOIN paths as snapshot_paths\n'
+													'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+													'LEFT JOIN paths as fanart_paths\n'
+													'ON fanart_paths."path" = games_table.art_fanart_path\n'
+													'WHERE games_table.game_list = "{game_list_id}"{filter_to_1g1r}\n'
+													'ORDER BY games_table.originaltitle COLLATE NOCASE ASC')
+		self.database['query']['by_all_page'] = ('SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.system as "tvshowtitle",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
+													'FROM games as games_table\n'
+													'LEFT JOIN game_list as game_lists_table\n'
+													'ON game_lists_table.label = games_table.game_list\n'
+													'LEFT JOIN paths as banner_paths\n'
+													'ON banner_paths."path" = games_table.art_banner_path\n'
+													'LEFT JOIN paths as box_paths\n'
+													'ON box_paths."path" = games_table.art_box_path\n'
+													'LEFT JOIN paths as clearlogo_paths\n'
+													'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+													'LEFT JOIN paths as title_paths\n'
+													'ON title_paths."path" = games_table.art_title_path\n'
+													'LEFT JOIN paths as snapshot_paths\n'
+													'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+													'LEFT JOIN paths as fanart_paths\n'
+													'ON fanart_paths."path" = games_table.art_fanart_path\n'
+													'WHERE games_table.game_list = "{game_list_id}"{filter_to_1g1r}\n'
+													'ORDER BY games_table.originaltitle COLLATE NOCASE ASC\n'
+													'LIMIT {items_per_page} OFFSET {starting_number}')
+		self.database['query']['get_game_table_filter'] = ('SELECT game_lists_table.table_filter\n'
+															'FROM game_list as game_lists_table\n'
+															'WHERE game_lists_table.label = "{}"')
+		self.database['query']['get_game_table_filter_from_choice'] = ('SELECT "by_alpha" as choice_id,a.table_filter\n'
+																		'from alphabetical a\n'
+																		'WHERE choice_id = "{choose_id}" and a.label = "{choose_value}"\n'
+																		'UNION\n'
+																		'SELECT "by_genre" as choice_id,b.table_filter\n'
+																		'from genre b\n'
+																		'WHERE choice_id = "{choose_id}" and b.label = "{choose_value}"\n'
+																		'UNION\n'
+																		'SELECT "by_year" as choice_id,c.table_filter\n'
+																		'from year c\n'
+																		'WHERE choice_id = "{choose_id}" and c.label = "{choose_value}"\n'
+																		'UNION\n'
+																		'SELECT "by_players" as choice_id,d.table_filter\n'
+																		'from nplayers d\n'
+																		'WHERE choice_id = "{choose_id}" and d.label = "{choose_value}"\n'
+																		'UNION\n'
+																		'SELECT "by_studio" as choice_id,e.table_filter\n'
+																		'from studio e\n'
+																		'WHERE choice_id = "{choose_id}" and e.label = "{choose_value}"\n'
+																		'UNION\n'
+																		'SELECT "by_tag" as choice_id,f.table_filter\n'
+																		'from tag f\n'
+																		'WHERE choice_id = "{choose_id}" and f.label = "{choose_value}"\n'
+																		'UNION\n'
+																		'SELECT "by_group" as choice_id,g.table_filter\n'
+																		'from groups g\n'
+																		'WHERE choice_id = "{choose_id}" and g.label = "{choose_value}"')
+		self.database['query']['get_games_from_choice_no_page'] = ('SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
+																	'FROM games as games_table\n'
+																	'LEFT JOIN game_list as game_lists_table\n'
+																	'ON game_lists_table.label = games_table.game_list\n'
+																	'LEFT JOIN paths as banner_paths\n'
+																	'ON banner_paths."path" = games_table.art_banner_path\n'
+																	'LEFT JOIN paths as box_paths\n'
+																	'ON box_paths."path" = games_table.art_box_path\n'
+																	'LEFT JOIN paths as clearlogo_paths\n'
+																	'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+																	'LEFT JOIN paths as title_paths\n'
+																	'ON title_paths."path" = games_table.art_title_path\n'
+																	'LEFT JOIN paths as snapshot_paths\n'
+																	'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+																	'LEFT JOIN paths as fanart_paths\n'
+																	'ON fanart_paths."path" = games_table.art_fanart_path\n'
+																	'WHERE games_table.game_list = "{game_list_id}" AND {choice_query}{filter_to_1g1r}\n'
+																	'ORDER BY games_table.originaltitle COLLATE NOCASE ASC')
+		self.database['query']['get_games_from_choice_page'] = ('SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
+																'FROM games as games_table\n'
+																'LEFT JOIN game_list as game_lists_table\n'
+																'ON game_lists_table.label = games_table.game_list\n'
+																'LEFT JOIN paths as banner_paths\n'
+																'ON banner_paths."path" = games_table.art_banner_path\n'
+																'LEFT JOIN paths as box_paths\n'
+																'ON box_paths."path" = games_table.art_box_path\n'
+																'LEFT JOIN paths as clearlogo_paths\n'
+																'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+																'LEFT JOIN paths as title_paths\n'
+																'ON title_paths."path" = games_table.art_title_path\n'
+																'LEFT JOIN paths as snapshot_paths\n'
+																'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+																'LEFT JOIN paths as fanart_paths\n'
+																'ON fanart_paths."path" = games_table.art_fanart_path\n'
+																'WHERE games_table.game_list = "{game_list_id}" AND {choice_query}{filter_to_1g1r}\n'
+																'ORDER BY games_table.originaltitle COLLATE NOCASE ASC\n'
+																'LIMIT {items_per_page} OFFSET {starting_number}')
+		self.database['query']['game_launch_info_from_id'] = ('SELECT games_table.uid,games_table.user_game_launcher,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,game_list_table.default_global_post_download_process,game_list_table.default_global_launcher,game_list_table.user_post_download_process,game_list_table.user_global_launcher,game_list_table.user_global_launch_addon,game_list_table.user_global_external_launch_command,game_list_table.user_global_download_path,game_list_table.default_global_launch_addon,game_list_table.default_global_external_launch_command\n'
+															'FROM games as games_table\n'
+															'LEFT JOIN game_list as game_list_table on games_table.game_list = game_list_table.label\n'
+															'WHERE games_table.uid = "{game_id}"')
+		self.database['query']['get_game_from_id'] = ('SELECT games_table.uid,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as platform,games_table.genres AS genres,games_table.studio as publisher,games_table.year,games_table.size,games_table.plot as overview,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,game_list_table.default_global_post_download_process,game_list_table.default_global_launcher,game_list_table.user_post_download_process,game_list_table.user_global_launcher,game_list_table.user_global_launch_addon,game_list_table.user_global_external_launch_command,game_list_table.user_global_download_path,game_list_table.default_global_launch_addon,game_list_table.default_global_external_launch_command,games_table.rom\n'
+														'FROM games as games_table\n'
+														'LEFT JOIN game_list as game_list_table on games_table.game_list = game_list_table.label\n'
+														'LEFT JOIN paths as banner_paths\n'
+														'ON banner_paths."path" = games_table.art_banner_path\n'
+														'LEFT JOIN paths as box_paths\n'
+														'ON box_paths."path" = games_table.art_box_path\n'
+														'LEFT JOIN paths as clearlogo_paths\n'
+														'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+														'LEFT JOIN paths as title_paths\n'
+														'ON title_paths."path" = games_table.art_title_path\n'
+														'LEFT JOIN paths as snapshot_paths\n'
+														'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+														'LEFT JOIN paths as fanart_paths\n'
+														'ON fanart_paths."path" = games_table.art_fanart_path\n'
+														'WHERE games_table.uid = "{game_id}"')
+		self.database['query']['get_game_list_launcher'] = ('SELECT game_lists_table.default_global_launcher,game_lists_table.user_global_launcher\n'
+															'FROM game_list as game_lists_table\n'
+															'WHERE game_lists_table.label = "{game_list_id}"')
+		self.database['query']['get_game_list_parameter'] = ('SELECT {parameter}\n'
+															'FROM game_list as game_lists_table\n'
+															'WHERE game_lists_table.label = "{game_list_id}"')
+		self.database['query']['get_game_list_user_global_external_launch_command'] = ('SELECT game_lists_table.default_global_external_launch_command,game_lists_table.user_global_external_launch_command\n'
+																						'FROM game_list as game_lists_table\n'
+																						'WHERE game_lists_table.label = "{game_list_id}"')
+		self.database['query']['get_game_list_info'] = ('SELECT game_lists_table.label,game_lists_table.system,game_lists_table.total_1g1r_games,game_lists_table.total_games,game_lists_table.default_global_external_launch_command,core_info_table.display_name as default_global_external_launch_core_name,game_lists_table.default_global_launch_addon,game_lists_table.default_global_launcher,game_lists_table.default_global_post_download_process,game_lists_table.user_global_download_path,game_lists_table.user_global_external_launch_command,game_lists_table.user_global_launch_addon,game_lists_table.user_global_launcher,game_lists_table.user_global_visibility,game_lists_table.user_post_download_process,COUNT(games_table.user_is_favorite) as total_favorited_games\n'
+														'FROM game_list as game_lists_table\n'
+														'LEFT JOIN games as games_table on games_table.game_list = game_lists_table.label and games_table.user_is_favorite is NOT NULL\n'
+														'LEFT JOIN core_info as core_info_table on core_info_table.core_stem = game_lists_table.default_global_external_launch_command\n'
+														'WHERE game_lists_table.label = "{game_list_id}"')
+		self.database['query']['search_random_get_game_lists'] = ('SELECT game_lists_table.label as label,NULL as next_path,poster_paths.url||game_lists_table.poster as thumb\n'
+																'FROM game_list as game_lists_table\n'
+																'LEFT JOIN paths as poster_paths\n'
+																'ON poster_paths."path" = game_lists_table.poster_path\n'
+																'WHERE game_lists_table.user_global_visibility is NULL\n'
+																'ORDER BY game_lists_table.label COLLATE NOCASE ASC')
+		self.database['query']['get_hidden_game_lists'] = ('SELECT game_lists_table.label as label,NULL as next_path,poster_paths.url||game_lists_table.poster as thumb\n'
+															'FROM game_list as game_lists_table\n'
+															'LEFT JOIN paths as poster_paths\n'
+															'ON poster_paths."path" = game_lists_table.poster_path\n'
+															'WHERE game_lists_table.user_global_visibility = "hidden"\n'
+															'ORDER BY game_lists_table.label COLLATE NOCASE ASC')
+		self.database['query']['search_random_choose_all'] = ('SELECT choose_table.label as label,NULL as next_path,thumb_paths.url||choose_table.thumb as thumb\n'
+																'FROM {table_select} as choose_table\n'
+																'LEFT JOIN paths as thumb_paths\n'
+																'ON thumb_paths."path" = choose_table.thumb_path\n'
+																'ORDER BY choose_table.label COLLATE NOCASE ASC')
+		self.database['query']['search_random_choose_matching_lists'] = ('SELECT choose_table.label as label,NULL as next_path,thumb_paths.url||choose_table.thumb as thumb\n'
+																		'FROM {table_select} as choose_table\n'
+																		'LEFT JOIN paths as thumb_paths\n'
+																		'ON thumb_paths."path" = choose_table.thumb_path\n'
+																		'WHERE choose_table.matching_lists {game_list_query}\n'
+																		'ORDER BY choose_table.label COLLATE NOCASE ASC')
+		self.database['query']['browse_favorites'] = ('SELECT browse_table.label,browse_table.next_path,browse_table.localization,browse_table.plot,thumb_paths.url||browse_table.thumb as thumb,poster_paths.url||browse_table.poster as poster,banner_paths.url||browse_table.banner as banner,(SELECT url FROM default_art WHERE art_type="fanart") as fanart,clearlogo_paths.url||browse_table.clearlogo as clearlogo\n'
+														'FROM choose_favorite as browse_table\n'
+														'LEFT JOIN paths as thumb_paths\n'
+														'ON thumb_paths."path" = browse_table.thumb_path\n'
+														'LEFT JOIN paths as poster_paths\n'
+														'ON poster_paths."path" = browse_table.poster_path\n'
+														'LEFT JOIN paths as banner_paths\n'
+														'ON banner_paths."path" = browse_table.banner_path\n'
+														'LEFT JOIN paths as clearlogo_paths\n'
+														'ON clearlogo_paths."path" = browse_table.clearlogo_path')
+		self.database['query']['favorites_by_all_no_page'] = ('SELECT * FROM (\n'
+															'SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.system as "tvshowtitle",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,{landscape_to_game_art} as landscape,{thumbnail_to_game_art} as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
+															'FROM favorites as fav_table\n'
+															'LEFT JOIN games as games_table\n'
+															'ON games_table.uid = fav_table.uid\n'
+															'LEFT JOIN game_list as game_lists_table\n'
+															'ON game_lists_table.label = games_table.game_list\n'
+															'LEFT JOIN paths as banner_paths\n'
+															'ON banner_paths."path" = games_table.art_banner_path\n'
+															'LEFT JOIN paths as box_paths\n'
+															'ON box_paths."path" = games_table.art_box_path\n'
+															'LEFT JOIN paths as clearlogo_paths\n'
+															'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+															'LEFT JOIN paths as title_paths\n'
+															'ON title_paths."path" = games_table.art_title_path\n'
+															'LEFT JOIN paths as snapshot_paths\n'
+															'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+															'LEFT JOIN paths as fanart_paths\n'
+															'ON fanart_paths."path" = games_table.art_fanart_path\n'
+															'WHERE fav_table.uid is not NULL\n'
+															'UNION\n'
+															'SELECT "search_from_link?query="||fav_table2.link_query as next_path,fav_table2.fav_group AS originaltitle,fav_table2.fav_group as label,fav_table2.fav_group as title,fav_table2.fav_group as sorttitle,"IAGL Search" as "set","IAGL Search" as "tvshowtitle",NULL AS genre,NULL as studio,NULL AS date,NULL as premiered,NULL as year,NULL as mpaa,NULL as rating,NULL as tag,NULL as size,"IAGL Search Link" as plot,NULL as country,NULL as trailer,NULL as lastplayed,NULL as playcount,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_banner.png" as banner,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_poster.png" as poster,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_clearlogo.png" as clearlogo,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_landscape.png" as landscape,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_thumb.png" as thumb,"special://xbmc/addons/plugin.program.iagl/fanart.png" as fanart\n'
+															'FROM favorites as fav_table2\n'
+															'WHERE fav_table2.is_search_link = 1\n'
+															'UNION\n'
+															'SELECT "random_from_link?query="||fav_table3.link_query as next_path,fav_table3.fav_group AS originaltitle,fav_table3.fav_group as label,fav_table3.fav_group as title,fav_table3.fav_group as sorttitle,"IAGL Search" as "set","IAGL Search" as "tvshowtitle",NULL AS genre,NULL as studio,NULL AS date,NULL as premiered,NULL as year,NULL as mpaa,NULL as rating,NULL as tag,NULL as size,"IAGL Random Link" as plot,NULL as country,NULL as trailer,NULL as lastplayed,NULL as playcount,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_banner.png" as banner,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_poster.png" as poster,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_clearlogo.png" as clearlogo,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_landscape.png" as landscape,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_thumb.png" as thumb,"special://xbmc/addons/plugin.program.iagl/fanart.png" as fanart\n'
+															'FROM favorites as fav_table3\n'
+															'WHERE fav_table3.is_random_link = 1\n'
+															') as combined_table\n'
+															'ORDER BY combined_table.originaltitle COLLATE NOCASE ASC')
+		self.database['query']['favorites_by_all_page'] = ('SELECT * FROM (\n'
+															'SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.system as "tvshowtitle",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,{landscape_to_game_art} as landscape,{thumbnail_to_game_art} as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
+															'FROM favorites as fav_table\n'
+															'LEFT JOIN games as games_table\n'
+															'ON games_table.uid = fav_table.uid\n'
+															'LEFT JOIN game_list as game_lists_table\n'
+															'ON game_lists_table.label = games_table.game_list\n'
+															'LEFT JOIN paths as banner_paths\n'
+															'ON banner_paths."path" = games_table.art_banner_path\n'
+															'LEFT JOIN paths as box_paths\n'
+															'ON box_paths."path" = games_table.art_box_path\n'
+															'LEFT JOIN paths as clearlogo_paths\n'
+															'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+															'LEFT JOIN paths as title_paths\n'
+															'ON title_paths."path" = games_table.art_title_path\n'
+															'LEFT JOIN paths as snapshot_paths\n'
+															'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+															'LEFT JOIN paths as fanart_paths\n'
+															'ON fanart_paths."path" = games_table.art_fanart_path\n'
+															'WHERE fav_table.uid is not NULL\n'
+															'UNION\n'
+															'SELECT "search_from_link?query="||fav_table2.link_query as next_path,fav_table2.fav_group AS originaltitle,fav_table2.fav_group as label,fav_table2.fav_group as title,fav_table2.fav_group as sorttitle,"IAGL Search" as "set","IAGL Search" as "tvshowtitle",NULL AS genre,NULL as studio,NULL AS date,NULL as premiered,NULL as year,NULL as mpaa,NULL as rating,NULL as tag,NULL as size,"IAGL Search Link" as plot,NULL as country,NULL as trailer,NULL as lastplayed,NULL as playcount,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_banner.png" as banner,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_poster.png" as poster,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_clearlogo.png" as clearlogo,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_landscape.png" as landscape,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_thumb.png" as thumb,"special://xbmc/addons/plugin.program.iagl/fanart.png" as fanart\n'
+															'FROM favorites as fav_table2\n'
+															'WHERE fav_table2.is_search_link = 1\n'
+															'UNION\n'
+															'SELECT "random_from_link?query="||fav_table3.link_query as next_path,fav_table3.fav_group AS originaltitle,fav_table3.fav_group as label,fav_table3.fav_group as title,fav_table3.fav_group as sorttitle,"IAGL Search" as "set","IAGL Search" as "tvshowtitle",NULL AS genre,NULL as studio,NULL AS date,NULL as premiered,NULL as year,NULL as mpaa,NULL as rating,NULL as tag,NULL as size,"IAGL Random Link" as plot,NULL as country,NULL as trailer,NULL as lastplayed,NULL as playcount,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_banner.png" as banner,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_poster.png" as poster,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_clearlogo.png" as clearlogo,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_landscape.png" as landscape,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_thumb.png" as thumb,"special://xbmc/addons/plugin.program.iagl/fanart.png" as fanart\n'
+															'FROM favorites as fav_table3\n'
+															'WHERE fav_table3.is_random_link = 1\n'
+															') as combined_table\n'
+															'ORDER BY combined_table.originaltitle COLLATE NOCASE ASC\n'
+															'LIMIT {items_per_page} OFFSET {starting_number}')
+		self.database['query']['favorites_by_group_no_page'] = ('SELECT * FROM (\n'
+															'SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.system as "tvshowtitle",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,{landscape_to_game_art} as landscape,{thumbnail_to_game_art} as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
+															'FROM favorites as fav_table\n'
+															'LEFT JOIN games as games_table\n'
+															'ON games_table.uid = fav_table.uid\n'
+															'LEFT JOIN game_list as game_lists_table\n'
+															'ON game_lists_table.label = games_table.game_list\n'
+															'LEFT JOIN paths as banner_paths\n'
+															'ON banner_paths."path" = games_table.art_banner_path\n'
+															'LEFT JOIN paths as box_paths\n'
+															'ON box_paths."path" = games_table.art_box_path\n'
+															'LEFT JOIN paths as clearlogo_paths\n'
+															'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+															'LEFT JOIN paths as title_paths\n'
+															'ON title_paths."path" = games_table.art_title_path\n'
+															'LEFT JOIN paths as snapshot_paths\n'
+															'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+															'LEFT JOIN paths as fanart_paths\n'
+															'ON fanart_paths."path" = games_table.art_fanart_path\n'
+															'WHERE fav_table.uid is not NULL and fav_table.fav_group = "{group_id}"\n'
+															'UNION\n'
+															'SELECT "search_from_link?query="||fav_table2.link_query as next_path,fav_table2.fav_group AS originaltitle,fav_table2.fav_group as label,fav_table2.fav_group as title,fav_table2.fav_group as sorttitle,"IAGL Search" as "set","IAGL Search" as "tvshowtitle",NULL AS genre,NULL as studio,NULL AS date,NULL as premiered,NULL as year,NULL as mpaa,NULL as rating,NULL as tag,NULL as size,"IAGL Search Link" as plot,NULL as country,NULL as trailer,NULL as lastplayed,NULL as playcount,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_banner.png" as banner,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_poster.png" as poster,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_clearlogo.png" as clearlogo,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_landscape.png" as landscape,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_thumb.png" as thumb,"special://xbmc/addons/plugin.program.iagl/fanart.png" as fanart\n'
+															'FROM favorites as fav_table2\n'
+															'WHERE fav_table2.is_search_link = 1 and fav_table2.fav_group = "{group_id}"\n'
+															'UNION\n'
+															'SELECT "random_from_link?query="||fav_table3.link_query as next_path,fav_table3.fav_group AS originaltitle,fav_table3.fav_group as label,fav_table3.fav_group as title,fav_table3.fav_group as sorttitle,"IAGL Search" as "set","IAGL Search" as "tvshowtitle",NULL AS genre,NULL as studio,NULL AS date,NULL as premiered,NULL as year,NULL as mpaa,NULL as rating,NULL as tag,NULL as size,"IAGL Random Link" as plot,NULL as country,NULL as trailer,NULL as lastplayed,NULL as playcount,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_banner.png" as banner,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_poster.png" as poster,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_clearlogo.png" as clearlogo,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_landscape.png" as landscape,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_thumb.png" as thumb,"special://xbmc/addons/plugin.program.iagl/fanart.png" as fanart\n'
+															'FROM favorites as fav_table3\n'
+															'WHERE fav_table3.is_random_link = 1 and fav_table3.fav_group = "{group_id}"\n'
+															') as combined_table\n'
+															'ORDER BY combined_table.originaltitle COLLATE NOCASE ASC')
+		self.database['query']['favorites_by_group_page'] = ('SELECT * FROM (\n'
+															'SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.system as "tvshowtitle",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,{landscape_to_game_art} as landscape,{thumbnail_to_game_art} as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
+															'FROM favorites as fav_table\n'
+															'LEFT JOIN games as games_table\n'
+															'ON games_table.uid = fav_table.uid\n'
+															'LEFT JOIN game_list as game_lists_table\n'
+															'ON game_lists_table.label = games_table.game_list\n'
+															'LEFT JOIN paths as banner_paths\n'
+															'ON banner_paths."path" = games_table.art_banner_path\n'
+															'LEFT JOIN paths as box_paths\n'
+															'ON box_paths."path" = games_table.art_box_path\n'
+															'LEFT JOIN paths as clearlogo_paths\n'
+															'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+															'LEFT JOIN paths as title_paths\n'
+															'ON title_paths."path" = games_table.art_title_path\n'
+															'LEFT JOIN paths as snapshot_paths\n'
+															'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+															'LEFT JOIN paths as fanart_paths\n'
+															'ON fanart_paths."path" = games_table.art_fanart_path\n'
+															'WHERE fav_table.uid is not NULL and fav_table.fav_group = "{group_id}"\n'
+															'UNION\n'
+															'SELECT "search_from_link?query="||fav_table2.link_query as next_path,fav_table2.fav_group AS originaltitle,fav_table2.fav_group as label,fav_table2.fav_group as title,fav_table2.fav_group as sorttitle,"IAGL Search" as "set","IAGL Search" as "tvshowtitle",NULL AS genre,NULL as studio,NULL AS date,NULL as premiered,NULL as year,NULL as mpaa,NULL as rating,NULL as tag,NULL as size,"IAGL Search Link" as plot,NULL as country,NULL as trailer,NULL as lastplayed,NULL as playcount,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_banner.png" as banner,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_poster.png" as poster,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_clearlogo.png" as clearlogo,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_landscape.png" as landscape,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_thumb.png" as thumb,"special://xbmc/addons/plugin.program.iagl/fanart.png" as fanart\n'
+															'FROM favorites as fav_table2\n'
+															'WHERE fav_table2.is_search_link = 1 and fav_table2.fav_group = "{group_id}"\n'
+															'UNION\n'
+															'SELECT "random_from_link?query="||fav_table3.link_query as next_path,fav_table3.fav_group AS originaltitle,fav_table3.fav_group as label,fav_table3.fav_group as title,fav_table3.fav_group as sorttitle,"IAGL Search" as "set","IAGL Search" as "tvshowtitle",NULL AS genre,NULL as studio,NULL AS date,NULL as premiered,NULL as year,NULL as mpaa,NULL as rating,NULL as tag,NULL as size,"IAGL Random Link" as plot,NULL as country,NULL as trailer,NULL as lastplayed,NULL as playcount,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_banner.png" as banner,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_poster.png" as poster,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_clearlogo.png" as clearlogo,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_landscape.png" as landscape,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_thumb.png" as thumb,"special://xbmc/addons/plugin.program.iagl/fanart.png" as fanart\n'
+															'FROM favorites as fav_table3\n'
+															'WHERE fav_table3.is_random_link = 1 and fav_table3.fav_group = "{group_id}"\n'
+															') as combined_table\n'
+															'ORDER BY combined_table.originaltitle COLLATE NOCASE ASC\n'
+															'LIMIT {items_per_page} OFFSET {starting_number}')
+		self.database['query']['favorites_by_group'] = ('SELECT * FROM (\n'
+														'SELECT fav_table.fav_group as label,fav_table.fav_group as next_path,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
+														'FROM favorites as fav_table\n'
+														'LEFT JOIN games as games_table\n'
+														'ON games_table.uid = (SELECT fav_table2.uid FROM favorites as fav_table2 WHERE fav_table2.fav_group = fav_table.fav_group ORDER BY RANDOM())\n'
+														'LEFT JOIN paths as banner_paths\n'
+														'ON banner_paths."path" = games_table.art_banner_path\n'
+														'LEFT JOIN paths as box_paths\n'
+														'ON box_paths."path" = games_table.art_box_path\n'
+														'LEFT JOIN paths as clearlogo_paths\n'
+														'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+														'LEFT JOIN paths as title_paths\n'
+														'ON title_paths."path" = games_table.art_title_path\n'
+														'LEFT JOIN paths as snapshot_paths\n'
+														'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+														'LEFT JOIN paths as fanart_paths\n'
+														'ON fanart_paths."path" = games_table.art_fanart_path\n'
+														'WHERE fav_table.uid is not NULL\n'
+														'GROUP BY fav_table.fav_group\n'
+														'UNION\n'
+														'SELECT fav_table2.fav_group as label,fav_table2.fav_group as next_path,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_banner.png" as banner,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_poster.png" as poster,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_clearlogo.png" as clearlogo,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_landscape.png" as landscape,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_thumb.png" as thumb,"special://xbmc/addons/plugin.program.iagl/fanart.png" as fanart\n'
+														'FROM favorites as fav_table2\n'
+														'WHERE fav_table2.is_search_link = 1\n'
+														'GROUP BY fav_table2.fav_group\n'
+														'UNION\n'
+														'SELECT fav_table3.fav_group as label,fav_table3.fav_group as next_path,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_banner.png" as banner,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_poster.png" as poster,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_clearlogo.png" as clearlogo,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_landscape.png" as landscape,"special://xbmc/addons/plugin.program.iagl/assets/default/favorites_thumb.png" as thumb,"special://xbmc/addons/plugin.program.iagl/fanart.png" as fanart\n'
+														'FROM favorites as fav_table3\n'
+														'WHERE fav_table3.is_random_link = 1\n'
+														'GROUP BY fav_table3.fav_group\n'
+														') as combined_table\n'
+														'GROUP BY combined_table.label\n'
+														'ORDER BY combined_table.label COLLATE NOCASE ASC')
+		self.database['query']['history_no_page'] = ('SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.system as "tvshowtitle",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,{landscape_to_game_art} as landscape,{thumbnail_to_game_art} as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
+													'FROM history as history_table\n'
+													'LEFT JOIN games as games_table\n'
+													'ON games_table.uid = history_table.uid\n'
+													'LEFT JOIN game_list as game_lists_table\n'
+													'ON game_lists_table.label = games_table.game_list\n'
+													'LEFT JOIN paths as banner_paths\n'
+													'ON banner_paths."path" = games_table.art_banner_path\n'
+													'LEFT JOIN paths as box_paths\n'
+													'ON box_paths."path" = games_table.art_box_path\n'
+													'LEFT JOIN paths as clearlogo_paths\n'
+													'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+													'LEFT JOIN paths as title_paths\n'
+													'ON title_paths."path" = games_table.art_title_path\n'
+													'LEFT JOIN paths as snapshot_paths\n'
+													'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+													'LEFT JOIN paths as fanart_paths\n'
+													'ON fanart_paths."path" = games_table.art_fanart_path\n'
+													'ORDER BY history_table.rowid DESC')
+		self.database['query']['history_page'] = ('SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.system as "tvshowtitle",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
+													'FROM history as history_table\n'
+													'LEFT JOIN games as games_table\n'
+													'ON games_table.uid = history_table.uid\n'
+													'LEFT JOIN game_list as game_lists_table\n'
+													'ON game_lists_table.label = games_table.game_list\n'
+													'LEFT JOIN game_list as game_lists_table\n'
+													'ON game_lists_table.label = games_table.game_list\n'
+													'LEFT JOIN paths as banner_paths\n'
+													'ON banner_paths."path" = games_table.art_banner_path\n'
+													'LEFT JOIN paths as box_paths\n'
+													'ON box_paths."path" = games_table.art_box_path\n'
+													'LEFT JOIN paths as clearlogo_paths\n'
+													'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+													'LEFT JOIN paths as title_paths\n'
+													'ON title_paths."path" = games_table.art_title_path\n'
+													'LEFT JOIN paths as snapshot_paths\n'
+													'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+													'LEFT JOIN paths as fanart_paths\n'
+													'ON fanart_paths."path" = games_table.art_fanart_path\n'
+													'ORDER BY history_table.rowid ASC\n'
+													'LIMIT {items_per_page} OFFSET {starting_number}')
+		self.database['query']['get_favorite_group_names'] = ('SELECT DISTINCT fav_table.fav_group as label\n'
+														'FROM favorites as fav_table')
+		self.database['query']['insert_favorite'] = ('INSERT INTO favorites(uid,fav_group,is_search_link,is_random_link,link_query)\n'
+													'VALUES(?,?,?,?,?)')
+		self.database['query']['mark_game_as_favorite'] = 'UPDATE games SET user_is_favorite=1 WHERE uid="{}"'
+		self.database['query']['unmark_game_as_favorite'] = 'UPDATE games SET user_is_favorite=NULL WHERE uid="{}"'
+		self.database['query']['insert_history'] = ('INSERT INTO history(uid)\n'
+													'VALUES(?)')
+		self.database['query']['limit_history'] = ('DELETE FROM history\n'
+													'WHERE uid = (SELECT history_table.uid FROM history as history_table WHERE history_table.rowid>{history_limit})')
+		self.database['query']['delete_history_from_uid'] = 'DELETE FROM history WHERE uid = "{}"'
+		self.database['query']['get_total_history'] = 'SELECT count(*) as total_history FROM history'
+		self.database['query']['delete_favorite_from_uid'] = 'DELETE FROM favorites WHERE uid="{}"'
+		self.database['query']['delete_favorite_from_link'] = 'DELETE FROM favorites WHERE link_query="{}"'
+		self.database['query']['search_games'] = ('SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.system as "tvshowtitle",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
+												'FROM games as games_table\n'
+												'LEFT JOIN game_list as game_lists_table\n'
+												'ON game_lists_table.label = games_table.game_list\n'
+												'LEFT JOIN paths as banner_paths\n'
+												'ON banner_paths."path" = games_table.art_banner_path\n'
+												'LEFT JOIN paths as box_paths\n'
+												'ON box_paths."path" = games_table.art_box_path\n'
+												'LEFT JOIN paths as clearlogo_paths\n'
+												'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+												'LEFT JOIN paths as title_paths\n'
+												'ON title_paths."path" = games_table.art_title_path\n'
+												'LEFT JOIN paths as snapshot_paths\n'
+												'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+												'LEFT JOIN paths as fanart_paths\n'
+												'ON fanart_paths."path" = games_table.art_fanart_path\n'
+												'{game_search_query}\n'
+												'ORDER BY games_table.originaltitle COLLATE NOCASE ASC')
+		self.database['query']['random_games'] = ('SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.system as "tvshowtitle",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
+												'FROM games as games_table\n'
+												'LEFT JOIN game_list as game_lists_table\n'
+												'ON game_lists_table.label = games_table.game_list\n'
+												'LEFT JOIN paths as banner_paths\n'
+												'ON banner_paths."path" = games_table.art_banner_path\n'
+												'LEFT JOIN paths as box_paths\n'
+												'ON box_paths."path" = games_table.art_box_path\n'
+												'LEFT JOIN paths as clearlogo_paths\n'
+												'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+												'LEFT JOIN paths as title_paths\n'
+												'ON title_paths."path" = games_table.art_title_path\n'
+												'LEFT JOIN paths as snapshot_paths\n'
+												'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+												'LEFT JOIN paths as fanart_paths\n'
+												'ON fanart_paths."path" = games_table.art_fanart_path\n'
+												'{game_search_query}\n'
+												'ORDER BY RANDOM() LIMIT {num_results}')
+		self.database['query']['get_playcount_and_lastplayed'] = 'SELECT playcount,lastplayed FROM games WHERE uid="{}"'
+		self.database['query']['update_playcount_and_lastplayed'] = 'UPDATE games SET playcount={},lastplayed="{}" WHERE uid="{}"'
+		self.database['query']['update_game_list_user_parameter'] = 'UPDATE game_list set {parameter}="{new_value}" WHERE label="{game_list_id}"'
+		self.database['query']['reset_game_list_user_parameter'] = 'UPDATE game_list set {parameter}=NULL WHERE label="{game_list_id}"'
+		self.database['query']['unhide_game_lists'] = 'UPDATE game_list set user_global_visibility=NULL WHERE {}'
+		self.database['query']['get_retroarch_default_commands'] = 'SELECT * FROM external_commands WHERE os="{user_launch_os}" and is_retroarch=1 and uses_applaunch={applaunch} and uses_apppause={appause}'
+		self.database['query']['get_retroarch_android'] = dict()
+		self.database['query']['get_retroarch_android']['commands'] = 'SELECT display_name,corename,systemname,REPLACE(REPLACE(REPLACE((SELECT command FROM external_commands WHERE os="{}" and is_retroarch=1 LIMIT 1),"XXCORE_STEMXX",core_stem),"XXCFG_PATHXX","{}"),"XXCORE_BASE_PATHXX","{}") as command FROM core_info'
+		self.database['query']['get_retroarch_android']['activities'] = 'SELECT display_name,corename,systemname,REPLACE(REPLACE(REPLACE((SELECT activity FROM external_commands WHERE os="{}" and is_retroarch=1 LIMIT 1),"XXCORE_STEMXX",core_stem),"XXCFG_PATHXX","{}"),"XXCORE_BASE_PATHXX","{}") as command FROM core_info'
+		self.database['query']['get_other_emulator_commands'] = 'SELECT * FROM external_commands WHERE os="{}" and is_retroarch=0 and uses_applaunch={} and uses_apppause={}'
+		self.database['query']['get_other_emulator_android'] = dict()
+		self.database['query']['get_other_emulator_android']['commands'] = 'SELECT display_name,command FROM external_commands WHERE os="{}" and is_retroarch=0'
+		self.database['query']['get_other_emulator_android']['activities'] = 'SELECT display_name,activity as command FROM external_commands WHERE os="{}" and is_retroarch=0'
+		# self.emulators = dict()
+		# self.emulators['additional_emulator_parameters'] = [{'name': 'atari800-5200', 'exe': 'atari800', 'args': '-fullscreen -5200_rom "[romfilename]"', 'system': 'Atari 5200', 'source': 'thegamesdb.net'}, {'name': 'daphne', 'args': '[name] vldp -framefile [rompath]../vldp/[name]/[name].txt -blank_searches -min_seek_delay 1000 -seek_frames_per_ms 20 -homedir [rompath].. -sound_buffer 2048 -fullscreen -fastboot -useoverlaysb 0', 'exts': '.zip', 'system': 'Arcade'}, {'name': 'dolphin-emu', 'args': '-b -e "[romfilename]"', 'exts': '.dol;.elf;.iso;.gcm;.wad;.wbfs;.gbz;.ciso', 'system': 'Nintendo Wii', 'source': 'thegamesdb.net', 'Windows': {'path': '%PROGRAMFILES%/Dolphin/', 'exe': 'Dolphin'}}, {'name': 'dosbox', 'args': '-conf -noconsole "[romfilename]"', 'rompath': '$HOME/dosbox', 'exts': '.conf', 'system': 'PC', 'source': 'thegamesdb.net'}, {'name': 'fbalpha', 'exe': ['fbalpha', 'fba64'], 'args': '"[romfilename]" -r 640x480x32', 'exts': '.zip', 'system': 'Arcade', 'source': 'thegamesdb.net'}, {'name': 'fs-uae', 'args': '"[romfilename]" --fullscreen', 'exts': '.fs-uae', 'system': 'Amiga', 'source': 'thegamesdb.net', 'hotkey': 'Escape'}, {'name': 'fusion', 'args': '"[romfilename]" -fullscreen', 'exts': '.sms;.sg;.sc;.mv;.gg;.cue;.bin;.zip', 'system': 'Sega Genesis', 'source': 'thegamesdb.net'}, {'name': 'gens', 'args': '--fs --quickexit "[romfilename]"', 'exts': '.zip;.md', 'system': 'Sega Genesis', 'source': 'thegamesdb.net'}, {'name': 'mame', 'custom': 'mame_init.nut'}, {'name': 'mednafen', 'args': '"[romfilename]"', 'exts': '.zip'}, {'name': 'mupen64plus', 'exe': ['mupen64plus', 'mupen64plus-ui-console'], 'args': '--fullscreen "[romfilename]"', 'exts': '.z64;.n64;v64', 'system': 'Nintendo 64', 'source': 'thegamesdb.net'}, {'name': 'nestopia', 'args': '"[romfilename]"', 'exts': '.nes;.unf;.unif;.fds;.zip;.rar;.7z', 'system': 'Nintendo Entertainment System (NES)', 'source': 'thegamesdb.net'}, {'name': 'pcsx', 'args': '-nogui -cdfile "[romfilename]"', 'exts': '.iso;.bin;.mdf;.img', 'system': 'Sony Playstation', 'source': 'thegamesdb.net'}, {'name': 'pcsx2', 'exe': ['pcsx2', 'PCSX2'], 'args': '"[romfilename]" --fullscreen --nogui', 'exts': '.iso;.bin;.mdf;.img', 'system': 'Sony Playstation 2', 'source': 'thegamesdb.net'}, {'name': 'scummvm', 'args': '-f [name]', 'rompath': '', 'system': 'PC', 'source': 'scummvm', 'Windows': {'path': '%PROGRAMFILESx86%/ScummVM/'}}, {'name': 'snes9x', 'args': '"[romfilename]"', 'exts': '.zip;.7z;.bin;.fig;.mgd;.sfc;.smc;.swc', 'system': 'Super Nintendo (SNES)', 'source': 'thegamesdb.net', 'Linux': {'exe': ['snes9x', 'snes9x-gtk']}}, {'name': 'steam', 'args': '-applaunch [name]', 'exts': '.acf', 'system': 'PC', 'source': 'steam', 'min_run': '5', 'Linux': {'rompath': '$HOME/.steam/steam/steamapps'}, 'Windows': {'path': '%PROGRAMFILES%/Steam/', 'exe': 'Steam', 'rompath': '%PROGRAMFILES%/Steam/SteamApps'}}, {'name': 'stella', 'args': '-fullscreen 1 "[romfilename]"', 'exts': '.zip,.gz,.a26,.bin,.rom', 'system': 'Atari 2600', 'source': 'thegamesdb.net'}, {'name': 'supermodel', 'args': '"[romfilename]" -fullscreen', 'exts': '.zip', 'system': 'Arcade', 'source': 'thegamesdb.net'}, {'name': 'vice', 'exe': 'x64', 'args': '-autostart "[romfilename]" +confirmexit -fullscreen -autostart-warp', 'exts': '.crt;.d64;.g64;.tap;.x64;.t64;.prg;.vsf;.zip', 'system': 'Commodore 64', 'source': 'thegamesdb.net', 'hotkey': 'Escape'}, {'name': 'virtualjaguar', 'args': '"[romfilename]" -f', 'romext': '.zip', 'system': 'Atari Jaguar', 'source': 'thegamesdb.net', 'hotkey': 'Escape'}, {'name': 'windows_games', 'OS': 'Windows', 'exe': 'cmd', 'args': '/c "[romfilename]"', 'romext': '.bat;.exe;.com', 'system': 'PC', 'source': 'thegamesdb.net'}, {'name': 'zsnes', 'args': '-m "[romfilename]"', 'exts': '.zip;.bin;.fig;.mgd;.sfc;.smc;.swc', 'system': 'Super Nintendo (SNES)', 'source': 'thegamesdb.net'}] #https://github.com/mickelson/attract/blob/master/config/emulators/script/db.nut
+

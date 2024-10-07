@@ -1,903 +1,1629 @@
-#Internet Archive Game Launcher v3.X
+#Internet Archive Game Launcher v4.X
 #Zach Morris
 #https://github.com/zach-morris/plugin.program.iagl
-# from kodi_six import xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
-import xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
+import xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs, json
 xbmc.log(msg='IAGL:  Lets Play!',level=xbmc.LOGINFO)
 xbmc.log(msg='IAGL:  Version %(addon_version)s'%{'addon_version':xbmcaddon.Addon().getAddonInfo('version')},level=xbmc.LOGDEBUG)
-import routing, sys, json, re
-from urllib.parse import unquote_plus as url_unquote
-from random import sample as random_sample
-from resources.lib.main import iagl_addon
-from resources.lib import paginate
-from resources.lib.utils import clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, check_if_file_exists, check_if_dir_exists, clean_image_entry, clean_trailer_entry, loc_str, check_and_close_notification, get_history_listitem, get_netplay_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, get_uuid, generate_discord_announcement, get_blank_favorites_listitem, get_database_listitem, url_quote_query, delete_file_pathlib, remove_game_from_favorites, zachs_debug, ADDON_SPECIAL_PATH
-
-## Plugin Initialization Stuff ##
-SLEEP_HACK=50  #https://github.com/xbmc/xbmc/issues/18576
+from resources.lib import routing
+from resources.lib import config
+from resources.lib import database
+from resources.lib import download
+from resources.lib import netplay
+from resources.lib import post_process
+from resources.lib import launch
+from resources.lib import common
+from resources.lib import dialogs
+from urllib.parse import unquote
+# ## Plugin Initialization Stuff ##
+# SLEEP_HACK=50  #https://github.com/xbmc/xbmc/issues/18576
 plugin = routing.Plugin()
-iagl_addon = iagl_addon()
-iagl_download = None
-iagl_post_process = None
-iagl_launch = None
-xbmcplugin.setContent(plugin.handle,iagl_addon.settings.get('views').get('content_type')) #Define the content type per settings
-## Plugin Routes ##
+config = config.config()
+
+cm = common.common(config=config)
+db = database.database(config=config,media_type=cm.get_setting('media_type'))
+dl = download.download(config=config,ia_email=cm.get_setting('ia_u'),ia_password=cm.get_setting('ia_p'),dl_path=cm.get_setting('default_dl_path'),threads=cm.get_setting('dl_threads'),auto_login=False) #Dont login right away for speed, only set the dl path to the current default
+nt = netplay.netplay(config=config)
+pp = post_process.post_process(config=config)
+ln = launch.launch(config=config)
+dialogs = dialogs.dialogs(config=config)
+
+# ## Plugin Routes ##
 @plugin.route('/')
-def index_route():
-	if iagl_addon.settings.get('tou'):
-		if iagl_addon.settings.get('run_wizard'):
-			if xbmcgui.Dialog().yesno(loc_str(30005),loc_str(30046)+'?'):
-				xbmc.log(msg='IAGL:  Wizard was selected to be run on first launch', level=xbmc.LOGDEBUG)
-				xbmc.executebuiltin('RunScript(%(ADDON_SPECIAL_PATH)srun_IAGL_wizard.py)'%{'ADDON_SPECIAL_PATH':ADDON_SPECIAL_PATH})
-			else:
-				xbmc.log(msg='IAGL:  Wizard was selected to not be run on first launch', level=xbmc.LOGDEBUG)
-				xbmcaddon.Addon(id=iagl_addon.name).setSetting(id='iagl_run_wizard',value='false')
-		plugin.redirect(iagl_addon.settings.get('index_list').get('route'))
+def route_root():
+	xbmc.log(msg='IAGL:  Root',level=xbmc.LOGDEBUG)
+	if not cm.get_setting('tou'):
+		xbmc.executebuiltin('Dialog.Close(busydialog)')
+		TOU_dialog = dialogs.get_tou()
+		TOU_dialog.doModal()
+		del TOU_dialog
+		if not cm.get_setting('tou'):
+			xbmc.executebuiltin('Dialog.Close(busydialog)')
+			xbmc.sleep(config.defaults.get('sleep'))
+			xbmc.executebuiltin('ActivateWindow(home)')
+		else:
+			check_result = cm.check_db()
+			plugin.redirect(cm.get_setting('front_page_display'))
+			#Wizard to be setup
+			# if not cm.get_setting('wizard_run'):
+			# 	if xbmcgui.Dialog().yesno(cm.get_loc(30245),cm.get_loc(30244)):
+			# 		print('run wizard***********')
+			# 	else:
+			# 		plugin.redirect(cm.get_setting('front_page_display'))
+			# else:
+			# 	plugin.redirect(cm.get_setting('front_page_display'))
 	else:
-		plugin.redirect('/tou')
+		check_result = cm.check_db()
+		plugin.redirect(cm.get_setting('front_page_display'))
+		#Wizard to be setup
+		# if not cm.get_setting('wizard_run'):
+		# 	if xbmcgui.Dialog().yesno(cm.get_loc(30245),cm.get_loc(30244)):
+		# 		print('run wizard***********')
+		# 	else:
+		# 		plugin.redirect(cm.get_setting('front_page_display'))
+		# else:
+		# 	plugin.redirect(cm.get_setting('front_page_display'))
 
-@plugin.route('/tou')
-def show_tou():
-	from resources.lib.main import iagl_dialog_TOU
-	TOU_Dialog = iagl_dialog_TOU('IAGL-TOU.xml',iagl_addon.directory.get('addon').get('path'),'Default','1080i')
-	TOU_Dialog.doModal()
-	del TOU_Dialog
-	xbmc.sleep(500) #Small sleep call here to ensure the new setting is written to file
-	if get_setting_as(setting_type='bool',setting=xbmcaddon.Addon(id=iagl_addon.name).getSetting(id='iagl_hidden_bool_tou')): #Need to recall setting to get the new value instead of the old
-		if iagl_addon.settings.get('run_wizard'):
-			if xbmcgui.Dialog().yesno(loc_str(30005),loc_str(30046)+'?'):
-				xbmc.log(msg='IAGL:  Wizard was selected to be run on first launch', level=xbmc.LOGDEBUG)
-				xbmc.executebuiltin('RunScript(%(ADDON_SPECIAL_PATH)srun_IAGL_wizard.py)'%{'ADDON_SPECIAL_PATH':ADDON_SPECIAL_PATH})
-			else:
-				xbmc.log(msg='IAGL:  Wizard was selected to not be run on first launch', level=xbmc.LOGDEBUG)
-				xbmcaddon.Addon(id=iagl_addon.name).setSetting(id='iagl_run_wizard',value='false')
-		plugin.redirect(iagl_addon.settings.get('index_list').get('route'))
+@plugin.route('/browse')
+def view_browse():
+	xbmc.log(msg='IAGL:  /browse',level=xbmc.LOGDEBUG)
+	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),list_item,True) for list_item,item_path in db.query_db(db.get_query('browse')) if isinstance(list_item,xbmcgui.ListItem)])
+	if db.get_total_history()>0:
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/history'),cm.get_history_li(),True)])
+	xbmcplugin.endOfDirectory(plugin.handle)
+
+@plugin.route('/all')
+def view_all():
+	xbmc.log(msg='IAGL:  /all',level=xbmc.LOGDEBUG)
+	# choose_from_list will be replaced by setting
+	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format(item_path,'choose_from_list')),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_list'),True) if isinstance(list_item.getProperty('total_games'),str) and list_item.getProperty('total_games').isdigit() and int(list_item.getProperty('total_games'))>1 else (plugin.url_for_path('{}/{}'.format(item_path,'by_all')),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_list'),True) for list_item,item_path in db.query_db(db.get_query('all_game_lists',game_list_clearlogo_to_art=cm.get_setting('game_list_clearlogo_to_art'))) if isinstance(list_item,xbmcgui.ListItem)])
+	for sm in config.listitem.get('sort_methods').get('all'):
+		xbmcplugin.addSortMethod(plugin.handle,sm)
+	xbmcplugin.endOfDirectory(plugin.handle)
+
+@plugin.route('/categories')
+def view_categories():
+	xbmc.log(msg='IAGL:  /categories',level=xbmc.LOGDEBUG)
+	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),list_item,True) for list_item,item_path in db.query_db(db.get_query('categories')) if isinstance(list_item,xbmcgui.ListItem)])
+	for sm in config.listitem.get('sort_methods').get('categories'):
+		xbmcplugin.addSortMethod(plugin.handle,sm)
+	xbmcplugin.endOfDirectory(plugin.handle)
+
+@plugin.route('/groups')
+def view_groups():
+	xbmc.log(msg='IAGL:  /groups',level=xbmc.LOGDEBUG)
+	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),list_item,True) for list_item,item_path in db.query_db(db.get_query('playlists')) if isinstance(list_item,xbmcgui.ListItem)])
+	for sm in config.listitem.get('sort_methods').get('playlists'):
+		xbmcplugin.addSortMethod(plugin.handle,sm)
+	xbmcplugin.endOfDirectory(plugin.handle)
+
+@plugin.route('/by_category/<category_id>')
+def view_by_category(category_id):
+	if category_id in ['favorites','search','random']:
+		plugin.redirect(category_id)
 	else:
+		xbmc.log(msg='IAGL:  /by_category/{}'.format(category_id),level=xbmc.LOGDEBUG)
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format(item_path,'choose_from_list')),list_item,True) if isinstance(list_item.getProperty('total_games'),str) and list_item.getProperty('total_games').isdigit() and int(list_item.getProperty('total_games'))>1 else (plugin.url_for_path('{}/{}'.format(item_path,'by_all')),list_item,True) for list_item,item_path in db.query_db(db.get_query('game_lists_by_category',category_id=category_id,game_list_clearlogo_to_art=cm.get_setting('game_list_clearlogo_to_art'))) if isinstance(list_item,xbmcgui.ListItem)])
+		for sm in config.listitem.get('sort_methods').get('by_category'):
+			xbmcplugin.addSortMethod(plugin.handle,sm)
+	xbmcplugin.endOfDirectory(plugin.handle)
+
+@plugin.route('/by_playlist/<playlist_id>')
+def view_by_playlist(playlist_id):
+	if isinstance(cm.get_setting('games_pagination'),int):
+		plugin.redirect('/by_playlist_paged/{}/{}'.format(playlist_id,0))
+	else:
+		xbmc.log(msg='IAGL:  /by_playlist/{}'.format(playlist_id),level=xbmc.LOGDEBUG)
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('game_lists_by_playlist_no_page',playlist_id=playlist_id,game_title_setting=cm.get_setting('append_game_list_to_playlist_results_combined'))) if isinstance(list_item,xbmcgui.ListItem)])
+		for sm in config.listitem.get('sort_methods').get('by_playlist'):
+			xbmcplugin.addSortMethod(plugin.handle,sm)
 		xbmcplugin.endOfDirectory(plugin.handle)
 
-@plugin.route('/archives/Browse All Lists')
-def archives_browse_all_route():
-	# xbmcplugin.addDirectoryItem(plugin.handle, plugin.url_for_path('/'),xbmcgui.ListItem('Browse All',offscreen=True), True) #Test li
-	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game_list/%(game_list_route)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_route':iagl_addon.settings.get('game_list').get('route')}),x,True) for x in iagl_addon.game_lists.get_game_lists_as_listitems() if x and x.getLabel2()!='history'])
-	for sm in iagl_addon.get_sort_methods('Browse All Lists'):
+@plugin.route('/by_playlist_paged/<playlist_id>/<page_id>')
+def view_by_playlist_paged(playlist_id,page_id):
+	if page_id == '0':
+		starting_number = 0
+		next_page = '1'
+	else:
+		starting_number = int(page_id)*cm.get_setting('games_pagination')
+		next_page = str(int(page_id)+1)
+	xbmc.log(msg='IAGL:  /by_playlist_paged/{}/{}'.format(playlist_id,page_id),level=xbmc.LOGDEBUG)
+	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+	page_result = [(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('game_lists_by_playlist_page',playlist_id=playlist_id,game_title_setting=cm.get_setting('append_game_list_to_playlist_results_combined'),items_per_page=cm.get_setting('games_pagination'),starting_number=starting_number)) if isinstance(list_item,xbmcgui.ListItem)]
+	xbmcplugin.addDirectoryItems(plugin.handle,page_result)
+	if len(page_result)==cm.get_setting('games_pagination'):
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(view_by_playlist_paged,playlist_id=playlist_id,page_id=next_page),cm.get_next_li(),True)])
+	for sm in config.listitem.get('sort_methods').get('by_playlist'):
 		xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
-	if iagl_addon.settings.get('game_list').get('force_viewtypes') and get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_2')):
-		xbmc.sleep(SLEEP_HACK)
-		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)'%{'view_type': get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_2'))})
 
-@plugin.route('/archives/Choose from List')
-def archives_choose_from_list_route():
-	clear_mem_cache('iagl_current_query')
-	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/archives/%(label2)s'%{'label2':x.getLabel2()}),x,True) for x in iagl_addon.routes.get_route_as_listitems('browse')])
-	if iagl_addon.settings.get('game_list').get('show_netplay') and iagl_addon.settings.get('ext_launchers').get('environment') not in ['android','android_ra32','android_aarch64']:
-		xbmcplugin.addDirectoryItem(plugin.handle,plugin.url_for_path('/netplay/lobby'),get_netplay_listitem(),True)
-	if check_if_file_exists(iagl_addon.directory.get('userdata').get('list_cache').get('path').joinpath('history.json')): #Add history listitem
-		xbmcplugin.addDirectoryItem(plugin.handle,plugin.url_for_path('/game_history/list_all/%(label2)s'%{'label2':'history'}),get_history_listitem(),True)
-	xbmcplugin.endOfDirectory(plugin.handle)
-	if iagl_addon.settings.get('game_list').get('force_viewtypes') and get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_1')):
-		xbmc.sleep(SLEEP_HACK)
-		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)'%{'view_type': get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_1'))})
+@plugin.route('/favorites')
+def view_favorites():
+	xbmc.log(msg='IAGL:  /favorites',level=xbmc.LOGDEBUG)
+	if cm.get_setting('favorites_page_display')=='/favorites':
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format('view_favorites',item_path)),list_item,True) for list_item,item_path in db.query_db(db.get_query('browse_favorites')) if isinstance(list_item,xbmcgui.ListItem)])
+		xbmcplugin.endOfDirectory(plugin.handle)
+	else:
+		plugin.redirect(cm.get_setting('favorites_page_display'))
 
-@plugin.route('/archives/Browse by Category')
-def archives_browse_by_category_route():
-	clear_mem_cache('iagl_current_query')
-	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/archives/by_category/%(label2)s'%{'label2':x.getLabel2()}),x,True) for x in iagl_addon.routes.get_route_as_listitems('categories')])
-	if check_if_file_exists(iagl_addon.directory.get('userdata').get('list_cache').get('path').joinpath('history.json')): #Add history listitem
-		xbmcplugin.addDirectoryItem(plugin.handle,plugin.url_for_path('/game_history/list_all/%(label2)s'%{'label2':'history'}),get_history_listitem(),True)
-	for sm in iagl_addon.get_sort_methods('Browse by Category'):
-		xbmcplugin.addSortMethod(plugin.handle,sm)
-	xbmcplugin.endOfDirectory(plugin.handle)
-	if iagl_addon.settings.get('game_list').get('force_viewtypes') and get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_3')):
-		xbmc.sleep(SLEEP_HACK)
-		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)'%{'view_type': get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_3'))})
-
-@plugin.route('/archives/Favorites')
-def archives_browse_by_favorites_route():
-	plugin.redirect('/archives/by_category/Favorites')
-
-@plugin.route('/archives/Search')
-def archives_search_route():
-	for x in iagl_addon.routes.get_search_random_route_as_listitems('search'):
-		if x.getLabel2() == 'execute':
-			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(search_games,query=json.dumps(get_mem_cache('iagl_current_query'))),x,True)])
-		elif x.getLabel2() == 'execute_link':
-			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(search_games_link,query=json.dumps(get_mem_cache('iagl_current_query'))),x,True)])
+@plugin.route('/view_favorites/<choose_id>')
+def view_favorites_by(choose_id):
+	xbmc.log(msg='IAGL:  /view_favorites',level=xbmc.LOGDEBUG)
+	if choose_id == 'by_all':
+		if isinstance(cm.get_setting('games_pagination'),int):
+			plugin.redirect('/view_favorites_paged/{}/{}'.format(choose_id,0))
 		else:
-			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/archives/Search/%(label2)s'%{'label2':x.getLabel2()}),x,True)])
-	xbmcplugin.endOfDirectory(plugin.handle,cacheToDisc=False)
+			xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_game') if 'play_game' in item_path else cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_link'),False if 'play_game' in item_path else True) for list_item,item_path in db.query_db(db.get_query('favorites_by_all_no_page',game_title_setting=cm.get_setting('game_title_setting'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'))) if isinstance(list_item,xbmcgui.ListItem)])
+			xbmcplugin.endOfDirectory(plugin.handle)
+	else: #by_fav_group
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format('view_favorites_group',item_path)),list_item,True) for list_item,item_path in db.query_db(db.get_query('favorites_by_group')) if isinstance(list_item,xbmcgui.ListItem)])
+		for sm in config.listitem.get('sort_methods').get('categories'):
+			xbmcplugin.addSortMethod(plugin.handle,sm)
+		xbmcplugin.endOfDirectory(plugin.handle)
 
-@plugin.route('/archives/Search/<value_in>')
-def archives_search_update_title(value_in):
-	iagl_addon.game_lists.update_search_random_query(value_in)
-	xbmc.sleep(500)
+@plugin.route('/view_favorites_paged/<choose_id>/<page_id>')
+def view_favorites_paged(choose_id,page_id):
+	xbmc.log(msg='IAGL:  /view_favorites_paged/{}/{}'.format(choose_id,page_id),level=xbmc.LOGDEBUG)
+	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+	if page_id == '0':
+		starting_number = 0
+		next_page = '1'
+	else:
+		starting_number = int(page_id)*cm.get_setting('games_pagination')
+		next_page = str(int(page_id)+1)
+	if choose_id == 'by_all':
+		page_result = [(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_game') if 'play_game' in item_path else cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_link'),False if 'play_game' in item_path else True) for list_item,item_path in db.query_db(db.get_query('favorites_by_all_page',game_title_setting=cm.get_setting('game_title_setting'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'),items_per_page=cm.get_setting('games_pagination'),starting_number=starting_number)) if isinstance(list_item,xbmcgui.ListItem)]
+		xbmcplugin.addDirectoryItems(plugin.handle,page_result)
+		if len(page_result)==cm.get_setting('games_pagination'):
+			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(view_favorites_paged,choose_id=choose_id,page_id=next_page),cm.get_next_li(),True)])
+		for sm in config.listitem.get('sort_methods').get('games'):
+			xbmcplugin.addSortMethod(plugin.handle,sm)
+	else:
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}/{}/{}'.format('game_list',game_list_id,choose_id,item_path)),list_item,True) for list_item,item_path in db.query_db(db.get_query(choose_id,game_list_id=game_list_id)) if isinstance(list_item,xbmcgui.ListItem)])
+		for sm in config.listitem.get('sort_methods').get('game_list_choice_by'):
+			xbmcplugin.addSortMethod(plugin.handle,sm)
+	xbmcplugin.endOfDirectory(plugin.handle)
+
+@plugin.route('/view_favorites_group/<group_id>')
+def view_favorites_by(group_id):
+	xbmc.log(msg='IAGL:  /view_favorites_group',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_setting('games_pagination'),int):
+		plugin.redirect('/view_favorites_group_paged/{}/{}'.format(group_id,0))
+	else:
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_game') if 'play_game' in item_path else cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_link'),False if 'play_game' in item_path else True) for list_item,item_path in db.query_db(db.get_query('favorites_by_group_no_page',group_id=group_id,game_title_setting=cm.get_setting('game_title_setting'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'))) if isinstance(list_item,xbmcgui.ListItem)])
+		xbmcplugin.endOfDirectory(plugin.handle)
+
+@plugin.route('/view_favorites_group_paged/<group_id>/<page_id>')
+def view_favorites_group_paged(group_id,page_id):
+	xbmc.log(msg='IAGL:  /view_favorites_group_paged',level=xbmc.LOGDEBUG)
+	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+	if page_id == '0':
+		starting_number = 0
+		next_page = '1'
+	else:
+		starting_number = int(page_id)*cm.get_setting('games_pagination')
+		next_page = str(int(page_id)+1)
+	page_result = [(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_game') if 'play_game' in item_path else cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_link'),False if 'play_game' in item_path else True) for list_item,item_path in db.query_db(db.get_query('favorites_by_group_page',group_id=group_id,game_title_setting=cm.get_setting('game_title_setting'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'),items_per_page=cm.get_setting('games_pagination'),starting_number=starting_number)) if isinstance(list_item,xbmcgui.ListItem)]
+	xbmcplugin.addDirectoryItems(plugin.handle,page_result)
+	if len(page_result)==cm.get_setting('games_pagination'):
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(view_favorites_group_paged,group_id=group_id,page_id=next_page),cm.get_next_li(),True)])
+	for sm in config.listitem.get('sort_methods').get('games'):
+		xbmcplugin.addSortMethod(plugin.handle,sm)
+	xbmcplugin.endOfDirectory(plugin.handle)
+
+@plugin.route('/history')
+def view_history():
+	xbmc.log(msg='IAGL:  /history',level=xbmc.LOGDEBUG)
+	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('history_no_page',game_title_setting=cm.get_setting('game_title_setting'),filter_to_1g1r=cm.get_setting('filter_to_1g1r'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'))) if isinstance(list_item,xbmcgui.ListItem)])
+	for sm in config.listitem.get('sort_methods').get('history'):
+		xbmcplugin.addSortMethod(plugin.handle,sm)
+	xbmcplugin.endOfDirectory(plugin.handle)
+
+## Search Routes ##
+@plugin.route('/search')
+def view_search():
+	xbmc.log(msg='IAGL:  /search',level=xbmc.LOGDEBUG)
+	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+	current_search = cm.get_search()
+	if isinstance(current_search,dict):
+		xbmc.log(msg='IAGL:  Current search parameters: {}'.format(current_search),level=xbmc.LOGDEBUG)
+	else:
+		xbmc.log(msg='IAGL:  Current search parameters are empty',level=xbmc.LOGDEBUG)
+	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.update_search_listitem(current_search=current_search,list_item_in=list_item,path_in=item_path),True) for list_item,item_path in db.query_db(db.get_query('search')) if isinstance(list_item,xbmcgui.ListItem)])
+	for sm in config.listitem.get('sort_methods').get('search'):
+		xbmcplugin.addSortMethod(plugin.handle,sm)
+	xbmcplugin.endOfDirectory(plugin.handle)
+
+@plugin.route('/search_enter_game_lists')
+def search_enter_game_lists():
+	xbmc.log(msg='IAGL:  /search_enter_game_lists',level=xbmc.LOGDEBUG)
+	li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_get_game_lists'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30024),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game lists select in search: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_search(game_lists=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game list select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
 	xbmc.executebuiltin('Container.Refresh')
 
-@plugin.route('/Search_Link')
-def search_games_link():
-	query = None
-	if plugin.args.get('query'):
-		query=json.loads(plugin.args['query'][0])
-	if query and query.get('title'):
-		default_input = 'My %(title)s Search'%{'title':query.get('title')}
-	else:
-		default_input = 'My Game Search'
-	current_dialog = xbmcgui.Dialog()
-	new_value = current_dialog.input(loc_str(30442),default_input)
-	if new_value:
-		new_value2 = current_dialog.input(loc_str(30444))
-		if 'lists' in query.keys() and query.get('lists'):
-			game_list_ids = query.get('lists')
-		else:
-			game_list_ids = iagl_addon.game_lists.list_game_lists()
-		game_list_items_art = [x for x in iagl_addon.game_lists.get_game_lists_as_listitems() if x and x.getLabel2() in game_list_ids]+[get_blank_favorites_listitem()]
-		new_value3 = current_dialog.select(loc_str(30443),game_list_items_art, useDetails=True)
-		if new_value3 in range(0,len(game_list_items_art)):
-			query_dict = {'values':{'label':new_value,'label2':new_value},'info':{'title':new_value,'originaltitle':new_value,'plot':new_value2},'properties':{'description':new_value},'art':{'thumb':game_list_items_art[new_value3].getArt('thumb'),'poster':game_list_items_art[new_value3].getArt('poster'),'banner':game_list_items_art[new_value3].getArt('banner'),'fanart':game_list_items_art[new_value3].getArt('fanart'),'clearlogo':game_list_items_art[new_value3].getArt('icon'),}}
-			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(search_games,query=json.dumps(get_mem_cache('iagl_current_query'))),iagl_addon.routes.add_query_listitem_context_menus(get_database_listitem(query_dict),query_in=query,list_in=query_dict,type_in='search'),True)])
-	xbmcplugin.endOfDirectory(plugin.handle)
-	del current_dialog
+@plugin.route('/context_menu/action/reset_all_search')
+def reset_all_search():
+	xbmc.log(msg='IAGL:  /reset_all_search',level=xbmc.LOGDEBUG)
+	result = cm.clear_search()
+	if result:
+		xbmc.sleep(config.defaults.get('sleep'))
+		xbmc.executebuiltin('Container.Refresh')
 
-@plugin.route('/Search')
-def search_games():
-	query = None
-	if plugin.args.get('query'):
-		query=json.loads(plugin.args['query'][0])
-	if query is not None:
-		filter_dict = {'info':{},'properties':{}}
-		if 'title' in query.keys() and query.get('title'):
-			filter_dict['info'].update({'title':re.compile(query.get('title'),re.IGNORECASE)})
-		if 'genre' in query.keys() and query.get('genre'):
-			filter_dict['info'].update({'genre':query.get('genre')})
-		if 'year' in query.keys() and query.get('year'):
-			filter_dict['info'].update({'year':query.get('year')})
-		if 'studio' in query.keys() and query.get('studio'):
-			filter_dict['info'].update({'studio':query.get('studio')})
-		if 'tag' in query.keys() and query.get('tag'):
-			filter_dict['info'].update({'tag':query.get('tag')})
-		if 'groups' in query.keys() and query.get('groups'):
-			filter_dict['info'].update({'showlink':query.get('groups')})
-		if 'nplayers' in query.keys() and query.get('nplayers'):
-			filter_dict['properties'].update({'nplayers':query.get('nplayers')})
-		if 'lists' in query.keys() and query.get('lists'):
-			game_list_ids = query.get('lists')
-		else:
-			game_list_ids = iagl_addon.game_lists.list_game_lists()
-
-		game_listitems = list()
-		for game_list_id in game_list_ids:
-			if game_list_id not in ['history']:
-				game_listitems = game_listitems+iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id,filter_in=filter_dict)
-
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':x.getProperty('route')}),update_listitem_title(x,iagl_addon.settings.get('game_list').get('append_emu_name')),True) for x in game_listitems if x])
-		for sm in iagl_addon.get_sort_methods('Games'):
-			xbmcplugin.addSortMethod(plugin.handle,sm)
-	xbmcplugin.endOfDirectory(plugin.handle)
-	if iagl_addon.settings.get('game_list').get('force_viewtypes') and get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_12')):
-		xbmc.sleep(SLEEP_HACK)
-		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)'%{'view_type': get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_12'))})
-
-@plugin.route('/game/Search_Link')
-def forward_search_link():
-	query = None
-	if plugin.args.get('query'):
-		if '}/' in plugin.args['query'][0]:
-			plugin.run(['plugin://plugin.program.iagl/Search/','0','query=%(qq)s'%{'qq':plugin.args['query'][0].split('}/')[0]+'}'}]) #Why doesn't redirect work here?
-
-@plugin.route('/game/Random_Link')
-def forward_random_link():
-	query = None
-	if plugin.args.get('query'):
-		if '}/' in plugin.args['query'][0]:
-			plugin.run(['plugin://plugin.program.iagl/Random Play/','0','query=%(qq)s'%{'qq':plugin.args['query'][0].split('}/')[0]+'}'}]) #Why doesn't redirect work here?
-
-
-@plugin.route('/archives/Random Play')
-def archives_search_route():
-	for x in iagl_addon.routes.get_search_random_route_as_listitems('random'):
-		if x.getLabel2() == 'execute':
-			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(random_games,query=json.dumps(get_mem_cache('iagl_current_query'))),x,True)])
-		elif x.getLabel2() == 'execute_link':
-			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(random_games_link,query=json.dumps(get_mem_cache('iagl_current_query'))),x,True)])
-		else:
-			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/archives/Random Play/%(label2)s'%{'label2':x.getLabel2()}),x,True)])
-	xbmcplugin.endOfDirectory(plugin.handle,cacheToDisc=False)
-
-@plugin.route('/archives/Random Play/<value_in>')
-def archives_search_update_title(value_in):
-	iagl_addon.game_lists.update_search_random_query(value_in)
+@plugin.route('/context_menu/action/reset_search_enter_game_lists')
+def reset_search_enter_game_lists():
+	xbmc.log(msg='IAGL:  /reset_search_enter_game_lists',level=xbmc.LOGDEBUG)
+	result = cm.update_search(game_lists=None)
+	xbmc.sleep(config.defaults.get('sleep'))
 	xbmc.executebuiltin('Container.Refresh')
 
-@plugin.route('/Random_Play_Link')
-def random_games_link():
-	query = None
-	if plugin.args.get('query'):
-		query=json.loads(plugin.args['query'][0])
-	default_input = 'My Random Play List'
-	current_dialog = xbmcgui.Dialog()
-	new_value = current_dialog.input(loc_str(30442),default_input)
-	if new_value:
-		new_value2 = current_dialog.input(loc_str(30444))
-		if 'lists' in query.keys() and query.get('lists'):
-			game_list_ids = query.get('lists')
-		else:
-			game_list_ids = iagl_addon.game_lists.list_game_lists()
-		game_list_items_art = [x for x in iagl_addon.game_lists.get_game_lists_as_listitems() if x and x.getLabel2() in game_list_ids]+[get_blank_favorites_listitem()]
-		new_value3 = current_dialog.select(loc_str(30443),game_list_items_art, useDetails=True)
-		if new_value3 in range(0,len(game_list_items_art)):
-			query_dict = {'values':{'label':new_value,'label2':new_value},'info':{'title':new_value,'originaltitle':new_value,'plot':new_value2},'properties':{'description':new_value},'art':{'thumb':game_list_items_art[new_value3].getArt('thumb'),'poster':game_list_items_art[new_value3].getArt('poster'),'banner':game_list_items_art[new_value3].getArt('banner'),'fanart':game_list_items_art[new_value3].getArt('fanart'),'clearlogo':game_list_items_art[new_value3].getArt('icon'),}}
-			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(random_games,query=json.dumps(get_mem_cache('iagl_current_query'))),iagl_addon.routes.add_query_listitem_context_menus(get_database_listitem(query_dict),query_in=query,list_in=query_dict,type_in='random'),True)])
-	xbmcplugin.endOfDirectory(plugin.handle)
-	del current_dialog
+@plugin.route('/search_enter_game_title')
+def search_enter_game_title():
+	xbmc.log(msg='IAGL:  /search_enter_game_title',level=xbmc.LOGDEBUG)
+	selected = xbmcgui.Dialog().input(heading=cm.get_loc(30226))
+	if isinstance(selected,str) and len(selected)>0:
+		result = cm.update_search(title=selected)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
 
-@plugin.route('/Random Play')
-def random_games():
-	query = None
-	if plugin.args.get('query'):
-		query=json.loads(plugin.args['query'][0])
-	if query is not None:
-		num_of_results = 1
-		if 'num_of_results' in query.keys() and query.get('num_of_results'):
-			num_of_results = int(query.get('num_of_results'))
+@plugin.route('/context_menu/action/reset_search_enter_game_title')
+def reset_search_enter_game_title():
+	xbmc.log(msg='IAGL:  /reset_search_enter_game_title',level=xbmc.LOGDEBUG)
+	result = cm.update_search(title=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
 
-		filter_dict = {'info':{},'properties':{}}
-		if 'genre' in query.keys() and query.get('genre'):
-			filter_dict['info'].update({'genre':query.get('genre')})
-		if 'year' in query.keys() and query.get('year'):
-			filter_dict['info'].update({'year':query.get('year')})
-		if 'studio' in query.keys() and query.get('studio'):
-			filter_dict['info'].update({'studio':query.get('studio')})
-		if 'tag' in query.keys() and query.get('tag'):
-			filter_dict['info'].update({'tag':query.get('tag')})
-		if 'groups' in query.keys() and query.get('groups'):
-			filter_dict['info'].update({'showlink':query.get('groups')})
-		if 'nplayers' in query.keys() and query.get('nplayers'):
-			filter_dict['properties'].update({'nplayers':query.get('nplayers')})
-		if 'lists' in query.keys() and query.get('lists'):
-			game_list_ids = query.get('lists')
-		else:
-			game_list_ids = iagl_addon.game_lists.list_game_lists()
-
-		game_listitems = list()
-		for game_list_id in game_list_ids:
-			if game_list_id not in ['history']:
-				game_listitems = game_listitems+iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id,filter_in=filter_dict)
-		game_listitems = random_sample(game_listitems,num_of_results) #Get random listitems using random sample
-
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':x.getProperty('route')}),update_listitem_title(x,iagl_addon.settings.get('game_list').get('append_emu_name')),True) for x in game_listitems if x])
-		for sm in iagl_addon.get_sort_methods('Games'):
-			xbmcplugin.addSortMethod(plugin.handle,sm)
-	xbmcplugin.endOfDirectory(plugin.handle)
-	if iagl_addon.settings.get('game_list').get('force_viewtypes') and get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_13')):
-		xbmc.sleep(SLEEP_HACK)
-		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)'%{'view_type': get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_13'))})
-
-@plugin.route('/archives/by_category/<category_id>')
-def archives_game_lists_in_category_route(category_id):
-	if category_id == 'Search':
-		plugin.redirect('/archives/Search')
-	elif category_id == 'Random Play':
-		plugin.redirect('/archives/Random Play')
+@plugin.route('/search_filter_genre')
+def search_filter_genre():
+	xbmc.log(msg='IAGL:  /search_filter_genre',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_search(),dict) and isinstance(cm.get_search().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_search().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='genre',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
 	else:
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game_list/%(game_list_route)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_route':iagl_addon.settings.get('game_list').get('route')}),x,True) for x in iagl_addon.game_lists.get_game_lists_as_listitems(filter_in={'info':{'genre':category_id},'properties':{}}) if x])
-		for sm in iagl_addon.get_sort_methods('Browse All Lists'):
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='genre'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30026),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game genres select in search: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_search(genres=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game genres select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_search_filter_genre')
+def reset_search_filter_genre():
+	xbmc.log(msg='IAGL:  /reset_search_filter_genre',level=xbmc.LOGDEBUG)
+	result = cm.update_search(genres=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/search_filter_nplayers')
+def search_filter_nplayers():
+	xbmc.log(msg='IAGL:  /search_filter_nplayers',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_search(),dict) and isinstance(cm.get_search().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_search().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='nplayers',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='nplayers'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30027),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game nplayers select in search: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_search(nplayers=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game nplayers select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_search_filter_nplayers')
+def reset_search_filter_nplayers():
+	xbmc.log(msg='IAGL:  /reset_search_filter_nplayers',level=xbmc.LOGDEBUG)
+	result = cm.update_search(nplayers=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/search_filter_studio')
+def search_filter_studio():
+	xbmc.log(msg='IAGL:  /search_filter_studio',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_search(),dict) and isinstance(cm.get_search().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_search().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='studio',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='studio'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30028),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game studios select in search: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_search(studios=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game studios select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_search_filter_studio')
+def reset_search_filter_studio():
+	xbmc.log(msg='IAGL:  /reset_search_filter_studio',level=xbmc.LOGDEBUG)
+	result = cm.update_search(studios=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/search_filter_tag')
+def search_filter_tag():
+	xbmc.log(msg='IAGL:  /search_filter_tag',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_search(),dict) and isinstance(cm.get_search().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_search().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='tag',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='tag'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30029),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game tags select in search: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_search(tags=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game tags select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_search_filter_tag')
+def reset_search_filter_tag():
+	xbmc.log(msg='IAGL:  /reset_search_filter_tag',level=xbmc.LOGDEBUG)
+	result = cm.update_search(tags=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/search_filter_playlist')
+def search_filter_playlist():
+	xbmc.log(msg='IAGL:  /search_filter_playlist',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_search(),dict) and isinstance(cm.get_search().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_search().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='groups',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='groups'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30030),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game playlists select in search: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_search(playlists=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game playlists select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_search_filter_playlist')
+def reset_search_filter_playlist():
+	xbmc.log(msg='IAGL:  /reset_search_filter_playlist',level=xbmc.LOGDEBUG)
+	result = cm.update_search(playlists=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/search_filter_region')
+def search_filter_region():
+	xbmc.log(msg='IAGL:  /search_filter_region',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_search(),dict) and isinstance(cm.get_search().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_search().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='region',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='region'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30031),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game regions select in search: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_search(regions=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game regions select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_search_filter_region')
+def reset_search_filter_region():
+	xbmc.log(msg='IAGL:  /reset_search_filter_region',level=xbmc.LOGDEBUG)
+	result = cm.update_search(regions=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/search_filter_language')
+def search_filter_language():
+	xbmc.log(msg='IAGL:  /search_filter_language',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_search(),dict) and isinstance(cm.get_search().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_search().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='language',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='language'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30032),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game languages select in search: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_search(languages=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game languages select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_search_filter_language')
+def reset_search_filter_language():
+	xbmc.log(msg='IAGL:  /reset_search_filter_language',level=xbmc.LOGDEBUG)
+	result = cm.update_search(languages=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/search_filter_edition')
+def search_filter_edition():
+	xbmc.log(msg='IAGL:  /search_filter_edition',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_search(),dict) and isinstance(cm.get_search().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_search().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='edition',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='edition'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30033),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game editions select in search: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_search(editions=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game editions select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_search_filter_edition')
+def reset_search_filter_edition():
+	xbmc.log(msg='IAGL:  /reset_search_filter_edition',level=xbmc.LOGDEBUG)
+	result = cm.update_search(editions=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/search_filter_code')
+def search_filter_code():
+	xbmc.log(msg='IAGL:  /search_filter_code',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_search(),dict) and isinstance(cm.get_search().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_search().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='code',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='code'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30034),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game codes select in search: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_search(codes=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game codes select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_search_filter_code')
+def reset_search_filter_code():
+	xbmc.log(msg='IAGL:  /reset_search_filter_code',level=xbmc.LOGDEBUG)
+	result = cm.update_search(codes=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/search_filter_rating')
+def search_filter_rating():
+	xbmc.log(msg='IAGL:  /search_filter_rating',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_search(),dict) and isinstance(cm.get_search().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_search().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='rating',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='rating'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30035),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game ratings select in search: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_search(ratings=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game ratings select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_search_filter_rating')
+def reset_search_filter_rating():
+	xbmc.log(msg='IAGL:  /reset_search_filter_rating',level=xbmc.LOGDEBUG)
+	result = cm.update_search(ratings=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/execute_search')
+def execute_search():
+	xbmc.log(msg='IAGL:  /execute_search',level=xbmc.LOGDEBUG)
+	game_search_query = cm.get_search_query()
+	if isinstance(game_search_query,str):
+		xbmc.log(msg='IAGL:  Current search parameters: {}'.format(cm.get_search()),level=xbmc.LOGDEBUG)
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('search_games',game_search_query=game_search_query,game_title_setting=cm.get_setting('append_game_list_to_search_results_combined'))) if isinstance(list_item,xbmcgui.ListItem)])
+		for sm in config.listitem.get('sort_methods').get('games'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
 		xbmcplugin.endOfDirectory(plugin.handle)
-	if iagl_addon.settings.get('game_list').get('force_viewtypes') and get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_3')):
-		xbmc.sleep(SLEEP_HACK)
-		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)'%{'view_type': get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_3'))})
+	else:
+		xbmc.log(msg='IAGL:  Current search parameters are empty',level=xbmc.LOGDEBUG)
+		ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30227),cm.get_loc(30228))
+		xbmc.sleep(config.defaults.get('sleep'))
+		xbmc.executebuiltin('Container.Refresh')
 
-@plugin.route('/game_list/list_all/<game_list_id>/')
-def get_all_games_redirect(game_list_id):
-	if iagl_addon.settings.get('game_list').get('filter_to_1g1r'):
-		game_stats = iagl_addon.game_lists.get_game_stats(game_list_id=game_list_id)
-		if game_stats and game_stats.get('groups') and '1G1R' in game_stats.get('groups').get('all'):
-			plugin.redirect('/game_list/category/Group by Custom Groups/1G1R/%(game_list_id)s/1'%{'game_list_id':game_list_id})
+@plugin.route('/generate_search_link')
+def generate_search_link():
+	xbmc.log(msg='IAGL:  /generate_search_link',level=xbmc.LOGDEBUG)
+	current_search = cm.get_search()
+	if isinstance(current_search,dict) and len(list(current_search.keys()))>0:
+		selected = xbmcgui.Dialog().input(heading=cm.get_loc(30230))
+		if isinstance(selected,str) and len(selected)>0:
+			xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(search_from_link,query=json.dumps(current_search)),cm.add_context_menu(li=xbmcgui.ListItem(selected,offscreen=True),type_in='search_link',ip=selected),True)])
+			xbmcplugin.endOfDirectory(plugin.handle)
 		else:
-			plugin.redirect('/game_list/list_all/'+game_list_id+'/1')
+			xbmc.sleep(config.defaults.get('sleep'))
+			xbmc.executebuiltin('Container.Refresh')
 	else:
-		plugin.redirect('/game_list/list_all/'+game_list_id+'/1')
+		xbmc.log(msg='IAGL:  Current search parameters are empty',level=xbmc.LOGDEBUG)
+		ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30227),cm.get_loc(30228))
+		xbmc.sleep(config.defaults.get('sleep'))
+		xbmc.executebuiltin('Container.Refresh')
 
-@plugin.route('/game_list/list_all/<game_list_id>/<page_number>')
-def game_list_list_all_route(game_list_id,page_number):
-	if iagl_addon.settings.get('game_list').get('games_per_page'):
-		current_page = paginate.Page([(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':x.getProperty('route')}),x,True) for x in iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id) if x], page=int(page_number), items_per_page=iagl_addon.settings.get('game_list').get('games_per_page'))
-		if current_page.next_page and current_page.page<current_page.next_page:
-			current_page.append((plugin.url_for_path('/game_list/list_all/%(game_list_id)s/%(label2)s'%{'label2':current_page.next_page,'game_list_id':game_list_id}),get_next_page_listitem(current_page=current_page.page,page_count=current_page.page_count,next_page=current_page.next_page,total_items=current_page.item_count),True))
-		xbmcplugin.addDirectoryItems(plugin.handle,current_page)
-	else:
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':x.getProperty('route')}),x,True) for x in iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id) if x])
-	for sm in iagl_addon.get_sort_methods('Games'):
-		xbmcplugin.addSortMethod(plugin.handle,sm)
-	xbmcplugin.endOfDirectory(plugin.handle)
-	if iagl_addon.settings.get('game_list').get('force_viewtypes') and get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_4')):
-		xbmc.sleep(SLEEP_HACK)
-		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)'%{'view_type': get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_4'))})
-
-@plugin.route('/game_history/list_all/<game_list_id>/')
-def get_all_games_redirect(game_list_id):
-	plugin.redirect('/game_history/list_all/'+game_list_id+'/1')
-
-@plugin.route('/game_history/list_all/<game_list_id>/<page_number>')
-def game_list_list_all_route(game_list_id,page_number):
-	if iagl_addon.settings.get('game_list').get('games_per_page'):
-		current_page = paginate.Page([(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':x.getProperty('route')}),x,True) for x in iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id) if x], page=int(page_number), items_per_page=iagl_addon.settings.get('game_list').get('games_per_page'))
-		if current_page.next_page and current_page.page<current_page.next_page:
-			current_page.append((plugin.url_for_path('/game_history/list_all/%(game_list_id)s/%(label2)s'%{'label2':current_page.next_page,'game_list_id':game_list_id}),get_next_page_listitem(current_page=current_page.page,page_count=current_page.page_count,next_page=current_page.next_page,total_items=current_page.item_count),True))
-		xbmcplugin.addDirectoryItems(plugin.handle,current_page)
-	else:
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':x.getProperty('route')}),x,True) for x in iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id) if x])
-	for sm in iagl_addon.get_sort_methods('History'):
-		xbmcplugin.addSortMethod(plugin.handle,sm)
-	xbmcplugin.endOfDirectory(plugin.handle)
-	if iagl_addon.settings.get('game_list').get('force_viewtypes') and get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_4')):
-		xbmc.sleep(SLEEP_HACK)
-		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)'%{'view_type': get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id='iagl_enable_forced_views_4'))})
-
-
-@plugin.route('/game_list/choose_from_list/<game_list_id>')
-def game_list_choose_from_list_route(game_list_id):
-	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game_list/%(label2)s/%(game_list_id)s'%{'label2':x.getLabel2(),'game_list_id':game_list_id}),x,True) for x in iagl_addon.routes.get_route_as_listitems('choose',game_list_name=iagl_addon.game_lists.get_game_list(game_list_id).get('emu_name'),game_list_id=game_list_id)])
-	for sm in iagl_addon.get_sort_methods('Choose from List'):
-		xbmcplugin.addSortMethod(plugin.handle,sm)
-	xbmcplugin.endOfDirectory(plugin.handle)
-
-@plugin.route('/game_list/<category_choice>/<game_list_id>')
-def game_list_choose_category_from_list_route(category_choice,game_list_id):
-	if category_choice=='One Big List':
-		if iagl_addon.settings.get('game_list').get('filter_to_1g1r'):
-			game_stats = iagl_addon.game_lists.get_game_stats(game_list_id=game_list_id)
-			if game_stats and game_stats.get('groups') and '1G1R' in game_stats.get('groups').get('all'):
-				plugin.redirect('/game_list/category/Group by Custom Groups/1G1R/%(game_list_id)s/1'%{'game_list_id':game_list_id})
-			else:
-				plugin.redirect('/game_list/list_all/'+game_list_id+'/1')
-		else:
-			plugin.redirect('/game_list/list_all/'+game_list_id+'/1')
-	else:
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game_list/category/%(category_choice)s/%(label2)s/%(game_list_id)s/1'%{'label2':x.getLabel2().replace('#','%23'),'category_choice':category_choice,'game_list_id':game_list_id}),x,True) for x in iagl_addon.game_lists.get_game_choose_categories_as_listitems(game_list_id=game_list_id,category_choice=category_choice,game_list_name=iagl_addon.game_lists.get_game_list(game_list_id).get('emu_name')) if x])
-		for sm in iagl_addon.get_sort_methods('Choose from List'):
+@plugin.route('/search_from_link')
+def search_from_link():
+	xbmc.log(msg='IAGL:  /search_from_link',level=xbmc.LOGDEBUG)
+	cc = next(iter(plugin.args.get('query')),None)
+	if isinstance(cc,str):
+		game_search_query = cm.get_search_query(current_search_in=json.loads(cc))
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('search_games',game_search_query=game_search_query,game_title_setting=cm.get_setting('append_game_list_to_search_results_combined'))) if isinstance(list_item,xbmcgui.ListItem)])
+		for sm in config.listitem.get('sort_methods').get('games'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
 		xbmcplugin.endOfDirectory(plugin.handle)
-	if iagl_addon.settings.get('game_list').get('force_viewtypes') and iagl_addon.settings.get('game_list').get('forced_views').get(category_choice) and get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id=iagl_addon.settings.get('game_list').get('forced_views').get(category_choice))):
-		xbmc.sleep(SLEEP_HACK)
-		xbmc.executebuiltin('Container.SetViewMode(%(view_type)s)'%{'view_type': get_setting_as(setting_type='forced_viewtype',setting=iagl_addon.handle.getSetting(id=iagl_addon.settings.get('game_list').get('forced_views').get(category_choice)))})
+	else:
+		if previous_path.startswith('plugin://plugin.program.iagl/search_from_link'): #User came from a favorite, return home after selecting parent path
+			xbmc.sleep(config.defaults.get('sleep'))
+			xbmc.executebuiltin('Dialog.Close(busydialog)')
+			xbmc.executebuiltin('ActivateWindow(home)')
+		else:
+			xbmc.log(msg='IAGL:  Unknown previous path {}'.format(previous_path), level=xbmc.LOGDEBUG)
+			plugin.redirect('/')
+## End Search Routes ##
 
-@plugin.route('/game_list/category/<category_choice>/<category_value>/<game_list_id>/<page_number>')
-def game_list_in_category_route(category_choice,category_value,game_list_id,page_number):
-	if category_choice == 'Alphabetical':
-		filter_dict = {'info':{},'properties':{'starts_with':category_value.replace('%23','#')}}
-	elif category_choice == 'Group by Genres':
-		filter_dict = {'info':{'genre':category_value},'properties':{}}
-	elif category_choice == 'Group by Years':
-		filter_dict = {'info':{'year':category_value},'properties':{}}
-	elif category_choice == 'Group by Players':
-		filter_dict = {'info':{},'properties':{'nplayers':category_value}}
-	elif category_choice == 'Group by Studio':
-		filter_dict = {'info':{'studio':category_value},'properties':{}}
-	elif category_choice == 'Group by Tag':
-		filter_dict = {'info':{'tag':category_value},'properties':{}}
-	elif category_choice == 'Group by Custom Groups':
-		filter_dict = {'info':{'showlink':category_value},'properties':{}}
+## Random Routes ##
+@plugin.route('/random')
+def view_random():
+	xbmc.log(msg='IAGL:  /random',level=xbmc.LOGDEBUG)
+	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+	current_search = cm.get_random()
+	if isinstance(current_search,dict):
+		xbmc.log(msg='IAGL:  Current random parameters: {}'.format(current_search),level=xbmc.LOGDEBUG)
 	else:
-		filter_dict = None
-	if iagl_addon.settings.get('game_list').get('games_per_page'):
-		current_page = paginate.Page([(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':x.getProperty('route')}),x,True) for x in iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id,filter_in=filter_dict) if x], page=int(page_number), items_per_page=iagl_addon.settings.get('game_list').get('games_per_page'))
-		if current_page.next_page and current_page.page<current_page.next_page:
-			current_page.append((plugin.url_for_path('/game_list/category/%(category_choice)s/%(category_value)s/%(game_list_id)s/%(page_number)s'%{'category_choice':category_choice,'category_value':category_value,'game_list_id':game_list_id,'page_number':current_page.next_page}),get_next_page_listitem(current_page=current_page.page,page_count=current_page.page_count,next_page=current_page.next_page,total_items=current_page.item_count),True))
-		xbmcplugin.addDirectoryItems(plugin.handle,current_page)
-	else:
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/game/%(game_list_id)s/%(label2)s'%{'label2':x.getLabel2(),'game_list_id':x.getProperty('route')}),x,True) for x in iagl_addon.game_lists.get_games_as_listitems(game_list_id=game_list_id,filter_in=filter_dict) if x])
-	for sm in iagl_addon.get_sort_methods('Games'):
+		xbmc.log(msg='IAGL:  Current random parameters are empty',level=xbmc.LOGDEBUG)
+	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.update_random_listitem(current_search=current_search,list_item_in=list_item,path_in=item_path),True) for list_item,item_path in db.query_db(db.get_query('random')) if isinstance(list_item,xbmcgui.ListItem)])
+	for sm in config.listitem.get('sort_methods').get('search'):
 		xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
-@plugin.route('/netplay/lobby')
-def get_netplay_lobby():
-	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(download_and_launch_game_netplay,game_list_id=x.getProperty('route'),game_id=x.getLabel2(),query=x.getProperty('query')),x,True) for x in iagl_addon.game_lists.get_netplay_lobby_as_listitems(filter_lobby=iagl_addon.settings.get('game_list').get('filter_lobby')) if x])
+@plugin.route('/context_menu/action/reset_all_random')
+def reset_all_random():
+	xbmc.log(msg='IAGL:  /reset_all_random',level=xbmc.LOGDEBUG)
+	result = cm.clear_random()
+	if result:
+		xbmc.sleep(config.defaults.get('sleep'))
+		xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/random_enter_game_lists')
+def random_enter_game_lists():
+	xbmc.log(msg='IAGL:  /random_enter_game_lists',level=xbmc.LOGDEBUG)
+	li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_get_game_lists')) if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30024),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game lists select in random: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_random(game_lists=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game list select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/random_enter_num_results')
+def random_enter_game_lists():
+	xbmc.log(msg='IAGL:  /random_enter_num_results',level=xbmc.LOGDEBUG)
+	number_options = [str(x) for x in config.defaults.get('infinit_results_char')+config.defaults.get('random_num_result_options')]
+	default_option = number_options.index(config.defaults.get('default_num_results'))
+	li = [xbmcgui.ListItem(x,offscreen=True) for x in number_options]
+	selected = xbmcgui.Dialog().select(heading=cm.get_loc(30038),list=li,useDetails=False,preselect=default_option)
+	if isinstance(selected,int):
+		if number_options[selected].isdigit():
+			xbmc.log(msg='IAGL:  Number of results selected in random: {}'.format(number_options[selected]),level=xbmc.LOGDEBUG)
+			result = cm.update_random(num_results=number_options[selected])
+		else:
+			xbmc.log(msg='IAGL:  Number of results selected in random: {}'.format('All'),level=xbmc.LOGDEBUG)
+			result = cm.update_random(num_results='All')
+	else:
+		xbmc.log(msg='IAGL:  Game list select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_random_enter_num_results')
+def reset_random_enter_num_results():
+	xbmc.log(msg='IAGL:  /reset_random_enter_num_results',level=xbmc.LOGDEBUG)
+	result = cm.update_random(num_results=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_random_enter_game_lists')
+def reset_random_enter_game_lists():
+	xbmc.log(msg='IAGL:  /reset_random_enter_game_lists',level=xbmc.LOGDEBUG)
+	result = cm.update_random(game_lists=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/random_enter_game_title')
+def random_enter_game_title():
+	xbmc.log(msg='IAGL:  /random_enter_game_title',level=xbmc.LOGDEBUG)
+	selected = xbmcgui.Dialog().input(heading=cm.get_loc(30226))
+	if isinstance(selected,str) and len(selected)>0:
+		result = cm.update_random(title=selected)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_random_enter_game_title')
+def reset_random_enter_game_title():
+	xbmc.log(msg='IAGL:  /reset_random_enter_game_title',level=xbmc.LOGDEBUG)
+	result = cm.update_random(title=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/random_filter_genre')
+def random_filter_genre():
+	xbmc.log(msg='IAGL:  /random_filter_genre',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_random(),dict) and isinstance(cm.get_random().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_random().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='genre',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='genre'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30026),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game genres select in random: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_random(genres=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game genres select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_random_filter_genre')
+def reset_random_filter_genre():
+	xbmc.log(msg='IAGL:  /reset_random_filter_genre',level=xbmc.LOGDEBUG)
+	result = cm.update_random(genres=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/random_filter_nplayers')
+def random_filter_nplayers():
+	xbmc.log(msg='IAGL:  /random_filter_nplayers',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_random(),dict) and isinstance(cm.get_random().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_random().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='nplayers',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='nplayers'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30027),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game nplayers select in random: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_random(nplayers=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game nplayers select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_random_filter_nplayers')
+def reset_random_filter_nplayers():
+	xbmc.log(msg='IAGL:  /reset_random_filter_nplayers',level=xbmc.LOGDEBUG)
+	result = cm.update_random(nplayers=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/random_filter_studio')
+def random_filter_studio():
+	xbmc.log(msg='IAGL:  /random_filter_studio',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_random(),dict) and isinstance(cm.get_random().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_random().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='studio',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='studio'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30028),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game studios select in random: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_random(studios=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game studios select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_random_filter_studio')
+def reset_random_filter_studio():
+	xbmc.log(msg='IAGL:  /reset_random_filter_studio',level=xbmc.LOGDEBUG)
+	result = cm.update_random(studios=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/random_filter_tag')
+def random_filter_tag():
+	xbmc.log(msg='IAGL:  /random_filter_tag',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_random(),dict) and isinstance(cm.get_random().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_random().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='tag',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='tag'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30029),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game tags select in random: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_random(tags=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game tags select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_random_filter_tag')
+def reset_random_filter_tag():
+	xbmc.log(msg='IAGL:  /reset_random_filter_tag',level=xbmc.LOGDEBUG)
+	result = cm.update_random(tags=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/random_filter_playlist')
+def random_filter_playlist():
+	xbmc.log(msg='IAGL:  /random_filter_playlist',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_random(),dict) and isinstance(cm.get_random().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_random().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='groups',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='groups'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30030),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game playlists select in random: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_random(playlists=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game playlists select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_random_filter_playlist')
+def reset_random_filter_playlist():
+	xbmc.log(msg='IAGL:  /reset_random_filter_playlist',level=xbmc.LOGDEBUG)
+	result = cm.update_random(playlists=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/random_filter_region')
+def random_filter_region():
+	xbmc.log(msg='IAGL:  /random_filter_region',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_random(),dict) and isinstance(cm.get_random().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_random().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='region',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='region'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30031),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game regions select in random: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_random(regions=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game regions select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_random_filter_region')
+def reset_random_filter_region():
+	xbmc.log(msg='IAGL:  /reset_random_filter_region',level=xbmc.LOGDEBUG)
+	result = cm.update_random(regions=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/random_filter_language')
+def random_filter_language():
+	xbmc.log(msg='IAGL:  /random_filter_language',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_random(),dict) and isinstance(cm.get_random().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_random().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='language',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='language'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30032),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game languages select in random: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_random(languages=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game languages select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_random_filter_language')
+def reset_random_filter_language():
+	xbmc.log(msg='IAGL:  /reset_random_filter_language',level=xbmc.LOGDEBUG)
+	result = cm.update_random(languages=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/random_filter_edition')
+def random_filter_edition():
+	xbmc.log(msg='IAGL:  /random_filter_edition',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_random(),dict) and isinstance(cm.get_random().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_random().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='edition',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='edition'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30033),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game editions select in random: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_random(editions=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game editions select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_random_filter_edition')
+def reset_random_filter_edition():
+	xbmc.log(msg='IAGL:  /reset_random_filter_edition',level=xbmc.LOGDEBUG)
+	result = cm.update_random(editions=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/random_filter_code')
+def random_filter_code():
+	xbmc.log(msg='IAGL:  /random_filter_code',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_random(),dict) and isinstance(cm.get_random().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_random().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='code',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='code'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30034),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game codes select in random: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_random(codes=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game codes select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_random_filter_code')
+def reset_random_filter_code():
+	xbmc.log(msg='IAGL:  /reset_random_filter_code',level=xbmc.LOGDEBUG)
+	result = cm.update_random(codes=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/random_filter_rating')
+def random_filter_rating():
+	xbmc.log(msg='IAGL:  /random_filter_rating',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_random(),dict) and isinstance(cm.get_random().get('game_lists'),list):
+		game_list_query = 'LIKE '+' OR choose_table.matching_lists LIKE '.join(['"%""{}""%"'.format(x) for x in cm.get_random().get('game_lists') if isinstance(x,str)])
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_matching_lists',table_select='rating',game_list_query=game_list_query))if isinstance(list_item,xbmcgui.ListItem)]
+	else:
+		li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_choose_all',table_select='rating'))if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30035),options=li,useDetails=True) 
+	if isinstance(selected,list):
+		xbmc.log(msg='IAGL:  Game ratings select in random: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+		result = cm.update_random(ratings=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+	else:
+		xbmc.log(msg='IAGL:  Game ratings select cancelled',level=xbmc.LOGDEBUG)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_random_filter_rating')
+def reset_random_filter_rating():
+	xbmc.log(msg='IAGL:  /reset_random_filter_rating',level=xbmc.LOGDEBUG)
+	result = cm.update_random(ratings=None)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/execute_random')
+def execute_random():
+	xbmc.log(msg='IAGL:  /execute_random',level=xbmc.LOGDEBUG)
+	game_search_query = cm.get_random_query()
+	if isinstance(game_search_query,str):
+		xbmc.log(msg='IAGL:  Current random parameters: {}'.format(cm.get_random()),level=xbmc.LOGDEBUG)
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('random_games',game_search_query=game_search_query,num_results=cm.get_random_num_results(),game_title_setting=cm.get_setting('append_game_list_to_search_results_combined'))) if isinstance(list_item,xbmcgui.ListItem)])
+		for sm in config.listitem.get('sort_methods').get('games'):
+			xbmcplugin.addSortMethod(plugin.handle,sm)
+		xbmcplugin.endOfDirectory(plugin.handle)
+	else:
+		xbmc.log(msg='IAGL:  Current random parameters are empty',level=xbmc.LOGDEBUG)
+		ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30227),cm.get_loc(30228))
+		xbmc.sleep(config.defaults.get('sleep'))
+		xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/generate_random_link')
+def generate_random_link():
+	xbmc.log(msg='IAGL:  /generate_random_link',level=xbmc.LOGDEBUG)
+	current_search = cm.get_random()
+	if isinstance(current_search,dict) and len(list(current_search.keys()))>0:
+		selected = xbmcgui.Dialog().input(heading=cm.get_loc(30230))
+		if isinstance(selected,str) and len(selected)>0:
+			xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(random_from_link,query=json.dumps(current_search)),cm.add_context_menu(li=xbmcgui.ListItem(selected,offscreen=True),type_in='random_link',ip=selected),True)])
+			xbmcplugin.endOfDirectory(plugin.handle)
+		else:
+			xbmc.sleep(config.defaults.get('sleep'))
+			xbmc.executebuiltin('Container.Refresh')
+	else:
+		xbmc.log(msg='IAGL:  Current random parameters are empty',level=xbmc.LOGDEBUG)
+		ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30227),cm.get_loc(30228))
+		xbmc.sleep(config.defaults.get('sleep'))
+		xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/random_from_link')
+def random_from_link():
+	xbmc.log(msg='IAGL:  /random_from_link',level=xbmc.LOGDEBUG)
+	cc = next(iter(plugin.args.get('query')),None)
+	if isinstance(cc,str):
+		game_search_query = cm.get_random_query(current_search_in=json.loads(cc))
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('random_games',game_search_query=game_search_query,num_results=cm.get_random_num_results(current_search_in=json.loads(cc)),game_title_setting=cm.get_setting('game_title_setting'))) if isinstance(list_item,xbmcgui.ListItem)])
+		for sm in config.listitem.get('sort_methods').get('games'):
+			xbmcplugin.addSortMethod(plugin.handle,sm)
+		xbmcplugin.endOfDirectory(plugin.handle)
+	else:
+		previous_path = xbmc.getInfoLabel('Container.FolderPath')
+		if previous_path.startswith('plugin://plugin.program.iagl/random_from_link'): #User came from a favorite, return home after selecting parent path
+			xbmc.sleep(config.defaults.get('sleep'))
+			xbmc.executebuiltin('Dialog.Close(busydialog)')
+			xbmc.executebuiltin('ActivateWindow(home)')
+		else:
+			xbmc.log(msg='IAGL:  Unknown previous path {}'.format(previous_path), level=xbmc.LOGDEBUG)
+			plugin.redirect('/')
+## End Random Routes ##
+
+@plugin.route('/game_list/<game_list_id>/<choose_id>')
+def view_game_list(game_list_id,choose_id):
+	xbmc.log(msg='IAGL:  /game_list/{}/{}'.format(game_list_id,choose_id),level=xbmc.LOGDEBUG)
+	if choose_id == 'choose_from_list':
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}/{}'.format('game_list',game_list_id,item_path)),list_item,True) for list_item,item_path in db.query_db(db.get_query(choose_id,game_list_id=game_list_id)) if isinstance(list_item,xbmcgui.ListItem)])
+		for sm in config.listitem.get('sort_methods').get('game_list_choice'):
+			xbmcplugin.addSortMethod(plugin.handle,sm)
+	elif choose_id == 'by_all':
+		if isinstance(cm.get_setting('games_pagination'),int):
+			plugin.redirect('/game_list_paged/{}/{}/{}'.format(game_list_id,choose_id,0))
+		else:
+			xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('by_all_no_page',game_list_id=game_list_id,game_title_setting=cm.get_setting('game_title_setting'),filter_to_1g1r=cm.get_setting('filter_to_1g1r'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'))) if isinstance(list_item,xbmcgui.ListItem)])
+			for sm in config.listitem.get('sort_methods').get('games'):
+				xbmcplugin.addSortMethod(plugin.handle,sm)
+	else:
+		# Possibly update this if I can understand art types for other media types
+		# if choose_id in config.settings.get('media_types').keys():
+		# 	print(config.settings.get('media_types').get(choose_id))
+		# 	xbmcplugin.setContent(plugin.handle,config.settings.get('media_types').get(choose_id))
+		# else:
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}/{}/{}'.format('game_list',game_list_id,choose_id,item_path)),list_item,True) for list_item,item_path in db.query_db(db.get_query(choose_id,game_list_id=game_list_id)) if isinstance(list_item,xbmcgui.ListItem)])
+		for sm in config.listitem.get('sort_methods').get('game_list_choice_by'):
+			xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
-@plugin.route('/game/<game_list_id>/<game_id>')
-def get_game(game_list_id,game_id):
-	if iagl_addon.settings.get('game_action').get('select')==0: #Download and launch
-		plugin.redirect('/game_launch/'+game_list_id+'/'+game_id)
-	elif iagl_addon.settings.get('game_action').get('select')==1: #Download only 
-		plugin.redirect('/game_download_only/'+game_list_id+'/'+game_id)
-	else: #Show info page
-		plugin.redirect('/game_info_page/'+game_list_id+'/'+game_id)
-
-@plugin.route('/game_info_page/<game_list_id>/<game_id>')
-def show_info_game(game_list_id,game_id):
-	game = iagl_addon.game_lists.get_game_as_dict(game_list_id=game_list_id,game_id=game_id)
-	if isinstance(game,dict):
-		from resources.lib.main import iagl_dialog_info_page
-		# iagl_addon.settings.get('game_action').get('show_netplay') and
-		info_page = iagl_dialog_info_page('IAGL-infodialog.xml',iagl_addon.directory.get('addon').get('path'),'Default','1080i',game_list_id=game_list_id,game_id=game_id,game=game,game_listitem=get_game_listitem(dict_in=game,filter_in=None),show_netplay=(iagl_addon.settings.get('game_action').get('show_netplay') and game.get('properties').get('emu_launcher') == 'external' and iagl_addon.settings.get('ext_launchers').get('environment') not in ['android','android_ra32','android_aarch64']),autoplay_trailer=iagl_addon.settings.get('game_action').get('autoplay_trailer'),netplay_launch_action=iagl_addon.settings.get('game_action').get('netplay_launch_action'))
-		info_page.doModal()
-		action_requested = info_page.action_requested
-		del info_page
-		if iagl_addon.kodi_user.get('current_folder') != iagl_addon.title: #There has to be a better way to know what the parentpath is
-			if xbmcgui.getCurrentWindowId() != 10000:
-				xbmc.log(msg='IAGL:  Returning to Home', level=xbmc.LOGDEBUG)
-				xbmc.executebuiltin('ActivateWindow(home)')
-				xbmc.sleep(100)
-		if action_requested == 0:  #Download and launch
-			plugin.redirect('/game_launch/'+game_list_id+'/'+game_id)
-		elif action_requested == 1:  #Download only 
-			plugin.redirect('/game_download_only/'+game_list_id+'/'+game_id)
-		elif action_requested == 2:  #Launch with netplay 
-			plugin.redirect('/netplay_game_launch/'+game_list_id+'/'+game_id)
-		elif action_requested == 3:
-			from resources.lib.main import iagl_dialog_netplay_settings_page
-			netplay_settings_page = iagl_dialog_netplay_settings_page('IAGL-netplay-input.xml',iagl_addon.directory.get('addon').get('path'),'Default','1080i',netplay_inputs=None,default_host=iagl_addon.settings.get('game_action').get('netplay_default_host'),default_port=iagl_addon.settings.get('game_action').get('netplay_port'))
-			netplay_settings_page.doModal()
-			netplay_settings = netplay_settings_page.values_out
-			del netplay_settings_page
-			plugin.run(['plugin://plugin.program.iagl/netplay_game_launch/'+game_list_id+'/'+game_id,'0','query=%(qq)s'%{'qq':url_quote_query(netplay_settings)}]) #Why doesn't redirect work here?
-
-	else:
-		current_dialog = xbmcgui.Dialog()
-		ok_ret = current_dialog.ok(loc_str(30203),loc_str(30359) % {'game_id': game_id, 'game_list_id': game_list_id})
-		del current_dialog
-
-@plugin.route('/game_launch/<game_list_id>/<game_id>')
-def download_and_launch_game(game_list_id,game_id):
-	game = iagl_addon.game_lists.get_game_as_dict(game_list_id=game_list_id,game_id=game_id)
-	current_game_list = iagl_addon.game_lists.get_game_list(game_list_id)
-	if isinstance(game,dict) and isinstance(current_game_list,dict):
-		from resources.lib.download import iagl_download
-		from resources.lib.post_process import iagl_post_process
-		from resources.lib.launch import iagl_launch
-
-		iagl_download = iagl_download(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game)
-		downloaded_files = iagl_download.download_game()
-		iagl_post_process = iagl_post_process(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game,game_files=downloaded_files)
-		post_processed_files = iagl_post_process.post_process_game(show_progress=(current_game_list.get('emu_postdlaction') not in ['none']))
-		iagl_launch = iagl_launch(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game,game_files=post_processed_files)
-		launched_files = iagl_launch.launch_game()
-
-		if not iagl_addon.settings.get('ext_launchers').get('close_kodi') and check_and_close_notification():
-			current_dialog = xbmcgui.Dialog()
-			if all([x.get('download_success') for x in downloaded_files]) and all([x.get('post_process_success') for x in post_processed_files]) and launched_files.get('launch_process_success'):
-				current_dialog.notification(loc_str(30202),launched_files.get('launch_process_message'),xbmcgui.NOTIFICATION_INFO,iagl_addon.settings.get('notifications').get('background_notification_time'),sound=False)
-			elif all([not x.get('download_success') for x in downloaded_files]):
-				current_dialog.notification(loc_str(30203),loc_str(30304) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':next(iter([x.get('download_message') for x in downloaded_files if not x.get('download_success')]),'Unknown')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
-			elif all([not x.get('post_process_success') for x in post_processed_files]):
-				current_dialog.notification(loc_str(30203),loc_str(30304) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':next(iter([x.get('post_process_message') for x in post_processed_files if not x.get('post_process_success')]),'Unknown')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
-			elif not launched_files.get('launch_process_success'):
-				current_dialog.notification(loc_str(30203),loc_str(30305) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':launched_files.get('launch_process_message')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
-			else:
-				current_dialog.notification(loc_str(30203),loc_str(30303) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':launched_files.get('launch_process_message')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
-		if iagl_addon.settings.get('ext_launchers').get('wait_for_return'):
-			iagl_post_launch = iagl_launch.post_launch_check(game_launch_status=launched_files)
+@plugin.route('/game_list_paged/<game_list_id>/<choose_id>/<page_id>')
+def view_game_list_paged(game_list_id,choose_id,page_id):
+	xbmc.log(msg='IAGL:  /game_list_paged/{}/{}/{}'.format(game_list_id,choose_id,page_id),level=xbmc.LOGDEBUG)
+	if choose_id == 'by_all':
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		if page_id == '0':
+			starting_number = 0
+			next_page = '1'
 		else:
-			xbmc.log(msg='IAGL:  Post launch wait is disabled, finishing.', level=xbmc.LOGDEBUG)
+			starting_number = int(page_id)*cm.get_setting('games_pagination')
+			next_page = str(int(page_id)+1)
+		page_result = [(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('by_all_page',game_list_id=game_list_id,game_title_setting=cm.get_setting('game_title_setting'),filter_to_1g1r=cm.get_setting('filter_to_1g1r'),items_per_page=cm.get_setting('games_pagination'),starting_number=starting_number)) if isinstance(list_item,xbmcgui.ListItem)]
+		xbmcplugin.addDirectoryItems(plugin.handle,page_result)
+		if len(page_result)==cm.get_setting('games_pagination'):
+			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(view_game_list_paged,game_list_id=game_list_id,choose_id=choose_id,page_id=next_page),cm.get_next_li(),True)])
+		for sm in config.listitem.get('sort_methods').get('games'):
+			xbmcplugin.addSortMethod(plugin.handle,sm)
 	else:
-		current_dialog = xbmcgui.Dialog()
-		ok_ret = current_dialog.ok(loc_str(30203),loc_str(30359) % {'game_id': game_id, 'game_list_id': game_list_id})
-		del current_dialog
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}/{}/{}'.format('game_list',game_list_id,choose_id,item_path)),list_item,True) for list_item,item_path in db.query_db(db.get_query(choose_id,game_list_id=game_list_id)) if isinstance(list_item,xbmcgui.ListItem)])
+		for sm in config.listitem.get('sort_methods').get('game_list_choice_by'):
+			xbmcplugin.addSortMethod(plugin.handle,sm)
+	xbmcplugin.endOfDirectory(plugin.handle)
 
-@plugin.route('/netplay_game_launch/<game_list_id>/<game_id>')
-def download_and_launch_game_netplay(game_list_id,game_id):
-	game = iagl_addon.game_lists.get_game_as_dict(game_list_id=game_list_id,game_id=game_id)
-	current_game_list = iagl_addon.game_lists.get_game_list(game_list_id)
-	uuid = get_uuid()
-	netplay_query = None
-	if plugin.args.get('query'):
-		netplay_query=json.loads(plugin.args['query'][0])
-	if isinstance(game,dict) and isinstance(current_game_list,dict):
-		from resources.lib.download import iagl_download
-		from resources.lib.post_process import iagl_post_process
-		from resources.lib.launch import iagl_launch
+@plugin.route('/game_list/<game_list_id>/<choose_id>/<choose_value>')
+def view_games_list_from_choice(game_list_id,choose_id,choose_value):
+	if isinstance(cm.get_setting('games_pagination'),int):
+		plugin.redirect('/game_list_paged/{}/{}/{}/{}'.format(game_list_id,choose_id,choose_value,0))
+	else:
+		xbmc.log(msg='IAGL:  /game_list/{}/{}/{}'.format(game_list_id,choose_id,choose_value),level=xbmc.LOGDEBUG)
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('get_games_from_choice_no_page',game_list_id=game_list_id,choice_query=db.get_game_table_filter_from_choice(choose_id=choose_id,choose_value=choose_value),game_title_setting=cm.get_setting('game_title_setting'),filter_to_1g1r=cm.get_setting('filter_to_1g1r'))) if isinstance(list_item,xbmcgui.ListItem)])
+		for sm in config.listitem.get('sort_methods').get('games'):
+			xbmcplugin.addSortMethod(plugin.handle,sm)
+		xbmcplugin.endOfDirectory(plugin.handle)
 
-		iagl_download = iagl_download(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game)
-		downloaded_files = iagl_download.download_game()
-		iagl_post_process = iagl_post_process(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game,game_files=downloaded_files)
-		post_processed_files = iagl_post_process.post_process_game(show_progress=(current_game_list.get('emu_postdlaction') not in ['none']))
-		iagl_launch = iagl_launch(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game,game_files=post_processed_files,netplay=True,uuid=uuid,netplay_query=netplay_query)
-		launched_files = iagl_launch.launch_game()
+@plugin.route('/game_list_paged/<game_list_id>/<choose_id>/<choose_value>/<page_id>')
+def view_games_list_from_choice_paged(game_list_id,choose_id,choose_value,page_id):
+	xbmc.log(msg='IAGL:  /game_list_paged/{}/{}/{}/{}'.format(game_list_id,choose_id,choose_value,page_id),level=xbmc.LOGDEBUG)
+	if page_id == '0':
+		starting_number = 0
+		next_page = '1'
+	else:
+		starting_number = int(page_id)*cm.get_setting('games_pagination')
+		next_page = str(int(page_id)+1)
+	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+	page_result = [(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('get_games_from_choice_page',game_list_id=game_list_id,choice_query=db.get_game_table_filter_from_choice(choose_id=choose_id,choose_value=choose_value),game_title_setting=cm.get_setting('game_title_setting'),filter_to_1g1r=cm.get_setting('filter_to_1g1r'),items_per_page=cm.get_setting('games_pagination'),starting_number=starting_number)) if isinstance(list_item,xbmcgui.ListItem)]
+	xbmcplugin.addDirectoryItems(plugin.handle,page_result)
+	if len(page_result)==cm.get_setting('games_pagination'):
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(view_games_list_from_choice_paged,game_list_id=game_list_id,choose_id=choose_id,choose_value=choose_value,page_id=next_page),cm.get_next_li(),True)])
+	for sm in config.listitem.get('sort_methods').get('games'):
+		xbmcplugin.addSortMethod(plugin.handle,sm)
+	xbmcplugin.endOfDirectory(plugin.handle)
 
-		if not iagl_addon.settings.get('ext_launchers').get('close_kodi') and check_and_close_notification():
-			current_dialog = xbmcgui.Dialog()
-			if all([x.get('download_success') for x in downloaded_files]) and all([x.get('post_process_success') for x in post_processed_files]) and launched_files.get('launch_process_success'):
-				if iagl_addon.settings.get('game_list').get('announce_netplay'):
-					discord_post_success = generate_discord_announcement(discord_id=iagl_addon.handle.getSetting(id='iagl_discord_id'),username=iagl_addon.handle.getSetting(id='iagl_netplay_nickname'),uuid=uuid,game=game)
-					if discord_post_success:
-						xbmc.log(msg='IAGL:  Game session id %(uid)s was successfully posted to discord'%{'uid':uuid}, level=xbmc.LOGDEBUG)
-				current_dialog.notification(loc_str(30202),launched_files.get('launch_process_message'),xbmcgui.NOTIFICATION_INFO,iagl_addon.settings.get('notifications').get('background_notification_time'),sound=False)
-			elif all([not x.get('download_success') for x in downloaded_files]):
-				current_dialog.notification(loc_str(30203),loc_str(30304) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':next(iter([x.get('download_message') for x in downloaded_files if not x.get('download_success')]),'Unknown')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
-			elif all([not x.get('post_process_success') for x in post_processed_files]):
-				current_dialog.notification(loc_str(30203),loc_str(30304) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':next(iter([x.get('post_process_message') for x in post_processed_files if not x.get('post_process_success')]),'Unknown')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
-			elif not launched_files.get('launch_process_success'):
-				current_dialog.notification(loc_str(30203),loc_str(30305) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':launched_files.get('launch_process_message')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
-			else:
-				current_dialog.notification(loc_str(30203),loc_str(30303) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':launched_files.get('launch_process_message')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
-		if iagl_addon.settings.get('ext_launchers').get('wait_for_return'):
-			iagl_post_launch = iagl_launch.post_launch_check(game_launch_status=launched_files)
+@plugin.route('/play_game/<game_id>')
+def play_game(game_id):
+	xbmc.log(msg='IAGL:  /play_game/{}'.format(game_id),level=xbmc.LOGDEBUG)
+	current_game_data = next(iter(db.get_game_launch_info_from_id(game_id=game_id)),None)
+	selected_game_parameters = dict()
+	if isinstance(current_game_data,dict):
+		selected_game_parameters['launcher'] = next(iter([x for x in [current_game_data.get('user_game_launcher'),current_game_data.get('user_global_launcher'),current_game_data.get('default_global_launcher')] if isinstance(x,str)]),'retroplayer') #Get launcher (retroplayer/external)
+		selected_game_parameters['game_addon'] = next(iter([x for x in [current_game_data.get('user_game_launch_addon'),current_game_data.get('user_global_launch_addon'),current_game_data.get('default_global_launch_addon')] if isinstance(x,str)]),None) #Get launch addon
+		selected_game_parameters['external_launch_command'] = next(iter([x for x in [current_game_data.get('user_game_external_launch_command'),current_game_data.get('user_global_external_launch_command'),current_game_data.get('default_global_external_launch_command')] if isinstance(x,str)]),None) #Get external launch command
+		selected_game_parameters['post_download_process'] = next(iter([x for x in [current_game_data.get('user_game_post_download_process'),current_game_data.get('user_post_download_process'),current_game_data.get('default_global_post_download_process')] if isinstance(x,str)]),None) #Get external launch command
+		xbmc.log(msg='IAGL:  Selected game parameters: {}'.format(selected_game_parameters),level=xbmc.LOGDEBUG)
+		if selected_game_parameters.get('launcher') == 'retroplayer':
+			xbmc.log(msg='IAGL:  Launcher set as retroplayer',level=xbmc.LOGDEBUG)
+			plugin.redirect('/play_game_retroplayer/{}'.format(game_id))
+		elif selected_game_parameters.get('launcher') == 'external':
+			xbmc.log(msg='IAGL:  Launcher set as external',level=xbmc.LOGDEBUG)
+			plugin.redirect('/play_game_external/{}'.format(game_id))
 		else:
-			xbmc.log(msg='IAGL:  Post launch wait is disabled, finishing.', level=xbmc.LOGDEBUG)
+			xbmc.log(msg='IAGL:  Launcher set as uknown ({}), defaulting to retroplayer'.format(next_path),level=xbmc.LOGDEBUG)
+			plugin.redirect('/play_game_retroplayer/{}'.format(game_id))
 	else:
-		current_dialog = xbmcgui.Dialog()
-		ok_ret = current_dialog.ok(loc_str(30203),loc_str(30359) % {'game_id': game_id, 'game_list_id': game_list_id})
-		del current_dialog
+		xbmc.log(msg='IAGL:  Database returned null results for game id {}'.format(game_id),level=xbmc.LOGERROR)
+	xbmcplugin.endOfDirectory(plugin.handle)
 
-@plugin.route('/netplay_game_launch/game_search')
-def copy_game_netplay_info():
-	query = None
-	if plugin.args.get('query'):
-		if '}/' in plugin.args.get('query')[0]:
-			query=json.loads(plugin.args.get('query')[0].split('}/')[0]+'}')
-	if query:
-		set_mem_cache('iagl_netplay_parameters',query)
-		current_dialog = xbmcgui.Dialog()
-		ok_ret = current_dialog.ok(loc_str(30004),loc_str(30616))
-		del current_dialog
+@plugin.route('/play_game_retroplayer/<game_id>')
+def play_game_retroplayer(game_id):
+	xbmc.log(msg='IAGL:  /play_game_retroplayer/{}'.format(game_id),level=xbmc.LOGDEBUG)
+	current_game_data = db.get_game_from_id(game_id=game_id,game_title_setting=cm.get_setting('append_game_list_to_playlist_results_combined'))
+	game_addon = next(iter([x for x in [current_game_data.get('user_game_launch_addon'),current_game_data.get('user_global_launch_addon'),current_game_data.get('default_global_launch_addon')] if isinstance(x,str)]),None) #Get launch addon
+	game_dl_path = current_game_data.get('user_global_download_path') or cm.get_setting('default_dl_path')
+	game_pp = next(iter([x for x in [current_game_data.get('user_game_post_download_process'),current_game_data.get('user_post_download_process'),current_game_data.get('default_global_post_download_process')] if isinstance(x,str)]),None)
+	current_game_name=current_game_data.get('label')
+	game_list_item = cm.create_game_li(game_data=current_game_data,game_addon=game_addon)
+	dl.set_game_name(game_name=current_game_name)
+	dl.set_rom(rom=current_game_data.get('rom'))
+	dl.set_dl_path(path_in=game_dl_path)
+	current_game_data = dl.downloader.download() #Returns a list of all files downloaded and their result
+	if all([x.get('download_success') for x in current_game_data]):
+		xbmc.log(msg='IAGL:  Download of {} completed'.format(current_game_name),level=xbmc.LOGDEBUG)
+		pp.set_game_name(game_name=current_game_name)
+		pp.set_rom(rom=current_game_data)
+		pp.set_process(process=game_pp)
+		current_game_data = pp.process_games() #Returns a dict containing process results
+		if current_game_data.get('process_success'):
+			ln.set_launcher(launcher='retroplayer')
+			xbmc.log(msg='IAGL:  Post processing of {} completed'.format(current_game_name),level=xbmc.LOGDEBUG)
+			if isinstance(game_list_item,xbmcgui.ListItem) and isinstance(current_game_data.get('launch_file'),str):
+				game_list_item.setPath(current_game_data.get('launch_file'))
+			ln.set_game_name(game_name=current_game_name)
+			ln.set_list_item(list_item=game_list_item)
+			ln.set_rom(rom=current_game_data)
+			current_game_data = ln.launcher.launch()
+			playcount_and_last_played_update = db.update_pc_and_cp(game_id=game_id)
+			history_limit_update = db.limit_history(history_limit=cm.get_setting('play_history'))
+			history_update = db.add_history(game_id=game_id)
+	else:
+		ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),next(iter([x.get('download_message') for x in current_game_data if isinstance(x.get('download_message'),str)]),cm.get_loc(30272)))
 
-@plugin.route('/game_download_only/<game_list_id>/<game_id>')
-def download_only_game(game_list_id,game_id):
-	game = iagl_addon.game_lists.get_game_as_dict(game_list_id=game_list_id,game_id=game_id)
-	current_game_list = iagl_addon.game_lists.get_game_list(game_list_id)
-	if isinstance(game,dict) and isinstance(current_game_list,dict):
-		from resources.lib.download import iagl_download
-		from resources.lib.post_process import iagl_post_process
+	xbmcplugin.endOfDirectory(plugin.handle)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
 
-		iagl_download = iagl_download(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game)
-		downloaded_files = iagl_download.download_game()
+@plugin.route('/play_game_external/<game_id>')
+def play_game_external(game_id):
+	xbmc.log(msg='IAGL:  /play_game_external/{}'.format(game_id),level=xbmc.LOGDEBUG)
+	current_game_data = db.get_game_from_id(game_id=game_id,game_title_setting=cm.get_setting('append_game_list_to_playlist_results_combined'))
+	launch_process = next(iter([x for x in [current_game_data.get('user_game_external_launch_command'),current_game_data.get('user_global_external_launch_command'),current_game_data.get('default_global_external_launch_command')] if isinstance(x,str)]),None) #Get external launch command
+	if isinstance(launch_process,str):
+		xbmc.log(msg='IAGL:  Launch process set to:\n{}'.format(launch_process),level=xbmc.LOGDEBUG)
+	else:
+		xbmc.log(msg='IAGL:  Launch process is not set, unable to launch game',level=xbmc.LOGDEBUG)
+	xbmcplugin.endOfDirectory(plugin.handle)
 
-		iagl_post_process = iagl_post_process(settings=iagl_addon.settings,directory=iagl_addon.directory,game_list=current_game_list,game=game,game_files=downloaded_files)
-		post_processed_files = iagl_post_process.post_process_game(show_progress=(current_game_list.get('emu_postdlaction') not in ['none']))
+@plugin.route('/context_menu/action/download_game_to/<game_id>')
+def download_game_to(game_id):
+	xbmc.log(msg='IAGL:  /download_game_to/{}'.format(game_id),level=xbmc.LOGDEBUG)
+	current_game_data = db.get_game_from_id(game_id=game_id)
+	if isinstance(current_game_data,dict) and isinstance(current_game_data.get('rom'),dict) or isinstance(current_game_data.get('rom'),list):
+		selected = xbmcgui.Dialog().browseSingle(0,heading=cm.get_loc(30267),shares="")
+		if isinstance(selected,str) and xbmcvfs.exists(selected):
+			dl.set_rom(rom=current_game_data.get('rom'))
 
-		if check_and_close_notification():
-			current_dialog = xbmcgui.Dialog()
-			if all([x.get('download_success') for x in downloaded_files]) and all([x.get('post_process_success') for x in post_processed_files]):
-				current_dialog.notification(loc_str(30202),loc_str(30302) % {'game_title': game.get('info').get('originaltitle')},xbmcgui.NOTIFICATION_INFO,iagl_addon.settings.get('notifications').get('background_notification_time'))
-			elif all([not x.get('download_success') for x in downloaded_files]):
-				current_dialog.notification(loc_str(30203),loc_str(30304) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':next(iter([x.get('download_message') for x in downloaded_files if not x.get('download_success')]),'Unknown')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
-			elif all([not x.get('post_process_success') for x in post_processed_files]):
-				current_dialog.notification(loc_str(30203),loc_str(30304) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':next(iter([x.get('post_process_message') for x in post_processed_files if not x.get('post_process_success')]),'Unkown')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
+@plugin.route('/context_menu/action/add_to_favorites/<game_id>')
+def add_to_iagl_favorites(game_id):
+	xbmc.log(msg='IAGL:  /add_to_iagl_favorites',level=xbmc.LOGDEBUG)
+	fav_groups = db.get_favorite_group_names()
+	if isinstance(fav_groups,list) and len(fav_groups)>0:  #Ask about current lists or new list
+		li = [xbmcgui.ListItem(x.get('label'),offscreen=True) for x in fav_groups]+[xbmcgui.ListItem(cm.get_loc(30234),offscreen=True)]
+		selected = xbmcgui.Dialog().select(heading=cm.get_loc(30235),list=li,useDetails=False)
+		if isinstance(selected,int):
+			if selected==len(li)-1:
+				new_name = xbmcgui.Dialog().input(heading=cm.get_loc(30089))
+				if isinstance(new_name,str) and len(new_name)>0:
+					result1 = db.add_favorite(fav_group=new_name,game_id=game_id)
+					result2 = db.mark_game_as_favorite(game_id=game_id)
+					if isinstance(result1,int) and isinstance(result2,int):
+						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_name))
 			else:
-				current_dialog.notification(loc_str(30203),loc_str(30303) % {'game_title': game.get('info').get('originaltitle'),'fail_reason':next(iter([x.get('download_message') for x in downloaded_files if not x.get('download_success')]),'Unkown')},xbmcgui.NOTIFICATION_ERROR,iagl_addon.settings.get('notifications').get('background_error_notification_time'))
-	else:
-		current_dialog = xbmcgui.Dialog()
-		ok_ret = current_dialog.ok(loc_str(30203),loc_str(30359) % {'game_id': game_id, 'game_list_id': game_list_id})
-		del current_dialog
+				fav_name = [x.get('label') for x in fav_groups][selected]
+				result1 = db.add_favorite(fav_group=fav_name,game_id=game_id)
+				result2 = db.mark_game_as_favorite(game_id=game_id)
+				if isinstance(result1,int) and isinstance(result2,int):
+					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),fav_name))			
+	else: #No groups defined yet
+		new_name = xbmcgui.Dialog().input(heading=cm.get_loc(30089))
+		if isinstance(new_name,str) and len(new_name)>0:
+			result1 = db.add_favorite(fav_group=new_name,game_id=game_id)
+			result2 = db.mark_game_as_favorite(game_id=game_id)
+			if isinstance(result1,int) and isinstance(result2,int):
+				ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_name))
 
-@plugin.route('/context_menu/edit/<game_list_id>/<edit_id>')
-def context_menu_edit(game_list_id,edit_id):
-	current_dialog = xbmcgui.Dialog()
-	current_crc = iagl_addon.game_lists.get_crc(game_list_id)
-	addons_available = []
-	# ,'emu_postdlaction','emu_default_addon'
-	if edit_id in ['emu_launcher','emu_visibility','emu_default_addon']:
-		if edit_id == 'emu_default_addon':
-			try:
-				json_query = json.loads(xbmc.executeJSONRPC('{ "jsonrpc": "2.0", "method": "Addons.GetAddons","params":{"type":"kodi.gameclient", "enabled": true}, "id": "1"}'))
-			except Exception as exc:
-				xbmc.log(msg='IAGL:  Error executing JSONRPC command.  Exception %(exc)s' % {'exc': exc}, level=xbmc.LOGERROR)
-				json_query = None
-			if json_query and json_query.get('result') and json_query.get('result').get('addons'):
-				addons_available = sorted([(xbmcaddon.Addon(id='%(addon_name)s' % {'addon_name':x.get('addonid')}).getAddonInfo('name'),x.get('addonid')) for x in json_query.get('result').get('addons') if x.get('addonid')!='game.libretro'],key=lambda x:x[0])
-			# {"id":"1","jsonrpc":"2.0","result":{"addons":[{"addonid":"game.libretro","type":"kodi.gameclient"},{"addonid":"game.libretro.cannonball","type":"kodi.gameclient"},{"addonid":"game.libretro.fbneo","type":"kodi.gameclient"},{"addonid":"game.libretro.mame2003","type":"kodi.gameclient"},{"addonid":"game.libretro.mame2003_plus","type":"kodi.gameclient"},{"addonid":"game.libretro.mame2015","type":"kodi.gameclient"}],"limits":{"end":6,"start":0,"total":6}}}
-		current_choices = dict(zip(['emu_launcher','emu_visibility','emu_default_addon'],[dict(zip(['query','query_values','header_values','current_choice'],[loc_str(30333),[loc_str(30363),loc_str(30364)],['external','retroplayer'],loc_str(30045)])),
-																	dict(zip(['query','query_values','header_values','current_choice'],[loc_str(30334),[loc_str(30200),loc_str(30201)],['hidden','visible'],loc_str(30403)])),
-																	dict(zip(['query','query_values','header_values','current_choice'],[loc_str(30339),[loc_str(30338)]+[x[0] for x in addons_available],['none']+[x[1] for x in addons_available],loc_str(30409)])),
-																	]))
-		choices = current_choices.get(edit_id)
-		new_value = current_dialog.select(choices.get('query'),choices.get('query_values'))
-		if new_value in [ii for ii,x in enumerate(choices.get('query_values'))] and choices.get('query_values')[new_value] != loc_str(30201): #Make sure the new value is indexable and is not 'Cancel'
-			success = iagl_addon.game_lists.update_game_list_header(game_list_id,header_key=edit_id,header_value=choices.get('header_values')[new_value],current_choice=choices.get('current_choice'))
-			if success:
-				if iagl_addon.refresh_list(current_crc):
-					ok_ret = current_dialog.ok(loc_str(30202),loc_str(30345)%{'current_filename':game_list_id})
-				else:
-					ok_ret = current_dialog.ok(loc_str(30202),loc_str(30346)%{'current_filename':game_list_id})
+@plugin.route('/context_menu/action/remove_game_from_favorites/<game_id>')
+def remove_game_from_favorites(game_id):
+	xbmc.log(msg='IAGL:  /remove_game_from_favorites',level=xbmc.LOGDEBUG)
+	if xbmcgui.Dialog().yesno(cm.get_loc(30237),cm.get_loc(30238)):
+		result1 = db.delete_favorite_from_uid(game_id=game_id)
+		result2 = db.unmark_game_as_favorite(game_id=game_id)
+		if isinstance(result1,int) and isinstance(result2,int):
+			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30237),cm.get_loc(30239))
+			xbmc.sleep(config.defaults.get('sleep'))
 			xbmc.executebuiltin('Container.Refresh')
-	if edit_id in ['emu_launcher']: #Redirect to update the launch command if they updated the launch type
-		if choices.get('header_values')[new_value] == 'external':
-			plugin.redirect('/context_menu/select/'+game_list_id+'/emu_ext_launch_cmd')
-		elif choices.get('header_values')[new_value] == 'retroplayer':
-			plugin.redirect('/context_menu/edit/'+game_list_id+'/emu_default_addon')
-	else:
-		xbmc.log(msg='IAGL:  Unknown context edit selection %(edit_id)s'%{'edit_id':edit_id},level=xbmc.LOGERROR)
-	del current_dialog
 
-@plugin.route('/context_menu/select/<game_list_id>/<select_id>')
-def context_menu_select(game_list_id,select_id):
-	current_dialog = xbmcgui.Dialog()
-	current_crc = iagl_addon.game_lists.get_crc(game_list_id)
-	if select_id == 'emu_downloadpath':
-		if iagl_addon.settings.get('ext_launchers').get('environment') in ['android','android_ra32','android_aarch64']:
-			current_dialog.ok(loc_str(30337),loc_str(30595))
-		current_choices = dict(zip(['emu_downloadpath'],[dict(zip(['query','query_values','header_values','current_choice'],[loc_str(30336),[loc_str(30207),loc_str(30208),loc_str(30201)],[0,1,2],''])),]))
-		choices = current_choices.get(select_id)
-		new_value = current_dialog.select(choices.get('query'),choices.get('query_values'))
-		if new_value in [0,1]: #Make sure the new value is indexable and is not 'Cancel'
-			if new_value == 0: #Default Dir
-				success = iagl_addon.game_lists.update_game_list_header(game_list_id,header_key=select_id,header_value='default',current_choice=loc_str(30513))
-				if success:
-					if iagl_addon.refresh_list(current_crc):
-						ok_ret = current_dialog.ok(loc_str(30202),loc_str(30345)%{'current_filename':game_list_id})
-					else:
-						ok_ret = current_dialog.ok(loc_str(30202),loc_str(30346)%{'current_filename':game_list_id})
-				xbmc.executebuiltin('Container.Refresh')
-			else: #Custom Dir
-				new_value = current_dialog.browse(0,loc_str(30337),'')
-				if check_if_dir_exists(new_value):
-					success = iagl_addon.game_lists.update_game_list_header(game_list_id,header_key=select_id,header_value=new_value,current_choice=loc_str(30513))
-					if success:
-						if iagl_addon.refresh_list(current_crc):
-							ok_ret = current_dialog.ok(loc_str(30202),loc_str(30345)%{'current_filename':game_list_id})
-						else:
-							ok_ret = current_dialog.ok(loc_str(30202),loc_str(30346)%{'current_filename':game_list_id})
-					xbmc.executebuiltin('Container.Refresh')
-	elif select_id == 'metadata':
-		current_choices = dict(zip(['metadata'],[dict(zip(['query','query_values','header_values','current_choice'],[loc_str(30331),[loc_str(30414),loc_str(30415),loc_str(30416),loc_str(30417),loc_str(30418),loc_str(30419),loc_str(30420)],['emu_name','emu_category','emu_description', 'emu_comment', 'emu_trailer', 'emu_author', 'emu_date'],''])),]))
-		choices = current_choices.get(select_id)
-		new_value = current_dialog.select(choices.get('query'),choices.get('query_values'))
-		if new_value in [ii for ii,x in enumerate(choices.get('query_values'))] and choices.get('query_values')[new_value] != loc_str(30201):
-			current_game_list = iagl_addon.game_lists.get_game_list(game_list_id)
-			new_value2 = current_dialog.input(loc_str(30343)%{'current_choice':choices.get('query_values')[new_value]},current_game_list.get(choices.get('header_values')[new_value]))
-			if choices.get('header_values')[new_value] == 'emu_trailer':
-				new_value2 = clean_trailer_entry(new_value2)
-			if new_value2:
-				success = iagl_addon.game_lists.update_game_list_header(game_list_id,header_key=choices.get('header_values')[new_value],header_value=new_value2,current_choice=choices.get('query_values')[new_value])
-				if success:
-					if iagl_addon.refresh_list(current_crc):
-						ok_ret = current_dialog.ok(loc_str(30202),loc_str(30345)%{'current_filename':game_list_id})
-					else:
-						ok_ret = current_dialog.ok(loc_str(30202),loc_str(30346)%{'current_filename':game_list_id})
-					xbmc.executebuiltin('Container.Refresh')
-			else:
-				if choices.get('header_values')[new_value] == 'emu_trailer':
-					ok_ret = current_dialog.ok(loc_str(30203),loc_str(30374))
-	elif select_id == 'art':
-		current_choices = dict(zip(['art'],[dict(zip(['query','query_values','header_values','current_choice'],[loc_str(30332),[loc_str(30421),loc_str(30422),loc_str(30423),loc_str(30424)],['emu_thumb', 'emu_logo', 'emu_banner', 'emu_fanart'],''])),]))
-		choices = current_choices.get(select_id)
-		new_value = current_dialog.select(choices.get('query'),choices.get('query_values'))
-		if new_value in [ii for ii,x in enumerate(choices.get('query_values'))] and choices.get('query_values')[new_value] != loc_str(30201):
-			current_game_list = iagl_addon.game_lists.get_game_list(game_list_id)
-			new_value2 = clean_image_entry(current_dialog.input(loc_str(30343)%{'current_choice':choices.get('query_values')[new_value]},current_game_list.get(choices.get('header_values')[new_value])))
-			if new_value2:
-				success = iagl_addon.game_lists.update_game_list_header(game_list_id,header_key=choices.get('header_values')[new_value],header_value=new_value2,current_choice=choices.get('query_values')[new_value])
-				if success:
-					if iagl_addon.refresh_list(current_crc):
-						ok_ret = current_dialog.ok(loc_str(30202),loc_str(30345)%{'current_filename':game_list_id})
-					else:
-						ok_ret = current_dialog.ok(loc_str(30202),loc_str(30346)%{'current_filename':game_list_id})
-					xbmc.executebuiltin('Container.Refresh')
-			else:
-				ok_ret = current_dialog.ok(loc_str(30203),loc_str(30373))
-	elif select_id == 'emu_ext_launch_cmd':
-		current_choices = iagl_addon.get_ext_launch_cmds() #Generate list of commands to use based on RA and other EXT launch settings
-		if current_choices:
-			current_choices=sorted([x for x in current_choices if x.get('@name').lower().startswith('retro')],key=lambda x: x.get('@name'))+sorted([x for x in current_choices if not x.get('@name').lower().startswith('retro')],key=lambda x: x.get('@name')) #Sort commands by name
-			new_value = current_dialog.select(loc_str(30363),[x.get('@name') for x in current_choices]+[loc_str(30583)])
-			if new_value in [ii for ii,x in enumerate(current_choices)]:
-				if iagl_addon.settings.get('ext_launchers').get('environment') in ['android','android_ra32','android_aarch64'] and iagl_addon.settings.get('ext_launchers').get('use_startactivity') and isinstance(current_choices[new_value].get('activity'),str):
-					success = iagl_addon.game_lists.update_game_list_header(game_list_id,header_key='emu_ext_launch_cmd',header_value=current_choices[new_value].get('activity'),current_choice=loc_str(30363)) #Use StartAndroidActivity
+@plugin.route('/context_menu/action/add_to_favorites_search/<link_name>')
+def add_to_favorites_search(link_name):
+	xbmc.log(msg='IAGL:  /add_to_favorites_search',level=xbmc.LOGDEBUG)
+	current_search = cm.get_search()
+	if isinstance(current_search,dict):
+		fav_groups = db.get_favorite_group_names()
+		if isinstance(fav_groups,list) and len(fav_groups)>0:  #Ask about current lists or new list
+			li = [xbmcgui.ListItem(x.get('label'),offscreen=True) for x in fav_groups]+[xbmcgui.ListItem(cm.get_loc(30234),offscreen=True)]
+			selected = xbmcgui.Dialog().select(heading=cm.get_loc(30235),list=li,useDetails=False)
+			if isinstance(selected,int):
+				if selected==len(li)-1:
+					new_name = xbmcgui.Dialog().input(heading=cm.get_loc(30089))
+					if isinstance(new_name,str) and len(new_name)>0:
+						result = db.add_favorite(fav_group=new_name,is_search_link=1,link_query=json.dumps(current_search))
+						if isinstance(result,int):
+							ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_name))
 				else:
-					success = iagl_addon.game_lists.update_game_list_header(game_list_id,header_key='emu_ext_launch_cmd',header_value=current_choices[new_value].get('command'),current_choice=loc_str(30363))	#Use Python subprocess
-				if success:
-					if iagl_addon.refresh_list(current_crc):
-						ok_ret = current_dialog.ok(loc_str(30202),loc_str(30345)%{'current_filename':game_list_id})
-					else:
-						ok_ret = current_dialog.ok(loc_str(30202),loc_str(30346)%{'current_filename':game_list_id})
-					xbmc.executebuiltin('Container.Refresh')
-			elif new_value == len(current_choices): #Manual Entry
-				current_game_list = iagl_addon.game_lists.get_game_list(game_list_id)
-				new_value2 = current_dialog.input(loc_str(30342),current_game_list.get('emu_ext_launch_cmd'))
-				if new_value2:
-					success = iagl_addon.game_lists.update_game_list_header(game_list_id,header_key='emu_ext_launch_cmd',header_value=new_value2,current_choice=loc_str(30363))
-					if success:
-						if iagl_addon.refresh_list(current_crc):
-							ok_ret = current_dialog.ok(loc_str(30202),loc_str(30345)%{'current_filename':game_list_id})
-						else:
-							ok_ret = current_dialog.ok(loc_str(30202),loc_str(30346)%{'current_filename':game_list_id})
-					xbmc.executebuiltin('Container.Refresh')
+					fav_name = [x.get('label') for x in fav_groups][selected]
+					result = db.add_favorite(fav_group=fav_name,is_search_link=1,link_query=json.dumps(current_search))
+					if isinstance(result,int):
+						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),fav_name))			
+		else: #No groups defined yet
+			new_name = xbmcgui.Dialog().input(heading=cm.get_loc(30089))
+			if isinstance(new_name,str) and len(new_name)>0:
+				result = db.add_favorite(fav_group=new_name,is_search_link=1,link_query=json.dumps(current_search))
+				if isinstance(result,int):
+					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_name))
 	else:
-		xbmc.log(msg='IAGL:  Unknown context edit selection %(select_id)s'%{'select_id':select_id},level=xbmc.LOGERROR)
-	del current_dialog
+		xbmc.log(msg='IAGL:  /add_to_favorites_search query was malformed: {}'.format(current_search),level=xbmc.LOGERROR)
 
-@plugin.route('/context_menu/action/<game_list_id>/<action_id>')
-def context_menu_action(game_list_id,action_id):
-	if action_id == 'view_list_settings':
-		current_game_list = iagl_addon.game_lists.get_game_list(game_list_id)
-		current_emu_postdlaction = get_post_dl_commands().get(current_game_list.get('emu_postdlaction'))
-		if not current_emu_postdlaction:
-			current_emu_postdlaction = current_game_list.get('emu_postdlaction')
-		launch_command_string = ''
-		download_path_string = loc_str(30361)
-		current_header = loc_str(30362)%{'game_list_id':game_list_id}
-		if current_game_list.get('emu_launcher') == 'external':
-			if current_game_list.get('emu_ext_launch_cmd') == 'none':
-				launch_command_string = '[COLOR FF12A0C7]%(elc)s:  [/COLOR]Not Set!'%{'elc':loc_str(30363)}
-			else:
-				launch_command_string = '[COLOR FF12A0C7]%(elc)s:  [/COLOR]%(lc)s'%{'elc':loc_str(30363),'lc':current_game_list.get('emu_ext_launch_cmd')}
-		if current_game_list.get('emu_launcher') == 'retroplayer':
-			if current_game_list.get('emu_default_addon') == 'none':
-				launch_command_string = '[COLOR FF12A0C7]%(rp)s:  [/COLOR]%(auto)s'%{'rp':loc_str(30364),'auto':loc_str(30338)}
-			else:
-				launch_command_string = '[COLOR FF12A0C7]%(rp)s:  [/COLOR]%(lc)s'%{'rp':loc_str(30364),'lc':current_game_list.get('emu_default_addon')}
-		if current_game_list.get('emu_downloadpath') != 'default':
-			download_path_string = current_game_list.get('emu_downloadpath_resolved')
-		current_text = '[B]%(md)s[/B][CR][COLOR FF12A0C7]%(gln)s:  [/COLOR]%(emu_name)s[CR][COLOR FF12A0C7]%(cat)s:  [/COLOR]%(emu_category)s[CR][COLOR FF12A0C7]%(platform_string)s:  [/COLOR]%(emu_description)s[CR][COLOR FF12A0C7]%(author_string)s:  [/COLOR]%(emu_author)s[CR][CR][B]%(dp)s[/B][CR][COLOR FF12A0C7]%(source)s:  [/COLOR]%(download_source)s[CR][COLOR FF12A0C7]%(dl)s:  [/COLOR]%(download_path_string)s[CR][COLOR FF12A0C7]%(pdlc)s:  [/COLOR]%(emu_postdlaction)s[CR][CR][B]%(lp)s[/B][CR][COLOR FF12A0C7]%(lw)s:  [/COLOR]%(emu_launcher)s[CR]%(launch_command_string)s'%{'emu_name':current_game_list.get('emu_name'),'emu_category':current_game_list.get('emu_category'),'emu_description':current_game_list.get('emu_description'),'emu_author':current_game_list.get('emu_author'),'download_source':current_game_list.get('download_source'),'emu_postdlaction':current_emu_postdlaction,'emu_launcher':{'retroplayer':loc_str(30128),'external':loc_str(30003)}.get(current_game_list.get('emu_launcher')),'launch_command_string':launch_command_string,'download_path_string':download_path_string,'platform_string':loc_str(30416),'author_string':loc_str(30419),'gln':loc_str(30365),'cat':loc_str(30415),'dp':loc_str(30366),'source':loc_str(30368),'dl':loc_str(30367),'pdlc':loc_str(30369),'lp':loc_str(30370),'lw':loc_str(30371),'md':loc_str(30372)}
-		set_mem_cache('TextViewer_Header',current_header)
-		set_mem_cache('TextViewer_Text',current_text)
-		plugin.redirect('/text_viewer')
-	elif action_id == 'refresh_list':
-		if iagl_addon.refresh_list(iagl_addon.game_lists.get_crc(game_list_id)):
-			current_dialog = xbmcgui.Dialog()
-			ok_ret = current_dialog.ok(loc_str(30202),loc_str(30306)%{'game_list_id': game_list_id})
-			del current_dialog
-			xbmc.executebuiltin('Container.Refresh')
-	elif action_id == 'delete_favorite':
-		current_game_list = iagl_addon.game_lists.get_game_list(game_list_id)
-		current_dialog = xbmcgui.Dialog()
-		if current_dialog.yesno(loc_str(30395),loc_str(30396)%{'game_list':current_game_list.get('emu_name')}):
-			if delete_file_pathlib(iagl_addon.game_lists.get_file(game_list_id)):
-				current_dialog.ok(loc_str(30202),loc_str(30358)%{'game_list_id_in':current_game_list.get('emu_name')})
-				iagl_addon.refresh_list(iagl_addon.game_lists.get_crc(game_list_id))
-				xbmc.executebuiltin('Container.Refresh')
-			else:
-				current_dialog.ok(loc_str(30203),loc_str(30397))
-		del current_dialog
-	elif action_id == 'share_favorite':
-		current_game_list = iagl_addon.game_lists.get_game_list(game_list_id)
-		current_dialog = xbmcgui.Dialog()
-		if current_dialog.yesno(loc_str(30395),loc_str(30398)%{'game_list':current_game_list.get('emu_name')}):
-			current_crc = iagl_addon.game_lists.get_crc(game_list_id)
-			#Have user update template values if they're not already updated
-			current_choices = dict(zip(['metadata'],[dict(zip(['query','query_values','header_values','current_choice'],[loc_str(30331),[loc_str(30414),loc_str(30415),loc_str(30416),loc_str(30417),loc_str(30418),loc_str(30419),loc_str(30420)],['emu_name','emu_category','emu_description', 'emu_comment', 'emu_trailer', 'emu_author', 'emu_date'],''])),])).get('metadata')
-			if current_game_list.get('emu_name') == 'Favorites':
-				new_value = current_dialog.input(loc_str(30343)%{'current_choice':current_choices.get('query_values')[0]},current_game_list.get(current_choices.get('header_values')[0]))
-				if new_value:
-					success = iagl_addon.game_lists.update_game_list_header(game_list_id,header_key=current_choices.get('header_values')[0],header_value=new_value,confirm_update=False)
-					if success:
-						if iagl_addon.refresh_list(current_crc):
-							xbmc.executebuiltin('Container.Refresh')
-			if current_game_list.get('emu_author') == 'Zach Morris':
-				new_value = current_dialog.input(loc_str(30343)%{'current_choice':current_choices.get('query_values')[5]},current_game_list.get(current_choices.get('header_values')[5]))
-				if new_value:
-					success = iagl_addon.game_lists.update_game_list_header(game_list_id,header_key=current_choices.get('header_values')[5],header_value=new_value,confirm_update=False)
-					if success:
-						if iagl_addon.refresh_list(current_crc):
-							xbmc.executebuiltin('Container.Refresh')
-			if current_game_list.get('emu_comment') == 'Your Favorites List':
-				new_value = current_dialog.input(loc_str(30343)%{'current_choice':current_choices.get('query_values')[3]},current_game_list.get(current_choices.get('header_values')[3]))
-				if new_value:
-					success = iagl_addon.game_lists.update_game_list_header(game_list_id,header_key=current_choices.get('header_values')[3],header_value=new_value,confirm_update=False)
-					if success:
-						if iagl_addon.refresh_list(current_crc):
-							xbmc.executebuiltin('Container.Refresh')
-			current_file = iagl_addon.game_lists.get_file(game_list_id)
-
-	else:
-		xbmc.log(msg='IAGL:  Unknown context action %(action_id)s'%{'action_id':action_id},level=xbmc.LOGERROR)
-
-@plugin.route('/query_context_menu/action/<action_id>')
-def category_context_menu_action(action_id):
-	if action_id in ['add_to_favs_search','add_to_favs_random']:
-		query = None
-		list_item = None
-		if plugin.args.get('query'):
-			query=json.loads(plugin.args.get('query')[0])
-		if plugin.args.get('list'):
-			list_item=json.loads(plugin.args.get('list')[0])
-
-		if query and list_item and list_item.get('properties'):
-			if action_id == 'add_to_favs_search':
-				list_item['properties']['route'] = 'Search_Link?query=%(qq)s'%{'qq':url_quote_query(query)}
-			if action_id == 'add_to_favs_random':
-				list_item['properties']['route'] = 'Random_Link?query=%(qq)s'%{'qq':url_quote_query(query)}
-			success = False
-			current_dialog = xbmcgui.Dialog()
-			available_fav_lists = [x for x in iagl_addon.game_lists.get_all_game_lists() if x and x.get('emu_category') and 'favorites' in x.get('emu_category').lower()]
-			available_fav_choices = [x.get('emu_name') for x in available_fav_lists]+[loc_str(30347)]
-			new_value = current_dialog.select(loc_str(30349),available_fav_choices)
-			fav_list_id = None
-			if new_value in range(len(available_fav_choices)):
-				if new_value == len(available_fav_choices)-1:
-					xbmc.log(msg='IAGL:  User selected to generate new favorites list', level=xbmc.LOGDEBUG)
-					favorites_name = current_dialog.input(loc_str(30351),'%(name)s Favorites'%{'name':next(iter([x for x in [iagl_addon.kodi_user.get('username')] if x]),'My')})
-					favorites_filename = clean_file_folder_name(favorites_name)
-					if favorites_name and favorites_filename:
-						if favorites_filename not in [x.get('game_list_id') for x in iagl_addon.game_lists.get_all_game_lists()]:
-							new_favorites_file = iagl_addon.game_lists.create_favorites_list(name_in=favorites_name,filename_in=favorites_filename)
-							if new_favorites_file:
-								success = add_game_to_favorites(filename_in=new_favorites_file,game=list_item)
-								if success:
-									xbmc.log(msg='IAGL:  User adding Query to favorites list %(fav_list_id)s'%{'fav_list_id':new_favorites_file}, level=xbmc.LOGDEBUG)
-									ok_ret = current_dialog.ok(loc_str(30202),loc_str(30353) % {'current_game': next(iter([x for x in [list_item.get('info').get('originaltitle'),list_item.get('values').get('label')] if x]),'Game Query'), 'current_filename': favorites_name})
-									clear_mem_cache('iagl_directory')
-								else:
-									ok_ret = current_dialog.ok(loc_str(30203),loc_str(30593))
-						else:
-							ok_ret = current_dialog.ok(loc_str(30203),loc_str(30594)%{'filename_in':favorites_name})
-							xbmc.log(msg='IAGL:  Favorites file %(filename_in)s already exists.  User must choose a different name.'%{'filename_in':favorites_name},level=xbmc.LOGERROR)
+@plugin.route('/context_menu/action/add_to_favorites_random/<link_name>')
+def add_to_favorites_random(link_name):
+	xbmc.log(msg='IAGL:  /add_to_favorites_random',level=xbmc.LOGDEBUG)
+	current_search = cm.get_random()
+	if isinstance(current_search,dict):
+		fav_groups = db.get_favorite_group_names()
+		if isinstance(fav_groups,list) and len(fav_groups)>0:  #Ask about current lists or new list
+			li = [xbmcgui.ListItem(x.get('label'),offscreen=True) for x in fav_groups]+[xbmcgui.ListItem(cm.get_loc(30234),offscreen=True)]
+			selected = xbmcgui.Dialog().select(heading=cm.get_loc(30235),list=li,useDetails=False)
+			if isinstance(selected,int):
+				if selected==len(li)-1:
+					new_name = xbmcgui.Dialog().input(heading=cm.get_loc(30089))
+					if isinstance(new_name,str) and len(new_name)>0:
+						result = db.add_favorite(fav_group=new_name,is_random_link=1,link_query=json.dumps(current_search))
+						if isinstance(result,int):
+							ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_name))
 				else:
-					fav_list_id = available_fav_lists[new_value].get('game_list_id')
-					fav_list_name = available_fav_lists[new_value].get('emu_name')
-					xbmc.log(msg='IAGL:  User adding Query to favorites list %(fav_list_id)s'%{'fav_list_id':fav_list_id}, level=xbmc.LOGDEBUG)
-					if fav_list_id:
-						success = add_game_to_favorites(filename_in=iagl_addon.game_lists.get_file(fav_list_id),game=list_item)
-					if success:
-						iagl_addon.refresh_list(iagl_addon.game_lists.get_crc(fav_list_id))
-						ok_ret = current_dialog.ok(loc_str(30202),loc_str(30353) % {'current_game': next(iter([x for x in [list_item.get('info').get('originaltitle'),list_item.get('values').get('label')] if x]),'Query'), 'current_filename': fav_list_name})
-					else:
-						ok_ret = current_dialog.ok(loc_str(30203),loc_str(30593))
-			del current_dialog
+					fav_name = [x.get('label') for x in fav_groups][selected]
+					result = db.add_favorite(fav_group=fav_name,is_random_link=1,link_query=json.dumps(current_search))
+					if isinstance(result,int):
+						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),fav_name))			
+		else: #No groups defined yet
+			new_name = xbmcgui.Dialog().input(heading=cm.get_loc(30089))
+			if isinstance(new_name,str) and len(new_name)>0:
+				result = db.add_favorite(fav_group=new_name,is_random_link=1,link_query=json.dumps(current_search))
+				if isinstance(result,int):
+					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_name))
 	else:
-		xbmc.log(msg='IAGL:  Unknown category context action %(action_id)s'%{'action_id':action_id},level=xbmc.LOGERROR)
+		xbmc.log(msg='IAGL:  /add_to_favorites_random query was malformed: {}'.format(current_search),level=xbmc.LOGERROR)
 
-@plugin.route('/game_context_menu/action/<game_list_id>/<game_id>/<action_id>')
-def category_context_menu_action(game_list_id,game_id,action_id):
-	if action_id == 'add_to_favs':
-		success = False
-		current_dialog = xbmcgui.Dialog()
-		available_fav_lists = [x for x in iagl_addon.game_lists.get_all_game_lists() if x and x.get('emu_category') and 'favorites' in x.get('emu_category').lower()]
-		available_fav_choices = [x.get('emu_name') for x in available_fav_lists]+[loc_str(30347)]
-		new_value = current_dialog.select(loc_str(30349),available_fav_choices)
-		fav_list_id = None
-		if new_value in range(len(available_fav_choices)):
-			current_game = iagl_addon.game_lists.get_game_as_dict(game_list_id=game_list_id,game_id=game_id)
-			if new_value == len(available_fav_choices)-1:
-				xbmc.log(msg='IAGL:  User selected to generate new favorites list', level=xbmc.LOGDEBUG)
-				favorites_name = current_dialog.input(loc_str(30351),'%(name)s Favorites'%{'name':next(iter([x for x in [iagl_addon.kodi_user.get('username')] if x]),'My')})
-				favorites_filename = clean_file_folder_name(favorites_name)
-				if favorites_name and favorites_filename:
-					if favorites_filename not in [x.get('game_list_id') for x in iagl_addon.game_lists.get_all_game_lists()]:
-						new_favorites_file = iagl_addon.game_lists.create_favorites_list(name_in=favorites_name,filename_in=favorites_filename)
-						if new_favorites_file:
-							success = add_game_to_favorites(filename_in=new_favorites_file,game=current_game)
-							if success:
-								xbmc.log(msg='IAGL:  User adding %(game_id)s from %(game_list_id)s to favorites list %(fav_list_id)s'%{'game_id':game_id,'game_list_id':game_list_id,'fav_list_id':new_favorites_file}, level=xbmc.LOGDEBUG)
-								ok_ret = current_dialog.ok(loc_str(30202),loc_str(30353) % {'current_game': next(iter([x for x in [current_game.get('info').get('originaltitle'),current_game.get('values').get('label')] if x]),game_id), 'current_filename': favorites_name})
-								clear_mem_cache('iagl_directory')
-								xbmc.executebuiltin('Container.Refresh')
+@plugin.route('/context_menu/action/remove_link_from_favorites')
+def remove_link_from_favorites():
+	xbmc.log(msg='IAGL:  /remove_link_from_favorites',level=xbmc.LOGDEBUG)
+	if isinstance(xbmc.getInfoLabel('ListItem.FileNameAndPath'),str) and isinstance(xbmc.getInfoLabel('ListItem.FileNameAndPath').split('query=')[-1],str) and len(xbmc.getInfoLabel('ListItem.FileNameAndPath').split('query=')[-1])>0:
+		query_in = unquote(xbmc.getInfoLabel('ListItem.FileNameAndPath').split('query=')[-1]).replace('"','""')
+		if xbmcgui.Dialog().yesno(cm.get_loc(30237),cm.get_loc(30238)):
+			result = db.delete_favorite_from_link(query_in=query_in)
+			if isinstance(result,int) and result>0:
+				ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30237),cm.get_loc(30239))
+				xbmc.sleep(config.defaults.get('sleep'))
+				xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/update_launcher/<game_list_id>')
+def update_game_list_launcher(game_list_id):
+	xbmc.log(msg='IAGL:  /update_game_list_launcher',level=xbmc.LOGDEBUG)
+	current_launcher = db.get_game_list_launcher(game_list_id=game_list_id)
+	if current_launcher == 'retroplayer':
+		if xbmcgui.Dialog().yesno(cm.get_loc(30259),cm.get_loc(30260)):
+			result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_launcher',new_value='external')
+			if isinstance(result,int) and result>0:
+				ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30262))
+				#add step to update command here
+	elif current_launcher == 'external':
+		if xbmcgui.Dialog().yesno(cm.get_loc(30259),cm.get_loc(30261)):
+			result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_launcher',new_value='retroplayer')
+			if isinstance(result,int) and result>0:
+				ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30263))
+				#add step to update command here
+	else:
+		xbmc.log(msg='IAGL:  Unknown current launcher: {}'.format(current_launcher),level=xbmc.LOGERROR)
+
+@plugin.route('/context_menu/action/get_game_list_info/<game_list_id>')
+def get_game_list_info(game_list_id):
+	xbmc.log(msg='IAGL:  /get_game_list_info',level=xbmc.LOGDEBUG)
+	game_list_info = next(iter(db.query_db(db.get_query('get_game_list_info',game_list_id=game_list_id),return_as='dict')),None)
+	if isinstance(game_list_info,dict):
+		info_key_to_label = {'label': cm.get_loc(30304),
+							 'system': cm.get_loc(30305),
+							 'total_games': cm.get_loc(30307),
+							 'total_1g1r_games': cm.get_loc(30306),
+							 'total_favorited_games': cm.get_loc(30308),
+							 'default_global_external_launch_command': cm.get_loc(30309),
+							 'default_global_external_launch_core_name':cm.get_loc(30309),
+							 'default_global_launch_addon': cm.get_loc(30310),
+							 'default_global_launcher': None,
+							 'default_global_post_download_process': cm.get_loc(30311),
+							 'user_global_download_path': cm.get_loc(30312),
+							 'user_global_external_launch_command': cm.get_loc(30313),
+							 'user_global_launch_addon': cm.get_loc(30314),
+							 'user_global_launcher': None,
+							 'user_global_visibility': None,
+							 'user_post_download_process': cm.get_loc(30315)}
+		game_list_launcher = next(iter([x for x in [game_list_info.get('user_global_launcher'),game_list_info.get('default_global_launcher')] if isinstance(x,str)]),'retroplayer') 
+		if game_list_launcher == 'external':
+			launch_command_key = next(iter([k for k in ['user_global_external_launch_command','default_global_external_launch_core_name'] if isinstance(game_list_info.get(k),str)]),None)
+			pp_command_key = next(iter([k for k in ['user_post_download_process','default_global_post_download_process'] if isinstance(game_list_info.get(k),str)]),None)
+			info_keys_to_display = ['label','system','total_games','total_1g1r_games','total_favorited_games',launch_command_key,'user_global_download_path',pp_command_key]
+			if isinstance(game_list_info.get('user_global_external_launch_command'),str):
+				li1 = xbmcgui.ListItem(label=cm.get_loc(30318),label2=cm.get_loc(30319))
+			else:
+				li1 = xbmcgui.ListItem(label=cm.get_loc(30318),label2=cm.get_loc(30320))
+			lis = [li1]+[xbmcgui.ListItem(label=info_key_to_label.get(x),label2=next(iter([str(z) for z in [game_list_info.get(x)] if z is not None]),cm.get_loc(30317))) for x in info_keys_to_display if isinstance(info_key_to_label.get(x),str)]
+			selected = xbmcgui.Dialog().select(heading=cm.get_loc(30316),list=lis,useDetails=True)
+			if lis[selected].getLabel() in [info_key_to_label.get('user_global_external_launch_command'),info_key_to_label.get('user_global_download_path')] and isinstance(lis[selected].getLabel2(),str) and len(lis[selected].getLabel2())>0 and lis[selected].getLabel2()!=cm.get_loc(30317):
+				xbmcgui.Dialog().textviewer(lis[selected].getLabel(),lis[selected].getLabel2())
+		else:
+			launch_command_key = next(iter([k for k in ['user_global_launch_addon','default_global_launch_addon'] if isinstance(game_list_info.get(k),str)]),None)
+			pp_command_key = next(iter([k for k in ['user_post_download_process','default_global_post_download_process'] if isinstance(game_list_info.get(k),str)]),None)
+			info_keys_to_display = ['label','system','total_games','total_1g1r_games','total_favorited_games',launch_command_key,'user_global_download_path',pp_command_key]
+			li1 = xbmcgui.ListItem(label=cm.get_loc(30318),label2=cm.get_loc(30321))
+			lis = [li1]+[xbmcgui.ListItem(label=info_key_to_label.get(x),label2=next(iter([str(z) for z in [game_list_info.get(x)] if z is not None]),cm.get_loc(30317))) for x in info_keys_to_display if isinstance(info_key_to_label.get(x),str)]
+			selected = xbmcgui.Dialog().select(heading=cm.get_loc(30316),list=lis,useDetails=True)
+	else:
+		xbmc.log(msg='IAGL:  Game list info is malformed for: {}'.format(game_list_id),level=xbmc.LOGERROR)
+
+@plugin.route('/context_menu/action/update_launch_command/<game_list_id>')
+def update_game_list_launch_command(game_list_id):
+	xbmc.log(msg='IAGL:  /update_game_list_launch_command',level=xbmc.LOGDEBUG)
+	current_launcher = db.get_game_list_launcher(game_list_id=game_list_id)
+	if current_launcher == 'retroplayer':
+		li = cm.get_game_addons()
+		selected = xbmcgui.Dialog().select(heading=cm.get_loc(30264),list=li,useDetails=True)
+	if current_launcher == 'external':
+		selected_external_command_types = xbmcgui.Dialog().select(heading=cm.get_loc(30278),list=[cm.get_loc(30275),cm.get_loc(30276),cm.get_loc(30277),cm.get_loc(30299)],useDetails=False)
+		if selected_external_command_types == 0:
+			if isinstance(cm.get_setting('user_launch_os'),str):
+				if cm.get_setting('user_launch_os') in config.defaults.get('config_available_systems'):
+					if isinstance(cm.get_setting('ra_app_path'),str) and xbmcvfs.exists(cm.get_setting('ra_app_path')) and isinstance(cm.get_setting('ra_cfg_path'),str) and xbmcvfs.exists(cm.get_setting('ra_cfg_path')):
+						installed_cores = cm.get_installed_ra_cores(ra_default_command=next(iter(db.query_db(db.get_query('get_retroarch_default_commands',user_launch_os=cm.get_setting('user_launch_os'),applaunch=cm.get_setting('applaunch'),appause=cm.get_setting('appause')),return_as='dict'))))
+							# db.query_db(query=config.database.get('query').get('get_retroarch_default_commands').format(cm.get_setting('user_launch_os'),cm.get_setting('applaunch'),cm.get_setting('appause')),return_as='dict')),None))
+						if isinstance(installed_cores,list) and len(installed_cores)>0:
+							choose_core_by = xbmcgui.Dialog().select(heading=cm.get_loc(30152),list=[cm.get_loc(30153),cm.get_loc(30154),cm.get_loc(30155)],useDetails=False)
+							if choose_core_by == 0:
+								display_names = sorted([x.get('display_name') for x in installed_cores if isinstance(x,dict) and isinstance(x.get('display_name'),str)])
+								xbmc.log(msg='IAGL:  {} Retroarch core options found'.format(len(display_names)),level=xbmc.LOGDEBUG)
+								if isinstance(display_names,list) and len(display_names)>0:
+									selected = xbmcgui.Dialog().select(heading=cm.get_loc(30156),list=display_names,useDetails=False)
+									new_command = next(iter([x.get('command') for x in installed_cores if x.get('display_name')==display_names[selected]]),None)
+									if selected>-1 and isinstance(new_command,str):
+										if xbmcgui.Dialog().yesno(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30292),display_names[selected])):
+											result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
+											if isinstance(result,int) and result>0:
+												ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),cm.get_loc(30293))
+												xbmc.sleep(config.defaults.get('sleep'))
+												xbmc.executebuiltin('Container.Refresh')
+									else:
+										xbmc.log(msg='IAGL:  Retroarch core selection cancelled',level=xbmc.LOGDEBUG)
+							elif choose_core_by == 1:
+								core_names = sorted([x.get('corename') for x in installed_cores if isinstance(x,dict) and isinstance(x.get('corename'),str)])
+								xbmc.log(msg='IAGL:  {} Retroarch core options found'.format(len(core_names)),level=xbmc.LOGDEBUG)
+								if isinstance(core_names,list) and len(core_names)>0:
+									selected = xbmcgui.Dialog().select(heading=cm.get_loc(30156),list=core_names,useDetails=False)
+									new_command = next(iter([x.get('command') for x in installed_cores if x.get('corename')==core_names[selected]]),None)
+									if selected>-1 and isinstance(new_command,str):
+										if xbmcgui.Dialog().yesno(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30292),core_names[selected])):
+											result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
+											if isinstance(result,int) and result>0:
+												ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),cm.get_loc(30293))
+												xbmc.sleep(config.defaults.get('sleep'))
+												xbmc.executebuiltin('Container.Refresh')
+									else:
+										xbmc.log(msg='IAGL:  Retroarch core selection cancelled',level=xbmc.LOGDEBUG)
+							elif choose_core_by == 2:
+								system_names = sorted(set([x.get('systemname') for x in installed_cores if isinstance(x,dict) and isinstance(x.get('systemname'),str)]))
+								xbmc.log(msg='IAGL:  {} Retroarch system options found'.format(len(system_names)),level=xbmc.LOGDEBUG)
+								if isinstance(system_names,list) and len(system_names)>0:
+									selected_system = xbmcgui.Dialog().select(heading=cm.get_loc(30157),list=system_names,useDetails=False)
+									if selected_system>-1:
+										display_names = sorted([x.get('display_name') for x in installed_cores if isinstance(x,dict) and isinstance(x.get('display_name'),str) and x.get('systemname')==system_names[selected_system]])
+										xbmc.log(msg='IAGL:  {} Retroarch core options found'.format(len(display_names)),level=xbmc.LOGDEBUG)
+										if isinstance(display_names,list) and len(display_names)>0:
+											selected = xbmcgui.Dialog().select(heading='{}: {}'.format(system_names[selected_system],cm.get_loc(30156)),list=display_names,useDetails=False)
+											new_command = next(iter([x.get('command') for x in installed_cores if x.get('display_name')==display_names[selected]]),None)
+											if selected>-1 and isinstance(new_command,str):
+												if xbmcgui.Dialog().yesno(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30292),display_names[selected])):
+													result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
+													if isinstance(result,int) and result>0:
+														ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),cm.get_loc(30293))
+														xbmc.sleep(config.defaults.get('sleep'))
+														xbmc.executebuiltin('Container.Refresh')
+											else:
+												xbmc.log(msg='IAGL:  Retroarch core selection cancelled',level=xbmc.LOGDEBUG)
 							else:
-								ok_ret = current_dialog.ok(loc_str(30203),loc_str(30593))
+								xbmc.log(msg='IAGL:  Retroarch core selection cancelled',level=xbmc.LOGDEBUG)
 					else:
-						ok_ret = current_dialog.ok(loc_str(30203),loc_str(30594)%{'filename_in':favorites_name})
-						xbmc.log(msg='IAGL:  Favorites file %(filename_in)s already exists.  User must choose a different name.'%{'filename_in':favorites_name},level=xbmc.LOGERROR)
-			else:
-				fav_list_id = available_fav_lists[new_value].get('game_list_id')
-				fav_list_name = available_fav_lists[new_value].get('emu_name')
-				xbmc.log(msg='IAGL:  User adding %(game_id)s from %(game_list_id)s to favorites list %(fav_list_id)s'%{'game_id':game_id,'game_list_id':game_list_id,'fav_list_id':fav_list_id}, level=xbmc.LOGDEBUG)
-				if fav_list_id:
-					success = add_game_to_favorites(filename_in=iagl_addon.game_lists.get_file(fav_list_id),game=current_game)
-				if success:
-					iagl_addon.refresh_list(iagl_addon.game_lists.get_crc(fav_list_id))
-					ok_ret = current_dialog.ok(loc_str(30202),loc_str(30353) % {'current_game': next(iter([x for x in [current_game.get('info').get('originaltitle'),current_game.get('values').get('label')] if x]),game_id), 'current_filename': fav_list_name})
+						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),cm.get_loc(30295))
 				else:
-					ok_ret = current_dialog.ok(loc_str(30203),loc_str(30593))
-		del current_dialog
-	elif action_id == 'remove_from_favs':
-		current_dialog = xbmcgui.Dialog()
-		current_game = url_unquote(game_id)
-		if current_dialog.yesno(loc_str(30395),loc_str(30396)%{'game_list':current_game}):
-			xbmc.log(msg='IAGL:  User deleting %(game_id)s from %(game_list_id)s'%{'game_id':current_game,'game_list_id':game_list_id}, level=xbmc.LOGDEBUG)
-			if remove_game_from_favorites(filename_in=iagl_addon.game_lists.get_file(game_list_id),game=current_game):
-				ok_ret = current_dialog.ok(loc_str(30202),loc_str(30358)%{'game_list_id_in':current_game})
-				iagl_addon.refresh_list(iagl_addon.game_lists.get_crc(game_list_id))
-				xbmc.executebuiltin('Container.Refresh')
+					if isinstance(cm.get_setting('ra_cfg_path'),str) and xbmcvfs.exists(cm.get_setting('ra_cfg_path')) and isinstance(cm.get_android_libretro_directory(),str):
+						possible_cores = db.query_db(query=config.database.get('query').get('get_retroarch_android').get(cm.get_setting('kodi_saa')).format(cm.get_setting('user_launch_os'),cm.get_setting('ra_cfg_path'),cm.get_android_libretro_directory()),return_as='dict')					
+						if isinstance(possible_cores,list) and len(possible_cores)>0:
+							choose_core_by = xbmcgui.Dialog().select(heading=cm.get_loc(30152),list=[cm.get_loc(30153),cm.get_loc(30154),cm.get_loc(30155)],useDetails=False)
+							if choose_core_by == 0:
+								display_names = sorted([x.get('display_name') for x in possible_cores if isinstance(x,dict) and isinstance(x.get('display_name'),str)])
+								xbmc.log(msg='IAGL:  {} Retroarch core options found'.format(len(display_names)),level=xbmc.LOGDEBUG)
+								if isinstance(display_names,list) and len(display_names)>0:
+									selected = xbmcgui.Dialog().select(heading=cm.get_loc(30156),list=display_names,useDetails=False)
+									new_command = next(iter([x.get('command') for x in possible_cores if x.get('display_name')==display_names[selected]]),None)
+									if selected>-1 and isinstance(new_command,str):
+										if xbmcgui.Dialog().yesno(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30292),display_names[selected])):
+											result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
+											if isinstance(result,int) and result>0:
+												ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30293),cm.get_loc(30294)))
+												xbmc.sleep(config.defaults.get('sleep'))
+												xbmc.executebuiltin('Container.Refresh')
+									else:
+										xbmc.log(msg='IAGL:  Retroarch core selection cancelled',level=xbmc.LOGDEBUG)
+							elif choose_core_by == 1:
+								core_names = sorted([x.get('corename') for x in possible_cores if isinstance(x,dict) and isinstance(x.get('corename'),str)])
+								xbmc.log(msg='IAGL:  {} Retroarch core options found'.format(len(core_names)),level=xbmc.LOGDEBUG)
+								if isinstance(core_names,list) and len(core_names)>0:
+									selected = xbmcgui.Dialog().select(heading=cm.get_loc(30156),list=core_names,useDetails=False)
+									new_command = next(iter([x.get('command') for x in possible_cores if x.get('corename')==core_names[selected]]),None)
+									if selected>-1 and isinstance(new_command,str):
+										if xbmcgui.Dialog().yesno(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30292),core_names[selected])):
+											result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
+											if isinstance(result,int) and result>0:
+												ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30293),cm.get_loc(30294)))
+												xbmc.sleep(config.defaults.get('sleep'))
+												xbmc.executebuiltin('Container.Refresh')
+									else:
+										xbmc.log(msg='IAGL:  Retroarch core selection cancelled',level=xbmc.LOGDEBUG)
+							elif choose_core_by == 2:
+								system_names = sorted(set([x.get('systemname') for x in possible_cores if isinstance(x,dict) and isinstance(x.get('systemname'),str)]))
+								xbmc.log(msg='IAGL:  {} Retroarch system options found'.format(len(system_names)),level=xbmc.LOGDEBUG)
+								if isinstance(system_names,list) and len(system_names)>0:
+									selected_system = xbmcgui.Dialog().select(heading=cm.get_loc(30157),list=system_names,useDetails=False)
+									if selected_system>-1:
+										display_names = sorted([x.get('display_name') for x in possible_cores if isinstance(x,dict) and isinstance(x.get('display_name'),str) and x.get('systemname')==system_names[selected_system]])
+										xbmc.log(msg='IAGL:  {} Retroarch core options found'.format(len(display_names)),level=xbmc.LOGDEBUG)
+										if isinstance(display_names,list) and len(display_names)>0:
+											selected = xbmcgui.Dialog().select(heading='{}: {}'.format(system_names[selected_system],cm.get_loc(30156)),list=display_names,useDetails=False)
+											new_command = next(iter([x.get('command') for x in possible_cores if x.get('display_name')==display_names[selected]]),None)
+											if selected>-1 and isinstance(new_command,str):
+												if xbmcgui.Dialog().yesno(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30292),display_names[selected])):
+													result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
+													if isinstance(result,int) and result>0:
+														ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30293),cm.get_loc(30294)))
+														xbmc.sleep(config.defaults.get('sleep'))
+														xbmc.executebuiltin('Container.Refresh')
+											else:
+												xbmc.log(msg='IAGL:  Retroarch core selection cancelled',level=xbmc.LOGDEBUG)
+							else:
+								xbmc.log(msg='IAGL:  Retroarch core selection cancelled',level=xbmc.LOGDEBUG)
+					else:
+						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),cm.get_loc(30295))
 			else:
-				ok_ret = current_dialog.ok(loc_str(30203),loc_str(30593))
-		del current_dialog
+				ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),cm.get_loc(30296))
+		elif selected_external_command_types == 1:
+			if cm.get_setting('user_launch_os') in config.defaults.get('config_available_systems'):
+				installed_emus = cm.get_other_emus(other_emulator_commands=db.query_db(query=config.database.get('query').get('get_other_emulator_commands').format(cm.get_setting('user_launch_os'),cm.get_setting('applaunch'),cm.get_setting('appause')),return_as='dict'),other_emulator_settings={x.upper():cm.get_setting(x) for x in config.defaults.get('other_emulator_settings') if isinstance(cm.get_setting(x),str) and len(cm.get_setting(x))>0})
+			else: #Android
+				installed_emus = db.query_db(query=config.database.get('query').get('get_other_emulator_android').get(cm.get_setting('kodi_saa')).format(cm.get_setting('user_launch_os'),'0','0'),return_as='dict')
+			if isinstance(installed_emus,list) and len(installed_emus)>0:
+				xbmc.log(msg='IAGL:  {} external emulator options found'.format(len(installed_emus)),level=xbmc.LOGDEBUG)
+				selected = xbmcgui.Dialog().select(heading=cm.get_loc(30158),list=[x.get('display_name') for x in installed_emus],useDetails=False)
+				new_command = next(iter([x.get('command') for x in installed_emus if x.get('display_name')==installed_emus[selected].get('display_name')]),None)
+				if selected>-1 and isinstance(new_command,str):
+					if xbmcgui.Dialog().yesno(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30292),installed_emus[selected].get('display_name'))):
+						result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
+						if isinstance(result,int) and result>0:
+							if cm.get_setting('user_launch_os') in config.defaults.get('config_available_systems'):
+								ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),cm.get_loc(30293))
+							else:
+								ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30293),cm.get_loc(30294)))
+							xbmc.sleep(config.defaults.get('sleep'))
+							xbmc.executebuiltin('Container.Refresh')
+				else:
+					xbmc.log(msg='IAGL:  Other emulator core selection cancelled',level=xbmc.LOGDEBUG)
+			else:
+				ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),cm.get_loc(30297))
+		elif selected_external_command_types == 2:  #Manual entry
+			if cm.get_setting('user_launch_os') not in config.defaults.get('config_available_systems') and cm.get_setting('kodi_saa')=='activities':
+				plugin.redirect('/update_android_command/{}/{}'.format(game_list_id,0))
+			else:
+				current_command = db.get_game_list_user_global_external_launch_command(game_list_id=game_list_id,user_only=True) #Don't utilize the defaults in manual entry, only a user defined entry as the initial entry
+				new_command = xbmcgui.Dialog().input(heading=cm.get_loc(30298),defaultt=current_command or '')
+				if isinstance(new_command,str) and len(new_command)>0:
+					if xbmcgui.Dialog().yesno(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30292),cm.get_loc(30277))):
+						result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
+						if isinstance(result,int) and result>0:
+							ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),cm.get_loc(30293))
+							xbmc.sleep(config.defaults.get('sleep'))
+							xbmc.executebuiltin('Container.Refresh')
+		elif selected_external_command_types == 3:  #Reset entry
+			if xbmcgui.Dialog().yesno(cm.get_loc(30299),cm.get_loc(30300)):
+				result = db.reset_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command')
+				if isinstance(result,int) and result>0:
+					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30299),cm.get_loc(30301))
+					xbmc.sleep(config.defaults.get('sleep'))
+					xbmc.executebuiltin('Container.Refresh')
+		else:
+			xbmc.log(msg='IAGL:  External command type selection cancelled',level=xbmc.LOGDEBUG)
+
+@plugin.route('/update_android_command/<game_list_id>/<menu_id>')
+def update_android_command(game_list_id,menu_id):
+	xbmc.log(msg='IAGL:  /update_android_command',level=xbmc.LOGDEBUG)
+	if menu_id == '0':
+		result = cm.clear_android_activity()
+		current_command = db.get_game_list_user_global_external_launch_command(game_list_id=game_list_id,user_only=True) #Don't utilize the defaults in manual entry, only a user defined entry as the initial entry
+		try:
+			current_command = json.loads(current_command)
+			if isinstance(current_command,dict):
+				for k,v in current_command.items():
+					result = cm.update_android_activity(key_in=k,value_in=v)
+		except:
+			current_command = dict()
 	else:
-		xbmc.log(msg='IAGL:  Unknown game context action %(action_id)s'%{'action_id':action_id},level=xbmc.LOGERROR)
+		current_command = cm.get_home_property(type_in='iagl_android_activity')
+	if isinstance(current_command,dict) and any([x in config.defaults.get('android_activity_keys') for x in current_command.keys()]):
+		lis =  [xbmcgui.ListItem(label=k,label2=current_command.get(k),offscreen=True) for k in config.defaults.get('android_activity_keys')]+[xbmcgui.ListItem(label='Submit Command',offscreen=True)]	
+	else:
+		lis =  [xbmcgui.ListItem(label=k,label2='',offscreen=True) for k in config.defaults.get('android_activity_keys')]+[xbmcgui.ListItem(label='Submit Command',offscreen=True)]
+	selected = xbmcgui.Dialog().select(heading='Test',list=lis,useDetails=True)
+	if selected>-1 and selected<len(lis)-1:
+		new_value = xbmcgui.Dialog().input(heading='{} {}'.format(cm.get_loc(30302),config.defaults.get('android_activity_keys')[selected]),defaultt=current_command.get(config.defaults.get('android_activity_keys')[selected]))
+		result = cm.update_android_activity(key_in=config.defaults.get('android_activity_keys')[selected],value_in=new_value)
+		plugin.redirect('/update_android_command/{}/{}'.format(game_list_id,config.defaults.get('android_activity_keys')[selected]))
+	else:
+		if isinstance(current_command,dict) and isinstance(json.dumps(current_command),str) and len(json.dumps(current_command))>0:
+			if xbmcgui.Dialog().yesno(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30292),cm.get_loc(30277))):
+				result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=json.dumps(current_command).replace('"','""'))
+				if isinstance(result,int) and result>0:
+					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),cm.get_loc(30293))
+					xbmc.sleep(config.defaults.get('sleep'))
+					xbmc.executebuiltin('Container.Refresh')
+		else:
+			xbmc.log(msg='IAGL:  Android external command appears malformed: {}'.format(current_command),level=xbmc.LOGERROR)
 
-@plugin.route('/text_viewer')
-def iagl_text_viewer():
-	from resources.lib.main import iagl_dialog_text_viewer
-	IAGL_text_Dialog = iagl_dialog_text_viewer('IAGL-textviewer.xml',iagl_addon.directory.get('addon').get('path'),'Default','1080i')
-	IAGL_text_Dialog.doModal()
-	del IAGL_text_Dialog
+@plugin.route('/context_menu/action/hide_game_list/<game_list_id>')
+def hide_game_list(game_list_id):
+	xbmc.log(msg='IAGL:  /hide_game_list',level=xbmc.LOGDEBUG)
+	if xbmcgui.Dialog().yesno(cm.get_loc(30249),'{}[CR]{}'.format(cm.get_loc(30251),game_list_id)):
+		result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_visibility',new_value='hidden')
+		if isinstance(result,int) and result>0:
+			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30249),cm.get_loc(30252))
+			xbmc.sleep(config.defaults.get('sleep'))
+			xbmc.executebuiltin('Container.Refresh')
 
-@plugin.route('/wizard_report')
-def iagl_wizard_report():
-	xbmcplugin.addDirectoryItems(plugin.handle,[('',x,True) for x in iagl_addon.game_lists.get_wizard_report_as_listitems() if x])
-	xbmcplugin.endOfDirectory(plugin.handle)
-	clear_mem_cache('iagl_wizard_results')
+@plugin.route('/context_menu/action/unhide_game_lists')
+def unhide_game_lists():
+	xbmc.log(msg='IAGL:  /unhide_game_lists',level=xbmc.LOGDEBUG)
+	li = [list_item for list_item,item_path in db.query_db(db.get_query('get_hidden_game_lists')) if isinstance(list_item,xbmcgui.ListItem)]
+	if len(li)>0:
+		selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30024),options=li,useDetails=True) 
+		if isinstance(selected,list):
+			xbmc.log(msg='IAGL:  Game lists selected to be unhidden: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+			result = db.unhide_game_lists(lists_in=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+			if isinstance(result,int) and result>0:
+				ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30255))
+		else:
+			xbmc.log(msg='IAGL:  Game list unhide cancelled',level=xbmc.LOGDEBUG)
+	else:
+		ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30253),cm.get_loc(30254))
+
+@plugin.route('/context_menu/action/update_game_dl_path/<game_list_id>')
+def update_game_dl_path(game_list_id):
+	xbmc.log(msg='IAGL:  /update_game_dl_path',level=xbmc.LOGDEBUG)
+	current_dl_path = next(iter(db.query_db(db.get_query('get_game_list_parameter',game_list_id=game_list_id,parameter='user_global_download_path'),return_as='dict')),None)
+	if isinstance(current_dl_path,dict) and isinstance(current_dl_path.get('user_global_download_path'),str) and len(current_dl_path.get('user_global_download_path'))>0: #Custom path already set, query about resetting it
+		selected = xbmcgui.Dialog().select(heading=cm.get_loc(30160),list=[cm.get_loc(30326),cm.get_loc(30327)],useDetails=False)
+		if selected==0:
+			result = xbmcgui.Dialog().browse(type=0,heading=cm.get_loc(30160),shares='')
+			if isinstance(result,str) and len(result)>0 and xbmcvfs.exists(result):
+				if xbmcgui.Dialog().yesno(cm.get_loc(30248),'{}[CR]{}'.format(cm.get_loc(30322),result[:40]+('...' if len(result)>40 else ''))):
+					result2 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_download_path',new_value=result)
+					if isinstance(result2,int) and result2>0:
+						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30323))
+						xbmc.sleep(config.defaults.get('sleep'))
+						xbmc.executebuiltin('Container.Refresh')
+			else:
+				xbmc.log(msg='IAGL:  Game list download path update cancelled or path invalid',level=xbmc.LOGDEBUG)
+		elif selected==1:
+			if xbmcgui.Dialog().yesno(cm.get_loc(30327),cm.get_loc(30324)):
+				result = db.reset_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_download_path')
+				if isinstance(result,int) and result>0:
+					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30299),cm.get_loc(30301))
+					xbmc.sleep(config.defaults.get('sleep'))
+					xbmc.executebuiltin('Container.Refresh')
+		else:
+			xbmc.log(msg='IAGL:  Game list download path update cancelled',level=xbmc.LOGDEBUG)
+	else:
+		result = xbmcgui.Dialog().browse(type=0,heading=cm.get_loc(30160),shares='')
+		if isinstance(result,str) and len(result)>0 and xbmcvfs.exists(result):
+			if xbmcgui.Dialog().yesno(cm.get_loc(30248),'{}[CR]{}'.format(cm.get_loc(30322),result[:20])):
+				result2 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_download_path',new_value=result)
+				if isinstance(result2,int) and result2>0:
+					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30323))
+					xbmc.sleep(config.defaults.get('sleep'))
+					xbmc.executebuiltin('Container.Refresh')
+		else:
+			xbmc.log(msg='IAGL:  Game list download path update cancelled or path invalid',level=xbmc.LOGDEBUG)
+
+@plugin.route('/context_menu/action/reset_game_list_settings/<game_list_id>')
+def reset_game_list_settings(game_list_id):
+	xbmc.log(msg='IAGL:  /reset_game_list_settings',level=xbmc.LOGDEBUG)
+	if xbmcgui.Dialog().yesno(cm.get_loc(30328),cm.get_loc(30329)):
+		results = list()
+		results.append(db.reset_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_download_path'))
+		results.append(db.reset_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command'))
+		results.append(db.reset_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_launcher'))
+		results.append(db.reset_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_launch_addon'))
+		results.append(db.reset_game_list_user_parameter(game_list_id=game_list_id,parameter='user_post_download_process'))
+		results.append(db.reset_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_visibility'))
+		if all([isinstance(x,int) for x in results]) and all([x>0 for x in results]):
+			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30328),cm.get_loc(30330))
+			xbmc.sleep(config.defaults.get('sleep'))
+			xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/check_ia_login')
+def check_ia_login():
+	xbmc.log(msg='IAGL:  /check_ia_login',level=xbmc.LOGDEBUG)
+	if isinstance(cm.get_setting('ia_u'),str) and isinstance(cm.get_setting('ia_p'),str):
+		dl.downloader.login()
+		if dl.downloader.logged_in:
+			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30268))
+		else:
+			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),cm.get_loc(30269))
+	else:
+		ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30065),cm.get_loc(30159))
+
+@plugin.route('/context_menu/action/reset_database')
+def reset_database():
+	xbmc.log(msg='IAGL:  /reset_database',level=xbmc.LOGDEBUG)
+	if xbmcgui.Dialog().yesno(cm.get_loc(30256),cm.get_loc(30257)):
+		result = cm.reset_db()
+		if result:
+			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30258))
+			xbmc.sleep(config.defaults.get('sleep'))
+			xbmc.executebuiltin('Container.Refresh')
 
 if __name__ == '__main__':
 	plugin.run(sys.argv)
-	del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_file_exists, check_if_dir_exists, check_and_close_notification, get_history_listitem, get_netplay_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, generate_discord_announcement, get_uuid, get_blank_favorites_listitem, get_database_listitem, url_quote_query, delete_file_pathlib, remove_game_from_favorites, zachs_debug, ADDON_SPECIAL_PATH #Delete all locally imported stuff to avoid memory leaks
+	del plugin
+	# del iagl_addon, iagl_download, iagl_post_process, iagl_launch, clear_mem_cache, get_mem_cache, set_mem_cache, get_next_page_listitem, get_setting_as, get_game_listitem, clean_image_entry, clean_trailer_entry, loc_str, check_if_file_exists, check_if_dir_exists, check_and_close_notification, get_history_listitem, get_netplay_listitem, update_listitem_title, get_post_dl_commands, add_game_to_favorites, clean_file_folder_name, generate_discord_announcement, get_uuid, get_blank_favorites_listitem, get_database_listitem, url_quote_query, delete_file_pathlib, remove_game_from_favorites, zachs_debug, ADDON_SPECIAL_PATH #Delete all locally imported stuff to avoid memory leaks
