@@ -1,0 +1,1332 @@
+# Kodi Media Center language file
+# Addon Name: Internet Archive Game Launcher
+# Addon id: plugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/zach-morris/plugin.program.iagl/issues\n"
+"Language: cs_cz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "Spouštěč internetových archivních her"
+
+msgctxt "#30002"
+msgid "Browse all Lists"
+msgstr "Procházet všechny seznamy"
+
+msgctxt "#30003"
+msgid "Browse lists by Category"
+msgstr "Procházet seznamy podle kategorie"
+
+msgctxt "#30004"
+msgid "Browse games by Playlist"
+msgstr "Procházejte hry podle seznamu skladeb"
+
+msgctxt "#30005"
+msgid "Favorites"
+msgstr "Oblíbené"
+
+msgctxt "#30006"
+msgid "Play History"
+msgstr "Historie přehrávání"
+
+msgctxt "#30007"
+msgid "Search"
+msgstr "Vyhledávání"
+
+msgctxt "#30008"
+msgid "Random Play"
+msgstr "Náhodné přehrávání"
+
+msgctxt "#30009"
+msgid "Next"
+msgstr "Další"
+
+msgctxt "#30010"
+msgid "Previous"
+msgstr "Předchozí"
+
+msgctxt "#30011"
+msgid "One Big List"
+msgstr "Jeden velký seznam"
+
+msgctxt "#30012"
+msgid "Alphabetical"
+msgstr "Abecední"
+
+msgctxt "#30013"
+msgid "Group by Genre"
+msgstr "Skupina podle žánru"
+
+msgctxt "#30014"
+msgid "Group by Year"
+msgstr "Skupina podle roku"
+
+msgctxt "#30015"
+msgid "Group by Players"
+msgstr "Seskupit podle hráčů"
+
+msgctxt "#30016"
+msgid "Group by Studio"
+msgstr "Skupina podle studia"
+
+msgctxt "#30017"
+msgid "Group by Tag"
+msgstr "Seskupit podle značky"
+
+msgctxt "#30018"
+msgid "Group by Playlist"
+msgstr "Seskupit podle seznamu skladeb"
+
+msgctxt "#30019"
+msgid "Group by Region"
+msgstr "Seskupit podle regionu"
+
+msgctxt "#30020"
+msgid "Group by Language"
+msgstr "Seskupit podle jazyka"
+
+msgctxt "#30021"
+msgid "Group by Edition"
+msgstr "Seskupit podle vydání"
+
+msgctxt "#30022"
+msgid "Group by Code"
+msgstr "Seskupit podle kódu"
+
+msgctxt "#30023"
+msgid "Group by Rating"
+msgstr "Seskupit podle hodnocení"
+
+msgctxt "#30024"
+msgid "Select Game Lists"
+msgstr "Vyberte seznam her"
+
+msgctxt "#30025"
+msgid "Search Game Titles"
+msgstr "Hledat názvy her"
+
+msgctxt "#30026"
+msgid "Filter by Genre"
+msgstr "Filtrovat podle žánru"
+
+msgctxt "#30027"
+msgid "Filter by Players"
+msgstr "Filtrování podle hráčů"
+
+msgctxt "#30028"
+msgid "Filter by Studio"
+msgstr "Filtrovat podle Studia"
+
+msgctxt "#30029"
+msgid "Filter by Tag"
+msgstr "Filtrovat podle značky"
+
+msgctxt "#30030"
+msgid "Filter by Playlist"
+msgstr "Filtrovat podle seznamu skladeb"
+
+msgctxt "#30031"
+msgid "Filter by Region"
+msgstr "Filtrovat podle regionu"
+
+msgctxt "#30032"
+msgid "Filter by Language"
+msgstr "Filtrovat podle jazyka"
+
+msgctxt "#30033"
+msgid "Filter by Edition"
+msgstr "Filtrovat podle vydání"
+
+msgctxt "#30034"
+msgid "Filter by Code"
+msgstr "Filtrovat podle kódu"
+
+msgctxt "#30035"
+msgid "Filter by Rating"
+msgstr "Filtrovat podle hodnocení"
+
+msgctxt "#30036"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Provést vyhledávání[/COLOR]"
+
+msgctxt "#30037"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Vytvořit odkaz na vyhledávání[/COLOR]"
+
+msgctxt "#30038"
+msgid "Choose Number of Results"
+msgstr "Zvolte Počet výsledků"
+
+msgctxt "#30039"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Provést náhodné vyhledávání[/COLOR]"
+
+msgctxt "#30040"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Vytvořit odkaz na náhodné vyhledávání[/COLOR]"
+
+msgctxt "#30041"
+msgid "General"
+msgstr "Generál"
+
+msgctxt "#30042"
+msgid "Launching"
+msgstr "Spouštění"
+
+msgctxt "#30043"
+msgid "Downloading"
+msgstr "Stahování"
+
+msgctxt "#30044"
+msgid "Views and Navigation"
+msgstr "Pohledy a navigace"
+
+msgctxt "#30045"
+msgid "Netplay"
+msgstr "Netplay"
+
+msgctxt "#30046"
+msgid "Setup Wizard"
+msgstr "Průvodce nastavením"
+
+msgctxt "#30047"
+msgid "Advanced"
+msgstr "Moderní"
+
+msgctxt "#30048"
+msgid "Play History"
+msgstr "Historie přehrávání"
+
+msgctxt "#30049"
+msgid "Define how many games to save in last played history"
+msgstr "Definujte, kolik her se má uložit v historii naposledy odehraných her"
+
+msgctxt "#30050"
+msgid "Default action on selecting game"
+msgstr "Výchozí akce při výběru hry"
+
+msgctxt "#30051"
+msgid "Define action to take when a game is selected"
+msgstr "Definujte akci, která se má provést při výběru hry"
+
+msgctxt "#30052"
+msgid "If game already exists locally"
+msgstr "Pokud hra již lokálně existuje"
+
+msgctxt "#30053"
+msgid "Define the action to take if a game file is found to exist locally"
+msgstr "Definujte akci, která se má provést, pokud se zjistí, že herní soubor existuje lokálně"
+
+msgctxt "#30054"
+msgid "Prompt"
+msgstr "Výzva"
+
+msgctxt "#30055"
+msgid "Do not re-download"
+msgstr "Nestahujte znovu"
+
+msgctxt "#30056"
+msgid "Re-download and overwrite"
+msgstr "Znovu stáhněte a přepište"
+
+msgctxt "#30057"
+msgid "Enable archive.org login"
+msgstr "Povolit přihlášení na archive.org"
+
+msgctxt "#30058"
+msgid "Enabled"
+msgstr "Povoleno"
+
+msgctxt "#30059"
+msgid "Disabled"
+msgstr "Zakázáno"
+
+msgctxt "#30060"
+msgid "Some games require login.  Enter your archive.org email address and password."
+msgstr "Některé hry vyžadují přihlášení.  Zadejte svou e-mailovou adresu a heslo archive.org."
+
+msgctxt "#30061"
+msgid "archive.org Email"
+msgstr "archive.org E-mail"
+
+msgctxt "#30062"
+msgid "Some games require login.  Enter your archive.org email address"
+msgstr "Některé hry vyžadují přihlášení.  Zadejte svou e-mailovou adresu archive.org"
+
+msgctxt "#30063"
+msgid "archive.org Password"
+msgstr "Archive.org Heslo"
+
+msgctxt "#30064"
+msgid "Some games require login.  Enter your archive.org password"
+msgstr "Některé hry vyžadují přihlášení.  Zadejte heslo pro archive.org"
+
+msgctxt "#30065"
+msgid "Check login credentials"
+msgstr "Zkontrolujte přihlašovací údaje"
+
+msgctxt "#30066"
+msgid "Test the entered email and password to check your ability to login"
+msgstr "Vyzkoušejte zadaný e-mail a heslo, abyste si ověřili svou schopnost přihlásit se"
+
+msgctxt "#30067"
+msgid "Download folder size limit"
+msgstr "Limit velikosti složky pro stahování"
+
+msgctxt "#30068"
+msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
+msgstr "Definujte velikost stahování / velikost mezipaměti.[CR]Po dosažení limitu velikosti se složka vymaže."
+
+msgctxt "#30069"
+msgid "Front page display"
+msgstr "Zobrazení na přední straně"
+
+msgctxt "#30070"
+msgid "Choose from list"
+msgstr "Vyberte ze seznamu"
+
+msgctxt "#30071"
+msgid "Games are presented as"
+msgstr "Hry jsou prezentovány jako"
+
+msgctxt "#30072"
+msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
+msgstr "Kodi poskytuje několik možností vzhledu pro filmy, televizní pořady a hry.  Více informací naleznete na wiki"
+
+msgctxt "#30073"
+msgid "TV Shows"
+msgstr "TV pořady"
+
+msgctxt "#30074"
+msgid "Movies"
+msgstr "Filmy"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "nan"
+
+msgctxt "#30076"
+msgid "10 Games"
+msgstr "10 her"
+
+msgctxt "#30077"
+msgid "25 Games"
+msgstr "25 her"
+
+msgctxt "#30078"
+msgid "50 Games"
+msgstr "50 her"
+
+msgctxt "#30079"
+msgid "100 Games"
+msgstr "100 her"
+
+msgctxt "#30080"
+msgid "250 Games"
+msgstr "250 her"
+
+msgctxt "#30081"
+msgid "500 Games"
+msgstr "500 her"
+
+msgctxt "#30082"
+msgid "Game artwork"
+msgstr "Kresba hry"
+
+msgctxt "#30083"
+msgid "Game list artwork"
+msgstr "Artwork seznamu her"
+
+msgctxt "#30084"
+msgid "Retroarch Settings"
+msgstr "Nastavení retroarch"
+
+msgctxt "#30085"
+msgid "Suspend Kodi IO on launch"
+msgstr "Pozastavte Kodi IO při spuštění"
+
+msgctxt "#30086"
+msgid "Stop media on launch"
+msgstr "Zastavit média při spuštění"
+
+msgctxt "#30087"
+msgid "Waiting for return"
+msgstr "Čekání na návrat"
+
+msgctxt "#30088"
+msgid "Add to IAGL Favorites"
+msgstr "Přidat do oblíbených IAGL"
+
+msgctxt "#30089"
+msgid "Enter a name for your favorites group"
+msgstr "Zadejte název své oblíbené skupiny"
+
+msgctxt "#30090"
+msgid "Favorite added to group"
+msgstr "Oblíbené přidáno do skupiny"
+
+msgctxt "#30091"
+msgid "Use clean game title"
+msgstr "Použijte čistý název hry"
+
+msgctxt "#30092"
+msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
+msgstr "Odeberte štítky z herního titulu pro zobrazení.  Příklad: [B]Mario (USA)[/B] se změní na [B]Mario[/B]"
+
+msgctxt "#30093"
+msgid "Games per page"
+msgstr "Hry na stránku"
+
+msgctxt "#30094"
+msgid "Define how many games are listed per page"
+msgstr "Definujte, kolik her je uvedeno na stránce"
+
+msgctxt "#30095"
+msgid "List all"
+msgstr "Seznam všech"
+
+msgctxt "#30096"
+msgid "Always filter list to 1 Game 1 Rom Set"
+msgstr "Vždy filtrujte seznam na 1 Game 1 Rom Set"
+
+msgctxt "#30097"
+msgid "If possible, game lists will be pre-filtered to a 1G1R set"
+msgstr "Pokud je to možné, seznamy her budou předfiltrovány na sadu 1G1R"
+
+msgctxt "#30098"
+msgid "Append game list name to search and random results"
+msgstr "K vyhledávání a náhodným výsledkům přidejte název seznamu her"
+
+msgctxt "#30099"
+msgid "When enabled, the name of the game list will be appended to search results"
+msgstr "Je-li povoleno, bude k výsledkům vyhledávání připojen název seznamu her"
+
+msgctxt "#30100"
+msgid "Append game list name when browsing by playlist"
+msgstr "Při procházení podle seznamu skladeb přidejte název seznamu her"
+
+msgctxt "#30101"
+msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
+msgstr "Je-li povoleno, název seznamu her bude připojen k názvu hry v seznamu skladeb"
+
+msgctxt "#30102"
+msgid "Kodi landscape art equates to"
+msgstr "Umění krajiny Kodi se rovná"
+
+msgctxt "#30103"
+msgid "Select the game artwork to be displayed as the landscape art"
+msgstr "Vyberte předlohu hry, která se má zobrazit jako kresba krajiny"
+
+msgctxt "#30104"
+msgid "Title Screen"
+msgstr "Titulní obrazovka"
+
+msgctxt "#30105"
+msgid "Screenshot"
+msgstr "Snímek obrazovky"
+
+msgctxt "#30106"
+msgid "Kodi thumbnail art equates to"
+msgstr "Umění miniatur Kodi odpovídá"
+
+msgctxt "#30107"
+msgid "Select the game artwork to be displayed as the thumbnail art"
+msgstr "Vyberte grafiku hry, která se má zobrazit jako miniatura"
+
+msgctxt "#30108"
+msgid "Game list clearlogo equates to"
+msgstr "Seznam her clearlogo odpovídá"
+
+msgctxt "#30109"
+msgid "Select the artwork displayed for the game list clearlogo"
+msgstr "Vyberte kresbu zobrazenou pro jasné logo seznamu her"
+
+msgctxt "#30110"
+msgid "System logo"
+msgstr "Systémové logo"
+
+msgctxt "#30111"
+msgid "System console"
+msgstr "Systémová konzole"
+
+msgctxt "#30112"
+msgid "System controller"
+msgstr "Systémový ovladač"
+
+msgctxt "#30113"
+msgid "Game list fanart equates to"
+msgstr "Seznam her fanart odpovídá"
+
+msgctxt "#30114"
+msgid "Select the artwork displayed for the game list fanart"
+msgstr "Vyberte kresbu zobrazenou pro fanart seznamu her"
+
+msgctxt "#30115"
+msgid "System collage"
+msgstr "Systémová koláž"
+
+msgctxt "#30116"
+msgid "System console"
+msgstr "Systémová konzole"
+
+msgctxt "#30117"
+msgid "System wallpaper"
+msgstr "Tapeta systému"
+
+msgctxt "#30118"
+msgid "Force IAGL viewtypes"
+msgstr "Vynutit typy zobrazení IAGL"
+
+msgctxt "#30119"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "Ověřte, že váš vzhled má k dispozici vynucené ID typu zobrazení"
+
+msgctxt "#30120"
+msgid "Frontpage viewtype"
+msgstr "Typ zobrazení přední strany"
+
+msgctxt "#30121"
+msgid "Game library lists viewtype"
+msgstr "Knihovna her uvádí typ zobrazení"
+
+msgctxt "#30122"
+msgid "Game categories viewtype"
+msgstr "Typ zobrazení kategorií her"
+
+msgctxt "#30123"
+msgid "Games list viewtype"
+msgstr "Typ zobrazení seznamu her"
+
+msgctxt "#30124"
+msgid "Choose list viewtype"
+msgstr "Vyberte typ zobrazení seznamu"
+
+msgctxt "#30125"
+msgid "Search and Random results viewtype"
+msgstr "Typ zobrazení vyhledávání a náhodných výsledků"
+
+msgctxt "#30126"
+msgid "Off (Default)"
+msgstr "Vypnuto (výchozí)"
+
+msgctxt "#30127"
+msgid "List / Poster (50)"
+msgstr "Seznam / plakát (50)"
+
+msgctxt "#30128"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "Plakát / Velký seznam / Plakátová stěna (51)"
+
+msgctxt "#30129"
+msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
+msgstr "Icon Wall / Horizontální vzor / LS Wall (52)"
+
+msgctxt "#30130"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "Banner / Na šířku / Informace o plakátu (501)"
+
+msgctxt "#30131"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "Fanart / Landscape Single / Episode List (502)"
+
+msgctxt "#30132"
+msgid "Logos / Big Square Wall (503)"
+msgstr "Loga / Velká čtvercová zeď (503)"
+
+msgctxt "#30133"
+msgid "Big List 2 (504)"
+msgstr "Velký seznam 2 (504)"
+
+msgctxt "#30134"
+msgid "Landscape Details (505)"
+msgstr "Podrobnosti na šířku (505)"
+
+msgctxt "#30135"
+msgid "Operating System"
+msgstr "Operační systém"
+
+msgctxt "#30136"
+msgid "Select your operating system"
+msgstr "Vyberte svůj operační systém"
+
+msgctxt "#30137"
+msgid "Windows"
+msgstr "Windows"
+
+msgctxt "#30138"
+msgid "Linux"
+msgstr "Linux"
+
+msgctxt "#30139"
+msgid "OSX"
+msgstr "OSX"
+
+msgctxt "#30140"
+msgid "Retroarch App Location"
+msgstr "Umístění aplikace Retroarch"
+
+msgctxt "#30141"
+msgid "Select the path to the retroarch executable"
+msgstr "Vyberte cestu ke spustitelnému souboru retroarch"
+
+msgctxt "#30142"
+msgid "Retroarch CFG Location"
+msgstr "Umístění Retroarch CFG"
+
+msgctxt "#30143"
+msgid "Select the path to the retroarch config file"
+msgstr "Vyberte cestu ke konfiguračnímu souboru retroarch"
+
+msgctxt "#30144"
+msgid "Android"
+msgstr "Android"
+
+msgctxt "#30145"
+msgid "Android aarch64"
+msgstr "Android aarch64"
+
+msgctxt "#30146"
+msgid "Android ra32"
+msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "When a game is launched"
+msgstr "Když je hra spuštěna"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when a game is launched (Windows, Linux and OSX only)"
+msgstr "Vyberte, co Kodi udělá při spuštění hry (pouze Windows, Linux a OSX)"
+
+msgctxt "#30149"
+msgid "Keep Kodi in the background"
+msgstr "Udržujte Kodi na pozadí"
+
+msgctxt "#30150"
+msgid "Close Kodi"
+msgstr "Zavřete Kodi"
+
+msgctxt "#30151"
+msgid "Pause Kodi"
+msgstr "Pozastavit Kodi"
+
+msgctxt "#30152"
+msgid "Retroarch core picker"
+msgstr "Retroarch core picker"
+
+msgctxt "#30153"
+msgid "List by System and Core Name"
+msgstr "Seznam podle názvu systému a jádra"
+
+msgctxt "#30154"
+msgid "List by Core Name"
+msgstr "Seznam podle názvu jádra"
+
+msgctxt "#30155"
+msgid "List by Emulated Systems"
+msgstr "Seznam podle emulovaných systémů"
+
+msgctxt "#30156"
+msgid "Select Core"
+msgstr "Vyberte Core"
+
+msgctxt "#30157"
+msgid "Select Emulated System"
+msgstr "Vyberte Emulovaný systém"
+
+msgctxt "#30158"
+msgid "Select Emulator"
+msgstr "Vyberte Emulátor"
+
+msgctxt "#30159"
+msgid "Credentials were not found[CR]Please enter them in addon settings"
+msgstr "Přihlašovací údaje nebyly nalezeny[CR]Zadejte je prosím v nastavení doplňku"
+
+msgctxt "#30160"
+msgid "Game List Download Path"
+msgstr "Cesta ke stažení seznamu her"
+
+msgctxt "#30161"
+msgid "Zero (Current Game Only)"
+msgstr "Nula (pouze aktuální hra)"
+
+msgctxt "#30162"
+msgid "25 MB"
+msgstr "25 MB"
+
+msgctxt "#30163"
+msgid "50 MB"
+msgstr "50 MB"
+
+msgctxt "#30164"
+msgid "100 MB"
+msgstr "100 MB"
+
+msgctxt "#30165"
+msgid "200 MB"
+msgstr "200 MB"
+
+msgctxt "#30166"
+msgid "500 MB"
+msgstr "500 MB"
+
+msgctxt "#30167"
+msgid "1 GB"
+msgstr "1 GB"
+
+msgctxt "#30168"
+msgid "2 GB"
+msgstr "2 GB"
+
+msgctxt "#30169"
+msgid "5 GB"
+msgstr "5 GB"
+
+msgctxt "#30170"
+msgid "10 GB"
+msgstr "10 GB"
+
+msgctxt "#30171"
+msgid "20 GB"
+msgstr "20 GB"
+
+msgctxt "#30172"
+msgid "Enable Netplay"
+msgstr "Povolit Netplay"
+
+msgctxt "#30173"
+msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
+msgstr "Povolte retroarch netplay (pouze Windows, Linux, OSX), použijte kontextové menu ke spuštění s netplay"
+
+msgctxt "#30174"
+msgid "Show Netplay Lobby"
+msgstr "Zobrazit lobby Netplay"
+
+msgctxt "#30175"
+msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
+msgstr "Je-li povoleno, na titulní stránce IAGL se zobrazí lobby netplay"
+
+msgctxt "#30176"
+msgid "Filter game lobby to IAGL auto launch games"
+msgstr "Filtrujte herní lobby na hry s automatickým spouštěním IAGL"
+
+msgctxt "#30177"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "Pokud je povoleno, v lobby netplay se budou zobrazovat pouze automaticky spouštěné hry"
+
+msgctxt "#30178"
+msgid "Netplay Port"
+msgstr "Port Netplay"
+
+msgctxt "#30179"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "Definujte IP port netplay, přes který se chcete připojit (ve výchozím nastavení ponechte prázdné)"
+
+msgctxt "#30180"
+msgid "Default player 2+ Hostname"
+msgstr "Výchozí hráč 2+ Hostname"
+
+msgctxt "#30181"
+msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
+msgstr "Definujte výchozí název hostitele / IP síťové hry (užitečné pro síťové hraní v místní síti, jako výchozí ponechte prázdné)"
+
+msgctxt "#30182"
+msgid "Check frames"
+msgstr "Zkontrolujte rámy"
+
+msgctxt "#30183"
+msgid "Define number of netplay sync frames (leave blank for default)"
+msgstr "Definujte počet snímků synchronizace netplay (ve výchozím nastavení ponechte prázdné)"
+
+msgctxt "#30184"
+msgid "Announce Netplay on Discord"
+msgstr "Oznamte Netplay na Discordu"
+
+msgctxt "#30185"
+msgid "Announces netplay start on discord for IAGL players"
+msgstr "Oznamuje začátek netplay on discord pro hráče IAGL"
+
+msgctxt "#30186"
+msgid "Discord Player Name"
+msgstr "Jméno Discord Player"
+
+msgctxt "#30187"
+msgid "Enter your player name to be announced on Discord"
+msgstr "Zadejte své jméno hráče, které bude oznámeno na Discordu"
+
+msgctxt "#30188"
+msgid "Discord User Account ID"
+msgstr "Discord ID uživatelského účtu"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
+msgstr "Zadejte své Discord ID (Uživatelské nastavení> Můj účet> Kopírovat ID), které bude uvedeno při hraní (volitelné)"
+
+msgctxt "#30190"
+msgid "Display report when wizard is completed"
+msgstr "Po dokončení průvodce zobrazit zprávu"
+
+msgctxt "#30191"
+msgid "Execute setup wizard"
+msgstr "Spusťte průvodce nastavením"
+
+msgctxt "#30192"
+msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
+msgstr "Spusťte průvodce a změňte nastavení pro seznamy her.  Toto lze kdykoli opakovat"
+
+msgctxt "#30193"
+msgid "Android Advance Settings"
+msgstr "Pokročilá nastavení systému Android"
+
+msgctxt "#30194"
+msgid "Use StartAndroidActivity"
+msgstr "Použijte StartAndroidActivity"
+
+msgctxt "#30195"
+msgid "Leave as default if unsure"
+msgstr "Pokud si nejste jisti, ponechte jako výchozí"
+
+msgctxt "#30196"
+msgid "Suspend Kodi Input and Audio when using External Launcher"
+msgstr "Při použití externího spouštěče pozastavte vstup a zvuk Kodi"
+
+msgctxt "#30197"
+msgid "Stop Kodi media playing before External Launch"
+msgstr "Zastavte přehrávání médií Kodi před externím spuštěním"
+
+msgctxt "#30198"
+msgid "Kodi is busy / waiting for return to Kodi after External Launch"
+msgstr "Kodi je zaneprázdněn / čeká na návrat do Kodi po externím spuštění"
+
+msgctxt "#30199"
+msgid "Download Advanced Settings"
+msgstr "Stáhněte si Pokročilá nastavení"
+
+msgctxt "#30200"
+msgid "Download Threads"
+msgstr "Stáhnout vlákna"
+
+msgctxt "#30201"
+msgid "Set alternate default folder for all downloads"
+msgstr "Nastavte alternativní výchozí složku pro všechna stahování"
+
+msgctxt "#30202"
+msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
+msgstr "Když vyberete tuto možnost, všechna stažená data se přesunou do alternativní složky.  [B]Poznámka: Tato složka nebude vyčištěna ani monitorována z hlediska velikosti[/B]"
+
+msgctxt "#30203"
+msgid "Organize default download folder using system folders"
+msgstr "Uspořádejte výchozí složku pro stahování pomocí systémových složek"
+
+msgctxt "#30204"
+msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
+msgstr "Když je povoleno, dočasná složka bude organizována podle systému (někdy je to nutné pro přepsání konfigurace)"
+
+msgctxt "#30205"
+msgid "Copy Kodi Network Source downloads to Local Filesystem"
+msgstr "Zkopírujte stahování síťového zdroje Kodi do místního systému souborů"
+
+msgctxt "#30206"
+msgid "Reset Options"
+msgstr "Možnosti resetování"
+
+msgctxt "#30207"
+msgid "Reset IAGL database to default settings"
+msgstr "Resetovat databázi IAGL na výchozí nastavení"
+
+msgctxt "#30208"
+msgid "When selected, the database will be reset to default settings"
+msgstr "Po výběru bude databáze obnovena na výchozí nastavení"
+
+msgctxt "#30209"
+msgid "Unhide game lists"
+msgstr "Odkrýt seznamy her"
+
+msgctxt "#30210"
+msgid "When selected, previously hidden game lists can be unhidden"
+msgstr "Je-li tato možnost vybrána, lze odkrýt dříve skryté seznamy her"
+
+msgctxt "#30211"
+msgid "Clear Cache"
+msgstr "Vymazat mezipaměť"
+
+msgctxt "#30212"
+msgid "When selected, all data in the cache folder including games will be purged"
+msgstr "Pokud vyberete tuto možnost, všechna data ve složce mezipaměti včetně her budou vymazána"
+
+msgctxt "#30213"
+msgid "Select"
+msgstr "Vybrat"
+
+msgctxt "#30214"
+msgid "Selected"
+msgstr "Vybraný"
+
+msgctxt "#30215"
+msgid "Game lists selected"
+msgstr "Vybrány seznamy her"
+
+msgctxt "#30216"
+msgid "Genres selected"
+msgstr "Vybrané žánry"
+
+msgctxt "#30217"
+msgid "Players selected"
+msgstr "Vybraní hráči"
+
+msgctxt "#30218"
+msgid "Studios selected"
+msgstr "Vybraná studia"
+
+msgctxt "#30219"
+msgid "Tags selected"
+msgstr "Vybrané štítky"
+
+msgctxt "#30220"
+msgid "Playlists selected"
+msgstr "Vybrané seznamy skladeb"
+
+msgctxt "#30221"
+msgid "Regions selected"
+msgstr "Vybrané oblasti"
+
+msgctxt "#30222"
+msgid "Languages selected"
+msgstr "Vybrané jazyky"
+
+msgctxt "#30223"
+msgid "Editions selected"
+msgstr "Vybrané edice"
+
+msgctxt "#30224"
+msgid "Codes selected"
+msgstr "Kódy vybrány"
+
+msgctxt "#30225"
+msgid "Ratings selected"
+msgstr "Vybraná hodnocení"
+
+msgctxt "#30226"
+msgid "Enter title search query"
+msgstr "Zadejte vyhledávací dotaz názvu"
+
+msgctxt "#30227"
+msgid "Empty search"
+msgstr "Prázdné hledání"
+
+msgctxt "#30228"
+msgid "Search criteria is empty.[CR]Update criteria and try again."
+msgstr "Kritéria vyhledávání jsou prázdná.[CR]Aktualizujte kritéria a zkuste to znovu."
+
+msgctxt "#30229"
+msgid "Reset criteria"
+msgstr "Resetovat kritéria"
+
+msgctxt "#30230"
+msgid "Enter Link Name"
+msgstr "Zadejte název odkazu"
+
+msgctxt "#30231"
+msgid "Define the start page for IAGL"
+msgstr "Definujte úvodní stránku pro IAGL"
+
+msgctxt "#30232"
+msgid "Kodi launch options"
+msgstr "Možnosti spuštění Kodi"
+
+msgctxt "#30233"
+msgid "Completed"
+msgstr "Dokončeno"
+
+msgctxt "#30234"
+msgid "Create new group"
+msgstr "Vytvořit novou skupinu"
+
+msgctxt "#30235"
+msgid "Select favorite group"
+msgstr "Vyberte oblíbenou skupinu"
+
+msgctxt "#30236"
+msgid "Group by Favorites Group"
+msgstr "Seskupit podle skupiny oblíbených"
+
+msgctxt "#30237"
+msgid "Remove IAGL Favorite"
+msgstr "Odebrat oblíbené IAGL"
+
+msgctxt "#30238"
+msgid "Are you sure you want to delete this Favorite?"
+msgstr "Opravdu chcete tuto oblíbenou položku smazat?"
+
+msgctxt "#30239"
+msgid "Favorite deleted"
+msgstr "Oblíbené smazáno"
+
+msgctxt "#30240"
+msgid "Favorites display"
+msgstr "Zobrazení oblíbených"
+
+msgctxt "#30241"
+msgid "Define the start page for IAGL Favorites"
+msgstr "Definujte úvodní stránku pro oblíbené položky IAGL"
+
+msgctxt "#30242"
+msgid "By Favorites Group"
+msgstr "Podle skupiny oblíbených"
+
+msgctxt "#30243"
+msgid "Reset *all* criteria"
+msgstr "Resetovat *všechna* kritéria"
+
+msgctxt "#30244"
+msgid "Run IAGL setup wizard?"
+msgstr "Spustit průvodce nastavením IAGL?"
+
+msgctxt "#30245"
+msgid "Wizard"
+msgstr "Čaroděj"
+
+msgctxt "#30246"
+msgid "Update game list Launcher"
+msgstr "Aktualizujte spouštěč seznamu her"
+
+msgctxt "#30247"
+msgid "Update Launch Command"
+msgstr "Aktualizovat spouštěcí příkaz"
+
+msgctxt "#30248"
+msgid "Update game list download path"
+msgstr "Aktualizujte cestu ke stažení seznamu her"
+
+msgctxt "#30249"
+msgid "Hide game list"
+msgstr "Skrýt seznam her"
+
+msgctxt "#30250"
+msgid "Update game list post download process"
+msgstr "Aktualizace seznamu her po stažení procesu"
+
+msgctxt "#30251"
+msgid "Are you sure you want to hide game list"
+msgstr "Opravdu chcete skrýt seznam her?"
+
+msgctxt "#30252"
+msgid "Game list is now hidden"
+msgstr "Seznam her je nyní skrytý"
+
+msgctxt "#30253"
+msgid "No results"
+msgstr "Žádné výsledky"
+
+msgctxt "#30254"
+msgid "No hidden game lists found"
+msgstr "Nebyly nalezeny žádné skryté seznamy her"
+
+msgctxt "#30255"
+msgid "Game lists unhidden"
+msgstr "Seznam her není skryt"
+
+msgctxt "#30256"
+msgid "Confirm reset"
+msgstr "Potvrďte reset"
+
+msgctxt "#30257"
+msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
+msgstr "Opravdu chcete obnovit databázi?[CR]Všechny informace o uživateli budou ztraceny![CR]Tuto akci nelze vrátit zpět!"
+
+msgctxt "#30258"
+msgid "Database has been reset"
+msgstr "Databáze byla resetována"
+
+msgctxt "#30259"
+msgid "Update Launcher"
+msgstr "Aktualizovat spouštěč"
+
+msgctxt "#30260"
+msgid "Update launcher from[CR]Kodi to[CR]External?"
+msgstr "Aktualizovat launcher z[CR]Kodi na[CR]Externí?"
+
+msgctxt "#30261"
+msgid "Update launcher from[CR]External to[CR]Kodi?"
+msgstr "Aktualizovat launcher z[CR]Externí na[CR]Kodi?"
+
+msgctxt "#30262"
+msgid "Launcher updated to external"
+msgstr "Spouštěč byl aktualizován na externí"
+
+msgctxt "#30263"
+msgid "Launcher updated to retroplayer"
+msgstr "Launcher aktualizován na retroplayer"
+
+msgctxt "#30264"
+msgid "Select game addon"
+msgstr "Vyberte herní doplněk"
+
+msgctxt "#30265"
+msgid "Reset to default"
+msgstr "Obnovit výchozí"
+
+msgctxt "#30266"
+msgid "Download game to…"
+msgstr "Stáhněte si hru do…"
+
+msgctxt "#30267"
+msgid "Select download folder"
+msgstr "Vyberte složku pro stahování"
+
+msgctxt "#30268"
+msgid "Archive.org login success!"
+msgstr "Archive.org přihlášení úspěšné!"
+
+msgctxt "#30269"
+msgid "Archive.org login failed.[CR]Check credentials or log for more details"
+msgstr "Přihlášení na Archive.org se nezdařilo.[CR]Další podrobnosti naleznete v přihlašovacích údajích nebo v protokolu"
+
+msgctxt "#30270"
+msgid "Error"
+msgstr "Chyba"
+
+msgctxt "#30271"
+msgid "Initializing download for[CR]"
+msgstr "Inicializace stahování pro [CR]"
+
+msgctxt "#30272"
+msgid "Check logs"
+msgstr "Zkontrolujte protokoly"
+
+msgctxt "#30273"
+msgid "Checking login for[CR]"
+msgstr "Kontrola přihlášení pro [CR]"
+
+msgctxt "#30274"
+msgid "Requesting file info for[CR]"
+msgstr "Žádost o informace o souboru pro [CR]"
+
+msgctxt "#30275"
+msgid "Select from Retroarch Cores"
+msgstr "Vyberte si z Retroarch Cores"
+
+msgctxt "#30276"
+msgid "Select from Extra Emulators"
+msgstr "Vyberte si z Extra emulátorů"
+
+msgctxt "#30277"
+msgid "Manually Enter Launch Command"
+msgstr "Ručně zadejte příkaz ke spuštění"
+
+msgctxt "#30278"
+msgid "Select External Command Type"
+msgstr "Vyberte typ externího příkazu"
+
+msgctxt "#30279"
+msgid "Extra Emulators"
+msgstr "Extra emulátory"
+
+msgctxt "#30280"
+msgid "Dolphin"
+msgstr "Delfín"
+
+msgctxt "#30281"
+msgid "Select the path to the Dolphin application (optional)"
+msgstr "Vyberte cestu k aplikaci Dolphin (volitelné)"
+
+msgctxt "#30282"
+msgid "MAME"
+msgstr "MAMA"
+
+msgctxt "#30283"
+msgid "Select the path to the MAME application (optional)"
+msgstr "Vyberte cestu k aplikaci MAME (volitelné)"
+
+msgctxt "#30284"
+msgid "Project 64"
+msgstr "Projekt 64"
+
+msgctxt "#30285"
+msgid "Select the path to the Project 64 application (optional)"
+msgstr "Vyberte cestu k aplikaci Project 64 (volitelné)"
+
+msgctxt "#30286"
+msgid "ePSXe"
+msgstr "ePSXe"
+
+msgctxt "#30287"
+msgid "Select the path to the ePSXe application (optional)"
+msgstr "Vyberte cestu k aplikaci ePSXe (volitelné)"
+
+msgctxt "#30288"
+msgid "Demul"
+msgstr "Demul"
+
+msgctxt "#30289"
+msgid "Select the path to the Demul application (optional)"
+msgstr "Vyberte cestu k aplikaci Demul (volitelné)"
+
+msgctxt "#30290"
+msgid "FS-UAE"
+msgstr "FS-SAE"
+
+msgctxt "#30291"
+msgid "Select the path to the FS-UAE application (optional)"
+msgstr "Vyberte cestu k aplikaci FS-UAE (volitelné)"
+
+msgctxt "#30292"
+msgid "Are you sure you want to set external launch command?"
+msgstr "Opravdu chcete nastavit externí příkaz pro spuštění?"
+
+msgctxt "#30293"
+msgid "External launch command updated"
+msgstr "Externí spouštěcí příkaz aktualizován"
+
+msgctxt "#30294"
+msgid "Android users must verify the core is installed in Retroarch"
+msgstr "Uživatelé Androidu musí ověřit, zda je jádro nainstalováno v Retroarch"
+
+msgctxt "#30295"
+msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
+msgstr "Nastavení spouštění jsou aktuálně prázdná[CR]Aktualizujte nastavení externího spouštění doplňku."
+
+msgctxt "#30296"
+msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
+msgstr "Nastavení spouštění jsou aktuálně prázdná[CR]Aktualizujte nastavení spouštění operačního systému doplňku."
+
+msgctxt "#30297"
+msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
+msgstr "Nebyly nalezeny žádné další emulátory[CR]Prosím aktualizujte nastavení doplňkového emulátoru doplňku"
+
+msgctxt "#30298"
+msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
+msgstr "Zadejte příkaz spuštění[CR]Viz volitelná klíčová slova na IAGL wiki"
+
+msgctxt "#30299"
+msgid "Reset Launch Command"
+msgstr "Resetujte spouštěcí příkaz"
+
+msgctxt "#30300"
+msgid "Are you sure you want to reset the external launch command?"
+msgstr "Opravdu chcete resetovat příkaz externího spuštění?"
+
+msgctxt "#30301"
+msgid "External launch command was reset"
+msgstr "Externí příkaz ke spuštění byl resetován"
+
+msgctxt "#30302"
+msgid "Enter a value for"
+msgstr "Zadejte hodnotu pro"
+
+msgctxt "#30303"
+msgid "View game list settings"
+msgstr "Zobrazit nastavení seznamu her"
+
+msgctxt "#30304"
+msgid "Game List"
+msgstr "Seznam her"
+
+msgctxt "#30305"
+msgid "Game List System"
+msgstr "Systém seznamu her"
+
+msgctxt "#30306"
+msgid "Total 1G1R Games in List"
+msgstr "Celkem 1G1R her v seznamu"
+
+msgctxt "#30307"
+msgid "Total Games in List"
+msgstr "Celkový počet her v seznamu"
+
+msgctxt "#30308"
+msgid "Total Favorited Games in List"
+msgstr "Celkový počet oblíbených her v seznamu"
+
+msgctxt "#30309"
+msgid "Default External Launch Command"
+msgstr "Výchozí příkaz externího spuštění"
+
+msgctxt "#30310"
+msgid "Default Retroplayer Game Addon"
+msgstr "Výchozí doplněk hry Retroplayer"
+
+msgctxt "#30311"
+msgid "Default Game Post Process"
+msgstr "Výchozí zpracování hry"
+
+msgctxt "#30312"
+msgid "User Defined Download Path"
+msgstr "Uživatelem definovaná cesta stahování"
+
+msgctxt "#30313"
+msgid "User External Launch Command"
+msgstr "Příkaz externího spuštění uživatele"
+
+msgctxt "#30314"
+msgid "User Defined Retroplayer Game Addon"
+msgstr "Uživatelsky definovaný doplněk hry Retroplayer"
+
+msgctxt "#30315"
+msgid "User Defined Post Process"
+msgstr "Uživatelem definovaný post proces"
+
+msgctxt "#30316"
+msgid "Game List Settings"
+msgstr "Nastavení seznamu her"
+
+msgctxt "#30317"
+msgid "None (will use addon default)"
+msgstr "Žádné (použije se výchozí nastavení doplňku)"
+
+msgctxt "#30318"
+msgid "Games List Launcher"
+msgstr "Spouštěč seznamu her"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "nan"
+
+msgctxt "#30320"
+msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
+msgstr "Externí spouštěcí příkaz[CR]*Nenalezen žádný uživatelský spouštěcí příkaz / používá se výchozí*"
+
+msgctxt "#30321"
+msgid "Kodi Retroplayer"
+msgstr "Kodi Retroplayer"
+
+msgctxt "#30322"
+msgid "Are you sure you want to update game list download path?"
+msgstr "Opravdu chcete aktualizovat cestu ke stažení seznamu her?"
+
+msgctxt "#30323"
+msgid "Download path updated"
+msgstr "Cesta ke stažení aktualizována"
+
+msgctxt "#30324"
+msgid "Are you sure you want to reset game list download path?"
+msgstr "Opravdu chcete obnovit cestu ke stažení seznamu her?"
+
+msgctxt "#30325"
+msgid "Download path reset"
+msgstr "Obnovení cesty ke stažení"
+
+msgctxt "#30326"
+msgid "Change download path"
+msgstr "Změnit cestu ke stažení"
+
+msgctxt "#30327"
+msgid "Reset download path"
+msgstr "Obnovit cestu ke stažení"
+
+msgctxt "#30328"
+msgid "Reset game list settings"
+msgstr "Obnovte nastavení seznamu her"
+
+msgctxt "#30329"
+msgid "Are you sure you want to reset all game list settings to default?"
+msgstr "Opravdu chcete obnovit všechna nastavení seznamu her na výchozí?"
+
+msgctxt "#30330"
+msgid "Game list settings were reset to default"
+msgstr "Nastavení seznamu her bylo resetováno na výchozí"

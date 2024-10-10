@@ -73,7 +73,8 @@ class database(object):
 		return result
 
 	def dict_factory(self,cursor,row):
-		return {key:value for key,value in zip([column[0] for column in cursor.description],row)}
+		return dict(zip([column[0] for column in cursor.description],row))
+		# return {key:value for key,value in zip([column[0] for column in cursor.description],row)}
 
 	def namedtuple_factory(self,cursor,row):
 		return namedtuple("Row",[column[0] for column in cursor.description])._make(row)

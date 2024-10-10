@@ -21,7 +21,7 @@ config = config.config()
 
 cm = common.common(config=config)
 db = database.database(config=config,media_type=cm.get_setting('media_type'))
-dl = download.download(config=config,ia_email=cm.get_setting('ia_u'),ia_password=cm.get_setting('ia_p'),dl_path=cm.get_setting('default_dl_path'),threads=cm.get_setting('dl_threads'),auto_login=False) #Dont login right away for speed, only set the dl path to the current default
+dl = download.download(config=config,ia_email=cm.get_setting('ia_u'),ia_password=cm.get_setting('ia_p'),dl_path=cm.get_setting('default_dl_path'),threads=cm.get_setting('dl_threads'),auto_login=False,if_game_exists=cm.get_setting('if_game_exists'),ige_dialog={'heading':cm.get_loc(30331),'list':[cm.get_loc(30055),cm.get_loc(30056)]}) #Dont login right away for speed, only set the dl path to the current default
 nt = netplay.netplay(config=config)
 pp = post_process.post_process(config=config)
 ln = launch.launch(config=config)

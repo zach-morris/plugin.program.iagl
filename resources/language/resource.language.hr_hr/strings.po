@@ -1,0 +1,1332 @@
+# Kodi Media Center language file
+# Addon Name: Internet Archive Game Launcher
+# Addon id: plugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/zach-morris/plugin.program.iagl/issues\n"
+"Language: hr_hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "Pokretač igara internetske arhive"
+
+msgctxt "#30002"
+msgid "Browse all Lists"
+msgstr "Pregledaj sve popise"
+
+msgctxt "#30003"
+msgid "Browse lists by Category"
+msgstr "Pregledajte popise po kategoriji"
+
+msgctxt "#30004"
+msgid "Browse games by Playlist"
+msgstr "Pregledajte igre prema popisu za reprodukciju"
+
+msgctxt "#30005"
+msgid "Favorites"
+msgstr "Favoriti"
+
+msgctxt "#30006"
+msgid "Play History"
+msgstr "Povijest igranja"
+
+msgctxt "#30007"
+msgid "Search"
+msgstr "Pretraživanje"
+
+msgctxt "#30008"
+msgid "Random Play"
+msgstr "Slučajna reprodukcija"
+
+msgctxt "#30009"
+msgid "Next"
+msgstr "Sljedeći"
+
+msgctxt "#30010"
+msgid "Previous"
+msgstr "Prethodno"
+
+msgctxt "#30011"
+msgid "One Big List"
+msgstr "Jedan veliki popis"
+
+msgctxt "#30012"
+msgid "Alphabetical"
+msgstr "Abecedno"
+
+msgctxt "#30013"
+msgid "Group by Genre"
+msgstr "Grupiraj po žanru"
+
+msgctxt "#30014"
+msgid "Group by Year"
+msgstr "Grupiraj po godini"
+
+msgctxt "#30015"
+msgid "Group by Players"
+msgstr "Grupiranje po igračima"
+
+msgctxt "#30016"
+msgid "Group by Studio"
+msgstr "Grupiraj po studiju"
+
+msgctxt "#30017"
+msgid "Group by Tag"
+msgstr "Grupiraj po oznaci"
+
+msgctxt "#30018"
+msgid "Group by Playlist"
+msgstr "Grupiraj po popisu za reprodukciju"
+
+msgctxt "#30019"
+msgid "Group by Region"
+msgstr "Grupiraj po regiji"
+
+msgctxt "#30020"
+msgid "Group by Language"
+msgstr "Grupiraj po jeziku"
+
+msgctxt "#30021"
+msgid "Group by Edition"
+msgstr "Grupiraj po izdanju"
+
+msgctxt "#30022"
+msgid "Group by Code"
+msgstr "Grupiraj po kodu"
+
+msgctxt "#30023"
+msgid "Group by Rating"
+msgstr "Grupiraj po ocjeni"
+
+msgctxt "#30024"
+msgid "Select Game Lists"
+msgstr "Odaberite Popisi igara"
+
+msgctxt "#30025"
+msgid "Search Game Titles"
+msgstr "Pretražite naslove igara"
+
+msgctxt "#30026"
+msgid "Filter by Genre"
+msgstr "Filtriraj po žanru"
+
+msgctxt "#30027"
+msgid "Filter by Players"
+msgstr "Filtriraj po igračima"
+
+msgctxt "#30028"
+msgid "Filter by Studio"
+msgstr "Filtriraj prema studiju"
+
+msgctxt "#30029"
+msgid "Filter by Tag"
+msgstr "Filtriraj po oznaci"
+
+msgctxt "#30030"
+msgid "Filter by Playlist"
+msgstr "Filtriraj po popisu za reprodukciju"
+
+msgctxt "#30031"
+msgid "Filter by Region"
+msgstr "Filtriraj po regiji"
+
+msgctxt "#30032"
+msgid "Filter by Language"
+msgstr "Filtriraj po jeziku"
+
+msgctxt "#30033"
+msgid "Filter by Edition"
+msgstr "Filtriraj po izdanju"
+
+msgctxt "#30034"
+msgid "Filter by Code"
+msgstr "Filtriraj prema kodu"
+
+msgctxt "#30035"
+msgid "Filter by Rating"
+msgstr "Filtriraj prema ocjeni"
+
+msgctxt "#30036"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Izvrši pretraživanje[/COLOR]"
+
+msgctxt "#30037"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Izradi vezu za pretraživanje[/COLOR]"
+
+msgctxt "#30038"
+msgid "Choose Number of Results"
+msgstr "Odaberite broj rezultata"
+
+msgctxt "#30039"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Izvrši nasumično pretraživanje[/COLOR]"
+
+msgctxt "#30040"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Izradi vezu za nasumično pretraživanje[/COLOR]"
+
+msgctxt "#30041"
+msgid "General"
+msgstr "General"
+
+msgctxt "#30042"
+msgid "Launching"
+msgstr "Pokretanje"
+
+msgctxt "#30043"
+msgid "Downloading"
+msgstr "Preuzimanje"
+
+msgctxt "#30044"
+msgid "Views and Navigation"
+msgstr "Prikazi i navigacija"
+
+msgctxt "#30045"
+msgid "Netplay"
+msgstr "Netplay"
+
+msgctxt "#30046"
+msgid "Setup Wizard"
+msgstr "Čarobnjak za postavljanje"
+
+msgctxt "#30047"
+msgid "Advanced"
+msgstr "Napredno"
+
+msgctxt "#30048"
+msgid "Play History"
+msgstr "Povijest igranja"
+
+msgctxt "#30049"
+msgid "Define how many games to save in last played history"
+msgstr "Definirajte koliko igara želite spremiti u povijesti zadnje igrane igre"
+
+msgctxt "#30050"
+msgid "Default action on selecting game"
+msgstr "Zadana radnja pri odabiru igre"
+
+msgctxt "#30051"
+msgid "Define action to take when a game is selected"
+msgstr "Definirajte akciju koju treba poduzeti kada se odabere igra"
+
+msgctxt "#30052"
+msgid "If game already exists locally"
+msgstr "Ako igra već postoji lokalno"
+
+msgctxt "#30053"
+msgid "Define the action to take if a game file is found to exist locally"
+msgstr "Definirajte akciju koju treba poduzeti ako se otkrije da datoteka igre postoji lokalno"
+
+msgctxt "#30054"
+msgid "Prompt"
+msgstr "Potaknuti"
+
+msgctxt "#30055"
+msgid "Do not re-download"
+msgstr "Nemojte ponovno preuzimati"
+
+msgctxt "#30056"
+msgid "Re-download and overwrite"
+msgstr "Ponovno preuzmite i prebrišite"
+
+msgctxt "#30057"
+msgid "Enable archive.org login"
+msgstr "Omogući prijavu na archive.org"
+
+msgctxt "#30058"
+msgid "Enabled"
+msgstr "Omogućeno"
+
+msgctxt "#30059"
+msgid "Disabled"
+msgstr "Onesposobljeno"
+
+msgctxt "#30060"
+msgid "Some games require login.  Enter your archive.org email address and password."
+msgstr "Neke igre zahtijevaju prijavu.  Unesite svoju adresu e-pošte i lozinku za archive.org."
+
+msgctxt "#30061"
+msgid "archive.org Email"
+msgstr "archive.org Email"
+
+msgctxt "#30062"
+msgid "Some games require login.  Enter your archive.org email address"
+msgstr "Neke igre zahtijevaju prijavu.  Unesite svoju adresu e-pošte archive.org"
+
+msgctxt "#30063"
+msgid "archive.org Password"
+msgstr "archive.org Lozinka"
+
+msgctxt "#30064"
+msgid "Some games require login.  Enter your archive.org password"
+msgstr "Neke igre zahtijevaju prijavu.  Unesite svoju lozinku za archive.org"
+
+msgctxt "#30065"
+msgid "Check login credentials"
+msgstr "Provjerite vjerodajnice za prijavu"
+
+msgctxt "#30066"
+msgid "Test the entered email and password to check your ability to login"
+msgstr "Testirajte unesenu e-poštu i lozinku kako biste provjerili mogućnost prijave"
+
+msgctxt "#30067"
+msgid "Download folder size limit"
+msgstr "Ograničenje veličine mape za preuzimanje"
+
+msgctxt "#30068"
+msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
+msgstr "Definirajte veličinu preuzimanja / veličine predmemorije.[CR]Mapa se čisti kada se dosegne ograničenje veličine."
+
+msgctxt "#30069"
+msgid "Front page display"
+msgstr "Prikaz naslovne stranice"
+
+msgctxt "#30070"
+msgid "Choose from list"
+msgstr "Odaberite s popisa"
+
+msgctxt "#30071"
+msgid "Games are presented as"
+msgstr "Igre su predstavljene kao"
+
+msgctxt "#30072"
+msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
+msgstr "Kodi nudi nekoliko opcija skinova za filmove, TV emisije i igre.  Pogledajte wiki za više informacija"
+
+msgctxt "#30073"
+msgid "TV Shows"
+msgstr "TV emisije"
+
+msgctxt "#30074"
+msgid "Movies"
+msgstr "Filmovi"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "nan"
+
+msgctxt "#30076"
+msgid "10 Games"
+msgstr "10 Igre"
+
+msgctxt "#30077"
+msgid "25 Games"
+msgstr "25 Igre"
+
+msgctxt "#30078"
+msgid "50 Games"
+msgstr "50 Igre"
+
+msgctxt "#30079"
+msgid "100 Games"
+msgstr "100 igara"
+
+msgctxt "#30080"
+msgid "250 Games"
+msgstr "250 igara"
+
+msgctxt "#30081"
+msgid "500 Games"
+msgstr "500 igara"
+
+msgctxt "#30082"
+msgid "Game artwork"
+msgstr "Umjetničko djelo igre"
+
+msgctxt "#30083"
+msgid "Game list artwork"
+msgstr "Ilustracija popisa igara"
+
+msgctxt "#30084"
+msgid "Retroarch Settings"
+msgstr "Retroarch postavke"
+
+msgctxt "#30085"
+msgid "Suspend Kodi IO on launch"
+msgstr "Obustavite Kodi IO pri pokretanju"
+
+msgctxt "#30086"
+msgid "Stop media on launch"
+msgstr "Zaustavi medije pri pokretanju"
+
+msgctxt "#30087"
+msgid "Waiting for return"
+msgstr "Čekajući povratak"
+
+msgctxt "#30088"
+msgid "Add to IAGL Favorites"
+msgstr "Dodaj u favorite IAGL-a"
+
+msgctxt "#30089"
+msgid "Enter a name for your favorites group"
+msgstr "Unesite naziv za svoju grupu favorita"
+
+msgctxt "#30090"
+msgid "Favorite added to group"
+msgstr "Favorit dodan u grupu"
+
+msgctxt "#30091"
+msgid "Use clean game title"
+msgstr "Koristite čisti naslov igre"
+
+msgctxt "#30092"
+msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
+msgstr "Uklonite oznake iz naslova igre za prikaz.  Primjer: [B]Mario (SAD)[/B] postaje [B]Mario[/B]"
+
+msgctxt "#30093"
+msgid "Games per page"
+msgstr "Igre po stranici"
+
+msgctxt "#30094"
+msgid "Define how many games are listed per page"
+msgstr "Definirajte koliko je igara navedeno po stranici"
+
+msgctxt "#30095"
+msgid "List all"
+msgstr "Navedite sve"
+
+msgctxt "#30096"
+msgid "Always filter list to 1 Game 1 Rom Set"
+msgstr "Uvijek filtriraj popis na 1 Game 1 Rom Set"
+
+msgctxt "#30097"
+msgid "If possible, game lists will be pre-filtered to a 1G1R set"
+msgstr "Ako je moguće, popisi igara bit će unaprijed filtrirani prema skupu 1G1R"
+
+msgctxt "#30098"
+msgid "Append game list name to search and random results"
+msgstr "Dodajte naziv popisa igara za pretraživanje i nasumične rezultate"
+
+msgctxt "#30099"
+msgid "When enabled, the name of the game list will be appended to search results"
+msgstr "Kada je omogućeno, naziv popisa igara bit će pridodan rezultatima pretraživanja"
+
+msgctxt "#30100"
+msgid "Append game list name when browsing by playlist"
+msgstr "Dodajte naziv popisa igara kada pregledavate popis za reprodukciju"
+
+msgctxt "#30101"
+msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
+msgstr "Kada je omogućeno, naziv popisa igara bit će pridodan nazivu igre na popisu za reprodukciju"
+
+msgctxt "#30102"
+msgid "Kodi landscape art equates to"
+msgstr "Kodi pejzažna umjetnost je jednaka"
+
+msgctxt "#30103"
+msgid "Select the game artwork to be displayed as the landscape art"
+msgstr "Odaberite sliku igre koja će biti prikazana kao pejzažna slika"
+
+msgctxt "#30104"
+msgid "Title Screen"
+msgstr "Naslovni zaslon"
+
+msgctxt "#30105"
+msgid "Screenshot"
+msgstr "Snimka zaslona"
+
+msgctxt "#30106"
+msgid "Kodi thumbnail art equates to"
+msgstr "Umjetnost sličica Kodi jednaka je"
+
+msgctxt "#30107"
+msgid "Select the game artwork to be displayed as the thumbnail art"
+msgstr "Odaberite sliku igre koja će biti prikazana kao sličica"
+
+msgctxt "#30108"
+msgid "Game list clearlogo equates to"
+msgstr "Popis igara clearlogo je jednak"
+
+msgctxt "#30109"
+msgid "Select the artwork displayed for the game list clearlogo"
+msgstr "Odaberite ilustraciju prikazanu za jasni logotip popisa igara"
+
+msgctxt "#30110"
+msgid "System logo"
+msgstr "Logo sustava"
+
+msgctxt "#30111"
+msgid "System console"
+msgstr "Sistemska konzola"
+
+msgctxt "#30112"
+msgid "System controller"
+msgstr "Kontroler sustava"
+
+msgctxt "#30113"
+msgid "Game list fanart equates to"
+msgstr "Popis igara fanart je jednak"
+
+msgctxt "#30114"
+msgid "Select the artwork displayed for the game list fanart"
+msgstr "Odaberite ilustraciju prikazanu za fanart popisa igara"
+
+msgctxt "#30115"
+msgid "System collage"
+msgstr "Kolaž sustava"
+
+msgctxt "#30116"
+msgid "System console"
+msgstr "Sistemska konzola"
+
+msgctxt "#30117"
+msgid "System wallpaper"
+msgstr "Pozadina sustava"
+
+msgctxt "#30118"
+msgid "Force IAGL viewtypes"
+msgstr "Forsiraj IAGL vrste prikaza"
+
+msgctxt "#30119"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "Provjerite ima li vaša koža na raspolaganju prisilni ID vrste prikaza"
+
+msgctxt "#30120"
+msgid "Frontpage viewtype"
+msgstr "Vrsta prikaza naslovne stranice"
+
+msgctxt "#30121"
+msgid "Game library lists viewtype"
+msgstr "Vrsta prikaza popisa knjižnice igara"
+
+msgctxt "#30122"
+msgid "Game categories viewtype"
+msgstr "Vrsta prikaza kategorija igre"
+
+msgctxt "#30123"
+msgid "Games list viewtype"
+msgstr "Vrsta prikaza popisa igara"
+
+msgctxt "#30124"
+msgid "Choose list viewtype"
+msgstr "Odaberite vrstu prikaza popisa"
+
+msgctxt "#30125"
+msgid "Search and Random results viewtype"
+msgstr "Vrsta prikaza pretraživanja i nasumičnih rezultata"
+
+msgctxt "#30126"
+msgid "Off (Default)"
+msgstr "Isključeno (zadano)"
+
+msgctxt "#30127"
+msgid "List / Poster (50)"
+msgstr "Popis / plakat (50)"
+
+msgctxt "#30128"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "Poster / Veliki popis / Zid za poster (51)"
+
+msgctxt "#30129"
+msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
+msgstr "Zid ikone / Vodoravni uzorak / LS zid (52)"
+
+msgctxt "#30130"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "Informacije o banneru / pejzažu / plakatu (501)"
+
+msgctxt "#30131"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "Fanart / Landscape singl / popis epizoda (502)"
+
+msgctxt "#30132"
+msgid "Logos / Big Square Wall (503)"
+msgstr "Logotipi / Veliki kvadratni zid (503)"
+
+msgctxt "#30133"
+msgid "Big List 2 (504)"
+msgstr "Velika lista 2 (504)"
+
+msgctxt "#30134"
+msgid "Landscape Details (505)"
+msgstr "Detalji pejzaža (505)"
+
+msgctxt "#30135"
+msgid "Operating System"
+msgstr "Operativni sustav"
+
+msgctxt "#30136"
+msgid "Select your operating system"
+msgstr "Odaberite svoj operativni sustav"
+
+msgctxt "#30137"
+msgid "Windows"
+msgstr "Windows"
+
+msgctxt "#30138"
+msgid "Linux"
+msgstr "Linux"
+
+msgctxt "#30139"
+msgid "OSX"
+msgstr "OSX"
+
+msgctxt "#30140"
+msgid "Retroarch App Location"
+msgstr "Lokacija aplikacije Retroarch"
+
+msgctxt "#30141"
+msgid "Select the path to the retroarch executable"
+msgstr "Odaberite put do izvršne datoteke retroarch"
+
+msgctxt "#30142"
+msgid "Retroarch CFG Location"
+msgstr "Retroarch CFG Lokacija"
+
+msgctxt "#30143"
+msgid "Select the path to the retroarch config file"
+msgstr "Odaberite put do retroarch konfiguracijske datoteke"
+
+msgctxt "#30144"
+msgid "Android"
+msgstr "Android"
+
+msgctxt "#30145"
+msgid "Android aarch64"
+msgstr "Android aarch64"
+
+msgctxt "#30146"
+msgid "Android ra32"
+msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "When a game is launched"
+msgstr "Kada se igra pokrene"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when a game is launched (Windows, Linux and OSX only)"
+msgstr "Odaberite što će Kodi učiniti kada se igra pokrene (samo Windows, Linux i OSX)"
+
+msgctxt "#30149"
+msgid "Keep Kodi in the background"
+msgstr "Neka Kodi bude u pozadini"
+
+msgctxt "#30150"
+msgid "Close Kodi"
+msgstr "Zatvori Kodi"
+
+msgctxt "#30151"
+msgid "Pause Kodi"
+msgstr "Pauziraj Kodi"
+
+msgctxt "#30152"
+msgid "Retroarch core picker"
+msgstr "Berač jezgri unatrag"
+
+msgctxt "#30153"
+msgid "List by System and Core Name"
+msgstr "Popis prema nazivu sustava i jezgre"
+
+msgctxt "#30154"
+msgid "List by Core Name"
+msgstr "Popis prema nazivu jezgre"
+
+msgctxt "#30155"
+msgid "List by Emulated Systems"
+msgstr "Popis po emuliranim sustavima"
+
+msgctxt "#30156"
+msgid "Select Core"
+msgstr "Odaberite Jezgra"
+
+msgctxt "#30157"
+msgid "Select Emulated System"
+msgstr "Odaberite Emulirani sustav"
+
+msgctxt "#30158"
+msgid "Select Emulator"
+msgstr "Odaberite Emulator"
+
+msgctxt "#30159"
+msgid "Credentials were not found[CR]Please enter them in addon settings"
+msgstr "Vjerodajnice nisu pronađene[CR]Unesite ih u postavke dodatka"
+
+msgctxt "#30160"
+msgid "Game List Download Path"
+msgstr "Put preuzimanja popisa igara"
+
+msgctxt "#30161"
+msgid "Zero (Current Game Only)"
+msgstr "Nula (samo trenutna igra)"
+
+msgctxt "#30162"
+msgid "25 MB"
+msgstr "25 MB"
+
+msgctxt "#30163"
+msgid "50 MB"
+msgstr "50 MB"
+
+msgctxt "#30164"
+msgid "100 MB"
+msgstr "100 MB"
+
+msgctxt "#30165"
+msgid "200 MB"
+msgstr "200 MB"
+
+msgctxt "#30166"
+msgid "500 MB"
+msgstr "500 MB"
+
+msgctxt "#30167"
+msgid "1 GB"
+msgstr "1 GB"
+
+msgctxt "#30168"
+msgid "2 GB"
+msgstr "2 GB"
+
+msgctxt "#30169"
+msgid "5 GB"
+msgstr "5 GB"
+
+msgctxt "#30170"
+msgid "10 GB"
+msgstr "10 GB"
+
+msgctxt "#30171"
+msgid "20 GB"
+msgstr "20 GB"
+
+msgctxt "#30172"
+msgid "Enable Netplay"
+msgstr "Omogući Netplay"
+
+msgctxt "#30173"
+msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
+msgstr "Omogućite retroarch netplay (samo Windows, Linux, OSX), koristite kontekstni izbornik za pokretanje s netplayom"
+
+msgctxt "#30174"
+msgid "Show Netplay Lobby"
+msgstr "Prikaži Netplay Lobby"
+
+msgctxt "#30175"
+msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
+msgstr "Kada je omogućeno, netplay predvorje bit će prikazano na IAGL naslovnoj stranici"
+
+msgctxt "#30176"
+msgid "Filter game lobby to IAGL auto launch games"
+msgstr "Filtrirajte predvorje igre u IAGL igre s automatskim pokretanjem"
+
+msgctxt "#30177"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "Ako je omogućeno, netplay lobby će prikazivati ​​samo igre koje se mogu pokrenuti automatski"
+
+msgctxt "#30178"
+msgid "Netplay Port"
+msgstr "Netplay priključak"
+
+msgctxt "#30179"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "Definirajte netplay IP port za povezivanje (ostavite prazno za zadano)"
+
+msgctxt "#30180"
+msgid "Default player 2+ Hostname"
+msgstr "Zadani igrač 2+ Naziv hosta"
+
+msgctxt "#30181"
+msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
+msgstr "Definirajte zadani netplay hostname / IP (korisno za netplay lokalne mreže, ostavite prazno za zadano)"
+
+msgctxt "#30182"
+msgid "Check frames"
+msgstr "Provjerite okvire"
+
+msgctxt "#30183"
+msgid "Define number of netplay sync frames (leave blank for default)"
+msgstr "Definirajte broj netplay sinkronizirajućih okvira (ostavite prazno za zadano)"
+
+msgctxt "#30184"
+msgid "Announce Netplay on Discord"
+msgstr "Najavite Netplay na Discordu"
+
+msgctxt "#30185"
+msgid "Announces netplay start on discord for IAGL players"
+msgstr "Najavljuje početak netplaya na discordu za IAGL igrače"
+
+msgctxt "#30186"
+msgid "Discord Player Name"
+msgstr "Ime Discord igrača"
+
+msgctxt "#30187"
+msgid "Enter your player name to be announced on Discord"
+msgstr "Unesite ime svog igrača kako bismo ga objavili na Discordu"
+
+msgctxt "#30188"
+msgid "Discord User Account ID"
+msgstr "ID Discord korisničkog računa"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
+msgstr "Navedite svoj Discord ID (Korisničke postavke>Moj račun>Kopiraj ID) koji će biti spomenut prilikom igranja (nije obavezno)"
+
+msgctxt "#30190"
+msgid "Display report when wizard is completed"
+msgstr "Prikaži izvješće kada čarobnjak završi"
+
+msgctxt "#30191"
+msgid "Execute setup wizard"
+msgstr "Izvršite čarobnjaka za postavljanje"
+
+msgctxt "#30192"
+msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
+msgstr "Pokrenite čarobnjaka za promjenu postavki za popise igara.  Ovo se može ponoviti u bilo kojem trenutku"
+
+msgctxt "#30193"
+msgid "Android Advance Settings"
+msgstr "Android napredne postavke"
+
+msgctxt "#30194"
+msgid "Use StartAndroidActivity"
+msgstr "Koristite StartAndroidActivity"
+
+msgctxt "#30195"
+msgid "Leave as default if unsure"
+msgstr "Ostavite kao zadano ako niste sigurni"
+
+msgctxt "#30196"
+msgid "Suspend Kodi Input and Audio when using External Launcher"
+msgstr "Obustavite Kodi unos i zvuk kada koristite vanjski pokretač"
+
+msgctxt "#30197"
+msgid "Stop Kodi media playing before External Launch"
+msgstr "Zaustavite reprodukciju Kodi medija prije vanjskog pokretanja"
+
+msgctxt "#30198"
+msgid "Kodi is busy / waiting for return to Kodi after External Launch"
+msgstr "Kodi je zauzet / čeka povratak na Kodi nakon vanjskog pokretanja"
+
+msgctxt "#30199"
+msgid "Download Advanced Settings"
+msgstr "Preuzmite napredne postavke"
+
+msgctxt "#30200"
+msgid "Download Threads"
+msgstr "Preuzimanje niti"
+
+msgctxt "#30201"
+msgid "Set alternate default folder for all downloads"
+msgstr "Postavite alternativnu zadanu mapu za sva preuzimanja"
+
+msgctxt "#30202"
+msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
+msgstr "Kada je odabrano, sva će preuzimanja ići u drugu mapu.  [B]Napomena: Ova se mapa neće brisati niti nadzirati zbog veličine[/B]"
+
+msgctxt "#30203"
+msgid "Organize default download folder using system folders"
+msgstr "Organizirajte zadanu mapu za preuzimanje pomoću sistemskih mapa"
+
+msgctxt "#30204"
+msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
+msgstr "Kada je omogućeno, privremena mapa bit će organizirana prema sustavu (ponekad je potrebno za nadjačavanje konfiguracije)"
+
+msgctxt "#30205"
+msgid "Copy Kodi Network Source downloads to Local Filesystem"
+msgstr "Kopirajte preuzimanja Kodi Network Source u lokalni datotečni sustav"
+
+msgctxt "#30206"
+msgid "Reset Options"
+msgstr "Reset opcije"
+
+msgctxt "#30207"
+msgid "Reset IAGL database to default settings"
+msgstr "Vratite IAGL bazu podataka na zadane postavke"
+
+msgctxt "#30208"
+msgid "When selected, the database will be reset to default settings"
+msgstr "Kada se odabere, baza podataka će se vratiti na zadane postavke"
+
+msgctxt "#30209"
+msgid "Unhide game lists"
+msgstr "Otkrij popise igara"
+
+msgctxt "#30210"
+msgid "When selected, previously hidden game lists can be unhidden"
+msgstr "Kada se odabere, prethodno skriveni popisi igara mogu se otkriti"
+
+msgctxt "#30211"
+msgid "Clear Cache"
+msgstr "Očisti predmemoriju"
+
+msgctxt "#30212"
+msgid "When selected, all data in the cache folder including games will be purged"
+msgstr "Kada se odabere, svi podaci u mapi predmemorije, uključujući igre, bit će izbrisani"
+
+msgctxt "#30213"
+msgid "Select"
+msgstr "Odaberite"
+
+msgctxt "#30214"
+msgid "Selected"
+msgstr "Odabrano"
+
+msgctxt "#30215"
+msgid "Game lists selected"
+msgstr "Odabrani popisi igara"
+
+msgctxt "#30216"
+msgid "Genres selected"
+msgstr "Odabrani žanrovi"
+
+msgctxt "#30217"
+msgid "Players selected"
+msgstr "Izabrani igrači"
+
+msgctxt "#30218"
+msgid "Studios selected"
+msgstr "Odabrani studiji"
+
+msgctxt "#30219"
+msgid "Tags selected"
+msgstr "Oznake odabrane"
+
+msgctxt "#30220"
+msgid "Playlists selected"
+msgstr "Odabrani popisi za reprodukciju"
+
+msgctxt "#30221"
+msgid "Regions selected"
+msgstr "Odabrane regije"
+
+msgctxt "#30222"
+msgid "Languages selected"
+msgstr "Odabrani jezici"
+
+msgctxt "#30223"
+msgid "Editions selected"
+msgstr "Odabrana izdanja"
+
+msgctxt "#30224"
+msgid "Codes selected"
+msgstr "Odabrani kodovi"
+
+msgctxt "#30225"
+msgid "Ratings selected"
+msgstr "Ocjene odabrane"
+
+msgctxt "#30226"
+msgid "Enter title search query"
+msgstr "Unesite upit za pretraživanje naslova"
+
+msgctxt "#30227"
+msgid "Empty search"
+msgstr "Prazna pretraga"
+
+msgctxt "#30228"
+msgid "Search criteria is empty.[CR]Update criteria and try again."
+msgstr "Kriteriji pretraživanja su prazni.[CR]Ažurirajte kriterije i pokušajte ponovo."
+
+msgctxt "#30229"
+msgid "Reset criteria"
+msgstr "Poništi kriterije"
+
+msgctxt "#30230"
+msgid "Enter Link Name"
+msgstr "Unesite naziv veze"
+
+msgctxt "#30231"
+msgid "Define the start page for IAGL"
+msgstr "Definirajte početnu stranicu za IAGL"
+
+msgctxt "#30232"
+msgid "Kodi launch options"
+msgstr "Opcije pokretanja Kodija"
+
+msgctxt "#30233"
+msgid "Completed"
+msgstr "Završeno"
+
+msgctxt "#30234"
+msgid "Create new group"
+msgstr "Stvorite novu grupu"
+
+msgctxt "#30235"
+msgid "Select favorite group"
+msgstr "Odaberite omiljenu grupu"
+
+msgctxt "#30236"
+msgid "Group by Favorites Group"
+msgstr "Grupiraj po grupi favorita"
+
+msgctxt "#30237"
+msgid "Remove IAGL Favorite"
+msgstr "Ukloni IAGL favorit"
+
+msgctxt "#30238"
+msgid "Are you sure you want to delete this Favorite?"
+msgstr "Jeste li sigurni da želite izbrisati ovaj favorit?"
+
+msgctxt "#30239"
+msgid "Favorite deleted"
+msgstr "Favorit izbrisan"
+
+msgctxt "#30240"
+msgid "Favorites display"
+msgstr "Prikaz favorita"
+
+msgctxt "#30241"
+msgid "Define the start page for IAGL Favorites"
+msgstr "Definirajte početnu stranicu za IAGL favorite"
+
+msgctxt "#30242"
+msgid "By Favorites Group"
+msgstr "Po grupi favorita"
+
+msgctxt "#30243"
+msgid "Reset *all* criteria"
+msgstr "Poništi *sve* kriterije"
+
+msgctxt "#30244"
+msgid "Run IAGL setup wizard?"
+msgstr "Pokrenuti čarobnjak za postavljanje IAGL-a?"
+
+msgctxt "#30245"
+msgid "Wizard"
+msgstr "Čarobnjak"
+
+msgctxt "#30246"
+msgid "Update game list Launcher"
+msgstr "Ažurirajte pokretač popisa igara"
+
+msgctxt "#30247"
+msgid "Update Launch Command"
+msgstr "Ažuriraj naredbu za pokretanje"
+
+msgctxt "#30248"
+msgid "Update game list download path"
+msgstr "Ažurirajte put preuzimanja popisa igara"
+
+msgctxt "#30249"
+msgid "Hide game list"
+msgstr "Sakrij popis igara"
+
+msgctxt "#30250"
+msgid "Update game list post download process"
+msgstr "Ažurirajte popis igara nakon procesa preuzimanja"
+
+msgctxt "#30251"
+msgid "Are you sure you want to hide game list"
+msgstr "Jeste li sigurni da želite sakriti popis igara?"
+
+msgctxt "#30252"
+msgid "Game list is now hidden"
+msgstr "Popis igara sada je skriven"
+
+msgctxt "#30253"
+msgid "No results"
+msgstr "Nema rezultata"
+
+msgctxt "#30254"
+msgid "No hidden game lists found"
+msgstr "Nije pronađen nijedan skriveni popis igara"
+
+msgctxt "#30255"
+msgid "Game lists unhidden"
+msgstr "Popisi igara otkriveni"
+
+msgctxt "#30256"
+msgid "Confirm reset"
+msgstr "Potvrdite resetiranje"
+
+msgctxt "#30257"
+msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
+msgstr "Jeste li sigurni da želite resetirati bazu podataka?[CR]Svi podaci o korisniku bit će izgubljeni![CR]Ovo se ne može poništiti!"
+
+msgctxt "#30258"
+msgid "Database has been reset"
+msgstr "Baza podataka je poništena"
+
+msgctxt "#30259"
+msgid "Update Launcher"
+msgstr "Pokretač ažuriranja"
+
+msgctxt "#30260"
+msgid "Update launcher from[CR]Kodi to[CR]External?"
+msgstr "Ažurirati pokretač iz [CR]Kodija u [CR]External?"
+
+msgctxt "#30261"
+msgid "Update launcher from[CR]External to[CR]Kodi?"
+msgstr "Ažurirati pokretač s[CR]External na [CR]Kodi?"
+
+msgctxt "#30262"
+msgid "Launcher updated to external"
+msgstr "Pokretač ažuriran na vanjski"
+
+msgctxt "#30263"
+msgid "Launcher updated to retroplayer"
+msgstr "Pokretač je ažuriran na retroplayer"
+
+msgctxt "#30264"
+msgid "Select game addon"
+msgstr "Odaberite dodatak za igru"
+
+msgctxt "#30265"
+msgid "Reset to default"
+msgstr "Vrati na zadano"
+
+msgctxt "#30266"
+msgid "Download game to…"
+msgstr "Preuzmite igru ​​na…"
+
+msgctxt "#30267"
+msgid "Select download folder"
+msgstr "Odaberite mapu za preuzimanje"
+
+msgctxt "#30268"
+msgid "Archive.org login success!"
+msgstr "Uspješna prijava na Archive.org!"
+
+msgctxt "#30269"
+msgid "Archive.org login failed.[CR]Check credentials or log for more details"
+msgstr "Prijava na Archive.org nije uspjela.[CR]Provjerite vjerodajnice ili se prijavite za više pojedinosti"
+
+msgctxt "#30270"
+msgid "Error"
+msgstr "Greška"
+
+msgctxt "#30271"
+msgid "Initializing download for[CR]"
+msgstr "Pokretanje preuzimanja za [CR]"
+
+msgctxt "#30272"
+msgid "Check logs"
+msgstr "Provjerite zapise"
+
+msgctxt "#30273"
+msgid "Checking login for[CR]"
+msgstr "Provjera prijave za [CR]"
+
+msgctxt "#30274"
+msgid "Requesting file info for[CR]"
+msgstr "Traženje informacija o datoteci za [CR]"
+
+msgctxt "#30275"
+msgid "Select from Retroarch Cores"
+msgstr "Odaberite Retroarch Cores"
+
+msgctxt "#30276"
+msgid "Select from Extra Emulators"
+msgstr "Odaberite iz dodatnih emulatora"
+
+msgctxt "#30277"
+msgid "Manually Enter Launch Command"
+msgstr "Ručno unesite naredbu za pokretanje"
+
+msgctxt "#30278"
+msgid "Select External Command Type"
+msgstr "Odaberite vrstu vanjske naredbe"
+
+msgctxt "#30279"
+msgid "Extra Emulators"
+msgstr "Dodatni emulatori"
+
+msgctxt "#30280"
+msgid "Dolphin"
+msgstr "Dupin"
+
+msgctxt "#30281"
+msgid "Select the path to the Dolphin application (optional)"
+msgstr "Odaberite put do aplikacije Dolphin (opcionalno)"
+
+msgctxt "#30282"
+msgid "MAME"
+msgstr "MAME"
+
+msgctxt "#30283"
+msgid "Select the path to the MAME application (optional)"
+msgstr "Odaberite put do aplikacije MAME (opcionalno)"
+
+msgctxt "#30284"
+msgid "Project 64"
+msgstr "Projekt 64"
+
+msgctxt "#30285"
+msgid "Select the path to the Project 64 application (optional)"
+msgstr "Odaberite put do aplikacije Project 64 (nije obavezno)"
+
+msgctxt "#30286"
+msgid "ePSXe"
+msgstr "ePSXe"
+
+msgctxt "#30287"
+msgid "Select the path to the ePSXe application (optional)"
+msgstr "Odaberite put do ePSXe aplikacije (opcionalno)"
+
+msgctxt "#30288"
+msgid "Demul"
+msgstr "Demul"
+
+msgctxt "#30289"
+msgid "Select the path to the Demul application (optional)"
+msgstr "Odaberite put do aplikacije Demul (nije obavezno)"
+
+msgctxt "#30290"
+msgid "FS-UAE"
+msgstr "FS-UAE"
+
+msgctxt "#30291"
+msgid "Select the path to the FS-UAE application (optional)"
+msgstr "Odaberite put do aplikacije FS-UAE (nije obavezno)"
+
+msgctxt "#30292"
+msgid "Are you sure you want to set external launch command?"
+msgstr "Jeste li sigurni da želite postaviti vanjsku naredbu za pokretanje?"
+
+msgctxt "#30293"
+msgid "External launch command updated"
+msgstr "Ažurirana vanjska naredba za pokretanje"
+
+msgctxt "#30294"
+msgid "Android users must verify the core is installed in Retroarch"
+msgstr "Korisnici Androida moraju provjeriti je li jezgra instalirana u Retroarchu"
+
+msgctxt "#30295"
+msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
+msgstr "Postavke pokretanja trenutno su prazne[CR]Ažurirajte vanjske postavke pokretanja dodatka."
+
+msgctxt "#30296"
+msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
+msgstr "Postavke pokretanja trenutno su prazne[CR]Ažurirajte postavke pokretanja dodatnog OS-a."
+
+msgctxt "#30297"
+msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
+msgstr "Nisu pronađeni dodatni emulatori[CR]Molimo ažurirajte dodatne postavke dodatnog emulatora"
+
+msgctxt "#30298"
+msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
+msgstr "Unesite naredbu za pokretanje[CR]Pogledajte neobavezne ključne riječi na IAGL wiki"
+
+msgctxt "#30299"
+msgid "Reset Launch Command"
+msgstr "Poništi naredbu za pokretanje"
+
+msgctxt "#30300"
+msgid "Are you sure you want to reset the external launch command?"
+msgstr "Jeste li sigurni da želite poništiti vanjsku naredbu za pokretanje?"
+
+msgctxt "#30301"
+msgid "External launch command was reset"
+msgstr "Vanjska naredba za pokretanje je poništena"
+
+msgctxt "#30302"
+msgid "Enter a value for"
+msgstr "Unesite vrijednost za"
+
+msgctxt "#30303"
+msgid "View game list settings"
+msgstr "Pogledajte postavke popisa igara"
+
+msgctxt "#30304"
+msgid "Game List"
+msgstr "Popis igara"
+
+msgctxt "#30305"
+msgid "Game List System"
+msgstr "Sustav popisa igara"
+
+msgctxt "#30306"
+msgid "Total 1G1R Games in List"
+msgstr "Ukupno 1G1R igara na popisu"
+
+msgctxt "#30307"
+msgid "Total Games in List"
+msgstr "Ukupno igara na popisu"
+
+msgctxt "#30308"
+msgid "Total Favorited Games in List"
+msgstr "Ukupno omiljenih igara na popisu"
+
+msgctxt "#30309"
+msgid "Default External Launch Command"
+msgstr "Zadana vanjska naredba za pokretanje"
+
+msgctxt "#30310"
+msgid "Default Retroplayer Game Addon"
+msgstr "Zadani dodatak igri Retroplayer"
+
+msgctxt "#30311"
+msgid "Default Game Post Process"
+msgstr "Zadani post-proces igre"
+
+msgctxt "#30312"
+msgid "User Defined Download Path"
+msgstr "Put preuzimanja definiran korisnikom"
+
+msgctxt "#30313"
+msgid "User External Launch Command"
+msgstr "Korisnička vanjska naredba za pokretanje"
+
+msgctxt "#30314"
+msgid "User Defined Retroplayer Game Addon"
+msgstr "Korisnički definiran Retroplayer dodatak igri"
+
+msgctxt "#30315"
+msgid "User Defined Post Process"
+msgstr "Korisnički definiran naknadni proces"
+
+msgctxt "#30316"
+msgid "Game List Settings"
+msgstr "Postavke popisa igara"
+
+msgctxt "#30317"
+msgid "None (will use addon default)"
+msgstr "Ništa (koristit će zadani dodatak)"
+
+msgctxt "#30318"
+msgid "Games List Launcher"
+msgstr "Pokretač popisa igara"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "nan"
+
+msgctxt "#30320"
+msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
+msgstr "Vanjska naredba za pokretanje [CR]*Nije pronađena korisnička naredba za pokretanje / koristi se zadana*"
+
+msgctxt "#30321"
+msgid "Kodi Retroplayer"
+msgstr "Kodi Retroplayer"
+
+msgctxt "#30322"
+msgid "Are you sure you want to update game list download path?"
+msgstr "Jeste li sigurni da želite ažurirati put preuzimanja popisa igara?"
+
+msgctxt "#30323"
+msgid "Download path updated"
+msgstr "Putanja za preuzimanje ažurirana"
+
+msgctxt "#30324"
+msgid "Are you sure you want to reset game list download path?"
+msgstr "Jeste li sigurni da želite poništiti put preuzimanja popisa igara?"
+
+msgctxt "#30325"
+msgid "Download path reset"
+msgstr "Put preuzimanja poništen"
+
+msgctxt "#30326"
+msgid "Change download path"
+msgstr "Promjena putanje preuzimanja"
+
+msgctxt "#30327"
+msgid "Reset download path"
+msgstr "Poništi put preuzimanja"
+
+msgctxt "#30328"
+msgid "Reset game list settings"
+msgstr "Resetiraj postavke popisa igara"
+
+msgctxt "#30329"
+msgid "Are you sure you want to reset all game list settings to default?"
+msgstr "Jeste li sigurni da želite vratiti sve postavke popisa igara na zadane?"
+
+msgctxt "#30330"
+msgid "Game list settings were reset to default"
+msgstr "Postavke popisa igara vraćene su na zadane"

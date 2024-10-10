@@ -1,0 +1,1332 @@
+# Kodi Media Center language file
+# Addon Name: Internet Archive Game Launcher
+# Addon id: plugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/zach-morris/plugin.program.iagl/issues\n"
+"Language: nb_no\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "Internet Archive Game Launcher"
+
+msgctxt "#30002"
+msgid "Browse all Lists"
+msgstr "Bla gjennom alle lister"
+
+msgctxt "#30003"
+msgid "Browse lists by Category"
+msgstr "Bla gjennom lister etter kategori"
+
+msgctxt "#30004"
+msgid "Browse games by Playlist"
+msgstr "Bla gjennom spill etter spilleliste"
+
+msgctxt "#30005"
+msgid "Favorites"
+msgstr "Favoritter"
+
+msgctxt "#30006"
+msgid "Play History"
+msgstr "Spillhistorikk"
+
+msgctxt "#30007"
+msgid "Search"
+msgstr "Søk"
+
+msgctxt "#30008"
+msgid "Random Play"
+msgstr "Tilfeldig spill"
+
+msgctxt "#30009"
+msgid "Next"
+msgstr "Neste"
+
+msgctxt "#30010"
+msgid "Previous"
+msgstr "Tidligere"
+
+msgctxt "#30011"
+msgid "One Big List"
+msgstr "En stor liste"
+
+msgctxt "#30012"
+msgid "Alphabetical"
+msgstr "Alfabetisk"
+
+msgctxt "#30013"
+msgid "Group by Genre"
+msgstr "Gruppe etter sjanger"
+
+msgctxt "#30014"
+msgid "Group by Year"
+msgstr "Gruppe etter år"
+
+msgctxt "#30015"
+msgid "Group by Players"
+msgstr "Gruppe etter spillere"
+
+msgctxt "#30016"
+msgid "Group by Studio"
+msgstr "Gruppe etter studio"
+
+msgctxt "#30017"
+msgid "Group by Tag"
+msgstr "Grupper etter tag"
+
+msgctxt "#30018"
+msgid "Group by Playlist"
+msgstr "Grupper etter spilleliste"
+
+msgctxt "#30019"
+msgid "Group by Region"
+msgstr "Gruppe etter region"
+
+msgctxt "#30020"
+msgid "Group by Language"
+msgstr "Grupper etter språk"
+
+msgctxt "#30021"
+msgid "Group by Edition"
+msgstr "Gruppe etter utgave"
+
+msgctxt "#30022"
+msgid "Group by Code"
+msgstr "Grupper etter kode"
+
+msgctxt "#30023"
+msgid "Group by Rating"
+msgstr "Grupper etter vurdering"
+
+msgctxt "#30024"
+msgid "Select Game Lists"
+msgstr "Velg Spilllister"
+
+msgctxt "#30025"
+msgid "Search Game Titles"
+msgstr "Søk etter spilltitler"
+
+msgctxt "#30026"
+msgid "Filter by Genre"
+msgstr "Filtrer etter sjanger"
+
+msgctxt "#30027"
+msgid "Filter by Players"
+msgstr "Filtrer etter spillere"
+
+msgctxt "#30028"
+msgid "Filter by Studio"
+msgstr "Filtrer etter studio"
+
+msgctxt "#30029"
+msgid "Filter by Tag"
+msgstr "Filtrer etter tag"
+
+msgctxt "#30030"
+msgid "Filter by Playlist"
+msgstr "Filtrer etter spilleliste"
+
+msgctxt "#30031"
+msgid "Filter by Region"
+msgstr "Filtrer etter region"
+
+msgctxt "#30032"
+msgid "Filter by Language"
+msgstr "Filtrer etter språk"
+
+msgctxt "#30033"
+msgid "Filter by Edition"
+msgstr "Filtrer etter utgave"
+
+msgctxt "#30034"
+msgid "Filter by Code"
+msgstr "Filtrer etter kode"
+
+msgctxt "#30035"
+msgid "Filter by Rating"
+msgstr "Filtrer etter vurdering"
+
+msgctxt "#30036"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Utfør søk[/COLOR]"
+
+msgctxt "#30037"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Opprett søkekobling[/COLOR]"
+
+msgctxt "#30038"
+msgid "Choose Number of Results"
+msgstr "Velg Antall resultater"
+
+msgctxt "#30039"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Utfør tilfeldig søk[/COLOR]"
+
+msgctxt "#30040"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Opprett tilfeldig søkekobling[/COLOR]"
+
+msgctxt "#30041"
+msgid "General"
+msgstr "General"
+
+msgctxt "#30042"
+msgid "Launching"
+msgstr "Lansering"
+
+msgctxt "#30043"
+msgid "Downloading"
+msgstr "Laster ned"
+
+msgctxt "#30044"
+msgid "Views and Navigation"
+msgstr "Visninger og navigering"
+
+msgctxt "#30045"
+msgid "Netplay"
+msgstr "Netplay"
+
+msgctxt "#30046"
+msgid "Setup Wizard"
+msgstr "Oppsettveiviser"
+
+msgctxt "#30047"
+msgid "Advanced"
+msgstr "Avansert"
+
+msgctxt "#30048"
+msgid "Play History"
+msgstr "Spillhistorikk"
+
+msgctxt "#30049"
+msgid "Define how many games to save in last played history"
+msgstr "Definer hvor mange spill som skal lagres i sist spilte historie"
+
+msgctxt "#30050"
+msgid "Default action on selecting game"
+msgstr "Standard handling ved valg av spill"
+
+msgctxt "#30051"
+msgid "Define action to take when a game is selected"
+msgstr "Definer handling som skal utføres når et spill er valgt"
+
+msgctxt "#30052"
+msgid "If game already exists locally"
+msgstr "Hvis spillet allerede eksisterer lokalt"
+
+msgctxt "#30053"
+msgid "Define the action to take if a game file is found to exist locally"
+msgstr "Definer handlingen som skal utføres hvis en spillfil finnes lokalt"
+
+msgctxt "#30054"
+msgid "Prompt"
+msgstr "Spør"
+
+msgctxt "#30055"
+msgid "Do not re-download"
+msgstr "Ikke last ned på nytt"
+
+msgctxt "#30056"
+msgid "Re-download and overwrite"
+msgstr "Last ned på nytt og overskriv"
+
+msgctxt "#30057"
+msgid "Enable archive.org login"
+msgstr "Aktiver archive.org-pålogging"
+
+msgctxt "#30058"
+msgid "Enabled"
+msgstr "Aktivert"
+
+msgctxt "#30059"
+msgid "Disabled"
+msgstr "Funksjonshemmet"
+
+msgctxt "#30060"
+msgid "Some games require login.  Enter your archive.org email address and password."
+msgstr "Noen spill krever innlogging.  Skriv inn din e-postadresse og passord for archive.org."
+
+msgctxt "#30061"
+msgid "archive.org Email"
+msgstr "archive.org E-post"
+
+msgctxt "#30062"
+msgid "Some games require login.  Enter your archive.org email address"
+msgstr "Noen spill krever innlogging.  Skriv inn e-postadressen din for archive.org"
+
+msgctxt "#30063"
+msgid "archive.org Password"
+msgstr "archive.org passord"
+
+msgctxt "#30064"
+msgid "Some games require login.  Enter your archive.org password"
+msgstr "Noen spill krever innlogging.  Skriv inn archive.org-passordet ditt"
+
+msgctxt "#30065"
+msgid "Check login credentials"
+msgstr "Sjekk påloggingsinformasjon"
+
+msgctxt "#30066"
+msgid "Test the entered email and password to check your ability to login"
+msgstr "Test den angitte e-postadressen og passordet for å sjekke muligheten til å logge på"
+
+msgctxt "#30067"
+msgid "Download folder size limit"
+msgstr "Last ned mappestørrelsesgrense"
+
+msgctxt "#30068"
+msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
+msgstr "Definer størrelsen på nedlastings-/bufferstørrelsen.[CR]Mappen slettes når størrelsesgrensen er nådd."
+
+msgctxt "#30069"
+msgid "Front page display"
+msgstr "Forsidevisning"
+
+msgctxt "#30070"
+msgid "Choose from list"
+msgstr "Velg fra listen"
+
+msgctxt "#30071"
+msgid "Games are presented as"
+msgstr "Spill presenteres som"
+
+msgctxt "#30072"
+msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
+msgstr "Kodi tilbyr flere hudalternativer for filmer, TV-serier og spill.  Se wiki for mer informasjon"
+
+msgctxt "#30073"
+msgid "TV Shows"
+msgstr "TV-programmer"
+
+msgctxt "#30074"
+msgid "Movies"
+msgstr "Filmer"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "nan"
+
+msgctxt "#30076"
+msgid "10 Games"
+msgstr "10 spill"
+
+msgctxt "#30077"
+msgid "25 Games"
+msgstr "25 spill"
+
+msgctxt "#30078"
+msgid "50 Games"
+msgstr "50 spill"
+
+msgctxt "#30079"
+msgid "100 Games"
+msgstr "100 spill"
+
+msgctxt "#30080"
+msgid "250 Games"
+msgstr "250 spill"
+
+msgctxt "#30081"
+msgid "500 Games"
+msgstr "500 spill"
+
+msgctxt "#30082"
+msgid "Game artwork"
+msgstr "Spillkunstverk"
+
+msgctxt "#30083"
+msgid "Game list artwork"
+msgstr "Spilllistekunstverk"
+
+msgctxt "#30084"
+msgid "Retroarch Settings"
+msgstr "Retroarch-innstillinger"
+
+msgctxt "#30085"
+msgid "Suspend Kodi IO on launch"
+msgstr "Suspend Kodi IO ved lansering"
+
+msgctxt "#30086"
+msgid "Stop media on launch"
+msgstr "Stopp media ved lansering"
+
+msgctxt "#30087"
+msgid "Waiting for return"
+msgstr "Venter på retur"
+
+msgctxt "#30088"
+msgid "Add to IAGL Favorites"
+msgstr "Legg til i IAGL-favoritter"
+
+msgctxt "#30089"
+msgid "Enter a name for your favorites group"
+msgstr "Skriv inn et navn for favorittgruppen din"
+
+msgctxt "#30090"
+msgid "Favorite added to group"
+msgstr "Favoritt lagt til i gruppen"
+
+msgctxt "#30091"
+msgid "Use clean game title"
+msgstr "Bruk ren spilltittel"
+
+msgctxt "#30092"
+msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
+msgstr "Fjern tagger fra en spilltittel for visning.  Eks: [B]Mario (USA)[/B] blir [B]Mario[/B]"
+
+msgctxt "#30093"
+msgid "Games per page"
+msgstr "Spill per side"
+
+msgctxt "#30094"
+msgid "Define how many games are listed per page"
+msgstr "Definer hvor mange spill som er oppført per side"
+
+msgctxt "#30095"
+msgid "List all"
+msgstr "Liste alle"
+
+msgctxt "#30096"
+msgid "Always filter list to 1 Game 1 Rom Set"
+msgstr "Filtrer alltid listen til 1 spill 1 romsett"
+
+msgctxt "#30097"
+msgid "If possible, game lists will be pre-filtered to a 1G1R set"
+msgstr "Hvis mulig, vil spilllister forhåndsfiltreres til et 1G1R-sett"
+
+msgctxt "#30098"
+msgid "Append game list name to search and random results"
+msgstr "Legg til navn på spilllisten til søk og tilfeldige resultater"
+
+msgctxt "#30099"
+msgid "When enabled, the name of the game list will be appended to search results"
+msgstr "Når aktivert, vil navnet på spilllisten bli lagt til søkeresultatene"
+
+msgctxt "#30100"
+msgid "Append game list name when browsing by playlist"
+msgstr "Legg til navn på spillliste når du surfer etter spilleliste"
+
+msgctxt "#30101"
+msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
+msgstr "Når aktivert, vil navnet på spilllisten bli lagt til spillnavnet i spillelisten"
+
+msgctxt "#30102"
+msgid "Kodi landscape art equates to"
+msgstr "Kodi landskapskunst tilsvarer"
+
+msgctxt "#30103"
+msgid "Select the game artwork to be displayed as the landscape art"
+msgstr "Velg spillkunstverket som skal vises som landskapskunst"
+
+msgctxt "#30104"
+msgid "Title Screen"
+msgstr "Tittelskjerm"
+
+msgctxt "#30105"
+msgid "Screenshot"
+msgstr "Skjermdump"
+
+msgctxt "#30106"
+msgid "Kodi thumbnail art equates to"
+msgstr "Kodi thumbnail art tilsvarer"
+
+msgctxt "#30107"
+msgid "Select the game artwork to be displayed as the thumbnail art"
+msgstr "Velg spillgrafikken som skal vises som miniatyrbilde"
+
+msgctxt "#30108"
+msgid "Game list clearlogo equates to"
+msgstr "Spillliste clearlogo tilsvarer"
+
+msgctxt "#30109"
+msgid "Select the artwork displayed for the game list clearlogo"
+msgstr "Velg kunstverket som vises for clearlogoen for spilllisten"
+
+msgctxt "#30110"
+msgid "System logo"
+msgstr "Systemlogo"
+
+msgctxt "#30111"
+msgid "System console"
+msgstr "Systemkonsoll"
+
+msgctxt "#30112"
+msgid "System controller"
+msgstr "Systemkontroller"
+
+msgctxt "#30113"
+msgid "Game list fanart equates to"
+msgstr "Spillliste fanart tilsvarer"
+
+msgctxt "#30114"
+msgid "Select the artwork displayed for the game list fanart"
+msgstr "Velg kunstverket som vises for fanarten til spilllisten"
+
+msgctxt "#30115"
+msgid "System collage"
+msgstr "System collage"
+
+msgctxt "#30116"
+msgid "System console"
+msgstr "Systemkonsoll"
+
+msgctxt "#30117"
+msgid "System wallpaper"
+msgstr "System tapet"
+
+msgctxt "#30118"
+msgid "Force IAGL viewtypes"
+msgstr "Tving frem IAGL-visningstyper"
+
+msgctxt "#30119"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "Bekreft at huden din har tvungen visningstype-ID tilgjengelig"
+
+msgctxt "#30120"
+msgid "Frontpage viewtype"
+msgstr "Forsidevisningstype"
+
+msgctxt "#30121"
+msgid "Game library lists viewtype"
+msgstr "Spillbibliotek viser visningstype"
+
+msgctxt "#30122"
+msgid "Game categories viewtype"
+msgstr "Spillkategorier viewtype"
+
+msgctxt "#30123"
+msgid "Games list viewtype"
+msgstr "Spilllistevisningstype"
+
+msgctxt "#30124"
+msgid "Choose list viewtype"
+msgstr "Velg listevisningstype"
+
+msgctxt "#30125"
+msgid "Search and Random results viewtype"
+msgstr "Visningstype for søk og tilfeldige resultater"
+
+msgctxt "#30126"
+msgid "Off (Default)"
+msgstr "Av (standard)"
+
+msgctxt "#30127"
+msgid "List / Poster (50)"
+msgstr "Liste / plakat (50)"
+
+msgctxt "#30128"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "Plakat / Stor liste / Plakatvegg (51)"
+
+msgctxt "#30129"
+msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
+msgstr "Ikon vegg / horisontalt mønster / LS vegg (52)"
+
+msgctxt "#30130"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "Banner / landskap / plakatinformasjon (501)"
+
+msgctxt "#30131"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "Fanart / Landscape Single / Episode List (502)"
+
+msgctxt "#30132"
+msgid "Logos / Big Square Wall (503)"
+msgstr "Logoer / Big Square Wall (503)"
+
+msgctxt "#30133"
+msgid "Big List 2 (504)"
+msgstr "Stor liste 2 (504)"
+
+msgctxt "#30134"
+msgid "Landscape Details (505)"
+msgstr "Landskapsdetaljer (505)"
+
+msgctxt "#30135"
+msgid "Operating System"
+msgstr "Operativsystem"
+
+msgctxt "#30136"
+msgid "Select your operating system"
+msgstr "Velg ditt operativsystem"
+
+msgctxt "#30137"
+msgid "Windows"
+msgstr "Windows"
+
+msgctxt "#30138"
+msgid "Linux"
+msgstr "Linux"
+
+msgctxt "#30139"
+msgid "OSX"
+msgstr "OSX"
+
+msgctxt "#30140"
+msgid "Retroarch App Location"
+msgstr "Retroarch appplassering"
+
+msgctxt "#30141"
+msgid "Select the path to the retroarch executable"
+msgstr "Velg banen til den kjørbare retroarch-filen"
+
+msgctxt "#30142"
+msgid "Retroarch CFG Location"
+msgstr "Retroarch CFG Location"
+
+msgctxt "#30143"
+msgid "Select the path to the retroarch config file"
+msgstr "Velg banen til retroarch-konfigurasjonsfilen"
+
+msgctxt "#30144"
+msgid "Android"
+msgstr "Android"
+
+msgctxt "#30145"
+msgid "Android aarch64"
+msgstr "Android aarch64"
+
+msgctxt "#30146"
+msgid "Android ra32"
+msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "When a game is launched"
+msgstr "Når et spill startes"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when a game is launched (Windows, Linux and OSX only)"
+msgstr "Velg hva Kodi skal gjøre når et spill startes (kun Windows, Linux og OSX)"
+
+msgctxt "#30149"
+msgid "Keep Kodi in the background"
+msgstr "Hold Kodi i bakgrunnen"
+
+msgctxt "#30150"
+msgid "Close Kodi"
+msgstr "Lukk Kodi"
+
+msgctxt "#30151"
+msgid "Pause Kodi"
+msgstr "Sett Kodi på pause"
+
+msgctxt "#30152"
+msgid "Retroarch core picker"
+msgstr "Retroarch kjernevelger"
+
+msgctxt "#30153"
+msgid "List by System and Core Name"
+msgstr "List etter system og kjernenavn"
+
+msgctxt "#30154"
+msgid "List by Core Name"
+msgstr "List etter kjernenavn"
+
+msgctxt "#30155"
+msgid "List by Emulated Systems"
+msgstr "Liste etter emulerte systemer"
+
+msgctxt "#30156"
+msgid "Select Core"
+msgstr "Velg kjerne"
+
+msgctxt "#30157"
+msgid "Select Emulated System"
+msgstr "Velg Emulert system"
+
+msgctxt "#30158"
+msgid "Select Emulator"
+msgstr "Velg Emulator"
+
+msgctxt "#30159"
+msgid "Credentials were not found[CR]Please enter them in addon settings"
+msgstr "Påloggingsinformasjon ble ikke funnet[CR]Vennligst skriv dem inn i tilleggsinnstillingene"
+
+msgctxt "#30160"
+msgid "Game List Download Path"
+msgstr "Nedlastingsbane for spillliste"
+
+msgctxt "#30161"
+msgid "Zero (Current Game Only)"
+msgstr "Null (bare nåværende spill)"
+
+msgctxt "#30162"
+msgid "25 MB"
+msgstr "25 MB"
+
+msgctxt "#30163"
+msgid "50 MB"
+msgstr "50 MB"
+
+msgctxt "#30164"
+msgid "100 MB"
+msgstr "100 MB"
+
+msgctxt "#30165"
+msgid "200 MB"
+msgstr "200 MB"
+
+msgctxt "#30166"
+msgid "500 MB"
+msgstr "500 MB"
+
+msgctxt "#30167"
+msgid "1 GB"
+msgstr "1 GB"
+
+msgctxt "#30168"
+msgid "2 GB"
+msgstr "2 GB"
+
+msgctxt "#30169"
+msgid "5 GB"
+msgstr "5 GB"
+
+msgctxt "#30170"
+msgid "10 GB"
+msgstr "10 GB"
+
+msgctxt "#30171"
+msgid "20 GB"
+msgstr "20 GB"
+
+msgctxt "#30172"
+msgid "Enable Netplay"
+msgstr "Aktiver Netplay"
+
+msgctxt "#30173"
+msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
+msgstr "Aktiver retroarch netplay (kun Windows, Linux, OSX), bruk kontekstmenyen for å starte med netplay"
+
+msgctxt "#30174"
+msgid "Show Netplay Lobby"
+msgstr "Vis Netplay-lobbyen"
+
+msgctxt "#30175"
+msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
+msgstr "Når den er aktivert, vil netplay-lobbyen vises på IAGL-forsiden"
+
+msgctxt "#30176"
+msgid "Filter game lobby to IAGL auto launch games"
+msgstr "Filtrer spilllobbyen til IAGL-automatiske lanseringsspill"
+
+msgctxt "#30177"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "Hvis aktivert, vil netplay-lobbyen bare vise spill som kan startes automatisk"
+
+msgctxt "#30178"
+msgid "Netplay Port"
+msgstr "Netplay-port"
+
+msgctxt "#30179"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "Definer nettspillets IP-port som skal kobles til (la stå tomt som standard)"
+
+msgctxt "#30180"
+msgid "Default player 2+ Hostname"
+msgstr "Standardspiller 2+ vertsnavn"
+
+msgctxt "#30181"
+msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
+msgstr "Definer et standard nettspillvertsnavn / IP (nyttig for lokalnettverksnettspill, la stå tomt for standard)"
+
+msgctxt "#30182"
+msgid "Check frames"
+msgstr "Sjekk rammer"
+
+msgctxt "#30183"
+msgid "Define number of netplay sync frames (leave blank for default)"
+msgstr "Definer antall netplay-synkroniseringsrammer (la stå tomt som standard)"
+
+msgctxt "#30184"
+msgid "Announce Netplay on Discord"
+msgstr "Kunngjør Netplay på Discord"
+
+msgctxt "#30185"
+msgid "Announces netplay start on discord for IAGL players"
+msgstr "Kunngjør nettspillstart på discord for IAGL-spillere"
+
+msgctxt "#30186"
+msgid "Discord Player Name"
+msgstr "Discord-spillerens navn"
+
+msgctxt "#30187"
+msgid "Enter your player name to be announced on Discord"
+msgstr "Skriv inn spillernavnet ditt for å bli annonsert på Discord"
+
+msgctxt "#30188"
+msgid "Discord User Account ID"
+msgstr "Discord brukerkonto-ID"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
+msgstr "Oppgi Discord IDen din (Brukerinnstillinger>Min konto>Kopier ID) for å bli nevnt når du spiller (valgfritt)"
+
+msgctxt "#30190"
+msgid "Display report when wizard is completed"
+msgstr "Vis rapport når veiviseren er fullført"
+
+msgctxt "#30191"
+msgid "Execute setup wizard"
+msgstr "Utfør oppsettveiviseren"
+
+msgctxt "#30192"
+msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
+msgstr "Kjør veiviseren for å endre innstillingene for spilllistene dine.  Dette kan kjøres på nytt når som helst"
+
+msgctxt "#30193"
+msgid "Android Advance Settings"
+msgstr "Forhåndsinnstillinger for Android"
+
+msgctxt "#30194"
+msgid "Use StartAndroidActivity"
+msgstr "Bruk StartAndroidActivity"
+
+msgctxt "#30195"
+msgid "Leave as default if unsure"
+msgstr "La være som standard hvis du er usikker"
+
+msgctxt "#30196"
+msgid "Suspend Kodi Input and Audio when using External Launcher"
+msgstr "Suspender Kodi-inngang og lyd når du bruker External Launcher"
+
+msgctxt "#30197"
+msgid "Stop Kodi media playing before External Launch"
+msgstr "Stopp Kodi-medieavspilling før ekstern lansering"
+
+msgctxt "#30198"
+msgid "Kodi is busy / waiting for return to Kodi after External Launch"
+msgstr "Kodi er opptatt / venter på retur til Kodi etter ekstern lansering"
+
+msgctxt "#30199"
+msgid "Download Advanced Settings"
+msgstr "Last ned avanserte innstillinger"
+
+msgctxt "#30200"
+msgid "Download Threads"
+msgstr "Last ned tråder"
+
+msgctxt "#30201"
+msgid "Set alternate default folder for all downloads"
+msgstr "Angi alternativ standardmappe for alle nedlastinger"
+
+msgctxt "#30202"
+msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
+msgstr "Når valgt, vil alle nedlastinger gå til en alternativ mappe.  [B]Merk: Denne mappen vil ikke bli slettet eller overvåket for størrelse[/B]"
+
+msgctxt "#30203"
+msgid "Organize default download folder using system folders"
+msgstr "Organiser standard nedlastingsmappe ved hjelp av systemmapper"
+
+msgctxt "#30204"
+msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
+msgstr "Når den er aktivert, vil den midlertidige mappen bli organisert etter system (noen ganger nødvendig for konfigurasjonsoverstyringer)"
+
+msgctxt "#30205"
+msgid "Copy Kodi Network Source downloads to Local Filesystem"
+msgstr "Kopier Kodi Network Source-nedlastinger til lokalt filsystem"
+
+msgctxt "#30206"
+msgid "Reset Options"
+msgstr "Tilbakestill alternativer"
+
+msgctxt "#30207"
+msgid "Reset IAGL database to default settings"
+msgstr "Tilbakestill IAGL-databasen til standardinnstillinger"
+
+msgctxt "#30208"
+msgid "When selected, the database will be reset to default settings"
+msgstr "Når valgt, vil databasen bli tilbakestilt til standardinnstillinger"
+
+msgctxt "#30209"
+msgid "Unhide game lists"
+msgstr "Vis spilllister"
+
+msgctxt "#30210"
+msgid "When selected, previously hidden game lists can be unhidden"
+msgstr "Når den er valgt, kan tidligere skjulte spilllister vises"
+
+msgctxt "#30211"
+msgid "Clear Cache"
+msgstr "Tøm buffer"
+
+msgctxt "#30212"
+msgid "When selected, all data in the cache folder including games will be purged"
+msgstr "Når valgt, vil alle data i cache-mappen, inkludert spill, bli slettet"
+
+msgctxt "#30213"
+msgid "Select"
+msgstr "Velge"
+
+msgctxt "#30214"
+msgid "Selected"
+msgstr "Valgt"
+
+msgctxt "#30215"
+msgid "Game lists selected"
+msgstr "Spilllister er valgt"
+
+msgctxt "#30216"
+msgid "Genres selected"
+msgstr "Sjangere valgt"
+
+msgctxt "#30217"
+msgid "Players selected"
+msgstr "Spillere valgt"
+
+msgctxt "#30218"
+msgid "Studios selected"
+msgstr "Studioer valgt"
+
+msgctxt "#30219"
+msgid "Tags selected"
+msgstr "Tagger er valgt"
+
+msgctxt "#30220"
+msgid "Playlists selected"
+msgstr "Spillelister er valgt"
+
+msgctxt "#30221"
+msgid "Regions selected"
+msgstr "Regioner valgt"
+
+msgctxt "#30222"
+msgid "Languages selected"
+msgstr "Språk valgt"
+
+msgctxt "#30223"
+msgid "Editions selected"
+msgstr "Utgaver valgt"
+
+msgctxt "#30224"
+msgid "Codes selected"
+msgstr "Koder valgt"
+
+msgctxt "#30225"
+msgid "Ratings selected"
+msgstr "Vurderinger valgt"
+
+msgctxt "#30226"
+msgid "Enter title search query"
+msgstr "Skriv inn tittelsøk"
+
+msgctxt "#30227"
+msgid "Empty search"
+msgstr "Tomt søk"
+
+msgctxt "#30228"
+msgid "Search criteria is empty.[CR]Update criteria and try again."
+msgstr "Søkekriteriene er tomme.[CR]Oppdater kriteriene og prøv på nytt."
+
+msgctxt "#30229"
+msgid "Reset criteria"
+msgstr "Tilbakestill kriterier"
+
+msgctxt "#30230"
+msgid "Enter Link Name"
+msgstr "Skriv inn lenkenavn"
+
+msgctxt "#30231"
+msgid "Define the start page for IAGL"
+msgstr "Definer startsiden for IAGL"
+
+msgctxt "#30232"
+msgid "Kodi launch options"
+msgstr "Kodi lanseringsalternativer"
+
+msgctxt "#30233"
+msgid "Completed"
+msgstr "Fullført"
+
+msgctxt "#30234"
+msgid "Create new group"
+msgstr "Opprett ny gruppe"
+
+msgctxt "#30235"
+msgid "Select favorite group"
+msgstr "Velg favorittgruppe"
+
+msgctxt "#30236"
+msgid "Group by Favorites Group"
+msgstr "Grupper etter favorittgruppe"
+
+msgctxt "#30237"
+msgid "Remove IAGL Favorite"
+msgstr "Fjern IAGL-favoritt"
+
+msgctxt "#30238"
+msgid "Are you sure you want to delete this Favorite?"
+msgstr "Er du sikker på at du vil slette denne favoritten?"
+
+msgctxt "#30239"
+msgid "Favorite deleted"
+msgstr "Favoritt slettet"
+
+msgctxt "#30240"
+msgid "Favorites display"
+msgstr "Favoritter vises"
+
+msgctxt "#30241"
+msgid "Define the start page for IAGL Favorites"
+msgstr "Definer startsiden for IAGL-favoritter"
+
+msgctxt "#30242"
+msgid "By Favorites Group"
+msgstr "Etter favorittgruppe"
+
+msgctxt "#30243"
+msgid "Reset *all* criteria"
+msgstr "Tilbakestill *alle* kriterier"
+
+msgctxt "#30244"
+msgid "Run IAGL setup wizard?"
+msgstr "Kjøre IAGL-oppsettveiviseren?"
+
+msgctxt "#30245"
+msgid "Wizard"
+msgstr "Veiviser"
+
+msgctxt "#30246"
+msgid "Update game list Launcher"
+msgstr "Oppdater spilllistestarter"
+
+msgctxt "#30247"
+msgid "Update Launch Command"
+msgstr "Oppdater startkommando"
+
+msgctxt "#30248"
+msgid "Update game list download path"
+msgstr "Oppdater nedlastingsbane for spillliste"
+
+msgctxt "#30249"
+msgid "Hide game list"
+msgstr "Skjul spillelisten"
+
+msgctxt "#30250"
+msgid "Update game list post download process"
+msgstr "Oppdater spilllisten etter nedlastingsprosessen"
+
+msgctxt "#30251"
+msgid "Are you sure you want to hide game list"
+msgstr "Er du sikker på at du vil skjule spilllisten"
+
+msgctxt "#30252"
+msgid "Game list is now hidden"
+msgstr "Spilllisten er nå skjult"
+
+msgctxt "#30253"
+msgid "No results"
+msgstr "Ingen resultater"
+
+msgctxt "#30254"
+msgid "No hidden game lists found"
+msgstr "Fant ingen skjulte spilllister"
+
+msgctxt "#30255"
+msgid "Game lists unhidden"
+msgstr "Spilllister vises"
+
+msgctxt "#30256"
+msgid "Confirm reset"
+msgstr "Bekreft tilbakestilling"
+
+msgctxt "#30257"
+msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
+msgstr "Er du sikker på at du vil tilbakestille databasen?[CR]All brukerinformasjon vil gå tapt![CR]Dette kan ikke angres!"
+
+msgctxt "#30258"
+msgid "Database has been reset"
+msgstr "Databasen er tilbakestilt"
+
+msgctxt "#30259"
+msgid "Update Launcher"
+msgstr "Oppdater Launcher"
+
+msgctxt "#30260"
+msgid "Update launcher from[CR]Kodi to[CR]External?"
+msgstr "Oppdatere lanseringen fra[CR]Kodi til[CR]Ekstern?"
+
+msgctxt "#30261"
+msgid "Update launcher from[CR]External to[CR]Kodi?"
+msgstr "Oppdatere startprogrammet fra[CR]Eksternt til[CR]Kodi?"
+
+msgctxt "#30262"
+msgid "Launcher updated to external"
+msgstr "Launcher oppdatert til ekstern"
+
+msgctxt "#30263"
+msgid "Launcher updated to retroplayer"
+msgstr "Launcher oppdatert til retroplayer"
+
+msgctxt "#30264"
+msgid "Select game addon"
+msgstr "Velg spilltillegg"
+
+msgctxt "#30265"
+msgid "Reset to default"
+msgstr "Tilbakestill til standard"
+
+msgctxt "#30266"
+msgid "Download game to…"
+msgstr "Last ned spillet til..."
+
+msgctxt "#30267"
+msgid "Select download folder"
+msgstr "Velg nedlastingsmappe"
+
+msgctxt "#30268"
+msgid "Archive.org login success!"
+msgstr "Archive.org pålogging suksess!"
+
+msgctxt "#30269"
+msgid "Archive.org login failed.[CR]Check credentials or log for more details"
+msgstr "Archive.org-pålogging mislyktes.[CR]Sjekk påloggingsinformasjonen eller logg for mer informasjon"
+
+msgctxt "#30270"
+msgid "Error"
+msgstr "Feil"
+
+msgctxt "#30271"
+msgid "Initializing download for[CR]"
+msgstr "Initialiserer nedlasting for[CR]"
+
+msgctxt "#30272"
+msgid "Check logs"
+msgstr "Sjekk logger"
+
+msgctxt "#30273"
+msgid "Checking login for[CR]"
+msgstr "Sjekker pålogging for [CR]"
+
+msgctxt "#30274"
+msgid "Requesting file info for[CR]"
+msgstr "Ber om filinformasjon for [CR]"
+
+msgctxt "#30275"
+msgid "Select from Retroarch Cores"
+msgstr "Velg fra Retroarch Cores"
+
+msgctxt "#30276"
+msgid "Select from Extra Emulators"
+msgstr "Velg fra Ekstra emulatorer"
+
+msgctxt "#30277"
+msgid "Manually Enter Launch Command"
+msgstr "Angi startkommando manuelt"
+
+msgctxt "#30278"
+msgid "Select External Command Type"
+msgstr "Velg ekstern kommandotype"
+
+msgctxt "#30279"
+msgid "Extra Emulators"
+msgstr "Ekstra emulatorer"
+
+msgctxt "#30280"
+msgid "Dolphin"
+msgstr "Delfin"
+
+msgctxt "#30281"
+msgid "Select the path to the Dolphin application (optional)"
+msgstr "Velg banen til Dolphin-applikasjonen (valgfritt)"
+
+msgctxt "#30282"
+msgid "MAME"
+msgstr "MAME"
+
+msgctxt "#30283"
+msgid "Select the path to the MAME application (optional)"
+msgstr "Velg banen til MAME-applikasjonen (valgfritt)"
+
+msgctxt "#30284"
+msgid "Project 64"
+msgstr "Prosjekt 64"
+
+msgctxt "#30285"
+msgid "Select the path to the Project 64 application (optional)"
+msgstr "Velg banen til Project 64-applikasjonen (valgfritt)"
+
+msgctxt "#30286"
+msgid "ePSXe"
+msgstr "ePSXe"
+
+msgctxt "#30287"
+msgid "Select the path to the ePSXe application (optional)"
+msgstr "Velg banen til ePSXe-applikasjonen (valgfritt)"
+
+msgctxt "#30288"
+msgid "Demul"
+msgstr "Demul"
+
+msgctxt "#30289"
+msgid "Select the path to the Demul application (optional)"
+msgstr "Velg banen til Demul-applikasjonen (valgfritt)"
+
+msgctxt "#30290"
+msgid "FS-UAE"
+msgstr "FS-UAE"
+
+msgctxt "#30291"
+msgid "Select the path to the FS-UAE application (optional)"
+msgstr "Velg banen til FS-UAE-applikasjonen (valgfritt)"
+
+msgctxt "#30292"
+msgid "Are you sure you want to set external launch command?"
+msgstr "Er du sikker på at du vil angi ekstern startkommando?"
+
+msgctxt "#30293"
+msgid "External launch command updated"
+msgstr "Ekstern startkommando oppdatert"
+
+msgctxt "#30294"
+msgid "Android users must verify the core is installed in Retroarch"
+msgstr "Android-brukere må bekrefte at kjernen er installert i Retroarch"
+
+msgctxt "#30295"
+msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
+msgstr "Lanseringsinnstillingene er tomme for øyeblikket[CR]Vennligst oppdater tilleggsinnstillingene for eksterne lanseringer."
+
+msgctxt "#30296"
+msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
+msgstr "Startinnstillingene er tomme for øyeblikket[CR]Vennligst oppdater tilleggsinnstillingene for OS-start."
+
+msgctxt "#30297"
+msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
+msgstr "Ingen ekstra emulatorer ble funnet[CR]Vennligst oppdater tilleggsinnstillingene for emulatorer"
+
+msgctxt "#30298"
+msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
+msgstr "Skriv inn startkommando[CR]Se valgfrie nøkkelord på IAGL-wiki"
+
+msgctxt "#30299"
+msgid "Reset Launch Command"
+msgstr "Tilbakestill startkommando"
+
+msgctxt "#30300"
+msgid "Are you sure you want to reset the external launch command?"
+msgstr "Er du sikker på at du vil tilbakestille den eksterne startkommandoen?"
+
+msgctxt "#30301"
+msgid "External launch command was reset"
+msgstr "Ekstern startkommando ble tilbakestilt"
+
+msgctxt "#30302"
+msgid "Enter a value for"
+msgstr "Angi en verdi for"
+
+msgctxt "#30303"
+msgid "View game list settings"
+msgstr "Se innstillinger for spillliste"
+
+msgctxt "#30304"
+msgid "Game List"
+msgstr "Spillliste"
+
+msgctxt "#30305"
+msgid "Game List System"
+msgstr "Spilllistesystem"
+
+msgctxt "#30306"
+msgid "Total 1G1R Games in List"
+msgstr "Totalt 1G1R-spill i listen"
+
+msgctxt "#30307"
+msgid "Total Games in List"
+msgstr "Totalt antall spill i listen"
+
+msgctxt "#30308"
+msgid "Total Favorited Games in List"
+msgstr "Totalt favorittspill i listen"
+
+msgctxt "#30309"
+msgid "Default External Launch Command"
+msgstr "Standard ekstern startkommando"
+
+msgctxt "#30310"
+msgid "Default Retroplayer Game Addon"
+msgstr "Standard Retroplayer Game Addon"
+
+msgctxt "#30311"
+msgid "Default Game Post Process"
+msgstr "Standard spillpostprosess"
+
+msgctxt "#30312"
+msgid "User Defined Download Path"
+msgstr "Brukerdefinert nedlastingsbane"
+
+msgctxt "#30313"
+msgid "User External Launch Command"
+msgstr "Ekstern brukerstartkommando"
+
+msgctxt "#30314"
+msgid "User Defined Retroplayer Game Addon"
+msgstr "Brukerdefinert Retroplayer Game Addon"
+
+msgctxt "#30315"
+msgid "User Defined Post Process"
+msgstr "Brukerdefinert etterprosess"
+
+msgctxt "#30316"
+msgid "Game List Settings"
+msgstr "Innstillinger for spillliste"
+
+msgctxt "#30317"
+msgid "None (will use addon default)"
+msgstr "Ingen (vil bruke standardtillegg)"
+
+msgctxt "#30318"
+msgid "Games List Launcher"
+msgstr "Spilllistestarter"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "nan"
+
+msgctxt "#30320"
+msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
+msgstr "Ekstern startkommando[CR]*Ingen brukerstartkommando funnet / bruker standard*"
+
+msgctxt "#30321"
+msgid "Kodi Retroplayer"
+msgstr "Kodi retrospiller"
+
+msgctxt "#30322"
+msgid "Are you sure you want to update game list download path?"
+msgstr "Er du sikker på at du vil oppdatere nedlastingsbanen for spilllisten?"
+
+msgctxt "#30323"
+msgid "Download path updated"
+msgstr "Nedlastingsbane oppdatert"
+
+msgctxt "#30324"
+msgid "Are you sure you want to reset game list download path?"
+msgstr "Er du sikker på at du vil tilbakestille nedlastingsbanen til spilllisten?"
+
+msgctxt "#30325"
+msgid "Download path reset"
+msgstr "Last ned bane tilbakestilling"
+
+msgctxt "#30326"
+msgid "Change download path"
+msgstr "Endre nedlastingsbane"
+
+msgctxt "#30327"
+msgid "Reset download path"
+msgstr "Tilbakestill nedlastingsbane"
+
+msgctxt "#30328"
+msgid "Reset game list settings"
+msgstr "Tilbakestill innstillinger for spillliste"
+
+msgctxt "#30329"
+msgid "Are you sure you want to reset all game list settings to default?"
+msgstr "Er du sikker på at du vil tilbakestille alle spilllisteinnstillinger til standard?"
+
+msgctxt "#30330"
+msgid "Game list settings were reset to default"
+msgstr "Innstillinger for spillliste ble tilbakestilt til standard"

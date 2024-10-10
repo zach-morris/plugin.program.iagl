@@ -1,0 +1,1332 @@
+# Kodi Media Center language file
+# Addon Name: Internet Archive Game Launcher
+# Addon id: plugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/zach-morris/plugin.program.iagl/issues\n"
+"Language: eu_es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "Internet Archive Game Launcher"
+
+msgctxt "#30002"
+msgid "Browse all Lists"
+msgstr "Arakatu zerrenda guztiak"
+
+msgctxt "#30003"
+msgid "Browse lists by Category"
+msgstr "Arakatu zerrendak Kategoriaren arabera"
+
+msgctxt "#30004"
+msgid "Browse games by Playlist"
+msgstr "Arakatu jokoak erreprodukzio zerrendaren arabera"
+
+msgctxt "#30005"
+msgid "Favorites"
+msgstr "Gogokoak"
+
+msgctxt "#30006"
+msgid "Play History"
+msgstr "Jolasaren historia"
+
+msgctxt "#30007"
+msgid "Search"
+msgstr "Bilatu"
+
+msgctxt "#30008"
+msgid "Random Play"
+msgstr "Ausazko jolasa"
+
+msgctxt "#30009"
+msgid "Next"
+msgstr "Hurrengoa"
+
+msgctxt "#30010"
+msgid "Previous"
+msgstr "Aurrekoa"
+
+msgctxt "#30011"
+msgid "One Big List"
+msgstr "Zerrenda Handi Bat"
+
+msgctxt "#30012"
+msgid "Alphabetical"
+msgstr "Alfabetikoa"
+
+msgctxt "#30013"
+msgid "Group by Genre"
+msgstr "Taldea Generoaren arabera"
+
+msgctxt "#30014"
+msgid "Group by Year"
+msgstr "Taldeka Urtez"
+
+msgctxt "#30015"
+msgid "Group by Players"
+msgstr "Taldeka Jokalarika"
+
+msgctxt "#30016"
+msgid "Group by Studio"
+msgstr "Taldeka Studio"
+
+msgctxt "#30017"
+msgid "Group by Tag"
+msgstr "Taldeka etiketaz"
+
+msgctxt "#30018"
+msgid "Group by Playlist"
+msgstr "Taldeka erreprodukzio-zerrenda"
+
+msgctxt "#30019"
+msgid "Group by Region"
+msgstr "Taldeka Eskualdeka"
+
+msgctxt "#30020"
+msgid "Group by Language"
+msgstr "Taldeka Hizkuntzaz"
+
+msgctxt "#30021"
+msgid "Group by Edition"
+msgstr "Taldeka edizioa"
+
+msgctxt "#30022"
+msgid "Group by Code"
+msgstr "Kodeka taldekatu"
+
+msgctxt "#30023"
+msgid "Group by Rating"
+msgstr "Taldeka Balorazioz"
+
+msgctxt "#30024"
+msgid "Select Game Lists"
+msgstr "Hautatu Jokoen zerrendak"
+
+msgctxt "#30025"
+msgid "Search Game Titles"
+msgstr "Bilatu jokoen izenburuak"
+
+msgctxt "#30026"
+msgid "Filter by Genre"
+msgstr "Iragazi generoaren arabera"
+
+msgctxt "#30027"
+msgid "Filter by Players"
+msgstr "Iragazi jokalarien arabera"
+
+msgctxt "#30028"
+msgid "Filter by Studio"
+msgstr "Iragazi estudioaren arabera"
+
+msgctxt "#30029"
+msgid "Filter by Tag"
+msgstr "Iragazi etiketaren arabera"
+
+msgctxt "#30030"
+msgid "Filter by Playlist"
+msgstr "Iragazi erreprodukzio zerrendaren arabera"
+
+msgctxt "#30031"
+msgid "Filter by Region"
+msgstr "Iragazi Eskualdearen arabera"
+
+msgctxt "#30032"
+msgid "Filter by Language"
+msgstr "Iragazi hizkuntzaren arabera"
+
+msgctxt "#30033"
+msgid "Filter by Edition"
+msgstr "Iragazi edizioaren arabera"
+
+msgctxt "#30034"
+msgid "Filter by Code"
+msgstr "Iragazi kodearen arabera"
+
+msgctxt "#30035"
+msgid "Filter by Rating"
+msgstr "Iragazi Balorazioaren arabera"
+
+msgctxt "#30036"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Exekutatu bilaketa[/COLOR]"
+
+msgctxt "#30037"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Sortu bilaketa-esteka[/COLOR]"
+
+msgctxt "#30038"
+msgid "Choose Number of Results"
+msgstr "Aukeratu Emaitza kopurua"
+
+msgctxt "#30039"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Exekutatu ausazko bilaketa[/COLOR]"
+
+msgctxt "#30040"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Sortu ausazko bilaketa esteka[/COLOR]"
+
+msgctxt "#30041"
+msgid "General"
+msgstr "Orokorra"
+
+msgctxt "#30042"
+msgid "Launching"
+msgstr "Abian jartzea"
+
+msgctxt "#30043"
+msgid "Downloading"
+msgstr "Deskargatzen"
+
+msgctxt "#30044"
+msgid "Views and Navigation"
+msgstr "Ikuspegiak eta nabigazioa"
+
+msgctxt "#30045"
+msgid "Netplay"
+msgstr "Netplay"
+
+msgctxt "#30046"
+msgid "Setup Wizard"
+msgstr "Konfigurazio morroia"
+
+msgctxt "#30047"
+msgid "Advanced"
+msgstr "Aurreratua"
+
+msgctxt "#30048"
+msgid "Play History"
+msgstr "Jolasaren historia"
+
+msgctxt "#30049"
+msgid "Define how many games to save in last played history"
+msgstr "Definitu zenbat joko gorde nahi dituzun azken jokatutako historian"
+
+msgctxt "#30050"
+msgid "Default action on selecting game"
+msgstr "Ekintza lehenetsia jokoa hautatzeko"
+
+msgctxt "#30051"
+msgid "Define action to take when a game is selected"
+msgstr "Definitu joko bat hautatzen denean egin beharreko ekintza"
+
+msgctxt "#30052"
+msgid "If game already exists locally"
+msgstr "Jokoa lokalean badago dagoeneko"
+
+msgctxt "#30053"
+msgid "Define the action to take if a game file is found to exist locally"
+msgstr "Definitu joko-fitxategi bat lokalean existitzen dela aurkitzen bada egin beharreko ekintza"
+
+msgctxt "#30054"
+msgid "Prompt"
+msgstr "Galdera"
+
+msgctxt "#30055"
+msgid "Do not re-download"
+msgstr "Ez deskargatu berriro"
+
+msgctxt "#30056"
+msgid "Re-download and overwrite"
+msgstr "Berriro deskargatu eta gainidatzi"
+
+msgctxt "#30057"
+msgid "Enable archive.org login"
+msgstr "Gaitu archive.org-en saioa"
+
+msgctxt "#30058"
+msgid "Enabled"
+msgstr "Gaituta"
+
+msgctxt "#30059"
+msgid "Disabled"
+msgstr "Ezindua"
+
+msgctxt "#30060"
+msgid "Some games require login.  Enter your archive.org email address and password."
+msgstr "Zenbait jokok saioa hasi behar dute.  Sartu zure archive.org helbide elektronikoa eta pasahitza."
+
+msgctxt "#30061"
+msgid "archive.org Email"
+msgstr "archive.org Posta elektronikoa"
+
+msgctxt "#30062"
+msgid "Some games require login.  Enter your archive.org email address"
+msgstr "Zenbait jokok saioa hasi behar dute.  Sartu zure archive.org helbide elektronikoa"
+
+msgctxt "#30063"
+msgid "archive.org Password"
+msgstr "archive.org Pasahitza"
+
+msgctxt "#30064"
+msgid "Some games require login.  Enter your archive.org password"
+msgstr "Zenbait jokok saioa hasi behar dute.  Sartu zure archive.org pasahitza"
+
+msgctxt "#30065"
+msgid "Check login credentials"
+msgstr "Egiaztatu saioa hasteko kredentzialak"
+
+msgctxt "#30066"
+msgid "Test the entered email and password to check your ability to login"
+msgstr "Probatu sartutako posta elektronikoa eta pasahitza saioa hasteko gaitasuna egiaztatzeko"
+
+msgctxt "#30067"
+msgid "Download folder size limit"
+msgstr "Deskargatu karpetaren tamaina muga"
+
+msgctxt "#30068"
+msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
+msgstr "Zehaztu deskarga/cache-tamainaren tamaina.[CR]Tamainaren mugara iristen denean karpeta garbitzen da."
+
+msgctxt "#30069"
+msgid "Front page display"
+msgstr "Lehen orrialdeko pantaila"
+
+msgctxt "#30070"
+msgid "Choose from list"
+msgstr "Aukeratu zerrendatik"
+
+msgctxt "#30071"
+msgid "Games are presented as"
+msgstr "Jolasak honela aurkezten dira"
+
+msgctxt "#30072"
+msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
+msgstr "Kodi-k hainbat azal-aukera eskaintzen ditu filmetarako, telesaioetarako eta jokoetarako.  Ikusi wikia informazio gehiagorako"
+
+msgctxt "#30073"
+msgid "TV Shows"
+msgstr "Telesailak"
+
+msgctxt "#30074"
+msgid "Movies"
+msgstr "Filmak"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "nan"
+
+msgctxt "#30076"
+msgid "10 Games"
+msgstr "10 Jolasak"
+
+msgctxt "#30077"
+msgid "25 Games"
+msgstr "25 Jolasak"
+
+msgctxt "#30078"
+msgid "50 Games"
+msgstr "50 Jolas"
+
+msgctxt "#30079"
+msgid "100 Games"
+msgstr "100 Joko"
+
+msgctxt "#30080"
+msgid "250 Games"
+msgstr "250 joko"
+
+msgctxt "#30081"
+msgid "500 Games"
+msgstr "500 joko"
+
+msgctxt "#30082"
+msgid "Game artwork"
+msgstr "Joko artelana"
+
+msgctxt "#30083"
+msgid "Game list artwork"
+msgstr "Jokoen zerrendako artelana"
+
+msgctxt "#30084"
+msgid "Retroarch Settings"
+msgstr "Retroarch ezarpenak"
+
+msgctxt "#30085"
+msgid "Suspend Kodi IO on launch"
+msgstr "Eten ezazu Kodi IO abiaraztean"
+
+msgctxt "#30086"
+msgid "Stop media on launch"
+msgstr "Gelditu multimedia abiaraztean"
+
+msgctxt "#30087"
+msgid "Waiting for return"
+msgstr "Itzultzeko zain"
+
+msgctxt "#30088"
+msgid "Add to IAGL Favorites"
+msgstr "Gehitu IAGL gogokoetara"
+
+msgctxt "#30089"
+msgid "Enter a name for your favorites group"
+msgstr "Idatzi gogokoen taldearentzat izen bat"
+
+msgctxt "#30090"
+msgid "Favorite added to group"
+msgstr "Gogokoena taldean gehitu da"
+
+msgctxt "#30091"
+msgid "Use clean game title"
+msgstr "Erabili jokoaren izenburu garbia"
+
+msgctxt "#30092"
+msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
+msgstr "Kendu etiketak jokoaren izenburutik bistaratzeko.  Adibidez: [B]Mario (AEB)[/B] [B]Mario[/B] bihurtzen da"
+
+msgctxt "#30093"
+msgid "Games per page"
+msgstr "Jolasak orrialde bakoitzeko"
+
+msgctxt "#30094"
+msgid "Define how many games are listed per page"
+msgstr "Definitu orrialde bakoitzeko zenbat joko zerrendatzen diren"
+
+msgctxt "#30095"
+msgid "List all"
+msgstr "Guztiak zerrendatu"
+
+msgctxt "#30096"
+msgid "Always filter list to 1 Game 1 Rom Set"
+msgstr "Iragazi beti zerrenda 1 Joko 1 Rom multzora"
+
+msgctxt "#30097"
+msgid "If possible, game lists will be pre-filtered to a 1G1R set"
+msgstr "Ahal izanez gero, jokoen zerrendak 1G1R multzo batera iragaziko dira"
+
+msgctxt "#30098"
+msgid "Append game list name to search and random results"
+msgstr "Erantsi joko zerrendaren izena bilaketa eta ausazko emaitzetan"
+
+msgctxt "#30099"
+msgid "When enabled, the name of the game list will be appended to search results"
+msgstr "Gaituta dagoenean, joko-zerrendaren izena gehituko da bilaketa-emaitzetan"
+
+msgctxt "#30100"
+msgid "Append game list name when browsing by playlist"
+msgstr "Erantsi joko zerrendaren izena erreprodukzio zerrendaren arabera arakatzean"
+
+msgctxt "#30101"
+msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
+msgstr "Gaituta dagoenean, joko-zerrendaren izena erreprodukzio-zerrendako jokoaren izenari erantsiko zaio"
+
+msgctxt "#30102"
+msgid "Kodi landscape art equates to"
+msgstr "Kodi paisaia-arteak berdintzen du"
+
+msgctxt "#30103"
+msgid "Select the game artwork to be displayed as the landscape art"
+msgstr "Hautatu paisaia arte gisa bistaratu nahi den jokoaren artelana"
+
+msgctxt "#30104"
+msgid "Title Screen"
+msgstr "Izenburu-pantaila"
+
+msgctxt "#30105"
+msgid "Screenshot"
+msgstr "Pantaila-argazkia"
+
+msgctxt "#30106"
+msgid "Kodi thumbnail art equates to"
+msgstr "Kodi miniatura-arteak berdintzen du"
+
+msgctxt "#30107"
+msgid "Select the game artwork to be displayed as the thumbnail art"
+msgstr "Hautatu miniatura gisa bistaratu beharreko jokoaren artelana"
+
+msgctxt "#30108"
+msgid "Game list clearlogo equates to"
+msgstr "Joko-zerrenda clearlogo-k berdintzen du"
+
+msgctxt "#30109"
+msgid "Select the artwork displayed for the game list clearlogo"
+msgstr "Hautatu clearlogo jokoen zerrendarako bistaratzen den artelana"
+
+msgctxt "#30110"
+msgid "System logo"
+msgstr "Sistemaren logotipoa"
+
+msgctxt "#30111"
+msgid "System console"
+msgstr "Sistemaren kontsola"
+
+msgctxt "#30112"
+msgid "System controller"
+msgstr "Sistema kontrolatzailea"
+
+msgctxt "#30113"
+msgid "Game list fanart equates to"
+msgstr "Jokoen zerrenda fanart-ek berdintzen du"
+
+msgctxt "#30114"
+msgid "Select the artwork displayed for the game list fanart"
+msgstr "Hautatu jokoen zerrendako fanart-erako bistaratuko den artelana"
+
+msgctxt "#30115"
+msgid "System collage"
+msgstr "Sistemaren collagea"
+
+msgctxt "#30116"
+msgid "System console"
+msgstr "Sistemaren kontsola"
+
+msgctxt "#30117"
+msgid "System wallpaper"
+msgstr "Sistemaren horma-papera"
+
+msgctxt "#30118"
+msgid "Force IAGL viewtypes"
+msgstr "Behartu IAGL ikuspegi motak"
+
+msgctxt "#30119"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "Egiaztatu zure azalak behartutako ikuspegi mota ID eskuragarri duela"
+
+msgctxt "#30120"
+msgid "Frontpage viewtype"
+msgstr "Hasierako orriaren ikuspegi mota"
+
+msgctxt "#30121"
+msgid "Game library lists viewtype"
+msgstr "Joko liburutegiak ikuspegi mota zerrendatzen du"
+
+msgctxt "#30122"
+msgid "Game categories viewtype"
+msgstr "Joko kategoriak ikuspegi mota"
+
+msgctxt "#30123"
+msgid "Games list viewtype"
+msgstr "Jokoen zerrenda ikuspegi mota"
+
+msgctxt "#30124"
+msgid "Choose list viewtype"
+msgstr "Aukeratu zerrenda ikuspegi mota"
+
+msgctxt "#30125"
+msgid "Search and Random results viewtype"
+msgstr "Bilaketa eta Ausazko emaitzak ikuspegi mota"
+
+msgctxt "#30126"
+msgid "Off (Default)"
+msgstr "Desaktibatuta (lehenetsia)"
+
+msgctxt "#30127"
+msgid "List / Poster (50)"
+msgstr "Zerrenda / Kartela (50)"
+
+msgctxt "#30128"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "Kartela / Zerrenda Handia / Poster Horma (51)"
+
+msgctxt "#30129"
+msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
+msgstr "Ikonoen horma / Eredu horizontala / LS horma (52)"
+
+msgctxt "#30130"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "Pankarta / Paisaia / Kartelaren informazioa (501)"
+
+msgctxt "#30131"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "Fanart / Landscape Single / Atalen zerrenda (502)"
+
+msgctxt "#30132"
+msgid "Logos / Big Square Wall (503)"
+msgstr "Logotipoak / Big Square Wall (503)"
+
+msgctxt "#30133"
+msgid "Big List 2 (504)"
+msgstr "2. zerrenda handia (504)"
+
+msgctxt "#30134"
+msgid "Landscape Details (505)"
+msgstr "Paisaia xehetasunak (505)"
+
+msgctxt "#30135"
+msgid "Operating System"
+msgstr "Sistema eragilea"
+
+msgctxt "#30136"
+msgid "Select your operating system"
+msgstr "Hautatu zure sistema eragilea"
+
+msgctxt "#30137"
+msgid "Windows"
+msgstr "Leihoak"
+
+msgctxt "#30138"
+msgid "Linux"
+msgstr "Linux"
+
+msgctxt "#30139"
+msgid "OSX"
+msgstr "OSX"
+
+msgctxt "#30140"
+msgid "Retroarch App Location"
+msgstr "Retroarch aplikazioaren kokapena"
+
+msgctxt "#30141"
+msgid "Select the path to the retroarch executable"
+msgstr "Hautatu retroarch exekutagarrirako bidea"
+
+msgctxt "#30142"
+msgid "Retroarch CFG Location"
+msgstr "Retroarch CFG kokapena"
+
+msgctxt "#30143"
+msgid "Select the path to the retroarch config file"
+msgstr "Hautatu retroarch konfigurazio fitxategirako bidea"
+
+msgctxt "#30144"
+msgid "Android"
+msgstr "Android"
+
+msgctxt "#30145"
+msgid "Android aarch64"
+msgstr "Android aarch64"
+
+msgctxt "#30146"
+msgid "Android ra32"
+msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "When a game is launched"
+msgstr "Joko bat abiarazten denean"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when a game is launched (Windows, Linux and OSX only)"
+msgstr "Hautatu Kodik zer egingo duen joko bat abiarazten denean (Windows, Linux eta OSX soilik)"
+
+msgctxt "#30149"
+msgid "Keep Kodi in the background"
+msgstr "Mantendu Kodi atzeko planoan"
+
+msgctxt "#30150"
+msgid "Close Kodi"
+msgstr "Itxi Kodi"
+
+msgctxt "#30151"
+msgid "Pause Kodi"
+msgstr "Kodi pausatu"
+
+msgctxt "#30152"
+msgid "Retroarch core picker"
+msgstr "Retroarch-nukleo-hautatzailea"
+
+msgctxt "#30153"
+msgid "List by System and Core Name"
+msgstr "Zerrenda sistemaren eta oinarrizko izenaren arabera"
+
+msgctxt "#30154"
+msgid "List by Core Name"
+msgstr "Zerrenda oinarrizko izenaren arabera"
+
+msgctxt "#30155"
+msgid "List by Emulated Systems"
+msgstr "Sistema emulatuen arabera zerrenda"
+
+msgctxt "#30156"
+msgid "Select Core"
+msgstr "Hautatu Core"
+
+msgctxt "#30157"
+msgid "Select Emulated System"
+msgstr "Hautatu sistema emulatua"
+
+msgctxt "#30158"
+msgid "Select Emulator"
+msgstr "Hautatu Emuladorea"
+
+msgctxt "#30159"
+msgid "Credentials were not found[CR]Please enter them in addon settings"
+msgstr "Ez dira kredentzialak aurkitu[CR]Mesedez, sartu gehigarrien ezarpenetan"
+
+msgctxt "#30160"
+msgid "Game List Download Path"
+msgstr "Jokoen zerrenda deskargatzeko bidea"
+
+msgctxt "#30161"
+msgid "Zero (Current Game Only)"
+msgstr "Zero (uneko jokoa soilik)"
+
+msgctxt "#30162"
+msgid "25 MB"
+msgstr "25 MB"
+
+msgctxt "#30163"
+msgid "50 MB"
+msgstr "50 MB"
+
+msgctxt "#30164"
+msgid "100 MB"
+msgstr "100 MB"
+
+msgctxt "#30165"
+msgid "200 MB"
+msgstr "200 MB"
+
+msgctxt "#30166"
+msgid "500 MB"
+msgstr "500 MB"
+
+msgctxt "#30167"
+msgid "1 GB"
+msgstr "1 GB"
+
+msgctxt "#30168"
+msgid "2 GB"
+msgstr "2 GB"
+
+msgctxt "#30169"
+msgid "5 GB"
+msgstr "5 GB"
+
+msgctxt "#30170"
+msgid "10 GB"
+msgstr "10 GB"
+
+msgctxt "#30171"
+msgid "20 GB"
+msgstr "20 GB"
+
+msgctxt "#30172"
+msgid "Enable Netplay"
+msgstr "Gaitu Netplay"
+
+msgctxt "#30173"
+msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
+msgstr "Gaitu retroarch netplay (Windows, Linux, OSX soilik), erabili testuinguru-menua netplay-arekin abiarazteko"
+
+msgctxt "#30174"
+msgid "Show Netplay Lobby"
+msgstr "Erakutsi Netplay Lobbya"
+
+msgctxt "#30175"
+msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
+msgstr "Gaituta dagoenean, netplay lobby-a IAGLren hasierako orrian bistaratuko da"
+
+msgctxt "#30176"
+msgid "Filter game lobby to IAGL auto launch games"
+msgstr "Iragazi jokoaren lobby-a IAGL automatikoki abiarazteko jokoetara"
+
+msgctxt "#30177"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "Gaituta badago, sareko lobby-ak automatikoki abiarazteko jokoak soilik erakutsiko ditu"
+
+msgctxt "#30178"
+msgid "Netplay Port"
+msgstr "Netplay portua"
+
+msgctxt "#30179"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "Definitu sareko IP ataka bidez konektatzeko (utzi hutsik lehenespenerako)"
+
+msgctxt "#30180"
+msgid "Default player 2+ Hostname"
+msgstr "2+ jokalari lehenetsia ostalari-izena"
+
+msgctxt "#30181"
+msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
+msgstr "Definitu sareko ostalari-izena / IP lehenetsia (sare lokaleko sarerako erabilgarria, utzi hutsik lehenespenerako)"
+
+msgctxt "#30182"
+msgid "Check frames"
+msgstr "Egiaztatu markoak"
+
+msgctxt "#30183"
+msgid "Define number of netplay sync frames (leave blank for default)"
+msgstr "Definitu netplay sinkronizazio fotograma kopurua (utzi hutsik lehenespenerako)"
+
+msgctxt "#30184"
+msgid "Announce Netplay on Discord"
+msgstr "Iragarri Netplay Discord-en"
+
+msgctxt "#30185"
+msgid "Announces netplay start on discord for IAGL players"
+msgstr "Discord-en sarean hasten dela iragartzen du IAGL jokalarientzat"
+
+msgctxt "#30186"
+msgid "Discord Player Name"
+msgstr "Discord jokalariaren izena"
+
+msgctxt "#30187"
+msgid "Enter your player name to be announced on Discord"
+msgstr "Sartu zure jokalariaren izena Discord-en iragartzeko"
+
+msgctxt "#30188"
+msgid "Discord User Account ID"
+msgstr "Discord erabiltzaile-kontuaren IDa"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
+msgstr "Eman zure Discord IDa (Erabiltzaile-ezarpenak>Nire kontua>Kopiatu IDa) erreproduzitzerakoan aipatu beharrekoa (aukerakoa)"
+
+msgctxt "#30190"
+msgid "Display report when wizard is completed"
+msgstr "Bistaratu txostena morroia amaitzen denean"
+
+msgctxt "#30191"
+msgid "Execute setup wizard"
+msgstr "Exekutatu konfigurazio morroia"
+
+msgctxt "#30192"
+msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
+msgstr "Exekutatu morroia zure joko-zerrenden ezarpenak aldatzeko.  Hau edozein unetan errepika daiteke"
+
+msgctxt "#30193"
+msgid "Android Advance Settings"
+msgstr "Android aurrerapen ezarpenak"
+
+msgctxt "#30194"
+msgid "Use StartAndroidActivity"
+msgstr "Erabili StartAndroidActivity"
+
+msgctxt "#30195"
+msgid "Leave as default if unsure"
+msgstr "Utzi lehenetsi gisa ziur ez baduzu"
+
+msgctxt "#30196"
+msgid "Suspend Kodi Input and Audio when using External Launcher"
+msgstr "Eten ezazu Kodi sarrera eta audioa Kanpoko abiarazlea erabiltzean"
+
+msgctxt "#30197"
+msgid "Stop Kodi media playing before External Launch"
+msgstr "Gelditu Kodi multimedia erreproduzitzea Kanpoko abiarazi aurretik"
+
+msgctxt "#30198"
+msgid "Kodi is busy / waiting for return to Kodi after External Launch"
+msgstr "Kodi lanpetuta dago / Kanpoko abiaraztearen ondoren Kodira itzultzeko zain"
+
+msgctxt "#30199"
+msgid "Download Advanced Settings"
+msgstr "Deskargatu Ezarpen aurreratuak"
+
+msgctxt "#30200"
+msgid "Download Threads"
+msgstr "Deskargatu hariak"
+
+msgctxt "#30201"
+msgid "Set alternate default folder for all downloads"
+msgstr "Ezarri ordezko karpeta lehenetsia deskarga guztientzat"
+
+msgctxt "#30202"
+msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
+msgstr "Hautatzen denean, deskarga guztiak ordezko karpeta batera joango dira.  [B]Oharra: karpeta hau ez da garbituko edo tamainaren jarraipena egingo[/B]"
+
+msgctxt "#30203"
+msgid "Organize default download folder using system folders"
+msgstr "Antolatu deskarga-karpeta lehenetsia sistemako karpetak erabiliz"
+
+msgctxt "#30204"
+msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
+msgstr "Gaituta dagoenean, behin-behineko karpeta sistemaren arabera antolatuko da (batzuetan beharrezkoa da konfigurazioa gainidazteko)"
+
+msgctxt "#30205"
+msgid "Copy Kodi Network Source downloads to Local Filesystem"
+msgstr "Kopiatu Kodi Network Source deskargak Tokiko Fitxategi Sistemara"
+
+msgctxt "#30206"
+msgid "Reset Options"
+msgstr "Berrezarri Aukerak"
+
+msgctxt "#30207"
+msgid "Reset IAGL database to default settings"
+msgstr "Berrezarri IAGL datu-basearen ezarpen lehenetsietara"
+
+msgctxt "#30208"
+msgid "When selected, the database will be reset to default settings"
+msgstr "Hautatzen denean, datu-basea lehenetsitako ezarpenetara berrezarriko da"
+
+msgctxt "#30209"
+msgid "Unhide game lists"
+msgstr "Erakutsi joko-zerrendak"
+
+msgctxt "#30210"
+msgid "When selected, previously hidden game lists can be unhidden"
+msgstr "Hautatzen denean, aurretik ezkutatuta zeuden joko-zerrendak ezkutatu daitezke"
+
+msgctxt "#30211"
+msgid "Clear Cache"
+msgstr "Garbitu cachea"
+
+msgctxt "#30212"
+msgid "When selected, all data in the cache folder including games will be purged"
+msgstr "Hautatzen denean, cache karpetako datu guztiak garbituko dira, jokoak barne"
+
+msgctxt "#30213"
+msgid "Select"
+msgstr "Hautatu"
+
+msgctxt "#30214"
+msgid "Selected"
+msgstr "Hautatuta"
+
+msgctxt "#30215"
+msgid "Game lists selected"
+msgstr "Aukeratutako jokoen zerrendak"
+
+msgctxt "#30216"
+msgid "Genres selected"
+msgstr "Aukeratutako generoak"
+
+msgctxt "#30217"
+msgid "Players selected"
+msgstr "Hautatutako jokalariak"
+
+msgctxt "#30218"
+msgid "Studios selected"
+msgstr "Aukeratutako estudioak"
+
+msgctxt "#30219"
+msgid "Tags selected"
+msgstr "Etiketak hautatuta"
+
+msgctxt "#30220"
+msgid "Playlists selected"
+msgstr "Erreprodukzio-zerrendak hautatuta"
+
+msgctxt "#30221"
+msgid "Regions selected"
+msgstr "Aukeratutako eskualdeak"
+
+msgctxt "#30222"
+msgid "Languages selected"
+msgstr "Aukeratutako hizkuntzak"
+
+msgctxt "#30223"
+msgid "Editions selected"
+msgstr "Aukeratutako edizioak"
+
+msgctxt "#30224"
+msgid "Codes selected"
+msgstr "Aukeratutako kodeak"
+
+msgctxt "#30225"
+msgid "Ratings selected"
+msgstr "Balorazioak hautatuta"
+
+msgctxt "#30226"
+msgid "Enter title search query"
+msgstr "Sartu izenburua bilatzeko kontsulta"
+
+msgctxt "#30227"
+msgid "Empty search"
+msgstr "Bilaketa hutsa"
+
+msgctxt "#30228"
+msgid "Search criteria is empty.[CR]Update criteria and try again."
+msgstr "Bilaketa-irizpideak hutsik daude.[CR]Eguneratu irizpideak eta saiatu berriro."
+
+msgctxt "#30229"
+msgid "Reset criteria"
+msgstr "Irizpideak berrezarri"
+
+msgctxt "#30230"
+msgid "Enter Link Name"
+msgstr "Sartu estekaren izena"
+
+msgctxt "#30231"
+msgid "Define the start page for IAGL"
+msgstr "Definitu IAGLren hasierako orria"
+
+msgctxt "#30232"
+msgid "Kodi launch options"
+msgstr "Kodi abiarazteko aukerak"
+
+msgctxt "#30233"
+msgid "Completed"
+msgstr "Osatua"
+
+msgctxt "#30234"
+msgid "Create new group"
+msgstr "Sortu talde berria"
+
+msgctxt "#30235"
+msgid "Select favorite group"
+msgstr "Hautatu gogoko taldea"
+
+msgctxt "#30236"
+msgid "Group by Favorites Group"
+msgstr "Talde gogokoen taldeka"
+
+msgctxt "#30237"
+msgid "Remove IAGL Favorite"
+msgstr "Kendu IAGL gogokoena"
+
+msgctxt "#30238"
+msgid "Are you sure you want to delete this Favorite?"
+msgstr "Ziur Gogoko hau ezabatu nahi duzula?"
+
+msgctxt "#30239"
+msgid "Favorite deleted"
+msgstr "Gogokoa ezabatu da"
+
+msgctxt "#30240"
+msgid "Favorites display"
+msgstr "Gogokoak bistaratzea"
+
+msgctxt "#30241"
+msgid "Define the start page for IAGL Favorites"
+msgstr "Definitu IAGL gogokoen hasierako orria"
+
+msgctxt "#30242"
+msgid "By Favorites Group"
+msgstr "Gogokoen Taldearen arabera"
+
+msgctxt "#30243"
+msgid "Reset *all* criteria"
+msgstr "Berrezarri *irizpide guztiak*"
+
+msgctxt "#30244"
+msgid "Run IAGL setup wizard?"
+msgstr "IAGL konfiguratzeko morroia exekutatu?"
+
+msgctxt "#30245"
+msgid "Wizard"
+msgstr "Morroia"
+
+msgctxt "#30246"
+msgid "Update game list Launcher"
+msgstr "Eguneratu joko-zerrenda abiarazlea"
+
+msgctxt "#30247"
+msgid "Update Launch Command"
+msgstr "Eguneratu Abiarazteko komandoa"
+
+msgctxt "#30248"
+msgid "Update game list download path"
+msgstr "Eguneratu jokoen zerrenda deskargatzeko bidea"
+
+msgctxt "#30249"
+msgid "Hide game list"
+msgstr "Ezkutatu jokoen zerrenda"
+
+msgctxt "#30250"
+msgid "Update game list post download process"
+msgstr "Eguneratu jokoen zerrenda deskargatu ondorengo prozesua"
+
+msgctxt "#30251"
+msgid "Are you sure you want to hide game list"
+msgstr "Ziur jokoen zerrenda ezkutatu nahi duzula"
+
+msgctxt "#30252"
+msgid "Game list is now hidden"
+msgstr "Jokoen zerrenda ezkutatuta dago orain"
+
+msgctxt "#30253"
+msgid "No results"
+msgstr "Ez dago emaitzarik"
+
+msgctxt "#30254"
+msgid "No hidden game lists found"
+msgstr "Ez da aurkitu ezkutuko joko-zerrendarik"
+
+msgctxt "#30255"
+msgid "Game lists unhidden"
+msgstr "Joko-zerrendak ezkutatuta"
+
+msgctxt "#30256"
+msgid "Confirm reset"
+msgstr "Berretsi berrezarri"
+
+msgctxt "#30257"
+msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
+msgstr "Ziur datu-basea berrezarri nahi duzula?[CR]Erabiltzaileen informazio guztia galduko da![CR]Ezin da desegin!"
+
+msgctxt "#30258"
+msgid "Database has been reset"
+msgstr "Datu-basea berrezarri da"
+
+msgctxt "#30259"
+msgid "Update Launcher"
+msgstr "Eguneratu abiarazlea"
+
+msgctxt "#30260"
+msgid "Update launcher from[CR]Kodi to[CR]External?"
+msgstr "[CR]Koditik[CR]Kanporako abiarazlea eguneratu?"
+
+msgctxt "#30261"
+msgid "Update launcher from[CR]External to[CR]Kodi?"
+msgstr "[CR]Kanpotik[CR]Kodira eguneratu abiarazlea?"
+
+msgctxt "#30262"
+msgid "Launcher updated to external"
+msgstr "Abiarazlea kanpoko moduan eguneratu da"
+
+msgctxt "#30263"
+msgid "Launcher updated to retroplayer"
+msgstr "Abiarazlea retroplayer-era eguneratu da"
+
+msgctxt "#30264"
+msgid "Select game addon"
+msgstr "Hautatu jokoaren gehigarria"
+
+msgctxt "#30265"
+msgid "Reset to default"
+msgstr "Berrezarri lehenespenera"
+
+msgctxt "#30266"
+msgid "Download game to…"
+msgstr "Deskargatu jokoa..."
+
+msgctxt "#30267"
+msgid "Select download folder"
+msgstr "Hautatu deskargatzeko karpeta"
+
+msgctxt "#30268"
+msgid "Archive.org login success!"
+msgstr "Archive.org-en saioa arrakastatsua izan da!"
+
+msgctxt "#30269"
+msgid "Archive.org login failed.[CR]Check credentials or log for more details"
+msgstr "Archive.org-en saioak huts egin du.[CR]Egiaztatu kredentzialak edo erregistratu xehetasun gehiago lortzeko"
+
+msgctxt "#30270"
+msgid "Error"
+msgstr "Errorea"
+
+msgctxt "#30271"
+msgid "Initializing download for[CR]"
+msgstr "[CR]-rako deskarga hasieratzen"
+
+msgctxt "#30272"
+msgid "Check logs"
+msgstr "Egiaztatu erregistroak"
+
+msgctxt "#30273"
+msgid "Checking login for[CR]"
+msgstr "Saio-hasiera egiaztatzen [CR]"
+
+msgctxt "#30274"
+msgid "Requesting file info for[CR]"
+msgstr "Fitxategiaren informazioa eskatzen [CR]"
+
+msgctxt "#30275"
+msgid "Select from Retroarch Cores"
+msgstr "Hautatu Retroarch Cores-en artean"
+
+msgctxt "#30276"
+msgid "Select from Extra Emulators"
+msgstr "Aukeratu emuladore gehigarrietatik"
+
+msgctxt "#30277"
+msgid "Manually Enter Launch Command"
+msgstr "Sartu eskuz abiarazteko komandoa"
+
+msgctxt "#30278"
+msgid "Select External Command Type"
+msgstr "Hautatu Kanpoko Komando Mota"
+
+msgctxt "#30279"
+msgid "Extra Emulators"
+msgstr "Emuladore gehigarriak"
+
+msgctxt "#30280"
+msgid "Dolphin"
+msgstr "Izurdea"
+
+msgctxt "#30281"
+msgid "Select the path to the Dolphin application (optional)"
+msgstr "Hautatu Dolphin aplikaziorako bidea (aukerakoa)"
+
+msgctxt "#30282"
+msgid "MAME"
+msgstr "MAME"
+
+msgctxt "#30283"
+msgid "Select the path to the MAME application (optional)"
+msgstr "Hautatu MAME aplikaziorako bidea (aukerakoa)"
+
+msgctxt "#30284"
+msgid "Project 64"
+msgstr "64. proiektua"
+
+msgctxt "#30285"
+msgid "Select the path to the Project 64 application (optional)"
+msgstr "Hautatu Project 64 aplikaziorako bidea (aukerakoa)"
+
+msgctxt "#30286"
+msgid "ePSXe"
+msgstr "ePSXe"
+
+msgctxt "#30287"
+msgid "Select the path to the ePSXe application (optional)"
+msgstr "Hautatu ePSXe aplikaziorako bidea (aukerakoa)"
+
+msgctxt "#30288"
+msgid "Demul"
+msgstr "Demul"
+
+msgctxt "#30289"
+msgid "Select the path to the Demul application (optional)"
+msgstr "Hautatu Demul aplikaziorako bidea (aukerakoa)"
+
+msgctxt "#30290"
+msgid "FS-UAE"
+msgstr "FS-UAE"
+
+msgctxt "#30291"
+msgid "Select the path to the FS-UAE application (optional)"
+msgstr "Hautatu FS-UAE aplikaziorako bidea (aukerakoa)"
+
+msgctxt "#30292"
+msgid "Are you sure you want to set external launch command?"
+msgstr "Ziur kanpoko abiarazteko komandoa ezarri nahi duzula?"
+
+msgctxt "#30293"
+msgid "External launch command updated"
+msgstr "Kanpoko abiarazteko komandoa eguneratu da"
+
+msgctxt "#30294"
+msgid "Android users must verify the core is installed in Retroarch"
+msgstr "Android erabiltzaileek nukleoa Retroarch-en instalatuta dagoela egiaztatu behar dute"
+
+msgctxt "#30295"
+msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
+msgstr "Abiarazte-ezarpenak hutsik daude[CR]Mesedez eguneratu gehigarria kanpoko abiarazte-ezarpenak."
+
+msgctxt "#30296"
+msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
+msgstr "Abiarazte-ezarpenak hutsik daude une honetan[CR]Mesedez eguneratu gehigarria OS abiarazteko ezarpenak."
+
+msgctxt "#30297"
+msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
+msgstr "Ez da emulatzaile gehigarririk aurkitu[CR]Mesedez eguneratu gehigarria emulatzaile gehigarrien ezarpenak"
+
+msgctxt "#30298"
+msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
+msgstr "Sartu abiarazteko komandoa[CR]Ikusi aukerako gako-hitzak IAGL wikian"
+
+msgctxt "#30299"
+msgid "Reset Launch Command"
+msgstr "Berrezarri abiarazteko komandoa"
+
+msgctxt "#30300"
+msgid "Are you sure you want to reset the external launch command?"
+msgstr "Ziur kanpoko abiarazteko komandoa berrezarri nahi duzula?"
+
+msgctxt "#30301"
+msgid "External launch command was reset"
+msgstr "Kanpoko abiarazteko komandoa berrezarri da"
+
+msgctxt "#30302"
+msgid "Enter a value for"
+msgstr "Sartu balio bat"
+
+msgctxt "#30303"
+msgid "View game list settings"
+msgstr "Ikusi jokoen zerrendaren ezarpenak"
+
+msgctxt "#30304"
+msgid "Game List"
+msgstr "Jokoen zerrenda"
+
+msgctxt "#30305"
+msgid "Game List System"
+msgstr "Jokoen zerrenda sistema"
+
+msgctxt "#30306"
+msgid "Total 1G1R Games in List"
+msgstr "Guztira 1G1R jokoak zerrendan"
+
+msgctxt "#30307"
+msgid "Total Games in List"
+msgstr "Jokoak guztira zerrendan"
+
+msgctxt "#30308"
+msgid "Total Favorited Games in List"
+msgstr "Gogokoen zerrendako jokoak guztira"
+
+msgctxt "#30309"
+msgid "Default External Launch Command"
+msgstr "Kanpoko abiarazteko komando lehenetsia"
+
+msgctxt "#30310"
+msgid "Default Retroplayer Game Addon"
+msgstr "Retroplayer jokoaren gehigarri lehenetsia"
+
+msgctxt "#30311"
+msgid "Default Game Post Process"
+msgstr "Jokoaren post-prozesu lehenetsia"
+
+msgctxt "#30312"
+msgid "User Defined Download Path"
+msgstr "Erabiltzaileak definitutako deskarga-bidea"
+
+msgctxt "#30313"
+msgid "User External Launch Command"
+msgstr "Erabiltzaileen kanpoko abiarazteko komandoa"
+
+msgctxt "#30314"
+msgid "User Defined Retroplayer Game Addon"
+msgstr "Erabiltzaileak Definitutako Retroplayer Game Addon"
+
+msgctxt "#30315"
+msgid "User Defined Post Process"
+msgstr "Erabiltzaileak definitutako osteko prozesua"
+
+msgctxt "#30316"
+msgid "Game List Settings"
+msgstr "Jokoen zerrendaren ezarpenak"
+
+msgctxt "#30317"
+msgid "None (will use addon default)"
+msgstr "Bat ere ez (gehigarri lehenetsia erabiliko du)"
+
+msgctxt "#30318"
+msgid "Games List Launcher"
+msgstr "Jokoen zerrenda abiarazlea"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "nan"
+
+msgctxt "#30320"
+msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
+msgstr "Kanpoko abiarazteko komandoa[CR]*Ez da aurkitu erabiltzailea abiarazteko komandorik / Lehenetsia erabiliz*"
+
+msgctxt "#30321"
+msgid "Kodi Retroplayer"
+msgstr "Kodi Retroplayer"
+
+msgctxt "#30322"
+msgid "Are you sure you want to update game list download path?"
+msgstr "Ziur jokoen zerrenda deskargatzeko bidea eguneratu nahi duzula?"
+
+msgctxt "#30323"
+msgid "Download path updated"
+msgstr "Deskargatzeko bidea eguneratu da"
+
+msgctxt "#30324"
+msgid "Are you sure you want to reset game list download path?"
+msgstr "Ziur joko-zerrenda deskargatzeko bidea berrezarri nahi duzula?"
+
+msgctxt "#30325"
+msgid "Download path reset"
+msgstr "Deskargatu bidea berrezarri"
+
+msgctxt "#30326"
+msgid "Change download path"
+msgstr "Aldatu deskargatzeko bidea"
+
+msgctxt "#30327"
+msgid "Reset download path"
+msgstr "Berrezarri deskarga-bidea"
+
+msgctxt "#30328"
+msgid "Reset game list settings"
+msgstr "Berrezarri jokoen zerrendaren ezarpenak"
+
+msgctxt "#30329"
+msgid "Are you sure you want to reset all game list settings to default?"
+msgstr "Ziur joko-zerrendaren ezarpen guztiak lehenetsi nahi dituzula?"
+
+msgctxt "#30330"
+msgid "Game list settings were reset to default"
+msgstr "Jokoaren zerrendaren ezarpenak lehenetsi ziren"

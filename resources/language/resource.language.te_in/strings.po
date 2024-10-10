@@ -1,0 +1,1332 @@
+# Kodi Media Center language file
+# Addon Name: Internet Archive Game Launcher
+# Addon id: plugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/zach-morris/plugin.program.iagl/issues\n"
+"Language: te_in\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "ఇంటర్నెట్ ఆర్కైవ్ గేమ్ లాంచర్"
+
+msgctxt "#30002"
+msgid "Browse all Lists"
+msgstr "అన్ని జాబితాలను బ్రౌజ్ చేయండి"
+
+msgctxt "#30003"
+msgid "Browse lists by Category"
+msgstr "వర్గం ద్వారా జాబితాలను బ్రౌజ్ చేయండి"
+
+msgctxt "#30004"
+msgid "Browse games by Playlist"
+msgstr "ప్లేజాబితా ద్వారా గేమ్‌లను బ్రౌజ్ చేయండి"
+
+msgctxt "#30005"
+msgid "Favorites"
+msgstr "ఇష్టమైనవి"
+
+msgctxt "#30006"
+msgid "Play History"
+msgstr "ప్లే హిస్టరీ"
+
+msgctxt "#30007"
+msgid "Search"
+msgstr "శోధించండి"
+
+msgctxt "#30008"
+msgid "Random Play"
+msgstr "రాండమ్ ప్లే"
+
+msgctxt "#30009"
+msgid "Next"
+msgstr "తదుపరి"
+
+msgctxt "#30010"
+msgid "Previous"
+msgstr "మునుపటి"
+
+msgctxt "#30011"
+msgid "One Big List"
+msgstr "ఒక పెద్ద జాబితా"
+
+msgctxt "#30012"
+msgid "Alphabetical"
+msgstr "అక్షరక్రమం"
+
+msgctxt "#30013"
+msgid "Group by Genre"
+msgstr "జానర్ ద్వారా సమూహం"
+
+msgctxt "#30014"
+msgid "Group by Year"
+msgstr "సంవత్సరం వారీగా సమూహం"
+
+msgctxt "#30015"
+msgid "Group by Players"
+msgstr "ఆటగాళ్ల వారీగా సమూహం"
+
+msgctxt "#30016"
+msgid "Group by Studio"
+msgstr "స్టూడియో ద్వారా సమూహం"
+
+msgctxt "#30017"
+msgid "Group by Tag"
+msgstr "ట్యాగ్ ద్వారా సమూహం చేయండి"
+
+msgctxt "#30018"
+msgid "Group by Playlist"
+msgstr "ప్లేజాబితా ద్వారా సమూహం"
+
+msgctxt "#30019"
+msgid "Group by Region"
+msgstr "ప్రాంతం వారీగా సమూహం"
+
+msgctxt "#30020"
+msgid "Group by Language"
+msgstr "భాష ద్వారా సమూహం"
+
+msgctxt "#30021"
+msgid "Group by Edition"
+msgstr "ఎడిషన్ ద్వారా సమూహం"
+
+msgctxt "#30022"
+msgid "Group by Code"
+msgstr "కోడ్ ద్వారా సమూహం"
+
+msgctxt "#30023"
+msgid "Group by Rating"
+msgstr "రేటింగ్ ద్వారా సమూహం"
+
+msgctxt "#30024"
+msgid "Select Game Lists"
+msgstr "గేమ్ జాబితాలను ఎంచుకోండి"
+
+msgctxt "#30025"
+msgid "Search Game Titles"
+msgstr "గేమ్ శీర్షికలను శోధించండి"
+
+msgctxt "#30026"
+msgid "Filter by Genre"
+msgstr "జానర్ ద్వారా ఫిల్టర్ చేయండి"
+
+msgctxt "#30027"
+msgid "Filter by Players"
+msgstr "ప్లేయర్‌ల వారీగా ఫిల్టర్ చేయండి"
+
+msgctxt "#30028"
+msgid "Filter by Studio"
+msgstr "స్టూడియో ద్వారా ఫిల్టర్ చేయండి"
+
+msgctxt "#30029"
+msgid "Filter by Tag"
+msgstr "ట్యాగ్ ద్వారా ఫిల్టర్ చేయండి"
+
+msgctxt "#30030"
+msgid "Filter by Playlist"
+msgstr "ప్లేజాబితా ద్వారా ఫిల్టర్ చేయండి"
+
+msgctxt "#30031"
+msgid "Filter by Region"
+msgstr "ప్రాంతం వారీగా ఫిల్టర్ చేయండి"
+
+msgctxt "#30032"
+msgid "Filter by Language"
+msgstr "భాష ద్వారా ఫిల్టర్ చేయండి"
+
+msgctxt "#30033"
+msgid "Filter by Edition"
+msgstr "ఎడిషన్ ద్వారా ఫిల్టర్ చేయండి"
+
+msgctxt "#30034"
+msgid "Filter by Code"
+msgstr "కోడ్ ద్వారా ఫిల్టర్ చేయండి"
+
+msgctxt "#30035"
+msgid "Filter by Rating"
+msgstr "రేటింగ్ ద్వారా ఫిల్టర్ చేయండి"
+
+msgctxt "#30036"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]శోధనను అమలు చేయండి[/COLOR]"
+
+msgctxt "#30037"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]శోధన లింక్‌ని సృష్టించండి[/COLOR]"
+
+msgctxt "#30038"
+msgid "Choose Number of Results"
+msgstr "ఫలితాల సంఖ్యను ఎంచుకోండి"
+
+msgctxt "#30039"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]యాదృచ్ఛిక శోధనను అమలు చేయండి[/COLOR]"
+
+msgctxt "#30040"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]యాదృచ్ఛిక శోధన లింక్‌ని సృష్టించండి[/COLOR]"
+
+msgctxt "#30041"
+msgid "General"
+msgstr "జనరల్"
+
+msgctxt "#30042"
+msgid "Launching"
+msgstr "ప్రారంభించడం"
+
+msgctxt "#30043"
+msgid "Downloading"
+msgstr "డౌన్‌లోడ్ చేస్తోంది"
+
+msgctxt "#30044"
+msgid "Views and Navigation"
+msgstr "వీక్షణలు మరియు నావిగేషన్"
+
+msgctxt "#30045"
+msgid "Netplay"
+msgstr "నెట్‌ప్లే"
+
+msgctxt "#30046"
+msgid "Setup Wizard"
+msgstr "సెటప్ విజార్డ్"
+
+msgctxt "#30047"
+msgid "Advanced"
+msgstr "అధునాతనమైనది"
+
+msgctxt "#30048"
+msgid "Play History"
+msgstr "ప్లే హిస్టరీ"
+
+msgctxt "#30049"
+msgid "Define how many games to save in last played history"
+msgstr "చివరిగా ఆడిన చరిత్రలో ఎన్ని గేమ్‌లను సేవ్ చేయాలో నిర్వచించండి"
+
+msgctxt "#30050"
+msgid "Default action on selecting game"
+msgstr "గేమ్‌ని ఎంచుకోవడంలో డిఫాల్ట్ చర్య"
+
+msgctxt "#30051"
+msgid "Define action to take when a game is selected"
+msgstr "గేమ్‌ని ఎంచుకున్నప్పుడు తీసుకోవాల్సిన చర్యను నిర్వచించండి"
+
+msgctxt "#30052"
+msgid "If game already exists locally"
+msgstr "గేమ్ ఇప్పటికే స్థానికంగా ఉన్నట్లయితే"
+
+msgctxt "#30053"
+msgid "Define the action to take if a game file is found to exist locally"
+msgstr "గేమ్ ఫైల్ స్థానికంగా ఉన్నట్లు కనుగొనబడితే తీసుకోవలసిన చర్యను నిర్వచించండి"
+
+msgctxt "#30054"
+msgid "Prompt"
+msgstr "ప్రాంప్ట్"
+
+msgctxt "#30055"
+msgid "Do not re-download"
+msgstr "మళ్లీ డౌన్‌లోడ్ చేయవద్దు"
+
+msgctxt "#30056"
+msgid "Re-download and overwrite"
+msgstr "మళ్లీ డౌన్‌లోడ్ చేసి, ఓవర్‌రైట్ చేయండి"
+
+msgctxt "#30057"
+msgid "Enable archive.org login"
+msgstr "archive.org లాగిన్‌ని ప్రారంభించండి"
+
+msgctxt "#30058"
+msgid "Enabled"
+msgstr "ప్రారంభించబడింది"
+
+msgctxt "#30059"
+msgid "Disabled"
+msgstr "వికలాంగుడు"
+
+msgctxt "#30060"
+msgid "Some games require login.  Enter your archive.org email address and password."
+msgstr "కొన్ని ఆటలకు లాగిన్ అవసరం.  మీ archive.org ఇమెయిల్ చిరునామా మరియు పాస్‌వర్డ్‌ను నమోదు చేయండి."
+
+msgctxt "#30061"
+msgid "archive.org Email"
+msgstr "archive.org ఇమెయిల్"
+
+msgctxt "#30062"
+msgid "Some games require login.  Enter your archive.org email address"
+msgstr "కొన్ని ఆటలకు లాగిన్ అవసరం.  మీ archive.org ఇమెయిల్ చిరునామాను నమోదు చేయండి"
+
+msgctxt "#30063"
+msgid "archive.org Password"
+msgstr "archive.org పాస్‌వర్డ్"
+
+msgctxt "#30064"
+msgid "Some games require login.  Enter your archive.org password"
+msgstr "కొన్ని ఆటలకు లాగిన్ అవసరం.  మీ archive.org పాస్‌వర్డ్‌ను నమోదు చేయండి"
+
+msgctxt "#30065"
+msgid "Check login credentials"
+msgstr "లాగిన్ ఆధారాలను తనిఖీ చేయండి"
+
+msgctxt "#30066"
+msgid "Test the entered email and password to check your ability to login"
+msgstr "మీ లాగిన్ సామర్థ్యాన్ని తనిఖీ చేయడానికి నమోదు చేసిన ఇమెయిల్ మరియు పాస్‌వర్డ్‌ను పరీక్షించండి"
+
+msgctxt "#30067"
+msgid "Download folder size limit"
+msgstr "డౌన్‌లోడ్ ఫోల్డర్ పరిమాణ పరిమితి"
+
+msgctxt "#30068"
+msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
+msgstr "డౌన్‌లోడ్ / కాష్ పరిమాణం యొక్క పరిమాణాన్ని నిర్వచించండి.[CR]పరిమాణ పరిమితిని చేరుకున్నప్పుడు ఫోల్డర్ ప్రక్షాళన చేయబడుతుంది."
+
+msgctxt "#30069"
+msgid "Front page display"
+msgstr "మొదటి పేజీ ప్రదర్శన"
+
+msgctxt "#30070"
+msgid "Choose from list"
+msgstr "జాబితా నుండి ఎంచుకోండి"
+
+msgctxt "#30071"
+msgid "Games are presented as"
+msgstr "ఆటలు ప్రదర్శించబడతాయి"
+
+msgctxt "#30072"
+msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
+msgstr "కోడి సినిమాలు, టీవీ షోలు మరియు గేమ్‌ల కోసం అనేక స్కిన్ ఆప్షన్‌లను అందిస్తుంది.  మరింత సమాచారం కోసం వికీని చూడండి"
+
+msgctxt "#30073"
+msgid "TV Shows"
+msgstr "టీవీ కార్యక్రమాలు"
+
+msgctxt "#30074"
+msgid "Movies"
+msgstr "సినిమాలు"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "nan"
+
+msgctxt "#30076"
+msgid "10 Games"
+msgstr "10 ఆటలు"
+
+msgctxt "#30077"
+msgid "25 Games"
+msgstr "25 ఆటలు"
+
+msgctxt "#30078"
+msgid "50 Games"
+msgstr "50 ఆటలు"
+
+msgctxt "#30079"
+msgid "100 Games"
+msgstr "100 ఆటలు"
+
+msgctxt "#30080"
+msgid "250 Games"
+msgstr "250 ఆటలు"
+
+msgctxt "#30081"
+msgid "500 Games"
+msgstr "500 ఆటలు"
+
+msgctxt "#30082"
+msgid "Game artwork"
+msgstr "గేమ్ కళాకృతి"
+
+msgctxt "#30083"
+msgid "Game list artwork"
+msgstr "గేమ్ జాబితా కళాకృతి"
+
+msgctxt "#30084"
+msgid "Retroarch Settings"
+msgstr "రెట్రోఆర్చ్ సెట్టింగ్‌లు"
+
+msgctxt "#30085"
+msgid "Suspend Kodi IO on launch"
+msgstr "ప్రారంభించినప్పుడు కోడి IOని నిలిపివేయండి"
+
+msgctxt "#30086"
+msgid "Stop media on launch"
+msgstr "ప్రారంభించిన మీడియాను ఆపండి"
+
+msgctxt "#30087"
+msgid "Waiting for return"
+msgstr "తిరిగి రావడానికి వేచి ఉంది"
+
+msgctxt "#30088"
+msgid "Add to IAGL Favorites"
+msgstr "IAGL ఇష్టమైన వాటికి జోడించండి"
+
+msgctxt "#30089"
+msgid "Enter a name for your favorites group"
+msgstr "మీకు ఇష్టమైన సమూహం కోసం పేరును నమోదు చేయండి"
+
+msgctxt "#30090"
+msgid "Favorite added to group"
+msgstr "ఇష్టమైనవి సమూహానికి జోడించబడ్డాయి"
+
+msgctxt "#30091"
+msgid "Use clean game title"
+msgstr "క్లీన్ గేమ్ టైటిల్ ఉపయోగించండి"
+
+msgctxt "#30092"
+msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
+msgstr "ప్రదర్శన కోసం గేమ్ శీర్షిక నుండి ట్యాగ్‌లను తీసివేయండి.  ఉదా: [B]మారియో (USA)[/B] [B]మారియో[/B] అవుతుంది"
+
+msgctxt "#30093"
+msgid "Games per page"
+msgstr "ఒక్కో పేజీకి ఆటలు"
+
+msgctxt "#30094"
+msgid "Define how many games are listed per page"
+msgstr "ఒక్కో పేజీకి ఎన్ని ఆటలు జాబితా చేయబడతాయో నిర్వచించండి"
+
+msgctxt "#30095"
+msgid "List all"
+msgstr "అన్నింటినీ జాబితా చేయండి"
+
+msgctxt "#30096"
+msgid "Always filter list to 1 Game 1 Rom Set"
+msgstr "ఎల్లప్పుడూ జాబితాను 1 గేమ్ 1 రోమ్ సెట్‌కి ఫిల్టర్ చేయండి"
+
+msgctxt "#30097"
+msgid "If possible, game lists will be pre-filtered to a 1G1R set"
+msgstr "వీలైతే, గేమ్ జాబితాలు 1G1R సెట్‌కి ముందే ఫిల్టర్ చేయబడతాయి"
+
+msgctxt "#30098"
+msgid "Append game list name to search and random results"
+msgstr "శోధన మరియు యాదృచ్ఛిక ఫలితాల కోసం గేమ్ జాబితా పేరును జోడించండి"
+
+msgctxt "#30099"
+msgid "When enabled, the name of the game list will be appended to search results"
+msgstr "ప్రారంభించబడినప్పుడు, గేమ్ జాబితా పేరు శోధన ఫలితాలకు జోడించబడుతుంది"
+
+msgctxt "#30100"
+msgid "Append game list name when browsing by playlist"
+msgstr "ప్లేజాబితా ద్వారా బ్రౌజ్ చేస్తున్నప్పుడు గేమ్ జాబితా పేరును జోడించండి"
+
+msgctxt "#30101"
+msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
+msgstr "ప్రారంభించబడినప్పుడు, ఆట జాబితా పేరు ప్లేజాబితాలోని గేమ్ పేరుకు జోడించబడుతుంది"
+
+msgctxt "#30102"
+msgid "Kodi landscape art equates to"
+msgstr "కోడి ప్రకృతి దృశ్యం కళకు సమానం"
+
+msgctxt "#30103"
+msgid "Select the game artwork to be displayed as the landscape art"
+msgstr "ల్యాండ్‌స్కేప్ ఆర్ట్‌గా ప్రదర్శించబడే గేమ్ ఆర్ట్‌వర్క్‌ను ఎంచుకోండి"
+
+msgctxt "#30104"
+msgid "Title Screen"
+msgstr "టైటిల్ స్క్రీన్"
+
+msgctxt "#30105"
+msgid "Screenshot"
+msgstr "స్క్రీన్షాట్"
+
+msgctxt "#30106"
+msgid "Kodi thumbnail art equates to"
+msgstr "కోడి థంబ్‌నెయిల్ ఆర్ట్ సమానం"
+
+msgctxt "#30107"
+msgid "Select the game artwork to be displayed as the thumbnail art"
+msgstr "థంబ్‌నెయిల్ ఆర్ట్‌గా ప్రదర్శించబడే గేమ్ ఆర్ట్‌వర్క్‌ను ఎంచుకోండి"
+
+msgctxt "#30108"
+msgid "Game list clearlogo equates to"
+msgstr "గేమ్ జాబితా క్లియర్‌లోగో సమానం"
+
+msgctxt "#30109"
+msgid "Select the artwork displayed for the game list clearlogo"
+msgstr "గేమ్ జాబితా క్లియర్‌లోగో కోసం ప్రదర్శించబడే కళాకృతిని ఎంచుకోండి"
+
+msgctxt "#30110"
+msgid "System logo"
+msgstr "సిస్టమ్ లోగో"
+
+msgctxt "#30111"
+msgid "System console"
+msgstr "సిస్టమ్ కన్సోల్"
+
+msgctxt "#30112"
+msgid "System controller"
+msgstr "సిస్టమ్ కంట్రోలర్"
+
+msgctxt "#30113"
+msgid "Game list fanart equates to"
+msgstr "గేమ్ జాబితా fanart సమానం"
+
+msgctxt "#30114"
+msgid "Select the artwork displayed for the game list fanart"
+msgstr "గేమ్ జాబితా ఫ్యానార్ట్ కోసం ప్రదర్శించబడే కళాకృతిని ఎంచుకోండి"
+
+msgctxt "#30115"
+msgid "System collage"
+msgstr "సిస్టమ్ కోల్లెజ్"
+
+msgctxt "#30116"
+msgid "System console"
+msgstr "సిస్టమ్ కన్సోల్"
+
+msgctxt "#30117"
+msgid "System wallpaper"
+msgstr "సిస్టమ్ వాల్‌పేపర్"
+
+msgctxt "#30118"
+msgid "Force IAGL viewtypes"
+msgstr "IAGL వీక్షణ రకాలను బలవంతం చేయండి"
+
+msgctxt "#30119"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "మీ చర్మం బలవంతంగా వీక్షణ రకం ID అందుబాటులో ఉందని ధృవీకరించండి"
+
+msgctxt "#30120"
+msgid "Frontpage viewtype"
+msgstr "మొదటి పేజీ వీక్షణ రకం"
+
+msgctxt "#30121"
+msgid "Game library lists viewtype"
+msgstr "గేమ్ లైబ్రరీ జాబితా వీక్షణ రకం"
+
+msgctxt "#30122"
+msgid "Game categories viewtype"
+msgstr "గేమ్ కేతగిరీలు వీక్షణ రకం"
+
+msgctxt "#30123"
+msgid "Games list viewtype"
+msgstr "ఆటల జాబితా వీక్షణ రకం"
+
+msgctxt "#30124"
+msgid "Choose list viewtype"
+msgstr "జాబితా వీక్షణ రకాన్ని ఎంచుకోండి"
+
+msgctxt "#30125"
+msgid "Search and Random results viewtype"
+msgstr "శోధన మరియు యాదృచ్ఛిక ఫలితాల వీక్షణ రకం"
+
+msgctxt "#30126"
+msgid "Off (Default)"
+msgstr "ఆఫ్ (డిఫాల్ట్)"
+
+msgctxt "#30127"
+msgid "List / Poster (50)"
+msgstr "జాబితా / పోస్టర్ (50)"
+
+msgctxt "#30128"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "పోస్టర్ / పెద్ద జాబితా / పోస్టర్ వాల్ (51)"
+
+msgctxt "#30129"
+msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
+msgstr "ఐకాన్ వాల్ / క్షితిజసమాంతర నమూనా / LS గోడ (52)"
+
+msgctxt "#30130"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "బ్యానర్ / ల్యాండ్‌స్కేప్ / పోస్టర్ సమాచారం (501)"
+
+msgctxt "#30131"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "ఫానార్ట్ / ల్యాండ్‌స్కేప్ సింగిల్ / ఎపిసోడ్ జాబితా (502)"
+
+msgctxt "#30132"
+msgid "Logos / Big Square Wall (503)"
+msgstr "లోగోలు / బిగ్ స్క్వేర్ వాల్ (503)"
+
+msgctxt "#30133"
+msgid "Big List 2 (504)"
+msgstr "పెద్ద జాబితా 2 (504)"
+
+msgctxt "#30134"
+msgid "Landscape Details (505)"
+msgstr "ప్రకృతి దృశ్యం వివరాలు (505)"
+
+msgctxt "#30135"
+msgid "Operating System"
+msgstr "ఆపరేటింగ్ సిస్టమ్"
+
+msgctxt "#30136"
+msgid "Select your operating system"
+msgstr "మీ ఆపరేటింగ్ సిస్టమ్‌ను ఎంచుకోండి"
+
+msgctxt "#30137"
+msgid "Windows"
+msgstr "విండోస్"
+
+msgctxt "#30138"
+msgid "Linux"
+msgstr "Linux"
+
+msgctxt "#30139"
+msgid "OSX"
+msgstr "OSX"
+
+msgctxt "#30140"
+msgid "Retroarch App Location"
+msgstr "Retroarch యాప్ స్థానం"
+
+msgctxt "#30141"
+msgid "Select the path to the retroarch executable"
+msgstr "రెట్రోఆర్చ్ ఎక్జిక్యూటబుల్‌కు మార్గాన్ని ఎంచుకోండి"
+
+msgctxt "#30142"
+msgid "Retroarch CFG Location"
+msgstr "Retroarch CFG స్థానం"
+
+msgctxt "#30143"
+msgid "Select the path to the retroarch config file"
+msgstr "retroarch config ఫైల్‌కి మార్గాన్ని ఎంచుకోండి"
+
+msgctxt "#30144"
+msgid "Android"
+msgstr "ఆండ్రాయిడ్"
+
+msgctxt "#30145"
+msgid "Android aarch64"
+msgstr "Android aarch64"
+
+msgctxt "#30146"
+msgid "Android ra32"
+msgstr "ఆండ్రాయిడ్ ra32"
+
+msgctxt "#30147"
+msgid "When a game is launched"
+msgstr "ఆట ప్రారంభించబడినప్పుడు"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when a game is launched (Windows, Linux and OSX only)"
+msgstr "గేమ్ ప్రారంభించబడినప్పుడు కోడి ఏమి చేస్తుందో ఎంచుకోండి (Windows, Linux మరియు OSX మాత్రమే)"
+
+msgctxt "#30149"
+msgid "Keep Kodi in the background"
+msgstr "కోడిని నేపథ్యంలో ఉంచండి"
+
+msgctxt "#30150"
+msgid "Close Kodi"
+msgstr "కోడిని మూసివేయి"
+
+msgctxt "#30151"
+msgid "Pause Kodi"
+msgstr "కోడిని పాజ్ చేయండి"
+
+msgctxt "#30152"
+msgid "Retroarch core picker"
+msgstr "Retroarch కోర్ పికర్"
+
+msgctxt "#30153"
+msgid "List by System and Core Name"
+msgstr "సిస్టమ్ మరియు కోర్ పేరు ద్వారా జాబితా"
+
+msgctxt "#30154"
+msgid "List by Core Name"
+msgstr "కోర్ పేరు ద్వారా జాబితా"
+
+msgctxt "#30155"
+msgid "List by Emulated Systems"
+msgstr "ఎమ్యులేటెడ్ సిస్టమ్స్ ద్వారా జాబితా"
+
+msgctxt "#30156"
+msgid "Select Core"
+msgstr "కోర్ని ఎంచుకోండి"
+
+msgctxt "#30157"
+msgid "Select Emulated System"
+msgstr "ఎమ్యులేటెడ్ సిస్టమ్‌ని ఎంచుకోండి"
+
+msgctxt "#30158"
+msgid "Select Emulator"
+msgstr "ఎమ్యులేటర్‌ని ఎంచుకోండి"
+
+msgctxt "#30159"
+msgid "Credentials were not found[CR]Please enter them in addon settings"
+msgstr "ఆధారాలు కనుగొనబడలేదు[CR]దయచేసి వాటిని యాడ్ఆన్ సెట్టింగ్‌లలో నమోదు చేయండి"
+
+msgctxt "#30160"
+msgid "Game List Download Path"
+msgstr "గేమ్ జాబితా డౌన్లోడ్ మార్గం"
+
+msgctxt "#30161"
+msgid "Zero (Current Game Only)"
+msgstr "జీరో (ప్రస్తుత ఆట మాత్రమే)"
+
+msgctxt "#30162"
+msgid "25 MB"
+msgstr "25 MB"
+
+msgctxt "#30163"
+msgid "50 MB"
+msgstr "50 MB"
+
+msgctxt "#30164"
+msgid "100 MB"
+msgstr "100 MB"
+
+msgctxt "#30165"
+msgid "200 MB"
+msgstr "200 MB"
+
+msgctxt "#30166"
+msgid "500 MB"
+msgstr "500 MB"
+
+msgctxt "#30167"
+msgid "1 GB"
+msgstr "1 GB"
+
+msgctxt "#30168"
+msgid "2 GB"
+msgstr "2 GB"
+
+msgctxt "#30169"
+msgid "5 GB"
+msgstr "5 GB"
+
+msgctxt "#30170"
+msgid "10 GB"
+msgstr "10 GB"
+
+msgctxt "#30171"
+msgid "20 GB"
+msgstr "20 GB"
+
+msgctxt "#30172"
+msgid "Enable Netplay"
+msgstr "నెట్‌ప్లేను ప్రారంభించండి"
+
+msgctxt "#30173"
+msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
+msgstr "రెట్రోఆర్చ్ నెట్‌ప్లేను ప్రారంభించండి (Windows, Linux, OSX మాత్రమే), నెట్‌ప్లేతో ప్రారంభించేందుకు సందర్భ మెనుని ఉపయోగించండి"
+
+msgctxt "#30174"
+msgid "Show Netplay Lobby"
+msgstr "నెట్‌ప్లే లాబీని చూపించు"
+
+msgctxt "#30175"
+msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
+msgstr "ప్రారంభించబడినప్పుడు, నెట్‌ప్లే లాబీ IAGL మొదటి పేజీలో ప్రదర్శించబడుతుంది"
+
+msgctxt "#30176"
+msgid "Filter game lobby to IAGL auto launch games"
+msgstr "IAGL ఆటో లాంచ్ గేమ్‌లకు ఫిల్టర్ గేమ్ లాబీ"
+
+msgctxt "#30177"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "ప్రారంభించబడితే, నెట్‌ప్లే లాబీ ఆటో లాంచ్ చేయగల గేమ్‌లను మాత్రమే చూపుతుంది"
+
+msgctxt "#30178"
+msgid "Netplay Port"
+msgstr "నెట్‌ప్లే పోర్ట్"
+
+msgctxt "#30179"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "కనెక్ట్ చేయడానికి నెట్‌ప్లే IP పోర్ట్‌ను నిర్వచించండి (డిఫాల్ట్‌గా ఖాళీగా ఉంచండి)"
+
+msgctxt "#30180"
+msgid "Default player 2+ Hostname"
+msgstr "డిఫాల్ట్ ప్లేయర్ 2+ హోస్ట్ పేరు"
+
+msgctxt "#30181"
+msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
+msgstr "డిఫాల్ట్ నెట్‌ప్లే హోస్ట్ పేరు / IPని నిర్వచించండి (స్థానిక నెట్‌వర్క్ నెట్‌ప్లేకి ఉపయోగపడుతుంది, డిఫాల్ట్ కోసం ఖాళీగా ఉంచండి)"
+
+msgctxt "#30182"
+msgid "Check frames"
+msgstr "ఫ్రేమ్‌లను తనిఖీ చేయండి"
+
+msgctxt "#30183"
+msgid "Define number of netplay sync frames (leave blank for default)"
+msgstr "నెట్‌ప్లే సమకాలీకరణ ఫ్రేమ్‌ల సంఖ్యను నిర్వచించండి (డిఫాల్ట్ కోసం ఖాళీగా ఉంచండి)"
+
+msgctxt "#30184"
+msgid "Announce Netplay on Discord"
+msgstr "డిస్కార్డ్‌పై నెట్‌ప్లేని ప్రకటించండి"
+
+msgctxt "#30185"
+msgid "Announces netplay start on discord for IAGL players"
+msgstr "IAGL ప్లేయర్‌ల కోసం అసమ్మతిపై నెట్‌ప్లే ప్రారంభాన్ని ప్రకటించింది"
+
+msgctxt "#30186"
+msgid "Discord Player Name"
+msgstr "డిస్కార్డ్ ప్లేయర్ పేరు"
+
+msgctxt "#30187"
+msgid "Enter your player name to be announced on Discord"
+msgstr "డిస్కార్డ్‌లో ప్రకటించడానికి మీ ప్లేయర్ పేరును నమోదు చేయండి"
+
+msgctxt "#30188"
+msgid "Discord User Account ID"
+msgstr "డిస్కార్డ్ యూజర్ ఖాతా ID"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
+msgstr "ప్లే చేస్తున్నప్పుడు పేర్కొనడానికి మీ డిస్కార్డ్ ID (యూజర్ సెట్టింగ్‌లు>నా ఖాతా>కాపీ ID)ని అందించండి (ఐచ్ఛికం)"
+
+msgctxt "#30190"
+msgid "Display report when wizard is completed"
+msgstr "విజార్డ్ పూర్తయినప్పుడు నివేదికను ప్రదర్శించండి"
+
+msgctxt "#30191"
+msgid "Execute setup wizard"
+msgstr "సెటప్ విజార్డ్‌ని అమలు చేయండి"
+
+msgctxt "#30192"
+msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
+msgstr "మీ గేమ్ జాబితాల కోసం సెట్టింగ్‌లను మార్చడానికి విజార్డ్‌ని అమలు చేయండి.  దీన్ని ఎప్పుడైనా మళ్లీ అమలు చేయవచ్చు"
+
+msgctxt "#30193"
+msgid "Android Advance Settings"
+msgstr "ఆండ్రాయిడ్ అడ్వాన్స్ సెట్టింగ్‌లు"
+
+msgctxt "#30194"
+msgid "Use StartAndroidActivity"
+msgstr "StartAndroidActivityని ఉపయోగించండి"
+
+msgctxt "#30195"
+msgid "Leave as default if unsure"
+msgstr "ఖచ్చితంగా తెలియకుంటే డిఫాల్ట్‌గా వదిలివేయండి"
+
+msgctxt "#30196"
+msgid "Suspend Kodi Input and Audio when using External Launcher"
+msgstr "బాహ్య లాంచర్‌ని ఉపయోగిస్తున్నప్పుడు కోడి ఇన్‌పుట్ మరియు ఆడియోను నిలిపివేయండి"
+
+msgctxt "#30197"
+msgid "Stop Kodi media playing before External Launch"
+msgstr "ఎక్స్‌టర్నల్ లాంచ్‌కు ముందు కోడి మీడియా ప్లే చేయడం ఆపివేయండి"
+
+msgctxt "#30198"
+msgid "Kodi is busy / waiting for return to Kodi after External Launch"
+msgstr "కోడి బిజీగా ఉంది / ఎక్స్‌టర్నల్ లాంచ్ తర్వాత కోడికి తిరిగి రావడానికి వేచి ఉంది"
+
+msgctxt "#30199"
+msgid "Download Advanced Settings"
+msgstr "అధునాతన సెట్టింగ్‌లను డౌన్‌లోడ్ చేయండి"
+
+msgctxt "#30200"
+msgid "Download Threads"
+msgstr "థ్రెడ్‌లను డౌన్‌లోడ్ చేయండి"
+
+msgctxt "#30201"
+msgid "Set alternate default folder for all downloads"
+msgstr "అన్ని డౌన్‌లోడ్‌ల కోసం ప్రత్యామ్నాయ డిఫాల్ట్ ఫోల్డర్‌ను సెట్ చేయండి"
+
+msgctxt "#30202"
+msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
+msgstr "ఎంచుకున్నప్పుడు, అన్ని డౌన్‌లోడ్‌లు ప్రత్యామ్నాయ ఫోల్డర్‌కి వెళ్తాయి.  [B]గమనిక: ఈ ఫోల్డర్ ప్రక్షాళన చేయబడదు లేదా పరిమాణం కోసం పర్యవేక్షించబడదు[/B]"
+
+msgctxt "#30203"
+msgid "Organize default download folder using system folders"
+msgstr "సిస్టమ్ ఫోల్డర్‌లను ఉపయోగించి డిఫాల్ట్ డౌన్‌లోడ్ ఫోల్డర్‌ను నిర్వహించండి"
+
+msgctxt "#30204"
+msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
+msgstr "ప్రారంభించబడినప్పుడు, తాత్కాలిక ఫోల్డర్ సిస్టమ్ ద్వారా నిర్వహించబడుతుంది (కొన్నిసార్లు కాన్ఫిగర్ ఓవర్‌రైడ్‌ల కోసం అవసరం)"
+
+msgctxt "#30205"
+msgid "Copy Kodi Network Source downloads to Local Filesystem"
+msgstr "కోడి నెట్‌వర్క్ సోర్స్ డౌన్‌లోడ్‌లను స్థానిక ఫైల్‌సిస్టమ్‌కి కాపీ చేయండి"
+
+msgctxt "#30206"
+msgid "Reset Options"
+msgstr "రీసెట్ ఎంపికలు"
+
+msgctxt "#30207"
+msgid "Reset IAGL database to default settings"
+msgstr "IAGL డేటాబేస్‌ని డిఫాల్ట్ సెట్టింగ్‌లకు రీసెట్ చేయండి"
+
+msgctxt "#30208"
+msgid "When selected, the database will be reset to default settings"
+msgstr "ఎంచుకున్నప్పుడు, డేటాబేస్ డిఫాల్ట్ సెట్టింగ్‌లకు రీసెట్ చేయబడుతుంది"
+
+msgctxt "#30209"
+msgid "Unhide game lists"
+msgstr "గేమ్ జాబితాలను దాచిపెట్టు"
+
+msgctxt "#30210"
+msgid "When selected, previously hidden game lists can be unhidden"
+msgstr "ఎంచుకున్నప్పుడు, గతంలో దాచిన గేమ్ జాబితాలు దాచబడవు"
+
+msgctxt "#30211"
+msgid "Clear Cache"
+msgstr "కాష్‌ని క్లియర్ చేయండి"
+
+msgctxt "#30212"
+msgid "When selected, all data in the cache folder including games will be purged"
+msgstr "ఎంచుకున్నప్పుడు, గేమ్‌లతో సహా కాష్ ఫోల్డర్‌లోని మొత్తం డేటా ప్రక్షాళన చేయబడుతుంది"
+
+msgctxt "#30213"
+msgid "Select"
+msgstr "ఎంచుకోండి"
+
+msgctxt "#30214"
+msgid "Selected"
+msgstr "ఎంపిక చేయబడింది"
+
+msgctxt "#30215"
+msgid "Game lists selected"
+msgstr "గేమ్ జాబితాలు ఎంచుకోబడ్డాయి"
+
+msgctxt "#30216"
+msgid "Genres selected"
+msgstr "శైలులు ఎంపిక చేయబడ్డాయి"
+
+msgctxt "#30217"
+msgid "Players selected"
+msgstr "క్రీడాకారులు ఎంపికయ్యారు"
+
+msgctxt "#30218"
+msgid "Studios selected"
+msgstr "స్టూడియోలు ఎంపిక చేయబడ్డాయి"
+
+msgctxt "#30219"
+msgid "Tags selected"
+msgstr "ట్యాగ్‌లు ఎంచుకోబడ్డాయి"
+
+msgctxt "#30220"
+msgid "Playlists selected"
+msgstr "ప్లేజాబితాలు ఎంచుకోబడ్డాయి"
+
+msgctxt "#30221"
+msgid "Regions selected"
+msgstr "ప్రాంతాలు ఎంపిక చేయబడ్డాయి"
+
+msgctxt "#30222"
+msgid "Languages selected"
+msgstr "భాషలు ఎంపిక చేయబడ్డాయి"
+
+msgctxt "#30223"
+msgid "Editions selected"
+msgstr "ఎడిషన్‌లు ఎంచుకోబడ్డాయి"
+
+msgctxt "#30224"
+msgid "Codes selected"
+msgstr "కోడ్‌లు ఎంచుకోబడ్డాయి"
+
+msgctxt "#30225"
+msgid "Ratings selected"
+msgstr "రేటింగ్‌లు ఎంపిక చేయబడ్డాయి"
+
+msgctxt "#30226"
+msgid "Enter title search query"
+msgstr "శీర్షిక శోధన ప్రశ్నను నమోదు చేయండి"
+
+msgctxt "#30227"
+msgid "Empty search"
+msgstr "ఖాళీ శోధన"
+
+msgctxt "#30228"
+msgid "Search criteria is empty.[CR]Update criteria and try again."
+msgstr "శోధన ప్రమాణాలు ఖాళీగా ఉన్నాయి.[CR]ప్రమాణాలను నవీకరించి, మళ్లీ ప్రయత్నించండి."
+
+msgctxt "#30229"
+msgid "Reset criteria"
+msgstr "ప్రమాణాలను రీసెట్ చేయండి"
+
+msgctxt "#30230"
+msgid "Enter Link Name"
+msgstr "లింక్ పేరును నమోదు చేయండి"
+
+msgctxt "#30231"
+msgid "Define the start page for IAGL"
+msgstr "IAGL కోసం ప్రారంభ పేజీని నిర్వచించండి"
+
+msgctxt "#30232"
+msgid "Kodi launch options"
+msgstr "కోడి ప్రయోగ ఎంపికలు"
+
+msgctxt "#30233"
+msgid "Completed"
+msgstr "పూర్తయింది"
+
+msgctxt "#30234"
+msgid "Create new group"
+msgstr "కొత్త సమూహాన్ని సృష్టించండి"
+
+msgctxt "#30235"
+msgid "Select favorite group"
+msgstr "ఇష్టమైన సమూహాన్ని ఎంచుకోండి"
+
+msgctxt "#30236"
+msgid "Group by Favorites Group"
+msgstr "ఇష్టమైన సమూహం ద్వారా సమూహం"
+
+msgctxt "#30237"
+msgid "Remove IAGL Favorite"
+msgstr "IAGL ఇష్టమైన వాటిని తీసివేయండి"
+
+msgctxt "#30238"
+msgid "Are you sure you want to delete this Favorite?"
+msgstr "మీరు ఖచ్చితంగా ఈ ఇష్టమైనదాన్ని తొలగించాలనుకుంటున్నారా?"
+
+msgctxt "#30239"
+msgid "Favorite deleted"
+msgstr "ఇష్టమైనది తొలగించబడింది"
+
+msgctxt "#30240"
+msgid "Favorites display"
+msgstr "ఇష్టమైనవి ప్రదర్శన"
+
+msgctxt "#30241"
+msgid "Define the start page for IAGL Favorites"
+msgstr "IAGL ఇష్టమైన వాటి కోసం ప్రారంభ పేజీని నిర్వచించండి"
+
+msgctxt "#30242"
+msgid "By Favorites Group"
+msgstr "ఇష్టమైన సమూహం ద్వారా"
+
+msgctxt "#30243"
+msgid "Reset *all* criteria"
+msgstr "*అన్ని* ప్రమాణాలను రీసెట్ చేయండి"
+
+msgctxt "#30244"
+msgid "Run IAGL setup wizard?"
+msgstr "IAGL సెటప్ విజార్డ్‌ని అమలు చేయాలా?"
+
+msgctxt "#30245"
+msgid "Wizard"
+msgstr "విజార్డ్"
+
+msgctxt "#30246"
+msgid "Update game list Launcher"
+msgstr "గేమ్ జాబితా లాంచర్‌ని నవీకరించండి"
+
+msgctxt "#30247"
+msgid "Update Launch Command"
+msgstr "లాంచ్ కమాండ్‌ని అప్‌డేట్ చేయండి"
+
+msgctxt "#30248"
+msgid "Update game list download path"
+msgstr "గేమ్ జాబితా డౌన్‌లోడ్ మార్గాన్ని నవీకరించండి"
+
+msgctxt "#30249"
+msgid "Hide game list"
+msgstr "గేమ్ జాబితాను దాచండి"
+
+msgctxt "#30250"
+msgid "Update game list post download process"
+msgstr "డౌన్‌లోడ్ ప్రక్రియ తర్వాత గేమ్ జాబితాను నవీకరించండి"
+
+msgctxt "#30251"
+msgid "Are you sure you want to hide game list"
+msgstr "మీరు గేమ్ జాబితాను ఖచ్చితంగా దాచాలనుకుంటున్నారా"
+
+msgctxt "#30252"
+msgid "Game list is now hidden"
+msgstr "గేమ్ జాబితా ఇప్పుడు దాచబడింది"
+
+msgctxt "#30253"
+msgid "No results"
+msgstr "ఫలితాలు లేవు"
+
+msgctxt "#30254"
+msgid "No hidden game lists found"
+msgstr "దాచిన గేమ్ జాబితాలు ఏవీ కనుగొనబడలేదు"
+
+msgctxt "#30255"
+msgid "Game lists unhidden"
+msgstr "గేమ్ జాబితాలు దాచబడలేదు"
+
+msgctxt "#30256"
+msgid "Confirm reset"
+msgstr "రీసెట్‌ని నిర్ధారించండి"
+
+msgctxt "#30257"
+msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
+msgstr "మీరు ఖచ్చితంగా డేటాబేస్‌ని రీసెట్ చేయాలనుకుంటున్నారా?[CR]మొత్తం వినియోగదారు సమాచారం పోతుంది![CR]దీనిని రద్దు చేయడం సాధ్యం కాదు!"
+
+msgctxt "#30258"
+msgid "Database has been reset"
+msgstr "డేటాబేస్ రీసెట్ చేయబడింది"
+
+msgctxt "#30259"
+msgid "Update Launcher"
+msgstr "లాంచర్‌ని నవీకరించండి"
+
+msgctxt "#30260"
+msgid "Update launcher from[CR]Kodi to[CR]External?"
+msgstr "లాంచర్‌ను[CR]కోడి నుండి[CR]బాహ్యానికి నవీకరించాలా?"
+
+msgctxt "#30261"
+msgid "Update launcher from[CR]External to[CR]Kodi?"
+msgstr "లాంచర్‌ను[CR]బాహ్యంగా[CR]కోడికి అప్‌డేట్ చేయాలా?"
+
+msgctxt "#30262"
+msgid "Launcher updated to external"
+msgstr "లాంచర్ బాహ్యంగా నవీకరించబడింది"
+
+msgctxt "#30263"
+msgid "Launcher updated to retroplayer"
+msgstr "లాంచర్ రెట్రో ప్లేయర్‌కి నవీకరించబడింది"
+
+msgctxt "#30264"
+msgid "Select game addon"
+msgstr "గేమ్ యాడ్ఆన్‌ని ఎంచుకోండి"
+
+msgctxt "#30265"
+msgid "Reset to default"
+msgstr "డిఫాల్ట్‌కి రీసెట్ చేయండి"
+
+msgctxt "#30266"
+msgid "Download game to…"
+msgstr "దీనికి గేమ్‌ని డౌన్‌లోడ్ చేయండి..."
+
+msgctxt "#30267"
+msgid "Select download folder"
+msgstr "డౌన్‌లోడ్ ఫోల్డర్‌ని ఎంచుకోండి"
+
+msgctxt "#30268"
+msgid "Archive.org login success!"
+msgstr "Archive.org లాగిన్ విజయవంతమైంది!"
+
+msgctxt "#30269"
+msgid "Archive.org login failed.[CR]Check credentials or log for more details"
+msgstr "Archive.org లాగిన్ విఫలమైంది.[CR]క్రెడెన్షియల్‌లను తనిఖీ చేయండి లేదా మరిన్ని వివరాల కోసం లాగ్ చేయండి"
+
+msgctxt "#30270"
+msgid "Error"
+msgstr "లోపం"
+
+msgctxt "#30271"
+msgid "Initializing download for[CR]"
+msgstr "[CR] కోసం డౌన్‌లోడ్‌ని ప్రారంభిస్తోంది"
+
+msgctxt "#30272"
+msgid "Check logs"
+msgstr "లాగ్‌లను తనిఖీ చేయండి"
+
+msgctxt "#30273"
+msgid "Checking login for[CR]"
+msgstr "[CR] కోసం లాగిన్‌ని తనిఖీ చేస్తోంది"
+
+msgctxt "#30274"
+msgid "Requesting file info for[CR]"
+msgstr "[CR] కోసం ఫైల్ సమాచారాన్ని అభ్యర్థిస్తోంది"
+
+msgctxt "#30275"
+msgid "Select from Retroarch Cores"
+msgstr "Retroarch కోర్ల నుండి ఎంచుకోండి"
+
+msgctxt "#30276"
+msgid "Select from Extra Emulators"
+msgstr "అదనపు ఎమ్యులేటర్ల నుండి ఎంచుకోండి"
+
+msgctxt "#30277"
+msgid "Manually Enter Launch Command"
+msgstr "లాంచ్ కమాండ్‌ని మాన్యువల్‌గా నమోదు చేయండి"
+
+msgctxt "#30278"
+msgid "Select External Command Type"
+msgstr "బాహ్య కమాండ్ రకాన్ని ఎంచుకోండి"
+
+msgctxt "#30279"
+msgid "Extra Emulators"
+msgstr "అదనపు ఎమ్యులేటర్లు"
+
+msgctxt "#30280"
+msgid "Dolphin"
+msgstr "డాల్ఫిన్"
+
+msgctxt "#30281"
+msgid "Select the path to the Dolphin application (optional)"
+msgstr "డాల్ఫిన్ అప్లికేషన్‌కు మార్గాన్ని ఎంచుకోండి (ఐచ్ఛికం)"
+
+msgctxt "#30282"
+msgid "MAME"
+msgstr "MAME"
+
+msgctxt "#30283"
+msgid "Select the path to the MAME application (optional)"
+msgstr "MAME అప్లికేషన్‌కి మార్గాన్ని ఎంచుకోండి (ఐచ్ఛికం)"
+
+msgctxt "#30284"
+msgid "Project 64"
+msgstr "ప్రాజెక్ట్ 64"
+
+msgctxt "#30285"
+msgid "Select the path to the Project 64 application (optional)"
+msgstr "ప్రాజెక్ట్ 64 అప్లికేషన్‌కు మార్గాన్ని ఎంచుకోండి (ఐచ్ఛికం)"
+
+msgctxt "#30286"
+msgid "ePSXe"
+msgstr "ePSXe"
+
+msgctxt "#30287"
+msgid "Select the path to the ePSXe application (optional)"
+msgstr "ePSXe అప్లికేషన్‌కు మార్గాన్ని ఎంచుకోండి (ఐచ్ఛికం)"
+
+msgctxt "#30288"
+msgid "Demul"
+msgstr "దేముల్"
+
+msgctxt "#30289"
+msgid "Select the path to the Demul application (optional)"
+msgstr "డెముల్ అప్లికేషన్‌కు మార్గాన్ని ఎంచుకోండి (ఐచ్ఛికం)"
+
+msgctxt "#30290"
+msgid "FS-UAE"
+msgstr "FS-UAE"
+
+msgctxt "#30291"
+msgid "Select the path to the FS-UAE application (optional)"
+msgstr "FS-UAE అప్లికేషన్‌కు మార్గాన్ని ఎంచుకోండి (ఐచ్ఛికం)"
+
+msgctxt "#30292"
+msgid "Are you sure you want to set external launch command?"
+msgstr "మీరు ఖచ్చితంగా బాహ్య ప్రయోగ ఆదేశాన్ని సెట్ చేయాలనుకుంటున్నారా?"
+
+msgctxt "#30293"
+msgid "External launch command updated"
+msgstr "బాహ్య ప్రయోగ కమాండ్ నవీకరించబడింది"
+
+msgctxt "#30294"
+msgid "Android users must verify the core is installed in Retroarch"
+msgstr "Retroarchలో కోర్ ఇన్‌స్టాల్ చేయబడిందని Android వినియోగదారులు తప్పనిసరిగా ధృవీకరించాలి"
+
+msgctxt "#30295"
+msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
+msgstr "లాంచ్ సెట్టింగ్‌లు ప్రస్తుతం ఖాళీగా ఉన్నాయి[CR]దయచేసి యాడ్ఆన్ బాహ్య ప్రయోగ సెట్టింగ్‌లను నవీకరించండి."
+
+msgctxt "#30296"
+msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
+msgstr "లాంచ్ సెట్టింగ్‌లు ప్రస్తుతం ఖాళీగా ఉన్నాయి[CR]దయచేసి యాడ్ఆన్ OS లాంచ్ సెట్టింగ్‌లను అప్‌డేట్ చేయండి."
+
+msgctxt "#30297"
+msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
+msgstr "అదనపు ఎమ్యులేటర్లు ఏవీ కనుగొనబడలేదు[CR]దయచేసి యాడ్ఆన్ అదనపు ఎమ్యులేటర్ సెట్టింగ్‌లను నవీకరించండి"
+
+msgctxt "#30298"
+msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
+msgstr "ప్రయోగ ఆదేశాన్ని నమోదు చేయండి[CR]IAGL వికీలో ఐచ్ఛిక కీలకపదాలను చూడండి"
+
+msgctxt "#30299"
+msgid "Reset Launch Command"
+msgstr "లాంచ్ కమాండ్‌ని రీసెట్ చేయండి"
+
+msgctxt "#30300"
+msgid "Are you sure you want to reset the external launch command?"
+msgstr "మీరు ఖచ్చితంగా బాహ్య ప్రయోగ ఆదేశాన్ని రీసెట్ చేయాలనుకుంటున్నారా?"
+
+msgctxt "#30301"
+msgid "External launch command was reset"
+msgstr "బాహ్య ప్రయోగ ఆదేశం రీసెట్ చేయబడింది"
+
+msgctxt "#30302"
+msgid "Enter a value for"
+msgstr "కోసం విలువను నమోదు చేయండి"
+
+msgctxt "#30303"
+msgid "View game list settings"
+msgstr "గేమ్ జాబితా సెట్టింగ్‌లను వీక్షించండి"
+
+msgctxt "#30304"
+msgid "Game List"
+msgstr "గేమ్ జాబితా"
+
+msgctxt "#30305"
+msgid "Game List System"
+msgstr "గేమ్ జాబితా వ్యవస్థ"
+
+msgctxt "#30306"
+msgid "Total 1G1R Games in List"
+msgstr "జాబితాలో మొత్తం 1G1R గేమ్‌లు"
+
+msgctxt "#30307"
+msgid "Total Games in List"
+msgstr "జాబితాలో మొత్తం గేమ్‌లు"
+
+msgctxt "#30308"
+msgid "Total Favorited Games in List"
+msgstr "జాబితాలో మొత్తం ఇష్టమైన గేమ్‌లు"
+
+msgctxt "#30309"
+msgid "Default External Launch Command"
+msgstr "డిఫాల్ట్ బాహ్య లాంచ్ కమాండ్"
+
+msgctxt "#30310"
+msgid "Default Retroplayer Game Addon"
+msgstr "డిఫాల్ట్ రెట్రోప్లేయర్ గేమ్ యాడ్ఆన్"
+
+msgctxt "#30311"
+msgid "Default Game Post Process"
+msgstr "డిఫాల్ట్ గేమ్ పోస్ట్ ప్రాసెస్"
+
+msgctxt "#30312"
+msgid "User Defined Download Path"
+msgstr "వినియోగదారు నిర్వచించిన డౌన్‌లోడ్ మార్గం"
+
+msgctxt "#30313"
+msgid "User External Launch Command"
+msgstr "వినియోగదారు బాహ్య లాంచ్ కమాండ్"
+
+msgctxt "#30314"
+msgid "User Defined Retroplayer Game Addon"
+msgstr "వినియోగదారు నిర్వచించిన రెట్రోప్లేయర్ గేమ్ యాడ్ఆన్"
+
+msgctxt "#30315"
+msgid "User Defined Post Process"
+msgstr "వినియోగదారు నిర్వచించిన పోస్ట్ ప్రక్రియ"
+
+msgctxt "#30316"
+msgid "Game List Settings"
+msgstr "గేమ్ జాబితా సెట్టింగులు"
+
+msgctxt "#30317"
+msgid "None (will use addon default)"
+msgstr "ఏదీ లేదు (యాడ్ఆన్ డిఫాల్ట్‌ని ఉపయోగిస్తుంది)"
+
+msgctxt "#30318"
+msgid "Games List Launcher"
+msgstr "ఆటల జాబితా లాంచర్"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "nan"
+
+msgctxt "#30320"
+msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
+msgstr "ఎక్స్‌టర్నల్ లాంచ్ కమాండ్[CR]*యూజర్ లాంచ్ కమాండ్ కనుగొనబడలేదు / డిఫాల్ట్‌గా ఉపయోగించడం*"
+
+msgctxt "#30321"
+msgid "Kodi Retroplayer"
+msgstr "కోడి రెట్రో ప్లేయర్"
+
+msgctxt "#30322"
+msgid "Are you sure you want to update game list download path?"
+msgstr "మీరు గేమ్ జాబితా డౌన్‌లోడ్ మార్గాన్ని ఖచ్చితంగా నవీకరించాలనుకుంటున్నారా?"
+
+msgctxt "#30323"
+msgid "Download path updated"
+msgstr "డౌన్‌లోడ్ మార్గం నవీకరించబడింది"
+
+msgctxt "#30324"
+msgid "Are you sure you want to reset game list download path?"
+msgstr "మీరు గేమ్ జాబితా డౌన్‌లోడ్ మార్గాన్ని ఖచ్చితంగా రీసెట్ చేయాలనుకుంటున్నారా?"
+
+msgctxt "#30325"
+msgid "Download path reset"
+msgstr "డౌన్‌లోడ్ పాత్ రీసెట్"
+
+msgctxt "#30326"
+msgid "Change download path"
+msgstr "డౌన్‌లోడ్ మార్గాన్ని మార్చండి"
+
+msgctxt "#30327"
+msgid "Reset download path"
+msgstr "డౌన్‌లోడ్ మార్గాన్ని రీసెట్ చేయండి"
+
+msgctxt "#30328"
+msgid "Reset game list settings"
+msgstr "గేమ్ జాబితా సెట్టింగ్‌లను రీసెట్ చేయండి"
+
+msgctxt "#30329"
+msgid "Are you sure you want to reset all game list settings to default?"
+msgstr "మీరు ఖచ్చితంగా అన్ని గేమ్ జాబితా సెట్టింగ్‌లను డిఫాల్ట్‌గా రీసెట్ చేయాలనుకుంటున్నారా?"
+
+msgctxt "#30330"
+msgid "Game list settings were reset to default"
+msgstr "గేమ్ జాబితా సెట్టింగ్‌లు డిఫాల్ట్‌కి రీసెట్ చేయబడ్డాయి"

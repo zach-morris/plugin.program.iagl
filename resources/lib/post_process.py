@@ -44,6 +44,7 @@ class post_process(object):
 		self.current_processer = process
 
 	def process_games(self):
+		#Check for matching files
 		return self.process.process_games()
 			
 	class no_process(object):
@@ -68,7 +69,7 @@ class post_process(object):
 			output = dict()
 			if isinstance(self.rom,list):
 				output['rom'] = self.rom
-				output['launch_file'] = next(iter([str(x.get('dl_filepath')) for x in self.rom]),None)
+				output['launch_file'] = next(iter([str(x.get('dl_filepath') or r.get('matching_files')) for x in self.rom]),None)
 				if isinstance(output.get('launch_file'),str) and xbmcvfs.exists(output.get('launch_file')):
 					output['process_success'] = True
 					xbmc.log(msg='IAGL:  Passthrough process completed, launch file is {}'.format(output.get('launch_file')),level=xbmc.LOGDEBUG)
@@ -113,20 +114,33 @@ class post_process(object):
 			if isinstance(self.rom,list):
 				output['rom'] = self.rom
 				for r in self.rom:
-					my_archive = archive_tool.archive_tool(archive_file=str(r.get('dl_filepath')),directory_out=str(r.get('dl_filepath').parent),flatten_archive=self.flatten_archive)
-					extracted_files, success = my_archive.extract()
-					if success:
-						output['launch_file'] = next(iter(extracted_files),None)
-						if isinstance(output.get('launch_file'),str) and xbmcvfs.exists(output.get('launch_file')):
+					if r.get('matching_file_found'):
+						if isinstance(r.get('matching_files'),list) and len(r.get('matching_files'))>0:
+							output['launch_file'] = str(r.get('matching_files')[0]) #Only one file found to be matching
 							output['process_success'] = True
-							if self.delete_zip_after_extract:
-								self.delete_file(str(r.get('dl_filepath')))
+							if len(r.get('matching_files'))==1:
+								xbmc.log(msg='IAGL:  Pointing to the one matching file: {}'.format(output.get('launch_file')),level=xbmc.LOGDEBUG)
+							else:
+								xbmc.log(msg='IAGL:  Pointing to the first of multiple matching file: {}'.format(output.get('launch_file')),level=xbmc.LOGDEBUG)
+						else:
+							output['launch_file'] = None
+							output['process_success'] = False
+							xbmc.log(msg='IAGL:  Matching file could not be found',level=xbmc.LOGERROR)
+					else:
+						my_archive = archive_tool.archive_tool(archive_file=str(r.get('dl_filepath')),directory_out=str(r.get('dl_filepath').parent),flatten_archive=self.flatten_archive)
+						extracted_files, success = my_archive.extract()
+						if success:
+							output['launch_file'] = next(iter(extracted_files),None)
+							if isinstance(output.get('launch_file'),str) and xbmcvfs.exists(output.get('launch_file')):
+								output['process_success'] = True
+								if self.delete_zip_after_extract:
+									self.delete_file(str(r.get('dl_filepath')))
+							else:
+								output['process_success'] = False
+								xbmc.log(msg='IAGL:  Unzip completed but the resulting file is missing!',level=xbmc.LOGERROR)
 						else:
 							output['process_success'] = False
-							xbmc.log(msg='IAGL:  Unzip completed but the resulting file is missing!',level=xbmc.LOGERROR)
-					else:
-						output['process_success'] = False
-						xbmc.log(msg='IAGL:  Unzip failed to complete',level=xbmc.LOGERROR)
-						if self.delete_zip_on_fail:
-							self.delete_file(str(r.get('dl_filepath')))
+							xbmc.log(msg='IAGL:  Unzip failed to complete',level=xbmc.LOGERROR)
+							if self.delete_zip_on_fail:
+								self.delete_file(str(r.get('dl_filepath')))
 			return output

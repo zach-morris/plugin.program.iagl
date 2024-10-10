@@ -1,0 +1,1332 @@
+# Kodi Media Center language file
+# Addon Name: Internet Archive Game Launcher
+# Addon id: plugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/zach-morris/plugin.program.iagl/issues\n"
+"Language: si_lk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "Internet Archive Game Launcher"
+
+msgctxt "#30002"
+msgid "Browse all Lists"
+msgstr "සියලුම ලැයිස්තු පිරික්සන්න"
+
+msgctxt "#30003"
+msgid "Browse lists by Category"
+msgstr "ප්‍රවර්ගය අනුව ලැයිස්තු පිරික්සන්න"
+
+msgctxt "#30004"
+msgid "Browse games by Playlist"
+msgstr "ධාවන ලැයිස්තුව අනුව ක්‍රීඩා බ්‍රවුස් කරන්න"
+
+msgctxt "#30005"
+msgid "Favorites"
+msgstr "ප්රියතම"
+
+msgctxt "#30006"
+msgid "Play History"
+msgstr "Play ඉතිහාසය"
+
+msgctxt "#30007"
+msgid "Search"
+msgstr "සොයන්න"
+
+msgctxt "#30008"
+msgid "Random Play"
+msgstr "අහඹු සෙල්ලම්"
+
+msgctxt "#30009"
+msgid "Next"
+msgstr "ඊළඟ"
+
+msgctxt "#30010"
+msgid "Previous"
+msgstr "පෙර"
+
+msgctxt "#30011"
+msgid "One Big List"
+msgstr "එක් විශාල ලැයිස්තුවක්"
+
+msgctxt "#30012"
+msgid "Alphabetical"
+msgstr "අකාරාදී"
+
+msgctxt "#30013"
+msgid "Group by Genre"
+msgstr "ප්‍රභේදය අනුව සමූහය"
+
+msgctxt "#30014"
+msgid "Group by Year"
+msgstr "වසර අනුව කණ්ඩායම්"
+
+msgctxt "#30015"
+msgid "Group by Players"
+msgstr "ක්‍රීඩකයින් අනුව කණ්ඩායම්"
+
+msgctxt "#30016"
+msgid "Group by Studio"
+msgstr "ස්ටුඩියෝ විසින් සමූහය"
+
+msgctxt "#30017"
+msgid "Group by Tag"
+msgstr "ටැගය අනුව කණ්ඩායම් කරන්න"
+
+msgctxt "#30018"
+msgid "Group by Playlist"
+msgstr "ධාවන ලැයිස්තුව අනුව කණ්ඩායම්"
+
+msgctxt "#30019"
+msgid "Group by Region"
+msgstr "කලාපය අනුව කණ්ඩායම"
+
+msgctxt "#30020"
+msgid "Group by Language"
+msgstr "භාෂාව අනුව කණ්ඩායම්"
+
+msgctxt "#30021"
+msgid "Group by Edition"
+msgstr "සංස්කරණය අනුව කණ්ඩායම්"
+
+msgctxt "#30022"
+msgid "Group by Code"
+msgstr "කේතය අනුව කණ්ඩායම්"
+
+msgctxt "#30023"
+msgid "Group by Rating"
+msgstr "ශ්‍රේණිගත කිරීම අනුව කණ්ඩායම්"
+
+msgctxt "#30024"
+msgid "Select Game Lists"
+msgstr "ක්‍රීඩා ලැයිස්තු තෝරන්න"
+
+msgctxt "#30025"
+msgid "Search Game Titles"
+msgstr "ක්‍රීඩා මාතෘකා සොයන්න"
+
+msgctxt "#30026"
+msgid "Filter by Genre"
+msgstr "ප්‍රභේදය අනුව පෙරන්න"
+
+msgctxt "#30027"
+msgid "Filter by Players"
+msgstr "ක්‍රීඩකයන් අනුව පෙරහන් කරන්න"
+
+msgctxt "#30028"
+msgid "Filter by Studio"
+msgstr "ස්ටුඩියෝ අනුව පෙරහන් කරන්න"
+
+msgctxt "#30029"
+msgid "Filter by Tag"
+msgstr "ටැගය අනුව පෙරන්න"
+
+msgctxt "#30030"
+msgid "Filter by Playlist"
+msgstr "ධාවන ලැයිස්තුව අනුව පෙරන්න"
+
+msgctxt "#30031"
+msgid "Filter by Region"
+msgstr "කලාපය අනුව පෙරහන් කරන්න"
+
+msgctxt "#30032"
+msgid "Filter by Language"
+msgstr "භාෂාව අනුව පෙරන්න"
+
+msgctxt "#30033"
+msgid "Filter by Edition"
+msgstr "සංස්කරණය අනුව පෙරහන් කරන්න"
+
+msgctxt "#30034"
+msgid "Filter by Code"
+msgstr "කේතය අනුව පෙරහන් කරන්න"
+
+msgctxt "#30035"
+msgid "Filter by Rating"
+msgstr "ශ්‍රේණිගත කිරීම අනුව පෙරන්න"
+
+msgctxt "#30036"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]සෙවීම ක්‍රියාත්මක කරන්න[/COLOR]"
+
+msgctxt "#30037"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]සෙවුම් සබැඳියක් සාදන්න[/COLOR]"
+
+msgctxt "#30038"
+msgid "Choose Number of Results"
+msgstr "ප්‍රතිඵල ගණන තෝරන්න"
+
+msgctxt "#30039"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]අහඹු සෙවුම ක්‍රියාත්මක කරන්න[/COLOR]"
+
+msgctxt "#30040"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]අහඹු සෙවුම් සබැඳියක් සාදන්න[/COLOR]"
+
+msgctxt "#30041"
+msgid "General"
+msgstr "ජෙනරාල්"
+
+msgctxt "#30042"
+msgid "Launching"
+msgstr "දියත් කිරීම"
+
+msgctxt "#30043"
+msgid "Downloading"
+msgstr "බාගත කිරීම"
+
+msgctxt "#30044"
+msgid "Views and Navigation"
+msgstr "දර්ශන සහ සංචලනය"
+
+msgctxt "#30045"
+msgid "Netplay"
+msgstr "නෙට්ප්ලේ"
+
+msgctxt "#30046"
+msgid "Setup Wizard"
+msgstr "සැකසුම් විශාරද"
+
+msgctxt "#30047"
+msgid "Advanced"
+msgstr "උසස්"
+
+msgctxt "#30048"
+msgid "Play History"
+msgstr "Play ඉතිහාසය"
+
+msgctxt "#30049"
+msgid "Define how many games to save in last played history"
+msgstr "අවසන් වරට ක්‍රීඩා කළ ඉතිහාසයේ කොපමණ ක්‍රීඩා සුරැකිය යුතුද යන්න නිර්වචනය කරන්න"
+
+msgctxt "#30050"
+msgid "Default action on selecting game"
+msgstr "ක්‍රීඩාව තේරීමේ පෙරනිමි ක්‍රියාව"
+
+msgctxt "#30051"
+msgid "Define action to take when a game is selected"
+msgstr "ක්‍රීඩාවක් තෝරාගත් විට ගත යුතු ක්‍රියාමාර්ග නිර්වචනය කරන්න"
+
+msgctxt "#30052"
+msgid "If game already exists locally"
+msgstr "ක්රීඩාව දැනටමත් දේශීයව පවතී නම්"
+
+msgctxt "#30053"
+msgid "Define the action to take if a game file is found to exist locally"
+msgstr "ක්‍රීඩා ගොනුවක් දේශීයව පවතින බව අනාවරණය වුවහොත් ගත යුතු ක්‍රියාමාර්ගය නිර්වචනය කරන්න"
+
+msgctxt "#30054"
+msgid "Prompt"
+msgstr "ඉක්මන් කරන්න"
+
+msgctxt "#30055"
+msgid "Do not re-download"
+msgstr "නැවත බාගත නොකරන්න"
+
+msgctxt "#30056"
+msgid "Re-download and overwrite"
+msgstr "නැවත බාගත කර නැවත ලියන්න"
+
+msgctxt "#30057"
+msgid "Enable archive.org login"
+msgstr "archive.org පිවිසුම සබල කරන්න"
+
+msgctxt "#30058"
+msgid "Enabled"
+msgstr "සබල කර ඇත"
+
+msgctxt "#30059"
+msgid "Disabled"
+msgstr "ආබාධිතයි"
+
+msgctxt "#30060"
+msgid "Some games require login.  Enter your archive.org email address and password."
+msgstr "සමහර ක්‍රීඩා වලට පුරනය වීම අවශ්‍ය වේ.  ඔබගේ archive.org ඊමේල් ලිපිනය සහ මුරපදය ඇතුළත් කරන්න."
+
+msgctxt "#30061"
+msgid "archive.org Email"
+msgstr "archive.org විද්‍යුත් තැපෑල"
+
+msgctxt "#30062"
+msgid "Some games require login.  Enter your archive.org email address"
+msgstr "සමහර ක්‍රීඩා වලට පුරනය වීම අවශ්‍ය වේ.  ඔබගේ archive.org ඊමේල් ලිපිනය ඇතුලත් කරන්න"
+
+msgctxt "#30063"
+msgid "archive.org Password"
+msgstr "archive.org මුරපදය"
+
+msgctxt "#30064"
+msgid "Some games require login.  Enter your archive.org password"
+msgstr "සමහර ක්‍රීඩා වලට පුරනය වීම අවශ්‍ය වේ.  ඔබගේ archive.org මුරපදය ඇතුළත් කරන්න"
+
+msgctxt "#30065"
+msgid "Check login credentials"
+msgstr "පිවිසුම් අක්තපත්‍ර පරීක්ෂා කරන්න"
+
+msgctxt "#30066"
+msgid "Test the entered email and password to check your ability to login"
+msgstr "ඔබගේ පුරනය වීමේ හැකියාව පරීක්ෂා කිරීම සඳහා ඇතුළත් කළ විද්‍යුත් තැපෑල සහ මුරපදය පරීක්ෂා කරන්න"
+
+msgctxt "#30067"
+msgid "Download folder size limit"
+msgstr "ෆෝල්ඩර ප්‍රමාණයේ සීමාව බාගන්න"
+
+msgctxt "#30068"
+msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
+msgstr "බාගැනීමේ / හැඹිලි ප්‍රමාණයේ ප්‍රමාණය නිර්වචනය කරන්න.[CR]ප්‍රමාණයේ සීමාවට ළඟා වූ විට ෆෝල්ඩරය පිරිසිදු කෙරේ."
+
+msgctxt "#30069"
+msgid "Front page display"
+msgstr "මුල් පිටු සංදර්ශකය"
+
+msgctxt "#30070"
+msgid "Choose from list"
+msgstr "ලැයිස්තුවෙන් තෝරන්න"
+
+msgctxt "#30071"
+msgid "Games are presented as"
+msgstr "ක්‍රීඩා ලෙස ඉදිරිපත් කෙරේ"
+
+msgctxt "#30072"
+msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
+msgstr "Kodi චිත්‍රපට, රූපවාහිනී වැඩසටහන් සහ ක්‍රීඩා සඳහා සම විකල්ප කිහිපයක් සපයයි.  වැඩි විස්තර සඳහා විකි බලන්න"
+
+msgctxt "#30073"
+msgid "TV Shows"
+msgstr "රූපවාහිනී වැඩසටහන්"
+
+msgctxt "#30074"
+msgid "Movies"
+msgstr "චිත්රපට"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "nan"
+
+msgctxt "#30076"
+msgid "10 Games"
+msgstr "ක්රීඩා 10 ක්"
+
+msgctxt "#30077"
+msgid "25 Games"
+msgstr "ක්රීඩා 25 ක්"
+
+msgctxt "#30078"
+msgid "50 Games"
+msgstr "ක්රීඩා 50 ක්"
+
+msgctxt "#30079"
+msgid "100 Games"
+msgstr "ක්රීඩා 100 ක්"
+
+msgctxt "#30080"
+msgid "250 Games"
+msgstr "ක්රීඩා 250 ක්"
+
+msgctxt "#30081"
+msgid "500 Games"
+msgstr "ක්රීඩා 500 ක්"
+
+msgctxt "#30082"
+msgid "Game artwork"
+msgstr "ක්රීඩා කලා කෘති"
+
+msgctxt "#30083"
+msgid "Game list artwork"
+msgstr "ක්‍රීඩා ලැයිස්තු කලා කෘති"
+
+msgctxt "#30084"
+msgid "Retroarch Settings"
+msgstr "Retroarch සැකසුම්"
+
+msgctxt "#30085"
+msgid "Suspend Kodi IO on launch"
+msgstr "දියත් කිරීමේදී Kodi IO අත්හිටුවන්න"
+
+msgctxt "#30086"
+msgid "Stop media on launch"
+msgstr "දියත් කිරීමේදී මාධ්‍ය නවත්වන්න"
+
+msgctxt "#30087"
+msgid "Waiting for return"
+msgstr "ආපසු එනතෙක් බලා සිටීම"
+
+msgctxt "#30088"
+msgid "Add to IAGL Favorites"
+msgstr "IAGL ප්‍රියතමයන් වෙත එක් කරන්න"
+
+msgctxt "#30089"
+msgid "Enter a name for your favorites group"
+msgstr "ඔබේ ප්‍රියතම කණ්ඩායම සඳහා නමක් ඇතුළත් කරන්න"
+
+msgctxt "#30090"
+msgid "Favorite added to group"
+msgstr "ප්රියතම කණ්ඩායමට එකතු කරන ලදී"
+
+msgctxt "#30091"
+msgid "Use clean game title"
+msgstr "පිරිසිදු ක්රීඩා මාතෘකාව භාවිතා කරන්න"
+
+msgctxt "#30092"
+msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
+msgstr "ප්‍රදර්ශනය සඳහා ක්‍රීඩා මාතෘකාවකින් ටැග් ඉවත් කරන්න.  උදා: [B]Mario (USA)[/B] [B]Mario[/B] බවට පත් වේ"
+
+msgctxt "#30093"
+msgid "Games per page"
+msgstr "පිටුවකට ක්‍රීඩා"
+
+msgctxt "#30094"
+msgid "Define how many games are listed per page"
+msgstr "පිටුවකට කොපමණ ක්‍රීඩා ලැයිස්තුගත කර ඇත්ද යන්න නිර්වචනය කරන්න"
+
+msgctxt "#30095"
+msgid "List all"
+msgstr "සියල්ල ලැයිස්තුගත කරන්න"
+
+msgctxt "#30096"
+msgid "Always filter list to 1 Game 1 Rom Set"
+msgstr "සෑම විටම ලැයිස්තුව 1 Game 1 Rom Set වෙත පෙරහන් කරන්න"
+
+msgctxt "#30097"
+msgid "If possible, game lists will be pre-filtered to a 1G1R set"
+msgstr "හැකි නම්, ක්‍රීඩා ලැයිස්තු 1G1R කට්ටලයකට පෙර පෙරහන් කරනු ලැබේ"
+
+msgctxt "#30098"
+msgid "Append game list name to search and random results"
+msgstr "සෙවීමට සහ අහඹු ප්‍රතිඵල සඳහා ක්‍රීඩා ලැයිස්තුවේ නම එක් කරන්න"
+
+msgctxt "#30099"
+msgid "When enabled, the name of the game list will be appended to search results"
+msgstr "සබල කළ විට, ක්‍රීඩා ලැයිස්තුවේ නම සෙවුම් ප්‍රතිඵලවලට එකතු වේ"
+
+msgctxt "#30100"
+msgid "Append game list name when browsing by playlist"
+msgstr "ධාවන ලැයිස්තුවෙන් බ්‍රවුස් කරන විට ක්‍රීඩා ලැයිස්තුවේ නම එක් කරන්න"
+
+msgctxt "#30101"
+msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
+msgstr "සබල කළ විට, ක්‍රීඩා ලැයිස්තුවේ නම ධාවන ලැයිස්තුවේ ක්‍රීඩා නාමයට එකතු වේ"
+
+msgctxt "#30102"
+msgid "Kodi landscape art equates to"
+msgstr "කොඩි භූ දර්ශන කලාව සමාන වේ"
+
+msgctxt "#30103"
+msgid "Select the game artwork to be displayed as the landscape art"
+msgstr "භූ දර්ශන කලාව ලෙස ප්‍රදර්ශනය කිරීමට ක්‍රීඩා කලා කෘති තෝරන්න"
+
+msgctxt "#30104"
+msgid "Title Screen"
+msgstr "මාතෘකා තිරය"
+
+msgctxt "#30105"
+msgid "Screenshot"
+msgstr "තිර රුවක්"
+
+msgctxt "#30106"
+msgid "Kodi thumbnail art equates to"
+msgstr "කොඩි සිඟිති රූ කලාව සමාන වේ"
+
+msgctxt "#30107"
+msgid "Select the game artwork to be displayed as the thumbnail art"
+msgstr "සිඟිති රූ කලාව ලෙස පෙන්වීමට ක්‍රීඩා කලා කෘති තෝරන්න"
+
+msgctxt "#30108"
+msgid "Game list clearlogo equates to"
+msgstr "ක්‍රීඩා ලැයිස්තුව පැහැදිලි ලාංඡනය සමාන වේ"
+
+msgctxt "#30109"
+msgid "Select the artwork displayed for the game list clearlogo"
+msgstr "ක්‍රීඩා ලැයිස්තුව පැහැදිලි ලාංඡනය සඳහා ප්‍රදර්ශනය වන කලා කෘති තෝරන්න"
+
+msgctxt "#30110"
+msgid "System logo"
+msgstr "පද්ධති ලාංඡනය"
+
+msgctxt "#30111"
+msgid "System console"
+msgstr "පද්ධති කොන්සෝලය"
+
+msgctxt "#30112"
+msgid "System controller"
+msgstr "පද්ධති පාලකය"
+
+msgctxt "#30113"
+msgid "Game list fanart equates to"
+msgstr "ක්‍රීඩා ලැයිස්තුව fanart සමාන වේ"
+
+msgctxt "#30114"
+msgid "Select the artwork displayed for the game list fanart"
+msgstr "ක්‍රීඩා ලැයිස්තුව fanart සඳහා ප්‍රදර්ශනය කර ඇති කලා කෘති තෝරන්න"
+
+msgctxt "#30115"
+msgid "System collage"
+msgstr "පද්ධති කොලෙජ්"
+
+msgctxt "#30116"
+msgid "System console"
+msgstr "පද්ධති කොන්සෝලය"
+
+msgctxt "#30117"
+msgid "System wallpaper"
+msgstr "පද්ධති බිතුපත"
+
+msgctxt "#30118"
+msgid "Force IAGL viewtypes"
+msgstr "IAGL viewtypes බල කරන්න"
+
+msgctxt "#30119"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "ඔබගේ සමෙහි බලහත්කාර දර්ශන වර්ග ID තිබේදැයි තහවුරු කර ගන්න"
+
+msgctxt "#30120"
+msgid "Frontpage viewtype"
+msgstr "මුල්පිටු දර්ශන වර්ගය"
+
+msgctxt "#30121"
+msgid "Game library lists viewtype"
+msgstr "ක්‍රීඩා පුස්තකාලය දර්ශන වර්ගය ලැයිස්තුගත කරයි"
+
+msgctxt "#30122"
+msgid "Game categories viewtype"
+msgstr "ක්‍රීඩා කාණ්ඩ දර්ශන වර්ගය"
+
+msgctxt "#30123"
+msgid "Games list viewtype"
+msgstr "ක්‍රීඩා ලැයිස්තුව බැලීමේ වර්ගය"
+
+msgctxt "#30124"
+msgid "Choose list viewtype"
+msgstr "ලැයිස්තුව බැලීමේ වර්ගය තෝරන්න"
+
+msgctxt "#30125"
+msgid "Search and Random results viewtype"
+msgstr "සෙවීම සහ අහඹු ප්‍රතිඵල බැලීමේ වර්ගය"
+
+msgctxt "#30126"
+msgid "Off (Default)"
+msgstr "අක්රිය (පෙරනිමි)"
+
+msgctxt "#30127"
+msgid "List / Poster (50)"
+msgstr "ලැයිස්තුව / පෝස්ටරය (50)"
+
+msgctxt "#30128"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "පෝස්ටර් / විශාල ලැයිස්තුව / පෝස්ටර් බිත්තිය (51)"
+
+msgctxt "#30129"
+msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
+msgstr "අයිකන බිත්තිය / තිරස් රටාව / LS බිත්තිය (52)"
+
+msgctxt "#30130"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "බැනරය / භූ දර්ශනය / පෝස්ටර් තොරතුරු (501)"
+
+msgctxt "#30131"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "Fanart / Landscape තනි / කථාංග ලැයිස්තුව (502)"
+
+msgctxt "#30132"
+msgid "Logos / Big Square Wall (503)"
+msgstr "ලාංඡන / විශාල හතරැස් බිත්තිය (503)"
+
+msgctxt "#30133"
+msgid "Big List 2 (504)"
+msgstr "විශාල ලැයිස්තුව 2 (504)"
+
+msgctxt "#30134"
+msgid "Landscape Details (505)"
+msgstr "භූ දර්ශන විස්තර (505)"
+
+msgctxt "#30135"
+msgid "Operating System"
+msgstr "මෙහෙයුම් පද්ධතිය"
+
+msgctxt "#30136"
+msgid "Select your operating system"
+msgstr "ඔබගේ මෙහෙයුම් පද්ධතිය තෝරන්න"
+
+msgctxt "#30137"
+msgid "Windows"
+msgstr "වින්ඩෝස්"
+
+msgctxt "#30138"
+msgid "Linux"
+msgstr "ලිනක්ස්"
+
+msgctxt "#30139"
+msgid "OSX"
+msgstr "OSX"
+
+msgctxt "#30140"
+msgid "Retroarch App Location"
+msgstr "Retroarch යෙදුම් ස්ථානය"
+
+msgctxt "#30141"
+msgid "Select the path to the retroarch executable"
+msgstr "retroarch executable වෙත යන මාර්ගය තෝරන්න"
+
+msgctxt "#30142"
+msgid "Retroarch CFG Location"
+msgstr "Retroarch CFG ස්ථානය"
+
+msgctxt "#30143"
+msgid "Select the path to the retroarch config file"
+msgstr "retroarch config ගොනුව වෙත මාර්ගය තෝරන්න"
+
+msgctxt "#30144"
+msgid "Android"
+msgstr "ඇන්ඩ්රොයිඩ්"
+
+msgctxt "#30145"
+msgid "Android aarch64"
+msgstr "Android aarch64"
+
+msgctxt "#30146"
+msgid "Android ra32"
+msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "When a game is launched"
+msgstr "ක්රීඩාවක් දියත් කරන විට"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when a game is launched (Windows, Linux and OSX only)"
+msgstr "ක්‍රීඩාවක් දියත් කළ විට Kodi කරන්නේ කුමක්ද යන්න තෝරන්න (Windows, Linux සහ OSX පමණි)"
+
+msgctxt "#30149"
+msgid "Keep Kodi in the background"
+msgstr "Kodi පසුබිමේ තබා ගන්න"
+
+msgctxt "#30150"
+msgid "Close Kodi"
+msgstr "කෝඩි වසන්න"
+
+msgctxt "#30151"
+msgid "Pause Kodi"
+msgstr "Kodi නවත්වන්න"
+
+msgctxt "#30152"
+msgid "Retroarch core picker"
+msgstr "Retroarch core picker"
+
+msgctxt "#30153"
+msgid "List by System and Core Name"
+msgstr "පද්ධතිය සහ මූලික නාමය අනුව ලැයිස්තුගත කරන්න"
+
+msgctxt "#30154"
+msgid "List by Core Name"
+msgstr "මූලික නම අනුව ලැයිස්තුව"
+
+msgctxt "#30155"
+msgid "List by Emulated Systems"
+msgstr "අනුකරණ පද්ධති මගින් ලැයිස්තුව"
+
+msgctxt "#30156"
+msgid "Select Core"
+msgstr "Core තෝරන්න"
+
+msgctxt "#30157"
+msgid "Select Emulated System"
+msgstr "අනුකරණ පද්ධතිය තෝරන්න"
+
+msgctxt "#30158"
+msgid "Select Emulator"
+msgstr "ඉමුලේටරය තෝරන්න"
+
+msgctxt "#30159"
+msgid "Credentials were not found[CR]Please enter them in addon settings"
+msgstr "අක්තපත්‍ර හමු නොවීය[CR]කරුණාකර ඒවා ඇඩෝන සැකසීම් තුළ ඇතුළත් කරන්න"
+
+msgctxt "#30160"
+msgid "Game List Download Path"
+msgstr "ක්‍රීඩා ලැයිස්තුව බාගත කිරීමේ මාර්ගය"
+
+msgctxt "#30161"
+msgid "Zero (Current Game Only)"
+msgstr "Zero (වත්මන් ක්‍රීඩාව පමණි)"
+
+msgctxt "#30162"
+msgid "25 MB"
+msgstr "25 MB"
+
+msgctxt "#30163"
+msgid "50 MB"
+msgstr "50 MB"
+
+msgctxt "#30164"
+msgid "100 MB"
+msgstr "100 MB"
+
+msgctxt "#30165"
+msgid "200 MB"
+msgstr "200 MB"
+
+msgctxt "#30166"
+msgid "500 MB"
+msgstr "500 MB"
+
+msgctxt "#30167"
+msgid "1 GB"
+msgstr "1 GB"
+
+msgctxt "#30168"
+msgid "2 GB"
+msgstr "2 GB"
+
+msgctxt "#30169"
+msgid "5 GB"
+msgstr "5 GB"
+
+msgctxt "#30170"
+msgid "10 GB"
+msgstr "10 GB"
+
+msgctxt "#30171"
+msgid "20 GB"
+msgstr "20 GB"
+
+msgctxt "#30172"
+msgid "Enable Netplay"
+msgstr "Netplay සබල කරන්න"
+
+msgctxt "#30173"
+msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
+msgstr "retroarch netplay සබල කරන්න (Windows, Linux, OSX පමණි), netplay සමඟ දියත් කිරීමට සන්දර්භය මෙනුව භාවිතා කරන්න"
+
+msgctxt "#30174"
+msgid "Show Netplay Lobby"
+msgstr "Netplay Lobby පෙන්වන්න"
+
+msgctxt "#30175"
+msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
+msgstr "සබල කළ විට, netplay lobby IAGL මුල් පිටුවේ සංදර්ශණය වනු ඇත"
+
+msgctxt "#30176"
+msgid "Filter game lobby to IAGL auto launch games"
+msgstr "IAGL ස්වයංක්‍රීය දියත් කිරීමේ ක්‍රීඩා වෙත පෙරහන් ක්‍රීඩා ලොබිය"
+
+msgctxt "#30177"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "සබල කර ඇත්නම්, netplay lobby ස්වයංක්‍රීයව දියත් කළ හැකි ක්‍රීඩා පමණක් පෙන්වයි"
+
+msgctxt "#30178"
+msgid "Netplay Port"
+msgstr "Netplay Port"
+
+msgctxt "#30179"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "හරහා සම්බන්ධ වීමට netplay IP port නිර්වචනය කරන්න (පෙරනිමිය සඳහා හිස්ව තබන්න)"
+
+msgctxt "#30180"
+msgid "Default player 2+ Hostname"
+msgstr "පෙරනිමි ක්‍රීඩකයා 2+ සත්කාරක නාමය"
+
+msgctxt "#30181"
+msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
+msgstr "පෙරනිමි netplay hostname / IP නිර්වචනය කරන්න (දේශීය ජාල netplay සඳහා ප්‍රයෝජනවත්, පෙරනිමිය සඳහා හිස්ව තබන්න)"
+
+msgctxt "#30182"
+msgid "Check frames"
+msgstr "රාමු පරීක්ෂා කරන්න"
+
+msgctxt "#30183"
+msgid "Define number of netplay sync frames (leave blank for default)"
+msgstr "netplay සමමුහුර්ත රාමු ගණන නිර්වචනය කරන්න (පෙරනිමිය සඳහා හිස්ව තබන්න)"
+
+msgctxt "#30184"
+msgid "Announce Netplay on Discord"
+msgstr "Discord මත Netplay නිවේදනය කරන්න"
+
+msgctxt "#30185"
+msgid "Announces netplay start on discord for IAGL players"
+msgstr "IAGL ක්‍රීඩකයින් සඳහා අසමගිය මත netplay ආරම්භය නිවේදනය කරයි"
+
+msgctxt "#30186"
+msgid "Discord Player Name"
+msgstr "Discord Player නම"
+
+msgctxt "#30187"
+msgid "Enter your player name to be announced on Discord"
+msgstr "Discord හි නිවේදනය කිරීමට ඔබගේ ක්‍රීඩකයාගේ නම ඇතුලත් කරන්න"
+
+msgctxt "#30188"
+msgid "Discord User Account ID"
+msgstr "Discord පරිශීලක ගිණුම් ID"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
+msgstr "ක්‍රීඩා කරන විට සඳහන් කිරීමට ඔබගේ Discord ID (පරිශීලක සැකසීම්>මගේ ගිණුම>පිටපත් ID) ලබා දෙන්න (විකල්ප)"
+
+msgctxt "#30190"
+msgid "Display report when wizard is completed"
+msgstr "විශාරද සම්පූර්ණ වූ විට වාර්තාව පෙන්වන්න"
+
+msgctxt "#30191"
+msgid "Execute setup wizard"
+msgstr "සැකසුම් විශාරද ක්‍රියාත්මක කරන්න"
+
+msgctxt "#30192"
+msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
+msgstr "ඔබගේ ක්‍රීඩා ලැයිස්තු සඳහා සැකසුම් වෙනස් කිරීමට විශාරද ධාවනය කරන්න.  මෙය ඕනෑම අවස්ථාවක නැවත ධාවනය කළ හැක"
+
+msgctxt "#30193"
+msgid "Android Advance Settings"
+msgstr "Android අත්තිකාරම් සැකසුම්"
+
+msgctxt "#30194"
+msgid "Use StartAndroidActivity"
+msgstr "StartAndroidActivity භාවිතා කරන්න"
+
+msgctxt "#30195"
+msgid "Leave as default if unsure"
+msgstr "විශ්වාස නැත්නම් පෙරනිමිය ලෙස තබන්න"
+
+msgctxt "#30196"
+msgid "Suspend Kodi Input and Audio when using External Launcher"
+msgstr "External Launcher භාවිතා කරන විට Kodi Input සහ Audio අත්හිටුවන්න"
+
+msgctxt "#30197"
+msgid "Stop Kodi media playing before External Launch"
+msgstr "බාහිර දියත් කිරීමට පෙර කොඩී මාධ්‍ය වාදනය කිරීම නවත්වන්න"
+
+msgctxt "#30198"
+msgid "Kodi is busy / waiting for return to Kodi after External Launch"
+msgstr "Kodi කාර්යබහුලයි / බාහිර දියත් කිරීමෙන් පසු Kodi වෙත ආපසු එනතෙක් බලා සිටී"
+
+msgctxt "#30199"
+msgid "Download Advanced Settings"
+msgstr "උසස් සැකසුම් බාගන්න"
+
+msgctxt "#30200"
+msgid "Download Threads"
+msgstr "නූල් බාගන්න"
+
+msgctxt "#30201"
+msgid "Set alternate default folder for all downloads"
+msgstr "සියලුම බාගැනීම් සඳහා විකල්ප පෙරනිමි ෆෝල්ඩරය සකසන්න"
+
+msgctxt "#30202"
+msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
+msgstr "තෝරාගත් විට, සියලුම බාගැනීම් විකල්ප ෆෝල්ඩරයකට යයි.  [B]සටහන: මෙම ෆෝල්ඩරය ප්‍රමාණය සඳහා පිරිසිදු කිරීම හෝ නිරීක්ෂණය කිරීම සිදු නොවේ[/B]"
+
+msgctxt "#30203"
+msgid "Organize default download folder using system folders"
+msgstr "පද්ධති ෆෝල්ඩර භාවිතයෙන් පෙරනිමි බාගැනීම් ෆෝල්ඩරය සංවිධානය කරන්න"
+
+msgctxt "#30204"
+msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
+msgstr "සක්‍රීය කළ විට, තාවකාලික ෆෝල්ඩරය පද්ධතිය මගින් සංවිධානය කරනු ලැබේ (සමහර විට වින්‍යාස ප්‍රතික්‍රියා සඳහා අවශ්‍ය වේ)"
+
+msgctxt "#30205"
+msgid "Copy Kodi Network Source downloads to Local Filesystem"
+msgstr "කොඩි ජාල මූලාශ්‍ර බාගැනීම් දේශීය ගොනු පද්ධතියට පිටපත් කරන්න"
+
+msgctxt "#30206"
+msgid "Reset Options"
+msgstr "විකල්ප යළි පිහිටුවන්න"
+
+msgctxt "#30207"
+msgid "Reset IAGL database to default settings"
+msgstr "IAGL දත්ත සමුදාය පෙරනිමි සැකසුම් වෙත යළි පිහිටුවන්න"
+
+msgctxt "#30208"
+msgid "When selected, the database will be reset to default settings"
+msgstr "තෝරාගත් විට, දත්ත සමුදාය පෙරනිමි සැකසුම් වෙත නැවත සකසනු ඇත"
+
+msgctxt "#30209"
+msgid "Unhide game lists"
+msgstr "ක්‍රීඩා ලැයිස්තු සඟවන්න"
+
+msgctxt "#30210"
+msgid "When selected, previously hidden game lists can be unhidden"
+msgstr "තෝරාගත් විට, කලින් සැඟවුණු ක්‍රීඩා ලැයිස්තු නොසැඟවිය හැක"
+
+msgctxt "#30211"
+msgid "Clear Cache"
+msgstr "හැඹිලිය හිස් කරන්න"
+
+msgctxt "#30212"
+msgid "When selected, all data in the cache folder including games will be purged"
+msgstr "තෝරාගත් විට, ක්‍රීඩා ඇතුළු හැඹිලි ෆෝල්ඩරයේ ඇති සියලුම දත්ත පිරිසිදු කෙරේ"
+
+msgctxt "#30213"
+msgid "Select"
+msgstr "තෝරන්න"
+
+msgctxt "#30214"
+msgid "Selected"
+msgstr "තෝරා ගන්නා ලදී"
+
+msgctxt "#30215"
+msgid "Game lists selected"
+msgstr "ක්‍රීඩා ලැයිස්තු තෝරා ඇත"
+
+msgctxt "#30216"
+msgid "Genres selected"
+msgstr "ප්‍රභේද තෝරා ඇත"
+
+msgctxt "#30217"
+msgid "Players selected"
+msgstr "ක්‍රීඩකයන් තෝරාගෙන ඇත"
+
+msgctxt "#30218"
+msgid "Studios selected"
+msgstr "චිත්‍රාගාර තෝරාගෙන ඇත"
+
+msgctxt "#30219"
+msgid "Tags selected"
+msgstr "ටැග් තෝරා ඇත"
+
+msgctxt "#30220"
+msgid "Playlists selected"
+msgstr "ධාවන ලැයිස්තු තෝරා ඇත"
+
+msgctxt "#30221"
+msgid "Regions selected"
+msgstr "තෝරාගත් කලාප"
+
+msgctxt "#30222"
+msgid "Languages selected"
+msgstr "තෝරාගත් භාෂා"
+
+msgctxt "#30223"
+msgid "Editions selected"
+msgstr "සංස්කරණ තෝරා ඇත"
+
+msgctxt "#30224"
+msgid "Codes selected"
+msgstr "කේත තෝරා ඇත"
+
+msgctxt "#30225"
+msgid "Ratings selected"
+msgstr "ඇගයීම් තෝරා ඇත"
+
+msgctxt "#30226"
+msgid "Enter title search query"
+msgstr "මාතෘකා සෙවුම් විමසුම ඇතුලත් කරන්න"
+
+msgctxt "#30227"
+msgid "Empty search"
+msgstr "හිස් සෙවීම"
+
+msgctxt "#30228"
+msgid "Search criteria is empty.[CR]Update criteria and try again."
+msgstr "සෙවුම් නිර්ණායක හිස්ය.[CR]නිර්ණායක යාවත්කාලීන කර නැවත උත්සාහ කරන්න."
+
+msgctxt "#30229"
+msgid "Reset criteria"
+msgstr "නිර්ණායක යළි පිහිටුවන්න"
+
+msgctxt "#30230"
+msgid "Enter Link Name"
+msgstr "සබැඳියේ නම ඇතුළත් කරන්න"
+
+msgctxt "#30231"
+msgid "Define the start page for IAGL"
+msgstr "IAGL සඳහා ආරම්භක පිටුව නිර්වචනය කරන්න"
+
+msgctxt "#30232"
+msgid "Kodi launch options"
+msgstr "Kodi දියත් කිරීමේ විකල්ප"
+
+msgctxt "#30233"
+msgid "Completed"
+msgstr "සම්පූර්ණ කළා"
+
+msgctxt "#30234"
+msgid "Create new group"
+msgstr "නව කණ්ඩායමක් සාදන්න"
+
+msgctxt "#30235"
+msgid "Select favorite group"
+msgstr "ප්රියතම කණ්ඩායම තෝරන්න"
+
+msgctxt "#30236"
+msgid "Group by Favorites Group"
+msgstr "ප්‍රියතම සමූහය අනුව සමූහය"
+
+msgctxt "#30237"
+msgid "Remove IAGL Favorite"
+msgstr "IAGL ප්‍රියතම ඉවත් කරන්න"
+
+msgctxt "#30238"
+msgid "Are you sure you want to delete this Favorite?"
+msgstr "ඔබට මෙම ප්‍රියතමය මැකීමට අවශ්‍ය බව විශ්වාසද?"
+
+msgctxt "#30239"
+msgid "Favorite deleted"
+msgstr "ප්රියතම මකා දමන ලදී"
+
+msgctxt "#30240"
+msgid "Favorites display"
+msgstr "ප්රියතම සංදර්ශකය"
+
+msgctxt "#30241"
+msgid "Define the start page for IAGL Favorites"
+msgstr "IAGL ප්‍රියතමයන් සඳහා ආරම්භක පිටුව නිර්වචනය කරන්න"
+
+msgctxt "#30242"
+msgid "By Favorites Group"
+msgstr "ප්‍රියතම සමූහය විසිනි"
+
+msgctxt "#30243"
+msgid "Reset *all* criteria"
+msgstr "*සියලු* නිර්ණායක යළි පිහිටුවන්න"
+
+msgctxt "#30244"
+msgid "Run IAGL setup wizard?"
+msgstr "IAGL පිහිටුවීම් විශාරද ධාවනය කරන්නද?"
+
+msgctxt "#30245"
+msgid "Wizard"
+msgstr "විශාරදයා"
+
+msgctxt "#30246"
+msgid "Update game list Launcher"
+msgstr "ක්‍රීඩා ලැයිස්තුව දියත් කිරීම යාවත්කාලීන කරන්න"
+
+msgctxt "#30247"
+msgid "Update Launch Command"
+msgstr "දියත් කිරීමේ විධානය යාවත්කාලීන කරන්න"
+
+msgctxt "#30248"
+msgid "Update game list download path"
+msgstr "ක්‍රීඩා ලැයිස්තුව බාගත කිරීමේ මාර්ගය යාවත්කාලීන කරන්න"
+
+msgctxt "#30249"
+msgid "Hide game list"
+msgstr "ක්රීඩා ලැයිස්තුව සඟවන්න"
+
+msgctxt "#30250"
+msgid "Update game list post download process"
+msgstr "බාගත කිරීමේ ක්‍රියාවලියෙන් පසු ක්‍රීඩා ලැයිස්තුව යාවත්කාලීන කරන්න"
+
+msgctxt "#30251"
+msgid "Are you sure you want to hide game list"
+msgstr "ඔබට ක්‍රීඩා ලැයිස්තුව සැඟවීමට අවශ්‍ය බව විශ්වාසද"
+
+msgctxt "#30252"
+msgid "Game list is now hidden"
+msgstr "ක්‍රීඩා ලැයිස්තුව දැන් සඟවා ඇත"
+
+msgctxt "#30253"
+msgid "No results"
+msgstr "ප්‍රතිඵල නැත"
+
+msgctxt "#30254"
+msgid "No hidden game lists found"
+msgstr "සැඟවුණු ක්‍රීඩා ලැයිස්තු හමු නොවීය"
+
+msgctxt "#30255"
+msgid "Game lists unhidden"
+msgstr "ක්‍රීඩා ලැයිස්තු නොසඟවා ඇත"
+
+msgctxt "#30256"
+msgid "Confirm reset"
+msgstr "යළි පිහිටුවීම තහවුරු කරන්න"
+
+msgctxt "#30257"
+msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
+msgstr "ඔබට දත්ත සමුදාය යළි පිහිටුවීමට අවශ්‍ය බව විශ්වාසද?[CR]සියලු පරිශීලක තොරතුරු අහිමි වනු ඇත![CR]මෙය පසුගමනය කළ නොහැක!"
+
+msgctxt "#30258"
+msgid "Database has been reset"
+msgstr "දත්ත සමුදාය නැවත සකස් කර ඇත"
+
+msgctxt "#30259"
+msgid "Update Launcher"
+msgstr "දියත් කිරීම යාවත්කාලීන කරන්න"
+
+msgctxt "#30260"
+msgid "Update launcher from[CR]Kodi to[CR]External?"
+msgstr "දියත් කිරීම [CR]Kodi සිට[CR]බාහිර වෙත යාවත්කාලීන කරන්නද?"
+
+msgctxt "#30261"
+msgid "Update launcher from[CR]External to[CR]Kodi?"
+msgstr "[CR]බාහිර සිට [CR]Kodi වෙත දියත් කිරීම යාවත්කාලීන කරන්නද?"
+
+msgctxt "#30262"
+msgid "Launcher updated to external"
+msgstr "දියත් කිරීම බාහිරට යාවත්කාලීන කරන ලදී"
+
+msgctxt "#30263"
+msgid "Launcher updated to retroplayer"
+msgstr "Launcher retroplayer වෙත යාවත්කාලීන කරන ලදී"
+
+msgctxt "#30264"
+msgid "Select game addon"
+msgstr "Game addon තෝරන්න"
+
+msgctxt "#30265"
+msgid "Reset to default"
+msgstr "පෙරනිමියට යළි පිහිටුවන්න"
+
+msgctxt "#30266"
+msgid "Download game to…"
+msgstr "ක්‍රීඩාව බාගන්න…"
+
+msgctxt "#30267"
+msgid "Select download folder"
+msgstr "බාගත ෆෝල්ඩරය තෝරන්න"
+
+msgctxt "#30268"
+msgid "Archive.org login success!"
+msgstr "Archive.org පිවිසුම සාර්ථකයි!"
+
+msgctxt "#30269"
+msgid "Archive.org login failed.[CR]Check credentials or log for more details"
+msgstr "Archive.org පිවිසුම අසාර්ථක විය.[CR] අක්තපත්‍ර පරීක්ෂා කරන්න හෝ වැඩි විස්තර සඳහා ලොග් වන්න"
+
+msgctxt "#30270"
+msgid "Error"
+msgstr "දෝෂයකි"
+
+msgctxt "#30271"
+msgid "Initializing download for[CR]"
+msgstr "[CR] සඳහා බාගැනීම ආරම්භ කරමින්"
+
+msgctxt "#30272"
+msgid "Check logs"
+msgstr "ලඝු-සටහන් පරීක්ෂා කරන්න"
+
+msgctxt "#30273"
+msgid "Checking login for[CR]"
+msgstr "[CR] සඳහා පිවිසුම පරීක්ෂා කරමින්"
+
+msgctxt "#30274"
+msgid "Requesting file info for[CR]"
+msgstr "[CR] සඳහා ගොනු තොරතුරු ඉල්ලමින්"
+
+msgctxt "#30275"
+msgid "Select from Retroarch Cores"
+msgstr "Retroarch Cores වෙතින් තෝරන්න"
+
+msgctxt "#30276"
+msgid "Select from Extra Emulators"
+msgstr "අමතර ඉමුලේටර් වලින් තෝරන්න"
+
+msgctxt "#30277"
+msgid "Manually Enter Launch Command"
+msgstr "දියත් කිරීමේ විධානය අතින් ඇතුල් කරන්න"
+
+msgctxt "#30278"
+msgid "Select External Command Type"
+msgstr "බාහිර විධාන වර්ගය තෝරන්න"
+
+msgctxt "#30279"
+msgid "Extra Emulators"
+msgstr "අමතර ඉමුලේටර්"
+
+msgctxt "#30280"
+msgid "Dolphin"
+msgstr "ඩොල්ෆින්"
+
+msgctxt "#30281"
+msgid "Select the path to the Dolphin application (optional)"
+msgstr "ඩොල්ෆින් යෙදුම සඳහා මාර්ගය තෝරන්න (විකල්ප)"
+
+msgctxt "#30282"
+msgid "MAME"
+msgstr "MAME"
+
+msgctxt "#30283"
+msgid "Select the path to the MAME application (optional)"
+msgstr "MAME යෙදුම සඳහා මාර්ගය තෝරන්න (විකල්ප)"
+
+msgctxt "#30284"
+msgid "Project 64"
+msgstr "ව්යාපෘතිය 64"
+
+msgctxt "#30285"
+msgid "Select the path to the Project 64 application (optional)"
+msgstr "ව්‍යාපෘති 64 යෙදුම සඳහා මාර්ගය තෝරන්න (විකල්ප)"
+
+msgctxt "#30286"
+msgid "ePSXe"
+msgstr "ePSXe"
+
+msgctxt "#30287"
+msgid "Select the path to the ePSXe application (optional)"
+msgstr "ePSXe යෙදුම සඳහා මාර්ගය තෝරන්න (විකල්ප)"
+
+msgctxt "#30288"
+msgid "Demul"
+msgstr "ඩෙමුල්"
+
+msgctxt "#30289"
+msgid "Select the path to the Demul application (optional)"
+msgstr "Demul යෙදුම සඳහා මාර්ගය තෝරන්න (විකල්ප)"
+
+msgctxt "#30290"
+msgid "FS-UAE"
+msgstr "FS-UAE"
+
+msgctxt "#30291"
+msgid "Select the path to the FS-UAE application (optional)"
+msgstr "FS-UAE යෙදුම සඳහා මාර්ගය තෝරන්න (විකල්ප)"
+
+msgctxt "#30292"
+msgid "Are you sure you want to set external launch command?"
+msgstr "ඔබට බාහිර දියත් කිරීමේ විධානය සැකසීමට අවශ්‍ය බව විශ්වාසද?"
+
+msgctxt "#30293"
+msgid "External launch command updated"
+msgstr "බාහිර දියත් කිරීමේ විධානය යාවත්කාලීන කරන ලදී"
+
+msgctxt "#30294"
+msgid "Android users must verify the core is installed in Retroarch"
+msgstr "ඇන්ඩ්‍රොයිඩ් භාවිතා කරන්නන් හරය Retroarch හි ස්ථාපනය කර ඇති බව තහවුරු කළ යුතුය"
+
+msgctxt "#30295"
+msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
+msgstr "දියත් කිරීමේ සිටුවම් දැනට හිස්ය[CR]කරුණාකර ඇඩෝන බාහිර දියත් කිරීමේ සිටුවම් යාවත්කාලීන කරන්න."
+
+msgctxt "#30296"
+msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
+msgstr "දියත් කිරීමේ සිටුවම් දැනට හිස්ය[CR]කරුණාකර addon OS දියත් කිරීමේ සිටුවම් යාවත්කාලීන කරන්න."
+
+msgctxt "#30297"
+msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
+msgstr "අමතර ඉමුලේටර් කිසිවක් හමු නොවීය[CR]කරුණාකර ඇඩෝන අමතර ඉමුලේටර් සැකසීම් යාවත්කාලීන කරන්න"
+
+msgctxt "#30298"
+msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
+msgstr "දියත් කිරීමේ විධානය ඇතුළු කරන්න[CR]IAGL wiki හි විකල්ප මූල පද බලන්න"
+
+msgctxt "#30299"
+msgid "Reset Launch Command"
+msgstr "දියත් කිරීමේ විධානය නැවත සකසන්න"
+
+msgctxt "#30300"
+msgid "Are you sure you want to reset the external launch command?"
+msgstr "ඔබට බාහිර දියත් කිරීමේ විධානය යළි පිහිටුවීමට අවශ්‍ය බව විශ්වාසද?"
+
+msgctxt "#30301"
+msgid "External launch command was reset"
+msgstr "බාහිර දියත් කිරීමේ විධානය යළි පිහිටුවන ලදී"
+
+msgctxt "#30302"
+msgid "Enter a value for"
+msgstr "සඳහා අගයක් ඇතුළත් කරන්න"
+
+msgctxt "#30303"
+msgid "View game list settings"
+msgstr "ක්‍රීඩා ලැයිස්තු සැකසීම් බලන්න"
+
+msgctxt "#30304"
+msgid "Game List"
+msgstr "ක්රීඩා ලැයිස්තුව"
+
+msgctxt "#30305"
+msgid "Game List System"
+msgstr "ක්රීඩා ලැයිස්තු පද්ධතිය"
+
+msgctxt "#30306"
+msgid "Total 1G1R Games in List"
+msgstr "ලැයිස්තුවේ මුළු 1G1R ක්‍රීඩා"
+
+msgctxt "#30307"
+msgid "Total Games in List"
+msgstr "ලැයිස්තුවේ මුළු ක්‍රීඩා"
+
+msgctxt "#30308"
+msgid "Total Favorited Games in List"
+msgstr "ලැයිස්තුවේ මුළු ප්‍රියතම ක්‍රීඩා"
+
+msgctxt "#30309"
+msgid "Default External Launch Command"
+msgstr "පෙරනිමි බාහිර දියත් කිරීමේ විධානය"
+
+msgctxt "#30310"
+msgid "Default Retroplayer Game Addon"
+msgstr "Default Retroplayer Game Addon"
+
+msgctxt "#30311"
+msgid "Default Game Post Process"
+msgstr "පෙරනිමි ක්‍රීඩා පසු ක්‍රියාවලිය"
+
+msgctxt "#30312"
+msgid "User Defined Download Path"
+msgstr "පරිශීලක නිර්වචනය කළ බාගත මාර්ගය"
+
+msgctxt "#30313"
+msgid "User External Launch Command"
+msgstr "පරිශීලක බාහිර දියත් කිරීමේ විධානය"
+
+msgctxt "#30314"
+msgid "User Defined Retroplayer Game Addon"
+msgstr "පරිශීලක නිර්වචනය කළ Retroplayer Game Addon"
+
+msgctxt "#30315"
+msgid "User Defined Post Process"
+msgstr "පරිශීලක නිර්වචනය කළ තැපැල් ක්‍රියාවලිය"
+
+msgctxt "#30316"
+msgid "Game List Settings"
+msgstr "ක්‍රීඩා ලැයිස්තු සැකසීම්"
+
+msgctxt "#30317"
+msgid "None (will use addon default)"
+msgstr "කිසිවක් නැත (ඇඩෝන පෙරනිමිය භාවිතා කරනු ඇත)"
+
+msgctxt "#30318"
+msgid "Games List Launcher"
+msgstr "ක්‍රීඩා ලැයිස්තු දියත් කිරීම"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "nan"
+
+msgctxt "#30320"
+msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
+msgstr "බාහිර දියත් කිරීමේ විධානය[CR]*පරිශීලක දියත් කිරීමේ විධානයක් හමු නොවීය / පෙරනිමිය භාවිතා කරමින්*"
+
+msgctxt "#30321"
+msgid "Kodi Retroplayer"
+msgstr "Kodi Retroplayer"
+
+msgctxt "#30322"
+msgid "Are you sure you want to update game list download path?"
+msgstr "ඔබට ක්‍රීඩා ලැයිස්තුව බාගත කිරීමේ මාර්ගය යාවත්කාලීන කිරීමට අවශ්‍ය බව විශ්වාසද?"
+
+msgctxt "#30323"
+msgid "Download path updated"
+msgstr "බාගත කිරීමේ මාර්ගය යාවත්කාලීන කරන ලදී"
+
+msgctxt "#30324"
+msgid "Are you sure you want to reset game list download path?"
+msgstr "ඔබට ක්‍රීඩා ලැයිස්තුව බාගත කිරීමේ මාර්ගය යළි සැකසීමට අවශ්‍ය බව විශ්වාසද?"
+
+msgctxt "#30325"
+msgid "Download path reset"
+msgstr "බාගත කිරීමේ මාර්ගය යළි පිහිටුවීම"
+
+msgctxt "#30326"
+msgid "Change download path"
+msgstr "බාගත කිරීමේ මාර්ගය වෙනස් කරන්න"
+
+msgctxt "#30327"
+msgid "Reset download path"
+msgstr "බාගත කිරීමේ මාර්ගය නැවත සකසන්න"
+
+msgctxt "#30328"
+msgid "Reset game list settings"
+msgstr "ක්‍රීඩා ලැයිස්තු සැකසීම් යළි පිහිටුවන්න"
+
+msgctxt "#30329"
+msgid "Are you sure you want to reset all game list settings to default?"
+msgstr "ඔබට සියලු ක්‍රීඩා ලැයිස්තු සැකසීම් පෙරනිමියට යළි සැකසීමට අවශ්‍ය බව විශ්වාසද?"
+
+msgctxt "#30330"
+msgid "Game list settings were reset to default"
+msgstr "ක්‍රීඩා ලැයිස්තු සැකසීම් පෙරනිමියට යළි පිහිටුවන ලදී"

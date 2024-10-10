@@ -11,7 +11,7 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 class download(object):
-	def __init__(self,config=None,rom=None,game_name=None,dl_path=None,current_downloader='archive_org',threads=None,auto_login=True,show_dl_progress=True,show_login_progress=True,ia_email=None,ia_password=None):
+	def __init__(self,config=None,rom=None,game_name=None,dl_path=None,current_downloader='archive_org',threads=None,auto_login=True,show_dl_progress=True,show_login_progress=True,ia_email=None,ia_password=None,if_game_exists=0,ige_dialog=None):
 		self.config = config
 		self.show_dl_progress = show_dl_progress
 		self.show_login_progress = show_login_progress
@@ -23,6 +23,8 @@ class download(object):
 		self.current_downloader = current_downloader
 		self.ia_email = None
 		self.ia_password = None
+		self.if_game_exists = if_game_exists
+		self.ige_dialog = ige_dialog
 		if threads is None:
 			self.threads = self.config.defaults.get('threads')
 		else:
@@ -84,13 +86,13 @@ class download(object):
 	def set_downloader(self,downloader='archive_org'):
 		if downloader == 'generic':
 			xbmc.log(msg='IAGL:  Downloader set to generic http downloader',level=xbmc.LOGDEBUG)
-			self.downloader = self.generic_downloader(config=self.config,dl_path=self.dl_path,threads=self.threads,auto_login=self.auto_login,show_dl_progress=self.show_dl_progress,show_login_progress=self.show_login_progress)
+			self.downloader = self.generic_downloader(config=self.config,dl_path=self.dl_path,threads=self.threads,auto_login=self.auto_login,show_dl_progress=self.show_dl_progress,show_login_progress=self.show_login_progress,if_game_exists=self.if_game_exists,ige_dialog=self.ige_dialog)
 		elif downloader == 'archive_org':
 			xbmc.log(msg='IAGL:  Downloader set to archive.org',level=xbmc.LOGDEBUG)
-			self.downloader = self.archive_org(config=self.config,dl_path=self.dl_path,threads=self.threads,auto_login=self.auto_login,show_dl_progress=self.show_dl_progress,show_login_progress=self.show_login_progress,ia_email=self.ia_email,ia_password=self.ia_password)
+			self.downloader = self.archive_org(config=self.config,dl_path=self.dl_path,threads=self.threads,auto_login=self.auto_login,show_dl_progress=self.show_dl_progress,show_login_progress=self.show_login_progress,ia_email=self.ia_email,ia_password=self.ia_password,if_game_exists=self.if_game_exists,ige_dialog=self.ige_dialog)
 		elif downloader == 'local_source':
 			xbmc.log(msg='IAGL:  Downloader set to Local File Source',level=xbmc.LOGDEBUG)
-			self.downloader = self.local_source(config=self.config,dl_path=self.dl_path,threads=self.threads,auto_login=self.auto_login,show_dl_progress=self.show_dl_progress,show_login_progress=self.show_login_progress)
+			self.downloader = self.local_source(config=self.config,dl_path=self.dl_path,threads=self.threads,auto_login=self.auto_login,show_dl_progress=self.show_dl_progress,show_login_progress=self.show_login_progress,if_game_exists=self.if_game_exists,ige_dialog=self.ige_dialog)
 		else:
 			xbmc.log(msg='IAGL:  Downloader type is unknown, defaulting to NONE',level=xbmc.LOGDEBUG)
 			self.downloader = None #Default downloader to NONE unless otherwise specified, saves unecessary login attempt
@@ -106,7 +108,7 @@ class download(object):
 			xbmc.log(msg='IAGL:  Badly formed game download request: {}'.format(self.rom),level=xbmc.LOGERROR)
 			
 	class archive_org(object):
-		def __init__(self,config=None,rom=None,game_name=None,dl_path=None,threads=None,auto_login=True,show_dl_progress=True,show_login_progress=True,ia_email=None,ia_password=None):
+		def __init__(self,config=None,rom=None,game_name=None,dl_path=None,threads=None,auto_login=True,show_dl_progress=True,show_login_progress=True,ia_email=None,ia_password=None,if_game_exists=0,ige_dialog=None):
 			self.config = config
 			self.rom = rom
 			self.game_name = game_name
@@ -120,6 +122,12 @@ class download(object):
 			self.show_login_progress = show_login_progress
 			self.ia_email = ia_email
 			self.ia_password = ia_password
+			self.if_game_exists = if_game_exists
+			if isinstance(ige_dialog,dict):
+				self.ige_dialog = ige_dialog
+			else:
+				self.ige_dialog = dict()
+			self.if_game_exists_choice = None  #Account for multiple filed games, keep track of the users choice
 			self.dp = None
 			self.dp_id = 10101
 			self.session = requests.Session()
@@ -279,65 +287,88 @@ class download(object):
 					cr['filename'] = url_unquote(cr.get('url').split('/')[-1].split('%2F')[-1])
 					cr['dl_filepath'] = Path(self.dl_path).joinpath(cr.get('filename'))
 					cr['filenum'] = rn
-					try:
-						with self.session.head(cr.get('url'),verify=False,timeout=self.config.downloads.get('timeout'),allow_redirects=True) as r:
-							if r.ok and r.headers:
-								cr['head_success'] = True
-								if isinstance(r.headers.get('Content-Length'),str) and r.headers.get('Content-Length').isdigit():
-									cr['Content-Length'] = int(r.headers.get('Content-Length'))
-								if isinstance(r.headers.get('Accept-Ranges'),str) and r.headers.get('Accept-Ranges')=='bytes':
-									cr['Accept-Ranges'] = True
-								else:
-									cr['Accept-Ranges'] = False
+					matching_files = [x for x in Path(self.dl_path).rglob('**/{}*'.format(Path(cr.get('filename')).name))] #First find any exact matches
+					matching_files = matching_files+[x for x in Path(self.dl_path).rglob('**/{}*'.format(Path(cr.get('filename')).stem)) if x not in matching_files] #Next add any stem matches
+					cr['matching_files'] = matching_files  #May have to make this more fancy when pointer files are introduced for certain archives, or take care of it in post_process
+					cr['matching_file_found'] = True if len(cr.get('matching_files'))>0 else False
+					cr['continue_with_download'] = True #Default to download
+					if cr.get('matching_file_found'):
+						xbmc.log(msg='IAGL:  Matching file(s) found locally for requested game:\n{}'.format('\n'.join(['..{}/{}'.format(x.parent.name,x.name) for x in cr['matching_files']])),level=xbmc.LOGDEBUG)
+						if self.if_game_exists == 0 or self.if_game_exists_choice == 0:
+							cr['continue_with_download'] = False
+						elif self.if_game_exists == 1 or self.if_game_exists_choice == 1:
+							xbmc.log(msg='IAGL:  User setting is to re-download.  Ignoring matching files',level=xbmc.LOGDEBUG)
+						elif self.if_game_exists == 2 and self.if_game_exists_choice is None: #Prompt user if they haven't yet made a choice
+							selected = xbmcgui.Dialog().select(heading=self.ige_dialog.get('heading') or 'Matching local file',list=self.ige_dialog.get('list') or ['Do not re-download','Re-download and overwrite'],useDetails=False)
+							if selected == 0:
+								self.if_game_exists_choice = 0
+								cr['continue_with_download'] = False
+							elif selected == 1:
+								self.if_game_exists_choice = 1
 							else:
-								cr['head_success'] = False
-								cr['Content-Length'] = None
-								cr['Accept-Ranges'] = None
-					except requests.exceptions.RequestException as rexc:
-						xbmc.log(msg='IAGL:  Head request exception for {}.  Request Exception {}'.format(cr.get('url'),rexc),level=xbmc.LOGERROR)
-						cr['head_success'] = False
-						cr['Content-Length'] = None
-						cr['Accept-Ranges'] = None
-					except requests.exceptions.HTTPError as hexc:
-						xbmc.log(msg='IAGL:  Head request exception for {}.  HTTP Exception {}'.format(cr.get('url'),hexc),level=xbmc.LOGERROR)
-						cr['head_success'] = False
-						cr['Content-Length'] = None
-						cr['Accept-Ranges'] = None
-					except requests.exceptions.ConnectionError as cexc:
-						xbmc.log(msg='IAGL:  Head request exception for {}.  Connection Exception {}'.format(cr.get('url'),cexc),level=xbmc.LOGERROR)
-						cr['head_success'] = False
-						cr['Content-Length'] = None
-						cr['Accept-Ranges'] = None
-					except requests.exceptions.Timeout as texc:
-						xbmc.log(msg='IAGL:  Head request exception for {}.  Timeout Exception {}'.format(cr.get('url'),texc),level=xbmc.LOGERROR)
-						cr['head_success'] = False
-						cr['Content-Length'] = None
-						cr['Accept-Ranges'] = None
-					except Exception as exc:
-						xbmc.log(msg='IAGL:  Head request exception for {}. Exception {}'.format(cr.get('url'),exc),level=xbmc.LOGERROR)
-						cr['head_success'] = False
-						cr['Content-Length'] = None
-						cr['Accept-Ranges'] = None
-					cr['filesize'] = cr.get('Content-Length') or cr.get('size') #Use content length if provided
-					if isinstance(cr.get('filesize'),str) and cr.get('filesize').isdigit():
-						cr['filesize'] = int(cr.get('filesize')) #Ensure the size is an integer
-					if cr.get('Accept-Ranges'):
-						chunk_size = min([self.config.downloads.get('min_file_size'),cr.get('filesize')])
-						if chunk_size <= 0: #Chunk size can't be 0 or less
-							chunk_size = cr.get('filesize')
-						if chunk_size==cr.get('filesize'):
-							cr['chunk_size'] = abs(cr.get('filesize'))
-							cr['byte_ranges'] = '0-'  #Small file, so we'll just request everything in one chunk
-							cr['chunk_filenames'] = str(cr.get('dl_filepath'))
+								pass #Continue with download, and re-ask if theres more files
 						else:
-							rr=list(range(0,cr.get('filesize'),chunk_size))
-							cr['chunk_size'] = chunk_size
-							cr['byte_ranges'] = ['{}-{}'.format(r1,r2-1 if r2!='end' else '') for r1,r2 in zip(rr,rr[1:]+['end'])] #Otherwise break the file into chunks
-							cr['chunk_filenames'] = [str(cr.get('dl_filepath').parent.joinpath(cr.get('dl_filepath').stem+'.{0:0=3d}'.format(ii)+cr.get('dl_filepath').suffix)) for ii,x in enumerate(cr.get('byte_ranges'))]
-					else:
-						cr['chunk_size'] = abs(cr.get('filesize'))
-						cr['byte_ranges'] = '0-'
-						cr['chunk_filenames'] = str(cr.get('dl_filepath'))
+							pass
+					if cr.get('continue_with_download'):
+						try:
+							with self.session.head(cr.get('url'),verify=False,timeout=self.config.downloads.get('timeout'),allow_redirects=True) as r:
+								if r.ok and r.headers:
+									cr['head_success'] = True
+									if isinstance(r.headers.get('Content-Length'),str) and r.headers.get('Content-Length').isdigit():
+										cr['Content-Length'] = int(r.headers.get('Content-Length'))
+									if isinstance(r.headers.get('Accept-Ranges'),str) and r.headers.get('Accept-Ranges')=='bytes':
+										cr['Accept-Ranges'] = True
+									else:
+										cr['Accept-Ranges'] = False
+								else:
+									cr['head_success'] = False
+									cr['Content-Length'] = None
+									cr['Accept-Ranges'] = None
+						except requests.exceptions.RequestException as rexc:
+							xbmc.log(msg='IAGL:  Head request exception for {}.  Request Exception {}'.format(cr.get('url'),rexc),level=xbmc.LOGERROR)
+							cr['head_success'] = False
+							cr['Content-Length'] = None
+							cr['Accept-Ranges'] = None
+						except requests.exceptions.HTTPError as hexc:
+							xbmc.log(msg='IAGL:  Head request exception for {}.  HTTP Exception {}'.format(cr.get('url'),hexc),level=xbmc.LOGERROR)
+							cr['head_success'] = False
+							cr['Content-Length'] = None
+							cr['Accept-Ranges'] = None
+						except requests.exceptions.ConnectionError as cexc:
+							xbmc.log(msg='IAGL:  Head request exception for {}.  Connection Exception {}'.format(cr.get('url'),cexc),level=xbmc.LOGERROR)
+							cr['head_success'] = False
+							cr['Content-Length'] = None
+							cr['Accept-Ranges'] = None
+						except requests.exceptions.Timeout as texc:
+							xbmc.log(msg='IAGL:  Head request exception for {}.  Timeout Exception {}'.format(cr.get('url'),texc),level=xbmc.LOGERROR)
+							cr['head_success'] = False
+							cr['Content-Length'] = None
+							cr['Accept-Ranges'] = None
+						except Exception as exc:
+							xbmc.log(msg='IAGL:  Head request exception for {}. Exception {}'.format(cr.get('url'),exc),level=xbmc.LOGERROR)
+							cr['head_success'] = False
+							cr['Content-Length'] = None
+							cr['Accept-Ranges'] = None
+						cr['filesize'] = cr.get('Content-Length') or cr.get('size') #Use content length if provided
+						if isinstance(cr.get('filesize'),str) and cr.get('filesize').isdigit():
+							cr['filesize'] = int(cr.get('filesize')) #Ensure the size is an integer
+						if cr.get('Accept-Ranges'):
+							chunk_size = min([self.config.downloads.get('min_file_size'),cr.get('filesize')])
+							if chunk_size <= 0: #Chunk size can't be 0 or less
+								chunk_size = cr.get('filesize')
+							if chunk_size==cr.get('filesize'):
+								cr['chunk_size'] = abs(cr.get('filesize'))
+								cr['byte_ranges'] = '0-'  #Small file, so we'll just request everything in one chunk
+								cr['chunk_filenames'] = str(cr.get('dl_filepath'))
+							else:
+								rr=list(range(0,cr.get('filesize'),chunk_size))
+								cr['chunk_size'] = chunk_size
+								cr['byte_ranges'] = ['{}-{}'.format(r1,r2-1 if r2!='end' else '') for r1,r2 in zip(rr,rr[1:]+['end'])] #Otherwise break the file into chunks
+								cr['chunk_filenames'] = [str(cr.get('dl_filepath').parent.joinpath(cr.get('dl_filepath').stem+'.{0:0=3d}'.format(ii)+cr.get('dl_filepath').suffix)) for ii,x in enumerate(cr.get('byte_ranges'))]
+						else:
+							cr['chunk_size'] = abs(cr.get('filesize'))
+							cr['byte_ranges'] = '0-'
+							cr['chunk_filenames'] = str(cr.get('dl_filepath'))
 
 		def download(self):
 			self.download_cancelled = False
@@ -354,53 +385,58 @@ class download(object):
 					self.login()
 			else:
 				xbmc.log(msg='IAGL:  Attempting download without login credentials',level=xbmc.LOGDEBUG)
-			self.get_rom_heads() #Initialize info needed for downloading
+			self.get_rom_heads() #Initialize info needed for downloading, look for local files
 			for cr in self.rom: #Threaded download for each rom in order
-				xbmcgui.Window(self.dp_id).setProperty('current_size',str(0))
-				xbmcgui.Window(self.dp_id).clearProperty('start_time')
-				xbmcgui.Window(self.dp_id).clearProperty('last_update')
-				if cr.get('chunk_filenames') is None:
-					num_workers = 1
-				else:
-					num_workers = self.threads
-				executor = ThreadPoolExecutor(max_workers=num_workers)
-				if isinstance(cr.get('chunk_filenames'),list):
-					xbmc.log(msg='IAGL:  Creating {} chunks to download with {} threads'.format(len(cr.get('chunk_filenames')),num_workers),level=xbmc.LOGDEBUG)
-					futures=[executor.submit(self.download_chunk,rom=cr,byte_range=br,chunk_filename=cf,thread_id=ii) for ii,(br,cf) in enumerate(zip(cr.get('byte_ranges'),cr.get('chunk_filenames')))]
-				else:
-					xbmc.log(msg='IAGL:  Creating 1 chunks to download with {} threads'.format(num_workers),level=xbmc.LOGDEBUG)
-					futures=[executor.submit(self.download_chunk,rom=cr,byte_range=cr.get('byte_ranges'),chunk_filename=cr.get('chunk_filenames'),thread_id=0)]
-				futures_results = [f.result() for f in futures] #Execute the threads, gather results
-				if len(futures_results)>1:
-					if all([x.get('success') for x in futures_results]):
-						if self.combine_chunks(files_in=sorted([x.get('chunk_filename') for x in futures_results]),dest_file=str(cr.get('dl_filepath'))):
+				if cr.get('continue_with_download'):
+					xbmcgui.Window(self.dp_id).setProperty('current_size',str(0))
+					xbmcgui.Window(self.dp_id).clearProperty('start_time')
+					xbmcgui.Window(self.dp_id).clearProperty('last_update')
+					if cr.get('chunk_filenames') is None:
+						num_workers = 1
+					else:
+						num_workers = self.threads
+					executor = ThreadPoolExecutor(max_workers=num_workers)
+					if isinstance(cr.get('chunk_filenames'),list):
+						xbmc.log(msg='IAGL:  Creating {} chunks to download with {} threads'.format(len(cr.get('chunk_filenames')),num_workers),level=xbmc.LOGDEBUG)
+						futures=[executor.submit(self.download_chunk,rom=cr,byte_range=br,chunk_filename=cf,thread_id=ii) for ii,(br,cf) in enumerate(zip(cr.get('byte_ranges'),cr.get('chunk_filenames')))]
+					else:
+						xbmc.log(msg='IAGL:  Creating 1 chunks to download with {} threads'.format(num_workers),level=xbmc.LOGDEBUG)
+						futures=[executor.submit(self.download_chunk,rom=cr,byte_range=cr.get('byte_ranges'),chunk_filename=cr.get('chunk_filenames'),thread_id=0)]
+					futures_results = [f.result() for f in futures] #Execute the threads, gather results
+					if len(futures_results)>1:
+						if all([x.get('success') for x in futures_results]):
+							if self.combine_chunks(files_in=sorted([x.get('chunk_filename') for x in futures_results]),dest_file=str(cr.get('dl_filepath'))):
+								cr['download_success'] = True
+								cr['download_size'] = sum([x.get('download_size') for x in futures_results])
+							else:
+								cr['download_success'] = False
+								cr['download_size'] = None
+								self.delete_file(str(cr.get('dl_filepath'))) #Download of a chunk failed, so delete the resulting file(s)
+								for fp in cr.get('chunk_filenames'):
+									self.delete_file(fp)
+						else:
+							xbmc.log(msg='IAGL:  One or more chunk downloads failed',level=xbmc.LOGERROR)
+							cr['download_success'] = False
+							cr['download_size'] = None
+							cr['download_message'] = next(iter([x.get('message') for x in futures_results if not x.get('success')]),None)
+							for fp in cr.get('chunk_filenames'):
+								self.delete_file(fp)
+							for fp in [x.get('dl_filepath') for x in self.rom]:
+								self.delete_file(str(fp))
+					else:
+						if xbmcvfs.exists(cr.get('chunk_filenames')):
 							cr['download_success'] = True
 							cr['download_size'] = sum([x.get('download_size') for x in futures_results])
 						else:
+							xbmc.log(msg='IAGL:  Single chunk download failed',level=xbmc.LOGERROR)
 							cr['download_success'] = False
 							cr['download_size'] = None
-							self.delete_file(str(cr.get('dl_filepath'))) #Download of a chunk failed, so delete the resulting file(s)
-							for fp in cr.get('chunk_filenames'):
-								self.delete_file(fp)
-					else:
-						xbmc.log(msg='IAGL:  One or more chunk downloads failed',level=xbmc.LOGERROR)
-						cr['download_success'] = False
-						cr['download_size'] = None
-						cr['download_message'] = next(iter([x.get('message') for x in futures_results if not x.get('success')]),None)
-						for fp in cr.get('chunk_filenames'):
-							self.delete_file(fp)
-						for fp in [x.get('dl_filepath') for x in self.rom]:
-							self.delete_file(str(fp))
+							cr['download_message'] = next(iter([x.get('message') for x in futures_results if not x.get('success') and isinstance(x.get('message'),str)]),None)
+							self.delete_file(str(cr.get('dl_filepath')))
 				else:
-					if xbmcvfs.exists(cr.get('chunk_filenames')):
-						cr['download_success'] = True
-						cr['download_size'] = sum([x.get('download_size') for x in futures_results])
-					else:
-						xbmc.log(msg='IAGL:  Single chunk download failed',level=xbmc.LOGERROR)
-						cr['download_success'] = False
-						cr['download_size'] = None
-						cr['download_message'] = next(iter([x.get('message') for x in futures_results if not x.get('success') and isinstance(x.get('message'),str)]),None)
-						self.delete_file(str(cr.get('dl_filepath')))
+					cr['download_success'] = True
+					cr['download_size'] = None
+					cr['download_message'] = 'Matching file found'
 			xbmcgui.Window(self.dp_id).clearProperty('current_size')
 			xbmcgui.Window(self.dp_id).clearProperty('start_time')
 			xbmcgui.Window(self.dp_id).clearProperty('last_update')
@@ -470,13 +506,13 @@ class download(object):
 						xbmc.log(msg='IAGL:  Chunk {} download complete.  File size {}'.format(thread_id,size),level=xbmc.LOGDEBUG)
 				except requests.exceptions.RequestException as rexc:
 					result['success'] = False
-					if r:
-						if r.status_code == 403:
+					if isinstance(rexc.response.status_code,int):
+						if rexc.response.status_code == 403:
 							result['message'] = 'Download Request error[CR]Archive requires login'
 						else:
 							result['message'] = 'Download Request error {}[CR]File not available'.format(r.status_code)
 					else:
-						result['message'] = 'Download Request error[CR]File not available'
+						result['message'] = 'Download Request error[CR]File not available or Archive requires login'
 					xbmc.log(msg='IAGL:  Download request exception for {}.  Request Exception {}'.format(rom.get('url'),rexc),level=xbmc.LOGERROR)
 					self.delete_file(chunk_filename)
 				except requests.exceptions.HTTPError as hexc:

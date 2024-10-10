@@ -1,0 +1,1332 @@
+# Kodi Media Center language file
+# Addon Name: Internet Archive Game Launcher
+# Addon id: plugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/zach-morris/plugin.program.iagl/issues\n"
+"Language: ca_es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "Internet Archive Game Launcher"
+
+msgctxt "#30002"
+msgid "Browse all Lists"
+msgstr "Exploreu totes les llistes"
+
+msgctxt "#30003"
+msgid "Browse lists by Category"
+msgstr "Exploreu les llistes per categories"
+
+msgctxt "#30004"
+msgid "Browse games by Playlist"
+msgstr "Navega pels jocs per llista de reproducció"
+
+msgctxt "#30005"
+msgid "Favorites"
+msgstr "Preferits"
+
+msgctxt "#30006"
+msgid "Play History"
+msgstr "Historial de reproducció"
+
+msgctxt "#30007"
+msgid "Search"
+msgstr "Cerca"
+
+msgctxt "#30008"
+msgid "Random Play"
+msgstr "Reproducció aleatòria"
+
+msgctxt "#30009"
+msgid "Next"
+msgstr "A continuació"
+
+msgctxt "#30010"
+msgid "Previous"
+msgstr "Anterior"
+
+msgctxt "#30011"
+msgid "One Big List"
+msgstr "Una gran llista"
+
+msgctxt "#30012"
+msgid "Alphabetical"
+msgstr "Alfabètic"
+
+msgctxt "#30013"
+msgid "Group by Genre"
+msgstr "Grup per gènere"
+
+msgctxt "#30014"
+msgid "Group by Year"
+msgstr "Grup per any"
+
+msgctxt "#30015"
+msgid "Group by Players"
+msgstr "Grup per jugadors"
+
+msgctxt "#30016"
+msgid "Group by Studio"
+msgstr "Grup per Estudi"
+
+msgctxt "#30017"
+msgid "Group by Tag"
+msgstr "Agrupa per etiqueta"
+
+msgctxt "#30018"
+msgid "Group by Playlist"
+msgstr "Agrupa per llista de reproducció"
+
+msgctxt "#30019"
+msgid "Group by Region"
+msgstr "Grup per regió"
+
+msgctxt "#30020"
+msgid "Group by Language"
+msgstr "Grup per llengua"
+
+msgctxt "#30021"
+msgid "Group by Edition"
+msgstr "Grup per edició"
+
+msgctxt "#30022"
+msgid "Group by Code"
+msgstr "Agrupa per codi"
+
+msgctxt "#30023"
+msgid "Group by Rating"
+msgstr "Agrupa per valoració"
+
+msgctxt "#30024"
+msgid "Select Game Lists"
+msgstr "Seleccioneu Llistes de jocs"
+
+msgctxt "#30025"
+msgid "Search Game Titles"
+msgstr "Cerca títols de jocs"
+
+msgctxt "#30026"
+msgid "Filter by Genre"
+msgstr "Filtra per gènere"
+
+msgctxt "#30027"
+msgid "Filter by Players"
+msgstr "Filtra per jugadors"
+
+msgctxt "#30028"
+msgid "Filter by Studio"
+msgstr "Filtra per estudi"
+
+msgctxt "#30029"
+msgid "Filter by Tag"
+msgstr "Filtra per etiqueta"
+
+msgctxt "#30030"
+msgid "Filter by Playlist"
+msgstr "Filtra per llista de reproducció"
+
+msgctxt "#30031"
+msgid "Filter by Region"
+msgstr "Filtra per regió"
+
+msgctxt "#30032"
+msgid "Filter by Language"
+msgstr "Filtra per idioma"
+
+msgctxt "#30033"
+msgid "Filter by Edition"
+msgstr "Filtra per edició"
+
+msgctxt "#30034"
+msgid "Filter by Code"
+msgstr "Filtra per codi"
+
+msgctxt "#30035"
+msgid "Filter by Rating"
+msgstr "Filtra per valoració"
+
+msgctxt "#30036"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Executar la cerca[/COLOR]"
+
+msgctxt "#30037"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Crea un enllaç de cerca[/COLOR]"
+
+msgctxt "#30038"
+msgid "Choose Number of Results"
+msgstr "Trieu Nombre de resultats"
+
+msgctxt "#30039"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Executar una cerca aleatòria[/COLOR]"
+
+msgctxt "#30040"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Crea un enllaç de cerca aleatòria[/COLOR]"
+
+msgctxt "#30041"
+msgid "General"
+msgstr "General"
+
+msgctxt "#30042"
+msgid "Launching"
+msgstr "Llançament"
+
+msgctxt "#30043"
+msgid "Downloading"
+msgstr "Descàrrega"
+
+msgctxt "#30044"
+msgid "Views and Navigation"
+msgstr "Vistes i navegació"
+
+msgctxt "#30045"
+msgid "Netplay"
+msgstr "Netplay"
+
+msgctxt "#30046"
+msgid "Setup Wizard"
+msgstr "Assistent de configuració"
+
+msgctxt "#30047"
+msgid "Advanced"
+msgstr "Avançat"
+
+msgctxt "#30048"
+msgid "Play History"
+msgstr "Historial de reproducció"
+
+msgctxt "#30049"
+msgid "Define how many games to save in last played history"
+msgstr "Definiu quants jocs voleu desar a l'historial de l'última jugada"
+
+msgctxt "#30050"
+msgid "Default action on selecting game"
+msgstr "Acció per defecte en seleccionar el joc"
+
+msgctxt "#30051"
+msgid "Define action to take when a game is selected"
+msgstr "Defineix l'acció que cal dur a terme quan es selecciona un joc"
+
+msgctxt "#30052"
+msgid "If game already exists locally"
+msgstr "Si el joc ja existeix localment"
+
+msgctxt "#30053"
+msgid "Define the action to take if a game file is found to exist locally"
+msgstr "Definiu l'acció que cal dur a terme si es troba un fitxer de joc que existeix localment"
+
+msgctxt "#30054"
+msgid "Prompt"
+msgstr "Avís"
+
+msgctxt "#30055"
+msgid "Do not re-download"
+msgstr "No torneu a descarregar"
+
+msgctxt "#30056"
+msgid "Re-download and overwrite"
+msgstr "Torneu a descarregar i sobreescriure"
+
+msgctxt "#30057"
+msgid "Enable archive.org login"
+msgstr "Activa l'inici de sessió d'archive.org"
+
+msgctxt "#30058"
+msgid "Enabled"
+msgstr "Habilitat"
+
+msgctxt "#30059"
+msgid "Disabled"
+msgstr "Inhabilitat"
+
+msgctxt "#30060"
+msgid "Some games require login.  Enter your archive.org email address and password."
+msgstr "Alguns jocs requereixen iniciar sessió.  Introduïu la vostra adreça de correu electrònic i contrasenya d'archive.org."
+
+msgctxt "#30061"
+msgid "archive.org Email"
+msgstr "archive.org Correu electrònic"
+
+msgctxt "#30062"
+msgid "Some games require login.  Enter your archive.org email address"
+msgstr "Alguns jocs requereixen iniciar sessió.  Introduïu la vostra adreça de correu electrònic d'archive.org"
+
+msgctxt "#30063"
+msgid "archive.org Password"
+msgstr "archive.org Contrasenya"
+
+msgctxt "#30064"
+msgid "Some games require login.  Enter your archive.org password"
+msgstr "Alguns jocs requereixen iniciar sessió.  Introduïu la vostra contrasenya d'archive.org"
+
+msgctxt "#30065"
+msgid "Check login credentials"
+msgstr "Comproveu les credencials d'inici de sessió"
+
+msgctxt "#30066"
+msgid "Test the entered email and password to check your ability to login"
+msgstr "Proveu el correu electrònic i la contrasenya introduïts per comprovar la vostra capacitat per iniciar sessió"
+
+msgctxt "#30067"
+msgid "Download folder size limit"
+msgstr "Límit de mida de la carpeta de baixada"
+
+msgctxt "#30068"
+msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
+msgstr "Definiu la mida de la descàrrega/mida de la memòria cau.[CR]La carpeta es purga quan s'arriba al límit de mida."
+
+msgctxt "#30069"
+msgid "Front page display"
+msgstr "Visualització de la portada"
+
+msgctxt "#30070"
+msgid "Choose from list"
+msgstr "Trieu de la llista"
+
+msgctxt "#30071"
+msgid "Games are presented as"
+msgstr "Els jocs es presenten com"
+
+msgctxt "#30072"
+msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
+msgstr "Kodi ofereix diverses opcions de pell per a pel·lícules, programes de televisió i jocs.  Vegeu la wiki per a més informació"
+
+msgctxt "#30073"
+msgid "TV Shows"
+msgstr "Programes de televisió"
+
+msgctxt "#30074"
+msgid "Movies"
+msgstr "Pel·lícules"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "nan"
+
+msgctxt "#30076"
+msgid "10 Games"
+msgstr "10 Jocs"
+
+msgctxt "#30077"
+msgid "25 Games"
+msgstr "25 Jocs"
+
+msgctxt "#30078"
+msgid "50 Games"
+msgstr "50 jocs"
+
+msgctxt "#30079"
+msgid "100 Games"
+msgstr "100 jocs"
+
+msgctxt "#30080"
+msgid "250 Games"
+msgstr "250 jocs"
+
+msgctxt "#30081"
+msgid "500 Games"
+msgstr "500 jocs"
+
+msgctxt "#30082"
+msgid "Game artwork"
+msgstr "Il·lustració del joc"
+
+msgctxt "#30083"
+msgid "Game list artwork"
+msgstr "Il·lustració de la llista de jocs"
+
+msgctxt "#30084"
+msgid "Retroarch Settings"
+msgstr "Configuració de retroarc"
+
+msgctxt "#30085"
+msgid "Suspend Kodi IO on launch"
+msgstr "Suspendeu Kodi IO al llançament"
+
+msgctxt "#30086"
+msgid "Stop media on launch"
+msgstr "Atura els mitjans al llançament"
+
+msgctxt "#30087"
+msgid "Waiting for return"
+msgstr "Esperant el retorn"
+
+msgctxt "#30088"
+msgid "Add to IAGL Favorites"
+msgstr "Afegeix als preferits d'IAGL"
+
+msgctxt "#30089"
+msgid "Enter a name for your favorites group"
+msgstr "Introduïu un nom per al vostre grup preferit"
+
+msgctxt "#30090"
+msgid "Favorite added to group"
+msgstr "Preferit afegit al grup"
+
+msgctxt "#30091"
+msgid "Use clean game title"
+msgstr "Utilitza el títol del joc net"
+
+msgctxt "#30092"
+msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
+msgstr "Elimina les etiquetes d'un títol de joc per mostrar-les.  Ex: [B]Mario (EUA)[/B] es converteix en [B]Mario[/B]"
+
+msgctxt "#30093"
+msgid "Games per page"
+msgstr "Jocs per pàgina"
+
+msgctxt "#30094"
+msgid "Define how many games are listed per page"
+msgstr "Definiu quants jocs s'enumeren per pàgina"
+
+msgctxt "#30095"
+msgid "List all"
+msgstr "Llista tots"
+
+msgctxt "#30096"
+msgid "Always filter list to 1 Game 1 Rom Set"
+msgstr "Filtreu sempre la llista a 1 joc 1 conjunt rom"
+
+msgctxt "#30097"
+msgid "If possible, game lists will be pre-filtered to a 1G1R set"
+msgstr "Si és possible, les llistes de jocs es filtraran prèviament a un conjunt 1G1R"
+
+msgctxt "#30098"
+msgid "Append game list name to search and random results"
+msgstr "Afegeix el nom de la llista de jocs a la cerca i als resultats aleatoris"
+
+msgctxt "#30099"
+msgid "When enabled, the name of the game list will be appended to search results"
+msgstr "Quan estigui activat, el nom de la llista de jocs s'adjuntarà als resultats de la cerca"
+
+msgctxt "#30100"
+msgid "Append game list name when browsing by playlist"
+msgstr "Afegiu el nom de la llista de jocs quan navegueu per llista de reproducció"
+
+msgctxt "#30101"
+msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
+msgstr "Quan està activat, el nom de la llista de jocs s'afegirà al nom del joc a la llista de reproducció"
+
+msgctxt "#30102"
+msgid "Kodi landscape art equates to"
+msgstr "L'art del paisatge de Kodi equival a"
+
+msgctxt "#30103"
+msgid "Select the game artwork to be displayed as the landscape art"
+msgstr "Seleccioneu l'il·lustració del joc que es mostrarà com a art del paisatge"
+
+msgctxt "#30104"
+msgid "Title Screen"
+msgstr "Pantalla de títol"
+
+msgctxt "#30105"
+msgid "Screenshot"
+msgstr "Captura de pantalla"
+
+msgctxt "#30106"
+msgid "Kodi thumbnail art equates to"
+msgstr "L'art en miniatura de Kodi equival a"
+
+msgctxt "#30107"
+msgid "Select the game artwork to be displayed as the thumbnail art"
+msgstr "Seleccioneu l'il·lustració del joc que es mostrarà com a imatge en miniatura"
+
+msgctxt "#30108"
+msgid "Game list clearlogo equates to"
+msgstr "Llista de jocs clearlogo equival a"
+
+msgctxt "#30109"
+msgid "Select the artwork displayed for the game list clearlogo"
+msgstr "Seleccioneu l'il·lustració que es mostra per a la llista de jocs clearlogo"
+
+msgctxt "#30110"
+msgid "System logo"
+msgstr "Logotip del sistema"
+
+msgctxt "#30111"
+msgid "System console"
+msgstr "Consola del sistema"
+
+msgctxt "#30112"
+msgid "System controller"
+msgstr "Controlador del sistema"
+
+msgctxt "#30113"
+msgid "Game list fanart equates to"
+msgstr "Llista de jocs a què equival el fanart"
+
+msgctxt "#30114"
+msgid "Select the artwork displayed for the game list fanart"
+msgstr "Seleccioneu l'obra d'art que es mostra per al fanart de la llista de jocs"
+
+msgctxt "#30115"
+msgid "System collage"
+msgstr "Collage del sistema"
+
+msgctxt "#30116"
+msgid "System console"
+msgstr "Consola del sistema"
+
+msgctxt "#30117"
+msgid "System wallpaper"
+msgstr "Fons de pantalla del sistema"
+
+msgctxt "#30118"
+msgid "Force IAGL viewtypes"
+msgstr "Força els tipus de vista IAGL"
+
+msgctxt "#30119"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "Verifiqueu que la vostra pell tingui disponible l'identificador de tipus de visualització forçat"
+
+msgctxt "#30120"
+msgid "Frontpage viewtype"
+msgstr "Tipus de visualització de la pàgina principal"
+
+msgctxt "#30121"
+msgid "Game library lists viewtype"
+msgstr "La biblioteca de jocs mostra el tipus de visualització"
+
+msgctxt "#30122"
+msgid "Game categories viewtype"
+msgstr "Tipus de vista de categories de joc"
+
+msgctxt "#30123"
+msgid "Games list viewtype"
+msgstr "Tipus de visualització de la llista de jocs"
+
+msgctxt "#30124"
+msgid "Choose list viewtype"
+msgstr "Trieu el tipus de vista de llista"
+
+msgctxt "#30125"
+msgid "Search and Random results viewtype"
+msgstr "Tipus de visualització de resultats de cerca i aleatoris"
+
+msgctxt "#30126"
+msgid "Off (Default)"
+msgstr "Desactivat (per defecte)"
+
+msgctxt "#30127"
+msgid "List / Poster (50)"
+msgstr "Llista / pòster (50)"
+
+msgctxt "#30128"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "Pòster/Llista gran/Pared de pòsters (51)"
+
+msgctxt "#30129"
+msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
+msgstr "Mur d'icones/Patró horitzontal/Paret LS (52)"
+
+msgctxt "#30130"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "Informació sobre pancarta/paisatge/pòster (501)"
+
+msgctxt "#30131"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "Fanart / Landscape Single / Llista d'episodis (502)"
+
+msgctxt "#30132"
+msgid "Logos / Big Square Wall (503)"
+msgstr "Logotips/Big Square Wall (503)"
+
+msgctxt "#30133"
+msgid "Big List 2 (504)"
+msgstr "Llista gran 2 (504)"
+
+msgctxt "#30134"
+msgid "Landscape Details (505)"
+msgstr "Detalls del paisatge (505)"
+
+msgctxt "#30135"
+msgid "Operating System"
+msgstr "Sistema operatiu"
+
+msgctxt "#30136"
+msgid "Select your operating system"
+msgstr "Seleccioneu el vostre sistema operatiu"
+
+msgctxt "#30137"
+msgid "Windows"
+msgstr "Windows"
+
+msgctxt "#30138"
+msgid "Linux"
+msgstr "Linux"
+
+msgctxt "#30139"
+msgid "OSX"
+msgstr "OSX"
+
+msgctxt "#30140"
+msgid "Retroarch App Location"
+msgstr "Ubicació de l'aplicació Retroarch"
+
+msgctxt "#30141"
+msgid "Select the path to the retroarch executable"
+msgstr "Seleccioneu el camí a l'executable retroarch"
+
+msgctxt "#30142"
+msgid "Retroarch CFG Location"
+msgstr "Ubicació de Retroarch CFG"
+
+msgctxt "#30143"
+msgid "Select the path to the retroarch config file"
+msgstr "Seleccioneu el camí al fitxer de configuració retroarch"
+
+msgctxt "#30144"
+msgid "Android"
+msgstr "Android"
+
+msgctxt "#30145"
+msgid "Android aarch64"
+msgstr "Android aarch64"
+
+msgctxt "#30146"
+msgid "Android ra32"
+msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "When a game is launched"
+msgstr "Quan s'inicia un joc"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when a game is launched (Windows, Linux and OSX only)"
+msgstr "Seleccioneu què farà Kodi quan s'iniciï un joc (només per a Windows, Linux i OSX)"
+
+msgctxt "#30149"
+msgid "Keep Kodi in the background"
+msgstr "Mantingueu Kodi en segon pla"
+
+msgctxt "#30150"
+msgid "Close Kodi"
+msgstr "Tanca Kodi"
+
+msgctxt "#30151"
+msgid "Pause Kodi"
+msgstr "Pausa Kodi"
+
+msgctxt "#30152"
+msgid "Retroarch core picker"
+msgstr "Selector de nucli retroarc"
+
+msgctxt "#30153"
+msgid "List by System and Core Name"
+msgstr "Llista per sistema i nom bàsic"
+
+msgctxt "#30154"
+msgid "List by Core Name"
+msgstr "Llista per nom principal"
+
+msgctxt "#30155"
+msgid "List by Emulated Systems"
+msgstr "Llista per sistemes emulats"
+
+msgctxt "#30156"
+msgid "Select Core"
+msgstr "Seleccioneu Core"
+
+msgctxt "#30157"
+msgid "Select Emulated System"
+msgstr "Seleccioneu Sistema emulat"
+
+msgctxt "#30158"
+msgid "Select Emulator"
+msgstr "Seleccioneu Emulador"
+
+msgctxt "#30159"
+msgid "Credentials were not found[CR]Please enter them in addon settings"
+msgstr "No s'han trobat credencials[CR]Introduïu-les a la configuració del complement"
+
+msgctxt "#30160"
+msgid "Game List Download Path"
+msgstr "Camí de descàrrega de la llista de jocs"
+
+msgctxt "#30161"
+msgid "Zero (Current Game Only)"
+msgstr "Zero (només el joc actual)"
+
+msgctxt "#30162"
+msgid "25 MB"
+msgstr "25 MB"
+
+msgctxt "#30163"
+msgid "50 MB"
+msgstr "50 MB"
+
+msgctxt "#30164"
+msgid "100 MB"
+msgstr "100 MB"
+
+msgctxt "#30165"
+msgid "200 MB"
+msgstr "200 MB"
+
+msgctxt "#30166"
+msgid "500 MB"
+msgstr "500 MB"
+
+msgctxt "#30167"
+msgid "1 GB"
+msgstr "1 GB"
+
+msgctxt "#30168"
+msgid "2 GB"
+msgstr "2 GB"
+
+msgctxt "#30169"
+msgid "5 GB"
+msgstr "5 GB"
+
+msgctxt "#30170"
+msgid "10 GB"
+msgstr "10 GB"
+
+msgctxt "#30171"
+msgid "20 GB"
+msgstr "20 GB"
+
+msgctxt "#30172"
+msgid "Enable Netplay"
+msgstr "Activa Netplay"
+
+msgctxt "#30173"
+msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
+msgstr "Activeu el joc en xarxa retroarch (només per a Windows, Linux i OSX), utilitzeu el menú contextual per iniciar-lo amb netplay"
+
+msgctxt "#30174"
+msgid "Show Netplay Lobby"
+msgstr "Mostra Netplay Lobby"
+
+msgctxt "#30175"
+msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
+msgstr "Quan estigui activat, el lobby de netplay es mostrarà a la pàgina principal de l'IAGL"
+
+msgctxt "#30176"
+msgid "Filter game lobby to IAGL auto launch games"
+msgstr "Filtra el vestíbul del joc als jocs de llançament automàtic d'IAGL"
+
+msgctxt "#30177"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "Si està activat, el vestíbul de netplay només mostrarà jocs que es poden iniciar automàticament"
+
+msgctxt "#30178"
+msgid "Netplay Port"
+msgstr "Port de Netplay"
+
+msgctxt "#30179"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "Definiu el port IP de netplay per connectar-vos (deixeu en blanc per defecte)"
+
+msgctxt "#30180"
+msgid "Default player 2+ Hostname"
+msgstr "Nom d'amfitrió del jugador per defecte 2+"
+
+msgctxt "#30181"
+msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
+msgstr "Definiu un nom d'amfitrió o IP per a netplay (útil per a la xarxa local, deixeu-lo en blanc per defecte)"
+
+msgctxt "#30182"
+msgid "Check frames"
+msgstr "Comproveu els marcs"
+
+msgctxt "#30183"
+msgid "Define number of netplay sync frames (leave blank for default)"
+msgstr "Definiu el nombre de fotogrames de sincronització de netplay (deixeu en blanc per defecte)"
+
+msgctxt "#30184"
+msgid "Announce Netplay on Discord"
+msgstr "Anunciar Netplay a Discord"
+
+msgctxt "#30185"
+msgid "Announces netplay start on discord for IAGL players"
+msgstr "Anuncia l'inici de la xarxa en discòrdia per als jugadors d'IAGL"
+
+msgctxt "#30186"
+msgid "Discord Player Name"
+msgstr "Nom del jugador de Discord"
+
+msgctxt "#30187"
+msgid "Enter your player name to be announced on Discord"
+msgstr "Introduïu el vostre nom de jugador per anunciar-lo a Discord"
+
+msgctxt "#30188"
+msgid "Discord User Account ID"
+msgstr "Identificador del compte d'usuari de Discord"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
+msgstr "Proporcioneu el vostre identificador de Discord (Configuració d'usuari>El meu compte>Copia l'identificador) per esmentar-lo quan jugueu (opcional)"
+
+msgctxt "#30190"
+msgid "Display report when wizard is completed"
+msgstr "Mostra l'informe quan s'hagi completat l'assistent"
+
+msgctxt "#30191"
+msgid "Execute setup wizard"
+msgstr "Executeu l'assistent de configuració"
+
+msgctxt "#30192"
+msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
+msgstr "Executeu l'assistent per canviar la configuració de les vostres llistes de jocs.  Això es pot tornar a executar en qualsevol moment"
+
+msgctxt "#30193"
+msgid "Android Advance Settings"
+msgstr "Configuració avançada d'Android"
+
+msgctxt "#30194"
+msgid "Use StartAndroidActivity"
+msgstr "Utilitzeu StartAndroidActivity"
+
+msgctxt "#30195"
+msgid "Leave as default if unsure"
+msgstr "Deixeu-ho com a predeterminat si no esteu segurs"
+
+msgctxt "#30196"
+msgid "Suspend Kodi Input and Audio when using External Launcher"
+msgstr "Suspendeu l'entrada i l'àudio de Kodi quan feu servir el llançador extern"
+
+msgctxt "#30197"
+msgid "Stop Kodi media playing before External Launch"
+msgstr "Atureu la reproducció de mitjans de Kodi abans del llançament extern"
+
+msgctxt "#30198"
+msgid "Kodi is busy / waiting for return to Kodi after External Launch"
+msgstr "Kodi està ocupat / esperant tornar a Kodi després del llançament extern"
+
+msgctxt "#30199"
+msgid "Download Advanced Settings"
+msgstr "Baixeu la configuració avançada"
+
+msgctxt "#30200"
+msgid "Download Threads"
+msgstr "Descarregar Fils"
+
+msgctxt "#30201"
+msgid "Set alternate default folder for all downloads"
+msgstr "Estableix una carpeta predeterminada alternativa per a totes les baixades"
+
+msgctxt "#30202"
+msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
+msgstr "Quan se seleccioneu, totes les baixades aniran a una carpeta alternativa.  [B]Nota: aquesta carpeta no es purgarà ni es controlarà per la mida[/B]"
+
+msgctxt "#30203"
+msgid "Organize default download folder using system folders"
+msgstr "Organitzeu la carpeta de descàrrega predeterminada mitjançant les carpetes del sistema"
+
+msgctxt "#30204"
+msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
+msgstr "Quan està activat, la carpeta temporal s'organitzarà per sistema (de vegades és necessari per substituir la configuració)"
+
+msgctxt "#30205"
+msgid "Copy Kodi Network Source downloads to Local Filesystem"
+msgstr "Copieu les descàrregues de la font de xarxa de Kodi al sistema de fitxers local"
+
+msgctxt "#30206"
+msgid "Reset Options"
+msgstr "Restableix les opcions"
+
+msgctxt "#30207"
+msgid "Reset IAGL database to default settings"
+msgstr "Restableix la base de dades IAGL a la configuració predeterminada"
+
+msgctxt "#30208"
+msgid "When selected, the database will be reset to default settings"
+msgstr "Quan se seleccioneu, la base de dades es restablirà a la configuració predeterminada"
+
+msgctxt "#30209"
+msgid "Unhide game lists"
+msgstr "Mostra les llistes de jocs"
+
+msgctxt "#30210"
+msgid "When selected, previously hidden game lists can be unhidden"
+msgstr "Quan se seleccioneu, les llistes de jocs amagades anteriorment es poden mostrar"
+
+msgctxt "#30211"
+msgid "Clear Cache"
+msgstr "Esborra la memòria cau"
+
+msgctxt "#30212"
+msgid "When selected, all data in the cache folder including games will be purged"
+msgstr "Quan se seleccioneu, es purgaran totes les dades de la carpeta de la memòria cau, inclosos els jocs"
+
+msgctxt "#30213"
+msgid "Select"
+msgstr "Seleccioneu"
+
+msgctxt "#30214"
+msgid "Selected"
+msgstr "Seleccionat"
+
+msgctxt "#30215"
+msgid "Game lists selected"
+msgstr "Llistes de jocs seleccionades"
+
+msgctxt "#30216"
+msgid "Genres selected"
+msgstr "Gèneres seleccionats"
+
+msgctxt "#30217"
+msgid "Players selected"
+msgstr "Jugadors seleccionats"
+
+msgctxt "#30218"
+msgid "Studios selected"
+msgstr "Estudis seleccionats"
+
+msgctxt "#30219"
+msgid "Tags selected"
+msgstr "Etiquetes seleccionades"
+
+msgctxt "#30220"
+msgid "Playlists selected"
+msgstr "Llistes de reproducció seleccionades"
+
+msgctxt "#30221"
+msgid "Regions selected"
+msgstr "Regions seleccionades"
+
+msgctxt "#30222"
+msgid "Languages selected"
+msgstr "Idiomes seleccionats"
+
+msgctxt "#30223"
+msgid "Editions selected"
+msgstr "Edicions seleccionades"
+
+msgctxt "#30224"
+msgid "Codes selected"
+msgstr "Codis seleccionats"
+
+msgctxt "#30225"
+msgid "Ratings selected"
+msgstr "Valoracions seleccionades"
+
+msgctxt "#30226"
+msgid "Enter title search query"
+msgstr "Introduïu la consulta de cerca de títol"
+
+msgctxt "#30227"
+msgid "Empty search"
+msgstr "Cerca buida"
+
+msgctxt "#30228"
+msgid "Search criteria is empty.[CR]Update criteria and try again."
+msgstr "El criteri de cerca està buit.[CR]Actualitza els criteris i torna-ho a provar."
+
+msgctxt "#30229"
+msgid "Reset criteria"
+msgstr "Restablir criteris"
+
+msgctxt "#30230"
+msgid "Enter Link Name"
+msgstr "Introduïu el nom de l'enllaç"
+
+msgctxt "#30231"
+msgid "Define the start page for IAGL"
+msgstr "Definiu la pàgina d'inici per a IAGL"
+
+msgctxt "#30232"
+msgid "Kodi launch options"
+msgstr "Opcions de llançament de Kodi"
+
+msgctxt "#30233"
+msgid "Completed"
+msgstr "Completat"
+
+msgctxt "#30234"
+msgid "Create new group"
+msgstr "Crea un grup nou"
+
+msgctxt "#30235"
+msgid "Select favorite group"
+msgstr "Seleccioneu el grup preferit"
+
+msgctxt "#30236"
+msgid "Group by Favorites Group"
+msgstr "Agrupa per grup de preferits"
+
+msgctxt "#30237"
+msgid "Remove IAGL Favorite"
+msgstr "Elimina el preferit d'IAGL"
+
+msgctxt "#30238"
+msgid "Are you sure you want to delete this Favorite?"
+msgstr "Esteu segur que voleu suprimir aquest Preferit?"
+
+msgctxt "#30239"
+msgid "Favorite deleted"
+msgstr "S'ha suprimit el preferit"
+
+msgctxt "#30240"
+msgid "Favorites display"
+msgstr "Mostra els preferits"
+
+msgctxt "#30241"
+msgid "Define the start page for IAGL Favorites"
+msgstr "Definiu la pàgina d'inici dels Preferits d'IAGL"
+
+msgctxt "#30242"
+msgid "By Favorites Group"
+msgstr "Per Grup de Preferits"
+
+msgctxt "#30243"
+msgid "Reset *all* criteria"
+msgstr "Restableix *tots* els criteris"
+
+msgctxt "#30244"
+msgid "Run IAGL setup wizard?"
+msgstr "Executeu l'assistent de configuració d'IAGL?"
+
+msgctxt "#30245"
+msgid "Wizard"
+msgstr "Mag"
+
+msgctxt "#30246"
+msgid "Update game list Launcher"
+msgstr "Actualitza el llançador de la llista de jocs"
+
+msgctxt "#30247"
+msgid "Update Launch Command"
+msgstr "Actualitza la comanda de llançament"
+
+msgctxt "#30248"
+msgid "Update game list download path"
+msgstr "Actualitza la ruta de descàrrega de la llista de jocs"
+
+msgctxt "#30249"
+msgid "Hide game list"
+msgstr "Amaga la llista de jocs"
+
+msgctxt "#30250"
+msgid "Update game list post download process"
+msgstr "Actualitza el procés de descàrrega posterior a la llista de jocs"
+
+msgctxt "#30251"
+msgid "Are you sure you want to hide game list"
+msgstr "Confirmes que vols amagar la llista de jocs?"
+
+msgctxt "#30252"
+msgid "Game list is now hidden"
+msgstr "La llista de jocs ara està oculta"
+
+msgctxt "#30253"
+msgid "No results"
+msgstr "Sense resultats"
+
+msgctxt "#30254"
+msgid "No hidden game lists found"
+msgstr "No s'han trobat llistes de jocs amagades"
+
+msgctxt "#30255"
+msgid "Game lists unhidden"
+msgstr "Les llistes de jocs es mostren"
+
+msgctxt "#30256"
+msgid "Confirm reset"
+msgstr "Confirmeu el reinici"
+
+msgctxt "#30257"
+msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
+msgstr "Esteu segur que voleu restablir la base de dades?[CR]Tota la informació de l'usuari es perdrà![CR]Això no es pot desfer!"
+
+msgctxt "#30258"
+msgid "Database has been reset"
+msgstr "La base de dades s'ha restablert"
+
+msgctxt "#30259"
+msgid "Update Launcher"
+msgstr "Actualitza el llançador"
+
+msgctxt "#30260"
+msgid "Update launcher from[CR]Kodi to[CR]External?"
+msgstr "Actualitzar el llançador de [CR]Kodi a [CR]Extern?"
+
+msgctxt "#30261"
+msgid "Update launcher from[CR]External to[CR]Kodi?"
+msgstr "Actualitzar el llançador de [CR]External a [CR]Kodi?"
+
+msgctxt "#30262"
+msgid "Launcher updated to external"
+msgstr "El llançador s'ha actualitzat a extern"
+
+msgctxt "#30263"
+msgid "Launcher updated to retroplayer"
+msgstr "El llançador s'ha actualitzat a retroplayer"
+
+msgctxt "#30264"
+msgid "Select game addon"
+msgstr "Seleccioneu el complement del joc"
+
+msgctxt "#30265"
+msgid "Reset to default"
+msgstr "Restableix els valors predeterminats"
+
+msgctxt "#30266"
+msgid "Download game to…"
+msgstr "Descarrega el joc a..."
+
+msgctxt "#30267"
+msgid "Select download folder"
+msgstr "Seleccioneu la carpeta de descàrrega"
+
+msgctxt "#30268"
+msgid "Archive.org login success!"
+msgstr "Éxit d'inici de sessió d'Archive.org!"
+
+msgctxt "#30269"
+msgid "Archive.org login failed.[CR]Check credentials or log for more details"
+msgstr "L'inici de sessió d'Archive.org ha fallat.[CR]Comproveu les credencials o inicieu sessió per obtenir més detalls"
+
+msgctxt "#30270"
+msgid "Error"
+msgstr "Error"
+
+msgctxt "#30271"
+msgid "Initializing download for[CR]"
+msgstr "S'està iniciant la baixada per a[CR]"
+
+msgctxt "#30272"
+msgid "Check logs"
+msgstr "Comproveu els registres"
+
+msgctxt "#30273"
+msgid "Checking login for[CR]"
+msgstr "S'està comprovant l'inici de sessió per a[CR]"
+
+msgctxt "#30274"
+msgid "Requesting file info for[CR]"
+msgstr "S'està sol·licitant informació del fitxer per a[CR]"
+
+msgctxt "#30275"
+msgid "Select from Retroarch Cores"
+msgstr "Seleccioneu entre Retroarch Cores"
+
+msgctxt "#30276"
+msgid "Select from Extra Emulators"
+msgstr "Seleccioneu entre els emuladors addicionals"
+
+msgctxt "#30277"
+msgid "Manually Enter Launch Command"
+msgstr "Introduïu manualment l'ordre d'inici"
+
+msgctxt "#30278"
+msgid "Select External Command Type"
+msgstr "Seleccioneu el tipus d'ordre extern"
+
+msgctxt "#30279"
+msgid "Extra Emulators"
+msgstr "Emuladors addicionals"
+
+msgctxt "#30280"
+msgid "Dolphin"
+msgstr "Dofí"
+
+msgctxt "#30281"
+msgid "Select the path to the Dolphin application (optional)"
+msgstr "Seleccioneu el camí a l'aplicació Dolphin (opcional)"
+
+msgctxt "#30282"
+msgid "MAME"
+msgstr "MAME"
+
+msgctxt "#30283"
+msgid "Select the path to the MAME application (optional)"
+msgstr "Seleccioneu el camí a l'aplicació MAME (opcional)"
+
+msgctxt "#30284"
+msgid "Project 64"
+msgstr "Projecte 64"
+
+msgctxt "#30285"
+msgid "Select the path to the Project 64 application (optional)"
+msgstr "Seleccioneu el camí a l'aplicació Project 64 (opcional)"
+
+msgctxt "#30286"
+msgid "ePSXe"
+msgstr "ePSXe"
+
+msgctxt "#30287"
+msgid "Select the path to the ePSXe application (optional)"
+msgstr "Seleccioneu el camí a l'aplicació ePSXe (opcional)"
+
+msgctxt "#30288"
+msgid "Demul"
+msgstr "Demul"
+
+msgctxt "#30289"
+msgid "Select the path to the Demul application (optional)"
+msgstr "Seleccioneu el camí a l'aplicació Demul (opcional)"
+
+msgctxt "#30290"
+msgid "FS-UAE"
+msgstr "FS-UAE"
+
+msgctxt "#30291"
+msgid "Select the path to the FS-UAE application (optional)"
+msgstr "Seleccioneu el camí a l'aplicació FS-UAE (opcional)"
+
+msgctxt "#30292"
+msgid "Are you sure you want to set external launch command?"
+msgstr "Esteu segur que voleu configurar l'ordre d'inici extern?"
+
+msgctxt "#30293"
+msgid "External launch command updated"
+msgstr "S'ha actualitzat l'ordre d'inici extern"
+
+msgctxt "#30294"
+msgid "Android users must verify the core is installed in Retroarch"
+msgstr "Els usuaris d'Android han de verificar que el nucli està instal·lat a Retroarch"
+
+msgctxt "#30295"
+msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
+msgstr "Actualment, la configuració d'inici està buida[CR]Si us plau, actualitzeu la configuració de llançament externa del complement."
+
+msgctxt "#30296"
+msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
+msgstr "Actualment, la configuració d'inici està buida[CR]Actualitzeu la configuració de llançament del sistema operatiu addicional."
+
+msgctxt "#30297"
+msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
+msgstr "No s'han trobat emuladors addicionals[CR]Actualitzeu la configuració addicional de l'emulador del complement"
+
+msgctxt "#30298"
+msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
+msgstr "Introduïu l'ordre d'inici[CR]Vegeu paraules clau opcionals a la wiki d'IAGL"
+
+msgctxt "#30299"
+msgid "Reset Launch Command"
+msgstr "Restableix l'ordre d'inici"
+
+msgctxt "#30300"
+msgid "Are you sure you want to reset the external launch command?"
+msgstr "Esteu segur que voleu restablir l'ordre d'inici extern?"
+
+msgctxt "#30301"
+msgid "External launch command was reset"
+msgstr "S'ha restablert l'ordre d'inici extern"
+
+msgctxt "#30302"
+msgid "Enter a value for"
+msgstr "Introduïu un valor per a"
+
+msgctxt "#30303"
+msgid "View game list settings"
+msgstr "Veure la configuració de la llista de jocs"
+
+msgctxt "#30304"
+msgid "Game List"
+msgstr "Llista de jocs"
+
+msgctxt "#30305"
+msgid "Game List System"
+msgstr "Sistema de llista de jocs"
+
+msgctxt "#30306"
+msgid "Total 1G1R Games in List"
+msgstr "Total de jocs 1G1R a la llista"
+
+msgctxt "#30307"
+msgid "Total Games in List"
+msgstr "Total de jocs a la llista"
+
+msgctxt "#30308"
+msgid "Total Favorited Games in List"
+msgstr "Total de jocs preferits a la llista"
+
+msgctxt "#30309"
+msgid "Default External Launch Command"
+msgstr "Comandament d'inici extern predeterminat"
+
+msgctxt "#30310"
+msgid "Default Retroplayer Game Addon"
+msgstr "Complement de joc Retroplayer predeterminat"
+
+msgctxt "#30311"
+msgid "Default Game Post Process"
+msgstr "Procés de post-joc per defecte"
+
+msgctxt "#30312"
+msgid "User Defined Download Path"
+msgstr "Ruta de descàrrega definida per l'usuari"
+
+msgctxt "#30313"
+msgid "User External Launch Command"
+msgstr "Comandament de llançament extern de l'usuari"
+
+msgctxt "#30314"
+msgid "User Defined Retroplayer Game Addon"
+msgstr "Complement de joc Retroplayer definit per l'usuari"
+
+msgctxt "#30315"
+msgid "User Defined Post Process"
+msgstr "Postprocés definit per l'usuari"
+
+msgctxt "#30316"
+msgid "Game List Settings"
+msgstr "Configuració de la llista de jocs"
+
+msgctxt "#30317"
+msgid "None (will use addon default)"
+msgstr "Cap (utilitzarà el complement per defecte)"
+
+msgctxt "#30318"
+msgid "Games List Launcher"
+msgstr "Llista de jocs llançador"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "nan"
+
+msgctxt "#30320"
+msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
+msgstr "Comandament de llançament extern[CR]*No s'ha trobat cap ordre d'inici de l'usuari/Utilitza el valor predeterminat*"
+
+msgctxt "#30321"
+msgid "Kodi Retroplayer"
+msgstr "Kodi Retroplayer"
+
+msgctxt "#30322"
+msgid "Are you sure you want to update game list download path?"
+msgstr "Confirmes que vols actualitzar el camí de baixada de la llista de jocs?"
+
+msgctxt "#30323"
+msgid "Download path updated"
+msgstr "S'ha actualitzat la ruta de descàrrega"
+
+msgctxt "#30324"
+msgid "Are you sure you want to reset game list download path?"
+msgstr "Confirmes que vols restablir el camí de baixada de la llista de jocs?"
+
+msgctxt "#30325"
+msgid "Download path reset"
+msgstr "Descàrrega restabliment del camí"
+
+msgctxt "#30326"
+msgid "Change download path"
+msgstr "Canvia el camí de descàrrega"
+
+msgctxt "#30327"
+msgid "Reset download path"
+msgstr "Restableix el camí de descàrrega"
+
+msgctxt "#30328"
+msgid "Reset game list settings"
+msgstr "Restableix la configuració de la llista de jocs"
+
+msgctxt "#30329"
+msgid "Are you sure you want to reset all game list settings to default?"
+msgstr "Confirmes que vols restablir la configuració predeterminada de tota la llista de jocs?"
+
+msgctxt "#30330"
+msgid "Game list settings were reset to default"
+msgstr "La configuració de la llista de jocs es va restablir a la configuració predeterminada"

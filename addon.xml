@@ -6,13 +6,19 @@
     <import addon="script.module.requests"/>
     <import addon="vfs.libarchive"/>
     <import addon="script.module.archive_tool" version="2.0.3"/>
-    <import addon="plugin.video.youtube" optional="true"/>
-<!--     <import addon="script.module.dateutil"/> -->
+<!--     <import addon="script.module.dateutil"/>
+    <import addon="script.module.requests"/>
+    <import addon="script.module.routing"/>
+    <import addon="vfs.libarchive"/>
+    <import addon="vfs.rar" optional="true"/>
+    <import addon="script.module.archive_tool" version="2.0.2"/>
+    <import addon="plugin.video.youtube" version="6.8.7"/> -->
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video game</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
+    <!-- <reuselanguageinvoker>false</reuselanguageinvoker> -->
     <platform>all</platform>
     <summary lang="en_GB">Internet Archive Game Launcher</summary>
     <description lang="en_GB">The Internet Archive Game Launcher (IAGL) is a FREE Kodi addon that will browse and launch games available from the Internet</description>

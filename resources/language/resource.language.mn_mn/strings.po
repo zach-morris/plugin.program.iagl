@@ -1,0 +1,1332 @@
+# Kodi Media Center language file
+# Addon Name: Internet Archive Game Launcher
+# Addon id: plugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/zach-morris/plugin.program.iagl/issues\n"
+"Language: mn_mn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "Интернет архивын тоглоом эхлүүлэгч"
+
+msgctxt "#30002"
+msgid "Browse all Lists"
+msgstr "Бүх жагсаалтыг үзэх"
+
+msgctxt "#30003"
+msgid "Browse lists by Category"
+msgstr "Жагсаалтыг ангиллаар нь үзэх"
+
+msgctxt "#30004"
+msgid "Browse games by Playlist"
+msgstr "Тоглуулах жагсаалтаар тоглоомуудыг үзэх"
+
+msgctxt "#30005"
+msgid "Favorites"
+msgstr "Дуртай"
+
+msgctxt "#30006"
+msgid "Play History"
+msgstr "Тоглоомын түүх"
+
+msgctxt "#30007"
+msgid "Search"
+msgstr "Хайх"
+
+msgctxt "#30008"
+msgid "Random Play"
+msgstr "Санамсаргүй тоглох"
+
+msgctxt "#30009"
+msgid "Next"
+msgstr "Дараа нь"
+
+msgctxt "#30010"
+msgid "Previous"
+msgstr "Өмнөх"
+
+msgctxt "#30011"
+msgid "One Big List"
+msgstr "Нэг том жагсаалт"
+
+msgctxt "#30012"
+msgid "Alphabetical"
+msgstr "Цагаан толгойн дарааллаар"
+
+msgctxt "#30013"
+msgid "Group by Genre"
+msgstr "Төрөлөөр бүлэг"
+
+msgctxt "#30014"
+msgid "Group by Year"
+msgstr "Жилээр нь бүлэглэх"
+
+msgctxt "#30015"
+msgid "Group by Players"
+msgstr "Тоглогчоор бүлэглэх"
+
+msgctxt "#30016"
+msgid "Group by Studio"
+msgstr "Studio-ийн бүлэг"
+
+msgctxt "#30017"
+msgid "Group by Tag"
+msgstr "Шошгоор бүлэглэх"
+
+msgctxt "#30018"
+msgid "Group by Playlist"
+msgstr "Тоглуулах жагсаалтаар бүлэглэх"
+
+msgctxt "#30019"
+msgid "Group by Region"
+msgstr "Бүс нутгаар бүлэглэх"
+
+msgctxt "#30020"
+msgid "Group by Language"
+msgstr "Хэлээр бүлэглэх"
+
+msgctxt "#30021"
+msgid "Group by Edition"
+msgstr "Хэвлэлээр бүлэглэх"
+
+msgctxt "#30022"
+msgid "Group by Code"
+msgstr "Кодоор бүлэглэх"
+
+msgctxt "#30023"
+msgid "Group by Rating"
+msgstr "Үнэлгээгээр бүлэглэх"
+
+msgctxt "#30024"
+msgid "Select Game Lists"
+msgstr "Тоглоомын жагсаалтыг сонгоно уу"
+
+msgctxt "#30025"
+msgid "Search Game Titles"
+msgstr "Тоглоомын гарчиг хайх"
+
+msgctxt "#30026"
+msgid "Filter by Genre"
+msgstr "Төрөлөөр шүүх"
+
+msgctxt "#30027"
+msgid "Filter by Players"
+msgstr "Тоглогчоор шүүх"
+
+msgctxt "#30028"
+msgid "Filter by Studio"
+msgstr "Studio-оор шүүх"
+
+msgctxt "#30029"
+msgid "Filter by Tag"
+msgstr "Шошгоор шүүх"
+
+msgctxt "#30030"
+msgid "Filter by Playlist"
+msgstr "Тоглуулах жагсаалтаар шүүх"
+
+msgctxt "#30031"
+msgid "Filter by Region"
+msgstr "Бүсээр шүүх"
+
+msgctxt "#30032"
+msgid "Filter by Language"
+msgstr "Хэлээр шүүх"
+
+msgctxt "#30033"
+msgid "Filter by Edition"
+msgstr "Хувилбараар шүүх"
+
+msgctxt "#30034"
+msgid "Filter by Code"
+msgstr "Кодоор шүүнэ үү"
+
+msgctxt "#30035"
+msgid "Filter by Rating"
+msgstr "Үнэлгээгээр шүүх"
+
+msgctxt "#30036"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Хайлтыг гүйцэтгэх[/COLOR]"
+
+msgctxt "#30037"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Хайлтын холбоос үүсгэх[/COLOR]"
+
+msgctxt "#30038"
+msgid "Choose Number of Results"
+msgstr "Үр дүнгийн тоог сонгоно уу"
+
+msgctxt "#30039"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Санамсаргүй хайлт хийх[/COLOR]"
+
+msgctxt "#30040"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Санамсаргүй хайлтын холбоос үүсгэх[/COLOR]"
+
+msgctxt "#30041"
+msgid "General"
+msgstr "Генерал"
+
+msgctxt "#30042"
+msgid "Launching"
+msgstr "Эхлүүлж байна"
+
+msgctxt "#30043"
+msgid "Downloading"
+msgstr "Татаж байна"
+
+msgctxt "#30044"
+msgid "Views and Navigation"
+msgstr "Харагдах байдал ба навигаци"
+
+msgctxt "#30045"
+msgid "Netplay"
+msgstr "Netplay"
+
+msgctxt "#30046"
+msgid "Setup Wizard"
+msgstr "Setup Wizard"
+
+msgctxt "#30047"
+msgid "Advanced"
+msgstr "Дэвшилтэт"
+
+msgctxt "#30048"
+msgid "Play History"
+msgstr "Тоглоомын түүх"
+
+msgctxt "#30049"
+msgid "Define how many games to save in last played history"
+msgstr "Хамгийн сүүлд тоглосон түүхэнд хэдэн тоглоом хадгалахыг тодорхойл"
+
+msgctxt "#30050"
+msgid "Default action on selecting game"
+msgstr "Тоглоом сонгоход өгөгдмөл үйлдэл"
+
+msgctxt "#30051"
+msgid "Define action to take when a game is selected"
+msgstr "Тоглоом сонгогдсон үед авах арга хэмжээг тодорхойл"
+
+msgctxt "#30052"
+msgid "If game already exists locally"
+msgstr "Хэрэв тоглоом орон нутагт аль хэдийн байгаа бол"
+
+msgctxt "#30053"
+msgid "Define the action to take if a game file is found to exist locally"
+msgstr "Тоглоомын файл дотоодод байгаа нь тогтоогдвол авах арга хэмжээг тодорхойл"
+
+msgctxt "#30054"
+msgid "Prompt"
+msgstr "Шуурхай"
+
+msgctxt "#30055"
+msgid "Do not re-download"
+msgstr "Дахин татаж авч болохгүй"
+
+msgctxt "#30056"
+msgid "Re-download and overwrite"
+msgstr "Дахин татаж аваад дарж бичнэ үү"
+
+msgctxt "#30057"
+msgid "Enable archive.org login"
+msgstr "archive.org нэвтрэлтийг идэвхжүүлнэ үү"
+
+msgctxt "#30058"
+msgid "Enabled"
+msgstr "Идэвхжүүлсэн"
+
+msgctxt "#30059"
+msgid "Disabled"
+msgstr "Идэвхгүй"
+
+msgctxt "#30060"
+msgid "Some games require login.  Enter your archive.org email address and password."
+msgstr "Зарим тоглоомууд нэвтрэх шаардлагатай.  archive.org цахим шуудангийн хаяг болон нууц үгээ оруулна уу."
+
+msgctxt "#30061"
+msgid "archive.org Email"
+msgstr "archive.org имэйл"
+
+msgctxt "#30062"
+msgid "Some games require login.  Enter your archive.org email address"
+msgstr "Зарим тоглоомууд нэвтрэх шаардлагатай.  archive.org имэйл хаягаа оруулна уу"
+
+msgctxt "#30063"
+msgid "archive.org Password"
+msgstr "archive.org Нууц үг"
+
+msgctxt "#30064"
+msgid "Some games require login.  Enter your archive.org password"
+msgstr "Зарим тоглоомууд нэвтрэх шаардлагатай.  archive.org нууц үгээ оруулна уу"
+
+msgctxt "#30065"
+msgid "Check login credentials"
+msgstr "Нэвтрэх үнэмлэхийг шалгана уу"
+
+msgctxt "#30066"
+msgid "Test the entered email and password to check your ability to login"
+msgstr "Нэвтрэх чадвараа шалгахын тулд оруулсан имэйл болон нууц үгээ шалгана уу"
+
+msgctxt "#30067"
+msgid "Download folder size limit"
+msgstr "Фолдерын хэмжээг хязгаарлах"
+
+msgctxt "#30068"
+msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
+msgstr "Татаж авах / кэшийн хэмжээг тодорхойл.[CR]Хэмжээний хязгаарт хүрсэн үед хавтас цэвэрлэгддэг."
+
+msgctxt "#30069"
+msgid "Front page display"
+msgstr "Нүүр хуудасны дэлгэц"
+
+msgctxt "#30070"
+msgid "Choose from list"
+msgstr "Жагсаалтаас сонгоно уу"
+
+msgctxt "#30071"
+msgid "Games are presented as"
+msgstr "Тоглоомуудыг дараах байдлаар үзүүлэв"
+
+msgctxt "#30072"
+msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
+msgstr "Kodi нь кино, ТВ шоу, тоглоом зэрэг олон төрлийн арьсны сонголтыг санал болгодог.  Дэлгэрэнгүй мэдээллийг вики-г үзнэ үү"
+
+msgctxt "#30073"
+msgid "TV Shows"
+msgstr "ТВ шоунууд"
+
+msgctxt "#30074"
+msgid "Movies"
+msgstr "Кино"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "nan"
+
+msgctxt "#30076"
+msgid "10 Games"
+msgstr "10 тоглоом"
+
+msgctxt "#30077"
+msgid "25 Games"
+msgstr "25 тоглоом"
+
+msgctxt "#30078"
+msgid "50 Games"
+msgstr "50 тоглоом"
+
+msgctxt "#30079"
+msgid "100 Games"
+msgstr "100 тоглоом"
+
+msgctxt "#30080"
+msgid "250 Games"
+msgstr "250 тоглоом"
+
+msgctxt "#30081"
+msgid "500 Games"
+msgstr "500 тоглоом"
+
+msgctxt "#30082"
+msgid "Game artwork"
+msgstr "Тоглоомын урлагийн бүтээл"
+
+msgctxt "#30083"
+msgid "Game list artwork"
+msgstr "Тоглоомын жагсаалтын урлагийн бүтээл"
+
+msgctxt "#30084"
+msgid "Retroarch Settings"
+msgstr "Retroarch тохиргоо"
+
+msgctxt "#30085"
+msgid "Suspend Kodi IO on launch"
+msgstr "Kodi IO-г эхлүүлэх үед түр зогсоо"
+
+msgctxt "#30086"
+msgid "Stop media on launch"
+msgstr "Эхлэх үед медиаг зогсоо"
+
+msgctxt "#30087"
+msgid "Waiting for return"
+msgstr "Эргэж ирэхийг хүлээж байна"
+
+msgctxt "#30088"
+msgid "Add to IAGL Favorites"
+msgstr "IAGL Favorites-д нэмнэ үү"
+
+msgctxt "#30089"
+msgid "Enter a name for your favorites group"
+msgstr "Дуртай бүлгийнхээ нэрийг оруулна уу"
+
+msgctxt "#30090"
+msgid "Favorite added to group"
+msgstr "Дуртай нь бүлэгт нэмэгдсэн"
+
+msgctxt "#30091"
+msgid "Use clean game title"
+msgstr "Цэвэр тоглоомын нэрийг ашиглана уу"
+
+msgctxt "#30092"
+msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
+msgstr "Тоглоомын гарчигнаас шошгыг устгаж үзүүлнэ үү.  Жишээ нь: [B]Марио (АНУ)[/B] [B]Марио[/B] болсон"
+
+msgctxt "#30093"
+msgid "Games per page"
+msgstr "Хуудас бүрт тоглоом"
+
+msgctxt "#30094"
+msgid "Define how many games are listed per page"
+msgstr "Нэг хуудсанд хэдэн тоглоом жагсаагдсаныг тодорхойл"
+
+msgctxt "#30095"
+msgid "List all"
+msgstr "Бүгдийг жагсаа"
+
+msgctxt "#30096"
+msgid "Always filter list to 1 Game 1 Rom Set"
+msgstr "Жагсаалтыг 1 Тоглоомын 1 Ром багц болгон шүүнэ үү"
+
+msgctxt "#30097"
+msgid "If possible, game lists will be pre-filtered to a 1G1R set"
+msgstr "Боломжтой бол тоглоомын жагсаалтыг 1G1R багц болгон урьдчилан шүүнэ"
+
+msgctxt "#30098"
+msgid "Append game list name to search and random results"
+msgstr "Тоглоомын жагсаалтын нэрийг хайлт болон санамсаргүй үр дүнд нэмнэ үү"
+
+msgctxt "#30099"
+msgid "When enabled, the name of the game list will be appended to search results"
+msgstr "Идэвхжүүлсэн үед тоглоомын жагсаалтын нэр хайлтын үр дүнд хавсаргах болно"
+
+msgctxt "#30100"
+msgid "Append game list name when browsing by playlist"
+msgstr "Тоглуулах жагсаалтаар үзэх үед тоглоомын жагсаалтын нэрийг нэмнэ үү"
+
+msgctxt "#30101"
+msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
+msgstr "Идэвхжүүлсэн үед тоглоомын жагсаалтын нэрийг тоглуулах жагсаалт дахь тоглоомын нэрэнд хавсаргана"
+
+msgctxt "#30102"
+msgid "Kodi landscape art equates to"
+msgstr "Коди ландшафтын урлаг нь үүнтэй тэнцэнэ"
+
+msgctxt "#30103"
+msgid "Select the game artwork to be displayed as the landscape art"
+msgstr "Ландшафтын урлагаар харуулах тоглоомын урлагийн бүтээлийг сонгоно уу"
+
+msgctxt "#30104"
+msgid "Title Screen"
+msgstr "Гарчиг дэлгэц"
+
+msgctxt "#30105"
+msgid "Screenshot"
+msgstr "Дэлгэцийн агшин"
+
+msgctxt "#30106"
+msgid "Kodi thumbnail art equates to"
+msgstr "Kodi thumbnail art нь үүнтэй тэнцүү байна"
+
+msgctxt "#30107"
+msgid "Select the game artwork to be displayed as the thumbnail art"
+msgstr "Өнгөц зураг хэлбэрээр харуулах тоглоомын бүтээлийг сонгоно уу"
+
+msgctxt "#30108"
+msgid "Game list clearlogo equates to"
+msgstr "Тоглоомын жагсаалт clearlogo-тай тэнцэнэ"
+
+msgctxt "#30109"
+msgid "Select the artwork displayed for the game list clearlogo"
+msgstr "Тоглоомын жагсаалтын clearlogo-д харуулсан урлагийн бүтээлийг сонгоно уу"
+
+msgctxt "#30110"
+msgid "System logo"
+msgstr "Системийн лого"
+
+msgctxt "#30111"
+msgid "System console"
+msgstr "Системийн консол"
+
+msgctxt "#30112"
+msgid "System controller"
+msgstr "Системийн хянагч"
+
+msgctxt "#30113"
+msgid "Game list fanart equates to"
+msgstr "Тоглоомын жагсаалт fanart-тай тэнцэнэ"
+
+msgctxt "#30114"
+msgid "Select the artwork displayed for the game list fanart"
+msgstr "Тоглоомын жагсаалтын fanart-д харуулах урлагийн бүтээлийг сонгоно уу"
+
+msgctxt "#30115"
+msgid "System collage"
+msgstr "Системийн эвлүүлэг"
+
+msgctxt "#30116"
+msgid "System console"
+msgstr "Системийн консол"
+
+msgctxt "#30117"
+msgid "System wallpaper"
+msgstr "Системийн ханын цаас"
+
+msgctxt "#30118"
+msgid "Force IAGL viewtypes"
+msgstr "IAGL харагдацын төрлийг албадах"
+
+msgctxt "#30119"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "Таны арьсанд албадан харах төрлийн ID байгаа эсэхийг шалгаарай"
+
+msgctxt "#30120"
+msgid "Frontpage viewtype"
+msgstr "Нүүр хуудас харах төрөл"
+
+msgctxt "#30121"
+msgid "Game library lists viewtype"
+msgstr "Тоглоомын номын сангийн харах төрлийг жагсаав"
+
+msgctxt "#30122"
+msgid "Game categories viewtype"
+msgstr "Тоглоомын ангиллыг үзэх төрөл"
+
+msgctxt "#30123"
+msgid "Games list viewtype"
+msgstr "Тоглоомын жагсаалтыг үзэх төрөл"
+
+msgctxt "#30124"
+msgid "Choose list viewtype"
+msgstr "Жагсаалтын харагдах төрлийг сонгоно уу"
+
+msgctxt "#30125"
+msgid "Search and Random results viewtype"
+msgstr "Хайлт болон Санамсаргүй илэрцийг харах төрөл"
+
+msgctxt "#30126"
+msgid "Off (Default)"
+msgstr "Унтраах (Өгөгдмөл)"
+
+msgctxt "#30127"
+msgid "List / Poster (50)"
+msgstr "Жагсаалт / Зурагт хуудас (50)"
+
+msgctxt "#30128"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "Зурагт хуудас / Том жагсаалт / Зурагт хуудас (51)"
+
+msgctxt "#30129"
+msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
+msgstr "Ханын дүрс / хэвтээ загвар / LS хана (52)"
+
+msgctxt "#30130"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "Баннер / Ландшафт / Зурагт хуудасны мэдээлэл (501)"
+
+msgctxt "#30131"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "Fanart / Landscape Single / Ангийн жагсаалт (502)"
+
+msgctxt "#30132"
+msgid "Logos / Big Square Wall (503)"
+msgstr "Лого / Том дөрвөлжин хана (503)"
+
+msgctxt "#30133"
+msgid "Big List 2 (504)"
+msgstr "Том жагсаалт 2 (504)"
+
+msgctxt "#30134"
+msgid "Landscape Details (505)"
+msgstr "Ландшафтын дэлгэрэнгүй (505)"
+
+msgctxt "#30135"
+msgid "Operating System"
+msgstr "Үйлдлийн систем"
+
+msgctxt "#30136"
+msgid "Select your operating system"
+msgstr "Үйлдлийн системээ сонгоно уу"
+
+msgctxt "#30137"
+msgid "Windows"
+msgstr "Windows"
+
+msgctxt "#30138"
+msgid "Linux"
+msgstr "Линукс"
+
+msgctxt "#30139"
+msgid "OSX"
+msgstr "OSX"
+
+msgctxt "#30140"
+msgid "Retroarch App Location"
+msgstr "Retroarch програмын байршил"
+
+msgctxt "#30141"
+msgid "Select the path to the retroarch executable"
+msgstr "Retroarch гүйцэтгэх боломжтой замыг сонгоно уу"
+
+msgctxt "#30142"
+msgid "Retroarch CFG Location"
+msgstr "Retroarch CFG байршил"
+
+msgctxt "#30143"
+msgid "Select the path to the retroarch config file"
+msgstr "Retroarch тохиргооны файл руу орох замыг сонгоно уу"
+
+msgctxt "#30144"
+msgid "Android"
+msgstr "Android"
+
+msgctxt "#30145"
+msgid "Android aarch64"
+msgstr "Android aarch64"
+
+msgctxt "#30146"
+msgid "Android ra32"
+msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "When a game is launched"
+msgstr "Тоглоом эхлэх үед"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when a game is launched (Windows, Linux and OSX only)"
+msgstr "Тоглоом эхлэхэд Kodi юу хийхийг сонгох (зөвхөн Windows, Linux болон OSX)"
+
+msgctxt "#30149"
+msgid "Keep Kodi in the background"
+msgstr "Kodi-г арын дэвсгэр дээр байлга"
+
+msgctxt "#30150"
+msgid "Close Kodi"
+msgstr "Kodi-г хаах"
+
+msgctxt "#30151"
+msgid "Pause Kodi"
+msgstr "Kodi-г түр зогсоо"
+
+msgctxt "#30152"
+msgid "Retroarch core picker"
+msgstr "Retroarch гол сонгогч"
+
+msgctxt "#30153"
+msgid "List by System and Core Name"
+msgstr "Систем болон үндсэн нэрээр нь жагсаа"
+
+msgctxt "#30154"
+msgid "List by Core Name"
+msgstr "Үндсэн нэрээр нь жагсаа"
+
+msgctxt "#30155"
+msgid "List by Emulated Systems"
+msgstr "Дуурайсан системүүдийн жагсаалт"
+
+msgctxt "#30156"
+msgid "Select Core"
+msgstr "Core-г сонгоно уу"
+
+msgctxt "#30157"
+msgid "Select Emulated System"
+msgstr "Дуурайсан системийг сонгоно уу"
+
+msgctxt "#30158"
+msgid "Select Emulator"
+msgstr "Эмуляторыг сонгоно уу"
+
+msgctxt "#30159"
+msgid "Credentials were not found[CR]Please enter them in addon settings"
+msgstr "Итгэмжлэл олдсонгүй[CR]Эдгээрийг нэмэлт тохиргоонд оруулна уу"
+
+msgctxt "#30160"
+msgid "Game List Download Path"
+msgstr "Тоглоомын жагсаалт татаж авах зам"
+
+msgctxt "#30161"
+msgid "Zero (Current Game Only)"
+msgstr "Тэг (Зөвхөн одоогийн тоглоом)"
+
+msgctxt "#30162"
+msgid "25 MB"
+msgstr "25 MB"
+
+msgctxt "#30163"
+msgid "50 MB"
+msgstr "50 MB"
+
+msgctxt "#30164"
+msgid "100 MB"
+msgstr "100 MB"
+
+msgctxt "#30165"
+msgid "200 MB"
+msgstr "200 MB"
+
+msgctxt "#30166"
+msgid "500 MB"
+msgstr "500 MB"
+
+msgctxt "#30167"
+msgid "1 GB"
+msgstr "1 ГБ"
+
+msgctxt "#30168"
+msgid "2 GB"
+msgstr "2 ГБ"
+
+msgctxt "#30169"
+msgid "5 GB"
+msgstr "5 ГБ"
+
+msgctxt "#30170"
+msgid "10 GB"
+msgstr "10 ГБ"
+
+msgctxt "#30171"
+msgid "20 GB"
+msgstr "20 ГБ"
+
+msgctxt "#30172"
+msgid "Enable Netplay"
+msgstr "Netplay-г идэвхжүүл"
+
+msgctxt "#30173"
+msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
+msgstr "Retroarch netplay-г идэвхжүүлнэ үү (зөвхөн Windows, Linux, OSX), netplay ашиглан эхлүүлэхийн тулд контекст цэсийг ашиглана уу"
+
+msgctxt "#30174"
+msgid "Show Netplay Lobby"
+msgstr "Netplay Lobby-г харуулах"
+
+msgctxt "#30175"
+msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
+msgstr "Идэвхжүүлсэн үед netplay лобби IAGL нүүр хуудсан дээр гарч ирнэ"
+
+msgctxt "#30176"
+msgid "Filter game lobby to IAGL auto launch games"
+msgstr "Тоглоомын лоббиг IAGL автоматаар эхлүүлэх тоглоом руу шүүнэ үү"
+
+msgctxt "#30177"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "Хэрэв идэвхжүүлсэн бол netplay лобби нь зөвхөн автоматаар эхлүүлэх боломжтой тоглоомуудыг харуулах болно"
+
+msgctxt "#30178"
+msgid "Netplay Port"
+msgstr "Netplay порт"
+
+msgctxt "#30179"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "Холбох netplay IP портыг тодорхойлно уу (өгөгдмөл бол хоосон орхино уу)"
+
+msgctxt "#30180"
+msgid "Default player 2+ Hostname"
+msgstr "Өгөгдмөл тоглуулагч 2+ Хост нэр"
+
+msgctxt "#30181"
+msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
+msgstr "Өгөгдмөл netplay хостын нэрийг / IP-г тодорхойлох (дотоод сүлжээний сүлжээний сүлжээний тоглуулагчид хэрэгтэй, анхдагчаар хоосон орхино уу)"
+
+msgctxt "#30182"
+msgid "Check frames"
+msgstr "Хүрээг шалгана уу"
+
+msgctxt "#30183"
+msgid "Define number of netplay sync frames (leave blank for default)"
+msgstr "Netplay синхрончлолын хүрээний тоог тодорхойлох (өгөгдмөлөөр хоосон орхино уу)"
+
+msgctxt "#30184"
+msgid "Announce Netplay on Discord"
+msgstr "Discord дээр Netplay-г зарлана"
+
+msgctxt "#30185"
+msgid "Announces netplay start on discord for IAGL players"
+msgstr "IAGL тоглогчдод зориулж discord дээр netplay эхлэхийг зарлалаа"
+
+msgctxt "#30186"
+msgid "Discord Player Name"
+msgstr "Discord тоглуулагчийн нэр"
+
+msgctxt "#30187"
+msgid "Enter your player name to be announced on Discord"
+msgstr "Discord дээр зарлахын тулд тоглогчийн нэрийг оруулна уу"
+
+msgctxt "#30188"
+msgid "Discord User Account ID"
+msgstr "Discord хэрэглэгчийн бүртгэлийн ID"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
+msgstr "Тоглож байхдаа дурдагдах Discord ID (Хэрэглэгчийн тохиргоо>Миний бүртгэл>Хуулбар ID) оруулна уу (заавал биш)"
+
+msgctxt "#30190"
+msgid "Display report when wizard is completed"
+msgstr "Шидтэний ажил дууссаны дараа тайланг харуулах"
+
+msgctxt "#30191"
+msgid "Execute setup wizard"
+msgstr "Тохируулах шидтэнг ажиллуулна уу"
+
+msgctxt "#30192"
+msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
+msgstr "Тоглоомын жагсаалтынхаа тохиргоог өөрчлөхийн тулд шидтэнг ажиллуулна уу.  Үүнийг хүссэн үедээ дахин ажиллуулж болно"
+
+msgctxt "#30193"
+msgid "Android Advance Settings"
+msgstr "Android дэвшилтэт тохиргоо"
+
+msgctxt "#30194"
+msgid "Use StartAndroidActivity"
+msgstr "StartAndroidActivity-г ашиглана уу"
+
+msgctxt "#30195"
+msgid "Leave as default if unsure"
+msgstr "Итгэлгүй байвал өгөгдмөл байдлаар үлдээнэ үү"
+
+msgctxt "#30196"
+msgid "Suspend Kodi Input and Audio when using External Launcher"
+msgstr "External Launcher ашиглах үед Kodi оролт болон аудиог түр зогсоо"
+
+msgctxt "#30197"
+msgid "Stop Kodi media playing before External Launch"
+msgstr "Гадна хөөргөхөөс өмнө Kodi медиа тоглуулахыг зогсоо"
+
+msgctxt "#30198"
+msgid "Kodi is busy / waiting for return to Kodi after External Launch"
+msgstr "Коди завгүй байна / Гадаад хөөргөсний дараа Коди руу буцахыг хүлээж байна"
+
+msgctxt "#30199"
+msgid "Download Advanced Settings"
+msgstr "Нарийвчилсан тохиргоог татаж авах"
+
+msgctxt "#30200"
+msgid "Download Threads"
+msgstr "Threads татаж авах"
+
+msgctxt "#30201"
+msgid "Set alternate default folder for all downloads"
+msgstr "Бүх татан авалтын хувьд өөр өгөгдмөл фолдерыг тохируулна уу"
+
+msgctxt "#30202"
+msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
+msgstr "Сонгосон үед бүх татан авалт өөр хавтас руу очно.  [B]Тэмдэглэл: Энэ фолдерыг цэвэрлэх эсвэл хэмжээг нь хянахгүй[/B]"
+
+msgctxt "#30203"
+msgid "Organize default download folder using system folders"
+msgstr "Системийн хавтас ашиглан анхдагч татаж авах хавтсыг зохион байгуул"
+
+msgctxt "#30204"
+msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
+msgstr "Идэвхжүүлсэн үед түр хавтас нь системээр зохион байгуулагдах болно (заримдаа тохиргоог хүчингүй болгоход шаардлагатай байдаг)"
+
+msgctxt "#30205"
+msgid "Copy Kodi Network Source downloads to Local Filesystem"
+msgstr "Kodi сүлжээний эх сурвалжийн татан авалтыг локал файлын систем рүү хуулна уу"
+
+msgctxt "#30206"
+msgid "Reset Options"
+msgstr "Сонголтуудыг дахин тохируулах"
+
+msgctxt "#30207"
+msgid "Reset IAGL database to default settings"
+msgstr "IAGL мэдээллийн санг анхдагч тохиргоонд дахин тохируулна уу"
+
+msgctxt "#30208"
+msgid "When selected, the database will be reset to default settings"
+msgstr "Сонгосон үед мэдээллийн баазыг анхдагч тохиргоонд нь буцаана"
+
+msgctxt "#30209"
+msgid "Unhide game lists"
+msgstr "Тоглоомын жагсаалтыг харуулах"
+
+msgctxt "#30210"
+msgid "When selected, previously hidden game lists can be unhidden"
+msgstr "Сонгосон үед өмнө нь нуусан тоглоомын жагсаалтыг ил гаргах боломжтой"
+
+msgctxt "#30211"
+msgid "Clear Cache"
+msgstr "Кэшийг цэвэрлэх"
+
+msgctxt "#30212"
+msgid "When selected, all data in the cache folder including games will be purged"
+msgstr "Сонгосон үед тоглоом зэрэг кэш хавтсанд байгаа бүх өгөгдөл цэвэрлэгдэх болно"
+
+msgctxt "#30213"
+msgid "Select"
+msgstr "Сонго"
+
+msgctxt "#30214"
+msgid "Selected"
+msgstr "Сонгосон"
+
+msgctxt "#30215"
+msgid "Game lists selected"
+msgstr "Тоглоомын жагсаалтыг сонгосон"
+
+msgctxt "#30216"
+msgid "Genres selected"
+msgstr "Төрөлүүдийг сонгосон"
+
+msgctxt "#30217"
+msgid "Players selected"
+msgstr "Тоглогчид сонгосон"
+
+msgctxt "#30218"
+msgid "Studios selected"
+msgstr "Студиудыг сонгосон"
+
+msgctxt "#30219"
+msgid "Tags selected"
+msgstr "Шошгуудыг сонгосон"
+
+msgctxt "#30220"
+msgid "Playlists selected"
+msgstr "Тоглуулах жагсаалтыг сонгосон"
+
+msgctxt "#30221"
+msgid "Regions selected"
+msgstr "Бүс нутгуудыг сонгосон"
+
+msgctxt "#30222"
+msgid "Languages selected"
+msgstr "Сонгосон хэлүүд"
+
+msgctxt "#30223"
+msgid "Editions selected"
+msgstr "Сонгосон хэвлэл"
+
+msgctxt "#30224"
+msgid "Codes selected"
+msgstr "Кодуудыг сонгосон"
+
+msgctxt "#30225"
+msgid "Ratings selected"
+msgstr "Үнэлгээг сонгосон"
+
+msgctxt "#30226"
+msgid "Enter title search query"
+msgstr "Гарчгийн хайлтын асуулга оруулна уу"
+
+msgctxt "#30227"
+msgid "Empty search"
+msgstr "Хоосон хайлт"
+
+msgctxt "#30228"
+msgid "Search criteria is empty.[CR]Update criteria and try again."
+msgstr "Хайлтын шалгуур хоосон байна.[CR]Шалгуурыг шинэчлээд дахин оролдоно уу."
+
+msgctxt "#30229"
+msgid "Reset criteria"
+msgstr "Шалгуурыг дахин тохируулах"
+
+msgctxt "#30230"
+msgid "Enter Link Name"
+msgstr "Холбоосын нэрийг оруулна уу"
+
+msgctxt "#30231"
+msgid "Define the start page for IAGL"
+msgstr "IAGL-ийн эхлэл хуудсыг тодорхойлно уу"
+
+msgctxt "#30232"
+msgid "Kodi launch options"
+msgstr "Kodi эхлүүлэх сонголтууд"
+
+msgctxt "#30233"
+msgid "Completed"
+msgstr "Дууссан"
+
+msgctxt "#30234"
+msgid "Create new group"
+msgstr "Шинэ бүлэг үүсгэх"
+
+msgctxt "#30235"
+msgid "Select favorite group"
+msgstr "Дуртай бүлгийг сонгоно уу"
+
+msgctxt "#30236"
+msgid "Group by Favorites Group"
+msgstr "Дуртай группээр бүлэг"
+
+msgctxt "#30237"
+msgid "Remove IAGL Favorite"
+msgstr "IAGL Favorite-г устга"
+
+msgctxt "#30238"
+msgid "Are you sure you want to delete this Favorite?"
+msgstr "Та энэ дуртай зүйлээ устгахдаа итгэлтэй байна уу?"
+
+msgctxt "#30239"
+msgid "Favorite deleted"
+msgstr "Дуртай устгасан"
+
+msgctxt "#30240"
+msgid "Favorites display"
+msgstr "Дуртай дэлгэц"
+
+msgctxt "#30241"
+msgid "Define the start page for IAGL Favorites"
+msgstr "IAGL Favorites-ийн эхлэл хуудсыг тодорхойл"
+
+msgctxt "#30242"
+msgid "By Favorites Group"
+msgstr "Favorites группээр"
+
+msgctxt "#30243"
+msgid "Reset *all* criteria"
+msgstr "*бүх* шалгуурыг дахин тохируулна уу"
+
+msgctxt "#30244"
+msgid "Run IAGL setup wizard?"
+msgstr "IAGL тохиргооны шидтэнг ажиллуулах уу?"
+
+msgctxt "#30245"
+msgid "Wizard"
+msgstr "Шидтэн"
+
+msgctxt "#30246"
+msgid "Update game list Launcher"
+msgstr "Тоглоомын жагсаалтыг эхлүүлэгчийг шинэчлэх"
+
+msgctxt "#30247"
+msgid "Update Launch Command"
+msgstr "Эхлүүлэх командыг шинэчлэх"
+
+msgctxt "#30248"
+msgid "Update game list download path"
+msgstr "Тоглоомын жагсаалтыг татаж авах замыг шинэчлэх"
+
+msgctxt "#30249"
+msgid "Hide game list"
+msgstr "Тоглоомын жагсаалтыг нуух"
+
+msgctxt "#30250"
+msgid "Update game list post download process"
+msgstr "Тоглоомын жагсаалтыг татаж авсны дараах процессыг шинэчлэх"
+
+msgctxt "#30251"
+msgid "Are you sure you want to hide game list"
+msgstr "Та тоглоомын жагсаалтыг нуухдаа итгэлтэй байна уу"
+
+msgctxt "#30252"
+msgid "Game list is now hidden"
+msgstr "Тоглоомын жагсаалтыг одоо нуусан байна"
+
+msgctxt "#30253"
+msgid "No results"
+msgstr "Үр дүн алга"
+
+msgctxt "#30254"
+msgid "No hidden game lists found"
+msgstr "Нуугдсан тоглоомын жагсаалт олдсонгүй"
+
+msgctxt "#30255"
+msgid "Game lists unhidden"
+msgstr "Тоглоомын жагсаалтыг нуусан"
+
+msgctxt "#30256"
+msgid "Confirm reset"
+msgstr "Дахин тохируулахыг баталгаажуулна уу"
+
+msgctxt "#30257"
+msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
+msgstr "Та мэдээллийн баазыг дахин тохируулахдаа итгэлтэй байна уу?[CR]Хэрэглэгчийн бүх мэдээлэл устах болно![CR]Үүнийг буцаах боломжгүй!"
+
+msgctxt "#30258"
+msgid "Database has been reset"
+msgstr "Өгөгдлийн санг дахин тохирууллаа"
+
+msgctxt "#30259"
+msgid "Update Launcher"
+msgstr "Эхлүүлэгчийг шинэчлэх"
+
+msgctxt "#30260"
+msgid "Update launcher from[CR]Kodi to[CR]External?"
+msgstr "Эхлүүлэгчийг [CR]Kodi-с[CR]Гадаад руу шинэчлэх үү?"
+
+msgctxt "#30261"
+msgid "Update launcher from[CR]External to[CR]Kodi?"
+msgstr "Эхлүүлэгчийг [CR]Гадаадаас [CR]Kodi руу шинэчлэх үү?"
+
+msgctxt "#30262"
+msgid "Launcher updated to external"
+msgstr "Эхлүүлэгчийг гадаад болгож шинэчилсэн"
+
+msgctxt "#30263"
+msgid "Launcher updated to retroplayer"
+msgstr "Эхлүүлэгчийг retroplayer болгон шинэчилсэн"
+
+msgctxt "#30264"
+msgid "Select game addon"
+msgstr "Тоглоомын нэмэлт хэрэгслийг сонгоно уу"
+
+msgctxt "#30265"
+msgid "Reset to default"
+msgstr "Өгөгдмөл рүү дахин тохируулна уу"
+
+msgctxt "#30266"
+msgid "Download game to…"
+msgstr "Тоглоомыг татаж авах…"
+
+msgctxt "#30267"
+msgid "Select download folder"
+msgstr "Татаж авах хавтас сонгоно уу"
+
+msgctxt "#30268"
+msgid "Archive.org login success!"
+msgstr "Archive.org-д нэвтэрч амжилттай боллоо!"
+
+msgctxt "#30269"
+msgid "Archive.org login failed.[CR]Check credentials or log for more details"
+msgstr "Archive.org-д нэвтэрч чадсангүй.[CR]Итгэмжлэх жуух бичгээ шалгах эсвэл дэлгэрэнгүй мэдээлэл авах бол нэвтэрнэ үү"
+
+msgctxt "#30270"
+msgid "Error"
+msgstr "Алдаа"
+
+msgctxt "#30271"
+msgid "Initializing download for[CR]"
+msgstr "[CR]-д татаж авах ажлыг эхлүүлж байна"
+
+msgctxt "#30272"
+msgid "Check logs"
+msgstr "Бүртгэлийг шалгана уу"
+
+msgctxt "#30273"
+msgid "Checking login for[CR]"
+msgstr "[CR]-н нэвтрэлтийг шалгаж байна"
+
+msgctxt "#30274"
+msgid "Requesting file info for[CR]"
+msgstr "[CR] файлын мэдээллийг хүсэж байна"
+
+msgctxt "#30275"
+msgid "Select from Retroarch Cores"
+msgstr "Retroarch Cores-аас сонгоно уу"
+
+msgctxt "#30276"
+msgid "Select from Extra Emulators"
+msgstr "Нэмэлт эмуляторуудаас сонгоно уу"
+
+msgctxt "#30277"
+msgid "Manually Enter Launch Command"
+msgstr "Эхлүүлэх командыг гараар оруулна уу"
+
+msgctxt "#30278"
+msgid "Select External Command Type"
+msgstr "Гадаад командын төрлийг сонгоно уу"
+
+msgctxt "#30279"
+msgid "Extra Emulators"
+msgstr "Нэмэлт эмуляторууд"
+
+msgctxt "#30280"
+msgid "Dolphin"
+msgstr "Далайн гахай"
+
+msgctxt "#30281"
+msgid "Select the path to the Dolphin application (optional)"
+msgstr "Dolphin програм руу явах замыг сонгоно уу (заавал биш)"
+
+msgctxt "#30282"
+msgid "MAME"
+msgstr "ЭЗЭН"
+
+msgctxt "#30283"
+msgid "Select the path to the MAME application (optional)"
+msgstr "MAME програм руу очих замыг сонгоно уу (заавал биш)"
+
+msgctxt "#30284"
+msgid "Project 64"
+msgstr "Төсөл 64"
+
+msgctxt "#30285"
+msgid "Select the path to the Project 64 application (optional)"
+msgstr "Project 64 програмд ​​хүрэх замыг сонгоно уу (заавал биш)"
+
+msgctxt "#30286"
+msgid "ePSXe"
+msgstr "ePSXe"
+
+msgctxt "#30287"
+msgid "Select the path to the ePSXe application (optional)"
+msgstr "ePSXe програм руу очих замыг сонгоно уу (заавал биш)"
+
+msgctxt "#30288"
+msgid "Demul"
+msgstr "Дэмүл"
+
+msgctxt "#30289"
+msgid "Select the path to the Demul application (optional)"
+msgstr "Demul програм руу очих замыг сонгоно уу (заавал биш)"
+
+msgctxt "#30290"
+msgid "FS-UAE"
+msgstr "FS-АНЭУ"
+
+msgctxt "#30291"
+msgid "Select the path to the FS-UAE application (optional)"
+msgstr "FS-UAE програм руу очих замыг сонгоно уу (заавал биш)"
+
+msgctxt "#30292"
+msgid "Are you sure you want to set external launch command?"
+msgstr "Та гадаад эхлүүлэх командыг тохируулахдаа итгэлтэй байна уу?"
+
+msgctxt "#30293"
+msgid "External launch command updated"
+msgstr "Гадаад эхлүүлэх командыг шинэчилсэн"
+
+msgctxt "#30294"
+msgid "Android users must verify the core is installed in Retroarch"
+msgstr "Android хэрэглэгчид цөмийг Retroarch-д суулгасан эсэхийг шалгах ёстой"
+
+msgctxt "#30295"
+msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
+msgstr "Эхлүүлэх тохиргоо одоогоор хоосон байна[CR]Гадаад эхлүүлэх тохиргооны нэмэлтийг шинэчилнэ үү."
+
+msgctxt "#30296"
+msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
+msgstr "Эхлүүлэх тохиргоо одоогоор хоосон байна[CR] Нэмэлт үйлдлийн системийн эхлүүлэх тохиргоог шинэчилнэ үү."
+
+msgctxt "#30297"
+msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
+msgstr "Нэмэлт эмулятор олдсонгүй[CR]Нэмэлт эмуляторын нэмэлт тохиргоог шинэчилнэ үү"
+
+msgctxt "#30298"
+msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
+msgstr "Эхлүүлэх командыг оруулна уу[CR]IAGL вики дээрх нэмэлт түлхүүр үгсийг харна уу"
+
+msgctxt "#30299"
+msgid "Reset Launch Command"
+msgstr "Эхлүүлэх командыг дахин тохируулах"
+
+msgctxt "#30300"
+msgid "Are you sure you want to reset the external launch command?"
+msgstr "Та гадаад эхлүүлэх командыг дахин тохируулахдаа итгэлтэй байна уу?"
+
+msgctxt "#30301"
+msgid "External launch command was reset"
+msgstr "Гадаад эхлүүлэх командыг дахин тохируулсан"
+
+msgctxt "#30302"
+msgid "Enter a value for"
+msgstr "-ын утгыг оруулна уу"
+
+msgctxt "#30303"
+msgid "View game list settings"
+msgstr "Тоглоомын жагсаалтын тохиргоог харах"
+
+msgctxt "#30304"
+msgid "Game List"
+msgstr "Тоглоомын жагсаалт"
+
+msgctxt "#30305"
+msgid "Game List System"
+msgstr "Тоглоомын жагсаалтын систем"
+
+msgctxt "#30306"
+msgid "Total 1G1R Games in List"
+msgstr "Жагсаалтад байгаа нийт 1G1R тоглоом"
+
+msgctxt "#30307"
+msgid "Total Games in List"
+msgstr "Жагсаалтад байгаа нийт тоглоомууд"
+
+msgctxt "#30308"
+msgid "Total Favorited Games in List"
+msgstr "Жагсаалтанд орсон нийт дуртай тоглоомууд"
+
+msgctxt "#30309"
+msgid "Default External Launch Command"
+msgstr "Өгөгдмөл гадаад эхлүүлэх команд"
+
+msgctxt "#30310"
+msgid "Default Retroplayer Game Addon"
+msgstr "Өгөгдмөл Retroplayer Game Addon"
+
+msgctxt "#30311"
+msgid "Default Game Post Process"
+msgstr "Тоглоомын бичлэгийн үндсэн процесс"
+
+msgctxt "#30312"
+msgid "User Defined Download Path"
+msgstr "Хэрэглэгчийн тодорхойлсон татаж авах зам"
+
+msgctxt "#30313"
+msgid "User External Launch Command"
+msgstr "Хэрэглэгчийн гадаад эхлүүлэх команд"
+
+msgctxt "#30314"
+msgid "User Defined Retroplayer Game Addon"
+msgstr "Хэрэглэгчийн тодорхойлсон Retroplayer Game Addon"
+
+msgctxt "#30315"
+msgid "User Defined Post Process"
+msgstr "Хэрэглэгчийн тодорхойлсон шуудангийн үйл явц"
+
+msgctxt "#30316"
+msgid "Game List Settings"
+msgstr "Тоглоомын жагсаалтын тохиргоо"
+
+msgctxt "#30317"
+msgid "None (will use addon default)"
+msgstr "Байхгүй (өгөгдмөл нэмэлтийг ашиглах болно)"
+
+msgctxt "#30318"
+msgid "Games List Launcher"
+msgstr "Тоглоомын жагсаалт эхлүүлэгч"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "nan"
+
+msgctxt "#30320"
+msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
+msgstr "Гадаад эхлүүлэх команд[CR]*Хэрэглэгчийн эхлүүлэх команд олдсонгүй / Өгөгдмөл ашиглах*"
+
+msgctxt "#30321"
+msgid "Kodi Retroplayer"
+msgstr "Kodi Retroplayer"
+
+msgctxt "#30322"
+msgid "Are you sure you want to update game list download path?"
+msgstr "Та тоглоомын жагсаалтыг татаж авах замыг шинэчлэхдээ итгэлтэй байна уу?"
+
+msgctxt "#30323"
+msgid "Download path updated"
+msgstr "Татаж авах замыг шинэчилсэн"
+
+msgctxt "#30324"
+msgid "Are you sure you want to reset game list download path?"
+msgstr "Та тоглоомын жагсаалтыг татаж авах замыг шинэчлэхдээ итгэлтэй байна уу?"
+
+msgctxt "#30325"
+msgid "Download path reset"
+msgstr "Татаж авах замыг дахин тохируулах"
+
+msgctxt "#30326"
+msgid "Change download path"
+msgstr "Татаж авах замыг өөрчлөх"
+
+msgctxt "#30327"
+msgid "Reset download path"
+msgstr "Татаж авах замыг дахин тохируулна уу"
+
+msgctxt "#30328"
+msgid "Reset game list settings"
+msgstr "Тоглоомын жагсаалтын тохиргоог дахин тохируулна уу"
+
+msgctxt "#30329"
+msgid "Are you sure you want to reset all game list settings to default?"
+msgstr "Та тоглоомын жагсаалтын бүх тохиргоог өгөгдмөл болгож шинэчлэхдээ итгэлтэй байна уу?"
+
+msgctxt "#30330"
+msgid "Game list settings were reset to default"
+msgstr "Тоглоомын жагсаалтын тохиргоог анхдагч болгож шинэчилсэн"
