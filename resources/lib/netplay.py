@@ -45,7 +45,7 @@ class netplay(object):
 		current_command = command_in
 		if isinstance(current_command,str):
 			current_command = current_command.replace(self.netplay_xx_cmd,'')  #Stubbing out netplay for now
-
+			xbmc.log(msg='IAGL:  Netplay command set to NONE',level=xbmc.LOGDEBUG)
 		return current_command
 
 		return current_command

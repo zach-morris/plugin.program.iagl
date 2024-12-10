@@ -1,4 +1,3 @@
-import os, sys
 from pathlib import Path
 import xbmcaddon,xbmcplugin,xbmcvfs
 
@@ -31,17 +30,22 @@ class config(object):
 		self.paths['addon_skins'] = self.paths['addon_resources'].joinpath('skins')
 		self.paths['userdata'] = Path(xbmcvfs.translatePath(self.addon.get('addon_handle').getAddonInfo('profile')))
 		self.paths['default_temp_dl'] = self.paths.get('userdata').joinpath('game_cache')
-		self.paths['assets_url'] = 'special://xbmc/addons/plugin.program.iagl/assets/default/{}'
+		self.paths['assets_url'] = 'special://home/addons/plugin.program.iagl/assets/default/{}'
+
 		#Files
 		self.files['addon_data_db'] = self.paths['addon_data'].joinpath('iagl.db')
+		self.files['addon_data_db_zipped'] = self.paths['addon_data'].joinpath('iagl.db.zip')
 		self.files['db'] = self.paths['userdata'].joinpath('iagl.db')
 		self.files['ia_cookie'] = self.paths['userdata'].joinpath('ia.cookie')
 		#Default Values
 		self.defaults['home_id'] = 10000
 		self.defaults['random_num_result_options'] = list(range(10,60,10))+list(range(100,251,50))+list(range(350,951,100))
-		self.defaults['infinit_results_char'] = ['∞']
+		self.defaults['infinite_results_char'] = ['∞']
 		self.defaults['default_num_results'] = '10'
 		self.defaults['sleep'] = 500
+		self.defaults['wait_for_stop_time'] = 500
+		self.defaults['wait_for_player_time'] = 5000
+		self.defaults['wait_for_process_time'] = 3
 		self.defaults['launcher'] = 'retroplayer'
 		self.defaults['threads'] = 5
 		self.defaults['config_available_systems'] = ['windows','linux','OSX']
@@ -50,10 +54,10 @@ class config(object):
 		#Media
 		self.media['default_type'] = 'video'
 		#Listitems
-		self.listitem['art_keys'] = ['thumb','poster','banner','fanart','clearlogo','fanart1','fanart2'] #https://alwinesch.github.io/group__python__xbmcgui__listitem.html#ga92f9aeb062ff50badcb8792d14a37394
-		self.listitem['property_keys'] = ['SpecialSort','table_filter','total_games','is_1g1r_list','total_1g1r_games'] #https://alwinesch.github.io/group__python__xbmcgui__listitem.html#ga96f1976952584c91e6d59c310ce86a25
-		self.listitem['info_keys'] = ['size','count','date'] #https://xbmc.github.io/docs.kodi.tv/master/kodi-base/d8/d29/group__python__xbmcgui__listitem.html#ga0b71166869bda87ad744942888fb5f14
-		self.listitem['non_string_to_list_keys'] = ['studio'] #Remove these keys from json serializable list due to database encoding
+		self.listitem['art_keys'] = set(['thumb','poster','banner','fanart','clearlogo','fanart1','fanart2']) #https://alwinesch.github.io/group__python__xbmcgui__listitem.html#ga92f9aeb062ff50badcb8792d14a37394
+		self.listitem['property_keys'] = set(['SpecialSort','table_filter','total_games','is_1g1r_list','total_1g1r_games']) #https://alwinesch.github.io/group__python__xbmcgui__listitem.html#ga96f1976952584c91e6d59c310ce86a25
+		self.listitem['info_keys'] = set(['size','count','date']) #https://xbmc.github.io/docs.kodi.tv/master/kodi-base/d8/d29/group__python__xbmcgui__listitem.html#ga0b71166869bda87ad744942888fb5f14
+		self.listitem['non_string_to_list_keys'] = set(['studio']) #Remove these keys from json serializable list due to database encoding, which is storing it just as a single string value
 		self.listitem['sort_methods'] = dict()
 		self.listitem['sort_methods']['all'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_SIZE]
 		self.listitem['sort_methods']['categories'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE]
@@ -64,9 +68,9 @@ class config(object):
 		self.listitem['sort_methods']['random'] = [xbmcplugin.SORT_METHOD_NONE]
 		self.listitem['sort_methods']['game_list_choice'] = [xbmcplugin.SORT_METHOD_NONE]
 		self.listitem['sort_methods']['game_list_choice_by'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE]
-		self.listitem['sort_methods']['games'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE,xbmcplugin.SORT_METHOD_LABEL,xbmcplugin.SORT_METHOD_TITLE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_GENRE,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE,xbmcplugin.SORT_METHOD_SIZE]
+		self.listitem['sort_methods']['games'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_GENRE,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE,xbmcplugin.SORT_METHOD_SIZE,xbmcplugin.SORT_METHOD_PLAYCOUNT]
 		self.listitem['sort_methods']['favorites'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE,xbmcplugin.SORT_METHOD_LABEL,xbmcplugin.SORT_METHOD_TITLE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_GENRE,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE,xbmcplugin.SORT_METHOD_SIZE]
-		self.listitem['sort_methods']['history'] = [xbmcplugin.SORT_METHOD_NONE,xbmcplugin.SORT_METHOD_LASTPLAYED,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE,xbmcplugin.SORT_METHOD_LABEL,xbmcplugin.SORT_METHOD_TITLE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_GENRE,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE,xbmcplugin.SORT_METHOD_SIZE]
+		self.listitem['sort_methods']['history'] = [xbmcplugin.SORT_METHOD_NONE,xbmcplugin.SORT_METHOD_LASTPLAYED,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE,xbmcplugin.SORT_METHOD_LABEL,xbmcplugin.SORT_METHOD_TITLE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_GENRE,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE,xbmcplugin.SORT_METHOD_SIZE,xbmcplugin.SORT_METHOD_PLAYCOUNT]
 		self.listitem['max_label_length'] = 15 #Truncate long search labels
 		#Settings
 		self.settings['front_page_display'] = dict() 
@@ -92,7 +96,7 @@ class config(object):
 		self.settings['games_pagination']['options'] = dict(zip(['0','1','2','3','4','5','6'],[None,10,25,50,100,250,500]))
 		self.settings['games_pagination']['default'] = None
 		self.settings['filter_to_1g1r'] = dict()
-		self.settings['filter_to_1g1r']['options'] = dict(zip(['0','1'],[' and (games_table."1g1r_game" IS NOT NULL or game_lists_table.is_1g1r_list = 0)','']))
+		self.settings['filter_to_1g1r']['options'] = dict(zip(['0','1'],[' and (games_table.is_1g1r = 1 or game_lists_table.is_1g1r_list = 0)','']))
 		self.settings['filter_to_1g1r']['default'] = ''
 		self.settings['append_game_list_to_search_results'] = dict()
 		self.settings['append_game_list_to_search_results']['options'] = dict(zip(['0','1'],['||" ("||games_table.game_list||")"','']))
@@ -111,6 +115,7 @@ class config(object):
 		self.settings['game_list_clearlogo_to_art']['default'] = 'clearlogo_paths.url||game_lists_table.clearlogo'
 		self.settings['user_launch_os'] = dict()
 		self.settings['user_launch_os']['options'] = dict(zip(['0','1','2','3','4','5','6'],[None,'windows','linux','OSX','android','android_aarch64','android_ra32']))
+		self.settings['user_launch_os']['android_options'] = ['android','android_aarch64','android_ra32']
 		self.settings['user_launch_os']['default'] = None
 		self.settings['force_viewtypes'] = dict()
 		self.settings['force_viewtypes']['options'] = dict(zip(['0','1'],[True,False]))
@@ -125,12 +130,9 @@ class config(object):
 		self.settings['wizard_run'] = dict()
 		self.settings['wizard_run']['options'] = dict(zip(['true','false'],[True,False]))
 		self.settings['wizard_run']['default'] = False
-		self.settings['uses_applaunch'] = dict()
-		self.settings['uses_applaunch']['options'] = dict(zip(['0','1','2'],['0','1','0']))
-		self.settings['uses_applaunch']['default'] = '0'
-		self.settings['uses_appause'] = dict()
-		self.settings['uses_appause']['options'] = dict(zip(['0','1','2'],['0','0','1']))
-		self.settings['uses_appause']['default'] = '0'
+		self.settings['kodi_on_launch'] = dict()
+		self.settings['kodi_on_launch']['options'] = dict(zip(['0','1','2','3'],['0','1','2','3']))
+		self.settings['kodi_on_launch']['default'] = '1'
 		self.settings['kodi_saa'] = dict()
 		self.settings['kodi_saa']['options'] = dict(zip(['0','1'],['activities','commands']))
 		self.settings['kodi_saa']['default'] = 'activities'
@@ -140,6 +142,15 @@ class config(object):
 		self.settings['if_game_exists'] = dict()
 		self.settings['if_game_exists']['options'] = dict(zip(['0','1','2',],[0,1,2]))
 		self.settings['if_game_exists']['default'] = 0
+		self.settings['kodi_media_stop'] = dict()
+		self.settings['kodi_media_stop']['options'] = dict(zip(['0','1'],[True,False]))
+		self.settings['kodi_media_stop']['default'] = True
+		self.settings['kodi_suspend'] = dict()
+		self.settings['kodi_suspend']['options'] = dict(zip(['0','1'],[True,False]))
+		self.settings['kodi_suspend']['default'] = True
+		self.settings['kodi_wfr'] = dict()
+		self.settings['kodi_wfr']['options'] = dict(zip(['0','1'],[True,False]))
+		self.settings['kodi_wfr']['default'] = True
 		#Dialogs
 		self.dialogs['tou'] = dict()
 		self.dialogs['tou']['actions'] = dict()
@@ -152,13 +163,15 @@ class config(object):
 		self.downloads['archive_org_login_url'] = 'https://archive.org/account/login'
 		self.downloads['archive_org_check_acct'] = 'https://archive.org/services/user.php?op=whoami'
 		self.downloads['chunk_size'] = 500000 #500 kb chunks
+		self.downloads['bad_file_return_size'] = 10000 #Small size returned file may mean archive returned 'Not found' html.  Note chunk_size must be larger than this
 		self.downloads['min_file_size'] = 2000000 #If a file is smaller than 2MB, only use 1 thread
+		self.downloads['login_timeout'] = (12.1,5.1)
 		self.downloads['timeout'] = (12.1,27)
 
 		#Database
 		self.database['process'] = dict()
 		self.database['process']['game'] = dict()
-		self.database['process']['game']['from_json'] = ['rom','extra_art']
+		self.database['process']['game']['from_json'] = ['rom','extra_art','launch_parameters']
 		self.database['query'] = dict()
 		self.database['query']['browse'] = ('SELECT browse_table.label,browse_table.next_path,browse_table.localization,thumb_paths.url||browse_table.thumb as thumb,poster_paths.url||browse_table.poster as poster,banner_paths.url||browse_table.banner as banner,(SELECT url FROM default_art WHERE art_type="fanart") as fanart,clearlogo_paths.url||browse_table.clearlogo as clearlogo,browse_table.plot,browse_table.SpecialSort\n'
 											'FROM browse as browse_table\n'
@@ -472,11 +485,11 @@ class config(object):
 																'WHERE games_table.game_list = "{game_list_id}" AND {choice_query}{filter_to_1g1r}\n'
 																'ORDER BY games_table.originaltitle COLLATE NOCASE ASC\n'
 																'LIMIT {items_per_page} OFFSET {starting_number}')
-		self.database['query']['game_launch_info_from_id'] = ('SELECT games_table.uid,games_table.user_game_launcher,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,game_list_table.default_global_post_download_process,game_list_table.default_global_launcher,game_list_table.user_post_download_process,game_list_table.user_global_launcher,game_list_table.user_global_launch_addon,game_list_table.user_global_external_launch_command,game_list_table.user_global_download_path,game_list_table.default_global_launch_addon,game_list_table.default_global_external_launch_command\n'
+		self.database['query']['game_launch_info_from_id'] = ('SELECT games_table.uid,games_table.launch_parameters,games_table.user_game_launcher,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,game_list_table.default_global_post_download_process,game_list_table.default_global_launcher,game_list_table.user_post_download_process,game_list_table.user_global_launcher,game_list_table.user_global_launch_addon,game_list_table.user_global_external_launch_command,game_list_table.user_global_uses_applaunch,game_list_table.user_global_uses_apppause,game_list_table.user_global_download_path,game_list_table.default_global_launch_addon,game_list_table.default_global_external_launch_command\n'
 															'FROM games as games_table\n'
 															'LEFT JOIN game_list as game_list_table on games_table.game_list = game_list_table.label\n'
 															'WHERE games_table.uid = "{game_id}"')
-		self.database['query']['get_game_from_id'] = ('SELECT games_table.uid,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as platform,games_table.genres AS genres,games_table.studio as publisher,games_table.year,games_table.size,games_table.plot as overview,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,game_list_table.default_global_post_download_process,game_list_table.default_global_launcher,game_list_table.user_post_download_process,game_list_table.user_global_launcher,game_list_table.user_global_launch_addon,game_list_table.user_global_external_launch_command,game_list_table.user_global_download_path,game_list_table.default_global_launch_addon,game_list_table.default_global_external_launch_command,games_table.rom\n'
+		self.database['query']['get_game_from_id'] = ('SELECT games_table.uid,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as platform,games_table.genres AS genres,games_table.studio as publisher,games_table.year,games_table.size,games_table.plot as overview,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart,games_table.launch_parameters,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,game_list_table.default_global_post_download_process,game_list_table.default_global_launcher,game_list_table.user_post_download_process,game_list_table.user_global_launcher,game_list_table.user_global_launch_addon,game_list_table.user_global_external_launch_command,game_list_table.user_global_uses_applaunch,game_list_table.user_global_uses_apppause,game_list_table.user_global_download_path,game_list_table.default_global_launch_addon,game_list_table.default_global_external_launch_command,games_table.rom\n'
 														'FROM games as games_table\n'
 														'LEFT JOIN game_list as game_list_table on games_table.game_list = game_list_table.label\n'
 														'LEFT JOIN paths as banner_paths\n'
@@ -498,10 +511,10 @@ class config(object):
 		self.database['query']['get_game_list_parameter'] = ('SELECT {parameter}\n'
 															'FROM game_list as game_lists_table\n'
 															'WHERE game_lists_table.label = "{game_list_id}"')
-		self.database['query']['get_game_list_user_global_external_launch_command'] = ('SELECT game_lists_table.default_global_external_launch_command,game_lists_table.user_global_external_launch_command\n'
+		self.database['query']['get_game_list_user_global_external_launch_command'] = ('SELECT game_lists_table.default_global_external_launch_command,game_lists_table.user_global_external_launch_command,game_list_table.user_global_uses_applaunch,game_list_table.user_global_uses_apppause\n'
 																						'FROM game_list as game_lists_table\n'
 																						'WHERE game_lists_table.label = "{game_list_id}"')
-		self.database['query']['get_game_list_info'] = ('SELECT game_lists_table.label,game_lists_table.system,game_lists_table.total_1g1r_games,game_lists_table.total_games,game_lists_table.default_global_external_launch_command,core_info_table.display_name as default_global_external_launch_core_name,game_lists_table.default_global_launch_addon,game_lists_table.default_global_launcher,game_lists_table.default_global_post_download_process,game_lists_table.user_global_download_path,game_lists_table.user_global_external_launch_command,game_lists_table.user_global_launch_addon,game_lists_table.user_global_launcher,game_lists_table.user_global_visibility,game_lists_table.user_post_download_process,COUNT(games_table.user_is_favorite) as total_favorited_games\n'
+		self.database['query']['get_game_list_info'] = ('SELECT game_lists_table.label,game_lists_table.system,game_lists_table.total_1g1r_games,game_lists_table.total_games,game_lists_table.default_global_external_launch_command,core_info_table.display_name as default_global_external_launch_core_name,game_lists_table.default_global_launch_addon,game_lists_table.default_global_launcher,game_lists_table.default_global_post_download_process,game_lists_table.user_global_download_path,game_lists_table.user_global_external_launch_command,game_lists_table.user_global_uses_applaunch,game_lists_table.user_global_uses_apppause,game_lists_table.user_global_launch_addon,game_lists_table.user_global_launcher,game_lists_table.user_global_visibility,game_lists_table.user_post_download_process,COUNT(games_table.user_is_favorite) as total_favorited_games\n'
 														'FROM game_list as game_lists_table\n'
 														'LEFT JOIN games as games_table on games_table.game_list = game_lists_table.label and games_table.user_is_favorite is NOT NULL\n'
 														'LEFT JOIN core_info as core_info_table on core_info_table.core_stem = game_lists_table.default_global_external_launch_command\n'
@@ -743,7 +756,7 @@ class config(object):
 		self.database['query']['insert_history'] = ('INSERT INTO history(uid)\n'
 													'VALUES(?)')
 		self.database['query']['limit_history'] = ('DELETE FROM history\n'
-													'WHERE uid = (SELECT history_table.uid FROM history as history_table WHERE history_table.rowid>{history_limit})')
+													'WHERE uid IN (SELECT history_table.uid FROM history as history_table LIMIT 99999 OFFSET {history_limit})')
 		self.database['query']['delete_history_from_uid'] = 'DELETE FROM history WHERE uid = "{}"'
 		self.database['query']['get_total_history'] = 'SELECT count(*) as total_history FROM history'
 		self.database['query']['delete_favorite_from_uid'] = 'DELETE FROM favorites WHERE uid="{}"'
@@ -784,11 +797,13 @@ class config(object):
 												'ON fanart_paths."path" = games_table.art_fanart_path\n'
 												'{game_search_query}\n'
 												'ORDER BY RANDOM() LIMIT {num_results}')
-		self.database['query']['get_playcount_and_lastplayed'] = 'SELECT playcount,lastplayed FROM games WHERE uid="{}"'
+		self.database['query']['get_playcount_and_lastplayed'] = 'SELECT playcount,lastplayed FROM games WHERE uid="{game_id}"'
 		self.database['query']['update_playcount_and_lastplayed'] = 'UPDATE games SET playcount={},lastplayed="{}" WHERE uid="{}"'
 		self.database['query']['update_game_list_user_parameter'] = 'UPDATE game_list set {parameter}="{new_value}" WHERE label="{game_list_id}"'
 		self.database['query']['reset_game_list_user_parameter'] = 'UPDATE game_list set {parameter}=NULL WHERE label="{game_list_id}"'
 		self.database['query']['unhide_game_lists'] = 'UPDATE game_list set user_global_visibility=NULL WHERE {}'
+		self.database['query']['uses_applauch'] = 'SELECT count(uses_applaunch) AS total FROM external_commands WHERE os = "{user_launch_os}" and uses_applaunch=1'
+		self.database['query']['uses_apppause'] = 'SELECT count(uses_apppause) AS total FROM external_commands WHERE os = "{user_launch_os}" and uses_apppause=1'
 		self.database['query']['get_retroarch_default_commands'] = 'SELECT * FROM external_commands WHERE os="{user_launch_os}" and is_retroarch=1 and uses_applaunch={applaunch} and uses_apppause={appause}'
 		self.database['query']['get_retroarch_android'] = dict()
 		self.database['query']['get_retroarch_android']['commands'] = 'SELECT display_name,corename,systemname,REPLACE(REPLACE(REPLACE((SELECT command FROM external_commands WHERE os="{}" and is_retroarch=1 LIMIT 1),"XXCORE_STEMXX",core_stem),"XXCFG_PATHXX","{}"),"XXCORE_BASE_PATHXX","{}") as command FROM core_info'

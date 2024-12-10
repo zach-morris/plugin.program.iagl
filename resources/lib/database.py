@@ -10,6 +10,7 @@ class database(object):
 	def __init__(self,config=None,media_type=None):
 		self.config=config
 		self.listitems = listitems.listitems(config=self.config,media_type=media_type)
+		self.factory_map = {'listitems':self.listitem_factory,'rows':sqlite3.Row,'dict':self.dict_factory,'namedtuple':self.namedtuple_factory}
 
 	def get_query(self,query_type=None,**kwargs):
 		query_out = None
@@ -29,16 +30,7 @@ class database(object):
 				xbmc.log(msg='IAGL: SQL QUERY: {}'.format(query),level=xbmc.LOGDEBUG)
 			try:
 				with closing(sqlite3.connect(self.config.files.get('db'))) as conn:
-					if return_as == 'listitems':
-						conn.row_factory = self.listitem_factory
-					elif return_as == 'rows':
-						conn.row_factory = sqlite3.Row
-					elif return_as == 'dict':
-						conn.row_factory = self.dict_factory
-					elif return_as == 'namedtuple':
-						conn.row_factory = self.namedtuple_factory
-					else:
-						conn.row_factory = self.listitem_factory
+					conn.row_factory = self.factory_map.get(return_as) or self.listitem_factory
 					if fetch_one:
 						result = conn.execute(query).fetchone()
 					else:
@@ -57,16 +49,6 @@ class database(object):
 				with closing(sqlite3.connect(self.config.files.get('db'))) as conn:
 					with closing(conn.cursor()) as cursor:
 						result = cursor.execute(statement)
-					# if return_as == 'listitems':
-					# 	conn.row_factory = self.listitem_factory
-					# elif return_as == 'rows':
-					# 	conn.row_factory = sqlite3.Row
-					# elif return_as == 'dict':
-					# 	conn.row_factory = self.dict_factory
-					# elif return_as == 'namedtuple':
-					# 	conn.row_factory = self.namedtuple_factory
-					# else:
-					# 	conn.row_factory = self.listitem_factory
 			except Exception as exc:
 				xbmc.log(msg='IAGL:  Error in statement: {}'.format(query),level=xbmc.LOGERROR)
 				xbmc.log(msg='IAGL:  SQL Error: {}'.format(exc),level=xbmc.LOGERROR)
@@ -74,13 +56,12 @@ class database(object):
 
 	def dict_factory(self,cursor,row):
 		return dict(zip([column[0] for column in cursor.description],row))
-		# return {key:value for key,value in zip([column[0] for column in cursor.description],row)}
 
 	def namedtuple_factory(self,cursor,row):
-		return namedtuple("Row",[column[0] for column in cursor.description])._make(row)
+		return namedtuple('Row',[column[0] for column in cursor.description])._make(row)
 
 	def listitem_factory(self,cursor,row):
-		return self.listitems.from_factory({v:k for k,v in enumerate([column[0] for column in cursor.description])},row)
+		return self.listitems.from_factory(dict(zip([column[0] for column in cursor.description],row)))
 
 	def get_table_filter(self,game_list_id):
 		filter_out = None
@@ -272,7 +253,7 @@ class database(object):
 	def update_pc_and_cp(self,game_id=None,time_format='%Y-%m-%d %H:%M:%S'):
 		result = None
 		if isinstance(game_id,str):
-			current_pc_lp = next(iter(self.query_db(query=self.config.database.get('query').get('get_playcount_and_lastplayed').format(game_id),return_as='dict')),None)
+			current_pc_lp = next(iter(self.query_db(query=self.get_query('get_playcount_and_lastplayed',game_id=game_id),return_as='dict')),None)
 			next_pc = 1
 			if isinstance(current_pc_lp,dict):
 				if isinstance(current_pc_lp.get('playcount'),int):

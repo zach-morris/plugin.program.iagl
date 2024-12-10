@@ -138,6 +138,8 @@ class post_process(object):
 							else:
 								output['process_success'] = False
 								xbmc.log(msg='IAGL:  Unzip completed but the resulting file is missing!',level=xbmc.LOGERROR)
+								if self.delete_zip_on_fail:
+									self.delete_file(str(r.get('dl_filepath')))
 						else:
 							output['process_success'] = False
 							xbmc.log(msg='IAGL:  Unzip failed to complete',level=xbmc.LOGERROR)

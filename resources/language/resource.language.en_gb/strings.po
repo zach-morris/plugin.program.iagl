@@ -1,5 +1,5 @@
 # Kodi Media Center language file
-# Addon Name: Internet Archive Game Launcher
+# Addon Name: /Internet Archive Game Launcher
 # Addon id: plugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
@@ -596,24 +596,24 @@ msgid "Android ra32"
 msgstr "Android ra32"
 
 msgctxt "#30147"
-msgid "When a game is launched"
-msgstr "When a game is launched"
+msgid "External launch selection options"
+msgstr "External launch selection options"
 
 msgctxt "#30148"
-msgid "Select what Kodi will do when a game is launched (Windows, Linux and OSX only)"
-msgstr "Select what Kodi will do when a game is launched (Windows, Linux and OSX only)"
+msgid "Select what options Kodi will present for external launching (Windows, Linux and OSX only)[CR]Leave at default if unsure."
+msgstr "Select what options Kodi will present for external launching (Windows, Linux and OSX only)[CR]Leave at default if unsure."
 
 msgctxt "#30149"
-msgid "Keep Kodi in the background"
-msgstr "Keep Kodi in the background"
+msgid "Only list default commands"
+msgstr "Only list default commands"
 
 msgctxt "#30150"
-msgid "Close Kodi"
-msgstr "Close Kodi"
+msgid "Only list close Kodi commands"
+msgstr "Only list close Kodi commands"
 
 msgctxt "#30151"
-msgid "Pause Kodi"
-msgstr "Pause Kodi"
+msgid "Only list pause Kodi commands"
+msgstr "Only list pause Kodi commands"
 
 msgctxt "#30152"
 msgid "Retroarch core picker"
@@ -1330,3 +1330,35 @@ msgstr "Are you sure you want to reset all game list settings to default?"
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Game list settings were reset to default"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Matching local file"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Checking credentials"
+
+msgctxt "#30333"
+msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options"
+msgstr "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "The archive file could not be processed[CR]Check logs for more details"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Select action before launch"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Leave Kodi running in background (default)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Close Kodi before launch, reopen Kodi after emulator exit"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Suspend Kodi before launch, wake Kodi after emulator exit"

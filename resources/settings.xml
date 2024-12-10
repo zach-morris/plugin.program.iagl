@@ -458,13 +458,14 @@
 			</group>
 			<group id="launching_2" label="30232">
 				<setting id="kodi_on_launch" label="30147" help="30148" type="integer">
-					<level>0</level>
-					<default>0</default>
+					<level>2</level>
+					<default>1</default>
 					<constraints>
 						<options>
-							<option label="30149">0</option>
-							<option label="30150">1</option>
-							<option label="30151">2</option>
+							<option label="30054">0</option>
+							<option label="30149">1</option>
+							<option label="30150">2</option>
+							<option label="30151">3</option>
 						</options>
 					</constraints>
 					<dependencies>

@@ -24,7 +24,7 @@ db = database.database(config=config,media_type=cm.get_setting('media_type'))
 dl = download.download(config=config,ia_email=cm.get_setting('ia_u'),ia_password=cm.get_setting('ia_p'),dl_path=cm.get_setting('default_dl_path'),threads=cm.get_setting('dl_threads'),auto_login=False,if_game_exists=cm.get_setting('if_game_exists'),ige_dialog={'heading':cm.get_loc(30331),'list':[cm.get_loc(30055),cm.get_loc(30056)]}) #Dont login right away for speed, only set the dl path to the current default
 nt = netplay.netplay(config=config)
 pp = post_process.post_process(config=config)
-ln = launch.launch(config=config)
+ln = launch.launch(config=config,user_launch_os=cm.get_setting('user_launch_os'),kodi_suspend=cm.get_setting('kodi_suspend'),kodi_media_stop=cm.get_setting('kodi_media_stop'),kodi_saa=cm.get_setting('kodi_saa'),kodi_wfr=cm.get_setting('kodi_wfr'))
 dialogs = dialogs.dialogs(config=config)
 
 # ## Plugin Routes ##
@@ -625,7 +625,7 @@ def random_enter_game_lists():
 @plugin.route('/random_enter_num_results')
 def random_enter_game_lists():
 	xbmc.log(msg='IAGL:  /random_enter_num_results',level=xbmc.LOGDEBUG)
-	number_options = [str(x) for x in config.defaults.get('infinit_results_char')+config.defaults.get('random_num_result_options')]
+	number_options = [str(x) for x in config.defaults.get('infinite_results_char')+config.defaults.get('random_num_result_options')]
 	default_option = number_options.index(config.defaults.get('default_num_results'))
 	li = [xbmcgui.ListItem(x,offscreen=True) for x in number_options]
 	selected = xbmcgui.Dialog().select(heading=cm.get_loc(30038),list=li,useDetails=False,preselect=default_option)
@@ -1103,12 +1103,15 @@ def play_game_retroplayer(game_id):
 			ln.set_list_item(list_item=game_list_item)
 			ln.set_rom(rom=current_game_data)
 			current_game_data = ln.launcher.launch()
-			playcount_and_last_played_update = db.update_pc_and_cp(game_id=game_id)
-			history_limit_update = db.limit_history(history_limit=cm.get_setting('play_history'))
-			history_update = db.add_history(game_id=game_id)
+			if current_game_data.get('launch_success'):
+				xbmc.log(msg='IAGL:  Updating play history and play count for game: {}'.format(current_game_name),level=xbmc.LOGDEBUG)
+				playcount_and_last_played_update = db.update_pc_and_cp(game_id=game_id)
+				history_limit_update = db.limit_history(history_limit=cm.get_setting('play_history'))
+				history_update = db.add_history(game_id=game_id)
+		else:
+			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),cm.get_loc(30334))
 	else:
 		ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),next(iter([x.get('download_message') for x in current_game_data if isinstance(x.get('download_message'),str)]),cm.get_loc(30272)))
-
 	xbmcplugin.endOfDirectory(plugin.handle)
 	xbmc.sleep(config.defaults.get('sleep'))
 	xbmc.executebuiltin('Container.Refresh')
@@ -1120,9 +1123,38 @@ def play_game_external(game_id):
 	launch_process = next(iter([x for x in [current_game_data.get('user_game_external_launch_command'),current_game_data.get('user_global_external_launch_command'),current_game_data.get('default_global_external_launch_command')] if isinstance(x,str)]),None) #Get external launch command
 	if isinstance(launch_process,str):
 		xbmc.log(msg='IAGL:  Launch process set to:\n{}'.format(launch_process),level=xbmc.LOGDEBUG)
+		game_dl_path = current_game_data.get('user_global_download_path') or cm.get_setting('default_dl_path')
+		game_pp = next(iter([x for x in [current_game_data.get('user_game_post_download_process'),current_game_data.get('user_post_download_process'),current_game_data.get('default_global_post_download_process')] if isinstance(x,str)]),None)
+		current_game_name=current_game_data.get('label')
+		dl.set_game_name(game_name=current_game_name)
+		dl.set_rom(rom=current_game_data.get('rom'))
+		dl.set_dl_path(path_in=game_dl_path)
+		current_game_data = dl.downloader.download() #Returns a list of all files downloaded and their result
+		if all([x.get('download_success') for x in current_game_data]):
+			xbmc.log(msg='IAGL:  Download of {} completed'.format(current_game_name),level=xbmc.LOGDEBUG)
+			pp.set_game_name(game_name=current_game_name)
+			pp.set_rom(rom=current_game_data)
+			pp.set_process(process=game_pp)
+			current_game_data = pp.process_games() #Returns a dict containing process results
+			if current_game_data.get('process_success'):
+				xbmc.log(msg='IAGL:  Post processing of {} completed'.format(current_game_name),level=xbmc.LOGDEBUG)
+				ln.set_launcher(launcher='external')
+				ln.set_game_name(game_name=current_game_name)
+				ln.set_rom(rom=current_game_data)
+				ln.set_launch_parameters(launch_parameters={'launch_process':launch_process,'netplay':cm.get_home_property('iagl_netplay_parameters')}) #Grab any netplay settings user has set
+				#Insert history here for games that will be launched with applaunch or apppause
+				current_game_data = ln.launcher.launch()
+				if current_game_data.get('launch_success'):
+					playcount_and_last_played_update = db.update_pc_and_cp(game_id=game_id)
+					history_limit_update = db.limit_history(history_limit=cm.get_setting('play_history'))
+					history_update = db.add_history(game_id=game_id)
+		else:
+			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),next(iter([x.get('download_message') for x in current_game_data if isinstance(x.get('download_message'),str)]),cm.get_loc(30272)))
 	else:
 		xbmc.log(msg='IAGL:  Launch process is not set, unable to launch game',level=xbmc.LOGDEBUG)
 	xbmcplugin.endOfDirectory(plugin.handle)
+	xbmc.sleep(config.defaults.get('sleep'))
+	xbmc.executebuiltin('Container.Refresh')
 
 @plugin.route('/context_menu/action/download_game_to/<game_id>')
 def download_game_to(game_id):
@@ -1281,6 +1313,8 @@ def get_game_list_info(game_list_id):
 							 'default_global_post_download_process': cm.get_loc(30311),
 							 'user_global_download_path': cm.get_loc(30312),
 							 'user_global_external_launch_command': cm.get_loc(30313),
+							 'user_global_uses_applaunch':None,
+							 'user_global_uses_apppause':None,
 							 'user_global_launch_addon': cm.get_loc(30314),
 							 'user_global_launcher': None,
 							 'user_global_visibility': None,
@@ -1291,13 +1325,22 @@ def get_game_list_info(game_list_id):
 			pp_command_key = next(iter([k for k in ['user_post_download_process','default_global_post_download_process'] if isinstance(game_list_info.get(k),str)]),None)
 			info_keys_to_display = ['label','system','total_games','total_1g1r_games','total_favorited_games',launch_command_key,'user_global_download_path',pp_command_key]
 			if isinstance(game_list_info.get('user_global_external_launch_command'),str):
-				li1 = xbmcgui.ListItem(label=cm.get_loc(30318),label2=cm.get_loc(30319))
+				if game_list_info.get('user_global_uses_applaunch') == 1:
+					pre_command_value = cm.get_loc(30337)
+				elif game_list_info.get('user_global_uses_apppause') == 1:
+					pre_command_value = cm.get_loc(30338)
+				else:
+					pre_command_value = cm.get_loc(30336)
+				li1 = xbmcgui.ListItem(label=cm.get_loc(30318),label2='{}[CR]{}'.format(cm.get_loc(30319),pre_command_value))
 			else:
 				li1 = xbmcgui.ListItem(label=cm.get_loc(30318),label2=cm.get_loc(30320))
 			lis = [li1]+[xbmcgui.ListItem(label=info_key_to_label.get(x),label2=next(iter([str(z) for z in [game_list_info.get(x)] if z is not None]),cm.get_loc(30317))) for x in info_keys_to_display if isinstance(info_key_to_label.get(x),str)]
 			selected = xbmcgui.Dialog().select(heading=cm.get_loc(30316),list=lis,useDetails=True)
 			if lis[selected].getLabel() in [info_key_to_label.get('user_global_external_launch_command'),info_key_to_label.get('user_global_download_path')] and isinstance(lis[selected].getLabel2(),str) and len(lis[selected].getLabel2())>0 and lis[selected].getLabel2()!=cm.get_loc(30317):
-				xbmcgui.Dialog().textviewer(lis[selected].getLabel(),lis[selected].getLabel2())
+				if 'XX' in lis[selected].getLabel2():
+					xbmcgui.Dialog().textviewer(lis[selected].getLabel(),lis[selected].getLabel2()+'[CR][CR]'+cm.get_loc(30333))
+				else:
+					xbmcgui.Dialog().textviewer(lis[selected].getLabel(),lis[selected].getLabel2())
 		else:
 			launch_command_key = next(iter([k for k in ['user_global_launch_addon','default_global_launch_addon'] if isinstance(game_list_info.get(k),str)]),None)
 			pp_command_key = next(iter([k for k in ['user_post_download_process','default_global_post_download_process'] if isinstance(game_list_info.get(k),str)]),None)
@@ -1321,8 +1364,34 @@ def update_game_list_launch_command(game_list_id):
 			if isinstance(cm.get_setting('user_launch_os'),str):
 				if cm.get_setting('user_launch_os') in config.defaults.get('config_available_systems'):
 					if isinstance(cm.get_setting('ra_app_path'),str) and xbmcvfs.exists(cm.get_setting('ra_app_path')) and isinstance(cm.get_setting('ra_cfg_path'),str) and xbmcvfs.exists(cm.get_setting('ra_cfg_path')):
-						installed_cores = cm.get_installed_ra_cores(ra_default_command=next(iter(db.query_db(db.get_query('get_retroarch_default_commands',user_launch_os=cm.get_setting('user_launch_os'),applaunch=cm.get_setting('applaunch'),appause=cm.get_setting('appause')),return_as='dict'))))
-							# db.query_db(query=config.database.get('query').get('get_retroarch_default_commands').format(cm.get_setting('user_launch_os'),cm.get_setting('applaunch'),cm.get_setting('appause')),return_as='dict')),None))
+						if cm.get_setting('kodi_on_launch') == '1':
+							applaunch_setting = '0'
+							apppause_setting = '0'
+						elif cm.get_setting('kodi_on_launch') == '2':
+							applaunch_setting = '1'
+							apppause_setting = '0'
+						elif cm.get_setting('kodi_on_launch') == '3':
+							applaunch_setting = '0'
+							apppause_setting = '1'
+						else: #Prompt user
+							pre_launch_options = [cm.get_loc(30336)]
+							uses_applaunch = next(iter(db.query_db(db.get_query('uses_applauch',user_launch_os=cm.get_setting('user_launch_os')),return_as='dict')),None)
+							uses_apppause = next(iter(db.query_db(db.get_query('uses_apppause',user_launch_os=cm.get_setting('user_launch_os')),return_as='dict')),None)
+							if isinstance(uses_applaunch,dict) and isinstance(uses_applaunch.get('total'),int) and uses_applaunch.get('total')>0:
+								pre_launch_options = pre_launch_options+[cm.get_loc(30337)]
+							if isinstance(uses_apppause,dict) and isinstance(uses_apppause.get('total'),int) and uses_apppause.get('total')>0:  #This assumes appause is only present if applaunch is present (currently true)
+								pre_launch_options = pre_launch_options+[cm.get_loc(30338)]
+							selected_external_pre_command_types = xbmcgui.Dialog().select(heading=cm.get_loc(30335),list=pre_launch_options,useDetails=False)
+							if selected_external_pre_command_types == 1:
+								applaunch_setting = '1'
+								apppause_setting = '0'
+							elif selected_external_pre_command_types == 2:
+								applaunch_setting = '0'
+								apppause_setting = '1'
+							else:
+								applaunch_setting = '0'
+								apppause_setting = '0'
+						installed_cores = cm.get_installed_ra_cores(ra_default_command=next(iter(db.query_db(db.get_query('get_retroarch_default_commands',user_launch_os=cm.get_setting('user_launch_os'),applaunch=applaunch_setting,appause=apppause_setting),return_as='dict')),None))
 						if isinstance(installed_cores,list) and len(installed_cores)>0:
 							choose_core_by = xbmcgui.Dialog().select(heading=cm.get_loc(30152),list=[cm.get_loc(30153),cm.get_loc(30154),cm.get_loc(30155)],useDetails=False)
 							if choose_core_by == 0:
@@ -1333,8 +1402,10 @@ def update_game_list_launch_command(game_list_id):
 									new_command = next(iter([x.get('command') for x in installed_cores if x.get('display_name')==display_names[selected]]),None)
 									if selected>-1 and isinstance(new_command,str):
 										if xbmcgui.Dialog().yesno(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30292),display_names[selected])):
-											result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
-											if isinstance(result,int) and result>0:
+											result1 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
+											result2 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_uses_apppause',new_value=apppause_setting)
+											result3 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_uses_applaunch',new_value=applaunch_setting)
+											if isinstance(result1,int) and isinstance(result2,int) and isinstance(result3,int) and result1>0 and result2>0 and result3>0:
 												ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),cm.get_loc(30293))
 												xbmc.sleep(config.defaults.get('sleep'))
 												xbmc.executebuiltin('Container.Refresh')
@@ -1348,8 +1419,10 @@ def update_game_list_launch_command(game_list_id):
 									new_command = next(iter([x.get('command') for x in installed_cores if x.get('corename')==core_names[selected]]),None)
 									if selected>-1 and isinstance(new_command,str):
 										if xbmcgui.Dialog().yesno(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30292),core_names[selected])):
-											result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
-											if isinstance(result,int) and result>0:
+											result1 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
+											result2 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_uses_apppause',new_value=apppause_setting)
+											result3 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_uses_applaunch',new_value=applaunch_setting)
+											if isinstance(result1,int) and isinstance(result2,int) and isinstance(result3,int) and result1>0 and result2>0 and result3>0:
 												ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),cm.get_loc(30293))
 												xbmc.sleep(config.defaults.get('sleep'))
 												xbmc.executebuiltin('Container.Refresh')
@@ -1368,8 +1441,10 @@ def update_game_list_launch_command(game_list_id):
 											new_command = next(iter([x.get('command') for x in installed_cores if x.get('display_name')==display_names[selected]]),None)
 											if selected>-1 and isinstance(new_command,str):
 												if xbmcgui.Dialog().yesno(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30292),display_names[selected])):
-													result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
-													if isinstance(result,int) and result>0:
+													result1 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
+													result2 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_uses_apppause',new_value=apppause_setting)
+													result3 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_uses_applaunch',new_value=applaunch_setting)
+													if isinstance(result1,int) and isinstance(result2,int) and isinstance(result3,int) and result1>0 and result2>0 and result3>0:
 														ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),cm.get_loc(30293))
 														xbmc.sleep(config.defaults.get('sleep'))
 														xbmc.executebuiltin('Container.Refresh')
@@ -1377,9 +1452,14 @@ def update_game_list_launch_command(game_list_id):
 												xbmc.log(msg='IAGL:  Retroarch core selection cancelled',level=xbmc.LOGDEBUG)
 							else:
 								xbmc.log(msg='IAGL:  Retroarch core selection cancelled',level=xbmc.LOGDEBUG)
+						else:
+							ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),cm.get_loc(30339))
+							xbmc.log(msg='IAGL:  No commands found matching query',level=xbmc.LOGERROR)
 					else:
 						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),cm.get_loc(30295))
-				else:
+				else: #Android
+					applaunch_setting = '0'
+					apppause_setting = '0'
 					if isinstance(cm.get_setting('ra_cfg_path'),str) and xbmcvfs.exists(cm.get_setting('ra_cfg_path')) and isinstance(cm.get_android_libretro_directory(),str):
 						possible_cores = db.query_db(query=config.database.get('query').get('get_retroarch_android').get(cm.get_setting('kodi_saa')).format(cm.get_setting('user_launch_os'),cm.get_setting('ra_cfg_path'),cm.get_android_libretro_directory()),return_as='dict')					
 						if isinstance(possible_cores,list) and len(possible_cores)>0:
@@ -1392,8 +1472,10 @@ def update_game_list_launch_command(game_list_id):
 									new_command = next(iter([x.get('command') for x in possible_cores if x.get('display_name')==display_names[selected]]),None)
 									if selected>-1 and isinstance(new_command,str):
 										if xbmcgui.Dialog().yesno(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30292),display_names[selected])):
-											result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
-											if isinstance(result,int) and result>0:
+											result1 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
+											result2 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_uses_apppause',new_value=apppause_setting)
+											result3 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_uses_applaunch',new_value=applaunch_setting)
+											if isinstance(result1,int) and isinstance(result2,int) and isinstance(result3,int) and result1>0 and result2>0 and result3>0:
 												ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30293),cm.get_loc(30294)))
 												xbmc.sleep(config.defaults.get('sleep'))
 												xbmc.executebuiltin('Container.Refresh')
@@ -1407,8 +1489,10 @@ def update_game_list_launch_command(game_list_id):
 									new_command = next(iter([x.get('command') for x in possible_cores if x.get('corename')==core_names[selected]]),None)
 									if selected>-1 and isinstance(new_command,str):
 										if xbmcgui.Dialog().yesno(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30292),core_names[selected])):
-											result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
-											if isinstance(result,int) and result>0:
+											result1 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
+											result2 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_uses_apppause',new_value=apppause_setting)
+											result3 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_uses_applaunch',new_value=applaunch_setting)
+											if isinstance(result1,int) and isinstance(result2,int) and isinstance(result3,int) and result1>0 and result2>0 and result3>0:
 												ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30293),cm.get_loc(30294)))
 												xbmc.sleep(config.defaults.get('sleep'))
 												xbmc.executebuiltin('Container.Refresh')
@@ -1427,8 +1511,10 @@ def update_game_list_launch_command(game_list_id):
 											new_command = next(iter([x.get('command') for x in possible_cores if x.get('display_name')==display_names[selected]]),None)
 											if selected>-1 and isinstance(new_command,str):
 												if xbmcgui.Dialog().yesno(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30292),display_names[selected])):
-													result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
-													if isinstance(result,int) and result>0:
+													result1 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
+													result2 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_uses_apppause',new_value=apppause_setting)
+													result3 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_uses_applaunch',new_value=applaunch_setting)
+													if isinstance(result1,int) and isinstance(result2,int) and isinstance(result3,int) and result1>0 and result2>0 and result3>0:
 														ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30293),cm.get_loc(30294)))
 														xbmc.sleep(config.defaults.get('sleep'))
 														xbmc.executebuiltin('Container.Refresh')
@@ -1442,17 +1528,41 @@ def update_game_list_launch_command(game_list_id):
 				ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),cm.get_loc(30296))
 		elif selected_external_command_types == 1:
 			if cm.get_setting('user_launch_os') in config.defaults.get('config_available_systems'):
-				installed_emus = cm.get_other_emus(other_emulator_commands=db.query_db(query=config.database.get('query').get('get_other_emulator_commands').format(cm.get_setting('user_launch_os'),cm.get_setting('applaunch'),cm.get_setting('appause')),return_as='dict'),other_emulator_settings={x.upper():cm.get_setting(x) for x in config.defaults.get('other_emulator_settings') if isinstance(cm.get_setting(x),str) and len(cm.get_setting(x))>0})
+				if cm.get_setting('kodi_on_launch') == '1':
+					applaunch_setting = '0'
+					apppause_setting = '0'
+				elif cm.get_setting('kodi_on_launch') == '2':
+					applaunch_setting = '1'
+					apppause_setting = '0'
+				elif cm.get_setting('kodi_on_launch') == '3':
+					applaunch_setting = '0'
+					apppause_setting = '1'
+				else: #Prompt user
+					selected_external_pre_command_types = xbmcgui.Dialog().select(heading=cm.get_loc(30335),list=[cm.get_loc(30336),cm.get_loc(30337),cm.get_loc(30338)],useDetails=False)
+					if selected_external_pre_command_types == 1:
+						applaunch_setting = '1'
+						apppause_setting = '0'
+					elif selected_external_pre_command_types == 2:
+						applaunch_setting = '0'
+						apppause_setting = '1'
+					else:
+						applaunch_setting = '0'
+						apppause_setting = '0'
+				installed_emus = cm.get_other_emus(other_emulator_commands=db.query_db(query=config.database.get('query').get('get_other_emulator_commands').format(cm.get_setting('user_launch_os'),applaunch_setting,apppause_setting),return_as='dict'),other_emulator_settings={x.upper():cm.get_setting(x) for x in config.defaults.get('other_emulator_settings') if isinstance(cm.get_setting(x),str) and len(cm.get_setting(x))>0})
 			else: #Android
 				installed_emus = db.query_db(query=config.database.get('query').get('get_other_emulator_android').get(cm.get_setting('kodi_saa')).format(cm.get_setting('user_launch_os'),'0','0'),return_as='dict')
+				applaunch_setting = '0'
+				apppause_setting = '0'
 			if isinstance(installed_emus,list) and len(installed_emus)>0:
 				xbmc.log(msg='IAGL:  {} external emulator options found'.format(len(installed_emus)),level=xbmc.LOGDEBUG)
 				selected = xbmcgui.Dialog().select(heading=cm.get_loc(30158),list=[x.get('display_name') for x in installed_emus],useDetails=False)
 				new_command = next(iter([x.get('command') for x in installed_emus if x.get('display_name')==installed_emus[selected].get('display_name')]),None)
 				if selected>-1 and isinstance(new_command,str):
 					if xbmcgui.Dialog().yesno(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30292),installed_emus[selected].get('display_name'))):
-						result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
-						if isinstance(result,int) and result>0:
+						result1 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=new_command.replace('"','""'))
+						result2 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_uses_apppause',new_value=apppause_setting)
+						result3 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_uses_applaunch',new_value=applaunch_setting)
+						if isinstance(result1,int) and isinstance(result2,int) and isinstance(result3,int) and result1>0 and result2>0 and result3>0:
 							if cm.get_setting('user_launch_os') in config.defaults.get('config_available_systems'):
 								ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),cm.get_loc(30293))
 							else:
@@ -1478,8 +1588,10 @@ def update_game_list_launch_command(game_list_id):
 							xbmc.executebuiltin('Container.Refresh')
 		elif selected_external_command_types == 3:  #Reset entry
 			if xbmcgui.Dialog().yesno(cm.get_loc(30299),cm.get_loc(30300)):
-				result = db.reset_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command')
-				if isinstance(result,int) and result>0:
+				result1 = db.reset_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command')
+				result2 = db.reset_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_uses_apppause')
+				result3 = db.reset_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_uses_applaunch')
+				if isinstance(result1,int) and isinstance(result2,int) and isinstance(result3,int) and result1>0 and result2>0 and result3>0:
 					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30299),cm.get_loc(30301))
 					xbmc.sleep(config.defaults.get('sleep'))
 					xbmc.executebuiltin('Container.Refresh')
@@ -1554,7 +1666,7 @@ def update_game_dl_path(game_list_id):
 	if isinstance(current_dl_path,dict) and isinstance(current_dl_path.get('user_global_download_path'),str) and len(current_dl_path.get('user_global_download_path'))>0: #Custom path already set, query about resetting it
 		selected = xbmcgui.Dialog().select(heading=cm.get_loc(30160),list=[cm.get_loc(30326),cm.get_loc(30327)],useDetails=False)
 		if selected==0:
-			result = xbmcgui.Dialog().browse(type=0,heading=cm.get_loc(30160),shares='')
+			result = xbmcgui.Dialog().browse(type=0,heading=cm.get_loc(30160),shares='local')
 			if isinstance(result,str) and len(result)>0 and xbmcvfs.exists(result):
 				if xbmcgui.Dialog().yesno(cm.get_loc(30248),'{}[CR]{}'.format(cm.get_loc(30322),result[:40]+('...' if len(result)>40 else ''))):
 					result2 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_download_path',new_value=result)
@@ -1574,9 +1686,9 @@ def update_game_dl_path(game_list_id):
 		else:
 			xbmc.log(msg='IAGL:  Game list download path update cancelled',level=xbmc.LOGDEBUG)
 	else:
-		result = xbmcgui.Dialog().browse(type=0,heading=cm.get_loc(30160),shares='')
+		result = xbmcgui.Dialog().browse(type=0,heading=cm.get_loc(30160),shares='local')
 		if isinstance(result,str) and len(result)>0 and xbmcvfs.exists(result):
-			if xbmcgui.Dialog().yesno(cm.get_loc(30248),'{}[CR]{}'.format(cm.get_loc(30322),result[:20])):
+			if xbmcgui.Dialog().yesno(cm.get_loc(30248),'{}[CR]{}'.format(cm.get_loc(30322),result[:40]+('...' if len(result)>40 else ''))):
 				result2 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_download_path',new_value=result)
 				if isinstance(result2,int) and result2>0:
 					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30323))
@@ -1605,11 +1717,19 @@ def reset_game_list_settings(game_list_id):
 def check_ia_login():
 	xbmc.log(msg='IAGL:  /check_ia_login',level=xbmc.LOGDEBUG)
 	if isinstance(cm.get_setting('ia_u'),str) and isinstance(cm.get_setting('ia_p'),str):
+		dp = xbmcgui.DialogProgress()
+		dp.create(cm.get_loc(30332),'{}{}'.format(cm.get_loc(30273),'archive.org'))
+		dp.update(1)
 		dl.downloader.login()
 		if dl.downloader.logged_in:
+			dp.update(100)
+			dp.close()
 			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30268))
 		else:
+			dp.update(100)
+			dp.close()
 			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),cm.get_loc(30269))
+		dp = None
 	else:
 		ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30065),cm.get_loc(30159))
 

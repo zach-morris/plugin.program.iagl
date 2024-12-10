@@ -1,5 +1,5 @@
 # Kodi Media Center language file
-# Addon Name: Internet Archive Game Launcher
+# Addon Name: /Internet Archive Game Launcher
 # Addon id: plugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
@@ -307,10 +307,6 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "චිත්රපට"
 
-msgctxt "#30075"
-msgid "Games "
-msgstr "nan"
-
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "ක්රීඩා 10 ක්"
@@ -595,24 +591,16 @@ msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
 
-msgctxt "#30147"
-msgid "When a game is launched"
-msgstr "ක්රීඩාවක් දියත් කරන විට"
-
-msgctxt "#30148"
-msgid "Select what Kodi will do when a game is launched (Windows, Linux and OSX only)"
-msgstr "ක්‍රීඩාවක් දියත් කළ විට Kodi කරන්නේ කුමක්ද යන්න තෝරන්න (Windows, Linux සහ OSX පමණි)"
-
 msgctxt "#30149"
-msgid "Keep Kodi in the background"
+msgid "Only list default commands"
 msgstr "Kodi පසුබිමේ තබා ගන්න"
 
 msgctxt "#30150"
-msgid "Close Kodi"
+msgid "Only list close Kodi commands"
 msgstr "කෝඩි වසන්න"
 
 msgctxt "#30151"
-msgid "Pause Kodi"
+msgid "Only list pause Kodi commands"
 msgstr "Kodi නවත්වන්න"
 
 msgctxt "#30152"
@@ -1282,10 +1270,6 @@ msgstr "කිසිවක් නැත (ඇඩෝන පෙරනිමිය �
 msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "ක්‍රීඩා ලැයිස්තු දියත් කිරීම"
-
-msgctxt "#30319"
-msgid "External Launch Command "
-msgstr "nan"
 
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"

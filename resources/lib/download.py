@@ -209,6 +209,18 @@ class download(object):
 					xbmc.log(msg='IAGL:  Unable to delete file {}'.format(file_in),level=xbmc.LOGDEBUG)
 			return success
 
+		def get_file_listing_xbmcvfs(self,directory_in,max_levels=4,current_level=0):
+			files_in_dir = list()
+			dirs_in_dir = list()
+			if isinstance(directory_in,str) and xbmcvfs.exists(os.path.join(directory_in,'')):
+				dirs_in_dir, files_in_dir = xbmcvfs.listdir(os.path.join(directory_in,''))
+				if current_level<max_levels:
+					for dd in dirs_in_dir:
+						dirs_in_dir2, files_in_dir2 = self.get_file_listing_xbmcvfs(os.path.join(directory_in,dd,''),max_levels=max_levels,current_level=current_level+1)
+						dirs_in_dir = dirs_in_dir+[x for x in dirs_in_dir2 if x not in dirs_in_dir]
+						files_in_dir = files_in_dir+[x for x in files_in_dir2 if x not in files_in_dir]
+			return dirs_in_dir, [os.path.join(directory_in,x) for x in files_in_dir]
+
 		def combine_chunks(self,files_in=None,dest_file=None,overwrite=True):
 			success = False
 			if isinstance(files_in,list) and isinstance(dest_file,str):
@@ -233,7 +245,7 @@ class download(object):
 		def check_login(self):
 			self.load_previous_cookie()			
 			try:
-				with self.session.get(self.config.downloads.get('archive_org_check_acct'),timeout=self.config.downloads.get('timeout'),headers=self.login_headers,allow_redirects=False) as r:
+				with self.session.get(self.config.downloads.get('archive_org_check_acct'),timeout=self.config.downloads.get('login_timeout'),headers=self.login_headers,allow_redirects=False) as r:
 					r.raise_for_status()
 					if r.ok and isinstance(r.text,str) and len(r.text)>0:
 						response = json.loads(r.text)
@@ -253,14 +265,14 @@ class download(object):
 			if not self.logged_in:
 				if isinstance(self.ia_email,str) and isinstance(self.ia_password,str):
 					try:
-						with self.session.get(self.config.downloads.get('archive_org_login_url'),verify=False,headers=self.login_headers) as r1:
+						with self.session.get(self.config.downloads.get('archive_org_login_url'),verify=False,timeout=self.config.downloads.get('login_timeout'),headers=self.login_headers) as r1:
 							if r1.ok:
 								xbmc.log(msg='IAGL:  Attempting Archive.org login',level=xbmc.LOGDEBUG)
 					except Exception as exc:
 						xbmc.log(msg='IAGL:  Archive.org login attempt exception: {}'.format(exc),level=xbmc.LOGERROR)
 					self.login_form_data = '-----------------------------239962525138460636124209110177\r\nContent-Disposition: form-data; name="username"\r\n\r\n{}\r\n-----------------------------239962525138460636124209110177\r\nContent-Disposition: form-data; name="password"\r\n\r\n{}\r\n-----------------------------239962525138460636124209110177\r\nContent-Disposition: form-data; name="remember"\r\n\r\ntrue\r\n-----------------------------239962525138460636124209110177\r\nContent-Disposition: form-data; name="referer"\r\n\r\nhttps://archive.org/\r\n-----------------------------239962525138460636124209110177\r\nContent-Disposition: form-data; name="login"\r\n\r\ntrue\r\n-----------------------------239962525138460636124209110177\r\nContent-Disposition: form-data; name="submit_by_js"\r\n\r\ntrue\r\n-----------------------------239962525138460636124209110177--\r\n'.format(self.ia_email,self.ia_password).encode('ascii')
 					try:
-						with self.session.post(self.config.downloads.get('archive_org_login_url'),verify=False,headers=self.login_headers,data=self.login_form_data) as r:
+						with self.session.post(self.config.downloads.get('archive_org_login_url'),verify=False,timeout=self.config.downloads.get('login_timeout'),headers=self.login_headers,data=self.login_form_data) as r:
 							r.raise_for_status()
 							if r.ok and isinstance(r.text,str) and 'Successful login' in r.text:
 								self.logged_in = True
@@ -278,10 +290,7 @@ class download(object):
 				else:
 					xbmc.log(msg='IAGL:  Archive.org credentials are not entered yet',level=xbmc.LOGDEBUG)
 
-		def get_rom_heads(self):
-			if self.dp is not None:
-				description = '{}{}'.format(self.config.addon.get('addon_handle').getLocalizedString(30274),self.game_name or 'Files')
-				self.dp.update(2,description)
+		def get_matching_local_files(self):
 			if isinstance(self.rom,list):
 				for rn,cr in enumerate(self.rom):
 					cr['filename'] = url_unquote(cr.get('url').split('/')[-1].split('%2F')[-1])
@@ -309,6 +318,13 @@ class download(object):
 								pass #Continue with download, and re-ask if theres more files
 						else:
 							pass
+
+		def get_rom_heads(self):
+			if self.dp is not None:
+				description = '{}{}'.format(self.config.addon.get('addon_handle').getLocalizedString(30274),self.game_name or 'Files')
+				self.dp.update(2,description)
+			if isinstance(self.rom,list):
+				for rn,cr in enumerate(self.rom):
 					if cr.get('continue_with_download'):
 						try:
 							with self.session.head(cr.get('url'),verify=False,timeout=self.config.downloads.get('timeout'),allow_redirects=True) as r:
@@ -380,12 +396,20 @@ class download(object):
 				self.dp.update(0,description)
 			else:
 				self.dp = None
-			if isinstance(self.ia_email,str) and isinstance(self.ia_password,str):
-				if not self.logged_in:
-					self.login()
+
+			self.get_matching_local_files() #Look for local files first
+
+			if isinstance(self.rom,list) and any([cr.get('continue_with_download')==True for cr in self.rom]):
+				if isinstance(self.ia_email,str) and isinstance(self.ia_password,str):
+					if not self.logged_in:
+						self.login()
+				else:
+					xbmc.log(msg='IAGL:  Attempting download without login credentials',level=xbmc.LOGDEBUG)
 			else:
-				xbmc.log(msg='IAGL:  Attempting download without login credentials',level=xbmc.LOGDEBUG)
-			self.get_rom_heads() #Initialize info needed for downloading, look for local files
+				xbmc.log(msg='IAGL:  Skipping IA login check due to matching local files',level=xbmc.LOGDEBUG)
+				
+			self.get_rom_heads() #Initialize info needed for downloading if necessary
+
 			for cr in self.rom: #Threaded download for each rom in order
 				if cr.get('continue_with_download'):
 					xbmcgui.Window(self.dp_id).setProperty('current_size',str(0))
@@ -424,7 +448,7 @@ class download(object):
 							for fp in [x.get('dl_filepath') for x in self.rom]:
 								self.delete_file(str(fp))
 					else:
-						if xbmcvfs.exists(cr.get('chunk_filenames')):
+						if xbmcvfs.exists(cr.get('chunk_filenames')) and all([x.get('success') for x in futures_results]):
 							cr['download_success'] = True
 							cr['download_size'] = sum([x.get('download_size') for x in futures_results])
 						else:
@@ -456,6 +480,7 @@ class download(object):
 				xbmc.log(msg='IAGL: {} downloading chunk {} of {} (byte range {})'.format(current_thread().getName(),thread_id,chunk_filename,byte_range),level=xbmc.LOGDEBUG)
 				try:  #Start chunk download
 					size = 0 #Initialize size of this threads download size
+					bad_file_returned = False
 					with self.session.get(rom.get('url'),headers={'Range':'bytes={}'.format(byte_range)},verify=False,stream=True,timeout=self.config.downloads.get('timeout'),allow_redirects=True) as r:
 						r.raise_for_status()
 						with xbmcvfs.File(chunk_filename,'wb') as game_file:
@@ -465,6 +490,8 @@ class download(object):
 							# for chunk in r.iter_content(chunk_size=rom.get('chunk_size')):
 							for chunk in r.iter_content(chunk_size=self.config.downloads.get('chunk_size')): #Break download into chunks (approx 4 for min file size)
 								game_file.write(bytearray(chunk))
+								if len(chunk)<self.config.downloads.get('bad_file_return_size') and b'<title>Item not available' in chunk:
+									bad_file_returned = True
 								size = size+len(chunk) #chunks may be a different size when streaming
 								if self.dp is not None and self.dp.iscanceled():
 									self.download_cancelled = True
@@ -499,14 +526,20 @@ class download(object):
 						result['message'] = 'Download error[CR]Archive returned file size of 0'
 						xbmc.log(msg='IAGL:  Chunk {} downloading failed.  Archive returned an empty file'.format(thread_id),level=xbmc.LOGDEBUG)
 					else:
-						result['success'] = True
-						result['download_size'] = size
-						result['message'] = 'Download completed'
-						result['chunk_filename'] = chunk_filename
-						xbmc.log(msg='IAGL:  Chunk {} download complete.  File size {}'.format(thread_id,size),level=xbmc.LOGDEBUG)
+						if bad_file_returned:
+							result['success'] = False
+							result['download_size'] = size
+							result['message'] = 'Download error[CR]Archive returned file not found or requires login'
+							xbmc.log(msg='IAGL:  Bad file returned in chunk {}.  Archive returned file not found.'.format(thread_id),level=xbmc.LOGDEBUG)
+						else:
+							result['success'] = True
+							result['download_size'] = size
+							result['message'] = 'Download completed'
+							result['chunk_filename'] = chunk_filename
+							xbmc.log(msg='IAGL:  Chunk {} download complete.  File size {}'.format(thread_id,size),level=xbmc.LOGDEBUG)
 				except requests.exceptions.RequestException as rexc:
 					result['success'] = False
-					if isinstance(rexc.response.status_code,int):
+					if rexc.response and isinstance(rexc.response.status_code,int):
 						if rexc.response.status_code == 403:
 							result['message'] = 'Download Request error[CR]Archive requires login'
 						else:

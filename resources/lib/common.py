@@ -56,7 +56,11 @@ class common(object):
 	def get_setting(self,setting_in=None):
 		result = None
 		if setting_in in self.config.settings.keys():
-			result = self.config.settings.get(setting_in).get('options').get(self.config.addon.get('addon_handle').getSetting(id=setting_in)) or self.config.settings.get(setting_in).get('default')
+			cv = self.config.addon.get('addon_handle').getSetting(id=setting_in)
+			if cv in self.config.settings.get(setting_in).get('options').keys():
+				result = self.config.settings.get(setting_in).get('options').get(cv)
+			else:
+				result = self.config.settings.get(setting_in).get('default')
 		elif setting_in == 'append_game_list_to_search_results_combined':
 			result1 = self.config.settings.get('game_title_setting').get('options').get(self.config.addon.get('addon_handle').getSetting(id='game_title_setting')) or self.config.settings.get('game_title_setting').get('default')
 			result2 = self.config.settings.get('append_game_list_to_search_results').get('options').get(self.config.addon.get('addon_handle').getSetting(id='append_game_list_to_search_results')) or self.config.settings.get('append_game_list_to_search_results').get('default')
@@ -87,10 +91,6 @@ class common(object):
 		elif setting_in == 'media_type':
 			result1 = self.config.settings.get('media_type_game').get('options').get(self.config.addon.get('addon_handle').getSetting(id='media_type_game')) or self.config.settings.get('media_type_game').get('default')
 			result = self.config.settings.get('media_type_game').get('listitem_type').get(result1) or self.config.media.get('default_type')
-		elif setting_in == 'applaunch':
-			result = self.config.settings.get('uses_applaunch').get('options').get(self.config.addon.get('addon_handle').getSetting(id='kodi_on_launch')) or self.config.settings.get('uses_applaunch').get('default')
-		elif setting_in == 'appause':
-			result = self.config.settings.get('uses_appause').get('options').get(self.config.addon.get('addon_handle').getSetting(id='kodi_on_launch')) or self.config.settings.get('uses_appause').get('default')
 		elif setting_in in self.config.settings.get('page_viewtype_options').get('viewtype_settings'):
 			result1 = self.config.settings.get('force_viewtypes').get('options').get(self.config.addon.get('addon_handle').getSetting(id='force_viewtypes')) or self.config.settings.get('force_viewtypes').get('default')
 			if result1:
@@ -138,7 +138,15 @@ class common(object):
 		else:
 			xbmc.log(msg='IAGL: userdata db not found, copying from addon data',level=xbmc.LOGDEBUG)
 			if self.config.files.get('addon_data_db').exists():
+				xbmc.log(msg='IAGL: Copying db to path {}'.format(self.config.files.get('db')),level=xbmc.LOGDEBUG)
 				result = self.files.copy_file(file_in=self.config.files.get('addon_data_db'),file_out=self.config.files.get('db'))
+			elif self.config.files.get('addon_data_db_zipped').exists():
+				xbmc.log(msg='IAGL: Extracting zipped db to path {}'.format(self.config.files.get('db')),level=xbmc.LOGDEBUG)
+				import archive_tool
+				my_archive = archive_tool.archive_tool(archive_file=str(self.config.files.get('addon_data_db_zipped')),directory_out=str(self.config.files.get('db').parent),flatten_archive=True)
+				extracted_files, result = my_archive.extract()
+				if result:
+					xbmc.log(msg='IAGL: Extracted zipped db to path {}'.format(','.join(extracted_files),str(self.config.files.get('db').parent)),level=xbmc.LOGDEBUG)
 			else:
 				xbmc.log(msg='IAGL: addon database file not found: {}'.format(self.config.files.get('addon_data_db')),level=xbmc.LOGERROR)
 		return result
@@ -187,6 +195,9 @@ class common(object):
 		else:
 			return None
 
+	def update_netplay_parameters(self,**kwargs):
+		return self.update_home_property(type_in='iagl_netplay_parameters',**kwargs)
+
 	def clear_search(self):
 		return self.clear_home_property(type_in='iagl_search')
 
@@ -195,6 +206,9 @@ class common(object):
 
 	def clear_android_activity(self):
 		return self.clear_home_property(type_in='iagl_android_activity')
+
+	def clear_netplay_parameters(self):
+		return self.clear_home_property(type_in='iagl_netplay_parameters')
 
 	def get_search(self):
 		return self.get_home_property(type_in='iagl_search')
@@ -531,8 +545,8 @@ class common(object):
 		li = None
 		if isinstance(game_data,dict):
 			li = xbmcgui.ListItem(label=game_data.get('label'),offscreen=True)
-			li.setArt({k:v for k in game_data.items() if k in self.config.listitem.get('art_keys')})
-			li.setProperties({k:v for k in game_data.items() if k in self.config.listitem.get('property_keys')})
+			# li.setArt({k:v for k in game_data.items() if k in self.config.listitem.get('art_keys')})
+			# li.setProperties({k:v for k in game_data.items() if k in self.config.listitem.get('property_keys')})
 			ginfo = li.getGameInfoTag()
 			ginfo.setTitle(game_data.get('label'))
 			ginfo.setOverview(game_data.get('overview'))
