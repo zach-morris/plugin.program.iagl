@@ -19,6 +19,7 @@ class config(object):
 		self.addon['addon_name'] = 'plugin.program.iagl'
 		self.addon['addon_url'] = 'plugin://{}'.format(self.addon.get('addon_name'))
 		self.addon['addon_handle'] = xbmcaddon.Addon(id=self.addon.get('addon_name'))	
+		self.addon['version'] = self.addon.get('addon_handle').getAddonInfo('version')
 		#Debug
 		self.debug['print_query'] = True
 		self.debug['factory_debug'] = False
@@ -30,11 +31,18 @@ class config(object):
 		self.paths['addon_skins'] = self.paths['addon_resources'].joinpath('skins')
 		self.paths['userdata'] = Path(xbmcvfs.translatePath(self.addon.get('addon_handle').getAddonInfo('profile')))
 		self.paths['default_temp_dl'] = self.paths.get('userdata').joinpath('game_cache')
+		if self.paths['default_temp_dl'].exists():
+			self.files['default_temp_dl_file_listing'] = [x for x in self.paths.get('default_temp_dl').rglob('**/*') if x.is_file()]
+			self.paths['default_temp_dl_size'] = sum(x.stat().st_size for x in self.files.get('default_temp_dl_file_listing'))
+		else:
+			self.files['default_temp_dl_file_listing'] = None
+			self.paths['default_temp_dl_size'] = None
 		self.paths['assets_url'] = 'special://home/addons/plugin.program.iagl/assets/default/{}'
 
 		#Files
 		self.files['addon_data_db'] = self.paths['addon_data'].joinpath('iagl.db')
 		self.files['addon_data_db_zipped'] = self.paths['addon_data'].joinpath('iagl.db.zip')
+		self.files['addon_data_db_zipped_backup'] = self.paths['addon_data'].joinpath('iagl_backup.db.zip')
 		self.files['db'] = self.paths['userdata'].joinpath('iagl.db')
 		self.files['ia_cookie'] = self.paths['userdata'].joinpath('ia.cookie')
 		#Default Values
@@ -51,13 +59,16 @@ class config(object):
 		self.defaults['config_available_systems'] = ['windows','linux','OSX']
 		self.defaults['other_emulator_settings'] = ['app_path_dolphin','app_path_mame','app_path_pj64','app_path_expsxe','app_path_demul','app_path_fsuae']
 		self.defaults['android_activity_keys'] = ['package','intent','dataType','dataURI','flags','extras','action','category','className']
+		self.defaults['retroarch_logging_n_lines'] = 500
+		self.defaults['show_extract_progress_size'] = 10*1024*1024
+		self.defaults['unzip_skip_bios_files'] = set(['advision.zip','gamecom.zip','crvision.zip','vsmile.zip','gmaster.zip','scv.zip'])
 		#Media
 		self.media['default_type'] = 'video'
 		#Listitems
 		self.listitem['art_keys'] = set(['thumb','poster','banner','fanart','clearlogo','fanart1','fanart2']) #https://alwinesch.github.io/group__python__xbmcgui__listitem.html#ga92f9aeb062ff50badcb8792d14a37394
 		self.listitem['property_keys'] = set(['SpecialSort','table_filter','total_games','is_1g1r_list','total_1g1r_games']) #https://alwinesch.github.io/group__python__xbmcgui__listitem.html#ga96f1976952584c91e6d59c310ce86a25
 		self.listitem['info_keys'] = set(['size','count','date']) #https://xbmc.github.io/docs.kodi.tv/master/kodi-base/d8/d29/group__python__xbmcgui__listitem.html#ga0b71166869bda87ad744942888fb5f14
-		self.listitem['non_string_to_list_keys'] = set(['studio']) #Remove these keys from json serializable list due to database encoding, which is storing it just as a single string value
+		self.listitem['non_string_to_list_keys'] = [] #set(['studio']) #Remove these keys from json serializable list due to database encoding - fixed, now all expected values are json
 		self.listitem['sort_methods'] = dict()
 		self.listitem['sort_methods']['all'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_SIZE]
 		self.listitem['sort_methods']['categories'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE]
@@ -113,10 +124,19 @@ class config(object):
 		self.settings['game_list_clearlogo_to_art'] = dict()
 		self.settings['game_list_clearlogo_to_art']['options'] = dict(zip(['0','1','2'],['clearlogo_paths.url||game_lists_table.clearlogo','console_paths.url||game_lists_table.console','controller_paths.url||game_lists_table.controller']))
 		self.settings['game_list_clearlogo_to_art']['default'] = 'clearlogo_paths.url||game_lists_table.clearlogo'
+		self.settings['game_list_fanart_to_art'] = dict()
+		self.settings['game_list_fanart_to_art']['options'] = dict(zip(['0','1','2'],['fanart_collage_paths.url||game_lists_table.fanart_collage','console_paths.url||game_lists_table.console','fanart_wallpaper_paths.url||game_lists_table.fanart_wallpaper']))
+		self.settings['game_list_fanart_to_art']['default'] = 'fanart_collage_paths.url||game_lists_table.fanart_collage'
 		self.settings['user_launch_os'] = dict()
 		self.settings['user_launch_os']['options'] = dict(zip(['0','1','2','3','4','5','6'],[None,'windows','linux','OSX','android','android_aarch64','android_ra32']))
 		self.settings['user_launch_os']['android_options'] = ['android','android_aarch64','android_ra32']
 		self.settings['user_launch_os']['default'] = None
+		self.settings['alt_temp_dl_enable'] = dict()
+		self.settings['alt_temp_dl_enable']['options'] = dict(zip(['0','1'],[True,False]))
+		self.settings['alt_temp_dl_enable']['default'] = False
+		self.settings['organize_temp_dl'] = dict()
+		self.settings['organize_temp_dl']['options'] = dict(zip(['0','1'],[True,False]))
+		self.settings['organize_temp_dl']['default'] = True
 		self.settings['force_viewtypes'] = dict()
 		self.settings['force_viewtypes']['options'] = dict(zip(['0','1'],[True,False]))
 		self.settings['force_viewtypes']['default'] = False
@@ -133,6 +153,9 @@ class config(object):
 		self.settings['kodi_on_launch'] = dict()
 		self.settings['kodi_on_launch']['options'] = dict(zip(['0','1','2','3'],['0','1','2','3']))
 		self.settings['kodi_on_launch']['default'] = '1'
+		self.settings['no_user_command_present'] = dict()
+		self.settings['no_user_command_present']['options'] = dict(zip(['0','1','2'],['0','1','2']))
+		self.settings['no_user_command_present']['default'] = '1'
 		self.settings['kodi_saa'] = dict()
 		self.settings['kodi_saa']['options'] = dict(zip(['0','1'],['activities','commands']))
 		self.settings['kodi_saa']['default'] = 'activities'
@@ -226,7 +249,7 @@ class config(object):
 											'ON clearlogo_paths."path" = groups_table.clearlogo_path\n'
 											'WHERE groups_table.total_count<5000\n' #Remove huge playlists as they return too many games
 											'ORDER BY groups_table.label COLLATE NOCASE ASC')
-		self.database['query']['all_game_lists'] = ('SELECT game_lists_table.label,game_lists_table.next_path,game_lists_table.table_filter,thumb_paths.url||game_lists_table.thumb as thumb,poster_paths.url||game_lists_table.poster as poster,banner_paths.url||game_lists_table.banner as banner,fanart_paths.url||game_lists_table.fanart_collage as fanart,{game_list_clearlogo_to_art} as clearlogo,"plugin://plugin.video.youtube/play/?video_id="||game_lists_table.trailer as trailer,game_lists_table.plot,DATE(game_lists_table.date) as premiered,game_lists_table.total_games,game_lists_table.is_1g1r_list,game_lists_table.total_1g1r_games\n'
+		self.database['query']['all_game_lists'] = ('SELECT game_lists_table.label,game_lists_table.next_path,game_lists_table.table_filter,thumb_paths.url||game_lists_table.thumb as thumb,poster_paths.url||game_lists_table.poster as poster,banner_paths.url||game_lists_table.banner as banner,{game_list_fanart_to_art} as fanart,{game_list_clearlogo_to_art} as clearlogo,"plugin://plugin.video.youtube/play/?video_id="||game_lists_table.trailer as trailer,game_lists_table.plot,DATE(game_lists_table.date) as premiered,game_lists_table.total_games,game_lists_table.is_1g1r_list,game_lists_table.total_1g1r_games\n'
 													'FROM game_list as game_lists_table\n'
 													'LEFT JOIN paths as thumb_paths\n'
 													'ON thumb_paths."path" = game_lists_table.thumb_path\n'
@@ -240,11 +263,13 @@ class config(object):
 													'ON console_paths."path" = game_lists_table.console_path\n'
 													'LEFT JOIN paths as controller_paths\n'
 													'ON controller_paths."path" = game_lists_table.controller_path\n'
-													'LEFT JOIN paths as fanart_paths\n'
-													'ON fanart_paths."path" = game_lists_table.fanart_collage_path\n'
+													'LEFT JOIN paths as fanart_collage_paths\n'
+													'ON fanart_collage_paths."path" = game_lists_table.fanart_collage_path\n'
+													'LEFT JOIN paths as fanart_wallpaper_paths\n'
+													'ON fanart_wallpaper_paths."path" = game_lists_table.fanart_wallpaper_path\n'
 													'WHERE game_lists_table.user_global_visibility is NULL and game_lists_table.label IN (SELECT DISTINCT(games_table.game_list) as available_lists FROM games AS games_table)'
 													'ORDER BY game_lists_table.label COLLATE NOCASE ASC') #Checked
-		self.database['query']['game_lists_by_category'] = ('SELECT game_lists_table.label,game_lists_table.next_path,game_lists_table.table_filter,thumb_paths.url||game_lists_table.thumb as thumb,poster_paths.url||game_lists_table.poster as poster,banner_paths.url||game_lists_table.banner as banner,fanart_paths.url||game_lists_table.fanart_collage as fanart,{game_list_clearlogo_to_art} as clearlogo,"plugin://plugin.video.youtube/play/?video_id="||game_lists_table.trailer as trailer,game_lists_table.plot,DATE(game_lists_table.date) as date,DATE(game_lists_table.date) as premiered,game_lists_table.total_games,game_lists_table.is_1g1r_list,game_lists_table.total_1g1r_games\n'
+		self.database['query']['game_lists_by_category'] = ('SELECT game_lists_table.label,game_lists_table.next_path,game_lists_table.table_filter,thumb_paths.url||game_lists_table.thumb as thumb,poster_paths.url||game_lists_table.poster as poster,banner_paths.url||game_lists_table.banner as banner,{game_list_fanart_to_art} as fanart,{game_list_clearlogo_to_art} as clearlogo,"plugin://plugin.video.youtube/play/?video_id="||game_lists_table.trailer as trailer,game_lists_table.plot,DATE(game_lists_table.date) as date,DATE(game_lists_table.date) as premiered,game_lists_table.total_games,game_lists_table.is_1g1r_list,game_lists_table.total_1g1r_games\n'
 													'FROM game_list as game_lists_table\n'
 													'LEFT JOIN paths as thumb_paths\n'
 													'ON thumb_paths."path" = game_lists_table.thumb_path\n'
@@ -258,8 +283,10 @@ class config(object):
 													'ON console_paths."path" = game_lists_table.console_path\n'
 													'LEFT JOIN paths as controller_paths\n'
 													'ON controller_paths."path" = game_lists_table.controller_path\n'
-													'LEFT JOIN paths as fanart_paths\n'
-													'ON fanart_paths."path" = game_lists_table.fanart_collage_path\n'
+													'LEFT JOIN paths as fanart_collage_paths\n'
+													'ON fanart_collage_paths."path" = game_lists_table.fanart_collage_path\n'
+													'LEFT JOIN paths as fanart_wallpaper_paths\n'
+													'ON fanart_wallpaper_paths."path" = game_lists_table.fanart_wallpaper_path\n'
 													'WHERE game_lists_table.user_global_visibility is NULL and game_lists_table.label IN (SELECT DISTINCT(games_table.game_list) as available_lists FROM games AS games_table) and game_lists_table.categories LIKE "%{category_id}%"'
 													'ORDER BY game_lists_table.label COLLATE NOCASE ASC') #Checked
 		self.database['query']['game_lists_by_playlist_no_page'] = ('SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
@@ -489,7 +516,7 @@ class config(object):
 															'FROM games as games_table\n'
 															'LEFT JOIN game_list as game_list_table on games_table.game_list = game_list_table.label\n'
 															'WHERE games_table.uid = "{game_id}"')
-		self.database['query']['get_game_from_id'] = ('SELECT games_table.uid,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as platform,games_table.genres AS genres,games_table.studio as publisher,games_table.year,games_table.size,games_table.plot as overview,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart,games_table.launch_parameters,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,game_list_table.default_global_post_download_process,game_list_table.default_global_launcher,game_list_table.user_post_download_process,game_list_table.user_global_launcher,game_list_table.user_global_launch_addon,game_list_table.user_global_external_launch_command,game_list_table.user_global_uses_applaunch,game_list_table.user_global_uses_apppause,game_list_table.user_global_download_path,game_list_table.default_global_launch_addon,game_list_table.default_global_external_launch_command,games_table.rom\n'
+		self.database['query']['get_game_from_id'] = ('SELECT games_table.uid,games_table.game_list as game_list_id,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as platform,games_table.genres AS genres,games_table.studio as publisher,games_table.year,games_table.size,games_table.plot as overview,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart,games_table.launch_parameters,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,game_list_table.default_global_post_download_process,game_list_table.default_global_launcher,game_list_table.user_post_download_process,game_list_table.user_global_launcher,game_list_table.user_global_launch_addon,game_list_table.user_global_external_launch_command,game_list_table.user_global_uses_applaunch,game_list_table.user_global_uses_apppause,game_list_table.user_global_download_path,game_list_table.default_global_launch_addon,game_list_table.default_global_external_launch_command,games_table.rom\n'
 														'FROM games as games_table\n'
 														'LEFT JOIN game_list as game_list_table on games_table.game_list = game_list_table.label\n'
 														'LEFT JOIN paths as banner_paths\n'
@@ -519,6 +546,11 @@ class config(object):
 														'LEFT JOIN games as games_table on games_table.game_list = game_lists_table.label and games_table.user_is_favorite is NOT NULL\n'
 														'LEFT JOIN core_info as core_info_table on core_info_table.core_stem = game_lists_table.default_global_external_launch_command\n'
 														'WHERE game_lists_table.label = "{game_list_id}"')
+		self.database['query']['get_game_list_info_from_game_id'] = ('SELECT game_lists_table.label,game_lists_table.system,game_lists_table.default_global_external_launch_command,core_info_table.display_name as default_global_external_launch_core_name,game_lists_table.default_global_launch_addon,game_lists_table.default_global_launcher,game_lists_table.default_global_post_download_process,game_lists_table.user_global_download_path,game_lists_table.user_global_external_launch_command,game_lists_table.user_global_uses_applaunch,game_lists_table.user_global_uses_apppause,game_lists_table.user_global_launch_addon,game_lists_table.user_global_launcher,game_lists_table.user_global_visibility,game_lists_table.user_post_download_process,games_table.uid,games_table.originaltitle AS originaltitle,games_table.name_search as sorttitle,games_table.system as platform,games_table.genres AS genres,games_table.studio as publisher,games_table.year,games_table.size,games_table.plot as overview,games_table.launch_parameters,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,games_table.rom\n'
+																	'FROM games as games_table\n'
+																	'LEFT JOIN game_list as game_lists_table on game_lists_table.label = games_table.game_list\n'
+																	'LEFT JOIN core_info as core_info_table on core_info_table.core_stem = game_lists_table.default_global_external_launch_command\n'
+																	'WHERE games_table.uid = "{game_id}"')
 		self.database['query']['search_random_get_game_lists'] = ('SELECT game_lists_table.label as label,NULL as next_path,poster_paths.url||game_lists_table.poster as thumb\n'
 																'FROM game_list as game_lists_table\n'
 																'LEFT JOIN paths as poster_paths\n'
@@ -724,7 +756,7 @@ class config(object):
 													'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
 													'LEFT JOIN paths as fanart_paths\n'
 													'ON fanart_paths."path" = games_table.art_fanart_path\n'
-													'ORDER BY history_table.rowid DESC')
+													'ORDER BY history_table.insert_time DESC')
 		self.database['query']['history_page'] = ('SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.system as "tvshowtitle",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
 													'FROM history as history_table\n'
 													'LEFT JOIN games as games_table\n'
@@ -745,7 +777,7 @@ class config(object):
 													'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
 													'LEFT JOIN paths as fanart_paths\n'
 													'ON fanart_paths."path" = games_table.art_fanart_path\n'
-													'ORDER BY history_table.rowid ASC\n'
+													'ORDER BY history_table.insert_time DESC\n'
 													'LIMIT {items_per_page} OFFSET {starting_number}')
 		self.database['query']['get_favorite_group_names'] = ('SELECT DISTINCT fav_table.fav_group as label\n'
 														'FROM favorites as fav_table')
@@ -753,10 +785,10 @@ class config(object):
 													'VALUES(?,?,?,?,?)')
 		self.database['query']['mark_game_as_favorite'] = 'UPDATE games SET user_is_favorite=1 WHERE uid="{}"'
 		self.database['query']['unmark_game_as_favorite'] = 'UPDATE games SET user_is_favorite=NULL WHERE uid="{}"'
-		self.database['query']['insert_history'] = ('INSERT INTO history(uid)\n'
-													'VALUES(?)')
+		self.database['query']['insert_history'] = ('INSERT INTO history(uid,insert_time)\n'
+													'VALUES(?,?)')
 		self.database['query']['limit_history'] = ('DELETE FROM history\n'
-													'WHERE uid IN (SELECT history_table.uid FROM history as history_table LIMIT 99999 OFFSET {history_limit})')
+													'WHERE uid NOT IN (SELECT history_table.uid FROM history as history_table order by history_table.insert_time DESC LIMIT {history_limit})')
 		self.database['query']['delete_history_from_uid'] = 'DELETE FROM history WHERE uid = "{}"'
 		self.database['query']['get_total_history'] = 'SELECT count(*) as total_history FROM history'
 		self.database['query']['delete_favorite_from_uid'] = 'DELETE FROM favorites WHERE uid="{}"'
@@ -812,5 +844,51 @@ class config(object):
 		self.database['query']['get_other_emulator_android'] = dict()
 		self.database['query']['get_other_emulator_android']['commands'] = 'SELECT display_name,command FROM external_commands WHERE os="{}" and is_retroarch=0'
 		self.database['query']['get_other_emulator_android']['activities'] = 'SELECT display_name,activity as command FROM external_commands WHERE os="{}" and is_retroarch=0'
-
-
+		self.database['query']['get_db_stats'] = ('SELECT game_lists_table.label,\n'
+													'CASE WHEN game_lists_table.is_1g1r_list = 1 THEN "Total Games: "||game_lists_table.total_games||" - Total 1G1R Games: "||game_lists_table.total_1g1r_games ELSE "Total Games: "||game_lists_table.total_games END as label2,\n'
+													'NULL as next_path,game_lists_table.system,thumb_paths.url||game_lists_table.thumb as thumb,poster_paths.url||game_lists_table.poster as poster,banner_paths.url||game_lists_table.banner as banner,fanart_paths.url||game_lists_table.fanart_collage as fanart,clearlogo_paths.url||game_lists_table.clearlogo as clearlogo,game_lists_table.total_games,game_lists_table.is_1g1r_list,game_lists_table.total_1g1r_games\n'
+													'FROM game_list as game_lists_table\n'
+													'LEFT JOIN paths as thumb_paths\n'
+													'ON thumb_paths."path" = game_lists_table.thumb_path\n'
+													'LEFT JOIN paths as poster_paths\n'
+													'ON poster_paths."path" = game_lists_table.poster_path\n'
+													'LEFT JOIN paths as banner_paths\n'
+													'ON banner_paths."path" = game_lists_table.banner_path\n'
+													'LEFT JOIN paths as clearlogo_paths\n'
+													'ON clearlogo_paths."path" = game_lists_table.clearlogo_path\n'
+													'LEFT JOIN paths as fanart_paths\n'
+													'ON fanart_paths."path" = game_lists_table.fanart_collage_path\n'
+													'ORDER BY game_lists_table.label COLLATE NOCASE ASC') 
+		self.database['query']['get_db_stats2'] = ('SELECT 1 as idx,"Unique Categories" as label, COUNT(*) as total_games\n'
+													'FROM categories\n'
+													'UNION\n'
+													'SELECT 2 as idx,"Unique Playlists" as label, COUNT(*) as total_games\n'
+													'FROM groups\n'
+													'UNION\n'
+													'SELECT 3 as idx,"Unique Genres" as label, COUNT(*) as total_games\n'
+													'FROM genre\n'
+													'UNION\n'
+													'SELECT 4 as idx,"Unique Languages" as label, COUNT(*) as total_games\n'
+													'FROM language\n'
+													'UNION\n'
+													'SELECT 5 as idx,"Unique Num Players" as label, COUNT(*) as total_games\n'
+													'FROM nplayers\n'
+													'UNION\n'
+													'SELECT 6 as idx,"Unique Ratings" as label, COUNT(*) as total_games\n'
+													'FROM rating\n'
+													'UNION\n'
+													'SELECT 7 as idx,"Unique Tags" as label, COUNT(*) as total_games\n'
+													'FROM tag\n'
+													'UNION\n'
+													'SELECT 8 as idx,"Unique Codes" as label, COUNT(*) as total_games\n'
+													'FROM code\n'
+													'UNION\n'
+													'SELECT 9 as idx,"Unique Studios" as label, COUNT(*) as total_games\n'
+													'FROM studio\n'
+													'UNION\n'
+													'SELECT 10 as idx,"Unique Years" as label, COUNT(*) as total_games\n'
+													'FROM year\n'
+													'UNION\n'
+													'SELECT 11 as idx,"Favorited Items" as label, COUNT(*) as total_games\n'
+													'FROM favorites\n'
+													'ORDER by idx')

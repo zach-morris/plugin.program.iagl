@@ -43,6 +43,18 @@ class launch(object):
 		if self.launcher is not None:
 			self.launcher.set_game_name(game_name=game_name)
 
+	def set_appause(self,appause=None):
+		if isinstance(appause,int):
+			self.appause = appause
+		if self.launcher is not None:
+			self.launcher.set_appause(appause=appause)
+
+	def set_applaunch(self,applaunch=None):
+		if isinstance(applaunch,int):
+			self.applaunch = applaunch
+		if self.launcher is not None:
+			self.launcher.set_applaunch(applaunch=applaunch)
+
 	def set_launch_parameters(self,launch_parameters=None):
 		if isinstance(launch_parameters,dict):
 			self.launch_parameters = launch_parameters
@@ -87,6 +99,12 @@ class launch(object):
 			if isinstance(game_name,str):
 				self.game_name = game_name
 
+		def set_appause(self,appause=None):
+			pass
+
+		def set_applaunch(self,applaunch=None):
+			pass
+
 		def set_launch_parameters(self,launch_parameters=None):
 			if isinstance(launch_parameters,dict):
 				self.launch_parameters = launch_parameters
@@ -99,7 +117,11 @@ class launch(object):
 				xbmc.log(msg='IAGL:  Attempting to start game {}'.format(self.game_name),level=xbmc.LOGINFO)
 				xbmc.Player().play(item=self.rom.get('launch_file'),listitem=self.list_item)
 				xbmc.sleep(self.config.defaults.get('wait_for_player_time')) #Wait for player or select dialog
-				if xbmc.Player().isPlayingGame() or xbmc.Player().isPlaying():
+				if xbmc.Player().isPlaying():
+					playing_item = xbmc.Player().getPlayingItem()
+				else:
+					playing_item = None
+				if xbmc.Player().isPlayingGame() or xbmc.Player().isPlaying() or (isinstance(playing_item,xbmcgui.ListItem) and playing_item.getPath() == self.rom.get('launch_file')):
 					self.rom['launch_success'] = True
 					self.rom['launch_message'] = 'Playing game: {}'.format(self.game_name)
 					xbmc.log(msg='IAGL:  Playing game: {}'.format(self.game_name),level=xbmc.LOGINFO)
@@ -141,6 +163,14 @@ class launch(object):
 			if isinstance(game_name,str):
 				self.game_name = game_name
 
+		def set_appause(self,appause=None):
+			if isinstance(appause,int):
+				self.appause = appause
+
+		def set_applaunch(self,applaunch=None):
+			if isinstance(applaunch,int):
+				self.applaunch = applaunch
+
 		def set_launch_parameters(self,launch_parameters=None):
 			if isinstance(launch_parameters,dict):
 				self.launch_parameters = launch_parameters
@@ -169,7 +199,7 @@ class launch(object):
 					xbmc.Player().stop()
 					xbmc.sleep(self.config.defaults.get('wait_for_stop_time')) #If sleep is not called, Kodi will crash - does not like playing video and then swiching to a game
 
-				if self.kodi_suspend and self.appause=='0' and self.applaunch=='0':  #Only disbable audio and joystick if enabled in settings and Kodi is not about to be suspended or closed
+				if self.kodi_suspend and self.appause==0 and self.applaunch==0:  #Only disbable audio and joystick if enabled in settings and Kodi is not about to be suspended or closed
 					xbmc.log(msg='IAGL:  Stopping the Kodi Audio and joystick inputs for external launching',level=xbmc.LOGDEBUG)
 					xbmc.audioSuspend()
 					xbmc.enableNavSounds(False)
@@ -179,9 +209,8 @@ class launch(object):
 				#Insert external launch code here
 				xbmc.log(msg='IAGL:  Launching game with command:\n{}'.format(self.current_launch_command),level=xbmc.LOGINFO)
 				launch_process=Popen(self.current_launch_command,stdout=PIPE,stderr=STDOUT,shell=True)
-				
 				#Capture launch process log output
-				if self.appause=='0' and self.applaunch=='0':
+				if self.appause==0 and self.applaunch==0:
 					q = Queue()
 					t = Thread(target=self.enqueue_output,args=(launch_process.stdout,q))
 					t.daemon = True # thread dies with the program
@@ -192,7 +221,7 @@ class launch(object):
 							current_line = q.get_nowait()
 						except:
 							current_line = None
-						if current_line and len(self.current_launch_log)<500: #Read up to first 500 lines of output if available
+						if current_line and len(self.current_launch_log)<self.config.defaults.get('retroarch_logging_n_lines'): #Read up to first n lines of output if available
 							self.current_launch_log.append(current_line.decode('utf-8',errors='ignore').replace('\n','').replace('\r',''))
 						else:
 							break
@@ -205,36 +234,38 @@ class launch(object):
 							xbmc.log(msg='IAGL:  Log output for {}'.format(self.game_name),level=xbmc.LOGDEBUG)
 							for cl in self.current_launch_log:
 								xbmc.log(msg='IAGL EXT LOG:  {}'.format(cl),level=xbmc.LOGDEBUG)
-						self.kodi_wfr 
-						dp = xbmcgui.DialogProgress()
-						dp.create('Please Wait','Waiting for game to exit...')
-						perc = 0
-						dp.update(perc,'Waiting for game to exit...')
-						returned_to_kodi=False
-						check=None
-						xbmc.log(msg='IAGL:  Waiting game to exit...',level=xbmc.LOGDEBUG)
-						while not returned_to_kodi:
-							try:
-								check = launch_process.wait(timeout=self.config.defaults.get('wait_for_process_time'))
-							except TimeoutExpired:
-								perc=perc+10
-								dp.update(perc%100,'Waiting for game to exit...')
-								returned_to_kodi=False
-								check=None
-							if dp.iscanceled():
-								xbmc.log(msg='IAGL:  User has cancelled waiting for the game to exit',level=xbmc.LOGDEBUG)
-								returned_to_kodi=True
-								dp.close()
-								break
-							if isinstance(check,int):
-								xbmc.log(msg='IAGL:  Detected the game has exited',level=xbmc.LOGDEBUG)
-								returned_to_kodi = True
-								dp.close()
-								break
-							if returned_to_kodi:
-								dp.close()
-								break
-						del dp
+						if self.kodi_wfr:
+							dp = xbmcgui.DialogProgress()
+							dp.create('Please Wait','Waiting for game to exit...')
+							perc = 0
+							dp.update(perc,'Waiting for game to exit...')
+							returned_to_kodi=False
+							check=None
+							xbmc.log(msg='IAGL:  Waiting game to exit...',level=xbmc.LOGDEBUG)
+							while not returned_to_kodi:
+								try:
+									check = launch_process.wait(timeout=self.config.defaults.get('wait_for_process_time'))  #Check if game closed every n seconds
+								except TimeoutExpired:
+									perc=perc+10
+									dp.update(perc%100,'Waiting for game to exit...')
+									returned_to_kodi=False
+									check=None
+								if dp.iscanceled():
+									xbmc.log(msg='IAGL:  User has cancelled waiting for the game to exit',level=xbmc.LOGDEBUG)
+									returned_to_kodi=True
+									dp.close()
+									break
+								if isinstance(check,int):
+									xbmc.log(msg='IAGL:  Detected the game has exited (Returned {})'.format(check),level=xbmc.LOGDEBUG)
+									returned_to_kodi = True
+									dp.close()
+									break
+								if returned_to_kodi:
+									dp.close()
+									break
+							del dp
+						else:
+							xbmc.log(msg='IAGL:  Wait for return set to false, returning to Kodi GUI',level=xbmc.LOGDEBUG)
 					else:
 						self.rom['launch_success'] = False
 						self.rom['launch_message'] = 'Game did not launch {}'.format(self.game_name)

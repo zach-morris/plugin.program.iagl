@@ -167,11 +167,11 @@ class database(object):
 		result = None
 		delete_first_result = self.delete_history_from_uid(game_id=game_id) #Remove the last time the game was played from history first
 		if self.config.debug.get('print_query'):
-			xbmc.log(msg='IAGL: SQL STATEMENT: {}'.format(self.config.database.get('query').get('insert_history').format(game_id)),level=xbmc.LOGDEBUG)
+			xbmc.log(msg='IAGL: SQL STATEMENT: {}, ({}, {})'.format(self.config.database.get('query').get('insert_history'),game_id,dt.now().timestamp()),level=xbmc.LOGDEBUG)
 		try:
 			with closing(sqlite3.connect(self.config.files.get('db'))) as conn:
 				with closing(conn.cursor()) as cursor:
-					cursor.execute(self.config.database.get('query').get('insert_history'),(game_id,))
+					cursor.execute(self.config.database.get('query').get('insert_history'),(game_id,dt.now().timestamp(),))
 					conn.commit()
 					result = cursor.lastrowid
 		except Exception as exc:

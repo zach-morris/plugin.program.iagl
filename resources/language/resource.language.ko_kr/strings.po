@@ -592,15 +592,15 @@ msgid "Android ra32"
 msgstr "안드로이드 ra32"
 
 msgctxt "#30149"
-msgid "Only list default commands"
+msgid "Keep Kodi in the background"
 msgstr "Kodi를 배경에 두세요"
 
 msgctxt "#30150"
-msgid "Only list close Kodi commands"
+msgid "Close Kodi"
 msgstr "코디 닫기"
 
 msgctxt "#30151"
-msgid "Only list pause Kodi commands"
+msgid "Pause Kodi"
 msgstr "코디 일시 정지"
 
 msgctxt "#30152"
@@ -800,7 +800,7 @@ msgid "Download Threads"
 msgstr "스레드 다운로드"
 
 msgctxt "#30201"
-msgid "Set alternate default folder for all downloads"
+msgid "Alternate default download folder"
 msgstr "모든 다운로드에 대한 대체 기본 폴더 설정"
 
 msgctxt "#30202"
@@ -1056,7 +1056,7 @@ msgid "Select game addon"
 msgstr "게임 애드온 선택"
 
 msgctxt "#30265"
-msgid "Reset to default"
+msgid "Are you sure you want to reset the game addon launch command?"
 msgstr "기본값으로 재설정"
 
 msgctxt "#30266"

@@ -11,12 +11,13 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 class download(object):
-	def __init__(self,config=None,rom=None,game_name=None,dl_path=None,current_downloader='archive_org',threads=None,auto_login=True,show_dl_progress=True,show_login_progress=True,ia_email=None,ia_password=None,if_game_exists=0,ige_dialog=None):
+	def __init__(self,config=None,rom=None,launch_parameters=None,game_name=None,dl_path=None,current_downloader='archive_org',threads=None,auto_login=True,show_dl_progress=True,show_login_progress=True,ia_email=None,ia_password=None,if_game_exists=0,ige_dialog=None):
 		self.config = config
 		self.show_dl_progress = show_dl_progress
 		self.show_login_progress = show_login_progress
 		self.downloader = None
 		self.rom = rom
+		self.launch_parameters = launch_parameters
 		self.game_name = game_name
 		self.dl_path = dl_path
 		self.auto_login = auto_login
@@ -46,6 +47,14 @@ class download(object):
 			self.rom = None
 		if self.downloader is not None:
 			self.downloader.set_rom(rom=self.rom)
+
+	def set_launch_parameters(self,launch_parameters=None):
+		if isinstance(launch_parameters,dict):
+			self.launch_parameters = launch_parameters
+		else:
+			self.launch_parameters = None
+		if self.downloader is not None:
+			self.downloader.set_launch_parameters(launch_parameters=self.launch_parameters)
 
 	def set_threads(self,threads=None):
 		if isinstance(threads,str) and threads.isdigit():
@@ -108,9 +117,10 @@ class download(object):
 			xbmc.log(msg='IAGL:  Badly formed game download request: {}'.format(self.rom),level=xbmc.LOGERROR)
 			
 	class archive_org(object):
-		def __init__(self,config=None,rom=None,game_name=None,dl_path=None,threads=None,auto_login=True,show_dl_progress=True,show_login_progress=True,ia_email=None,ia_password=None,if_game_exists=0,ige_dialog=None):
+		def __init__(self,config=None,rom=None,launch_parameters=None,game_name=None,dl_path=None,threads=None,auto_login=True,show_dl_progress=True,show_login_progress=True,ia_email=None,ia_password=None,if_game_exists=0,ige_dialog=None):
 			self.config = config
 			self.rom = rom
+			self.launch_parameters = launch_parameters
 			self.game_name = game_name
 			self.dl_path = dl_path
 			if threads is None:
@@ -148,6 +158,12 @@ class download(object):
 				self.rom = rom
 			else:
 				self.rom = None
+
+		def set_launch_parameters(self,launch_parameters=None):
+			if isinstance(launch_parameters,dict):
+				self.launch_parameters = launch_parameters
+			else:
+				self.launch_parameters = None
 
 		def set_game_name(self,game_name=None):
 			if isinstance(game_name,str):
@@ -291,14 +307,26 @@ class download(object):
 					xbmc.log(msg='IAGL:  Archive.org credentials are not entered yet',level=xbmc.LOGDEBUG)
 
 		def get_matching_local_files(self):
+			matching_files = []
+			current_dl_path_files = list(Path(self.dl_path).rglob('**/*'))
+			if isinstance(self.launch_parameters,dict) and isinstance(self.launch_parameters.get('launch_file'),dict):
+				lf = self.launch_parameters.get('launch_file').get('filename') or self.launch_parameters.get('launch_file').get('file_name')
+				if isinstance(lf,str):
+					lf = str(Path().joinpath(*lf.split('/')))  #Correct any path seperation
+					matching_files = matching_files+[x for x in current_dl_path_files if x.is_file() and x not in matching_files and lf == x.name]
+					matching_files = matching_files+[x for x in current_dl_path_files if x.is_file() and x not in matching_files and lf in str(x)]
+					if len(matching_files)>0:
+						xbmc.log(msg='IAGL:  Matching launch_parameter file found locally for requested game:\n{}'.format(lf),level=xbmc.LOGDEBUG)
 			if isinstance(self.rom,list):
 				for rn,cr in enumerate(self.rom):
-					cr['filename'] = url_unquote(cr.get('url').split('/')[-1].split('%2F')[-1])
+					cr['filename'] = xbmcvfs.makeLegalFilename(url_unquote(cr.get('url').split('/')[-1].split('%2F')[-1]))
 					cr['dl_filepath'] = Path(self.dl_path).joinpath(cr.get('filename'))
 					cr['filenum'] = rn
-					matching_files = [x for x in Path(self.dl_path).rglob('**/{}*'.format(Path(cr.get('filename')).name))] #First find any exact matches
-					matching_files = matching_files+[x for x in Path(self.dl_path).rglob('**/{}*'.format(Path(cr.get('filename')).stem)) if x not in matching_files] #Next add any stem matches
-					cr['matching_files'] = matching_files  #May have to make this more fancy when pointer files are introduced for certain archives, or take care of it in post_process
+					matching_files = matching_files+[x for x in current_dl_path_files if x.is_file() and x not in matching_files and Path(cr.get('filename')).name == x.name]
+					matching_files = matching_files+[x for x in current_dl_path_files if x.is_file() and x not in matching_files and Path(cr.get('filename')).stem == x.stem]
+					# matching_files = matching_files+[x for x in current_dl_path_files if x.is_file() and x not in matching_files and Path(cr.get('filename')).name in str(x)]
+					matching_files = matching_files+[x for x in current_dl_path_files if x.is_file() and x not in matching_files and str(x.stem) in Path(cr.get('filename')).stem]
+					cr['matching_files'] = matching_files
 					cr['matching_file_found'] = True if len(cr.get('matching_files'))>0 else False
 					cr['continue_with_download'] = True #Default to download
 					if cr.get('matching_file_found'):
@@ -382,7 +410,7 @@ class download(object):
 								cr['byte_ranges'] = ['{}-{}'.format(r1,r2-1 if r2!='end' else '') for r1,r2 in zip(rr,rr[1:]+['end'])] #Otherwise break the file into chunks
 								cr['chunk_filenames'] = [str(cr.get('dl_filepath').parent.joinpath(cr.get('dl_filepath').stem+'.{0:0=3d}'.format(ii)+cr.get('dl_filepath').suffix)) for ii,x in enumerate(cr.get('byte_ranges'))]
 						else:
-							cr['chunk_size'] = abs(cr.get('filesize'))
+							cr['chunk_size'] = abs(cr.get('filesize') or self.config.downloads.get('min_file_size'))
 							cr['byte_ranges'] = '0-'
 							cr['chunk_filenames'] = str(cr.get('dl_filepath'))
 
@@ -501,7 +529,7 @@ class download(object):
 										current_size=int(xbmcgui.Window(self.dp_id).getProperty('current_size'))+len(chunk) #Get size of download combining all threads
 									else:
 										current_size=len(chunk)
-									percent_complete = int(100*current_size/(rom.get('filesize')+1)) #Calculate overall progress for downloading this file combining all threads
+									percent_complete = int(100*current_size/((rom.get('filesize') or 0)+1)) #Calculate overall progress for downloading this file combining all threads
 									xbmcgui.Window(self.dp_id).setProperty('current_size',str(current_size))
 									if xbmcgui.Window(self.dp_id).getProperty('start_time').isdigit():
 										bps_start = int(xbmcgui.Window(self.dp_id).getProperty('start_time'))/1000

@@ -1,6 +1,7 @@
 import xbmc,xbmcgui,xbmcaddon,xbmcvfs,json,os
 from pathlib import Path
 from urllib.parse import urlencode
+import archive_tool
 
 class common(object):
 	def __init__(self,config=None):
@@ -70,20 +71,17 @@ class common(object):
 			result2 = self.config.settings.get('append_game_list_to_playlist_results').get('options').get(self.config.addon.get('addon_handle').getSetting(id='append_game_list_to_playlist_results')) or self.config.settings.get('append_game_list_to_playlist_results').get('default')
 			result = result1+result2		
 		elif setting_in == 'default_dl_path': #Download paths are strings for xbmcvfs
-			current_temp_dl_size = self.xbmc_dir_size(self.config.paths.get('default_temp_dl'))
-			current_file_list = self.xbmc_get_files(self.config.paths.get('default_temp_dl'))
-			if isinstance(current_temp_dl_size,int) and current_temp_dl_size>self.get_setting('game_cache_size') and isinstance(current_file_list,list) and len(current_file_list)>0:
-				xbmc.log(msg='IAGL: game_cache directory size is {} bytes ({} total files), limit is {} bytes.  Purging folder.'.format(current_temp_dl_size,len(current_file_list),self.get_setting('game_cache_size')),level=xbmc.LOGDEBUG)
+			if isinstance(self.config.paths.get('default_temp_dl_size'),int) and self.config.paths.get('default_temp_dl_size')>self.get_setting('game_cache_size'):
+				xbmc.log(msg='IAGL: game_cache directory size is {} bytes ({} total files), limit is {} bytes.  Purging folder.'.format(self.config.paths.get('default_temp_dl_size'),len(self.config.files.get('default_temp_dl_file_listing')),self.get_setting('game_cache_size')),level=xbmc.LOGDEBUG)
 				if self.xbmc_del_dir(self.config.paths.get('default_temp_dl')):
 					xbmc.log(msg='IAGL: game_cache directory purged',level=xbmc.LOGDEBUG)
-			result1 = self.config.addon.get('addon_handle').getSetting(id='alt_temp_dl')
-			if self.xbmc_dir_exists(result1):
-				result = self.get_path_as_xbmc_str(result1)
+			if self.get_setting('alt_temp_dl_enable')==True and self.xbmc_dir_exists(self.config.addon.get('addon_handle').getSetting(id='alt_temp_dl')):
+				result = self.get_path_as_xbmc_str(self.config.addon.get('addon_handle').getSetting(id='alt_temp_dl'))
 			else:
 				if not self.xbmc_dir_exists(self.config.paths.get('default_temp_dl')):
 					if self.xbmc_mk_dir(self.config.paths.get('default_temp_dl')):
 						result = self.get_path_as_xbmc_str(self.config.paths.get('default_temp_dl'))
-						xbmc.log(msg='IAGL: game_cache directory created',level=xbmc.LOGDEBUG)
+						xbmc.log(msg='IAGL: game_cache directory (re)created',level=xbmc.LOGDEBUG)
 					else:
 						xbmc.log(msg='IAGL: unable to create game_cache directory',level=xbmc.LOGERROR)
 				else:
@@ -130,37 +128,114 @@ class common(object):
 			current_property_dict = None
 		return current_property_dict
 
+	# def get_crc32(self,filename_in=None,chunk_size=10485760):
+	# 	csum = None
+	# 	if isinstance(filename_in,Path) and filename_in.exists():
+	# 		with filename_in.open(mode='rb') as f:
+	# 			for chunk in iter((lambda:f.read(chunk_size)),None):
+	# 				if chunk:
+	# 					if csum:
+	# 						csum = zlib_crc32(chunk,csum)
+	# 					else:
+	# 						csum = zlib_crc32(chunk)
+	# 				else:
+	# 					break
+	# 	if csum:
+	# 		return format(csum & 0xFFFFFFFF,'X')
+	# 	else:
+	# 		return None
+
+	def get_game_dl_path(self,path_in=None,game_list_id=None,organize_path=True):
+		result = path_in
+		if isinstance(path_in,str) and isinstance(game_list_id,str) and organize_path:
+			
+			if self.xbmc_dir_exists(str(Path(path_in).joinpath(xbmcvfs.makeLegalFilename(game_list_id)))):
+				result = self.get_path_as_xbmc_str(str(Path(path_in).joinpath(xbmcvfs.makeLegalFilename(game_list_id))))
+			else:
+				if self.xbmc_mk_dir(str(Path(path_in).joinpath(xbmcvfs.makeLegalFilename(game_list_id)))):
+					result = self.get_path_as_xbmc_str(str(Path(path_in).joinpath(xbmcvfs.makeLegalFilename(game_list_id))))
+					xbmc.log(msg='IAGL: game_cache sub-directory {} created'.format(xbmcvfs.makeLegalFilename(game_list_id)),level=xbmc.LOGDEBUG)
+				else:					
+					xbmc.log(msg='IAGL: Unable to generate game_cache sub-directory {}'.format(xbmcvfs.makeLegalFilename(game_list_id)),level=xbmc.LOGERROR)
+		return result
+
+	def update_game_dl_path(self,path_in=None,new_folder=None):
+		path_out = path_in
+		if isinstance(path_in,str) and Path(path_in).name!=new_folder:
+			game_dl_path = Path(path_in).joinpath(new_folder)
+			if not game_dl_path.exists():
+				game_dl_path.mkdir(exist_ok=True)
+			path_out = str(game_dl_path)
+			xbmc.log(msg='IAGL:  Download folder updated to {} per post process command'.format(path_out),level=xbmc.LOGDEBUG)
+		return path_out
+
+	def extract_addon_db(self,use_backup=False):
+		success = False
+		if use_backup:
+			current_file = self.config.files.get('addon_data_db_zipped_backup')
+		else:
+			current_file = self.config.files.get('addon_data_db_zipped')
+		if current_file.exists():
+			my_archive = archive_tool.archive_tool(archive_file=str(current_file),directory_out=str(self.config.files.get('db').parent),flatten_archive=True)
+			xbmc.log(msg='IAGL: Extracting zipped db {} to path {}'.format(current_file,self.config.files.get('db')),level=xbmc.LOGDEBUG)
+			extracted_files, result = my_archive.extract()
+			if result and self.config.files.get('db').exists():
+				success = True
+			else:
+				success = False
+		else:
+			xbmc.log(msg='IAGL: File not found: {}'.format(current_file),level=xbmc.LOGDEBUG)
+			success = False
+		return success
+
 	def check_db(self):
 		result = False
 		if self.config.files.get('db').exists():
 			xbmc.log(msg='IAGL: db path {}'.format(self.config.files.get('db')),level=xbmc.LOGDEBUG)
-			result = True
+			if self.get_setting('db_version') == self.config.addon.get('version'):
+				xbmc.log(msg='IAGL: db version {}'.format(self.get_setting('db_version')),level=xbmc.LOGDEBUG)
+				result = True
+			else:
+				if self.config.files.get('addon_data_db_zipped').exists():
+					#Query user about updating db, copying settings here
+					xbmc.log(msg='IAGL: new db version found',level=xbmc.LOGDEBUG)
+				else:
+					xbmcaddon.Addon(id=self.config.addon.get('addon_name')).setSetting(id='db_version',value=self.config.addon.get('version'))
+					xbmc.log(msg='IAGL: new db version not found (settings likely reset?) updating version number',level=xbmc.LOGDEBUG)
+					result = True
 		else:
 			xbmc.log(msg='IAGL: userdata db not found, copying from addon data',level=xbmc.LOGDEBUG)
-			if self.config.files.get('addon_data_db').exists():
-				xbmc.log(msg='IAGL: Copying db to path {}'.format(self.config.files.get('db')),level=xbmc.LOGDEBUG)
-				result = self.files.copy_file(file_in=self.config.files.get('addon_data_db'),file_out=self.config.files.get('db'))
-			elif self.config.files.get('addon_data_db_zipped').exists():
-				xbmc.log(msg='IAGL: Extracting zipped db to path {}'.format(self.config.files.get('db')),level=xbmc.LOGDEBUG)
-				import archive_tool
-				my_archive = archive_tool.archive_tool(archive_file=str(self.config.files.get('addon_data_db_zipped')),directory_out=str(self.config.files.get('db').parent),flatten_archive=True)
-				extracted_files, result = my_archive.extract()
+			if self.config.files.get('addon_data_db_zipped').exists():
+				result = self.extract_addon_db()
 				if result:
-					xbmc.log(msg='IAGL: Extracted zipped db to path {}'.format(','.join(extracted_files),str(self.config.files.get('db').parent)),level=xbmc.LOGDEBUG)
+					xbmcaddon.Addon(id=self.config.addon.get('addon_name')).setSetting(id='db_version',value=self.config.addon.get('version'))
+					xbmc.log(msg='IAGL: Extracted zipped db with version {} to path {}'.format(self.config.addon.get('version'),str(self.config.files.get('db').parent)),level=xbmc.LOGDEBUG)
+					self.config.files.get('addon_data_db_zipped').rename(self.config.files.get('addon_data_db_zipped_backup'))
+				else:
+					xbmc.log(msg='IAGL:  Error extracting addon db: {}'.format(self.config.files.get('addon_data_db_zipped')),level=xbmc.LOGERROR)
 			else:
-				xbmc.log(msg='IAGL: addon database file not found: {}'.format(self.config.files.get('addon_data_db')),level=xbmc.LOGERROR)
+				xbmc.log(msg='IAGL: addon database file not found, trying to restore from backup.',level=xbmc.LOGDEBUG)
+				result = self.extract_addon_db(use_backup=True)
+				if result==False:
+					xbmc.log(msg='IAGL: addon database file not found, unable to restore from backup.',level=xbmc.LOGERROR)
 		return result
 
 	def reset_db(self):
 		result = False
 		xbmc.log(msg='IAGL: userdata db reset requested',level=xbmc.LOGDEBUG)
-		if self.config.files.get('addon_data_db').exists():
+		if self.config.files.get('addon_data_db_zipped').exists():
+			use_backup=False  #Use the non-backup if it exists
+		elif self.config.files.get('addon_data_db_zipped_backup').exists():
+			use_backup=True  #If it doesnt exist (likely), use the backup version
+		else:
+			use_backup = None
+		if use_backup is not None:
 			if self.config.files.get('db').exists():
 				self.config.files.get('db').unlink()
 				xbmc.log(msg='IAGL: old db deleted',level=xbmc.LOGDEBUG)
-				result = self.files.copy_file(file_in=self.config.files.get('addon_data_db'),file_out=self.config.files.get('db'))
+				result = self.extract_addon_db(use_backup=use_backup)
 		else:
-			xbmc.log(msg='IAGL: addon database file not found: {}'.format(self.config.files.get('addon_data_db')),level=xbmc.LOGERROR)
+			xbmc.log(msg='IAGL: addon database file not found',level=xbmc.LOGERROR)
 		return result
 
 	def get_game_addons(self,as_listitems=True,add_reset_to_default=True):
@@ -168,19 +243,19 @@ class common(object):
 		addons_json = json.loads(xbmc.executeJSONRPC('{ "jsonrpc": "2.0", "method": "Addons.GetAddons","params":{"type":"kodi.gameclient", "enabled": true}, "id": "1"}'))
 		if isinstance(addons_json,dict) and isinstance(addons_json.get('result'),dict) and isinstance(addons_json.get('result').get('addons'),list):
 			ids = [x.get('addonid') for x in addons_json.get('result').get('addons') if isinstance(x.get('addonid'),str) and x.get('addonid') not in ['game.libretro']]
-			result_dict = [{'id':x,'label':xbmcaddon.Addon(id=x).getAddonInfo('name'),'icon':xbmcaddon.Addon(id=x).getAddonInfo('icon')} for x in ids]
-		if as_listitems and len(result_dict)>0:
-			for r in result_dict:
-				li = xbmcgui.ListItem(r.get('label'),offscreen=True)
-				li.setArt({k:r.get('icon') for k in ['banner','clearlogo','landscape','poster','thumb']})
-				li.setProperties({'id':r.get('id')})
-				result.append(li)
-			if add_reset_to_default:
-				li = xbmcgui.ListItem(self.get_loc(30265),offscreen=True)
-				li.setProperties({'id':'reset'})
-				result.append(li)
-		else:
-			result = result_dict
+			result_dict = sorted([{'id':x,'label':xbmcaddon.Addon(id=x).getAddonInfo('name'),'icon':xbmcaddon.Addon(id=x).getAddonInfo('icon')} for x in sorted(set(ids))],key=lambda x: x.get('label'))
+			if as_listitems and len(result_dict)>0:
+				for r in result_dict:
+					li = xbmcgui.ListItem(r.get('label'),offscreen=True)
+					li.setArt({k:r.get('icon') for k in ['banner','clearlogo','landscape','poster','thumb']})
+					li.setProperties({'id':r.get('id')})
+					result.append(li)
+				if add_reset_to_default:
+					li = xbmcgui.ListItem(self.get_loc(30299),offscreen=True)
+					li.setProperties({'id':'reset'})
+					result.append(li)
+			else:
+				result = result_dict
 		return result
 
 	def update_search(self,**kwargs):
@@ -515,6 +590,7 @@ class common(object):
 		li_out = li
 		if type_in == 'game' and isinstance(ip,str):
 			li_out.addContextMenuItems([(self.get_loc(30088),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/add_to_favorites/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30342),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/view_launch_parameters/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30266),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/download_game_to/{})'.format(ip.split('/')[-1])),])
 		if type_in == 'search_link' and isinstance(ip,str):
 			li_out.addContextMenuItems([(self.get_loc(30088),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/add_to_favorites_search/{})'.format(ip))])
@@ -579,7 +655,7 @@ class common(object):
 		parameters_out['core_stem'] = core_path_in.stem
 		parameters_out['info_file_path'] = info_files_in.get(core_path_in.stem)
 		if isinstance(parameters_out.get('info_file_path'),Path) and parameters_out.get('info_file_path').exists():
-			ra_info_text = parameters_out.get('info_file_path').read_text()
+			ra_info_text = parameters_out.get('info_file_path').read_text(encoding='utf-8',errors='ignore')
 			if isinstance(ra_info_text,str) and len(ra_info_text)>0:
 				for kk in ['display_name','corename','systemname','supported_extensions','description']:
 					parameters_out[kk] = self.get_ra_parameter(parameter_in=kk,text_in=ra_info_text)
@@ -597,7 +673,7 @@ class common(object):
 	def get_android_libretro_directory(self):
 		dir_out = None
 		if isinstance(self.get_setting('ra_cfg_path'),str) and xbmcvfs.exists(self.get_setting('ra_cfg_path')):
-			dir_out = self.get_ra_parameter(parameter_in='libretro_directory',text_in=Path(self.get_setting('ra_cfg_path')).read_text())
+			dir_out = self.get_ra_parameter(parameter_in='libretro_directory',text_in=Path(self.get_setting('ra_cfg_path')).read_text(encoding='utf-8',errors='ignore'))
 			if isinstance(dir_out,str) and '~' in dir_out:
 				dir_out = str(Path(dir_out).expanduser())
 		return dir_out
@@ -607,7 +683,7 @@ class common(object):
 		if isinstance(ra_default_command,dict) and isinstance(ra_default_command.get('command'),str) and isinstance(self.get_setting('ra_cfg_path'),str) and xbmcvfs.exists(self.get_setting('ra_cfg_path')):
 			xbmc.log(msg='IAGL:  Querying available RA cores for users system',level=xbmc.LOGDEBUG)
 			try:
-				ra_cfg_text = Path(self.get_setting('ra_cfg_path')).read_text()
+				ra_cfg_text = Path(self.get_setting('ra_cfg_path')).read_text(encoding='utf-8',errors='ignore')
 			except Exception as exc:
 				xbmc.log(msg='IAGL:  Unable to read Retroarch config file.  Error: {}'.format(exc),level=xbmc.LOGERROR)
 				ra_cfg_text = None
@@ -652,7 +728,7 @@ class common(object):
 								xbmc.log(msg='IAGL:  Destination directory does not exist (use create_directory=True if necessary): {}'.format(file_out.parent),level=xbmc.LOGDEBUG)
 						else:
 							if copy_as_text:
-								bytes_written=file_out.write_text(file_in.read_text())
+								bytes_written=file_out.write_text(file_in.read_text(encoding='utf-8',errors='ignore'))
 								if bytes_written>0:
 									success = True
 									xbmc.log(msg='IAGL:  File copied (as text): {} bytes'.format(bytes_written),level=xbmc.LOGDEBUG)

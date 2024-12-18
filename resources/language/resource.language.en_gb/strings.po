@@ -596,24 +596,24 @@ msgid "Android ra32"
 msgstr "Android ra32"
 
 msgctxt "#30147"
-msgid "External launch selection options"
-msgstr "External launch selection options"
+msgid "Game launcher selection method"
+msgstr "Game launcher selection method"
 
 msgctxt "#30148"
-msgid "Select what options Kodi will present for external launching (Windows, Linux and OSX only)[CR]Leave at default if unsure."
-msgstr "Select what options Kodi will present for external launching (Windows, Linux and OSX only)[CR]Leave at default if unsure."
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
 
 msgctxt "#30149"
-msgid "Only list default commands"
-msgstr "Only list default commands"
+msgid "Keep Kodi in the background"
+msgstr "Keep Kodi in the background"
 
 msgctxt "#30150"
-msgid "Only list close Kodi commands"
-msgstr "Only list close Kodi commands"
+msgid "Close Kodi"
+msgstr "Close Kodi"
 
 msgctxt "#30151"
-msgid "Only list pause Kodi commands"
-msgstr "Only list pause Kodi commands"
+msgid "Pause Kodi"
+msgstr "Pause Kodi"
 
 msgctxt "#30152"
 msgid "Retroarch core picker"
@@ -812,8 +812,8 @@ msgid "Download Threads"
 msgstr "Download Threads"
 
 msgctxt "#30201"
-msgid "Set alternate default folder for all downloads"
-msgstr "Set alternate default folder for all downloads"
+msgid "Alternate default download folder"
+msgstr "Alternate default download folder"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -1068,8 +1068,8 @@ msgid "Select game addon"
 msgstr "Select game addon"
 
 msgctxt "#30265"
-msgid "Reset to default"
-msgstr "Reset to default"
+msgid "Are you sure you want to reset the game addon launch command?"
+msgstr "Are you sure you want to reset the game addon launch command?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1340,8 +1340,8 @@ msgid "Checking credentials"
 msgstr "Checking credentials"
 
 msgctxt "#30333"
-msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options"
-msgstr "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options"
+msgstr "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options"
 
 msgctxt "#30334"
 msgid "The archive file could not be processed[CR]Check logs for more details"
@@ -1362,3 +1362,87 @@ msgstr "Close Kodi before launch, reopen Kodi after emulator exit"
 msgctxt "#30338"
 msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
 msgstr "Suspend Kodi before launch, wake Kodi after emulator exit"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "View IAGL db stats"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Lists current stats for IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db Stats"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "View launch parameters"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Game Settings"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Game Launch Parameters"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "If no user Launch Command is present"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Attempt Launch with default"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Stop / Do not launch"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "No command set"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "A launch command is not set for this list, set one now?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "No default launch command could be found for this list"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Default core was not found.  Please install {} or update launcher"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Game addon launch command reset"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "No game addons found"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Game addon launch command updated"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Use alternate default download folder"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Only show options that keep Kodi in the background"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Only show options that close Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Only show options that pause Kodi"

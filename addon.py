@@ -77,7 +77,7 @@ def view_all():
 	xbmc.log(msg='IAGL:  /all',level=xbmc.LOGDEBUG)
 	# choose_from_list will be replaced by setting
 	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format(item_path,'choose_from_list')),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_list'),True) if isinstance(list_item.getProperty('total_games'),str) and list_item.getProperty('total_games').isdigit() and int(list_item.getProperty('total_games'))>1 else (plugin.url_for_path('{}/{}'.format(item_path,'by_all')),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_list'),True) for list_item,item_path in db.query_db(db.get_query('all_game_lists',game_list_clearlogo_to_art=cm.get_setting('game_list_clearlogo_to_art'))) if isinstance(list_item,xbmcgui.ListItem)])
+	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format(item_path,'choose_from_list')),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_list'),True) if isinstance(list_item.getProperty('total_games'),str) and list_item.getProperty('total_games').isdigit() and int(list_item.getProperty('total_games'))>1 else (plugin.url_for_path('{}/{}'.format(item_path,'by_all')),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_list'),True) for list_item,item_path in db.query_db(db.get_query('all_game_lists',game_list_fanart_to_art=cm.get_setting('game_list_fanart_to_art'),game_list_clearlogo_to_art=cm.get_setting('game_list_clearlogo_to_art'))) if isinstance(list_item,xbmcgui.ListItem)])
 	for sm in config.listitem.get('sort_methods').get('all'):
 		xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -107,7 +107,7 @@ def view_by_category(category_id):
 	else:
 		xbmc.log(msg='IAGL:  /by_category/{}'.format(category_id),level=xbmc.LOGDEBUG)
 		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format(item_path,'choose_from_list')),list_item,True) if isinstance(list_item.getProperty('total_games'),str) and list_item.getProperty('total_games').isdigit() and int(list_item.getProperty('total_games'))>1 else (plugin.url_for_path('{}/{}'.format(item_path,'by_all')),list_item,True) for list_item,item_path in db.query_db(db.get_query('game_lists_by_category',category_id=category_id,game_list_clearlogo_to_art=cm.get_setting('game_list_clearlogo_to_art'))) if isinstance(list_item,xbmcgui.ListItem)])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format(item_path,'choose_from_list')),list_item,True) if isinstance(list_item.getProperty('total_games'),str) and list_item.getProperty('total_games').isdigit() and int(list_item.getProperty('total_games'))>1 else (plugin.url_for_path('{}/{}'.format(item_path,'by_all')),list_item,True) for list_item,item_path in db.query_db(db.get_query('game_lists_by_category',category_id=category_id,game_list_fanart_to_art=cm.get_setting('game_list_fanart_to_art'),game_list_clearlogo_to_art=cm.get_setting('game_list_clearlogo_to_art'))) if isinstance(list_item,xbmcgui.ListItem)])
 		for sm in config.listitem.get('sort_methods').get('by_category'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -1079,39 +1079,56 @@ def play_game(game_id):
 def play_game_retroplayer(game_id):
 	xbmc.log(msg='IAGL:  /play_game_retroplayer/{}'.format(game_id),level=xbmc.LOGDEBUG)
 	current_game_data = db.get_game_from_id(game_id=game_id,game_title_setting=cm.get_setting('append_game_list_to_playlist_results_combined'))
-	game_addon = next(iter([x for x in [current_game_data.get('user_game_launch_addon'),current_game_data.get('user_global_launch_addon'),current_game_data.get('default_global_launch_addon')] if isinstance(x,str)]),None) #Get launch addon
-	game_dl_path = current_game_data.get('user_global_download_path') or cm.get_setting('default_dl_path')
-	game_pp = next(iter([x for x in [current_game_data.get('user_game_post_download_process'),current_game_data.get('user_post_download_process'),current_game_data.get('default_global_post_download_process')] if isinstance(x,str)]),None)
-	current_game_name=current_game_data.get('label')
-	game_list_item = cm.create_game_li(game_data=current_game_data,game_addon=game_addon)
-	dl.set_game_name(game_name=current_game_name)
-	dl.set_rom(rom=current_game_data.get('rom'))
-	dl.set_dl_path(path_in=game_dl_path)
-	current_game_data = dl.downloader.download() #Returns a list of all files downloaded and their result
-	if all([x.get('download_success') for x in current_game_data]):
-		xbmc.log(msg='IAGL:  Download of {} completed'.format(current_game_name),level=xbmc.LOGDEBUG)
-		pp.set_game_name(game_name=current_game_name)
-		pp.set_rom(rom=current_game_data)
-		pp.set_process(process=game_pp)
-		current_game_data = pp.process_games() #Returns a dict containing process results
-		if current_game_data.get('process_success'):
-			ln.set_launcher(launcher='retroplayer')
-			xbmc.log(msg='IAGL:  Post processing of {} completed'.format(current_game_name),level=xbmc.LOGDEBUG)
-			if isinstance(game_list_item,xbmcgui.ListItem) and isinstance(current_game_data.get('launch_file'),str):
-				game_list_item.setPath(current_game_data.get('launch_file'))
-			ln.set_game_name(game_name=current_game_name)
-			ln.set_list_item(list_item=game_list_item)
-			ln.set_rom(rom=current_game_data)
-			current_game_data = ln.launcher.launch()
-			if current_game_data.get('launch_success'):
-				xbmc.log(msg='IAGL:  Updating play history and play count for game: {}'.format(current_game_name),level=xbmc.LOGDEBUG)
-				playcount_and_last_played_update = db.update_pc_and_cp(game_id=game_id)
-				history_limit_update = db.limit_history(history_limit=cm.get_setting('play_history'))
-				history_update = db.add_history(game_id=game_id)
-		else:
-			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),cm.get_loc(30334))
+	continue_launching = True
+	if cm.get_setting('no_user_command_present') == '0':
+		game_addon = next(iter([x for x in [current_game_data.get('user_game_launch_addon'),current_game_data.get('user_global_launch_addon')] if isinstance(x,str)]),None) #Use the kodi prompt to choose the addon if user hasn't set anything
+	elif cm.get_setting('no_user_command_present') == '1':
+		game_addon = next(iter([x for x in [current_game_data.get('user_game_launch_addon'),current_game_data.get('user_global_launch_addon'),current_game_data.get('default_global_launch_addon')] if isinstance(x,str)]),None) #Get launch addon, default to the IAGL default if user hasn't set anything
 	else:
-		ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),next(iter([x.get('download_message') for x in current_game_data if isinstance(x.get('download_message'),str)]),cm.get_loc(30272)))
+		game_addon = next(iter([x for x in [current_game_data.get('user_game_launch_addon'),current_game_data.get('user_global_launch_addon')] if isinstance(x,str)]),None) #Use what the user has set, if nothing then stop
+		if not isinstance(game_addon,str):
+			xbmcgui.Dialog().notification(cm.get_loc(30270),cm.get_loc(30351),xbmcgui.NOTIFICATION_WARNING)
+			xbmc.log(msg='IAGL:  Launch addon is not set, and user has no_user_command_preset set to STOP',level=xbmc.LOGDEBUG)
+			continue_launching = False
+
+	if continue_launching:
+		game_dl_path = current_game_data.get('user_global_download_path') or cm.get_game_dl_path(path_in=cm.get_setting('default_dl_path'),game_list_id=current_game_data.get('game_list_id'),organize_path=cm.get_setting('organize_temp_dl'))
+		game_pp = next(iter([x for x in [current_game_data.get('user_game_post_download_process'),current_game_data.get('user_post_download_process'),current_game_data.get('default_global_post_download_process')] if isinstance(x,str)]),None)
+		if isinstance(game_pp,str) and game_pp.startswith('move_to_folder_'):  #Special case where folder needs to be named exactly
+			game_dl_path = cm.update_game_dl_path(path_in=game_dl_path,new_folder=game_pp.replace('move_to_folder_',''))
+		game_lp = next(iter([x for x in [current_game_data.get('launch_parameters')] if isinstance(x,dict)]),None)
+		current_game_name=current_game_data.get('label')
+		game_list_item = cm.create_game_li(game_data=current_game_data,game_addon=game_addon)
+		dl.set_game_name(game_name=current_game_name)
+		dl.set_rom(rom=current_game_data.get('rom'))
+		dl.set_launch_parameters(launch_parameters=game_lp)
+		dl.set_dl_path(path_in=game_dl_path)
+		current_game_data = dl.downloader.download() #Returns a list of all files downloaded and their result
+		if all([x.get('download_success') for x in current_game_data]):
+			xbmc.log(msg='IAGL:  Download of {} completed'.format(current_game_name),level=xbmc.LOGDEBUG)
+			pp.set_process(process=game_pp)
+			pp.set_game_name(game_name=current_game_name)
+			pp.set_rom(rom=current_game_data)
+			pp.set_launch_parameters(launch_parameters=game_lp)
+			current_game_data = pp.process_games() #Returns a dict containing process results
+			if current_game_data.get('process_success'):
+				ln.set_launcher(launcher='retroplayer')
+				xbmc.log(msg='IAGL:  Post processing of {} completed'.format(current_game_name),level=xbmc.LOGDEBUG)
+				if isinstance(game_list_item,xbmcgui.ListItem) and isinstance(current_game_data.get('launch_file'),str):
+					game_list_item.setPath(current_game_data.get('launch_file'))
+				ln.set_game_name(game_name=current_game_name)
+				ln.set_list_item(list_item=game_list_item)
+				ln.set_rom(rom=current_game_data)
+				current_game_data = ln.launcher.launch()
+				if current_game_data.get('launch_success'):
+					xbmc.log(msg='IAGL:  Updating play history and play count for game: {}'.format(current_game_name),level=xbmc.LOGDEBUG)
+					playcount_and_last_played_update = db.update_pc_and_cp(game_id=game_id)
+					history_update = db.add_history(game_id=game_id)
+					history_limit_update = db.limit_history(history_limit=cm.get_setting('play_history'))
+			else:
+				ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),cm.get_loc(30334))
+		else:
+			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),next(iter([x.get('download_message') for x in current_game_data if isinstance(x.get('download_message'),str)]),cm.get_loc(30272)))
 	xbmcplugin.endOfDirectory(plugin.handle)
 	xbmc.sleep(config.defaults.get('sleep'))
 	xbmc.executebuiltin('Container.Refresh')
@@ -1120,34 +1137,72 @@ def play_game_retroplayer(game_id):
 def play_game_external(game_id):
 	xbmc.log(msg='IAGL:  /play_game_external/{}'.format(game_id),level=xbmc.LOGDEBUG)
 	current_game_data = db.get_game_from_id(game_id=game_id,game_title_setting=cm.get_setting('append_game_list_to_playlist_results_combined'))
-	launch_process = next(iter([x for x in [current_game_data.get('user_game_external_launch_command'),current_game_data.get('user_global_external_launch_command'),current_game_data.get('default_global_external_launch_command')] if isinstance(x,str)]),None) #Get external launch command
+	launch_process = next(iter([x for x in [current_game_data.get('user_game_external_launch_command'),current_game_data.get('user_global_external_launch_command')] if isinstance(x,str)]),None) #Get external launch command
+	if not isinstance(launch_process,str) and isinstance(current_game_data.get('game_list_id'),str):  #No user command is set, and a default exists
+		if cm.get_setting('no_user_command_present') == '0':
+			if xbmcgui.Dialog().yesno(cm.get_loc(30349),cm.get_loc(30350)):
+				plugin.redirect('/context_menu/action/update_launch_command/{}'.format(current_game_data.get('game_list_id')))
+				launch_process = next(iter([x for x in [current_game_data.get('user_game_external_launch_command'),current_game_data.get('user_global_external_launch_command')] if isinstance(x,str)]),None) #Get external launch command again
+		elif cm.get_setting('no_user_command_present') == '1':
+			if isinstance(current_game_data.get('default_global_external_launch_command'),str):
+				xbmc.log(msg='IAGL:  Attempting to use the default',level=xbmc.LOGDEBUG)
+				if isinstance(cm.get_setting('user_launch_os'),str):
+					if cm.get_setting('user_launch_os') in config.defaults.get('config_available_systems'):
+						installed_cores = cm.get_installed_ra_cores(ra_default_command=next(iter(db.query_db(db.get_query('get_retroarch_default_commands',user_launch_os=cm.get_setting('user_launch_os'),applaunch='0',appause='0'),return_as='dict')),None))
+						if isinstance(installed_cores,list) and isinstance(next(iter([x for x in installed_cores if isinstance(x,dict) and x.get('core_stem')==current_game_data.get('default_global_external_launch_command')]),None),dict) and isinstance(next(iter([x for x in installed_cores if isinstance(x,dict) and x.get('core_stem')==current_game_data.get('default_global_external_launch_command')]),None).get('command'),str):
+							launch_process = next(iter([x for x in installed_cores if isinstance(x,dict) and x.get('core_stem')==current_game_data.get('default_global_external_launch_command')]),None).get('command')
+							xbmc.log(msg='IAGL:  Default command set to {}'.format(launch_process),level=xbmc.LOGDEBUG)
+						else:
+							xbmcgui.Dialog().notification(cm.get_loc(30270),cm.get_loc(30352).format(current_game_data.get('default_global_external_launch_command')),xbmcgui.NOTIFICATION_WARNING)
+					else: #Android
+						possible_cores = db.query_db(query=config.database.get('query').get('get_retroarch_android').get(cm.get_setting('kodi_saa')).format(cm.get_setting('user_launch_os'),cm.get_setting('ra_cfg_path'),cm.get_android_libretro_directory()),return_as='dict')					
+						if isinstance(possible_cores,list) and isinstance(next(iter([x for x in possible_cores if isinstance(x,dict) and isinstance(x.get('command'),str) and current_game_data.get('default_global_external_launch_command') in x.get('command')]),None),dict) and isinstance(next(iter([x for x in possible_cores if isinstance(x,dict) and isinstance(x.get('command'),str) and current_game_data.get('default_global_external_launch_command') in x.get('command')]),None).get('command'),str):
+							launch_process = next(iter([x for x in possible_cores if isinstance(x,dict) and isinstance(x.get('command'),str) and current_game_data.get('default_global_external_launch_command') in x.get('command')]),None).get('command').replace('"','""')
+						else:
+							xbmcgui.Dialog().notification(cm.get_loc(30270),cm.get_loc(30352).format(current_game_data.get('default_global_external_launch_command')),xbmcgui.NOTIFICATION_WARNING)
+				else:
+					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),cm.get_loc(30296))
+			else:
+				ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),cm.get_loc(30351))
+		else:
+			xbmcgui.Dialog().notification(cm.get_loc(30270),cm.get_loc(30351),xbmcgui.NOTIFICATION_WARNING)
+			xbmc.log(msg='IAGL:  Launch process is not set, and user has no_user_command_preset set to STOP',level=xbmc.LOGDEBUG)
 	if isinstance(launch_process,str):
 		xbmc.log(msg='IAGL:  Launch process set to:\n{}'.format(launch_process),level=xbmc.LOGDEBUG)
-		game_dl_path = current_game_data.get('user_global_download_path') or cm.get_setting('default_dl_path')
-		game_pp = next(iter([x for x in [current_game_data.get('user_game_post_download_process'),current_game_data.get('user_post_download_process'),current_game_data.get('default_global_post_download_process')] if isinstance(x,str)]),None)
-		current_game_name=current_game_data.get('label')
+		current_dl_path = current_game_data.get('user_global_download_path') or cm.get_game_dl_path(path_in=cm.get_setting('default_dl_path'),game_list_id=current_game_data.get('game_list_id'),organize_path=cm.get_setting('organize_temp_dl'))
+		current_pp = next(iter([x for x in [current_game_data.get('user_game_post_download_process'),current_game_data.get('user_post_download_process'),current_game_data.get('default_global_post_download_process')] if isinstance(x,str)]),None)
+		if isinstance(current_pp,str) and current_pp.startswith('move_to_folder_'):  #Special case where folder needs to be named exactly
+			current_dl_path = cm.update_game_dl_path(path_in=current_dl_path,new_folder=current_pp.replace('move_to_folder_',''))
+		current_lp = next(iter([x for x in [current_game_data.get('launch_parameters')] if isinstance(x,dict)]),None)
+		current_applaunch = next(iter([x for x in [current_game_data.get('user_global_uses_applaunch')] if isinstance(x,int)]),0) #Default to not using applaunch if the value is not present
+		current_apppause = next(iter([x for x in [current_game_data.get('user_global_uses_apppause')] if isinstance(x,int)]),0) #Default to not using apppause if the value is not present
+		current_game_name = current_game_data.get('label')
 		dl.set_game_name(game_name=current_game_name)
 		dl.set_rom(rom=current_game_data.get('rom'))
-		dl.set_dl_path(path_in=game_dl_path)
+		dl.set_launch_parameters(launch_parameters=current_lp)
+		dl.set_dl_path(path_in=current_dl_path)
 		current_game_data = dl.downloader.download() #Returns a list of all files downloaded and their result
 		if all([x.get('download_success') for x in current_game_data]):
 			xbmc.log(msg='IAGL:  Download of {} completed'.format(current_game_name),level=xbmc.LOGDEBUG)
+			pp.set_process(process=current_pp)
 			pp.set_game_name(game_name=current_game_name)
 			pp.set_rom(rom=current_game_data)
-			pp.set_process(process=game_pp)
+			pp.set_launch_parameters(launch_parameters=current_lp)
 			current_game_data = pp.process_games() #Returns a dict containing process results
 			if current_game_data.get('process_success'):
 				xbmc.log(msg='IAGL:  Post processing of {} completed'.format(current_game_name),level=xbmc.LOGDEBUG)
 				ln.set_launcher(launcher='external')
 				ln.set_game_name(game_name=current_game_name)
+				ln.set_appause(appause=current_apppause)
+				ln.set_applaunch(applaunch=current_applaunch)
 				ln.set_rom(rom=current_game_data)
 				ln.set_launch_parameters(launch_parameters={'launch_process':launch_process,'netplay':cm.get_home_property('iagl_netplay_parameters')}) #Grab any netplay settings user has set
 				#Insert history here for games that will be launched with applaunch or apppause
 				current_game_data = ln.launcher.launch()
 				if current_game_data.get('launch_success'):
 					playcount_and_last_played_update = db.update_pc_and_cp(game_id=game_id)
-					history_limit_update = db.limit_history(history_limit=cm.get_setting('play_history'))
 					history_update = db.add_history(game_id=game_id)
+					history_limit_update = db.limit_history(history_limit=cm.get_setting('play_history'))
 		else:
 			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),next(iter([x.get('download_message') for x in current_game_data if isinstance(x.get('download_message'),str)]),cm.get_loc(30272)))
 	else:
@@ -1164,6 +1219,68 @@ def download_game_to(game_id):
 		selected = xbmcgui.Dialog().browseSingle(0,heading=cm.get_loc(30267),shares="")
 		if isinstance(selected,str) and xbmcvfs.exists(selected):
 			dl.set_rom(rom=current_game_data.get('rom'))
+
+@plugin.route('/context_menu/action/view_launch_parameters/<game_id>')
+def download_game_to(game_id):
+	xbmc.log(msg='IAGL:  /view_launch_parameters/{}'.format(game_id),level=xbmc.LOGDEBUG)
+	current_game_data = db.get_game_from_id(game_id=game_id,game_title_setting=cm.get_setting('game_title_setting'))
+	game_item_info = next(iter(db.query_db(db.get_query('get_game_list_info_from_game_id',game_id=game_id,game_title_setting=cm.get_setting('game_title_setting')),return_as='dict')),None)
+	if isinstance(game_item_info,dict):
+		info_key_to_label = {'label': cm.get_loc(30304),
+							 'system': cm.get_loc(30305),
+							 'default_global_external_launch_command': cm.get_loc(30309),
+							 'default_global_external_launch_core_name':cm.get_loc(30309),
+							 'default_global_launch_addon': cm.get_loc(30310),
+							 'default_global_launcher': None,
+							 'default_global_post_download_process': cm.get_loc(30311),
+							 'user_global_download_path': cm.get_loc(30312),
+							 'user_global_external_launch_command': cm.get_loc(30313),
+							 'user_global_uses_applaunch':None,
+							 'user_global_uses_apppause':None,
+							 'user_global_launch_addon': cm.get_loc(30314),
+							 'user_global_launcher': None,
+							 'user_global_visibility': None,
+							 'user_post_download_process': cm.get_loc(30315),
+							 'launch_parameters':cm.get_loc(30344),
+							# 'user_game_launch_addon':None, #not yet editable by the user, to be added later
+							# 'user_game_external_launch_command':None, #not yet editable by the user, to be added later
+							# 'user_game_post_download_process':None #not yet editable by the user, to be added later
+							 }
+		game_list_launcher = next(iter([x for x in [game_item_info.get('user_global_launcher'),game_item_info.get('default_global_launcher')] if isinstance(x,str)]),'retroplayer') 
+		if game_list_launcher == 'external':
+			launch_command_key = next(iter([k for k in ['user_global_external_launch_command','default_global_external_launch_core_name'] if isinstance(game_item_info.get(k),str)]),None)
+			pp_command_key = next(iter([k for k in ['user_post_download_process','default_global_post_download_process'] if isinstance(game_item_info.get(k),str)]),None)
+			info_keys_to_display = ['label','system',launch_command_key,'user_global_download_path',pp_command_key,'launch_parameters']
+			if isinstance(game_item_info.get('user_global_external_launch_command'),str):
+				if game_item_info.get('user_global_uses_applaunch') == 1:
+					pre_command_value = cm.get_loc(30337)
+				elif game_item_info.get('user_global_uses_apppause') == 1:
+					pre_command_value = cm.get_loc(30338)
+				else:
+					pre_command_value = cm.get_loc(30336)
+				li1 = xbmcgui.ListItem(label=cm.get_loc(30318),label2='{}[CR]{}'.format(cm.get_loc(30319),pre_command_value))
+			else:
+				li1 = xbmcgui.ListItem(label=cm.get_loc(30318),label2=cm.get_loc(30320))
+			lis = [li1]+[xbmcgui.ListItem(label=info_key_to_label.get(x),label2=next(iter([str(z) for z in [game_item_info.get(x)] if z is not None]),cm.get_loc(30317))) for x in info_keys_to_display if isinstance(info_key_to_label.get(x),str)]
+			selected = xbmcgui.Dialog().select(heading=cm.get_loc(30343),list=lis,useDetails=True)
+			if lis[selected].getLabel() in [info_key_to_label.get('user_global_external_launch_command'),info_key_to_label.get('user_global_download_path'),info_key_to_label.get('launch_parameters')] and isinstance(lis[selected].getLabel2(),str) and len(lis[selected].getLabel2())>0 and lis[selected].getLabel2()!=cm.get_loc(30317):
+				if 'XX' in lis[selected].getLabel2():
+					xbmcgui.Dialog().textviewer(lis[selected].getLabel(),lis[selected].getLabel2()+'[CR][CR]'+cm.get_loc(30333))
+				elif lis[selected].getLabel() == info_key_to_label.get('launch_parameters'):
+					xbmcgui.Dialog().textviewer(lis[selected].getLabel(),'[CR]'.join([x.replace('\\n','[CR]').replace('\n','[CR]').replace('\\r','[CR]').replace('\r','[CR]').replace('{','[CR]{').replace('}','[CR]}').replace('[CR][CR]','[CR]').strip() for x in lis[selected].getLabel2().split(',')]))
+				else:
+					xbmcgui.Dialog().textviewer(lis[selected].getLabel(),lis[selected].getLabel2())
+		else:
+			launch_command_key = next(iter([k for k in ['user_global_launch_addon','default_global_launch_addon'] if isinstance(game_item_info.get(k),str)]),None)
+			pp_command_key = next(iter([k for k in ['user_post_download_process','default_global_post_download_process'] if isinstance(game_item_info.get(k),str)]),None)
+			info_keys_to_display = ['label','system',launch_command_key,'user_global_download_path',pp_command_key,'launch_parameters']
+			li1 = xbmcgui.ListItem(label=cm.get_loc(30318),label2=cm.get_loc(30321))
+			lis = [li1]+[xbmcgui.ListItem(label=info_key_to_label.get(x),label2=next(iter([str(z) for z in [game_item_info.get(x)] if z is not None]),cm.get_loc(30317))) for x in info_keys_to_display if isinstance(info_key_to_label.get(x),str)]
+			selected = xbmcgui.Dialog().select(heading=cm.get_loc(30343),list=lis,useDetails=True)
+			if lis[selected].getLabel() in [info_key_to_label.get('launch_parameters')] and isinstance(lis[selected].getLabel2(),str) and len(lis[selected].getLabel2())>0 and lis[selected].getLabel2()!=cm.get_loc(30317):
+				xbmcgui.Dialog().textviewer(lis[selected].getLabel(),'[CR]'.join([x.replace('\\n','[CR]').replace('\n','[CR]').replace('\\r','[CR]').replace('\r','[CR]').replace('{','[CR]{').replace('}','[CR]}').replace('[CR][CR]','[CR]').strip() for x in lis[selected].getLabel2().split(',')]))
+	else:
+		xbmc.log(msg='IAGL:  Game item info is malformed for: {}'.format(game_list_id),level=xbmc.LOGERROR)
 
 @plugin.route('/context_menu/action/add_to_favorites/<game_id>')
 def add_to_iagl_favorites(game_id):
@@ -1357,7 +1474,30 @@ def update_game_list_launch_command(game_list_id):
 	current_launcher = db.get_game_list_launcher(game_list_id=game_list_id)
 	if current_launcher == 'retroplayer':
 		li = cm.get_game_addons()
-		selected = xbmcgui.Dialog().select(heading=cm.get_loc(30264),list=li,useDetails=True)
+		if len(li)>0:
+			selected = xbmcgui.Dialog().select(heading=cm.get_loc(30264),list=li,useDetails=True)
+			if selected>0:
+				if selected == len(li)-1:
+					if xbmcgui.Dialog().yesno(cm.get_loc(30299),cm.get_loc(30265)):
+						result1 = db.reset_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_launch_addon')
+						if isinstance(result1,int) and result1>0:
+							ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30299),cm.get_loc(30353))
+							xbmc.sleep(config.defaults.get('sleep'))
+							xbmc.executebuiltin('Container.Refresh')
+				else:
+					if isinstance(li[selected],xbmcgui.ListItem) and isinstance(li[selected].getProperty('id'),str):
+						result1 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_launch_addon',new_value=li[selected].getProperty('id'))
+						if isinstance(result1,int) and result1>0:
+							ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),cm.get_loc(30355))
+							xbmc.sleep(config.defaults.get('sleep'))
+							xbmc.executebuiltin('Container.Refresh')
+					else:
+						xbmc.log(msg='IAGL: Game addon id could not be found for {}'.format(li[selected]),level=xbmc.LOGERROR)
+			else:
+				xbmc.log(msg='IAGL:  Updating launch command cancelled',level=xbmc.LOGDEBUG)
+		else:
+			xbmcgui.Dialog().notification(cm.get_loc(30270),cm.get_loc(30354),xbmcgui.NOTIFICATION_WARNING)
+			xbmc.log(msg='IAGL:  No game addons were found installed, unable to update user_global_launch_addon',level=xbmc.LOGDEBUG)
 	if current_launcher == 'external':
 		selected_external_command_types = xbmcgui.Dialog().select(heading=cm.get_loc(30278),list=[cm.get_loc(30275),cm.get_loc(30276),cm.get_loc(30277),cm.get_loc(30299)],useDetails=False)
 		if selected_external_command_types == 0:
@@ -1742,6 +1882,22 @@ def reset_database():
 			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30258))
 			xbmc.sleep(config.defaults.get('sleep'))
 			xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/get_db_stats')
+def get_db_stats():
+	xbmc.log(msg='IAGL:  /get_db_stats',level=xbmc.LOGDEBUG)
+	game_lists = db.query_db(db.get_query('get_db_stats'),return_as='dict')
+	meta_lists = db.query_db(db.get_query('get_db_stats2'),return_as='dict')
+	default_art = {'clearlogo':config.paths.get('assets_url').format('icon.png'),'thumb':config.paths.get('assets_url').format('icon.png')}
+	all_li = xbmcgui.ListItem(label='All Lists',label2='Total Games: {}  - Total 1G1R Games: {}'.format(sum([x.get('total_games') for x in game_lists]),sum([x.get('total_1g1r_games') for x in game_lists if isinstance(x.get('total_1g1r_games'),int)])),offscreen=True)
+	all_li.setArt(default_art)
+	sys_li = xbmcgui.ListItem(label='Unique Systems',label2='Total: {}'.format(len(set([x.get('system') for x in game_lists]))),offscreen=True)
+	sys_li.setArt(default_art)
+	meta_lis = [xbmcgui.ListItem(label=x.get('label'),label2='Total: {}'.format(x.get('total_games')),offscreen=True) for x in meta_lists]
+	for m in meta_lis:
+		m.setArt(default_art)
+	li = [all_li]+[sys_li]+meta_lis+[list_item for list_item,item_path in db.query_db(db.get_query('get_db_stats')) if isinstance(list_item,xbmcgui.ListItem)]
+	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30341),options=li,useDetails=True) 
 
 if __name__ == '__main__':
 	plugin.run(sys.argv)

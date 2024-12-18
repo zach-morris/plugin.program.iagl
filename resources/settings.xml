@@ -457,15 +457,29 @@
 				</setting>
 			</group>
 			<group id="launching_2" label="30232">
+				<setting id="no_user_command_present" label="30345" help="30346" type="integer">
+					<level>2</level>
+					<default>1</default>
+					<constraints>
+						<options>
+							<option label="30054">0</option>
+							<option label="30347">1</option>
+							<option label="30348">2</option>
+						</options>
+					</constraints>
+					<control format="string" type="list">
+						<heading>30345</heading>
+					</control>
+				</setting>
 				<setting id="kodi_on_launch" label="30147" help="30148" type="integer">
 					<level>2</level>
 					<default>1</default>
 					<constraints>
 						<options>
 							<option label="30054">0</option>
-							<option label="30149">1</option>
-							<option label="30150">2</option>
-							<option label="30151">3</option>
+							<option label="30357">1</option>
+							<option label="30358">2</option>
+							<option label="30359">3</option>
 						</options>
 					</constraints>
 					<dependencies>
@@ -717,19 +731,39 @@
 						<popup>false</popup>
 					</control>
 				</setting>
+				<setting id="alt_temp_dl_enable" label="30356" help="30202" type="integer">
+					<level>3</level>
+					<default>1</default>
+					<constraints>
+						<options>
+							<option label="30058">0</option>
+							<option label="30059">1</option>
+						</options>
+					</constraints>
+					<control format="string" type="list">
+						<heading>30356</heading>
+					</control>
+				</setting>
 				<setting id="alt_temp_dl" label="30201" help="30202" type="path">
 					<level>3</level>
 					<constraints>
 						<writable>false</writable>
 						<allowempty>true</allowempty>
 					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<or>
+								<condition operator="is" setting="alt_temp_dl_enable">0</condition>
+							</or>
+						</dependency>
+					</dependencies>
 					<control format="path" type="button">
 						<heading>30201</heading>
 					</control>
 				</setting>
 				<setting id="organize_temp_dl" label="30203" type="integer">
 					<level>3</level>
-					<default>1</default>
+					<default>0</default>
 					<constraints>
 						<options>
 							<option label="30058">0</option>
@@ -764,6 +798,24 @@
 					</dependencies>
 					<control type="toggle"/>
 				</setting>
+				<setting help="" id="db_version" label="Database Version" type="string">
+					<level>4</level>
+					<default>false</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition name="InfoBool" on="property">false</condition>
+						</dependency>
+					</dependencies>
+				</setting>
+				<setting help="" id="db_crc32" label="Database CRC32" type="string">
+					<level>4</level>
+					<default>false</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition name="InfoBool" on="property">false</condition>
+						</dependency>
+					</dependencies>
+				</setting>
 			</group>
 		</category>
 		<category id="advanced" label="30047">
@@ -774,6 +826,16 @@
 						<constraints>
 							<allowempty>true</allowempty>
 						</constraints>
+						<control format="action" type="button">
+							<close>true</close>
+					</control>
+				</setting>
+				<setting id="get_db_stats" label="30339" help="30340" type="action">
+					<level>3</level>
+						<data>RunPlugin(plugin://plugin.program.iagl/context_menu/action/get_db_stats)</data>
+						<constraints>
+							<allowempty>true</allowempty>
+						</constraints>`
 						<control format="action" type="button">
 							<close>true</close>
 					</control>
