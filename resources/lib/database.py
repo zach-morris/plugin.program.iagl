@@ -115,7 +115,7 @@ class database(object):
 		return result
 
 	def get_game_list_user_global_external_launch_command(self,**kwargs):
-		l =  next(iter(self.query_db(query=self.config.database.get('query').get('get_game_list_user_global_external_launch_command').format(**kwargs),return_as='dict')),None)
+		l =  next(iter([x for x in self.query_db(query=self.config.database.get('query').get('get_game_list_user_global_external_launch_command').format(**kwargs),return_as='dict') if isinstance(x,dict)]),None)
 		if kwargs.get('user_only'):
 			result = l.get('user_global_external_launch_command')
 		elif kwargs.get('default_only'):

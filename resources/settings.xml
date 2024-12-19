@@ -455,6 +455,44 @@
 						<heading>30142</heading>
 					</control>
 				</setting>
+				<setting id="ra_cfg_path_android"  label="30360" help="30361" type="string">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<or>
+								<condition operator="is" setting="user_launch_os">4</condition>
+								<condition operator="is" setting="user_launch_os">5</condition>
+								<condition operator="is" setting="user_launch_os">6</condition>
+							</or>
+						</dependency>
+					</dependencies>
+					<control format="string" type="edit">
+						<heading>30360</heading>
+					</control>
+				</setting>
+				<setting id="ra_cores_path_android"  label="30362" help="30363" type="string">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<or>
+								<condition operator="is" setting="user_launch_os">4</condition>
+								<condition operator="is" setting="user_launch_os">5</condition>
+								<condition operator="is" setting="user_launch_os">6</condition>
+							</or>
+						</dependency>
+					</dependencies>
+					<control format="string" type="edit">
+						<heading>30362</heading>
+					</control>
+				</setting>
 			</group>
 			<group id="launching_2" label="30232">
 				<setting id="no_user_command_present" label="30345" help="30346" type="integer">

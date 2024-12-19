@@ -1,7 +1,7 @@
 #Internet Archive Game Launcher v4.X (For Kodi v19+)
 #Zach Morris
 #https://github.com/zach-morris/plugin.program.iagl
-import xbmc, xbmcgui, xbmcvfs
+import xbmc, xbmcgui, xbmcvfs, json
 from pathlib import Path
 from queue import Queue, Empty
 from threading import Thread
@@ -65,7 +65,7 @@ class launch(object):
 		if launcher == 'external':
 			xbmc.log(msg='IAGL:  Launcher set to external',level=xbmc.LOGDEBUG)
 			if self.user_launch_os in self.config.settings.get('user_launch_os').get('android_options'):
-				self.launcher = self.external_android(config=self.config,rom=self.rom,game_name=self.game_name,launch_parameters=self.launch_parameters,kodi_suspend=self.kodi_suspend,kodi_media_stop=self.kodi_media_stop,kodi_saa=self.kodi_saa,kodi_wfr=self.kodi_wfr)
+				self.launcher = self.external_android(config=self.config,rom=self.rom,game_name=self.game_name,launch_parameters=self.launch_parameters,kodi_suspend=self.kodi_suspend,kodi_media_stop=self.kodi_media_stop,kodi_wfr=self.kodi_wfr)
 			elif self.user_launch_os is not None:
 				self.launcher = self.external(config=self.config,rom=self.rom,game_name=self.game_name,launch_parameters=self.launch_parameters,kodi_suspend=self.kodi_suspend,kodi_media_stop=self.kodi_media_stop,kodi_wfr=self.kodi_wfr,appause=self.appause,applaunch=self.applaunch)
 			else:
@@ -284,6 +284,87 @@ class launch(object):
 					xbmc.audioResume()
 					xbmc.enableNavSounds(True)
 					xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Settings.SetSettingValue","params":{"setting":"input.enablejoystick","value":true},"id":"1"}')
+			else:
+				self.rom['launch_success'] = False
+				self.rom['launch_message'] = 'Launch command could not be generated'
+				xbmc.log(msg='IAGL:  Unable to generate the launch command for: {}'.format(self.rom.get('launch_file')),level=xbmc.LOGERROR)
+
+			return self.rom
+
+	class external_android(object):
+		def __init__(self,config=None,rom=None,game_name=None,launch_parameters=None,kodi_suspend=None,kodi_media_stop=None,kodi_wfr=None,appause=None,applaunch=None):
+			self.config = config
+			self.rom = rom
+			self.game_name = game_name
+			self.launch_parameters = launch_parameters
+			self.kodi_media_stop = kodi_media_stop
+			self.kodi_suspend = kodi_suspend
+			self.kodi_wfr = kodi_wfr
+			self.appause = appause
+			self.applaunch = applaunch
+			self.current_launch_command = None
+			self.io_is_suspended = False
+			self.current_launch_log = list()
+
+		def set_rom(self,rom=None):
+			if isinstance(rom,dict):
+				self.rom = rom
+
+		def set_game_name(self,game_name=None):
+			if isinstance(game_name,str):
+				self.game_name = game_name
+
+		def set_appause(self,appause=None):
+			if isinstance(appause,int):
+				self.appause = appause
+
+		def set_applaunch(self,applaunch=None):
+			if isinstance(applaunch,int):
+				self.applaunch = applaunch
+
+		def set_launch_parameters(self,launch_parameters=None):
+			if isinstance(launch_parameters,dict):
+				self.launch_parameters = launch_parameters
+
+		def generate_launch_command(self):
+			if isinstance(self.launch_parameters,dict) and isinstance(self.launch_parameters.get('launch_process'),str):
+				self.current_launch_command = self.launch_parameters.get('launch_process')
+			if isinstance(self.current_launch_command,str):
+				if isinstance(self.rom,dict) and isinstance(self.rom.get('launch_file'),str):
+					self.current_launch_command = self.current_launch_command.replace('XXROM_PATHXX',self.rom.get('launch_file'))
+				if isinstance(self.launch_parameters.get('netplay'),str):
+					self.current_launch_command = self.current_launch_command.replace(' XXNETPLAY_COMMANDXX',self.rom.get('netplay'))
+				else:
+					self.current_launch_command = self.current_launch_command.replace(' XXNETPLAY_COMMANDXX','') #If no netplay command was provided, remove the keyword
+				xbmc.log(msg='IAGL:  External command generated:  {}'.format(self.current_launch_command),level=xbmc.LOGDEBUG)
+				try:
+					self.current_launch_command = json.loads(self.current_launch_command)
+				except Exception as exc:
+					xbmc.log(msg='IAGL:  JSON load activity failed:  {}'.format(exc),level=xbmc.LOGDEBUG)
+					self.current_launch_command = None
+				if isinstance(self.current_launch_command,dict) and (isinstance(self.current_launch_command.get('extras'),dict) or isinstance(self.current_launch_command.get('extras'),list)):
+					self.current_launch_command['extras_json'] = json.dumps(self.current_launch_command.get('extras'))
+
+		def enqueue_output(self,out,queue):
+			for line in iter(out.readline, b''):
+				queue.put(line)
+			out.close()
+
+		def launch(self):
+			self.generate_launch_command()
+			if isinstance(self.current_launch_command,dict):
+				if self.kodi_media_stop and xbmc.Player().isPlaying():
+					xbmc.Player().stop()
+					xbmc.sleep(self.config.defaults.get('wait_for_stop_time')) #If sleep is not called, Kodi will crash - does not like playing video and then swiching to a game
+
+				xbmc.log(msg='IAGL:  Launching game with StartAndroidActivity:\n{}'.format(self.current_launch_command),level=xbmc.LOGINFO)
+				current_android_command = 'StartAndroidActivity("{package}","{intent}","{dataType}","{dataURI}","{flags}","{extras_json}","{action}","{category}","{className}")'.format(**self.current_launch_command)
+				xbmc.executebuiltin(current_android_command,self.kodi_wfr)
+				xbmc.sleep(self.config.defaults.get('wait_for_player_time'))
+				self.rom['launch_success'] = True
+				self.rom['launch_message'] = 'Playing game {}'.format(self.game_name)
+				xbmc.log(msg='IAGL:  Playing game {}'.format(self.game_name),level=xbmc.LOGINFO)
+
 			else:
 				self.rom['launch_success'] = False
 				self.rom['launch_message'] = 'Launch command could not be generated'

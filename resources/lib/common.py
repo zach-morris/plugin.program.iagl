@@ -266,9 +266,25 @@ class common(object):
 
 	def update_android_activity(self,key_in=None,value_in=None):
 		if key_in in self.config.defaults.get('android_activity_keys') and value_in is not None:
-			return self.update_home_property(type_in='iagl_android_activity',**{key_in:value_in})
+			try:
+				value_set = json.loads(value_in,parse_int=str,parse_float=str)  #Convert to list or dict if possible
+			except Exception as exc:
+				value_set = value_in
+			return self.update_home_property(type_in='iagl_android_activity',**{key_in:value_set})
 		else:
 			return None
+
+	def convert_android_value(self,value_in=None):
+		if isinstance(value_in,str):
+			value_out = value_in
+		elif isinstance(value_in,list) or isinstance(value_in,dict):
+			value_out = json.dumps(value_in)
+		else:
+			if value_in is not None:
+				value_out = str(value_in)
+			else:
+				value_out = None
+		return value_out
 
 	def update_netplay_parameters(self,**kwargs):
 		return self.update_home_property(type_in='iagl_netplay_parameters',**kwargs)
@@ -670,12 +686,33 @@ class common(object):
 			parameters_out['command'] = current_command
 		return parameters_out
 
+	def check_android_directory_exists(self,path_in=None):
+		exists_out = False
+		if isinstance(path_in,str):
+			try:
+				exists_out = xbmcvfs.exists(path_in)
+			except:
+				exists_out = False
+		return exists_out
+
 	def get_android_libretro_directory(self):
 		dir_out = None
-		if isinstance(self.get_setting('ra_cfg_path'),str) and xbmcvfs.exists(self.get_setting('ra_cfg_path')):
-			dir_out = self.get_ra_parameter(parameter_in='libretro_directory',text_in=Path(self.get_setting('ra_cfg_path')).read_text(encoding='utf-8',errors='ignore'))
-			if isinstance(dir_out,str) and '~' in dir_out:
-				dir_out = str(Path(dir_out).expanduser())
+		use_alternate = False
+		if self.check_android_directory_exists(path_in=self.get_setting('ra_cfg_path') or self.get_setting('ra_cfg_path_android')):
+			try:
+				dir_out = self.get_ra_parameter(parameter_in='libretro_directory',text_in=Path(self.get_setting('ra_cfg_path') or self.get_setting('ra_cfg_path_android')).read_text(encoding='utf-8',errors='ignore'))
+				if isinstance(dir_out,str) and '~' in dir_out:
+					dir_out = str(Path(dir_out).expanduser())
+			except:
+				use_alternate = True
+		else:  #If the file does not exist or is not accessible, use the users manually entered value
+			use_alternate = True
+		if use_alternate and isinstance(self.get_setting('ra_cores_path_android'),str):
+			xbmc.log(msg='IAGL:  User has manually set the Android Retroarch Core Path to : {}'.format(self.get_setting('ra_cores_path_android')),level=xbmc.LOGDEBUG)			
+			if self.get_setting('ra_cores_path_android').endswith('/'):
+				dir_out = self.get_setting('ra_cores_path_android')[:-1]  #Ensure no trailing slash
+			else:
+				dir_out = self.get_setting('ra_cores_path_android')
 		return dir_out
 
 	def get_installed_ra_cores(self,ra_default_command=None):

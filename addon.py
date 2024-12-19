@@ -1155,9 +1155,9 @@ def play_game_external(game_id):
 						else:
 							xbmcgui.Dialog().notification(cm.get_loc(30270),cm.get_loc(30352).format(current_game_data.get('default_global_external_launch_command')),xbmcgui.NOTIFICATION_WARNING)
 					else: #Android
-						possible_cores = db.query_db(query=config.database.get('query').get('get_retroarch_android').get(cm.get_setting('kodi_saa')).format(cm.get_setting('user_launch_os'),cm.get_setting('ra_cfg_path'),cm.get_android_libretro_directory()),return_as='dict')					
+						possible_cores = db.query_db(query=config.database.get('query').get('get_retroarch_android').get(cm.get_setting('kodi_saa')).format(cm.get_setting('user_launch_os'),cm.get_setting('ra_cfg_path') or cm.get_setting('ra_cfg_path_android'),cm.get_android_libretro_directory()),return_as='dict')					
 						if isinstance(possible_cores,list) and isinstance(next(iter([x for x in possible_cores if isinstance(x,dict) and isinstance(x.get('command'),str) and current_game_data.get('default_global_external_launch_command') in x.get('command')]),None),dict) and isinstance(next(iter([x for x in possible_cores if isinstance(x,dict) and isinstance(x.get('command'),str) and current_game_data.get('default_global_external_launch_command') in x.get('command')]),None).get('command'),str):
-							launch_process = next(iter([x for x in possible_cores if isinstance(x,dict) and isinstance(x.get('command'),str) and current_game_data.get('default_global_external_launch_command') in x.get('command')]),None).get('command').replace('"','""')
+							launch_process = next(iter([x for x in possible_cores if isinstance(x,dict) and isinstance(x.get('command'),str) and current_game_data.get('default_global_external_launch_command') in x.get('command')]),None).get('command')
 						else:
 							xbmcgui.Dialog().notification(cm.get_loc(30270),cm.get_loc(30352).format(current_game_data.get('default_global_external_launch_command')),xbmcgui.NOTIFICATION_WARNING)
 				else:
@@ -1600,8 +1600,8 @@ def update_game_list_launch_command(game_list_id):
 				else: #Android
 					applaunch_setting = '0'
 					apppause_setting = '0'
-					if isinstance(cm.get_setting('ra_cfg_path'),str) and xbmcvfs.exists(cm.get_setting('ra_cfg_path')) and isinstance(cm.get_android_libretro_directory(),str):
-						possible_cores = db.query_db(query=config.database.get('query').get('get_retroarch_android').get(cm.get_setting('kodi_saa')).format(cm.get_setting('user_launch_os'),cm.get_setting('ra_cfg_path'),cm.get_android_libretro_directory()),return_as='dict')					
+					if isinstance(cm.get_setting('ra_cfg_path') or cm.get_setting('ra_cfg_path_android'),str) and isinstance(cm.get_android_libretro_directory(),str):
+						possible_cores = db.query_db(query=config.database.get('query').get('get_retroarch_android').get(cm.get_setting('kodi_saa')).format(cm.get_setting('user_launch_os'),cm.get_setting('ra_cfg_path') or cm.get_setting('ra_cfg_path_android'),cm.get_android_libretro_directory()),return_as='dict')					
 						if isinstance(possible_cores,list) and len(possible_cores)>0:
 							choose_core_by = xbmcgui.Dialog().select(heading=cm.get_loc(30152),list=[cm.get_loc(30153),cm.get_loc(30154),cm.get_loc(30155)],useDetails=False)
 							if choose_core_by == 0:
@@ -1745,7 +1745,7 @@ def update_android_command(game_list_id,menu_id):
 		result = cm.clear_android_activity()
 		current_command = db.get_game_list_user_global_external_launch_command(game_list_id=game_list_id,user_only=True) #Don't utilize the defaults in manual entry, only a user defined entry as the initial entry
 		try:
-			current_command = json.loads(current_command)
+			current_command = json.loads(current_command,parse_int=str,parse_float=str)
 			if isinstance(current_command,dict):
 				for k,v in current_command.items():
 					result = cm.update_android_activity(key_in=k,value_in=v)
@@ -1754,18 +1754,18 @@ def update_android_command(game_list_id,menu_id):
 	else:
 		current_command = cm.get_home_property(type_in='iagl_android_activity')
 	if isinstance(current_command,dict) and any([x in config.defaults.get('android_activity_keys') for x in current_command.keys()]):
-		lis =  [xbmcgui.ListItem(label=k,label2=current_command.get(k),offscreen=True) for k in config.defaults.get('android_activity_keys')]+[xbmcgui.ListItem(label='Submit Command',offscreen=True)]	
+		lis =  [xbmcgui.ListItem(label=k,label2=cm.convert_android_value(current_command.get(k)),offscreen=True) for k in config.defaults.get('android_activity_keys')]+[xbmcgui.ListItem(label='Submit Command',offscreen=True)]	
 	else:
 		lis =  [xbmcgui.ListItem(label=k,label2='',offscreen=True) for k in config.defaults.get('android_activity_keys')]+[xbmcgui.ListItem(label='Submit Command',offscreen=True)]
 	selected = xbmcgui.Dialog().select(heading='Test',list=lis,useDetails=True)
 	if selected>-1 and selected<len(lis)-1:
-		new_value = xbmcgui.Dialog().input(heading='{} {}'.format(cm.get_loc(30302),config.defaults.get('android_activity_keys')[selected]),defaultt=current_command.get(config.defaults.get('android_activity_keys')[selected]))
+		new_value = xbmcgui.Dialog().input(heading='{} {}'.format(cm.get_loc(30302),config.defaults.get('android_activity_keys')[selected]),defaultt=cm.convert_android_value(current_command.get(config.defaults.get('android_activity_keys')[selected])))
 		result = cm.update_android_activity(key_in=config.defaults.get('android_activity_keys')[selected],value_in=new_value)
 		plugin.redirect('/update_android_command/{}/{}'.format(game_list_id,config.defaults.get('android_activity_keys')[selected]))
 	else:
 		if isinstance(current_command,dict) and isinstance(json.dumps(current_command),str) and len(json.dumps(current_command))>0:
 			if xbmcgui.Dialog().yesno(cm.get_loc(30247),'{}[CR]{}'.format(cm.get_loc(30292),cm.get_loc(30277))):
-				result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=json.dumps(current_command).replace('"','""'))
+				result = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_external_launch_command',new_value=json.dumps(current_command).replace('"','""')) #Need double quotes to insert into sql
 				if isinstance(result,int) and result>0:
 					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30247),cm.get_loc(30293))
 					xbmc.sleep(config.defaults.get('sleep'))
