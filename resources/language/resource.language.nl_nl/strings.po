@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "Films"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "Spellen"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 spellen"
@@ -369,7 +373,7 @@ msgstr "Favoriet toegevoegd aan groep"
 
 msgctxt "#30091"
 msgid "Use clean game title"
-msgstr "Gebruik een schone speltitel"
+msgstr "Gebruik een schone gametitel"
 
 msgctxt "#30092"
 msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
@@ -489,7 +493,7 @@ msgstr "Weergavetype voorpagina"
 
 msgctxt "#30121"
 msgid "Game library lists viewtype"
-msgstr "Gamebibliotheek geeft viewtype weer"
+msgstr "Gamebibliotheek lijsten viewtype"
 
 msgctxt "#30122"
 msgid "Game categories viewtype"
@@ -591,6 +595,14 @@ msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android-ra32"
 
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Methode voor het selecteren van een game launcher"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Selecteer wat Kodi moet doen bij het selecteren van een game launcher (alleen Windows, Linux en OSX)"
+
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
 msgstr "Houd Kodi op de achtergrond"
@@ -657,7 +669,7 @@ msgstr "100MB"
 
 msgctxt "#30165"
 msgid "200 MB"
-msgstr "200MB"
+msgstr "200 MB"
 
 msgctxt "#30166"
 msgid "500 MB"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Installatiewizard uitvoeren"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Voer de wizard uit om de instellingen voor uw spellijsten te wijzigen. Dit kan op elk gewenst moment opnieuw worden uitgevoerd"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Voer de wizard uit om snel instellingen voor uw spellijsten te wijzigen. Dit kan op elk gewenst moment opnieuw worden uitgevoerd"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,11 +813,11 @@ msgstr "Download-threads"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Stel een alternatieve standaardmap in voor alle downloads"
+msgstr "Alternatieve standaard downloadmap"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
-msgstr "Als deze optie is geselecteerd, worden alle downloads naar een alternatieve map verplaatst. [B]Let op: Deze map wordt niet verwijderd of gecontroleerd op grootte[/B]"
+msgstr "Als deze optie is geselecteerd, worden alle downloads naar een alternatieve map gestuurd. [B]Let op: Deze map wordt niet verwijderd of gecontroleerd op grootte[/B]"
 
 msgctxt "#30203"
 msgid "Organize default download folder using system folders"
@@ -925,7 +937,7 @@ msgstr "Definieer de startpagina voor IAGL"
 
 msgctxt "#30232"
 msgid "Kodi launch options"
-msgstr "Opties voor de lancering van Kodi"
+msgstr "Kodi-lanceringsopties"
 
 msgctxt "#30233"
 msgid "Completed"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Update spellijst Launcher"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Update startcommando"
+msgid "Update game list Launch Command"
+msgstr "Update spellijst Startopdracht"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Update downloadpad van gamelijst"
+msgid "Update game list Download Path"
+msgstr "Update spellijst Downloadpad"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1057,7 +1069,7 @@ msgstr "Selecteer game-add-on"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Resetten naar standaard"
+msgstr "Weet u zeker dat u de opdracht voor het starten van de game-add-on wilt resetten?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1089,7 +1101,7 @@ msgstr "Controleer logs"
 
 msgctxt "#30273"
 msgid "Checking login for[CR]"
-msgstr "Controleer de login voor [CR]"
+msgstr "Controle van de login voor [CR]"
 
 msgctxt "#30274"
 msgid "Requesting file info for[CR]"
@@ -1271,6 +1283,10 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Spellenlijst Launcher"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Extern lanceercommando"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
 msgstr "Externe startopdracht [CR] *Geen startopdracht van gebruiker gevonden / Standaardinstelling wordt gebruikt*"
@@ -1314,3 +1330,227 @@ msgstr "Weet u zeker dat u alle instellingen in de spellijst wilt terugzetten na
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "De instellingen voor de spellijst zijn teruggezet naar de standaardinstellingen"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Overeenkomend lokaal bestand"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Controle van referenties"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "De volgende variabelen worden vervangen tijdens het opstarten:[CR]● XXROM_PATHXX: Het pad naar het bestand dat wordt opgestart[CR]● XXROM_NAMEXX: De naam van het bestand dat wordt opgestart (geen pad)[CR]● XXROM_STEMXX: De naam van het bestand dat wordt opgestart (geen pad, geen extensie)[CR]● XXNETPLAY_COMMANDXX: Elke toevoeging van een opdracht die nodig is voor netplay, zie de add-oninstellingen voor opties[CR]Zie wiki voor meer informatie…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Het archiefbestand kon niet worden verwerkt [CR] Controleer de logs voor meer details"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Selecteer actie vóór de lancering"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Kodi op de achtergrond laten draaien (standaard)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Sluit Kodi voor het opstarten, open Kodi opnieuw nadat de emulator is afgesloten"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Kodi opschorten voor de lancering, Kodi weer activeren na het afsluiten van de emulator"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Bekijk IAGL-databasestatistieken"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Geeft de huidige statistieken voor de IAGL-database weer"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db-statistieken"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Bekijk de startparameters"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Spelinstellingen"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Game-startparameters"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Als er geen gebruikersstartopdracht aanwezig is"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Selecteer wat Kodi moet doen als er geen startopdracht (retroplayer-add-on of externe emulator) is ingesteld"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Probeer te starten met standaard"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Stoppen / Niet lanceren"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Geen commando ingesteld"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Er is geen startopdracht ingesteld voor deze lijst. Kunt u er nu een instellen?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Er kon geen standaard startopdracht voor deze lijst worden gevonden"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Standaardkern niet gevonden. Installeer {} of werk launcher bij."
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Game-add-on startopdracht reset"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Geen game-add-ons gevonden"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Game-add-on-startopdracht bijgewerkt"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Gebruik alternatieve standaard downloadmap"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Alleen opties weergeven die Kodi op de achtergrond houden"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Toon alleen opties die Kodi sluiten"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Alleen opties weergeven die Kodi pauzeren"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG-locatie als string"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "U kunt ook het pad naar het bestand retroarch.cfg invoeren, precies zoals het in Retroarch staat"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch Cores-map als string"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "U kunt ook het pad naar de Cores-directory invoeren, precies zoals het in de Retroarch-directoryconfiguratie staat"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Update Launcher voor {}?[CR][B]Hiermee worden de instellingen voor alle games in deze lijst gewijzigd.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Update Launch Command voor {}?[CR][B]Hiermee worden de instellingen voor alle games in deze lijst gewijzigd.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Update Launch Download Path voor {}?[CR][B]Hiermee worden de instellingen voor alle games in deze lijst gewijzigd.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Update Lanceeropdracht"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Update start downloadpad"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Reset instellingen voor {}?[CR][B]Hiermee worden de instellingen voor alle games in deze lijst gewijzigd.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Steun"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Doneer aan Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Er is een nieuwe IAGL-database gevonden[CR]Wilt u updaten?[CR]Instellingen worden indien mogelijk naar de nieuwe database gekopieerd"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Nieuwe db"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Database is bijgewerkt[CR]Gebruikersinstellingen zijn overgedragen"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Database is bijgewerkt[CR]Sommige gebruikersinstellingen konden niet worden overgedragen[CR]Zie logboek voor meer details"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Er is een fout opgetreden bij het updaten van de database [CR] Zie het logboek voor meer details"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Vraag het me later nog eens"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Deze keer niet updaten[CR](Vraag het me niet opnieuw tot de volgende update)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Welkom bij de IAGL-installatiewizard[CR]Laten we alle instellingen doornemen, zodat je aan de slag kunt!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Voor de meeste spellen is een archive.org-account vereist[CR]Meld u aan op https://archive.org/account/signup[CR]Wilt u uw account gebruiken met IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "De installatie voor het gebruik van Kodi-game-add-ons is voltooid![CR]Ben je klaar om te spelen?[CR]Selecteer [B]Nee[/B] om het extern starten van games in te stellen."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Stel alle spellijsten in om extern te worden gestart"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Stel in dat alleen bepaalde spellijsten extern worden gestart"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Reset alle game list launchers naar de standaardinstellingen"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} spellijsten zijn bijgewerkt voor externe lancering"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Standaardinstellingen zijn vooraf ingesteld voor elke externe startopdracht[CR]Controleer indien nodig de startparameters van het spel voordat u het spel start[CR]Zie wiki voor meer informatie."

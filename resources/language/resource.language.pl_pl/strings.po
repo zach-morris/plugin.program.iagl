@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -277,7 +277,7 @@ msgstr "Sprawdź podany adres e-mail i hasło, aby sprawdzić, czy możesz się 
 
 msgctxt "#30067"
 msgid "Download folder size limit"
-msgstr "Limit rozmiaru pobieranego folderu"
+msgstr "Limit rozmiaru folderu do pobrania"
 
 msgctxt "#30068"
 msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
@@ -306,6 +306,10 @@ msgstr "Programy telewizyjne"
 msgctxt "#30074"
 msgid "Movies"
 msgstr "Kino"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "Zawody sportowe"
 
 msgctxt "#30076"
 msgid "10 Games"
@@ -591,6 +595,14 @@ msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
 
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Metoda wyboru programu uruchamiającego grę"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Wybierz, co Kodi zrobi po wybraniu programu uruchamiającego gry (tylko Windows, Linux i OSX)"
+
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
 msgstr "Utrzymuj Kodi w tle"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Uruchom kreatora konfiguracji"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Uruchom kreatora, aby zmienić ustawienia dla list gier. Można go uruchomić ponownie w dowolnym momencie"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Uruchom kreatora, aby szybko zmienić ustawienia dla list gier. Można go uruchomić ponownie w dowolnym momencie"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,7 +813,7 @@ msgstr "Pobierz wątki"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Ustaw alternatywny domyślny folder dla wszystkich pobranych plików"
+msgstr "Alternatywny domyślny folder pobierania"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Aktualizuj listę gier Launcher"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Aktualizuj polecenie uruchamiania"
+msgid "Update game list Launch Command"
+msgstr "Aktualizuj listę gier Uruchom polecenie"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Zaktualizuj ścieżkę pobierania listy gier"
+msgid "Update game list Download Path"
+msgstr "Aktualizuj listę gier Ścieżka pobierania"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1017,7 +1029,7 @@ msgstr "Nie znaleziono ukrytych list gier"
 
 msgctxt "#30255"
 msgid "Game lists unhidden"
-msgstr "Odkryto listy gier"
+msgstr "Listy gier nie są ukryte"
 
 msgctxt "#30256"
 msgid "Confirm reset"
@@ -1057,7 +1069,7 @@ msgstr "Wybierz dodatek do gry"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Przywróć domyślne"
+msgstr "Czy na pewno chcesz zresetować polecenie uruchomienia dodatku do gry?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1073,7 +1085,7 @@ msgstr "Zalogowanie do Archive.org powiodło się!"
 
 msgctxt "#30269"
 msgid "Archive.org login failed.[CR]Check credentials or log for more details"
-msgstr "Nie udało się zalogować do Archive.org.[CR]Sprawdź dane uwierzytelniające lub zaloguj się, aby uzyskać więcej szczegółów"
+msgstr "Logowanie do Archive.org nie powiodło się.[CR]Sprawdź dane uwierzytelniające lub zaloguj się, aby uzyskać więcej szczegółów"
 
 msgctxt "#30270"
 msgid "Error"
@@ -1257,7 +1269,7 @@ msgstr "Dodatek do gry Retroplayer zdefiniowany przez użytkownika"
 
 msgctxt "#30315"
 msgid "User Defined Post Process"
-msgstr "Postproces definiowany przez użytkownika"
+msgstr "Zdefiniowany przez użytkownika proces końcowy"
 
 msgctxt "#30316"
 msgid "Game List Settings"
@@ -1270,6 +1282,10 @@ msgstr "Brak (zostanie użyty domyślny dodatek)"
 msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Lista gier Launcher"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Polecenie zewnętrznego uruchomienia"
 
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
@@ -1314,3 +1330,227 @@ msgstr "Czy na pewno chcesz przywrócić ustawienia domyślne wszystkich list gi
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Ustawienia listy gier zostały przywrócone do domyślnych"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Dopasowanie pliku lokalnego"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Sprawdzanie uprawnień"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "Podczas uruchamiania zostaną zastąpione następujące zmienne:[CR]● XXROM_PATHXX: Ścieżka do pliku, który zostanie uruchomiony[CR]● XXROM_NAMEXX: Nazwa pliku, który zostanie uruchomiony (bez ścieżki)[CR]● XXROM_STEMXX: Nazwa pliku, który zostanie uruchomiony (bez ścieżki, bez rozszerzenia)[CR]● XXNETPLAY_COMMANDXX: Wszelkie dodatkowe polecenia wymagane do gry sieciowej, opcje znajdują się w ustawieniach dodatku[CR]Więcej informacji znajdziesz w wiki…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Nie można przetworzyć pliku archiwum[CR]Sprawdź dzienniki, aby uzyskać więcej szczegółów"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Wybierz akcję przed uruchomieniem"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Pozostaw Kodi działające w tle (domyślnie)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Zamknij Kodi przed uruchomieniem, otwórz ponownie Kodi po wyjściu z emulatora"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Zawieszenie Kodi przed uruchomieniem, wybudzenie Kodi po wyjściu z emulatora"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Wyświetl statystyki bazy danych IAGL"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Wyświetla aktualne statystyki dla bazy danych IAGL"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "Statystyki db"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Wyświetl parametry uruchamiania"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Ustawienia gry"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Parametry uruchamiania gry"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Jeśli nie ma polecenia Launch Command użytkownika"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Wybierz, co Kodi zrobi, gdy nie zostanie ustawione żadne polecenie uruchomienia (dodatek retroplayer lub zewnętrzny emulator)"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Spróbuj uruchomić z domyślnym"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Zatrzymaj się / Nie uruchamiaj"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Brak zestawu poleceń"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Polecenie uruchomienia nie zostało ustawione dla tej listy. Jak je ustawić teraz?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Nie znaleziono domyślnego polecenia uruchamiania dla tej listy"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Nie znaleziono domyślnego rdzenia. Zainstaluj {} lub zaktualizuj program uruchamiający"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Polecenie uruchomienia dodatku do gry reset"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Nie znaleziono żadnych dodatków do gry"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Zaktualizowano polecenie uruchamiania dodatku do gry"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Użyj alternatywnego domyślnego folderu pobierania"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Pokaż tylko opcje, które utrzymują Kodi w tle"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Pokaż tylko opcje zamykające Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Pokaż tylko opcje, które wstrzymują Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Lokalizacja Retroarch CFG jako ciąg"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Alternatywnie wprowadź ścieżkę do pliku retroarch.cfg dokładnie tak, jak jest ona wyświetlana w Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Katalog rdzeni Retroarch jako ciąg"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Alternatywnie wprowadź ścieżkę do katalogu Cores dokładnie tak, jak pojawia się ona w konfiguracji katalogu Retroarch"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Zaktualizuj program uruchamiający dla {}?[CR][B]Spowoduje to zmianę ustawień dla wszystkich gier na tej liście.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Zaktualizuj polecenie uruchamiania dla {}?[CR][B]Spowoduje to zmianę ustawień dla wszystkich gier na tej liście.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Zaktualizuj ścieżkę pobierania dla {}?[CR][B]Spowoduje to zmianę ustawień dla wszystkich gier na tej liście.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Aktualizuj polecenie uruchamiania"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Aktualizacja Uruchom ścieżkę pobierania"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Zresetuj ustawienia dla {}?[CR][B]Spowoduje to zmianę ustawień dla wszystkich gier na tej liście.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Wsparcie"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Przekaż darowiznę na Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Znaleziono nową bazę danych IAGL[CR]Czy chcesz dokonać aktualizacji?[CR]Ustawienia zostaną skopiowane do nowej bazy danych, jeśli będzie to możliwe"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Nowa baza danych"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Baza danych została zaktualizowana[CR]Ustawienia użytkownika zostały przeniesione"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Baza danych została zaktualizowana[CR]Niektóre ustawienia użytkownika nie zostały przeniesione[CR]Więcej szczegółów znajdziesz w dzienniku"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Wystąpił błąd podczas aktualizacji bazy danych[CR]Więcej szczegółów znajdziesz w dzienniku"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Zapytaj mnie ponownie później"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Nie aktualizuj tym razem[CR](Nie pytaj mnie ponownie do następnej aktualizacji)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Witamy w Kreatorze konfiguracji IAGL[CR]Przeanalizujmy wszystkie ustawienia, abyś mógł zacząć grać!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Większość gier wymaga konta archive.org[CR]Zarejestruj się na stronie https://archive.org/account/signup[CR]Czy chcesz używać swojego konta w IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Konfiguracja umożliwiająca korzystanie z dodatków do gier Kodi jest zakończona![CR]Czy jesteś gotowy do gry?[CR]Wybierz [B]Nie[/B], aby skonfigurować zewnętrzne uruchamianie gier."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Ustaw wszystkie listy gier tak, aby były uruchamiane zewnętrznie"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Ustaw uruchamianie zewnętrzne tylko niektórych list gier"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Przywróć domyślne ustawienia wszystkich programów uruchamiających listy gier"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} Listy gier zostały zaktualizowane w celu uruchomienia zewnętrznego"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Wartości domyślne są wstępnie ustawione dla każdego zewnętrznego polecenia uruchomienia.[CR]Przed uruchomieniem gry zapoznaj się z parametrami uruchamiania, jeśli to konieczne.[CR]Więcej szczegółów znajdziesz w wiki."

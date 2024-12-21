@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "Filmek"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "Játékok"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 Játékok"
@@ -591,6 +595,14 @@ msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
 
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Játékindító kiválasztási módszer"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Válassza ki, mit tegyen a Kodi a játékindító kiválasztásakor (csak Windows, Linux és OSX)"
+
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
 msgstr "Tartsa a Kodit a háttérben"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "A telepítővarázsló végrehajtása"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Futtassa a varázslót a játéklisták beállításainak módosításához.  Ez bármikor megismételhető"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Futtassa a varázslót a játéklisták beállításainak gyors módosításához.  Ez bármikor megismételhető"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,7 +813,7 @@ msgstr "Szálak letöltése"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Állítson be egy alternatív alapértelmezett mappát az összes letöltéshez"
+msgstr "Alternatív alapértelmezett letöltési mappa"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Frissítse a játéklistát Launcher"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Frissítse az Indítási parancsot"
+msgid "Update game list Launch Command"
+msgstr "A játéklista frissítése Indítsa el a parancsot"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Frissítse a játéklista letöltési útvonalát"
+msgid "Update game list Download Path"
+msgstr "Frissítse a játéklistát Letöltési útvonal"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1057,7 +1069,7 @@ msgstr "Válassza ki a játékkiegészítőt"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Visszaállítás alapértelmezettre"
+msgstr "Biztosan visszaállítja a játékkiegészítő indító parancsát?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1181,7 +1193,7 @@ msgstr "Az indítási beállítások jelenleg üresek[CR]Kérjük, frissítse a 
 
 msgctxt "#30296"
 msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
-msgstr "Az indítási beállítások jelenleg üresek[CR]Kérjük, frissítse a kiegészítő operációs rendszer indítási beállításait."
+msgstr "Az indítási beállítások jelenleg üresek[CR]Kérjük, frissítse az OS indítási beállításait."
 
 msgctxt "#30297"
 msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
@@ -1271,6 +1283,10 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Játéklista-indító"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Külső indítási parancs"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
 msgstr "Külső indítási parancs[CR]*Nem található felhasználói indítási parancs / az alapértelmezett beállítás használata*"
@@ -1309,8 +1325,232 @@ msgstr "A játéklista beállításainak visszaállítása"
 
 msgctxt "#30329"
 msgid "Are you sure you want to reset all game list settings to default?"
-msgstr "Biztos, hogy vissza szeretné állítani az összes játéklista beállítást az alapértelmezettre?"
+msgstr "Biztosan vissza szeretné állítani az összes játéklista beállítást az alapértelmezettre?"
 
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "A játéklista beállításai visszaálltak az alapértelmezettre"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Egyező helyi fájl"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Hitelesítési adatok ellenőrzése"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "a következő változók cserélődnek le az indítás során:[CR]● XXROM_PATHXX: Az elindítandó fájl elérési útja[CR]● XXROM_NAMEXX: Az indítandó fájl neve (nincs elérési út)[CR]● XXROM_STEMXX: A az indítandó fájl neve (nincs elérési út, nincs kiterjesztés)[CR]● XXNETPLAY_COMMANDXX: Bármilyen parancs hozzáadása szükséges a netplayhez, lásd a kiegészítő beállításait opciók[CR]További információért lásd a wikit…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Az archív fájlt nem sikerült feldolgozni[CR]További részletekért ellenőrizze a naplókat"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Indítás előtt válassza ki a műveletet"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Hagyja futni a Kodit a háttérben (alapértelmezett)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Indítás előtt zárja be a Kodi-t, az emulátor kilépése után nyissa meg újra a Kodi-t"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "A Kodi felfüggesztése indítás előtt, Kodi felébresztése az emulátor kilépése után"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Tekintse meg az IAGL db statisztikáit"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Felsorolja az IAGL db aktuális statisztikáit"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db Statisztika"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Indítási paraméterek megtekintése"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Játékbeállítások"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Játékindítási paraméterek"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Ha nincs felhasználó, indítsa el a parancsot"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Válassza ki, mit tegyen a Kodi, ha nincs beállítva indítási parancs (retroplayer kiegészítő vagy külső emulátor)."
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Indítási kísérlet alapértelmezés szerint"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Stop / Ne indítsa el"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Nincs parancs beállítva"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Nincs beállítva indítóparancs ehhez a listához, most beállít egyet?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Ehhez a listához nem található alapértelmezett indítási parancs"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Az alapértelmezett mag nem található.  Telepítse a(z) {} alkalmazást vagy frissítse az indítót"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Játékkiegészítő indítóparancs visszaállítása"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Nem találhatók játékkiegészítők"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "A játékkiegészítő indító parancsa frissítve"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Használjon másik alapértelmezett letöltési mappát"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Csak azokat az opciókat jelenítse meg, amelyek a Kodi-t a háttérben tartják"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Csak azokat a lehetőségeket jelenítse meg, amelyek bezárják a Kodi-t"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Csak azokat a beállításokat jelenítse meg, amelyek szüneteltetik a Kodi-t"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Hely mint karakterlánc"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Alternatív megoldásként adja meg a retroarch.cfg fájl elérési útját pontosan úgy, ahogy az a Retroarchban megjelenik"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch Cores könyvtárat karakterláncként"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Alternatív megoldásként adja meg a Cores könyvtár elérési útját pontosan úgy, ahogy az a Retroarch könyvtárkonfigurációban megjelenik"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "A(z) {} indítóprogramjának frissítése?[CR][B]Ez módosítja a listán szereplő összes játék beállításait.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Frissíti a(z) {} indítóparancsát?[CR][B]Ez a listán szereplő összes játék beállításait módosítja.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Frissíti a(z) {} indítási letöltési útvonalát?[CR][B]Ez módosítja a listán szereplő összes játék beállításait.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Frissítse az Indítási parancsot"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Frissítés Indítsa el a Letöltési útvonalat"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Visszaállítja a beállításokat a következőhöz: {}?[CR][B]Ez a listán szereplő összes játék beállításait módosítja.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Támogatás"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Adományozzon az Archive.org-nak"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Új IAGL adatbázis található"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Új db"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Az adatbázis frissítve[CR]A felhasználói beállítások átvitele megtörtént"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Az adatbázis frissült[CR]Egyes felhasználói beállítások átvitele nem sikerült[CR]További részletekért lásd a naplót"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Hiba történt az adatbázis frissítése során[CR]További részletekért lásd a naplót"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Kérdezd meg később"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Ezúttal ne frissíts[CR](Ne kérdezz újra a következő frissítésig)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Üdvözöljük az IAGL beállítási varázslójában[CR]Futtathat minden beállítást, hogy elkezdhesse játszani!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "A legtöbb játékhoz archive.org fiók szükséges[CR]Regisztráljon a https://archive.org/account/signup oldalon[CR]Szeretné használni fiókját az IAGL-lel?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "A beállítás befejeződött a Kodi-játékkiegészítők használatához![CR]Készen állsz a játékra?[CR]A külső játékindítás beállításához válassza a [B]Nem[/B] lehetőséget."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Állítsa be az összes játéklistát úgy, hogy külsőleg elinduljon"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Csak néhány játéklistát állítson be külső indításra"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Állítsa vissza az összes játéklista-indítót az alapértelmezettre"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} játéklista frissítve lett külső indításhoz"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Az alapértelmezett értékek minden külső indítóparancshoz előre be vannak állítva[CR]Indítás előtt ellenőrizze a játék indítási paramétereit, ha szükséges[CR]További részletekért lásd a wikit."

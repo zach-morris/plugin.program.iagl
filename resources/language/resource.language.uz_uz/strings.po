@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -25,7 +25,7 @@ msgstr "Roʻyxatlarni Turkum boʻyicha koʻrib chiqing"
 
 msgctxt "#30004"
 msgid "Browse games by Playlist"
-msgstr "Pleylist bo'yicha o'yinlarni ko'rib chiqing"
+msgstr "Pleylist boʻyicha oʻyinlarni koʻrib chiqing"
 
 msgctxt "#30005"
 msgid "Favorites"
@@ -117,7 +117,7 @@ msgstr "Janr boʻyicha filtrlash"
 
 msgctxt "#30027"
 msgid "Filter by Players"
-msgstr "O‘yinchilar bo‘yicha filtrlash"
+msgstr "O'yinchilar bo'yicha filtrlash"
 
 msgctxt "#30028"
 msgid "Filter by Studio"
@@ -169,7 +169,7 @@ msgstr "[COLOR FF12A0C7]Tasodifiy qidiruvni amalga oshirish[/COLOR]"
 
 msgctxt "#30040"
 msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
-msgstr "[COLOR FF12A0C7]Tasodifiy qidiruv havolasini yarating[/COLOR]"
+msgstr "[COLOR FF12A0C7]Tasodifiy qidiruv havolasini yaratish[/COLOR]"
 
 msgctxt "#30041"
 msgid "General"
@@ -249,7 +249,7 @@ msgstr "O'chirilgan"
 
 msgctxt "#30060"
 msgid "Some games require login.  Enter your archive.org email address and password."
-msgstr "Ba'zi o'yinlar tizimga kirishni talab qiladi.  archive.org elektron pochta manzilingiz va parolingizni kiriting."
+msgstr "Ba'zi o'yinlar tizimga kirishni talab qiladi.  archive.org elektron pochta manzili va parolni kiriting."
 
 msgctxt "#30061"
 msgid "archive.org Email"
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "Filmlar"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "O'yinlar"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 ta o'yin"
@@ -333,7 +337,7 @@ msgstr "500 o'yinlar"
 
 msgctxt "#30082"
 msgid "Game artwork"
-msgstr "O'yin san'at asari"
+msgstr "O'yin san'ati"
 
 msgctxt "#30083"
 msgid "Game list artwork"
@@ -477,7 +481,7 @@ msgstr "Tizim fon rasmi"
 
 msgctxt "#30118"
 msgid "Force IAGL viewtypes"
-msgstr "IAGL ko‘rish turlarini majburlash"
+msgstr "IAGL koʻrish turlarini majburlash"
 
 msgctxt "#30119"
 msgid "Verify your skin has the forced viewtype ID available"
@@ -513,7 +517,7 @@ msgstr "Oʻchirilgan (standart)"
 
 msgctxt "#30127"
 msgid "List / Poster (50)"
-msgstr "Roʻyxat / afisha (50)"
+msgstr "Ro'yxat / afisha (50)"
 
 msgctxt "#30128"
 msgid "Poster / Big List / Poster Wall (51)"
@@ -591,6 +595,14 @@ msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
 
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "O'yinni ishga tushirish vositasini tanlash usuli"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "O'yinni ishga tushirish moslamasini tanlashda Kodi nima qilishini tanlang (faqat Windows, Linux va OSX)"
+
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
 msgstr "Kodi-ni fonda saqlang"
@@ -613,7 +625,7 @@ msgstr "Tizim va yadro nomi bo'yicha ro'yxat"
 
 msgctxt "#30154"
 msgid "List by Core Name"
-msgstr "Asosiy nomi bo'yicha ro'yxat"
+msgstr "Asosiy ism bo'yicha ro'yxat"
 
 msgctxt "#30155"
 msgid "List by Emulated Systems"
@@ -701,7 +713,7 @@ msgstr "Yoqilganda, netplay lobbi IAGL bosh sahifasida ko'rsatiladi"
 
 msgctxt "#30176"
 msgid "Filter game lobby to IAGL auto launch games"
-msgstr "O'yin lobbisini IAGL avtomatik ishga tushirish o'yinlariga filtrlang"
+msgstr "IAGL o'yinlarini avtomatik ishga tushirish uchun o'yin lobbisini filtrlang"
 
 msgctxt "#30177"
 msgid "If enabled, the netplay lobby will only show auto launchable games"
@@ -713,7 +725,7 @@ msgstr "Netplay porti"
 
 msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
-msgstr "Ulanish uchun netplay IP portini aniqlang (standart uchun bo'sh qoldiring)"
+msgstr "Ulanish uchun netplay IP portini aniqlang (standart sifatida bo'sh qoldiring)"
 
 msgctxt "#30180"
 msgid "Default player 2+ Hostname"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "O'rnatish ustasini ishga tushiring"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "O'yin ro'yxatlaringiz sozlamalarini o'zgartirish uchun sehrgarni ishga tushiring.  Buni istalgan vaqtda qayta ishga tushirish mumkin"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "O'yin ro'yxatlaringiz sozlamalarini tezda o'zgartirish uchun sehrgarni ishga tushiring.  Buni istalgan vaqtda qayta ishga tushirish mumkin"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -777,7 +789,7 @@ msgstr "StartAndroidActivity-dan foydalaning"
 
 msgctxt "#30195"
 msgid "Leave as default if unsure"
-msgstr "Agar ishonchingiz komil bo'lmasa, standart sifatida qoldiring"
+msgstr "Agar ishonchingiz komil bo'lmasa, sukut bo'yicha qoldiring"
 
 msgctxt "#30196"
 msgid "Suspend Kodi Input and Audio when using External Launcher"
@@ -801,7 +813,7 @@ msgstr "Mavzularni yuklab olish"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Barcha yuklab olishlar uchun muqobil standart papkani o'rnating"
+msgstr "Muqobil standart yuklab olish papkasi"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -813,7 +825,7 @@ msgstr "Tizim papkalari yordamida standart yuklab olish papkasini tashkil qiling
 
 msgctxt "#30204"
 msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
-msgstr "Yoqilganda, vaqtinchalik jild tizim tomonidan tartibga solinadi (ba'zan konfiguratsiyani bekor qilish uchun kerak)"
+msgstr "Yoqilganda, vaqtinchalik jild tizim tomonidan tartibga solinadi (ba'zan konfiguratsiyani bekor qilish uchun kerak bo'ladi)"
 
 msgctxt "#30205"
 msgid "Copy Kodi Network Source downloads to Local Filesystem"
@@ -984,11 +996,11 @@ msgid "Update game list Launcher"
 msgstr "Launcher o'yinlar ro'yxatini yangilang"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Ishga tushirish buyrug'ini yangilang"
+msgid "Update game list Launch Command"
+msgstr "O'yinlar ro'yxatini ishga tushirish buyrug'ini yangilang"
 
 msgctxt "#30248"
-msgid "Update game list download path"
+msgid "Update game list Download Path"
 msgstr "O'yinlar ro'yxatini yuklab olish yo'lini yangilang"
 
 msgctxt "#30249"
@@ -997,7 +1009,7 @@ msgstr "O'yinlar ro'yxatini yashirish"
 
 msgctxt "#30250"
 msgid "Update game list post download process"
-msgstr "Yuklab olish jarayonidan keyingi o'yinlar ro'yxatini yangilang"
+msgstr "Yuklab olish jarayonidan keyin o'yinlar ro'yxatini yangilang"
 
 msgctxt "#30251"
 msgid "Are you sure you want to hide game list"
@@ -1005,7 +1017,7 @@ msgstr "Haqiqatan ham oʻyinlar roʻyxatini berkitmoqchimisiz"
 
 msgctxt "#30252"
 msgid "Game list is now hidden"
-msgstr "O'yinlar ro'yxati endi yashirin"
+msgstr "Oʻyinlar roʻyxati endi yashirin"
 
 msgctxt "#30253"
 msgid "No results"
@@ -1037,7 +1049,7 @@ msgstr "Launcher yangilash"
 
 msgctxt "#30260"
 msgid "Update launcher from[CR]Kodi to[CR]External?"
-msgstr "Launcher [CR]Kodi'dan[CR]Tashqiga yangilansinmi?"
+msgstr "Launcher[CR]Kodi'dan[CR]Tashqiga yangilansinmi?"
 
 msgctxt "#30261"
 msgid "Update launcher from[CR]External to[CR]Kodi?"
@@ -1057,11 +1069,11 @@ msgstr "O'yin qo'shimchasini tanlang"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Standart holatga qaytarish"
+msgstr "Haqiqatan ham oʻyin qoʻshimchasini ishga tushirish buyrugʻini tiklamoqchimisiz?"
 
 msgctxt "#30266"
 msgid "Download game to…"
-msgstr "Oʻyinni yuklab olish uchun…"
+msgstr "Oʻyinni yuklab oling…"
 
 msgctxt "#30267"
 msgid "Select download folder"
@@ -1073,7 +1085,7 @@ msgstr "Archive.org saytiga kirish muvaffaqiyatli!"
 
 msgctxt "#30269"
 msgid "Archive.org login failed.[CR]Check credentials or log for more details"
-msgstr "Archive.org-ga kirish amalga oshmadi.[CR]Batafsil ma’lumotlar uchun hisob ma’lumotlarini tekshiring yoki tizimga kiring"
+msgstr "Archive.org tizimiga kirish amalga oshmadi.[CR]Batafsil maʼlumotlar uchun hisob maʼlumotlarini tekshiring yoki tizimga kiring"
 
 msgctxt "#30270"
 msgid "Error"
@@ -1271,6 +1283,10 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "O'yinlar ro'yxatini ishga tushirish dasturi"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Tashqi ishga tushirish buyrug'i"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
 msgstr "Tashqi ishga tushirish buyrug‘i[CR]*Foydalanuvchini ishga tushirish buyrug‘i topilmadi / Standartdan foydalanish*"
@@ -1313,4 +1329,228 @@ msgstr "Haqiqatan ham barcha oʻyinlar roʻyxati sozlamalarini asl holatiga qayt
 
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
-msgstr "Oʻyin roʻyxati sozlamalari asl holatiga qaytarildi"
+msgstr "Oʻyinlar roʻyxati sozlamalari asl holatiga qaytarildi"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Mahalliy fayl mos keladi"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Hisob ma'lumotlarini tekshirish"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "u ishga tushirish vaqtida quyidagi oʻzgaruvchilar almashtiriladi:[CR]● XXROM_PATHXX: ishga tushiriladigan faylga yoʻl[CR]● XXROM_NAMEXX: ishga tushiriladigan fayl nomi (yoʻl yoʻq)[CR]● XXROM_STEMXX: ishga tushiriladigan fayl nomi (yo‘l kengaytmasiz)[CR]● XXNETPLAY_COMMANDXX: Netplay uchun har qanday buyruq qo‘shilishi kerak, qo‘shimcha sozlamalariga qarang. variantlar[CR]Batafsil maʼlumot uchun wikiga qarang…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Arxiv faylini qayta ishlab bo‘lmadi[CR]Batafsil ma’lumot uchun jurnallarni tekshiring"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Ishga tushirishdan oldin harakatni tanlang"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Kodi-ni fonda qoldiring (standart)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Ishga tushirishdan oldin Kodi-ni yoping, emulyatordan chiqqandan keyin Kodi-ni qayta oching"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Kodi-ni ishga tushirishdan oldin to'xtatib turing, emulyatordan chiqqandan keyin Kodi-ni uyg'oting"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "IAGL JB statistikasini ko'rish"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "IAGL db uchun joriy statistik ma'lumotlarni ko'rsatadi"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db statistikasi"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Ishga tushirish parametrlarini ko'rish"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "O'yin sozlamalari"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "O'yinni ishga tushirish parametrlari"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Agar foydalanuvchi ishga tushirish buyrug'i mavjud bo'lmasa"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Hech qanday ishga tushirish buyrug'i (retroplayer qo'shimchasi yoki tashqi emulyator) o'rnatilmaganda Kodi nima qilishini tanlang"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Sukut bo'yicha ishga tushirishga harakat qiling"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "To'xtating / ishga tushirmang"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Hech qanday buyruq o'rnatilmagan"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Ushbu ro'yxat uchun ishga tushirish buyrug'i o'rnatilmagan, hozir o'rnatilsinmi?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Ushbu ro'yxat uchun standart ishga tushirish buyrug'i topilmadi"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Standart yadro topilmadi.  Iltimos, {} ni oʻrnating yoki ishga tushirgichni yangilang"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "O'yin qo'shimchasini ishga tushirish buyrug'ini tiklash"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Oʻyin qoʻshimchalari topilmadi"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "O'yin qo'shimchasini ishga tushirish buyrug'i yangilandi"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Muqobil standart yuklab olish papkasidan foydalaning"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Faqat Kodi-ni fonda saqlaydigan variantlarni ko'rsating"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Faqat Kodi-ni yopadigan variantlarni ko'rsating"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Faqat Kodi-ni pauza qiladigan variantlarni ko'rsatish"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Joylashuvi qator sifatida"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Shu bilan bir qatorda retroarch.cfg fayliga yo‘lni aynan Retroarch da ko‘rsatilganidek kiriting."
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch Cores katalogi qator sifatida"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Shu bilan bir qatorda Cores katalogiga yo'lni aynan Retroarch katalog konfiguratsiyasida ko'rsatilganidek kiriting."
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{} uchun Launcher yangilanadi?[CR][B]Bu roʻyxatdagi barcha oʻyinlar sozlamalarini oʻzgartiradi.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{} uchun ishga tushirish buyrugʻini yangilang?[CR][B]Bu roʻyxatdagi barcha oʻyinlar sozlamalarini oʻzgartiradi.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{} Yuklab olish yoʻlini yangilang?[CR][B]Bu roʻyxatdagi barcha oʻyinlar sozlamalarini oʻzgartiradi.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Ishga tushirish buyrug'ini yangilang"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Yuklab olish yo'lini yangilang"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{} uchun sozlamalarni asliga qaytaring?[CR][B]Bu roʻyxatdagi barcha oʻyinlar sozlamalarini oʻzgartiradi.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Qo'llab-quvvatlash"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Archive.org saytiga xayriya qiling"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Yangi IAGL maʼlumotlar bazasi topildi[CR]Yangilashni xohlaysizmi?[CR]Iloji boʻlsa, sozlamalar yangi JDB ga koʻchiriladi."
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Yangi JB"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Maʼlumotlar bazasi yangilandi[CR]Foydalanuvchi sozlamalari uzatildi"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Maʼlumotlar bazasi yangilandi[CR]Baʼzi foydalanuvchi sozlamalarini oʻtkazib boʻlmadi[CR]Batafsil maʼlumot uchun jurnalga qarang"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Maʼlumotlar bazasini yangilashda xatolik yuz berdi[CR]Batafsil maʼlumotlar uchun jurnalga qarang"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Keyinroq yana so'rang"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Bu safar yangilanmasin[CR](Keyingi yangilanishgacha mendan boshqa soʻramang)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "IAGL sozlash ustasiga xush kelibsiz[CR]Sizni oʻynashingiz uchun barcha sozlamalarni koʻrib chiqishga ruxsat bering!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Aksariyat oʻyinlar archive.org hisobini talab qiladi[CR]Https://archive.org/account/signup sahifasida roʻyxatdan oʻting[CR]Hisobingizdan IAGL bilan foydalanmoqchimisiz?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Kodi oʻyin qoʻshimchalaridan foydalanish uchun sozlash tugallandi![CR]Oʻynashga tayyormisiz?[CR]Tashqi oʻyinni ishga tushirishni sozlash uchun [B]Yoʻq[/B] ni tanlang."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Barcha oʻyin roʻyxatlarini tashqaridan ishga tushiriladigan qilib oʻrnating"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Faqat ba'zi o'yinlar ro'yxatini tashqaridan ishga tushirish uchun o'rnating"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Barcha oʻyinlar roʻyxati ishga tushirgichlarini asl holatiga qaytaring"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} oʻyin roʻyxati tashqi ishga tushirish uchun yangilandi"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Har bir tashqi ishga tushirish buyrugʻi uchun birlamchi sozlamalar oldindan oʻrnatiladi[CR]Agar kerak boʻlsa, oʻyinni boshlash parametrlarini koʻrib chiqishdan oldin[CR]Batafsil maʼlumot uchun wiki-ga qarang."

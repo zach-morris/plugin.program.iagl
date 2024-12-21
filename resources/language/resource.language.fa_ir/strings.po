@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "فیلم ها"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "بازی ها"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 بازی"
@@ -591,6 +595,14 @@ msgctxt "#30146"
 msgid "Android ra32"
 msgstr "اندروید ra32"
 
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "روش انتخاب لانچر بازی"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "انتخاب کنید که Kodi هنگام انتخاب یک راه‌انداز بازی (فقط ویندوز، لینوکس و OSX) چه کاری انجام می‌دهد."
+
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
 msgstr "Kodi را در پس زمینه نگه دارید"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "اجرای جادوگر راه اندازی"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "جادوگر را اجرا کنید تا تنظیمات لیست بازی های خود را تغییر دهید.  این را می توان در هر زمان دوباره اجرا کرد"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "جادوگر را اجرا کنید تا به سرعت تنظیمات لیست بازی های خود را تغییر دهید.  این را می توان در هر زمان دوباره اجرا کرد"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,7 +813,7 @@ msgstr "دانلود موضوعات"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "پوشه پیش فرض جایگزین را برای همه دانلودها تنظیم کنید"
+msgstr "پوشه دانلود پیش فرض جایگزین"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -917,7 +929,7 @@ msgstr "بازنشانی معیارها"
 
 msgctxt "#30230"
 msgid "Enter Link Name"
-msgstr "نام پیوند را وارد کنید"
+msgstr "نام لینک را وارد کنید"
 
 msgctxt "#30231"
 msgid "Define the start page for IAGL"
@@ -981,15 +993,15 @@ msgstr "جادوگر"
 
 msgctxt "#30246"
 msgid "Update game list Launcher"
-msgstr "راه‌انداز لیست بازی را به‌روزرسانی کنید"
+msgstr "لانچر لیست بازی را به روز کنید"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "به روز رسانی فرمان راه اندازی"
+msgid "Update game list Launch Command"
+msgstr "لیست بازی ها را به روز کنید Launch Command"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "به روز رسانی مسیر دانلود لیست بازی ها"
+msgid "Update game list Download Path"
+msgstr "به روز رسانی لیست بازی ها مسیر دانلود"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1009,7 +1021,7 @@ msgstr "لیست بازی اکنون پنهان است"
 
 msgctxt "#30253"
 msgid "No results"
-msgstr "بدون نتیجه"
+msgstr "هیچ نتیجه ای وجود ندارد"
 
 msgctxt "#30254"
 msgid "No hidden game lists found"
@@ -1057,7 +1069,7 @@ msgstr "افزونه بازی را انتخاب کنید"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "به حالت پیش فرض بازنشانی کنید"
+msgstr "آیا مطمئن هستید که می خواهید دستور راه اندازی افزونه بازی را بازنشانی کنید؟"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1271,6 +1283,10 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "راه‌انداز فهرست بازی‌ها"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "فرمان راه اندازی خارجی"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
 msgstr "فرمان راه‌اندازی خارجی[CR]*دستور راه‌اندازی کاربر پیدا نشد / با استفاده از پیش‌فرض*"
@@ -1285,7 +1301,7 @@ msgstr "آیا مطمئن هستید که می خواهید مسیر دانلو�
 
 msgctxt "#30323"
 msgid "Download path updated"
-msgstr "مسیر دانلود آپدیت شد"
+msgstr "مسیر دانلود به روز شد"
 
 msgctxt "#30324"
 msgid "Are you sure you want to reset game list download path?"
@@ -1314,3 +1330,227 @@ msgstr "آیا مطمئن هستید که می خواهید همه تنظیما�
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "تنظیمات لیست بازی به حالت پیش فرض بازنشانی شد"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "مطابق با فایل محلی"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "بررسی مدارک"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "متغیرهای زیر در حین راه‌اندازی جایگزین می‌شوند:[CR]● XXROM_PATHXX: مسیر فایلی که راه‌اندازی می‌شود[CR]● XXROM_NAMEXX: نام فایلی که راه‌اندازی می‌شود (بدون مسیر)[CR]● XXROM_STEMXX: نام فایلی که راه‌اندازی می‌شود (بدون مسیر بدون پسوند)[CR]● XXNETPLAY_COMMANDXX: هر دستوری که برای netplay، تنظیمات افزونه را برای گزینه‌ها ببینید[CR]برای اطلاعات بیشتر به ویکی مراجعه کنید…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "فایل بایگانی قابل پردازش نیست[CR]برای جزئیات بیشتر گزارش‌ها را بررسی کنید"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "اقدام قبل از راه اندازی را انتخاب کنید"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Kodi را در پس‌زمینه اجرا کنید (پیش‌فرض)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Kodi را قبل از راه‌اندازی ببندید، پس از خروج شبیه‌ساز Kodi را دوباره باز کنید"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Kodi را قبل از راه‌اندازی به حالت تعلیق درآورید، پس از خروج از شبیه‌ساز، Kodi را بیدار کنید"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "مشاهده آمار IAGL db"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "آمار فعلی برای IAGL db را فهرست می کند"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "آمار db"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "مشاهده پارامترهای راه اندازی"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "تنظیمات بازی"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "پارامترهای راه اندازی بازی"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "اگر هیچ کاربر دستور راه اندازی وجود ندارد"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "وقتی هیچ فرمان راه اندازی (افزونه بازباز یا شبیه ساز خارجی) تنظیم نشده است، Kodi چه کاری انجام خواهد داد"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "سعی کنید با پیش فرض راه اندازی کنید"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "توقف / راه اندازی نشود"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "هیچ دستوری تنظیم نشده است"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "دستور راه اندازی برای این لیست تنظیم نشده است، اکنون یکی را تنظیم کنید؟"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "هیچ فرمان راه اندازی پیش فرض برای این لیست یافت نشد"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "هسته پیش فرض پیدا نشد.  لطفاً {} را نصب کنید یا راه‌انداز را به‌روزرسانی کنید"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "بازنشانی دستور راه اندازی افزونه بازی"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "هیچ افزونه بازی یافت نشد"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "دستور راه اندازی افزونه بازی به روز شد"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "از پوشه دانلود پیش فرض جایگزین استفاده کنید"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "فقط گزینه هایی را نشان دهید که Kodi را در پس زمینه نگه می دارند"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "فقط گزینه هایی را نشان دهید که Kodi را می بندند"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "فقط گزینه هایی را نشان دهید که Kodi را متوقف می کند"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG مکان به عنوان رشته"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "یا مسیر فایل retroarch.cfg را دقیقاً همانطور که در Retroarch ظاهر می شود وارد کنید"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "دایرکتوری Cores Retroarch به عنوان رشته"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "یا مسیر دایرکتوری Cores را دقیقاً همانطور که در پیکربندی دایرکتوری Retroarch ظاهر می شود وارد کنید"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "راه‌انداز را برای {} به‌روزرسانی کنید؟[CR][B]این کار تنظیمات همه بازی‌های این فهرست را تغییر می‌دهد.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "فرمان راه‌اندازی را برای {} به‌روزرسانی کنید؟[CR][B]این کار تنظیمات همه بازی‌های این فهرست را تغییر می‌دهد.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "راه‌اندازی مسیر دانلود را برای {} به‌روزرسانی کنید؟[CR][B]این کار تنظیمات همه بازی‌های این فهرست را تغییر می‌دهد.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "به روز رسانی فرمان راه اندازی"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "به روز رسانی راه اندازی مسیر دانلود"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "تنظیمات برای {} بازنشانی شود؟[CR][B]این کار تنظیمات همه بازی‌های این فهرست را تغییر می‌دهد.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "پشتیبانی کنید"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "به Archive.org اهدا کنید"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "یک پایگاه داده جدید IAGL پیدا شده است[CR]آیا می خواهید به روز رسانی کنید؟[CR]تنظیمات در صورت امکان به db جدید کپی می شوند"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "db جدید"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "پایگاه داده به روز شد[CR]تنظیمات کاربر منتقل شد"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "پایگاه داده به‌روزرسانی شد[CR]برخی تنظیمات کاربر منتقل نشدند[CR]برای جزئیات بیشتر به گزارش مراجعه کنید"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "هنگام به‌روزرسانی پایگاه داده خطایی روی داد[CR] برای جزئیات بیشتر به گزارش مراجعه کنید"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "بعدا دوباره از من بپرس"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "این بار به‌روزرسانی نشود[CR] (تا به‌روزرسانی بعدی دیگر از من سؤال نکنید)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "به IAGL Setup Wizard خوش آمدید[CR]."
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "اکثر بازی‌ها به یک حساب archive.org نیاز دارند[CR]در https://archive.org/account/signup[CR]ثبت‌نام کنید آیا می‌خواهید از حساب خود با IAGL استفاده کنید؟"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "راه‌اندازی برای استفاده از افزونه‌های بازی Kodi کامل شد![CR]آماده بازی هستید؟[CR]برای راه‌اندازی راه‌اندازی بازی خارجی، [B]No[/B] را انتخاب کنید."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "همه لیست های بازی را تنظیم کنید تا به صورت خارجی راه اندازی شوند"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "فقط برخی از لیست های بازی را برای راه اندازی خارجی تنظیم کنید"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "همه لانچرهای لیست بازی را به حالت پیش فرض بازنشانی کنید"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} لیست بازی برای راه اندازی خارجی به روز شد"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "پیش‌فرض‌ها برای هر فرمان راه‌اندازی خارجی از پیش تنظیم شده‌اند[CR]قبل از راه‌اندازی بازبینی پارامترهای راه‌اندازی بازی در صورت نیاز[CR]برای جزئیات بیشتر به ویکی مراجعه کنید."

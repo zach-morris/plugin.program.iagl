@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -249,7 +249,7 @@ msgstr "B'diżabilità"
 
 msgctxt "#30060"
 msgid "Some games require login.  Enter your archive.org email address and password."
-msgstr "Xi logħob jeħtieġu login.  Daħħal l-indirizz elettroniku u l-password tiegħek archive.org."
+msgstr "Xi logħob jeħtieġu login.  Daħħal l-indirizz elettroniku u l-password tiegħek ta' archive.org."
 
 msgctxt "#30061"
 msgid "archive.org Email"
@@ -306,6 +306,10 @@ msgstr "Shows tat-TV"
 msgctxt "#30074"
 msgid "Movies"
 msgstr "Films"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "Logħob"
 
 msgctxt "#30076"
 msgid "10 Games"
@@ -591,6 +595,14 @@ msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
 
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Metodu ta 'għażla tal-lanċjar tal-logħob"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Agħżel x'se jagħmel Kodi meta tagħżel lanċjar tal-logħob (Windows, Linux u OSX biss)"
+
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
 msgstr "Żomm Kodi fl-isfond"
@@ -721,7 +733,7 @@ msgstr "Player default 2+ Hostname"
 
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
-msgstr "Iddefinixxi isem tal-hostname/IP default netplay (utli għan-netplay lokali tan-netwerk, ħalli vojt għal default)"
+msgstr "Iddefinixxi isem tal-hostname / IP default netplay (utli għan-netplay tan-netwerk lokali, ħalli vojt għal default)"
 
 msgctxt "#30182"
 msgid "Check frames"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Esegwi setup wizard"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Mexxi l-wizard biex tibdel is-settings għal-listi tal-logħob tiegħek.  Dan jista' jerġa' jitħaddem fi kwalunkwe ħin"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Mexxi l-wizard biex tbiddel malajr is-settings għal-listi tal-logħob tiegħek.  Dan jista' jerġa' jitħaddem fi kwalunkwe ħin"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,7 +813,7 @@ msgstr "Niżżel il-Ħjut"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Issettja folder default alternattiv għat-tniżżil kollu"
+msgstr "Folder alternattiv tat-tniżżil default"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -809,7 +821,7 @@ msgstr "Meta jintgħażel, it-tniżżil kollu jmur f'folder alternattiv.  [B]Not
 
 msgctxt "#30203"
 msgid "Organize default download folder using system folders"
-msgstr "Organizza folder default download billi tuża folders tas-sistema"
+msgstr "Organizza folder download default billi tuża folders tas-sistema"
 
 msgctxt "#30204"
 msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
@@ -825,7 +837,7 @@ msgstr "Irrisettja Għażliet"
 
 msgctxt "#30207"
 msgid "Reset IAGL database to default settings"
-msgstr "Irrisettja d-database IAGL għas-settings default"
+msgstr "Irrisettja d-database IAGL għall-issettjar default"
 
 msgctxt "#30208"
 msgid "When selected, the database will be reset to default settings"
@@ -949,7 +961,7 @@ msgstr "Neħħi IAGL Favorit"
 
 msgctxt "#30238"
 msgid "Are you sure you want to delete this Favorite?"
-msgstr "Żgur li trid tħassar dan il-Favorit?"
+msgstr "Int żgur li trid tħassar dan il-Favorit?"
 
 msgctxt "#30239"
 msgid "Favorite deleted"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Aġġorna l-Luncher tal-lista tal-logħob"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Aġġorna l-Kmand tat-Tnedija"
+msgid "Update game list Launch Command"
+msgstr "Aġġorna l-lista tal-logħob Tnedija Kmand"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Aġġorna l-mogħdija tat-tniżżil tal-lista tal-logħob"
+msgid "Update game list Download Path"
+msgstr "Aġġorna l-lista tal-logħob Download Path"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1057,7 +1069,7 @@ msgstr "Agħżel l-addon tal-logħba"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Irrisettja għal default"
+msgstr "Int żgur li trid tirrisettja l-kmand tat-tnedija tal-addon tal-logħba?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1093,7 +1105,7 @@ msgstr "Iċċekkja l-login għal[CR]"
 
 msgctxt "#30274"
 msgid "Requesting file info for[CR]"
-msgstr "Titlob informazzjoni tal-fajl għal[CR]"
+msgstr "Titlob informazzjoni dwar il-fajl għal[CR]"
 
 msgctxt "#30275"
 msgid "Select from Retroarch Cores"
@@ -1105,7 +1117,7 @@ msgstr "Agħżel minn Emulaturi Extra"
 
 msgctxt "#30277"
 msgid "Manually Enter Launch Command"
-msgstr "Ikteb il-Kmand tat-Tnedija manwalment"
+msgstr "Manwalment Daħħal Kmand tat-Tnedija"
 
 msgctxt "#30278"
 msgid "Select External Command Type"
@@ -1145,7 +1157,7 @@ msgstr "ePSXe"
 
 msgctxt "#30287"
 msgid "Select the path to the ePSXe application (optional)"
-msgstr "Agħżel it-triq għall-applikazzjoni ePSXe (mhux obbligatorja)"
+msgstr "Agħżel it-triq għall-applikazzjoni ePSXe (mhux obbligatorju)"
 
 msgctxt "#30288"
 msgid "Demul"
@@ -1161,7 +1173,7 @@ msgstr "FS-UAE"
 
 msgctxt "#30291"
 msgid "Select the path to the FS-UAE application (optional)"
-msgstr "Agħżel it-triq għall-applikazzjoni FS-UAE (mhux obbligatorju)"
+msgstr "Agħżel it-triq għall-applikazzjoni FS-UAE (mhux obbligatorja)"
 
 msgctxt "#30292"
 msgid "Are you sure you want to set external launch command?"
@@ -1185,7 +1197,7 @@ msgstr "Is-settings tat-tnedija bħalissa huma vojta[CR]Jekk jogħġbok aġġorn
 
 msgctxt "#30297"
 msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
-msgstr "Ma nstab l-ebda emulaturi żejda[CR]Jekk jogħġbok aġġorna s-settings tal-emulaturi żejda addon"
+msgstr "Ma nstab l-ebda emulaturi żejda[CR]Jekk jogħġbok aġġorna s-settings tal-emulatur addizzjonali tal-addon"
 
 msgctxt "#30298"
 msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
@@ -1221,7 +1233,7 @@ msgstr "Sistema Lista tal-Logħob"
 
 msgctxt "#30306"
 msgid "Total 1G1R Games in List"
-msgstr "Logħob totali 1G1R fil-Lista"
+msgstr "Logħob Total 1G1R fil-Lista"
 
 msgctxt "#30307"
 msgid "Total Games in List"
@@ -1229,7 +1241,7 @@ msgstr "Logħob Totali fil-Lista"
 
 msgctxt "#30308"
 msgid "Total Favorited Games in List"
-msgstr "Logħob Preferit totali fil-Lista"
+msgstr "Logħob Favoriti Totali fil-Lista"
 
 msgctxt "#30309"
 msgid "Default External Launch Command"
@@ -1271,6 +1283,10 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Logħob Lista Llanċjar"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Kmand tat-Tnedija Estern"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
 msgstr "Kmand tat-Tnedija Estern[CR]*Ebda Kmand tat-Tnedija mill-Utent misjub/Uża Default*"
@@ -1309,8 +1325,232 @@ msgstr "Irrisettja s-settings tal-lista tal-logħob"
 
 msgctxt "#30329"
 msgid "Are you sure you want to reset all game list settings to default?"
-msgstr "Int żgur li trid tirreset is-settings kollha tal-lista tal-logħob għal default?"
+msgstr "Int żgur li trid tirrisettja s-settings kollha tal-lista tal-logħob għal default?"
 
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Is-settings tal-lista tal-logħob ġew reset għal default"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Fajl lokali li jaqbel"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Iċċekkjar kredenzjali"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "Il-varjabbli li ġejjin se jiġu sostitwiti waqt it-tnedija:[CR]● XXROM_PATHXX: It-triq għall-fajl li se jiġi varat[CR]● XXROM_NAMEXX: L-isem tal-fajl li se jiġi varat (l-ebda mogħdija)[CR]● XXROM_STEMXX: Il- isem il-fajl li se jitnieda (l-ebda mogħdija l-ebda estensjoni)[CR]● XXNETPLAY_COMMANDXX: Kwalunkwe żieda fil-kmand meħtieġa għan-netplay, ara s-settings addon għal għażliet[CR]Ara l-wiki għal aktar informazzjoni..."
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Il-fajl tal-arkivju ma setax jiġi pproċessat[CR]Iċċekkja r-reġistri għal aktar dettalji"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Agħżel azzjoni qabel it-tnedija"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Ħalli Kodi jaħdem fl-isfond (default)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Agħlaq Kodi qabel it-tnedija, iftaħ mill-ġdid Kodi wara l-ħruġ tal-emulatur"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Issospendi Kodi qabel it-tnedija, qajjem Kodi wara l-ħruġ tal-emulatur"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Ara l-istatistiċi ta' IAGL db"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Jelenka stats kurrenti għal IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db Stats"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Ara l-parametri tat-tnedija"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Issettjar tal-Logħob"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Parametri tat-Tnedija tal-Logħba"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Jekk l-ebda utent Launch Command ma jkun preżenti"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Agħżel x'se jagħmel Kodi meta l-ebda kmand tat-tnedija (addon retroplayer jew emulator estern) ma jkun issettjat"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Tentattiv Tnedija b'inadempjenza"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Waqqaf / Tniedix"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Ebda kmand sett"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Kmand tat-tnedija mhuwiex issettjat għal din il-lista, issettja waħda issa?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "L-ebda kmand tal-varar default ma seta' jinstab għal din il-lista"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Il-qalba default ma nstabitx.  Jekk jogħġbok installa {} jew aġġorna l-lanċjar"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Reset kmand tat-tnedija tal-addon tal-logħob"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Ma nstab l-ebda addons tal-logħob"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Kmand tat-tnedija tal-addon tal-logħob aġġornat"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Uża folder ta' download default alternattiv"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Uri biss għażliet li jżommu Kodi fl-isfond"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Uri biss għażliet li jagħlqu Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Uri biss għażliet li jwaqqfu Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Post bħala spag"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Alternattivament daħħal it-triq għall-fajl retroarch.cfg eżatt kif jidher f'Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Direttorju Retroarch Cores bħala spag"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Alternattivament daħħal it-triq għad-direttorju Cores eżatt kif jidher fil-konfigurazzjoni tad-direttorju Retroarch"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Aġġorna l-Launcher għal {}?[CR][B]Dan se jibdel is-settings għal-logħob kollu f'din il-lista.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Aġġorna l-Kmand tat-Tnedija għal {}?[CR][B]Dan se jibdel is-settings għal-logħob kollu f'din il-lista.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Aġġorna l-Mogħdija tat-Tniżżil tat-Tnedija għal {}?[CR][B]Dan se jibdel is-settings għal-logħob kollu f'din il-lista.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Aġġorna l-Kmand tat-Tnedija"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Aġġornament Tnedija Download Path"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Irrisettja s-settings għal {}?[CR][B]Dan se jibdel is-settings għal-logħob kollu f'din il-lista.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Appoġġ"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Agħti donazzjoni lil Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Instabet database IAGL ġdida[CR]Trid taġġorna?[CR]Is-settings se jiġu kkupjati fid-db il-ġdid jekk possibbli"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Db ġdid"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Database ġiet aġġornata[CR]Is-settings tal-utent ġew trasferiti"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Database ġiet aġġornata[CR]Xi settings tal-utent naqsu milli jittrasferixxu[CR]Ara l-log għal aktar dettalji"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Kien hemm żball fl-aġġornament tad-database[CR]Ara l-log għal aktar dettalji"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Erġa staqsi aktar tard"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Taġġornix din id-darba[CR](Terġax titlobni sal-aġġornament li jmiss)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Merħba lill-IAGL Setup Wizard[CR]Ejja niġbdu s-settings kollha biex tilgħab!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Il-biċċa l-kbira tal-logħob jeħtieġu kont ta' archive.org[CR]Irreġistra fuq https://archive.org/account/signup[CR]Tixtieq tuża l-kont tiegħek ma' IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Is-setup hija kompluta għall-użu ta' addons tal-logħob Kodi![CR]Int lest biex tilgħab?[CR]Agħżel [B]Le[/B] biex issettja t-tnedija tal-logħba esterna."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Issettja l-listi tal-logħob kollha biex jiġu mnedija esternament"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Issettja biss xi listi tal-logħob biex jiġu mnedija esternament"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Irrisettja l-lanċjaturi kollha tal-lista tal-logħob lura għall-inadempjenza"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} listi tal-logħob ġew aġġornati għat-tnedija esterna"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Id-defaults huma ssettjati minn qabel għal kull kmand estern tat-tnedija[CR]Qabel ma tniedi l-parametri tat-tnedija tal-logħob tar-reviżjoni jekk meħtieġ[CR]Ara l-wiki għal aktar dettalji."

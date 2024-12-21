@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "Kvikmyndir"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "Leikir"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 leikir"
@@ -591,6 +595,14 @@ msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
 
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Valaðferð fyrir leikjaræsi"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Veldu hvað Kodi mun gera þegar þú velur leikjaforrit (aðeins Windows, Linux og OSX)"
+
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
 msgstr "Haltu Kodi í bakgrunni"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Keyra uppsetningarhjálp"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Keyrðu töframanninn til að breyta stillingum fyrir leikjalistana þína.  Þetta er hægt að endurræsa hvenær sem er"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Keyrðu töframanninn til að breyta stillingum fyrir leikjalistana þína fljótt.  Þetta er hægt að endurræsa hvenær sem er"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,7 +813,7 @@ msgstr "Sækja þræði"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Stilltu aðra sjálfgefna möppu fyrir öll niðurhal"
+msgstr "Önnur sjálfgefna niðurhalsmappa"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -957,7 +969,7 @@ msgstr "Uppáhaldi eytt"
 
 msgctxt "#30240"
 msgid "Favorites display"
-msgstr "Uppáhalds skjár"
+msgstr "Uppáhalds birt"
 
 msgctxt "#30241"
 msgid "Define the start page for IAGL Favorites"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Uppfærðu ræsiforrit fyrir leikjalista"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Uppfærðu ræsingarskipun"
+msgid "Update game list Launch Command"
+msgstr "Uppfærðu leikjalista Ræstu stjórn"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Uppfæra niðurhalsslóð leikjalista"
+msgid "Update game list Download Path"
+msgstr "Uppfæra leikjalista Sækja Path"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1057,7 +1069,7 @@ msgstr "Veldu leikjaviðbót"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Endurstilla sjálfgefið"
+msgstr "Ertu viss um að þú viljir endurstilla ræsingarskipun leikjaviðbótarinnar?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1093,7 +1105,7 @@ msgstr "Athugar innskráningu fyrir[CR]"
 
 msgctxt "#30274"
 msgid "Requesting file info for[CR]"
-msgstr "Beiðni um skráarupplýsingar fyrir [CR]"
+msgstr "Biður um skráarupplýsingar fyrir [CR]"
 
 msgctxt "#30275"
 msgid "Select from Retroarch Cores"
@@ -1177,7 +1189,7 @@ msgstr "Android notendur verða að staðfesta að kjarninn sé settur upp í Re
 
 msgctxt "#30295"
 msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
-msgstr "Ræsingarstillingar eru tómar eins og er[CR]Vinsamlegast uppfærðu viðbótarstillingar fyrir ytri ræsingu."
+msgstr "Ræsingarstillingar eru tómar eins og er[CR]Vinsamlegast uppfærðu viðbót við ytri ræsingarstillingar."
 
 msgctxt "#30296"
 msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
@@ -1225,7 +1237,7 @@ msgstr "Samtals 1G1R leikir á lista"
 
 msgctxt "#30307"
 msgid "Total Games in List"
-msgstr "Heildarleikir á lista"
+msgstr "Samtals leikir á lista"
 
 msgctxt "#30308"
 msgid "Total Favorited Games in List"
@@ -1271,6 +1283,10 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Sjósetja fyrir leikjalista"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Ytri ræsingarskipun"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
 msgstr "Ytri ræsingarskipun[CR]*Engin ræsingarskipun notanda fannst / notar sjálfgefið*"
@@ -1297,7 +1313,7 @@ msgstr "Sækja slóð endurstilla"
 
 msgctxt "#30326"
 msgid "Change download path"
-msgstr "Breyta niðurhalsleið"
+msgstr "Breyta niðurhalsslóð"
 
 msgctxt "#30327"
 msgid "Reset download path"
@@ -1314,3 +1330,227 @@ msgstr "Ertu viss um að þú viljir endurstilla allar leikjalistastillingar á 
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Stillingar leikjalista voru endurstilltar á sjálfgefnar stillingar"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Samsvörun staðbundin skrá"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Athugar skilríki"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "Eftirfarandi breytum verður skipt út við ræsingu:[CR]● XXROM_PATHXX: Slóðin að skránni sem verður opnuð[CR]● XXROM_NAMEXX: Nafn skráarinnar sem verður opnuð (engin slóð)[CR]● XXROM_STEMXX: nafn skráarinnar sem verður opnuð (engin slóð engin eftirnafn)[CR]● XXNETPLAY_COMMANDXX: Sérhverja skipanaviðbót sem þarf fyrir netplay, sjá viðbótarstillingar fyrir valkostir[CR]Sjáðu wiki fyrir frekari upplýsingar..."
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Ekki var hægt að vinna úr safnskránni[CR]Athugaðu annála til að fá frekari upplýsingar"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Veldu aðgerð fyrir ræsingu"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Leyfðu Kodi að keyra í bakgrunni (sjálfgefið)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Lokaðu Kodi fyrir ræsingu, opnaðu Kodi aftur eftir að keppinautur er hætt"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Fresta Kodi fyrir ræsingu, vekja Kodi eftir að keppinautur er hætt"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Skoða IAGL db tölfræði"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Sýnir núverandi tölfræði fyrir IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db tölfræði"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Skoða ræsingarfæribreytur"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Leikjastillingar"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Leikur Sjósetningarfæribreytur"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Ef enginn notandi Launch Command er til staðar"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Veldu hvað Kodi mun gera þegar engin ræsingarskipun (retroplayer viðbót eða ytri keppinautur) er stillt"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Reyndu að ræsa með sjálfgefnu"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Stöðva / Ekki ræsa"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Engin skipan sett"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Ræsiskipun er ekki stillt fyrir þennan lista, stilltu eina núna?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Engin sjálfgefna ræsingarskipun fannst fyrir þennan lista"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Sjálfgefinn kjarni fannst ekki.  Vinsamlegast settu upp {} eða uppfærðu ræsiforritið"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Endurstillt skipun fyrir leikjaviðbót"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Engar leikjaviðbætur fundust"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Ræsingarskipun leikjaviðbótar uppfærð"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Notaðu aðra sjálfgefna niðurhalsmöppu"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Sýndu aðeins valkosti sem halda Kodi í bakgrunni"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Sýndu aðeins valkosti sem loka Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Sýndu aðeins valkosti sem gera hlé á Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Location sem strengur"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Að öðrum kosti skaltu slá inn slóðina að retroarch.cfg skránni nákvæmlega eins og hún birtist í Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch Cores skrá sem strengur"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Að öðrum kosti skaltu slá inn slóðina að Cores möppunni nákvæmlega eins og hún birtist í Retroarch möppuuppsetningu"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Uppfæra ræsiforrit fyrir {}?[CR][B]Þetta mun breyta stillingum fyrir alla leiki á þessum lista.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Uppfæra ræsingarskipun fyrir {}?[CR][B]Þetta mun breyta stillingum fyrir alla leiki á þessum lista.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Uppfæra Launch Download Path fyrir {}?[CR][B]Þetta mun breyta stillingum fyrir alla leiki á þessum lista.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Uppfærðu ræsingarskipun"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Uppfæra Ræsa niðurhalsslóð"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Endurstilla stillingar fyrir {}?[CR][B]Þetta mun breyta stillingum fyrir alla leiki á þessum lista.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Stuðningur"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Gefðu til Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Nýr IAGL gagnagrunnur hefur fundist[CR]Viltu uppfæra?[CR]Stillingar verða afritaðar í nýja db ef mögulegt er"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Nýtt db"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Gagnagrunnur var uppfærður[CR]Notendastillingar voru fluttar"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Gagnagrunnur var uppfærður[CR]Ekki tókst að flytja sumar notendastillingar[CR]Sjáðu annál fyrir frekari upplýsingar"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Villa kom upp við að uppfæra gagnagrunninn[CR]Sjáðu annál fyrir frekari upplýsingar"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Spyrðu mig aftur síðar"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Ekki uppfæra í þetta skiptið[CR](Ekki spyrja mig aftur fyrr en í næstu uppfærslu)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Velkomin í IAGL uppsetningarhjálpina[CR]Leyfum þér að fara í gegnum allar stillingar til að fá þig til að spila!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Flestir leikir krefjast archive.org reiknings[CR]Skráðu þig á https://archive.org/account/signup[CR]Viltu nota reikninginn þinn hjá IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Uppsetningu er lokið fyrir notkun Kodi leikjaviðbótar![CR]Ertu tilbúinn að spila?[CR]Veldu [B]Nei[/B] til að setja upp ytri leikjaræsingu."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Stilltu alla leikjalista þannig að þeir séu opnir ytra"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Stilltu aðeins nokkra leikjalista til að vera opnir ytra"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Endurstilla alla ræsilista leikja aftur í sjálfgefið"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} leikjalistar voru uppfærðir fyrir utanaðkomandi ræsingu"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Sjálfgefin eru forstillt fyrir hverja ytri ræsingarskipun[CR]Áður en ræst er, skoðaðu ræsingarbreytur leikja ef þörf krefur[CR]Sjáðu wiki fyrir frekari upplýsingar."

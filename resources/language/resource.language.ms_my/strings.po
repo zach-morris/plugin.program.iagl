@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -285,7 +285,7 @@ msgstr "Tentukan saiz saiz muat turun / cache.[CR]Folder dibersihkan apabila had
 
 msgctxt "#30069"
 msgid "Front page display"
-msgstr "Paparan muka depan"
+msgstr "Paparan muka surat hadapan"
 
 msgctxt "#30070"
 msgid "Choose from list"
@@ -306,6 +306,10 @@ msgstr "Rancangan TV"
 msgctxt "#30074"
 msgid "Movies"
 msgstr "Filem"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "Permainan"
 
 msgctxt "#30076"
 msgid "10 Games"
@@ -533,7 +537,7 @@ msgstr "Fanart / Landskap Single / Senarai Episod (502)"
 
 msgctxt "#30132"
 msgid "Logos / Big Square Wall (503)"
-msgstr "Logo / Dinding Segi Empat Besar (503)"
+msgstr "Logo / Dinding Persegi Besar (503)"
 
 msgctxt "#30133"
 msgid "Big List 2 (504)"
@@ -590,6 +594,14 @@ msgstr "Android aarch64"
 msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Kaedah pemilihan pelancar permainan"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Pilih perkara yang akan Kodi lakukan apabila memilih pelancar permainan (Windows, Linux dan OSX sahaja)"
 
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
@@ -705,7 +717,7 @@ msgstr "Tapis lobi permainan kepada permainan pelancaran automatik IAGL"
 
 msgctxt "#30177"
 msgid "If enabled, the netplay lobby will only show auto launchable games"
-msgstr "Jika didayakan, lobi netplay hanya akan menunjukkan permainan boleh dilancarkan secara automatik"
+msgstr "Jika didayakan, lobi netplay hanya akan memaparkan permainan boleh dilancarkan secara automatik"
 
 msgctxt "#30178"
 msgid "Netplay Port"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Laksanakan wizard persediaan"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Jalankan wizard untuk menukar tetapan untuk senarai permainan anda.  Ini boleh disiarkan semula pada bila-bila masa"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Jalankan wizard untuk menukar tetapan dengan cepat untuk senarai permainan anda.  Ini boleh disiarkan semula pada bila-bila masa"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -781,7 +793,7 @@ msgstr "Biarkan sebagai lalai jika tidak pasti"
 
 msgctxt "#30196"
 msgid "Suspend Kodi Input and Audio when using External Launcher"
-msgstr "Gantungkan Input dan Audio Kodi apabila menggunakan Pelancar Luaran"
+msgstr "Gantung Input dan Audio Kodi apabila menggunakan Pelancar Luaran"
 
 msgctxt "#30197"
 msgid "Stop Kodi media playing before External Launch"
@@ -801,7 +813,7 @@ msgstr "Muat Turun Benang"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Tetapkan folder lalai ganti untuk semua muat turun"
+msgstr "Folder muat turun lalai ganti"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Kemas kini Pelancar senarai permainan"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Kemas kini Perintah Pelancaran"
+msgid "Update game list Launch Command"
+msgstr "Kemas kini senarai permainan Perintah Pelancaran"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Kemas kini laluan muat turun senarai permainan"
+msgid "Update game list Download Path"
+msgstr "Kemas kini senarai permainan Laluan Muat Turun"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1053,11 +1065,11 @@ msgstr "Pelancar dikemas kini kepada pemain semula"
 
 msgctxt "#30264"
 msgid "Select game addon"
-msgstr "Pilih addon permainan"
+msgstr "Pilih tambahan permainan"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Tetapkan semula kepada lalai"
+msgstr "Adakah anda pasti mahu menetapkan semula arahan pelancaran addon permainan?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1069,7 +1081,7 @@ msgstr "Pilih folder muat turun"
 
 msgctxt "#30268"
 msgid "Archive.org login success!"
-msgstr "Berjaya log masuk Archive.org!"
+msgstr "kejayaan log masuk Archive.org!"
 
 msgctxt "#30269"
 msgid "Archive.org login failed.[CR]Check credentials or log for more details"
@@ -1271,6 +1283,10 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Pelancar Senarai Permainan"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Perintah Pelancaran Luaran"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
 msgstr "Perintah Pelancaran Luaran[CR]*Tiada Perintah Pelancaran Pengguna Ditemui / Menggunakan Lalai*"
@@ -1314,3 +1330,227 @@ msgstr "Adakah anda pasti mahu menetapkan semula semua tetapan senarai permainan
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Tetapan senarai permainan telah ditetapkan semula kepada lalai"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Memadankan fail tempatan"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Menyemak bukti kelayakan"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "pembolehubah berikut akan digantikan semasa pelancaran:[CR]● XXROM_PATHXX: Laluan ke fail yang akan dilancarkan[CR]● XXROM_NAMEXX: Nama fail yang akan dilancarkan (tiada laluan)[CR]● XXROM_STEMXX: The nama fail yang akan dilancarkan (tiada laluan tiada sambungan)[CR]● XXNETPLAY_COMMANDXX: Sebarang penambahan arahan yang diperlukan untuk netplay, lihat tetapan addon untuk pilihan[CR]Lihat wiki untuk mendapatkan maklumat lanjut…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Fail arkib tidak dapat diproses[CR]Semak log untuk mendapatkan butiran lanjut"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Pilih tindakan sebelum pelancaran"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Biarkan Kodi berjalan di latar belakang (lalai)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Tutup Kodi sebelum pelancaran, buka semula Kodi selepas emulator keluar"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Gantung Kodi sebelum pelancaran, bangunkan Kodi selepas emulator keluar"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Lihat statistik db IAGL"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Menyenaraikan statistik semasa untuk IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db Statistik"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Lihat parameter pelancaran"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Tetapan Permainan"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Parameter Pelancaran Permainan"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Jika tiada Perintah Pelancaran pengguna hadir"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Pilih perkara yang akan Kodi lakukan apabila tiada arahan pelancaran (tambahan pemain retro atau emulator luaran) ditetapkan"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Cuba Lancarkan dengan lalai"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Berhenti / Jangan lancarkan"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Tiada arahan ditetapkan"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Perintah pelancaran tidak ditetapkan untuk senarai ini, tetapkan satu sekarang?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Tiada arahan pelancaran lalai boleh ditemui untuk senarai ini"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Teras lalai tidak ditemui.  Sila pasang {} atau kemas kini pelancar"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Tetapan semula arahan pelancaran addon permainan"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Tiada tambahan permainan ditemui"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Perintah pelancaran addon permainan dikemas kini"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Gunakan folder muat turun lalai ganti"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Hanya tunjukkan pilihan yang mengekalkan Kodi di latar belakang"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Hanya tunjukkan pilihan yang menutup Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Hanya tunjukkan pilihan yang menjeda Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Lokasi sebagai rentetan"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Sebagai alternatif, masukkan laluan ke fail retroarch.cfg sama seperti yang dipaparkan dalam Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Direktori Retroarch Cores sebagai rentetan"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Sebagai alternatif, masukkan laluan ke direktori Teras tepat seperti yang muncul dalam konfigurasi direktori Retroarch"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Kemas kini Pelancar untuk {}?[CR][B]Ini akan menukar tetapan untuk semua permainan dalam senarai ini.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Kemas kini Perintah Pelancaran untuk {}?[CR][B]Ini akan menukar tetapan untuk semua permainan dalam senarai ini.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Kemas Kini Laluan Muat Turun Pelancaran untuk {}?[CR][B]Ini akan menukar tetapan untuk semua permainan dalam senarai ini.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Kemas kini Perintah Pelancaran"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Laluan Muat Turun Pelancaran Kemas Kini"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Tetapkan semula tetapan untuk {}?[CR][B]Ini akan menukar tetapan untuk semua permainan dalam senarai ini.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Sokongan"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Derma kepada Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Pangkalan data IAGL baharu telah ditemui[CR]Adakah anda mahu mengemas kini?[CR]Tetapan akan disalin ke db baharu jika boleh"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "db baharu"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Pangkalan data telah dikemas kini[CR]Tetapan pengguna telah dipindahkan"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Pangkalan data telah dikemas kini[CR]Sesetengah tetapan pengguna gagal dipindahkan[CR]Lihat log untuk mendapatkan butiran lanjut"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Terdapat ralat semasa mengemas kini pangkalan data[CR]Lihat log untuk mendapatkan butiran lanjut"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Nanti tanya saya lagi"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Jangan kemas kini kali ini[CR](Jangan tanya saya lagi sehingga kemas kini seterusnya)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Selamat datang ke Wizard Persediaan IAGL[CR]Mari jalankan semua tetapan untuk membolehkan anda bermain!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Kebanyakan permainan memerlukan akaun archive.org[CR]Daftar di https://archive.org/account/signup[CR]Adakah anda mahu menggunakan akaun anda dengan IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Persediaan selesai untuk menggunakan alat tambah permainan Kodi![CR]Adakah anda bersedia untuk bermain?[CR]Pilih [B]Tidak[/B] untuk menyediakan pelancaran permainan luaran."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Tetapkan semua senarai permainan untuk dilancarkan secara luaran"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Tetapkan hanya beberapa senarai permainan untuk dilancarkan secara luaran"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Tetapkan semula semua pelancar senarai permainan kembali kepada lalai"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} senarai permainan telah dikemas kini untuk pelancaran luaran"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Lalai dipraset untuk setiap arahan pelancaran luaran[CR]Sebelum melancarkan semakan semula parameter pelancaran permainan jika perlu[CR]Lihat wiki untuk mendapatkan butiran lanjut."

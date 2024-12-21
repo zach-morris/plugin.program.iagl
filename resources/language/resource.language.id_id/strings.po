@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -213,7 +213,7 @@ msgstr "Tindakan default saat memilih permainan"
 
 msgctxt "#30051"
 msgid "Define action to take when a game is selected"
-msgstr "Tentukan tindakan yang harus diambil saat permainan dipilih"
+msgstr "Tentukan tindakan yang akan diambil saat permainan dipilih"
 
 msgctxt "#30052"
 msgid "If game already exists locally"
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "Film"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "Pertandingan"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 Permainan"
@@ -381,7 +385,7 @@ msgstr "Game per halaman"
 
 msgctxt "#30094"
 msgid "Define how many games are listed per page"
-msgstr "Tentukan berapa banyak permainan yang tercantum per halaman"
+msgstr "Tentukan berapa banyak game yang tercantum per halaman"
 
 msgctxt "#30095"
 msgid "List all"
@@ -529,7 +533,7 @@ msgstr "Info Spanduk / Lanskap / Poster (501)"
 
 msgctxt "#30131"
 msgid "Fanart / Landscape Single / Episode List (502)"
-msgstr "Daftar Fanart / Lanskap Tunggal / Episode (502)"
+msgstr "Fanart / Lanskap Tunggal / Daftar Episode (502)"
 
 msgctxt "#30132"
 msgid "Logos / Big Square Wall (503)"
@@ -590,6 +594,14 @@ msgstr "Bahasa Indonesia: Android aarch64"
 msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Metode pemilihan peluncur game"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Pilih apa yang akan dilakukan Kodi saat memilih peluncur game (hanya Windows, Linux, dan OSX)"
 
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Jalankan wizard pengaturan"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Jalankan wizard untuk mengubah pengaturan daftar permainan Anda. Ini dapat dijalankan kembali kapan saja"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Jalankan wizard untuk mengubah pengaturan daftar permainan Anda dengan cepat. Ini dapat dijalankan kembali kapan saja"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,7 +813,7 @@ msgstr "Unduh Thread"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Tetapkan folder default alternatif untuk semua unduhan"
+msgstr "Folder unduhan default alternatif"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -837,7 +849,7 @@ msgstr "Tampilkan daftar game"
 
 msgctxt "#30210"
 msgid "When selected, previously hidden game lists can be unhidden"
-msgstr "Jika dipilih, daftar permainan yang sebelumnya tersembunyi dapat ditampilkan kembali"
+msgstr "Saat dipilih, daftar permainan yang sebelumnya tersembunyi dapat ditampilkan kembali"
 
 msgctxt "#30211"
 msgid "Clear Cache"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Perbarui daftar game Peluncur"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Perbarui Perintah Peluncuran"
+msgid "Update game list Launch Command"
+msgstr "Perbarui daftar game Luncurkan Perintah"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Perbarui jalur unduhan daftar game"
+msgid "Update game list Download Path"
+msgstr "Perbarui daftar game Jalur Unduhan"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1057,7 +1069,7 @@ msgstr "Pilih addon game"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Setel ulang ke default"
+msgstr "Apakah Anda yakin ingin mengatur ulang perintah peluncuran add-on game?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1271,6 +1283,10 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Peluncur Daftar Game"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Perintah Peluncuran Eksternal"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
 msgstr "Perintah Peluncuran Eksternal[CR]*Tidak Ada Perintah Peluncuran Pengguna yang Ditemukan / Menggunakan Default*"
@@ -1314,3 +1330,227 @@ msgstr "Apakah Anda yakin ingin mengatur ulang semua pengaturan daftar permainan
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Pengaturan daftar permainan telah diatur ulang ke default"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Mencocokkan file lokal"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Memeriksa kredensial"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "Variabel berikut akan diganti selama peluncuran:[CR]● XXROM_PATHXX: Jalur ke berkas yang akan diluncurkan[CR]● XXROM_NAMEXX: Nama berkas yang akan diluncurkan (tanpa jalur)[CR]● XXROM_STEMXX: Nama berkas yang akan diluncurkan (tanpa jalur, tanpa ekstensi)[CR]● XXNETPLAY_COMMANDXX: Perintah tambahan apa pun yang diperlukan untuk netplay, lihat pengaturan addon untuk opsi[CR]Lihat wiki untuk info lebih lanjut…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "File arsip tidak dapat diproses[CR]Periksa log untuk detail lebih lanjut"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Pilih tindakan sebelum peluncuran"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Biarkan Kodi berjalan di latar belakang (default)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Tutup Kodi sebelum peluncuran, buka kembali Kodi setelah keluar dari emulator"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Suspend Kodi sebelum peluncuran, aktifkan Kodi setelah emulator keluar"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Lihat statistik database IAGL"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Mencantumkan statistik terkini untuk IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "Statistik db"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Lihat parameter peluncuran"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Pengaturan Permainan"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Parameter Peluncuran Game"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Jika tidak ada Perintah Peluncuran pengguna"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Pilih apa yang akan dilakukan Kodi saat tidak ada perintah peluncuran (addon retroplayer atau emulator eksternal) yang ditetapkan"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Mencoba Meluncurkan dengan default"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Berhenti / Jangan luncurkan"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Tidak ada perintah yang ditetapkan"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Perintah peluncuran tidak ditetapkan untuk daftar ini, tetapkan sekarang?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Tidak ada perintah peluncuran default yang dapat ditemukan untuk daftar ini"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Inti default tidak ditemukan. Harap instal {} atau perbarui peluncur"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Atur ulang perintah peluncuran addon game"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Tidak ada add-on game yang ditemukan"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Perintah peluncuran addon game diperbarui"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Gunakan folder unduhan default alternatif"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Hanya tampilkan opsi yang membuat Kodi tetap berada di latar belakang"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Hanya tampilkan opsi yang menutup Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Hanya tampilkan opsi yang menjeda Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Lokasi CFG Retroarch sebagai string"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Atau masukkan jalur ke file retroarch.cfg persis seperti yang muncul di Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Direktori Inti Retroarch sebagai string"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Atau masukkan jalur ke direktori Cores persis seperti yang muncul dalam konfigurasi direktori Retroarch"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Perbarui Peluncur untuk {}?[CR][B]Ini akan mengubah pengaturan untuk semua game dalam daftar ini.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Perbarui Perintah Peluncuran untuk {}?[CR][B]Ini akan mengubah pengaturan untuk semua game dalam daftar ini.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Perbarui Jalur Unduhan Peluncuran untuk {}?[CR][B]Ini akan mengubah pengaturan untuk semua game dalam daftar ini.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Perbarui Perintah Peluncuran"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Pembaruan Peluncuran Jalur Unduhan"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Setel ulang pengaturan untuk {}?[CR][B]Ini akan mengubah pengaturan untuk semua permainan dalam daftar ini.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Mendukung"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Donasi ke Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Database IAGL baru telah ditemukan[CR]Apakah Anda ingin memperbarui?[CR]Pengaturan akan disalin ke database baru jika memungkinkan"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "db baru"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Basis data telah diperbarui[CR]Pengaturan pengguna telah ditransfer"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Basis data telah diperbarui[CR]Beberapa pengaturan pengguna gagal ditransfer[CR]Lihat log untuk detail lebih lanjut"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Terjadi kesalahan saat memperbarui database[CR]Lihat log untuk detail lebih lanjut"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Tanyakan lagi nanti"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Jangan perbarui kali ini[CR](Jangan tanya saya lagi sampai pembaruan berikutnya)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Selamat datang di Panduan Pengaturan IAGL[CR]Mari jalankan semua pengaturan agar Anda bisa bermain!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Kebanyakan permainan memerlukan akun archive.org[CR]Daftar di https://archive.org/account/signup[CR]Apakah Anda ingin menggunakan akun Anda dengan IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Penyiapan selesai untuk menggunakan add-on game Kodi![CR]Apakah Anda siap bermain?[CR]Pilih [B]Tidak[/B] untuk menyiapkan peluncuran game eksternal."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Tetapkan semua daftar game untuk diluncurkan secara eksternal"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Tetapkan hanya beberapa daftar game untuk diluncurkan secara eksternal"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Setel ulang semua peluncur daftar game kembali ke default"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} daftar game diperbarui untuk peluncuran eksternal"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Nilai default telah ditetapkan sebelumnya untuk setiap perintah peluncuran eksternal.[CR]Sebelum meluncurkan, tinjau parameter peluncuran game jika diperlukan.[CR]Lihat wiki untuk detail lebih lanjut."

@@ -1,0 +1,75 @@
+<window id="4070">
+    <defaultcontrol always="false">3001</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+  <type>dialog</type>
+  <visible>true</visible>
+    <coordinates>
+        <system>1</system>
+        <posx>0</posx>
+        <posy>0</posy>
+    </coordinates>
+    <controls>
+        <control type="image">
+            <description>Background Image</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>100%</width>
+            <height>100%</height>
+            <texture>black.png</texture>
+            <ondown>3001</ondown>
+            <onup>3001</onup>
+            <onleft>3001</onleft>
+            <onright>3001</onright>
+        </control>
+        <control type="image">
+            <description>Header Color</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>100%</width>
+            <height>10%</height>
+            <texture>white.png</texture>
+        </control>
+        <control type="image">
+            <left>25%</left>
+            <top>25%</top>
+            <width>50%</width>
+            <height>50%</height>
+            <aspectratio align="center">keep</aspectratio>
+            <texture background="false">qrcode_archive.png</texture>
+            <visible>true</visible>
+        </control>
+        <control type="button" id="3001">
+            <description>OK</description>
+            <label>OK</label>
+            <posx>75%</posx>
+            <posy>90%</posy>
+            <width>250</width>
+            <height>60</height>
+            <textoffsetx>12</textoffsetx>
+            <align>center</align>
+            <alignx>center</alignx>
+            <texturenofocus>button-nofocus2.png</texturenofocus>
+            <texturefocus>button-highlight1.png</texturefocus>
+        </control>
+        <control type="textbox" id="3007">
+           <description>Title</description>
+           <posx>10%</posx>
+           <posy>2%</posy>
+           <height>65</height>
+           <align>center</align>
+           <ondown>3001</ondown>
+           <onup>3001</onup>
+           <onleft>3001</onleft>
+           <onright>3001</onright>
+           <visible>true</visible>
+           <colordiffuse>FFFFFFFF</colordiffuse>
+           <style>bold</style>
+           <font>font20</font>
+           <textcolor>black</textcolor>
+           <scrolltime>200</scrolltime>
+           <width min="50%" max="90%">auto</width>
+           <aspectratio align="center">keep</aspectratio>
+           <label>Support Archive.org with a donation[CR]https://archive.org/donate</label>
+       </control>
+   </controls>
+</window>

@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "映画"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "ゲーム"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 ゲーム"
@@ -591,6 +595,14 @@ msgctxt "#30146"
 msgid "Android ra32"
 msgstr "アンドロイドra32"
 
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "ゲームランチャーの選択方法"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "ゲームランチャーを選択したときにKodiが行う動作を選択します（Windows、Linux、OSXのみ）"
+
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
 msgstr "Kodiをバックグラウンドで実行する"
@@ -721,7 +733,7 @@ msgstr "デフォルトのプレーヤー 2+ ホスト名"
 
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
-msgstr "デフォルトのネットプレイ ホスト名 / IP を定義します (ローカル ネットワーク ネットプレイに便利です。デフォルトの場合は空白のままにします)"
+msgstr "デフォルトのネットプレイホスト名/IPを定義します（ローカルネットワークのネットプレイに便利です。デフォルトの場合は空白のままにします）"
 
 msgctxt "#30182"
 msgid "Check frames"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "セットアップウィザードを実行する"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "ウィザードを実行してゲームリストの設定を変更してください。これはいつでも再実行できます。"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "ウィザードを実行すると、ゲームリストの設定をすばやく変更できます。これはいつでも再実行できます。"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -777,7 +789,7 @@ msgstr "StartAndroidActivityを使用する"
 
 msgctxt "#30195"
 msgid "Leave as default if unsure"
-msgstr "不明な場合はデフォルトのままにしてください"
+msgstr "不明な場合はデフォルトのままにしておきます"
 
 msgctxt "#30196"
 msgid "Suspend Kodi Input and Audio when using External Launcher"
@@ -801,7 +813,7 @@ msgstr "スレッドをダウンロード"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "すべてのダウンロードの代替デフォルトフォルダを設定する"
+msgstr "代替のデフォルトダウンロードフォルダ"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -845,7 +857,7 @@ msgstr "キャッシュをクリア"
 
 msgctxt "#30212"
 msgid "When selected, all data in the cache folder including games will be purged"
-msgstr "選択すると、ゲームを含むキャッシュフォルダ内のすべてのデータが消去されます"
+msgstr "選択すると、ゲームを含むキャッシュフォルダ内のすべてのデータが消去されます。"
 
 msgctxt "#30213"
 msgid "Select"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "ゲームリストランチャーの更新"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "起動コマンドの更新"
+msgid "Update game list Launch Command"
+msgstr "ゲームリストの更新コマンドを起動"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "ゲームリストのダウンロードパスを更新"
+msgid "Update game list Download Path"
+msgstr "ゲームリストの更新 ダウンロードパス"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -997,7 +1009,7 @@ msgstr "ゲームリストを非表示"
 
 msgctxt "#30250"
 msgid "Update game list post download process"
-msgstr "ダウンロード後のゲームリストの更新"
+msgstr "ダウンロードプロセス後のゲームリストの更新"
 
 msgctxt "#30251"
 msgid "Are you sure you want to hide game list"
@@ -1057,7 +1069,7 @@ msgstr "ゲームアドオンを選択"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "デフォルトにリセット"
+msgstr "ゲームアドオンの起動コマンドをリセットしてもよろしいですか?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1271,6 +1283,10 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "ゲームリストランチャー"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "外部起動コマンド"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
 msgstr "外部起動コマンド[CR]*ユーザー起動コマンドが見つかりません / デフォルトを使用しています*"
@@ -1314,3 +1330,227 @@ msgstr "すべてのゲーム リスト設定をデフォルトにリセット�
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "ゲームリストの設定がデフォルトにリセットされました"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "一致するローカルファイル"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "資格情報の確認"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "起動中に次の変数が置き換えられます:[CR]● XXROM_PATHXX: 起動されるファイルへのパス[CR]● XXROM_NAMEXX: 起動されるファイルの名前 (パスなし)[CR]● XXROM_STEMXX: 起動されるファイルの名前 (パスなし、拡張子なし)[CR]● XXNETPLAY_COMMANDXX: ネットプレイに必要なコマンドの追加。オプションについてはアドオン設定を参照してください[CR]詳細については wiki を参照してください…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "アーカイブファイルを処理できませんでした[CR]詳細についてはログを確認してください"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "起動前にアクションを選択"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Kodiをバックグラウンドで実行したままにする（デフォルト）"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "起動前にKodiを閉じ、エミュレータの終了後にKodiを再度開きます"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "起動前にKodiを一時停止し、エミュレータの終了後にKodiを起動する"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "IAGL db統計を表示"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "IAGL dbの現在の統計を一覧表示します"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db統計"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "起動パラメータを表示"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "ゲーム設定"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "ゲーム起動パラメータ"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "ユーザ起動コマンドが存在しない場合"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "起動コマンド（レトロプレイヤーアドオンまたは外部エミュレータ）が設定されていない場合にKodiが行う動作を選択します"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "デフォルトで起動を試みる"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "停止/起動しない"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "コマンドが設定されていません"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "このリストには起動コマンドが設定されていません。今すぐ設定しますか?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "このリストのデフォルトの起動コマンドが見つかりませんでした"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "デフォルトのコアが見つかりませんでした。{} をインストールするか、ランチャーを更新してください。"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "ゲームアドオン起動コマンドのリセット"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "ゲームアドオンが見つかりません"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "ゲームアドオン起動コマンドが更新されました"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "代替のデフォルトダウンロードフォルダを使用する"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Kodiをバックグラウンドで維持するオプションのみを表示する"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Kodiを閉じるオプションのみを表示する"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Kodiを一時停止するオプションのみを表示する"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG の場所を文字列として"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "または、Retroarchに表示されるretroarch.cfgファイルへのパスを正確に入力します。"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch Cores ディレクトリを文字列として"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "または、Retroarchディレクトリ構成に表示されるとおりに、Coresディレクトリへのパスを入力します。"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{} のランチャーを更新しますか?[CR][B]これにより、このリスト内のすべてのゲームの設定が変更されます。[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{} の起動コマンドを更新しますか?[CR][B]これにより、このリスト内のすべてのゲームの設定が変更されます。[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{} の起動ダウンロード パスを更新しますか?[CR][B]これにより、このリスト内のすべてのゲームの設定が変更されます。[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "起動コマンドの更新"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "アップデート起動ダウンロードパス"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{} の設定をリセットしますか?[CR][B]これにより、このリスト内のすべてのゲームの設定が変更されます。[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "サポート"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Archive.orgに寄付する"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "新しい IAGL データベースが見つかりました[CR]更新しますか?[CR]可能な場合は設定が新しいデータベースにコピーされます"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "新しいデータベース"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "データベースが更新されました[CR]ユーザー設定が転送されました"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "データベースが更新されました[CR]一部のユーザー設定の転送に失敗しました[CR]詳細についてはログを参照してください"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "データベースの更新中にエラーが発生しました[CR]詳細についてはログを参照してください"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "後でもう一度聞いてください"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "今回は更新しない[CR](次回の更新まで再度確認しない)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "IAGL セットアップ ウィザードへようこそ[CR] ゲームをプレイするために必要な設定をすべて実行してみましょう。"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "ほとんどのゲームには archive.org アカウントが必要です[CR]https://archive.org/account/signup でサインアップしてください[CR]IAGL でアカウントを使用しますか?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Kodi ゲーム アドオンを使用するためのセットアップが完了しました。[CR]プレイする準備はできましたか?[CR]外部ゲームの起動を設定するには、[B]いいえ[/B]を選択してください。"
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "すべてのゲームリストを外部から起動するように設定する"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "一部のゲームリストのみを外部から起動するように設定する"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "すべてのゲームリストランチャーをデフォルトにリセットします"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} ゲームリストが外部起動用に更新されました"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "デフォルトは、各外部起動コマンドに対して事前に設定されています[CR]起動する前に、必要に応じてゲーム起動パラメータを確認してください[CR]詳細については、wiki を参照してください。"

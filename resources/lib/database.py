@@ -148,6 +148,21 @@ class database(object):
 		
 		return result
 
+	def transfer_game_list_user_settings(self,old_settings=None):
+		result = None
+		if isinstance(old_settings,dict):
+			if self.config.debug.get('print_query'):
+				xbmc.log(msg='IAGL: SQL STATEMENT: {}'.format(self.config.database.get('query').get('transfer_game_list_user_settings').format(**old_settings)),level=xbmc.LOGDEBUG)
+			try:
+				with closing(sqlite3.connect(self.config.files.get('db'))) as conn:
+					with closing(conn.cursor()) as cursor:
+						cursor.execute(self.config.database.get('query').get('transfer_game_list_user_settings').format(**old_settings))
+						conn.commit()
+						result = cursor.rowcount
+			except Exception as exc:
+				xbmc.log(msg='IAGL:  SQL Error: {}'.format(exc),level=xbmc.LOGERROR)
+		return result
+
 	def mark_game_as_favorite(self,game_id=None):
 		result = None
 		if isinstance(game_id,str):
@@ -284,6 +299,36 @@ class database(object):
 			xbmc.log(msg='IAGL:  SQL Error: {}'.format(exc),level=xbmc.LOGERROR)
 		return result
 
+	def update_all_game_list_user_parameters(self,**kwargs):
+		result = None
+		if self.config.debug.get('print_query'):
+			xbmc.log(msg='IAGL: SQL STATEMENT: {}'.format(self.config.database.get('query').get('update_all_game_list_user_parameters').format(**kwargs)),level=xbmc.LOGDEBUG)
+		try:
+			with closing(sqlite3.connect(self.config.files.get('db'))) as conn:
+				with closing(conn.cursor()) as cursor:
+					cursor.execute(self.config.database.get('query').get('update_all_game_list_user_parameters').format(**kwargs))
+					conn.commit()
+					result = cursor.rowcount
+		except Exception as exc:
+			xbmc.log(msg='IAGL:  SQL Error: {}'.format(exc),level=xbmc.LOGERROR)
+		return result
+
+	def update_some_game_list_user_parameters(self,**kwargs):
+		result = None
+		if isinstance(kwargs.get('game_lists'),list):
+			kwargs['game_lists'] = ','.join(['"{}"'.format(x) for x in kwargs.get('game_lists')])  #Format game_lists for sql
+		if self.config.debug.get('print_query'):
+			xbmc.log(msg='IAGL: SQL STATEMENT: {}'.format(self.config.database.get('query').get('update_some_game_list_user_parameters').format(**kwargs)),level=xbmc.LOGDEBUG)
+		try:
+			with closing(sqlite3.connect(self.config.files.get('db'))) as conn:
+				with closing(conn.cursor()) as cursor:
+					cursor.execute(self.config.database.get('query').get('update_some_game_list_user_parameters').format(**kwargs))
+					conn.commit()
+					result = cursor.rowcount
+		except Exception as exc:
+			xbmc.log(msg='IAGL:  SQL Error: {}'.format(exc),level=xbmc.LOGERROR)
+		return result
+
 	def reset_game_list_user_parameter(self,**kwargs):
 		result = None
 		if self.config.debug.get('print_query'):
@@ -292,6 +337,20 @@ class database(object):
 			with closing(sqlite3.connect(self.config.files.get('db'))) as conn:
 				with closing(conn.cursor()) as cursor:
 					cursor.execute(self.config.database.get('query').get('reset_game_list_user_parameter').format(**kwargs))
+					conn.commit()
+					result = cursor.rowcount
+		except Exception as exc:
+			xbmc.log(msg='IAGL:  SQL Error: {}'.format(exc),level=xbmc.LOGERROR)
+		return result
+
+	def reset_all_game_list_user_parameters(self,**kwargs):
+		result = None
+		if self.config.debug.get('print_query'):
+			xbmc.log(msg='IAGL: SQL STATEMENT: {}'.format(self.config.database.get('query').get('reset_all_game_list_user_parameters').format(**kwargs)),level=xbmc.LOGDEBUG)
+		try:
+			with closing(sqlite3.connect(self.config.files.get('db'))) as conn:
+				with closing(conn.cursor()) as cursor:
+					cursor.execute(self.config.database.get('query').get('reset_all_game_list_user_parameters').format(**kwargs))
 					conn.commit()
 					result = cursor.rowcount
 		except Exception as exc:

@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "영화 산업"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "계략"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10개의 게임"
@@ -591,6 +595,14 @@ msgctxt "#30146"
 msgid "Android ra32"
 msgstr "안드로이드 ra32"
 
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "게임런처 선택 방법"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "게임 실행기를 선택할 때 Kodi가 수행할 작업을 선택합니다(Windows, Linux 및 OSX 전용)"
+
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
 msgstr "Kodi를 배경에 두세요"
@@ -633,7 +645,7 @@ msgstr "에뮬레이터 선택"
 
 msgctxt "#30159"
 msgid "Credentials were not found[CR]Please enter them in addon settings"
-msgstr "자격 증명을 찾을 수 없습니다[CR]애드온 설정에 입력하세요."
+msgstr "자격 증명을 찾을 수 없습니다[CR] 애드온 설정에 입력하세요."
 
 msgctxt "#30160"
 msgid "Game List Download Path"
@@ -673,7 +685,7 @@ msgstr "2GB(2기가바이트)"
 
 msgctxt "#30169"
 msgid "5 GB"
-msgstr "5GB(5기가바이트)"
+msgstr "5GB (5기가바이트)"
 
 msgctxt "#30170"
 msgid "10 GB"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "설치 마법사 실행"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "게임 목록의 설정을 변경하려면 마법사를 실행하세요. 언제든지 다시 실행할 수 있습니다."
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "게임 목록의 설정을 빠르게 변경하려면 마법사를 실행하세요. 언제든지 다시 실행할 수 있습니다."
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,7 +813,7 @@ msgstr "스레드 다운로드"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "모든 다운로드에 대한 대체 기본 폴더 설정"
+msgstr "대체 기본 다운로드 폴더"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -873,7 +885,7 @@ msgstr "선택된 스튜디오"
 
 msgctxt "#30219"
 msgid "Tags selected"
-msgstr "태그 선택됨"
+msgstr "선택된 태그"
 
 msgctxt "#30220"
 msgid "Playlists selected"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "게임 목록 업데이트 런처"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "업데이트 시작 명령"
+msgid "Update game list Launch Command"
+msgstr "게임 목록 업데이트 명령 실행"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "게임 목록 다운로드 경로 업데이트"
+msgid "Update game list Download Path"
+msgstr "게임 목록 업데이트 다운로드 경로"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1045,7 +1057,7 @@ msgstr "[CR]외부에서 [CR]Kodi로 런처를 업데이트하시겠습니까?"
 
 msgctxt "#30262"
 msgid "Launcher updated to external"
-msgstr "런처가 외부로 업데이트되었습니다."
+msgstr "외부로 런처 업데이트됨"
 
 msgctxt "#30263"
 msgid "Launcher updated to retroplayer"
@@ -1057,7 +1069,7 @@ msgstr "게임 애드온 선택"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "기본값으로 재설정"
+msgstr "게임 애드온 실행 명령을 재설정하시겠습니까?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1271,6 +1283,10 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "게임 목록 런처"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "외부 발사 명령"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
 msgstr "외부 실행 명령[CR]*사용자 실행 명령을 찾을 수 없음/기본값 사용*"
@@ -1314,3 +1330,227 @@ msgstr "모든 게임 목록 설정을 기본값으로 재설정하시겠습니�
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "게임 목록 설정이 기본값으로 재설정되었습니다."
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "로컬 파일과 일치"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "자격 증명 확인"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "다음 변수는 실행 중에 대체됩니다.[CR]● XXROM_PATHXX: 실행될 파일의 ​​경로[CR]● XXROM_NAMEXX: 실행될 파일의 ​​이름(경로 없음)[CR]● XXROM_STEMXX: 실행될 파일의 ​​이름(경로 없음, 확장자 없음)[CR]● XXNETPLAY_COMMANDXX: Netplay에 필요한 명령 추가, 옵션은 애드온 설정 참조[CR]자세한 내용은 위키 참조…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "보관 파일을 처리할 수 없습니다[CR] 자세한 내용은 로그를 확인하세요."
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "실행 전에 작업을 선택하세요"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Kodi를 백그라운드에서 실행 상태로 둡니다(기본값)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "실행 전에 Kodi를 닫고 에뮬레이터 종료 후 Kodi를 다시 엽니다."
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "실행 전에 Kodi를 일시 중단하고 에뮬레이터 종료 후 Kodi를 깨웁니다."
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "IAGL db 통계 보기"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "IAGL db에 대한 현재 통계를 나열합니다."
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db 통계"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "발사 매개변수 보기"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "게임 설정"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "게임 실행 매개변수"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "사용자 실행 명령이 없는 경우"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "실행 명령(retroplayer 애드온 또는 외부 에뮬레이터)이 설정되지 않은 경우 Kodi에서 수행할 작업을 선택하세요."
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "기본값으로 실행 시도"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "중지 / 실행하지 마십시오"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "명령어 세트 없음"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "이 목록에는 실행 명령이 설정되지 않았습니다. 지금 설정하시겠습니까?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "이 목록에 대한 기본 실행 명령을 찾을 수 없습니다."
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "기본 코어를 찾을 수 없습니다. {}를 설치하거나 런처를 업데이트하세요."
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "게임 애드온 실행 명령 재설정"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "게임 애드온을 찾을 수 없습니다"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "게임 애드온 실행 명령이 업데이트되었습니다."
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "대체 기본 다운로드 폴더 사용"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Kodi를 백그라운드에 유지하는 옵션만 표시합니다."
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Kodi를 닫는 옵션만 표시합니다."
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Kodi를 일시 정지하는 옵션만 표시합니다."
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG 위치를 문자열로 표시"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "또는 Retroarch에 표시된 대로 retroarch.cfg 파일의 경로를 정확히 입력하세요."
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch Cores 디렉토리를 문자열로 표시"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "또는 Retroarch 디렉토리 구성에 표시된 대로 Cores 디렉토리 경로를 정확히 입력하세요."
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}에 대한 Launcher를 업데이트하시겠습니까?[CR][B]이렇게 하면 이 목록에 있는 모든 게임의 설정이 변경됩니다.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}에 대한 실행 명령을 업데이트하시겠습니까?[CR][B]이렇게 하면 이 목록에 있는 모든 게임의 설정이 변경됩니다.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}에 대한 실행 다운로드 경로를 업데이트하시겠습니까?[CR][B]이렇게 하면 이 목록에 있는 모든 게임의 설정이 변경됩니다.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "업데이트 시작 명령"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "업데이트 시작 다운로드 경로"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}에 대한 설정을 재설정하시겠습니까?[CR][B]이렇게 하면 이 목록에 있는 모든 게임의 설정이 변경됩니다.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "지원하다"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Archive.org에 기부하세요"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "새로운 IAGL 데이터베이스가 발견되었습니다[CR]업데이트하시겠습니까?[CR]가능하다면 설정이 새 db에 복사됩니다."
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "새로운 db"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "데이터베이스가 업데이트되었습니다[CR]사용자 설정이 전송되었습니다"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "데이터베이스가 업데이트되었습니다[CR]일부 사용자 설정이 전송되지 않았습니다[CR]자세한 내용은 로그를 참조하세요."
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "데이터베이스 업데이트 중 오류가 발생했습니다.[CR] 자세한 내용은 로그를 참조하세요."
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "나중에 다시 물어보세요"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "이번에는 업데이트하지 마세요[CR](다음 업데이트까지 다시 묻지 마세요)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "IAGL 설정 마법사에 오신 것을 환영합니다.[CR]게임을 시작하기 위해 모든 설정을 살펴보겠습니다!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "대부분의 게임을 하려면 archive.org 계정이 필요합니다.[CR]https://archive.org/account/signup에서 가입하세요.[CR]IAGL에서 계정을 사용하시겠습니까?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Kodi 게임 애드온을 사용하기 위한 설정이 완료되었습니다![CR]플레이할 준비가 되셨나요?[CR]외부 게임 실행을 설정하려면 [B]아니요[/B]를 선택하세요."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "모든 게임 목록을 외부에서 실행되도록 설정"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "일부 게임 목록만 외부에서 실행되도록 설정"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "모든 게임 목록 런처를 기본값으로 재설정합니다."
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} 게임 목록이 외부 출시를 위해 업데이트되었습니다."
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "각 외부 실행 명령에 대한 기본값이 미리 설정되어 있습니다.[CR]필요한 경우 실행하기 전에 게임 실행 매개변수를 검토하세요.[CR]자세한 내용은 위키를 참조하세요."

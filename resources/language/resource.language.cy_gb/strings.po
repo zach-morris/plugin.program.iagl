@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "Ffilmiau"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "Gemau"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 Gêm"
@@ -591,6 +595,14 @@ msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
 
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Dull dewis lansiwr gêm"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Dewiswch beth fydd Kodi yn ei wneud wrth ddewis lansiwr gêm (Windows, Linux ac OSX yn unig)"
+
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
 msgstr "Cadwch Kodi yn y cefndir"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Gweithredu dewin gosod"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Rhedeg y dewin i newid gosodiadau ar gyfer eich rhestrau gêm.  Gellir ail-redeg hwn unrhyw bryd"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Rhedeg y dewin i newid gosodiadau eich rhestrau gêm yn gyflym.  Gellir ail-redeg hwn unrhyw bryd"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,7 +813,7 @@ msgstr "Lawrlwythwch Threads"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Gosod ffolder rhagosodedig arall ar gyfer pob lawrlwythiad"
+msgstr "Ffolder lawrlwytho rhagosodedig arall"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -853,7 +865,7 @@ msgstr "Dewiswch"
 
 msgctxt "#30214"
 msgid "Selected"
-msgstr "Wedi'i ddewis"
+msgstr "Dewiswyd"
 
 msgctxt "#30215"
 msgid "Game lists selected"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Diweddaru Lansiwr rhestr gêm"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Diweddaru Lansio Gorchymyn"
+msgid "Update game list Launch Command"
+msgstr "Diweddaru rhestr gêm Lansio Gorchymyn"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Diweddaru llwybr lawrlwytho rhestr gêm"
+msgid "Update game list Download Path"
+msgstr "Diweddaru rhestr gêm Llwybr Lawrlwytho"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1057,7 +1069,7 @@ msgstr "Dewiswch ategyn gêm"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Ailosod i ddiofyn"
+msgstr "Ydych chi'n siŵr eich bod am ailosod y gorchymyn lansio addon gêm?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1271,9 +1283,13 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Lansiwr Rhestr Gemau"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Gorchymyn Lansio Allanol"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
-msgstr "Gorchymyn Lansio Allanol[CR]*Dim Gorchymyn Lansio Defnyddiwr Wedi'i Ganfod / Gan Ddefnyddio'r Rhagosodiad*"
+msgstr "Gorchymyn Lansio Allanol[CR]*Dim Gorchymyn Lansio Defnyddiwr wedi'i Ganfod / Gan Ddefnyddio'r Rhagosodiad*"
 
 msgctxt "#30321"
 msgid "Kodi Retroplayer"
@@ -1314,3 +1330,227 @@ msgstr "Ydych chi'n siŵr eich bod am ailosod pob gosodiad rhestr gêm i'r rhago
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Cafodd gosodiadau rhestr gêm eu hailosod i'r rhagosodiad"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Yn cyd-fynd â ffeil leol"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Gwirio tystlythyrau"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "bydd y newidynnau canlynol yn cael eu disodli yn ystod lansiad:[CR] ● ​​XXROM_PATHXX: Y llwybr i'r ffeil a fydd yn cael ei lansio[CR] ● ​​XXROM_NAMEXX: Enw'r ffeil a fydd yn cael ei lansio (dim llwybr)[CR] ● ​​XXROM_STEMXX: Y enw'r ffeil a fydd yn cael ei lansio (dim llwybr dim estyniad)[CR] ● ​​XXNETPLAY_COMMANDXX: Unrhyw ychwanegiad gorchymyn sydd ei angen ar gyfer netplay, gweler gosodiadau addon ar gyfer opsiynau[CR]Gweler wiki am fwy o wybodaeth…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Nid oedd modd prosesu'r ffeil archif[CR]Gwiriwch y logiau am ragor o fanylion"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Dewiswch weithred cyn ei lansio"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Gadael Kodi yn rhedeg yn y cefndir (rhagosodedig)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Caewch Kodi cyn ei lansio, ailagor Kodi ar ôl gadael yr efelychydd"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Atal Kodi cyn ei lansio, deffro Kodi ar ôl gadael yr efelychydd"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Gweld ystadegau db IAGL"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Yn rhestru ystadegau cyfredol ar gyfer IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db Ystadegau"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Gweld paramedrau lansio"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Gosodiadau Gêm"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Paramedrau Lansio Gêm"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Os nad oes Gorchymyn Lansio defnyddiwr yn bresennol"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Dewiswch beth fydd Kodi yn ei wneud pan nad oes gorchymyn lansio (addon retroplayer neu efelychydd allanol) wedi'i osod"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Ceisiwch Lansio yn ddiofyn"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Stopiwch / Peidiwch â lansio"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Dim set gorchymyn"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Nid yw gorchymyn lansio wedi'i osod ar gyfer y rhestr hon, gosodwch un nawr?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Ni chafwyd hyd i orchymyn lansio rhagosodedig ar gyfer y rhestr hon"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Ni chanfuwyd craidd diofyn.  Gosodwch {} neu diweddarwch y lansiwr"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Ailosod gorchymyn lansio addon gêm"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Ni ddaethpwyd o hyd i unrhyw ategion gêm"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Gorchymyn lansio addon gêm wedi'i ddiweddaru"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Defnyddiwch ffolder lawrlwytho rhagosodedig arall"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Dangoswch opsiynau sy'n cadw Kodi yn y cefndir yn unig"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Dangoswch opsiynau sy'n cau Kodi yn unig"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Dangoswch opsiynau sy'n seibio Kodi yn unig"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Lleoliad CFG Retroarch fel llinyn"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Fel arall, nodwch y llwybr i'r ffeil retroarch.cfg yn union fel y mae'n ymddangos yn Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Cyfeiriadur Retroarch Cores fel llinyn"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Fel arall, nodwch y llwybr i gyfeiriadur Cores yn union fel y mae'n ymddangos yng nghyfluniad cyfeiriadur Retroarch"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Diweddaru Lansiwr ar gyfer {}?[CR][B]Bydd hyn yn newid gosodiadau ar gyfer pob gêm yn y rhestr hon.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Diweddaru Launch Command ar gyfer {}?[CR][B]Bydd hyn yn newid gosodiadau ar gyfer pob gêm yn y rhestr hon.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Diweddaru Llwybr Lawrlwytho Lansio ar gyfer {}?[CR][B]Bydd hyn yn newid gosodiadau ar gyfer pob gêm yn y rhestr hon.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Diweddaru Lansio Gorchymyn"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Diweddaru Lansio Llwybr Lawrlwytho"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Ailosod gosodiadau ar gyfer {}?[CR][B]Bydd hyn yn newid gosodiadau ar gyfer pob gêm yn y rhestr hon.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Cefnogaeth"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Cyfrannwch i Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Mae cronfa ddata IAGL newydd wedi'i chanfod[CR]Ydych chi am ddiweddaru?[CR]Bydd gosodiadau'n cael eu copïo i'r db newydd os yn bosibl"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "db newydd"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Diweddarwyd y gronfa ddata[CR]Cafodd gosodiadau defnyddiwr eu trosglwyddo"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Diweddarwyd y gronfa ddata[CR]Methodd rhai gosodiadau defnyddwyr drosglwyddo[CR]Gweler y log am ragor o fanylion"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Bu gwall wrth ddiweddaru'r gronfa ddata[CR]Gweler y log am ragor o fanylion"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Gofynnwch i mi eto yn nes ymlaen"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Peidiwch â diweddaru'r tro hwn[CR] (Peidiwch â gofyn i mi eto tan y diweddariad nesaf)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Croeso i Dewin Gosod IAGL[CR]Gadewch i ni redeg trwy'r holl osodiadau i'ch cael chi i chwarae!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Mae angen cyfrif archive.org ar y rhan fwyaf o gemau[CR]Cofrestrwch yn https://archive.org/account/signup[CR]A hoffech chi ddefnyddio'ch cyfrif gydag IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Mae'r gosodiad wedi'i gwblhau ar gyfer defnyddio ategion gêm Kodi![CR]Ydych chi'n barod i chwarae?[CR]Dewiswch [B] Na[/B] i osod lansiad gêm allanol."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Gosodwch yr holl restrau gêm i'w lansio'n allanol"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Gosodwch rai rhestrau gêm yn unig i'w lansio'n allanol"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Ailosodwch yr holl lanswyr rhestr gemau yn ôl i'r rhagosodiad"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "Cafodd {} rhestri gemau eu diweddaru i'w lansio'n allanol"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Mae rhagosodiadau wedi'u rhagosod ar gyfer pob gorchymyn lansio allanol[CR]Cyn lansio paramedrau lansio gêm adolygu os oes angen[CR]Gweler wici am ragor o fanylion."

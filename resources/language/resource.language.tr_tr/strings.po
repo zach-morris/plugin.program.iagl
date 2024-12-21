@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "Filmler"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "Oyunlar"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 Oyun"
@@ -591,6 +595,14 @@ msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
 
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Oyun başlatıcısı seçim yöntemi"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Bir oyun başlatıcısı seçerken Kodi'nin ne yapacağını seçin (yalnızca Windows, Linux ve OSX)"
+
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
 msgstr "Kodi'yi arka planda tutun"
@@ -693,7 +705,7 @@ msgstr "Retroarch netplay'i etkinleştirin (yalnızca Windows, Linux, OSX), netp
 
 msgctxt "#30174"
 msgid "Show Netplay Lobby"
-msgstr "Netplay Lobisini göster"
+msgstr "Netplay Lobisini Göster"
 
 msgctxt "#30175"
 msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Kurulum sihirbazını çalıştır"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Oyun listeleriniz için ayarları değiştirmek üzere sihirbazı çalıştırın. Bu, istediğiniz zaman tekrar çalıştırılabilir"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Oyun listeleriniz için ayarları hızla değiştirmek için sihirbazı çalıştırın. Bu, istediğiniz zaman tekrar çalıştırılabilir"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,7 +813,7 @@ msgstr "Konuları İndir"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Tüm indirmeler için alternatif varsayılan klasör ayarlayın"
+msgstr "Alternatif varsayılan indirme klasörü"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Oyun listesini güncelle Başlatıcı"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Başlatma Komutunu Güncelle"
+msgid "Update game list Launch Command"
+msgstr "Oyun listesini güncelle Başlatma Komutu"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Oyun listesinin indirme yolunu güncelle"
+msgid "Update game list Download Path"
+msgstr "Oyun listesini güncelle İndirme Yolu"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1057,7 +1069,7 @@ msgstr "Oyun eklentisini seçin"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Varsayılana sıfırla"
+msgstr "Oyun eklentisi başlatma komutunu sıfırlamak istediğinizden emin misiniz?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1271,6 +1283,10 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Oyun Listesi Başlatıcısı"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Harici Fırlatma Komutu"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
 msgstr "Harici Başlatma Komutu[CR]*Kullanıcı Başlatma Komutu Bulunamadı / Varsayılan Kullanılıyor*"
@@ -1314,3 +1330,227 @@ msgstr "Tüm oyun listesi ayarlarını varsayılanlara sıfırlamak istediğiniz
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Oyun listesi ayarları varsayılanlara sıfırlandı"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Yerel dosyayla eşleşme"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Kimlik bilgilerinin kontrol edilmesi"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "Başlatma sırasında aşağıdaki değişkenler değiştirilecektir:[CR]● XXROM_PATHXX: Başlatılacak dosyanın yolu[CR]● XXROM_NAMEXX: Başlatılacak dosyanın adı (yol yok)[CR]● XXROM_STEMXX: Başlatılacak dosyanın adı (yol yok, uzantı yok)[CR]● XXNETPLAY_COMMANDXX: Netplay için herhangi bir komut eklemesi gerekebilir, seçenekler için eklenti ayarlarına bakın[CR]Daha fazla bilgi için wiki'ye bakın…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Arşiv dosyası işlenemedi[CR]Daha fazla ayrıntı için günlükleri kontrol edin"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Başlatmadan önce eylemi seçin"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Kodi'yi arka planda çalışır durumda bırakın (varsayılan)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Başlatmadan önce Kodi'yi kapatın, emülatörden çıktıktan sonra Kodi'yi yeniden açın"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Başlatmadan önce Kodi'yi askıya al, emülatörden çıktıktan sonra Kodi'yi uyandır"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "IAGL veritabanı istatistiklerini görüntüle"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "IAGL db için güncel istatistikleri listeler"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db İstatistikleri"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Başlatma parametrelerini görüntüle"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Oyun Ayarları"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Oyun Başlatma Parametreleri"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Hiçbir kullanıcı Başlatma Komutu mevcut değilse"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Başlatma komutu (retroplayer eklentisi veya harici emülatör) ayarlanmadığında Kodi'nin ne yapacağını seçin"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Varsayılanla başlatmayı dene"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Durdur / Başlatma"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Komut seti yok"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Bu liste için bir başlatma komutu ayarlanmamış, şimdi bir tane ayarlayabilir misiniz?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Bu liste için varsayılan başlatma komutu bulunamadı"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Varsayılan çekirdek bulunamadı. Lütfen {} yükleyin veya başlatıcıyı güncelleyin"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Oyun eklentisi başlatma komutu sıfırlama"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Hiçbir oyun eklentisi bulunamadı"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Oyun eklentisi başlatma komutu güncellendi"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Alternatif varsayılan indirme klasörünü kullan"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Yalnızca Kodi'yi arka planda tutan seçenekleri göster"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Yalnızca Kodi'yi kapatan seçenekleri göster"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Yalnızca Kodi'yi duraklatan seçenekleri göster"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Konumu dize olarak"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Alternatif olarak, Retroarch'ta göründüğü gibi retroarch.cfg dosyasının yolunu tam olarak girin"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch Cores dizini dize olarak"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Alternatif olarak, Retroarch dizin yapılandırmasında göründüğü gibi Cores dizinine giden yolu tam olarak girin"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}? için Başlatıcıyı Güncelle[CR][B]Bu, bu listedeki tüm oyunların ayarlarını değiştirecektir.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}? için Başlatma Komutunu Güncelle[CR][B]Bu, bu listedeki tüm oyunların ayarlarını değiştirecektir.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}? için Başlatma İndirme Yolunu Güncelle[CR][B]Bu, bu listedeki tüm oyunların ayarlarını değiştirecektir.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Başlatma Komutunu Güncelle"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Güncelleme Başlatma İndirme Yolu"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}? için ayarları sıfırla[CR][B]Bu, bu listedeki tüm oyunların ayarlarını değiştirecektir.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Destek"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Archive.org'a bağış yapın"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Yeni bir IAGL veritabanı bulundu[CR]Güncellemek ister misiniz?[CR]Mümkünse ayarlar yeni veritabanına kopyalanacaktır"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Yeni veritabanı"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Veritabanı güncellendi[CR]Kullanıcı ayarları aktarıldı"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Veritabanı güncellendi[CR]Bazı kullanıcı ayarları aktarılamadı[CR]Daha fazla ayrıntı için günlüğe bakın"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Veritabanı güncellenirken bir hata oluştu[CR]Daha fazla ayrıntı için günlüğe bakın"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Bana daha sonra tekrar sor"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Bu sefer güncelleme yapma[CR](Bir sonraki güncellemeye kadar bana tekrar sorma)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "IAGL Kurulum Sihirbazına Hoş Geldiniz[CR]Oynamaya başlamanız için tüm ayarları inceleyelim!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Çoğu oyun archive.org hesabı gerektirir[CR]https://archive.org/account/signup adresinden kaydolun[CR]Hesabınızı IAGL ile kullanmak ister misiniz?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Kodi oyun eklentilerini kullanmak için kurulum tamamlandı![CR]Oynamaya hazır mısınız?[CR]Harici oyun başlatmayı kurmak için [B]Hayır[/B]'ı seçin."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Tüm oyun listelerinin harici olarak başlatılmasını ayarlayın"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Yalnızca bazı oyun listelerinin harici olarak başlatılmasını ayarla"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Tüm oyun listesi başlatıcılarını varsayılana sıfırla"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} oyun listesi harici lansman için güncellendi"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Her harici başlatma komutu için varsayılanlar önceden ayarlanmıştır.[CR]Başlatmadan önce gerekirse oyun başlatma parametrelerini inceleyin.[CR]Daha fazla ayrıntı için wiki'ye bakın."

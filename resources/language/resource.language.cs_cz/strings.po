@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -217,7 +217,7 @@ msgstr "Definujte akci, která se má provést při výběru hry"
 
 msgctxt "#30052"
 msgid "If game already exists locally"
-msgstr "Pokud hra již lokálně existuje"
+msgstr "Pokud hra již existuje lokálně"
 
 msgctxt "#30053"
 msgid "Define the action to take if a game file is found to exist locally"
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "Filmy"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "Hry"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 her"
@@ -389,7 +393,7 @@ msgstr "Seznam všech"
 
 msgctxt "#30096"
 msgid "Always filter list to 1 Game 1 Rom Set"
-msgstr "Vždy filtrujte seznam na 1 Game 1 Rom Set"
+msgstr "Vždy filtrujte seznam na 1 hru 1 sada Romů"
 
 msgctxt "#30097"
 msgid "If possible, game lists will be pre-filtered to a 1G1R set"
@@ -457,7 +461,7 @@ msgstr "Systémový ovladač"
 
 msgctxt "#30113"
 msgid "Game list fanart equates to"
-msgstr "Seznam her fanart odpovídá"
+msgstr "Seznam her se fanart rovná"
 
 msgctxt "#30114"
 msgid "Select the artwork displayed for the game list fanart"
@@ -481,7 +485,7 @@ msgstr "Vynutit typy zobrazení IAGL"
 
 msgctxt "#30119"
 msgid "Verify your skin has the forced viewtype ID available"
-msgstr "Ověřte, že váš vzhled má k dispozici vynucené ID typu zobrazení"
+msgstr "Ověřte, zda má váš vzhled k dispozici vynucené ID typu zobrazení"
 
 msgctxt "#30120"
 msgid "Frontpage viewtype"
@@ -590,6 +594,14 @@ msgstr "Android aarch64"
 msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Způsob výběru spouštěče hry"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Vyberte, co bude Kodi dělat při výběru spouštěče hry (pouze Windows, Linux a OSX)"
 
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Spusťte průvodce nastavením"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Spusťte průvodce a změňte nastavení pro seznamy her.  Toto lze kdykoli opakovat"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Spusťte průvodce a rychle změňte nastavení pro seznamy her.  Toto lze kdykoli opakovat"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -781,11 +793,11 @@ msgstr "Pokud si nejste jisti, ponechte jako výchozí"
 
 msgctxt "#30196"
 msgid "Suspend Kodi Input and Audio when using External Launcher"
-msgstr "Při použití externího spouštěče pozastavte vstup a zvuk Kodi"
+msgstr "Při používání externího spouštěče pozastavte vstup a zvuk Kodi"
 
 msgctxt "#30197"
 msgid "Stop Kodi media playing before External Launch"
-msgstr "Zastavte přehrávání médií Kodi před externím spuštěním"
+msgstr "Před externím spuštěním zastavte přehrávání médií Kodi"
 
 msgctxt "#30198"
 msgid "Kodi is busy / waiting for return to Kodi after External Launch"
@@ -801,7 +813,7 @@ msgstr "Stáhnout vlákna"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Nastavte alternativní výchozí složku pro všechna stahování"
+msgstr "Alternativní výchozí složka pro stahování"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Aktualizujte spouštěč seznamu her"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Aktualizovat spouštěcí příkaz"
+msgid "Update game list Launch Command"
+msgstr "Aktualizujte seznam her Launch Command"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Aktualizujte cestu ke stažení seznamu her"
+msgid "Update game list Download Path"
+msgstr "Aktualizovat seznam her Cesta ke stažení"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1053,11 +1065,11 @@ msgstr "Launcher aktualizován na retroplayer"
 
 msgctxt "#30264"
 msgid "Select game addon"
-msgstr "Vyberte herní doplněk"
+msgstr "Vyberte doplněk hry"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Obnovit výchozí"
+msgstr "Opravdu chcete resetovat příkaz ke spuštění doplňku hry?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1185,7 +1197,7 @@ msgstr "Nastavení spouštění jsou aktuálně prázdná[CR]Aktualizujte nastav
 
 msgctxt "#30297"
 msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
-msgstr "Nebyly nalezeny žádné další emulátory[CR]Prosím aktualizujte nastavení doplňkového emulátoru doplňku"
+msgstr "Nebyly nalezeny žádné další emulátory[CR]Prosím aktualizujte nastavení doplňkového emulátoru"
 
 msgctxt "#30298"
 msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
@@ -1241,7 +1253,7 @@ msgstr "Výchozí doplněk hry Retroplayer"
 
 msgctxt "#30311"
 msgid "Default Game Post Process"
-msgstr "Výchozí zpracování hry"
+msgstr "Výchozí herní post Proces"
 
 msgctxt "#30312"
 msgid "User Defined Download Path"
@@ -1270,6 +1282,10 @@ msgstr "Žádné (použije se výchozí nastavení doplňku)"
 msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Spouštěč seznamu her"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Externí spouštěcí příkaz"
 
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
@@ -1314,3 +1330,227 @@ msgstr "Opravdu chcete obnovit všechna nastavení seznamu her na výchozí?"
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Nastavení seznamu her bylo resetováno na výchozí"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Odpovídající místní soubor"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Kontrola přihlašovacích údajů"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "Při spuštění budou nahrazeny následující proměnné:[CR]● XXROM_PATHXX: Cesta k souboru, který bude spuštěn[CR]● XXROM_NAMEXX: Název souboru, který bude spuštěn (bez cesty)[CR]● XXROM_STEMXX: název souboru, který bude spuštěn (bez cesty, bez přípony)[CR]● XXNETPLAY_COMMANDXX: Pro netplay je nutné přidat jakýkoli příkaz, možnosti viz nastavení addonu[CR]Viz wiki pro více informací…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Archivní soubor nelze zpracovat[CR]Zkontrolujte protokoly pro další podrobnosti"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Vyberte akci před spuštěním"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Nechat Kodi běžet na pozadí (výchozí)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Zavřete Kodi před spuštěním, znovu otevřete Kodi po ukončení emulátoru"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Pozastavte Kodi před spuštěním, probuďte Kodi po ukončení emulátoru"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Zobrazit statistiky IAGL db"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Vypisuje aktuální statistiky pro IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db Statistiky"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Zobrazit parametry spuštění"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Nastavení hry"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Parametry spuštění hry"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Pokud není přítomen žádný uživatelský příkaz ke spuštění"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Vyberte, co Kodi udělá, když není nastaven žádný příkaz ke spuštění (doplňek pro retroplayer nebo externí emulátor)."
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Pokus o spuštění s výchozím nastavením"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Zastavit / Nespouštět"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Není nastaven žádný příkaz"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Pro tento seznam není nastaven příkaz ke spuštění, nastavit jej nyní?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Pro tento seznam nebyl nalezen žádný výchozí příkaz ke spuštění"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Výchozí jádro nebylo nalezeno.  Nainstalujte si prosím {} nebo aktualizujte spouštěč"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Reset příkazu ke spuštění doplňku hry"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Nebyly nalezeny žádné herní doplňky"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Příkaz ke spuštění doplňku hry byl aktualizován"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Použijte alternativní výchozí složku pro stahování"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Zobrazit pouze možnosti, které udržují Kodi na pozadí"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Zobrazit pouze možnosti, které zavírají Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Zobrazit pouze možnosti, které pozastaví Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Umístění jako řetězec"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Případně zadejte cestu k souboru retroarch.cfg přesně tak, jak se zobrazuje v Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch Cores adresář jako řetězec"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Případně zadejte cestu k adresáři Cores přesně tak, jak je uvedena v konfiguraci adresáře Retroarch"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Aktualizovat spouštěč pro {}?[CR][B]Tímto se změní nastavení pro všechny hry v tomto seznamu.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Aktualizovat spouštěcí příkaz pro {}?[CR][B]Tímto se změní nastavení pro všechny hry v tomto seznamu.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Aktualizovat spustit cestu stahování pro {}?[CR][B]Tímto se změní nastavení pro všechny hry v tomto seznamu.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Aktualizovat spouštěcí příkaz"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Aktualizace Spusťte cestu stahování"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Resetovat nastavení pro {}?[CR][B]Tímto se změní nastavení pro všechny hry v tomto seznamu.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Podpora"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Přispějte na Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Byla nalezena nová databáze IAGL[CR]Chcete aktualizovat?[CR]Pokud to bude možné, nastavení se zkopíruje do nové databáze"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Nová db"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Databáze byla aktualizována[CR]Uživatelská nastavení byla přenesena"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Databáze byla aktualizována[CR]Přenos některých uživatelských nastavení se nezdařil[CR]Další podrobnosti naleznete v protokolu"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Při aktualizaci databáze došlo k chybě[CR]Další podrobnosti naleznete v protokolu"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Zeptejte se mě znovu později"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Tentokrát neaktualizovat[CR](Do příští aktualizace se mě znovu neptat)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Vítejte v průvodci nastavením IAGL[CR]Umožní vám projít všechna nastavení, abyste mohli hrát!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Většina her vyžaduje účet archive.org[CR]Zaregistrujte se na https://archive.org/account/signup[CR]Chcete používat svůj účet s IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Nastavení je dokončeno pro použití herních doplňků Kodi![CR]Jste připraveni hrát?[CR]Výběrem [B]Ne[/B] nastavíte spouštění externí hry."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Nastavte všechny seznamy her, které se mají spouštět externě"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Nastavte pouze některé seznamy her, které se mají spouštět externě"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Resetujte všechny spouštěče seznamu her zpět na výchozí"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "Pro externí spuštění bylo aktualizováno {} seznamů her"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Výchozí hodnoty jsou přednastaveny pro každý externí příkaz ke spuštění[CR]Před spuštěním si v případě potřeby zkontrolujte parametry spuštění hry[CR]Další podrobnosti naleznete na wiki."

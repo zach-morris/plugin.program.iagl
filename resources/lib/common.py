@@ -199,6 +199,50 @@ class common(object):
 				if self.config.files.get('addon_data_db_zipped').exists():
 					#Query user about updating db, copying settings here
 					xbmc.log(msg='IAGL: new db version found',level=xbmc.LOGDEBUG)
+					if xbmcgui.Dialog().yesno(self.get_loc(30373),self.get_loc(30372)):
+						from resources.lib import database
+						db = database.database(config=self.config,media_type=self.get_setting('media_type'))
+						old_settings = db.query_db(db.get_query('get_all_game_list_user_settings'),return_as='dict')
+						old_settings_filtered = [x for x in old_settings if any([x.get(y) is not None for y in x.keys() if y.startswith('user_')])]  #Filter down to only those lists that had user settings
+						#Transfer new file over to db spot
+						result = self.extract_addon_db()
+						if result:
+							xbmc.log(msg='IAGL: Extracted zipped db with version {} to path {}'.format(self.config.addon.get('version'),str(self.config.files.get('db').parent)),level=xbmc.LOGDEBUG)
+							self.config.files.get('addon_data_db_zipped').rename(self.config.files.get('addon_data_db_zipped_backup'))
+							xbmcaddon.Addon(id=self.config.addon.get('addon_name')).setSetting(id='db_version',value=self.config.addon.get('version'))
+							xfer_results = list()
+							#Transfer settings over, convert to the correct format for insert
+							for os in old_settings_filtered:
+								for k,v in os.items():
+									if v is None:
+										os[k] = 'NULL'
+									elif isinstance(v,str):
+										if k=='label':
+											pass
+										else:
+											os[k] = '"{}"'.format(v.replace('"','""'))
+									else:
+										pass
+								xfer_results.append(db.transfer_game_list_user_settings(old_settings=os))
+							#Will need to add game specific settings here in the future
+							if all([x is not None for x in xfer_results]):
+								ok_ret = xbmcgui.Dialog().ok(self.get_loc(30233),self.get_loc(30374))
+							elif any([x is not None for x in xfer_results]):
+								ok_ret = xbmcgui.Dialog().ok(self.get_loc(30233),self.get_loc(30375))
+							else:
+								ok_ret = xbmcgui.Dialog().ok(self.get_loc(30270),self.get_loc(30376))
+								xbmc.log(msg='IAGL:  Error transferring settings to new addon db: {}'.format(self.config.files.get('addon_data_db_zipped')),level=xbmc.LOGERROR)
+						else:
+							ok_ret = xbmcgui.Dialog().ok(self.get_loc(30270),self.get_loc(30376))
+							xbmc.log(msg='IAGL:  Error extracting addon db: {}'.format(self.config.files.get('addon_data_db_zipped')),level=xbmc.LOGERROR)
+						del db
+					else:
+						selected = xbmcgui.Dialog().select(heading=self.get_loc(30373),list=[self.get_loc(30377),self.get_loc(30378)],useDetails=False)
+						if selected == 1:
+							xbmc.log(msg='IAGL:  User requested not to be asked about update again.  Moving new db to backup.',level=xbmc.LOGDEBUG)
+							self.config.files.get('addon_data_db_zipped').rename(self.config.files.get('addon_data_db_zipped_backup'))
+						else:
+							xbmc.log(msg='IAGL:  User will be asked about update again later...',level=xbmc.LOGDEBUG)
 				else:
 					xbmcaddon.Addon(id=self.config.addon.get('addon_name')).setSetting(id='db_version',value=self.config.addon.get('version'))
 					xbmc.log(msg='IAGL: new db version not found (settings likely reset?) updating version number',level=xbmc.LOGDEBUG)
@@ -236,6 +280,19 @@ class common(object):
 				result = self.extract_addon_db(use_backup=use_backup)
 		else:
 			xbmc.log(msg='IAGL: addon database file not found',level=xbmc.LOGERROR)
+		return result
+
+	def get_android_apps(self):
+		result = None
+		apps_json = json.loads(xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Files.GetDirectory","params":{"directory":"androidapp://sources/apps/"},"id": "1"}'))
+		if isinstance(apps_json,dict):
+			if 'error' in apps_json.keys():
+				xbmc.log(msg='IAGL: Kodi did not identify installed android apps: {}'.format(apps_json),level=xbmc.LOGDEBUG)
+			else:
+				if isinstance(apps_json.get('result'),dict) and isinstance(apps_json.get('result').get('files'),list):
+					result = dict(zip([x.get('label') or 'Unknown' for x in apps_json.get('result').get('files') if isinstance(x,dict) and isinstance(x.get('file'),str) and 'androidapp' in x.get('file')],[x.get('file').split('/')[-1] for x in apps_json.get('result').get('files') if isinstance(x,dict) and isinstance(x.get('file'),str) and 'androidapp' in x.get('file')]))
+				else:
+					xbmc.log(msg='IAGL: Kodi did not identify installed android apps: {}'.format(apps_json),level=xbmc.LOGDEBUG)
 		return result
 
 	def get_game_addons(self,as_listitems=True,add_reset_to_default=True):
@@ -607,7 +664,11 @@ class common(object):
 		if type_in == 'game' and isinstance(ip,str):
 			li_out.addContextMenuItems([(self.get_loc(30088),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/add_to_favorites/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30342),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/view_launch_parameters/{})'.format(ip.split('/')[-1])),
-										(self.get_loc(30266),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/download_game_to/{})'.format(ip.split('/')[-1])),])
+										(self.get_loc(30266),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/download_game_to/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30246),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launcher_from_uid/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30247),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launch_command_from_uid/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30248),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_dl_path_from_uid/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30328),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/reset_game_list_settings_from_uid/{})'.format(ip.split('/')[-1]))])
 		if type_in == 'search_link' and isinstance(ip,str):
 			li_out.addContextMenuItems([(self.get_loc(30088),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/add_to_favorites_search/{})'.format(ip))])
 		if type_in == 'random_link' and isinstance(ip,str):

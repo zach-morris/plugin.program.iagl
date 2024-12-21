@@ -29,6 +29,7 @@ class config(object):
 		self.paths['addon_resources'] = self.paths['addon'].joinpath('resources')
 		self.paths['addon_data'] = self.paths['addon_resources'].joinpath('data')
 		self.paths['addon_skins'] = self.paths['addon_resources'].joinpath('skins')
+		self.paths['addon_skin_media'] = self.paths['addon_skins'].joinpath('Default','media')
 		self.paths['userdata'] = Path(xbmcvfs.translatePath(self.addon.get('addon_handle').getAddonInfo('profile')))
 		self.paths['default_temp_dl'] = self.paths.get('userdata').joinpath('game_cache')
 		if self.paths['default_temp_dl'].exists():
@@ -45,6 +46,10 @@ class config(object):
 		self.files['addon_data_db_zipped_backup'] = self.paths['addon_data'].joinpath('iagl_backup.db.zip')
 		self.files['db'] = self.paths['userdata'].joinpath('iagl.db')
 		self.files['ia_cookie'] = self.paths['userdata'].joinpath('ia.cookie')
+		self.files['sounds'] = dict()
+		self.files['sounds']['wizard_start'] = self.paths['addon_skin_media'].joinpath('wizard_start.wav')
+		self.files['sounds']['wizard_done'] = self.paths['addon_skin_media'].joinpath('wizard_done.wav')
+		# START_SOUND = MEDIA_SPECIAL_PATH%{'filename':'wizard_start.wav'}
 		#Default Values
 		self.defaults['home_id'] = 10000
 		self.defaults['random_num_result_options'] = list(range(10,60,10))+list(range(100,251,50))+list(range(350,951,100))
@@ -181,6 +186,11 @@ class config(object):
 		self.dialogs['tou']['buttons'] = dict()
 		self.dialogs['tou']['buttons']['do_not_agree'] = 3003
 		self.dialogs['tou']['buttons']['agree'] = 3001
+		self.dialogs['donate'] = dict()
+		self.dialogs['donate']['actions'] = dict()
+		self.dialogs['donate']['actions']['ok'] = [10,13,92]
+		self.dialogs['donate']['buttons'] = dict()
+		self.dialogs['donate']['buttons']['ok'] = 3001
 
 		#Downloads
 		self.downloads['archive_org_login_url'] = 'https://archive.org/account/login'
@@ -541,6 +551,9 @@ class config(object):
 		self.database['query']['get_game_list_user_global_external_launch_command'] = ('SELECT game_lists_table.default_global_external_launch_command,game_lists_table.user_global_external_launch_command,game_lists_table.user_global_uses_applaunch,game_lists_table.user_global_uses_apppause\n'
 																						'FROM game_list as game_lists_table\n'
 																						'WHERE game_lists_table.label = "{game_list_id}"')
+		self.database['query']['get_all_game_list_user_settings'] = ('SELECT games_list_table.label,games_list_table.user_global_download_path,games_list_table.user_global_external_launch_command,games_list_table.user_global_launch_addon,games_list_table.user_global_launcher,games_list_table.user_global_visibility,games_list_table.user_post_download_process,games_list_table.user_global_uses_apppause,games_list_table.user_global_uses_applaunch\n'
+																	 'FROM game_list as games_list_table')
+		self.database['query']['transfer_game_list_user_settings'] = 'UPDATE game_list SET user_global_download_path={user_global_download_path},user_global_external_launch_command={user_global_external_launch_command},user_global_launch_addon={user_global_launch_addon},user_global_launcher={user_global_launcher},user_global_visibility={user_global_visibility},user_post_download_process={user_post_download_process},user_global_uses_apppause={user_global_uses_apppause},user_global_uses_applaunch={user_global_uses_applaunch} WHERE label="{label}"'
 		self.database['query']['get_game_list_info'] = ('SELECT game_lists_table.label,game_lists_table.system,game_lists_table.total_1g1r_games,game_lists_table.total_games,game_lists_table.default_global_external_launch_command,core_info_table.display_name as default_global_external_launch_core_name,game_lists_table.default_global_launch_addon,game_lists_table.default_global_launcher,game_lists_table.default_global_post_download_process,game_lists_table.user_global_download_path,game_lists_table.user_global_external_launch_command,game_lists_table.user_global_uses_applaunch,game_lists_table.user_global_uses_apppause,game_lists_table.user_global_launch_addon,game_lists_table.user_global_launcher,game_lists_table.user_global_visibility,game_lists_table.user_post_download_process,COUNT(games_table.user_is_favorite) as total_favorited_games\n'
 														'FROM game_list as game_lists_table\n'
 														'LEFT JOIN games as games_table on games_table.game_list = game_lists_table.label and games_table.user_is_favorite is NOT NULL\n'
@@ -832,7 +845,10 @@ class config(object):
 		self.database['query']['get_playcount_and_lastplayed'] = 'SELECT playcount,lastplayed FROM games WHERE uid="{game_id}"'
 		self.database['query']['update_playcount_and_lastplayed'] = 'UPDATE games SET playcount={},lastplayed="{}" WHERE uid="{}"'
 		self.database['query']['update_game_list_user_parameter'] = 'UPDATE game_list set {parameter}="{new_value}" WHERE label="{game_list_id}"'
+		self.database['query']['update_all_game_list_user_parameters'] = 'UPDATE game_list set {parameter}="{new_value}" WHERE label IN (SELECT label from game_list)'
+		self.database['query']['update_some_game_list_user_parameters'] = 'UPDATE game_list set {parameter}="{new_value}" WHERE label IN ({game_lists})'
 		self.database['query']['reset_game_list_user_parameter'] = 'UPDATE game_list set {parameter}=NULL WHERE label="{game_list_id}"'
+		self.database['query']['reset_all_game_list_user_parameters'] = 'UPDATE game_list set {parameter}=NULL WHERE label IN (SELECT label from game_list)'
 		self.database['query']['unhide_game_lists'] = 'UPDATE game_list set user_global_visibility=NULL WHERE {}'
 		self.database['query']['uses_applauch'] = 'SELECT count(uses_applaunch) AS total FROM external_commands WHERE os = "{user_launch_os}" and uses_applaunch=1'
 		self.database['query']['uses_apppause'] = 'SELECT count(uses_apppause) AS total FROM external_commands WHERE os = "{user_launch_os}" and uses_apppause=1'

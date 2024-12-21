@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -25,7 +25,7 @@ msgstr "Pregledajte popise po kategoriji"
 
 msgctxt "#30004"
 msgid "Browse games by Playlist"
-msgstr "Pregledajte igre prema popisu za reprodukciju"
+msgstr "Pregledajte igre po popisu za reprodukciju"
 
 msgctxt "#30005"
 msgid "Favorites"
@@ -281,7 +281,7 @@ msgstr "Ograničenje veličine mape za preuzimanje"
 
 msgctxt "#30068"
 msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
-msgstr "Definirajte veličinu preuzimanja / veličine predmemorije.[CR]Mapa se čisti kada se dosegne ograničenje veličine."
+msgstr "Definirajte veličinu preuzimanja / veličinu predmemorije.[CR]Mapa se čisti kada se dosegne ograničenje veličine."
 
 msgctxt "#30069"
 msgid "Front page display"
@@ -306,6 +306,10 @@ msgstr "TV emisije"
 msgctxt "#30074"
 msgid "Movies"
 msgstr "Filmovi"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "Igre"
 
 msgctxt "#30076"
 msgid "10 Games"
@@ -525,7 +529,7 @@ msgstr "Zid ikone / Vodoravni uzorak / LS zid (52)"
 
 msgctxt "#30130"
 msgid "Banner / Landscape / Poster Info (501)"
-msgstr "Informacije o banneru / pejzažu / plakatu (501)"
+msgstr "Podaci o banneru / pejzažu / plakatu (501)"
 
 msgctxt "#30131"
 msgid "Fanart / Landscape Single / Episode List (502)"
@@ -590,6 +594,14 @@ msgstr "Android aarch64"
 msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Način odabira pokretača igre"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Odaberite što će Kodi učiniti kada odaberete pokretač igre (samo Windows, Linux i OSX)"
 
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Izvršite čarobnjaka za postavljanje"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Pokrenite čarobnjaka za promjenu postavki za popise igara.  Ovo se može ponoviti u bilo kojem trenutku"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Pokrenite čarobnjaka za brzu promjenu postavki za popise igara.  Ovo se može ponoviti u bilo kojem trenutku"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,11 +813,11 @@ msgstr "Preuzimanje niti"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Postavite alternativnu zadanu mapu za sva preuzimanja"
+msgstr "Alternativna zadana mapa za preuzimanje"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
-msgstr "Kada je odabrano, sva će preuzimanja ići u drugu mapu.  [B]Napomena: Ova se mapa neće brisati niti nadzirati zbog veličine[/B]"
+msgstr "Kada je odabrano, sva će preuzimanja ići u drugu mapu.  [B]Napomena: ova mapa neće biti očišćena niti nadzirana zbog veličine[/B]"
 
 msgctxt "#30203"
 msgid "Organize default download folder using system folders"
@@ -909,7 +921,7 @@ msgstr "Prazna pretraga"
 
 msgctxt "#30228"
 msgid "Search criteria is empty.[CR]Update criteria and try again."
-msgstr "Kriteriji pretraživanja su prazni.[CR]Ažurirajte kriterije i pokušajte ponovo."
+msgstr "Kriteriji pretraživanja su prazni.[CR]Ažurirajte kriterije i pokušajte ponovno."
 
 msgctxt "#30229"
 msgid "Reset criteria"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Ažurirajte pokretač popisa igara"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Ažuriraj naredbu za pokretanje"
+msgid "Update game list Launch Command"
+msgstr "Ažuriraj popis igara Naredba za pokretanje"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Ažurirajte put preuzimanja popisa igara"
+msgid "Update game list Download Path"
+msgstr "Ažurirajte popis igara Download Path"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1021,7 +1033,7 @@ msgstr "Popisi igara otkriveni"
 
 msgctxt "#30256"
 msgid "Confirm reset"
-msgstr "Potvrdite resetiranje"
+msgstr "Potvrdite reset"
 
 msgctxt "#30257"
 msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
@@ -1057,7 +1069,7 @@ msgstr "Odaberite dodatak za igru"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Vrati na zadano"
+msgstr "Jeste li sigurni da želite poništiti naredbu za pokretanje dodatka igre?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1271,6 +1283,10 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Pokretač popisa igara"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Vanjska naredba za pokretanje"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
 msgstr "Vanjska naredba za pokretanje [CR]*Nije pronađena korisnička naredba za pokretanje / koristi se zadana*"
@@ -1314,3 +1330,227 @@ msgstr "Jeste li sigurni da želite vratiti sve postavke popisa igara na zadane?
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Postavke popisa igara vraćene su na zadane"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Odgovarajuća lokalna datoteka"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Provjera vjerodajnica"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "sljedeće varijable bit će zamijenjene tijekom pokretanja:[CR]● XXROM_PATHXX: Put do datoteke koja će se pokrenuti[CR]● XXROM_NAMEXX: Naziv datoteke koja će se pokrenuti (bez putanje)[CR]● XXROM_STEMXX: naziv datoteke koja će se pokrenuti (bez staze bez ekstenzije)[CR]● XXNETPLAY_COMMANDXX: Svaki dodatak naredbi potreban za netplay, pogledajte postavke dodatka za opcije[CR]Pogledajte wiki za više informacija..."
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Arhivska datoteka nije mogla biti obrađena[CR]Provjerite zapisnike za više pojedinosti"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Odaberite radnju prije pokretanja"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Ostavite Kodi da radi u pozadini (zadano)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Zatvorite Kodi prije pokretanja, ponovno otvorite Kodi nakon izlaska iz emulatora"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Obustavite Kodi prije pokretanja, probudite Kodi nakon izlaska iz emulatora"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Pogledajte IAGL db statistiku"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Navodi trenutnu statistiku za IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db statistika"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Pregledajte parametre pokretanja"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Postavke igre"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Parametri pokretanja igre"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Ako nije prisutna korisnička naredba za pokretanje"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Odaberite što će Kodi učiniti kada nije postavljena naredba za pokretanje (dodatak za retroplayer ili vanjski emulator)."
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Pokušaj pokretanja sa zadanim postavkama"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Zaustavi / Ne pokreći"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Nije postavljena naredba"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Naredba za pokretanje nije postavljena za ovaj popis, postaviti je sada?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Nije moguće pronaći zadanu naredbu za pokretanje za ovaj popis"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Zadana jezgra nije pronađena.  Molimo instalirajte {} ili ažurirajte pokretač"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Reset naredbe za pokretanje dodatka igre"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Nije pronađen nijedan dodatak igri"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Ažurirana naredba za pokretanje dodatka za igru"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Koristite alternativnu zadanu mapu za preuzimanje"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Prikaži samo opcije koje Kodi drže u pozadini"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Prikaži samo opcije koje zatvaraju Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Prikaži samo opcije koje pauziraju Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Lokacija kao niz"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Ili unesite put do datoteke retroarch.cfg točno onako kako se pojavljuje u Retroarchu"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Direktorij Retroarch Cores kao niz"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Alternativno unesite put do direktorija Cores točno onako kako se pojavljuje u konfiguraciji direktorija Retroarch"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Ažuriraj pokretač za {}?[CR][B]Ovo će promijeniti postavke za sve igre na ovom popisu.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Ažuriraj naredbu za pokretanje za {}?[CR][B]Ovo će promijeniti postavke za sve igre na ovom popisu.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Ažuriraj put pokretanja preuzimanja za {}?[CR][B]Ovo će promijeniti postavke za sve igre na ovom popisu.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Ažuriraj naredbu za pokretanje"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Ažuriranje pokretanja putanje preuzimanja"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Poništi postavke za {}?[CR][B]Ovo će promijeniti postavke za sve igre na ovom popisu.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "podrška"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Donirajte Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Pronađena je nova IAGL baza podataka[CR]Želite li ažurirati?[CR]Postavke će se kopirati u novu bazu podataka ako je moguće"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Novi db"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Baza podataka je ažurirana[CR]Korisničke postavke su prenesene"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Baza podataka je ažurirana[CR]Neke korisničke postavke nisu uspjele prenijeti[CR]Pogledajte dnevnik za više detalja"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Došlo je do pogreške prilikom ažuriranja baze podataka[CR]Pogledajte zapisnik za više detalja"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Pitaj me kasnije"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Ne ažuriraj ovaj put[CR](Nemoj me više pitati do sljedećeg ažuriranja)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Dobro došli u čarobnjak za postavljanje IAGL-a[CR]Prođimo kroz sve postavke da biste mogli igrati!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Većina igara zahtijeva archive.org račun[CR]Prijavite se na https://archive.org/account/signup[CR]Želite li koristiti svoj račun s IAGL-om?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Postavljanje je dovršeno za korištenje Kodi dodataka igrica![CR]Jeste li spremni za igru?[CR]Odaberite [B]Ne[/B] za postavljanje vanjskog pokretanja igre."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Postavite sve popise igara za eksterno pokretanje"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Postavite samo neke popise igara za eksterno pokretanje"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Vratite sve pokretače popisa igara na zadane postavke"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} popisa igara ažurirano je za vanjsko pokretanje"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Zadane su postavke unaprijed postavljene za svaku vanjsku naredbu za pokretanje[CR]Prije pokretanja pregledajte parametre pokretanja igre ako je potrebno[CR]Pogledajte wiki za više pojedinosti."

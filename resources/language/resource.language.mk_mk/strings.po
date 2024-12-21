@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -129,7 +129,7 @@ msgstr "Филтрирај по ознака"
 
 msgctxt "#30030"
 msgid "Filter by Playlist"
-msgstr "Филтрирајте по плејлиста"
+msgstr "Филтрирај по плејлиста"
 
 msgctxt "#30031"
 msgid "Filter by Region"
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "Филмови"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "Игри"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 игри"
@@ -345,7 +349,7 @@ msgstr "Retroarch Settings"
 
 msgctxt "#30085"
 msgid "Suspend Kodi IO on launch"
-msgstr "Суспендирајте го Kodi IO при лансирање"
+msgstr "Суспендирајте го Kodi IO при стартување"
 
 msgctxt "#30086"
 msgid "Stop media on launch"
@@ -591,6 +595,14 @@ msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Андроид ра32"
 
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Метод за избор на фрлач на игри"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Изберете што ќе прави Kodi при изборот на стартер на игри (само за Windows, Linux и OSX)"
+
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
 msgstr "Чувајте го Kodi во позадина"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Изврши волшебник за поставување"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Вклучете го волшебникот за да ги промените поставките за списоците со игри.  Ова може да се повтори во секое време"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Вклучете го волшебникот за брзо менување на поставките за списоците со игри.  Ова може да се повтори во секое време"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,7 +813,7 @@ msgstr "Преземете теми"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Поставете алтернативна стандардна папка за сите преземања"
+msgstr "Алтернативна стандардна папка за преземање"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Ажурирајте го стартерот на списокот на игри"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Ажурирајте ја командата за стартување"
+msgid "Update game list Launch Command"
+msgstr "Ажурирајте го списокот со игри Команда за стартување"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Ажурирајте ја патеката за преземање на списокот со игри"
+msgid "Update game list Download Path"
+msgstr "Ажурирајте го списокот со игри Патека за преземање"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1057,7 +1069,7 @@ msgstr "Изберете додаток за игра"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Ресетирање на стандардно"
+msgstr "Дали сте сигурни дека сакате да ја ресетирате командата за стартување на додатоци за играта?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1271,6 +1283,10 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Стартувач на список на игри"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Надворешна команда за стартување"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
 msgstr "Надворешна команда за стартување[CR]*Не е пронајдена команда за стартување од корисник / се користи стандардно*"
@@ -1314,3 +1330,227 @@ msgstr "Дали сте сигурни дека сакате да ги ресе�
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Поставките на списокот со игри беа ресетирани на стандардните"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Соодветна локална датотека"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Проверка на ингеренциите"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "следните променливи ќе бидат заменети за време на стартувањето:[CR]● XXROM_PATHXX: Патеката до датотеката што ќе се стартува[CR]● XXROM_NAMEXX: Името на датотеката што ќе се стартува (без патека)[CR]● XXROM_STEMXX: име на датотеката што ќе се стартува (без патека без екстензија)[CR]● XXNETPLAY_COMMANDXX: секое додавање команда е потребно за netplay, видете ги поставките за додатоци за опции[CR]Погледнете во вики за повеќе информации…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Архивската датотека не може да се обработи[CR]Проверете ги дневниците за повеќе детали"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Изберете дејство пред стартување"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Оставете го Kodi да работи во заднина (стандардно)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Затворете го Kodi пред лансирањето, повторно отворете го Kodi по излегувањето од емулаторот"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Суспендирајте го Kodi пред лансирањето, разбудете го Kodi по излегувањето од емулаторот"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Погледнете ја статистиката на IAGL db"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Ја наведува моменталната статистика за IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db статистика"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Погледнете ги параметрите за стартување"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Поставки за играта"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Параметри за стартување на играта"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Ако не е присутна Командата за стартување од корисник"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Изберете што ќе прави Kodi кога не е поставена команда за стартување (додаток за ретроплеер или надворешен емулатор)."
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Обидете се да стартувате со стандардно"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Стоп / Не стартувај"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Нема поставено команди"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Командата за стартување не е поставена за оваа листа, поставете ја сега?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Не можеше да се најде стандардна команда за стартување за оваа листа"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Стандардно јадро не беше пронајдено.  Инсталирајте го {} или ажурирајте го стартерот"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Ресетирање на командата за стартување на додатокот за игра"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Не се пронајдени додатоци за игри"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Ажурирана е командата за стартување на додатокот за игри"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Користете алтернативна стандардна папка за преземање"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Прикажи само опции што го задржуваат Kodi во заднина"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Прикажи само опции што го затвораат Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Прикажи само опции што го паузираат Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Локација како низа"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Алтернативно внесете ја патеката до датотеката retroarch.cfg точно како што се појавува во Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Директориум Retroarch Cores како низа"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Алтернативно, внесете ја патеката до директориумот Cores точно како што се појавува во конфигурацијата на директориумот Retroarch"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Да се ​​ажурира стартерот за {}?[CR][B]Ова ќе ги промени поставките за сите игри во списоков.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Ажурирајте ја командата за стартување за {}?[CR][B]Ова ќе ги промени поставките за сите игри на оваа листа.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Ажурирајте ја патеката за преземање на стартување за {}?[CR][B]Ова ќе ги промени поставките за сите игри на оваа листа.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Ажурирајте ја командата за стартување"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Ажурирајте ја патеката за преземање за стартување"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Да се ​​ресетираат поставките за {}?[CR][B]Ова ќе ги промени поставките за сите игри на оваа листа.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Поддршка"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Донирајте на Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Пронајдена е нова база на податоци на IAGL[CR]Дали сакате да се ажурирате?[CR]Поставките ќе се копираат во новата db ако е можно"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Нов db"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Базата на податоци е ажурирана[CR]Корисничките поставки се префрлени"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Базата на податоци е ажурирана[CR]Не успеаја да се пренесат некои кориснички поставки[CR]Видете во дневникот за повеќе детали"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Настана грешка при ажурирањето на базата на податоци[CR]Видете во дневникот за повеќе детали"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Прашај ме пак подоцна"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Не ажурирај овој пат[CR] (Не ме прашувај повторно до следното ажурирање)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Добре дојдовте во Волшебникот за поставување IAGL[CR]Да ги поминеме сите поставки за да ве поттикне да играте!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Повеќето игри бараат сметка на archive.org[CR]Регистрирајте се на https://archive.org/account/signup[CR]Дали сакате да ја користите вашата сметка со IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Поставувањето е завршено за користење на додатоци за играта Kodi![CR]Дали сте подготвени да играте?[CR]Изберете [B]Не[/B] за да поставите надворешно стартување на играта."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Поставете ги сите списоци со игри да се стартуваат надворешно"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Поставете само некои списоци со игри да се стартуваат надворешно"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Ресетирајте ги сите фрлачи на списоци со игри на стандардно"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} списоци на игри беа ажурирани за надворешно стартување"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Стандардните вредности се однапред поставени за секоја надворешна команда за стартување[CR]Пред да започнете преглед на параметрите за стартување на играта доколку е потребно[CR]Погледнете во вики за повеќе детали."

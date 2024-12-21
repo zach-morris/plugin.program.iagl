@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -181,7 +181,7 @@ msgstr "Lansare"
 
 msgctxt "#30043"
 msgid "Downloading"
-msgstr "Descărcarea"
+msgstr "Descărcare"
 
 msgctxt "#30044"
 msgid "Views and Navigation"
@@ -261,15 +261,15 @@ msgstr "Unele jocuri necesită autentificare.  Introduceți adresa dvs. de e-mai
 
 msgctxt "#30063"
 msgid "archive.org Password"
-msgstr "archive.org Parola"
+msgstr "Parolă archive.org"
 
 msgctxt "#30064"
 msgid "Some games require login.  Enter your archive.org password"
-msgstr "Unele jocuri necesită autentificare.  Introduceți parola archive.org"
+msgstr "Unele jocuri necesită autentificare.  Introduceți parola dvs. archive.org"
 
 msgctxt "#30065"
 msgid "Check login credentials"
-msgstr "Verificați acreditările de conectare"
+msgstr "Verificați datele de conectare"
 
 msgctxt "#30066"
 msgid "Test the entered email and password to check your ability to login"
@@ -297,7 +297,7 @@ msgstr "Jocurile sunt prezentate ca"
 
 msgctxt "#30072"
 msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
-msgstr "Kodi oferă mai multe opțiuni de skin pentru filme, emisiuni TV și jocuri.  Vezi wiki pentru mai multe informații"
+msgstr "Kodi oferă mai multe opțiuni de skin pentru filme, emisiuni TV și jocuri.  Consultați wiki pentru mai multe informații"
 
 msgctxt "#30073"
 msgid "TV Shows"
@@ -306,6 +306,10 @@ msgstr "Emisiuni TV"
 msgctxt "#30074"
 msgid "Movies"
 msgstr "Filme"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "Jocuri"
 
 msgctxt "#30076"
 msgid "10 Games"
@@ -369,7 +373,7 @@ msgstr "Favorit adăugat la grup"
 
 msgctxt "#30091"
 msgid "Use clean game title"
-msgstr "Utilizați titlul de joc curat"
+msgstr "Folosește titlul de joc curat"
 
 msgctxt "#30092"
 msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
@@ -397,7 +401,7 @@ msgstr "Dacă este posibil, listele de jocuri vor fi prefiltrate la un set 1G1R"
 
 msgctxt "#30098"
 msgid "Append game list name to search and random results"
-msgstr "Adăugați numele listei de jocuri la căutare și la rezultate aleatorii"
+msgstr "Adăugați numele listei de jocuri la căutare și rezultate aleatorii"
 
 msgctxt "#30099"
 msgid "When enabled, the name of the game list will be appended to search results"
@@ -573,7 +577,7 @@ msgstr "Selectați calea către executabilul retroarch"
 
 msgctxt "#30142"
 msgid "Retroarch CFG Location"
-msgstr "Localizare Retroarch CFG"
+msgstr "Retroarch CFG Locație"
 
 msgctxt "#30143"
 msgid "Select the path to the retroarch config file"
@@ -590,6 +594,14 @@ msgstr "Android aarch64"
 msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Metoda de selectare a lansatorului de joc"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Selectați ce va face Kodi atunci când selectați un lansator de joc (numai pentru Windows, Linux și OSX)"
 
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
@@ -705,7 +717,7 @@ msgstr "Filtrați lobby-ul jocului la jocurile de lansare automată IAGL"
 
 msgctxt "#30177"
 msgid "If enabled, the netplay lobby will only show auto launchable games"
-msgstr "Dacă este activat, lobby-ul netplay va afișa numai jocuri care pot fi lansate automat"
+msgstr "Dacă este activată, lobby-ul netplay va afișa numai jocuri care pot fi lansate automat"
 
 msgctxt "#30178"
 msgid "Netplay Port"
@@ -753,7 +765,7 @@ msgstr "ID-ul contului de utilizator Discord"
 
 msgctxt "#30189"
 msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
-msgstr "Furnizați ID-ul dvs. Discord (Setări utilizator> Contul meu> Copiere ID) pentru a fi menționat când jucați (opțional)"
+msgstr "Furnizați ID-ul dvs. Discord (Setări utilizator> Contul meu> Copiere ID) pentru a fi menționat atunci când jucați (opțional)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Executați vrăjitorul de configurare"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Rulați vrăjitorul pentru a modifica setările pentru listele dvs. de jocuri.  Aceasta poate fi reluată în orice moment"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Rulați expertul pentru a schimba rapid setările pentru listele dvs. de jocuri.  Aceasta poate fi reluată în orice moment"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,7 +813,7 @@ msgstr "Descărcați fire"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Setați folderul implicit alternativ pentru toate descărcările"
+msgstr "Dosar alternativ de descărcare implicit"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -837,7 +849,7 @@ msgstr "Afișează listele de jocuri"
 
 msgctxt "#30210"
 msgid "When selected, previously hidden game lists can be unhidden"
-msgstr "Când sunt selectate, listele de jocuri ascunse anterior pot fi dezactivate"
+msgstr "Când este selectată, listele de jocuri ascunse anterior pot fi dezactivate"
 
 msgctxt "#30211"
 msgid "Clear Cache"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Actualizați lista de jocuri Launcher"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Actualizați comanda de lansare"
+msgid "Update game list Launch Command"
+msgstr "Actualizați lista de jocuri Lansați comanda"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Actualizați calea de descărcare a listei de jocuri"
+msgid "Update game list Download Path"
+msgstr "Actualizați lista de jocuri Calea de descărcare"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1057,7 +1069,7 @@ msgstr "Selectați suplimentul de joc"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Resetați la valoarea implicită"
+msgstr "Sigur doriți să resetați comanda de lansare a suplimentului de joc?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1101,7 +1113,7 @@ msgstr "Selectați din Retroarch Cores"
 
 msgctxt "#30276"
 msgid "Select from Extra Emulators"
-msgstr "Selectați din emulatoarele suplimentare"
+msgstr "Selectați dintre emulatori suplimentari"
 
 msgctxt "#30277"
 msgid "Manually Enter Launch Command"
@@ -1233,7 +1245,7 @@ msgstr "Totalul de jocuri preferate din listă"
 
 msgctxt "#30309"
 msgid "Default External Launch Command"
-msgstr "Comanda de lansare externă implicită"
+msgstr "Comanda implicită de lansare externă"
 
 msgctxt "#30310"
 msgid "Default Retroplayer Game Addon"
@@ -1271,9 +1283,13 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Lansatorul listei de jocuri"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Comanda de lansare externă"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
-msgstr "Comanda de lansare externă[CR]*Nu a fost găsită nicio comandă de lansare de utilizator/Utilizarea implicită*"
+msgstr "Comandă de lansare externă[CR]*Nu a fost găsită nicio comandă de lansare de utilizator/Utilizarea implicită*"
 
 msgctxt "#30321"
 msgid "Kodi Retroplayer"
@@ -1314,3 +1330,227 @@ msgstr "Sigur doriți să resetați toate setările listei de jocuri la valorile
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Setările listei de jocuri au fost resetate la valorile implicite"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Fișier local potrivit"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Verificarea acreditărilor"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "următoarele variabile vor fi înlocuite în timpul lansării:[CR]● XXROM_PATHXX: Calea către fișierul care va fi lansat[CR]● XXROM_NAMEXX: Numele fișierului care va fi lansat (fără cale)[CR]● XXROM_STEMXX: numele fișierului care va fi lansat (fără cale fără extensie)[CR]● XXNETPLAY_COMMANDXX: Orice adăugare de comandă necesară pentru netplay, consultați setările suplimentelor pentru opțiuni[CR]Consultați wiki pentru mai multe informații..."
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Fișierul arhivă nu a putut fi procesat[CR]Verificați jurnalele pentru mai multe detalii"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Selectați acțiunea înainte de lansare"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Lăsați Kodi să ruleze în fundal (implicit)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Închideți Kodi înainte de lansare, redeschideți Kodi după ieșirea din emulator"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Suspendați Kodi înainte de lansare, treziți Kodi după ieșirea din emulator"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Vedeți statisticile IAGL db"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Listează statisticile curente pentru IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db Statistici"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Vizualizați parametrii de lansare"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Setările jocului"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Parametrii de lansare a jocului"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Dacă nu este prezentă nicio comandă de lansare a utilizatorului"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Selectați ce va face Kodi atunci când nu este setată nicio comandă de lansare (addon retroplayer sau emulator extern)."
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Încercați lansarea implicită"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Opriți / Nu lansați"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Nicio comandă setată"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "O comandă de lansare nu este setată pentru această listă, setați una acum?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Nu a putut fi găsită nicio comandă de lansare implicită pentru această listă"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Nucleul implicit nu a fost găsit.  Instalați {} sau actualizați lansatorul"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Resetare comanda de lansare a suplimentului de joc"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Nu s-au găsit suplimente de joc"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Comanda de lansare a suplimentului de joc a fost actualizată"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Utilizați un folder de descărcare implicit alternativ"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Afișează doar opțiunile care păstrează Kodi în fundal"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Afișează numai opțiunile care închid Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Afișează numai opțiunile care întrerup Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Locație ca șir"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Alternativ, introduceți calea către fișierul retroarch.cfg exact așa cum apare în Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Directorul Retroarch Cores ca șir"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Alternativ, introduceți calea către directorul Cores exact așa cum apare în configurația directorului Retroarch"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Actualizați Lansatorul pentru {}?[CR][B]Acest lucru va schimba setările pentru toate jocurile din această listă.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Actualizați comanda de lansare pentru {}?[CR][B]Acest lucru va schimba setările pentru toate jocurile din această listă.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Actualizați Calea de descărcare de lansare pentru {}?[CR][B]Acest lucru va schimba setările pentru toate jocurile din această listă.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Actualizați comanda de lansare"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Actualizare Lansare Calea de descărcare"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Resetați setările pentru {}?[CR][B]Acest lucru se vor schimba setările pentru toate jocurile din această listă.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Sprijin"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Donează la Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "A fost găsită o nouă bază de date IAGL[CR]Doriți să actualizați?[CR]Setările vor fi copiate în noua bază de date dacă este posibil"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Db nou"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Baza de date a fost actualizată[CR]Setările utilizatorului au fost transferate"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Baza de date a fost actualizată[CR]Unele setări ale utilizatorului nu au putut fi transferate[CR]Consultați jurnalul pentru mai multe detalii"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "A apărut o eroare la actualizarea bazei de date[CR]Consultați jurnalul pentru mai multe detalii"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Întreabă-mă din nou mai târziu"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Nu actualizați de data aceasta[CR](Nu mă întrebați din nou până la următoarea actualizare)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Bine ați venit la IAGL Setup Wizard[CR]Să parcurgem toate setările pentru a vă ajuta să jucați!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Majoritatea jocurilor necesită un cont archive.org[CR]Înscrieți-vă la https://archive.org/account/signup[CR]Doriți să vă folosiți contul cu IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Configurarea este completă pentru utilizarea suplimentelor pentru jocuri Kodi![CR]Sunteți gata să jucați?[CR]Selectați [B]Nu[/B] pentru a configura lansarea externă a jocului."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Setați toate listele de jocuri să fie lansate extern"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Setați doar câteva liste de jocuri pentru a fi lansate extern"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Resetați toate lansatoarele de liste de jocuri înapoi la valorile implicite"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} liste de jocuri au fost actualizate pentru lansare externă"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Valorile implicite sunt prestabilite pentru fiecare comandă de lansare externă[CR]Înainte de lansare, revizuiți parametrii de lansare a jocului, dacă este necesar[CR]Consultați wiki pentru mai multe detalii."

@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "Phim"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "Trò chơi"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 trò chơi"
@@ -493,7 +497,7 @@ msgstr "Thư viện trò chơi liệt kê kiểu xem"
 
 msgctxt "#30122"
 msgid "Game categories viewtype"
-msgstr "Loại trò chơi"
+msgstr "Loại trò chơi viewtype"
 
 msgctxt "#30123"
 msgid "Games list viewtype"
@@ -590,6 +594,14 @@ msgstr "Android aarch64"
 msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Phương pháp lựa chọn trình khởi chạy trò chơi"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Chọn những gì Kodi sẽ làm khi chọn trình khởi chạy trò chơi (chỉ dành cho Windows, Linux và OSX)"
 
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Thực hiện trình hướng dẫn thiết lập"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Chạy trình hướng dẫn để thay đổi cài đặt cho danh sách trò chơi của bạn. Có thể chạy lại bất kỳ lúc nào"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Chạy trình hướng dẫn để nhanh chóng thay đổi cài đặt cho danh sách trò chơi của bạn. Có thể chạy lại bất kỳ lúc nào"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,7 +813,7 @@ msgstr "Tải xuống Chủ đề"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Đặt thư mục mặc định thay thế cho tất cả các bản tải xuống"
+msgstr "Thư mục tải xuống mặc định thay thế"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -917,7 +929,7 @@ msgstr "Đặt lại tiêu chí"
 
 msgctxt "#30230"
 msgid "Enter Link Name"
-msgstr "Nhập tên liên kết"
+msgstr "Nhập Tên Liên Kết"
 
 msgctxt "#30231"
 msgid "Define the start page for IAGL"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Cập nhật danh sách trò chơi Launcher"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Cập nhật lệnh khởi chạy"
+msgid "Update game list Launch Command"
+msgstr "Cập nhật danh sách trò chơi Lệnh khởi chạy"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Cập nhật đường dẫn tải danh sách trò chơi"
+msgid "Update game list Download Path"
+msgstr "Cập nhật danh sách trò chơi Tải xuống Đường dẫn"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1045,7 +1057,7 @@ msgstr "Cập nhật trình khởi chạy từ [CR]Ngoài sang [CR]Kodi?"
 
 msgctxt "#30262"
 msgid "Launcher updated to external"
-msgstr "Trình khởi chạy được cập nhật ra bên ngoài"
+msgstr "Trình khởi chạy được cập nhật bên ngoài"
 
 msgctxt "#30263"
 msgid "Launcher updated to retroplayer"
@@ -1057,7 +1069,7 @@ msgstr "Chọn tiện ích bổ sung trò chơi"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Đặt lại về mặc định"
+msgstr "Bạn có chắc chắn muốn thiết lập lại lệnh khởi chạy tiện ích bổ sung của trò chơi không?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1271,6 +1283,10 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Trình khởi chạy danh sách trò chơi"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Lệnh khởi chạy bên ngoài"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
 msgstr "Lệnh khởi chạy bên ngoài[CR]*Không tìm thấy lệnh khởi chạy của người dùng / Sử dụng mặc định*"
@@ -1285,7 +1301,7 @@ msgstr "Bạn có chắc chắn muốn cập nhật đường dẫn tải xuốn
 
 msgctxt "#30323"
 msgid "Download path updated"
-msgstr "Đã cập nhật đường dẫn tải xuống"
+msgstr "Đường dẫn tải xuống đã được cập nhật"
 
 msgctxt "#30324"
 msgid "Are you sure you want to reset game list download path?"
@@ -1314,3 +1330,227 @@ msgstr "Bạn có chắc chắn muốn đặt lại tất cả cài đặt danh 
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Cài đặt danh sách trò chơi đã được đặt lại về mặc định"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Phù hợp với tập tin cục bộ"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Kiểm tra thông tin xác thực"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "Các biến sau sẽ được thay thế trong quá trình khởi chạy:[CR]● XXROM_PATHXX: Đường dẫn đến tệp sẽ được khởi chạy[CR]● XXROM_NAMEXX: Tên của tệp sẽ được khởi chạy (không có đường dẫn)[CR]● XXROM_STEMXX: Tên của tệp sẽ được khởi chạy (không có đường dẫn, không có phần mở rộng)[CR]● XXNETPLAY_COMMANDXX: Bất kỳ lệnh bổ sung nào được yêu cầu cho netplay, hãy xem cài đặt tiện ích bổ sung để biết các tùy chọn[CR]Xem wiki để biết thêm thông tin…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Không thể xử lý tệp lưu trữ[CR]Kiểm tra nhật ký để biết thêm chi tiết"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Chọn hành động trước khi khởi chạy"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Để Kodi chạy ở chế độ nền (mặc định)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Đóng Kodi trước khi khởi chạy, mở lại Kodi sau khi thoát khỏi trình giả lập"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Tạm dừng Kodi trước khi khởi chạy, đánh thức Kodi sau khi thoát khỏi trình giả lập"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Xem số liệu thống kê cơ sở dữ liệu IAGL"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Liệt kê số liệu thống kê hiện tại cho IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "Thống kê db"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Xem thông số khởi chạy"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Cài đặt trò chơi"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Tham số khởi chạy trò chơi"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Nếu không có lệnh khởi chạy của người dùng nào hiện diện"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Chọn những gì Kodi sẽ làm khi không có lệnh khởi chạy nào được thiết lập (phần bổ trợ retroplayer hoặc trình giả lập bên ngoài)"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Thử khởi chạy với mặc định"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Dừng lại / Không khởi chạy"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Không có lệnh nào được đặt"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Chưa thiết lập lệnh khởi chạy cho danh sách này, hãy thiết lập ngay bây giờ?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Không tìm thấy lệnh khởi chạy mặc định cho danh sách này"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Không tìm thấy lõi mặc định. Vui lòng cài đặt {} hoặc cập nhật trình khởi chạy"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Lệnh khởi chạy tiện ích bổ sung trò chơi được thiết lập lại"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Không tìm thấy tiện ích bổ sung cho trò chơi"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Lệnh khởi chạy tiện ích bổ sung trò chơi đã được cập nhật"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Sử dụng thư mục tải xuống mặc định thay thế"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Chỉ hiển thị các tùy chọn giữ Kodi ở chế độ nền"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Chỉ hiển thị các tùy chọn đóng Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Chỉ hiển thị các tùy chọn tạm dừng Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Vị trí Retroarch CFG dưới dạng chuỗi"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Hoặc nhập đường dẫn đến tệp retroarch.cfg chính xác như nó xuất hiện trong Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Thư mục Retroarch Cores dưới dạng chuỗi"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Hoặc nhập đường dẫn đến thư mục Cores chính xác như trong cấu hình thư mục Retroarch"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Cập nhật Trình khởi chạy cho {}?[CR][B]Điều này sẽ thay đổi cài đặt cho tất cả trò chơi trong danh sách này.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Cập nhật lệnh khởi chạy cho {}?[CR][B]Điều này sẽ thay đổi cài đặt cho tất cả trò chơi trong danh sách này.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Cập nhật Đường dẫn tải xuống cho {}?[CR][B]Điều này sẽ thay đổi cài đặt cho tất cả trò chơi trong danh sách này.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Cập nhật lệnh khởi chạy"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Cập nhật Đường dẫn Tải xuống"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Đặt lại cài đặt cho {}?[CR][B]Điều này sẽ thay đổi cài đặt cho tất cả trò chơi trong danh sách này.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Ủng hộ"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Quyên góp cho Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Đã tìm thấy cơ sở dữ liệu IAGL mới[CR]Bạn có muốn cập nhật không?[CR]Các thiết lập sẽ được sao chép vào cơ sở dữ liệu mới nếu có thể"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Cơ sở dữ liệu mới"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Cơ sở dữ liệu đã được cập nhật[CR]Cài đặt người dùng đã được chuyển giao"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Cơ sở dữ liệu đã được cập nhật[CR]Một số cài đặt người dùng không thể chuyển giao[CR]Xem nhật ký để biết thêm chi tiết"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Đã xảy ra lỗi khi cập nhật cơ sở dữ liệu[CR]Xem nhật ký để biết thêm chi tiết"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Hỏi lại tôi sau nhé"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Lần này không cập nhật[CR](Đừng hỏi tôi nữa cho đến lần cập nhật tiếp theo)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Chào mừng đến với Trình hướng dẫn thiết lập IAGL[CR]Chúng ta hãy cùng xem qua tất cả các cài đặt để bắt đầu chơi!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Hầu hết các trò chơi đều yêu cầu có tài khoản archive.org[CR]Đăng ký tại https://archive.org/account/signup[CR]Bạn có muốn sử dụng tài khoản của mình với IAGL không?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Quá trình thiết lập để sử dụng tiện ích bổ sung trò chơi Kodi đã hoàn tất![CR]Bạn đã sẵn sàng chơi chưa?[CR]Chọn [B]Không[/B] để thiết lập khởi chạy trò chơi bên ngoài."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Thiết lập tất cả danh sách trò chơi được khởi chạy bên ngoài"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Chỉ thiết lập một số danh sách trò chơi được khởi chạy bên ngoài"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Đặt lại tất cả trình khởi chạy danh sách trò chơi về mặc định"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} danh sách trò chơi đã được cập nhật để ra mắt bên ngoài"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Các giá trị mặc định được thiết lập sẵn cho mỗi lệnh khởi chạy bên ngoài[CR]Trước khi khởi chạy, hãy xem lại các thông số khởi chạy trò chơi nếu cần[CR]Xem wiki để biết thêm chi tiết."

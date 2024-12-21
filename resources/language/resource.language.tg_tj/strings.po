@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -169,7 +169,7 @@ msgstr "[COLOR FF12A0C7]Ҷустуҷӯи тасодуфиро иҷро куне�
 
 msgctxt "#30040"
 msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
-msgstr "[COLOR FF12A0C7]Сохтани пайванди ҷустуҷӯи тасодуфӣ[/COLOR]"
+msgstr "[COLOR FF12A0C7]Сохтани пайванди тасодуфии ҷустуҷӯ[/COLOR]"
 
 msgctxt "#30041"
 msgid "General"
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "Филмҳо"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "Бозиҳо"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 Бозиҳо"
@@ -337,7 +341,7 @@ msgstr "Асарҳои бозӣ"
 
 msgctxt "#30083"
 msgid "Game list artwork"
-msgstr "Рӯйхати бозиҳо"
+msgstr "Рӯйхати бозӣ"
 
 msgctxt "#30084"
 msgid "Retroarch Settings"
@@ -409,11 +413,11 @@ msgstr "Ҳангоми дидан аз рӯи рӯйхати навозиш но
 
 msgctxt "#30101"
 msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
-msgstr "Вақте ки фаъол карда мешавад, номи рӯйхати бозӣ ба номи бозӣ дар рӯйхати навозиш замима карда мешавад"
+msgstr "Ҳангоми фаъол шудан, номи рӯйхати бозӣ ба номи бозӣ дар рӯйхати навозиш замима карда мешавад"
 
 msgctxt "#30102"
 msgid "Kodi landscape art equates to"
-msgstr "Санъати манзараи Коди баробар аст"
+msgstr "Санъати манзараи Kodi ба он баробар аст"
 
 msgctxt "#30103"
 msgid "Select the game artwork to be displayed as the landscape art"
@@ -569,7 +573,7 @@ msgstr "Ҷойгиршавии барномаи Retroarch"
 
 msgctxt "#30141"
 msgid "Select the path to the retroarch executable"
-msgstr "Роҳро ба иҷрошавандаи ретроарх интихоб кунед"
+msgstr "Роҳи иҷрошавандаи ретроархро интихоб кунед"
 
 msgctxt "#30142"
 msgid "Retroarch CFG Location"
@@ -590,6 +594,14 @@ msgstr "Android aarch64"
 msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Усули интихоби оғозкунандаи бозӣ"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Интихоб кунед, ки Kodi ҳангоми интихоби роҳандози бозӣ чӣ кор хоҳад кард (танҳо Windows, Linux ва OSX)"
 
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
@@ -617,7 +629,7 @@ msgstr "Рӯйхат аз рӯи номи асосӣ"
 
 msgctxt "#30155"
 msgid "List by Emulated Systems"
-msgstr "Рӯйхати системаҳои эмулятсияшуда"
+msgstr "Рӯйхати системаҳои тақлидшуда"
 
 msgctxt "#30156"
 msgid "Select Core"
@@ -701,7 +713,7 @@ msgstr "Вақте ки фаъол карда мешавад, лобби netplay
 
 msgctxt "#30176"
 msgid "Filter game lobby to IAGL auto launch games"
-msgstr "Лобби бозиро ба бозиҳои автоматии IAGL филтр кунед"
+msgstr "Лобби бозиро ба бозиҳои худкори IAGL филтр кунед"
 
 msgctxt "#30177"
 msgid "If enabled, the netplay lobby will only show auto launchable games"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Устоди танзимро иҷро кунед"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Устодро барои тағир додани танзимоти рӯйхатҳои бозиҳои худ иҷро кунед.  Ин метавонад дар ҳар вақт такрор карда шавад"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Устодро иҷро кунед, то танзимоти рӯйхати бозиҳои худро зуд тағир диҳед.  Ин метавонад дар ҳар вақт такрор шавад"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,7 +813,7 @@ msgstr "Зеркашӣ кардани риштаҳо"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Барои ҳама зеркашиҳо ҷузвдони алтернативии пешфарзро таъин кунед"
+msgstr "Папкаи зеркашии алтернативии пешфарз"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -837,7 +849,7 @@ msgstr "Рӯйхати бозиҳоро нишон диҳед"
 
 msgctxt "#30210"
 msgid "When selected, previously hidden game lists can be unhidden"
-msgstr "Ҳангоми интихоб, рӯйхати бозиҳои қаблан пинҳоншуда метавонанд пинҳон карда шаванд"
+msgstr "Ҳангоми интихоб, рӯйхати бозиҳои қаблан пинҳоншуда метавонанд пинҳон шаванд"
 
 msgctxt "#30211"
 msgid "Clear Cache"
@@ -873,7 +885,7 @@ msgstr "Студияҳо интихоб шуданд"
 
 msgctxt "#30219"
 msgid "Tags selected"
-msgstr "Тегҳо интихоб карда шуданд"
+msgstr "Тегҳо интихоб шудаанд"
 
 msgctxt "#30220"
 msgid "Playlists selected"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Навсозии рӯйхати бозиҳо Launcher"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Фармони оғозро навсозӣ кунед"
+msgid "Update game list Launch Command"
+msgstr "Навсозии рӯйхати бозиҳо Фармони оғоз"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Роҳи зеркашии рӯйхати бозиҳоро навсозӣ кунед"
+msgid "Update game list Download Path"
+msgstr "Рӯйхати бозиҳоро навсозӣ кунед"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1057,7 +1069,7 @@ msgstr "Иловаи бозӣ интихоб кунед"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Ба ҳолати пешфарз барқарор кунед"
+msgstr "Шумо мутмаин ҳастед, ки мехоҳед фармони оғози бозии addon-ро аз нав танзим кунед?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1177,11 +1189,11 @@ msgstr "Истифодабарандагони Android бояд тасдиқ к�
 
 msgctxt "#30295"
 msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
-msgstr "Танзимоти оғозёбӣ айни ҳол холӣ аст[CR]Лутфан, замимаи танзимоти оғози берунаро нав кунед."
+msgstr "Танзимоти оғозёбӣ дар ҳоли ҳозир холӣ аст[CR]Лутфан, иловаи танзимоти оғози берунаро навсозӣ кунед."
 
 msgctxt "#30296"
 msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
-msgstr "Танзимоти оғозёбӣ айни ҳол холӣ аст[CR]Лутфан, танзимоти оғози OS-ро навсозӣ кунед."
+msgstr "Танзимоти оғозёбӣ ҳоло холӣ аст[CR]Лутфан, танзимоти оғози OS-ро навсозӣ кунед."
 
 msgctxt "#30297"
 msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
@@ -1193,7 +1205,7 @@ msgstr "Фармони оғозро ворид кунед[CR]Дар вики IAG
 
 msgctxt "#30299"
 msgid "Reset Launch Command"
-msgstr "Фармони оғозро аз нав танзим кунед"
+msgstr "Фармони оғозёбиро аз нав танзим кунед"
 
 msgctxt "#30300"
 msgid "Are you sure you want to reset the external launch command?"
@@ -1257,11 +1269,11 @@ msgstr "Addon Game Retroplayer муайяншудаи корбар"
 
 msgctxt "#30315"
 msgid "User Defined Post Process"
-msgstr "Раванди Post Муайянкунандаи корбар"
+msgstr "Раванди пости корбар муайяншуда"
 
 msgctxt "#30316"
 msgid "Game List Settings"
-msgstr "Танзимоти рӯйхати бозӣ"
+msgstr "Танзимоти Рӯйхати бозӣ"
 
 msgctxt "#30317"
 msgid "None (will use addon default)"
@@ -1271,9 +1283,13 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Оғозкунандаи рӯйхати бозиҳо"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Фармони Оғози беруна"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
-msgstr "Фармони Оғози беруна[CR]*Ягон Фармони Оғози корбар ёфт нашуд/Истифодаи пешфарз*"
+msgstr "Фармони Оғози беруна[CR]*Фармони оғози корбар ёфт нашуд/Истифодаи пешфарз*"
 
 msgctxt "#30321"
 msgid "Kodi Retroplayer"
@@ -1314,3 +1330,227 @@ msgstr "Шумо мутмаин ҳастед, ки мехоҳед ҳамаи т�
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Танзимоти рӯйхати бозиҳо ба пешфарз барқарор карда шуданд"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Мутобиқати файли маҳаллӣ"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Санҷиши эътимоднома"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "вай ҳангоми оғозёбӣ тағирёбандаҳои зерин иваз карда мешаванд:[CR]● XXROM_PATHXX: Роҳ ба файле, ки оғоз мешавад[CR]● XXROM_NAMEXX: Номи файле, ки оғоз мешавад (роҳ нест)[CR]● XXROM_STEMXX: номи файле, ки оғоз хоҳад шуд (бе роҳе нест, васеъшавӣ)[CR]● XXNETPLAY_COMMANDXX: Ҳар як иловаи фармон барои netplay лозим аст, ба танзимоти изофӣ нигаред имконоти[CR]Барои маълумоти бештар ба вики нигаред…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Файли бойгонӣ коркард карда нашуд[CR]Барои тафсилоти бештар гузоришҳоро санҷед"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Пеш аз оғози кор амалеро интихоб кунед"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Кодиро дар замина кор кунед (пешфарз)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Пеш аз оғози кор Kodi-ро пӯшед, пас аз баромадани эмулятор Kodi-ро боз кунед"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Пеш аз оғози кор Kodi-ро боздошт, пас аз баромадани эмулятор Kodi-ро бедор кунед"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Дидани омори IAGL db"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Рӯйхати омори ҷорӣ барои IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db омор"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Намоиши параметрҳои оғозёбӣ"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Танзимоти бозӣ"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Параметрҳои оғози бозӣ"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Агар ягон корбар Фармони оғозёбӣ мавҷуд набошад"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Вақте ки ягон фармони оғозёбӣ (addon retroplayer ё эмулятори беруна) таъин нашудааст, Kodi чӣ кор хоҳад кард, интихоб кунед"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Кӯшиш кунед, ки бо нобаёнӣ оғоз кунед"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Истед / Оғоз накунед"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Маҷмӯи фармон нест"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Фармони оғозёбӣ барои ин рӯйхат муқаррар нашудааст, ҳоло онро таъин кунед?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Барои ин рӯйхат ягон фармони оғозёбӣ ёфт нашуд"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Асоси пешфарз ёфт нашуд.  Лутфан {}-ро насб кунед ё роҳандозро навсозӣ кунед"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Аз нав танзимкунии фармони оғози иловаи бозӣ"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Ягон иловаи бозӣ ёфт нашуд"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Фармони оғозёбии иловаи бозӣ нав карда шуд"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Папкаи зеркашии алтернативии пешфарзро истифода баред"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Танҳо вариантҳоеро нишон диҳед, ки Kodi-ро дар замина нигоҳ доранд"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Танҳо вариантҳоеро нишон диҳед, ки Kodi-ро пӯшанд"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Танҳо вариантҳоеро нишон диҳед, ки Kodi-ро таваққуф мекунанд"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Ҷойгир ҳамчун сатр"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Интихобан, роҳро ба файли retroarch.cfg ҳамон тавре ки дар Retroarch пайдо мешавад, ворид кунед"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Феҳристи Retroarch Cores ҳамчун сатр"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Ба таври алтернативӣ роҳро ба феҳристи Cores ворид кунед, ҳамон тавре ки он дар конфигуратсияи директорияи Retroarch пайдо мешавад"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Навсозии Launcher барои {}?[CR][B]Ин танзимоти ҳамаи бозиҳои ин рӯйхатро тағир медиҳад.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Навсозии Фармони оғозёбӣ барои {}?[CR][B]Ин танзимоти ҳамаи бозиҳои ин рӯйхатро тағир медиҳад.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Роҳи оғози боргириро барои {} навсозӣ кунед?[CR][B]Ин танзимотро барои ҳамаи бозиҳои ин рӯйхат тағир медиҳад.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Навсозии Фармони оғозёбӣ"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Навсозии Оғози роҳи зеркашӣ"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Танзимотҳоро барои {} аз нав танзим кунед?[CR][B]Ин танзимотро барои ҳамаи бозиҳои ин рӯйхат тағир медиҳад.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Дастгирӣ"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Ба Archive.org хайрия кунед"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Пойгоҳи нави IAGL пайдо шуд[CR]Оё шумо мехоҳед навсозӣ кунед?[CR]Агар имконпазир бошад, танзимот ба DB-и нав нусхабардорӣ карда мешаванд"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Дб нав"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Пойгоҳи додаҳо нав карда шуд[CR]Танзимоти корбар интиқол дода шуд"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Пойгоҳи додаҳо нав карда шуд[CR]Баъзе танзимоти корбар интиқол дода нашуд[CR]Барои тафсилоти бештар ба гузориш нигаред"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Ҳангоми навсозии пойгоҳи дода хатогӣ рух дод[CR]Барои тафсилоти бештар ба гузориш нигаред"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Баъд аз ман боз пурсед"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Ин дафъа навсозӣ накунед[CR](То навсозии навбатӣ аз ман дигар напурсед)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Хуш омадед ба устоди танзимоти IAGL[CR]Бигзор тамоми танзимотро иҷро кунед, то шуморо бозӣ кунад!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Аксари бозиҳо ҳисоби archive.org-ро талаб мекунанд[CR]Дар https://archive.org/account/signup сабти ном шавед[CR]Оё шумо мехоҳед ҳисоби худро бо IAGL истифода баред?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Барои истифодаи замимаҳои бозии Kodi насбкунӣ анҷом ёфт![CR]Оё шумо омодаед бозӣ мекунед?[CR]Барои насб кардани оғози бозии беруна [B]Не[/B] -ро интихоб кунед."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Ҳама рӯйхатҳои бозиҳоро барои аз берун кушода шудан таъин кунед"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Танҳо баъзе рӯйхатҳои бозиҳоро барои аз берун кушода шудан таъин кунед"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Ҳама оғозкунандагони рӯйхати бозиҳоро ба ҳолати пешфарз баргардонед"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} рӯйхати бозиҳо барои оғози берунӣ нав карда шуданд"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Барои ҳар як фармони оғози берунӣ танзимоти пешфарз муқаррар карда мешаванд[CR]Пеш аз оғози баррасии параметрҳои оғози бозӣ, агар лозим бошад[CR]Барои тафсилоти бештар ба вики нигаред."

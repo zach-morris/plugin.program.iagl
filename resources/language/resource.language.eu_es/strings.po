@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -89,7 +89,7 @@ msgstr "Taldeka Eskualdeka"
 
 msgctxt "#30020"
 msgid "Group by Language"
-msgstr "Taldeka Hizkuntzaz"
+msgstr "Taldeka Hizkuntza"
 
 msgctxt "#30021"
 msgid "Group by Edition"
@@ -165,7 +165,7 @@ msgstr "Aukeratu Emaitza kopurua"
 
 msgctxt "#30039"
 msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
-msgstr "[COLOR FF12A0C7]Exekutatu ausazko bilaketa[/COLOR]"
+msgstr "[COLOR FF12A0C7]Ausazko bilaketa exekutatu[/COLOR]"
 
 msgctxt "#30040"
 msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "Filmak"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "Jolasak"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 Jolasak"
@@ -325,7 +329,7 @@ msgstr "100 Joko"
 
 msgctxt "#30080"
 msgid "250 Games"
-msgstr "250 joko"
+msgstr "250 Joko"
 
 msgctxt "#30081"
 msgid "500 Games"
@@ -361,7 +365,7 @@ msgstr "Gehitu IAGL gogokoetara"
 
 msgctxt "#30089"
 msgid "Enter a name for your favorites group"
-msgstr "Idatzi gogokoen taldearentzat izen bat"
+msgstr "Idatzi izena gogokoen duzun taldearentzat"
 
 msgctxt "#30090"
 msgid "Favorite added to group"
@@ -417,7 +421,7 @@ msgstr "Kodi paisaia-arteak berdintzen du"
 
 msgctxt "#30103"
 msgid "Select the game artwork to be displayed as the landscape art"
-msgstr "Hautatu paisaia arte gisa bistaratu nahi den jokoaren artelana"
+msgstr "Hautatu paisaia arte gisa bistaratu beharreko jokoaren artelana"
 
 msgctxt "#30104"
 msgid "Title Screen"
@@ -591,6 +595,14 @@ msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
 
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Joko abiarazlearen aukeraketa metodoa"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Hautatu Kodi-k zer egingo duen joko-abiarazlea hautatzean (Windows, Linux eta OSX soilik)"
+
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
 msgstr "Mantendu Kodi atzeko planoan"
@@ -605,7 +617,7 @@ msgstr "Kodi pausatu"
 
 msgctxt "#30152"
 msgid "Retroarch core picker"
-msgstr "Retroarch-nukleo-hautatzailea"
+msgstr "Retroarch core hautatzailea"
 
 msgctxt "#30153"
 msgid "List by System and Core Name"
@@ -617,7 +629,7 @@ msgstr "Zerrenda oinarrizko izenaren arabera"
 
 msgctxt "#30155"
 msgid "List by Emulated Systems"
-msgstr "Sistema emulatuen arabera zerrenda"
+msgstr "Sistema emulatuen zerrenda"
 
 msgctxt "#30156"
 msgid "Select Core"
@@ -757,15 +769,15 @@ msgstr "Eman zure Discord IDa (Erabiltzaile-ezarpenak>Nire kontua>Kopiatu IDa) e
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
-msgstr "Bistaratu txostena morroia amaitzen denean"
+msgstr "Erakutsi txostena morroia amaitzen denean"
 
 msgctxt "#30191"
 msgid "Execute setup wizard"
 msgstr "Exekutatu konfigurazio morroia"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Exekutatu morroia zure joko-zerrenden ezarpenak aldatzeko.  Hau edozein unetan errepika daiteke"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Exekutatu morroia zure joko-zerrenden ezarpenak azkar aldatzeko.  Hau edozein unetan errepika daiteke"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -781,7 +793,7 @@ msgstr "Utzi lehenetsi gisa ziur ez baduzu"
 
 msgctxt "#30196"
 msgid "Suspend Kodi Input and Audio when using External Launcher"
-msgstr "Eten ezazu Kodi sarrera eta audioa Kanpoko abiarazlea erabiltzean"
+msgstr "Eten Kodi sarrera eta audioa Kanpoko abiarazlea erabiltzean"
 
 msgctxt "#30197"
 msgid "Stop Kodi media playing before External Launch"
@@ -793,7 +805,7 @@ msgstr "Kodi lanpetuta dago / Kanpoko abiaraztearen ondoren Kodira itzultzeko za
 
 msgctxt "#30199"
 msgid "Download Advanced Settings"
-msgstr "Deskargatu Ezarpen aurreratuak"
+msgstr "Deskargatu ezarpen aurreratuak"
 
 msgctxt "#30200"
 msgid "Download Threads"
@@ -801,7 +813,7 @@ msgstr "Deskargatu hariak"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Ezarri ordezko karpeta lehenetsia deskarga guztientzat"
+msgstr "Ordezko deskarga-karpeta lehenetsia"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Eguneratu joko-zerrenda abiarazlea"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Eguneratu Abiarazteko komandoa"
+msgid "Update game list Launch Command"
+msgstr "Eguneratu jokoen zerrenda Abiarazi komandoa"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Eguneratu jokoen zerrenda deskargatzeko bidea"
+msgid "Update game list Download Path"
+msgstr "Eguneratu jokoen zerrenda Deskargatzeko bidea"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -997,7 +1009,7 @@ msgstr "Ezkutatu jokoen zerrenda"
 
 msgctxt "#30250"
 msgid "Update game list post download process"
-msgstr "Eguneratu jokoen zerrenda deskargatu ondorengo prozesua"
+msgstr "Eguneratu joko-zerrenda deskargatu ondorengo prozesua"
 
 msgctxt "#30251"
 msgid "Are you sure you want to hide game list"
@@ -1057,7 +1069,7 @@ msgstr "Hautatu jokoaren gehigarria"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Berrezarri lehenespenera"
+msgstr "Ziur jokoaren gehigarria abiarazteko komandoa berrezarri nahi duzula?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1177,7 +1189,7 @@ msgstr "Android erabiltzaileek nukleoa Retroarch-en instalatuta dagoela egiaztat
 
 msgctxt "#30295"
 msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
-msgstr "Abiarazte-ezarpenak hutsik daude[CR]Mesedez eguneratu gehigarria kanpoko abiarazte-ezarpenak."
+msgstr "Abiarazte-ezarpenak hutsik daude une honetan[CR]Mesedez eguneratu gehigarria kanpoko abiarazte-ezarpenak."
 
 msgctxt "#30296"
 msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
@@ -1229,7 +1241,7 @@ msgstr "Jokoak guztira zerrendan"
 
 msgctxt "#30308"
 msgid "Total Favorited Games in List"
-msgstr "Gogokoen zerrendako jokoak guztira"
+msgstr "Gogokoeneko partidak zerrendan"
 
 msgctxt "#30309"
 msgid "Default External Launch Command"
@@ -1270,6 +1282,10 @@ msgstr "Bat ere ez (gehigarri lehenetsia erabiliko du)"
 msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Jokoen zerrenda abiarazlea"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Kanpoko abiarazteko komandoa"
 
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
@@ -1314,3 +1330,227 @@ msgstr "Ziur joko-zerrendaren ezarpen guztiak lehenetsi nahi dituzula?"
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Jokoaren zerrendaren ezarpenak lehenetsi ziren"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Fitxategi lokal bat datorrena"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Kredentzialak egiaztatzea"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "abiaraztean aldagai hauek ordezkatuko dira:[CR]● XXROM_PATHXX: abiaraziko den fitxategiaren bidea[CR]● XXROM_NAMEXX: abiaraziko den fitxategiaren izena (biderik gabe)[CR]● XXROM_STEMXX: Abiaraziko den fitxategiaren izena (biderik ez luzapenik)[CR]● XXNETPLAY_COMMANDXX: Netplayerako beharrezkoa den edozein komando gehitzea, ikusi gehigarrien ezarpenak. aukerak[CR]Ikusi wikia informazio gehiagorako..."
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Ezin izan da artxibo-fitxategia prozesatu[CR]Begiratu erregistroak xehetasun gehiago lortzeko"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Hautatu ekintza abiarazi aurretik"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Utzi Kodi atzeko planoan martxan (lehenetsia)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Itxi Kodi abiarazi aurretik, ireki berriro Kodi emuladorea irten ondoren"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Eten ezazu Kodi abiarazi aurretik, esna ezazu Kodi emuladorea irten ondoren"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Ikusi IAGL db estatistikak"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "IAGL db-ren uneko estatistikak zerrendatzen ditu"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db Estatistikak"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Ikusi abiarazteko parametroak"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Joko ezarpenak"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Jokoa abiarazteko parametroak"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Erabiltzailerik abiarazteko komandorik ez badago"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Hautatu Kodi-k zer egingo duen abiarazteko komandorik (retroplayer gehigarria edo kanpoko emuladorea) ezartzen ez denean"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Saiatu abiarazi lehenespenarekin"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Gelditu / Ez abiarazi"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Ez dago komandorik ezarri"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Ez dago abiarazteko komandorik zerrenda honetarako ezarrita, ezarri bat orain?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Ezin izan da zerrenda honetarako abiarazteko komando lehenetsirik aurkitu"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Ez da nukleo lehenetsia aurkitu.  Mesedez, instalatu {} edo eguneratu abiarazlea"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Joko gehigarria abiarazteko komandoa berrezarri"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Ez da joko gehigarririk aurkitu"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Jokoaren gehigarria abiarazteko komandoa eguneratu da"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Erabili ordezko deskarga-karpeta lehenetsia"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Kodi atzeko planoan mantentzen duten aukerak soilik erakutsi"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Erakutsi soilik Kodi ixten duten aukerak"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Erakutsi Kodi pausatzen duten aukerak soilik"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Kokapena kate gisa"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Bestela, sartu retroarch.cfg fitxategirako bidea Retroarch-en agertzen den bezala"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch Cores direktorioa kate gisa"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Bestela, sartu Cores direktorioaren bidea Retroarch direktorioaren konfigurazioan agertzen den bezala"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Eguneratu {}-rako abiarazlea?[CR][B]Honek zerrenda honetako joko guztien ezarpenak aldatuko ditu.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Eguneratu abiarazteko komandoa {}-rako?[CR][B]Honek zerrenda honetako joko guztien ezarpenak aldatuko ditu.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Eguneratu Abiarazi deskargatzeko bidea {}?[CR][B]Zerrenda honetako joko guztien ezarpenak aldatuko dira.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Eguneratu Abiarazteko komandoa"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Eguneratu Abiarazi deskarga-bidea"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}-ren ezarpenak berrezarri?[CR][B]Zerrenda honetako joko guztien ezarpenak aldatuko dira.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Laguntza"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Dohaintza egin Archive.org-era"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "IAGL datu-base berri bat aurkitu da[CR]Eguneratu nahi duzu?[CR]Ezarpenak db berrian kopiatuko dira ahal izanez gero"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "db berria"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Datu-basea eguneratu da[CR]Erabiltzaileen ezarpenak transferitu dira"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Datu-basea eguneratu da[CR]Erabiltzaileen ezarpen batzuk ezin izan dira transferitu[CR]Ikusi erregistroa xehetasun gehiago lortzeko"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Errore bat gertatu da datu-basea eguneratzean[CR]Ikusi erregistroa xehetasun gehiago lortzeko"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Galde iezadazu berriro geroago"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Ez eguneratu oraingoan[CR](Ez galdetu berriro hurrengo eguneratze arte)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Ongi etorri IAGL konfigurazio morroira[CR]Ezar ditzagun ezarpen guztiak jolasten hasteko!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Joko gehienek archive.org kontu bat behar dute[CR]Eman izena https://archive.org/account/signup helbidean[CR]Zure kontua IAGLrekin erabili nahi duzu?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Kodi joko gehigarriak erabiltzeko konfigurazioa osatu da![CR]Jokatzeko prest al zaude?[CR]Hautatu [B]Ez[/B] kanpoko jokoaren abiarazte konfiguratzeko."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Ezarri joko-zerrenda guztiak kanpotik abiarazteko"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Ezarri joko-zerrenda batzuk bakarrik kanpotik abiarazteko"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Berrezarri joko-zerrenden abiarazle guztiak lehenespenera"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} joko-zerrenda eguneratu dira kanpoko abiarazteko"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Lehenetsiak aurrez ezarrita daude kanpoko abiarazteko komando bakoitzarentzat[CR]Berrikusi jokoaren abiarazte-parametroak abiarazi aurretik, behar izanez gero[CR]Ikusi wikia xehetasun gehiagorako."

@@ -878,6 +878,26 @@
 							<close>true</close>
 					</control>
 				</setting>
+				<setting id="rerun_wizard" label="30191" help="30192" type="action">
+					<level>3</level>
+						<data>RunPlugin(plugin://plugin.program.iagl/wizard_start)</data>
+						<constraints>
+							<allowempty>true</allowempty>
+						</constraints>`
+						<control format="action" type="button">
+							<close>true</close>
+					</control>
+				</setting>
+				<setting id="get_donate" label="30370" help="30371" type="action">
+					<level>3</level>
+						<data>RunPlugin(plugin://plugin.program.iagl/context_menu/action/get_donate_screen)</data>
+						<constraints>
+							<allowempty>true</allowempty>
+						</constraints>`
+						<control format="action" type="button">
+							<close>true</close>
+					</control>
+				</setting>
 			</group>
 		</category>
 	</section>

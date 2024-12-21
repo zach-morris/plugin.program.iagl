@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -297,7 +297,7 @@ msgstr "Spel presenteras som"
 
 msgctxt "#30072"
 msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
-msgstr "Kodi erbjuder flera hudalternativ för filmer, TV-program och spel.  Se wiki för mer information"
+msgstr "Kodi erbjuder flera hudalternativ för filmer, tv-program och spel.  Se wiki för mer information"
 
 msgctxt "#30073"
 msgid "TV Shows"
@@ -306,6 +306,10 @@ msgstr "TV-program"
 msgctxt "#30074"
 msgid "Movies"
 msgstr "Filmer"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "Spel"
 
 msgctxt "#30076"
 msgid "10 Games"
@@ -389,7 +393,7 @@ msgstr "Lista alla"
 
 msgctxt "#30096"
 msgid "Always filter list to 1 Game 1 Rom Set"
-msgstr "Filtrera alltid listan till 1 Spel 1 Rom Set"
+msgstr "Filtrera alltid listan till 1 Game 1 Rom Set"
 
 msgctxt "#30097"
 msgid "If possible, game lists will be pre-filtered to a 1G1R set"
@@ -591,6 +595,14 @@ msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
 
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Valmetod för spelstarter"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Välj vad Kodi ska göra när du väljer en spelstartare (endast Windows, Linux och OSX)"
+
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
 msgstr "Håll Kodi i bakgrunden"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Kör installationsguiden"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Kör guiden för att ändra inställningarna för dina spellistor.  Detta kan köras igen när som helst"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Kör guiden för att snabbt ändra inställningarna för dina spellistor.  Detta kan köras igen när som helst"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,7 +813,7 @@ msgstr "Ladda ner trådar"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Ställ in alternativ standardmapp för alla nedladdningar"
+msgstr "Alternativ standard nedladdningsmapp"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -889,7 +901,7 @@ msgstr "Valda språk"
 
 msgctxt "#30223"
 msgid "Editions selected"
-msgstr "Valda upplagor"
+msgstr "Utgåvor valda"
 
 msgctxt "#30224"
 msgid "Codes selected"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Uppdatera spellista Launcher"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Uppdatera startkommando"
+msgid "Update game list Launch Command"
+msgstr "Uppdatera spellistan Startkommando"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Uppdatera nedladdningssökväg för spellistan"
+msgid "Update game list Download Path"
+msgstr "Uppdatera spellista Ladda ner sökväg"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1057,7 +1069,7 @@ msgstr "Välj speltillägg"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Återställ till standard"
+msgstr "Är du säker på att du vill återställa startkommandot för speltillägget?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1069,7 +1081,7 @@ msgstr "Välj nedladdningsmapp"
 
 msgctxt "#30268"
 msgid "Archive.org login success!"
-msgstr "Archive.org inloggning lyckad!"
+msgstr "Archive.org login lyckad!"
 
 msgctxt "#30269"
 msgid "Archive.org login failed.[CR]Check credentials or log for more details"
@@ -1089,7 +1101,7 @@ msgstr "Kontrollera loggar"
 
 msgctxt "#30273"
 msgid "Checking login for[CR]"
-msgstr "Kontrollerar inloggning för [CR]"
+msgstr "Kontrollerar inloggning för[CR]"
 
 msgctxt "#30274"
 msgid "Requesting file info for[CR]"
@@ -1177,15 +1189,15 @@ msgstr "Android-användare måste verifiera att kärnan är installerad i Retroa
 
 msgctxt "#30295"
 msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
-msgstr "Lanseringsinställningarna är för närvarande tomma[CR]Uppdatera tillägget för externa startinställningar."
+msgstr "Startinställningarna är för närvarande tomma[CR]Uppdatera tillägget för externa startinställningar."
 
 msgctxt "#30296"
 msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
-msgstr "Startinställningarna är för närvarande tomma[CR]Uppdatera tilläggsstartinställningarna för OS."
+msgstr "Lanseringsinställningarna är för närvarande tomma[CR]Var vänlig uppdatera tilläggets startinställningar för OS."
 
 msgctxt "#30297"
 msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
-msgstr "Inga extra emulatorer hittades[CR]Var vänlig uppdatera tilläggsinställningarna för extra emulator"
+msgstr "Inga extra emulatorer hittades[CR]Vänligen uppdatera tilläggsinställningarna för extra emulatorer"
 
 msgctxt "#30298"
 msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
@@ -1193,7 +1205,7 @@ msgstr "Ange startkommando[CR]Se valfria nyckelord på IAGL-wiki"
 
 msgctxt "#30299"
 msgid "Reset Launch Command"
-msgstr "Återställ startkommandot"
+msgstr "Återställ startkommando"
 
 msgctxt "#30300"
 msgid "Are you sure you want to reset the external launch command?"
@@ -1271,6 +1283,10 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Spellista Launcher"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Externt startkommando"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
 msgstr "Externt startkommando[CR]*Inget användarstartkommando hittades / använder standard*"
@@ -1314,3 +1330,227 @@ msgstr "Är du säker på att du vill återställa alla spellistans inställning
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Spellistans inställningar återställdes till standardinställningarna"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Matchande lokal fil"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Kontrollerar autentiseringsuppgifter"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "följande variabler kommer att ersättas under lanseringen:[CR]● XXROM_PATHXX: Sökvägen till filen som kommer att startas[CR]● XXROM_NAMEXX: Namnet på filen som kommer att startas (ingen sökväg)[CR]● XXROM_STEMXX: namnet på filen som kommer att startas (ingen sökväg utan tillägg)[CR]● XXNETPLAY_COMMANDXX: Alla kommandotillägg som krävs för netplay, se tilläggsinställningar för options[CR]Se wiki för mer information..."
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Arkivfilen kunde inte bearbetas[CR]Kontrollera loggar för mer information"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Välj åtgärd före start"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Låt Kodi köras i bakgrunden (standard)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Stäng Kodi före lansering, öppna Kodi igen efter att emulatorn avslutats"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Stäng av Kodi före lansering, väck Kodi efter emulatoravslut"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Visa IAGL db-statistik"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Visar aktuell statistik för IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db statistik"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Visa startparametrar"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Spelinställningar"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Spelstartsparametrar"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Om ingen användare startkommando finns"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Välj vad Kodi ska göra när inget startkommando (retroplayer-tillägg eller extern emulator) är inställt"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Försök att starta med standard"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Stoppa / Starta inte"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Inget kommando inställt"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Ett startkommando är inte inställt för den här listan, ställ in ett nu?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Inget standardstartkommando kunde hittas för den här listan"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Standardkärnan hittades inte.  Installera {} eller uppdatera startprogrammet"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Startkommandot för speltillägg återställs"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Inga speltillägg hittades"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Startkommandot för speltillägg uppdaterat"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Använd alternativ standard nedladdningsmapp"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Visa bara alternativ som håller Kodi i bakgrunden"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Visa bara alternativ som stänger Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Visa bara alternativ som pausar Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Location som sträng"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Alternativt anger du sökvägen till retroarch.cfg-filen exakt som den visas i Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch Cores-katalogen som sträng"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Alternativt kan du ange sökvägen till Cores-katalogen exakt som den visas i Retroarch-katalogkonfigurationen"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Uppdatera startprogrammet för {}?[CR][B]Detta ändrar inställningarna för alla spel i den här listan.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Uppdatera startkommando för {}?[CR][B]Detta ändrar inställningarna för alla spel i den här listan.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Uppdatera Launch Download Path för {}?[CR][B]Detta ändrar inställningarna för alla spel i den här listan.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Uppdatera startkommando"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Uppdatera Launch Download Path"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Återställa inställningarna för {}?[CR][B]Detta ändrar inställningarna för alla spel i den här listan.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Stöd"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Donera till Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "En ny IAGL-databas har hittats[CR]Vill du uppdatera?[CR]Inställningarna kommer att kopieras till den nya db om möjligt"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Ny db"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Databasen uppdaterades[CR]Användarinställningarna överfördes"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Databasen uppdaterades[CR]Vissa användarinställningar kunde inte överföras[CR]Se loggen för mer information"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Det uppstod ett fel vid uppdatering av databasen[CR]Se loggen för mer information"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Fråga mig igen senare"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Uppdatera inte den här gången[CR](Fråga mig inte igen förrän nästa uppdatering)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Välkommen till IAGL Setup Wizard[CR]Låt oss gå igenom alla inställningar för att få dig att spela!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "De flesta spel kräver ett archive.org-konto[CR]Registrera dig på https://archive.org/account/signup[CR]Vill du använda ditt konto med IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Installationen är klar för att använda Kodi-speltillägg![CR]Är du redo att spela?[CR]Välj [B]Nej[/B] för att ställa in extern spelstart."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Ange att alla spellistor ska lanseras externt"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Ställ in att endast vissa spellistor ska lanseras externt"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Återställ alla startprogram för spellistor till standard"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} spellistor uppdaterades för extern lansering"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Standardinställningarna är förinställda för varje externt startkommando[CR]Innan du startar granska spelstartparametrar om det behövs[CR]Se wiki för mer information."

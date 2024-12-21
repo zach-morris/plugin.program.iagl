@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -93,7 +93,7 @@ msgstr "Хэлээр бүлэглэх"
 
 msgctxt "#30021"
 msgid "Group by Edition"
-msgstr "Хэвлэлээр бүлэглэх"
+msgstr "Хувилбараар бүлэглэх"
 
 msgctxt "#30022"
 msgid "Group by Code"
@@ -181,7 +181,7 @@ msgstr "Эхлүүлж байна"
 
 msgctxt "#30043"
 msgid "Downloading"
-msgstr "Татаж байна"
+msgstr "Татаж авч байна"
 
 msgctxt "#30044"
 msgid "Views and Navigation"
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "Кино"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "Тоглоомууд"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 тоглоом"
@@ -405,7 +409,7 @@ msgstr "Идэвхжүүлсэн үед тоглоомын жагсаалтын 
 
 msgctxt "#30100"
 msgid "Append game list name when browsing by playlist"
-msgstr "Тоглуулах жагсаалтаар үзэх үед тоглоомын жагсаалтын нэрийг нэмнэ үү"
+msgstr "Тоглуулах жагсаалтаар үзэхдээ тоглоомын жагсаалтын нэрийг нэмнэ үү"
 
 msgctxt "#30101"
 msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
@@ -429,7 +433,7 @@ msgstr "Дэлгэцийн агшин"
 
 msgctxt "#30106"
 msgid "Kodi thumbnail art equates to"
-msgstr "Kodi thumbnail art нь үүнтэй тэнцүү байна"
+msgstr "Kodi thumbnail art нь үүнтэй тэнцэнэ"
 
 msgctxt "#30107"
 msgid "Select the game artwork to be displayed as the thumbnail art"
@@ -457,7 +461,7 @@ msgstr "Системийн хянагч"
 
 msgctxt "#30113"
 msgid "Game list fanart equates to"
-msgstr "Тоглоомын жагсаалт fanart-тай тэнцэнэ"
+msgstr "Тоглоомын жагсаалт fanart тэнцүү байна"
 
 msgctxt "#30114"
 msgid "Select the artwork displayed for the game list fanart"
@@ -477,7 +481,7 @@ msgstr "Системийн ханын цаас"
 
 msgctxt "#30118"
 msgid "Force IAGL viewtypes"
-msgstr "IAGL харагдацын төрлийг албадах"
+msgstr "IAGL харагдацын төрлүүдийг хүчлэх"
 
 msgctxt "#30119"
 msgid "Verify your skin has the forced viewtype ID available"
@@ -497,7 +501,7 @@ msgstr "Тоглоомын ангиллыг үзэх төрөл"
 
 msgctxt "#30123"
 msgid "Games list viewtype"
-msgstr "Тоглоомын жагсаалтыг үзэх төрөл"
+msgstr "Тоглоомын жагсаалтын харагдах хэлбэр"
 
 msgctxt "#30124"
 msgid "Choose list viewtype"
@@ -505,7 +509,7 @@ msgstr "Жагсаалтын харагдах төрлийг сонгоно уу
 
 msgctxt "#30125"
 msgid "Search and Random results viewtype"
-msgstr "Хайлт болон Санамсаргүй илэрцийг харах төрөл"
+msgstr "Хайлтын болон Санамсаргүй илэрцийг харах төрөл"
 
 msgctxt "#30126"
 msgid "Off (Default)"
@@ -521,7 +525,7 @@ msgstr "Зурагт хуудас / Том жагсаалт / Зурагт ху�
 
 msgctxt "#30129"
 msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
-msgstr "Ханын дүрс / хэвтээ загвар / LS хана (52)"
+msgstr "Ханын дүрс / Хэвтээ хээ / LS хана (52)"
 
 msgctxt "#30130"
 msgid "Banner / Landscape / Poster Info (501)"
@@ -590,6 +594,14 @@ msgstr "Android aarch64"
 msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Тоглоом эхлүүлэгчийг сонгох арга"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Тоглоом эхлүүлэгчийг сонгохдоо Kodi юу хийхийг сонгох (зөвхөн Windows, Linux болон OSX)"
 
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
@@ -713,7 +725,7 @@ msgstr "Netplay порт"
 
 msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
-msgstr "Холбох netplay IP портыг тодорхойлно уу (өгөгдмөл бол хоосон орхино уу)"
+msgstr "Холбох netplay IP портыг тодорхойлох (өгөгдмөл бол хоосон орхино уу)"
 
 msgctxt "#30180"
 msgid "Default player 2+ Hostname"
@@ -721,7 +733,7 @@ msgstr "Өгөгдмөл тоглуулагч 2+ Хост нэр"
 
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
-msgstr "Өгөгдмөл netplay хостын нэрийг / IP-г тодорхойлох (дотоод сүлжээний сүлжээний сүлжээний тоглуулагчид хэрэгтэй, анхдагчаар хоосон орхино уу)"
+msgstr "Өгөгдмөл netplay хостын нэр / IP-г тодорхойлох (дотоод сүлжээний netplay-д хэрэгтэй, анхдагчаар хоосон орхино уу)"
 
 msgctxt "#30182"
 msgid "Check frames"
@@ -729,11 +741,11 @@ msgstr "Хүрээг шалгана уу"
 
 msgctxt "#30183"
 msgid "Define number of netplay sync frames (leave blank for default)"
-msgstr "Netplay синхрончлолын хүрээний тоог тодорхойлох (өгөгдмөлөөр хоосон орхино уу)"
+msgstr "Netplay синк фрэймийн тоог тодорхойлох (өгөгдмөлөөр хоосон орхино уу)"
 
 msgctxt "#30184"
 msgid "Announce Netplay on Discord"
-msgstr "Discord дээр Netplay-г зарлана"
+msgstr "Discord дээр Netplay-г зарла"
 
 msgctxt "#30185"
 msgid "Announces netplay start on discord for IAGL players"
@@ -753,7 +765,7 @@ msgstr "Discord хэрэглэгчийн бүртгэлийн ID"
 
 msgctxt "#30189"
 msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
-msgstr "Тоглож байхдаа дурдагдах Discord ID (Хэрэглэгчийн тохиргоо>Миний бүртгэл>Хуулбар ID) оруулна уу (заавал биш)"
+msgstr "Тоглож байхдаа дурдагдах Discord ID-аа (Хэрэглэгчийн тохиргоо>Миний бүртгэл>Хуулбар ID) оруулна уу (заавал биш)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Тохируулах шидтэнг ажиллуулна уу"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Тоглоомын жагсаалтынхаа тохиргоог өөрчлөхийн тулд шидтэнг ажиллуулна уу.  Үүнийг хүссэн үедээ дахин ажиллуулж болно"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Тоглоомын жагсаалтынхаа тохиргоог хурдан өөрчлөхийн тулд шидтэнг ажиллуулна уу.  Үүнийг хүссэн үедээ дахин ажиллуулж болно"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,7 +813,7 @@ msgstr "Threads татаж авах"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Бүх татан авалтын хувьд өөр өгөгдмөл фолдерыг тохируулна уу"
+msgstr "Өөр өгөгдмөл татаж авах хавтас"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -825,7 +837,7 @@ msgstr "Сонголтуудыг дахин тохируулах"
 
 msgctxt "#30207"
 msgid "Reset IAGL database to default settings"
-msgstr "IAGL мэдээллийн санг анхдагч тохиргоонд дахин тохируулна уу"
+msgstr "IAGL мэдээллийн санг өгөгдмөл тохиргоонд дахин тохируулна уу"
 
 msgctxt "#30208"
 msgid "When selected, the database will be reset to default settings"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Тоглоомын жагсаалтыг эхлүүлэгчийг шинэчлэх"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Эхлүүлэх командыг шинэчлэх"
+msgid "Update game list Launch Command"
+msgstr "Тоглоомын жагсаалтыг шинэчлээрэй Launch Command"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Тоглоомын жагсаалтыг татаж авах замыг шинэчлэх"
+msgid "Update game list Download Path"
+msgstr "Тоглоомын жагсаалтыг Татаж авах замыг шинэчлэх"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -997,7 +1009,7 @@ msgstr "Тоглоомын жагсаалтыг нуух"
 
 msgctxt "#30250"
 msgid "Update game list post download process"
-msgstr "Тоглоомын жагсаалтыг татаж авсны дараах процессыг шинэчлэх"
+msgstr "Татаж авах үйл явцын дараах тоглоомын жагсаалтыг шинэчлэх"
 
 msgctxt "#30251"
 msgid "Are you sure you want to hide game list"
@@ -1037,7 +1049,7 @@ msgstr "Эхлүүлэгчийг шинэчлэх"
 
 msgctxt "#30260"
 msgid "Update launcher from[CR]Kodi to[CR]External?"
-msgstr "Эхлүүлэгчийг [CR]Kodi-с[CR]Гадаад руу шинэчлэх үү?"
+msgstr "Эхлүүлэгчийг[CR]Kodi-с[CR]Гадаад руу шинэчлэх үү?"
 
 msgctxt "#30261"
 msgid "Update launcher from[CR]External to[CR]Kodi?"
@@ -1057,7 +1069,7 @@ msgstr "Тоглоомын нэмэлт хэрэгслийг сонгоно уу
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Өгөгдмөл рүү дахин тохируулна уу"
+msgstr "Та тоглоомын нэмэлтийг эхлүүлэх командыг дахин тохируулахдаа итгэлтэй байна уу?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1065,7 +1077,7 @@ msgstr "Тоглоомыг татаж авах…"
 
 msgctxt "#30267"
 msgid "Select download folder"
-msgstr "Татаж авах хавтас сонгоно уу"
+msgstr "Татаж авах хавтсыг сонгоно уу"
 
 msgctxt "#30268"
 msgid "Archive.org login success!"
@@ -1117,7 +1129,7 @@ msgstr "Нэмэлт эмуляторууд"
 
 msgctxt "#30280"
 msgid "Dolphin"
-msgstr "Далайн гахай"
+msgstr "Дельфин"
 
 msgctxt "#30281"
 msgid "Select the path to the Dolphin application (optional)"
@@ -1161,7 +1173,7 @@ msgstr "FS-АНЭУ"
 
 msgctxt "#30291"
 msgid "Select the path to the FS-UAE application (optional)"
-msgstr "FS-UAE програм руу очих замыг сонгоно уу (заавал биш)"
+msgstr "FS-UAE програмын замыг сонгох (заавал биш)"
 
 msgctxt "#30292"
 msgid "Are you sure you want to set external launch command?"
@@ -1265,11 +1277,15 @@ msgstr "Тоглоомын жагсаалтын тохиргоо"
 
 msgctxt "#30317"
 msgid "None (will use addon default)"
-msgstr "Байхгүй (өгөгдмөл нэмэлтийг ашиглах болно)"
+msgstr "Аль нь ч биш (өгөгдмөл нэмэлтийг ашиглах болно)"
 
 msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Тоглоомын жагсаалт эхлүүлэгч"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Гадаад эхлүүлэх команд"
 
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
@@ -1314,3 +1330,227 @@ msgstr "Та тоглоомын жагсаалтын бүх тохиргоог �
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Тоглоомын жагсаалтын тохиргоог анхдагч болгож шинэчилсэн"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Орон нутгийн файл таарч байна"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Итгэмжлэх жуух бичгийг шалгаж байна"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "Дараах хувьсагчдыг эхлүүлэх үед солих болно:[CR]● XXROM_PATHXX: Ажиллуулах файлын зам[CR]● XXROM_NAMEXX: Ажиллуулах файлын нэр (зам байхгүй)[CR]● XXROM_STEMXX: эхлүүлэх файлын нэр (зам өргөтгөлгүй)[CR]● XXNETPLAY_COMMANDXX: Netplay-д шаардлагатай аливаа командын нэмэлт тохиргоог үзнэ үү. сонголтууд[CR]Дэлгэрэнгүй мэдээллийг вики-г үзнэ үү..."
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Архив файлыг боловсруулж чадсангүй[CR]Дэлгэрэнгүй мэдээллийг бүртгэлээс шалгана уу"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Эхлүүлэхийн өмнө үйлдлийг сонгоно уу"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Kodi-г арын дэвсгэр дээр ажиллуулах (өгөгдмөл)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Эхлүүлэхийн өмнө Kodi-г хааж, эмулятор гарсны дараа Kodi-г дахин нээнэ үү"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Kodi-г эхлүүлэхийн өмнө түр зогсоож, эмулятор гарсны дараа Kodi-г сэрээ"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "IAGL db статистикийг харах"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "IAGL db-ийн одоогийн статистикийг жагсаав"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db статистик"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Эхлүүлэх параметрүүдийг харах"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Тоглоомын тохиргоо"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Тоглоом эхлүүлэх параметрүүд"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Хэрэв хэрэглэгч эхлүүлэх команд байхгүй бол"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Ямар ч эхлүүлэх командыг (дахин тоглуулагчийн нэмэлт эсвэл гадаад эмулятор) тохируулаагүй үед Kodi юу хийхийг сонго"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Өгөгдмөлөөр эхлүүлэхийг оролдоорой"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Зогсоох / бүү ажиллуул"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Команд тохируулаагүй байна"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Энэ жагсаалтад эхлүүлэх командыг тохируулаагүй байна, одоо тохируулах уу?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Энэ жагсаалтад өгөгдмөл эхлүүлэх команд олдсонгүй"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Өгөгдмөл цөм олдсонгүй.  {}-г суулгана уу эсвэл эхлүүлэгчийг шинэчилнэ үү"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Тоглоомын нэмэлтийг эхлүүлэх командыг дахин тохируулна уу"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Тоглоомын нэмэлт хэрэгсэл олдсонгүй"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Тоглоомын нэмэлтийг эхлүүлэх командыг шинэчилсэн"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Өөр өгөгдмөл татаж авах хавтас ашиглана уу"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Зөвхөн Kodi-г арын дэвсгэр дээр байлгах сонголтуудыг харуул"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Зөвхөн Kodi-г хаадаг сонголтуудыг харуул"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Зөвхөн Kodi-г түр зогсоох сонголтуудыг харуул"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Байршлыг стринг хэлбэрээр хийх"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Эсвэл retroarch.cfg файл руу орох замыг яг Retroarch дээр харагдаж байгаа байдлаар оруулна уу."
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch Cores лавлахыг мөр болгон"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Эсвэл Cores лавлах руу очих замыг Retroarch лавлах тохиргоонд байгаа байдлаар оруулна уу."
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}-н Эхлүүлэгчийг шинэчлэх үү?[CR][B]Энэ жагсаалтад байгаа бүх тоглоомын тохиргоог өөрчлөх болно.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}-н эхлүүлэх командыг шинэчлэх үү?[CR][B]Энэ жагсаалтад байгаа бүх тоглоомын тохиргоог өөрчилнө.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}-н Татаж авах замыг шинэчлэх үү?[CR][B]Энэ жагсаалтад байгаа бүх тоглоомын тохиргоог өөрчлөх болно.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Эхлүүлэх командыг шинэчлэх"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Татаж авах замыг шинэчлэх"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}-н тохиргоог шинэчлэх үү?[CR][B]Энэ жагсаалтад байгаа бүх тоглоомын тохиргоог өөрчилнө.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Дэмжлэг"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Archive.org сайтад хандивлана уу"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Шинэ IAGL мэдээллийн сан олдлоо[CR]Та шинэчлэхийг хүсэж байна уу?[CR]Тохиргоог боломжтой бол шинэ db руу хуулах болно."
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Шинэ дб"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Өгөгдлийн санг шинэчилсэн[CR]Хэрэглэгчийн тохиргоог шилжүүлсэн"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Өгөгдлийн санг шинэчилсэн[CR]Зарим хэрэглэгчийн тохиргоог шилжүүлж чадсангүй[CR]Дэлгэрэнгүй мэдээллийг бүртгэлээс харна уу"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Мэдээллийн санг шинэчлэхэд алдаа гарлаа[CR]Дэлгэрэнгүй мэдээллийг бүртгэлээс харна уу"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Дараа дахин асуу"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Энэ удаа бүү шинэчил[CR](Дараагийн шинэчлэлт хүртэл надаас дахин битгий асуу)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "IAGL Setup Wizard[CR]-д тавтай морилно уу!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Ихэнх тоглоомууд archive.org бүртгэл шаарддаг[CR] https://archive.org/account/signup хаягаар бүртгүүлнэ үү[CR]Та IAGL-д бүртгэлээ ашиглахыг хүсэж байна уу?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Kodi тоглоомын нэмэлтүүдийг ашиглахын тулд тохируулга дууслаа![CR]Та тоглоход бэлэн үү?[CR]Гадаад тоглоом эхлүүлэх тохиргоог хийхийн тулд [B]Үгүй[/B]-г сонгоно уу."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Бүх тоглоомын жагсаалтыг гаднаас эхлүүлэхээр тохируулна уу"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Зөвхөн зарим тоглоомын жагсаалтыг гаднаас эхлүүлэхээр тохируулна уу"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Бүх тоглоомын жагсаалт эхлүүлэгчийг өгөгдмөл рүү буцаана уу"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} тоглоомын жагсаалтыг гаднаас гаргахаар шинэчилсэн"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Анхдагч тохиргоог гадаад эхлүүлэх команд бүрд урьдчилан тохируулсан байна[CR]Шаардлагатай бол тоглоом эхлүүлэх параметрүүдийг шалгахын өмнө[CR]Дэлгэрэнгүй мэдээллийг вики-г үзнэ үү."

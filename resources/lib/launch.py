@@ -5,6 +5,7 @@ import xbmc, xbmcgui, xbmcvfs, json
 from pathlib import Path
 from queue import Queue, Empty
 from threading import Thread
+from urllib.parse import quote as url_quote
 from subprocess import Popen, TimeoutExpired, PIPE, STDOUT
 
 class launch(object):
@@ -181,6 +182,12 @@ class launch(object):
 			if isinstance(self.current_launch_command,str):
 				if isinstance(self.rom,dict) and isinstance(self.rom.get('launch_file'),str):
 					self.current_launch_command = self.current_launch_command.replace('XXROM_PATHXX',self.rom.get('launch_file'))
+					self.current_launch_command = self.current_launch_command.replace('XXROM_NAMEXX',Path(self.rom.get('launch_file')).name)
+					self.current_launch_command = self.current_launch_command.replace('XXROM_NAME_QUOTEDXX',url_quote(Path(self.rom.get('launch_file')).name))
+					self.current_launch_command = self.current_launch_command.replace('XXROM_NAME_QUOTESPACEXX',Path(self.rom.get('launch_file')).name.replace(' ','%2F'))
+					self.current_launch_command = self.current_launch_command.replace('XXROM_STEMXX',Path(self.rom.get('launch_file')).stem)
+					self.current_launch_command = self.current_launch_command.replace('XXROM_STEM_QUOTEDXX',url_quote(Path(self.rom.get('launch_file')).stem))
+					self.current_launch_command = self.current_launch_command.replace('XXROM_STEM_QUOTESPACEXX',Path(self.rom.get('launch_file')).stem.replace(' ','%2F'))
 				if isinstance(self.launch_parameters.get('netplay'),str):
 					self.current_launch_command = self.current_launch_command.replace(' XXNETPLAY_COMMANDXX',self.rom.get('netplay'))
 				else:
@@ -332,6 +339,12 @@ class launch(object):
 			if isinstance(self.current_launch_command,str):
 				if isinstance(self.rom,dict) and isinstance(self.rom.get('launch_file'),str):
 					self.current_launch_command = self.current_launch_command.replace('XXROM_PATHXX',self.rom.get('launch_file'))
+					self.current_launch_command = self.current_launch_command.replace('XXROM_NAMEXX',Path(self.rom.get('launch_file')).name)
+					self.current_launch_command = self.current_launch_command.replace('XXROM_NAME_QUOTEDXX',url_quote(Path(self.rom.get('launch_file')).name))
+					self.current_launch_command = self.current_launch_command.replace('XXROM_NAME_QUOTESPACEXX',Path(self.rom.get('launch_file')).name.replace(' ','%20'))
+					self.current_launch_command = self.current_launch_command.replace('XXROM_STEMXX',Path(self.rom.get('launch_file')).stem)
+					self.current_launch_command = self.current_launch_command.replace('XXROM_STEM_QUOTEDXX',url_quote(Path(self.rom.get('launch_file')).stem))
+					self.current_launch_command = self.current_launch_command.replace('XXROM_STEM_QUOTESPACEXX',Path(self.rom.get('launch_file')).stem.replace(' ','%20'))
 				if isinstance(self.launch_parameters.get('netplay'),str):
 					self.current_launch_command = self.current_launch_command.replace(' XXNETPLAY_COMMANDXX',self.rom.get('netplay'))
 				else:
@@ -344,6 +357,8 @@ class launch(object):
 					self.current_launch_command = None
 				if isinstance(self.current_launch_command,dict) and (isinstance(self.current_launch_command.get('extras'),dict) or isinstance(self.current_launch_command.get('extras'),list)):
 					self.current_launch_command['extras_json'] = json.dumps(self.current_launch_command.get('extras'))
+				else:
+					self.current_launch_command['extras_json'] = None
 
 		def enqueue_output(self,out,queue):
 			for line in iter(out.readline, b''):

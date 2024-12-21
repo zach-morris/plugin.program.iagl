@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "ภาพยนตร์"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "เกมส์"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 เกม"
@@ -337,7 +341,7 @@ msgstr "งานศิลปะในเกม"
 
 msgctxt "#30083"
 msgid "Game list artwork"
-msgstr "รายชื่อเกมอาร์ตเวิร์ก"
+msgstr "ภาพปกรายชื่อเกม"
 
 msgctxt "#30084"
 msgid "Retroarch Settings"
@@ -353,7 +357,7 @@ msgstr "หยุดสื่อในการเปิดตัว"
 
 msgctxt "#30087"
 msgid "Waiting for return"
-msgstr "รอการกลับมา"
+msgstr "กำลังรอการกลับมา"
 
 msgctxt "#30088"
 msgid "Add to IAGL Favorites"
@@ -591,6 +595,14 @@ msgctxt "#30146"
 msgid "Android ra32"
 msgstr "แอนดรอยด์ ra32"
 
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "วิธีการเลือกตัวเปิดเกม"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "เลือกสิ่งที่ Kodi จะทำเมื่อเลือกตัวเปิดเกม (เฉพาะ Windows, Linux และ OSX)"
+
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
 msgstr "เก็บ Kodi ไว้ในพื้นหลัง"
@@ -729,7 +741,7 @@ msgstr "ตรวจสอบเฟรม"
 
 msgctxt "#30183"
 msgid "Define number of netplay sync frames (leave blank for default)"
-msgstr "กำหนดจำนวนเฟรมซิงค์การเล่นเน็ตเพลย์ (ปล่อยว่างไว้เพื่อใช้ค่าเริ่มต้น)"
+msgstr "กำหนดจำนวนเฟรมการซิงค์เน็ตเพลย์ (ปล่อยว่างไว้เพื่อใช้ค่าเริ่มต้น)"
 
 msgctxt "#30184"
 msgid "Announce Netplay on Discord"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "ดำเนินการตัวช่วยติดตั้ง"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "เรียกใช้ตัวช่วยสร้างเพื่อเปลี่ยนการตั้งค่าสำหรับรายการเกมของคุณ คุณสามารถเรียกใช้ซ้ำได้ตลอดเวลา"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "เรียกใช้ตัวช่วยสร้างเพื่อเปลี่ยนการตั้งค่าสำหรับรายการเกมของคุณอย่างรวดเร็ว ซึ่งสามารถเรียกใช้ซ้ำได้ตลอดเวลา"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,7 +813,7 @@ msgstr "ดาวน์โหลดกระทู้"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "ตั้งค่าโฟลเดอร์เริ่มต้นสำรองสำหรับการดาวน์โหลดทั้งหมด"
+msgstr "โฟลเดอร์ดาวน์โหลดทางเลือกเริ่มต้น"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "อัปเดตรายชื่อเกม Launcher"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "อัปเดตคำสั่งเปิดตัว"
+msgid "Update game list Launch Command"
+msgstr "อัปเดตรายชื่อเกม เปิดคำสั่ง"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "อัพเดทเส้นทางการดาวน์โหลดรายชื่อเกม"
+msgid "Update game list Download Path"
+msgstr "อัพเดทรายชื่อเกม ดาวน์โหลดเส้นทาง"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1057,7 +1069,7 @@ msgstr "เลือกส่วนเสริมเกม"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "รีเซ็ตเป็นค่าเริ่มต้น"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการรีเซ็ตคำสั่งเปิดส่วนเสริมเกม?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1125,7 +1137,7 @@ msgstr "เลือกเส้นทางไปยังแอปพลิเ
 
 msgctxt "#30282"
 msgid "MAME"
-msgstr "เมม"
+msgstr "เมเม่"
 
 msgctxt "#30283"
 msgid "Select the path to the MAME application (optional)"
@@ -1141,7 +1153,7 @@ msgstr "เลือกเส้นทางไปยังแอปพลิเ
 
 msgctxt "#30286"
 msgid "ePSXe"
-msgstr "เอปสัน เอส เอ็กซ์"
+msgstr "เอปสัน เอส เอ"
 
 msgctxt "#30287"
 msgid "Select the path to the ePSXe application (optional)"
@@ -1157,7 +1169,7 @@ msgstr "เลือกเส้นทางไปยังแอปพลิเ
 
 msgctxt "#30290"
 msgid "FS-UAE"
-msgstr "FS-ยูเออี"
+msgstr "เอฟเอส-ยูเออี"
 
 msgctxt "#30291"
 msgid "Select the path to the FS-UAE application (optional)"
@@ -1271,6 +1283,10 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "ตัวเปิดรายชื่อเกม"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "คำสั่งเปิดตัวภายนอก"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
 msgstr "คำสั่งเปิดใช้ภายนอก[CR]*ไม่พบคำสั่งเปิดใช้ของผู้ใช้ / ใช้ค่าเริ่มต้น*"
@@ -1314,3 +1330,227 @@ msgstr "คุณแน่ใจหรือไม่ว่าต้องกา
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "การตั้งค่ารายการเกมได้รับการรีเซ็ตเป็นค่าเริ่มต้น"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "การจับคู่ไฟล์ท้องถิ่น"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "การตรวจสอบข้อมูลประจำตัว"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "ตัวแปรต่อไปนี้จะถูกแทนที่ในระหว่างการเปิดใช้งาน:[CR]● XXROM_PATHXX: เส้นทางไปยังไฟล์ที่จะเปิดตัว[CR]● XXROM_NAMEXX: ชื่อไฟล์ที่จะเปิดตัว (ไม่มีเส้นทาง)[CR]● XXROM_STEMXX: ชื่อไฟล์ที่จะเปิดตัว (ไม่มีเส้นทาง ไม่มีนามสกุล)[CR]● XXNETPLAY_COMMANDXX: จำเป็นต้องมีการเพิ่มคำสั่งใดๆ สำหรับ netplay โปรดดูการตั้งค่าส่วนเสริมสำหรับตัวเลือก[CR] ดู wiki เพื่อดูข้อมูลเพิ่มเติม…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "ไม่สามารถประมวลผลไฟล์เก็บถาวรได้[CR]ตรวจสอบบันทึกเพื่อดูรายละเอียดเพิ่มเติม"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "เลือกการดำเนินการก่อนเปิดตัว"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "ปล่อยให้ Kodi ทำงานอยู่เบื้องหลัง (ค่าเริ่มต้น)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "ปิด Kodi ก่อนเปิดใช้งาน เปิด Kodi อีกครั้งหลังจากออกจากโปรแกรมจำลอง"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "ระงับ Kodi ก่อนเปิดใช้งาน และปลุก Kodi หลังจากออกจากโปรแกรมจำลอง"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "ดูสถิติฐานข้อมูล IAGL"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "แสดงสถิติปัจจุบันของ IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "สถิติ db"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "ดูพารามิเตอร์การเปิดตัว"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "การตั้งค่าเกม"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "พารามิเตอร์การเปิดตัวเกม"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "ถ้าไม่มีผู้ใช้เปิดคำสั่ง"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "เลือกสิ่งที่ Kodi จะทำเมื่อไม่มีการตั้งค่าคำสั่งเปิดใช้งาน (โปรแกรมเสริม Retroplayer หรือโปรแกรมจำลองภายนอก)"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "พยายามเปิดใช้ด้วยค่าเริ่มต้น"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "หยุด / อย่าปล่อย"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "ไม่มีชุดคำสั่ง"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "คำสั่งเปิดใช้ไม่ได้ถูกตั้งค่าสำหรับรายการนี้ โปรดตั้งค่าตอนนี้เลยหรือไม่"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "ไม่พบคำสั่งเปิดใช้งานเริ่มต้นสำหรับรายการนี้"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "ไม่พบแกนหลักเริ่มต้น โปรดติดตั้ง {} หรืออัปเดตตัวเรียกใช้งาน"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "รีเซ็ตคำสั่งเปิดโปรแกรมเสริมเกม"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "ไม่พบส่วนเสริมเกม"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "คำสั่งเปิดส่วนเสริมเกมได้รับการอัปเดตแล้ว"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "ใช้โฟลเดอร์ดาวน์โหลดเริ่มต้นอื่น"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "แสดงเฉพาะตัวเลือกที่เก็บ Kodi ไว้ในพื้นหลังเท่านั้น"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "แสดงเฉพาะตัวเลือกที่ปิด Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "แสดงเฉพาะตัวเลือกที่หยุดชั่วคราว Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "ตำแหน่ง CFG ของ Retroarch เป็นสตริง"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "อีกวิธีหนึ่งคือป้อนเส้นทางไปยังไฟล์ retroarch.cfg ตามที่ปรากฏใน Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "ไดเร็กทอรี Retroarch Cores เป็นสตริง"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "หรือป้อนเส้นทางไปยังไดเร็กทอรี Cores ให้ตรงกับที่ปรากฏในการกำหนดค่าไดเร็กทอรี Retroarch"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "อัปเดต Launcher สำหรับ {}?[CR][B]การเปลี่ยนแปลงนี้จะเปลี่ยนการตั้งค่าสำหรับเกมทั้งหมดในรายการนี้[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "อัปเดตคำสั่งเปิดใช้งานสำหรับ {}?[CR][B]การดำเนินการนี้จะเปลี่ยนการตั้งค่าสำหรับเกมทั้งหมดในรายการนี้[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "อัปเดตเส้นทางการดาวน์โหลดการเปิดตัวสำหรับ {}?[CR][B]การดำเนินการนี้จะเปลี่ยนการตั้งค่าสำหรับเกมทั้งหมดในรายการนี้[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "อัปเดตคำสั่งเปิดตัว"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "อัปเดตเส้นทางการเปิดตัวการดาวน์โหลด"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "รีเซ็ตการตั้งค่าสำหรับ {}?[CR][B]การดำเนินการนี้จะเปลี่ยนการตั้งค่าสำหรับเกมทั้งหมดในรายการนี้[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "สนับสนุน"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "บริจาคให้ Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "พบฐานข้อมูล IAGL ใหม่[CR]คุณต้องการอัพเดตหรือไม่[CR]การตั้งค่าจะถูกคัดลอกไปยังฐานข้อมูลใหม่หากเป็นไปได้"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "ฐานข้อมูลใหม่"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "ฐานข้อมูลได้รับการอัพเดต[CR]การตั้งค่าผู้ใช้ได้รับการโอน"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "ฐานข้อมูลได้รับการอัพเดต[CR]การตั้งค่าผู้ใช้บางส่วนไม่สามารถถ่ายโอนได้[CR]ดูบันทึกสำหรับรายละเอียดเพิ่มเติม"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "มีข้อผิดพลาดในการอัพเดตฐานข้อมูล[CR]ดูบันทึกสำหรับรายละเอียดเพิ่มเติม"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "ถามฉันอีกครั้งภายหลัง"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "อย่าเพิ่งอัปเดตครั้งนี้[CR](อย่าถามฉันอีกจนกว่าจะมีการอัปเดตครั้งต่อไป)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "ยินดีต้อนรับสู่ตัวช่วยการตั้งค่า IAGL[CR]มาดูการตั้งค่าทั้งหมดเพื่อเริ่มเล่นได้เลย!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "เกมส่วนใหญ่ต้องใช้บัญชี archive.org[CR]สมัครได้ที่ https://archive.org/account/signup[CR]คุณต้องการใช้บัญชีของคุณกับ IAGL หรือไม่"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "การตั้งค่าสำหรับการใช้โปรแกรมเสริมเกม Kodi เสร็จสมบูรณ์แล้ว![CR]คุณพร้อมที่จะเล่นหรือยัง?[CR]เลือก [B]ไม่[/B] เพื่อตั้งค่าการเปิดเกมภายนอก"
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "ตั้งค่ารายการเกมทั้งหมดให้เปิดตัวภายนอก"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "ตั้งค่าเฉพาะรายชื่อเกมบางรายการที่จะเปิดใช้งานจากภายนอก"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "รีเซ็ตตัวเปิดรายการเกมทั้งหมดกลับเป็นค่าเริ่มต้น"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} รายการเกมได้รับการอัปเดตสำหรับการเปิดตัวภายนอก"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "ค่าเริ่มต้นจะถูกตั้งค่าไว้ล่วงหน้าสำหรับคำสั่งเปิดภายนอกแต่ละคำสั่ง[CR]ก่อนเปิดเกมให้ตรวจสอบพารามิเตอร์การเปิดเกมหากจำเป็น[CR]ดู wiki เพื่อดูรายละเอียดเพิ่มเติม"

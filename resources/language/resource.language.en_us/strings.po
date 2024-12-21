@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -776,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Execute setup wizard"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Run the wizard to change settings for your game lists.  This can be rerun at any time"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -996,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Update game list Launcher"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Update Launch Command"
+msgid "Update game list Launch Command"
+msgstr "Update game list Launch Command"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Update game list download path"
+msgid "Update game list Download Path"
+msgstr "Update game list Download Path"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1340,8 +1340,8 @@ msgid "Checking credentials"
 msgstr "Checking credentials"
 
 msgctxt "#30333"
-msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options"
-msgstr "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
 
 msgctxt "#30334"
 msgid "The archive file could not be processed[CR]Check logs for more details"
@@ -1462,3 +1462,95 @@ msgstr "Retroarch Cores directory as string"
 msgctxt "#30363"
 msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
 msgstr "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Update Launch Command"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Update Launch Download Path"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Support"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Donate to Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "New db"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Database was updated[CR]User settings were transferred"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "There was an error updating the database[CR]See log for more details"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Ask me again later"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Do not update this time[CR](Don’t ask me again until next update)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Set all game lists to be externally launched"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Set only some game lists to be externally launched"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Reset all game list launchers back to default"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} game lists were updated for external launching"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."

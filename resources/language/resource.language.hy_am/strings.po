@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -25,7 +25,7 @@ msgstr "Թերթիր ցուցակներն ըստ կատեգորիայի"
 
 msgctxt "#30004"
 msgid "Browse games by Playlist"
-msgstr "Զննեք խաղերը ըստ երգացանկ"
+msgstr "Թերթիր խաղերը ըստ երգացանկ"
 
 msgctxt "#30005"
 msgid "Favorites"
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "Ֆիլմեր"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "Խաղեր"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 Խաղեր"
@@ -317,7 +321,7 @@ msgstr "25 Խաղեր"
 
 msgctxt "#30078"
 msgid "50 Games"
-msgstr "50 Խաղ"
+msgstr "50 Խաղեր"
 
 msgctxt "#30079"
 msgid "100 Games"
@@ -465,7 +469,7 @@ msgstr "Ընտրեք արվեստի գործը, որը ցուցադրվում է
 
 msgctxt "#30115"
 msgid "System collage"
-msgstr "Համակարգային կոլաժ"
+msgstr "Համակարգի կոլաժ"
 
 msgctxt "#30116"
 msgid "System console"
@@ -485,7 +489,7 @@ msgstr "Համոզվեք, որ ձեր մաշկի վրա առկա է հարկադ
 
 msgctxt "#30120"
 msgid "Frontpage viewtype"
-msgstr "Առաջին էջի տեսքը"
+msgstr "Առաջին էջի տեսքի տեսակը"
 
 msgctxt "#30121"
 msgid "Game library lists viewtype"
@@ -590,6 +594,14 @@ msgstr "Android aarch64"
 msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Խաղի գործարկիչի ընտրության մեթոդ"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Ընտրեք, թե ինչ կանի Kodi-ն խաղի գործարկիչ ընտրելիս (միայն Windows, Linux և OSX)"
 
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
@@ -721,7 +733,7 @@ msgstr "Լռելյայն նվագարկիչ 2+ հյուրընկալող անու
 
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
-msgstr "Սահմանեք լռելյայն ցանցային հոսթի անունը / IP (օգտակար տեղական ցանցի համար, թողեք դատարկ լռելյայն)"
+msgstr "Սահմանեք լռելյայն ցանցային հոսթի անունը / IP (օգտակար տեղական ցանցի համար, լռելյայն թողեք դատարկ)"
 
 msgctxt "#30182"
 msgid "Check frames"
@@ -741,7 +753,7 @@ msgstr "Հայտարարում է netplay-ի մեկնարկը IAGL խաղացո�
 
 msgctxt "#30186"
 msgid "Discord Player Name"
-msgstr "Discord խաղացողի անունը"
+msgstr "Discord խաղացողի անուն"
 
 msgctxt "#30187"
 msgid "Enter your player name to be announced on Discord"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Գործարկել տեղադրման հրաշագործը"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Գործարկեք հրաշագործը՝ ձեր խաղերի ցուցակների կարգավորումները փոխելու համար:  Սա կարող է կրկնվել ցանկացած պահի"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Գործարկեք հրաշագործը՝ ձեր խաղերի ցուցակների կարգավորումներն արագ փոխելու համար:  Սա կարող է կրկնվել ցանկացած պահի"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -797,11 +809,11 @@ msgstr "Ներբեռնեք Ընդլայնված կարգավորումները"
 
 msgctxt "#30200"
 msgid "Download Threads"
-msgstr "Բեռնել Թեմաներ"
+msgstr "Ներբեռնեք Թեմաներ"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Սահմանեք այլընտրանքային լռելյայն թղթապանակ բոլոր ներբեռնումների համար"
+msgstr "Այլընտրանքային լռելյայն ներբեռնման թղթապանակ"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -937,7 +949,7 @@ msgstr "Ստեղծել նոր խումբ"
 
 msgctxt "#30235"
 msgid "Select favorite group"
-msgstr "Ընտրեք սիրված խումբը"
+msgstr "Ընտրեք սիրելի խումբը"
 
 msgctxt "#30236"
 msgid "Group by Favorites Group"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Թարմացրեք խաղերի ցուցակի գործարկիչը"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Թարմացրեք Գործարկման հրամանը"
+msgid "Update game list Launch Command"
+msgstr "Թարմացրեք խաղերի ցանկը Գործարկման հրամանը"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Թարմացրեք խաղերի ցանկի ներբեռնման ուղին"
+msgid "Update game list Download Path"
+msgstr "Թարմացրեք խաղերի ցանկը Ներբեռնման ուղին"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1057,7 +1069,7 @@ msgstr "Ընտրեք խաղի հավելումը"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Վերականգնել լռելյայն"
+msgstr "Վստա՞հ եք, որ ցանկանում եք վերականգնել խաղի հավելումների գործարկման հրամանը:"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1229,7 +1241,7 @@ msgstr "Խաղերի ընդհանուր ցուցակը"
 
 msgctxt "#30308"
 msgid "Total Favorited Games in List"
-msgstr "Ցանկում նախընտրած խաղերի ընդհանուր թիվը"
+msgstr "Ընդհանուր նախընտրած խաղերը ցանկում"
 
 msgctxt "#30309"
 msgid "Default External Launch Command"
@@ -1270,6 +1282,10 @@ msgstr "Ոչ մեկը (կօգտագործի հավելման լռելյայն)"
 msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Խաղերի ցուցակի գործարկիչ"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Արտաքին գործարկման հրաման"
 
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
@@ -1314,3 +1330,227 @@ msgstr "Վստա՞հ եք, որ ցանկանում եք վերականգնել �
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Խաղերի ցանկի կարգավորումները վերականգնվել են լռելյայն"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Համապատասխան տեղական ֆայլ"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Հավատարմագրերի ստուգում"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "գործարկման ընթացքում կփոխարինվեն հետևյալ փոփոխականները. գործարկվող ֆայլի անվանումը (ուղի չկա առանց ընդլայնման)[CR]● XXNETPLAY_COMMANDXX. ցանկացած հրամանի հավելում պահանջվում է netplay, տե՛ս հավելումների կարգավորումները ընտրանքների համար[CR]Տե՛ս վիքիը՝ լրացուցիչ տեղեկությունների համար…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Չհաջողվեց մշակել արխիվի ֆայլը[CR]Լրացուցիչ մանրամասների համար ստուգեք գրանցամատյանները"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Գործարկումից առաջ ընտրեք գործողություն"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Թողեք Kodi-ն գործարկվի հետին պլանում (կանխադրված)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Փակեք Kodi-ն գործարկումից առաջ, նորից բացեք Kodi-ն էմուլյատորից դուրս գալուց հետո"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Կասեցրեք Kodi-ն գործարկումից առաջ, արթնացրեք Kodi-ին էմուլյատորից դուրս գալուց հետո"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Դիտեք IAGL db վիճակագրությունը"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Ցուցակում է ընթացիկ վիճակագրությունը IAGL db-ի համար"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db վիճակագրություն"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Դիտեք գործարկման պարամետրերը"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Խաղի կարգավորումներ"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Խաղի մեկնարկի պարամետրերը"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Եթե ​​որևէ օգտվող չկա Գործարկման հրաման"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Ընտրեք, թե ինչ կանի Kodi-ն, երբ գործարկման հրաման (retroplayer հավելում կամ արտաքին էմուլյատոր) սահմանված չէ"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Փորձեք գործարկել լռելյայն"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Դադարեցրեք / Մի գործարկեք"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Ոչ մի հրաման չկա"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Գործարկման հրամանը սահմանված չէ այս ցանկի համար, սահմանե՞լ այն հիմա:"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Այս ցուցակի համար լռելյայն գործարկման հրաման չի գտնվել"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Լռելյայն միջուկը չի գտնվել:  Տեղադրեք {} կամ թարմացրեք գործարկիչը"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Խաղի հավելումների գործարկման հրամանի վերակայում"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Խաղի հավելումներ չեն գտնվել"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Խաղի հավելումների գործարկման հրամանը թարմացվել է"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Օգտագործեք այլընտրանքային լռելյայն ներբեռնման պանակը"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Ցույց տվեք միայն ընտրանքները, որոնք Kodi-ին պահում են հետին պլանում"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Ցուցադրել միայն Կոդիին փակող տարբերակները"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Ցուցադրել միայն Կոդիին դադարեցնող տարբերակները"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Տեղադրությունը որպես տող"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Այլապես մուտքագրեք retroarch.cfg ֆայլի ուղին ճիշտ այնպես, ինչպես այն հայտնվում է Retroarch-ում"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch Cores գրացուցակը որպես տող"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Այլապես մուտքագրեք Cores գրացուցակի ուղին ճիշտ այնպես, ինչպես այն հայտնվում է Retroarch գրացուցակի կազմաձևում"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Թարմացնե՞լ Launcher-ը {}-ի համար:[CR][B]Սա կփոխի այս ցանկի բոլոր խաղերի կարգավորումները:[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Թարմացնե՞լ Launch Command-ը {}-ի համար:[CR][B]Սա կփոխի այս ցանկի բոլոր խաղերի կարգավորումները:[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Թարմացնե՞լ մեկնարկի ներբեռնման ուղին {}-ի համար:[CR][B]Սա կփոխի այս ցանկի բոլոր խաղերի կարգավորումները:[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Թարմացնել Գործարկման հրամանը"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Թարմացրեք Գործարկման ներբեռնման ուղին"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Վերակայե՞լ {}-ի կարգավորումները:[CR][B]Սա կփոխի այս ցանկի բոլոր խաղերի կարգավորումները:[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Աջակցություն"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Նվիրաբերեք Archive.org-ին"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Գտնվել է նոր IAGL տվյալների բազա[CR]Ցանկանու՞մ եք թարմացնել:[CR]Կարգավորումները հնարավորության դեպքում կպատճենվեն նոր db-ում:"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Նոր դբ"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Տվյալների բազան թարմացվել է[CR]Օգտատիրոջ կարգավորումները փոխանցվել են"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Տվյալների բազան թարմացվել է[CR]Օգտատիրոջ որոշ կարգավորումներ չհաջողվեց փոխանցել[CR]Տե՛ս տեղեկամատյանը՝ լրացուցիչ մանրամասների համար"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Տվյալների բազան թարմացնելիս սխալ տեղի ունեցավ[CR]Տե՛ս գրանցամատյանը՝ լրացուցիչ մանրամասների համար"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Հարցրեք ինձ ավելի ուշ"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Մի թարմացրու այս անգամ[CR] (Այլևս մի հարցրու ինձ մինչև հաջորդ թարմացումը)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Բարի գալուստ IAGL Setup Wizard[CR]Թույլ տվեք անցնել բոլոր կարգավորումները՝ ձեզ խաղալու համար:"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Խաղերի մեծ մասի համար անհրաժեշտ է archive.org հաշիվ[CR]Գրանցվեք https://archive.org/account/signup[CR]Կցանկանայի՞ք օգտագործել ձեր հաշիվը IAGL-ում:"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Կարգավորումն ավարտված է Kodi խաղի հավելումներ օգտագործելու համար։[CR]Պատրա՞ստ եք խաղալ։[CR]Ընտրեք [B]Ոչ[/B]՝ արտաքին խաղի մեկնարկը կարգավորելու համար։"
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Նախադրեք բոլոր խաղերի ցուցակները, որպեսզի արտաքին գործարկվեն"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Սահմանեք միայն որոշ խաղերի ցուցակներ, որոնք պետք է արտասահմանից գործարկվեն"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Վերականգնել բոլոր խաղերի ցուցակի գործարկիչները լռելյայն"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} խաղերի ցուցակները թարմացվել են արտաքին գործարկման համար"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Լռելյայնները նախապես սահմանված են յուրաքանչյուր արտաքին գործարկման հրամանի համար[CR]Նախքան խաղի մեկնարկի վերանայման պարամետրերը սկսելը, եթե անհրաժեշտ է[CR]Տե՛ս վիքիում լրացուցիչ մանրամասների համար:"

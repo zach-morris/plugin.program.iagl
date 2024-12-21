@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -13,7 +13,7 @@ msgstr ""
 
 msgctxt "#30001"
 msgid "Internet Archive Game Launcher"
-msgstr "Interneti-arhiivi mängude käivitaja"
+msgstr "Interneti-arhiivi mängukäivitaja"
 
 msgctxt "#30002"
 msgid "Browse all Lists"
@@ -65,7 +65,7 @@ msgstr "Grupp žanri järgi"
 
 msgctxt "#30014"
 msgid "Group by Year"
-msgstr "Rühmitada aastate kaupa"
+msgstr "Rühmitamine Aastate järgi"
 
 msgctxt "#30015"
 msgid "Group by Players"
@@ -197,7 +197,7 @@ msgstr "Seadistusviisard"
 
 msgctxt "#30047"
 msgid "Advanced"
-msgstr "Täiustatud"
+msgstr "Täpsemalt"
 
 msgctxt "#30048"
 msgid "Play History"
@@ -307,6 +307,10 @@ msgctxt "#30074"
 msgid "Movies"
 msgstr "Filmid"
 
+msgctxt "#30075"
+msgid "Games "
+msgstr "Mängud"
+
 msgctxt "#30076"
 msgid "10 Games"
 msgstr "10 mängu"
@@ -405,7 +409,7 @@ msgstr "Kui see on lubatud, lisatakse otsingutulemustele mänguloendi nimi"
 
 msgctxt "#30100"
 msgid "Append game list name when browsing by playlist"
-msgstr "Lisage esitusloendi järgi sirvimisel mängude loendi nimi"
+msgstr "Esitusloendi järgi sirvimisel lisage mänguloendi nimi"
 
 msgctxt "#30101"
 msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
@@ -509,7 +513,7 @@ msgstr "Otsingu- ja juhuslike tulemuste vaatetüüp"
 
 msgctxt "#30126"
 msgid "Off (Default)"
-msgstr "Väljas (vaikimisi)"
+msgstr "Väljas (vaikeseade)"
 
 msgctxt "#30127"
 msgid "List / Poster (50)"
@@ -590,6 +594,14 @@ msgstr "Android aarch64"
 msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Mängu käivitaja valiku meetod"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Valige, mida Kodi mängukäiviti valimisel teeb (ainult Windows, Linux ja OSX)"
 
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Käivitage häälestusviisard"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Mänguloendite sätete muutmiseks käivitage viisard.  Seda saab igal ajal uuesti käivitada"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Mängude loendite sätete kiireks muutmiseks käivitage viisard.  Seda saab igal ajal uuesti käivitada"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -801,7 +813,7 @@ msgstr "Laadige lõimed alla"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Määrake kõigi allalaadimiste jaoks alternatiivne vaikekaust"
+msgstr "Alternatiivne allalaadimise vaikekaust"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -913,7 +925,7 @@ msgstr "Otsingukriteeriumid on tühjad.[CR]Värskendage kriteeriume ja proovige 
 
 msgctxt "#30229"
 msgid "Reset criteria"
-msgstr "Lähtestage kriteeriumid"
+msgstr "Lähtesta kriteeriumid"
 
 msgctxt "#30230"
 msgid "Enter Link Name"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Värskendage mänguloendi käivitajat"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Värskendage Käivituskäsku"
+msgid "Update game list Launch Command"
+msgstr "Värskendage mängude loendit Käivitage käsk"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Värskendage mängude loendi allalaadimisteed"
+msgid "Update game list Download Path"
+msgstr "Värskendage mängude loendit allalaadimistee"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -997,7 +1009,7 @@ msgstr "Peida mängude loend"
 
 msgctxt "#30250"
 msgid "Update game list post download process"
-msgstr "Värskendage mängude loendit pärast allalaadimise protsessi"
+msgstr "Värskendage mängude loendi allalaadimisprotsessi"
 
 msgctxt "#30251"
 msgid "Are you sure you want to hide game list"
@@ -1041,7 +1053,7 @@ msgstr "Kas värskendada käivitusprogrammi [CR]Kodi versioonist[CR]External?"
 
 msgctxt "#30261"
 msgid "Update launcher from[CR]External to[CR]Kodi?"
-msgstr "Kas värskendada käivitusprogrammi [CR]External versioonist [CR]Kodi?"
+msgstr "Kas värskendada käivitusprogrammi [CR]External versioonist[CR]Kodi?"
 
 msgctxt "#30262"
 msgid "Launcher updated to external"
@@ -1057,7 +1069,7 @@ msgstr "Valige mängu lisand"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Lähtestage vaikeseadetele"
+msgstr "Kas olete kindel, et soovite mängu lisandmooduli käivitamise käsu lähtestada?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1257,7 +1269,7 @@ msgstr "Kasutaja määratud retromängija mängulisand"
 
 msgctxt "#30315"
 msgid "User Defined Post Process"
-msgstr "Kasutaja määratud postiprotsess"
+msgstr "Kasutaja määratud postitamisprotsess"
 
 msgctxt "#30316"
 msgid "Game List Settings"
@@ -1270,6 +1282,10 @@ msgstr "Puudub (kasutab lisandmooduli vaikeseadet)"
 msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Mängude loendi käivitaja"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Väline käivituskäsk"
 
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
@@ -1314,3 +1330,227 @@ msgstr "Kas olete kindel, et soovite kõik mängude loendi seaded vaikeseadetele
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Mängude loendi seaded lähtestati vaikeseadetele"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Sobiv kohalik fail"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Mandaatide kontrollimine"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "käivitamisel asendatakse järgmised muutujad:[CR]● XXROM_PATHXX: käivitatava faili tee[CR]● XXROM_NAMEXX: käivitatava faili nimi (tee puudub)[CR]● XXROM_STEMXX: käivitatava faili nimi (tee pole laiendita)[CR]● XXNETPLAY_COMMANDXX: netplay jaoks on vaja mis tahes käsu lisamist, vaadake lisaseadeid valikud[CR]Lisateavet leiate wikist…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Arhiivifaili ei saanud töödelda[CR]Lisateavet vaadake logidest"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Valige toiming enne käivitamist"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Jäta Kodi taustal töötama (vaikeseade)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Sulgege Kodi enne käivitamist, avage Kodi uuesti pärast emulaatorist väljumist"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Peatage Kodi enne käivitamist, äratage Kodi pärast emulaatorist väljumist"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Vaadake IAGL db statistikat"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Loetleb IAGL db praeguse statistika"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db Statistika"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Vaadake käivitusparameetreid"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Mängu seaded"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Mängu käivitamise parameetrid"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Kui kasutajat pole, käivitage käsk Käivitus"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Valige, mida Kodi teeb, kui käivitamiskäsku (retropleieri lisandmoodul või väline emulaator) pole määratud"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Proovige käivitada vaikimisi"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Peata / Ära käivita"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Käsk pole määratud"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Selle loendi jaoks pole käivitamiskäsku määratud, kas määrata see kohe?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Selle loendi jaoks ei leitud ühtegi vaikekäivituskäsku"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Vaikimisi tuuma ei leitud.  Installige {} või värskendage käivitusprogrammi"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Mängu lisandmooduli käivitamise käsu lähtestamine"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Ühtegi mängu lisandmoodulit ei leitud"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Mängu lisandmooduli käivitamise käsku värskendati"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Kasutage alternatiivset allalaadimise vaikekausta"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Kuva ainult valikud, mis hoiavad Kodi taustal"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Kuva ainult valikud, mis Kodi sulgevad"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Kuva ainult valikud, mis peatavad Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Asukoht stringina"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Teise võimalusena sisestage faili retroarch.cfg tee täpselt nii, nagu see kuvatakse rakenduses Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch Cores kataloog stringina"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Teise võimalusena sisestage Cores kataloogi tee täpselt nii, nagu see kuvatakse Retroarchi kataloogi konfiguratsioonis"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Kas värskendada mängu {} käivitajat?[CR][B]See muudab kõigi selles loendis olevate mängude seadeid.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Kas värskendada mängu {} käivitamiskäsku?[CR][B]See muudab kõigi selles loendis olevate mängude seadeid.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Kas värskendada mängu {} käivitamise allalaadimisteed?[CR][B]See muudab kõigi selles loendis olevate mängude seadeid.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Värskendage Käivituskäsku"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Värskendage Käivitage allalaadimistee"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Lähtestada mängu {} seaded?[CR][B]See muudab kõigi selles loendis olevate mängude seadeid.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Toetus"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Annetage saidile Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Leiti uus IAGL-i andmebaas[CR]Kas soovite värskendada?[CR]Võimalusel kopeeritakse seaded uude andmebaasi"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Uus db"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Andmebaasi värskendati[CR]Kasutaja seaded viidi üle"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Andmebaasi värskendati[CR]Mõne kasutaja seadete ülekandmine ebaõnnestus[CR]Lisateavet leiate logist"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Andmebaasi värskendamisel ilmnes viga[CR]Lisateavet leiate logist"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Küsi hiljem uuesti"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Ärge värskendage seekord[CR](Ärge küsige enne järgmist värskendust)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Tere tulemast IAGL-i seadistusviisardisse[CR]Läheb läbi kõik seaded, et saaksite mängida!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Enamik mänge nõuab archive.org kontot[CR]Registreeruge aadressil https://archive.org/account/signup[CR]Kas soovite kasutada oma kontot IAGL-iga?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Seadistamine on Kodi mängu lisandmoodulite kasutamiseks valmis![CR]Kas olete mängimiseks valmis?[CR]Välise mängu käivitamise seadistamiseks valige [B]Ei[/B]."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Määrake kõik mängude loendid väliselt käivitamiseks"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Määrake väliselt käivitamiseks ainult mõned mängude loendid"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Lähtestage kõik mängude loendi käivitajad vaikeseadetele"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "Välise käivitamise jaoks värskendati {} mängude loendit"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Iga välise käivituskäsu jaoks on vaikesätted eelseadistatud[CR]Enne käivitamist vaadake vajadusel mängu käivitusparameetrid üle[CR]Lisateavet leiate wikist."

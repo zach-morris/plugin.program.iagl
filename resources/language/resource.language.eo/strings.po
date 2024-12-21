@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: /Internet Archive Game Launcher
-# Addon id: plugin.program.iagl
+# Addon id: pltugin.program.iagl
 # Addon Provider: ZachMorris
 msgid ""
 msgstr ""
@@ -113,7 +113,7 @@ msgstr "Serĉu Ludotitolojn"
 
 msgctxt "#30026"
 msgid "Filter by Genre"
-msgstr "Filtrilo laŭ Ĝenro"
+msgstr "Filtru laŭ Ĝenro"
 
 msgctxt "#30027"
 msgid "Filter by Players"
@@ -221,7 +221,7 @@ msgstr "Se ludo jam ekzistas loke"
 
 msgctxt "#30053"
 msgid "Define the action to take if a game file is found to exist locally"
-msgstr "Difinu la agon por fari se luddosiero troviĝas loke"
+msgstr "Difinu la agon por fari se ludodosiero troviĝas loke"
 
 msgctxt "#30054"
 msgid "Prompt"
@@ -306,6 +306,10 @@ msgstr "Televidprogramoj"
 msgctxt "#30074"
 msgid "Movies"
 msgstr "Filmoj"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "Ludoj"
 
 msgctxt "#30076"
 msgid "10 Games"
@@ -401,7 +405,7 @@ msgstr "Aldonu ludlistnomon al serĉo kaj hazardaj rezultoj"
 
 msgctxt "#30099"
 msgid "When enabled, the name of the game list will be appended to search results"
-msgstr "Kiam ĝi estas ebligita, la nomo de la ludlisto estos almetita al serĉrezultoj"
+msgstr "Kiam ĝi estas ebligita, la nomo de la ludlisto estos aldonita al serĉrezultoj"
 
 msgctxt "#30100"
 msgid "Append game list name when browsing by playlist"
@@ -473,7 +477,7 @@ msgstr "Sistemkonzolo"
 
 msgctxt "#30117"
 msgid "System wallpaper"
-msgstr "Sistema tapeto"
+msgstr "Sistemtapeto"
 
 msgctxt "#30118"
 msgid "Force IAGL viewtypes"
@@ -505,7 +509,7 @@ msgstr "Elektu listan vidospecon"
 
 msgctxt "#30125"
 msgid "Search and Random results viewtype"
-msgstr "Vidspeco de serĉo kaj hazardaj rezultoj"
+msgstr "Vidtipo de serĉo kaj hazardaj rezultoj"
 
 msgctxt "#30126"
 msgid "Off (Default)"
@@ -525,7 +529,7 @@ msgstr "Ikono Muro / Horizontala Skemo / LS-Muro (52)"
 
 msgctxt "#30130"
 msgid "Banner / Landscape / Poster Info (501)"
-msgstr "Standardo / Pejzaĝo / Afiŝo Informoj (501)"
+msgstr "Standardo / Pejzaĝo / Afiŝa Informo (501)"
 
 msgctxt "#30131"
 msgid "Fanart / Landscape Single / Episode List (502)"
@@ -590,6 +594,14 @@ msgstr "Android aarch64"
 msgctxt "#30146"
 msgid "Android ra32"
 msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Elekta metodo de ludlanĉilo"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Elektu kion faros Kodi kiam elektas ludlanĉilon (nur Vindozo, Linukso kaj OSX)"
 
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
@@ -753,7 +765,7 @@ msgstr "Discord Uzanto-Konto ID"
 
 msgctxt "#30189"
 msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
-msgstr "Provizu vian Discord-ID (Uzanto-Agordojn> Mia Konto> Kopii ID) por esti menciita dum ludado (laŭvola)"
+msgstr "Provizu vian Discord-ID (Uzanto-Agordoj>Mia Konto>Kopii ID) por esti menciita dum ludado (laŭvola)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -764,8 +776,8 @@ msgid "Execute setup wizard"
 msgstr "Efektivigu agordan sorĉiston"
 
 msgctxt "#30192"
-msgid "Run the wizard to change settings for your game lists.  This can be rerun at any time"
-msgstr "Rulu la sorĉiston por ŝanĝi agordojn por viaj ludlistoj.  Ĉi tio povas esti ripetita en ajna momento"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Rulu la sorĉiston por rapide ŝanĝi agordojn por viaj ludlistoj.  Ĉi tio povas esti ripetita en ajna momento"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -785,7 +797,7 @@ msgstr "Malakceptu Kodi-Enigo kaj Audio kiam vi uzas Eksteran Lanĉilon"
 
 msgctxt "#30197"
 msgid "Stop Kodi media playing before External Launch"
-msgstr "Ĉesu la ludadon de amaskomunikiloj de Kodi antaŭ Ekstera Lanĉo"
+msgstr "Ĉesu la ludadon de Kodi-komunikiloj antaŭ Ekstera Lanĉo"
 
 msgctxt "#30198"
 msgid "Kodi is busy / waiting for return to Kodi after External Launch"
@@ -801,7 +813,7 @@ msgstr "Elŝutu Fadenojn"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Agordu alternan defaŭltan dosierujon por ĉiuj elŝutoj"
+msgstr "Alterna defaŭlta elŝuta dosierujo"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -984,12 +996,12 @@ msgid "Update game list Launcher"
 msgstr "Ĝisdatigu ludliston Lanĉilon"
 
 msgctxt "#30247"
-msgid "Update Launch Command"
-msgstr "Ĝisdatigi Lanĉan Komandon"
+msgid "Update game list Launch Command"
+msgstr "Ĝisdatigu ludliston Lanĉkomando"
 
 msgctxt "#30248"
-msgid "Update game list download path"
-msgstr "Ĝisdatigu la elŝutan vojon de la ludlisto"
+msgid "Update game list Download Path"
+msgstr "Ĝisdatigu ludliston Elŝuta Vojo"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -997,7 +1009,7 @@ msgstr "Kaŝi ludliston"
 
 msgctxt "#30250"
 msgid "Update game list post download process"
-msgstr "Ĝisdatigi ludliston post elŝuta procezo"
+msgstr "Ĝisdatigu ludliston post elŝuta procezo"
 
 msgctxt "#30251"
 msgid "Are you sure you want to hide game list"
@@ -1057,7 +1069,7 @@ msgstr "Elektu ludon aldonaĵon"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Restarigi al defaŭlta"
+msgstr "Ĉu vi certas, ke vi volas reagordi la lanĉan komandon de la aldonaĵo de la ludo?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1271,6 +1283,10 @@ msgctxt "#30318"
 msgid "Games List Launcher"
 msgstr "Ludoj Listo Lanĉilo"
 
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Ekstera Lanĉa Komando"
+
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
 msgstr "Ekstera Lanĉa Komando[CR]*Neniu Uzanta Lanĉa Komando Trovita/Uzanta Defaŭltan*"
@@ -1314,3 +1330,227 @@ msgstr "Ĉu vi certas, ke vi volas restarigi ĉiujn agordojn de la ludlisto al d
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
 msgstr "Ludlisto agordoj estis restarigitaj al defaŭlta"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Kongrua loka dosiero"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Kontrolante akreditaĵojn"
+
+msgctxt "#30333"
+msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "la sekvaj variabloj estos anstataŭigitaj dum lanĉo:[CR]● XXROM_PATHXX: La vojo al la dosiero kiu estos lanĉita[CR]● XXROM_NAMEXX: La nomo de la dosiero kiu estos lanĉita (neniu vojo)[CR]● XXROM_STEMXX: La nomo de la dosiero kiu estos lanĉita (neniu vojo sen etendo)[CR]● XXNETPLAY_COMMANDXX: Ajna komando-aldono necesa por retludado, vidu aldonajn agordojn por opcioj[CR]Vidu vikion por pliaj informoj..."
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "La arkiva dosiero ne povis esti prilaborita[CR]Kontrolu protokolojn por pliaj detaloj"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Elektu agon antaŭ lanĉo"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Lasu Kodi funkcianta en fono (defaŭlte)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Fermu Kodi antaŭ lanĉo, remalfermu Kodi post eliro de emulilo"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Malakceptu Kodi antaŭ lanĉo, veku Kodi post eliro de emulilo"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Rigardu IAGL-db-statistikojn"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Listigas aktualajn statistikojn por IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db Statoj"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Rigardu lanĉajn parametrojn"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Ludaj Agordoj"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Ludaj Lanĉaj Parametroj"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Se neniu uzanto Launch Command ĉeestas"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Elektu kion Kodi faros kiam neniu lanĉa komando (retroludila aldonaĵo aŭ ekstera emulilo) estas agordita"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Provu Lanĉi defaŭlte"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Haltu / Ne lanĉu"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Neniu komando aro"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Lanĉa komando ne estas agordita por ĉi tiu listo, ĉu vi agordas unu nun?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Neniu defaŭlta lanĉa komando estis trovita por ĉi tiu listo"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Defaŭlta kerno ne estis trovita.  Bonvolu instali {} aŭ ĝisdatigi lanĉilon"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Ludo-aldonaĵo lanĉa komando rekomencigita"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Neniuj lud-aldonaĵoj trovitaj"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Luda aldonaĵo lanĉa komando ĝisdatigita"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Uzu alternan defaŭltan elŝutan dosierujon"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Montru nur opciojn, kiuj tenas Kodi en la fono"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Montru nur opciojn, kiuj fermas Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Montru nur opciojn, kiuj paŭzas Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Loko kiel ŝnuro"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Alternative enigu la vojon al la dosiero retroarch.cfg ekzakte kiel ĝi aperas en Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Dosierujo Retroarch Cores kiel ĉeno"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Alternative enigu la vojon al la dosierujo Cores ĝuste kiel ĝi aperas en la agordo de la dosierujo de Retroarch"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Ĝisdatigu Lanĉilon por {}?[CR][B]Ĉi tio ŝanĝos agordojn por ĉiuj ludoj en ĉi tiu listo.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Ĝisdatigi Lanĉan Komandon por {}?[CR][B]Ĉi tio ŝanĝos agordojn por ĉiuj ludoj en ĉi tiu listo.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Ĝisdatigi Lanĉan Elŝutvojon por {}?[CR][B]Ĉi tio ŝanĝos agordojn por ĉiuj ludoj en ĉi tiu listo.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Ĝisdatigi Lanĉan Komandon"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Ĝisdatigi Lanĉan Elŝutan Vodon"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Restarigi agordojn por {}?[CR][B]Ĉi tio ŝanĝos agordojn por ĉiuj ludoj en ĉi tiu listo.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Subteno"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Donacu al Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Nova IAGL-datumbazo estis trovita[CR]Ĉu vi volas ĝisdatigi?[CR]Agordoj estos kopiitaj al la nova db se eble"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Nova db"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Datumaro estis ĝisdatigita[CR]Uzantaj agordoj estis translokigitaj"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Datumaro estis ĝisdatigita[CR]Kelkaj uzantaj agordoj malsukcesis translokiĝi[CR]Vidu protokolon por pliaj detaloj"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Okazis eraro dum ĝisdatigo de la datumbazo[CR]Vidu protokolon por pliaj detaloj"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Demandu min denove poste"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Ne ĝisdatigu ĉi-foje[CR](Ne demandu min denove ĝis venonta ĝisdatigo)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Bonvenon al la IAGL-Agorda Sorĉisto[CR]Ni trairu ĉiujn agordojn por ludi vin!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Plej multaj ludoj postulas konton archive.org[CR]Enskribiĝu ĉe https://archive.org/account/signup[CR]Ĉu vi ŝatus uzi vian konton kun IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Agordo estas kompleta por uzi Kodi-ludadonojn![CR]Ĉu vi pretas ludi?[CR]Elektu [B]Ne[/B] por agordi eksteran ludlanĉon."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Agordu ĉiujn ludlistojn por esti ekstere lanĉitaj"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Agordu nur kelkajn ludlistojn por esti ekstere lanĉitaj"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Restarigu ĉiujn ludlistlanĉilojn al defaŭlto"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} ludlistoj estis ĝisdatigitaj por ekstera lanĉo"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Defaŭltoj estas antaŭfiksitaj por ĉiu ekstera lanĉa komando[CR]Antaŭ lanĉi reviziajn ludajn lanĉajn parametrojn se necese[CR]Vidu vikion por pliaj detaloj."

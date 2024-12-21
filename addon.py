@@ -43,34 +43,31 @@ def route_root():
 		else:
 			check_result = cm.check_db()
 			plugin.redirect(cm.get_setting('front_page_display'))
-			#Wizard to be setup
-			# if not cm.get_setting('wizard_run'):
-			# 	if xbmcgui.Dialog().yesno(cm.get_loc(30245),cm.get_loc(30244)):
-			# 		print('run wizard***********')
-			# 	else:
-			# 		plugin.redirect(cm.get_setting('front_page_display'))
-			# else:
-			# 	plugin.redirect(cm.get_setting('front_page_display'))
 	else:
 		check_result = cm.check_db()
 		plugin.redirect(cm.get_setting('front_page_display'))
-		#Wizard to be setup
-		# if not cm.get_setting('wizard_run'):
-		# 	if xbmcgui.Dialog().yesno(cm.get_loc(30245),cm.get_loc(30244)):
-		# 		print('run wizard***********')
-		# 	else:
-		# 		plugin.redirect(cm.get_setting('front_page_display'))
-		# else:
-		# 	plugin.redirect(cm.get_setting('front_page_display'))
 
 @plugin.route('/browse')
 def view_browse():
 	xbmc.log(msg='IAGL:  /browse',level=xbmc.LOGDEBUG)
-	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),list_item,True) for list_item,item_path in db.query_db(db.get_query('browse')) if isinstance(list_item,xbmcgui.ListItem)])
-	if db.get_total_history()>0:
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/history'),cm.get_history_li(),True)])
-	xbmcplugin.endOfDirectory(plugin.handle)
+	if not cm.get_setting('wizard_run'):
+		if xbmcgui.Dialog().yesno(cm.get_loc(30245),cm.get_loc(30244)):
+			plugin.redirect('/wizard_start')
+		else:
+			xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='wizard_run',value='true')
+			#Browse
+			xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),list_item,True) for list_item,item_path in db.query_db(db.get_query('browse')) if isinstance(list_item,xbmcgui.ListItem)])
+			if db.get_total_history()>0:
+				xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/history'),cm.get_history_li(),True)])
+			xbmcplugin.endOfDirectory(plugin.handle)
+	else:
+		#Browse
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),list_item,True) for list_item,item_path in db.query_db(db.get_query('browse')) if isinstance(list_item,xbmcgui.ListItem)])
+		if db.get_total_history()>0:
+			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/history'),cm.get_history_li(),True)])
+		xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/all')
 def view_all():
@@ -1413,6 +1410,13 @@ def update_game_list_launcher(game_list_id):
 	else:
 		xbmc.log(msg='IAGL:  Unknown current launcher: {}'.format(current_launcher),level=xbmc.LOGERROR)
 
+@plugin.route('/context_menu/action/update_launcher_from_uid/<game_id>')
+def update_game_list_launcher_from_uid(game_id):
+	xbmc.log(msg='IAGL:  /update_launcher_from_uid',level=xbmc.LOGDEBUG)
+	game_item_info = next(iter(db.query_db(db.get_query('get_game_list_info_from_game_id',game_id=game_id,game_title_setting=cm.get_setting('game_title_setting')),return_as='dict')),None)
+	if xbmcgui.Dialog().yesno(cm.get_loc(30259),cm.get_loc(30364).format(game_item_info.get('label'))):
+		plugin.redirect('/context_menu/action/update_launcher/{}'.format(game_item_info.get('label')))
+
 @plugin.route('/context_menu/action/get_game_list_info/<game_list_id>')
 def get_game_list_info(game_list_id):
 	xbmc.log(msg='IAGL:  /get_game_list_info',level=xbmc.LOGDEBUG)
@@ -1440,7 +1444,7 @@ def get_game_list_info(game_list_id):
 		if game_list_launcher == 'external':
 			launch_command_key = next(iter([k for k in ['user_global_external_launch_command','default_global_external_launch_core_name'] if isinstance(game_list_info.get(k),str)]),None)
 			pp_command_key = next(iter([k for k in ['user_post_download_process','default_global_post_download_process'] if isinstance(game_list_info.get(k),str)]),None)
-			info_keys_to_display = ['label','system','total_games','total_1g1r_games','total_favorited_games',launch_command_key,'user_global_download_path',pp_command_key]
+			info_keys_to_display = ['label','system',launch_command_key,'user_global_download_path',pp_command_key,'total_games','total_1g1r_games','total_favorited_games']
 			if isinstance(game_list_info.get('user_global_external_launch_command'),str):
 				if game_list_info.get('user_global_uses_applaunch') == 1:
 					pre_command_value = cm.get_loc(30337)
@@ -1461,7 +1465,7 @@ def get_game_list_info(game_list_id):
 		else:
 			launch_command_key = next(iter([k for k in ['user_global_launch_addon','default_global_launch_addon'] if isinstance(game_list_info.get(k),str)]),None)
 			pp_command_key = next(iter([k for k in ['user_post_download_process','default_global_post_download_process'] if isinstance(game_list_info.get(k),str)]),None)
-			info_keys_to_display = ['label','system','total_games','total_1g1r_games','total_favorited_games',launch_command_key,'user_global_download_path',pp_command_key]
+			info_keys_to_display = ['label','system',launch_command_key,'user_global_download_path',pp_command_key,'total_games','total_1g1r_games','total_favorited_games']
 			li1 = xbmcgui.ListItem(label=cm.get_loc(30318),label2=cm.get_loc(30321))
 			lis = [li1]+[xbmcgui.ListItem(label=info_key_to_label.get(x),label2=next(iter([str(z) for z in [game_list_info.get(x)] if z is not None]),cm.get_loc(30317))) for x in info_keys_to_display if isinstance(info_key_to_label.get(x),str)]
 			selected = xbmcgui.Dialog().select(heading=cm.get_loc(30316),list=lis,useDetails=True)
@@ -1738,6 +1742,13 @@ def update_game_list_launch_command(game_list_id):
 		else:
 			xbmc.log(msg='IAGL:  External command type selection cancelled',level=xbmc.LOGDEBUG)
 
+@plugin.route('/context_menu/action/update_launch_command_from_uid/<game_id>')
+def update_game_list_launcher_from_uid(game_id):
+	xbmc.log(msg='IAGL:  /update_launch_command_from_uid',level=xbmc.LOGDEBUG)
+	game_item_info = next(iter(db.query_db(db.get_query('get_game_list_info_from_game_id',game_id=game_id,game_title_setting=cm.get_setting('game_title_setting')),return_as='dict')),None)
+	if xbmcgui.Dialog().yesno(cm.get_loc(30367),cm.get_loc(30365).format(game_item_info.get('label'))):
+		plugin.redirect('/context_menu/action/update_launch_command/{}'.format(game_item_info.get('label')))
+
 @plugin.route('/update_android_command/<game_list_id>/<menu_id>')
 def update_android_command(game_list_id,menu_id):
 	xbmc.log(msg='IAGL:  /update_android_command',level=xbmc.LOGDEBUG)
@@ -1837,6 +1848,13 @@ def update_game_dl_path(game_list_id):
 		else:
 			xbmc.log(msg='IAGL:  Game list download path update cancelled or path invalid',level=xbmc.LOGDEBUG)
 
+@plugin.route('/context_menu/action/update_game_dl_path_from_uid/<game_id>')
+def update_game_dl_path_from_uid(game_id):
+	xbmc.log(msg='IAGL:  /update_game_dl_path_from_uid',level=xbmc.LOGDEBUG)
+	game_item_info = next(iter(db.query_db(db.get_query('get_game_list_info_from_game_id',game_id=game_id,game_title_setting=cm.get_setting('game_title_setting')),return_as='dict')),None)
+	if xbmcgui.Dialog().yesno(cm.get_loc(30368),cm.get_loc(30366).format(game_item_info.get('label'))):
+		plugin.redirect('/context_menu/action/update_game_dl_path/{}'.format(game_item_info.get('label')))
+
 @plugin.route('/context_menu/action/reset_game_list_settings/<game_list_id>')
 def reset_game_list_settings(game_list_id):
 	xbmc.log(msg='IAGL:  /reset_game_list_settings',level=xbmc.LOGDEBUG)
@@ -1852,6 +1870,13 @@ def reset_game_list_settings(game_list_id):
 			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30328),cm.get_loc(30330))
 			xbmc.sleep(config.defaults.get('sleep'))
 			xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_game_list_settings_from_uid/<game_id>')
+def reset_game_list_settings_from_uid(game_id):
+	xbmc.log(msg='IAGL:  /reset_game_list_settings_from_uid',level=xbmc.LOGDEBUG)
+	game_item_info = next(iter(db.query_db(db.get_query('get_game_list_info_from_game_id',game_id=game_id,game_title_setting=cm.get_setting('game_title_setting')),return_as='dict')),None)
+	if xbmcgui.Dialog().yesno(cm.get_loc(30328),cm.get_loc(30369).format(game_item_info.get('label'))):
+		plugin.redirect('/context_menu/action/reset_game_list_settings/{}'.format(game_item_info.get('label')))
 
 @plugin.route('/context_menu/action/check_ia_login')
 def check_ia_login():
@@ -1899,6 +1924,60 @@ def get_db_stats():
 	li = [all_li]+[sys_li]+meta_lis+[list_item for list_item,item_path in db.query_db(db.get_query('get_db_stats')) if isinstance(list_item,xbmcgui.ListItem)]
 	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30341),options=li,useDetails=True) 
 
+@plugin.route('/context_menu/action/get_donate_screen')
+def get_donate_screen():
+	xbmc.log(msg='IAGL:  /get_donate_screen',level=xbmc.LOGDEBUG)
+	donate_dialog = dialogs.get_donate()
+	donate_dialog.doModal()
+	del donate_dialog
+
+@plugin.route('/wizard_start')
+def wizard_start():
+	xbmc.log(msg='IAGL:  Wizard script started', level=xbmc.LOGDEBUG)
+	xbmc.playSFX(str(config.files.get('sounds').get('wizard_start')),False)
+	ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30245),cm.get_loc(30379))
+	xbmc.sleep(config.defaults.get('sleep'))
+	if xbmcgui.Dialog().yesno(cm.get_loc(30057),cm.get_loc(30380)):
+		selected = xbmcgui.Dialog().input(heading=cm.get_loc(30061),defaultt=cm.get_setting('ia_u') or '')
+		if isinstance(selected,str) and len(selected)>0 and '@' in selected:
+			xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='ia_u',value=selected)
+		else:
+			xbmc.log(msg='IAGL: User entered email appears invalid {}'.format(selected),level=xbmc.LOGERROR)
+		selected = xbmcgui.Dialog().input(heading=cm.get_loc(30063),option=xbmcgui.ALPHANUM_HIDE_INPUT,defaultt=cm.get_setting('ia_p') or '')
+		if isinstance(selected,str) and len(selected)>0:
+			xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='ia_p',value=selected)
+		else:
+			xbmc.log(msg='IAGL: User entered password appears invalid {}'.format(selected),level=xbmc.LOGERROR)
+	if xbmcgui.Dialog().yesno(cm.get_loc(30233),cm.get_loc(30381)):
+		xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='wizard_run',value='true')
+		xbmc.playSFX(str(config.files.get('sounds').get('wizard_done')),False)
+		plugin.redirect(cm.get_setting('front_page_display'))
+	else:
+		xbmc.log(msg='IAGL:  Wizard external launching branch selected', level=xbmc.LOGDEBUG)
+		selected = xbmcgui.Dialog().select(heading=cm.get_loc(30319),list=[cm.get_loc(30382),cm.get_loc(30383),cm.get_loc(30384)],useDetails=False,preselect=0)
+		if selected>-1:
+			if selected == 0:
+				result = db.update_all_game_list_user_parameters(parameter='user_global_launcher',new_value='external')
+				if isinstance(result,int) and result>0:
+					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30262))
+			elif selected == 2:
+				result = db.reset_all_game_list_user_parameters(parameter='user_global_launcher')
+				if isinstance(result,int) and result>0:
+					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30301))
+			else:
+				li = [list_item for list_item,item_path in db.query_db(db.get_query('search_random_get_game_lists'))if isinstance(list_item,xbmcgui.ListItem)]
+				selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30024),options=li,useDetails=True)
+				if isinstance(selected,list):
+					xbmc.log(msg='IAGL:  Game lists selected for external launching: {}'.format([x.getLabel() for ii,x in enumerate(li) if ii in selected]),level=xbmc.LOGDEBUG)
+					result = db.update_some_game_list_user_parameters(parameter='user_global_launcher',new_value='external',game_lists=[x.getLabel() for ii,x in enumerate(li) if ii in selected])
+					if isinstance(result,int) and result>0:
+						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30385).format(len([x.getLabel() for ii,x in enumerate(li) if ii in selected])))
+			if xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30386)):
+				xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='wizard_run',value='true')
+				xbmc.playSFX(str(config.files.get('sounds').get('wizard_done')),False)
+				plugin.redirect(cm.get_setting('front_page_display'))
+		else:
+			xbmc.log(msg='IAGL:  Wizard external launching branch cancelled', level=xbmc.LOGDEBUG)
 if __name__ == '__main__':
 	plugin.run(sys.argv)
 	del plugin
