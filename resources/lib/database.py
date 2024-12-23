@@ -163,6 +163,21 @@ class database(object):
 				xbmc.log(msg='IAGL:  SQL Error: {}'.format(exc),level=xbmc.LOGERROR)
 		return result
 
+	def transfer_game_values(self,old_values=None):
+		result = None
+		if isinstance(old_values,dict):
+			if self.config.debug.get('print_query'):
+				xbmc.log(msg='IAGL: SQL STATEMENT: {}'.format(self.config.database.get('query').get('transfer_game_values').format(**old_values)),level=xbmc.LOGDEBUG)
+			try:
+				with closing(sqlite3.connect(self.config.files.get('db'))) as conn:
+					with closing(conn.cursor()) as cursor:
+						cursor.execute(self.config.database.get('query').get('transfer_game_values').format(**old_values))
+						conn.commit()
+						result = cursor.rowcount
+			except Exception as exc:
+				xbmc.log(msg='IAGL:  SQL Error: {}'.format(exc),level=xbmc.LOGERROR)
+		return result
+
 	def mark_game_as_favorite(self,game_id=None):
 		result = None
 		if isinstance(game_id,str):
@@ -178,15 +193,17 @@ class database(object):
 				xbmc.log(msg='IAGL:  SQL Error: {}'.format(exc),level=xbmc.LOGERROR)
 		return result
 
-	def add_history(self,game_id=None):
+	def add_history(self,game_id=None,insert_time=None):
 		result = None
 		delete_first_result = self.delete_history_from_uid(game_id=game_id) #Remove the last time the game was played from history first
+		if insert_time is None:
+			insert_time = dt.now().timestamp()
 		if self.config.debug.get('print_query'):
-			xbmc.log(msg='IAGL: SQL STATEMENT: {}, ({}, {})'.format(self.config.database.get('query').get('insert_history'),game_id,dt.now().timestamp()),level=xbmc.LOGDEBUG)
+			xbmc.log(msg='IAGL: SQL STATEMENT: {}, ({}, {})'.format(self.config.database.get('query').get('insert_history'),game_id,insert_time),level=xbmc.LOGDEBUG)
 		try:
 			with closing(sqlite3.connect(self.config.files.get('db'))) as conn:
 				with closing(conn.cursor()) as cursor:
-					cursor.execute(self.config.database.get('query').get('insert_history'),(game_id,dt.now().timestamp(),))
+					cursor.execute(self.config.database.get('query').get('insert_history'),(game_id,insert_time,))
 					conn.commit()
 					result = cursor.lastrowid
 		except Exception as exc:

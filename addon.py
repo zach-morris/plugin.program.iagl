@@ -1908,6 +1908,44 @@ def reset_database():
 			xbmc.sleep(config.defaults.get('sleep'))
 			xbmc.executebuiltin('Container.Refresh')
 
+@plugin.route('/context_menu/action/reset_game_lists_to_retroplayer')
+def reset_game_lists_to_retroplayer():
+	xbmc.log(msg='IAGL:  /reset_game_lists_to_retroplayer',level=xbmc.LOGDEBUG)
+	if xbmcgui.Dialog().yesno(cm.get_loc(30393),cm.get_loc(30395)):
+		result = db.update_all_game_list_user_parameters(parameter='user_global_launcher',new_value='retroplayer')
+		if result:
+			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30263))
+			xbmc.sleep(config.defaults.get('sleep'))
+			xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/reset_game_lists_to_external')
+def reset_game_lists_to_external():
+	xbmc.log(msg='IAGL:  /reset_game_lists_to_external',level=xbmc.LOGDEBUG)
+	if xbmcgui.Dialog().yesno(cm.get_loc(30393),cm.get_loc(30394)):
+		result = db.update_all_game_list_user_parameters(parameter='user_global_launcher',new_value='external')
+		if result:
+			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30262))
+			xbmc.sleep(config.defaults.get('sleep'))
+			xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/backup_database')
+def backup_database():
+	xbmc.log(msg='IAGL:  /backup_database',level=xbmc.LOGDEBUG)
+	backup_path = xbmcgui.Dialog().browse(type=3,heading=cm.get_loc(30402),shares='')
+	if cm.backup_database(backup_path=backup_path):
+		ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30404))
+		xbmc.sleep(config.defaults.get('sleep'))
+		xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/restore_database')
+def restore_database():
+	xbmc.log(msg='IAGL:  /restore_database',level=xbmc.LOGDEBUG)
+	backup_file = xbmcgui.Dialog().browse(type=1,heading=cm.get_loc(30403),shares='')
+	if cm.restore_database(backup_file=backup_file):
+		ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30405))
+		xbmc.sleep(config.defaults.get('sleep'))
+		xbmc.executebuiltin('Container.Refresh')
+
 @plugin.route('/context_menu/action/get_db_stats')
 def get_db_stats():
 	xbmc.log(msg='IAGL:  /get_db_stats',level=xbmc.LOGDEBUG)
@@ -1954,6 +1992,71 @@ def wizard_start():
 		plugin.redirect(cm.get_setting('front_page_display'))
 	else:
 		xbmc.log(msg='IAGL:  Wizard external launching branch selected', level=xbmc.LOGDEBUG)
+		if not isinstance(cm.get_setting('user_launch_os'),str):
+			detected_platform = cm.check_system_platform()
+			selected = xbmcgui.Dialog().select(heading=cm.get_loc(30136),list=[cm.get_loc(30213),cm.get_loc(30137),cm.get_loc(30138),cm.get_loc(30139),cm.get_loc(30144),cm.get_loc(30145),cm.get_loc(30146)],useDetails=False,preselect=detected_platform)
+			if selected>0:
+				xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='user_launch_os',value=str(selected))
+		if isinstance(cm.get_setting('user_launch_os'),str):
+			#Look for app if not on android and not already set
+			if cm.get_setting('user_launch_os') not in config.settings.get('user_launch_os').get('android_options') and (isinstance(cm.get_setting('ra_app_path'),str) and len(cm.get_setting('ra_app_path'))==0 or not isinstance(cm.get_setting('ra_app_path'),str)):
+				found_app = None
+				if isinstance(config.settings.get('user_launch_os').get('possible_app_locations').get(cm.get_setting('user_launch_os')),list):
+					for p in config.settings.get('user_launch_os').get('possible_app_locations').get(cm.get_setting('user_launch_os')):
+						try:
+							if p.exists():
+								found_app = p
+						except:
+							pass
+				if found_app is not None:
+					xbmc.log(msg='IAGL:  Wizard found retroarch at {}'.format(str(found_app)), level=xbmc.LOGDEBUG)
+					xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='ra_app_path',value=str(found_app))
+					if len(str(found_app))>40:
+						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30140),cm.get_loc(30387).format('{}...{}'.format(str(found_app)[0:20],str(found_app)[-14:])))
+					else:
+						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30140),cm.get_loc(30387).format(str(found_app)))
+				else: #Find app
+					if (isinstance(cm.get_setting('ra_app_path'),str) and len(cm.get_setting('ra_app_path'))==0 or not isinstance(cm.get_setting('ra_app_path'),str)):
+						xbmc.log(msg='IAGL:  Wizard did not find retroarch, querying user', level=xbmc.LOGDEBUG)
+						found_app = xbmcgui.Dialog().browse(type=1,heading=cm.get_loc(30140),shares='')
+						if isinstance(found_app,str) and xbmcvfs.exists(found_app):
+							xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='ra_app_path',value=found_app)
+			#Look for config if not aleady set
+			if (cm.get_setting('user_launch_os') not in config.settings.get('user_launch_os').get('android_options') and (isinstance(cm.get_setting('ra_cfg_path'),str) and len(cm.get_setting('ra_cfg_path'))==0 or not isinstance(cm.get_setting('ra_cfg_path'),str))) or (cm.get_setting('user_launch_os') in config.settings.get('user_launch_os').get('android_options') and (isinstance(cm.get_setting('ra_cfg_path_android'),str) and len(cm.get_setting('ra_cfg_path_android'))==0 or not isinstance(cm.get_setting('ra_cfg_path_android'),str))):
+				found_config = None
+				if isinstance(config.settings.get('user_launch_os').get('possible_config_locations').get(cm.get_setting('user_launch_os')),list):
+					for p in config.settings.get('user_launch_os').get('possible_config_locations').get(cm.get_setting('user_launch_os')):
+						try:
+							if p.exists():
+								found_config = p
+						except:
+							pass
+				if found_config is not None:
+					xbmc.log(msg='IAGL:  Wizard found retroarch config at {}'.format(str(found_config)), level=xbmc.LOGDEBUG)
+					if len(str(found_config))>40:
+						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30142),cm.get_loc(30388).format('{}...{}'.format(str(found_config)[0:20],str(found_config)[-14:])))
+					else:
+						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30142),cm.get_loc(30388).format(str(found_config)))
+					if cm.get_setting('user_launch_os') in config.settings.get('user_launch_os').get('android_options'):
+						xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='ra_cfg_path_android',value=str(found_config))
+					else:
+						xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='ra_cfg_path',value=str(found_config))
+				else: #Find or enter config
+					xbmc.log(msg='IAGL:  Wizard did not find retroarch config, querying user', level=xbmc.LOGDEBUG)
+					if (cm.get_setting('user_launch_os') not in config.settings.get('user_launch_os').get('android_options') and (isinstance(cm.get_setting('ra_cfg_path'),str) and len(cm.get_setting('ra_cfg_path'))==0 or not isinstance(cm.get_setting('ra_cfg_path'),str))):
+						found_config = xbmcgui.Dialog().browse(type=1,heading=cm.get_loc(30142),shares='')
+						if isinstance(found_config,str) and xbmcvfs.exists(found_config):
+							xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='ra_cfg_path',value=found_config)
+					if (cm.get_setting('user_launch_os') in config.settings.get('user_launch_os').get('android_options') and (isinstance(cm.get_setting('ra_cfg_path_android'),str) and len(cm.get_setting('ra_cfg_path_android'))==0 or not isinstance(cm.get_setting('ra_cfg_path_android'),str))):
+						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30360),cm.get_loc(30396))
+						found_config = xbmcgui.Dialog().input(heading=cm.get_loc(30360))
+						if isinstance(found_config,str) and len(found_config)>0:
+							xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='ra_cfg_path_android',value=found_config)
+		if (cm.get_setting('user_launch_os') in config.settings.get('user_launch_os').get('android_options') and (isinstance(cm.get_setting('ra_cores_path_android'),str) and len(cm.get_setting('ra_cores_path_android'))==0 or not isinstance(cm.get_setting('ra_cores_path_android'),str))):
+			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30362),cm.get_loc(30397))
+			found_core_dir = xbmcgui.Dialog().input(heading=cm.get_loc(30362))
+			if isinstance(found_core_dir,str) and len(found_core_dir)>0:
+				xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='ra_cores_path_android',value=found_core_dir)
 		selected = xbmcgui.Dialog().select(heading=cm.get_loc(30319),list=[cm.get_loc(30382),cm.get_loc(30383),cm.get_loc(30384)],useDetails=False,preselect=0)
 		if selected>-1:
 			if selected == 0:
@@ -1976,8 +2079,11 @@ def wizard_start():
 				xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='wizard_run',value='true')
 				xbmc.playSFX(str(config.files.get('sounds').get('wizard_done')),False)
 				plugin.redirect(cm.get_setting('front_page_display'))
+				ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30389)) #End
 		else:
 			xbmc.log(msg='IAGL:  Wizard external launching branch cancelled', level=xbmc.LOGDEBUG)
+			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30389)) #End
+
 if __name__ == '__main__':
 	plugin.run(sys.argv)
 	del plugin

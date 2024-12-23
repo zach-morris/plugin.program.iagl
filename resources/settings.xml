@@ -868,6 +868,46 @@
 							<close>true</close>
 					</control>
 				</setting>
+				<setting id="reset_game_lists_to_retroplayer" label="30390" help="30392" type="action">
+					<level>3</level>
+						<data>RunPlugin(plugin://plugin.program.iagl/context_menu/action/reset_game_lists_to_retroplayer)</data>
+						<constraints>
+							<allowempty>true</allowempty>
+						</constraints>
+						<control format="action" type="button">
+							<close>true</close>
+					</control>
+				</setting>
+				<setting id="reset_game_lists_to_external" label="30382" help="30391" type="action">
+					<level>3</level>
+						<data>RunPlugin(plugin://plugin.program.iagl/context_menu/action/reset_game_lists_to_external)</data>
+						<constraints>
+							<allowempty>true</allowempty>
+						</constraints>
+						<control format="action" type="button">
+							<close>true</close>
+					</control>
+				</setting>
+				<setting id="backup_database" label="30398" help="30400" type="action">
+					<level>3</level>
+						<data>RunPlugin(plugin://plugin.program.iagl/context_menu/action/backup_database)</data>
+						<constraints>
+							<allowempty>true</allowempty>
+						</constraints>
+						<control format="action" type="button">
+							<close>true</close>
+					</control>
+				</setting>
+				<setting id="restore_database" label="30399" help="30401" type="action">
+					<level>3</level>
+						<data>RunPlugin(plugin://plugin.program.iagl/context_menu/action/restore_database)</data>
+						<constraints>
+							<allowempty>true</allowempty>
+						</constraints>
+						<control format="action" type="button">
+							<close>true</close>
+					</control>
+				</setting>
 				<setting id="get_db_stats" label="30339" help="30340" type="action">
 					<level>3</level>
 						<data>RunPlugin(plugin://plugin.program.iagl/context_menu/action/get_db_stats)</data>

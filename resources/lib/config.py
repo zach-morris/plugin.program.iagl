@@ -32,6 +32,10 @@ class config(object):
 		self.paths['addon_skin_media'] = self.paths['addon_skins'].joinpath('Default','media')
 		self.paths['userdata'] = Path(xbmcvfs.translatePath(self.addon.get('addon_handle').getAddonInfo('profile')))
 		self.paths['default_temp_dl'] = self.paths.get('userdata').joinpath('game_cache')
+		try:
+			self.paths['os_home'] = Path.home()
+		except:
+			self.paths['os_home'] = Path('~')
 		if self.paths['default_temp_dl'].exists():
 			self.files['default_temp_dl_file_listing'] = [x for x in self.paths.get('default_temp_dl').rglob('**/*') if x.is_file()]
 			self.paths['default_temp_dl_size'] = sum(x.stat().st_size for x in self.files.get('default_temp_dl_file_listing'))
@@ -134,6 +138,8 @@ class config(object):
 		self.settings['game_list_fanart_to_art']['default'] = 'fanart_collage_paths.url||game_lists_table.fanart_collage'
 		self.settings['user_launch_os'] = dict()
 		self.settings['user_launch_os']['options'] = dict(zip(['0','1','2','3','4','5','6'],[None,'windows','linux','OSX','android','android_aarch64','android_ra32']))
+		self.settings['user_launch_os']['possible_app_locations'] = dict(zip(['windows','linux','OSX','android','android_aarch64','android_ra32'],[[Path('C:').joinpath('Program Files (x86)','Retroarch','retroarch.exe'),Path('C:').joinpath('Program Files','Retroarch','retroarch.exe')],[Path('usr').joinpath('local','bin','retroarch'),self.paths.get('os_home').joinpath('bin','retroarch'),self.paths.get('os_home').joinpath('ra','usr','local','bin','retroarch'),Path('var').joinpath('lib','flatpak','app','org.libretro.RetroArch','current','active','files','bin','retroarch'),Path('home').joinpath('kodi','bin','retroarch'),Path('opt').joinpath('retropie','emulators','retroarch','bin','retroarch'),Path('opt').joinpath('retroarch','bin','retroarch')],[Path('/Applications').joinpath('RetroArch.app','Contents','MacOS','RetroArch')],None,None,None]))
+		self.settings['user_launch_os']['possible_config_locations'] = dict(zip(['windows','linux','OSX','android','android_aarch64','android_ra32'],[[Path('C:').joinpath('Program Files (x86)','Retroarch','retroarch.cfg'),Path('C:').joinpath('Program Files','Retroarch','retroarch.cfg'),self.paths.get('os_home').joinpath('AppData','Roaming','RetroArch','retroarch.cfg')],[self.paths.get('os_home').joinpath('.config','retroarch','retroarch.cfg'),self.paths.get('os_home').joinpath('.var','app','org.libretro.RetroArch','config','retroarch','retroarch.cfg'),Path('opt').joinpath('retropie','configs','all','retroarch.cfg')],[self.paths.get('os_home').joinpath('Library','Application Support','RetroArch','config','retroarch.cfg')],[Path('mnt').joinpath('internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),Path('sdcard').joinpath('Android','data','com.retroarch','files','retroarch.cfg'),Path('data').joinpath('data','com.retroarch','retroarch.cfg'),Path('mnt').joinpath('internal_sd','Android','data','com.retroarch.aarch64','files','retroarch.cfg'),Path('sdcard').joinpath('Android','data','com.retroarch.aarch64','files','retroarch.cfg'),Path('data').joinpath('user','0','com.retroarch.aarch64','retroarch.cfg'),Path('data').joinpath('user','0','com.retroarch.aarch64','files','retroarch.cfg'),Path('mnt').joinpath('internal_sd','Android','data','com.retroarch.ra32','files','retroarch.cfg'),Path('sdcard').joinpath('Android','data','com.retroarch.ra32','files','retroarch.cfg'),Path('data').joinpath('data','com.retroarch.ra32','retroarch.cfg'),Path('data').joinpath('data','com.retroarch.ra32','files','retroarch.cfg')],[Path('mnt').joinpath('internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),Path('sdcard').joinpath('Android','data','com.retroarch','files','retroarch.cfg'),Path('data').joinpath('data','com.retroarch','retroarch.cfg'),Path('mnt').joinpath('internal_sd','Android','data','com.retroarch.aarch64','files','retroarch.cfg'),Path('sdcard').joinpath('Android','data','com.retroarch.aarch64','files','retroarch.cfg'),Path('data').joinpath('user','0','com.retroarch.aarch64','retroarch.cfg'),Path('data').joinpath('user','0','com.retroarch.aarch64','files','retroarch.cfg')],[Path('mnt').joinpath('internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),Path('sdcard').joinpath('Android','data','com.retroarch','files','retroarch.cfg'),Path('data').joinpath('data','com.retroarch','retroarch.cfg'),Path('mnt').joinpath('internal_sd','Android','data','com.retroarch.ra32','files','retroarch.cfg'),Path('sdcard').joinpath('Android','data','com.retroarch.ra32','files','retroarch.cfg'),Path('data').joinpath('data','com.retroarch.ra32','retroarch.cfg'),Path('data').joinpath('data','com.retroarch.ra32','files','retroarch.cfg')]]))
 		self.settings['user_launch_os']['android_options'] = ['android','android_aarch64','android_ra32']
 		self.settings['user_launch_os']['default'] = None
 		self.settings['alt_temp_dl_enable'] = dict()
@@ -551,9 +557,26 @@ class config(object):
 		self.database['query']['get_game_list_user_global_external_launch_command'] = ('SELECT game_lists_table.default_global_external_launch_command,game_lists_table.user_global_external_launch_command,game_lists_table.user_global_uses_applaunch,game_lists_table.user_global_uses_apppause\n'
 																						'FROM game_list as game_lists_table\n'
 																						'WHERE game_lists_table.label = "{game_list_id}"')
-		self.database['query']['get_all_game_list_user_settings'] = ('SELECT games_list_table.label,games_list_table.user_global_download_path,games_list_table.user_global_external_launch_command,games_list_table.user_global_launch_addon,games_list_table.user_global_launcher,games_list_table.user_global_visibility,games_list_table.user_post_download_process,games_list_table.user_global_uses_apppause,games_list_table.user_global_uses_applaunch\n'
-																	 'FROM game_list as games_list_table')
+		self.database['query']['get_all_game_list_user_settings_for_transfer'] = ('SELECT games_list_table.label,games_list_table.user_global_download_path,games_list_table.user_global_external_launch_command,games_list_table.user_global_launch_addon,games_list_table.user_global_launcher,games_list_table.user_global_visibility,games_list_table.user_post_download_process,games_list_table.user_global_uses_apppause,games_list_table.user_global_uses_applaunch\n'
+																				 'FROM game_list as games_list_table\n'
+																				 'WHERE (games_list_table.user_global_download_path is not NULL or games_list_table.user_global_external_launch_command is not NULL or games_list_table.user_global_launch_addon is not NULL or games_list_table.user_global_launcher is not NULL or games_list_table.user_global_visibility is not NULL or games_list_table.user_post_download_process is not NULL or games_list_table.user_global_uses_apppause is not NULL or games_list_table.user_global_uses_applaunch is not NULL)')
 		self.database['query']['transfer_game_list_user_settings'] = 'UPDATE game_list SET user_global_download_path={user_global_download_path},user_global_external_launch_command={user_global_external_launch_command},user_global_launch_addon={user_global_launch_addon},user_global_launcher={user_global_launcher},user_global_visibility={user_global_visibility},user_post_download_process={user_post_download_process},user_global_uses_apppause={user_global_uses_apppause},user_global_uses_applaunch={user_global_uses_applaunch} WHERE label="{label}"'
+		self.database['query']['get_all_favorites_for_transfer'] = ('SELECT fav_table.uid,fav_table.fav_group,fav_table.is_search_link,fav_table.is_random_link,fav_table.link_query,games_table.originaltitle,games_table.game_list\n'
+																	'FROM favorites as fav_table\n'
+																	'LEFT JOIN games as games_table\n'
+																	'ON games_table.uid = fav_table.uid')
+		self.database['query']['get_all_history_for_transfer'] = ('SELECT history_table.uid,history_table.insert_time,games_table.originaltitle,games_table.game_list\n'
+																'FROM history as history_table\n'
+																'LEFT JOIN games as games_table\n'
+																'ON games_table.uid = history_table.uid')
+		self.database['query']['get_all_game_table_values_for_transfer'] = ('SELECT games_table.uid,games_table.originaltitle,games_table.game_list,games_table.user_game_launcher,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,games_table.user_is_favorite,games_table.lastplayed,games_table.playcount\n'
+																			'FROM games as games_table\n'
+																			'WHERE (games_table.user_game_launcher is not NULL or games_table.user_game_launch_addon is not NULL or games_table.user_game_external_launch_command is not NULL or games_table.user_game_post_download_process is not NULL or games_table.user_is_favorite is not NULL or games_table.lastplayed is not NULL or games_table.playcount is not NULL)')
+		self.database['query']['get_all_uids_in_new_db'] = 'SELECT games_table.uid from games as games_table WHERE games_table.uid in ({old_uids})'
+		self.database['query']['get_all_old_uids_by_originaltitle_and_list'] = ('SELECT "{old_uid}" as old_uid,games_table.uid as new_uid\n'
+																				'FROM games as games_table\n'
+																				'LEFT JOIN game_list as game_lists_table on game_lists_table.label = games_table.game_list\n'
+																				'WHERE games_table.originaltitle = "{game_title}" and game_lists_table.label = "{game_list}"')
 		self.database['query']['get_game_list_info'] = ('SELECT game_lists_table.label,game_lists_table.system,game_lists_table.total_1g1r_games,game_lists_table.total_games,game_lists_table.default_global_external_launch_command,core_info_table.display_name as default_global_external_launch_core_name,game_lists_table.default_global_launch_addon,game_lists_table.default_global_launcher,game_lists_table.default_global_post_download_process,game_lists_table.user_global_download_path,game_lists_table.user_global_external_launch_command,game_lists_table.user_global_uses_applaunch,game_lists_table.user_global_uses_apppause,game_lists_table.user_global_launch_addon,game_lists_table.user_global_launcher,game_lists_table.user_global_visibility,game_lists_table.user_post_download_process,COUNT(games_table.user_is_favorite) as total_favorited_games\n'
 														'FROM game_list as game_lists_table\n'
 														'LEFT JOIN games as games_table on games_table.game_list = game_lists_table.label and games_table.user_is_favorite is NOT NULL\n'
@@ -795,11 +818,14 @@ class config(object):
 		self.database['query']['get_favorite_group_names'] = ('SELECT DISTINCT fav_table.fav_group as label\n'
 														'FROM favorites as fav_table')
 		self.database['query']['insert_favorite'] = ('INSERT INTO favorites(uid,fav_group,is_search_link,is_random_link,link_query)\n'
-													'VALUES(?,?,?,?,?)')
+													 'VALUES(?,?,?,?,?)')
+		self.database['query']['transfer_game_values'] = ('UPDATE games SET user_game_launcher={user_game_launcher},user_game_launch_addon={user_game_launch_addon},user_game_external_launch_command={user_game_external_launch_command},user_game_post_download_process={user_game_post_download_process},user_is_favorite={user_is_favorite},lastplayed={lastplayed},playcount={playcount}\n'
+														  'WHERE uid="{uid}"')
 		self.database['query']['mark_game_as_favorite'] = 'UPDATE games SET user_is_favorite=1 WHERE uid="{}"'
 		self.database['query']['unmark_game_as_favorite'] = 'UPDATE games SET user_is_favorite=NULL WHERE uid="{}"'
 		self.database['query']['insert_history'] = ('INSERT INTO history(uid,insert_time)\n'
 													'VALUES(?,?)')
+		
 		self.database['query']['limit_history'] = ('DELETE FROM history\n'
 													'WHERE uid NOT IN (SELECT history_table.uid FROM history as history_table order by history_table.insert_time DESC LIMIT {history_limit})')
 		self.database['query']['delete_history_from_uid'] = 'DELETE FROM history WHERE uid = "{}"'

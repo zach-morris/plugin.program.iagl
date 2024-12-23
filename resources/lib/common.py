@@ -1,6 +1,7 @@
 import xbmc,xbmcgui,xbmcaddon,xbmcvfs,json,os
 from pathlib import Path
 from urllib.parse import urlencode
+from datetime import datetime as dt
 import archive_tool
 
 class common(object):
@@ -202,36 +203,139 @@ class common(object):
 					if xbmcgui.Dialog().yesno(self.get_loc(30373),self.get_loc(30372)):
 						from resources.lib import database
 						db = database.database(config=self.config,media_type=self.get_setting('media_type'))
-						old_settings = db.query_db(db.get_query('get_all_game_list_user_settings'),return_as='dict')
-						old_settings_filtered = [x for x in old_settings if any([x.get(y) is not None for y in x.keys() if y.startswith('user_')])]  #Filter down to only those lists that had user settings
-						#Transfer new file over to db spot
+						old_game_list_settings = db.query_db(db.get_query('get_all_game_list_user_settings_for_transfer'),return_as='dict')
+						old_favorites = db.query_db(db.get_query('get_all_favorites_for_transfer'),return_as='dict')
+						old_history = db.query_db(db.get_query('get_all_history_for_transfer'),return_as='dict')
+						old_game_values = db.query_db(db.get_query('get_all_game_table_values_for_transfer'),return_as='dict')
+						#Get all the old uids in favorites, history, game settings to check if they're NOT in the new db
+						all_old_uid_lists = []
+						if isinstance(old_favorites,list):
+							all_old_uid_lists = all_old_uid_lists+old_favorites
+						if isinstance(old_history,list):
+							all_old_uid_lists = all_old_uid_lists+old_history
+						if isinstance(old_game_values,list):
+							all_old_uid_lists = all_old_uid_lists+old_game_values
+						if isinstance(all_old_uid_lists,list) and len(all_old_uid_lists)>0:
+							old_uids = set([x.get('uid') for x in all_old_uid_lists if isinstance(x.get('uid'),str)])
+						else:
+							old_uids = None
+						#Temporarily rename old db
+						self.config.files.get('db').rename(self.config.files.get('db').parent.joinpath(self.config.files.get('db').name.replace('iagl.db','iagl_old.db')))
+						xbmc.log(msg='IAGL: Current db temporarly rename to iagl_old.db',level=xbmc.LOGDEBUG)
+						#Extract new db to userdata
 						result = self.extract_addon_db()
 						if result:
+							continue_with_update = False
+							no_match_uids = None
+							new_matches = []
+							no_matches = []
 							xbmc.log(msg='IAGL: Extracted zipped db with version {} to path {}'.format(self.config.addon.get('version'),str(self.config.files.get('db').parent)),level=xbmc.LOGDEBUG)
-							self.config.files.get('addon_data_db_zipped').rename(self.config.files.get('addon_data_db_zipped_backup'))
-							xbmcaddon.Addon(id=self.config.addon.get('addon_name')).setSetting(id='db_version',value=self.config.addon.get('version'))
-							xfer_results = list()
-							#Transfer settings over, convert to the correct format for insert
-							for os in old_settings_filtered:
-								for k,v in os.items():
-									if v is None:
-										os[k] = 'NULL'
-									elif isinstance(v,str):
-										if k=='label':
-											pass
-										else:
-											os[k] = '"{}"'.format(v.replace('"','""'))
-									else:
-										pass
-								xfer_results.append(db.transfer_game_list_user_settings(old_settings=os))
-							#Will need to add game specific settings here in the future
-							if all([x is not None for x in xfer_results]):
-								ok_ret = xbmcgui.Dialog().ok(self.get_loc(30233),self.get_loc(30374))
-							elif any([x is not None for x in xfer_results]):
-								ok_ret = xbmcgui.Dialog().ok(self.get_loc(30233),self.get_loc(30375))
-							else:
-								ok_ret = xbmcgui.Dialog().ok(self.get_loc(30270),self.get_loc(30376))
-								xbmc.log(msg='IAGL:  Error transferring settings to new addon db: {}'.format(self.config.files.get('addon_data_db_zipped')),level=xbmc.LOGERROR)
+							self.config.files.get('addon_data_db_zipped').rename(self.config.files.get('addon_data_db_zipped_backup'))  #Rename new zipped db to backup
+							if old_uids is not None:
+								new_uids = db.query_db(db.get_query('get_all_uids_in_new_db',old_uids=','.join(['"{}"'.format(x) for x in old_uids])),return_as='dict')
+								no_match_uids = [x for x in old_uids if x not in [y.get('uid') for y in new_uids if isinstance(y.get('uid'),str)]]
+								if len(no_match_uids)>0:  #Some old games are not in the new db, query user what to do:  remove them, try and find them by originaltitle/gamelist
+									ok_ret = xbmcgui.Dialog().ok(self.get_loc(30393),self.get_loc(30406).format(len(no_match_uids)))
+									selected = xbmcgui.Dialog().select(heading=self.get_loc(30393),list=[self.get_loc(30407),self.get_loc(30408),self.get_loc(30409)],useDetails=False)
+									if selected == 0:
+										continue_with_update = True
+										xbmc.log(msg='IAGL: User opted to attempt matching by title and game list',level=xbmc.LOGDEBUG)
+										old_uid_to_title = {x:next(iter([y.get('originaltitle') for y in all_old_uid_lists if y.get('uid')==x]),None) for x in no_match_uids}
+										old_uid_to_game_list = {x:next(iter([y.get('game_list') for y in all_old_uid_lists if y.get('uid')==x]),None) for x in no_match_uids}
+										for nm in no_match_uids:
+											if isinstance(old_uid_to_title.get(nm),str) and isinstance(old_uid_to_game_list.get(nm),str):
+												old_to_new = db.query_db(db.get_query('get_all_old_uids_by_originaltitle_and_list',old_uid=nm,game_title=old_uid_to_title.get(nm),game_list=old_uid_to_game_list.get(nm)),return_as='dict')
+												if isinstance(old_to_new,list) and len(old_to_new)>0:
+													xbmc.log(msg='IAGL: Match found for {}: {}/{}'.format(nm,old_uid_to_title.get(nm),old_uid_to_game_list.get(nm)),level=xbmc.LOGDEBUG)
+													new_matches.append(next(iter(old_to_new),None))
+												else:
+													xbmc.log(msg='IAGL: No Match found for {}: {}/{}'.format(nm,old_uid_to_title.get(nm),old_uid_to_game_list.get(nm)),level=xbmc.LOGDEBUG)
+													no_matches.append(nm) #All of these will be discarded
+											else:
+												xbmc.log(msg='IAGL: Error getting title and game list for uid {}'.format(nm),level=xbmc.LOGERROR)
+										#First discard any that had no match
+										old_favorites = [x for x in old_favorites if x.get('uid') not in no_matches]
+										old_history = [x for x in old_history if x.get('uid') not in no_matches]
+										old_game_values = [x for x in old_game_values if x.get('uid') not in no_matches]
+										#Now convert old uid to new uid
+										if len(new_matches)>0:
+											old_favorites = [{k:next(iter([z.get('new_uid') for z in new_matches if z.get('old_uid')==v]),None) if k=='uid' and v in [z.get('old_uid') for z in new_matches] else v for k,v in x.items()} for x in old_favorites]
+											old_history = [{k:next(iter([z.get('new_uid') for z in new_matches if z.get('old_uid')==v]),None) if k=='uid' and v in [z.get('old_uid') for z in new_matches] else v for k,v in x.items()} for x in old_history]
+											old_game_values = [{k:next(iter([z.get('new_uid') for z in new_matches if z.get('old_uid')==v]),None) if k=='uid' and v in [z.get('old_uid') for z in new_matches] else v for k,v in x.items()} for x in old_game_values]
+									elif selected == 1:
+										continue_with_update = True
+										xbmc.log(msg='IAGL: {} game uids were not found in the new db and will be discarded'.format(len(no_match_uids)),level=xbmc.LOGDEBUG)
+										old_favorites = [x for x in old_favorites if x.get('uid') not in no_match_uids]
+										old_history = [x for x in old_history if x.get('uid') not in no_match_uids]
+										old_game_values = [x for x in old_game_values if x.get('uid') not in no_match_uids]
+									elif selected ==2:  #Go back to old db
+										continue_with_update = False
+										xbmc.log(msg='IAGL: User opted to go back to old db, upgrade cancelled',level=xbmc.LOGDEBUG)
+										self.config.files.get('db').unlink()
+										self.config.files.get('db').parent.joinpath(self.config.files.get('db').name.replace('iagl.db','iagl_old.db')).rename(self.config.files.get('db'))
+										ok_ret = xbmcgui.Dialog().ok(self.get_loc(30233),self.get_loc(30410).format(len(no_match_uids)))
+								else:
+									xbmc.log(msg='All old game uids found in the new db',level=xbmc.LOGDEBUG)
+									continue_with_update = True
+							if continue_with_update:
+								xfer_results = list()
+								#Transfer game_list settings over, convert to the correct format for insert
+								if isinstance(old_game_list_settings,list): #Transfer game list settings first, nothing to match here
+									xbmc.log(msg='IAGL: Transferring custom settings for {} game lists'.format(len(old_game_list_settings)),level=xbmc.LOGDEBUG)
+									for os in old_game_list_settings:
+										for k,v in os.items():
+											if v is None:
+												os[k] = 'NULL'
+											elif isinstance(v,str):
+												if k=='label':
+													pass
+												elif v.isdigit():
+													pass
+												else:
+													os[k] = '"{}"'.format(v.replace('"','""'))
+											else:
+												pass
+										xfer_results.append(db.transfer_game_list_user_settings(old_settings=os))
+									del old_game_list_settings
+								if isinstance(old_favorites,list):
+									xbmc.log(msg='IAGL: Transferring items for {} favorites'.format(len(old_favorites)),level=xbmc.LOGDEBUG)
+									for of in old_favorites:
+										xfer_results.append(db.add_favorite(game_id=of.get('uid'),fav_group=of.get('fav_group'),is_search_link=int(of.get('is_search_link') or 0),is_random_link=int(of.get('is_random_link') or 0),link_query=of.get('link_query')))
+									del old_favorites
+								if isinstance(old_history,list):
+									xbmc.log(msg='IAGL: Transferring items for {} history'.format(len(old_history)),level=xbmc.LOGDEBUG)
+									for oh in old_history:
+										xfer_results.append(db.add_history(game_id=oh.get('uid'),insert_time=oh.get('insert_time')))
+									del old_history
+								if isinstance(old_game_values,list):
+									xbmc.log(msg='IAGL: Transferring game list item data for {} games'.format(len(old_game_values)),level=xbmc.LOGDEBUG)
+									for og in old_game_values:
+										for k,v in og.items():
+											if v is None:
+												og[k] = 'NULL'
+											elif isinstance(v,str):
+												if k=='uid':
+													pass
+												elif v.isdigit():
+													pass
+												else:
+													og[k] = '"{}"'.format(v.replace('"','""'))
+											else:
+												pass
+										xfer_results.append(db.transfer_game_values(old_values=og))
+									del old_game_values
+								#Will need to add game specific settings here in the future
+								if all([x is not None for x in xfer_results]) or len(xfer_results)==0:  #Everything transferred or no transfer required
+									ok_ret = xbmcgui.Dialog().ok(self.get_loc(30233),self.get_loc(30374))
+								elif any([x is not None for x in xfer_results]):  #Only some transferred
+									ok_ret = xbmcgui.Dialog().ok(self.get_loc(30233),self.get_loc(30375))
+								else: #Everything failed!
+									ok_ret = xbmcgui.Dialog().ok(self.get_loc(30270),self.get_loc(30376))
+									xbmc.log(msg='IAGL:  Error transferring settings to new addon db: {}'.format(self.config.files.get('addon_data_db_zipped')),level=xbmc.LOGERROR)
+								#might move this depending on the outcome of the above, but leave here for now...
+								xbmcaddon.Addon(id=self.config.addon.get('addon_name')).setSetting(id='db_version',value=self.config.addon.get('version'))
+								if self.config.files.get('db').parent.joinpath(self.config.files.get('db').name.replace('iagl.db','iagl_old.db')).exists():
+									self.config.files.get('db').parent.joinpath(self.config.files.get('db').name.replace('iagl.db','iagl_old.db')).unlink()
 						else:
 							ok_ret = xbmcgui.Dialog().ok(self.get_loc(30270),self.get_loc(30376))
 							xbmc.log(msg='IAGL:  Error extracting addon db: {}'.format(self.config.files.get('addon_data_db_zipped')),level=xbmc.LOGERROR)
@@ -267,6 +371,8 @@ class common(object):
 	def reset_db(self):
 		result = False
 		xbmc.log(msg='IAGL: userdata db reset requested',level=xbmc.LOGDEBUG)
+		pDialog = xbmcgui.DialogProgressBG()
+		pDialog.create('Please Wait','Reset in progress...')
 		if self.config.files.get('addon_data_db_zipped').exists():
 			use_backup=False  #Use the non-backup if it exists
 		elif self.config.files.get('addon_data_db_zipped_backup').exists():
@@ -280,19 +386,86 @@ class common(object):
 				result = self.extract_addon_db(use_backup=use_backup)
 		else:
 			xbmc.log(msg='IAGL: addon database file not found',level=xbmc.LOGERROR)
+		pDialog.close()
+		del pDialog
 		return result
+
+	def backup_database(self,backup_path=None):
+		result = False
+		if isinstance(backup_path,str) and len(backup_path)>0 and xbmcvfs.exists(backup_path):
+			xbmc.log(msg='IAGL:  User selected to backup the database to the directory: {}'.format(backup_path),level=xbmc.LOGDEBUG)
+			pDialog = xbmcgui.DialogProgressBG()
+			pDialog.create('Please Wait','Backup in progress...')
+			try:
+				if self.config.files.get('db').exists():
+					result = xbmcvfs.copy(str(self.config.files.get('db')),str(Path(backup_path).joinpath('iagl_{}.db'.format(dt.now().timestamp()))))
+			except Exception as exc:
+				xbmc.log(msg='IAGL:  Backup failed: {}'.format(exc),level=xbmc.LOGERROR)
+			pDialog.close()
+			del pDialog
+		return result
+
+	def restore_database(self,backup_file=None):
+		result = False
+		if isinstance(backup_file,str) and len(backup_file)>0 and backup_file.endswith('.db') and xbmcvfs.exists(backup_file):
+			xbmc.log(msg='IAGL:  User selected restore the database from backup file: {}'.format(backup_file),level=xbmc.LOGDEBUG)
+			pDialog = xbmcgui.DialogProgressBG()
+			pDialog.create('Please Wait','Restoring backup...')
+			try:
+				if self.config.files.get('db').exists():
+					self.config.files.get('db').unlink()
+					result = xbmcvfs.copy(backup_file,str(self.config.files.get('db')))
+			except Exception as exc:
+				xbmc.log(msg='IAGL:  Backup restoration failed: {}'.format(exc),level=xbmc.LOGERROR)
+			pDialog.close()
+			del pDialog
+		return result
+
+	def check_system_platform(self,return_as_user_launch_os=True):
+		current_platform = None
+		if xbmc.getCondVisibility('System.Platform.Linux') and not xbmc.getCondVisibility('System.Platform.Android'):
+			xbmc.log(msg='IAGL: User system detected as Linux',level=xbmc.LOGDEBUG)
+			current_platform = 'linux'
+		elif xbmc.getCondVisibility('System.Platform.Linux') and xbmc.getCondVisibility('System.Platform.Android'):
+			xbmc.log(msg='IAGL: User system detected as Android',level=xbmc.LOGDEBUG)
+			current_platform = 'android'
+			android_apps = self.get_android_apps()
+			if isinstance(android_apps,list):
+				if 'com.retroarch.aarch64' in android_apps:
+					xbmc.log(msg='IAGL: com.retroarch.aarch64 was found installed',level=xbmc.LOGDEBUG)
+					current_platform = 'android_aarch64'
+				elif 'com.retroarch.ra32' in android_apps:
+					xbmc.log(msg='IAGL: om.retroarch.ra32 was found installed',level=xbmc.LOGDEBUG)
+					current_platform = 'android_ra32'
+				elif 'com.retroarch' in android_apps:
+					xbmc.log(msg='IAGL: com.retroarch was found installed',level=xbmc.LOGDEBUG)
+					current_platform = 'android'
+				else:					
+					xbmc.log(msg='IAGL: retroarch was not found to be installed',level=xbmc.LOGDEBUG)
+		elif xbmc.getCondVisibility('System.Platform.OSX'):
+			xbmc.log(msg='IAGL: User system detected as OSX',level=xbmc.LOGDEBUG)
+			current_platform = 'OSX'
+		elif xbmc.getCondVisibility('System.Platform.Windows'):
+			xbmc.log(msg='IAGL: User system detected as Windows',level=xbmc.LOGDEBUG)
+			current_platform = 'windows'
+		else:
+			if xbmc.getCondVisibility('System.Platform.IOS') or xbmc.getCondVisibility('System.Platform.UWP'):
+				xbmc.log(msg='IAGL: Unsupported external launch system detected (IOS or UWP)',level=xbmc.LOGDEBUG)
+		if return_as_user_launch_os:
+			if isinstance(current_platform,str):
+				current_platform = next(iter([k for k,v in self.config.settings.get('user_launch_os').get('options').items() if v==current_platform]),'0')
+			else:
+				current_platform = '0'
+			if isinstance(current_platform,str) and current_platform.isdigit():
+				current_platform = int(current_platform)
+		return current_platform
 
 	def get_android_apps(self):
 		result = None
-		apps_json = json.loads(xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Files.GetDirectory","params":{"directory":"androidapp://sources/apps/"},"id": "1"}'))
-		if isinstance(apps_json,dict):
-			if 'error' in apps_json.keys():
-				xbmc.log(msg='IAGL: Kodi did not identify installed android apps: {}'.format(apps_json),level=xbmc.LOGDEBUG)
-			else:
-				if isinstance(apps_json.get('result'),dict) and isinstance(apps_json.get('result').get('files'),list):
-					result = dict(zip([x.get('label') or 'Unknown' for x in apps_json.get('result').get('files') if isinstance(x,dict) and isinstance(x.get('file'),str) and 'androidapp' in x.get('file')],[x.get('file').split('/')[-1] for x in apps_json.get('result').get('files') if isinstance(x,dict) and isinstance(x.get('file'),str) and 'androidapp' in x.get('file')]))
-				else:
-					xbmc.log(msg='IAGL: Kodi did not identify installed android apps: {}'.format(apps_json),level=xbmc.LOGDEBUG)
+		try:
+			dirs, result = xbmcvfs.listdir('androidapp://sources/apps/')
+		except Exception as exc:
+			xbmc.log(msg='IAGL: Error querying android apps: {}'.format(exc),level=xbmc.LOGDEBUG)
 		return result
 
 	def get_game_addons(self,as_listitems=True,add_reset_to_default=True):

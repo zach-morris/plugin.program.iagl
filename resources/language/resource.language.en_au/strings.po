@@ -1554,3 +1554,103 @@ msgstr "{} game lists were updated for external launching"
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Wizard completed[CR]Lets Play!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Set all game lists to be launched with Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Quickly set all game lists to external launching"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Quickly set all game lists to Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Confirm"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Are you sure you want to set all lists to external launching"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Are you sure you want to set all lists to Kodi retroplayer"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Backup current database"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Restore database from backup"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Backup the current IAGL database and all user settings"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Restore the current addon database from a backup"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Select backup path"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Select backup db"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Backup completed"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Restore completed"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} matching game ids were not found in the new db[CR]Select next action"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Update database, attempt to match games by title and game list"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Update database, remove game ids that were not found"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Restore back to old database"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Database restored back to old database"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Please Wait"
