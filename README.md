@@ -69,7 +69,7 @@ IAGL in Action
 -------------------
 
 <p align="center">
-  <img style="max-width:75vw" src="https://i.imgur.com/YRAVMP2.gif" alt="IAGL_screens"/>
+  <img style="max-width:75vw" src="https://i.imgur.com/lgsNRPg.gif" alt="IAGL_screens"/>
 </p>
 
 
