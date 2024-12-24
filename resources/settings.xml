@@ -455,6 +455,74 @@
 						<heading>30142</heading>
 					</control>
 				</setting>
+				<setting id="override_ra_directory" label="30412" help="30413" type="integer">
+					<level>2</level>
+					<default>1</default>
+					<constraints>
+						<options>
+							<option label="30058">0</option>
+							<option label="30059">1</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<or>
+								<condition operator="is" setting="user_launch_os">1</condition>
+								<condition operator="is" setting="user_launch_os">2</condition>
+								<condition operator="is" setting="user_launch_os">3</condition>
+							</or>
+						</dependency>
+					</dependencies>
+					<control format="string" type="list">
+						<heading>30412</heading>
+					</control>
+				</setting>
+				<setting id="ra_cores_path_override" label="30414" help="30413" type="path">
+					<level>2</level>
+					<default/>
+					<constraints>
+						<writable>false</writable>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<or>
+									<condition operator="is" setting="user_launch_os">1</condition>
+									<condition operator="is" setting="user_launch_os">2</condition>
+									<condition operator="is" setting="user_launch_os">3</condition>
+								</or>
+								<condition operator="is" setting="override_ra_directory">0</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="button" format="path">
+						<heading>30414</heading>
+					</control>
+				</setting>
+				<setting id="ra_info_path_override" label="30415" help="30413" type="path">
+					<level>2</level>
+					<default/>
+					<constraints>
+						<writable>false</writable>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<or>
+									<condition operator="is" setting="user_launch_os">1</condition>
+									<condition operator="is" setting="user_launch_os">2</condition>
+									<condition operator="is" setting="user_launch_os">3</condition>
+								</or>
+								<condition operator="is" setting="override_ra_directory">0</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="button" format="path">
+						<heading>30415</heading>
+					</control>
+				</setting>
 				<setting id="ra_cfg_path_android"  label="30360" help="30361" type="string">
 					<level>0</level>
 					<default/>
@@ -556,7 +624,7 @@
 					</control>
 				</setting>
 				<setting id="kodi_media_stop" label="30086" help="30197" type="integer">
-					<level>3</level>
+					<level>2</level>
 					<default>0</default>
 					<constraints>
 						<options>
@@ -569,7 +637,7 @@
 					</control>
 				</setting>
 				<setting id="kodi_saa" label="30194" help="30195" type="integer">
-					<level>3</level>
+					<level>2</level>
 					<default>0</default>
 					<constraints>
 						<options>
@@ -591,7 +659,7 @@
 					</control>
 				</setting>
 				<setting id="kodi_wfr" label="30087" help="30198" type="integer">
-					<level>3</level>
+					<level>2</level>
 					<default>0</default>
 					<constraints>
 						<options>
@@ -770,7 +838,7 @@
 					</control>
 				</setting>
 				<setting id="alt_temp_dl_enable" label="30356" help="30202" type="integer">
-					<level>3</level>
+					<level>1</level>
 					<default>1</default>
 					<constraints>
 						<options>
@@ -783,7 +851,7 @@
 					</control>
 				</setting>
 				<setting id="alt_temp_dl" label="30201" help="30202" type="path">
-					<level>3</level>
+					<level>1</level>
 					<constraints>
 						<writable>false</writable>
 						<allowempty>true</allowempty>
@@ -800,7 +868,7 @@
 					</control>
 				</setting>
 				<setting id="organize_temp_dl" label="30203" type="integer">
-					<level>3</level>
+					<level>1</level>
 					<default>0</default>
 					<constraints>
 						<options>
@@ -859,7 +927,7 @@
 		<category id="advanced" label="30047">
 			<group id="advanced_1" label="30047">
 				<setting id="reset_database" label="30207" help="30208" type="action">
-					<level>3</level>
+					<level>2</level>
 						<data>RunPlugin(plugin://plugin.program.iagl/context_menu/action/reset_database)</data>
 						<constraints>
 							<allowempty>true</allowempty>
@@ -869,7 +937,7 @@
 					</control>
 				</setting>
 				<setting id="reset_game_lists_to_retroplayer" label="30390" help="30392" type="action">
-					<level>3</level>
+					<level>2</level>
 						<data>RunPlugin(plugin://plugin.program.iagl/context_menu/action/reset_game_lists_to_retroplayer)</data>
 						<constraints>
 							<allowempty>true</allowempty>
@@ -879,7 +947,7 @@
 					</control>
 				</setting>
 				<setting id="reset_game_lists_to_external" label="30382" help="30391" type="action">
-					<level>3</level>
+					<level>2</level>
 						<data>RunPlugin(plugin://plugin.program.iagl/context_menu/action/reset_game_lists_to_external)</data>
 						<constraints>
 							<allowempty>true</allowempty>
@@ -889,7 +957,7 @@
 					</control>
 				</setting>
 				<setting id="backup_database" label="30398" help="30400" type="action">
-					<level>3</level>
+					<level>2</level>
 						<data>RunPlugin(plugin://plugin.program.iagl/context_menu/action/backup_database)</data>
 						<constraints>
 							<allowempty>true</allowempty>
@@ -899,7 +967,7 @@
 					</control>
 				</setting>
 				<setting id="restore_database" label="30399" help="30401" type="action">
-					<level>3</level>
+					<level>2</level>
 						<data>RunPlugin(plugin://plugin.program.iagl/context_menu/action/restore_database)</data>
 						<constraints>
 							<allowempty>true</allowempty>
@@ -909,7 +977,7 @@
 					</control>
 				</setting>
 				<setting id="get_db_stats" label="30339" help="30340" type="action">
-					<level>3</level>
+					<level>0</level>
 						<data>RunPlugin(plugin://plugin.program.iagl/context_menu/action/get_db_stats)</data>
 						<constraints>
 							<allowempty>true</allowempty>
@@ -919,7 +987,7 @@
 					</control>
 				</setting>
 				<setting id="rerun_wizard" label="30191" help="30192" type="action">
-					<level>3</level>
+					<level>0</level>
 						<data>RunPlugin(plugin://plugin.program.iagl/wizard_start)</data>
 						<constraints>
 							<allowempty>true</allowempty>
@@ -929,7 +997,7 @@
 					</control>
 				</setting>
 				<setting id="get_donate" label="30370" help="30371" type="action">
-					<level>3</level>
+					<level>0</level>
 						<data>RunPlugin(plugin://plugin.program.iagl/context_menu/action/get_donate_screen)</data>
 						<constraints>
 							<allowempty>true</allowempty>

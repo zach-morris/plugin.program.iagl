@@ -951,28 +951,36 @@ class common(object):
 
 	def get_installed_ra_cores(self,ra_default_command=None):
 		cores_out = None
-		if isinstance(ra_default_command,dict) and isinstance(ra_default_command.get('command'),str) and isinstance(self.get_setting('ra_cfg_path'),str) and xbmcvfs.exists(self.get_setting('ra_cfg_path')):
-			xbmc.log(msg='IAGL:  Querying available RA cores for users system',level=xbmc.LOGDEBUG)
-			try:
-				ra_cfg_text = Path(self.get_setting('ra_cfg_path')).read_text(encoding='utf-8',errors='ignore')
-			except Exception as exc:
-				xbmc.log(msg='IAGL:  Unable to read Retroarch config file.  Error: {}'.format(exc),level=xbmc.LOGERROR)
-				ra_cfg_text = None
-			if isinstance(ra_cfg_text,str) and len(ra_cfg_text)>0:
-				libretro_directory = self.get_ra_parameter(parameter_in='libretro_directory',text_in=ra_cfg_text)
-				if libretro_directory.startswith(':\\'):
-					libretro_directory = str(Path(self.get_setting('ra_cfg_path')).parent.joinpath(libretro_directory.replace(':\\','')))
-				libretro_info_path = self.get_ra_parameter(parameter_in='libretro_info_path',text_in=ra_cfg_text)
-				if libretro_info_path.startswith(':\\'):
-					libretro_info_path = str(Path(self.get_setting('ra_cfg_path')).parent.joinpath(libretro_info_path.replace(':\\','')))
-				if isinstance(libretro_directory,str) and len(libretro_directory)>0 and Path(libretro_directory).expanduser().exists():
-					installed_cores = [x for x in Path(libretro_directory).expanduser().glob('*') if x.is_file() and x.suffix.lower() in ['.dylib','.so','.dll','dylib','so','dll']]
-					if isinstance(libretro_info_path,str) and len(libretro_info_path)>0 and Path(libretro_info_path).expanduser().exists():
-						info_files = [x for x in Path(libretro_info_path).expanduser().glob('*') if x.is_file() and x.suffix.lower() in ['.info','info']]
-						info_files_dict = dict(zip([y.stem for y in info_files],[y for y in info_files]))
-						cores_out = [self.get_core_parameters(core_path_in=x,info_files_in=info_files_dict,ra_default_command=ra_default_command.get('command')) for x in installed_cores]
-				else:
-					xbmc.log(msg='IAGL:  Unable to read Retroarch config path: {}'.format(libretro_directory),level=xbmc.LOGERROR)
+		if self.get_setting('override_ra_directory') and isinstance(self.get_setting('ra_cores_path_override'),str) and len(self.get_setting('ra_cores_path_override'))>0 and Path(self.get_setting('ra_cores_path_override')).exists() and isinstance(self.get_setting('ra_info_path_override'),str) and len(self.get_setting('ra_info_path_override'))>0 and Path(self.get_setting('ra_info_path_override')).exists():
+			xbmc.log(msg='IAGL:  User Retroarch cores directory override set: {}'.format(self.get_setting('ra_cores_path_override')),level=xbmc.LOGDEBUG)
+			xbmc.log(msg='IAGL:  User Retroarch info directory override set: {}'.format(self.get_setting('ra_info_path_override')),level=xbmc.LOGDEBUG)
+			installed_cores = [x for x in Path(self.get_setting('ra_cores_path_override')).glob('*') if x.is_file() and x.suffix.lower() in ['.dylib','.so','.dll','dylib','so','dll']]
+			info_files = [x for x in Path(self.get_setting('ra_info_path_override')).glob('*') if x.is_file() and x.suffix.lower() in ['.info','info']]
+			info_files_dict = dict(zip([y.stem for y in info_files],[y for y in info_files]))
+			cores_out = [self.get_core_parameters(core_path_in=x,info_files_in=info_files_dict,ra_default_command=ra_default_command.get('command')) for x in installed_cores]
+		else:
+			if isinstance(ra_default_command,dict) and isinstance(ra_default_command.get('command'),str) and isinstance(self.get_setting('ra_cfg_path'),str) and xbmcvfs.exists(self.get_setting('ra_cfg_path')):
+				xbmc.log(msg='IAGL:  Querying available RA cores for users system',level=xbmc.LOGDEBUG)
+				try:
+					ra_cfg_text = Path(self.get_setting('ra_cfg_path')).read_text(encoding='utf-8',errors='ignore')
+				except Exception as exc:
+					xbmc.log(msg='IAGL:  Unable to read Retroarch config file.  Error: {}'.format(exc),level=xbmc.LOGERROR)
+					ra_cfg_text = None
+				if isinstance(ra_cfg_text,str) and len(ra_cfg_text)>0:
+					libretro_directory = self.get_ra_parameter(parameter_in='libretro_directory',text_in=ra_cfg_text)
+					if libretro_directory.startswith(':\\'):
+						libretro_directory = str(Path(self.get_setting('ra_cfg_path')).parent.joinpath(libretro_directory.replace(':\\','')))
+					libretro_info_path = self.get_ra_parameter(parameter_in='libretro_info_path',text_in=ra_cfg_text)
+					if libretro_info_path.startswith(':\\'):
+						libretro_info_path = str(Path(self.get_setting('ra_cfg_path')).parent.joinpath(libretro_info_path.replace(':\\','')))
+					if isinstance(libretro_directory,str) and len(libretro_directory)>0 and Path(libretro_directory).expanduser().exists():
+						installed_cores = [x for x in Path(libretro_directory).expanduser().glob('*') if x.is_file() and x.suffix.lower() in ['.dylib','.so','.dll','dylib','so','dll']]
+						if isinstance(libretro_info_path,str) and len(libretro_info_path)>0 and Path(libretro_info_path).expanduser().exists():
+							info_files = [x for x in Path(libretro_info_path).expanduser().glob('*') if x.is_file() and x.suffix.lower() in ['.info','info']]
+							info_files_dict = dict(zip([y.stem for y in info_files],[y for y in info_files]))
+							cores_out = [self.get_core_parameters(core_path_in=x,info_files_in=info_files_dict,ra_default_command=ra_default_command.get('command')) for x in installed_cores]
+					else:
+						xbmc.log(msg='IAGL:  Unable to read Retroarch config path: {}'.format(libretro_directory),level=xbmc.LOGERROR)
 		return cores_out			
 
 	def get_other_emus(self,other_emulator_commands=None,other_emulator_settings=None):

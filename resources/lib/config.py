@@ -142,6 +142,9 @@ class config(object):
 		self.settings['user_launch_os']['possible_config_locations'] = dict(zip(['windows','linux','OSX','android','android_aarch64','android_ra32'],[[Path('C:').joinpath('Program Files (x86)','Retroarch','retroarch.cfg'),Path('C:').joinpath('Program Files','Retroarch','retroarch.cfg'),self.paths.get('os_home').joinpath('AppData','Roaming','RetroArch','retroarch.cfg')],[self.paths.get('os_home').joinpath('.config','retroarch','retroarch.cfg'),self.paths.get('os_home').joinpath('.var','app','org.libretro.RetroArch','config','retroarch','retroarch.cfg'),Path('opt').joinpath('retropie','configs','all','retroarch.cfg')],[self.paths.get('os_home').joinpath('Library','Application Support','RetroArch','config','retroarch.cfg')],[Path('mnt').joinpath('internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),Path('sdcard').joinpath('Android','data','com.retroarch','files','retroarch.cfg'),Path('data').joinpath('data','com.retroarch','retroarch.cfg'),Path('mnt').joinpath('internal_sd','Android','data','com.retroarch.aarch64','files','retroarch.cfg'),Path('sdcard').joinpath('Android','data','com.retroarch.aarch64','files','retroarch.cfg'),Path('data').joinpath('user','0','com.retroarch.aarch64','retroarch.cfg'),Path('data').joinpath('user','0','com.retroarch.aarch64','files','retroarch.cfg'),Path('mnt').joinpath('internal_sd','Android','data','com.retroarch.ra32','files','retroarch.cfg'),Path('sdcard').joinpath('Android','data','com.retroarch.ra32','files','retroarch.cfg'),Path('data').joinpath('data','com.retroarch.ra32','retroarch.cfg'),Path('data').joinpath('data','com.retroarch.ra32','files','retroarch.cfg')],[Path('mnt').joinpath('internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),Path('sdcard').joinpath('Android','data','com.retroarch','files','retroarch.cfg'),Path('data').joinpath('data','com.retroarch','retroarch.cfg'),Path('mnt').joinpath('internal_sd','Android','data','com.retroarch.aarch64','files','retroarch.cfg'),Path('sdcard').joinpath('Android','data','com.retroarch.aarch64','files','retroarch.cfg'),Path('data').joinpath('user','0','com.retroarch.aarch64','retroarch.cfg'),Path('data').joinpath('user','0','com.retroarch.aarch64','files','retroarch.cfg')],[Path('mnt').joinpath('internal_sd','Android','data','com.retroarch','files','retroarch.cfg'),Path('sdcard').joinpath('Android','data','com.retroarch','files','retroarch.cfg'),Path('data').joinpath('data','com.retroarch','retroarch.cfg'),Path('mnt').joinpath('internal_sd','Android','data','com.retroarch.ra32','files','retroarch.cfg'),Path('sdcard').joinpath('Android','data','com.retroarch.ra32','files','retroarch.cfg'),Path('data').joinpath('data','com.retroarch.ra32','retroarch.cfg'),Path('data').joinpath('data','com.retroarch.ra32','files','retroarch.cfg')]]))
 		self.settings['user_launch_os']['android_options'] = ['android','android_aarch64','android_ra32']
 		self.settings['user_launch_os']['default'] = None
+		self.settings['override_ra_directory'] = dict()
+		self.settings['override_ra_directory']['options'] = dict(zip(['0','1'],[True,False]))
+		self.settings['override_ra_directory']['default'] = False
 		self.settings['alt_temp_dl_enable'] = dict()
 		self.settings['alt_temp_dl_enable']['options'] = dict(zip(['0','1'],[True,False]))
 		self.settings['alt_temp_dl_enable']['default'] = False
@@ -307,6 +310,8 @@ class config(object):
 													'ORDER BY game_lists_table.label COLLATE NOCASE ASC') #Checked
 		self.database['query']['game_lists_by_playlist_no_page'] = ('SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
 																	'FROM games as games_table\n'
+																	'LEFT JOIN game_list as game_lists_table\n'
+																	'ON game_lists_table.label = games_table.game_list\n'
 																	'LEFT JOIN paths as banner_paths\n'
 																	'ON banner_paths."path" = games_table.art_banner_path\n'
 																	'LEFT JOIN paths as box_paths\n'
@@ -319,9 +324,12 @@ class config(object):
 																	'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
 																	'LEFT JOIN paths as fanart_paths\n'
 																	'ON fanart_paths."path" = games_table.art_fanart_path\n'
-																	'WHERE games_table.groups  LIKE "%""{playlist_id}""%"')
+																	'WHERE games_table.groups  LIKE "%""{playlist_id}""%"\n'
+																	'AND game_lists_table.user_global_visibility is NULL')
 		self.database['query']['game_lists_by_playlist_page'] = ('SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
 																'FROM games as games_table\n'
+																'LEFT JOIN game_list as game_lists_table\n'
+																'ON game_lists_table.label = games_table.game_list\n'
 																'LEFT JOIN paths as banner_paths\n'
 																'ON banner_paths."path" = games_table.art_banner_path\n'
 																'LEFT JOIN paths as box_paths\n'
@@ -334,7 +342,8 @@ class config(object):
 																'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
 																'LEFT JOIN paths as fanart_paths\n'
 																'ON fanart_paths."path" = games_table.art_fanart_path\n'
-																'WHERE games_table.groups  LIKE "%""{playlist_id}""%"'
+																'WHERE games_table.groups  LIKE "%""{playlist_id}""%"\n'
+																'AND game_lists_table.user_global_visibility is NULL\n'
 																'ORDER BY games_table.originaltitle COLLATE NOCASE ASC\n'
 																'LIMIT {items_per_page} OFFSET {starting_number}')
 		self.database['query']['choose_from_list'] = ('SELECT choose_table.label,choose_table.next_path,choose_table.localization as localization,choose_table.choice_table as choice_table,thumb_paths.url||choose_table.thumb as thumb,poster_paths.url||choose_table.poster as poster,banner_paths.url||choose_table.banner as banner,(SELECT url FROM default_art WHERE art_type="fanart") as fanart,clearlogo_paths.url||choose_table.clearlogo as clearlogo,choose_table.plot\n'
