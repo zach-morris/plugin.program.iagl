@@ -68,9 +68,7 @@ Some audio files in [this folder](https://github.com/zach-morris/plugin.program.
 IAGL in Action
 -------------------
 
-<p align="center">
-  <img style="max-width:75vw" src="https://i.imgur.com/YRAVMP2.gif" alt="IAGL_screens"/>
-</p>
+[![IAGL](https://i.imgur.com/rHgDFw1.gif)](https://www.youtube.com/watch?v=jUIbVqd_iTE)
 
 
 Support
