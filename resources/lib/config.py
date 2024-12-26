@@ -145,6 +145,9 @@ class config(object):
 		self.settings['override_ra_directory'] = dict()
 		self.settings['override_ra_directory']['options'] = dict(zip(['0','1'],[True,False]))
 		self.settings['override_ra_directory']['default'] = False
+		self.settings['enable_elec_prepend_command'] = dict()
+		self.settings['enable_elec_prepend_command']['options'] = dict(zip(['0','1','2','3','4'],[None,('retroarch','systemd-run '),('all','systemd-run '),('retroarch','flatpak run '),('all','flatpak run ')]))
+		self.settings['enable_elec_prepend_command']['default'] = None
 		self.settings['alt_temp_dl_enable'] = dict()
 		self.settings['alt_temp_dl_enable']['options'] = dict(zip(['0','1'],[True,False]))
 		self.settings['alt_temp_dl_enable']['default'] = False

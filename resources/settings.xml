@@ -671,6 +671,29 @@
 						<heading>30194</heading>
 					</control>
 				</setting>
+				<setting id="enable_elec_prepend_command" label="30416" help="30417" type="integer">
+					<level>3</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="30059">0</option>
+							<option label="30418">1</option>
+							<option label="30419">2</option>
+							<option label="30420">3</option>
+							<option label="30421">4</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<or>
+								<condition operator="is" setting="user_launch_os">2</condition>
+							</or>
+						</dependency>
+					</dependencies>
+					<control format="string" type="list">
+						<heading>30412</heading>
+					</control>
+				</setting>
 			</group>
 			<group id="launching_3" label="30279">
 				<setting id="app_path_dolphin" label="30280" help="30281" type="path">

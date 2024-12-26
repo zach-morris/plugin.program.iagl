@@ -1670,3 +1670,27 @@ msgstr "Retroarch Core Directory"
 msgctxt "#30415"
 msgid "Retroach Info Directory"
 msgstr "Retroach Info Directory"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Append linux app to start launch command"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Prepend systemd-run to Retroarch commands"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Prepend systemd-run to all commands"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Prepend flatpak run to Retroarch commands"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Prepend flatpak run to all commands"

@@ -1165,6 +1165,14 @@ def play_game_external(game_id):
 			xbmcgui.Dialog().notification(cm.get_loc(30270),cm.get_loc(30351),xbmcgui.NOTIFICATION_WARNING)
 			xbmc.log(msg='IAGL:  Launch process is not set, and user has no_user_command_preset set to STOP',level=xbmc.LOGDEBUG)
 	if isinstance(launch_process,str):
+		if isinstance(cm.get_setting('enable_elec_prepend_command'),tuple): #Prepend systemd run or flatpak run to the launch command if set in settings
+			xbmc.log(msg='IAGL:  User prepend launch commmmand set to: {}'.format(cm.get_setting('enable_elec_prepend_command')),level=xbmc.LOGDEBUG)
+			if 'retroarch' in launch_process.lower() and cm.get_setting('enable_elec_prepend_command')[0] in ['retroarch','all']:
+				launch_process = '{}{}'.format(cm.get_setting('enable_elec_prepend_command')[-1],launch_process)
+			elif 'retroarch' not in launch_process.lower() and cm.get_setting('enable_elec_prepend_command')[0] in ['all']:
+				launch_process = '{}{}'.format(cm.get_setting('enable_elec_prepend_command')[-1],launch_process)
+			else:
+				xbmc.log(msg='IAGL:  User prepend commmand did not match rules',level=xbmc.LOGDEBUG)
 		xbmc.log(msg='IAGL:  Launch process set to:\n{}'.format(launch_process),level=xbmc.LOGDEBUG)
 		current_dl_path = current_game_data.get('user_global_download_path') or cm.get_game_dl_path(path_in=cm.get_setting('default_dl_path'),game_list_id=current_game_data.get('game_list_id'),organize_path=cm.get_setting('organize_temp_dl'))
 		current_pp = next(iter([x for x in [current_game_data.get('user_game_post_download_process'),current_game_data.get('user_post_download_process'),current_game_data.get('default_global_post_download_process')] if isinstance(x,str)]),None)

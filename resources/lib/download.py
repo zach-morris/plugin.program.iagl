@@ -315,6 +315,9 @@ class download(object):
 					lf = str(Path().joinpath(*lf.split('/')))  #Correct any path seperation
 					matching_files = matching_files+[x for x in current_dl_path_files if x.is_file() and x not in matching_files and lf == x.name]
 					matching_files = matching_files+[x for x in current_dl_path_files if x.is_file() and x not in matching_files and lf in str(x)]
+					if lf!=xbmcvfs.makeLegalFilename(lf):
+						matching_files = matching_files+[x for x in current_dl_path_files if x.is_file() and x not in matching_files and xbmcvfs.makeLegalFilename(lf) == x.name]
+						matching_files = matching_files+[x for x in current_dl_path_files if x.is_file() and x not in matching_files and xbmcvfs.makeLegalFilename(lf) in str(x)]
 					if len(matching_files)>0:
 						xbmc.log(msg='IAGL:  Matching launch_parameter file found locally for requested game:\n{}'.format(lf),level=xbmc.LOGDEBUG)
 			if isinstance(self.rom,list):
