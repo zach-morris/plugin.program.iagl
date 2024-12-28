@@ -1219,11 +1219,26 @@ def play_game_external(game_id):
 @plugin.route('/context_menu/action/download_game_to/<game_id>')
 def download_game_to(game_id):
 	xbmc.log(msg='IAGL:  /download_game_to/{}'.format(game_id),level=xbmc.LOGDEBUG)
-	current_game_data = db.get_game_from_id(game_id=game_id)
+	current_game_data = db.get_game_from_id(game_id=game_id,game_title_setting=cm.get_setting('game_title_setting'))
+	game_pp = next(iter([x for x in [current_game_data.get('user_game_post_download_process'),current_game_data.get('user_post_download_process'),current_game_data.get('default_global_post_download_process')] if isinstance(x,str)]),None)
+	game_lp = next(iter([x for x in [current_game_data.get('launch_parameters')] if isinstance(x,dict)]),None)
+	current_game_name=current_game_data.get('label')
 	if isinstance(current_game_data,dict) and isinstance(current_game_data.get('rom'),dict) or isinstance(current_game_data.get('rom'),list):
 		selected = xbmcgui.Dialog().browseSingle(0,heading=cm.get_loc(30267),shares="")
 		if isinstance(selected,str) and xbmcvfs.exists(selected):
 			dl.set_rom(rom=current_game_data.get('rom'))
+			dl.set_dl_path(path_in=selected)
+			current_game_data = dl.downloader.download()
+			if all([x.get('download_success') for x in current_game_data]):
+				xbmc.log(msg='IAGL:  Download to... of {} completed'.format(current_game_name),level=xbmc.LOGDEBUG)
+				if xbmcgui.Dialog().yesno(cm.get_loc(30233),cm.get_loc(30446)):
+					pp.set_process(process=game_pp)
+					pp.set_game_name(game_name=current_game_name)
+					pp.set_rom(rom=current_game_data)
+					pp.set_launch_parameters(launch_parameters=game_lp)
+					current_game_data = pp.process_games() #Returns a dict containing process results
+					if current_game_data.get('process_success'):
+						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30447))
 
 @plugin.route('/context_menu/action/view_launch_parameters/<game_id>')
 def download_game_to(game_id):
