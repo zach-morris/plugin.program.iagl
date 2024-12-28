@@ -1863,6 +1863,32 @@ def update_game_dl_path_from_uid(game_id):
 	if xbmcgui.Dialog().yesno(cm.get_loc(30368),cm.get_loc(30366).format(game_item_info.get('label'))):
 		plugin.redirect('/context_menu/action/update_game_dl_path/{}'.format(game_item_info.get('label')))
 
+@plugin.route('/context_menu/action/update_game_list_post_process/<game_list_id>')
+def update_game_list_post_process(game_list_id):
+	xbmc.log(msg='IAGL:  /update_game_list_post_process',level=xbmc.LOGDEBUG)
+	current_default_pp = next(iter(db.query_db(db.get_query('get_game_list_parameter',game_list_id=game_list_id,parameter='default_global_post_download_process'),return_as='dict')),None)
+	current_options = cm.get_post_process_options()
+	if isinstance(current_default_pp,dict) and isinstance(current_default_pp.get('default_global_post_download_process'),str) and current_default_pp.get('default_global_post_download_process') in current_options.keys():
+		preselected = [k for k,v in current_options.items()].index(current_default_pp.get('default_global_post_download_process'))
+	else:
+		preselected = [k for k,v in current_options.items()].index('no_process')
+	selected = xbmcgui.Dialog().select(heading=cm.get_loc(30315),list=[v for k,v in current_options.items()],useDetails=False,preselect=preselected)
+	if selected>-1:
+		if xbmcgui.Dialog().yesno(cm.get_loc(30315),cm.get_loc(30443)):
+			result = [k for k,v in current_options.items()][selected]
+			result2 = db.update_game_list_user_parameter(game_list_id=game_list_id,parameter='user_post_download_process',new_value=result)
+			if isinstance(result2,int) and result2>0:
+				ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30444))
+				xbmc.sleep(config.defaults.get('sleep'))
+				xbmc.executebuiltin('Container.Refresh')
+
+@plugin.route('/context_menu/action/update_game_list_post_process_from_uid/<game_id>')
+def update_game_list_post_process_from_uid(game_id):
+	xbmc.log(msg='IAGL:  /update_game_list_post_process_from_uid',level=xbmc.LOGDEBUG)
+	game_item_info = next(iter(db.query_db(db.get_query('get_game_list_info_from_game_id',game_id=game_id,game_title_setting=cm.get_setting('game_title_setting')),return_as='dict')),None)
+	if xbmcgui.Dialog().yesno(cm.get_loc(30315),cm.get_loc(30445).format(game_item_info.get('label'))):
+		plugin.redirect('/context_menu/action/update_game_list_post_process/{}'.format(game_item_info.get('label')))
+
 @plugin.route('/context_menu/action/reset_game_list_settings/<game_list_id>')
 def reset_game_list_settings(game_list_id):
 	xbmc.log(msg='IAGL:  /reset_game_list_settings',level=xbmc.LOGDEBUG)
@@ -2065,6 +2091,11 @@ def wizard_start():
 			found_core_dir = xbmcgui.Dialog().input(heading=cm.get_loc(30362))
 			if isinstance(found_core_dir,str) and len(found_core_dir)>0:
 				xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='ra_cores_path_android',value=found_core_dir)
+		if cm.get_setting('user_launch_os') in config.settings.get('user_launch_os').get('android_options'):
+			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30201),cm.get_loc(30422))
+			result = xbmcgui.Dialog().browse(type=0,heading=cm.get_loc(30356),shares='')
+			if isinstance(result,str) and xbmcvfs.exists(result):
+				xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='alt_temp_dl',value=result)
 		selected = xbmcgui.Dialog().select(heading=cm.get_loc(30319),list=[cm.get_loc(30382),cm.get_loc(30383),cm.get_loc(30384)],useDetails=False,preselect=0)
 		if selected>-1:
 			if selected == 0:

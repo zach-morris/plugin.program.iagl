@@ -841,6 +841,7 @@ class common(object):
 										(self.get_loc(30246),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launcher_from_uid/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30247),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launch_command_from_uid/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30248),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_dl_path_from_uid/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30250),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_list_post_process_from_uid/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30328),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/reset_game_list_settings_from_uid/{})'.format(ip.split('/')[-1]))])
 		if type_in == 'search_link' and isinstance(ip,str):
 			li_out.addContextMenuItems([(self.get_loc(30088),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/add_to_favorites_search/{})'.format(ip))])
@@ -856,6 +857,7 @@ class common(object):
 										(self.get_loc(30247),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launch_command/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30249),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/hide_game_list/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30248),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_dl_path/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30250),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_list_post_process/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30328),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/reset_game_list_settings/{})'.format(ip.split('/')[-1]))])
 		return li_out
 
@@ -866,6 +868,9 @@ class common(object):
 		if isinstance(params_in,dict) and isinstance(params_in.get('user_global_launcher'),str):
 			launcher_out = params_in.get('user_global_launcher') #If user setting exists, it will be the value returned
 		return launcher_out
+
+	def get_post_process_options(self):
+		return {'unzip':self.get_loc(30423),'no_process':self.get_loc(30424),'unzip_skip_bios':self.get_loc(30425),'unzip_to_folder':self.get_loc(30426),'move_chd_to_folder':self.get_loc(30427),'move_to_folder_arcade':self.get_loc(30428),'move_to_folder_arcade':self.get_loc(30428),'move_to_folder_channelf':self.get_loc(30429),'move_to_folder_coleco':self.get_loc(30430),'move_to_folder_fds':self.get_loc(30431),'move_to_folder_gamegear':self.get_loc(30432),'move_to_folder_megadrive':self.get_loc(30433),'move_to_folder_msx':self.get_loc(30434),'move_to_folder_nes':self.get_loc(30435),'move_to_folder_ngp':self.get_loc(30436),'move_to_folder_pce':self.get_loc(30437),'move_to_folder_sg1000':self.get_loc(30438),'move_to_folder_sgx':self.get_loc(30439),'move_to_folder_sms':self.get_loc(30440),'move_to_folder_spectrum':self.get_loc(30441),'move_to_folder_tg16':self.get_loc(30442)}
 
 	def create_game_li(self,game_data=None,game_addon=None):
 		li = None
