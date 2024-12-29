@@ -1340,7 +1340,7 @@ msgid "Checking credentials"
 msgstr "Sjekker legitimasjon"
 
 msgctxt "#30333"
-msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
 msgstr "følgende variabler vil bli erstattet under lansering:[CR]● XXROM_PATHXX: Banen til filen som vil bli lansert[CR]● XXROM_NAMEXX: Navnet på filen som vil bli lansert (ingen bane)[CR]● XXROM_STEMXX: navnet på filen som vil bli lansert (ingen bane uten utvidelse)[CR]● XXNETPLAY_COMMANDXX: Eventuelle kommandotillegg som kreves for netplay, se tilleggsinnstillinger for alternativer[CR]Se wiki for mer informasjon..."
 
 msgctxt "#30334"

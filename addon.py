@@ -1791,7 +1791,7 @@ def update_android_command(game_list_id,menu_id):
 		lis =  [xbmcgui.ListItem(label=k,label2=cm.convert_android_value(current_command.get(k)),offscreen=True) for k in config.defaults.get('android_activity_keys')]+[xbmcgui.ListItem(label='Submit Command',offscreen=True)]	
 	else:
 		lis =  [xbmcgui.ListItem(label=k,label2='',offscreen=True) for k in config.defaults.get('android_activity_keys')]+[xbmcgui.ListItem(label='Submit Command',offscreen=True)]
-	selected = xbmcgui.Dialog().select(heading='Test',list=lis,useDetails=True)
+	selected = xbmcgui.Dialog().select(heading=cm.get_loc(30319),list=lis,useDetails=True)
 	if selected>-1 and selected<len(lis)-1:
 		new_value = xbmcgui.Dialog().input(heading='{} {}'.format(cm.get_loc(30302),config.defaults.get('android_activity_keys')[selected]),defaultt=cm.convert_android_value(current_command.get(config.defaults.get('android_activity_keys')[selected])))
 		result = cm.update_android_activity(key_in=config.defaults.get('android_activity_keys')[selected],value_in=new_value)

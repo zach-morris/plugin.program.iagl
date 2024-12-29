@@ -849,6 +849,7 @@ class common(object):
 			li_out.addContextMenuItems([(self.get_loc(30088),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/add_to_favorites_random/{})'.format(ip))])
 		if type_in == 'remove_fav_game' and isinstance(ip,str):
 			li_out.addContextMenuItems([(self.get_loc(30237),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/remove_game_from_favorites/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30342),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/view_launch_parameters/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30246),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launcher_from_uid/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30247),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launch_command_from_uid/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30248),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_dl_path_from_uid/{})'.format(ip.split('/')[-1])),

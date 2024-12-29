@@ -1340,7 +1340,7 @@ msgid "Checking credentials"
 msgstr "Перевірка облікових даних"
 
 msgctxt "#30333"
-msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
 msgstr "наступні змінні буде замінено під час запуску:[CR]● XXROM_PATHXX: шлях до файлу, який буде запущено[CR]● XXROM_NAMEXX: ім’я файлу, який буде запущено (без шляху)[CR]● XXROM_STEMXX: ім’я файлу, який буде запущено (без шляху та розширення)[CR]● XXNETPLAY_COMMANDXX: будь-яка додаткова команда, необхідна для netplay, див. налаштування аддона для options[CR]Див. вікі для отримання додаткової інформації…"
 
 msgctxt "#30334"

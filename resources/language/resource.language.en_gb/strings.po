@@ -1340,8 +1340,8 @@ msgid "Checking credentials"
 msgstr "Checking credentials"
 
 msgctxt "#30333"
-msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
-msgstr "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
 
 msgctxt "#30334"
 msgid "The archive file could not be processed[CR]Check logs for more details"
@@ -1790,3 +1790,11 @@ msgstr "Post process updated"
 msgctxt "#30445"
 msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
 msgstr "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Download completed.  Post process files?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Game files processed"

@@ -1340,7 +1340,7 @@ msgid "Checking credentials"
 msgstr "Vérification des informations d'identification"
 
 msgctxt "#30333"
-msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
 msgstr "Les variables suivantes seront remplacées lors du lancement : [CR]● XXROM_PATHXX : Le chemin vers le fichier qui sera lancé [CR]● XXROM_NAMEXX : Le nom du fichier qui sera lancé (pas de chemin) [CR]● XXROM_STEMXX : Le nom du fichier qui sera lancé (pas de chemin ni d'extension) [CR]● XXNETPLAY_COMMANDXX : Tout ajout de commande requis pour le netplay, voir les paramètres du module complémentaire pour les options [CR]Voir le wiki pour plus d'informations…"
 
 msgctxt "#30334"

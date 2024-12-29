@@ -1340,7 +1340,7 @@ msgid "Checking credentials"
 msgstr "Preverjanje poverilnic"
 
 msgctxt "#30333"
-msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
 msgstr "Naslednje spremenljivke bodo zamenjane med zagonom:[CR]● XXROM_PATHXX: pot do datoteke, ki bo zagnana[CR]● XXROM_NAMEXX: ime datoteke, ki bo zagnana (brez poti)[CR]● XXROM_STEMXX: ime datoteke, ki bo zagnana (brez poti in končnice)[CR]● XXNETPLAY_COMMANDXX: Kateri koli dodatek ukazu, ki je potreben za netplay, glejte nastavitve dodatka za možnosti[CR]Za več informacij glejte wiki ..."
 
 msgctxt "#30334"

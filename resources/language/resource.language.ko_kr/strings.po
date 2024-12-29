@@ -1340,7 +1340,7 @@ msgid "Checking credentials"
 msgstr "자격 증명 확인"
 
 msgctxt "#30333"
-msgid "he following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
 msgstr "다음 변수는 실행 중에 대체됩니다.[CR]● XXROM_PATHXX: 실행될 파일의 ​​경로[CR]● XXROM_NAMEXX: 실행될 파일의 ​​이름(경로 없음)[CR]● XXROM_STEMXX: 실행될 파일의 ​​이름(경로 없음, 확장자 없음)[CR]● XXNETPLAY_COMMANDXX: Netplay에 필요한 명령 추가, 옵션은 애드온 설정 참조[CR]자세한 내용은 위키 참조…"
 
 msgctxt "#30334"
