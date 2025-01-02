@@ -727,10 +727,6 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "연결할 netplay IP 포트를 정의합니다(기본값은 비워둡니다)"
 
-msgctxt "#30180"
-msgid "Default player 2+ Hostname"
-msgstr "기본 플레이어 2+ 호스트 이름"
-
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "기본 netplay 호스트 이름/IP를 정의합니다(로컬 네트워크 netplay에 유용하며 기본값은 비워둡니다)"
@@ -762,10 +758,6 @@ msgstr "Discord에 발표될 플레이어 이름을 입력하세요."
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord 사용자 계정 ID"
-
-msgctxt "#30189"
-msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
-msgstr "플레이 시 언급되도록 Discord ID를 입력하세요(사용자 설정>내 계정>ID 복사) (선택 사항)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"

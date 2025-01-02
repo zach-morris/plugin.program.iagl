@@ -727,10 +727,6 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Սահմանեք netplay IP պորտը, որի միջոցով կարելի է միանալ (թողեք դատարկ որպես լռելյայն)"
 
-msgctxt "#30180"
-msgid "Default player 2+ Hostname"
-msgstr "Լռելյայն նվագարկիչ 2+ հյուրընկալող անուն"
-
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Սահմանեք լռելյայն ցանցային հոսթի անունը / IP (օգտակար տեղական ցանցի համար, լռելյայն թողեք դատարկ)"
@@ -762,10 +758,6 @@ msgstr "Մուտքագրեք ձեր խաղացողի անունը, որը կհա
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord օգտվողի հաշվի ID"
-
-msgctxt "#30189"
-msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
-msgstr "Տրամադրեք ձեր Discord ID-ն (Օգտվողի կարգավորումներ>Իմ հաշիվը>Պատճեն ID), որպեսզի նշվի խաղալիս (ըստ ցանկության)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"

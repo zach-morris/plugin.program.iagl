@@ -727,10 +727,6 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Määrake ühenduse loomiseks mõeldud netplay IP-port (vaikimisi jätke tühjaks)"
 
-msgctxt "#30180"
-msgid "Default player 2+ Hostname"
-msgstr "Vaikimisi mängija 2+ hostinimi"
-
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Määrake võrgumängimise vaikehostinimi / IP (kasulik kohaliku võrgu võrgumängimise jaoks, vaikimisi jätke tühjaks)"
@@ -762,10 +758,6 @@ msgstr "Sisestage oma mängija nimi, mida Discordis teatatakse"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discordi kasutajakonto ID"
-
-msgctxt "#30189"
-msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
-msgstr "Esitage oma Discordi ID (Kasutaja seaded> Minu konto> Kopeeri ID), mida mängides mainitakse (valikuline)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"

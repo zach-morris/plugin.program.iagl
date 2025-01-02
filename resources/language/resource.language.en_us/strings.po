@@ -728,8 +728,8 @@ msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Define the netplay IP port to connect through (leave blank for default)"
 
 msgctxt "#30180"
-msgid "Default player 2+ Hostname"
-msgstr "Default player 2+ Hostname"
+msgid "Default Localhost IP"
+msgstr "Default Localhost IP"
 
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
@@ -764,8 +764,8 @@ msgid "Discord User Account ID"
 msgstr "Discord User Account ID"
 
 msgctxt "#30189"
-msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
-msgstr "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Provide your Discord ID (User Settings>My Account>Copy ID)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -1798,3 +1798,131 @@ msgstr "Download completed.  Post process files?"
 msgctxt "#30447"
 msgid "Game files processed"
 msgstr "Game files processed"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Not Available (Windows, OSX, Linux Only)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Netplay Username Type"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Select integration for netplay player name"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Use Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Manually enter a Player Name"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Player names will be published in the Retroarch Lobby"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Player Name"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Current Discord User"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord User set to [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "View gaming sessions you can join online using Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Unable to find discord user with ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Lobby Filter Options"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Only show rooms that can be entered"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Only show rooms that are using libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Show rooms that have a password"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Show rooms that have a spectator password"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Show rooms using MITM servers"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Only show rooms created within timeframe"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 minutes"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 minutes"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Any Timeframe"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Filter the lobby rooms based on creation time"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Only show rooms that are using IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Unable to find matching game with name like[CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Not Found"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Select matching game"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Netplay launch action"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Join from retroarch lobby"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Join from localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Select the default action when joining a netplay game"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Launch as netplay host"

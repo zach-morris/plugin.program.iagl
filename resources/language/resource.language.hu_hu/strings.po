@@ -727,10 +727,6 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Határozza meg a netplay IP-portját, amelyen keresztül csatlakozik (alapértelmezés szerint hagyja üresen)"
 
-msgctxt "#30180"
-msgid "Default player 2+ Hostname"
-msgstr "Alapértelmezett játékos 2+ gazdagépnév"
-
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Határozzon meg egy alapértelmezett netplay gazdagépnevet/IP-t (hasznos helyi hálózati netplay esetén, alapértelmezés esetén hagyja üresen)"
@@ -762,10 +758,6 @@ msgstr "Adja meg játékosnevét, amelyet a Discordon közölni szeretne"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord felhasználói fiók azonosítója"
-
-msgctxt "#30189"
-msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
-msgstr "Adja meg Discord-azonosítóját (Felhasználói beállítások> Saját fiók> Másolásazonosító), hogy megemlítse játék közben (opcionális)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"

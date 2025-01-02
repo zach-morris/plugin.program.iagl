@@ -727,10 +727,6 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "接続するネットプレイ IP ポートを定義します (デフォルトでは空白のままにします)"
 
-msgctxt "#30180"
-msgid "Default player 2+ Hostname"
-msgstr "デフォルトのプレーヤー 2+ ホスト名"
-
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "デフォルトのネットプレイホスト名/IPを定義します（ローカルネットワークのネットプレイに便利です。デフォルトの場合は空白のままにします）"
@@ -762,10 +758,6 @@ msgstr "Discordで発表されるプレイヤー名を入力してください"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord ユーザーアカウント ID"
-
-msgctxt "#30189"
-msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
-msgstr "プレイ時に言及される Discord ID (ユーザー設定 > マイアカウント > ID をコピー) を入力してください (オプション)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"

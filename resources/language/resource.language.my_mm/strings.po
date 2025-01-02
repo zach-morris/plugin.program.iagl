@@ -727,10 +727,6 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "ချိတ်ဆက်ရန် netplay IP ပေါက်ကို သတ်မှတ်ပါ (မူလအတွက် ဗလာချန်ထားပါ)"
 
-msgctxt "#30180"
-msgid "Default player 2+ Hostname"
-msgstr "မူရင်းကစားသမား 2+ လက်ခံသူအမည်"
-
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "မူရင်း netplay hostname / IP ကို ​​သတ်မှတ်ပါ (ပြည်တွင်း ကွန်ရက် netplay အတွက် အသုံးဝင်သည်၊ ပုံသေ အတွက် ကွက်လပ် ထားပါ)"
@@ -762,10 +758,6 @@ msgstr "Discord တွင်ကြေငြာရန် သင်၏ကစား
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord အသုံးပြုသူအကောင့် ID"
-
-msgctxt "#30189"
-msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
-msgstr "ကစားနေစဉ်တွင် ဖော်ပြရန်အတွက် သင်၏ Discord ID (အသုံးပြုသူ ဆက်တင်များ> ကျွန်ုပ်၏အကောင့်> မိတ္တူ ID) ကို ပေးဆောင်ပါ (ချန်လှပ်ထားနိုင်သည်)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"

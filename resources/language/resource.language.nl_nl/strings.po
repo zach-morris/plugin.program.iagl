@@ -727,10 +727,6 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Definieer de IP-poort van het netwerk waarmee verbinding moet worden gemaakt (laat leeg voor standaard)"
 
-msgctxt "#30180"
-msgid "Default player 2+ Hostname"
-msgstr "Standaardspeler 2+ Hostnaam"
-
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Definieer een standaard netwerkhostnaam/IP (handig voor lokaal netwerknetwerk, laat leeg voor standaard)"
@@ -762,10 +758,6 @@ msgstr "Voer je spelersnaam in om aangekondigd te worden op Discord"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord-gebruikersaccount-ID"
-
-msgctxt "#30189"
-msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
-msgstr "Geef je Discord-ID op (Gebruikersinstellingen > Mijn account > ID kopiëren) zodat deze wordt genoemd tijdens het spelen (optioneel)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"

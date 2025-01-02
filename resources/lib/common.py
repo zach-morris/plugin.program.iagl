@@ -2,6 +2,7 @@ import xbmc,xbmcgui,xbmcaddon,xbmcvfs,json,os
 from pathlib import Path
 from urllib.parse import urlencode
 from datetime import datetime as dt
+from infotagger.listitem import ListItemInfoTag
 import archive_tool
 
 class common(object):
@@ -11,6 +12,9 @@ class common(object):
 
 	def get_loc(self,value_in=None):
 		return self.config.addon.get('addon_handle').getLocalizedString(value_in)
+
+	def get_now_timestamp(self):
+		return dt.now().astimezone().isoformat()
 
 	def get_path_as_xbmc_str(self,path_in=None):
 		cpath = None
@@ -94,6 +98,27 @@ class common(object):
 			result1 = self.config.settings.get('force_viewtypes').get('options').get(self.config.addon.get('addon_handle').getSetting(id='force_viewtypes')) or self.config.settings.get('force_viewtypes').get('default')
 			if result1:
 				result = self.config.settings.get('page_viewtype_options').get('options').get(self.config.addon.get('addon_handle').getSetting(id=setting_in)) or self.config.settings.get('page_viewtype_options').get('default')
+		elif setting_in == 'show_lobby':
+			if self.get_setting('enable_netplay')==True and self.get_setting('netplay_show_lobby')==True:
+				result = True
+			else:
+				result = False
+		elif setting_in == 'game_context_menu':
+			if self.get_setting('enable_netplay')==True:
+				result = 'game_with_netplay'
+			else:
+				result = 'game'
+		elif setting_in == 'discord_avatar_image':
+			if isinstance(self.get_setting('discord_user_id'),str) and len(self.get_setting('discord_user_id'))>0 and self.get_setting('discord_user_id').isdigit() and isinstance(self.get_setting('discord_user_avatar'),str):
+				result = self.config.netplay.get('discord_user_avatar').format(**{'discord_user_id':self.get_setting('discord_user_id'),'discord_user_avatar':self.get_setting('discord_user_avatar')})
+		elif setting_in == 'discord_at':
+			if isinstance(self.get_setting('discord_user_id'),str) and len(self.get_setting('discord_user_id'))>0 and self.get_setting('discord_user_id').isdigit():
+				result = self.config.netplay.get('discord_user_at').format(**{'discord_user_id':self.get_setting('discord_user_id')})
+		elif setting_in == 'discord_announce':
+			if self.get_setting('netplay_username_type')==0 and isinstance(self.get_setting('discord_username'),str) and len(self.get_setting('discord_username'))>0 and isinstance(self.get_setting('discord_user_id'),str) and len(self.get_setting('discord_user_id'))>0 and self.get_setting('discord_user_id').isdigit():
+				result = True
+			else:
+				result = False
 		else:
 			result = self.config.addon.get('addon_handle').getSetting(id=setting_in)
 		return result
@@ -832,11 +857,94 @@ class common(object):
 		li.setArt({k:self.config.paths.get('assets_url').format('history_{}.png'.format(k)) for k in ['banner','clearlogo','landscape','poster','thumb']})
 		return li
 
+	def get_netplay_lobby_li(self):
+		li = xbmcgui.ListItem(self.get_loc(30045),offscreen=True)
+		li.setArt({k:self.config.paths.get('assets_url').format('netplay_{}.png'.format(k)) for k in ['banner','clearlogo','landscape','poster','thumb']})
+		info_tag = ListItemInfoTag(li,self.get_setting('media_type'))
+		info_tag.set_info({'plot':self.get_loc(30458)})
+		return li
+
+	def get_lobby_rooms(self,lobby=None,channel=None):
+		lis = []
+		paths =[]
+		if isinstance(lobby,list):
+			if self.get_setting('netplay_filter_connectable'):
+				lobby = [l for l in lobby if l.get('connectable')==True]
+			if self.get_setting('netplay_filter_is_retroarch'):
+				lobby = [l for l in lobby if l.get('is_retroarch')==True]
+			if self.get_setting('netplay_filter_is_IAGL'):
+				lobby = [l for l in lobby if isinstance(l.get('username'),str) and '-IAGL' in l.get('username')]
+			if self.get_setting('netplay_filter_has_password') == False:
+				lobby = [l for l in lobby if l.get('has_password')==False]
+			if self.get_setting('netplay_filter_has_spectate_password') == False:
+				lobby = [l for l in lobby if l.get('has_spectate_password')==False]
+			if self.get_setting('netplay_filter_host_method') == False:
+				lobby = [l for l in lobby if l.get('host_method')!=3]
+			if isinstance(self.get_setting('netplay_filter_created'),int):
+				nnow = dt.now().timestamp()
+				lobby = [l for l in lobby if isinstance(l.get('created'),str) and nnow-dt.fromisoformat(l.get('created')).timestamp()<=self.get_setting('netplay_filter_created')*60]
+			if isinstance(channel,list):
+				xbmc.log(msg='IAGL:  Generating lobby for {} rooms, with discord integration'.format(len(lobby)),level=xbmc.LOGDEBUG)
+				#for testing
+				for l in lobby:
+					if isinstance(l.get('username'),str) and '-IAGL' in l.get('username'):
+						partial_game_id = l.get('username').split('-IAGL')[-1].strip()
+					else:
+						partial_game_id = None
+					# channel_item = next(iter([x for x in channel if x.get()]),None)
+					current_li = xbmcgui.ListItem('{game_name} with {username}'.format(**l),offscreen=True)
+					current_li.setArt({k:self.config.paths.get('assets_url').format('netplay_game_{}.png'.format(k)) for k in ['banner','clearlogo','landscape','poster','thumb']})
+					info_tag = ListItemInfoTag(current_li,self.get_setting('media_type'))
+					info_tag.set_info({'originaltitle':'{game_name}'.format(**l),
+										'date':'{created}'.format(**l),
+										'premiered':'{created}'.format(**l),
+										'dateadded':'{updated}'.format(**l),
+										'plot':'Session ID: {id}[CR]Game: {game_name}[CR]User: {username}[CR]Country: {country}[CR]Core: {core_name} ({core_version})[CR]Room Created: {created}[CR]Last Updated: {updated}'.format(**l)})
+					current_li.setProperties({'lobby_json':json.dumps(l),'partial_game_id':partial_game_id})
+					paths.append('/netplay_by_game_name/{game_name}'.format(**l))
+					lis.append(current_li)
+			else:
+				xbmc.log(msg='IAGL:  Generating lobby for {} rooms, without discord integration'.format(len(lobby)),level=xbmc.LOGDEBUG)
+				for l in lobby:
+					current_li = xbmcgui.ListItem('{game_name} with {username}'.format(**l),offscreen=True)
+					current_li.setArt({k:self.config.paths.get('assets_url').format('netplay_game_{}.png'.format(k)) for k in ['banner','clearlogo','landscape','poster','thumb']})
+					info_tag = ListItemInfoTag(current_li,self.get_setting('media_type'))
+					info_tag.set_info({'originaltitle':'{game_name}'.format(**l),
+										'date':'{created}'.format(**l),
+										'premiered':'{created}'.format(**l),
+										'dateadded':'{updated}'.format(**l),
+										'plot':'Session ID: {id}[CR]Game: {game_name}[CR]User: {username}[CR]Country: {country}[CR]Core: {core_name} ({core_version})[CR]Last Updated: {updated}'.format(**l)})
+					current_li.setProperties({'lobby_json':json.dumps(l)})
+					paths.append('/netplay_by_game_name/{game_name}'.format(**l))
+					lis.append(current_li)
+		else:
+			xbmc.log(msg='IAGL:  Lobby appears empty',level=xbmc.LOGDEBUG)
+
+		return zip(lis,paths)
+
+	def get_lobby_username(self,game_id=None):
+		current_username = self.get_setting('discord_username')
+		if isinstance(game_id,str):
+			current_username = self.config.netplay.get('lobby_username').format(**{'discord_username':self.get_setting('discord_username'),'game_id':game_id})
+			if len(current_username)>self.config.netplay.get('ra_user_max_length'):
+				current_username = current_username[0:self.config.netplay.get('ra_user_max_length')-1]
+		return current_username
+
 	def add_context_menu(self,li=None,ip=None,type_in=None):
 		li_out = li
 		if type_in == 'game' and isinstance(ip,str):
 			li_out.addContextMenuItems([(self.get_loc(30088),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/add_to_favorites/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30342),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/view_launch_parameters/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30266),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/download_game_to/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30246),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launcher_from_uid/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30247),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launch_command_from_uid/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30248),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_dl_path_from_uid/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30250),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_list_post_process_from_uid/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30328),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/reset_game_list_settings_from_uid/{})'.format(ip.split('/')[-1]))])
+		if type_in == 'game_with_netplay' and isinstance(ip,str):
+			li_out.addContextMenuItems([(self.get_loc(30088),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/add_to_favorites/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30479),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/launch_game_as_host/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30250),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_list_post_process_from_uid/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30266),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/download_game_to/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30246),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launcher_from_uid/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30247),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launch_command_from_uid/{})'.format(ip.split('/')[-1])),

@@ -727,10 +727,6 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Définissez le port IP netplay via lequel se connecter (laissez vide par défaut)"
 
-msgctxt "#30180"
-msgid "Default player 2+ Hostname"
-msgstr "Nom d'hôte du joueur par défaut 2+"
-
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Définir un nom d'hôte / IP netplay par défaut (utile pour le réseau local netplay, laissez vide pour la valeur par défaut)"
@@ -762,10 +758,6 @@ msgstr "Entrez votre nom de joueur pour être annoncé sur Discord"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "ID de compte utilisateur Discord"
-
-msgctxt "#30189"
-msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
-msgstr "Fournissez votre identifiant Discord (Paramètres utilisateur > Mon compte > Copier l'identifiant) pour qu'il soit mentionné lors de la lecture (facultatif)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"

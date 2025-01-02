@@ -727,10 +727,6 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Përcaktoni portën IP të netplay për t'u lidhur (lëreni bosh si parazgjedhje)"
 
-msgctxt "#30180"
-msgid "Default player 2+ Hostname"
-msgstr "Lojtari i parazgjedhur 2+ Emri i hostit"
-
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Përcaktoni një emër pritës/IP të paracaktuar të netplay (e dobishme për rrjetin lokal të rrjetit, lëreni bosh për parazgjedhjen)"
@@ -762,10 +758,6 @@ msgstr "Futni emrin e lojtarit tuaj që do të shpallet në Discord"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord ID e llogarisë së përdoruesit"
-
-msgctxt "#30189"
-msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
-msgstr "Jepni ID-në tuaj të Discord (Cilësimet e përdoruesit> Llogaria ime> ID-ja e kopjimit) që do të përmendet kur luani (opsionale)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"

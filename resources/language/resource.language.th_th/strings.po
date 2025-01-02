@@ -727,10 +727,6 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "กำหนดพอร์ต IP ของ netplay ที่จะเชื่อมต่อ (ปล่อยว่างไว้เพื่อใช้ค่าเริ่มต้น)"
 
-msgctxt "#30180"
-msgid "Default player 2+ Hostname"
-msgstr "ผู้เล่นเริ่มต้น 2+ ชื่อโฮสต์"
-
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "กำหนดชื่อโฮสต์ netplay / IP เริ่มต้น (มีประโยชน์สำหรับ netplay บนเครือข่ายท้องถิ่น ปล่อยว่างไว้หากต้องการค่าเริ่มต้น)"
@@ -762,10 +758,6 @@ msgstr "กรอกชื่อผู้เล่นของคุณเพื
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "รหัสบัญชีผู้ใช้ Discord"
-
-msgctxt "#30189"
-msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
-msgstr "ระบุ ID Discord ของคุณ (การตั้งค่าผู้ใช้ > บัญชีของฉัน > คัดลอก ID) เพื่อระบุเมื่อเล่น (ไม่บังคับ)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"

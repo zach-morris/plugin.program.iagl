@@ -14,6 +14,7 @@ class config(object):
 		self.settings = dict()
 		self.dialogs = dict()
 		self.downloads = dict()
+		self.netplay = dict()
 
 		#Handle
 		self.addon['addon_name'] = 'plugin.program.iagl'
@@ -91,6 +92,8 @@ class config(object):
 		self.listitem['sort_methods']['games'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_GENRE,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE,xbmcplugin.SORT_METHOD_SIZE,xbmcplugin.SORT_METHOD_PLAYCOUNT]
 		self.listitem['sort_methods']['favorites'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE,xbmcplugin.SORT_METHOD_LABEL,xbmcplugin.SORT_METHOD_TITLE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_GENRE,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE,xbmcplugin.SORT_METHOD_SIZE]
 		self.listitem['sort_methods']['history'] = [xbmcplugin.SORT_METHOD_NONE,xbmcplugin.SORT_METHOD_LASTPLAYED,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE,xbmcplugin.SORT_METHOD_LABEL,xbmcplugin.SORT_METHOD_TITLE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_GENRE,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE,xbmcplugin.SORT_METHOD_SIZE,xbmcplugin.SORT_METHOD_PLAYCOUNT]
+		self.listitem['sort_methods']['netplay_lobby'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE,xbmcplugin.SORT_METHOD_DATE]
+
 		self.listitem['max_label_length'] = 15 #Truncate long search labels
 		#Settings
 		self.settings['front_page_display'] = dict() 
@@ -161,6 +164,39 @@ class config(object):
 		self.settings['page_viewtype_options']['viewtype_settings'] = ['front_page_viewtype','game_lists_viewtype','game_categories_viewtype','games_viewtype','search_random_viewtype']
 		self.settings['page_viewtype_options']['options'] = dict(zip(['0','1','2','3','4','5','6','7','8'],[None,'50','51','52','501','502','503','504','505']))
 		self.settings['page_viewtype_options']['default'] = None
+		self.settings['enable_netplay'] = dict()
+		self.settings['enable_netplay']['options'] = dict(zip(['0','1'],[True,False]))
+		self.settings['enable_netplay']['default'] = False
+		self.settings['netplay_show_lobby'] = dict()
+		self.settings['netplay_show_lobby']['options'] = dict(zip(['0','1'],[True,False]))
+		self.settings['netplay_show_lobby']['default'] = False
+		self.settings['netplay_username_type'] = dict()
+		self.settings['netplay_username_type']['options'] = dict(zip(['0','1'],[0,1]))
+		self.settings['netplay_username_type']['default'] = 0
+		self.settings['netplay_filter_connectable'] = dict()
+		self.settings['netplay_filter_connectable']['options'] = dict(zip(['0','1'],[True,False]))
+		self.settings['netplay_filter_connectable']['default'] = True
+		self.settings['netplay_filter_is_retroarch'] = dict()
+		self.settings['netplay_filter_is_retroarch']['options'] = dict(zip(['0','1'],[True,False]))
+		self.settings['netplay_filter_is_retroarch']['default'] = True
+		self.settings['netplay_filter_is_IAGL'] = dict()
+		self.settings['netplay_filter_is_IAGL']['options'] = dict(zip(['0','1'],[True,False]))
+		self.settings['netplay_filter_is_IAGL']['default'] = True
+		self.settings['netplay_filter_has_password'] = dict()
+		self.settings['netplay_filter_has_password']['options'] = dict(zip(['0','1'],[True,False]))
+		self.settings['netplay_filter_has_password']['default'] = True
+		self.settings['netplay_filter_has_spectate_password'] = dict()
+		self.settings['netplay_filter_has_spectate_password']['options'] = dict(zip(['0','1'],[True,False]))
+		self.settings['netplay_filter_has_spectate_password']['default'] = True
+		self.settings['netplay_filter_host_method'] = dict()
+		self.settings['netplay_filter_host_method']['options'] = dict(zip(['0','1'],[True,False]))
+		self.settings['netplay_filter_host_method']['default'] = True
+		self.settings['netplay_filter_created'] = dict()
+		self.settings['netplay_filter_created']['options'] = dict(zip(['0','1','2'],[30,60,None]))
+		self.settings['netplay_filter_created']['default'] = None
+		self.settings['netplay_launch_type'] = dict()
+		self.settings['netplay_launch_type']['options'] = dict(zip(['0','1','2'],[0,1,2]))
+		self.settings['netplay_launch_type']['default'] = 0
 		self.settings['tou'] = dict()
 		self.settings['tou']['options'] = dict(zip(['true','false'],[True,False]))
 		self.settings['tou']['default'] = False
@@ -203,6 +239,11 @@ class config(object):
 		self.dialogs['donate']['actions']['ok'] = [10,13,92]
 		self.dialogs['donate']['buttons'] = dict()
 		self.dialogs['donate']['buttons']['ok'] = 3001
+		self.dialogs['discord_invite'] = dict()
+		self.dialogs['discord_invite']['actions'] = dict()
+		self.dialogs['discord_invite']['actions']['ok'] = [10,13,92]
+		self.dialogs['discord_invite']['buttons'] = dict()
+		self.dialogs['discord_invite']['buttons']['ok'] = 3001
 
 		#Downloads
 		self.downloads['archive_org_login_url'] = 'https://archive.org/account/login'
@@ -212,6 +253,23 @@ class config(object):
 		self.downloads['min_file_size'] = 2000000 #If a file is smaller than 2MB, only use 1 thread
 		self.downloads['login_timeout'] = (12.1,5.1)
 		self.downloads['timeout'] = (12.1,27)
+
+		#Netplay
+		self.netplay['lobby_url'] = 'http://lobby.libretro.com/list/'
+		self.netplay['lobby_username'] = '{discord_username}-IAGL{game_id}'
+		self.netplay['discord_channel'] = 'https://discordapp.com/api/channels/696566635166826526/messages?limit=100'
+		self.netplay['channel_hook'] = 'https://discordapp.com/api/webhooks/696566666598809641/{}'
+		self.netplay['discord_user'] = 'https://discordapp.com/api/users/{}'
+		self.netplay['discord_user_avatar'] = 'https://cdn.discordapp.com/avatars/{discord_user_id}/{discord_user_avatar}.png'
+
+		self.netplay['discord_user_at'] = '<@{discord_user_id}>'
+		self.netplay['header_query'] = 'Obg Awx2BGZjZQxkZQHmZmHjBGLm.KbjSRj.bwRpgZk0f0Tg4Ucy6Z_qqvn9xFN'
+		self.netplay['header_post'] = 'cDNaRo6zXMlTlwC-hnEnDXEEK6Lh_pxYnywkAyjdkGAIlmkza5QeTdQThHpXnUMXLJNt'
+		self.netplay['discord_announce_json'] = '{{"username": "IAGL Netplay Bot", "avatar_url": "https://cdn.discordapp.com/avatars/696566666598809641/9fa63a6bd4a8783e9eaa2be13f2adae4.png", "content": "{discord_at} has started hosting {originaltitle}","embeds": [{{"author": {{"name": "{discord_username}"}}, "title": "{originaltitle}", "description": "Come play {originaltitle} with {discord_username}", "timestamp": "{discord_timestamp}", "fields": [{{"name": "platform", "value": "{platform}", "inline": true}},{{"name": "game_list", "value": "{game_list_id}", "inline": true}},{{"name": "uid", "value": "{uid}", "inline": false}}],"image":{{"url":"{image_url}"}}}}]}}'
+		self.netplay['netplay_timeout'] = (12.1,5.1)
+		self.netplay['ra_user_max_length'] = 32
+		self.netplay['default_port'] = 55435
+		self.netplay['default_art'] = 'https://raw.githubusercontent.com/zach-morris/iagl.media/master/icon.png'
 
 		#Database
 		self.database['process'] = dict()
@@ -560,6 +618,88 @@ class config(object):
 														'LEFT JOIN paths as fanart_paths\n'
 														'ON fanart_paths."path" = games_table.art_fanart_path\n'
 														'WHERE games_table.uid = "{game_id}"')
+		self.database['query']['get_game_from_id_for_netplay'] = ('SELECT games_table.uid,games_table.game_list as game_list_id,games_table.originaltitle AS originaltitle,games_table.system as platform,banner_paths.url||games_table.art_banner as art_banner,box_paths.url||games_table.art_box as art_box,clearlogo_paths.url||games_table.art_logo as art_logo,title_paths.url||games_table.art_title as art_title,snapshot_paths.url||games_table.art_snapshot as art_snapshot,fanart_paths.url||games_table.art_fanart as art_fanart,game_list_art_paths.url||game_list_table.poster as art_game_list\n'
+														'FROM games as games_table\n'
+														'LEFT JOIN game_list as game_list_table on games_table.game_list = game_list_table.label\n'
+														'LEFT JOIN paths as banner_paths\n'
+														'ON banner_paths."path" = games_table.art_banner_path\n'
+														'LEFT JOIN paths as box_paths\n'
+														'ON box_paths."path" = games_table.art_box_path\n'
+														'LEFT JOIN paths as clearlogo_paths\n'
+														'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+														'LEFT JOIN paths as title_paths\n'
+														'ON title_paths."path" = games_table.art_title_path\n'
+														'LEFT JOIN paths as snapshot_paths\n'
+														'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+														'LEFT JOIN paths as fanart_paths\n'
+														'ON fanart_paths."path" = games_table.art_fanart_path\n'
+														'LEFT JOIN paths as game_list_art_paths\n'
+														'ON game_list_art_paths."path" = game_list_table.poster_path\n'
+														'WHERE games_table.uid = "{game_id}"')
+		self.database['query']['get_game_from_originaltitle_exact'] = ('SELECT "/play_game_external_netplay/"||games_table.uid as next_path,games_table.uid,games_table.game_list as game_list_id,games_table.originaltitle AS originaltitle,{game_title_setting} as label,games_table.game_list as label2,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as platform,games_table.genres AS genres,games_table.studio as publisher,games_table.year,games_table.size,games_table.plot as overview,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart,games_table.launch_parameters,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,game_list_table.default_global_post_download_process,game_list_table.default_global_launcher,game_list_table.user_post_download_process,game_list_table.user_global_launcher,game_list_table.user_global_launch_addon,game_list_table.user_global_external_launch_command,game_list_table.user_global_uses_applaunch,game_list_table.user_global_uses_apppause,game_list_table.user_global_download_path,game_list_table.default_global_launch_addon,game_list_table.default_global_external_launch_command,games_table.rom\n'
+														'FROM games as games_table\n'
+														'LEFT JOIN game_list as game_list_table on games_table.game_list = game_list_table.label\n'
+														'LEFT JOIN paths as banner_paths\n'
+														'ON banner_paths."path" = games_table.art_banner_path\n'
+														'LEFT JOIN paths as box_paths\n'
+														'ON box_paths."path" = games_table.art_box_path\n'
+														'LEFT JOIN paths as clearlogo_paths\n'
+														'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+														'LEFT JOIN paths as title_paths\n'
+														'ON title_paths."path" = games_table.art_title_path\n'
+														'LEFT JOIN paths as snapshot_paths\n'
+														'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+														'LEFT JOIN paths as fanart_paths\n'
+														'ON fanart_paths."path" = games_table.art_fanart_path\n'
+														'WHERE games_table.originaltitle = "{game_name}"')
+		self.database['query']['get_game_from_originaltitle_exact_with_partial_uid'] = ('SELECT "/play_game_external_netplay/"||games_table.uid as next_path,games_table.uid,games_table.game_list as game_list_id,games_table.originaltitle AS originaltitle,{game_title_setting} as label,games_table.game_list as label2,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as platform,games_table.genres AS genres,games_table.studio as publisher,games_table.year,games_table.size,games_table.plot as overview,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart,games_table.launch_parameters,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,game_list_table.default_global_post_download_process,game_list_table.default_global_launcher,game_list_table.user_post_download_process,game_list_table.user_global_launcher,game_list_table.user_global_launch_addon,game_list_table.user_global_external_launch_command,game_list_table.user_global_uses_applaunch,game_list_table.user_global_uses_apppause,game_list_table.user_global_download_path,game_list_table.default_global_launch_addon,game_list_table.default_global_external_launch_command,games_table.rom\n'
+														'FROM games as games_table\n'
+														'LEFT JOIN game_list as game_list_table on games_table.game_list = game_list_table.label\n'
+														'LEFT JOIN paths as banner_paths\n'
+														'ON banner_paths."path" = games_table.art_banner_path\n'
+														'LEFT JOIN paths as box_paths\n'
+														'ON box_paths."path" = games_table.art_box_path\n'
+														'LEFT JOIN paths as clearlogo_paths\n'
+														'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+														'LEFT JOIN paths as title_paths\n'
+														'ON title_paths."path" = games_table.art_title_path\n'
+														'LEFT JOIN paths as snapshot_paths\n'
+														'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+														'LEFT JOIN paths as fanart_paths\n'
+														'ON fanart_paths."path" = games_table.art_fanart_path\n'
+														'WHERE games_table.originaltitle = "{game_name}" and games_table.uid LIKE "%{partial_game_id}%"')
+		self.database['query']['get_game_from_originaltitle_fuzzy'] = ('SELECT "/play_game_external_netplay/"||games_table.uid as next_path,games_table.uid,games_table.game_list as game_list_id,games_table.originaltitle AS originaltitle,{game_title_setting} as label,games_table.game_list as label2,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as platform,games_table.genres AS genres,games_table.studio as publisher,games_table.year,games_table.size,games_table.plot as overview,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart,games_table.launch_parameters,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,game_list_table.default_global_post_download_process,game_list_table.default_global_launcher,game_list_table.user_post_download_process,game_list_table.user_global_launcher,game_list_table.user_global_launch_addon,game_list_table.user_global_external_launch_command,game_list_table.user_global_uses_applaunch,game_list_table.user_global_uses_apppause,game_list_table.user_global_download_path,game_list_table.default_global_launch_addon,game_list_table.default_global_external_launch_command,games_table.rom\n'
+														'FROM games as games_table\n'
+														'LEFT JOIN game_list as game_list_table on games_table.game_list = game_list_table.label\n'
+														'LEFT JOIN paths as banner_paths\n'
+														'ON banner_paths."path" = games_table.art_banner_path\n'
+														'LEFT JOIN paths as box_paths\n'
+														'ON box_paths."path" = games_table.art_box_path\n'
+														'LEFT JOIN paths as clearlogo_paths\n'
+														'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+														'LEFT JOIN paths as title_paths\n'
+														'ON title_paths."path" = games_table.art_title_path\n'
+														'LEFT JOIN paths as snapshot_paths\n'
+														'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+														'LEFT JOIN paths as fanart_paths\n'
+														'ON fanart_paths."path" = games_table.art_fanart_path\n'
+														'WHERE games_table.originaltitle = "{game_name}" or games_table.originaltitle LIKE "%{game_name}%" or games_table.rom LIKE "%{game_name}%"')
+		self.database['query']['get_game_from_originaltitle_fuzzy_with_partial_uid'] = ('SELECT "/play_game_external_netplay/"||games_table.uid as next_path,games_table.uid,games_table.game_list as game_list_id,games_table.originaltitle AS originaltitle,{game_title_setting} as label,games_table.game_list as label2,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as platform,games_table.genres AS genres,games_table.studio as publisher,games_table.year,games_table.size,games_table.plot as overview,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart,games_table.launch_parameters,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,game_list_table.default_global_post_download_process,game_list_table.default_global_launcher,game_list_table.user_post_download_process,game_list_table.user_global_launcher,game_list_table.user_global_launch_addon,game_list_table.user_global_external_launch_command,game_list_table.user_global_uses_applaunch,game_list_table.user_global_uses_apppause,game_list_table.user_global_download_path,game_list_table.default_global_launch_addon,game_list_table.default_global_external_launch_command,games_table.rom\n'
+														'FROM games as games_table\n'
+														'LEFT JOIN game_list as game_list_table on games_table.game_list = game_list_table.label\n'
+														'LEFT JOIN paths as banner_paths\n'
+														'ON banner_paths."path" = games_table.art_banner_path\n'
+														'LEFT JOIN paths as box_paths\n'
+														'ON box_paths."path" = games_table.art_box_path\n'
+														'LEFT JOIN paths as clearlogo_paths\n'
+														'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+														'LEFT JOIN paths as title_paths\n'
+														'ON title_paths."path" = games_table.art_title_path\n'
+														'LEFT JOIN paths as snapshot_paths\n'
+														'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+														'LEFT JOIN paths as fanart_paths\n'
+														'ON fanart_paths."path" = games_table.art_fanart_path\n'
+														'WHERE (games_table.originaltitle = "{game_name}" or games_table.originaltitle LIKE "%{game_name}%" or games_table.rom LIKE "%{game_name}%") and games_table.uid LIKE "%{partial_game_id}%"')
 		self.database['query']['get_game_list_launcher'] = ('SELECT game_lists_table.default_global_launcher,game_lists_table.user_global_launcher\n'
 															'FROM game_list as game_lists_table\n'
 															'WHERE game_lists_table.label = "{game_list_id}"')

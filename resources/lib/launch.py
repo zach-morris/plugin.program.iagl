@@ -188,8 +188,29 @@ class launch(object):
 					self.current_launch_command = self.current_launch_command.replace('XXROM_STEMXX',Path(self.rom.get('launch_file')).stem)
 					self.current_launch_command = self.current_launch_command.replace('XXROM_STEM_QUOTEDXX',url_quote(Path(self.rom.get('launch_file')).stem))
 					self.current_launch_command = self.current_launch_command.replace('XXROM_STEM_QUOTESPACEXX',Path(self.rom.get('launch_file')).stem.replace(' ','%2F'))
-				if isinstance(self.launch_parameters.get('netplay'),str):
-					self.current_launch_command = self.current_launch_command.replace(' XXNETPLAY_COMMANDXX',self.rom.get('netplay'))
+				if isinstance(self.launch_parameters.get('netplay'),dict):
+					xbmc.log(msg='IAGL:  Netplay parameters found: {}'.format(self.launch_parameters.get('netplay')),level=xbmc.LOGDEBUG)
+					current_netplay_command = ''
+					if self.launch_parameters.get('netplay').get('as_host'):
+						current_netplay_command = ' --host --nick "{nick}"'.format(**self.launch_parameters.get('netplay'))
+						if isinstance(self.launch_parameters.get('netplay').get('port'),str) and self.launch_parameters.get('netplay').get('port').isdigit():
+							current_netplay_command = current_netplay_command+' --port {}'.format(self.launch_parameters.get('netplay').get('port'))
+						if isinstance(self.launch_parameters.get('netplay').get('frames'),str) and self.launch_parameters.get('netplay').get('frames').isdigit():
+							current_netplay_command = current_netplay_command+' --check-frames {}'.format(self.launch_parameters.get('netplay').get('frames'))
+					else:
+						if self.launch_parameters.get('netplay').get('host_method')==3:
+							current_netplay_command = ' --connect "{mitm_ip}" --mitm-session "{mitm_session}" --port {mitm_port}'.format(**self.launch_parameters.get('netplay'))
+							if isinstance(self.launch_parameters.get('netplay').get('frames'),str) and self.launch_parameters.get('netplay').get('frames').isdigit():
+								current_netplay_command = current_netplay_command+' --check-frames {}'.format(self.launch_parameters.get('netplay').get('frames'))
+							if isinstance(self.launch_parameters.get('netplay').get('nick'),str) and len(self.launch_parameters.get('netplay').get('nick'))>0:
+								current_netplay_command = current_netplay_command+' --nick "{}"'.format(self.launch_parameters.get('netplay').get('nick'))
+						else:
+							current_netplay_command = ' --connect "{ip}" --port {port}'.format(**self.launch_parameters.get('netplay'))
+							if isinstance(self.launch_parameters.get('netplay').get('frames'),str) and self.launch_parameters.get('netplay').get('frames').isdigit():
+								current_netplay_command = current_netplay_command+' --check-frames {}'.format(self.launch_parameters.get('netplay').get('frames'))
+							if isinstance(self.launch_parameters.get('netplay').get('nick'),str) and len(self.launch_parameters.get('netplay').get('nick'))>0:
+								current_netplay_command = current_netplay_command+' --nick "{}"'.format(self.launch_parameters.get('netplay').get('nick'))
+					self.current_launch_command = self.current_launch_command.replace(' XXNETPLAY_COMMANDXX',current_netplay_command)
 				else:
 					self.current_launch_command = self.current_launch_command.replace(' XXNETPLAY_COMMANDXX','') #If no netplay command was provided, remove the keyword
 				xbmc.log(msg='IAGL:  External command generated:  {}'.format(self.current_launch_command),level=xbmc.LOGDEBUG)
@@ -345,7 +366,7 @@ class launch(object):
 					self.current_launch_command = self.current_launch_command.replace('XXROM_STEMXX',Path(self.rom.get('launch_file')).stem)
 					self.current_launch_command = self.current_launch_command.replace('XXROM_STEM_QUOTEDXX',url_quote(Path(self.rom.get('launch_file')).stem))
 					self.current_launch_command = self.current_launch_command.replace('XXROM_STEM_QUOTESPACEXX',Path(self.rom.get('launch_file')).stem.replace(' ','%20'))
-				if isinstance(self.launch_parameters.get('netplay'),str):
+				if isinstance(self.launch_parameters.get('netplay'),dict):
 					self.current_launch_command = self.current_launch_command.replace(' XXNETPLAY_COMMANDXX',self.rom.get('netplay'))
 				else:
 					self.current_launch_command = self.current_launch_command.replace(' XXNETPLAY_COMMANDXX','') #If no netplay command was provided, remove the keyword

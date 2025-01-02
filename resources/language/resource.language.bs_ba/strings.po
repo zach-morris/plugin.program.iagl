@@ -727,10 +727,6 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Definirajte netplay IP port za povezivanje (ostavite prazno za zadano)"
 
-msgctxt "#30180"
-msgid "Default player 2+ Hostname"
-msgstr "Zadani igrač 2+ Ime domaćina"
-
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Definirajte zadano netplay ime hosta / IP (korisno za netplay na lokalnoj mreži, ostavite prazno za default)"
@@ -762,10 +758,6 @@ msgstr "Unesite svoje ime igrača da bude objavljeno na Discordu"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord ID korisničkog naloga"
-
-msgctxt "#30189"
-msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
-msgstr "Navedite svoj Discord ID (korisničke postavke>Moj račun>Copy ID) koji će biti spomenut prilikom igranja (opcionalno)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"

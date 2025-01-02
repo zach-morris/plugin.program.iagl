@@ -60,6 +60,8 @@ def view_browse():
 			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),list_item,True) for list_item,item_path in db.query_db(db.get_query('browse')) if isinstance(list_item,xbmcgui.ListItem)])
 			if db.get_total_history()>0:
 				xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/history'),cm.get_history_li(),True)])
+			if cm.get_setting('show_lobby'):
+				xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/netplay_lobby'),cm.get_netplay_lobby_li(),True)])
 			xbmcplugin.endOfDirectory(plugin.handle)
 	else:
 		#Browse
@@ -67,6 +69,8 @@ def view_browse():
 		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),list_item,True) for list_item,item_path in db.query_db(db.get_query('browse')) if isinstance(list_item,xbmcgui.ListItem)])
 		if db.get_total_history()>0:
 			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/history'),cm.get_history_li(),True)])
+		if cm.get_setting('show_lobby'):
+			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('/netplay_lobby'),cm.get_netplay_lobby_li(),True)])
 		xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/all')
@@ -116,7 +120,7 @@ def view_by_playlist(playlist_id):
 	else:
 		xbmc.log(msg='IAGL:  /by_playlist/{}'.format(playlist_id),level=xbmc.LOGDEBUG)
 		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('game_lists_by_playlist_no_page',playlist_id=playlist_id,game_title_setting=cm.get_setting('append_game_list_to_playlist_results_combined'))) if isinstance(list_item,xbmcgui.ListItem)])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in=cm.get_setting('game_context_menu')),False) for list_item,item_path in db.query_db(db.get_query('game_lists_by_playlist_no_page',playlist_id=playlist_id,game_title_setting=cm.get_setting('append_game_list_to_playlist_results_combined'))) if isinstance(list_item,xbmcgui.ListItem)])
 		for sm in config.listitem.get('sort_methods').get('by_playlist'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
 		xbmcplugin.endOfDirectory(plugin.handle)
@@ -131,7 +135,7 @@ def view_by_playlist_paged(playlist_id,page_id):
 		next_page = str(int(page_id)+1)
 	xbmc.log(msg='IAGL:  /by_playlist_paged/{}/{}'.format(playlist_id,page_id),level=xbmc.LOGDEBUG)
 	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-	page_result = [(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('game_lists_by_playlist_page',playlist_id=playlist_id,game_title_setting=cm.get_setting('append_game_list_to_playlist_results_combined'),items_per_page=cm.get_setting('games_pagination'),starting_number=starting_number)) if isinstance(list_item,xbmcgui.ListItem)]
+	page_result = [(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in=cm.get_setting('game_context_menu')),False) for list_item,item_path in db.query_db(db.get_query('game_lists_by_playlist_page',playlist_id=playlist_id,game_title_setting=cm.get_setting('append_game_list_to_playlist_results_combined'),items_per_page=cm.get_setting('games_pagination'),starting_number=starting_number)) if isinstance(list_item,xbmcgui.ListItem)]
 	xbmcplugin.addDirectoryItems(plugin.handle,page_result)
 	if len(page_result)==cm.get_setting('games_pagination'):
 		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(view_by_playlist_paged,playlist_id=playlist_id,page_id=next_page),cm.get_next_li(),True)])
@@ -222,7 +226,7 @@ def view_favorites_group_paged(group_id,page_id):
 def view_history():
 	xbmc.log(msg='IAGL:  /history',level=xbmc.LOGDEBUG)
 	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('history_no_page',game_title_setting=cm.get_setting('game_title_setting'),filter_to_1g1r=cm.get_setting('filter_to_1g1r'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'))) if isinstance(list_item,xbmcgui.ListItem)])
+	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in=cm.get_setting('game_context_menu')),False) for list_item,item_path in db.query_db(db.get_query('history_no_page',game_title_setting=cm.get_setting('game_title_setting'),filter_to_1g1r=cm.get_setting('filter_to_1g1r'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'))) if isinstance(list_item,xbmcgui.ListItem)])
 	for sm in config.listitem.get('sort_methods').get('history'):
 		xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -533,7 +537,7 @@ def execute_search():
 	if isinstance(game_search_query,str):
 		xbmc.log(msg='IAGL:  Current search parameters: {}'.format(cm.get_search()),level=xbmc.LOGDEBUG)
 		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('search_games',game_search_query=game_search_query,game_title_setting=cm.get_setting('append_game_list_to_search_results_combined'))) if isinstance(list_item,xbmcgui.ListItem)])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in=cm.get_setting('game_context_menu')),False) for list_item,item_path in db.query_db(db.get_query('search_games',game_search_query=game_search_query,game_title_setting=cm.get_setting('append_game_list_to_search_results_combined'))) if isinstance(list_item,xbmcgui.ListItem)])
 		for sm in config.listitem.get('sort_methods').get('games'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
 		xbmcplugin.endOfDirectory(plugin.handle)
@@ -569,7 +573,7 @@ def search_from_link():
 	if isinstance(cc,str):
 		game_search_query = cm.get_search_query(current_search_in=json.loads(cc))
 		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('search_games',game_search_query=game_search_query,game_title_setting=cm.get_setting('append_game_list_to_search_results_combined'))) if isinstance(list_item,xbmcgui.ListItem)])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in=cm.get_setting('game_context_menu')),False) for list_item,item_path in db.query_db(db.get_query('search_games',game_search_query=game_search_query,game_title_setting=cm.get_setting('append_game_list_to_search_results_combined'))) if isinstance(list_item,xbmcgui.ListItem)])
 		for sm in config.listitem.get('sort_methods').get('games'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
 		xbmcplugin.endOfDirectory(plugin.handle)
@@ -915,7 +919,7 @@ def execute_random():
 	if isinstance(game_search_query,str):
 		xbmc.log(msg='IAGL:  Current random parameters: {}'.format(cm.get_random()),level=xbmc.LOGDEBUG)
 		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('random_games',game_search_query=game_search_query,num_results=cm.get_random_num_results(),game_title_setting=cm.get_setting('append_game_list_to_search_results_combined'))) if isinstance(list_item,xbmcgui.ListItem)])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in=cm.get_setting('game_context_menu')),False) for list_item,item_path in db.query_db(db.get_query('random_games',game_search_query=game_search_query,num_results=cm.get_random_num_results(),game_title_setting=cm.get_setting('append_game_list_to_search_results_combined'))) if isinstance(list_item,xbmcgui.ListItem)])
 		for sm in config.listitem.get('sort_methods').get('games'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
 		xbmcplugin.endOfDirectory(plugin.handle)
@@ -951,7 +955,7 @@ def random_from_link():
 	if isinstance(cc,str):
 		game_search_query = cm.get_random_query(current_search_in=json.loads(cc))
 		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('random_games',game_search_query=game_search_query,num_results=cm.get_random_num_results(current_search_in=json.loads(cc)),game_title_setting=cm.get_setting('game_title_setting'))) if isinstance(list_item,xbmcgui.ListItem)])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in=cm.get_setting('game_context_menu')),False) for list_item,item_path in db.query_db(db.get_query('random_games',game_search_query=game_search_query,num_results=cm.get_random_num_results(current_search_in=json.loads(cc)),game_title_setting=cm.get_setting('game_title_setting'))) if isinstance(list_item,xbmcgui.ListItem)])
 		for sm in config.listitem.get('sort_methods').get('games'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
 		xbmcplugin.endOfDirectory(plugin.handle)
@@ -966,6 +970,118 @@ def random_from_link():
 			plugin.redirect('/')
 ## End Random Routes ##
 
+## Netplay Routes  ##
+@plugin.route('/netplay_lobby')
+def netplay_lobby():
+	xbmc.log(msg='IAGL:  /netplay_lobby',level=xbmc.LOGDEBUG)
+	lobby = nt.query_ra_lobby()
+	channel = nt.query_discord_channel()
+	if isinstance(lobby,list) and len(lobby)>0:
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='netplay_lobby'),False) for list_item,item_path in cm.get_lobby_rooms(lobby=lobby,channel=channel) if isinstance(list_item,xbmcgui.ListItem)])
+		for sm in config.listitem.get('sort_methods').get('netplay_lobby'):
+			xbmcplugin.addSortMethod(plugin.handle,sm)
+		xbmcplugin.endOfDirectory(plugin.handle)
+
+@plugin.route('/netplay_by_game_name/<game_name>')
+def netplay_by_game_name(game_name):
+	xbmc.log(msg='IAGL:  /netplay_by_game_name',level=xbmc.LOGDEBUG)	
+	found_games_exact = db.query_db(db.get_query('get_game_from_originaltitle_exact',game_name=game_name,game_title_setting=cm.get_setting('game_title_setting')))
+	if isinstance(found_games_exact,list) and len(found_games_exact)==1:
+		xbmc.log(msg='IAGL: One exact matching name game found for {}, uid: {}'.format(game_name,next(iter([x[1].replace('play_game_external_netplay/','') for x in found_games_exact]),None)),level=xbmc.LOGDEBUG)	
+		plugin.redirect(found_games_exact[0][-1])
+	elif isinstance(found_games_exact,list) and len(found_games_exact)>1:
+		xbmc.log(msg='IAGL: {} exact matching games found for {}'.format(len(found_games_exact),game_name),level=xbmc.LOGDEBUG)	
+		selected = xbmcgui.Dialog().select(heading=cm.get_loc(30474),list=[x[0] for x in found_games_exact],useDetails=True)
+		if selected>-1:
+			plugin.redirect([x[-1] for x in found_games_exact][selected])
+	else:
+		found_games_fuzzy = db.query_db(db.get_query('get_game_from_originaltitle_fuzzy',game_name=game_name,game_title_setting=cm.get_setting('game_title_setting')))
+		if isinstance(found_games_fuzzy,list) and len(found_games_fuzzy)==1:
+			xbmc.log(msg='IAGL: One fuzzy matching name game found for {}, uid: {}'.format(game_name,next(iter([x[1].replace('play_game_external_netplay/','') for x in found_games_fuzzy]),None)),level=xbmc.LOGDEBUG)	
+			plugin.redirect(found_games_fuzzy[0][-1])
+		elif isinstance(found_games_fuzzy,list) and len(found_games_fuzzy)>1:
+			xbmc.log(msg='IAGL: {} fuzzy matching games found for {}'.format(len(found_games_fuzzy),game_name),level=xbmc.LOGDEBUG)	
+			selected = xbmcgui.Dialog().select(heading=cm.get_loc(30474),list=[x[0] for x in found_games_fuzzy],useDetails=True)
+			if selected>-1:
+				plugin.redirect([x[-1] for x in found_games_fuzzy][selected])
+		else:
+			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30473),cm.get_loc(30472).format(game_name))
+
+@plugin.route('/play_game_external_netplay/<game_id>')
+def play_game_external_netplay(game_id):
+	xbmc.log(msg='IAGL:  /play_game_external_netplay/{}'.format(game_id),level=xbmc.LOGDEBUG)
+	netplay_parameters = dict()
+	netplay_cancel = False
+	if isinstance(xbmc.getInfoLabel('ListItem.Property(lobby_json)'),str):
+		netplay_parameters = json.loads(xbmc.getInfoLabel('ListItem.Property(lobby_json)'))
+	if cm.get_setting('netplay_launch_type')==1: #Join from lobby
+		netplay_parameters['localhost'] = None
+	elif cm.get_setting('netplay_launch_type')==2:  #Join from localhost
+		if isinstance(cm.get_setting('netplay_localhost'),str) and len(cm.get_setting('netplay_localhost'))>=7:
+			xbmc.log(msg='IAGL:  User requested netplay on localhost: {}'.format(cm.get_setting('netplay_localhost')),level=xbmc.LOGDEBUG)
+			netplay_parameters['localhost'] = cm.get_setting('netplay_localhost')
+			netplay_parameters['ip'] = cm.get_setting('netplay_localhost') #Override IP for localhost netplay
+			netplay_parameters['host_method'] = 0 #Override host method for localhost netplay
+		else:
+			xbmc.log(msg='IAGL:  User requested netplay on localhost but the setting is invalid',level=xbmc.LOGERROR)
+	else:  #Prompt
+		select = xbmcgui.Dialog().select(heading=cm.get_loc(30475),list=[cm.get_loc(30476),cm.get_loc(30477)],useDetails=False)
+		if select>-1:
+			if select==0: #Join from lobby
+				netplay_parameters['localhost'] = None
+			elif select==1:  #Join from localhost
+				netplay_parameters['localhost'] = None
+				if isinstance(cm.get_setting('netplay_localhost'),str) and len(cm.get_setting('netplay_localhost'))>=7:
+					xbmc.log(msg='IAGL:  User requested netplay on localhost: {}'.format(cm.get_setting('netplay_localhost')),level=xbmc.LOGDEBUG)
+					netplay_parameters['localhost'] = cm.get_setting('netplay_localhost')
+					netplay_parameters['ip'] = cm.get_setting('netplay_localhost') #Override IP for localhost netplay
+					netplay_parameters['host_method'] = 0 #Override host method for localhost netplay
+				else:
+					xbmc.log(msg='IAGL:  User requested netplay on localhost but the setting is invalid',level=xbmc.LOGERROR)
+			else:
+				netplay_cancel = True
+		else:
+			netplay_cancel = True
+			xbmc.log(msg='IAGL: User cancelled netplay join',level=xbmc.LOGDEBUG)
+	if not netplay_cancel and isinstance(netplay_parameters,dict):
+		if isinstance(cm.get_setting('netplay_port'),str) and cm.get_setting('netplay_port').isdigit():
+			xbmc.log(msg='IAGL:  User requested netplay on port: {}'.format(cm.get_setting('netplay_port')),level=xbmc.LOGDEBUG)
+			netplay_parameters['mitm_port'] = cm.get_setting('netplay_port')
+			netplay_parameters['port'] = cm.get_setting('netplay_port')
+		if isinstance(cm.get_setting('netplay_frames'),str) and cm.get_setting('netplay_frames').isdigit():
+			netplay_parameters['frames'] = cm.get_setting('netplay_frames')
+		if isinstance(cm.get_setting('discord_username'),str) and len(cm.get_setting('discord_username'))>0:
+			netplay_parameters['nick'] = cm.get_setting('discord_username')
+		elif isinstance(cm.get_setting('lobby_username'),str) and len(cm.get_setting('lobby_username'))>0:
+			netplay_parameters['nick'] = cm.get_setting('lobby_username')
+		else:
+			xbmc.log(msg='IAGL:  No user name for netplay identified from IAGL settings',level=xbmc.LOGDEBUG)
+		if cm.update_netplay_parameters(**netplay_parameters):
+			plugin.redirect('/play_game_external/{}'.format(game_id))
+
+@plugin.route('/context_menu/action/launch_game_as_host/<game_id>')
+def launch_game_as_host(game_id):
+	xbmc.log(msg='IAGL:  /launch_game_as_host/{}'.format(game_id),level=xbmc.LOGDEBUG)
+	netplay_parameters = dict()
+	netplay_parameters['as_host'] = True
+	if isinstance(cm.get_setting('netplay_port'),str) and cm.get_setting('netplay_port').isdigit():
+		xbmc.log(msg='IAGL:  User requested netplay on port: {}'.format(cm.get_setting('netplay_port')),level=xbmc.LOGDEBUG)
+		netplay_parameters['port'] = cm.get_setting('netplay_port')
+	if isinstance(cm.get_setting('netplay_frames'),str) and cm.get_setting('netplay_frames').isdigit():
+		netplay_parameters['frames'] = cm.get_setting('netplay_frames')
+	if cm.get_setting('discord_announce'):
+		netplay_parameters['nick'] = cm.get_lobby_username(game_id=game_id)
+	elif isinstance(cm.get_setting('lobby_username'),str) and len(cm.get_setting('lobby_username'))>0:
+		netplay_parameters['nick'] = cm.get_setting('lobby_username')
+	else:
+		netplay_parameters['nick'] = 'IAGL Player'
+		xbmc.log(msg='IAGL:  No user name for netplay identified from IAGL settings',level=xbmc.LOGDEBUG)
+	if cm.update_netplay_parameters(**netplay_parameters):
+		plugin.redirect('/play_game_external/{}'.format(game_id))
+
+## End Netplay Routes
+
 @plugin.route('/game_list/<game_list_id>/<choose_id>')
 def view_game_list(game_list_id,choose_id):
 	xbmc.log(msg='IAGL:  /game_list/{}/{}'.format(game_list_id,choose_id),level=xbmc.LOGDEBUG)
@@ -979,7 +1095,7 @@ def view_game_list(game_list_id,choose_id):
 			plugin.redirect('/game_list_paged/{}/{}/{}'.format(game_list_id,choose_id,0))
 		else:
 			xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('by_all_no_page',game_list_id=game_list_id,game_title_setting=cm.get_setting('game_title_setting'),filter_to_1g1r=cm.get_setting('filter_to_1g1r'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'))) if isinstance(list_item,xbmcgui.ListItem)])
+			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in=cm.get_setting('game_context_menu')),False) for list_item,item_path in db.query_db(db.get_query('by_all_no_page',game_list_id=game_list_id,game_title_setting=cm.get_setting('game_title_setting'),filter_to_1g1r=cm.get_setting('filter_to_1g1r'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'))) if isinstance(list_item,xbmcgui.ListItem)])
 			for sm in config.listitem.get('sort_methods').get('games'):
 				xbmcplugin.addSortMethod(plugin.handle,sm)
 	else:
@@ -1005,7 +1121,7 @@ def view_game_list_paged(game_list_id,choose_id,page_id):
 		else:
 			starting_number = int(page_id)*cm.get_setting('games_pagination')
 			next_page = str(int(page_id)+1)
-		page_result = [(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('by_all_page',game_list_id=game_list_id,game_title_setting=cm.get_setting('game_title_setting'),filter_to_1g1r=cm.get_setting('filter_to_1g1r'),items_per_page=cm.get_setting('games_pagination'),starting_number=starting_number)) if isinstance(list_item,xbmcgui.ListItem)]
+		page_result = [(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in=cm.get_setting('game_context_menu')),False) for list_item,item_path in db.query_db(db.get_query('by_all_page',game_list_id=game_list_id,game_title_setting=cm.get_setting('game_title_setting'),filter_to_1g1r=cm.get_setting('filter_to_1g1r'),items_per_page=cm.get_setting('games_pagination'),starting_number=starting_number)) if isinstance(list_item,xbmcgui.ListItem)]
 		xbmcplugin.addDirectoryItems(plugin.handle,page_result)
 		if len(page_result)==cm.get_setting('games_pagination'):
 			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(view_game_list_paged,game_list_id=game_list_id,choose_id=choose_id,page_id=next_page),cm.get_next_li(),True)])
@@ -1025,7 +1141,7 @@ def view_games_list_from_choice(game_list_id,choose_id,choose_value):
 	else:
 		xbmc.log(msg='IAGL:  /game_list/{}/{}/{}'.format(game_list_id,choose_id,choose_value),level=xbmc.LOGDEBUG)
 		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('get_games_from_choice_no_page',game_list_id=game_list_id,choice_query=db.get_game_table_filter_from_choice(choose_id=choose_id,choose_value=choose_value),game_title_setting=cm.get_setting('game_title_setting'),filter_to_1g1r=cm.get_setting('filter_to_1g1r'))) if isinstance(list_item,xbmcgui.ListItem)])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in=cm.get_setting('game_context_menu')),False) for list_item,item_path in db.query_db(db.get_query('get_games_from_choice_no_page',game_list_id=game_list_id,choice_query=db.get_game_table_filter_from_choice(choose_id=choose_id,choose_value=choose_value),game_title_setting=cm.get_setting('game_title_setting'),filter_to_1g1r=cm.get_setting('filter_to_1g1r'))) if isinstance(list_item,xbmcgui.ListItem)])
 		for sm in config.listitem.get('sort_methods').get('games'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
 		xbmcplugin.endOfDirectory(plugin.handle)
@@ -1040,7 +1156,7 @@ def view_games_list_from_choice_paged(game_list_id,choose_id,choose_value,page_i
 		starting_number = int(page_id)*cm.get_setting('games_pagination')
 		next_page = str(int(page_id)+1)
 	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-	page_result = [(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game'),False) for list_item,item_path in db.query_db(db.get_query('get_games_from_choice_page',game_list_id=game_list_id,choice_query=db.get_game_table_filter_from_choice(choose_id=choose_id,choose_value=choose_value),game_title_setting=cm.get_setting('game_title_setting'),filter_to_1g1r=cm.get_setting('filter_to_1g1r'),items_per_page=cm.get_setting('games_pagination'),starting_number=starting_number)) if isinstance(list_item,xbmcgui.ListItem)]
+	page_result = [(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in=cm.get_setting('game_context_menu')),False) for list_item,item_path in db.query_db(db.get_query('get_games_from_choice_page',game_list_id=game_list_id,choice_query=db.get_game_table_filter_from_choice(choose_id=choose_id,choose_value=choose_value),game_title_setting=cm.get_setting('game_title_setting'),filter_to_1g1r=cm.get_setting('filter_to_1g1r'),items_per_page=cm.get_setting('games_pagination'),starting_number=starting_number)) if isinstance(list_item,xbmcgui.ListItem)]
 	xbmcplugin.addDirectoryItems(plugin.handle,page_result)
 	if len(page_result)==cm.get_setting('games_pagination'):
 		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(view_games_list_from_choice_paged,game_list_id=game_list_id,choose_id=choose_id,choose_value=choose_value,page_id=next_page),cm.get_next_li(),True)])
@@ -1182,6 +1298,7 @@ def play_game_external(game_id):
 		current_applaunch = next(iter([x for x in [current_game_data.get('user_global_uses_applaunch')] if isinstance(x,int)]),0) #Default to not using applaunch if the value is not present
 		current_apppause = next(iter([x for x in [current_game_data.get('user_global_uses_apppause')] if isinstance(x,int)]),0) #Default to not using apppause if the value is not present
 		current_game_name = current_game_data.get('label')
+		current_netplay_parameters = cm.get_home_property('iagl_netplay_parameters')
 		dl.set_game_name(game_name=current_game_name)
 		dl.set_rom(rom=current_game_data.get('rom'))
 		dl.set_launch_parameters(launch_parameters=current_lp)
@@ -1201,13 +1318,16 @@ def play_game_external(game_id):
 				ln.set_appause(appause=current_apppause)
 				ln.set_applaunch(applaunch=current_applaunch)
 				ln.set_rom(rom=current_game_data)
-				ln.set_launch_parameters(launch_parameters={'launch_process':launch_process,'netplay':cm.get_home_property('iagl_netplay_parameters')}) #Grab any netplay settings user has set
+				ln.set_launch_parameters(launch_parameters={'launch_process':launch_process,'netplay':current_netplay_parameters}) #Grab any netplay settings user has set
 				#Insert history here for games that will be launched with applaunch or apppause
+				if cm.get_setting('discord_announce') and isinstance(current_netplay_parameters,dict) and current_netplay_parameters.get('as_host')==True:
+					nt.discord_announce(game=next(iter(db.query_db(db.get_query('get_game_from_id_for_netplay',game_id=game_id),return_as='dict')),None),discord_at=cm.get_setting('discord_at'),discord_user_id=cm.get_setting('discord_user_id'),discord_username=cm.get_setting('discord_username'),timestamp=cm.get_now_timestamp())
 				current_game_data = ln.launcher.launch()
 				if current_game_data.get('launch_success'):
 					playcount_and_last_played_update = db.update_pc_and_cp(game_id=game_id)
 					history_update = db.add_history(game_id=game_id)
 					history_limit_update = db.limit_history(history_limit=cm.get_setting('play_history'))
+				result = cm.clear_netplay_parameters() #Reset netplay parameters after launch
 		else:
 			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),next(iter([x.get('download_message') for x in current_game_data if isinstance(x.get('download_message'),str)]),cm.get_loc(30272)))
 	else:
@@ -2010,6 +2130,22 @@ def get_db_stats():
 		m.setArt(default_art)
 	li = [all_li]+[sys_li]+meta_lis+[list_item for list_item,item_path in db.query_db(db.get_query('get_db_stats')) if isinstance(list_item,xbmcgui.ListItem)]
 	selected = xbmcgui.Dialog().multiselect(heading=cm.get_loc(30341),options=li,useDetails=True) 
+
+@plugin.route('/context_menu/action/enter_discord_id')
+def enter_discord_id():
+	xbmc.log(msg='IAGL:  /enter_discord_id',level=xbmc.LOGDEBUG)
+	invite_dialog = dialogs.get_discord_invite()
+	invite_dialog.doModal()
+	del invite_dialog
+	selected = xbmcgui.Dialog().input(heading=cm.get_loc(30189))
+	current_discord_user = nt.query_discord_user(id_in=selected)
+	if isinstance(current_discord_user,dict) and (isinstance(current_discord_user.get('global_name'),str) or isinstance(current_discord_user.get('username'),str)):
+		xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='discord_user_id',value=selected)
+		xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='discord_username',value=current_discord_user.get('global_name') or current_discord_user.get('username'))
+		xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='discord_user_avatar',value=current_discord_user.get('avatar'))
+		ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30457).format(current_discord_user.get('global_name') or current_discord_user.get('username')))
+	else:
+		ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30270),cm.get_loc(30459).format(selected))
 
 @plugin.route('/context_menu/action/get_donate_screen')
 def get_donate_screen():

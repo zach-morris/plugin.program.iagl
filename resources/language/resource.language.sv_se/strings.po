@@ -727,10 +727,6 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Definiera netplay IP-porten att ansluta via (lämna tomt för standard)"
 
-msgctxt "#30180"
-msgid "Default player 2+ Hostname"
-msgstr "Standardspelare 2+ Värdnamn"
-
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Definiera ett standardnätspelsvärdnamn / IP (användbart för lokalt nätverksnätspel, lämna tomt för standard)"
@@ -762,10 +758,6 @@ msgstr "Ange ditt spelarnamn för att tillkännages på Discord"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord användarkonto-ID"
-
-msgctxt "#30189"
-msgid "Provide your Discord ID (User Settings>My Account>Copy ID) to be mentioned when playing (optional)"
-msgstr "Ange ditt Discord ID (Användarinställningar>Mitt konto>Kopiera ID) för att nämnas när du spelar (valfritt)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
