@@ -108,6 +108,11 @@ class common(object):
 				result = 'game_with_netplay'
 			else:
 				result = 'game'
+		elif setting_in == 'game_favorites_context_menu':
+			if self.get_setting('enable_netplay')==True:
+				result = 'remove_fav_game_with_netplay'
+			else:
+				result = 'remove_fav_game'
 		elif setting_in == 'discord_avatar_image':
 			if isinstance(self.get_setting('discord_user_id'),str) and len(self.get_setting('discord_user_id'))>0 and self.get_setting('discord_user_id').isdigit() and isinstance(self.get_setting('discord_user_avatar'),str):
 				result = self.config.netplay.get('discord_user_avatar').format(**{'discord_user_id':self.get_setting('discord_user_id'),'discord_user_avatar':self.get_setting('discord_user_avatar')})
@@ -887,21 +892,50 @@ class common(object):
 				xbmc.log(msg='IAGL:  Generating lobby for {} rooms, with discord integration'.format(len(lobby)),level=xbmc.LOGDEBUG)
 				#for testing
 				for l in lobby:
-					if isinstance(l.get('username'),str) and '-IAGL' in l.get('username'):
-						partial_game_id = l.get('username').split('-IAGL')[-1].strip()
+					channel_item = None
+					l['username_split'] =  l.get('username').split('-IAGL')[0].strip()
+					l['has_password_str'] = 'Y' if l.get('has_password') == True else 'N'
+					l['has_spectate_password_str'] = 'Y' if l.get('has_password') == True else 'N'
+					l['IAGL_user_str'] = 'Y' if '-IAGL' in l.get('username') else 'N'
+					if isinstance(l.get('username'),str) and '-IAGL' in l.get('username'):  #If this was an IAGL launched game, look for additional metadata in the discord channel
+						l['partial_game_id'] = l.get('username').split('-IAGL')[-1].strip()
+						#Use first matching channel message based on the partial uid.  That should be sufficient?
+						channel_item = next(iter([x for x in channel if isinstance(x,dict) and isinstance(x.get('embeds'),list) and isinstance(next(iter(x.get('embeds')),{}).get('fields'),list) and any([l.get('partial_game_id') in y.get('value') for y in next(iter(x.get('embeds')),{}).get('fields') if isinstance(y,dict) and y.get('name')=='uid'])]),None)
 					else:
-						partial_game_id = None
-					# channel_item = next(iter([x for x in channel if x.get()]),None)
-					current_li = xbmcgui.ListItem('{game_name} with {username}'.format(**l),offscreen=True)
-					current_li.setArt({k:self.config.paths.get('assets_url').format('netplay_game_{}.png'.format(k)) for k in ['banner','clearlogo','landscape','poster','thumb']})
-					info_tag = ListItemInfoTag(current_li,self.get_setting('media_type'))
-					info_tag.set_info({'originaltitle':'{game_name}'.format(**l),
-										'date':'{created}'.format(**l),
-										'premiered':'{created}'.format(**l),
-										'dateadded':'{updated}'.format(**l),
-										'plot':'Session ID: {id}[CR]Game: {game_name}[CR]User: {username}[CR]Country: {country}[CR]Core: {core_name} ({core_version})[CR]Room Created: {created}[CR]Last Updated: {updated}'.format(**l)})
-					current_li.setProperties({'lobby_json':json.dumps(l),'partial_game_id':partial_game_id})
-					paths.append('/netplay_by_game_name/{game_name}'.format(**l))
+						l['partial_game_id'] = None
+					if isinstance(channel_item,dict):
+						current_li = xbmcgui.ListItem('{game_name} with {username_split}'.format(**l),offscreen=True)
+						if isinstance(channel_item.get('embeds'),list) and isinstance(next(iter(channel_item.get('embeds')),{}).get('image'),dict) and isinstance(next(iter(channel_item.get('embeds')),{}).get('image').get('url'),str):
+							#Use art set from discord
+							current_li.setArt({k:next(iter(channel_item.get('embeds')),{}).get('image').get('url') for k in ['poster','thumb']})
+							current_li.setArt({k:self.config.paths.get('assets_url').format('netplay_game_{}.png'.format(k)) for k in ['banner','clearlogo','landscape']})
+						else:
+							current_li.setArt({k:self.config.paths.get('assets_url').format('netplay_game_{}.png'.format(k)) for k in ['banner','clearlogo','landscape','poster','thumb']})
+						info_tag = ListItemInfoTag(current_li,self.get_setting('media_type'))
+						info_tag.set_info({'originaltitle':'{game_name}'.format(**l),
+											'date':'{updated}'.format(**l),
+											'premiered':'{created}'.format(**l),
+											'dateadded':'{updated}'.format(**l),
+											'plot':'Session ID: {id}[CR]Game: {game_name}[CR]User: {username}[CR]Country: {country}[CR]Core: {core_name} ({core_version})[CR]IAGL User: {IAGL_user_str}[CR]Password: {has_spectate_password_str} / Spectate Password: {has_password_str}[CR]Last Updated: {updated}'.format(**l)})
+						if isinstance(channel_item.get('embeds'),list) and isinstance(next(iter(channel_item.get('embeds')),{}).get('fields'),list) and isinstance(next(iter([y.get('value') for y in next(iter(channel_item.get('embeds')),{}).get('fields') if y.get('name')=='uid']),None),str):
+							current_uid = next(iter([y.get('value') for y in next(iter(channel_item.get('embeds')),{}).get('fields') if y.get('name')=='uid']),None)
+							current_li.setProperties({'lobby_json':json.dumps(l),'game_id':l.get('partial_game_id'),'uid':current_uid})
+							current_path = '/netplay_by_uid/{}'.format(current_uid)
+						else:
+							current_li.setProperties({'lobby_json':json.dumps(l),'partial_game_id':l.get('partial_game_id')})
+							current_path = '/netplay_by_game_name/{game_name}'.format(**l)
+					else:
+						current_li = xbmcgui.ListItem('{game_name} with {username_split}'.format(**l),offscreen=True)
+						current_li.setArt({k:self.config.paths.get('assets_url').format('netplay_game_{}.png'.format(k)) for k in ['banner','clearlogo','landscape','poster','thumb']})
+						info_tag = ListItemInfoTag(current_li,self.get_setting('media_type'))
+						info_tag.set_info({'originaltitle':'{game_name}'.format(**l),
+											'date':'{updated}'.format(**l),
+											'premiered':'{created}'.format(**l),
+											'dateadded':'{updated}'.format(**l),
+											'plot':'Session ID: {id}[CR]Game: {game_name}[CR]User: {username}[CR]Country: {country}[CR]Core: {core_name} ({core_version})[CR]IAGL User: {IAGL_user_str}[CR]Password: {has_spectate_password_str} / Spectate Password: {has_password_str}[CR]Last Updated: {updated}'.format(**l)})
+						current_li.setProperties({'lobby_json':json.dumps(l),'partial_game_id':l.get('partial_game_id')})
+						current_path = '/netplay_by_game_name/{game_name}'.format(**l)
+					paths.append(current_path)
 					lis.append(current_li)
 			else:
 				xbmc.log(msg='IAGL:  Generating lobby for {} rooms, without discord integration'.format(len(lobby)),level=xbmc.LOGDEBUG)
@@ -943,8 +977,8 @@ class common(object):
 										(self.get_loc(30328),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/reset_game_list_settings_from_uid/{})'.format(ip.split('/')[-1]))])
 		if type_in == 'game_with_netplay' and isinstance(ip,str):
 			li_out.addContextMenuItems([(self.get_loc(30088),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/add_to_favorites/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30342),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/view_launch_parameters/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30479),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/launch_game_as_host/{})'.format(ip.split('/')[-1])),
-										(self.get_loc(30250),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_list_post_process_from_uid/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30266),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/download_game_to/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30246),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launcher_from_uid/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30247),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launch_command_from_uid/{})'.format(ip.split('/')[-1])),
@@ -958,6 +992,17 @@ class common(object):
 		if type_in == 'remove_fav_game' and isinstance(ip,str):
 			li_out.addContextMenuItems([(self.get_loc(30237),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/remove_game_from_favorites/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30342),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/view_launch_parameters/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30266),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/download_game_to/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30246),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launcher_from_uid/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30247),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launch_command_from_uid/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30248),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_dl_path_from_uid/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30250),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_list_post_process_from_uid/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30328),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/reset_game_list_settings_from_uid/{})'.format(ip.split('/')[-1]))])
+		if type_in == 'remove_fav_game_with_netplay' and isinstance(ip,str):
+			li_out.addContextMenuItems([(self.get_loc(30237),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/remove_game_from_favorites/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30342),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/view_launch_parameters/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30479),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/launch_game_as_host/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30266),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/download_game_to/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30246),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launcher_from_uid/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30247),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launch_command_from_uid/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30248),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_dl_path_from_uid/{})'.format(ip.split('/')[-1])),

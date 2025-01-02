@@ -108,7 +108,7 @@ def view_by_category(category_id):
 	else:
 		xbmc.log(msg='IAGL:  /by_category/{}'.format(category_id),level=xbmc.LOGDEBUG)
 		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format(item_path,'choose_from_list')),list_item,True) if isinstance(list_item.getProperty('total_games'),str) and list_item.getProperty('total_games').isdigit() and int(list_item.getProperty('total_games'))>1 else (plugin.url_for_path('{}/{}'.format(item_path,'by_all')),list_item,True) for list_item,item_path in db.query_db(db.get_query('game_lists_by_category',category_id=category_id,game_list_fanart_to_art=cm.get_setting('game_list_fanart_to_art'),game_list_clearlogo_to_art=cm.get_setting('game_list_clearlogo_to_art'))) if isinstance(list_item,xbmcgui.ListItem)])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format(item_path,'choose_from_list')),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_list'),True) if isinstance(list_item.getProperty('total_games'),str) and list_item.getProperty('total_games').isdigit() and int(list_item.getProperty('total_games'))>1 else (plugin.url_for_path('{}/{}'.format(item_path,'by_all')),list_item,True) for list_item,item_path in db.query_db(db.get_query('game_lists_by_category',category_id=category_id,game_list_fanart_to_art=cm.get_setting('game_list_fanart_to_art'),game_list_clearlogo_to_art=cm.get_setting('game_list_clearlogo_to_art'))) if isinstance(list_item,xbmcgui.ListItem)])
 		for sm in config.listitem.get('sort_methods').get('by_category'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -161,7 +161,7 @@ def view_favorites_by(choose_id):
 			plugin.redirect('/view_favorites_paged/{}/{}'.format(choose_id,0))
 		else:
 			xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_game') if 'play_game' in item_path else cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_link'),False if 'play_game' in item_path else True) for list_item,item_path in db.query_db(db.get_query('favorites_by_all_no_page',game_title_setting=cm.get_setting('game_title_setting'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'))) if isinstance(list_item,xbmcgui.ListItem)])
+			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in=cm.get_setting('game_favorites_context_menu')) if 'play_game' in item_path else cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_link'),False if 'play_game' in item_path else True) for list_item,item_path in db.query_db(db.get_query('favorites_by_all_no_page',game_title_setting=cm.get_setting('game_title_setting'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'))) if isinstance(list_item,xbmcgui.ListItem)])
 			xbmcplugin.endOfDirectory(plugin.handle)
 	else: #by_fav_group
 		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
@@ -181,7 +181,7 @@ def view_favorites_paged(choose_id,page_id):
 		starting_number = int(page_id)*cm.get_setting('games_pagination')
 		next_page = str(int(page_id)+1)
 	if choose_id == 'by_all':
-		page_result = [(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_game') if 'play_game' in item_path else cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_link'),False if 'play_game' in item_path else True) for list_item,item_path in db.query_db(db.get_query('favorites_by_all_page',game_title_setting=cm.get_setting('game_title_setting'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'),items_per_page=cm.get_setting('games_pagination'),starting_number=starting_number)) if isinstance(list_item,xbmcgui.ListItem)]
+		page_result = [(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in=cm.get_setting('game_favorites_context_menu')) if 'play_game' in item_path else cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_link'),False if 'play_game' in item_path else True) for list_item,item_path in db.query_db(db.get_query('favorites_by_all_page',game_title_setting=cm.get_setting('game_title_setting'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'),items_per_page=cm.get_setting('games_pagination'),starting_number=starting_number)) if isinstance(list_item,xbmcgui.ListItem)]
 		xbmcplugin.addDirectoryItems(plugin.handle,page_result)
 		if len(page_result)==cm.get_setting('games_pagination'):
 			xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(view_favorites_paged,choose_id=choose_id,page_id=next_page),cm.get_next_li(),True)])
@@ -201,7 +201,7 @@ def view_favorites_by(group_id):
 		plugin.redirect('/view_favorites_group_paged/{}/{}'.format(group_id,0))
 	else:
 		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_game') if 'play_game' in item_path else cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_link'),False if 'play_game' in item_path else True) for list_item,item_path in db.query_db(db.get_query('favorites_by_group_no_page',group_id=group_id,game_title_setting=cm.get_setting('game_title_setting'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'))) if isinstance(list_item,xbmcgui.ListItem)])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in=cm.get_setting('game_favorites_context_menu')) if 'play_game' in item_path else cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_link'),False if 'play_game' in item_path else True) for list_item,item_path in db.query_db(db.get_query('favorites_by_group_no_page',group_id=group_id,game_title_setting=cm.get_setting('game_title_setting'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'))) if isinstance(list_item,xbmcgui.ListItem)])
 		xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/view_favorites_group_paged/<group_id>/<page_id>')
@@ -214,7 +214,7 @@ def view_favorites_group_paged(group_id,page_id):
 	else:
 		starting_number = int(page_id)*cm.get_setting('games_pagination')
 		next_page = str(int(page_id)+1)
-	page_result = [(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_game') if 'play_game' in item_path else cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_link'),False if 'play_game' in item_path else True) for list_item,item_path in db.query_db(db.get_query('favorites_by_group_page',group_id=group_id,game_title_setting=cm.get_setting('game_title_setting'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'),items_per_page=cm.get_setting('games_pagination'),starting_number=starting_number)) if isinstance(list_item,xbmcgui.ListItem)]
+	page_result = [(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in=cm.get_setting('game_favorites_context_menu')) if 'play_game' in item_path else cm.add_context_menu(li=list_item,ip=item_path,type_in='remove_fav_link'),False if 'play_game' in item_path else True) for list_item,item_path in db.query_db(db.get_query('favorites_by_group_page',group_id=group_id,game_title_setting=cm.get_setting('game_title_setting'),thumbnail_to_game_art=cm.get_setting('thumbnail_to_game_art'),landscape_to_game_art=cm.get_setting('landscape_to_game_art'),items_per_page=cm.get_setting('games_pagination'),starting_number=starting_number)) if isinstance(list_item,xbmcgui.ListItem)]
 	xbmcplugin.addDirectoryItems(plugin.handle,page_result)
 	if len(page_result)==cm.get_setting('games_pagination'):
 		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for(view_favorites_group_paged,group_id=group_id,page_id=next_page),cm.get_next_li(),True)])
@@ -1007,6 +1007,16 @@ def netplay_by_game_name(game_name):
 				plugin.redirect([x[-1] for x in found_games_fuzzy][selected])
 		else:
 			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30473),cm.get_loc(30472).format(game_name))
+
+@plugin.route('/netplay_by_uid/<game_id>')
+def netplay_by_uid(game_id):
+	xbmc.log(msg='IAGL:  /netplay_by_uid/{}'.format(game_id),level=xbmc.LOGDEBUG)	
+	found_games_exact = db.query_db(db.get_query('netplay_by_uid',game_id=game_id,game_title_setting=cm.get_setting('game_title_setting')))
+	if isinstance(found_games_exact,list) and len(found_games_exact)==1:
+		xbmc.log(msg='IAGL: One exact matching name game found for uid: {}'.format(game_id),level=xbmc.LOGDEBUG)	
+		plugin.redirect(found_games_exact[0][-1])
+	else:
+		ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30473),cm.get_loc(30472).format(game_id))
 
 @plugin.route('/play_game_external_netplay/<game_id>')
 def play_game_external_netplay(game_id):

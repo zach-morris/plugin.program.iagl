@@ -22,7 +22,7 @@ class config(object):
 		self.addon['addon_handle'] = xbmcaddon.Addon(id=self.addon.get('addon_name'))	
 		self.addon['version'] = self.addon.get('addon_handle').getAddonInfo('version')
 		#Debug
-		self.debug['print_query'] = True
+		self.debug['print_query'] = False
 		self.debug['factory_debug'] = False
 		#Paths
 		self.paths['self'] = Path(__file__)
@@ -652,22 +652,22 @@ class config(object):
 														'LEFT JOIN paths as fanart_paths\n'
 														'ON fanart_paths."path" = games_table.art_fanart_path\n'
 														'WHERE games_table.originaltitle = "{game_name}"')
-		self.database['query']['get_game_from_originaltitle_exact_with_partial_uid'] = ('SELECT "/play_game_external_netplay/"||games_table.uid as next_path,games_table.uid,games_table.game_list as game_list_id,games_table.originaltitle AS originaltitle,{game_title_setting} as label,games_table.game_list as label2,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as platform,games_table.genres AS genres,games_table.studio as publisher,games_table.year,games_table.size,games_table.plot as overview,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart,games_table.launch_parameters,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,game_list_table.default_global_post_download_process,game_list_table.default_global_launcher,game_list_table.user_post_download_process,game_list_table.user_global_launcher,game_list_table.user_global_launch_addon,game_list_table.user_global_external_launch_command,game_list_table.user_global_uses_applaunch,game_list_table.user_global_uses_apppause,game_list_table.user_global_download_path,game_list_table.default_global_launch_addon,game_list_table.default_global_external_launch_command,games_table.rom\n'
-														'FROM games as games_table\n'
-														'LEFT JOIN game_list as game_list_table on games_table.game_list = game_list_table.label\n'
-														'LEFT JOIN paths as banner_paths\n'
-														'ON banner_paths."path" = games_table.art_banner_path\n'
-														'LEFT JOIN paths as box_paths\n'
-														'ON box_paths."path" = games_table.art_box_path\n'
-														'LEFT JOIN paths as clearlogo_paths\n'
-														'ON clearlogo_paths."path" = games_table.art_logo_path\n'
-														'LEFT JOIN paths as title_paths\n'
-														'ON title_paths."path" = games_table.art_title_path\n'
-														'LEFT JOIN paths as snapshot_paths\n'
-														'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
-														'LEFT JOIN paths as fanart_paths\n'
-														'ON fanart_paths."path" = games_table.art_fanart_path\n'
-														'WHERE games_table.originaltitle = "{game_name}" and games_table.uid LIKE "%{partial_game_id}%"')
+		self.database['query']['netplay_by_uid'] = ('SELECT "/play_game_external_netplay/"||games_table.uid as next_path,games_table.uid,games_table.game_list as game_list_id,games_table.originaltitle AS originaltitle,{game_title_setting} as label,games_table.game_list as label2,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as platform,games_table.genres AS genres,games_table.studio as publisher,games_table.year,games_table.size,games_table.plot as overview,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart,games_table.launch_parameters,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,game_list_table.default_global_post_download_process,game_list_table.default_global_launcher,game_list_table.user_post_download_process,game_list_table.user_global_launcher,game_list_table.user_global_launch_addon,game_list_table.user_global_external_launch_command,game_list_table.user_global_uses_applaunch,game_list_table.user_global_uses_apppause,game_list_table.user_global_download_path,game_list_table.default_global_launch_addon,game_list_table.default_global_external_launch_command,games_table.rom\n'
+													'FROM games as games_table\n'
+													'LEFT JOIN game_list as game_list_table on games_table.game_list = game_list_table.label\n'
+													'LEFT JOIN paths as banner_paths\n'
+													'ON banner_paths."path" = games_table.art_banner_path\n'
+													'LEFT JOIN paths as box_paths\n'
+													'ON box_paths."path" = games_table.art_box_path\n'
+													'LEFT JOIN paths as clearlogo_paths\n'
+													'ON clearlogo_paths."path" = games_table.art_logo_path\n'
+													'LEFT JOIN paths as title_paths\n'
+													'ON title_paths."path" = games_table.art_title_path\n'
+													'LEFT JOIN paths as snapshot_paths\n'
+													'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
+													'LEFT JOIN paths as fanart_paths\n'
+													'ON fanart_paths."path" = games_table.art_fanart_path\n'
+													'WHERE games_table.uid = "{game_id}"')
 		self.database['query']['get_game_from_originaltitle_fuzzy'] = ('SELECT "/play_game_external_netplay/"||games_table.uid as next_path,games_table.uid,games_table.game_list as game_list_id,games_table.originaltitle AS originaltitle,{game_title_setting} as label,games_table.game_list as label2,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as platform,games_table.genres AS genres,games_table.studio as publisher,games_table.year,games_table.size,games_table.plot as overview,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart,games_table.launch_parameters,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,game_list_table.default_global_post_download_process,game_list_table.default_global_launcher,game_list_table.user_post_download_process,game_list_table.user_global_launcher,game_list_table.user_global_launch_addon,game_list_table.user_global_external_launch_command,game_list_table.user_global_uses_applaunch,game_list_table.user_global_uses_apppause,game_list_table.user_global_download_path,game_list_table.default_global_launch_addon,game_list_table.default_global_external_launch_command,games_table.rom\n'
 														'FROM games as games_table\n'
 														'LEFT JOIN game_list as game_list_table on games_table.game_list = game_list_table.label\n'
@@ -684,22 +684,6 @@ class config(object):
 														'LEFT JOIN paths as fanart_paths\n'
 														'ON fanart_paths."path" = games_table.art_fanart_path\n'
 														'WHERE games_table.originaltitle = "{game_name}" or games_table.originaltitle LIKE "%{game_name}%" or games_table.rom LIKE "%{game_name}%"')
-		self.database['query']['get_game_from_originaltitle_fuzzy_with_partial_uid'] = ('SELECT "/play_game_external_netplay/"||games_table.uid as next_path,games_table.uid,games_table.game_list as game_list_id,games_table.originaltitle AS originaltitle,{game_title_setting} as label,games_table.game_list as label2,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as platform,games_table.genres AS genres,games_table.studio as publisher,games_table.year,games_table.size,games_table.plot as overview,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart,games_table.launch_parameters,games_table.user_game_launch_addon,games_table.user_game_external_launch_command,games_table.user_game_post_download_process,game_list_table.default_global_post_download_process,game_list_table.default_global_launcher,game_list_table.user_post_download_process,game_list_table.user_global_launcher,game_list_table.user_global_launch_addon,game_list_table.user_global_external_launch_command,game_list_table.user_global_uses_applaunch,game_list_table.user_global_uses_apppause,game_list_table.user_global_download_path,game_list_table.default_global_launch_addon,game_list_table.default_global_external_launch_command,games_table.rom\n'
-														'FROM games as games_table\n'
-														'LEFT JOIN game_list as game_list_table on games_table.game_list = game_list_table.label\n'
-														'LEFT JOIN paths as banner_paths\n'
-														'ON banner_paths."path" = games_table.art_banner_path\n'
-														'LEFT JOIN paths as box_paths\n'
-														'ON box_paths."path" = games_table.art_box_path\n'
-														'LEFT JOIN paths as clearlogo_paths\n'
-														'ON clearlogo_paths."path" = games_table.art_logo_path\n'
-														'LEFT JOIN paths as title_paths\n'
-														'ON title_paths."path" = games_table.art_title_path\n'
-														'LEFT JOIN paths as snapshot_paths\n'
-														'ON snapshot_paths."path" = games_table.art_snapshot_path\n'
-														'LEFT JOIN paths as fanart_paths\n'
-														'ON fanart_paths."path" = games_table.art_fanart_path\n'
-														'WHERE (games_table.originaltitle = "{game_name}" or games_table.originaltitle LIKE "%{game_name}%" or games_table.rom LIKE "%{game_name}%") and games_table.uid LIKE "%{partial_game_id}%"')
 		self.database['query']['get_game_list_launcher'] = ('SELECT game_lists_table.default_global_launcher,game_lists_table.user_global_launcher\n'
 															'FROM game_list as game_lists_table\n'
 															'WHERE game_lists_table.label = "{game_list_id}"')
