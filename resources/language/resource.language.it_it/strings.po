@@ -1,0 +1,1936 @@
+# Kodi Media Center language file
+# Addon Name: /Internet Archive Game Launcher
+# Addon id: pltugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/zach-morris/plugin.program.iagl/issues\n"
+"Language: it_it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "Lanciatore di giochi di Internet Archive"
+
+msgctxt "#30002"
+msgid "Browse all Lists"
+msgstr "Sfoglia tutti gli elenchi"
+
+msgctxt "#30003"
+msgid "Browse lists by Category"
+msgstr "Sfoglia gli elenchi per categoria"
+
+msgctxt "#30004"
+msgid "Browse games by Playlist"
+msgstr "Sfoglia i giochi per Playlist"
+
+msgctxt "#30005"
+msgid "Favorites"
+msgstr "Preferiti"
+
+msgctxt "#30006"
+msgid "Play History"
+msgstr "Cronologia di riproduzione"
+
+msgctxt "#30007"
+msgid "Search"
+msgstr "Ricerca"
+
+msgctxt "#30008"
+msgid "Random Play"
+msgstr "Riproduzione casuale"
+
+msgctxt "#30009"
+msgid "Next"
+msgstr "Prossimo"
+
+msgctxt "#30010"
+msgid "Previous"
+msgstr "Precedente"
+
+msgctxt "#30011"
+msgid "One Big List"
+msgstr "Una grande lista"
+
+msgctxt "#30012"
+msgid "Alphabetical"
+msgstr "Alfabetico"
+
+msgctxt "#30013"
+msgid "Group by Genre"
+msgstr "Raggruppa per genere"
+
+msgctxt "#30014"
+msgid "Group by Year"
+msgstr "Raggruppa per anno"
+
+msgctxt "#30015"
+msgid "Group by Players"
+msgstr "Raggruppa per giocatori"
+
+msgctxt "#30016"
+msgid "Group by Studio"
+msgstr "Raggruppa per Studio"
+
+msgctxt "#30017"
+msgid "Group by Tag"
+msgstr "Raggruppa per tag"
+
+msgctxt "#30018"
+msgid "Group by Playlist"
+msgstr "Raggruppa per playlist"
+
+msgctxt "#30019"
+msgid "Group by Region"
+msgstr "Raggruppa per regione"
+
+msgctxt "#30020"
+msgid "Group by Language"
+msgstr "Raggruppa per lingua"
+
+msgctxt "#30021"
+msgid "Group by Edition"
+msgstr "Raggruppa per edizione"
+
+msgctxt "#30022"
+msgid "Group by Code"
+msgstr "Raggruppa per codice"
+
+msgctxt "#30023"
+msgid "Group by Rating"
+msgstr "Raggruppa per valutazione"
+
+msgctxt "#30024"
+msgid "Select Game Lists"
+msgstr "Seleziona Elenchi di giochi"
+
+msgctxt "#30025"
+msgid "Search Game Titles"
+msgstr "Cerca titoli di gioco"
+
+msgctxt "#30026"
+msgid "Filter by Genre"
+msgstr "Filtra per genere"
+
+msgctxt "#30027"
+msgid "Filter by Players"
+msgstr "Filtra per giocatori"
+
+msgctxt "#30028"
+msgid "Filter by Studio"
+msgstr "Filtra per Studio"
+
+msgctxt "#30029"
+msgid "Filter by Tag"
+msgstr "Filtra per tag"
+
+msgctxt "#30030"
+msgid "Filter by Playlist"
+msgstr "Filtra per playlist"
+
+msgctxt "#30031"
+msgid "Filter by Region"
+msgstr "Filtra per regione"
+
+msgctxt "#30032"
+msgid "Filter by Language"
+msgstr "Filtra per lingua"
+
+msgctxt "#30033"
+msgid "Filter by Edition"
+msgstr "Filtra per Edizione"
+
+msgctxt "#30034"
+msgid "Filter by Code"
+msgstr "Filtra per codice"
+
+msgctxt "#30035"
+msgid "Filter by Rating"
+msgstr "Filtra per valutazione"
+
+msgctxt "#30036"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Esegui ricerca[/COLOR]"
+
+msgctxt "#30037"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Crea collegamento di ricerca[/COLOR]"
+
+msgctxt "#30038"
+msgid "Choose Number of Results"
+msgstr "Scegli il numero di risultati"
+
+msgctxt "#30039"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Esegui ricerca casuale[/COLOR]"
+
+msgctxt "#30040"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Crea collegamento di ricerca casuale[/COLOR]"
+
+msgctxt "#30041"
+msgid "General"
+msgstr "Generale"
+
+msgctxt "#30042"
+msgid "Launching"
+msgstr "Lancio"
+
+msgctxt "#30043"
+msgid "Downloading"
+msgstr "Scaricamento"
+
+msgctxt "#30044"
+msgid "Views and Navigation"
+msgstr "Visualizzazioni e navigazione"
+
+msgctxt "#30045"
+msgid "Netplay"
+msgstr "Gioco in rete"
+
+msgctxt "#30046"
+msgid "Setup Wizard"
+msgstr "Configurazione guidata"
+
+msgctxt "#30047"
+msgid "Advanced"
+msgstr "Avanzato"
+
+msgctxt "#30048"
+msgid "Play History"
+msgstr "Cronologia di riproduzione"
+
+msgctxt "#30049"
+msgid "Define how many games to save in last played history"
+msgstr "Definisci quante partite salvare nella cronologia delle ultime partite giocate"
+
+msgctxt "#30050"
+msgid "Default action on selecting game"
+msgstr "Azione predefinita nella selezione del gioco"
+
+msgctxt "#30051"
+msgid "Define action to take when a game is selected"
+msgstr "Definisci l'azione da intraprendere quando viene selezionato un gioco"
+
+msgctxt "#30052"
+msgid "If game already exists locally"
+msgstr "Se il gioco esiste già localmente"
+
+msgctxt "#30053"
+msgid "Define the action to take if a game file is found to exist locally"
+msgstr "Definire l'azione da intraprendere se viene rilevata l'esistenza di un file di gioco localmente"
+
+msgctxt "#30054"
+msgid "Prompt"
+msgstr "Richiesta"
+
+msgctxt "#30055"
+msgid "Do not re-download"
+msgstr "Non scaricare di nuovo"
+
+msgctxt "#30056"
+msgid "Re-download and overwrite"
+msgstr "Scarica di nuovo e sovrascrivi"
+
+msgctxt "#30057"
+msgid "Enable archive.org login"
+msgstr "Abilita l'accesso ad archive.org"
+
+msgctxt "#30058"
+msgid "Enabled"
+msgstr "Abilitato"
+
+msgctxt "#30059"
+msgid "Disabled"
+msgstr "Disabilitato"
+
+msgctxt "#30060"
+msgid "Some games require login.  Enter your archive.org email address and password."
+msgstr "Alcuni giochi richiedono l'accesso. Inserisci il tuo indirizzo email archive.org e la password."
+
+msgctxt "#30061"
+msgid "archive.org Email"
+msgstr "E-mail di archive.org"
+
+msgctxt "#30062"
+msgid "Some games require login.  Enter your archive.org email address"
+msgstr "Alcuni giochi richiedono l'accesso. Inserisci il tuo indirizzo email archive.org"
+
+msgctxt "#30063"
+msgid "archive.org Password"
+msgstr "Password di archive.org"
+
+msgctxt "#30064"
+msgid "Some games require login.  Enter your archive.org password"
+msgstr "Alcuni giochi richiedono l'accesso. Inserisci la tua password archive.org"
+
+msgctxt "#30065"
+msgid "Check login credentials"
+msgstr "Controlla le credenziali di accesso"
+
+msgctxt "#30066"
+msgid "Test the entered email and password to check your ability to login"
+msgstr "Prova l'email e la password inserite per verificare la tua capacità di accedere"
+
+msgctxt "#30067"
+msgid "Download folder size limit"
+msgstr "Limite dimensione cartella download"
+
+msgctxt "#30068"
+msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
+msgstr "Definisce la dimensione del download/dimensione della cache.[CR]La cartella viene svuotata quando viene raggiunto il limite di dimensione."
+
+msgctxt "#30069"
+msgid "Front page display"
+msgstr "Visualizzazione della prima pagina"
+
+msgctxt "#30070"
+msgid "Choose from list"
+msgstr "Scegli dall'elenco"
+
+msgctxt "#30071"
+msgid "Games are presented as"
+msgstr "I giochi sono presentati come"
+
+msgctxt "#30072"
+msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
+msgstr "Kodi offre diverse opzioni di skin per film, programmi TV e giochi. Consulta wiki per maggiori informazioni"
+
+msgctxt "#30073"
+msgid "TV Shows"
+msgstr "Programmi TV"
+
+msgctxt "#30074"
+msgid "Movies"
+msgstr "Film"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "Giochi"
+
+msgctxt "#30076"
+msgid "10 Games"
+msgstr "10 Giochi"
+
+msgctxt "#30077"
+msgid "25 Games"
+msgstr "25 Giochi"
+
+msgctxt "#30078"
+msgid "50 Games"
+msgstr "50 giochi"
+
+msgctxt "#30079"
+msgid "100 Games"
+msgstr "100 giochi"
+
+msgctxt "#30080"
+msgid "250 Games"
+msgstr "250 giochi"
+
+msgctxt "#30081"
+msgid "500 Games"
+msgstr "500 giochi"
+
+msgctxt "#30082"
+msgid "Game artwork"
+msgstr "Grafica del gioco"
+
+msgctxt "#30083"
+msgid "Game list artwork"
+msgstr "Elenco dei giochi artwork"
+
+msgctxt "#30084"
+msgid "Retroarch Settings"
+msgstr "Impostazioni Retroarch"
+
+msgctxt "#30085"
+msgid "Suspend Kodi IO on launch"
+msgstr "Sospendi Kodi IO all'avvio"
+
+msgctxt "#30086"
+msgid "Stop media on launch"
+msgstr "Interrompi il supporto all'avvio"
+
+msgctxt "#30087"
+msgid "Waiting for return"
+msgstr "In attesa del ritorno"
+
+msgctxt "#30088"
+msgid "Add to IAGL Favorites"
+msgstr "Aggiungi ai preferiti IAGL"
+
+msgctxt "#30089"
+msgid "Enter a name for your favorites group"
+msgstr "Inserisci un nome per il tuo gruppo di preferiti"
+
+msgctxt "#30090"
+msgid "Favorite added to group"
+msgstr "Preferito aggiunto al gruppo"
+
+msgctxt "#30091"
+msgid "Use clean game title"
+msgstr "Usa un titolo di gioco pulito"
+
+msgctxt "#30092"
+msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
+msgstr "Rimuovi i tag dal titolo di un gioco per la visualizzazione. Es: [B]Mario (USA)[/B] diventa [B]Mario[/B]"
+
+msgctxt "#30093"
+msgid "Games per page"
+msgstr "Giochi per pagina"
+
+msgctxt "#30094"
+msgid "Define how many games are listed per page"
+msgstr "Definisci quanti giochi sono elencati per pagina"
+
+msgctxt "#30095"
+msgid "List all"
+msgstr "Elenca tutto"
+
+msgctxt "#30096"
+msgid "Always filter list to 1 Game 1 Rom Set"
+msgstr "Filtra sempre l'elenco a 1 Gioco 1 Rom Set"
+
+msgctxt "#30097"
+msgid "If possible, game lists will be pre-filtered to a 1G1R set"
+msgstr "Se possibile, gli elenchi dei giochi saranno prefiltrati in un set 1G1R"
+
+msgctxt "#30098"
+msgid "Append game list name to search and random results"
+msgstr "Aggiungi il nome dell'elenco dei giochi alla ricerca e ai risultati casuali"
+
+msgctxt "#30099"
+msgid "When enabled, the name of the game list will be appended to search results"
+msgstr "Se abilitato, il nome dell'elenco dei giochi verrà aggiunto ai risultati della ricerca"
+
+msgctxt "#30100"
+msgid "Append game list name when browsing by playlist"
+msgstr "Aggiungi il nome dell'elenco dei giochi quando si naviga per playlist"
+
+msgctxt "#30101"
+msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
+msgstr "Se abilitato, il nome dell'elenco dei giochi verrà aggiunto al nome del gioco nella playlist"
+
+msgctxt "#30102"
+msgid "Kodi landscape art equates to"
+msgstr "L'arte paesaggistica di Kodi equivale a"
+
+msgctxt "#30103"
+msgid "Select the game artwork to be displayed as the landscape art"
+msgstr "Seleziona l'immagine del gioco da visualizzare come immagine del paesaggio"
+
+msgctxt "#30104"
+msgid "Title Screen"
+msgstr "Schermata del titolo"
+
+msgctxt "#30105"
+msgid "Screenshot"
+msgstr "Schermata"
+
+msgctxt "#30106"
+msgid "Kodi thumbnail art equates to"
+msgstr "L'arte in miniatura di Kodi equivale a"
+
+msgctxt "#30107"
+msgid "Select the game artwork to be displayed as the thumbnail art"
+msgstr "Seleziona l'immagine del gioco da visualizzare come miniatura"
+
+msgctxt "#30108"
+msgid "Game list clearlogo equates to"
+msgstr "Elenco dei giochi clearlogo equivale a"
+
+msgctxt "#30109"
+msgid "Select the artwork displayed for the game list clearlogo"
+msgstr "Seleziona l'immagine visualizzata per l'elenco dei giochi clearlogo"
+
+msgctxt "#30110"
+msgid "System logo"
+msgstr "Logo del sistema"
+
+msgctxt "#30111"
+msgid "System console"
+msgstr "Console di sistema"
+
+msgctxt "#30112"
+msgid "System controller"
+msgstr "Controllore di sistema"
+
+msgctxt "#30113"
+msgid "Game list fanart equates to"
+msgstr "La lista dei giochi fanart equivale a"
+
+msgctxt "#30114"
+msgid "Select the artwork displayed for the game list fanart"
+msgstr "Seleziona l'opera d'arte visualizzata per la lista dei giochi fanart"
+
+msgctxt "#30115"
+msgid "System collage"
+msgstr "collage di sistema"
+
+msgctxt "#30116"
+msgid "System console"
+msgstr "Console di sistema"
+
+msgctxt "#30117"
+msgid "System wallpaper"
+msgstr "Sfondo del sistema"
+
+msgctxt "#30118"
+msgid "Force IAGL viewtypes"
+msgstr "Forza i tipi di visualizzazione IAGL"
+
+msgctxt "#30119"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "Verifica che la tua skin abbia l'ID del tipo di visualizzazione forzato disponibile"
+
+msgctxt "#30120"
+msgid "Frontpage viewtype"
+msgstr "Tipo di visualizzazione della prima pagina"
+
+msgctxt "#30121"
+msgid "Game library lists viewtype"
+msgstr "Elenchi di librerie di giochi tipo di visualizzazione"
+
+msgctxt "#30122"
+msgid "Game categories viewtype"
+msgstr "Tipo di visualizzazione delle categorie di gioco"
+
+msgctxt "#30123"
+msgid "Games list viewtype"
+msgstr "Tipo di visualizzazione dell'elenco dei giochi"
+
+msgctxt "#30124"
+msgid "Choose list viewtype"
+msgstr "Scegli il tipo di visualizzazione dell'elenco"
+
+msgctxt "#30125"
+msgid "Search and Random results viewtype"
+msgstr "Visualizzazione dei risultati di ricerca e casuali"
+
+msgctxt "#30126"
+msgid "Off (Default)"
+msgstr "Disattivato (predefinito)"
+
+msgctxt "#30127"
+msgid "List / Poster (50)"
+msgstr "Elenco / Poster (50)"
+
+msgctxt "#30128"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "Poster / Grande Elenco / Poster Wall (51)"
+
+msgctxt "#30129"
+msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
+msgstr "Icon Wall / Modello orizzontale / LS Wall (52)"
+
+msgctxt "#30130"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "Banner / Paesaggio / Informazioni sul poster (501)"
+
+msgctxt "#30131"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "Fanart / Paesaggio Singolo / Elenco Episodi (502)"
+
+msgctxt "#30132"
+msgid "Logos / Big Square Wall (503)"
+msgstr "Loghi / Grande muro quadrato (503)"
+
+msgctxt "#30133"
+msgid "Big List 2 (504)"
+msgstr "Grande Lista 2 (504)"
+
+msgctxt "#30134"
+msgid "Landscape Details (505)"
+msgstr "Dettagli del paesaggio (505)"
+
+msgctxt "#30135"
+msgid "Operating System"
+msgstr "Sistema operativo"
+
+msgctxt "#30136"
+msgid "Select your operating system"
+msgstr "Seleziona il tuo sistema operativo"
+
+msgctxt "#30137"
+msgid "Windows"
+msgstr "Finestre"
+
+msgctxt "#30138"
+msgid "Linux"
+msgstr "Linux"
+
+msgctxt "#30139"
+msgid "OSX"
+msgstr "OSX"
+
+msgctxt "#30140"
+msgid "Retroarch App Location"
+msgstr "Posizione dell'app Retroarch"
+
+msgctxt "#30141"
+msgid "Select the path to the retroarch executable"
+msgstr "Selezionare il percorso per l'eseguibile retroarch"
+
+msgctxt "#30142"
+msgid "Retroarch CFG Location"
+msgstr "Posizione del CFG Retroarch"
+
+msgctxt "#30143"
+msgid "Select the path to the retroarch config file"
+msgstr "Seleziona il percorso per il file di configurazione di retroarch"
+
+msgctxt "#30144"
+msgid "Android"
+msgstr "Android"
+
+msgctxt "#30145"
+msgid "Android aarch64"
+msgstr "Androide aarch64"
+
+msgctxt "#30146"
+msgid "Android ra32"
+msgstr "Androide ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Metodo di selezione del launcher del gioco"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Seleziona cosa farà Kodi quando selezioni un launcher di gioco (solo Windows, Linux e OSX)"
+
+msgctxt "#30149"
+msgid "Keep Kodi in the background"
+msgstr "Mantieni Kodi in background"
+
+msgctxt "#30150"
+msgid "Close Kodi"
+msgstr "Chiudi Kodi"
+
+msgctxt "#30151"
+msgid "Pause Kodi"
+msgstr "Metti in pausa Kodi"
+
+msgctxt "#30152"
+msgid "Retroarch core picker"
+msgstr "Selettore di nucleo Retroarch"
+
+msgctxt "#30153"
+msgid "List by System and Core Name"
+msgstr "Elenco per sistema e nome core"
+
+msgctxt "#30154"
+msgid "List by Core Name"
+msgstr "Elenco per nome del nucleo"
+
+msgctxt "#30155"
+msgid "List by Emulated Systems"
+msgstr "Elenco per sistemi emulati"
+
+msgctxt "#30156"
+msgid "Select Core"
+msgstr "Seleziona Core"
+
+msgctxt "#30157"
+msgid "Select Emulated System"
+msgstr "Seleziona sistema emulato"
+
+msgctxt "#30158"
+msgid "Select Emulator"
+msgstr "Seleziona Emulatore"
+
+msgctxt "#30159"
+msgid "Credentials were not found[CR]Please enter them in addon settings"
+msgstr "Le credenziali non sono state trovate[CR]Inserirle nelle impostazioni del componente aggiuntivo"
+
+msgctxt "#30160"
+msgid "Game List Download Path"
+msgstr "Elenco dei giochi Percorso di download"
+
+msgctxt "#30161"
+msgid "Zero (Current Game Only)"
+msgstr "Zero (solo gioco attuale)"
+
+msgctxt "#30162"
+msgid "25 MB"
+msgstr "25 MB"
+
+msgctxt "#30163"
+msgid "50 MB"
+msgstr "50 MB"
+
+msgctxt "#30164"
+msgid "100 MB"
+msgstr "100 MB"
+
+msgctxt "#30165"
+msgid "200 MB"
+msgstr "200 MB"
+
+msgctxt "#30166"
+msgid "500 MB"
+msgstr "500 MB"
+
+msgctxt "#30167"
+msgid "1 GB"
+msgstr "1 GB"
+
+msgctxt "#30168"
+msgid "2 GB"
+msgstr "2 GB"
+
+msgctxt "#30169"
+msgid "5 GB"
+msgstr "5 GB"
+
+msgctxt "#30170"
+msgid "10 GB"
+msgstr "10 GB"
+
+msgctxt "#30171"
+msgid "20 GB"
+msgstr "20 GB"
+
+msgctxt "#30172"
+msgid "Enable Netplay"
+msgstr "Abilita Netplay"
+
+msgctxt "#30173"
+msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
+msgstr "Abilita retroarch netplay (solo Windows, Linux, OSX), usa il menu contestuale per avviare con netplay"
+
+msgctxt "#30174"
+msgid "Show Netplay Lobby"
+msgstr "Mostra la lobby di Netplay"
+
+msgctxt "#30175"
+msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
+msgstr "Se abilitata, la lobby di Netplay verrà visualizzata nella home page di IAGL"
+
+msgctxt "#30176"
+msgid "Filter game lobby to IAGL auto launch games"
+msgstr "Filtra la lobby del gioco per avviare automaticamente i giochi IAGL"
+
+msgctxt "#30177"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "Se abilitato, la lobby di Netplay mostrerà solo i giochi avviabili automaticamente"
+
+msgctxt "#30178"
+msgid "Netplay Port"
+msgstr "Porta di Netplay"
+
+msgctxt "#30179"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "Definisci la porta IP di netplay tramite cui connetterti (lascia vuoto per impostazione predefinita)"
+
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "IP predefinito dell'host locale"
+
+msgctxt "#30181"
+msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
+msgstr "Definisci un nome host/IP netplay predefinito (utile per netplay di rete locale, lasciare vuoto per impostazione predefinita)"
+
+msgctxt "#30182"
+msgid "Check frames"
+msgstr "Controllare i telai"
+
+msgctxt "#30183"
+msgid "Define number of netplay sync frames (leave blank for default)"
+msgstr "Definisci il numero di frame di sincronizzazione netplay (lascia vuoto per impostazione predefinita)"
+
+msgctxt "#30184"
+msgid "Announce Netplay on Discord"
+msgstr "Annuncia Netplay su Discord"
+
+msgctxt "#30185"
+msgid "Announces netplay start on discord for IAGL players"
+msgstr "Annuncia l'inizio del netplay su Discord per i giocatori IAGL"
+
+msgctxt "#30186"
+msgid "Discord Player Name"
+msgstr "Nome del lettore Discord"
+
+msgctxt "#30187"
+msgid "Enter your player name to be announced on Discord"
+msgstr "Inserisci il nome del tuo giocatore per essere annunciato su Discord"
+
+msgctxt "#30188"
+msgid "Discord User Account ID"
+msgstr "ID account utente Discord"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Fornisci il tuo ID Discord (Impostazioni utente>Il mio account>Copia ID)"
+
+msgctxt "#30190"
+msgid "Display report when wizard is completed"
+msgstr "Visualizza il report al termine della procedura guidata"
+
+msgctxt "#30191"
+msgid "Execute setup wizard"
+msgstr "Eseguire la procedura guidata di installazione"
+
+msgctxt "#30192"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Esegui la procedura guidata per modificare rapidamente le impostazioni per le tue liste di giochi. Questa operazione può essere eseguita nuovamente in qualsiasi momento"
+
+msgctxt "#30193"
+msgid "Android Advance Settings"
+msgstr "Impostazioni avanzate Android"
+
+msgctxt "#30194"
+msgid "Use StartAndroidActivity"
+msgstr "Utilizzare StartAndroidActivity"
+
+msgctxt "#30195"
+msgid "Leave as default if unsure"
+msgstr "Lascia come predefinito se non sei sicuro"
+
+msgctxt "#30196"
+msgid "Suspend Kodi Input and Audio when using External Launcher"
+msgstr "Sospendi l'input e l'audio di Kodi quando utilizzi un launcher esterno"
+
+msgctxt "#30197"
+msgid "Stop Kodi media playing before External Launch"
+msgstr "Interrompere la riproduzione dei contenuti multimediali Kodi prima del lancio esterno"
+
+msgctxt "#30198"
+msgid "Kodi is busy / waiting for return to Kodi after External Launch"
+msgstr "Kodi è occupato/in attesa del ritorno a Kodi dopo il lancio esterno"
+
+msgctxt "#30199"
+msgid "Download Advanced Settings"
+msgstr "Scarica Impostazioni Avanzate"
+
+msgctxt "#30200"
+msgid "Download Threads"
+msgstr "Scarica discussioni"
+
+msgctxt "#30201"
+msgid "Alternate default download folder"
+msgstr "Cartella di download predefinita alternativa"
+
+msgctxt "#30202"
+msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
+msgstr "Se selezionata, tutti i download andranno in una cartella alternativa. [B]Nota: questa cartella non verrà eliminata o monitorata per dimensione[/B]"
+
+msgctxt "#30203"
+msgid "Organize default download folder using system folders"
+msgstr "Organizza la cartella di download predefinita utilizzando le cartelle di sistema"
+
+msgctxt "#30204"
+msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
+msgstr "Se abilitata, la cartella temporanea verrà organizzata in base al sistema (a volte necessario per gli override della configurazione)"
+
+msgctxt "#30205"
+msgid "Copy Kodi Network Source downloads to Local Filesystem"
+msgstr "Copia i download della sorgente di rete Kodi sul file system locale"
+
+msgctxt "#30206"
+msgid "Reset Options"
+msgstr "Reimposta opzioni"
+
+msgctxt "#30207"
+msgid "Reset IAGL database to default settings"
+msgstr "Ripristina le impostazioni predefinite del database IAGL"
+
+msgctxt "#30208"
+msgid "When selected, the database will be reset to default settings"
+msgstr "Se selezionato, il database verrà ripristinato alle impostazioni predefinite"
+
+msgctxt "#30209"
+msgid "Unhide game lists"
+msgstr "Mostra gli elenchi dei giochi"
+
+msgctxt "#30210"
+msgid "When selected, previously hidden game lists can be unhidden"
+msgstr "Se selezionato, gli elenchi di giochi precedentemente nascosti possono essere visualizzati"
+
+msgctxt "#30211"
+msgid "Clear Cache"
+msgstr "Cancella cache"
+
+msgctxt "#30212"
+msgid "When selected, all data in the cache folder including games will be purged"
+msgstr "Se selezionato, tutti i dati nella cartella cache, inclusi i giochi, verranno eliminati"
+
+msgctxt "#30213"
+msgid "Select"
+msgstr "Selezionare"
+
+msgctxt "#30214"
+msgid "Selected"
+msgstr "Selezionato"
+
+msgctxt "#30215"
+msgid "Game lists selected"
+msgstr "Elenchi di giochi selezionati"
+
+msgctxt "#30216"
+msgid "Genres selected"
+msgstr "Generi selezionati"
+
+msgctxt "#30217"
+msgid "Players selected"
+msgstr "Giocatori selezionati"
+
+msgctxt "#30218"
+msgid "Studios selected"
+msgstr "Studi selezionati"
+
+msgctxt "#30219"
+msgid "Tags selected"
+msgstr "Tag selezionati"
+
+msgctxt "#30220"
+msgid "Playlists selected"
+msgstr "Playlist selezionate"
+
+msgctxt "#30221"
+msgid "Regions selected"
+msgstr "Regioni selezionate"
+
+msgctxt "#30222"
+msgid "Languages selected"
+msgstr "Lingue selezionate"
+
+msgctxt "#30223"
+msgid "Editions selected"
+msgstr "Edizioni selezionate"
+
+msgctxt "#30224"
+msgid "Codes selected"
+msgstr "Codici selezionati"
+
+msgctxt "#30225"
+msgid "Ratings selected"
+msgstr "Valutazioni selezionate"
+
+msgctxt "#30226"
+msgid "Enter title search query"
+msgstr "Inserisci la query di ricerca del titolo"
+
+msgctxt "#30227"
+msgid "Empty search"
+msgstr "Ricerca vuota"
+
+msgctxt "#30228"
+msgid "Search criteria is empty.[CR]Update criteria and try again."
+msgstr "I criteri di ricerca sono vuoti.[CR]Aggiorna i criteri e riprova."
+
+msgctxt "#30229"
+msgid "Reset criteria"
+msgstr "Reimposta criteri"
+
+msgctxt "#30230"
+msgid "Enter Link Name"
+msgstr "Inserisci il nome del collegamento"
+
+msgctxt "#30231"
+msgid "Define the start page for IAGL"
+msgstr "Definisci la pagina iniziale per IAGL"
+
+msgctxt "#30232"
+msgid "Kodi launch options"
+msgstr "Opzioni di avvio di Kodi"
+
+msgctxt "#30233"
+msgid "Completed"
+msgstr "Completato"
+
+msgctxt "#30234"
+msgid "Create new group"
+msgstr "Crea nuovo gruppo"
+
+msgctxt "#30235"
+msgid "Select favorite group"
+msgstr "Seleziona il gruppo preferito"
+
+msgctxt "#30236"
+msgid "Group by Favorites Group"
+msgstr "Raggruppa per gruppo Preferiti"
+
+msgctxt "#30237"
+msgid "Remove IAGL Favorite"
+msgstr "Rimuovi preferito IAGL"
+
+msgctxt "#30238"
+msgid "Are you sure you want to delete this Favorite?"
+msgstr "Sei sicuro di voler eliminare questo preferito?"
+
+msgctxt "#30239"
+msgid "Favorite deleted"
+msgstr "Preferito eliminato"
+
+msgctxt "#30240"
+msgid "Favorites display"
+msgstr "Visualizzazione dei preferiti"
+
+msgctxt "#30241"
+msgid "Define the start page for IAGL Favorites"
+msgstr "Definisci la pagina iniziale per i preferiti IAGL"
+
+msgctxt "#30242"
+msgid "By Favorites Group"
+msgstr "Dal gruppo Preferiti"
+
+msgctxt "#30243"
+msgid "Reset *all* criteria"
+msgstr "Reimposta *tutti* i criteri"
+
+msgctxt "#30244"
+msgid "Run IAGL setup wizard?"
+msgstr "Eseguire la procedura guidata di installazione IAGL?"
+
+msgctxt "#30245"
+msgid "Wizard"
+msgstr "Procedura guidata"
+
+msgctxt "#30246"
+msgid "Update game list Launcher"
+msgstr "Aggiorna l'elenco dei giochi Launcher"
+
+msgctxt "#30247"
+msgid "Update game list Launch Command"
+msgstr "Aggiorna l'elenco dei giochi Avvia il comando"
+
+msgctxt "#30248"
+msgid "Update game list Download Path"
+msgstr "Aggiorna elenco giochi Percorso download"
+
+msgctxt "#30249"
+msgid "Hide game list"
+msgstr "Nascondi elenco giochi"
+
+msgctxt "#30250"
+msgid "Update game list post download process"
+msgstr "Aggiorna l'elenco dei giochi dopo il processo di download"
+
+msgctxt "#30251"
+msgid "Are you sure you want to hide game list"
+msgstr "Sei sicuro di voler nascondere l'elenco dei giochi?"
+
+msgctxt "#30252"
+msgid "Game list is now hidden"
+msgstr "L'elenco dei giochi è ora nascosto"
+
+msgctxt "#30253"
+msgid "No results"
+msgstr "Nessun risultato"
+
+msgctxt "#30254"
+msgid "No hidden game lists found"
+msgstr "Nessun elenco di giochi nascosti trovato"
+
+msgctxt "#30255"
+msgid "Game lists unhidden"
+msgstr "Elenchi di giochi non nascosti"
+
+msgctxt "#30256"
+msgid "Confirm reset"
+msgstr "Conferma il ripristino"
+
+msgctxt "#30257"
+msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
+msgstr "Vuoi davvero reimpostare il database?[CR]Tutte le informazioni utente andranno perse![CR]Questa operazione non può essere annullata!"
+
+msgctxt "#30258"
+msgid "Database has been reset"
+msgstr "Il database è stato reimpostato"
+
+msgctxt "#30259"
+msgid "Update Launcher"
+msgstr "Aggiorna Launcher"
+
+msgctxt "#30260"
+msgid "Update launcher from[CR]Kodi to[CR]External?"
+msgstr "Aggiornare il launcher da[CR]Kodi a[CR]Esterno?"
+
+msgctxt "#30261"
+msgid "Update launcher from[CR]External to[CR]Kodi?"
+msgstr "Aggiornare il launcher da[CR]Esterno a[CR]Kodi?"
+
+msgctxt "#30262"
+msgid "Launcher updated to external"
+msgstr "Launcher aggiornato a esterno"
+
+msgctxt "#30263"
+msgid "Launcher updated to retroplayer"
+msgstr "Launcher aggiornato a retroplayer"
+
+msgctxt "#30264"
+msgid "Select game addon"
+msgstr "Seleziona il componente aggiuntivo del gioco"
+
+msgctxt "#30265"
+msgid "Are you sure you want to reset the game addon launch command?"
+msgstr "Vuoi davvero reimpostare il comando di avvio del componente aggiuntivo del gioco?"
+
+msgctxt "#30266"
+msgid "Download game to…"
+msgstr "Scarica il gioco su…"
+
+msgctxt "#30267"
+msgid "Select download folder"
+msgstr "Seleziona cartella di download"
+
+msgctxt "#30268"
+msgid "Archive.org login success!"
+msgstr "Accesso ad Archive.org riuscito!"
+
+msgctxt "#30269"
+msgid "Archive.org login failed.[CR]Check credentials or log for more details"
+msgstr "Accesso ad Archive.org non riuscito.[CR]Controlla le credenziali o accedi per maggiori dettagli"
+
+msgctxt "#30270"
+msgid "Error"
+msgstr "Errore"
+
+msgctxt "#30271"
+msgid "Initializing download for[CR]"
+msgstr "Inizializzazione del download per [CR]"
+
+msgctxt "#30272"
+msgid "Check logs"
+msgstr "Controllare i registri"
+
+msgctxt "#30273"
+msgid "Checking login for[CR]"
+msgstr "Controllo dell'accesso per [CR]"
+
+msgctxt "#30274"
+msgid "Requesting file info for[CR]"
+msgstr "Richiesta informazioni file per [CR]"
+
+msgctxt "#30275"
+msgid "Select from Retroarch Cores"
+msgstr "Seleziona da Retroarch Cores"
+
+msgctxt "#30276"
+msgid "Select from Extra Emulators"
+msgstr "Seleziona da Emulatori Extra"
+
+msgctxt "#30277"
+msgid "Manually Enter Launch Command"
+msgstr "Inserisci manualmente il comando di avvio"
+
+msgctxt "#30278"
+msgid "Select External Command Type"
+msgstr "Seleziona il tipo di comando esterno"
+
+msgctxt "#30279"
+msgid "Extra Emulators"
+msgstr "Emulatori extra"
+
+msgctxt "#30280"
+msgid "Dolphin"
+msgstr "Delfino"
+
+msgctxt "#30281"
+msgid "Select the path to the Dolphin application (optional)"
+msgstr "Selezionare il percorso dell'applicazione Dolphin (facoltativo)"
+
+msgctxt "#30282"
+msgid "MAME"
+msgstr "MAME"
+
+msgctxt "#30283"
+msgid "Select the path to the MAME application (optional)"
+msgstr "Seleziona il percorso dell'applicazione MAME (facoltativo)"
+
+msgctxt "#30284"
+msgid "Project 64"
+msgstr "Progetto 64"
+
+msgctxt "#30285"
+msgid "Select the path to the Project 64 application (optional)"
+msgstr "Selezionare il percorso dell'applicazione Project 64 (facoltativo)"
+
+msgctxt "#30286"
+msgid "ePSXe"
+msgstr "ePSXe"
+
+msgctxt "#30287"
+msgid "Select the path to the ePSXe application (optional)"
+msgstr "Selezionare il percorso per l'applicazione ePSXe (facoltativo)"
+
+msgctxt "#30288"
+msgid "Demul"
+msgstr "Demul"
+
+msgctxt "#30289"
+msgid "Select the path to the Demul application (optional)"
+msgstr "Selezionare il percorso dell'applicazione Demul (facoltativo)"
+
+msgctxt "#30290"
+msgid "FS-UAE"
+msgstr "FS-Emirati Arabi Uniti"
+
+msgctxt "#30291"
+msgid "Select the path to the FS-UAE application (optional)"
+msgstr "Selezionare il percorso per l'applicazione FS-UAE (facoltativo)"
+
+msgctxt "#30292"
+msgid "Are you sure you want to set external launch command?"
+msgstr "Vuoi davvero impostare il comando di avvio esterno?"
+
+msgctxt "#30293"
+msgid "External launch command updated"
+msgstr "Comando di avvio esterno aggiornato"
+
+msgctxt "#30294"
+msgid "Android users must verify the core is installed in Retroarch"
+msgstr "Gli utenti Android devono verificare che il core sia installato in Retroarch"
+
+msgctxt "#30295"
+msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
+msgstr "Le impostazioni di avvio sono attualmente vuote[CR]Aggiorna le impostazioni di avvio esterne del componente aggiuntivo."
+
+msgctxt "#30296"
+msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
+msgstr "Le impostazioni di avvio sono attualmente vuote[CR]Aggiorna le impostazioni di avvio del sistema operativo aggiuntivo."
+
+msgctxt "#30297"
+msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
+msgstr "Non sono stati trovati emulatori extra[CR]Aggiorna le impostazioni dell'emulatore extra aggiuntivo"
+
+msgctxt "#30298"
+msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
+msgstr "Inserisci il comando di avvio[CR]Vedi le parole chiave facoltative su IAGL wiki"
+
+msgctxt "#30299"
+msgid "Reset Launch Command"
+msgstr "Ripristina comando di avvio"
+
+msgctxt "#30300"
+msgid "Are you sure you want to reset the external launch command?"
+msgstr "Vuoi davvero reimpostare il comando di avvio esterno?"
+
+msgctxt "#30301"
+msgid "External launch command was reset"
+msgstr "Il comando di avvio esterno è stato reimpostato"
+
+msgctxt "#30302"
+msgid "Enter a value for"
+msgstr "Inserisci un valore per"
+
+msgctxt "#30303"
+msgid "View game list settings"
+msgstr "Visualizza le impostazioni dell'elenco dei giochi"
+
+msgctxt "#30304"
+msgid "Game List"
+msgstr "Elenco dei giochi"
+
+msgctxt "#30305"
+msgid "Game List System"
+msgstr "Sistema di elenco dei giochi"
+
+msgctxt "#30306"
+msgid "Total 1G1R Games in List"
+msgstr "Totale giochi 1G1R nell'elenco"
+
+msgctxt "#30307"
+msgid "Total Games in List"
+msgstr "Totale giochi in elenco"
+
+msgctxt "#30308"
+msgid "Total Favorited Games in List"
+msgstr "Totale giochi preferiti nell'elenco"
+
+msgctxt "#30309"
+msgid "Default External Launch Command"
+msgstr "Comando di avvio esterno predefinito"
+
+msgctxt "#30310"
+msgid "Default Retroplayer Game Addon"
+msgstr "Addon predefinito per il gioco Retroplayer"
+
+msgctxt "#30311"
+msgid "Default Game Post Process"
+msgstr "Post-processo di gioco predefinito"
+
+msgctxt "#30312"
+msgid "User Defined Download Path"
+msgstr "Percorso di download definito dall'utente"
+
+msgctxt "#30313"
+msgid "User External Launch Command"
+msgstr "Comando di avvio esterno dell'utente"
+
+msgctxt "#30314"
+msgid "User Defined Retroplayer Game Addon"
+msgstr "Addon di gioco Retroplayer definito dall'utente"
+
+msgctxt "#30315"
+msgid "User Defined Post Process"
+msgstr "Post-processo definito dall'utente"
+
+msgctxt "#30316"
+msgid "Game List Settings"
+msgstr "Impostazioni elenco giochi"
+
+msgctxt "#30317"
+msgid "None (will use addon default)"
+msgstr "Nessuno (verrà utilizzato il componente aggiuntivo predefinito)"
+
+msgctxt "#30318"
+msgid "Games List Launcher"
+msgstr "Elenco giochi Launcher"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Comando di avvio esterno"
+
+msgctxt "#30320"
+msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
+msgstr "Comando di avvio esterno[CR]*Nessun comando di avvio utente trovato / Utilizzo predefinito*"
+
+msgctxt "#30321"
+msgid "Kodi Retroplayer"
+msgstr "Lettore retrò Kodi"
+
+msgctxt "#30322"
+msgid "Are you sure you want to update game list download path?"
+msgstr "Vuoi davvero aggiornare il percorso di download dell'elenco dei giochi?"
+
+msgctxt "#30323"
+msgid "Download path updated"
+msgstr "Percorso di download aggiornato"
+
+msgctxt "#30324"
+msgid "Are you sure you want to reset game list download path?"
+msgstr "Vuoi davvero reimpostare il percorso di download dell'elenco dei giochi?"
+
+msgctxt "#30325"
+msgid "Download path reset"
+msgstr "Ripristina percorso download"
+
+msgctxt "#30326"
+msgid "Change download path"
+msgstr "Cambia percorso di download"
+
+msgctxt "#30327"
+msgid "Reset download path"
+msgstr "Reimposta percorso download"
+
+msgctxt "#30328"
+msgid "Reset game list settings"
+msgstr "Ripristina le impostazioni dell'elenco dei giochi"
+
+msgctxt "#30329"
+msgid "Are you sure you want to reset all game list settings to default?"
+msgstr "Vuoi davvero ripristinare tutte le impostazioni predefinite dell'elenco dei giochi?"
+
+msgctxt "#30330"
+msgid "Game list settings were reset to default"
+msgstr "Le impostazioni dell'elenco dei giochi sono state ripristinate ai valori predefiniti"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "File locale corrispondente"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Verifica delle credenziali"
+
+msgctxt "#30333"
+msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "Le seguenti variabili verranno sostituite durante l'avvio:[CR]● XXROM_PATHXX: Il percorso al file che verrà avviato[CR]● XXROM_NAMEXX: Il nome del file che verrà avviato (nessun percorso)[CR]● XXROM_STEMXX: Il nome del file che verrà avviato (nessun percorso, nessuna estensione)[CR]● XXNETPLAY_COMMANDXX: Qualsiasi aggiunta di comando richiesta per netplay, vedere le impostazioni del componente aggiuntivo per le opzioni[CR]Consultare wiki per maggiori informazioni…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Il file di archivio non può essere elaborato[CR]Controlla i log per maggiori dettagli"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Seleziona l'azione prima del lancio"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Lascia Kodi in esecuzione in background (impostazione predefinita)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Chiudere Kodi prima dell'avvio, riaprire Kodi dopo l'uscita dall'emulatore"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Sospendi Kodi prima dell'avvio, riattiva Kodi dopo l'uscita dall'emulatore"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Visualizza le statistiche del database IAGL"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Elenca le statistiche correnti per il database IAGL"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "Statistiche del database"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Visualizza i parametri di avvio"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Impostazioni di gioco"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Parametri di avvio del gioco"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Se non è presente alcun comando di avvio utente"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Seleziona cosa farà Kodi quando non è impostato alcun comando di avvio (componente aggiuntivo retroplayer o emulatore esterno)"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Tentativo di avvio con impostazione predefinita"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Stop / Non lanciare"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Nessun comando impostato"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Per questo elenco non è impostato alcun comando di avvio. Impostarne uno ora?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Non è stato possibile trovare alcun comando di avvio predefinito per questo elenco"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Il core predefinito non è stato trovato. Installa {} o aggiorna il launcher"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Comando di avvio del componente aggiuntivo del gioco reimpostato"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Nessun componente aggiuntivo di gioco trovato"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Comando di avvio del componente aggiuntivo del gioco aggiornato"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Utilizzare una cartella di download predefinita alternativa"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Mostra solo le opzioni che mantengono Kodi in background"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Mostra solo le opzioni che chiudono Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Mostra solo le opzioni che mettono in pausa Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Posizione CFG Retroarch come stringa"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "In alternativa, immettere il percorso del file retroarch.cfg esattamente come appare in Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Directory dei core di Retroarch come stringa"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "In alternativa, immettere il percorso della directory Cores esattamente come appare nella configurazione della directory Retroarch"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Aggiorna Launcher per {}?[CR][B]Questo cambierà le impostazioni per tutti i giochi in questo elenco.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Aggiorna comando di avvio per {}?[CR][B]Questo cambierà le impostazioni per tutti i giochi in questo elenco.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Aggiorna il percorso di avvio del download per {}?[CR][B]Questo cambierà le impostazioni per tutti i giochi in questo elenco.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Aggiorna comando di avvio"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Aggiorna Avvia Percorso di download"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Ripristina impostazioni per {}?[CR][B]Questo cambierà le impostazioni per tutti i giochi in questo elenco.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Supporto"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Fai una donazione ad Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "È stato trovato un nuovo database IAGL[CR]Vuoi aggiornare?[CR]Se possibile, le impostazioni verranno copiate nel nuovo database"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Nuovo database"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Il database è stato aggiornato[CR]Le impostazioni utente sono state trasferite"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Il database è stato aggiornato[CR]Alcune impostazioni utente non sono state trasferite[CR]Consultare il registro per maggiori dettagli"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Si è verificato un errore durante l'aggiornamento del database[CR]Consulta il registro per maggiori dettagli"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Chiedimelo di nuovo più tardi"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Non aggiornare questa volta[CR](Non chiedermelo più fino al prossimo aggiornamento)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Benvenuti alla procedura guidata di installazione di IAGL[CR]Esaminiamo tutte le impostazioni per iniziare a giocare!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Per la maggior parte dei giochi è necessario un account archive.org[CR]Registrati su https://archive.org/account/signup[CR]Vuoi usare il tuo account con IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "La configurazione per l'utilizzo dei componenti aggiuntivi per giochi Kodi è completa![CR]Sei pronto per giocare?[CR]Seleziona [B]No[/B] per configurare l'avvio di giochi esterni."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Imposta tutti gli elenchi di giochi per essere avviati esternamente"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Imposta solo alcuni elenchi di giochi da avviare esternamente"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Ripristina tutti i launcher dell'elenco dei giochi ai valori predefiniti"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} elenchi di giochi sono stati aggiornati per l'avvio esterno"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "I valori predefiniti sono preimpostati per ogni comando di avvio esterno[CR]Prima di avviare il gioco, rivedere i parametri di avvio, se necessario[CR]Consultare la wiki per maggiori dettagli."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "App Retroarch impostata su:[CR]{}[CR]Modifica nelle impostazioni del componente aggiuntivo se necessario"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Configurazione Retroarch impostata su:[CR]{}[CR]Modifica nelle impostazioni del componente aggiuntivo se necessario"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Wizard completato[CR]Giochiamo!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Imposta tutti gli elenchi di giochi da avviare con Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Imposta rapidamente tutti gli elenchi di giochi per l'avvio esterno"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Imposta rapidamente tutti gli elenchi di giochi su Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Confermare"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Sei sicuro di voler impostare tutti gli elenchi per l'avvio esterno?"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Sei sicuro di voler impostare tutti gli elenchi su Kodi retroplayer?"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "I permessi Android richiedono di immettere manualmente il percorso di configurazione di Retroarch[CR]Consulta wiki per ulteriore assistenza"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "I permessi Android richiedono di immettere manualmente il percorso principale di Retroarch[CR]Consulta wiki per ulteriore assistenza"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Backup del database corrente"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Ripristinare il database dal backup"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Eseguire il backup del database IAGL corrente e di tutte le impostazioni utente"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Ripristina il database del componente aggiuntivo corrente da un backup"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Seleziona percorso di backup"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Seleziona il backup del database"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Backup completato"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Ripristino completato"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} ID di gioco corrispondenti non sono stati trovati nel nuovo database[CR]Seleziona l'azione successiva"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Aggiorna il database, prova ad abbinare i giochi in base al titolo e all'elenco dei giochi"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Aggiorna il database, rimuovi gli ID di gioco che non sono stati trovati"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Ripristina il vecchio database"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Il database è stato ripristinato al vecchio database"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Attendere prego"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Impostare manualmente le directory di Retroarch"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "Per impostazione predefinita, IAGL rileverà le directory dalla configurazione RA, è possibile sovrascrivere manualmente questa funzione"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Directory principale di Retroarch"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Elenco informazioni Retroach"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Aggiungi l'app Linux per avviare il comando di avvio"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak è utilizzato per sistemi linux/elec specifici. Abilitalo solo se il tuo sistema lo richiede."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Aggiungere systemd-run ai comandi Retroarch"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Aggiungere systemd-run a tutti i comandi"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Aggiungi flatpak run ai comandi Retroarch"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Aggiungi flatpak run a tutti i comandi"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Le autorizzazioni Android richiedono una directory di archiviazione condivisa[CR]Immetti una posizione condivisa a cui possono accedere entrambe le applicazioni"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Decomprimi i file"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Nessuna elaborazione"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Decomprimi i file, salta i file del BIOS"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Decomprimi i file nella cartella"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Decomprimi i file, sposta CHD nella cartella"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Sposta i file nella cartella: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Sposta i file nella cartella: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Sposta i file nella cartella: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Sposta i file nella cartella: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Sposta i file nella cartella: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Sposta i file nella cartella: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Sposta i file nella cartella: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Sposta i file nella cartella: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Sposta i file nella cartella: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Sposta i file nella cartella: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Sposta i file nella cartella: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Sposta i file nella cartella: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Sposta i file nella cartella: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Sposta i file nella cartella: spectrum"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Sposta i file nella cartella: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Vuoi davvero aggiornare il processo di post-elaborazione dell'elenco dei giochi?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Post processo aggiornato"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Aggiorna il processo di post per {}?[CR][B]Questo cambierà le impostazioni per tutti i giochi in questo elenco.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Download completato. Elaborare i file?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "File di gioco elaborati"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Non disponibile (solo Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Tipo di nome utente Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Seleziona l'integrazione per il nome del lettore Netplay"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Usa Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord consente partite di netplay automatizzate (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Inserisci manualmente un nome giocatore"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "I nomi dei giocatori saranno pubblicati nella lobby di Retroarch"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Nome del giocatore"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Utente Discord attuale"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Utente Discord impostato su [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Visualizza le sessioni di gioco a cui puoi partecipare online utilizzando Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Impossibile trovare l'utente Discord con ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Opzioni filtro lobby"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Mostra solo le stanze in cui è possibile entrare"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Mostra solo le stanze che utilizzano libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Mostra le stanze che hanno una password"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Mostra le stanze che hanno una password per gli spettatori"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Mostra le stanze utilizzando i server MITM"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Mostra solo le stanze create entro l'intervallo di tempo"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 minuti"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 minuti"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Qualsiasi lasso di tempo"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Filtra le sale della lobby in base all'ora di creazione"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Mostra solo le stanze che utilizzano IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Impossibile trovare il gioco corrispondente con nome simile a [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Non trovato"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Seleziona il gioco corrispondente"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Azione di lancio di Netplay"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Unisciti alla lobby di Retroarch"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Partecipa da localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Seleziona l'azione predefinita quando ti unisci a una partita netplay"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Avvia come host netplay"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Rinomina IAGL preferito"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Rinomina completata"

@@ -1,0 +1,1936 @@
+# Kodi Media Center language file
+# Addon Name: /Internet Archive Game Launcher
+# Addon id: pltugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/zach-morris/plugin.program.iagl/issues\n"
+"Language: is_is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "Internet Archive Game Sjósetja"
+
+msgctxt "#30002"
+msgid "Browse all Lists"
+msgstr "Skoðaðu alla lista"
+
+msgctxt "#30003"
+msgid "Browse lists by Category"
+msgstr "Skoðaðu lista eftir flokkum"
+
+msgctxt "#30004"
+msgid "Browse games by Playlist"
+msgstr "Skoðaðu leiki eftir spilunarlista"
+
+msgctxt "#30005"
+msgid "Favorites"
+msgstr "Uppáhalds"
+
+msgctxt "#30006"
+msgid "Play History"
+msgstr "Spila Saga"
+
+msgctxt "#30007"
+msgid "Search"
+msgstr "Leita"
+
+msgctxt "#30008"
+msgid "Random Play"
+msgstr "Random Play"
+
+msgctxt "#30009"
+msgid "Next"
+msgstr "Næst"
+
+msgctxt "#30010"
+msgid "Previous"
+msgstr "Fyrri"
+
+msgctxt "#30011"
+msgid "One Big List"
+msgstr "Einn stór listi"
+
+msgctxt "#30012"
+msgid "Alphabetical"
+msgstr "Stafrófsröð"
+
+msgctxt "#30013"
+msgid "Group by Genre"
+msgstr "Hópur eftir tegund"
+
+msgctxt "#30014"
+msgid "Group by Year"
+msgstr "Hópur eftir árum"
+
+msgctxt "#30015"
+msgid "Group by Players"
+msgstr "Hópur eftir leikmönnum"
+
+msgctxt "#30016"
+msgid "Group by Studio"
+msgstr "Hópur eftir stúdíói"
+
+msgctxt "#30017"
+msgid "Group by Tag"
+msgstr "Hópur eftir merki"
+
+msgctxt "#30018"
+msgid "Group by Playlist"
+msgstr "Hópur eftir lagalista"
+
+msgctxt "#30019"
+msgid "Group by Region"
+msgstr "Hópur eftir svæðum"
+
+msgctxt "#30020"
+msgid "Group by Language"
+msgstr "Hópur eftir tungumálum"
+
+msgctxt "#30021"
+msgid "Group by Edition"
+msgstr "Hópur eftir útgáfu"
+
+msgctxt "#30022"
+msgid "Group by Code"
+msgstr "Flokka eftir kóða"
+
+msgctxt "#30023"
+msgid "Group by Rating"
+msgstr "Flokkaðu eftir einkunn"
+
+msgctxt "#30024"
+msgid "Select Game Lists"
+msgstr "Veldu Leikjalistar"
+
+msgctxt "#30025"
+msgid "Search Game Titles"
+msgstr "Leita að leikjatitlum"
+
+msgctxt "#30026"
+msgid "Filter by Genre"
+msgstr "Sía eftir tegund"
+
+msgctxt "#30027"
+msgid "Filter by Players"
+msgstr "Sía eftir leikmönnum"
+
+msgctxt "#30028"
+msgid "Filter by Studio"
+msgstr "Sía eftir stúdíói"
+
+msgctxt "#30029"
+msgid "Filter by Tag"
+msgstr "Sía eftir merki"
+
+msgctxt "#30030"
+msgid "Filter by Playlist"
+msgstr "Sía eftir lagalista"
+
+msgctxt "#30031"
+msgid "Filter by Region"
+msgstr "Sía eftir svæði"
+
+msgctxt "#30032"
+msgid "Filter by Language"
+msgstr "Sía eftir tungumáli"
+
+msgctxt "#30033"
+msgid "Filter by Edition"
+msgstr "Sía eftir útgáfu"
+
+msgctxt "#30034"
+msgid "Filter by Code"
+msgstr "Sía eftir kóða"
+
+msgctxt "#30035"
+msgid "Filter by Rating"
+msgstr "Sía eftir einkunn"
+
+msgctxt "#30036"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Framkvæma leit[/COLOR]"
+
+msgctxt "#30037"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Búa til leitartengil[/COLOR]"
+
+msgctxt "#30038"
+msgid "Choose Number of Results"
+msgstr "Veldu Fjöldi niðurstaðna"
+
+msgctxt "#30039"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Framkvæma handahófskennda leit[/COLOR]"
+
+msgctxt "#30040"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Búa til handahófskenndan leitartengil[/COLOR]"
+
+msgctxt "#30041"
+msgid "General"
+msgstr "Almennt"
+
+msgctxt "#30042"
+msgid "Launching"
+msgstr "Sjósetja"
+
+msgctxt "#30043"
+msgid "Downloading"
+msgstr "Niðurhal"
+
+msgctxt "#30044"
+msgid "Views and Navigation"
+msgstr "Skoðanir og siglingar"
+
+msgctxt "#30045"
+msgid "Netplay"
+msgstr "Netspilun"
+
+msgctxt "#30046"
+msgid "Setup Wizard"
+msgstr "Uppsetningarhjálp"
+
+msgctxt "#30047"
+msgid "Advanced"
+msgstr "Ítarlegri"
+
+msgctxt "#30048"
+msgid "Play History"
+msgstr "Spila Saga"
+
+msgctxt "#30049"
+msgid "Define how many games to save in last played history"
+msgstr "Tilgreindu hversu marga leiki á að vista í sögunni sem síðast spilaði"
+
+msgctxt "#30050"
+msgid "Default action on selecting game"
+msgstr "Sjálfgefin aðgerð við val á leik"
+
+msgctxt "#30051"
+msgid "Define action to take when a game is selected"
+msgstr "Skilgreindu aðgerðir til að grípa til þegar leikur er valinn"
+
+msgctxt "#30052"
+msgid "If game already exists locally"
+msgstr "Ef leikurinn er þegar til staðar á staðnum"
+
+msgctxt "#30053"
+msgid "Define the action to take if a game file is found to exist locally"
+msgstr "Skilgreindu aðgerðina sem á að grípa til ef í ljós kemur að leikskrá er til staðar á staðnum"
+
+msgctxt "#30054"
+msgid "Prompt"
+msgstr "Hvetja"
+
+msgctxt "#30055"
+msgid "Do not re-download"
+msgstr "Ekki hlaða niður aftur"
+
+msgctxt "#30056"
+msgid "Re-download and overwrite"
+msgstr "Hladdu niður aftur og skrifaðu yfir"
+
+msgctxt "#30057"
+msgid "Enable archive.org login"
+msgstr "Virkja archive.org innskráningu"
+
+msgctxt "#30058"
+msgid "Enabled"
+msgstr "Virkt"
+
+msgctxt "#30059"
+msgid "Disabled"
+msgstr "Öryrkjar"
+
+msgctxt "#30060"
+msgid "Some games require login.  Enter your archive.org email address and password."
+msgstr "Sumir leikir krefjast innskráningar.  Sláðu inn archive.org netfangið þitt og lykilorð."
+
+msgctxt "#30061"
+msgid "archive.org Email"
+msgstr "archive.org Tölvupóstur"
+
+msgctxt "#30062"
+msgid "Some games require login.  Enter your archive.org email address"
+msgstr "Sumir leikir krefjast innskráningar.  Sláðu inn archive.org netfangið þitt"
+
+msgctxt "#30063"
+msgid "archive.org Password"
+msgstr "archive.org lykilorð"
+
+msgctxt "#30064"
+msgid "Some games require login.  Enter your archive.org password"
+msgstr "Sumir leikir krefjast innskráningar.  Sláðu inn archive.org lykilorðið þitt"
+
+msgctxt "#30065"
+msgid "Check login credentials"
+msgstr "Athugaðu innskráningarskilríki"
+
+msgctxt "#30066"
+msgid "Test the entered email and password to check your ability to login"
+msgstr "Prófaðu innslátt netfangið og lykilorðið til að athuga getu þína til að skrá þig inn"
+
+msgctxt "#30067"
+msgid "Download folder size limit"
+msgstr "Möppustærðartakmörk fyrir niðurhal"
+
+msgctxt "#30068"
+msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
+msgstr "Tilgreindu stærð niðurhals / skyndiminni.[CR]Mappan er hreinsuð þegar stærðartakmörkunum er náð."
+
+msgctxt "#30069"
+msgid "Front page display"
+msgstr "Skjár á forsíðu"
+
+msgctxt "#30070"
+msgid "Choose from list"
+msgstr "Veldu af lista"
+
+msgctxt "#30071"
+msgid "Games are presented as"
+msgstr "Leikir eru kynntir sem"
+
+msgctxt "#30072"
+msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
+msgstr "Kodi býður upp á nokkra húðvalkosti fyrir kvikmyndir, sjónvarpsþætti og leiki.  Sjá wiki fyrir frekari upplýsingar"
+
+msgctxt "#30073"
+msgid "TV Shows"
+msgstr "Sjónvarpsþættir"
+
+msgctxt "#30074"
+msgid "Movies"
+msgstr "Kvikmyndir"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "Leikir"
+
+msgctxt "#30076"
+msgid "10 Games"
+msgstr "10 leikir"
+
+msgctxt "#30077"
+msgid "25 Games"
+msgstr "25 leikir"
+
+msgctxt "#30078"
+msgid "50 Games"
+msgstr "50 leikir"
+
+msgctxt "#30079"
+msgid "100 Games"
+msgstr "100 leikir"
+
+msgctxt "#30080"
+msgid "250 Games"
+msgstr "250 leikir"
+
+msgctxt "#30081"
+msgid "500 Games"
+msgstr "500 leikir"
+
+msgctxt "#30082"
+msgid "Game artwork"
+msgstr "Leikjalistaverk"
+
+msgctxt "#30083"
+msgid "Game list artwork"
+msgstr "Listaverk leikja"
+
+msgctxt "#30084"
+msgid "Retroarch Settings"
+msgstr "Retroarch stillingar"
+
+msgctxt "#30085"
+msgid "Suspend Kodi IO on launch"
+msgstr "Lokaðu Kodi IO við ræsingu"
+
+msgctxt "#30086"
+msgid "Stop media on launch"
+msgstr "Stöðva fjölmiðla við kynningu"
+
+msgctxt "#30087"
+msgid "Waiting for return"
+msgstr "Beðið eftir endurkomu"
+
+msgctxt "#30088"
+msgid "Add to IAGL Favorites"
+msgstr "Bæta við IAGL Favorites"
+
+msgctxt "#30089"
+msgid "Enter a name for your favorites group"
+msgstr "Sláðu inn nafn fyrir uppáhaldshópinn þinn"
+
+msgctxt "#30090"
+msgid "Favorite added to group"
+msgstr "Uppáhaldi bætt við hóp"
+
+msgctxt "#30091"
+msgid "Use clean game title"
+msgstr "Notaðu hreinan leikjaheiti"
+
+msgctxt "#30092"
+msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
+msgstr "Fjarlægðu merki úr leikjaheiti til að sýna.  Dæmi: [B]Mario (Bandaríkin)[/B] verður [B]Mario[/B]"
+
+msgctxt "#30093"
+msgid "Games per page"
+msgstr "Leikir á síðu"
+
+msgctxt "#30094"
+msgid "Define how many games are listed per page"
+msgstr "Tilgreindu hversu margir leikir eru skráðir á hverja síðu"
+
+msgctxt "#30095"
+msgid "List all"
+msgstr "Listaðu allt"
+
+msgctxt "#30096"
+msgid "Always filter list to 1 Game 1 Rom Set"
+msgstr "Alltaf sía listann í 1 leik 1 Rom Set"
+
+msgctxt "#30097"
+msgid "If possible, game lists will be pre-filtered to a 1G1R set"
+msgstr "Ef mögulegt er verða leikjalistar forsíaðir í 1G1R sett"
+
+msgctxt "#30098"
+msgid "Append game list name to search and random results"
+msgstr "Bættu nafni leiklista við leit og tilviljunarkenndar niðurstöður"
+
+msgctxt "#30099"
+msgid "When enabled, the name of the game list will be appended to search results"
+msgstr "Þegar það er virkt mun nafni leikjalistans bætast við leitarniðurstöður"
+
+msgctxt "#30100"
+msgid "Append game list name when browsing by playlist"
+msgstr "Bættu við nafni leiklista þegar þú vafrar eftir lagalista"
+
+msgctxt "#30101"
+msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
+msgstr "Þegar kveikt er á því mun nafni leikjalistans bætast við nafn leiksins á spilunarlistanum"
+
+msgctxt "#30102"
+msgid "Kodi landscape art equates to"
+msgstr "Kodi landslagslist jafngildir"
+
+msgctxt "#30103"
+msgid "Select the game artwork to be displayed as the landscape art"
+msgstr "Veldu leiklistaverkið sem á að sýna sem landslagslist"
+
+msgctxt "#30104"
+msgid "Title Screen"
+msgstr "Titilskjár"
+
+msgctxt "#30105"
+msgid "Screenshot"
+msgstr "Skjáskot"
+
+msgctxt "#30106"
+msgid "Kodi thumbnail art equates to"
+msgstr "Kodi smámyndalist jafngildir"
+
+msgctxt "#30107"
+msgid "Select the game artwork to be displayed as the thumbnail art"
+msgstr "Veldu listaverk leiksins sem á að sýna sem smámyndarlist"
+
+msgctxt "#30108"
+msgid "Game list clearlogo equates to"
+msgstr "Leiklisti clearlogo jafngildir"
+
+msgctxt "#30109"
+msgid "Select the artwork displayed for the game list clearlogo"
+msgstr "Veldu listaverkið sem birtist fyrir clearlogo leiklistans"
+
+msgctxt "#30110"
+msgid "System logo"
+msgstr "Kerfismerki"
+
+msgctxt "#30111"
+msgid "System console"
+msgstr "Kerfistölva"
+
+msgctxt "#30112"
+msgid "System controller"
+msgstr "Kerfisstýring"
+
+msgctxt "#30113"
+msgid "Game list fanart equates to"
+msgstr "Leiklisti fanart jafngildir"
+
+msgctxt "#30114"
+msgid "Select the artwork displayed for the game list fanart"
+msgstr "Veldu listaverkið sem birtist fyrir fanart leikjalistann"
+
+msgctxt "#30115"
+msgid "System collage"
+msgstr "Kerfisklippimynd"
+
+msgctxt "#30116"
+msgid "System console"
+msgstr "Kerfistölva"
+
+msgctxt "#30117"
+msgid "System wallpaper"
+msgstr "Veggfóður fyrir kerfi"
+
+msgctxt "#30118"
+msgid "Force IAGL viewtypes"
+msgstr "Þvingaðu IAGL útsýnisgerðir"
+
+msgctxt "#30119"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "Staðfestu að húðin þín sé með þvingaða útsýnistegundaauðkenni tiltækt"
+
+msgctxt "#30120"
+msgid "Frontpage viewtype"
+msgstr "Forsíðu útsýnisgerð"
+
+msgctxt "#30121"
+msgid "Game library lists viewtype"
+msgstr "Leikjasafnið sýnir viewtype"
+
+msgctxt "#30122"
+msgid "Game categories viewtype"
+msgstr "Viewtype leikjaflokka"
+
+msgctxt "#30123"
+msgid "Games list viewtype"
+msgstr "Útsýnistegund leikjalista"
+
+msgctxt "#30124"
+msgid "Choose list viewtype"
+msgstr "Veldu tegund lista"
+
+msgctxt "#30125"
+msgid "Search and Random results viewtype"
+msgstr "Leitar- og handahófskenndar niðurstöður útsýnistegund"
+
+msgctxt "#30126"
+msgid "Off (Default)"
+msgstr "Slökkt (sjálfgefið)"
+
+msgctxt "#30127"
+msgid "List / Poster (50)"
+msgstr "Listi / veggspjald (50)"
+
+msgctxt "#30128"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "Veggspjald / Stór listi / Veggspjald (51)"
+
+msgctxt "#30129"
+msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
+msgstr "Táknveggur / lárétt mynstur / LS vegg (52)"
+
+msgctxt "#30130"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "Upplýsingar um borði / landslag / veggspjald (501)"
+
+msgctxt "#30131"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "Fanart / Landscape Single / Episode List (502)"
+
+msgctxt "#30132"
+msgid "Logos / Big Square Wall (503)"
+msgstr "Merki / Big Square Wall (503)"
+
+msgctxt "#30133"
+msgid "Big List 2 (504)"
+msgstr "Stór listi 2 (504)"
+
+msgctxt "#30134"
+msgid "Landscape Details (505)"
+msgstr "Landslagsupplýsingar (505)"
+
+msgctxt "#30135"
+msgid "Operating System"
+msgstr "Stýrikerfi"
+
+msgctxt "#30136"
+msgid "Select your operating system"
+msgstr "Veldu stýrikerfið þitt"
+
+msgctxt "#30137"
+msgid "Windows"
+msgstr "Windows"
+
+msgctxt "#30138"
+msgid "Linux"
+msgstr "Linux"
+
+msgctxt "#30139"
+msgid "OSX"
+msgstr "OSX"
+
+msgctxt "#30140"
+msgid "Retroarch App Location"
+msgstr "Retroarch App Staðsetning"
+
+msgctxt "#30141"
+msgid "Select the path to the retroarch executable"
+msgstr "Veldu slóðina að retroarch executable"
+
+msgctxt "#30142"
+msgid "Retroarch CFG Location"
+msgstr "Retroarch CFG Staðsetning"
+
+msgctxt "#30143"
+msgid "Select the path to the retroarch config file"
+msgstr "Veldu slóðina að retroarch stillingarskránni"
+
+msgctxt "#30144"
+msgid "Android"
+msgstr "Android"
+
+msgctxt "#30145"
+msgid "Android aarch64"
+msgstr "Android aarch64"
+
+msgctxt "#30146"
+msgid "Android ra32"
+msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Valaðferð fyrir leikjaræsi"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Veldu hvað Kodi mun gera þegar þú velur leikjaforrit (aðeins Windows, Linux og OSX)"
+
+msgctxt "#30149"
+msgid "Keep Kodi in the background"
+msgstr "Haltu Kodi í bakgrunni"
+
+msgctxt "#30150"
+msgid "Close Kodi"
+msgstr "Lokaðu Kodi"
+
+msgctxt "#30151"
+msgid "Pause Kodi"
+msgstr "Gerðu hlé á Kodi"
+
+msgctxt "#30152"
+msgid "Retroarch core picker"
+msgstr "Retroarch kjarnavalari"
+
+msgctxt "#30153"
+msgid "List by System and Core Name"
+msgstr "Listi eftir kerfi og kjarnaheiti"
+
+msgctxt "#30154"
+msgid "List by Core Name"
+msgstr "Listi eftir kjarnanafni"
+
+msgctxt "#30155"
+msgid "List by Emulated Systems"
+msgstr "Listi eftir eftirlíktum kerfum"
+
+msgctxt "#30156"
+msgid "Select Core"
+msgstr "Veldu Kjarna"
+
+msgctxt "#30157"
+msgid "Select Emulated System"
+msgstr "Veldu Hermakerfi"
+
+msgctxt "#30158"
+msgid "Select Emulator"
+msgstr "Veldu keppinautur"
+
+msgctxt "#30159"
+msgid "Credentials were not found[CR]Please enter them in addon settings"
+msgstr "Skilríki fundust ekki[CR]Vinsamlegast sláðu þau inn í viðbótarstillingum"
+
+msgctxt "#30160"
+msgid "Game List Download Path"
+msgstr "Niðurhalsslóð leikjalista"
+
+msgctxt "#30161"
+msgid "Zero (Current Game Only)"
+msgstr "Núll (aðeins núverandi leikur)"
+
+msgctxt "#30162"
+msgid "25 MB"
+msgstr "25 MB"
+
+msgctxt "#30163"
+msgid "50 MB"
+msgstr "50 MB"
+
+msgctxt "#30164"
+msgid "100 MB"
+msgstr "100 MB"
+
+msgctxt "#30165"
+msgid "200 MB"
+msgstr "200 MB"
+
+msgctxt "#30166"
+msgid "500 MB"
+msgstr "500 MB"
+
+msgctxt "#30167"
+msgid "1 GB"
+msgstr "1 GB"
+
+msgctxt "#30168"
+msgid "2 GB"
+msgstr "2 GB"
+
+msgctxt "#30169"
+msgid "5 GB"
+msgstr "5 GB"
+
+msgctxt "#30170"
+msgid "10 GB"
+msgstr "10 GB"
+
+msgctxt "#30171"
+msgid "20 GB"
+msgstr "20 GB"
+
+msgctxt "#30172"
+msgid "Enable Netplay"
+msgstr "Virkja Netplay"
+
+msgctxt "#30173"
+msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
+msgstr "Virkjaðu retroarch netspilun (aðeins Windows, Linux, OSX), notaðu samhengisvalmyndina til að ræsa með netspilun"
+
+msgctxt "#30174"
+msgid "Show Netplay Lobby"
+msgstr "Sýndu Netplay anddyri"
+
+msgctxt "#30175"
+msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
+msgstr "Þegar kveikt er á því mun netspilunaranddyrið birtast á forsíðu IAGL"
+
+msgctxt "#30176"
+msgid "Filter game lobby to IAGL auto launch games"
+msgstr "Sía leikjaanddyri yfir í IAGL sjálfvirka ræsingarleiki"
+
+msgctxt "#30177"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "Ef það er virkt mun netspilunaranddyrið aðeins sýna leiki sem hægt er að ræsa sjálfkrafa"
+
+msgctxt "#30178"
+msgid "Netplay Port"
+msgstr "Netplay port"
+
+msgctxt "#30179"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "Skilgreindu netplay IP tengið sem á að tengjast í gegnum (skilið eftir autt fyrir sjálfgefið)"
+
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Sjálfgefin Localhost IP"
+
+msgctxt "#30181"
+msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
+msgstr "Skilgreindu sjálfgefið netplay hýsingarheiti / IP (gagnlegt fyrir netspilun á staðarneti, skildu eftir autt fyrir sjálfgefið)"
+
+msgctxt "#30182"
+msgid "Check frames"
+msgstr "Athugaðu ramma"
+
+msgctxt "#30183"
+msgid "Define number of netplay sync frames (leave blank for default)"
+msgstr "Skilgreindu fjölda netplay samstillingarramma (skilið eftir autt sem sjálfgefið)"
+
+msgctxt "#30184"
+msgid "Announce Netplay on Discord"
+msgstr "Tilkynntu Netplay á Discord"
+
+msgctxt "#30185"
+msgid "Announces netplay start on discord for IAGL players"
+msgstr "Tilkynnir netspilun á ósamræmi fyrir IAGL spilara"
+
+msgctxt "#30186"
+msgid "Discord Player Name"
+msgstr "Discord spilara nafn"
+
+msgctxt "#30187"
+msgid "Enter your player name to be announced on Discord"
+msgstr "Sláðu inn spilaranafnið þitt til að vera tilkynnt á Discord"
+
+msgctxt "#30188"
+msgid "Discord User Account ID"
+msgstr "Discord notandareikningskenni"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Gefðu upp Discord auðkenni þitt (Notandastillingar> Reikningurinn minn> Afrita auðkenni)"
+
+msgctxt "#30190"
+msgid "Display report when wizard is completed"
+msgstr "Birta skýrslu þegar töframaður er lokið"
+
+msgctxt "#30191"
+msgid "Execute setup wizard"
+msgstr "Keyra uppsetningarhjálp"
+
+msgctxt "#30192"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Keyrðu töframanninn til að breyta stillingum fyrir leikjalistana þína fljótt.  Þetta er hægt að endurræsa hvenær sem er"
+
+msgctxt "#30193"
+msgid "Android Advance Settings"
+msgstr "Android fyrirfram stillingar"
+
+msgctxt "#30194"
+msgid "Use StartAndroidActivity"
+msgstr "Notaðu StartAndroidActivity"
+
+msgctxt "#30195"
+msgid "Leave as default if unsure"
+msgstr "Skildu eftir sem sjálfgefið ef þú ert ekki viss"
+
+msgctxt "#30196"
+msgid "Suspend Kodi Input and Audio when using External Launcher"
+msgstr "Fresta Kodi inntak og hljóði þegar ytri sjósetja er notað"
+
+msgctxt "#30197"
+msgid "Stop Kodi media playing before External Launch"
+msgstr "Hættu að spila Kodi fjölmiðla fyrir ytri ræsingu"
+
+msgctxt "#30198"
+msgid "Kodi is busy / waiting for return to Kodi after External Launch"
+msgstr "Kodi er upptekinn / bíður eftir endurkomu til Kodi eftir ytri ræsingu"
+
+msgctxt "#30199"
+msgid "Download Advanced Settings"
+msgstr "Sækja ítarlegar stillingar"
+
+msgctxt "#30200"
+msgid "Download Threads"
+msgstr "Sækja þræði"
+
+msgctxt "#30201"
+msgid "Alternate default download folder"
+msgstr "Önnur sjálfgefna niðurhalsmappa"
+
+msgctxt "#30202"
+msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
+msgstr "Þegar valið er mun allt niðurhal fara í aðra möppu.  [B]Athugið: Þessi mappa verður ekki hreinsuð eða fylgst með stærðinni[/B]"
+
+msgctxt "#30203"
+msgid "Organize default download folder using system folders"
+msgstr "Skipuleggðu sjálfgefna niðurhalsmöppu með því að nota kerfismöppur"
+
+msgctxt "#30204"
+msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
+msgstr "Þegar kveikt er á henni verður bráðabirgðamöppunni skipulögð eftir kerfi (stundum nauðsynlegt til að hnekkja stillingum)"
+
+msgctxt "#30205"
+msgid "Copy Kodi Network Source downloads to Local Filesystem"
+msgstr "Afritaðu niðurhal Kodi netkerfis í staðbundið skráarkerfi"
+
+msgctxt "#30206"
+msgid "Reset Options"
+msgstr "Endurstilla valkosti"
+
+msgctxt "#30207"
+msgid "Reset IAGL database to default settings"
+msgstr "Endurstilla IAGL gagnagrunn á sjálfgefnar stillingar"
+
+msgctxt "#30208"
+msgid "When selected, the database will be reset to default settings"
+msgstr "Þegar valið er verður gagnagrunnurinn endurstilltur í sjálfgefnar stillingar"
+
+msgctxt "#30209"
+msgid "Unhide game lists"
+msgstr "Sýna leikjalista"
+
+msgctxt "#30210"
+msgid "When selected, previously hidden game lists can be unhidden"
+msgstr "Þegar valið er, geta áður faldir leikalistar verið birtir"
+
+msgctxt "#30211"
+msgid "Clear Cache"
+msgstr "Hreinsaðu skyndiminni"
+
+msgctxt "#30212"
+msgid "When selected, all data in the cache folder including games will be purged"
+msgstr "Þegar valið er, verða öll gögn í skyndiminni möppunni, þ.mt leikir, hreinsuð"
+
+msgctxt "#30213"
+msgid "Select"
+msgstr "Veldu"
+
+msgctxt "#30214"
+msgid "Selected"
+msgstr "Valið"
+
+msgctxt "#30215"
+msgid "Game lists selected"
+msgstr "Leiklistar valdir"
+
+msgctxt "#30216"
+msgid "Genres selected"
+msgstr "Tegundir valdar"
+
+msgctxt "#30217"
+msgid "Players selected"
+msgstr "Leikmenn valdir"
+
+msgctxt "#30218"
+msgid "Studios selected"
+msgstr "Vinnustofur valin"
+
+msgctxt "#30219"
+msgid "Tags selected"
+msgstr "Merki valin"
+
+msgctxt "#30220"
+msgid "Playlists selected"
+msgstr "Lagalistar valdir"
+
+msgctxt "#30221"
+msgid "Regions selected"
+msgstr "Svæði valin"
+
+msgctxt "#30222"
+msgid "Languages selected"
+msgstr "Tungumál valin"
+
+msgctxt "#30223"
+msgid "Editions selected"
+msgstr "Útgáfur valdar"
+
+msgctxt "#30224"
+msgid "Codes selected"
+msgstr "Kóðar valdir"
+
+msgctxt "#30225"
+msgid "Ratings selected"
+msgstr "Einkunnir valdar"
+
+msgctxt "#30226"
+msgid "Enter title search query"
+msgstr "Sláðu inn titilleitarfyrirspurn"
+
+msgctxt "#30227"
+msgid "Empty search"
+msgstr "Tóm leit"
+
+msgctxt "#30228"
+msgid "Search criteria is empty.[CR]Update criteria and try again."
+msgstr "Leitarskilyrði eru tóm.[CR]Uppfærðu skilyrði og reyndu aftur."
+
+msgctxt "#30229"
+msgid "Reset criteria"
+msgstr "Endurstilla skilyrði"
+
+msgctxt "#30230"
+msgid "Enter Link Name"
+msgstr "Sláðu inn heiti tengils"
+
+msgctxt "#30231"
+msgid "Define the start page for IAGL"
+msgstr "Skilgreindu upphafssíðu IAGL"
+
+msgctxt "#30232"
+msgid "Kodi launch options"
+msgstr "Kodi ræsingarvalkostir"
+
+msgctxt "#30233"
+msgid "Completed"
+msgstr "Lokið"
+
+msgctxt "#30234"
+msgid "Create new group"
+msgstr "Búa til nýjan hóp"
+
+msgctxt "#30235"
+msgid "Select favorite group"
+msgstr "Veldu uppáhalds hópinn"
+
+msgctxt "#30236"
+msgid "Group by Favorites Group"
+msgstr "Hópur eftir uppáhaldshópi"
+
+msgctxt "#30237"
+msgid "Remove IAGL Favorite"
+msgstr "Fjarlægðu IAGL uppáhalds"
+
+msgctxt "#30238"
+msgid "Are you sure you want to delete this Favorite?"
+msgstr "Ertu viss um að þú viljir eyða þessu eftirlæti?"
+
+msgctxt "#30239"
+msgid "Favorite deleted"
+msgstr "Uppáhaldi eytt"
+
+msgctxt "#30240"
+msgid "Favorites display"
+msgstr "Uppáhalds skjár"
+
+msgctxt "#30241"
+msgid "Define the start page for IAGL Favorites"
+msgstr "Skilgreindu upphafssíðu fyrir IAGL Favorites"
+
+msgctxt "#30242"
+msgid "By Favorites Group"
+msgstr "Eftir Favorites Group"
+
+msgctxt "#30243"
+msgid "Reset *all* criteria"
+msgstr "Endurstilla *öll* skilyrði"
+
+msgctxt "#30244"
+msgid "Run IAGL setup wizard?"
+msgstr "Keyra IAGL uppsetningarhjálp?"
+
+msgctxt "#30245"
+msgid "Wizard"
+msgstr "Galdramaður"
+
+msgctxt "#30246"
+msgid "Update game list Launcher"
+msgstr "Uppfærðu ræsiforrit fyrir leikjalista"
+
+msgctxt "#30247"
+msgid "Update game list Launch Command"
+msgstr "Uppfærðu leikjalista Ræstu stjórn"
+
+msgctxt "#30248"
+msgid "Update game list Download Path"
+msgstr "Uppfæra leikjalista Sækja Path"
+
+msgctxt "#30249"
+msgid "Hide game list"
+msgstr "Fela leikjalista"
+
+msgctxt "#30250"
+msgid "Update game list post download process"
+msgstr "Uppfærðu leikjalista eftir niðurhalsferli"
+
+msgctxt "#30251"
+msgid "Are you sure you want to hide game list"
+msgstr "Ertu viss um að þú viljir fela leikjalistann"
+
+msgctxt "#30252"
+msgid "Game list is now hidden"
+msgstr "Leiklisti er nú falinn"
+
+msgctxt "#30253"
+msgid "No results"
+msgstr "Engar niðurstöður"
+
+msgctxt "#30254"
+msgid "No hidden game lists found"
+msgstr "Engir faldir leikjalistar fundust"
+
+msgctxt "#30255"
+msgid "Game lists unhidden"
+msgstr "Leiklistar ófaldir"
+
+msgctxt "#30256"
+msgid "Confirm reset"
+msgstr "Staðfestu endurstillingu"
+
+msgctxt "#30257"
+msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
+msgstr "Ertu viss um að þú viljir endurstilla gagnagrunninn?[CR]Allar notendaupplýsingar munu glatast![CR]Ekki er hægt að afturkalla þetta!"
+
+msgctxt "#30258"
+msgid "Database has been reset"
+msgstr "Gagnagrunnur hefur verið endurstilltur"
+
+msgctxt "#30259"
+msgid "Update Launcher"
+msgstr "Uppfæra ræsiforrit"
+
+msgctxt "#30260"
+msgid "Update launcher from[CR]Kodi to[CR]External?"
+msgstr "Uppfæra ræsiforrit frá[CR]Kodi yfir í[CR]ytri?"
+
+msgctxt "#30261"
+msgid "Update launcher from[CR]External to[CR]Kodi?"
+msgstr "Uppfæra ræsiforritið frá[CR]External í[CR]Kodi?"
+
+msgctxt "#30262"
+msgid "Launcher updated to external"
+msgstr "Sjósetja uppfært í ytri"
+
+msgctxt "#30263"
+msgid "Launcher updated to retroplayer"
+msgstr "Sjósetja uppfært í retroplayer"
+
+msgctxt "#30264"
+msgid "Select game addon"
+msgstr "Veldu leikjaviðbót"
+
+msgctxt "#30265"
+msgid "Are you sure you want to reset the game addon launch command?"
+msgstr "Ertu viss um að þú viljir endurstilla ræsingarskipun leikjaviðbótarinnar?"
+
+msgctxt "#30266"
+msgid "Download game to…"
+msgstr "Sækja leikinn til að…"
+
+msgctxt "#30267"
+msgid "Select download folder"
+msgstr "Veldu niðurhalsmöppu"
+
+msgctxt "#30268"
+msgid "Archive.org login success!"
+msgstr "Innskráning á Archive.org tókst!"
+
+msgctxt "#30269"
+msgid "Archive.org login failed.[CR]Check credentials or log for more details"
+msgstr "Innskráning á Archive.org mistókst.[CR]Athugaðu skilríki eða skráðu þig til að fá frekari upplýsingar"
+
+msgctxt "#30270"
+msgid "Error"
+msgstr "Villa"
+
+msgctxt "#30271"
+msgid "Initializing download for[CR]"
+msgstr "Frumstillir niðurhal fyrir[CR]"
+
+msgctxt "#30272"
+msgid "Check logs"
+msgstr "Athugaðu logs"
+
+msgctxt "#30273"
+msgid "Checking login for[CR]"
+msgstr "Athugar innskráningu fyrir[CR]"
+
+msgctxt "#30274"
+msgid "Requesting file info for[CR]"
+msgstr "Beiðni um skráarupplýsingar fyrir [CR]"
+
+msgctxt "#30275"
+msgid "Select from Retroarch Cores"
+msgstr "Veldu úr Retroarch Cores"
+
+msgctxt "#30276"
+msgid "Select from Extra Emulators"
+msgstr "Veldu úr Extra Emulators"
+
+msgctxt "#30277"
+msgid "Manually Enter Launch Command"
+msgstr "Sláðu inn ræsingarskipun handvirkt"
+
+msgctxt "#30278"
+msgid "Select External Command Type"
+msgstr "Veldu External Command Type"
+
+msgctxt "#30279"
+msgid "Extra Emulators"
+msgstr "Auka hermir"
+
+msgctxt "#30280"
+msgid "Dolphin"
+msgstr "Höfrungur"
+
+msgctxt "#30281"
+msgid "Select the path to the Dolphin application (optional)"
+msgstr "Veldu leið að Dolphin forritinu (valfrjálst)"
+
+msgctxt "#30282"
+msgid "MAME"
+msgstr "MAMMA"
+
+msgctxt "#30283"
+msgid "Select the path to the MAME application (optional)"
+msgstr "Veldu slóðina að MAME forritinu (valfrjálst)"
+
+msgctxt "#30284"
+msgid "Project 64"
+msgstr "Verkefni 64"
+
+msgctxt "#30285"
+msgid "Select the path to the Project 64 application (optional)"
+msgstr "Veldu leið að Project 64 forritinu (valfrjálst)"
+
+msgctxt "#30286"
+msgid "ePSXe"
+msgstr "ePSXe"
+
+msgctxt "#30287"
+msgid "Select the path to the ePSXe application (optional)"
+msgstr "Veldu slóðina að ePSXe forritinu (valfrjálst)"
+
+msgctxt "#30288"
+msgid "Demul"
+msgstr "Demul"
+
+msgctxt "#30289"
+msgid "Select the path to the Demul application (optional)"
+msgstr "Veldu slóð að Demul forritinu (valfrjálst)"
+
+msgctxt "#30290"
+msgid "FS-UAE"
+msgstr "FS-UAE"
+
+msgctxt "#30291"
+msgid "Select the path to the FS-UAE application (optional)"
+msgstr "Veldu slóðina að FS-UAE forritinu (valfrjálst)"
+
+msgctxt "#30292"
+msgid "Are you sure you want to set external launch command?"
+msgstr "Ertu viss um að þú viljir stilla ytri ræsingarskipun?"
+
+msgctxt "#30293"
+msgid "External launch command updated"
+msgstr "Ytri ræsingarskipun uppfærð"
+
+msgctxt "#30294"
+msgid "Android users must verify the core is installed in Retroarch"
+msgstr "Android notendur verða að staðfesta að kjarninn sé uppsettur í Retroarch"
+
+msgctxt "#30295"
+msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
+msgstr "Ræsingarstillingar eru tómar eins og er[CR]Vinsamlegast uppfærðu viðbótarstillingar fyrir ytri ræsingu."
+
+msgctxt "#30296"
+msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
+msgstr "Ræsingarstillingar eru tómar eins og er[CR]Vinsamlegast uppfærðu ræsistillingar stýrikerfis viðbótarinnar."
+
+msgctxt "#30297"
+msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
+msgstr "Engir auka keppinautar fundust[CR]Vinsamlegast uppfærðu stillingar fyrir viðbótarhermi"
+
+msgctxt "#30298"
+msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
+msgstr "Sláðu inn ræsingarskipun[CR]Sjá valfrjáls leitarorð á IAGL wiki"
+
+msgctxt "#30299"
+msgid "Reset Launch Command"
+msgstr "Endurstilla ræsingarskipun"
+
+msgctxt "#30300"
+msgid "Are you sure you want to reset the external launch command?"
+msgstr "Ertu viss um að þú viljir endurstilla ytri ræsingarskipunina?"
+
+msgctxt "#30301"
+msgid "External launch command was reset"
+msgstr "Ytri ræsingarskipun var endurstillt"
+
+msgctxt "#30302"
+msgid "Enter a value for"
+msgstr "Sláðu inn gildi fyrir"
+
+msgctxt "#30303"
+msgid "View game list settings"
+msgstr "Skoða stillingar leikjalista"
+
+msgctxt "#30304"
+msgid "Game List"
+msgstr "Leikjalisti"
+
+msgctxt "#30305"
+msgid "Game List System"
+msgstr "Leikjalistakerfi"
+
+msgctxt "#30306"
+msgid "Total 1G1R Games in List"
+msgstr "Samtals 1G1R leikir á lista"
+
+msgctxt "#30307"
+msgid "Total Games in List"
+msgstr "Heildarleikir á lista"
+
+msgctxt "#30308"
+msgid "Total Favorited Games in List"
+msgstr "Heildaruppáhaldsleikir á listanum"
+
+msgctxt "#30309"
+msgid "Default External Launch Command"
+msgstr "Sjálfgefin ytri ræsingarskipun"
+
+msgctxt "#30310"
+msgid "Default Retroplayer Game Addon"
+msgstr "Sjálfgefinn Retroplayer Game Addon"
+
+msgctxt "#30311"
+msgid "Default Game Post Process"
+msgstr "Sjálfgefið Game Post Process"
+
+msgctxt "#30312"
+msgid "User Defined Download Path"
+msgstr "Notendaskilgreind niðurhalsslóð"
+
+msgctxt "#30313"
+msgid "User External Launch Command"
+msgstr "Ytri ræsingarskipun notanda"
+
+msgctxt "#30314"
+msgid "User Defined Retroplayer Game Addon"
+msgstr "User Defined Retroplayer Game Addon"
+
+msgctxt "#30315"
+msgid "User Defined Post Process"
+msgstr "Notendaskilgreint póstferli"
+
+msgctxt "#30316"
+msgid "Game List Settings"
+msgstr "Stillingar leikjalista"
+
+msgctxt "#30317"
+msgid "None (will use addon default)"
+msgstr "Engin (mun nota sjálfgefið viðbót)"
+
+msgctxt "#30318"
+msgid "Games List Launcher"
+msgstr "Sjósetja fyrir leikjalista"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Ytri ræsingarskipun"
+
+msgctxt "#30320"
+msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
+msgstr "Ytri ræsingarskipun[CR]*Engin ræsingarskipun notanda fannst / notar sjálfgefið*"
+
+msgctxt "#30321"
+msgid "Kodi Retroplayer"
+msgstr "Kodi afturspilari"
+
+msgctxt "#30322"
+msgid "Are you sure you want to update game list download path?"
+msgstr "Ertu viss um að þú viljir uppfæra niðurhalsslóð leikjalistans?"
+
+msgctxt "#30323"
+msgid "Download path updated"
+msgstr "Niðurhalsslóð uppfærð"
+
+msgctxt "#30324"
+msgid "Are you sure you want to reset game list download path?"
+msgstr "Ertu viss um að þú viljir endurstilla niðurhalsslóð leikjalistans?"
+
+msgctxt "#30325"
+msgid "Download path reset"
+msgstr "Sækja slóð endurstilla"
+
+msgctxt "#30326"
+msgid "Change download path"
+msgstr "Breyta niðurhalsslóð"
+
+msgctxt "#30327"
+msgid "Reset download path"
+msgstr "Endurstilla niðurhalsslóð"
+
+msgctxt "#30328"
+msgid "Reset game list settings"
+msgstr "Endurstilla stillingar leikjalista"
+
+msgctxt "#30329"
+msgid "Are you sure you want to reset all game list settings to default?"
+msgstr "Ertu viss um að þú viljir endurstilla allar stillingar leikjalistans á sjálfgefnar?"
+
+msgctxt "#30330"
+msgid "Game list settings were reset to default"
+msgstr "Stillingar leikjalista voru endurstilltar á sjálfgefnar stillingar"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Samsvörun staðbundin skrá"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Athugar skilríki"
+
+msgctxt "#30333"
+msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "Eftirfarandi breytum verður skipt út við ræsingu:[CR]● XXROM_PATHXX: Slóðin að skránni sem verður opnuð[CR]● XXROM_NAMEXX: Nafn skráarinnar sem verður opnuð (engin slóð)[CR]● XXROM_STEMXX: nafn skráarinnar sem verður opnuð (engin slóð engin eftirnafn)[CR]● XXNETPLAY_COMMANDXX: Sérhverja skipanaviðbót sem þarf fyrir netplay, sjá viðbótarstillingar fyrir valkostir[CR]Sjáðu wiki fyrir frekari upplýsingar..."
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Ekki var hægt að vinna úr geymsluskránni[CR]Athugaðu annála til að fá frekari upplýsingar"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Veldu aðgerð fyrir ræsingu"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Leyfðu Kodi að keyra í bakgrunni (sjálfgefið)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Lokaðu Kodi fyrir ræsingu, opnaðu Kodi aftur eftir að keppinautur er hætt"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Fresta Kodi fyrir ræsingu, vekja Kodi eftir að keppinautur hættir"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Skoða IAGL db tölfræði"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Sýnir núverandi tölfræði fyrir IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db tölfræði"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Skoða ræsingarfæribreytur"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Leikjastillingar"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Leikur Sjósetningarfæribreytur"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Ef enginn notandi Launch Command er til staðar"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Veldu hvað Kodi mun gera þegar engin ræsingarskipun (retroplayer viðbót eða ytri hermir) er stillt"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Reyndu að ræsa með sjálfgefnu"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Stöðva / Ekki ræsa"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Engin skipan sett"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Ræsiskipun er ekki stillt fyrir þennan lista, stilltu eina núna?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Engin sjálfgefna ræsingarskipun fannst fyrir þennan lista"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Sjálfgefinn kjarni fannst ekki.  Vinsamlegast settu upp {} eða uppfærðu ræsiforritið"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Endurstilla skipun fyrir leikjaviðbót"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Engar leikjaviðbætur fundust"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Leikjaviðbót ræsingarskipun uppfærð"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Notaðu aðra sjálfgefna niðurhalsmöppu"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Sýndu aðeins valkosti sem halda Kodi í bakgrunni"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Sýndu aðeins valkosti sem loka Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Sýndu aðeins valkosti sem gera hlé á Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Location sem strengur"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Að öðrum kosti skaltu slá inn slóðina að retroarch.cfg skránni nákvæmlega eins og hún birtist í Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch Cores skrá sem strengur"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Að öðrum kosti skaltu slá inn slóðina að Cores möppunni nákvæmlega eins og hún birtist í Retroarch möppuuppsetningu"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Uppfæra ræsiforrit fyrir {}?[CR][B]Þetta mun breyta stillingum fyrir alla leiki á þessum lista.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Uppfæra ræsingarskipun fyrir {}?[CR][B]Þetta mun breyta stillingum fyrir alla leiki á þessum lista.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Uppfæra Launch Download Path fyrir {}?[CR][B]Þetta mun breyta stillingum fyrir alla leiki á þessum lista.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Uppfærðu ræsingarskipun"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Uppfærsla Ræsa niðurhalsslóð"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Endurstilla stillingar fyrir {}?[CR][B]Þetta mun breyta stillingum fyrir alla leiki á þessum lista.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Stuðningur"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Gefðu til Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Nýr IAGL gagnagrunnur hefur fundist[CR]Viltu uppfæra?[CR]Stillingar verða afritaðar í nýja db ef mögulegt er"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Nýtt db"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Gagnagrunnur var uppfærður[CR]Notendastillingar voru fluttar"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Gagnagrunnur var uppfærður[CR]Ekki tókst að flytja sumar notendastillingar[CR]Sjáðu annál fyrir frekari upplýsingar"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Villa kom upp við að uppfæra gagnagrunninn[CR]Sjáðu skráningu fyrir frekari upplýsingar"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Spyrðu mig aftur síðar"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Ekki uppfæra í þetta skiptið[CR](Ekki spyrja mig aftur fyrr en í næstu uppfærslu)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Velkomin í IAGL uppsetningarhjálpina[CR]Leyfum þér að fara í gegnum allar stillingar til að fá þig til að spila!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Flestir leikir krefjast archive.org reiknings[CR]Skráðu þig á https://archive.org/account/signup[CR]Viltu nota reikninginn þinn hjá IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Uppsetningu er lokið fyrir notkun Kodi leikjaviðbótar![CR]Ertu tilbúinn að spila?[CR]Veldu [B]Nei[/B] til að setja upp ytri leikjaræsingu."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Stilltu alla leikjalista þannig að þeir séu opnir ytra"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Stilltu aðeins nokkra leikjalista til að vera opnir ytra"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Endurstilla alla ræsilista leikja aftur í sjálfgefið"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} leikjalistar voru uppfærðir fyrir utanaðkomandi ræsingu"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Sjálfgefin eru forstillt fyrir hverja ytri ræsingarskipun[CR]Áður en ræst er, skoðaðu ræsingarbreytur leikja ef þörf krefur[CR]Sjáðu wiki fyrir frekari upplýsingar."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch app stillt á:[CR]{}[CR]Breyta í viðbótarstillingum ef þörf krefur"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch config stillt á:[CR]{}[CR]Breyta í viðbótarstillingum ef þörf krefur"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Galdrakarl lokið[CR]Leyfum okkur að spila!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Stilltu alla leikjalista til að vera ræstir með Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Stilltu alla leikjalista fljótt á ytri ræsingu"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Stilltu alla leikjalista fljótt á Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Staðfesta"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Ertu viss um að þú viljir stilla alla lista á ytri ræsingu"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Ertu viss um að þú viljir stilla alla lista á Kodi retroplayer"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Android heimildir krefjast þess að þú slærð inn Retroarch stillingarslóðina handvirkt[CR]Sjáðu wiki fyrir frekari hjálp"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Android heimildir krefjast þess að þú slærð inn Retroarch kjarnaslóðina handvirkt[CR]Sjáðu wiki fyrir frekari hjálp"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Afritaðu núverandi gagnagrunn"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Endurheimtu gagnagrunn úr öryggisafriti"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Taktu öryggisafrit af núverandi IAGL gagnagrunni og öllum notendastillingum"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Endurheimtu núverandi viðbótargagnagrunn úr öryggisafriti"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Veldu öryggisafrit"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Veldu öryggisafrit db"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Öryggisafritun lokið"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Endurheimtu lokið"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} samsvarandi auðkenni leikja fundust ekki í nýju db[CR]Veldu næstu aðgerð"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Uppfærðu gagnagrunn, reyndu að passa leiki eftir titli og leikjalista"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Uppfærðu gagnagrunn, fjarlægðu auðkenni leikja sem fundust ekki"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Endurheimtu aftur í gamlan gagnagrunn"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Gagnagrunnur endurheimtur í gamlan gagnagrunn"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Vinsamlegast bíddu"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Stilltu Retroarch möppur handvirkt"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL mun sjálfgefið finna möppur frá RA stillingum, þú getur handvirkt hnekið þessari aðgerð"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch Core Directory"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroach Info Directory"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Bættu við Linux app til að hefja ræsingarskipun"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak er notað fyrir ákveðin linux/elec kerfi.  Virkjaðu aðeins ef kerfið þitt krefst þess."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Settu systemd-run undir Retroarch skipanir"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Settu systemd-run fyrir allar skipanir"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Prepend flatpak run til Retroarch skipanir"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Settu flatpak run fyrir allar skipanir"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Android heimildir krefjast sameiginlegrar geymslumöppu[CR]Sláðu inn sameiginlega staðsetningu sem bæði forritin geta nálgast"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Unzip skrár"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Engin vinnsla"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Taktu niður skrár, slepptu BIOS skrám"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Unzip skrár í möppu"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Taktu niður skrár, færðu CHD í möppu"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Færa skrár í möppu: spilakassa"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Færa skrár í möppu: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Færa skrár í möppu: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Færa skrár í möppu: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Færa skrár í möppu: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Færa skrár í möppu: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Færa skrár í möppu: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Færa skrár í möppu: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Færa skrár í möppu: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Færa skrár í möppu: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Færa skrár í möppu: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Færa skrár í möppu: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Færa skrár í möppu: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Færa skrár í möppu: litróf"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Færa skrár í möppu: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Ertu viss um að þú viljir uppfæra leiklista eftir ferli?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Færsluferli uppfært"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Uppfæra póstferli fyrir {}?[CR][B]Þetta mun breyta stillingum fyrir alla leiki á þessum lista.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Niðurhali lokið.  Eftir vinnsluskrár?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Leikjaskrár unnar"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Ekki tiltækt (aðeins Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Netplay notendanafn Tegund"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Veldu samþættingu fyrir netplay spilaranafn"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Notaðu Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord gerir sjálfvirka netleikjaleiki kleift (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Sláðu inn nafn leikmanns handvirkt"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Nöfn leikmanna verða birt í Retroarch anddyrinu"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Nafn leikmanns"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Núverandi Discord notandi"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord notandi stilltur á [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Skoðaðu leikjalotur sem þú getur tekið þátt í á netinu með því að nota Retroarch netspilun"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Gat ekki fundið discord notanda með auðkenni [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Síuvalkostir í anddyri"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Sýnið aðeins herbergi sem hægt er að fara inn í"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Sýndu aðeins herbergi sem nota libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Sýndu herbergi sem eru með lykilorð"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Sýndu herbergi sem eru með lykilorð fyrir áhorfendur"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Sýndu herbergi með MITM netþjónum"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Sýndu aðeins herbergi sem eru búin til innan tímaramma"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 mínútur"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 mínútur"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Hvaða tímarammi sem er"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Síuðu anddyri herbergin út frá sköpunartíma"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Sýndu aðeins herbergi sem nota IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Ekki er hægt að finna samsvarandi leik með nafni eins og [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Fannst ekki"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Veldu samsvarandi leik"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Netplay ræsingaraðgerð"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Vertu með úr retroarch anddyri"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Vertu með frá localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Veldu sjálfgefna aðgerð þegar þú tekur þátt í netspilunarleik"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Ræsa sem netplay gestgjafi"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Endurnefna IAGL uppáhalds"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Endurnefna lokið"

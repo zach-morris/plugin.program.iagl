@@ -1,0 +1,1936 @@
+# Kodi Media Center language file
+# Addon Name: /Internet Archive Game Launcher
+# Addon id: pltugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/zach-morris/plugin.program.iagl/issues\n"
+"Language: ta_in\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "இணைய காப்பக விளையாட்டு துவக்கி"
+
+msgctxt "#30002"
+msgid "Browse all Lists"
+msgstr "அனைத்து பட்டியல்களையும் உலாவவும்"
+
+msgctxt "#30003"
+msgid "Browse lists by Category"
+msgstr "வகையின்படி பட்டியல்களை உலாவவும்"
+
+msgctxt "#30004"
+msgid "Browse games by Playlist"
+msgstr "பிளேலிஸ்ட் மூலம் கேம்களை உலாவுக"
+
+msgctxt "#30005"
+msgid "Favorites"
+msgstr "பிடித்தவை"
+
+msgctxt "#30006"
+msgid "Play History"
+msgstr "வரலாற்றை விளையாடு"
+
+msgctxt "#30007"
+msgid "Search"
+msgstr "தேடு"
+
+msgctxt "#30008"
+msgid "Random Play"
+msgstr "சீரற்ற விளையாட்டு"
+
+msgctxt "#30009"
+msgid "Next"
+msgstr "அடுத்து"
+
+msgctxt "#30010"
+msgid "Previous"
+msgstr "முந்தைய"
+
+msgctxt "#30011"
+msgid "One Big List"
+msgstr "ஒரு பெரிய பட்டியல்"
+
+msgctxt "#30012"
+msgid "Alphabetical"
+msgstr "அகரவரிசைப்படி"
+
+msgctxt "#30013"
+msgid "Group by Genre"
+msgstr "வகையின்படி குழு"
+
+msgctxt "#30014"
+msgid "Group by Year"
+msgstr "ஆண்டு வாரியாக குழு"
+
+msgctxt "#30015"
+msgid "Group by Players"
+msgstr "வீரர்களின் அடிப்படையில் குழு"
+
+msgctxt "#30016"
+msgid "Group by Studio"
+msgstr "ஸ்டுடியோ மூலம் குழு"
+
+msgctxt "#30017"
+msgid "Group by Tag"
+msgstr "குறிச்சொல் மூலம் குழு"
+
+msgctxt "#30018"
+msgid "Group by Playlist"
+msgstr "பிளேலிஸ்ட் மூலம் குழு"
+
+msgctxt "#30019"
+msgid "Group by Region"
+msgstr "பகுதி வாரியாக குழு"
+
+msgctxt "#30020"
+msgid "Group by Language"
+msgstr "மொழி வாரியாக குழு"
+
+msgctxt "#30021"
+msgid "Group by Edition"
+msgstr "பதிப்பின்படி குழு"
+
+msgctxt "#30022"
+msgid "Group by Code"
+msgstr "குறியீடு மூலம் குழு"
+
+msgctxt "#30023"
+msgid "Group by Rating"
+msgstr "மதிப்பீட்டின்படி குழு"
+
+msgctxt "#30024"
+msgid "Select Game Lists"
+msgstr "விளையாட்டு பட்டியல்களைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30025"
+msgid "Search Game Titles"
+msgstr "விளையாட்டு தலைப்புகளைத் தேடுங்கள்"
+
+msgctxt "#30026"
+msgid "Filter by Genre"
+msgstr "வகையின்படி வடிகட்டவும்"
+
+msgctxt "#30027"
+msgid "Filter by Players"
+msgstr "பிளேயர்களின்படி வடிகட்டவும்"
+
+msgctxt "#30028"
+msgid "Filter by Studio"
+msgstr "ஸ்டுடியோ மூலம் வடிகட்டவும்"
+
+msgctxt "#30029"
+msgid "Filter by Tag"
+msgstr "குறிச்சொல் மூலம் வடிகட்டவும்"
+
+msgctxt "#30030"
+msgid "Filter by Playlist"
+msgstr "பிளேலிஸ்ட்டின்படி வடிகட்டவும்"
+
+msgctxt "#30031"
+msgid "Filter by Region"
+msgstr "பிராந்தியத்தின்படி வடிகட்டவும்"
+
+msgctxt "#30032"
+msgid "Filter by Language"
+msgstr "மொழியின்படி வடிகட்டவும்"
+
+msgctxt "#30033"
+msgid "Filter by Edition"
+msgstr "பதிப்பின்படி வடிகட்டவும்"
+
+msgctxt "#30034"
+msgid "Filter by Code"
+msgstr "குறியீட்டின்படி வடிகட்டவும்"
+
+msgctxt "#30035"
+msgid "Filter by Rating"
+msgstr "மதிப்பீட்டின்படி வடிகட்டவும்"
+
+msgctxt "#30036"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]தேடலை இயக்கவும்[/COLOR]"
+
+msgctxt "#30037"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]தேடல் இணைப்பை உருவாக்கவும்[/COLOR]"
+
+msgctxt "#30038"
+msgid "Choose Number of Results"
+msgstr "முடிவுகளின் எண்ணிக்கையைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30039"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]ரேண்டம் தேடலை இயக்கு[/COLOR]"
+
+msgctxt "#30040"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]சீரற்ற தேடல் இணைப்பை உருவாக்கு[/COLOR]"
+
+msgctxt "#30041"
+msgid "General"
+msgstr "பொது"
+
+msgctxt "#30042"
+msgid "Launching"
+msgstr "தொடங்குதல்"
+
+msgctxt "#30043"
+msgid "Downloading"
+msgstr "பதிவிறக்குகிறது"
+
+msgctxt "#30044"
+msgid "Views and Navigation"
+msgstr "காட்சிகள் மற்றும் வழிசெலுத்தல்"
+
+msgctxt "#30045"
+msgid "Netplay"
+msgstr "நெட்பிளே"
+
+msgctxt "#30046"
+msgid "Setup Wizard"
+msgstr "அமைவு வழிகாட்டி"
+
+msgctxt "#30047"
+msgid "Advanced"
+msgstr "மேம்பட்டது"
+
+msgctxt "#30048"
+msgid "Play History"
+msgstr "வரலாற்றை விளையாடு"
+
+msgctxt "#30049"
+msgid "Define how many games to save in last played history"
+msgstr "கடைசியாக விளையாடிய வரலாற்றில் எத்தனை கேம்களைச் சேமிக்க வேண்டும் என்பதை வரையறுக்கவும்"
+
+msgctxt "#30050"
+msgid "Default action on selecting game"
+msgstr "விளையாட்டைத் தேர்ந்தெடுப்பதில் இயல்புநிலை செயல்"
+
+msgctxt "#30051"
+msgid "Define action to take when a game is selected"
+msgstr "ஒரு விளையாட்டு தேர்ந்தெடுக்கப்படும்போது எடுக்க வேண்டிய நடவடிக்கையை வரையறுக்கவும்."
+
+msgctxt "#30052"
+msgid "If game already exists locally"
+msgstr "விளையாட்டு ஏற்கனவே உள்ளூரில் இருந்தால்"
+
+msgctxt "#30053"
+msgid "Define the action to take if a game file is found to exist locally"
+msgstr "கேம் கோப்பு உள்நாட்டில் இருப்பது கண்டறியப்பட்டால் எடுக்க வேண்டிய நடவடிக்கையை வரையறுக்கவும்"
+
+msgctxt "#30054"
+msgid "Prompt"
+msgstr "உடனடியாக"
+
+msgctxt "#30055"
+msgid "Do not re-download"
+msgstr "மீண்டும் பதிவிறக்க வேண்டாம்"
+
+msgctxt "#30056"
+msgid "Re-download and overwrite"
+msgstr "மீண்டும் பதிவிறக்கம் செய்து மேலெழுதவும்"
+
+msgctxt "#30057"
+msgid "Enable archive.org login"
+msgstr "archive.org உள்நுழைவை இயக்கவும்"
+
+msgctxt "#30058"
+msgid "Enabled"
+msgstr "இயக்கப்பட்டது"
+
+msgctxt "#30059"
+msgid "Disabled"
+msgstr "முடக்கப்பட்டது"
+
+msgctxt "#30060"
+msgid "Some games require login.  Enter your archive.org email address and password."
+msgstr "சில விளையாட்டுகளுக்கு உள்நுழைவு தேவைப்படுகிறது.  உங்கள் archive.org மின்னஞ்சல் முகவரி மற்றும் கடவுச்சொல்லை உள்ளிடவும்."
+
+msgctxt "#30061"
+msgid "archive.org Email"
+msgstr "archive.org மின்னஞ்சல்"
+
+msgctxt "#30062"
+msgid "Some games require login.  Enter your archive.org email address"
+msgstr "சில விளையாட்டுகளுக்கு உள்நுழைவு தேவைப்படுகிறது.  உங்கள் archive.org மின்னஞ்சல் முகவரியை உள்ளிடவும்"
+
+msgctxt "#30063"
+msgid "archive.org Password"
+msgstr "archive.org கடவுச்சொல்"
+
+msgctxt "#30064"
+msgid "Some games require login.  Enter your archive.org password"
+msgstr "சில விளையாட்டுகளுக்கு உள்நுழைவு தேவைப்படுகிறது.  உங்கள் archive.org கடவுச்சொல்லை உள்ளிடவும்"
+
+msgctxt "#30065"
+msgid "Check login credentials"
+msgstr "உள்நுழைவு சான்றுகளை சரிபார்க்கவும்"
+
+msgctxt "#30066"
+msgid "Test the entered email and password to check your ability to login"
+msgstr "உள்நுழைவதற்கான உங்கள் திறனை சரிபார்க்க உள்ளிட்ட மின்னஞ்சல் மற்றும் கடவுச்சொல்லை சோதிக்கவும்"
+
+msgctxt "#30067"
+msgid "Download folder size limit"
+msgstr "பதிவிறக்க கோப்புறை அளவு வரம்பு"
+
+msgctxt "#30068"
+msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
+msgstr "பதிவிறக்கம் / தற்காலிக சேமிப்பின் அளவை வரையறுக்கவும்.[CR]அளவு வரம்பை அடைந்ததும் கோப்புறை சுத்தப்படுத்தப்படும்."
+
+msgctxt "#30069"
+msgid "Front page display"
+msgstr "முன் பக்க காட்சி"
+
+msgctxt "#30070"
+msgid "Choose from list"
+msgstr "பட்டியலிலிருந்து தேர்வு செய்யவும்"
+
+msgctxt "#30071"
+msgid "Games are presented as"
+msgstr "விளையாட்டுகள் வழங்கப்படுகின்றன"
+
+msgctxt "#30072"
+msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
+msgstr "திரைப்படங்கள், டிவி நிகழ்ச்சிகள் மற்றும் கேம்களுக்கு கோடி பல தோல் விருப்பங்களை வழங்குகிறது.  மேலும் தகவலுக்கு விக்கியைப் பார்க்கவும்"
+
+msgctxt "#30073"
+msgid "TV Shows"
+msgstr "தொலைக்காட்சி நிகழ்ச்சிகள்"
+
+msgctxt "#30074"
+msgid "Movies"
+msgstr "திரைப்படங்கள்"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "விளையாட்டுகள்"
+
+msgctxt "#30076"
+msgid "10 Games"
+msgstr "10 விளையாட்டுகள்"
+
+msgctxt "#30077"
+msgid "25 Games"
+msgstr "25 விளையாட்டுகள்"
+
+msgctxt "#30078"
+msgid "50 Games"
+msgstr "50 விளையாட்டுகள்"
+
+msgctxt "#30079"
+msgid "100 Games"
+msgstr "100 விளையாட்டுகள்"
+
+msgctxt "#30080"
+msgid "250 Games"
+msgstr "250 விளையாட்டுகள்"
+
+msgctxt "#30081"
+msgid "500 Games"
+msgstr "500 விளையாட்டுகள்"
+
+msgctxt "#30082"
+msgid "Game artwork"
+msgstr "விளையாட்டு கலைப்படைப்பு"
+
+msgctxt "#30083"
+msgid "Game list artwork"
+msgstr "விளையாட்டு பட்டியல் கலைப்படைப்பு"
+
+msgctxt "#30084"
+msgid "Retroarch Settings"
+msgstr "பின்னோக்கி அமைப்புகள்"
+
+msgctxt "#30085"
+msgid "Suspend Kodi IO on launch"
+msgstr "துவக்கத்தில் கோடி ஐஓவை இடைநிறுத்தவும்"
+
+msgctxt "#30086"
+msgid "Stop media on launch"
+msgstr "தொடக்கத்தில் மீடியாவை நிறுத்துங்கள்"
+
+msgctxt "#30087"
+msgid "Waiting for return"
+msgstr "திரும்புவதற்காக காத்திருக்கிறது"
+
+msgctxt "#30088"
+msgid "Add to IAGL Favorites"
+msgstr "IAGL பிடித்தவைகளில் சேர்க்கவும்"
+
+msgctxt "#30089"
+msgid "Enter a name for your favorites group"
+msgstr "உங்களுக்கு பிடித்த குழுவிற்கு ஒரு பெயரை உள்ளிடவும்"
+
+msgctxt "#30090"
+msgid "Favorite added to group"
+msgstr "பிடித்தமானது குழுவில் சேர்க்கப்பட்டது"
+
+msgctxt "#30091"
+msgid "Use clean game title"
+msgstr "சுத்தமான விளையாட்டு தலைப்பைப் பயன்படுத்தவும்"
+
+msgctxt "#30092"
+msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
+msgstr "காட்சிக்காக கேம் தலைப்பிலிருந்து குறிச்சொற்களை அகற்றவும்.  எ.கா: [B]Mario (USA)[/B] ஆனது [B]Mario[/B]"
+
+msgctxt "#30093"
+msgid "Games per page"
+msgstr "பக்கத்திற்கு விளையாட்டுகள்"
+
+msgctxt "#30094"
+msgid "Define how many games are listed per page"
+msgstr "ஒரு பக்கத்திற்கு எத்தனை கேம்கள் பட்டியலிடப்பட்டுள்ளன என்பதை வரையறுக்கவும்"
+
+msgctxt "#30095"
+msgid "List all"
+msgstr "அனைத்தையும் பட்டியலிடுங்கள்"
+
+msgctxt "#30096"
+msgid "Always filter list to 1 Game 1 Rom Set"
+msgstr "எப்போதும் பட்டியலை 1 கேம் 1 ரோம் செட்டாக வடிகட்டவும்"
+
+msgctxt "#30097"
+msgid "If possible, game lists will be pre-filtered to a 1G1R set"
+msgstr "முடிந்தால், விளையாட்டு பட்டியல்கள் 1G1R தொகுப்பிற்கு முன்பே வடிகட்டப்படும்."
+
+msgctxt "#30098"
+msgid "Append game list name to search and random results"
+msgstr "தேடல் மற்றும் சீரற்ற முடிவுகளுக்கு விளையாட்டுப் பட்டியல் பெயரைச் சேர்க்கவும்"
+
+msgctxt "#30099"
+msgid "When enabled, the name of the game list will be appended to search results"
+msgstr "இயக்கப்பட்டால், தேடல் முடிவுகளுடன் கேம் பட்டியலின் பெயர் சேர்க்கப்படும்"
+
+msgctxt "#30100"
+msgid "Append game list name when browsing by playlist"
+msgstr "பிளேலிஸ்ட் மூலம் உலாவும்போது கேம் பட்டியல் பெயரைச் சேர்க்கவும்"
+
+msgctxt "#30101"
+msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
+msgstr "இயக்கப்பட்டால், கேம் பட்டியலின் பெயர் பிளேலிஸ்ட்டில் உள்ள கேம் பெயருடன் இணைக்கப்படும்"
+
+msgctxt "#30102"
+msgid "Kodi landscape art equates to"
+msgstr "கோடி இயற்கைக் கலை சமன்"
+
+msgctxt "#30103"
+msgid "Select the game artwork to be displayed as the landscape art"
+msgstr "இயற்கைக் கலையாகக் காட்டப்பட வேண்டிய கேம் கலைப்படைப்பைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30104"
+msgid "Title Screen"
+msgstr "தலைப்பு திரை"
+
+msgctxt "#30105"
+msgid "Screenshot"
+msgstr "ஸ்கிரீன்ஷாட்"
+
+msgctxt "#30106"
+msgid "Kodi thumbnail art equates to"
+msgstr "கோடி சிறுபடக் கலை சமன்"
+
+msgctxt "#30107"
+msgid "Select the game artwork to be displayed as the thumbnail art"
+msgstr "சிறுபடக் கலையாகக் காட்டப்பட வேண்டிய கேம் கலைப்படைப்பைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30108"
+msgid "Game list clearlogo equates to"
+msgstr "விளையாட்டு பட்டியல் கிளியர்லோகோ இதற்குச் சமம்"
+
+msgctxt "#30109"
+msgid "Select the artwork displayed for the game list clearlogo"
+msgstr "கேம் லிஸ்ட் கிளியர்லோகோவில் காட்டப்படும் கலைப்படைப்பைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30110"
+msgid "System logo"
+msgstr "சிஸ்டம் லோகோ"
+
+msgctxt "#30111"
+msgid "System console"
+msgstr "சிஸ்டம் கன்சோல்"
+
+msgctxt "#30112"
+msgid "System controller"
+msgstr "கணினி கட்டுப்படுத்தி"
+
+msgctxt "#30113"
+msgid "Game list fanart equates to"
+msgstr "விளையாட்டு பட்டியல் fanart சமன்"
+
+msgctxt "#30114"
+msgid "Select the artwork displayed for the game list fanart"
+msgstr "கேம் லிஸ்ட் ஃபேனர்ட்டுக்காக காட்டப்படும் கலைப்படைப்பைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30115"
+msgid "System collage"
+msgstr "சிஸ்டம் படத்தொகுப்பு"
+
+msgctxt "#30116"
+msgid "System console"
+msgstr "சிஸ்டம் கன்சோல்"
+
+msgctxt "#30117"
+msgid "System wallpaper"
+msgstr "கணினி வால்பேப்பர்"
+
+msgctxt "#30118"
+msgid "Force IAGL viewtypes"
+msgstr "ஐஏஜிஎல் காட்சி வகைகளை கட்டாயப்படுத்தவும்"
+
+msgctxt "#30119"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "உங்கள் சருமத்தில் கட்டாயக் காட்சி வகை ஐடி உள்ளதா எனச் சரிபார்க்கவும்"
+
+msgctxt "#30120"
+msgid "Frontpage viewtype"
+msgstr "முதல் பக்க காட்சி வகை"
+
+msgctxt "#30121"
+msgid "Game library lists viewtype"
+msgstr "விளையாட்டு நூலகம் காட்சி வகையை பட்டியலிடுகிறது"
+
+msgctxt "#30122"
+msgid "Game categories viewtype"
+msgstr "விளையாட்டு வகைகள் காட்சி வகை"
+
+msgctxt "#30123"
+msgid "Games list viewtype"
+msgstr "விளையாட்டு பட்டியல் காட்சி வகை"
+
+msgctxt "#30124"
+msgid "Choose list viewtype"
+msgstr "பட்டியல் காட்சி வகையைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30125"
+msgid "Search and Random results viewtype"
+msgstr "தேடல் மற்றும் சீரற்ற முடிவுகள் காட்சி வகை"
+
+msgctxt "#30126"
+msgid "Off (Default)"
+msgstr "ஆஃப் (இயல்புநிலை)"
+
+msgctxt "#30127"
+msgid "List / Poster (50)"
+msgstr "பட்டியல் / சுவரொட்டி (50)"
+
+msgctxt "#30128"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "சுவரொட்டி / பெரிய பட்டியல் / சுவரொட்டி சுவர் (51)"
+
+msgctxt "#30129"
+msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
+msgstr "ஐகான் சுவர் / கிடைமட்ட முறை / LS சுவர் (52)"
+
+msgctxt "#30130"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "பேனர் / இயற்கை / சுவரொட்டி தகவல் (501)"
+
+msgctxt "#30131"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "ஃபனார்ட் / லேண்ட்ஸ்கேப் ஒற்றை / எபிசோட் பட்டியல் (502)"
+
+msgctxt "#30132"
+msgid "Logos / Big Square Wall (503)"
+msgstr "சின்னங்கள் / பெரிய சதுர சுவர் (503)"
+
+msgctxt "#30133"
+msgid "Big List 2 (504)"
+msgstr "பெரிய பட்டியல் 2 (504)"
+
+msgctxt "#30134"
+msgid "Landscape Details (505)"
+msgstr "நிலப்பரப்பு விவரங்கள் (505)"
+
+msgctxt "#30135"
+msgid "Operating System"
+msgstr "இயக்க முறைமை"
+
+msgctxt "#30136"
+msgid "Select your operating system"
+msgstr "உங்கள் இயக்க முறைமையைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30137"
+msgid "Windows"
+msgstr "விண்டோஸ்"
+
+msgctxt "#30138"
+msgid "Linux"
+msgstr "லினக்ஸ்"
+
+msgctxt "#30139"
+msgid "OSX"
+msgstr "OSX"
+
+msgctxt "#30140"
+msgid "Retroarch App Location"
+msgstr "Retroarch ஆப் இடம்"
+
+msgctxt "#30141"
+msgid "Select the path to the retroarch executable"
+msgstr "retroarch இயங்கக்கூடிய பாதையைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30142"
+msgid "Retroarch CFG Location"
+msgstr "Retroarch CFG இருப்பிடம்"
+
+msgctxt "#30143"
+msgid "Select the path to the retroarch config file"
+msgstr "retroarch config கோப்புக்கான பாதையைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30144"
+msgid "Android"
+msgstr "அண்ட்ராய்டு"
+
+msgctxt "#30145"
+msgid "Android aarch64"
+msgstr "Android aarch64"
+
+msgctxt "#30146"
+msgid "Android ra32"
+msgstr "ஆண்ட்ராய்டு ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "விளையாட்டு துவக்கி தேர்வு முறை"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "கேம் லாஞ்சரைத் தேர்ந்தெடுக்கும்போது கோடி என்ன செய்யும் என்பதைத் தேர்ந்தெடுக்கவும் (Windows, Linux மற்றும் OSX மட்டும்)"
+
+msgctxt "#30149"
+msgid "Keep Kodi in the background"
+msgstr "கோடியை பின்னணியில் வைத்திருங்கள்"
+
+msgctxt "#30150"
+msgid "Close Kodi"
+msgstr "கோடியை மூடு"
+
+msgctxt "#30151"
+msgid "Pause Kodi"
+msgstr "கோடியை இடைநிறுத்து"
+
+msgctxt "#30152"
+msgid "Retroarch core picker"
+msgstr "Retroarch கோர் பிக்கர்"
+
+msgctxt "#30153"
+msgid "List by System and Core Name"
+msgstr "சிஸ்டம் மற்றும் கோர் பெயர் அடிப்படையில் பட்டியல்"
+
+msgctxt "#30154"
+msgid "List by Core Name"
+msgstr "முக்கிய பெயரின்படி பட்டியல்"
+
+msgctxt "#30155"
+msgid "List by Emulated Systems"
+msgstr "எமுலேட்டட் சிஸ்டம்ஸ் மூலம் பட்டியல்"
+
+msgctxt "#30156"
+msgid "Select Core"
+msgstr "கோர் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30157"
+msgid "Select Emulated System"
+msgstr "எமுலேட்டட் சிஸ்டத்தைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30158"
+msgid "Select Emulator"
+msgstr "முன்மாதிரியைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30159"
+msgid "Credentials were not found[CR]Please enter them in addon settings"
+msgstr "நற்சான்றிதழ்கள் கிடைக்கவில்லை[CR]அவற்றை addon அமைப்புகளில் உள்ளிடவும்"
+
+msgctxt "#30160"
+msgid "Game List Download Path"
+msgstr "விளையாட்டு பட்டியல் பதிவிறக்க பாதை"
+
+msgctxt "#30161"
+msgid "Zero (Current Game Only)"
+msgstr "பூஜ்யம் (தற்போதைய விளையாட்டு மட்டும்)"
+
+msgctxt "#30162"
+msgid "25 MB"
+msgstr "25 எம்பி"
+
+msgctxt "#30163"
+msgid "50 MB"
+msgstr "50 எம்பி"
+
+msgctxt "#30164"
+msgid "100 MB"
+msgstr "100 எம்பி"
+
+msgctxt "#30165"
+msgid "200 MB"
+msgstr "200 எம்பி"
+
+msgctxt "#30166"
+msgid "500 MB"
+msgstr "500 எம்பி"
+
+msgctxt "#30167"
+msgid "1 GB"
+msgstr "1 ஜிபி"
+
+msgctxt "#30168"
+msgid "2 GB"
+msgstr "2 ஜிபி"
+
+msgctxt "#30169"
+msgid "5 GB"
+msgstr "5 ஜிபி"
+
+msgctxt "#30170"
+msgid "10 GB"
+msgstr "10 ஜிபி"
+
+msgctxt "#30171"
+msgid "20 GB"
+msgstr "20 ஜிபி"
+
+msgctxt "#30172"
+msgid "Enable Netplay"
+msgstr "Netplay ஐ இயக்கு"
+
+msgctxt "#30173"
+msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
+msgstr "ரெட்ரோஆர்ச் நெட்பிளேயை இயக்கு (விண்டோஸ், லினக்ஸ், ஓஎஸ்எக்ஸ் மட்டும்), நெட்பிளேயுடன் தொடங்க சூழல் மெனுவைப் பயன்படுத்தவும்"
+
+msgctxt "#30174"
+msgid "Show Netplay Lobby"
+msgstr "Netplay லாபியைக் காட்டு"
+
+msgctxt "#30175"
+msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
+msgstr "இயக்கப்பட்டால், நெட்பிளே லாபி ஐஏஜிஎல் முன் பக்கத்தில் காட்டப்படும்"
+
+msgctxt "#30176"
+msgid "Filter game lobby to IAGL auto launch games"
+msgstr "IAGL ஆட்டோ லான்ச் கேம்களுக்கு கேம் லாபியை வடிகட்டவும்"
+
+msgctxt "#30177"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "இயக்கப்பட்டால், நெட்பிளே லாபி தானாக தொடங்கக்கூடிய கேம்களை மட்டுமே காண்பிக்கும்"
+
+msgctxt "#30178"
+msgid "Netplay Port"
+msgstr "நெட்பிளே போர்ட்"
+
+msgctxt "#30179"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "இணைக்க நெட்பிளே ஐபி போர்ட்டை வரையறுக்கவும் (இயல்புநிலைக்கு காலியாக விடவும்)"
+
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "இயல்புநிலை லோக்கல் ஹோஸ்ட் ஐபி"
+
+msgctxt "#30181"
+msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
+msgstr "இயல்புநிலை நெட்பிளே ஹோஸ்ட்பெயர் / ஐபி (உள்ளூர் நெட்வொர்க் நெட்பிளேக்கு பயனுள்ளதாக இருக்கும், இயல்புநிலைக்கு காலியாக விடவும்)"
+
+msgctxt "#30182"
+msgid "Check frames"
+msgstr "சட்டங்களை சரிபார்க்கவும்"
+
+msgctxt "#30183"
+msgid "Define number of netplay sync frames (leave blank for default)"
+msgstr "நெட்பிளே ஒத்திசைவு பிரேம்களின் எண்ணிக்கையை வரையறுக்கவும் (இயல்புநிலைக்கு காலியாக விடவும்)"
+
+msgctxt "#30184"
+msgid "Announce Netplay on Discord"
+msgstr "டிஸ்கார்டில் நெட்பிளேயை அறிவிக்கவும்"
+
+msgctxt "#30185"
+msgid "Announces netplay start on discord for IAGL players"
+msgstr "IAGL வீரர்களுக்கான நெட்பிளேவை டிஸ்கார்டில் தொடங்குவதாக அறிவிக்கிறது."
+
+msgctxt "#30186"
+msgid "Discord Player Name"
+msgstr "டிஸ்கார்ட் பிளேயர் பெயர்"
+
+msgctxt "#30187"
+msgid "Enter your player name to be announced on Discord"
+msgstr "டிஸ்கார்டில் அறிவிக்கப்படும் உங்கள் பிளேயர் பெயரை உள்ளிடவும்"
+
+msgctxt "#30188"
+msgid "Discord User Account ID"
+msgstr "டிஸ்கார்ட் பயனர் கணக்கு ஐடி"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "உங்கள் டிஸ்கார்ட் ஐடியை வழங்கவும் (பயனர் அமைப்புகள்>எனது கணக்கு>நகல் ஐடி)"
+
+msgctxt "#30190"
+msgid "Display report when wizard is completed"
+msgstr "வழிகாட்டி முடிந்ததும் காட்சி அறிக்கை"
+
+msgctxt "#30191"
+msgid "Execute setup wizard"
+msgstr "அமைவு வழிகாட்டியை இயக்கவும்"
+
+msgctxt "#30192"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "உங்கள் விளையாட்டு பட்டியல்களுக்கான அமைப்புகளை விரைவாக மாற்ற, வழிகாட்டியை இயக்கவும்.  இதை எந்த நேரத்திலும் மீண்டும் இயக்கலாம்"
+
+msgctxt "#30193"
+msgid "Android Advance Settings"
+msgstr "Android அட்வான்ஸ் அமைப்புகள்"
+
+msgctxt "#30194"
+msgid "Use StartAndroidActivity"
+msgstr "StartAndroidActivity ஐப் பயன்படுத்தவும்"
+
+msgctxt "#30195"
+msgid "Leave as default if unsure"
+msgstr "உறுதியாக தெரியவில்லை என்றால் இயல்புநிலையாக விடவும்"
+
+msgctxt "#30196"
+msgid "Suspend Kodi Input and Audio when using External Launcher"
+msgstr "வெளிப்புற துவக்கியைப் பயன்படுத்தும் போது கோடி உள்ளீடு மற்றும் ஆடியோவை இடைநிறுத்தவும்"
+
+msgctxt "#30197"
+msgid "Stop Kodi media playing before External Launch"
+msgstr "வெளிப்புற வெளியீட்டிற்கு முன் கோடி மீடியா இயங்குவதை நிறுத்துங்கள்"
+
+msgctxt "#30198"
+msgid "Kodi is busy / waiting for return to Kodi after External Launch"
+msgstr "கோடி பிஸியாக உள்ளது / வெளிப்புற வெளியீட்டிற்குப் பிறகு கோடிக்கு திரும்ப காத்திருக்கிறது"
+
+msgctxt "#30199"
+msgid "Download Advanced Settings"
+msgstr "மேம்பட்ட அமைப்புகளைப் பதிவிறக்கு"
+
+msgctxt "#30200"
+msgid "Download Threads"
+msgstr "நூல்களைப் பதிவிறக்கவும்"
+
+msgctxt "#30201"
+msgid "Alternate default download folder"
+msgstr "மாற்று இயல்புநிலை பதிவிறக்க கோப்புறை"
+
+msgctxt "#30202"
+msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
+msgstr "தேர்ந்தெடுக்கப்பட்டால், அனைத்து பதிவிறக்கங்களும் மாற்று கோப்புறைக்கு செல்லும்.  [B]குறிப்பு: இந்தக் கோப்புறை சுத்தப்படுத்தப்படாது அல்லது அளவுக்காக கண்காணிக்கப்படாது[/B]"
+
+msgctxt "#30203"
+msgid "Organize default download folder using system folders"
+msgstr "கணினி கோப்புறைகளைப் பயன்படுத்தி இயல்புநிலை பதிவிறக்க கோப்புறையை ஒழுங்கமைக்கவும்"
+
+msgctxt "#30204"
+msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
+msgstr "இயக்கப்பட்டால், தற்காலிக கோப்புறை கணினியால் ஒழுங்கமைக்கப்படும் (சில நேரங்களில் கட்டமைப்பு மேலெழுதுவதற்கு அவசியம்)"
+
+msgctxt "#30205"
+msgid "Copy Kodi Network Source downloads to Local Filesystem"
+msgstr "கோடி நெட்வொர்க் மூல பதிவிறக்கங்களை உள்ளூர் கோப்பு முறைமைக்கு நகலெடுக்கவும்"
+
+msgctxt "#30206"
+msgid "Reset Options"
+msgstr "விருப்பங்களை மீட்டமைக்கவும்"
+
+msgctxt "#30207"
+msgid "Reset IAGL database to default settings"
+msgstr "IAGL தரவுத்தளத்தை இயல்புநிலை அமைப்புகளுக்கு மீட்டமைக்கவும்"
+
+msgctxt "#30208"
+msgid "When selected, the database will be reset to default settings"
+msgstr "தேர்ந்தெடுக்கப்பட்டதும், தரவுத்தளம் இயல்புநிலை அமைப்புகளுக்கு மீட்டமைக்கப்படும்"
+
+msgctxt "#30209"
+msgid "Unhide game lists"
+msgstr "கேம் பட்டியல்களை மறை"
+
+msgctxt "#30210"
+msgid "When selected, previously hidden game lists can be unhidden"
+msgstr "தேர்ந்தெடுக்கப்பட்டால், முன்பு மறைக்கப்பட்ட விளையாட்டு பட்டியல்கள் மறைக்கப்படலாம்"
+
+msgctxt "#30211"
+msgid "Clear Cache"
+msgstr "தற்காலிக சேமிப்பை அழிக்கவும்"
+
+msgctxt "#30212"
+msgid "When selected, all data in the cache folder including games will be purged"
+msgstr "தேர்ந்தெடுக்கும் போது, ​​கேம்கள் உட்பட கேச் கோப்புறையில் உள்ள எல்லா தரவும் நீக்கப்படும்"
+
+msgctxt "#30213"
+msgid "Select"
+msgstr "தேர்ந்தெடு"
+
+msgctxt "#30214"
+msgid "Selected"
+msgstr "தேர்ந்தெடுக்கப்பட்டது"
+
+msgctxt "#30215"
+msgid "Game lists selected"
+msgstr "தேர்ந்தெடுக்கப்பட்ட விளையாட்டுப் பட்டியல்கள்"
+
+msgctxt "#30216"
+msgid "Genres selected"
+msgstr "வகைகள் தேர்ந்தெடுக்கப்பட்டன"
+
+msgctxt "#30217"
+msgid "Players selected"
+msgstr "வீரர்கள் தேர்ந்தெடுக்கப்பட்டனர்"
+
+msgctxt "#30218"
+msgid "Studios selected"
+msgstr "ஸ்டுடியோக்கள் தேர்ந்தெடுக்கப்பட்டன"
+
+msgctxt "#30219"
+msgid "Tags selected"
+msgstr "குறிச்சொற்கள் தேர்ந்தெடுக்கப்பட்டன"
+
+msgctxt "#30220"
+msgid "Playlists selected"
+msgstr "பிளேலிஸ்ட்கள் தேர்ந்தெடுக்கப்பட்டன"
+
+msgctxt "#30221"
+msgid "Regions selected"
+msgstr "தேர்ந்தெடுக்கப்பட்ட பகுதிகள்"
+
+msgctxt "#30222"
+msgid "Languages selected"
+msgstr "தேர்ந்தெடுக்கப்பட்ட மொழிகள்"
+
+msgctxt "#30223"
+msgid "Editions selected"
+msgstr "பதிப்புகள் தேர்ந்தெடுக்கப்பட்டன"
+
+msgctxt "#30224"
+msgid "Codes selected"
+msgstr "குறியீடுகள் தேர்ந்தெடுக்கப்பட்டன"
+
+msgctxt "#30225"
+msgid "Ratings selected"
+msgstr "மதிப்பீடுகள் தேர்ந்தெடுக்கப்பட்டன"
+
+msgctxt "#30226"
+msgid "Enter title search query"
+msgstr "தலைப்பு தேடல் வினவலை உள்ளிடவும்"
+
+msgctxt "#30227"
+msgid "Empty search"
+msgstr "வெற்று தேடல்"
+
+msgctxt "#30228"
+msgid "Search criteria is empty.[CR]Update criteria and try again."
+msgstr "தேடல் அளவுகோல் காலியாக உள்ளது.[CR]அளவுகோல்களைப் புதுப்பித்து மீண்டும் முயற்சிக்கவும்."
+
+msgctxt "#30229"
+msgid "Reset criteria"
+msgstr "அளவுகோல்களை மீட்டமைக்கவும்"
+
+msgctxt "#30230"
+msgid "Enter Link Name"
+msgstr "இணைப்பின் பெயரை உள்ளிடவும்"
+
+msgctxt "#30231"
+msgid "Define the start page for IAGL"
+msgstr "IAGLக்கான தொடக்கப் பக்கத்தை வரையறுக்கவும்"
+
+msgctxt "#30232"
+msgid "Kodi launch options"
+msgstr "கோடி வெளியீட்டு விருப்பங்கள்"
+
+msgctxt "#30233"
+msgid "Completed"
+msgstr "முடிக்கப்பட்டது"
+
+msgctxt "#30234"
+msgid "Create new group"
+msgstr "புதிய குழுவை உருவாக்கவும்"
+
+msgctxt "#30235"
+msgid "Select favorite group"
+msgstr "பிடித்த குழுவைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30236"
+msgid "Group by Favorites Group"
+msgstr "பிடித்தவை குழு மூலம் குழு"
+
+msgctxt "#30237"
+msgid "Remove IAGL Favorite"
+msgstr "IAGL பிடித்ததை அகற்று"
+
+msgctxt "#30238"
+msgid "Are you sure you want to delete this Favorite?"
+msgstr "இந்தப் பிடித்தமானதை நிச்சயமாக நீக்க விரும்புகிறீர்களா?"
+
+msgctxt "#30239"
+msgid "Favorite deleted"
+msgstr "பிடித்தது நீக்கப்பட்டது"
+
+msgctxt "#30240"
+msgid "Favorites display"
+msgstr "பிடித்தவை காட்சி"
+
+msgctxt "#30241"
+msgid "Define the start page for IAGL Favorites"
+msgstr "IAGL பிடித்தவைக்கான தொடக்கப் பக்கத்தை வரையறுக்கவும்"
+
+msgctxt "#30242"
+msgid "By Favorites Group"
+msgstr "பிடித்தவை குழு மூலம்"
+
+msgctxt "#30243"
+msgid "Reset *all* criteria"
+msgstr "*அனைத்து* அளவுகோல்களையும் மீட்டமைக்கவும்"
+
+msgctxt "#30244"
+msgid "Run IAGL setup wizard?"
+msgstr "IAGL அமைவு வழிகாட்டியை இயக்கவா?"
+
+msgctxt "#30245"
+msgid "Wizard"
+msgstr "வழிகாட்டி"
+
+msgctxt "#30246"
+msgid "Update game list Launcher"
+msgstr "கேம் பட்டியல் துவக்கியைப் புதுப்பிக்கவும்"
+
+msgctxt "#30247"
+msgid "Update game list Launch Command"
+msgstr "கேம் பட்டியலைப் புதுப்பிக்கவும் துவக்க கட்டளை"
+
+msgctxt "#30248"
+msgid "Update game list Download Path"
+msgstr "விளையாட்டுப் பட்டியலைப் பதிவிறக்கும் பாதையைப் புதுப்பிக்கவும்"
+
+msgctxt "#30249"
+msgid "Hide game list"
+msgstr "விளையாட்டுப் பட்டியலை மறை"
+
+msgctxt "#30250"
+msgid "Update game list post download process"
+msgstr "பதிவிறக்க செயல்முறைக்குப் பிறகு கேம் பட்டியலைப் புதுப்பிக்கவும்"
+
+msgctxt "#30251"
+msgid "Are you sure you want to hide game list"
+msgstr "கேம் பட்டியலை நிச்சயமாக மறைக்க விரும்புகிறீர்களா?"
+
+msgctxt "#30252"
+msgid "Game list is now hidden"
+msgstr "விளையாட்டு பட்டியல் இப்போது மறைக்கப்பட்டுள்ளது"
+
+msgctxt "#30253"
+msgid "No results"
+msgstr "முடிவுகள் இல்லை"
+
+msgctxt "#30254"
+msgid "No hidden game lists found"
+msgstr "மறைக்கப்பட்ட விளையாட்டு பட்டியல்கள் எதுவும் இல்லை"
+
+msgctxt "#30255"
+msgid "Game lists unhidden"
+msgstr "கேம் பட்டியல்கள் மறைக்கப்படவில்லை"
+
+msgctxt "#30256"
+msgid "Confirm reset"
+msgstr "மீட்டமைப்பை உறுதிப்படுத்தவும்"
+
+msgctxt "#30257"
+msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
+msgstr "தரவுத்தளத்தை மீட்டமைக்க விரும்புகிறீர்களா?[CR]எல்லா பயனர் தகவல்களும் இழக்கப்படும்![CR]இதைச் செயல்தவிர்க்க முடியாது!"
+
+msgctxt "#30258"
+msgid "Database has been reset"
+msgstr "தரவுத்தளம் மீட்டமைக்கப்பட்டது"
+
+msgctxt "#30259"
+msgid "Update Launcher"
+msgstr "துவக்கியைப் புதுப்பிக்கவும்"
+
+msgctxt "#30260"
+msgid "Update launcher from[CR]Kodi to[CR]External?"
+msgstr "துவக்கியை[CR]கோடியிலிருந்து[CR]வெளிப்புறத்திற்குப் புதுப்பிக்கவா?"
+
+msgctxt "#30261"
+msgid "Update launcher from[CR]External to[CR]Kodi?"
+msgstr "துவக்கியை[CR]வெளியிலிருந்து [CR]கோடிக்கு புதுப்பிக்கவா?"
+
+msgctxt "#30262"
+msgid "Launcher updated to external"
+msgstr "துவக்கி வெளிப்புறத்திற்கு புதுப்பிக்கப்பட்டது"
+
+msgctxt "#30263"
+msgid "Launcher updated to retroplayer"
+msgstr "துவக்கி ரெட்ரோபிளேயருக்கு புதுப்பிக்கப்பட்டது"
+
+msgctxt "#30264"
+msgid "Select game addon"
+msgstr "விளையாட்டு துணை நிரலைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30265"
+msgid "Are you sure you want to reset the game addon launch command?"
+msgstr "விளையாட்டு addon வெளியீட்டு கட்டளையை நிச்சயமாக மீட்டமைக்க விரும்புகிறீர்களா?"
+
+msgctxt "#30266"
+msgid "Download game to…"
+msgstr "விளையாட்டைப் பதிவிறக்கம் செய்ய…"
+
+msgctxt "#30267"
+msgid "Select download folder"
+msgstr "பதிவிறக்க கோப்புறையைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30268"
+msgid "Archive.org login success!"
+msgstr "Archive.org உள்நுழைவு வெற்றி!"
+
+msgctxt "#30269"
+msgid "Archive.org login failed.[CR]Check credentials or log for more details"
+msgstr "Archive.org உள்நுழைவு தோல்வியடைந்தது.[CR]நற்சான்றிதழ்களைச் சரிபார்க்கவும் அல்லது மேலும் விவரங்களுக்கு பதிவு செய்யவும்"
+
+msgctxt "#30270"
+msgid "Error"
+msgstr "பிழை"
+
+msgctxt "#30271"
+msgid "Initializing download for[CR]"
+msgstr "[CR] க்கான பதிவிறக்கத்தை துவக்குகிறது"
+
+msgctxt "#30272"
+msgid "Check logs"
+msgstr "பதிவுகளைச் சரிபார்க்கவும்"
+
+msgctxt "#30273"
+msgid "Checking login for[CR]"
+msgstr "[CR] க்கான உள்நுழைவைச் சரிபார்க்கிறது"
+
+msgctxt "#30274"
+msgid "Requesting file info for[CR]"
+msgstr "[CR] க்கான கோப்புத் தகவலைக் கோருகிறது"
+
+msgctxt "#30275"
+msgid "Select from Retroarch Cores"
+msgstr "ரெட்ரோஆர்க் கோர்களில் இருந்து தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30276"
+msgid "Select from Extra Emulators"
+msgstr "கூடுதல் எமுலேட்டர்களில் இருந்து தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30277"
+msgid "Manually Enter Launch Command"
+msgstr "துவக்க கட்டளையை கைமுறையாக உள்ளிடவும்"
+
+msgctxt "#30278"
+msgid "Select External Command Type"
+msgstr "வெளிப்புற கட்டளை வகையைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30279"
+msgid "Extra Emulators"
+msgstr "கூடுதல் முன்மாதிரிகள்"
+
+msgctxt "#30280"
+msgid "Dolphin"
+msgstr "டால்பின்"
+
+msgctxt "#30281"
+msgid "Select the path to the Dolphin application (optional)"
+msgstr "டால்பின் பயன்பாட்டிற்கான பாதையைத் தேர்ந்தெடுக்கவும் (விரும்பினால்)"
+
+msgctxt "#30282"
+msgid "MAME"
+msgstr "MAME"
+
+msgctxt "#30283"
+msgid "Select the path to the MAME application (optional)"
+msgstr "MAME பயன்பாட்டிற்கான பாதையைத் தேர்ந்தெடுக்கவும் (விரும்பினால்)"
+
+msgctxt "#30284"
+msgid "Project 64"
+msgstr "திட்டம் 64"
+
+msgctxt "#30285"
+msgid "Select the path to the Project 64 application (optional)"
+msgstr "திட்டம் 64 பயன்பாட்டிற்கான பாதையைத் தேர்ந்தெடுக்கவும் (விரும்பினால்)"
+
+msgctxt "#30286"
+msgid "ePSXe"
+msgstr "ePSXe"
+
+msgctxt "#30287"
+msgid "Select the path to the ePSXe application (optional)"
+msgstr "ePSXe பயன்பாட்டிற்கான பாதையைத் தேர்ந்தெடுக்கவும் (விரும்பினால்)"
+
+msgctxt "#30288"
+msgid "Demul"
+msgstr "டெமுல்"
+
+msgctxt "#30289"
+msgid "Select the path to the Demul application (optional)"
+msgstr "டெமுல் பயன்பாட்டிற்கான பாதையைத் தேர்ந்தெடுக்கவும் (விரும்பினால்)"
+
+msgctxt "#30290"
+msgid "FS-UAE"
+msgstr "FS-UAE"
+
+msgctxt "#30291"
+msgid "Select the path to the FS-UAE application (optional)"
+msgstr "FS-UAE பயன்பாட்டிற்கான பாதையைத் தேர்ந்தெடுக்கவும் (விரும்பினால்)"
+
+msgctxt "#30292"
+msgid "Are you sure you want to set external launch command?"
+msgstr "வெளிப்புற வெளியீட்டு கட்டளையை நிச்சயமாக அமைக்க விரும்புகிறீர்களா?"
+
+msgctxt "#30293"
+msgid "External launch command updated"
+msgstr "வெளிப்புற வெளியீட்டு கட்டளை புதுப்பிக்கப்பட்டது"
+
+msgctxt "#30294"
+msgid "Android users must verify the core is installed in Retroarch"
+msgstr "ஆண்ட்ராய்டு பயனர்கள் கோர்வை Retroarch இல் நிறுவப்பட்டுள்ளதைச் சரிபார்க்க வேண்டும்"
+
+msgctxt "#30295"
+msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
+msgstr "துவக்க அமைப்புகள் தற்போது காலியாக உள்ளன[CR]தயவுசெய்து addon வெளிப்புற வெளியீட்டு அமைப்புகளைப் புதுப்பிக்கவும்."
+
+msgctxt "#30296"
+msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
+msgstr "துவக்க அமைப்புகள் தற்போது காலியாக உள்ளன[CR]தயவுசெய்து addon OS வெளியீட்டு அமைப்புகளைப் புதுப்பிக்கவும்."
+
+msgctxt "#30297"
+msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
+msgstr "கூடுதல் எமுலேட்டர்கள் எதுவும் கிடைக்கவில்லை[CR]தயவுசெய்து கூடுதல் எமுலேட்டர் அமைப்புகளைப் புதுப்பிக்கவும்."
+
+msgctxt "#30298"
+msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
+msgstr "வெளியீட்டு கட்டளையை உள்ளிடவும்[CR]IAGL விக்கியில் விருப்பச் சொற்களைப் பார்க்கவும்"
+
+msgctxt "#30299"
+msgid "Reset Launch Command"
+msgstr "துவக்க கட்டளையை மீட்டமைக்கவும்"
+
+msgctxt "#30300"
+msgid "Are you sure you want to reset the external launch command?"
+msgstr "வெளிப்புற வெளியீட்டு கட்டளையை மீட்டமைக்க விரும்புகிறீர்களா?"
+
+msgctxt "#30301"
+msgid "External launch command was reset"
+msgstr "வெளிப்புற வெளியீட்டு கட்டளை மீட்டமைக்கப்பட்டது"
+
+msgctxt "#30302"
+msgid "Enter a value for"
+msgstr "இதற்கான மதிப்பை உள்ளிடவும்"
+
+msgctxt "#30303"
+msgid "View game list settings"
+msgstr "விளையாட்டு பட்டியல் அமைப்புகளைப் பார்க்கவும்"
+
+msgctxt "#30304"
+msgid "Game List"
+msgstr "விளையாட்டு பட்டியல்"
+
+msgctxt "#30305"
+msgid "Game List System"
+msgstr "விளையாட்டு பட்டியல் அமைப்பு"
+
+msgctxt "#30306"
+msgid "Total 1G1R Games in List"
+msgstr "பட்டியலில் மொத்தம் 1G1R கேம்கள்"
+
+msgctxt "#30307"
+msgid "Total Games in List"
+msgstr "பட்டியலில் உள்ள மொத்த விளையாட்டுகள்"
+
+msgctxt "#30308"
+msgid "Total Favorited Games in List"
+msgstr "பட்டியலில் உள்ள மொத்த விருப்பமான கேம்கள்"
+
+msgctxt "#30309"
+msgid "Default External Launch Command"
+msgstr "இயல்புநிலை வெளிப்புற வெளியீட்டு கட்டளை"
+
+msgctxt "#30310"
+msgid "Default Retroplayer Game Addon"
+msgstr "இயல்புநிலை ரெட்ரோபிளேயர் கேம் ஆடோன்"
+
+msgctxt "#30311"
+msgid "Default Game Post Process"
+msgstr "இயல்புநிலை கேம் பிந்தைய செயல்முறை"
+
+msgctxt "#30312"
+msgid "User Defined Download Path"
+msgstr "பயனர் வரையறுக்கப்பட்ட பதிவிறக்க பாதை"
+
+msgctxt "#30313"
+msgid "User External Launch Command"
+msgstr "பயனர் வெளிப்புற துவக்க கட்டளை"
+
+msgctxt "#30314"
+msgid "User Defined Retroplayer Game Addon"
+msgstr "பயனர் வரையறுக்கப்பட்ட ரெட்ரோபிளேயர் கேம் Addon"
+
+msgctxt "#30315"
+msgid "User Defined Post Process"
+msgstr "பயனர் வரையறுக்கப்பட்ட இடுகை செயல்முறை"
+
+msgctxt "#30316"
+msgid "Game List Settings"
+msgstr "விளையாட்டு பட்டியல் அமைப்புகள்"
+
+msgctxt "#30317"
+msgid "None (will use addon default)"
+msgstr "எதுவும் இல்லை (ஆட்ஆன் இயல்புநிலையைப் பயன்படுத்தும்)"
+
+msgctxt "#30318"
+msgid "Games List Launcher"
+msgstr "விளையாட்டு பட்டியல் துவக்கி"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "வெளிப்புற வெளியீட்டு கட்டளை"
+
+msgctxt "#30320"
+msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
+msgstr "வெளிப்புற வெளியீட்டு கட்டளை[CR]*பயனர் வெளியீட்டு கட்டளை இல்லை / இயல்புநிலையைப் பயன்படுத்துகிறது*"
+
+msgctxt "#30321"
+msgid "Kodi Retroplayer"
+msgstr "கோடி ரெட்ரோபிளேயர்"
+
+msgctxt "#30322"
+msgid "Are you sure you want to update game list download path?"
+msgstr "கேம் பட்டியல் பதிவிறக்க பாதையை நிச்சயமாக புதுப்பிக்க விரும்புகிறீர்களா?"
+
+msgctxt "#30323"
+msgid "Download path updated"
+msgstr "பதிவிறக்க பாதை புதுப்பிக்கப்பட்டது"
+
+msgctxt "#30324"
+msgid "Are you sure you want to reset game list download path?"
+msgstr "கேம் பட்டியல் பதிவிறக்க பாதையை நிச்சயமாக மீட்டமைக்க விரும்புகிறீர்களா?"
+
+msgctxt "#30325"
+msgid "Download path reset"
+msgstr "பதிவிறக்க பாதை மீட்டமைப்பு"
+
+msgctxt "#30326"
+msgid "Change download path"
+msgstr "பதிவிறக்க பாதையை மாற்று"
+
+msgctxt "#30327"
+msgid "Reset download path"
+msgstr "பதிவிறக்க பாதையை மீட்டமைக்கவும்"
+
+msgctxt "#30328"
+msgid "Reset game list settings"
+msgstr "விளையாட்டு பட்டியல் அமைப்புகளை மீட்டமைக்கவும்"
+
+msgctxt "#30329"
+msgid "Are you sure you want to reset all game list settings to default?"
+msgstr "எல்லா கேம் பட்டியல் அமைப்புகளையும் இயல்புநிலைக்கு மீட்டமைக்க விரும்புகிறீர்களா?"
+
+msgctxt "#30330"
+msgid "Game list settings were reset to default"
+msgstr "கேம் பட்டியல் அமைப்புகள் இயல்புநிலைக்கு மீட்டமைக்கப்பட்டன"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "உள்ளூர் கோப்பு பொருந்தும்"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "சான்றுகளை சரிபார்க்கிறது"
+
+msgctxt "#30333"
+msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "வெளியீட்டின் போது பின்வரும் மாறிகள் மாற்றப்படும்:[CR]● XXROM_PATHXX: தொடங்கப்படும் கோப்பிற்கான பாதை[CR]● XXROM_NAMEXX: தொடங்கப்படும் கோப்பின் பெயர் (பாதை இல்லை)[CR]● XXROM_STEMXX: தி தொடங்கப்படும் கோப்பின் பெயர் (பாதை இல்லை நீட்டிப்பு இல்லை)[CR]● XXNETPLAY_COMMANDXX: நெட்பிளேக்கு ஏதேனும் கட்டளைச் சேர்த்தல் தேவை, விருப்பங்களுக்கான addon அமைப்புகளைப் பார்க்கவும்[CR]மேலும் தகவலுக்கு விக்கியைப் பார்க்கவும்..."
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "காப்பகக் கோப்பைச் செயலாக்க முடியவில்லை[CR]மேலும் விவரங்களுக்குப் பதிவுகளைச் சரிபார்க்கவும்"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "தொடங்குவதற்கு முன் செயலைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "கோடியை பின்னணியில் இயங்க விடவும் (இயல்புநிலை)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "தொடங்குவதற்கு முன் கோடியை மூடவும், எமுலேட்டர் வெளியேறிய பிறகு கோடியை மீண்டும் திறக்கவும்"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "தொடங்குவதற்கு முன் கோடியை இடைநிறுத்தவும், எமுலேட்டர் வெளியேறிய பிறகு கோடியை எழுப்பவும்"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "IAGL db புள்ளிவிவரங்களைக் காண்க"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "IAGL db-க்கான தற்போதைய புள்ளிவிவரங்களைப் பட்டியலிடுகிறது."
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db புள்ளிவிவரங்கள்"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "துவக்க அளவுருக்களைக் காண்க"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "விளையாட்டு அமைப்புகள்"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "விளையாட்டு அளவுருக்களை துவக்கவும்"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "பயனர் துவக்க கட்டளை இல்லை என்றால்"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "வெளியீட்டு கட்டளை (ரெட்ரோபிளேயர் addon அல்லது வெளிப்புற முன்மாதிரி) அமைக்கப்படாதபோது கோடி என்ன செய்யும் என்பதைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "முன்னிருப்பாக துவக்க முயற்சி"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "நிறுத்து / தொடங்காதே"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "கட்டளை அமைக்கப்படவில்லை"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "இந்தப் பட்டியலுக்கு வெளியீட்டு கட்டளை அமைக்கப்படவில்லை, இப்போது ஒன்றை அமைக்கவா?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "இந்தப் பட்டியலுக்கு இயல்புநிலை வெளியீட்டு கட்டளை எதுவும் இல்லை"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "இயல்புநிலை கோர் காணப்படவில்லை.  {}ஐ நிறுவவும் அல்லது துவக்கியைப் புதுப்பிக்கவும்"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "கேம் addon வெளியீட்டு கட்டளை மீட்டமைப்பு"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "விளையாட்டு துணை நிரல் எதுவும் இல்லை"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "கேம் ஆட்ஆன் வெளியீட்டு கட்டளை புதுப்பிக்கப்பட்டது"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "மாற்று இயல்புநிலை பதிவிறக்க கோப்புறையைப் பயன்படுத்தவும்"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "கோடியை பின்னணியில் வைத்திருக்கும் விருப்பங்களை மட்டும் காட்டு"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "கோடியை மூடும் விருப்பங்களை மட்டும் காட்டு"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "கோடியை இடைநிறுத்தும் விருப்பங்களை மட்டும் காட்டு"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "சரமாக CFG இருப்பிடத்தை மீட்டெடுக்கவும்"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "மாற்றாக retroarch.cfg கோப்பிற்கான பாதையை Retroarch இல் உள்ளதைப் போலவே உள்ளிடவும்"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch கோர்ஸ் கோப்பகம் சரமாக"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "மாற்றாக கோர்ஸ் கோப்பகத்திற்கான பாதையை Retroarch டைரக்டரி உள்ளமைவில் உள்ளவாறு உள்ளிடவும்"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}க்கான துவக்கியைப் புதுப்பிக்கவா?[CR][B]இது இந்தப் பட்டியலில் உள்ள அனைத்து கேம்களுக்கான அமைப்புகளையும் மாற்றும்.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}க்கான துவக்கக் கட்டளையைப் புதுப்பிக்கவா?[CR][B]இது இந்தப் பட்டியலில் உள்ள அனைத்து கேம்களுக்கான அமைப்புகளையும் மாற்றும்.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}க்கான துவக்கப் பதிவிறக்கப் பாதையைப் புதுப்பிக்கவா?[CR][B]இது இந்தப் பட்டியலில் உள்ள அனைத்து கேம்களுக்கான அமைப்புகளையும் மாற்றும்.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "துவக்க கட்டளையைப் புதுப்பிக்கவும்"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "துவக்கப் பதிவிறக்கப் பாதையைப் புதுப்பிக்கவும்"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}க்கான அமைப்புகளை மீட்டமைக்கவா?[CR][B]இது இந்தப் பட்டியலில் உள்ள அனைத்து கேம்களுக்கான அமைப்புகளையும் மாற்றும்.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "ஆதரவு"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Archive.org க்கு நன்கொடை அளிக்கவும்"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "புதிய IAGL தரவுத்தளம் கண்டறியப்பட்டது[CR]நீங்கள் புதுப்பிக்க விரும்புகிறீர்களா?[CR]முடிந்தால் அமைப்புகள் புதிய db க்கு நகலெடுக்கப்படும்"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "புதிய db"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "தரவுத்தளம் புதுப்பிக்கப்பட்டது[CR]பயனர் அமைப்புகள் மாற்றப்பட்டன"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "தரவுத்தளம் புதுப்பிக்கப்பட்டது[CR]சில பயனர் அமைப்புகள் மாற்றப்படவில்லை[CR]மேலும் விவரங்களுக்கு பதிவைப் பார்க்கவும்"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "தரவுத்தளத்தைப் புதுப்பிப்பதில் பிழை ஏற்பட்டது[CR]மேலும் விவரங்களுக்கு பதிவைப் பார்க்கவும்"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "பிறகு மீண்டும் என்னிடம் கேள்"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "இந்த நேரத்தில் புதுப்பிக்க வேண்டாம்[CR](அடுத்த புதுப்பிப்பு வரை என்னிடம் மீண்டும் கேட்க வேண்டாம்)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "IAGL அமைவு வழிகாட்டிக்கு வரவேற்கிறோம்[CR]நீங்கள் விளையாடுவதற்கு அனைத்து அமைப்புகளையும் இயக்கலாம்!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "பெரும்பாலான கேம்களுக்கு archive.org கணக்கு தேவை"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "கோடி கேம் துணை நிரல்களைப் பயன்படுத்துவதற்கான அமைவு முடிந்தது![CR]விளையாடத் தயாரா?[CR]வெளிப்புற கேம் தொடங்குதலை அமைக்க [B]இல்லை[/B] என்பதைத் தேர்ந்தெடுக்கவும்."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "அனைத்து விளையாட்டுப் பட்டியல்களையும் வெளிப்புறமாகத் தொடங்குமாறு அமைக்கவும்"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "வெளிப்புறமாகத் தொடங்குவதற்கு சில விளையாட்டுப் பட்டியல்களை மட்டும் அமைக்கவும்"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "அனைத்து கேம் பட்டியல் துவக்கிகளையும் இயல்புநிலைக்கு மீட்டமைக்கவும்"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} கேம் பட்டியல்கள் வெளிப்புறத் துவக்கத்திற்காக புதுப்பிக்கப்பட்டன"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "ஒவ்வொரு வெளிப்புற வெளியீட்டு கட்டளைக்கும் இயல்புநிலைகள் முன்பே அமைக்கப்பட்டிருக்கும்[CR]தேவைப்பட்டால் மதிப்பாய்வு கேம் வெளியீட்டு அளவுருக்களை தொடங்குவதற்கு முன்[CR]மேலும் விவரங்களுக்கு விக்கியைப் பார்க்கவும்."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch பயன்பாடு இவ்வாறு அமைக்கப்பட்டது:[CR]{}[CR]தேவைப்பட்டால் addon அமைப்புகளில் மாற்றவும்"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch config அமைக்கப்பட்டது:[CR]{}[CR]தேவைப்பட்டால் addon அமைப்புகளில் மாற்றவும்"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "வழிகாட்டி முடிந்தது[CR]விளையாடட்டும்!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "கோடியுடன் தொடங்கப்படும் அனைத்து கேம் பட்டியல்களையும் அமைக்கவும்"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "அனைத்து கேம் பட்டியல்களையும் வெளிப்புற துவக்கத்திற்கு விரைவாக அமைக்கவும்"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "அனைத்து கேம் பட்டியல்களையும் கோடி ரெட்ரோபிளேயருக்கு விரைவாக அமைக்கவும்"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "உறுதிப்படுத்தவும்"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "எல்லா பட்டியல்களையும் வெளிப்புறத் துவக்கத்திற்கு அமைக்க விரும்புகிறீர்களா?"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "நீங்கள் நிச்சயமாக எல்லா பட்டியல்களையும் கோடி ரெட்ரோபிளேயரில் அமைக்க விரும்புகிறீர்களா?"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Android அனுமதிகளுக்கு நீங்கள் Retroarch config பாதையை கைமுறையாக உள்ளிட வேண்டும்[CR]மேலும் உதவிக்கு விக்கியைப் பார்க்கவும்"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Android அனுமதிகளுக்கு நீங்கள் Retroarch கோர் பாதையை கைமுறையாக உள்ளிட வேண்டும்[CR]மேலும் உதவிக்கு விக்கியைப் பார்க்கவும்"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "தற்போதைய தரவுத்தளத்தை காப்புப் பிரதி எடுக்கவும்"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "காப்புப்பிரதியிலிருந்து தரவுத்தளத்தை மீட்டெடுக்கவும்"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "தற்போதைய IAGL தரவுத்தளம் மற்றும் அனைத்து பயனர் அமைப்புகளையும் காப்புப்பிரதி எடுக்கவும்."
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "காப்புப்பிரதியிலிருந்து தற்போதைய addon தரவுத்தளத்தை மீட்டமைக்கவும்"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "காப்புப் பாதையைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "காப்புப்பிரதி db ஐத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "காப்புப்பிரதி முடிந்தது"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "மீட்டெடுப்பு முடிந்தது"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} பொருந்தும் கேம் ஐடிகள் புதிய db இல் காணப்படவில்லை[CR]அடுத்த செயலைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "தரவுத்தளத்தைப் புதுப்பிக்கவும், தலைப்பு மற்றும் கேம் பட்டியல் மூலம் கேம்களைப் பொருத்த முயற்சிக்கவும்"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "தரவுத்தளத்தைப் புதுப்பிக்கவும், கண்டுபிடிக்கப்படாத கேம் ஐடிகளை அகற்றவும்"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "பழைய தரவுத்தளத்திற்கு மீட்டமைக்கவும்"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "தரவுத்தளம் பழைய தரவுத்தளத்திற்கு மீட்டமைக்கப்பட்டது"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "தயவுசெய்து காத்திருங்கள்"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Retroarch கோப்பகங்களை கைமுறையாக அமைக்கவும்"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL இயல்பாக RA கட்டமைப்பிலிருந்து கோப்பகங்களைக் கண்டறியும், இந்தச் செயல்பாட்டை நீங்கள் கைமுறையாக மேலெழுதலாம்"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch கோர் டைரக்டரி"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "தகவல் கோப்பகத்தைத் திரும்பப் பெறவும்"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "துவக்க கட்டளையைத் தொடங்க linux பயன்பாட்டைச் சேர்க்கவும்"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak என்பது குறிப்பிட்ட linux/elec அமைப்புகளுக்குப் பயன்படுத்தப்படுகிறது.  உங்கள் கணினிக்கு தேவைப்பட்டால் மட்டுமே இயக்கவும்."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Retroarch கட்டளைகளுக்கு systemd-run ஐ முன்வைக்கவும்"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "அனைத்து கட்டளைகளுக்கும் systemd-ரன்னை முன்வைக்கவும்"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Retroarch கட்டளைகளுக்கு பிளாட்பேக் ரன் முன்முயற்சி செய்யவும்"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "அனைத்து கட்டளைகளுக்கும் பிளாட்பாக் இயக்கத்தை முன்வைக்கவும்"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Android அனுமதிகளுக்கு பகிரப்பட்ட சேமிப்பக கோப்பகம் தேவை[CR]இரண்டு பயன்பாடுகளாலும் அணுகக்கூடிய பகிரப்பட்ட இருப்பிடத்தை உள்ளிடவும்"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "கோப்புகளை அன்சிப் செய்யவும்"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "செயலாக்கம் இல்லை"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "கோப்புகளை அன்சிப் செய்யவும், பயாஸ் கோப்புகளைத் தவிர்க்கவும்"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "கோப்புறையில் கோப்புகளை அன்சிப் செய்யவும்"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "கோப்புகளை அவிழ்த்து, CHD ஐ கோப்புறைக்கு நகர்த்தவும்."
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "கோப்புகளை கோப்புறைக்கு நகர்த்தவும்: ஆர்கேட்"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "கோப்புகளை கோப்புறைக்கு நகர்த்தவும்: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "கோப்புகளை கோப்புறைக்கு நகர்த்தவும்: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "கோப்புகளை கோப்புறைக்கு நகர்த்தவும்: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "கோப்புகளை கோப்புறைக்கு நகர்த்தவும்: கேம் கியர்"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "கோப்புகளை கோப்புறைக்கு நகர்த்தவும்: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "கோப்புகளை கோப்புறைக்கு நகர்த்தவும்: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "கோப்புகளை கோப்புறைக்கு நகர்த்தவும்: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "கோப்புகளை கோப்புறைக்கு நகர்த்தவும்: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "கோப்புகளை கோப்புறைக்கு நகர்த்தவும்: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "கோப்புகளை கோப்புறைக்கு நகர்த்தவும்: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "கோப்புகளை கோப்புறைக்கு நகர்த்தவும்: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "கோப்புகளை கோப்புறைக்கு நகர்த்தவும்: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "கோப்புகளை கோப்புறைக்கு நகர்த்தவும்: ஸ்பெக்ட்ரம்"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "கோப்புகளை கோப்புறைக்கு நகர்த்தவும்: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "கேம் பட்டியல் இடுகை செயல்முறையை நிச்சயமாகப் புதுப்பிக்க விரும்புகிறீர்களா?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "இடுகை செயல்முறை புதுப்பிக்கப்பட்டது"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}க்கான இடுகைச் செயல்முறையைப் புதுப்பிக்கவா?[CR][B]இது இந்தப் பட்டியலில் உள்ள அனைத்து கேம்களுக்கான அமைப்புகளையும் மாற்றும்.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "பதிவிறக்கம் முடிந்தது. செயல்முறை கோப்புகளை இடுகையிடவா?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "விளையாட்டு கோப்புகள் செயலாக்கப்பட்டன"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "கிடைக்கவில்லை (Windows, OSX, Linux மட்டும்)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "நெட்பிளே பயனர்பெயர் வகை"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "நெட்பிளே பிளேயர் பெயருக்கான ஒருங்கிணைப்பைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "டிஸ்கார்டைப் பயன்படுத்தவும்"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "டிஸ்கார்ட் தானியங்கு நெட்பிளே பொருத்தங்களை செயல்படுத்துகிறது (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "பிளேயர் பெயரை கைமுறையாக உள்ளிடவும்"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "வீரர்களின் பெயர்கள் Retroarch லாபியில் வெளியிடப்படும்"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "வீரர் பெயர்"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "தற்போதைய டிஸ்கார்ட் பயனர்"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "டிஸ்கார்ட் பயனர் [CR]{}க்கு அமைக்கப்பட்டார்"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Retroarch netplay ஐப் பயன்படுத்தி ஆன்லைனில் சேரக்கூடிய கேமிங் அமர்வுகளைப் பார்க்கவும்"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "ஐடி [CR]{} உடன் டிஸ்கார்ட் பயனரைக் கண்டுபிடிக்க முடியவில்லை"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "லாபி வடிகட்டி விருப்பங்கள்"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "நுழையக்கூடிய அறைகளை மட்டும் காட்டு."
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "லிப்ரெட்ரோவைப் பயன்படுத்தும் ஷோ ரூம்களை மட்டும்"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "கடவுச்சொல் உள்ள அறைகளைக் காட்டு"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "பார்வையாளர் கடவுச்சொல்லைக் கொண்ட அறைகளைக் காட்டு"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "MITM சேவையகங்களைப் பயன்படுத்தி அறைகளைக் காட்டு"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "ஷோ ரூம்கள் மட்டுமே காலக்கெடுவிற்குள் உருவாக்கப்படும்"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 நிமிடங்கள்"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 நிமிடங்கள்"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "எந்த காலக்கெடுவும்"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "உருவாக்கும் நேரத்தின் அடிப்படையில் லாபி அறைகளை வடிகட்டவும்"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "IAGLஐப் பயன்படுத்தும் அறைகளை மட்டும் காட்டுங்கள்"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "[CR]{} போன்ற பெயருடன் பொருந்தக்கூடிய விளையாட்டைக் கண்டுபிடிக்க முடியவில்லை."
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "கிடைக்கவில்லை"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "பொருந்தும் விளையாட்டைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Netplay வெளியீட்டு நடவடிக்கை"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "ரெட்ரோச் லாபியில் இருந்து சேரவும்"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "லோக்கல் ஹோஸ்டிலிருந்து சேரவும்"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "நெட்பிளே கேமில் சேரும்போது இயல்புநிலை செயலைத் தேர்ந்தெடுக்கவும்"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "நெட்பிளே ஹோஸ்டாக துவக்கவும்"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "IAGL பிடித்ததை மறுபெயரிடு"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "மறுபெயரிடுதல் முடிந்தது"

@@ -1,14 +1,16 @@
-<meta name=”robots” content=”noindex, nofollow”>
+<meta name="robots" content="noindex, nofollow">
 
-![](https://i.imgur.com/nQfTbZq.png?display=inline-block) Internet Archive Game Launcher
+<p align="center">
+  <img style="max-width:50vw" src="https://repository-images.githubusercontent.com/129450529/0dcca600-7a9a-11eb-8892-f50d5ccd601c" alt="IAGL"/>
+</p>
+
+
+Internet Archive Game Launcher
 ==========================
 
 The Internet Archive Game Launcher (IAGL - /eye/gull/) will launch games from the internet using [Kodi](http://kodi.tv)
 
 IAGL is *FREE*, as in beer. As in no money. As in gratis.
-
-
-![IAGL](https://github.com/zach-morris/plugin.program.iagl/blob/main/fanart.jpg)
 
 
 Installation
@@ -25,8 +27,10 @@ or
 - Download the latest version zipfile from [here](https://github.com/zach-morris/repository.zachmorris/tree/master/plugin.program.iagl) to install by zipfile.
 
 **NOTE**
-The addon in the repository is for the lastest major version of Kodi now.
-Users of earlier versions of Kodi can still manually install older versions from here:  [here](https://github.com/zach-morris/repository.zachmorris/tree/master/plugin.program.iagl) (there is no more repository for the old version).
+The addon in the repository is for Kodi v20 now.
+Users of Kodi v19 or earlier have to manually install and earlier of the addon from [here](https://github.com/zach-morris/repository.zachmorris/tree/master/plugin.program.iagl) (there is no more repository for the old version, support or maintenenance for older versions is not available).
+
+Also note that IAGL>v4.0 is *incompatible* with earlier versions.  Any settings/game lists/favorties/etc cannot be transferred.  Do not upgrade if you want to keep your old setup.
 
 Help
 -------------
@@ -52,7 +56,7 @@ Licenses
 
 IAGL code is released under the [GNU GENERAL PUBLIC LICENSE Version 3](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
-Supplementary databases released with IAGL, in [this folder](https://github.com/zach-morris/plugin.program.iagl/tree/main/resources/data/databases), are released under the [Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) license. This allows for *non-commercial* use as long as credit is given and that derivative works (works based on the CC licensed data) are also made available under the same license.
+Supplementary databases released with IAGL, in [this folder](https://github.com/zach-morris/plugin.program.iagl/tree/main/resources/data/), are released under the [Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) license. This allows for *non-commercial* use as long as credit is given and that derivative works (works based on the CC licensed data) are also made available under the same license.
 
 Media files in the skin folder are licensed under the Creative Commons Attribution-ShareAlike 4.0 Unported License.  You can find the license details [here](http://creativecommons.org/licenses/by-sa/4.0/)
 
@@ -63,11 +67,17 @@ Some audio files in [this folder](https://github.com/zach-morris/plugin.program.
 
 IAGL in Action
 -------------------
-[![IAGL](https://i.imgur.com/rHgDFw1.gif)](https://www.youtube.com/watch?v=jUIbVqd_iTE)
 
+[![IAGL](https://i.imgur.com/rHgDFw1.gif)](https://www.youtube.com/watch?v=jUIbVqd_iTE)
 
 
 Support
 -------------------
 
-Support the internet archive by [donating](https://archive.org/donate/)!
+**Support the internet archive by [donating](https://archive.org/donate/)!**
+
+
+<p align="center">
+  <img style="max-width:25vw" src="https://i.imgur.com/2JEHlLY.png" alt="IAGL_screens"/>
+</p>
+

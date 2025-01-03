@@ -1,0 +1,1936 @@
+# Kodi Media Center language file
+# Addon Name: /Internet Archive Game Launcher
+# Addon id: pltugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/zach-morris/plugin.program.iagl/issues\n"
+"Language: id_id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "Peluncur Game Arsip Internet"
+
+msgctxt "#30002"
+msgid "Browse all Lists"
+msgstr "Telusuri semua Daftar"
+
+msgctxt "#30003"
+msgid "Browse lists by Category"
+msgstr "Telusuri daftar berdasarkan Kategori"
+
+msgctxt "#30004"
+msgid "Browse games by Playlist"
+msgstr "Telusuri game berdasarkan Daftar Putar"
+
+msgctxt "#30005"
+msgid "Favorites"
+msgstr "Favorit"
+
+msgctxt "#30006"
+msgid "Play History"
+msgstr "Sejarah Permainan"
+
+msgctxt "#30007"
+msgid "Search"
+msgstr "Mencari"
+
+msgctxt "#30008"
+msgid "Random Play"
+msgstr "Putar Acak"
+
+msgctxt "#30009"
+msgid "Next"
+msgstr "Berikutnya"
+
+msgctxt "#30010"
+msgid "Previous"
+msgstr "Sebelumnya"
+
+msgctxt "#30011"
+msgid "One Big List"
+msgstr "Satu Daftar Besar"
+
+msgctxt "#30012"
+msgid "Alphabetical"
+msgstr "Alfabetis"
+
+msgctxt "#30013"
+msgid "Group by Genre"
+msgstr "Kelompokkan berdasarkan Genre"
+
+msgctxt "#30014"
+msgid "Group by Year"
+msgstr "Kelompokkan Berdasarkan Tahun"
+
+msgctxt "#30015"
+msgid "Group by Players"
+msgstr "Kelompokkan Berdasarkan Pemain"
+
+msgctxt "#30016"
+msgid "Group by Studio"
+msgstr "Kelompokkan berdasarkan Studio"
+
+msgctxt "#30017"
+msgid "Group by Tag"
+msgstr "Kelompokkan berdasarkan Tag"
+
+msgctxt "#30018"
+msgid "Group by Playlist"
+msgstr "Kelompokkan berdasarkan Daftar Putar"
+
+msgctxt "#30019"
+msgid "Group by Region"
+msgstr "Kelompokkan berdasarkan Wilayah"
+
+msgctxt "#30020"
+msgid "Group by Language"
+msgstr "Kelompokkan berdasarkan Bahasa"
+
+msgctxt "#30021"
+msgid "Group by Edition"
+msgstr "Kelompokkan berdasarkan Edisi"
+
+msgctxt "#30022"
+msgid "Group by Code"
+msgstr "Kelompokkan berdasarkan Kode"
+
+msgctxt "#30023"
+msgid "Group by Rating"
+msgstr "Kelompokkan berdasarkan Peringkat"
+
+msgctxt "#30024"
+msgid "Select Game Lists"
+msgstr "Pilih Daftar Game"
+
+msgctxt "#30025"
+msgid "Search Game Titles"
+msgstr "Cari Judul Game"
+
+msgctxt "#30026"
+msgid "Filter by Genre"
+msgstr "Filter berdasarkan Genre"
+
+msgctxt "#30027"
+msgid "Filter by Players"
+msgstr "Filter berdasarkan Pemain"
+
+msgctxt "#30028"
+msgid "Filter by Studio"
+msgstr "Filter berdasarkan Studio"
+
+msgctxt "#30029"
+msgid "Filter by Tag"
+msgstr "Filter berdasarkan Tag"
+
+msgctxt "#30030"
+msgid "Filter by Playlist"
+msgstr "Filter berdasarkan Daftar Putar"
+
+msgctxt "#30031"
+msgid "Filter by Region"
+msgstr "Filter berdasarkan Wilayah"
+
+msgctxt "#30032"
+msgid "Filter by Language"
+msgstr "Filter berdasarkan Bahasa"
+
+msgctxt "#30033"
+msgid "Filter by Edition"
+msgstr "Filter berdasarkan Edisi"
+
+msgctxt "#30034"
+msgid "Filter by Code"
+msgstr "Filter berdasarkan Kode"
+
+msgctxt "#30035"
+msgid "Filter by Rating"
+msgstr "Filter berdasarkan Peringkat"
+
+msgctxt "#30036"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Jalankan Pencarian[/COLOR]"
+
+msgctxt "#30037"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Buat Tautan Pencarian[/COLOR]"
+
+msgctxt "#30038"
+msgid "Choose Number of Results"
+msgstr "Pilih Jumlah Hasil"
+
+msgctxt "#30039"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Jalankan Pencarian Acak[/COLOR]"
+
+msgctxt "#30040"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Buat Tautan Pencarian Acak[/COLOR]"
+
+msgctxt "#30041"
+msgid "General"
+msgstr "Umum"
+
+msgctxt "#30042"
+msgid "Launching"
+msgstr "Meluncurkan"
+
+msgctxt "#30043"
+msgid "Downloading"
+msgstr "Sedang mengunduh"
+
+msgctxt "#30044"
+msgid "Views and Navigation"
+msgstr "Tampilan dan Navigasi"
+
+msgctxt "#30045"
+msgid "Netplay"
+msgstr "permainan jaringan"
+
+msgctxt "#30046"
+msgid "Setup Wizard"
+msgstr "Panduan Pengaturan"
+
+msgctxt "#30047"
+msgid "Advanced"
+msgstr "Canggih"
+
+msgctxt "#30048"
+msgid "Play History"
+msgstr "Sejarah Permainan"
+
+msgctxt "#30049"
+msgid "Define how many games to save in last played history"
+msgstr "Tentukan berapa banyak permainan yang akan disimpan dalam riwayat permainan terakhir"
+
+msgctxt "#30050"
+msgid "Default action on selecting game"
+msgstr "Tindakan default saat memilih permainan"
+
+msgctxt "#30051"
+msgid "Define action to take when a game is selected"
+msgstr "Tentukan tindakan yang akan diambil saat permainan dipilih"
+
+msgctxt "#30052"
+msgid "If game already exists locally"
+msgstr "Jika game sudah ada secara lokal"
+
+msgctxt "#30053"
+msgid "Define the action to take if a game file is found to exist locally"
+msgstr "Tentukan tindakan yang harus diambil jika file game ditemukan ada secara lokal"
+
+msgctxt "#30054"
+msgid "Prompt"
+msgstr "Mengingatkan"
+
+msgctxt "#30055"
+msgid "Do not re-download"
+msgstr "Jangan mengunduh ulang"
+
+msgctxt "#30056"
+msgid "Re-download and overwrite"
+msgstr "Unduh ulang dan timpa"
+
+msgctxt "#30057"
+msgid "Enable archive.org login"
+msgstr "Aktifkan login archive.org"
+
+msgctxt "#30058"
+msgid "Enabled"
+msgstr "Diaktifkan"
+
+msgctxt "#30059"
+msgid "Disabled"
+msgstr "Dengan disabilitas"
+
+msgctxt "#30060"
+msgid "Some games require login.  Enter your archive.org email address and password."
+msgstr "Beberapa permainan memerlukan login. Masukkan alamat email dan kata sandi archive.org Anda."
+
+msgctxt "#30061"
+msgid "archive.org Email"
+msgstr "arsip.org Surel"
+
+msgctxt "#30062"
+msgid "Some games require login.  Enter your archive.org email address"
+msgstr "Beberapa permainan memerlukan login. Masukkan alamat email archive.org Anda"
+
+msgctxt "#30063"
+msgid "archive.org Password"
+msgstr "arsip.org Kata Sandi"
+
+msgctxt "#30064"
+msgid "Some games require login.  Enter your archive.org password"
+msgstr "Beberapa permainan memerlukan login. Masukkan kata sandi archive.org Anda"
+
+msgctxt "#30065"
+msgid "Check login credentials"
+msgstr "Periksa kredensial login"
+
+msgctxt "#30066"
+msgid "Test the entered email and password to check your ability to login"
+msgstr "Uji email dan kata sandi yang dimasukkan untuk memeriksa kemampuan Anda untuk masuk"
+
+msgctxt "#30067"
+msgid "Download folder size limit"
+msgstr "Batasan ukuran folder unduhan"
+
+msgctxt "#30068"
+msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
+msgstr "Tentukan ukuran unduhan / ukuran cache.[CR]Folder akan dihapus saat batas ukuran tercapai."
+
+msgctxt "#30069"
+msgid "Front page display"
+msgstr "Tampilan halaman depan"
+
+msgctxt "#30070"
+msgid "Choose from list"
+msgstr "Pilih dari daftar"
+
+msgctxt "#30071"
+msgid "Games are presented as"
+msgstr "Permainan disajikan sebagai"
+
+msgctxt "#30072"
+msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
+msgstr "Kodi menyediakan beberapa opsi tampilan untuk Film, Acara TV, dan Game. Lihat wiki untuk informasi lebih lanjut"
+
+msgctxt "#30073"
+msgid "TV Shows"
+msgstr "Acara TV"
+
+msgctxt "#30074"
+msgid "Movies"
+msgstr "Film"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "Pertandingan"
+
+msgctxt "#30076"
+msgid "10 Games"
+msgstr "10 Permainan"
+
+msgctxt "#30077"
+msgid "25 Games"
+msgstr "25 Permainan"
+
+msgctxt "#30078"
+msgid "50 Games"
+msgstr "50 Permainan"
+
+msgctxt "#30079"
+msgid "100 Games"
+msgstr "100 Permainan"
+
+msgctxt "#30080"
+msgid "250 Games"
+msgstr "250 Permainan"
+
+msgctxt "#30081"
+msgid "500 Games"
+msgstr "500 Permainan"
+
+msgctxt "#30082"
+msgid "Game artwork"
+msgstr "Karya seni permainan"
+
+msgctxt "#30083"
+msgid "Game list artwork"
+msgstr "Karya seni daftar permainan"
+
+msgctxt "#30084"
+msgid "Retroarch Settings"
+msgstr "Pengaturan Retroarch"
+
+msgctxt "#30085"
+msgid "Suspend Kodi IO on launch"
+msgstr "Hentikan Kodi IO saat peluncuran"
+
+msgctxt "#30086"
+msgid "Stop media on launch"
+msgstr "Hentikan media saat peluncuran"
+
+msgctxt "#30087"
+msgid "Waiting for return"
+msgstr "Menunggu pengembalian"
+
+msgctxt "#30088"
+msgid "Add to IAGL Favorites"
+msgstr "Tambahkan ke Favorit IAGL"
+
+msgctxt "#30089"
+msgid "Enter a name for your favorites group"
+msgstr "Masukkan nama untuk grup favorit Anda"
+
+msgctxt "#30090"
+msgid "Favorite added to group"
+msgstr "Favorit ditambahkan ke grup"
+
+msgctxt "#30091"
+msgid "Use clean game title"
+msgstr "Gunakan judul game yang bersih"
+
+msgctxt "#30092"
+msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
+msgstr "Hapus tag dari judul game untuk ditampilkan. Misalnya: [B]Mario (USA)[/B] menjadi [B]Mario[/B]"
+
+msgctxt "#30093"
+msgid "Games per page"
+msgstr "Game per halaman"
+
+msgctxt "#30094"
+msgid "Define how many games are listed per page"
+msgstr "Tentukan berapa banyak game yang tercantum per halaman"
+
+msgctxt "#30095"
+msgid "List all"
+msgstr "Daftar semuanya"
+
+msgctxt "#30096"
+msgid "Always filter list to 1 Game 1 Rom Set"
+msgstr "Selalu saring daftar ke 1 Game 1 Rom Set"
+
+msgctxt "#30097"
+msgid "If possible, game lists will be pre-filtered to a 1G1R set"
+msgstr "Jika memungkinkan, daftar permainan akan difilter terlebih dahulu ke set 1G1R"
+
+msgctxt "#30098"
+msgid "Append game list name to search and random results"
+msgstr "Tambahkan nama daftar permainan ke pencarian dan hasil acak"
+
+msgctxt "#30099"
+msgid "When enabled, the name of the game list will be appended to search results"
+msgstr "Jika diaktifkan, nama daftar permainan akan ditambahkan ke hasil pencarian"
+
+msgctxt "#30100"
+msgid "Append game list name when browsing by playlist"
+msgstr "Tambahkan nama daftar game saat menelusuri berdasarkan daftar putar"
+
+msgctxt "#30101"
+msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
+msgstr "Jika diaktifkan, nama daftar game akan ditambahkan ke nama game di daftar putar"
+
+msgctxt "#30102"
+msgid "Kodi landscape art equates to"
+msgstr "Seni lanskap Kodi setara dengan"
+
+msgctxt "#30103"
+msgid "Select the game artwork to be displayed as the landscape art"
+msgstr "Pilih karya seni game yang akan ditampilkan sebagai seni lanskap"
+
+msgctxt "#30104"
+msgid "Title Screen"
+msgstr "Layar Judul"
+
+msgctxt "#30105"
+msgid "Screenshot"
+msgstr "Tangkapan layar"
+
+msgctxt "#30106"
+msgid "Kodi thumbnail art equates to"
+msgstr "Seni gambar mini Kodi setara dengan"
+
+msgctxt "#30107"
+msgid "Select the game artwork to be displayed as the thumbnail art"
+msgstr "Pilih karya seni game yang akan ditampilkan sebagai seni gambar mini"
+
+msgctxt "#30108"
+msgid "Game list clearlogo equates to"
+msgstr "Daftar game clearlogo sama dengan"
+
+msgctxt "#30109"
+msgid "Select the artwork displayed for the game list clearlogo"
+msgstr "Pilih karya seni yang ditampilkan untuk daftar game clearlogo"
+
+msgctxt "#30110"
+msgid "System logo"
+msgstr "Logo sistem"
+
+msgctxt "#30111"
+msgid "System console"
+msgstr "Konsol sistem"
+
+msgctxt "#30112"
+msgid "System controller"
+msgstr "Pengontrol sistem"
+
+msgctxt "#30113"
+msgid "Game list fanart equates to"
+msgstr "Daftar game fanart setara dengan"
+
+msgctxt "#30114"
+msgid "Select the artwork displayed for the game list fanart"
+msgstr "Pilih karya seni yang ditampilkan untuk fanart daftar game"
+
+msgctxt "#30115"
+msgid "System collage"
+msgstr "Kolase sistem"
+
+msgctxt "#30116"
+msgid "System console"
+msgstr "Konsol sistem"
+
+msgctxt "#30117"
+msgid "System wallpaper"
+msgstr "Wallpaper sistem"
+
+msgctxt "#30118"
+msgid "Force IAGL viewtypes"
+msgstr "Paksa tipe tampilan IAGL"
+
+msgctxt "#30119"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "Verifikasi bahwa kulit Anda memiliki ID tipe tampilan paksa yang tersedia"
+
+msgctxt "#30120"
+msgid "Frontpage viewtype"
+msgstr "Jenis tampilan halaman depan"
+
+msgctxt "#30121"
+msgid "Game library lists viewtype"
+msgstr "Tampilan jenis daftar pustaka game"
+
+msgctxt "#30122"
+msgid "Game categories viewtype"
+msgstr "Tampilan tipe kategori permainan"
+
+msgctxt "#30123"
+msgid "Games list viewtype"
+msgstr "Jenis tampilan daftar permainan"
+
+msgctxt "#30124"
+msgid "Choose list viewtype"
+msgstr "Pilih jenis tampilan daftar"
+
+msgctxt "#30125"
+msgid "Search and Random results viewtype"
+msgstr "Tampilan jenis Pencarian dan hasil acak"
+
+msgctxt "#30126"
+msgid "Off (Default)"
+msgstr "Mati (Default)"
+
+msgctxt "#30127"
+msgid "List / Poster (50)"
+msgstr "Daftar / Poster (50)"
+
+msgctxt "#30128"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "Poster / Daftar Besar / Dinding Poster (51)"
+
+msgctxt "#30129"
+msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
+msgstr "Dinding Ikon / Pola Horizontal / Dinding LS (52)"
+
+msgctxt "#30130"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "Info Spanduk / Lanskap / Poster (501)"
+
+msgctxt "#30131"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "Fanart / Lanskap Tunggal / Daftar Episode (502)"
+
+msgctxt "#30132"
+msgid "Logos / Big Square Wall (503)"
+msgstr "Logo / Dinding Persegi Besar (503)"
+
+msgctxt "#30133"
+msgid "Big List 2 (504)"
+msgstr "Daftar Besar 2 (504)"
+
+msgctxt "#30134"
+msgid "Landscape Details (505)"
+msgstr "Detail Lanskap (505)"
+
+msgctxt "#30135"
+msgid "Operating System"
+msgstr "Sistem Operasi"
+
+msgctxt "#30136"
+msgid "Select your operating system"
+msgstr "Pilih sistem operasi Anda"
+
+msgctxt "#30137"
+msgid "Windows"
+msgstr "Jendela"
+
+msgctxt "#30138"
+msgid "Linux"
+msgstr "Bahasa Indonesia: Sistem Operasi Linux"
+
+msgctxt "#30139"
+msgid "OSX"
+msgstr "OS X-nya"
+
+msgctxt "#30140"
+msgid "Retroarch App Location"
+msgstr "Lokasi Aplikasi Retroarch"
+
+msgctxt "#30141"
+msgid "Select the path to the retroarch executable"
+msgstr "Pilih jalur ke file yang dapat dieksekusi retroarch"
+
+msgctxt "#30142"
+msgid "Retroarch CFG Location"
+msgstr "Lokasi CFG Retroarch"
+
+msgctxt "#30143"
+msgid "Select the path to the retroarch config file"
+msgstr "Pilih jalur ke file konfigurasi retroarch"
+
+msgctxt "#30144"
+msgid "Android"
+msgstr "Bahasa Indonesia: Android"
+
+msgctxt "#30145"
+msgid "Android aarch64"
+msgstr "Bahasa Indonesia: Android aarch64"
+
+msgctxt "#30146"
+msgid "Android ra32"
+msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Metode pemilihan peluncur game"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Pilih apa yang akan dilakukan Kodi saat memilih peluncur game (hanya Windows, Linux, dan OSX)"
+
+msgctxt "#30149"
+msgid "Keep Kodi in the background"
+msgstr "Biarkan Kodi di latar belakang"
+
+msgctxt "#30150"
+msgid "Close Kodi"
+msgstr "Tutup Kodi"
+
+msgctxt "#30151"
+msgid "Pause Kodi"
+msgstr "Jeda Kodi"
+
+msgctxt "#30152"
+msgid "Retroarch core picker"
+msgstr "Pemilih inti Retroarch"
+
+msgctxt "#30153"
+msgid "List by System and Core Name"
+msgstr "Daftar berdasarkan Sistem dan Nama Inti"
+
+msgctxt "#30154"
+msgid "List by Core Name"
+msgstr "Daftar Berdasarkan Nama Inti"
+
+msgctxt "#30155"
+msgid "List by Emulated Systems"
+msgstr "Daftar berdasarkan Sistem yang Ditiru"
+
+msgctxt "#30156"
+msgid "Select Core"
+msgstr "Pilih Inti"
+
+msgctxt "#30157"
+msgid "Select Emulated System"
+msgstr "Pilih Sistem yang Ditiru"
+
+msgctxt "#30158"
+msgid "Select Emulator"
+msgstr "Pilih Emulator"
+
+msgctxt "#30159"
+msgid "Credentials were not found[CR]Please enter them in addon settings"
+msgstr "Kredensial tidak ditemukan[CR]Silakan masukkan di pengaturan addon"
+
+msgctxt "#30160"
+msgid "Game List Download Path"
+msgstr "Jalur Unduhan Daftar Game"
+
+msgctxt "#30161"
+msgid "Zero (Current Game Only)"
+msgstr "Nol (Hanya Game Saat Ini)"
+
+msgctxt "#30162"
+msgid "25 MB"
+msgstr "25MB"
+
+msgctxt "#30163"
+msgid "50 MB"
+msgstr "50MB"
+
+msgctxt "#30164"
+msgid "100 MB"
+msgstr "100MB"
+
+msgctxt "#30165"
+msgid "200 MB"
+msgstr "200MB"
+
+msgctxt "#30166"
+msgid "500 MB"
+msgstr "500MB"
+
+msgctxt "#30167"
+msgid "1 GB"
+msgstr "1 GB"
+
+msgctxt "#30168"
+msgid "2 GB"
+msgstr "2 GB"
+
+msgctxt "#30169"
+msgid "5 GB"
+msgstr "5 GB"
+
+msgctxt "#30170"
+msgid "10 GB"
+msgstr "10 GB"
+
+msgctxt "#30171"
+msgid "20 GB"
+msgstr "20 GB"
+
+msgctxt "#30172"
+msgid "Enable Netplay"
+msgstr "Aktifkan Netplay"
+
+msgctxt "#30173"
+msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
+msgstr "Aktifkan retroarch netplay (hanya Windows, Linux, OSX), gunakan menu konteks untuk meluncurkan dengan netplay"
+
+msgctxt "#30174"
+msgid "Show Netplay Lobby"
+msgstr "Tampilkan Lobi Netplay"
+
+msgctxt "#30175"
+msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
+msgstr "Jika diaktifkan, lobi netplay akan ditampilkan di halaman depan IAGL"
+
+msgctxt "#30176"
+msgid "Filter game lobby to IAGL auto launch games"
+msgstr "Filter lobi game ke peluncuran game otomatis IAGL"
+
+msgctxt "#30177"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "Jika diaktifkan, lobi netplay hanya akan menampilkan game yang dapat diluncurkan secara otomatis"
+
+msgctxt "#30178"
+msgid "Netplay Port"
+msgstr "Pelabuhan Netplay"
+
+msgctxt "#30179"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "Tentukan port IP netplay untuk terhubung (biarkan kosong untuk default)"
+
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "IP Lokal Host Default"
+
+msgctxt "#30181"
+msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
+msgstr "Tentukan nama host / IP netplay default (berguna untuk netplay jaringan lokal, biarkan kosong untuk default)"
+
+msgctxt "#30182"
+msgid "Check frames"
+msgstr "Periksa bingkai"
+
+msgctxt "#30183"
+msgid "Define number of netplay sync frames (leave blank for default)"
+msgstr "Tentukan jumlah frame sinkronisasi netplay (biarkan kosong untuk default)"
+
+msgctxt "#30184"
+msgid "Announce Netplay on Discord"
+msgstr "Umumkan Netplay di Discord"
+
+msgctxt "#30185"
+msgid "Announces netplay start on discord for IAGL players"
+msgstr "Mengumumkan dimulainya netplay di discord untuk pemain IAGL"
+
+msgctxt "#30186"
+msgid "Discord Player Name"
+msgstr "Nama Pemain Discord"
+
+msgctxt "#30187"
+msgid "Enter your player name to be announced on Discord"
+msgstr "Masukkan nama pemain Anda untuk diumumkan di Discord"
+
+msgctxt "#30188"
+msgid "Discord User Account ID"
+msgstr "ID Akun Pengguna Discord"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Berikan ID Discord Anda (Pengaturan Pengguna>Akun Saya>Salin ID)"
+
+msgctxt "#30190"
+msgid "Display report when wizard is completed"
+msgstr "Tampilkan laporan saat wizard selesai"
+
+msgctxt "#30191"
+msgid "Execute setup wizard"
+msgstr "Jalankan wizard pengaturan"
+
+msgctxt "#30192"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Jalankan wizard untuk mengubah pengaturan daftar permainan Anda dengan cepat. Ini dapat dijalankan kembali kapan saja"
+
+msgctxt "#30193"
+msgid "Android Advance Settings"
+msgstr "Pengaturan Lanjutan Android"
+
+msgctxt "#30194"
+msgid "Use StartAndroidActivity"
+msgstr "Gunakan StartAndroidActivity"
+
+msgctxt "#30195"
+msgid "Leave as default if unsure"
+msgstr "Biarkan sebagai default jika tidak yakin"
+
+msgctxt "#30196"
+msgid "Suspend Kodi Input and Audio when using External Launcher"
+msgstr "Hentikan Input dan Audio Kodi saat menggunakan Peluncur Eksternal"
+
+msgctxt "#30197"
+msgid "Stop Kodi media playing before External Launch"
+msgstr "Hentikan pemutaran media Kodi sebelum Peluncuran Eksternal"
+
+msgctxt "#30198"
+msgid "Kodi is busy / waiting for return to Kodi after External Launch"
+msgstr "Kodi sedang sibuk / menunggu kembali ke Kodi setelah Peluncuran Eksternal"
+
+msgctxt "#30199"
+msgid "Download Advanced Settings"
+msgstr "Unduh Pengaturan Lanjutan"
+
+msgctxt "#30200"
+msgid "Download Threads"
+msgstr "Unduh Thread"
+
+msgctxt "#30201"
+msgid "Alternate default download folder"
+msgstr "Folder unduhan default alternatif"
+
+msgctxt "#30202"
+msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
+msgstr "Bila dipilih, semua unduhan akan masuk ke folder alternatif. [B]Catatan: Folder ini tidak akan dihapus atau dipantau ukurannya[/B]"
+
+msgctxt "#30203"
+msgid "Organize default download folder using system folders"
+msgstr "Atur folder unduhan default menggunakan folder sistem"
+
+msgctxt "#30204"
+msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
+msgstr "Bila diaktifkan, folder sementara akan diatur berdasarkan sistem (terkadang diperlukan untuk pengesampingan konfigurasi)"
+
+msgctxt "#30205"
+msgid "Copy Kodi Network Source downloads to Local Filesystem"
+msgstr "Salin unduhan Sumber Jaringan Kodi ke Sistem Berkas Lokal"
+
+msgctxt "#30206"
+msgid "Reset Options"
+msgstr "Opsi Reset"
+
+msgctxt "#30207"
+msgid "Reset IAGL database to default settings"
+msgstr "Setel ulang basis data IAGL ke pengaturan default"
+
+msgctxt "#30208"
+msgid "When selected, the database will be reset to default settings"
+msgstr "Saat dipilih, database akan diatur ulang ke pengaturan default"
+
+msgctxt "#30209"
+msgid "Unhide game lists"
+msgstr "Tampilkan daftar game"
+
+msgctxt "#30210"
+msgid "When selected, previously hidden game lists can be unhidden"
+msgstr "Saat dipilih, daftar permainan yang sebelumnya tersembunyi dapat ditampilkan kembali"
+
+msgctxt "#30211"
+msgid "Clear Cache"
+msgstr "Hapus Cache"
+
+msgctxt "#30212"
+msgid "When selected, all data in the cache folder including games will be purged"
+msgstr "Saat dipilih, semua data dalam folder cache termasuk game akan dihapus"
+
+msgctxt "#30213"
+msgid "Select"
+msgstr "Memilih"
+
+msgctxt "#30214"
+msgid "Selected"
+msgstr "Terpilih"
+
+msgctxt "#30215"
+msgid "Game lists selected"
+msgstr "Daftar permainan yang dipilih"
+
+msgctxt "#30216"
+msgid "Genres selected"
+msgstr "Genre yang dipilih"
+
+msgctxt "#30217"
+msgid "Players selected"
+msgstr "Pemain yang dipilih"
+
+msgctxt "#30218"
+msgid "Studios selected"
+msgstr "Studio yang dipilih"
+
+msgctxt "#30219"
+msgid "Tags selected"
+msgstr "Tag dipilih"
+
+msgctxt "#30220"
+msgid "Playlists selected"
+msgstr "Daftar putar yang dipilih"
+
+msgctxt "#30221"
+msgid "Regions selected"
+msgstr "Wilayah yang dipilih"
+
+msgctxt "#30222"
+msgid "Languages selected"
+msgstr "Bahasa yang dipilih"
+
+msgctxt "#30223"
+msgid "Editions selected"
+msgstr "Edisi yang dipilih"
+
+msgctxt "#30224"
+msgid "Codes selected"
+msgstr "Kode yang dipilih"
+
+msgctxt "#30225"
+msgid "Ratings selected"
+msgstr "Peringkat yang dipilih"
+
+msgctxt "#30226"
+msgid "Enter title search query"
+msgstr "Masukkan judul kueri pencarian"
+
+msgctxt "#30227"
+msgid "Empty search"
+msgstr "Pencarian kosong"
+
+msgctxt "#30228"
+msgid "Search criteria is empty.[CR]Update criteria and try again."
+msgstr "Kriteria pencarian kosong.[CR]Perbarui kriteria dan coba lagi."
+
+msgctxt "#30229"
+msgid "Reset criteria"
+msgstr "Atur ulang kriteria"
+
+msgctxt "#30230"
+msgid "Enter Link Name"
+msgstr "Masukkan Nama Tautan"
+
+msgctxt "#30231"
+msgid "Define the start page for IAGL"
+msgstr "Tentukan halaman awal untuk IAGL"
+
+msgctxt "#30232"
+msgid "Kodi launch options"
+msgstr "Opsi peluncuran Kodi"
+
+msgctxt "#30233"
+msgid "Completed"
+msgstr "Selesai"
+
+msgctxt "#30234"
+msgid "Create new group"
+msgstr "Buat grup baru"
+
+msgctxt "#30235"
+msgid "Select favorite group"
+msgstr "Pilih grup favorit"
+
+msgctxt "#30236"
+msgid "Group by Favorites Group"
+msgstr "Kelompokkan berdasarkan Favorit Kelompokkan"
+
+msgctxt "#30237"
+msgid "Remove IAGL Favorite"
+msgstr "Hapus Favorit IAGL"
+
+msgctxt "#30238"
+msgid "Are you sure you want to delete this Favorite?"
+msgstr "Apakah Anda yakin ingin menghapus Favorit ini?"
+
+msgctxt "#30239"
+msgid "Favorite deleted"
+msgstr "Favorit dihapus"
+
+msgctxt "#30240"
+msgid "Favorites display"
+msgstr "Tampilan favorit"
+
+msgctxt "#30241"
+msgid "Define the start page for IAGL Favorites"
+msgstr "Tentukan halaman awal untuk Favorit IAGL"
+
+msgctxt "#30242"
+msgid "By Favorites Group"
+msgstr "Oleh Grup Favorit"
+
+msgctxt "#30243"
+msgid "Reset *all* criteria"
+msgstr "Setel ulang *semua* kriteria"
+
+msgctxt "#30244"
+msgid "Run IAGL setup wizard?"
+msgstr "Jalankan panduan pengaturan IAGL?"
+
+msgctxt "#30245"
+msgid "Wizard"
+msgstr "Penyihir"
+
+msgctxt "#30246"
+msgid "Update game list Launcher"
+msgstr "Perbarui daftar game Peluncur"
+
+msgctxt "#30247"
+msgid "Update game list Launch Command"
+msgstr "Perbarui daftar game Luncurkan Perintah"
+
+msgctxt "#30248"
+msgid "Update game list Download Path"
+msgstr "Perbarui daftar game Jalur Unduhan"
+
+msgctxt "#30249"
+msgid "Hide game list"
+msgstr "Sembunyikan daftar permainan"
+
+msgctxt "#30250"
+msgid "Update game list post download process"
+msgstr "Perbarui daftar game setelah proses pengunduhan"
+
+msgctxt "#30251"
+msgid "Are you sure you want to hide game list"
+msgstr "Apakah Anda yakin ingin menyembunyikan daftar permainan?"
+
+msgctxt "#30252"
+msgid "Game list is now hidden"
+msgstr "Daftar game sekarang disembunyikan"
+
+msgctxt "#30253"
+msgid "No results"
+msgstr "Tidak ada hasil"
+
+msgctxt "#30254"
+msgid "No hidden game lists found"
+msgstr "Tidak ditemukan daftar permainan tersembunyi"
+
+msgctxt "#30255"
+msgid "Game lists unhidden"
+msgstr "Daftar game tidak disembunyikan"
+
+msgctxt "#30256"
+msgid "Confirm reset"
+msgstr "Konfirmasi pengaturan ulang"
+
+msgctxt "#30257"
+msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
+msgstr "Apakah Anda yakin ingin mengatur ulang basis data?[CR]Semua info pengguna akan hilang![CR]Ini tidak dapat dibatalkan!"
+
+msgctxt "#30258"
+msgid "Database has been reset"
+msgstr "Basis data telah direset"
+
+msgctxt "#30259"
+msgid "Update Launcher"
+msgstr "Perbarui Peluncur"
+
+msgctxt "#30260"
+msgid "Update launcher from[CR]Kodi to[CR]External?"
+msgstr "Perbarui peluncur dari[CR]Kodi ke[CR]Eksternal?"
+
+msgctxt "#30261"
+msgid "Update launcher from[CR]External to[CR]Kodi?"
+msgstr "Perbarui peluncur dari[CR]Eksternal ke[CR]Kodi?"
+
+msgctxt "#30262"
+msgid "Launcher updated to external"
+msgstr "Peluncur diperbarui ke eksternal"
+
+msgctxt "#30263"
+msgid "Launcher updated to retroplayer"
+msgstr "Peluncur diperbarui ke retroplayer"
+
+msgctxt "#30264"
+msgid "Select game addon"
+msgstr "Pilih addon game"
+
+msgctxt "#30265"
+msgid "Are you sure you want to reset the game addon launch command?"
+msgstr "Apakah Anda yakin ingin mengatur ulang perintah peluncuran add-on game?"
+
+msgctxt "#30266"
+msgid "Download game to…"
+msgstr "Unduh game ke…"
+
+msgctxt "#30267"
+msgid "Select download folder"
+msgstr "Pilih folder unduhan"
+
+msgctxt "#30268"
+msgid "Archive.org login success!"
+msgstr "Login Archive.org berhasil!"
+
+msgctxt "#30269"
+msgid "Archive.org login failed.[CR]Check credentials or log for more details"
+msgstr "Gagal masuk ke Archive.org.[CR]Periksa kredensial atau log untuk keterangan lebih lanjut"
+
+msgctxt "#30270"
+msgid "Error"
+msgstr "Kesalahan"
+
+msgctxt "#30271"
+msgid "Initializing download for[CR]"
+msgstr "Inisialisasi unduhan untuk [CR]"
+
+msgctxt "#30272"
+msgid "Check logs"
+msgstr "Periksa log"
+
+msgctxt "#30273"
+msgid "Checking login for[CR]"
+msgstr "Memeriksa login untuk [CR]"
+
+msgctxt "#30274"
+msgid "Requesting file info for[CR]"
+msgstr "Meminta info file untuk [CR]"
+
+msgctxt "#30275"
+msgid "Select from Retroarch Cores"
+msgstr "Pilih dari Inti Retroarch"
+
+msgctxt "#30276"
+msgid "Select from Extra Emulators"
+msgstr "Pilih dari Emulator Ekstra"
+
+msgctxt "#30277"
+msgid "Manually Enter Launch Command"
+msgstr "Masukkan Perintah Peluncuran Secara Manual"
+
+msgctxt "#30278"
+msgid "Select External Command Type"
+msgstr "Pilih Jenis Perintah Eksternal"
+
+msgctxt "#30279"
+msgid "Extra Emulators"
+msgstr "Emulator Tambahan"
+
+msgctxt "#30280"
+msgid "Dolphin"
+msgstr "Lumba-lumba"
+
+msgctxt "#30281"
+msgid "Select the path to the Dolphin application (optional)"
+msgstr "Pilih jalur ke aplikasi Dolphin (opsional)"
+
+msgctxt "#30282"
+msgid "MAME"
+msgstr "Ibu"
+
+msgctxt "#30283"
+msgid "Select the path to the MAME application (optional)"
+msgstr "Pilih jalur ke aplikasi MAME (opsional)"
+
+msgctxt "#30284"
+msgid "Project 64"
+msgstr "Proyek 64"
+
+msgctxt "#30285"
+msgid "Select the path to the Project 64 application (optional)"
+msgstr "Pilih jalur ke aplikasi Proyek 64 (opsional)"
+
+msgctxt "#30286"
+msgid "ePSXe"
+msgstr "ePSXe"
+
+msgctxt "#30287"
+msgid "Select the path to the ePSXe application (optional)"
+msgstr "Pilih jalur ke aplikasi ePSXe (opsional)"
+
+msgctxt "#30288"
+msgid "Demul"
+msgstr "Demul"
+
+msgctxt "#30289"
+msgid "Select the path to the Demul application (optional)"
+msgstr "Pilih jalur ke aplikasi Demul (opsional)"
+
+msgctxt "#30290"
+msgid "FS-UAE"
+msgstr "FS-UEA"
+
+msgctxt "#30291"
+msgid "Select the path to the FS-UAE application (optional)"
+msgstr "Pilih jalur ke aplikasi FS-UAE (opsional)"
+
+msgctxt "#30292"
+msgid "Are you sure you want to set external launch command?"
+msgstr "Apakah Anda yakin ingin mengatur perintah peluncuran eksternal?"
+
+msgctxt "#30293"
+msgid "External launch command updated"
+msgstr "Perintah peluncuran eksternal diperbarui"
+
+msgctxt "#30294"
+msgid "Android users must verify the core is installed in Retroarch"
+msgstr "Pengguna Android harus memverifikasi inti terpasang di Retroarch"
+
+msgctxt "#30295"
+msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
+msgstr "Pengaturan peluncuran saat ini kosong[CR]Harap perbarui pengaturan peluncuran eksternal addon."
+
+msgctxt "#30296"
+msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
+msgstr "Pengaturan peluncuran saat ini kosong[CR]Harap perbarui pengaturan peluncuran OS addon."
+
+msgctxt "#30297"
+msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
+msgstr "Tidak ada emulator tambahan yang ditemukan[CR]Harap perbarui pengaturan emulator tambahan"
+
+msgctxt "#30298"
+msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
+msgstr "Masukkan perintah peluncuran[CR]Lihat kata kunci opsional di wiki IAGL"
+
+msgctxt "#30299"
+msgid "Reset Launch Command"
+msgstr "Atur Ulang Perintah Peluncuran"
+
+msgctxt "#30300"
+msgid "Are you sure you want to reset the external launch command?"
+msgstr "Apakah Anda yakin ingin mengatur ulang perintah peluncuran eksternal?"
+
+msgctxt "#30301"
+msgid "External launch command was reset"
+msgstr "Perintah peluncuran eksternal telah diatur ulang"
+
+msgctxt "#30302"
+msgid "Enter a value for"
+msgstr "Masukkan nilai untuk"
+
+msgctxt "#30303"
+msgid "View game list settings"
+msgstr "Lihat pengaturan daftar permainan"
+
+msgctxt "#30304"
+msgid "Game List"
+msgstr "Daftar Game"
+
+msgctxt "#30305"
+msgid "Game List System"
+msgstr "Sistem Daftar Game"
+
+msgctxt "#30306"
+msgid "Total 1G1R Games in List"
+msgstr "Total Game 1G1R dalam Daftar"
+
+msgctxt "#30307"
+msgid "Total Games in List"
+msgstr "Jumlah Game dalam Daftar"
+
+msgctxt "#30308"
+msgid "Total Favorited Games in List"
+msgstr "Total Game Favorit dalam Daftar"
+
+msgctxt "#30309"
+msgid "Default External Launch Command"
+msgstr "Perintah Peluncuran Eksternal Default"
+
+msgctxt "#30310"
+msgid "Default Retroplayer Game Addon"
+msgstr "Add-on Game Retroplayer Default"
+
+msgctxt "#30311"
+msgid "Default Game Post Process"
+msgstr "Proses Pasca Game Default"
+
+msgctxt "#30312"
+msgid "User Defined Download Path"
+msgstr "Jalur Unduhan yang Ditentukan Pengguna"
+
+msgctxt "#30313"
+msgid "User External Launch Command"
+msgstr "Perintah Peluncuran Eksternal Pengguna"
+
+msgctxt "#30314"
+msgid "User Defined Retroplayer Game Addon"
+msgstr "Add-on Game Retroplayer yang Ditentukan Pengguna"
+
+msgctxt "#30315"
+msgid "User Defined Post Process"
+msgstr "Proses Pasca yang Ditentukan Pengguna"
+
+msgctxt "#30316"
+msgid "Game List Settings"
+msgstr "Pengaturan Daftar Game"
+
+msgctxt "#30317"
+msgid "None (will use addon default)"
+msgstr "Tidak ada (akan menggunakan addon default)"
+
+msgctxt "#30318"
+msgid "Games List Launcher"
+msgstr "Peluncur Daftar Game"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Perintah Peluncuran Eksternal"
+
+msgctxt "#30320"
+msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
+msgstr "Perintah Peluncuran Eksternal[CR]*Tidak Ada Perintah Peluncuran Pengguna yang Ditemukan / Menggunakan Default*"
+
+msgctxt "#30321"
+msgid "Kodi Retroplayer"
+msgstr "Pemain Kodi Retro"
+
+msgctxt "#30322"
+msgid "Are you sure you want to update game list download path?"
+msgstr "Apakah Anda yakin ingin memperbarui jalur unduhan daftar permainan?"
+
+msgctxt "#30323"
+msgid "Download path updated"
+msgstr "Jalur unduhan diperbarui"
+
+msgctxt "#30324"
+msgid "Are you sure you want to reset game list download path?"
+msgstr "Apakah Anda yakin ingin mengatur ulang jalur unduhan daftar permainan?"
+
+msgctxt "#30325"
+msgid "Download path reset"
+msgstr "Jalur unduhan diatur ulang"
+
+msgctxt "#30326"
+msgid "Change download path"
+msgstr "Ubah jalur unduhan"
+
+msgctxt "#30327"
+msgid "Reset download path"
+msgstr "Setel ulang jalur unduhan"
+
+msgctxt "#30328"
+msgid "Reset game list settings"
+msgstr "Setel ulang pengaturan daftar permainan"
+
+msgctxt "#30329"
+msgid "Are you sure you want to reset all game list settings to default?"
+msgstr "Apakah Anda yakin ingin mengatur ulang semua pengaturan daftar permainan ke default?"
+
+msgctxt "#30330"
+msgid "Game list settings were reset to default"
+msgstr "Pengaturan daftar permainan telah diatur ulang ke default"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Mencocokkan file lokal"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Memeriksa kredensial"
+
+msgctxt "#30333"
+msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "Variabel berikut akan diganti selama peluncuran:[CR]● XXROM_PATHXX: Jalur ke berkas yang akan diluncurkan[CR]● XXROM_NAMEXX: Nama berkas yang akan diluncurkan (tanpa jalur)[CR]● XXROM_STEMXX: Nama berkas yang akan diluncurkan (tanpa jalur, tanpa ekstensi)[CR]● XXNETPLAY_COMMANDXX: Perintah tambahan apa pun yang diperlukan untuk netplay, lihat pengaturan addon untuk opsi[CR]Lihat wiki untuk info lebih lanjut…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "File arsip tidak dapat diproses[CR]Periksa log untuk detail lebih lanjut"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Pilih tindakan sebelum peluncuran"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Biarkan Kodi berjalan di latar belakang (default)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Tutup Kodi sebelum peluncuran, buka kembali Kodi setelah keluar dari emulator"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Suspend Kodi sebelum peluncuran, aktifkan Kodi setelah emulator keluar"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Lihat statistik database IAGL"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Mencantumkan statistik terkini untuk IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "Statistik db"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Lihat parameter peluncuran"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Pengaturan Permainan"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Parameter Peluncuran Game"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Jika tidak ada Perintah Peluncuran pengguna"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Pilih apa yang akan dilakukan Kodi saat tidak ada perintah peluncuran (addon retroplayer atau emulator eksternal) yang ditetapkan"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Mencoba Meluncurkan dengan default"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Berhenti / Jangan luncurkan"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Tidak ada perintah yang ditetapkan"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Perintah peluncuran tidak ditetapkan untuk daftar ini, tetapkan sekarang?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Tidak ada perintah peluncuran default yang dapat ditemukan untuk daftar ini"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Inti default tidak ditemukan. Harap instal {} atau perbarui peluncur"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Atur ulang perintah peluncuran addon game"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Tidak ada add-on game yang ditemukan"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Perintah peluncuran addon game diperbarui"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Gunakan folder unduhan default alternatif"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Hanya tampilkan opsi yang membuat Kodi tetap berada di latar belakang"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Hanya tampilkan opsi yang menutup Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Hanya tampilkan opsi yang menjeda Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Lokasi CFG Retroarch sebagai string"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Atau masukkan jalur ke file retroarch.cfg persis seperti yang muncul di Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Direktori Inti Retroarch sebagai string"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Atau masukkan jalur ke direktori Cores persis seperti yang muncul dalam konfigurasi direktori Retroarch"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Perbarui Peluncur untuk {}?[CR][B]Ini akan mengubah pengaturan untuk semua game dalam daftar ini.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Perbarui Perintah Peluncuran untuk {}?[CR][B]Ini akan mengubah pengaturan untuk semua game dalam daftar ini.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Perbarui Jalur Unduhan Peluncuran untuk {}?[CR][B]Ini akan mengubah pengaturan untuk semua game dalam daftar ini.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Perbarui Perintah Peluncuran"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Pembaruan Peluncuran Jalur Unduhan"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Setel ulang pengaturan untuk {}?[CR][B]Ini akan mengubah pengaturan untuk semua permainan dalam daftar ini.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Mendukung"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Donasi ke Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Database IAGL baru telah ditemukan[CR]Apakah Anda ingin memperbarui?[CR]Pengaturan akan disalin ke database baru jika memungkinkan"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "db baru"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Basis data telah diperbarui[CR]Pengaturan pengguna telah ditransfer"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Basis data telah diperbarui[CR]Beberapa pengaturan pengguna gagal ditransfer[CR]Lihat log untuk detail lebih lanjut"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Terjadi kesalahan saat memperbarui database[CR]Lihat log untuk detail lebih lanjut"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Tanyakan lagi nanti"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Jangan perbarui kali ini[CR](Jangan tanya saya lagi sampai pembaruan berikutnya)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Selamat datang di Panduan Pengaturan IAGL[CR]Mari jalankan semua pengaturan agar Anda bisa bermain!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Kebanyakan permainan memerlukan akun archive.org[CR]Daftar di https://archive.org/account/signup[CR]Apakah Anda ingin menggunakan akun Anda dengan IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Penyiapan selesai untuk menggunakan add-on game Kodi![CR]Apakah Anda siap bermain?[CR]Pilih [B]Tidak[/B] untuk menyiapkan peluncuran game eksternal."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Tetapkan semua daftar game untuk diluncurkan secara eksternal"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Tetapkan hanya beberapa daftar game untuk diluncurkan secara eksternal"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Setel ulang semua peluncur daftar game kembali ke default"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} daftar game diperbarui untuk peluncuran eksternal"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Nilai default telah ditetapkan sebelumnya untuk setiap perintah peluncuran eksternal.[CR]Sebelum meluncurkan, tinjau parameter peluncuran game jika diperlukan.[CR]Lihat wiki untuk detail lebih lanjut."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Aplikasi Retroarch diatur ke:[CR]{}[CR]Ubah dalam pengaturan addon jika diperlukan"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Konfigurasi Retroarch diatur ke:[CR]{}[CR]Ubah dalam pengaturan addon jika diperlukan"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Penyihir selesai[CR]Ayo Bermain!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Tetapkan semua daftar game untuk diluncurkan dengan Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Atur semua daftar game dengan cepat ke peluncuran eksternal"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Atur semua daftar game dengan cepat ke Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Mengonfirmasi"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Apakah Anda yakin ingin mengatur semua daftar ke peluncuran eksternal?"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Apakah Anda yakin ingin mengatur semua daftar ke Kodi retroplayer?"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Izin Android mengharuskan Anda memasukkan jalur konfigurasi Retroarch secara manual[CR]Lihat wiki untuk bantuan lebih lanjut"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Izin Android mengharuskan Anda memasukkan jalur inti Retroarch secara manual[CR]Lihat wiki untuk bantuan lebih lanjut"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Cadangkan basis data saat ini"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Pulihkan database dari cadangan"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Cadangkan database IAGL saat ini dan semua pengaturan pengguna"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Pulihkan database addon saat ini dari cadangan"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Pilih jalur cadangan"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Pilih database cadangan"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Pencadangan selesai"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Pemulihan selesai"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} id permainan yang cocok tidak ditemukan di db baru[CR]Pilih tindakan berikutnya"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Perbarui basis data, coba cocokkan game berdasarkan judul dan daftar game"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Perbarui database, hapus id game yang tidak ditemukan"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Pulihkan kembali ke database lama"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Database dikembalikan ke database lama"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Harap tunggu"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Mengatur direktori Retroarch secara manual"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL secara default akan mendeteksi direktori dari konfigurasi RA, Anda dapat mengganti fungsi ini secara manual"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Direktori Inti Retroarch"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Direktori Info Retroach"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Tambahkan aplikasi linux untuk memulai perintah peluncuran"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak digunakan untuk sistem linux/elec tertentu. Aktifkan hanya jika sistem Anda memerlukannya."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Tambahkan systemd-run ke perintah Retroarch"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Tambahkan systemd-run ke semua perintah"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Tambahkan flatpak run ke perintah Retroarch"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Tambahkan flatpak run ke semua perintah"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Izin Android memerlukan direktori penyimpanan bersama[CR]Masukkan lokasi bersama yang dapat diakses oleh kedua aplikasi"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Ekstrak File Zip"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Tidak Ada Pemrosesan"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Ekstrak File, Lewati file BIOS"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Ekstrak File ke Folder"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Ekstrak File, Pindahkan CHD ke folder"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Pindahkan file ke folder: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Pindahkan file ke folder: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Pindahkan file ke folder: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Pindahkan file ke folder: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Pindahkan file ke folder: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Pindahkan file ke folder: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Pindahkan file ke folder: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Pindahkan file ke folder: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Pindahkan file ke folder: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Pindahkan file ke folder: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Pindahkan file ke folder: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Pindahkan file ke folder: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Pindahkan file ke folder: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Pindahkan file ke folder: spektrum"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Pindahkan file ke folder: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Apakah Anda yakin ingin memperbarui daftar permainan setelah proses?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Proses pasca diperbarui"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Perbarui Proses Pasca untuk {}?[CR][B]Ini akan mengubah pengaturan untuk semua permainan dalam daftar ini.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Pengunduhan selesai. File pascaproses?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "File game diproses"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Tidak Tersedia (Hanya Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Tipe Nama Pengguna Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Pilih integrasi untuk nama pemain netplay"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Gunakan Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord memungkinkan pencocokan netplay otomatis (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Masukkan Nama Pemain secara manual"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Nama pemain akan dipublikasikan di Lobi Retroarch"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Nama Pemain"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Pengguna Discord Saat Ini"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Pengguna Discord diatur ke [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Lihat sesi permainan yang dapat Anda ikuti secara online menggunakan Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Tidak dapat menemukan pengguna discord dengan ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Opsi Filter Lobi"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Hanya tampilkan ruangan yang bisa dimasuki"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Hanya tampilkan ruangan yang menggunakan libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Tampilkan ruangan yang memiliki kata sandi"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Tampilkan ruangan yang memiliki kata sandi penonton"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Ruang pamer menggunakan server MITM"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Hanya tampilkan ruang pamer yang dibuat dalam jangka waktu tertentu"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 menit"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 menit"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Jangka Waktu Apa Pun"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Filter ruang lobi berdasarkan waktu pembuatan"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Hanya tampilkan ruangan yang menggunakan IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Tidak dapat menemukan permainan yang cocok dengan nama seperti [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Tidak Ditemukan"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Pilih permainan yang cocok"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Aksi peluncuran Netplay"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Bergabung dari lobi retroarch"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Bergabung dari localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Pilih tindakan default saat bergabung dengan permainan netplay"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Luncurkan sebagai host netplay"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Ubah Nama IAGL Menjadi Favorit"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Ganti Nama Selesai"

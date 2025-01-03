@@ -1,0 +1,1936 @@
+# Kodi Media Center language file
+# Addon Name: /Internet Archive Game Launcher
+# Addon id: pltugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/zach-morris/plugin.program.iagl/issues\n"
+"Language: af_za\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "Internet Argief Game Launcher"
+
+msgctxt "#30002"
+msgid "Browse all Lists"
+msgstr "Blaai deur alle lyste"
+
+msgctxt "#30003"
+msgid "Browse lists by Category"
+msgstr "Blaai deur lyste volgens kategorie"
+
+msgctxt "#30004"
+msgid "Browse games by Playlist"
+msgstr "Blaai deur speletjies volgens snitlys"
+
+msgctxt "#30005"
+msgid "Favorites"
+msgstr "Gunstelinge"
+
+msgctxt "#30006"
+msgid "Play History"
+msgstr "Speel Geskiedenis"
+
+msgctxt "#30007"
+msgid "Search"
+msgstr "Soek"
+
+msgctxt "#30008"
+msgid "Random Play"
+msgstr "Ewekansige speel"
+
+msgctxt "#30009"
+msgid "Next"
+msgstr "Volgende"
+
+msgctxt "#30010"
+msgid "Previous"
+msgstr "Vorige"
+
+msgctxt "#30011"
+msgid "One Big List"
+msgstr "Een groot lys"
+
+msgctxt "#30012"
+msgid "Alphabetical"
+msgstr "Alfabeties"
+
+msgctxt "#30013"
+msgid "Group by Genre"
+msgstr "Groepeer volgens genre"
+
+msgctxt "#30014"
+msgid "Group by Year"
+msgstr "Groepeer volgens jaar"
+
+msgctxt "#30015"
+msgid "Group by Players"
+msgstr "Groepeer volgens spelers"
+
+msgctxt "#30016"
+msgid "Group by Studio"
+msgstr "Groepeer volgens Studio"
+
+msgctxt "#30017"
+msgid "Group by Tag"
+msgstr "Groepeer volgens Tag"
+
+msgctxt "#30018"
+msgid "Group by Playlist"
+msgstr "Groepeer volgens snitlys"
+
+msgctxt "#30019"
+msgid "Group by Region"
+msgstr "Groepeer volgens streek"
+
+msgctxt "#30020"
+msgid "Group by Language"
+msgstr "Groepeer volgens taal"
+
+msgctxt "#30021"
+msgid "Group by Edition"
+msgstr "Groepeer volgens uitgawe"
+
+msgctxt "#30022"
+msgid "Group by Code"
+msgstr "Groepeer volgens kode"
+
+msgctxt "#30023"
+msgid "Group by Rating"
+msgstr "Groepeer volgens gradering"
+
+msgctxt "#30024"
+msgid "Select Game Lists"
+msgstr "Kies Speletjielyste"
+
+msgctxt "#30025"
+msgid "Search Game Titles"
+msgstr "Soek speletjietitels"
+
+msgctxt "#30026"
+msgid "Filter by Genre"
+msgstr "Filtreer volgens genre"
+
+msgctxt "#30027"
+msgid "Filter by Players"
+msgstr "Filter volgens spelers"
+
+msgctxt "#30028"
+msgid "Filter by Studio"
+msgstr "Filtreer volgens Studio"
+
+msgctxt "#30029"
+msgid "Filter by Tag"
+msgstr "Filtreer volgens Tag"
+
+msgctxt "#30030"
+msgid "Filter by Playlist"
+msgstr "Filter volgens snitlys"
+
+msgctxt "#30031"
+msgid "Filter by Region"
+msgstr "Filtreer volgens streek"
+
+msgctxt "#30032"
+msgid "Filter by Language"
+msgstr "Filter volgens taal"
+
+msgctxt "#30033"
+msgid "Filter by Edition"
+msgstr "Filter volgens uitgawe"
+
+msgctxt "#30034"
+msgid "Filter by Code"
+msgstr "Filter volgens kode"
+
+msgctxt "#30035"
+msgid "Filter by Rating"
+msgstr "Filtreer volgens gradering"
+
+msgctxt "#30036"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Voer soektog uit[/COLOR]"
+
+msgctxt "#30037"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Skep soekskakel[/COLOR]"
+
+msgctxt "#30038"
+msgid "Choose Number of Results"
+msgstr "Kies Aantal resultate"
+
+msgctxt "#30039"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Voer ewekansige soektog uit[/COLOR]"
+
+msgctxt "#30040"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Skep ewekansige soekskakel[/COLOR]"
+
+msgctxt "#30041"
+msgid "General"
+msgstr "Algemeen"
+
+msgctxt "#30042"
+msgid "Launching"
+msgstr "Bekendstelling"
+
+msgctxt "#30043"
+msgid "Downloading"
+msgstr "Laai tans af"
+
+msgctxt "#30044"
+msgid "Views and Navigation"
+msgstr "Uitsigte en navigasie"
+
+msgctxt "#30045"
+msgid "Netplay"
+msgstr "Netspeel"
+
+msgctxt "#30046"
+msgid "Setup Wizard"
+msgstr "Setup Wizard"
+
+msgctxt "#30047"
+msgid "Advanced"
+msgstr "Gevorderd"
+
+msgctxt "#30048"
+msgid "Play History"
+msgstr "Speel Geskiedenis"
+
+msgctxt "#30049"
+msgid "Define how many games to save in last played history"
+msgstr "Definieer hoeveel speletjies om in laas gespeelde geskiedenis te stoor"
+
+msgctxt "#30050"
+msgid "Default action on selecting game"
+msgstr "Standaardaksie by die keuse van speletjie"
+
+msgctxt "#30051"
+msgid "Define action to take when a game is selected"
+msgstr "Definieer aksie om te neem wanneer 'n speletjie gekies word"
+
+msgctxt "#30052"
+msgid "If game already exists locally"
+msgstr "As speletjie reeds plaaslik bestaan"
+
+msgctxt "#30053"
+msgid "Define the action to take if a game file is found to exist locally"
+msgstr "Definieer die aksie om te neem as daar gevind word dat 'n speletjie-lêer plaaslik bestaan"
+
+msgctxt "#30054"
+msgid "Prompt"
+msgstr "Prompt"
+
+msgctxt "#30055"
+msgid "Do not re-download"
+msgstr "Moenie weer aflaai nie"
+
+msgctxt "#30056"
+msgid "Re-download and overwrite"
+msgstr "Laai weer af en skryf oor"
+
+msgctxt "#30057"
+msgid "Enable archive.org login"
+msgstr "Aktiveer archive.org-aanmelding"
+
+msgctxt "#30058"
+msgid "Enabled"
+msgstr "Geaktiveer"
+
+msgctxt "#30059"
+msgid "Disabled"
+msgstr "Gestrem"
+
+msgctxt "#30060"
+msgid "Some games require login.  Enter your archive.org email address and password."
+msgstr "Sommige speletjies vereis aanmelding.  Voer jou archive.org-e-posadres en wagwoord in."
+
+msgctxt "#30061"
+msgid "archive.org Email"
+msgstr "archive.org E-pos"
+
+msgctxt "#30062"
+msgid "Some games require login.  Enter your archive.org email address"
+msgstr "Sommige speletjies vereis aanmelding.  Voer jou archive.org-e-posadres in"
+
+msgctxt "#30063"
+msgid "archive.org Password"
+msgstr "archive.org Wagwoord"
+
+msgctxt "#30064"
+msgid "Some games require login.  Enter your archive.org password"
+msgstr "Sommige speletjies vereis aanmelding.  Voer jou archive.org-wagwoord in"
+
+msgctxt "#30065"
+msgid "Check login credentials"
+msgstr "Gaan aanmeldbewyse na"
+
+msgctxt "#30066"
+msgid "Test the entered email and password to check your ability to login"
+msgstr "Toets die ingevoerde e-posadres en wagwoord om jou vermoë om aan te meld, te kontroleer"
+
+msgctxt "#30067"
+msgid "Download folder size limit"
+msgstr "Laai gidsgroottelimiet af"
+
+msgctxt "#30068"
+msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
+msgstr "Definieer die grootte van die aflaai-/kasgrootte.[CR]Die vouer word skoongemaak wanneer die groottelimiet bereik word."
+
+msgctxt "#30069"
+msgid "Front page display"
+msgstr "Voorblad vertoon"
+
+msgctxt "#30070"
+msgid "Choose from list"
+msgstr "Kies uit lys"
+
+msgctxt "#30071"
+msgid "Games are presented as"
+msgstr "Speletjies word aangebied as"
+
+msgctxt "#30072"
+msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
+msgstr "Kodi bied verskeie velopsies vir films, TV-programme en speletjies.  Sien wiki vir meer inligting"
+
+msgctxt "#30073"
+msgid "TV Shows"
+msgstr "TV-programme"
+
+msgctxt "#30074"
+msgid "Movies"
+msgstr "Flieks"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "Speletjies"
+
+msgctxt "#30076"
+msgid "10 Games"
+msgstr "10 Speletjies"
+
+msgctxt "#30077"
+msgid "25 Games"
+msgstr "25 Speletjies"
+
+msgctxt "#30078"
+msgid "50 Games"
+msgstr "50 Speletjies"
+
+msgctxt "#30079"
+msgid "100 Games"
+msgstr "100 speletjies"
+
+msgctxt "#30080"
+msgid "250 Games"
+msgstr "250 speletjies"
+
+msgctxt "#30081"
+msgid "500 Games"
+msgstr "500 speletjies"
+
+msgctxt "#30082"
+msgid "Game artwork"
+msgstr "Spelkunswerk"
+
+msgctxt "#30083"
+msgid "Game list artwork"
+msgstr "Game lys kunswerk"
+
+msgctxt "#30084"
+msgid "Retroarch Settings"
+msgstr "Retroarch-instellings"
+
+msgctxt "#30085"
+msgid "Suspend Kodi IO on launch"
+msgstr "Skors Kodi IO tydens bekendstelling"
+
+msgctxt "#30086"
+msgid "Stop media on launch"
+msgstr "Stop media by bekendstelling"
+
+msgctxt "#30087"
+msgid "Waiting for return"
+msgstr "Wag vir terugkeer"
+
+msgctxt "#30088"
+msgid "Add to IAGL Favorites"
+msgstr "Voeg by IAGL-gunstelinge"
+
+msgctxt "#30089"
+msgid "Enter a name for your favorites group"
+msgstr "Voer 'n naam vir jou gunstelinggroep in"
+
+msgctxt "#30090"
+msgid "Favorite added to group"
+msgstr "Gunsteling by groep gevoeg"
+
+msgctxt "#30091"
+msgid "Use clean game title"
+msgstr "Gebruik skoon speletjietitel"
+
+msgctxt "#30092"
+msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
+msgstr "Verwyder merkers van 'n speletjietitel vir vertoon.  Bv: [B]Mario (VSA)[/B] word [B]Mario[/B]"
+
+msgctxt "#30093"
+msgid "Games per page"
+msgstr "Speletjies per bladsy"
+
+msgctxt "#30094"
+msgid "Define how many games are listed per page"
+msgstr "Definieer hoeveel speletjies per bladsy gelys word"
+
+msgctxt "#30095"
+msgid "List all"
+msgstr "Lys alles"
+
+msgctxt "#30096"
+msgid "Always filter list to 1 Game 1 Rom Set"
+msgstr "Filter altyd lys na 1 Game 1 Rom Set"
+
+msgctxt "#30097"
+msgid "If possible, game lists will be pre-filtered to a 1G1R set"
+msgstr "Indien moontlik, sal speletjielyste vooraf na 'n 1G1R-stel gefiltreer word"
+
+msgctxt "#30098"
+msgid "Append game list name to search and random results"
+msgstr "Voeg speletjielysnaam by soektog en ewekansige resultate"
+
+msgctxt "#30099"
+msgid "When enabled, the name of the game list will be appended to search results"
+msgstr "Wanneer dit geaktiveer is, sal die naam van die speletjielys by soekresultate aangeheg word"
+
+msgctxt "#30100"
+msgid "Append game list name when browsing by playlist"
+msgstr "Voeg speletjielysnaam by wanneer jy volgens snitlys blaai"
+
+msgctxt "#30101"
+msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
+msgstr "Wanneer dit geaktiveer is, sal die naam van die speletjielys by die speletjienaam in die snitlys aangeheg word"
+
+msgctxt "#30102"
+msgid "Kodi landscape art equates to"
+msgstr "Kodi landskapkuns is gelykstaande aan"
+
+msgctxt "#30103"
+msgid "Select the game artwork to be displayed as the landscape art"
+msgstr "Kies die speletjiekunswerk wat as die landskapkuns vertoon moet word"
+
+msgctxt "#30104"
+msgid "Title Screen"
+msgstr "Titelskerm"
+
+msgctxt "#30105"
+msgid "Screenshot"
+msgstr "Skermskoot"
+
+msgctxt "#30106"
+msgid "Kodi thumbnail art equates to"
+msgstr "Kodi-kleinkiekiekuns is gelykstaande aan"
+
+msgctxt "#30107"
+msgid "Select the game artwork to be displayed as the thumbnail art"
+msgstr "Kies die speletjiekunswerk wat as die duimnaelkuns vertoon moet word"
+
+msgctxt "#30108"
+msgid "Game list clearlogo equates to"
+msgstr "Game lys clearlogo is gelykstaande aan"
+
+msgctxt "#30109"
+msgid "Select the artwork displayed for the game list clearlogo"
+msgstr "Kies die kunswerk wat vir die clearlogo van die speletjielys vertoon word"
+
+msgctxt "#30110"
+msgid "System logo"
+msgstr "Stelsel logo"
+
+msgctxt "#30111"
+msgid "System console"
+msgstr "Stelsel konsole"
+
+msgctxt "#30112"
+msgid "System controller"
+msgstr "Stelsel kontroleerder"
+
+msgctxt "#30113"
+msgid "Game list fanart equates to"
+msgstr "Game lys fanart gelykstaande aan"
+
+msgctxt "#30114"
+msgid "Select the artwork displayed for the game list fanart"
+msgstr "Kies die kunswerk wat vir die speletjielys-fanart vertoon word"
+
+msgctxt "#30115"
+msgid "System collage"
+msgstr "Stelsel collage"
+
+msgctxt "#30116"
+msgid "System console"
+msgstr "Stelsel konsole"
+
+msgctxt "#30117"
+msgid "System wallpaper"
+msgstr "Stelsel plakpapier"
+
+msgctxt "#30118"
+msgid "Force IAGL viewtypes"
+msgstr "Forseer IAGL-aansigtipes"
+
+msgctxt "#30119"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "Verifieer dat jou vel die gedwonge viewtype ID beskikbaar het"
+
+msgctxt "#30120"
+msgid "Frontpage viewtype"
+msgstr "Voorbladaansigtipe"
+
+msgctxt "#30121"
+msgid "Game library lists viewtype"
+msgstr "Speletjiebiblioteek lys viewtype"
+
+msgctxt "#30122"
+msgid "Game categories viewtype"
+msgstr "Speletjiekategorieë aansigtipe"
+
+msgctxt "#30123"
+msgid "Games list viewtype"
+msgstr "Speellys-aansigtipe"
+
+msgctxt "#30124"
+msgid "Choose list viewtype"
+msgstr "Kies lysaansigtipe"
+
+msgctxt "#30125"
+msgid "Search and Random results viewtype"
+msgstr "Soek en ewekansige resultate viewtype"
+
+msgctxt "#30126"
+msgid "Off (Default)"
+msgstr "Af (Verstek)"
+
+msgctxt "#30127"
+msgid "List / Poster (50)"
+msgstr "Lys / Plakkaat (50)"
+
+msgctxt "#30128"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "Plakkaat / Groot lys / Plakkaatmuur (51)"
+
+msgctxt "#30129"
+msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
+msgstr "Ikoonmuur / Horisontale Patroon / LS-muur (52)"
+
+msgctxt "#30130"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "Banier / Landskap / Plakkaatinligting (501)"
+
+msgctxt "#30131"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "Fanart / Landskap-enkelsnit / Episodelys (502)"
+
+msgctxt "#30132"
+msgid "Logos / Big Square Wall (503)"
+msgstr "Logo's / Big Square Wall (503)"
+
+msgctxt "#30133"
+msgid "Big List 2 (504)"
+msgstr "Groot lys 2 (504)"
+
+msgctxt "#30134"
+msgid "Landscape Details (505)"
+msgstr "Landskapbesonderhede (505)"
+
+msgctxt "#30135"
+msgid "Operating System"
+msgstr "Bedryfstelsel"
+
+msgctxt "#30136"
+msgid "Select your operating system"
+msgstr "Kies jou bedryfstelsel"
+
+msgctxt "#30137"
+msgid "Windows"
+msgstr "Vensters"
+
+msgctxt "#30138"
+msgid "Linux"
+msgstr "Linux"
+
+msgctxt "#30139"
+msgid "OSX"
+msgstr "OSX"
+
+msgctxt "#30140"
+msgid "Retroarch App Location"
+msgstr "Retroarch App-ligging"
+
+msgctxt "#30141"
+msgid "Select the path to the retroarch executable"
+msgstr "Kies die pad na die retroarch-uitvoerbare"
+
+msgctxt "#30142"
+msgid "Retroarch CFG Location"
+msgstr "Retroarch CFG-ligging"
+
+msgctxt "#30143"
+msgid "Select the path to the retroarch config file"
+msgstr "Kies die pad na die retroarch-opstellingslêer"
+
+msgctxt "#30144"
+msgid "Android"
+msgstr "Android"
+
+msgctxt "#30145"
+msgid "Android aarch64"
+msgstr "Android aarch64"
+
+msgctxt "#30146"
+msgid "Android ra32"
+msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Spellanseerder-keusemetode"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Kies wat Kodi sal doen wanneer jy 'n speletjielanseerder kies (slegs Windows, Linux en OSX)"
+
+msgctxt "#30149"
+msgid "Keep Kodi in the background"
+msgstr "Hou Kodi op die agtergrond"
+
+msgctxt "#30150"
+msgid "Close Kodi"
+msgstr "Maak Kodi toe"
+
+msgctxt "#30151"
+msgid "Pause Kodi"
+msgstr "Stop Kodi"
+
+msgctxt "#30152"
+msgid "Retroarch core picker"
+msgstr "Retroarch core picker"
+
+msgctxt "#30153"
+msgid "List by System and Core Name"
+msgstr "Lys volgens stelsel en kernnaam"
+
+msgctxt "#30154"
+msgid "List by Core Name"
+msgstr "Lys volgens kernnaam"
+
+msgctxt "#30155"
+msgid "List by Emulated Systems"
+msgstr "Lys volgens geëmuleerde stelsels"
+
+msgctxt "#30156"
+msgid "Select Core"
+msgstr "Kies Kern"
+
+msgctxt "#30157"
+msgid "Select Emulated System"
+msgstr "Kies Geëmuleerde stelsel"
+
+msgctxt "#30158"
+msgid "Select Emulator"
+msgstr "Kies Emulator"
+
+msgctxt "#30159"
+msgid "Credentials were not found[CR]Please enter them in addon settings"
+msgstr "Geloofsbriewe is nie gevind nie[CR]Voer dit asseblief in by addon-instellings in"
+
+msgctxt "#30160"
+msgid "Game List Download Path"
+msgstr "Speletjielys Aflaai Pad"
+
+msgctxt "#30161"
+msgid "Zero (Current Game Only)"
+msgstr "Nul (slegs huidige speletjie)"
+
+msgctxt "#30162"
+msgid "25 MB"
+msgstr "25 MB"
+
+msgctxt "#30163"
+msgid "50 MB"
+msgstr "50 MB"
+
+msgctxt "#30164"
+msgid "100 MB"
+msgstr "100 MB"
+
+msgctxt "#30165"
+msgid "200 MB"
+msgstr "200 MB"
+
+msgctxt "#30166"
+msgid "500 MB"
+msgstr "500 MB"
+
+msgctxt "#30167"
+msgid "1 GB"
+msgstr "1 GB"
+
+msgctxt "#30168"
+msgid "2 GB"
+msgstr "2 GB"
+
+msgctxt "#30169"
+msgid "5 GB"
+msgstr "5 GB"
+
+msgctxt "#30170"
+msgid "10 GB"
+msgstr "10 GB"
+
+msgctxt "#30171"
+msgid "20 GB"
+msgstr "20 GB"
+
+msgctxt "#30172"
+msgid "Enable Netplay"
+msgstr "Aktiveer Netplay"
+
+msgctxt "#30173"
+msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
+msgstr "Aktiveer retroarch netplay (slegs Windows, Linux, OSX), gebruik kontekskieslys om met netplay te begin"
+
+msgctxt "#30174"
+msgid "Show Netplay Lobby"
+msgstr "Wys Netplay Lobby"
+
+msgctxt "#30175"
+msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
+msgstr "Wanneer dit geaktiveer is, sal die netspeel-lobby op die IAGL-voorblad vertoon word"
+
+msgctxt "#30176"
+msgid "Filter game lobby to IAGL auto launch games"
+msgstr "Filtreer speletjie-lobby na IAGL-outo-bekendstellingspeletjies"
+
+msgctxt "#30177"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "As dit geaktiveer is, sal die netplay-lobby slegs outomatiese beginbare speletjies wys"
+
+msgctxt "#30178"
+msgid "Netplay Port"
+msgstr "Netplay-poort"
+
+msgctxt "#30179"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "Definieer die netplay IP-poort om deur te koppel (laat leeg vir verstek)"
+
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Standaard Localhost IP"
+
+msgctxt "#30181"
+msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
+msgstr "Definieer 'n verstek netspeel gasheernaam / IP (nuttig vir plaaslike netwerk netspeel, laat leeg vir verstek)"
+
+msgctxt "#30182"
+msgid "Check frames"
+msgstr "Gaan rame na"
+
+msgctxt "#30183"
+msgid "Define number of netplay sync frames (leave blank for default)"
+msgstr "Definieer aantal netspeel-sinkroniseringsrame (laat leeg vir verstek)"
+
+msgctxt "#30184"
+msgid "Announce Netplay on Discord"
+msgstr "Kondig Netplay op Discord aan"
+
+msgctxt "#30185"
+msgid "Announces netplay start on discord for IAGL players"
+msgstr "Kondig netspel begin op onenigheid aan vir IAGL-spelers"
+
+msgctxt "#30186"
+msgid "Discord Player Name"
+msgstr "Discord-speler se naam"
+
+msgctxt "#30187"
+msgid "Enter your player name to be announced on Discord"
+msgstr "Voer jou spelernaam in om op Discord aangekondig te word"
+
+msgctxt "#30188"
+msgid "Discord User Account ID"
+msgstr "Discord-gebruikersrekening-ID"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Verskaf jou Discord ID (Gebruikerinstellings> My rekening> Kopieer ID)"
+
+msgctxt "#30190"
+msgid "Display report when wizard is completed"
+msgstr "Vertoon verslag wanneer die towenaar voltooi is"
+
+msgctxt "#30191"
+msgid "Execute setup wizard"
+msgstr "Voer opstellingsassistent uit"
+
+msgctxt "#30192"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Begin die towenaar om instellings vir jou speletjielyste vinnig te verander.  Dit kan enige tyd weer uitgevoer word"
+
+msgctxt "#30193"
+msgid "Android Advance Settings"
+msgstr "Gevorderde Android-instellings"
+
+msgctxt "#30194"
+msgid "Use StartAndroidActivity"
+msgstr "Gebruik StartAndroidActivity"
+
+msgctxt "#30195"
+msgid "Leave as default if unsure"
+msgstr "Los as verstek as onseker is"
+
+msgctxt "#30196"
+msgid "Suspend Kodi Input and Audio when using External Launcher"
+msgstr "Hou Kodi-invoer en oudio op wanneer u eksterne lanseerder gebruik"
+
+msgctxt "#30197"
+msgid "Stop Kodi media playing before External Launch"
+msgstr "Stop Kodi-media speel voor eksterne bekendstelling"
+
+msgctxt "#30198"
+msgid "Kodi is busy / waiting for return to Kodi after External Launch"
+msgstr "Kodi is besig / wag vir terugkeer na Kodi na eksterne bekendstelling"
+
+msgctxt "#30199"
+msgid "Download Advanced Settings"
+msgstr "Laai gevorderde instellings af"
+
+msgctxt "#30200"
+msgid "Download Threads"
+msgstr "Laai Threads af"
+
+msgctxt "#30201"
+msgid "Alternate default download folder"
+msgstr "Alternatiewe verstek aflaai gids"
+
+msgctxt "#30202"
+msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
+msgstr "Wanneer gekies, sal alle aflaaie na 'n alternatiewe vouer gaan.  [B]Let wel: Hierdie vouer sal nie skoongemaak of gemonitor word vir grootte nie[/B]"
+
+msgctxt "#30203"
+msgid "Organize default download folder using system folders"
+msgstr "Organiseer verstek aflaai vouer met behulp van stelsel dopgehou"
+
+msgctxt "#30204"
+msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
+msgstr "Wanneer dit geaktiveer is, sal die tydelike vouer volgens stelsel georganiseer word (soms nodig vir konfigurasie-oorskrywings)"
+
+msgctxt "#30205"
+msgid "Copy Kodi Network Source downloads to Local Filesystem"
+msgstr "Kopieer Kodi-netwerkbron-aflaaie na plaaslike lêerstelsel"
+
+msgctxt "#30206"
+msgid "Reset Options"
+msgstr "Stel opsies terug"
+
+msgctxt "#30207"
+msgid "Reset IAGL database to default settings"
+msgstr "Stel IAGL-databasis terug na verstekinstellings"
+
+msgctxt "#30208"
+msgid "When selected, the database will be reset to default settings"
+msgstr "Wanneer gekies, sal die databasis teruggestel word na verstek instellings"
+
+msgctxt "#30209"
+msgid "Unhide game lists"
+msgstr "Versteek speletjielyste"
+
+msgctxt "#30210"
+msgid "When selected, previously hidden game lists can be unhidden"
+msgstr "As dit gekies is, kan voorheen versteekte speletjielyste ontsteek word"
+
+msgctxt "#30211"
+msgid "Clear Cache"
+msgstr "Vee kas uit"
+
+msgctxt "#30212"
+msgid "When selected, all data in the cache folder including games will be purged"
+msgstr "Wanneer dit gekies is, sal alle data in die kasvouer, insluitend speletjies, skoongemaak word"
+
+msgctxt "#30213"
+msgid "Select"
+msgstr "Kies"
+
+msgctxt "#30214"
+msgid "Selected"
+msgstr "Gekies"
+
+msgctxt "#30215"
+msgid "Game lists selected"
+msgstr "Speletjielyste gekies"
+
+msgctxt "#30216"
+msgid "Genres selected"
+msgstr "Genres gekies"
+
+msgctxt "#30217"
+msgid "Players selected"
+msgstr "Spelers gekies"
+
+msgctxt "#30218"
+msgid "Studios selected"
+msgstr "Ateljees gekies"
+
+msgctxt "#30219"
+msgid "Tags selected"
+msgstr "Merkers gekies"
+
+msgctxt "#30220"
+msgid "Playlists selected"
+msgstr "Snitlyste gekies"
+
+msgctxt "#30221"
+msgid "Regions selected"
+msgstr "Streke gekies"
+
+msgctxt "#30222"
+msgid "Languages selected"
+msgstr "Tale gekies"
+
+msgctxt "#30223"
+msgid "Editions selected"
+msgstr "Uitgawes gekies"
+
+msgctxt "#30224"
+msgid "Codes selected"
+msgstr "Kodes gekies"
+
+msgctxt "#30225"
+msgid "Ratings selected"
+msgstr "Graderings gekies"
+
+msgctxt "#30226"
+msgid "Enter title search query"
+msgstr "Voer titelsoektog in"
+
+msgctxt "#30227"
+msgid "Empty search"
+msgstr "Leë soektog"
+
+msgctxt "#30228"
+msgid "Search criteria is empty.[CR]Update criteria and try again."
+msgstr "Soekkriteria is leeg.[CR]Dateer kriteria op en probeer weer."
+
+msgctxt "#30229"
+msgid "Reset criteria"
+msgstr "Stel kriteria terug"
+
+msgctxt "#30230"
+msgid "Enter Link Name"
+msgstr "Voer skakelnaam in"
+
+msgctxt "#30231"
+msgid "Define the start page for IAGL"
+msgstr "Definieer die beginbladsy vir IAGL"
+
+msgctxt "#30232"
+msgid "Kodi launch options"
+msgstr "Kodi-bekendstellingsopsies"
+
+msgctxt "#30233"
+msgid "Completed"
+msgstr "Voltooi"
+
+msgctxt "#30234"
+msgid "Create new group"
+msgstr "Skep nuwe groep"
+
+msgctxt "#30235"
+msgid "Select favorite group"
+msgstr "Kies gunsteling groep"
+
+msgctxt "#30236"
+msgid "Group by Favorites Group"
+msgstr "Groepeer volgens gunstelingegroep"
+
+msgctxt "#30237"
+msgid "Remove IAGL Favorite"
+msgstr "Verwyder IAGL gunsteling"
+
+msgctxt "#30238"
+msgid "Are you sure you want to delete this Favorite?"
+msgstr "Is jy seker jy wil hierdie gunsteling uitvee?"
+
+msgctxt "#30239"
+msgid "Favorite deleted"
+msgstr "Gunsteling is uitgevee"
+
+msgctxt "#30240"
+msgid "Favorites display"
+msgstr "Gunstelinge vertoon"
+
+msgctxt "#30241"
+msgid "Define the start page for IAGL Favorites"
+msgstr "Definieer die beginbladsy vir IAGL-gunstelinge"
+
+msgctxt "#30242"
+msgid "By Favorites Group"
+msgstr "Deur gunstelinge groep"
+
+msgctxt "#30243"
+msgid "Reset *all* criteria"
+msgstr "Stel *alle* kriteria terug"
+
+msgctxt "#30244"
+msgid "Run IAGL setup wizard?"
+msgstr "Begin die IAGL-opstellingsassistent?"
+
+msgctxt "#30245"
+msgid "Wizard"
+msgstr "Towenaar"
+
+msgctxt "#30246"
+msgid "Update game list Launcher"
+msgstr "Dateer speletjielys-lanseerder op"
+
+msgctxt "#30247"
+msgid "Update game list Launch Command"
+msgstr "Dateer speletjielys op Begin Command"
+
+msgctxt "#30248"
+msgid "Update game list Download Path"
+msgstr "Dateer speletjielys op Aflaai Pad"
+
+msgctxt "#30249"
+msgid "Hide game list"
+msgstr "Versteek speletjielys"
+
+msgctxt "#30250"
+msgid "Update game list post download process"
+msgstr "Dateer speletjielys op na aflaaiproses"
+
+msgctxt "#30251"
+msgid "Are you sure you want to hide game list"
+msgstr "Is jy seker jy wil speletjielys versteek"
+
+msgctxt "#30252"
+msgid "Game list is now hidden"
+msgstr "Speletjielys is nou versteek"
+
+msgctxt "#30253"
+msgid "No results"
+msgstr "Geen resultate nie"
+
+msgctxt "#30254"
+msgid "No hidden game lists found"
+msgstr "Geen versteekte speletjielyste gevind nie"
+
+msgctxt "#30255"
+msgid "Game lists unhidden"
+msgstr "Speletjielyste word nie versteek nie"
+
+msgctxt "#30256"
+msgid "Confirm reset"
+msgstr "Bevestig terugstelling"
+
+msgctxt "#30257"
+msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
+msgstr "Is jy seker jy wil die databasis terugstel?[CR]Alle gebruikerinligting sal verlore gaan![CR]Dit kan nie ontdoen word nie!"
+
+msgctxt "#30258"
+msgid "Database has been reset"
+msgstr "Databasis is teruggestel"
+
+msgctxt "#30259"
+msgid "Update Launcher"
+msgstr "Dateer lanseerder op"
+
+msgctxt "#30260"
+msgid "Update launcher from[CR]Kodi to[CR]External?"
+msgstr "Dateer lanseerder op van[CR]Kodi na[CR]Ekstern?"
+
+msgctxt "#30261"
+msgid "Update launcher from[CR]External to[CR]Kodi?"
+msgstr "Dateer lanseerder op van[CR]Ekstern na[CR]Kodi?"
+
+msgctxt "#30262"
+msgid "Launcher updated to external"
+msgstr "Launcher opgedateer na ekstern"
+
+msgctxt "#30263"
+msgid "Launcher updated to retroplayer"
+msgstr "Launcher opgedateer na retroplayer"
+
+msgctxt "#30264"
+msgid "Select game addon"
+msgstr "Kies speletjie-byvoeging"
+
+msgctxt "#30265"
+msgid "Are you sure you want to reset the game addon launch command?"
+msgstr "Is jy seker jy wil die speletjie-addon-beginbevel terugstel?"
+
+msgctxt "#30266"
+msgid "Download game to…"
+msgstr "Laai speletjie af om..."
+
+msgctxt "#30267"
+msgid "Select download folder"
+msgstr "Kies aflaaimap"
+
+msgctxt "#30268"
+msgid "Archive.org login success!"
+msgstr "Archive.org aanmeld sukses!"
+
+msgctxt "#30269"
+msgid "Archive.org login failed.[CR]Check credentials or log for more details"
+msgstr "Archive.org-aanmelding het misluk.[CR]Gaan eiebewyse na of teken aan vir meer besonderhede"
+
+msgctxt "#30270"
+msgid "Error"
+msgstr "Fout"
+
+msgctxt "#30271"
+msgid "Initializing download for[CR]"
+msgstr "Inisialiseer tans aflaai vir[CR]"
+
+msgctxt "#30272"
+msgid "Check logs"
+msgstr "Gaan logs na"
+
+msgctxt "#30273"
+msgid "Checking login for[CR]"
+msgstr "Kontroleer tans aanmelding vir [CR]"
+
+msgctxt "#30274"
+msgid "Requesting file info for[CR]"
+msgstr "Versoek tans lêerinligting vir [CR]"
+
+msgctxt "#30275"
+msgid "Select from Retroarch Cores"
+msgstr "Kies uit Retroarch Cores"
+
+msgctxt "#30276"
+msgid "Select from Extra Emulators"
+msgstr "Kies uit Ekstra Emulators"
+
+msgctxt "#30277"
+msgid "Manually Enter Launch Command"
+msgstr "Voer Launch Command handmatig in"
+
+msgctxt "#30278"
+msgid "Select External Command Type"
+msgstr "Kies Eksterne opdragtipe"
+
+msgctxt "#30279"
+msgid "Extra Emulators"
+msgstr "Ekstra emulators"
+
+msgctxt "#30280"
+msgid "Dolphin"
+msgstr "Dolfyn"
+
+msgctxt "#30281"
+msgid "Select the path to the Dolphin application (optional)"
+msgstr "Kies die pad na die Dolphin-toepassing (opsioneel)"
+
+msgctxt "#30282"
+msgid "MAME"
+msgstr "MAME"
+
+msgctxt "#30283"
+msgid "Select the path to the MAME application (optional)"
+msgstr "Kies die pad na die MAME-toepassing (opsioneel)"
+
+msgctxt "#30284"
+msgid "Project 64"
+msgstr "Projek 64"
+
+msgctxt "#30285"
+msgid "Select the path to the Project 64 application (optional)"
+msgstr "Kies die pad na die Project 64-toepassing (opsioneel)"
+
+msgctxt "#30286"
+msgid "ePSXe"
+msgstr "ePSXe"
+
+msgctxt "#30287"
+msgid "Select the path to the ePSXe application (optional)"
+msgstr "Kies die pad na die ePSXe-toepassing (opsioneel)"
+
+msgctxt "#30288"
+msgid "Demul"
+msgstr "Demul"
+
+msgctxt "#30289"
+msgid "Select the path to the Demul application (optional)"
+msgstr "Kies die pad na die Demul-toepassing (opsioneel)"
+
+msgctxt "#30290"
+msgid "FS-UAE"
+msgstr "FS-VAE"
+
+msgctxt "#30291"
+msgid "Select the path to the FS-UAE application (optional)"
+msgstr "Kies die pad na die FS-VAE-toepassing (opsioneel)"
+
+msgctxt "#30292"
+msgid "Are you sure you want to set external launch command?"
+msgstr "Is jy seker jy wil eksterne bekendstelling opdrag stel?"
+
+msgctxt "#30293"
+msgid "External launch command updated"
+msgstr "Eksterne bekendstellingopdrag opgedateer"
+
+msgctxt "#30294"
+msgid "Android users must verify the core is installed in Retroarch"
+msgstr "Android-gebruikers moet verifieer dat die kern in Retroarch geïnstalleer is"
+
+msgctxt "#30295"
+msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
+msgstr "Begininstellings is tans leeg[CR]Dateer asseblief byvoeging by eksterne bekendstellinginstellings op."
+
+msgctxt "#30296"
+msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
+msgstr "Bekendstellingsinstellings is tans leeg[CR]Dateer asseblief byvoegingbedryfstelsel-begininstellings op."
+
+msgctxt "#30297"
+msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
+msgstr "Geen ekstra emulators is gevind nie[CR]Dateer asseblief byvoeging by ekstra emulatorinstellings op"
+
+msgctxt "#30298"
+msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
+msgstr "Voer launch command [CR]Sien opsionele sleutelwoorde op IAGL wiki"
+
+msgctxt "#30299"
+msgid "Reset Launch Command"
+msgstr "Stel Beginbevel terug"
+
+msgctxt "#30300"
+msgid "Are you sure you want to reset the external launch command?"
+msgstr "Is jy seker jy wil die eksterne bekendstellingsbevel terugstel?"
+
+msgctxt "#30301"
+msgid "External launch command was reset"
+msgstr "Eksterne bekendstellingopdrag is teruggestel"
+
+msgctxt "#30302"
+msgid "Enter a value for"
+msgstr "Voer 'n waarde in vir"
+
+msgctxt "#30303"
+msgid "View game list settings"
+msgstr "Bekyk speletjielysinstellings"
+
+msgctxt "#30304"
+msgid "Game List"
+msgstr "Speletjie lys"
+
+msgctxt "#30305"
+msgid "Game List System"
+msgstr "Speletjielysstelsel"
+
+msgctxt "#30306"
+msgid "Total 1G1R Games in List"
+msgstr "Totale 1G1R-speletjies in lys"
+
+msgctxt "#30307"
+msgid "Total Games in List"
+msgstr "Totale speletjies in lys"
+
+msgctxt "#30308"
+msgid "Total Favorited Games in List"
+msgstr "Totaal gunsteling speletjies in lys"
+
+msgctxt "#30309"
+msgid "Default External Launch Command"
+msgstr "Verstek eksterne bekendstelling opdrag"
+
+msgctxt "#30310"
+msgid "Default Retroplayer Game Addon"
+msgstr "Standaard Retroplayer Game Addon"
+
+msgctxt "#30311"
+msgid "Default Game Post Process"
+msgstr "Verstek Game Post Proses"
+
+msgctxt "#30312"
+msgid "User Defined Download Path"
+msgstr "Gebruikergedefinieerde aflaaipad"
+
+msgctxt "#30313"
+msgid "User External Launch Command"
+msgstr "Gebruiker eksterne beginopdrag"
+
+msgctxt "#30314"
+msgid "User Defined Retroplayer Game Addon"
+msgstr "Gebruiker-gedefinieerde Retroplayer Game Addon"
+
+msgctxt "#30315"
+msgid "User Defined Post Process"
+msgstr "Gebruikergedefinieerde posproses"
+
+msgctxt "#30316"
+msgid "Game List Settings"
+msgstr "Speletjielysinstellings"
+
+msgctxt "#30317"
+msgid "None (will use addon default)"
+msgstr "Geen (sal addon verstek gebruik)"
+
+msgctxt "#30318"
+msgid "Games List Launcher"
+msgstr "Speletjieslyslanseerder"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Eksterne bekendstellingsbevel"
+
+msgctxt "#30320"
+msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
+msgstr "Eksterne Launch Command[CR]*Geen Gebruiker Launch Command Found / Gebruik verstek*"
+
+msgctxt "#30321"
+msgid "Kodi Retroplayer"
+msgstr "Kodi retrospeler"
+
+msgctxt "#30322"
+msgid "Are you sure you want to update game list download path?"
+msgstr "Is jy seker jy wil speletjielys aflaaipad opdateer?"
+
+msgctxt "#30323"
+msgid "Download path updated"
+msgstr "Aflaaipad opgedateer"
+
+msgctxt "#30324"
+msgid "Are you sure you want to reset game list download path?"
+msgstr "Is jy seker jy wil speletjielys aflaaipad terugstel?"
+
+msgctxt "#30325"
+msgid "Download path reset"
+msgstr "Laai pad-terugstelling af"
+
+msgctxt "#30326"
+msgid "Change download path"
+msgstr "Verander aflaaipad"
+
+msgctxt "#30327"
+msgid "Reset download path"
+msgstr "Stel aflaaipad terug"
+
+msgctxt "#30328"
+msgid "Reset game list settings"
+msgstr "Stel speletjielysinstellings terug"
+
+msgctxt "#30329"
+msgid "Are you sure you want to reset all game list settings to default?"
+msgstr "Is jy seker jy wil alle speletjielysinstellings na verstek terugstel?"
+
+msgctxt "#30330"
+msgid "Game list settings were reset to default"
+msgstr "Speletjielysinstellings is na verstek teruggestel"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Ooreenstemmende plaaslike lêer"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Kontroleer geloofsbriewe"
+
+msgctxt "#30333"
+msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "die volgende veranderlikes sal tydens bekendstelling vervang word:[CR]● XXROM_PATHXX: Die pad na die lêer wat geloods sal word[CR]● XXROM_NAMEXX: Die naam van die lêer wat geloods sal word (geen pad nie)[CR]● XXROM_STEMXX: Die naam van die lêer wat geloods gaan word (geen pad geen uitbreiding nie)[CR]● XXNETPLAY_COMMANDXX: Enige opdragbyvoeging benodig vir netplay, sien addon-instellings vir opsies[CR]Sien wiki vir meer inligting..."
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Die argieflêer kon nie verwerk word nie[CR]Gaan logs na vir meer besonderhede"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Kies aksie voor bekendstelling"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Laat Kodi op die agtergrond loop (verstek)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Maak Kodi toe voor bekendstelling, maak Kodi weer oop na emulator-uitgang"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Skors Kodi voor bekendstelling, maak Kodi wakker na emulator-uitgang"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Bekyk IAGL db-statistieke"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Lys huidige statistieke vir IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db statistieke"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Bekyk bekendstellingsparameters"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Speletjie-instellings"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Speletjie-beginparameters"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "As geen gebruiker Launch Command teenwoordig is nie"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Kies wat Kodi sal doen as geen bekendstellingsbevel (retrospeler-byvoeging of eksterne emulator) ingestel is nie"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Poging om te begin met verstek"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Stop / Moenie begin nie"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Geen opdrag gestel nie"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "'n Beginopdrag is nie vir hierdie lys gestel nie, stel nou een?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Geen verstek bekendstellingopdrag kon vir hierdie lys gevind word nie"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Verstekkern is nie gevind nie.  Installeer asseblief {} of dateer lanseerder op"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Game addon launch command reset"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Geen speletjie-byvoegings gevind nie"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Game addon launch opdrag opgedateer"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Gebruik alternatiewe verstek aflaai gids"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Wys slegs opsies wat Kodi op die agtergrond hou"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Wys slegs opsies wat Kodi sluit"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Wys slegs opsies wat Kodi onderbreek"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG-ligging as string"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Alternatiewelik voer die pad na die retroarch.cfg-lêer in presies soos dit in Retroarch verskyn"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch Cores-gids as string"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Alternatiewelik voer die pad na die Cores-gids in presies soos dit in Retroarch-gidskonfigurasie verskyn"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Dateer lanseerder vir {} op?[CR][B]Dit sal instellings vir alle speletjies in hierdie lys verander.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Dateer Beginbevel vir {} op?[CR][B]Dit sal instellings vir alle speletjies in hierdie lys verander.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Dateer bekendstelling aflaaipad op vir {}?[CR][B]Dit sal instellings vir alle speletjies in hierdie lys verander.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Dateer Beginbevel op"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Opdateer Begin Aflaai Pad"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Stel instellings vir {} terug?[CR][B]Dit sal instellings vir alle speletjies in hierdie lys verander.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Ondersteuning"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Skenk aan Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "'n Nuwe IAGL-databasis is gevind[CR]Wil jy opdateer?[CR]Instellings sal na die nuwe db gekopieer word indien moontlik"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "nuwe db"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Databasis is opgedateer[CR]Gebruikerinstellings is oorgedra"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Databasis is opgedateer[CR]Sommige gebruikerinstellings kon nie oordra nie[CR]Sien logboek vir meer besonderhede"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Daar was 'n fout met die opdatering van die databasis[CR]Sien log vir meer besonderhede"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Vra my later weer"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Moenie hierdie keer opdateer nie[CR](Moenie my weer vra tot volgende opdatering nie)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Welkom by die IAGL Setup Wizard[CR]Kom ons gaan deur al die instellings om jou te laat speel!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Die meeste speletjies vereis 'n archive.org-rekening[CR]Sluit aan by https://archive.org/account/signup[CR]Wil jy jou rekening met IAGL gebruik?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Opstelling is voltooi vir die gebruik van Kodi-speletjie-byvoegings![CR]Is jy gereed om te speel?[CR]Kies [B]Nee[/B] om eksterne speletjie-bekendstelling op te stel."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Stel alle speletjielyste om ekstern bekendgestel te word"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Stel slegs sommige speletjielyste om ekstern bekendgestel te word"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Stel alle speletjielyslanseerders terug na verstek"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} speletjielyste is opgedateer vir eksterne bekendstelling"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Verstekpunte is vooraf ingestel vir elke eksterne bekendstellingsbevel[CR]Voor die bekendstelling van hersien speletjie-bekendstellingsparameters indien nodig[CR]Sien wiki vir meer besonderhede."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch-toepassing gestel op:[CR]{}[CR]Verander in addon-instellings indien nodig"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch-opstelling gestel na:[CR]{}[CR]Verander in addon-instellings indien nodig"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Wizard voltooi[CR]Kom ons speel!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Stel alle speletjielyste in om met Kodi bekendgestel te word"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Stel alle speletjielyste vinnig op eksterne bekendstelling"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Stel alle speletjielyste vinnig op Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Bevestig"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Is jy seker jy wil alle lyste op eksterne bekendstelling stel"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Is jy seker jy wil alle lyste op Kodi retroplayer stel"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Android-toestemmings vereis dat jy die Retroarch-opstellingspad handmatig moet invoer[CR]Sien wiki vir meer hulp"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Android-toestemmings vereis dat jy die Retroarch-kernpad handmatig moet invoer[CR]Sien wiki vir meer hulp"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Rugsteun huidige databasis"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Herstel databasis vanaf rugsteun"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Rugsteun die huidige IAGL-databasis en alle gebruikerinstellings"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Herstel die huidige addon-databasis vanaf 'n rugsteun"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Kies rugsteunpad"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Kies rugsteun db"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Rugsteun voltooi"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Herstel voltooi"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} ooreenstemmende speletjie-ID's is nie in die nuwe db gevind nie[CR]Kies volgende aksie"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Dateer databasis op, probeer om speletjies volgens titel en speletjielys te pas"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Dateer databasis op, verwyder speletjie-ID's wat nie gevind is nie"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Herstel terug na ou databasis"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Databasis is terug na ou databasis herstel"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Wag asseblief"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Stel Retroarch-gidse handmatig in"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL sal by verstek dopgehou van RA-konfigurasie opspoor, jy kan hierdie funksie handmatig ignoreer"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch Core Directory"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroach Info Directory"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Voeg linux-toepassing by om opdrag te begin"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak word gebruik vir spesifieke linux/elec-stelsels.  Aktiveer net as jou stelsel dit vereis."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Plaas systemd-run vooraf aan Retroarch-opdragte"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Stel systemd-run voor by alle opdragte"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Stel flatpak-loop voor na Retroarch-opdragte"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Plaas flatpak run voor op alle opdragte"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Android-toestemmings vereis 'n gedeelde berginggids[CR]Voer 'n gedeelde ligging in wat deur beide toepassings toeganklik is"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Pak lêers uit"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Geen verwerking nie"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Pak lêers uit, slaan BIOS-lêers oor"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Pak lêers uit na gids"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Pak lêers uit, skuif CHD na gids"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Skuif lêers na gids: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Skuif lêers na gids: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Skuif lêers na gids: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Skuif lêers na gids: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Skuif lêers na gids: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Skuif lêers na gids: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Skuif lêers na gids: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Skuif lêers na gids: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Skuif lêers na gids: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Skuif lêers na gids: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Skuif lêers na gids: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Skuif lêers na gids: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Skuif lêers na vouer: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Skuif lêers na gids: spektrum"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Skuif lêers na gids: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Is jy seker jy wil speletjielys-posproses opdateer?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Posproses opgedateer"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Dateer plasingsproses vir {} op?[CR][B]Dit sal instellings vir alle speletjies in hierdie lys verander.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Aflaai voltooi.  Plaas proseslêers?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Spellêers verwerk"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Nie beskikbaar nie (slegs Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Netplay Gebruikersnaam Tipe"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Kies integrasie vir netwerkspelernaam"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Gebruik Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord maak geoutomatiseerde netspeelwedstryde moontlik (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Voer 'n spelernaam handmatig in"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Spelersname sal in die Retroarch Lobby gepubliseer word"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Speler Naam"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Huidige Discord-gebruiker"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord-gebruiker gestel op [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Bekyk speletjiesessies waarby jy aanlyn kan aansluit deur Retroarch-netspel te gebruik"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Kan nie discord-gebruiker met ID [CR]{} vind nie"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Lobbyfilteropsies"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Wys slegs kamers wat betree kan word"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Wys slegs kamers wat libretro gebruik"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Wys kamers wat 'n wagwoord het"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Wys kamers wat 'n toeskouerwagwoord het"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Wys kamers met MITM-bedieners"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Wys slegs kamers wat binne tydraamwerk geskep is"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 minute"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 minute"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Enige tydraamwerk"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Filtreer die lobbykamers op grond van skeppingstyd"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Wys slegs kamers wat IAGL gebruik"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Kan nie bypassende speletjie vind met naam soos[CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Nie gevind nie"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Kies bypassende speletjie"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Netplay bekendstelling aksie"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Sluit aan vanaf retroarch lobby"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Sluit aan vanaf localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Kies die verstekaksie wanneer jy by 'n netwerkspeletjie aansluit"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Begin as netplay-gasheer"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Hernoem IAGL gunsteling"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Hernoem voltooi"

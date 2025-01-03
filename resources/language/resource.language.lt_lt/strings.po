@@ -1,0 +1,1936 @@
+# Kodi Media Center language file
+# Addon Name: /Internet Archive Game Launcher
+# Addon id: pltugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/zach-morris/plugin.program.iagl/issues\n"
+"Language: lt_lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "Interneto archyvo žaidimų paleidimo priemonė"
+
+msgctxt "#30002"
+msgid "Browse all Lists"
+msgstr "Naršyti visus sąrašus"
+
+msgctxt "#30003"
+msgid "Browse lists by Category"
+msgstr "Naršykite sąrašus pagal kategoriją"
+
+msgctxt "#30004"
+msgid "Browse games by Playlist"
+msgstr "Naršykite žaidimus pagal grojaraštį"
+
+msgctxt "#30005"
+msgid "Favorites"
+msgstr "Mėgstamiausi"
+
+msgctxt "#30006"
+msgid "Play History"
+msgstr "Play istorija"
+
+msgctxt "#30007"
+msgid "Search"
+msgstr "Ieškoti"
+
+msgctxt "#30008"
+msgid "Random Play"
+msgstr "Atsitiktinis žaidimas"
+
+msgctxt "#30009"
+msgid "Next"
+msgstr "Kitas"
+
+msgctxt "#30010"
+msgid "Previous"
+msgstr "Ankstesnis"
+
+msgctxt "#30011"
+msgid "One Big List"
+msgstr "Vienas didelis sąrašas"
+
+msgctxt "#30012"
+msgid "Alphabetical"
+msgstr "Abėcėlinis"
+
+msgctxt "#30013"
+msgid "Group by Genre"
+msgstr "Grupė pagal žanrą"
+
+msgctxt "#30014"
+msgid "Group by Year"
+msgstr "Grupuoti pagal metus"
+
+msgctxt "#30015"
+msgid "Group by Players"
+msgstr "Grupė pagal žaidėjus"
+
+msgctxt "#30016"
+msgid "Group by Studio"
+msgstr "Grupė pagal studiją"
+
+msgctxt "#30017"
+msgid "Group by Tag"
+msgstr "Grupuoti pagal žymą"
+
+msgctxt "#30018"
+msgid "Group by Playlist"
+msgstr "Grupuoti pagal grojaraštį"
+
+msgctxt "#30019"
+msgid "Group by Region"
+msgstr "Grupė pagal regioną"
+
+msgctxt "#30020"
+msgid "Group by Language"
+msgstr "Grupė pagal kalbą"
+
+msgctxt "#30021"
+msgid "Group by Edition"
+msgstr "Grupuoti pagal leidimą"
+
+msgctxt "#30022"
+msgid "Group by Code"
+msgstr "Grupuoti pagal kodą"
+
+msgctxt "#30023"
+msgid "Group by Rating"
+msgstr "Grupuoti pagal įvertinimą"
+
+msgctxt "#30024"
+msgid "Select Game Lists"
+msgstr "Pasirinkite Žaidimų sąrašai"
+
+msgctxt "#30025"
+msgid "Search Game Titles"
+msgstr "Ieškoti žaidimų pavadinimų"
+
+msgctxt "#30026"
+msgid "Filter by Genre"
+msgstr "Filtruoti pagal žanrą"
+
+msgctxt "#30027"
+msgid "Filter by Players"
+msgstr "Filtruoti pagal žaidėjus"
+
+msgctxt "#30028"
+msgid "Filter by Studio"
+msgstr "Filtruoti pagal studiją"
+
+msgctxt "#30029"
+msgid "Filter by Tag"
+msgstr "Filtruoti pagal žymą"
+
+msgctxt "#30030"
+msgid "Filter by Playlist"
+msgstr "Filtruoti pagal grojaraštį"
+
+msgctxt "#30031"
+msgid "Filter by Region"
+msgstr "Filtruoti pagal regioną"
+
+msgctxt "#30032"
+msgid "Filter by Language"
+msgstr "Filtruoti pagal kalbą"
+
+msgctxt "#30033"
+msgid "Filter by Edition"
+msgstr "Filtruoti pagal leidimą"
+
+msgctxt "#30034"
+msgid "Filter by Code"
+msgstr "Filtruoti pagal kodą"
+
+msgctxt "#30035"
+msgid "Filter by Rating"
+msgstr "Filtruoti pagal įvertinimą"
+
+msgctxt "#30036"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Vykdyti paiešką[/COLOR]"
+
+msgctxt "#30037"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Sukurti paieškos nuorodą[/COLOR]"
+
+msgctxt "#30038"
+msgid "Choose Number of Results"
+msgstr "Pasirinkite Rezultatų skaičių"
+
+msgctxt "#30039"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Vykdyti atsitiktinę paiešką[/COLOR]"
+
+msgctxt "#30040"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Sukurti atsitiktinės paieškos nuorodą[/COLOR]"
+
+msgctxt "#30041"
+msgid "General"
+msgstr "Generolas"
+
+msgctxt "#30042"
+msgid "Launching"
+msgstr "Paleidimas"
+
+msgctxt "#30043"
+msgid "Downloading"
+msgstr "Atsisiunčiama"
+
+msgctxt "#30044"
+msgid "Views and Navigation"
+msgstr "Rodiniai ir navigacija"
+
+msgctxt "#30045"
+msgid "Netplay"
+msgstr "Netplay"
+
+msgctxt "#30046"
+msgid "Setup Wizard"
+msgstr "Sąrankos vedlys"
+
+msgctxt "#30047"
+msgid "Advanced"
+msgstr "Išplėstinė"
+
+msgctxt "#30048"
+msgid "Play History"
+msgstr "Play istorija"
+
+msgctxt "#30049"
+msgid "Define how many games to save in last played history"
+msgstr "Apibrėžkite, kiek žaidimų išsaugoti paskutinio žaidimo istorijoje"
+
+msgctxt "#30050"
+msgid "Default action on selecting game"
+msgstr "Numatytasis veiksmas pasirenkant žaidimą"
+
+msgctxt "#30051"
+msgid "Define action to take when a game is selected"
+msgstr "Apibrėžkite veiksmus, kurių reikia imtis, kai pasirenkamas žaidimas"
+
+msgctxt "#30052"
+msgid "If game already exists locally"
+msgstr "Jei žaidimas jau egzistuoja vietoje"
+
+msgctxt "#30053"
+msgid "Define the action to take if a game file is found to exist locally"
+msgstr "Apibrėžkite veiksmą, kurio reikia imtis, jei žaidimo failas yra vietoje"
+
+msgctxt "#30054"
+msgid "Prompt"
+msgstr "Raginimas"
+
+msgctxt "#30055"
+msgid "Do not re-download"
+msgstr "Nesisiųskite iš naujo"
+
+msgctxt "#30056"
+msgid "Re-download and overwrite"
+msgstr "Atsisiųskite iš naujo ir perrašykite"
+
+msgctxt "#30057"
+msgid "Enable archive.org login"
+msgstr "Įgalinti archive.org prisijungimą"
+
+msgctxt "#30058"
+msgid "Enabled"
+msgstr "Įjungta"
+
+msgctxt "#30059"
+msgid "Disabled"
+msgstr "Išjungta"
+
+msgctxt "#30060"
+msgid "Some games require login.  Enter your archive.org email address and password."
+msgstr "Kai kuriems žaidimams reikia prisijungti.  Įveskite savo archive.org el. pašto adresą ir slaptažodį."
+
+msgctxt "#30061"
+msgid "archive.org Email"
+msgstr "archive.org El"
+
+msgctxt "#30062"
+msgid "Some games require login.  Enter your archive.org email address"
+msgstr "Kai kuriems žaidimams reikia prisijungti.  Įveskite savo archive.org el. pašto adresą"
+
+msgctxt "#30063"
+msgid "archive.org Password"
+msgstr "archive.org Slaptažodis"
+
+msgctxt "#30064"
+msgid "Some games require login.  Enter your archive.org password"
+msgstr "Kai kuriems žaidimams reikia prisijungti.  Įveskite savo archive.org slaptažodį"
+
+msgctxt "#30065"
+msgid "Check login credentials"
+msgstr "Patikrinkite prisijungimo duomenis"
+
+msgctxt "#30066"
+msgid "Test the entered email and password to check your ability to login"
+msgstr "Patikrinkite įvestą el. pašto adresą ir slaptažodį, kad patikrintumėte savo galimybę prisijungti"
+
+msgctxt "#30067"
+msgid "Download folder size limit"
+msgstr "Atsisiuntimo aplanko dydžio apribojimas"
+
+msgctxt "#30068"
+msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
+msgstr "Apibrėžkite atsisiuntimo / talpyklos dydį.[CR]Aplankas išvalomas, kai pasiekiama dydžio riba."
+
+msgctxt "#30069"
+msgid "Front page display"
+msgstr "Priekinio puslapio ekranas"
+
+msgctxt "#30070"
+msgid "Choose from list"
+msgstr "Pasirinkite iš sąrašo"
+
+msgctxt "#30071"
+msgid "Games are presented as"
+msgstr "Žaidimai pateikiami kaip"
+
+msgctxt "#30072"
+msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
+msgstr "„Kodi“ siūlo keletą filmų, TV laidų ir žaidimų odos parinkčių.  Daugiau informacijos rasite wiki"
+
+msgctxt "#30073"
+msgid "TV Shows"
+msgstr "TV laidos"
+
+msgctxt "#30074"
+msgid "Movies"
+msgstr "Filmai"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "Žaidimai"
+
+msgctxt "#30076"
+msgid "10 Games"
+msgstr "10 žaidimų"
+
+msgctxt "#30077"
+msgid "25 Games"
+msgstr "25 žaidimai"
+
+msgctxt "#30078"
+msgid "50 Games"
+msgstr "50 žaidimų"
+
+msgctxt "#30079"
+msgid "100 Games"
+msgstr "100 žaidimų"
+
+msgctxt "#30080"
+msgid "250 Games"
+msgstr "250 žaidimų"
+
+msgctxt "#30081"
+msgid "500 Games"
+msgstr "500 žaidimų"
+
+msgctxt "#30082"
+msgid "Game artwork"
+msgstr "Žaidimo meno kūriniai"
+
+msgctxt "#30083"
+msgid "Game list artwork"
+msgstr "Žaidimų sąrašo meno kūriniai"
+
+msgctxt "#30084"
+msgid "Retroarch Settings"
+msgstr "Retroarch nustatymai"
+
+msgctxt "#30085"
+msgid "Suspend Kodi IO on launch"
+msgstr "Sustabdykite Kodi IO paleidimą"
+
+msgctxt "#30086"
+msgid "Stop media on launch"
+msgstr "Sustabdykite mediją paleidžiant"
+
+msgctxt "#30087"
+msgid "Waiting for return"
+msgstr "Laukia sugrįžimo"
+
+msgctxt "#30088"
+msgid "Add to IAGL Favorites"
+msgstr "Pridėti prie IAGL mėgstamiausių"
+
+msgctxt "#30089"
+msgid "Enter a name for your favorites group"
+msgstr "Įveskite mėgstamiausių grupės pavadinimą"
+
+msgctxt "#30090"
+msgid "Favorite added to group"
+msgstr "Mėgstamiausias įtrauktas į grupę"
+
+msgctxt "#30091"
+msgid "Use clean game title"
+msgstr "Naudokite švarų žaidimo pavadinimą"
+
+msgctxt "#30092"
+msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
+msgstr "Pašalinkite žymas iš žaidimo pavadinimo, kad būtų rodomas.  Pvz.: [B]Mario (JAV)[/B] tampa [B]Mario[/B]"
+
+msgctxt "#30093"
+msgid "Games per page"
+msgstr "Žaidimai puslapyje"
+
+msgctxt "#30094"
+msgid "Define how many games are listed per page"
+msgstr "Nurodykite, kiek žaidimų pateikiama puslapyje"
+
+msgctxt "#30095"
+msgid "List all"
+msgstr "Išvardykite visus"
+
+msgctxt "#30096"
+msgid "Always filter list to 1 Game 1 Rom Set"
+msgstr "Visada filtruokite sąrašą į 1 žaidimo 1 romų rinkinį"
+
+msgctxt "#30097"
+msgid "If possible, game lists will be pre-filtered to a 1G1R set"
+msgstr "Jei įmanoma, žaidimų sąrašai bus iš anksto filtruojami pagal 1G1R rinkinį"
+
+msgctxt "#30098"
+msgid "Append game list name to search and random results"
+msgstr "Pridėkite žaidimų sąrašo pavadinimą prie paieškos ir atsitiktinių rezultatų"
+
+msgctxt "#30099"
+msgid "When enabled, the name of the game list will be appended to search results"
+msgstr "Kai įjungta, žaidimų sąrašo pavadinimas bus pridėtas prie paieškos rezultatų"
+
+msgctxt "#30100"
+msgid "Append game list name when browsing by playlist"
+msgstr "Naršydami pagal grojaraštį pridėkite žaidimų sąrašo pavadinimą"
+
+msgctxt "#30101"
+msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
+msgstr "Kai įjungta, žaidimų sąrašo pavadinimas bus pridėtas prie žaidimo pavadinimo grojaraštyje"
+
+msgctxt "#30102"
+msgid "Kodi landscape art equates to"
+msgstr "Kodi kraštovaizdžio menas prilygsta"
+
+msgctxt "#30103"
+msgid "Select the game artwork to be displayed as the landscape art"
+msgstr "Pasirinkite žaidimo kūrinį, kuris bus rodomas kaip kraštovaizdžio menas"
+
+msgctxt "#30104"
+msgid "Title Screen"
+msgstr "Pavadinimo ekranas"
+
+msgctxt "#30105"
+msgid "Screenshot"
+msgstr "Ekrano kopija"
+
+msgctxt "#30106"
+msgid "Kodi thumbnail art equates to"
+msgstr "Kodi miniatiūrų menas prilygsta"
+
+msgctxt "#30107"
+msgid "Select the game artwork to be displayed as the thumbnail art"
+msgstr "Pasirinkite žaidimo iliustraciją, kuri bus rodoma kaip miniatiūros iliustracija"
+
+msgctxt "#30108"
+msgid "Game list clearlogo equates to"
+msgstr "Žaidimų sąrašas clearlogo prilygsta"
+
+msgctxt "#30109"
+msgid "Select the artwork displayed for the game list clearlogo"
+msgstr "Pasirinkite žaidimų sąrašo išvalymo logotipo iliustraciją"
+
+msgctxt "#30110"
+msgid "System logo"
+msgstr "Sistemos logotipas"
+
+msgctxt "#30111"
+msgid "System console"
+msgstr "Sistemos konsolė"
+
+msgctxt "#30112"
+msgid "System controller"
+msgstr "Sistemos valdiklis"
+
+msgctxt "#30113"
+msgid "Game list fanart equates to"
+msgstr "Žaidimų sąrašas fanart prilygsta"
+
+msgctxt "#30114"
+msgid "Select the artwork displayed for the game list fanart"
+msgstr "Pasirinkite žaidimų sąrašo fanart meno kūrinius"
+
+msgctxt "#30115"
+msgid "System collage"
+msgstr "Sistemos koliažas"
+
+msgctxt "#30116"
+msgid "System console"
+msgstr "Sistemos konsolė"
+
+msgctxt "#30117"
+msgid "System wallpaper"
+msgstr "Sistemos tapetai"
+
+msgctxt "#30118"
+msgid "Force IAGL viewtypes"
+msgstr "Priversti IAGL rodinių tipus"
+
+msgctxt "#30119"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "Patikrinkite, ar jūsų oda turi priverstinio peržiūros tipo ID"
+
+msgctxt "#30120"
+msgid "Frontpage viewtype"
+msgstr "Pirmojo puslapio peržiūros tipas"
+
+msgctxt "#30121"
+msgid "Game library lists viewtype"
+msgstr "Žaidimų bibliotekos sąrašų rodinio tipas"
+
+msgctxt "#30122"
+msgid "Game categories viewtype"
+msgstr "Žaidimo kategorijų peržiūros tipas"
+
+msgctxt "#30123"
+msgid "Games list viewtype"
+msgstr "Žaidimų sąrašo peržiūros tipas"
+
+msgctxt "#30124"
+msgid "Choose list viewtype"
+msgstr "Pasirinkite sąrašo rodinio tipą"
+
+msgctxt "#30125"
+msgid "Search and Random results viewtype"
+msgstr "Paieškos ir atsitiktinių rezultatų peržiūros tipas"
+
+msgctxt "#30126"
+msgid "Off (Default)"
+msgstr "Išjungta (numatytasis)"
+
+msgctxt "#30127"
+msgid "List / Poster (50)"
+msgstr "Sąrašas / plakatas (50)"
+
+msgctxt "#30128"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "Plakatas / Didelis sąrašas / Plakatų siena (51)"
+
+msgctxt "#30129"
+msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
+msgstr "Piktogramos siena / horizontalus raštas / LS siena (52)"
+
+msgctxt "#30130"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "Reklaminė juosta / kraštovaizdis / plakato informacija (501)"
+
+msgctxt "#30131"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "Fanart / Landscape Single / serijų sąrašas (502)"
+
+msgctxt "#30132"
+msgid "Logos / Big Square Wall (503)"
+msgstr "Logotipai / Big Square Wall (503)"
+
+msgctxt "#30133"
+msgid "Big List 2 (504)"
+msgstr "Didysis sąrašas 2 (504)"
+
+msgctxt "#30134"
+msgid "Landscape Details (505)"
+msgstr "Išsami informacija apie kraštovaizdį (505)"
+
+msgctxt "#30135"
+msgid "Operating System"
+msgstr "Operacinė sistema"
+
+msgctxt "#30136"
+msgid "Select your operating system"
+msgstr "Pasirinkite savo operacinę sistemą"
+
+msgctxt "#30137"
+msgid "Windows"
+msgstr "Windows"
+
+msgctxt "#30138"
+msgid "Linux"
+msgstr "Linux"
+
+msgctxt "#30139"
+msgid "OSX"
+msgstr "OSX"
+
+msgctxt "#30140"
+msgid "Retroarch App Location"
+msgstr "Retroarch programos vieta"
+
+msgctxt "#30141"
+msgid "Select the path to the retroarch executable"
+msgstr "Pasirinkite kelią į retroarch vykdomąjį failą"
+
+msgctxt "#30142"
+msgid "Retroarch CFG Location"
+msgstr "Retroarch CFG Vieta"
+
+msgctxt "#30143"
+msgid "Select the path to the retroarch config file"
+msgstr "Pasirinkite kelią į retroarch konfigūracijos failą"
+
+msgctxt "#30144"
+msgid "Android"
+msgstr "Android"
+
+msgctxt "#30145"
+msgid "Android aarch64"
+msgstr "Android aarch64"
+
+msgctxt "#30146"
+msgid "Android ra32"
+msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Žaidimo paleidimo priemonės pasirinkimo būdas"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Pasirinkite, ką Kodi darys pasirinkdamas žaidimų paleidimo priemonę (tik „Windows“, „Linux“ ir OSX)"
+
+msgctxt "#30149"
+msgid "Keep Kodi in the background"
+msgstr "Laikykite Kodi fone"
+
+msgctxt "#30150"
+msgid "Close Kodi"
+msgstr "Uždarykite Kodi"
+
+msgctxt "#30151"
+msgid "Pause Kodi"
+msgstr "Pristabdykite Kodi"
+
+msgctxt "#30152"
+msgid "Retroarch core picker"
+msgstr "Retroarcho šerdies rinkiklis"
+
+msgctxt "#30153"
+msgid "List by System and Core Name"
+msgstr "Sąrašas pagal sistemą ir pagrindinį pavadinimą"
+
+msgctxt "#30154"
+msgid "List by Core Name"
+msgstr "Sąrašas pagal pagrindinį pavadinimą"
+
+msgctxt "#30155"
+msgid "List by Emulated Systems"
+msgstr "Sąrašas pagal emuliuotas sistemas"
+
+msgctxt "#30156"
+msgid "Select Core"
+msgstr "Pasirinkite Core"
+
+msgctxt "#30157"
+msgid "Select Emulated System"
+msgstr "Pasirinkite Emuliuota sistema"
+
+msgctxt "#30158"
+msgid "Select Emulator"
+msgstr "Pasirinkite emuliatorių"
+
+msgctxt "#30159"
+msgid "Credentials were not found[CR]Please enter them in addon settings"
+msgstr "Kredencialai nerasta[CR]Įveskite juos priedo nustatymuose"
+
+msgctxt "#30160"
+msgid "Game List Download Path"
+msgstr "Žaidimų sąrašo atsisiuntimo kelias"
+
+msgctxt "#30161"
+msgid "Zero (Current Game Only)"
+msgstr "Nulis (tik dabartinis žaidimas)"
+
+msgctxt "#30162"
+msgid "25 MB"
+msgstr "25 MB"
+
+msgctxt "#30163"
+msgid "50 MB"
+msgstr "50 MB"
+
+msgctxt "#30164"
+msgid "100 MB"
+msgstr "100 MB"
+
+msgctxt "#30165"
+msgid "200 MB"
+msgstr "200 MB"
+
+msgctxt "#30166"
+msgid "500 MB"
+msgstr "500 MB"
+
+msgctxt "#30167"
+msgid "1 GB"
+msgstr "1 GB"
+
+msgctxt "#30168"
+msgid "2 GB"
+msgstr "2 GB"
+
+msgctxt "#30169"
+msgid "5 GB"
+msgstr "5 GB"
+
+msgctxt "#30170"
+msgid "10 GB"
+msgstr "10 GB"
+
+msgctxt "#30171"
+msgid "20 GB"
+msgstr "20 GB"
+
+msgctxt "#30172"
+msgid "Enable Netplay"
+msgstr "Įgalinti Netplay"
+
+msgctxt "#30173"
+msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
+msgstr "Įgalinkite retroarch netplay (tik Windows, Linux, OSX), naudokite kontekstinį meniu, kad paleistumėte su netplay"
+
+msgctxt "#30174"
+msgid "Show Netplay Lobby"
+msgstr "Rodyti „Netplay Lobby“."
+
+msgctxt "#30175"
+msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
+msgstr "Kai įjungta, netplay fojė bus rodoma IAGL pagrindiniame puslapyje"
+
+msgctxt "#30176"
+msgid "Filter game lobby to IAGL auto launch games"
+msgstr "Filtruokite žaidimų fojė į IAGL automatinio paleidimo žaidimus"
+
+msgctxt "#30177"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "Jei įjungta, „netplay“ vestibiulyje bus rodomi tik automatiškai paleidžiami žaidimai"
+
+msgctxt "#30178"
+msgid "Netplay Port"
+msgstr "Netplay prievadas"
+
+msgctxt "#30179"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "Apibrėžkite „netplay“ IP prievadą, per kurį norite prisijungti (palikite tuščią, jei norite numatytųjų)"
+
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Numatytasis Localhost IP"
+
+msgctxt "#30181"
+msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
+msgstr "Apibrėžkite numatytąjį „netplay“ pagrindinio kompiuterio pavadinimą / IP (naudinga vietinio tinklo tinkle, palikite tuščią pagal numatytuosius nustatymus)"
+
+msgctxt "#30182"
+msgid "Check frames"
+msgstr "Patikrinkite rėmelius"
+
+msgctxt "#30183"
+msgid "Define number of netplay sync frames (leave blank for default)"
+msgstr "Apibrėžkite „netplay“ sinchronizavimo kadrų skaičių (palikite tuščią, jei norite numatytųjų)"
+
+msgctxt "#30184"
+msgid "Announce Netplay on Discord"
+msgstr "Paskelbkite „Netplay“ sistemoje „Discord“."
+
+msgctxt "#30185"
+msgid "Announces netplay start on discord for IAGL players"
+msgstr "Praneša, kad IAGL žaidėjai pradeda žaisti tinkle"
+
+msgctxt "#30186"
+msgid "Discord Player Name"
+msgstr "Discord grotuvo vardas"
+
+msgctxt "#30187"
+msgid "Enter your player name to be announced on Discord"
+msgstr "Įveskite savo žaidėjo vardą, kuris bus paskelbtas Discord"
+
+msgctxt "#30188"
+msgid "Discord User Account ID"
+msgstr "„Discord“ vartotojo paskyros ID"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Pateikite savo „Discord“ ID (Vartotojo nustatymai> Mano paskyra> Kopijavimo ID)"
+
+msgctxt "#30190"
+msgid "Display report when wizard is completed"
+msgstr "Rodyti ataskaitą, kai vedlys bus baigtas"
+
+msgctxt "#30191"
+msgid "Execute setup wizard"
+msgstr "Vykdykite sąrankos vedlį"
+
+msgctxt "#30192"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Paleiskite vedlį, kad greitai pakeistumėte žaidimų sąrašų nustatymus.  Tai gali būti pakartota bet kuriuo metu"
+
+msgctxt "#30193"
+msgid "Android Advance Settings"
+msgstr "„Android Advance“ nustatymai"
+
+msgctxt "#30194"
+msgid "Use StartAndroidActivity"
+msgstr "Naudokite „StartAndroidActivity“."
+
+msgctxt "#30195"
+msgid "Leave as default if unsure"
+msgstr "Jei nesate tikri, palikite kaip numatytąjį"
+
+msgctxt "#30196"
+msgid "Suspend Kodi Input and Audio when using External Launcher"
+msgstr "Sustabdykite Kodi įvestį ir garsą, kai naudojate išorinę paleidimo priemonę"
+
+msgctxt "#30197"
+msgid "Stop Kodi media playing before External Launch"
+msgstr "Sustabdykite „Kodi“ medijos leidimą prieš išorinį paleidimą"
+
+msgctxt "#30198"
+msgid "Kodi is busy / waiting for return to Kodi after External Launch"
+msgstr "Kodi yra užsiėmęs / laukia sugrįžimo į Kodi po išorinio paleidimo"
+
+msgctxt "#30199"
+msgid "Download Advanced Settings"
+msgstr "Atsisiųskite išplėstinius nustatymus"
+
+msgctxt "#30200"
+msgid "Download Threads"
+msgstr "Atsisiųsti gijas"
+
+msgctxt "#30201"
+msgid "Alternate default download folder"
+msgstr "Alternatyvus numatytasis atsisiuntimo aplankas"
+
+msgctxt "#30202"
+msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
+msgstr "Pasirinkus, visi atsisiuntimai bus perkelti į alternatyvų aplanką.  [B]Pastaba: šis aplankas nebus išvalytas ir jo dydis nebus stebimas[/B]"
+
+msgctxt "#30203"
+msgid "Organize default download folder using system folders"
+msgstr "Sutvarkykite numatytąjį atsisiuntimo aplanką naudodami sistemos aplankus"
+
+msgctxt "#30204"
+msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
+msgstr "Kai įjungta, laikinas aplankas bus sutvarkytas pagal sistemą (kartais būtina konfigūracijos nepaisymui)"
+
+msgctxt "#30205"
+msgid "Copy Kodi Network Source downloads to Local Filesystem"
+msgstr "Nukopijuokite Kodi tinklo šaltinio atsisiuntimus į vietinę failų sistemą"
+
+msgctxt "#30206"
+msgid "Reset Options"
+msgstr "Iš naujo nustatyti parinktis"
+
+msgctxt "#30207"
+msgid "Reset IAGL database to default settings"
+msgstr "Iš naujo nustatykite IAGL duomenų bazę į numatytuosius nustatymus"
+
+msgctxt "#30208"
+msgid "When selected, the database will be reset to default settings"
+msgstr "Pasirinkus, duomenų bazės nustatymai bus atstatyti į numatytuosius nustatymus"
+
+msgctxt "#30209"
+msgid "Unhide game lists"
+msgstr "Rodyti žaidimų sąrašus"
+
+msgctxt "#30210"
+msgid "When selected, previously hidden game lists can be unhidden"
+msgstr "Pasirinkus anksčiau paslėptus žaidimų sąrašus galima nebeslėpti"
+
+msgctxt "#30211"
+msgid "Clear Cache"
+msgstr "Išvalyti talpyklą"
+
+msgctxt "#30212"
+msgid "When selected, all data in the cache folder including games will be purged"
+msgstr "Pasirinkus, visi talpyklos aplanke esantys duomenys, įskaitant žaidimus, bus išvalyti"
+
+msgctxt "#30213"
+msgid "Select"
+msgstr "Pasirinkite"
+
+msgctxt "#30214"
+msgid "Selected"
+msgstr "Pasirinkta"
+
+msgctxt "#30215"
+msgid "Game lists selected"
+msgstr "Pasirinkti žaidimų sąrašai"
+
+msgctxt "#30216"
+msgid "Genres selected"
+msgstr "Pasirinkti žanrai"
+
+msgctxt "#30217"
+msgid "Players selected"
+msgstr "Atrinkti žaidėjai"
+
+msgctxt "#30218"
+msgid "Studios selected"
+msgstr "Pasirinktos studijos"
+
+msgctxt "#30219"
+msgid "Tags selected"
+msgstr "Žymos pasirinktos"
+
+msgctxt "#30220"
+msgid "Playlists selected"
+msgstr "Pasirinkti grojaraščiai"
+
+msgctxt "#30221"
+msgid "Regions selected"
+msgstr "Pasirinkti regionai"
+
+msgctxt "#30222"
+msgid "Languages selected"
+msgstr "Pasirinktos kalbos"
+
+msgctxt "#30223"
+msgid "Editions selected"
+msgstr "Pasirinkti leidimai"
+
+msgctxt "#30224"
+msgid "Codes selected"
+msgstr "Pasirinkti kodai"
+
+msgctxt "#30225"
+msgid "Ratings selected"
+msgstr "Įvertinimai pasirinkti"
+
+msgctxt "#30226"
+msgid "Enter title search query"
+msgstr "Įveskite pavadinimo paieškos užklausą"
+
+msgctxt "#30227"
+msgid "Empty search"
+msgstr "Tuščia paieška"
+
+msgctxt "#30228"
+msgid "Search criteria is empty.[CR]Update criteria and try again."
+msgstr "Paieškos kriterijus tuščias.[CR]Atnaujinkite kriterijus ir bandykite dar kartą."
+
+msgctxt "#30229"
+msgid "Reset criteria"
+msgstr "Iš naujo nustatyti kriterijus"
+
+msgctxt "#30230"
+msgid "Enter Link Name"
+msgstr "Įveskite nuorodos pavadinimą"
+
+msgctxt "#30231"
+msgid "Define the start page for IAGL"
+msgstr "Apibrėžkite IAGL pradžios puslapį"
+
+msgctxt "#30232"
+msgid "Kodi launch options"
+msgstr "Kodi paleidimo parinktys"
+
+msgctxt "#30233"
+msgid "Completed"
+msgstr "Užbaigta"
+
+msgctxt "#30234"
+msgid "Create new group"
+msgstr "Sukurti naują grupę"
+
+msgctxt "#30235"
+msgid "Select favorite group"
+msgstr "Pasirinkite mėgstamą grupę"
+
+msgctxt "#30236"
+msgid "Group by Favorites Group"
+msgstr "Grupė pagal mėgstamiausių grupę"
+
+msgctxt "#30237"
+msgid "Remove IAGL Favorite"
+msgstr "Pašalinti IAGL mėgstamiausią"
+
+msgctxt "#30238"
+msgid "Are you sure you want to delete this Favorite?"
+msgstr "Ar tikrai norite ištrinti šį Pamėgtą vietą?"
+
+msgctxt "#30239"
+msgid "Favorite deleted"
+msgstr "Mėgstamiausias ištrintas"
+
+msgctxt "#30240"
+msgid "Favorites display"
+msgstr "Mėgstamiausių ekranas"
+
+msgctxt "#30241"
+msgid "Define the start page for IAGL Favorites"
+msgstr "Apibrėžkite IAGL parankinių pradžios puslapį"
+
+msgctxt "#30242"
+msgid "By Favorites Group"
+msgstr "Pagal mėgstamiausių grupę"
+
+msgctxt "#30243"
+msgid "Reset *all* criteria"
+msgstr "Iš naujo nustatyti *visus* kriterijus"
+
+msgctxt "#30244"
+msgid "Run IAGL setup wizard?"
+msgstr "Paleisti IAGL sąrankos vedlį?"
+
+msgctxt "#30245"
+msgid "Wizard"
+msgstr "Vedlys"
+
+msgctxt "#30246"
+msgid "Update game list Launcher"
+msgstr "Atnaujinkite žaidimų sąrašą paleidimo priemonė"
+
+msgctxt "#30247"
+msgid "Update game list Launch Command"
+msgstr "Atnaujinkite žaidimų sąrašą Launch Command"
+
+msgctxt "#30248"
+msgid "Update game list Download Path"
+msgstr "Atnaujinti žaidimų sąrašą Atsisiuntimo kelias"
+
+msgctxt "#30249"
+msgid "Hide game list"
+msgstr "Slėpti žaidimų sąrašą"
+
+msgctxt "#30250"
+msgid "Update game list post download process"
+msgstr "Atnaujinkite žaidimų sąrašą po atsisiuntimo"
+
+msgctxt "#30251"
+msgid "Are you sure you want to hide game list"
+msgstr "Ar tikrai norite paslėpti žaidimų sąrašą?"
+
+msgctxt "#30252"
+msgid "Game list is now hidden"
+msgstr "Žaidimų sąrašas dabar paslėptas"
+
+msgctxt "#30253"
+msgid "No results"
+msgstr "Jokių rezultatų"
+
+msgctxt "#30254"
+msgid "No hidden game lists found"
+msgstr "Paslėptų žaidimų sąrašų nerasta"
+
+msgctxt "#30255"
+msgid "Game lists unhidden"
+msgstr "Žaidimų sąrašai nepaslėpti"
+
+msgctxt "#30256"
+msgid "Confirm reset"
+msgstr "Patvirtinkite atstatymą"
+
+msgctxt "#30257"
+msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
+msgstr "Ar tikrai norite iš naujo nustatyti duomenų bazę?[CR]Bus prarasta visa vartotojo informacija![CR]To negalima anuliuoti!"
+
+msgctxt "#30258"
+msgid "Database has been reset"
+msgstr "Duomenų bazė buvo nustatyta iš naujo"
+
+msgctxt "#30259"
+msgid "Update Launcher"
+msgstr "Atnaujinti paleidimo priemonę"
+
+msgctxt "#30260"
+msgid "Update launcher from[CR]Kodi to[CR]External?"
+msgstr "Atnaujinti paleidimo priemonę iš [CR]Kodi į[CR]External?"
+
+msgctxt "#30261"
+msgid "Update launcher from[CR]External to[CR]Kodi?"
+msgstr "Atnaujinti paleidimo priemonę iš [CR]External į [CR]Kodi?"
+
+msgctxt "#30262"
+msgid "Launcher updated to external"
+msgstr "Paleidimo priemonė atnaujinta į išorinę"
+
+msgctxt "#30263"
+msgid "Launcher updated to retroplayer"
+msgstr "Paleidimo priemonė atnaujinta į retroplayer"
+
+msgctxt "#30264"
+msgid "Select game addon"
+msgstr "Pasirinkite žaidimo priedą"
+
+msgctxt "#30265"
+msgid "Are you sure you want to reset the game addon launch command?"
+msgstr "Ar tikrai norite iš naujo nustatyti žaidimo priedo paleidimo komandą?"
+
+msgctxt "#30266"
+msgid "Download game to…"
+msgstr "Parsisiųsti žaidimą į…"
+
+msgctxt "#30267"
+msgid "Select download folder"
+msgstr "Pasirinkite atsisiuntimo aplanką"
+
+msgctxt "#30268"
+msgid "Archive.org login success!"
+msgstr "Archive.org prisijungimas sėkmingas!"
+
+msgctxt "#30269"
+msgid "Archive.org login failed.[CR]Check credentials or log for more details"
+msgstr "Nepavyko prisijungti prie Archive.org.[CR]Patikrinkite kredencialus arba prisijunkite, jei norite gauti daugiau informacijos"
+
+msgctxt "#30270"
+msgid "Error"
+msgstr "Klaida"
+
+msgctxt "#30271"
+msgid "Initializing download for[CR]"
+msgstr "Inicijuojamas [CR] atsisiuntimas"
+
+msgctxt "#30272"
+msgid "Check logs"
+msgstr "Patikrinkite žurnalus"
+
+msgctxt "#30273"
+msgid "Checking login for[CR]"
+msgstr "Tikrinama [CR] prisijungimo informacija"
+
+msgctxt "#30274"
+msgid "Requesting file info for[CR]"
+msgstr "Prašoma failo informacijos [CR]"
+
+msgctxt "#30275"
+msgid "Select from Retroarch Cores"
+msgstr "Pasirinkite iš Retroarch Cores"
+
+msgctxt "#30276"
+msgid "Select from Extra Emulators"
+msgstr "Pasirinkite iš papildomų emuliatorių"
+
+msgctxt "#30277"
+msgid "Manually Enter Launch Command"
+msgstr "Rankiniu būdu įveskite paleidimo komandą"
+
+msgctxt "#30278"
+msgid "Select External Command Type"
+msgstr "Pasirinkite Išorinės komandos tipą"
+
+msgctxt "#30279"
+msgid "Extra Emulators"
+msgstr "Papildomi emuliatoriai"
+
+msgctxt "#30280"
+msgid "Dolphin"
+msgstr "Delfinas"
+
+msgctxt "#30281"
+msgid "Select the path to the Dolphin application (optional)"
+msgstr "Pasirinkite kelią į „Dolphin“ programą (neprivaloma)"
+
+msgctxt "#30282"
+msgid "MAME"
+msgstr "MAME"
+
+msgctxt "#30283"
+msgid "Select the path to the MAME application (optional)"
+msgstr "Pasirinkite kelią į MAME programą (neprivaloma)"
+
+msgctxt "#30284"
+msgid "Project 64"
+msgstr "64 projektas"
+
+msgctxt "#30285"
+msgid "Select the path to the Project 64 application (optional)"
+msgstr "Pasirinkite kelią į „Project 64“ programą (neprivaloma)"
+
+msgctxt "#30286"
+msgid "ePSXe"
+msgstr "ePSXe"
+
+msgctxt "#30287"
+msgid "Select the path to the ePSXe application (optional)"
+msgstr "Pasirinkite kelią į ePSXe programą (neprivaloma)"
+
+msgctxt "#30288"
+msgid "Demul"
+msgstr "Demul"
+
+msgctxt "#30289"
+msgid "Select the path to the Demul application (optional)"
+msgstr "Pasirinkite kelią į programą „Demul“ (neprivaloma)"
+
+msgctxt "#30290"
+msgid "FS-UAE"
+msgstr "FS-JAE"
+
+msgctxt "#30291"
+msgid "Select the path to the FS-UAE application (optional)"
+msgstr "Pasirinkite kelią į FS-UAE programą (neprivaloma)"
+
+msgctxt "#30292"
+msgid "Are you sure you want to set external launch command?"
+msgstr "Ar tikrai norite nustatyti išorinę paleidimo komandą?"
+
+msgctxt "#30293"
+msgid "External launch command updated"
+msgstr "Atnaujinta išorinė paleidimo komanda"
+
+msgctxt "#30294"
+msgid "Android users must verify the core is installed in Retroarch"
+msgstr "„Android“ naudotojai turi patikrinti, ar „Retroarch“ yra įdiegtas branduolys"
+
+msgctxt "#30295"
+msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
+msgstr "Paleidimo nustatymai šiuo metu tušti[CR]Atnaujinkite priedo išorinio paleidimo nustatymus."
+
+msgctxt "#30296"
+msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
+msgstr "Paleidimo nustatymai šiuo metu tušti[CR]Atnaujinkite priedo OS paleidimo nustatymus."
+
+msgctxt "#30297"
+msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
+msgstr "Jokių papildomų emuliatorių nerasta[CR]Atnaujinkite papildomo emuliatoriaus nustatymus"
+
+msgctxt "#30298"
+msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
+msgstr "Įveskite paleidimo komandą[CR]Žr. pasirenkamus raktinius žodžius IAGL wiki"
+
+msgctxt "#30299"
+msgid "Reset Launch Command"
+msgstr "Iš naujo nustatykite paleidimo komandą"
+
+msgctxt "#30300"
+msgid "Are you sure you want to reset the external launch command?"
+msgstr "Ar tikrai norite iš naujo nustatyti išorinę paleidimo komandą?"
+
+msgctxt "#30301"
+msgid "External launch command was reset"
+msgstr "Išorinė paleidimo komanda buvo nustatyta iš naujo"
+
+msgctxt "#30302"
+msgid "Enter a value for"
+msgstr "Įveskite reikšmę"
+
+msgctxt "#30303"
+msgid "View game list settings"
+msgstr "Peržiūrėkite žaidimų sąrašo nustatymus"
+
+msgctxt "#30304"
+msgid "Game List"
+msgstr "Žaidimų sąrašas"
+
+msgctxt "#30305"
+msgid "Game List System"
+msgstr "Žaidimų sąrašų sistema"
+
+msgctxt "#30306"
+msgid "Total 1G1R Games in List"
+msgstr "Iš viso sąraše yra 1G1R žaidimai"
+
+msgctxt "#30307"
+msgid "Total Games in List"
+msgstr "Iš viso žaidimų sąraše"
+
+msgctxt "#30308"
+msgid "Total Favorited Games in List"
+msgstr "Iš viso sąraše esančių mėgstamiausių žaidimų"
+
+msgctxt "#30309"
+msgid "Default External Launch Command"
+msgstr "Numatytoji išorinio paleidimo komanda"
+
+msgctxt "#30310"
+msgid "Default Retroplayer Game Addon"
+msgstr "Numatytasis Retroplayer žaidimo priedas"
+
+msgctxt "#30311"
+msgid "Default Game Post Process"
+msgstr "Numatytasis žaidimo paskelbimo procesas"
+
+msgctxt "#30312"
+msgid "User Defined Download Path"
+msgstr "Vartotojo nustatytas atsisiuntimo kelias"
+
+msgctxt "#30313"
+msgid "User External Launch Command"
+msgstr "Vartotojo išorinė paleidimo komanda"
+
+msgctxt "#30314"
+msgid "User Defined Retroplayer Game Addon"
+msgstr "Vartotojo nustatytas Retroplayer žaidimo priedas"
+
+msgctxt "#30315"
+msgid "User Defined Post Process"
+msgstr "Vartotojo nustatytas paskelbimo procesas"
+
+msgctxt "#30316"
+msgid "Game List Settings"
+msgstr "Žaidimų sąrašo nustatymai"
+
+msgctxt "#30317"
+msgid "None (will use addon default)"
+msgstr "Nėra (bus naudojamas numatytasis priedas)"
+
+msgctxt "#30318"
+msgid "Games List Launcher"
+msgstr "Žaidimų sąrašo paleidimo priemonė"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Išorinė paleidimo komanda"
+
+msgctxt "#30320"
+msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
+msgstr "Išorinė paleidimo komanda[CR]* Vartotojo paleidimo komanda nerasta / naudojama numatytoji*"
+
+msgctxt "#30321"
+msgid "Kodi Retroplayer"
+msgstr "„Kodi Retroplayer“."
+
+msgctxt "#30322"
+msgid "Are you sure you want to update game list download path?"
+msgstr "Ar tikrai norite atnaujinti žaidimų sąrašo atsisiuntimo kelią?"
+
+msgctxt "#30323"
+msgid "Download path updated"
+msgstr "Atsisiuntimo kelias atnaujintas"
+
+msgctxt "#30324"
+msgid "Are you sure you want to reset game list download path?"
+msgstr "Ar tikrai norite iš naujo nustatyti žaidimų sąrašo atsisiuntimo kelią?"
+
+msgctxt "#30325"
+msgid "Download path reset"
+msgstr "Atsisiųsti kelią iš naujo"
+
+msgctxt "#30326"
+msgid "Change download path"
+msgstr "Keisti atsisiuntimo kelią"
+
+msgctxt "#30327"
+msgid "Reset download path"
+msgstr "Iš naujo nustatyti atsisiuntimo kelią"
+
+msgctxt "#30328"
+msgid "Reset game list settings"
+msgstr "Iš naujo nustatykite žaidimų sąrašo nustatymus"
+
+msgctxt "#30329"
+msgid "Are you sure you want to reset all game list settings to default?"
+msgstr "Ar tikrai norite iš naujo nustatyti visus žaidimų sąrašo nustatymus į numatytuosius?"
+
+msgctxt "#30330"
+msgid "Game list settings were reset to default"
+msgstr "Žaidimų sąrašo nustatymai buvo atkurti į numatytuosius"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Atitinkamas vietinis failas"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Tikrinami kredencialai"
+
+msgctxt "#30333"
+msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "paleidimo metu bus pakeisti šie kintamieji:[CR]● XXROM_PATHXX: kelias į failą, kuris bus paleistas[CR]● XXROM_NAMEXX: failo, kuris bus paleistas, pavadinimas (nėra kelio)[CR]● XXROM_STEMXX: failo, kuris bus paleistas, pavadinimas (nėra kelio be plėtinio)[CR]● XXNETPLAY_COMMANDXX: bet koks komandos pridėjimas, reikalingas netplay, žr. priedo nustatymus parinktys[CR]Daugiau informacijos ieškokite wiki…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Nepavyko apdoroti archyvo failo[CR]Išsamesnės informacijos ieškokite žurnaluose"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Prieš paleisdami pasirinkite veiksmą"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Palikite Kodi veikti fone (numatytasis)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Uždarykite „Kodi“ prieš paleidimą, iš naujo atidarykite „Kodi“ išėjus iš emuliatoriaus"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Sustabdykite „Kodi“ prieš paleidimą, pažadinkite „Kodi“ išėjus iš emuliatoriaus"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Peržiūrėkite IAGL db statistiką"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Pateikiama dabartinė IAGL db statistika"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db statistika"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Peržiūrėkite paleidimo parametrus"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Žaidimo nustatymai"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Žaidimo paleidimo parametrai"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Jei nėra vartotojo, paleiskite komandą"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Pasirinkite, ką Kodi darys, kai nenustatyta jokia paleidimo komanda (retroplayer priedas arba išorinis emuliatorius)."
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Bandyti paleisti pagal numatytuosius nustatymus"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Sustabdyti / nepaleisti"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Nėra komandos"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Šiam sąrašui paleidimo komanda nenustatyta, nustatyti ją dabar?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Šiam sąrašui nepavyko rasti numatytosios paleidimo komandos"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Numatytasis branduolys nerastas.  Įdiekite {} arba atnaujinkite paleidimo priemonę"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Žaidimo priedo paleidimo komandos atstatymas"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Žaidimo priedų nerasta"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Atnaujinta žaidimo priedo paleidimo komanda"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Naudokite alternatyvų numatytąjį atsisiuntimo aplanką"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Rodyti tik parinktis, kurios išlaiko „Kodi“ fone"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Rodyti tik parinktis, kurios uždaro „Kodi“."
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Rodyti tik parinktis, kurios pristabdo „Kodi“."
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Vieta kaip eilutė"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Arba įveskite retroarch.cfg failo kelią tiksliai taip, kaip jis rodomas Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch Cores katalogas kaip eilutė"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Arba įveskite kelią į katalogą Cores tiksliai taip, kaip jis rodomas Retroarch katalogo konfigūracijoje"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Atnaujinti {} paleidimo priemonę?[CR][B]Tai pakeis visų šiame sąraše esančių žaidimų nustatymus.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Atnaujinti {} paleidimo komandą?[CR][B]Tai pakeis visų šiame sąraše esančių žaidimų nustatymus.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Atnaujinti {} paleidimo kelią?[CR][B]Tai pakeis visų šiame sąraše esančių žaidimų nustatymus.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Atnaujinkite paleidimo komandą"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Atnaujinkite Paleiskite atsisiuntimo kelią"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Iš naujo nustatyti {}?[CR][B]Tai pakeis visų šiame sąraše esančių žaidimų nustatymus.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Palaikymas"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Aukokite Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Buvo rasta nauja IAGL duomenų bazė[CR]Ar norite atnaujinti?[CR]Jei įmanoma, nustatymai bus nukopijuoti į naują duomenų bazę"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Naujas db"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Duomenų bazė buvo atnaujinta[CR]Vartotojo nustatymai buvo perkelti"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Duomenų bazė buvo atnaujinta[CR]Nepavyko perkelti kai kurių naudotojo nustatymų[CR]Daugiau informacijos rasite žurnale"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Atnaujinant duomenų bazę įvyko klaida[CR]Daugiau informacijos rasite žurnale"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Paklausk manęs vėliau"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Neatnaujinkite šį kartą[CR](Daugiau neklauskite iki kito atnaujinimo)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Sveiki atvykę į IAGL sąrankos vedlį[CR]Paleiskite visus nustatymus, kad galėtumėte žaisti!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Daugeliui žaidimų reikalinga archive.org paskyra[CR]Prisiregistruokite adresu https://archive.org/account/signup[CR]Ar norėtumėte naudoti savo paskyrą su IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Sąranka baigta naudoti „Kodi“ žaidimų priedus![CR]Ar esate pasiruošę žaisti?[CR]Pasirinkite [B]Ne[/B], kad nustatytumėte išorinio žaidimo paleidimą."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Nustatykite, kad visi žaidimų sąrašai būtų paleisti iš išorės"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Nustatykite, kad tik kai kurie žaidimų sąrašai būtų paleisti iš išorės"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Iš naujo nustatykite visus žaidimų sąrašo paleidimo įrenginius į numatytuosius nustatymus"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "Atnaujinti žaidimų sąrašai: {} išoriniam paleidimui"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Numatytieji nustatymai yra iš anksto nustatyti kiekvienai išorinei paleidimo komandai[CR]Prieš paleidžiant peržiūrėkite žaidimo paleidimo parametrus, jei reikia[CR]Daugiau informacijos rasite wiki."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch programa nustatyta į:[CR]{}[CR]Jei reikia, pakeiskite priedo nustatymus"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch konfigūracija nustatyta į:[CR]{}[CR]Jei reikia, pakeiskite priedo nustatymus"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Vedlys baigtas[CR]Žaiskime!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Nustatykite visus žaidimų sąrašus, kad jie būtų paleisti naudojant „Kodi“."
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Greitai nustatykite visų žaidimų sąrašų išorinį paleidimą"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Greitai nustatykite visus žaidimų sąrašus į „Kodi retroplayer“."
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Patvirtinti"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Ar tikrai norite nustatyti visų sąrašų išorinį paleidimą?"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Ar tikrai norite nustatyti visus sąrašus į „Kodi retroplayer“."
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Norint gauti „Android“ leidimus, reikia rankiniu būdu įvesti „Retroarch“ konfigūracijos kelią[CR]Daugiau pagalbos ieškokite wiki"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Norint gauti „Android“ leidimus, reikia rankiniu būdu įvesti pagrindinį „Retroarch“ kelią[CR]Jei reikia daugiau pagalbos, žr. wiki"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Sukurkite atsarginę dabartinės duomenų bazės kopiją"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Atkurti duomenų bazę iš atsarginės kopijos"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Sukurkite atsarginę dabartinės IAGL duomenų bazės ir visų vartotojo nustatymų kopiją"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Atkurkite dabartinę priedų duomenų bazę iš atsarginės kopijos"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Pasirinkite atsarginį kelią"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Pasirinkite atsarginę kopiją db"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Atsarginė kopija baigta"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Atkūrimas baigtas"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} atitinkantys žaidimo ID nerasta naujame db[CR]Pasirinkite kitą veiksmą"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Atnaujinkite duomenų bazę, pabandykite suderinti žaidimus pagal pavadinimą ir žaidimų sąrašą"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Atnaujinkite duomenų bazę, pašalinkite žaidimų ID, kurie nebuvo rasti"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Atkurti atgal į seną duomenų bazę"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Duomenų bazė atkurta atgal į seną duomenų bazę"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Prašome palaukti"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Rankiniu būdu nustatykite Retroarch katalogus"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL pagal numatytuosius nustatymus aptiks katalogus iš RA konfigūracijos, galite rankiniu būdu nepaisyti šios funkcijos"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "„Retroarch“ pagrindinis katalogas"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroach informacijos katalogas"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Pridėkite „Linux“ programą, kad paleistumėte komandą"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak naudojamas konkrečioms linux/elec sistemoms.  Įjunkite tik tada, kai to reikalauja jūsų sistema."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Prie Retroarch komandų pridėkite systemd-run"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Prie visų komandų pridėkite systemd-run"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Pridėkite „flatpak“ paleidimą prie „Retroarch“ komandų"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Pridėkite flatpak paleidimą prie visų komandų"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Norint gauti „Android“ leidimus, reikalingas bendrinamas saugojimo katalogas[CR]Įveskite bendrinamą vietą, kurią gali pasiekti abi programos"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Išpakuokite failus"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Jokio apdorojimo"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Išpakuokite failus, praleiskite BIOS failus"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Išpakuokite failus į aplanką"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Išpakuokite failus, perkelkite CHD į aplanką"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Perkelkite failus į aplanką: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Perkelkite failus į aplanką: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Perkelkite failus į aplanką: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Perkelkite failus į aplanką: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Perkelkite failus į aplanką: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Perkelkite failus į aplanką megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Perkelkite failus į aplanką: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Perkelkite failus į aplanką: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Perkelkite failus į aplanką: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Perkelti failus į aplanką: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Perkelkite failus į aplanką: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Perkelkite failus į aplanką: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Perkelti failus į aplanką: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Perkelkite failus į aplanką: spektras"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Perkelkite failus į aplanką: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Ar tikrai norite atnaujinti žaidimų sąrašo paskelbimo procesą?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Paskelbimo procesas atnaujintas"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Atnaujinti {} paskelbimo procesą?[CR][B]Tai pakeis visų šiame sąraše esančių žaidimų nustatymus.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Atsisiuntimas baigtas.  Paskelbti proceso failus?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Žaidimo failai apdoroti"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Nepasiekiamas (tik „Windows“, „OSX“, „Linux“)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Netplay vartotojo vardo tipas"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Pasirinkite „netplay“ grotuvo pavadinimo integraciją"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Naudokite Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "„Discord“ įgalina automatines tinklo rungtynes ​​(IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Rankiniu būdu įveskite žaidėjo vardą"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Žaidėjų vardai bus paskelbti Retroarch fojė"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Žaidėjo vardas"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Dabartinis „Discord“ vartotojas"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord User nustatytas į [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Peržiūrėkite žaidimų seansus, prie kurių galite prisijungti naudodami „Retroarch netplay“."
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Nepavyko rasti nesuderinamo vartotojo, kurio ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Fojė filtro parinktys"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Rodyti tik patalpas, į kurias galima patekti"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Rodyti tik kambarius, kuriuose naudojamas libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Rodyti patalpas, kuriose yra slaptažodis"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Rodyti patalpas, kuriose yra žiūrovo slaptažodis"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Rodyti patalpas naudojant MITM serverius"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Rodyti tik per laikotarpį sukurtus kambarius"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 minučių"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 minučių"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Bet koks laikotarpis"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Filtruokite vestibiulio kambarius pagal sukūrimo laiką"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Rodyti tik patalpas, kuriose naudojamas IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Nepavyko rasti tinkamo žaidimo pavadinimu [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Nerasta"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Pasirinkite atitinkamą žaidimą"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "„Netplay“ paleidimo veiksmas"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Prisijunkite iš retroarch fojė"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Prisijunkite iš localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Prisijungdami prie tinklo žaidimo pasirinkite numatytąjį veiksmą"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Paleiskite kaip „netplay“ prieglobą"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Pervardykite IAGL mėgstamiausią"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Pervadinimas baigtas"

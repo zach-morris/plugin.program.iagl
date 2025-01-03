@@ -1,0 +1,1936 @@
+# Kodi Media Center language file
+# Addon Name: /Internet Archive Game Launcher
+# Addon id: pltugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/zach-morris/plugin.program.iagl/issues\n"
+"Language: fi_fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "Internet-arkiston pelien käynnistysohjelma"
+
+msgctxt "#30002"
+msgid "Browse all Lists"
+msgstr "Selaa kaikkia luetteloita"
+
+msgctxt "#30003"
+msgid "Browse lists by Category"
+msgstr "Selaa luetteloita kategorioiden mukaan"
+
+msgctxt "#30004"
+msgid "Browse games by Playlist"
+msgstr "Selaa pelejä soittolistan mukaan"
+
+msgctxt "#30005"
+msgid "Favorites"
+msgstr "Suosikit"
+
+msgctxt "#30006"
+msgid "Play History"
+msgstr "Pelihistoria"
+
+msgctxt "#30007"
+msgid "Search"
+msgstr "Haku"
+
+msgctxt "#30008"
+msgid "Random Play"
+msgstr "Satunnainen peli"
+
+msgctxt "#30009"
+msgid "Next"
+msgstr "Seuraavaksi"
+
+msgctxt "#30010"
+msgid "Previous"
+msgstr "Edellinen"
+
+msgctxt "#30011"
+msgid "One Big List"
+msgstr "Yksi iso lista"
+
+msgctxt "#30012"
+msgid "Alphabetical"
+msgstr "Aakkosellinen"
+
+msgctxt "#30013"
+msgid "Group by Genre"
+msgstr "Ryhmä genren mukaan"
+
+msgctxt "#30014"
+msgid "Group by Year"
+msgstr "Ryhmittele vuoden mukaan"
+
+msgctxt "#30015"
+msgid "Group by Players"
+msgstr "Ryhmä pelaajien mukaan"
+
+msgctxt "#30016"
+msgid "Group by Studio"
+msgstr "Ryhmä Studion mukaan"
+
+msgctxt "#30017"
+msgid "Group by Tag"
+msgstr "Ryhmittele tunnisteen mukaan"
+
+msgctxt "#30018"
+msgid "Group by Playlist"
+msgstr "Ryhmittele soittolistan mukaan"
+
+msgctxt "#30019"
+msgid "Group by Region"
+msgstr "Ryhmittele alueen mukaan"
+
+msgctxt "#30020"
+msgid "Group by Language"
+msgstr "Ryhmä kielen mukaan"
+
+msgctxt "#30021"
+msgid "Group by Edition"
+msgstr "Ryhmittele painoksen mukaan"
+
+msgctxt "#30022"
+msgid "Group by Code"
+msgstr "Ryhmittele koodin mukaan"
+
+msgctxt "#30023"
+msgid "Group by Rating"
+msgstr "Ryhmittele luokituksen mukaan"
+
+msgctxt "#30024"
+msgid "Select Game Lists"
+msgstr "Valitse Peliluettelot"
+
+msgctxt "#30025"
+msgid "Search Game Titles"
+msgstr "Etsi pelien nimiä"
+
+msgctxt "#30026"
+msgid "Filter by Genre"
+msgstr "Suodata lajityypin mukaan"
+
+msgctxt "#30027"
+msgid "Filter by Players"
+msgstr "Suodata pelaajien mukaan"
+
+msgctxt "#30028"
+msgid "Filter by Studio"
+msgstr "Suodata Studion mukaan"
+
+msgctxt "#30029"
+msgid "Filter by Tag"
+msgstr "Suodata tunnisteen mukaan"
+
+msgctxt "#30030"
+msgid "Filter by Playlist"
+msgstr "Suodata soittolistan mukaan"
+
+msgctxt "#30031"
+msgid "Filter by Region"
+msgstr "Suodata alueen mukaan"
+
+msgctxt "#30032"
+msgid "Filter by Language"
+msgstr "Suodata kielen mukaan"
+
+msgctxt "#30033"
+msgid "Filter by Edition"
+msgstr "Suodata painoksen mukaan"
+
+msgctxt "#30034"
+msgid "Filter by Code"
+msgstr "Suodata koodin mukaan"
+
+msgctxt "#30035"
+msgid "Filter by Rating"
+msgstr "Suodata luokituksen mukaan"
+
+msgctxt "#30036"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Suorita haku[/COLOR]"
+
+msgctxt "#30037"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Luo hakulinkki[/COLOR]"
+
+msgctxt "#30038"
+msgid "Choose Number of Results"
+msgstr "Valitse Tulosten määrä"
+
+msgctxt "#30039"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Suorita satunnainen haku[/COLOR]"
+
+msgctxt "#30040"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Luo satunnainen hakulinkki[/COLOR]"
+
+msgctxt "#30041"
+msgid "General"
+msgstr "Kenraali"
+
+msgctxt "#30042"
+msgid "Launching"
+msgstr "Käynnistetään"
+
+msgctxt "#30043"
+msgid "Downloading"
+msgstr "Ladataan"
+
+msgctxt "#30044"
+msgid "Views and Navigation"
+msgstr "Näkymät ja navigointi"
+
+msgctxt "#30045"
+msgid "Netplay"
+msgstr "Netplay"
+
+msgctxt "#30046"
+msgid "Setup Wizard"
+msgstr "Ohjattu asennustoiminto"
+
+msgctxt "#30047"
+msgid "Advanced"
+msgstr "Edistynyt"
+
+msgctxt "#30048"
+msgid "Play History"
+msgstr "Pelihistoria"
+
+msgctxt "#30049"
+msgid "Define how many games to save in last played history"
+msgstr "Määritä, kuinka monta peliä tallennetaan viimeksi pelatun historian aikana"
+
+msgctxt "#30050"
+msgid "Default action on selecting game"
+msgstr "Oletustoiminto pelin valinnassa"
+
+msgctxt "#30051"
+msgid "Define action to take when a game is selected"
+msgstr "Määritä toimet, jotka suoritetaan, kun peli valitaan"
+
+msgctxt "#30052"
+msgid "If game already exists locally"
+msgstr "Jos peli on jo olemassa paikallisesti"
+
+msgctxt "#30053"
+msgid "Define the action to take if a game file is found to exist locally"
+msgstr "Määritä toiminto, joka suoritetaan, jos pelitiedosto löytyy paikallisesti"
+
+msgctxt "#30054"
+msgid "Prompt"
+msgstr "Kehote"
+
+msgctxt "#30055"
+msgid "Do not re-download"
+msgstr "Älä lataa uudelleen"
+
+msgctxt "#30056"
+msgid "Re-download and overwrite"
+msgstr "Lataa uudelleen ja korvaa"
+
+msgctxt "#30057"
+msgid "Enable archive.org login"
+msgstr "Ota archive.org-kirjautuminen käyttöön"
+
+msgctxt "#30058"
+msgid "Enabled"
+msgstr "Käytössä"
+
+msgctxt "#30059"
+msgid "Disabled"
+msgstr "Ei käytössä"
+
+msgctxt "#30060"
+msgid "Some games require login.  Enter your archive.org email address and password."
+msgstr "Jotkut pelit vaativat kirjautumisen.  Kirjoita archive.org-sähköpostiosoitteesi ja salasanasi."
+
+msgctxt "#30061"
+msgid "archive.org Email"
+msgstr "archive.org Sähköposti"
+
+msgctxt "#30062"
+msgid "Some games require login.  Enter your archive.org email address"
+msgstr "Jotkut pelit vaativat kirjautumisen.  Kirjoita archive.org-sähköpostiosoitteesi"
+
+msgctxt "#30063"
+msgid "archive.org Password"
+msgstr "archive.org Salasana"
+
+msgctxt "#30064"
+msgid "Some games require login.  Enter your archive.org password"
+msgstr "Jotkut pelit vaativat kirjautumisen.  Kirjoita archive.org-salasanasi"
+
+msgctxt "#30065"
+msgid "Check login credentials"
+msgstr "Tarkista kirjautumistiedot"
+
+msgctxt "#30066"
+msgid "Test the entered email and password to check your ability to login"
+msgstr "Testaa syötettyä sähköpostiosoitetta ja salasanaa tarkistaaksesi kykysi kirjautua"
+
+msgctxt "#30067"
+msgid "Download folder size limit"
+msgstr "Lataa kansion kokorajoitus"
+
+msgctxt "#30068"
+msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
+msgstr "Määritä latauksen/välimuistin koko.[CR]Kansio tyhjennetään, kun kokoraja saavutetaan."
+
+msgctxt "#30069"
+msgid "Front page display"
+msgstr "etusivun näyttö"
+
+msgctxt "#30070"
+msgid "Choose from list"
+msgstr "Valitse luettelosta"
+
+msgctxt "#30071"
+msgid "Games are presented as"
+msgstr "Pelit esitetään muodossa"
+
+msgctxt "#30072"
+msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
+msgstr "Kodi tarjoaa useita ihovaihtoehtoja elokuville, TV-ohjelmille ja peleille.  Katso wikistä lisätietoja"
+
+msgctxt "#30073"
+msgid "TV Shows"
+msgstr "TV-ohjelmat"
+
+msgctxt "#30074"
+msgid "Movies"
+msgstr "Elokuvat"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "Pelit"
+
+msgctxt "#30076"
+msgid "10 Games"
+msgstr "10 peliä"
+
+msgctxt "#30077"
+msgid "25 Games"
+msgstr "25 peliä"
+
+msgctxt "#30078"
+msgid "50 Games"
+msgstr "50 peliä"
+
+msgctxt "#30079"
+msgid "100 Games"
+msgstr "100 peliä"
+
+msgctxt "#30080"
+msgid "250 Games"
+msgstr "250 peliä"
+
+msgctxt "#30081"
+msgid "500 Games"
+msgstr "500 peliä"
+
+msgctxt "#30082"
+msgid "Game artwork"
+msgstr "Pelin taideteoksia"
+
+msgctxt "#30083"
+msgid "Game list artwork"
+msgstr "Peliluettelon taideteoksia"
+
+msgctxt "#30084"
+msgid "Retroarch Settings"
+msgstr "Retroarch-asetukset"
+
+msgctxt "#30085"
+msgid "Suspend Kodi IO on launch"
+msgstr "Keskeytä Kodi IO käynnistyksen yhteydessä"
+
+msgctxt "#30086"
+msgid "Stop media on launch"
+msgstr "Pysäytä media käynnistyksen yhteydessä"
+
+msgctxt "#30087"
+msgid "Waiting for return"
+msgstr "Paluuta odotellessa"
+
+msgctxt "#30088"
+msgid "Add to IAGL Favorites"
+msgstr "Lisää IAGL-suosikkeihin"
+
+msgctxt "#30089"
+msgid "Enter a name for your favorites group"
+msgstr "Anna suosikkiryhmällesi nimi"
+
+msgctxt "#30090"
+msgid "Favorite added to group"
+msgstr "Suosikki lisätty ryhmään"
+
+msgctxt "#30091"
+msgid "Use clean game title"
+msgstr "Käytä puhdasta pelin otsikkoa"
+
+msgctxt "#30092"
+msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
+msgstr "Poista tunnisteet pelin nimestä näyttöä varten.  Esimerkki: [B]Mario (USA)[/B] muuttuu [B]Mario[/B]"
+
+msgctxt "#30093"
+msgid "Games per page"
+msgstr "Pelit per sivu"
+
+msgctxt "#30094"
+msgid "Define how many games are listed per page"
+msgstr "Määritä, kuinka monta peliä sivulla näytetään"
+
+msgctxt "#30095"
+msgid "List all"
+msgstr "Listaa kaikki"
+
+msgctxt "#30096"
+msgid "Always filter list to 1 Game 1 Rom Set"
+msgstr "Suodata aina listaan ​​1 Game 1 Rom Set"
+
+msgctxt "#30097"
+msgid "If possible, game lists will be pre-filtered to a 1G1R set"
+msgstr "Jos mahdollista, peliluettelot esisuodatetaan 1G1R-sarjaan"
+
+msgctxt "#30098"
+msgid "Append game list name to search and random results"
+msgstr "Liitä peliluettelon nimi hakuun ja satunnaisiin tuloksiin"
+
+msgctxt "#30099"
+msgid "When enabled, the name of the game list will be appended to search results"
+msgstr "Kun tämä on käytössä, peliluettelon nimi liitetään hakutuloksiin"
+
+msgctxt "#30100"
+msgid "Append game list name when browsing by playlist"
+msgstr "Liitä peliluettelon nimi, kun selaat soittolistoja"
+
+msgctxt "#30101"
+msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
+msgstr "Kun tämä on käytössä, peliluettelon nimi liitetään pelin nimeen soittolistassa"
+
+msgctxt "#30102"
+msgid "Kodi landscape art equates to"
+msgstr "Kodi maisemataide vastaa"
+
+msgctxt "#30103"
+msgid "Select the game artwork to be displayed as the landscape art"
+msgstr "Valitse maisemakuvana näytettävä pelin kuvitus"
+
+msgctxt "#30104"
+msgid "Title Screen"
+msgstr "Otsikkonäyttö"
+
+msgctxt "#30105"
+msgid "Screenshot"
+msgstr "Kuvakaappaus"
+
+msgctxt "#30106"
+msgid "Kodi thumbnail art equates to"
+msgstr "Kodi-pikkukuvataide vastaa"
+
+msgctxt "#30107"
+msgid "Select the game artwork to be displayed as the thumbnail art"
+msgstr "Valitse pikkukuvana näytettävä pelin kuvitus"
+
+msgctxt "#30108"
+msgid "Game list clearlogo equates to"
+msgstr "Pelilista clearlogo vastaa"
+
+msgctxt "#30109"
+msgid "Select the artwork displayed for the game list clearlogo"
+msgstr "Valitse peliluettelon clearlogon kuvitus"
+
+msgctxt "#30110"
+msgid "System logo"
+msgstr "Järjestelmän logo"
+
+msgctxt "#30111"
+msgid "System console"
+msgstr "Järjestelmäkonsoli"
+
+msgctxt "#30112"
+msgid "System controller"
+msgstr "Järjestelmän ohjain"
+
+msgctxt "#30113"
+msgid "Game list fanart equates to"
+msgstr "Pelilista fanart vastaa"
+
+msgctxt "#30114"
+msgid "Select the artwork displayed for the game list fanart"
+msgstr "Valitse peliluettelosta fanart näytettävä kuvitus"
+
+msgctxt "#30115"
+msgid "System collage"
+msgstr "Järjestelmän kollaasi"
+
+msgctxt "#30116"
+msgid "System console"
+msgstr "Järjestelmäkonsoli"
+
+msgctxt "#30117"
+msgid "System wallpaper"
+msgstr "Järjestelmän taustakuva"
+
+msgctxt "#30118"
+msgid "Force IAGL viewtypes"
+msgstr "Pakota IAGL-näkymätyypit"
+
+msgctxt "#30119"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "Varmista, että ihollasi on pakkonäkymätyypin tunnus"
+
+msgctxt "#30120"
+msgid "Frontpage viewtype"
+msgstr "Etusivun näkymätyyppi"
+
+msgctxt "#30121"
+msgid "Game library lists viewtype"
+msgstr "Pelikirjasto luetteloi näkymätyypin"
+
+msgctxt "#30122"
+msgid "Game categories viewtype"
+msgstr "Peliluokkien näkymätyyppi"
+
+msgctxt "#30123"
+msgid "Games list viewtype"
+msgstr "Peliluettelon näkymätyyppi"
+
+msgctxt "#30124"
+msgid "Choose list viewtype"
+msgstr "Valitse luettelonäkymän tyyppi"
+
+msgctxt "#30125"
+msgid "Search and Random results viewtype"
+msgstr "Haku- ja satunnaisten tulosten näkymätyyppi"
+
+msgctxt "#30126"
+msgid "Off (Default)"
+msgstr "Pois (oletus)"
+
+msgctxt "#30127"
+msgid "List / Poster (50)"
+msgstr "Luettelo / juliste (50)"
+
+msgctxt "#30128"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "Juliste / Suuri lista / Julisteseinä (51)"
+
+msgctxt "#30129"
+msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
+msgstr "Ikoniseinä / Vaakakuvio / LS-seinä (52)"
+
+msgctxt "#30130"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "Banneri/Vaisema/Julistetiedot (501)"
+
+msgctxt "#30131"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "Fanart / Landscape Single / Episode List (502)"
+
+msgctxt "#30132"
+msgid "Logos / Big Square Wall (503)"
+msgstr "Logot / Big Square Wall (503)"
+
+msgctxt "#30133"
+msgid "Big List 2 (504)"
+msgstr "Suuri lista 2 (504)"
+
+msgctxt "#30134"
+msgid "Landscape Details (505)"
+msgstr "Maiseman tiedot (505)"
+
+msgctxt "#30135"
+msgid "Operating System"
+msgstr "Käyttöjärjestelmä"
+
+msgctxt "#30136"
+msgid "Select your operating system"
+msgstr "Valitse käyttöjärjestelmäsi"
+
+msgctxt "#30137"
+msgid "Windows"
+msgstr "Windows"
+
+msgctxt "#30138"
+msgid "Linux"
+msgstr "Linux"
+
+msgctxt "#30139"
+msgid "OSX"
+msgstr "OSX"
+
+msgctxt "#30140"
+msgid "Retroarch App Location"
+msgstr "Retroarch-sovelluksen sijainti"
+
+msgctxt "#30141"
+msgid "Select the path to the retroarch executable"
+msgstr "Valitse polku retroarch-suoritettavaan tiedostoon"
+
+msgctxt "#30142"
+msgid "Retroarch CFG Location"
+msgstr "Retroarch CFG Sijainti"
+
+msgctxt "#30143"
+msgid "Select the path to the retroarch config file"
+msgstr "Valitse polku retroarch-määritystiedostoon"
+
+msgctxt "#30144"
+msgid "Android"
+msgstr "Android"
+
+msgctxt "#30145"
+msgid "Android aarch64"
+msgstr "Android aarch64"
+
+msgctxt "#30146"
+msgid "Android ra32"
+msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Pelin käynnistysohjelman valintamenetelmä"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Valitse, mitä Kodi tekee valitessaan pelin käynnistysohjelmaa (vain Windows, Linux ja OSX)"
+
+msgctxt "#30149"
+msgid "Keep Kodi in the background"
+msgstr "Pidä Kodi taustalla"
+
+msgctxt "#30150"
+msgid "Close Kodi"
+msgstr "Sulje Kodi"
+
+msgctxt "#30151"
+msgid "Pause Kodi"
+msgstr "Keskeytä Kodi"
+
+msgctxt "#30152"
+msgid "Retroarch core picker"
+msgstr "Retroarch-ytimen poimija"
+
+msgctxt "#30153"
+msgid "List by System and Core Name"
+msgstr "Luettelo järjestelmän ja ydinnimen mukaan"
+
+msgctxt "#30154"
+msgid "List by Core Name"
+msgstr "Luettelo ydinnimen mukaan"
+
+msgctxt "#30155"
+msgid "List by Emulated Systems"
+msgstr "Luettelo emuloitujen järjestelmien mukaan"
+
+msgctxt "#30156"
+msgid "Select Core"
+msgstr "Valitse Ydin"
+
+msgctxt "#30157"
+msgid "Select Emulated System"
+msgstr "Valitse Emuloitu järjestelmä"
+
+msgctxt "#30158"
+msgid "Select Emulator"
+msgstr "Valitse Emulaattori"
+
+msgctxt "#30159"
+msgid "Credentials were not found[CR]Please enter them in addon settings"
+msgstr "Tunnuksia ei löytynyt[CR]Anna ne lisäosan asetuksiin"
+
+msgctxt "#30160"
+msgid "Game List Download Path"
+msgstr "Peliluettelon latauspolku"
+
+msgctxt "#30161"
+msgid "Zero (Current Game Only)"
+msgstr "Zero (vain nykyinen peli)"
+
+msgctxt "#30162"
+msgid "25 MB"
+msgstr "25 Mt"
+
+msgctxt "#30163"
+msgid "50 MB"
+msgstr "50 Mt"
+
+msgctxt "#30164"
+msgid "100 MB"
+msgstr "100 Mt"
+
+msgctxt "#30165"
+msgid "200 MB"
+msgstr "200 Mt"
+
+msgctxt "#30166"
+msgid "500 MB"
+msgstr "500 Mt"
+
+msgctxt "#30167"
+msgid "1 GB"
+msgstr "1 Gt"
+
+msgctxt "#30168"
+msgid "2 GB"
+msgstr "2 Gt"
+
+msgctxt "#30169"
+msgid "5 GB"
+msgstr "5 Gt"
+
+msgctxt "#30170"
+msgid "10 GB"
+msgstr "10 Gt"
+
+msgctxt "#30171"
+msgid "20 GB"
+msgstr "20 Gt"
+
+msgctxt "#30172"
+msgid "Enable Netplay"
+msgstr "Ota Netplay käyttöön"
+
+msgctxt "#30173"
+msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
+msgstr "Ota retroarch netplay käyttöön (vain Windows, Linux, OSX), käytä kontekstivalikkoa käynnistääksesi netplayn kanssa"
+
+msgctxt "#30174"
+msgid "Show Netplay Lobby"
+msgstr "Näytä Netplay Lobby"
+
+msgctxt "#30175"
+msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
+msgstr "Kun tämä on käytössä, netplay-aula näkyy IAGL:n etusivulla"
+
+msgctxt "#30176"
+msgid "Filter game lobby to IAGL auto launch games"
+msgstr "Suodata peliaula IAGL-automaattikäynnistyspeleihin"
+
+msgctxt "#30177"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "Jos tämä on käytössä, netplay-aula näyttää vain automaattisesti käynnistyvät pelit"
+
+msgctxt "#30178"
+msgid "Netplay Port"
+msgstr "Netplay portti"
+
+msgctxt "#30179"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "Määritä netplay-IP-portti, jonka kautta muodostetaan yhteys (jätä tyhjäksi oletuksena)"
+
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Paikallisen palvelimen oletus-IP"
+
+msgctxt "#30181"
+msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
+msgstr "Määritä oletusarvoinen netplay-isäntänimi / IP (hyödyllinen paikallisverkon netplay-tilassa, jätä tyhjäksi oletuksena)"
+
+msgctxt "#30182"
+msgid "Check frames"
+msgstr "Tarkista kehykset"
+
+msgctxt "#30183"
+msgid "Define number of netplay sync frames (leave blank for default)"
+msgstr "Määritä netplay-synkronointikehysten määrä (jätä tyhjäksi oletuksena)"
+
+msgctxt "#30184"
+msgid "Announce Netplay on Discord"
+msgstr "Ilmoita Netplay Discordissa"
+
+msgctxt "#30185"
+msgid "Announces netplay start on discord for IAGL players"
+msgstr "Ilmoittaa netplayn alkamisesta discordissa IAGL-pelaajille"
+
+msgctxt "#30186"
+msgid "Discord Player Name"
+msgstr "Discord-soittimen nimi"
+
+msgctxt "#30187"
+msgid "Enter your player name to be announced on Discord"
+msgstr "Kirjoita pelaajanimesi, joka julkaistaan ​​Discordissa"
+
+msgctxt "#30188"
+msgid "Discord User Account ID"
+msgstr "Discord-käyttäjätilin tunnus"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Anna Discord-tunnuksesi (Käyttäjäasetukset> Oma tili> Kopioi tunnus)"
+
+msgctxt "#30190"
+msgid "Display report when wizard is completed"
+msgstr "Näytä raportti, kun ohjattu toiminto on valmis"
+
+msgctxt "#30191"
+msgid "Execute setup wizard"
+msgstr "Suorita ohjattu asennustoiminto"
+
+msgctxt "#30192"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Suorita ohjattu toiminto muuttaaksesi nopeasti peliluetteloiden asetuksia.  Tämä voidaan toistaa milloin tahansa"
+
+msgctxt "#30193"
+msgid "Android Advance Settings"
+msgstr "Androidin lisäasetukset"
+
+msgctxt "#30194"
+msgid "Use StartAndroidActivity"
+msgstr "Käytä StartAndroidActivityä"
+
+msgctxt "#30195"
+msgid "Leave as default if unsure"
+msgstr "Jätä oletukseksi, jos olet epävarma"
+
+msgctxt "#30196"
+msgid "Suspend Kodi Input and Audio when using External Launcher"
+msgstr "Keskeytä Kodi-tulo ja ääni, kun käytät ulkoista käynnistysohjelmaa"
+
+msgctxt "#30197"
+msgid "Stop Kodi media playing before External Launch"
+msgstr "Lopeta Kodi-median toisto ennen ulkoista käynnistystä"
+
+msgctxt "#30198"
+msgid "Kodi is busy / waiting for return to Kodi after External Launch"
+msgstr "Kodi on kiireinen / odottaa paluuta Kodiin ulkoisen käynnistyksen jälkeen"
+
+msgctxt "#30199"
+msgid "Download Advanced Settings"
+msgstr "Lataa lisäasetukset"
+
+msgctxt "#30200"
+msgid "Download Threads"
+msgstr "Lataa ketjut"
+
+msgctxt "#30201"
+msgid "Alternate default download folder"
+msgstr "Vaihtoehtoinen oletuslatauskansio"
+
+msgctxt "#30202"
+msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
+msgstr "Kun tämä valitaan, kaikki lataukset siirtyvät vaihtoehtoiseen kansioon.  [B]Huomaa: Tätä kansiota ei tyhjennetä tai sen kokoa ei valvota[/B]"
+
+msgctxt "#30203"
+msgid "Organize default download folder using system folders"
+msgstr "Järjestä oletuslatauskansio järjestelmäkansioiden avulla"
+
+msgctxt "#30204"
+msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
+msgstr "Kun tämä on käytössä, väliaikainen kansio järjestetään järjestelmän mukaan (joskus tarpeen asetusten ohittamiseen)"
+
+msgctxt "#30205"
+msgid "Copy Kodi Network Source downloads to Local Filesystem"
+msgstr "Kopioi Kodi Network Source -lataukset paikalliseen tiedostojärjestelmään"
+
+msgctxt "#30206"
+msgid "Reset Options"
+msgstr "Palauta asetukset"
+
+msgctxt "#30207"
+msgid "Reset IAGL database to default settings"
+msgstr "Palauta IAGL-tietokanta oletusasetuksiin"
+
+msgctxt "#30208"
+msgid "When selected, the database will be reset to default settings"
+msgstr "Kun tämä valitaan, tietokanta palautetaan oletusasetuksiin"
+
+msgctxt "#30209"
+msgid "Unhide game lists"
+msgstr "Näytä peliluettelot"
+
+msgctxt "#30210"
+msgid "When selected, previously hidden game lists can be unhidden"
+msgstr "Kun tämä on valittuna, aiemmin piilotetut peliluettelot voidaan näyttää"
+
+msgctxt "#30211"
+msgid "Clear Cache"
+msgstr "Tyhjennä välimuisti"
+
+msgctxt "#30212"
+msgid "When selected, all data in the cache folder including games will be purged"
+msgstr "Kun tämä valitaan, kaikki välimuistikansion tiedot, mukaan lukien pelit, tyhjennetään"
+
+msgctxt "#30213"
+msgid "Select"
+msgstr "Valitse"
+
+msgctxt "#30214"
+msgid "Selected"
+msgstr "Valittu"
+
+msgctxt "#30215"
+msgid "Game lists selected"
+msgstr "Pelilistat valittu"
+
+msgctxt "#30216"
+msgid "Genres selected"
+msgstr "Genret valittu"
+
+msgctxt "#30217"
+msgid "Players selected"
+msgstr "Pelaajat valittu"
+
+msgctxt "#30218"
+msgid "Studios selected"
+msgstr "Studiot valittu"
+
+msgctxt "#30219"
+msgid "Tags selected"
+msgstr "Tunnisteet valittu"
+
+msgctxt "#30220"
+msgid "Playlists selected"
+msgstr "Soittolistat valittu"
+
+msgctxt "#30221"
+msgid "Regions selected"
+msgstr "Alueet valittu"
+
+msgctxt "#30222"
+msgid "Languages selected"
+msgstr "Kielet valittu"
+
+msgctxt "#30223"
+msgid "Editions selected"
+msgstr "Versioita valittu"
+
+msgctxt "#30224"
+msgid "Codes selected"
+msgstr "Koodit valittu"
+
+msgctxt "#30225"
+msgid "Ratings selected"
+msgstr "Arviot valittu"
+
+msgctxt "#30226"
+msgid "Enter title search query"
+msgstr "Kirjoita otsikon hakukysely"
+
+msgctxt "#30227"
+msgid "Empty search"
+msgstr "Tyhjä haku"
+
+msgctxt "#30228"
+msgid "Search criteria is empty.[CR]Update criteria and try again."
+msgstr "Hakuehdot on tyhjä.[CR]Päivitä ehdot ja yritä uudelleen."
+
+msgctxt "#30229"
+msgid "Reset criteria"
+msgstr "Palauta kriteerit"
+
+msgctxt "#30230"
+msgid "Enter Link Name"
+msgstr "Anna linkin nimi"
+
+msgctxt "#30231"
+msgid "Define the start page for IAGL"
+msgstr "Määritä IAGL:n aloitussivu"
+
+msgctxt "#30232"
+msgid "Kodi launch options"
+msgstr "Kodin käynnistysvaihtoehdot"
+
+msgctxt "#30233"
+msgid "Completed"
+msgstr "Valmis"
+
+msgctxt "#30234"
+msgid "Create new group"
+msgstr "Luo uusi ryhmä"
+
+msgctxt "#30235"
+msgid "Select favorite group"
+msgstr "Valitse suosikkiryhmä"
+
+msgctxt "#30236"
+msgid "Group by Favorites Group"
+msgstr "Ryhmittele suosikkiryhmän mukaan"
+
+msgctxt "#30237"
+msgid "Remove IAGL Favorite"
+msgstr "Poista IAGL-suosikki"
+
+msgctxt "#30238"
+msgid "Are you sure you want to delete this Favorite?"
+msgstr "Haluatko varmasti poistaa tämän suosikin?"
+
+msgctxt "#30239"
+msgid "Favorite deleted"
+msgstr "Suosikki poistettu"
+
+msgctxt "#30240"
+msgid "Favorites display"
+msgstr "Suosikkien näyttö"
+
+msgctxt "#30241"
+msgid "Define the start page for IAGL Favorites"
+msgstr "Määritä IAGL-suosikkien aloitussivu"
+
+msgctxt "#30242"
+msgid "By Favorites Group"
+msgstr "Suosikkiryhmän mukaan"
+
+msgctxt "#30243"
+msgid "Reset *all* criteria"
+msgstr "Nollaa *kaikki* kriteerit"
+
+msgctxt "#30244"
+msgid "Run IAGL setup wizard?"
+msgstr "Suoritetaanko ohjattu IAGL-asennustoiminto?"
+
+msgctxt "#30245"
+msgid "Wizard"
+msgstr "Ohjattu toiminto"
+
+msgctxt "#30246"
+msgid "Update game list Launcher"
+msgstr "Päivitä peliluettelon käynnistysohjelma"
+
+msgctxt "#30247"
+msgid "Update game list Launch Command"
+msgstr "Päivitä peliluettelo Launch Command"
+
+msgctxt "#30248"
+msgid "Update game list Download Path"
+msgstr "Päivitä peliluettelo Download Path"
+
+msgctxt "#30249"
+msgid "Hide game list"
+msgstr "Piilota peliluettelo"
+
+msgctxt "#30250"
+msgid "Update game list post download process"
+msgstr "Päivitä peliluettelo latausprosessin jälkeen"
+
+msgctxt "#30251"
+msgid "Are you sure you want to hide game list"
+msgstr "Haluatko varmasti piilottaa peliluettelon"
+
+msgctxt "#30252"
+msgid "Game list is now hidden"
+msgstr "Peliluettelo on nyt piilotettu"
+
+msgctxt "#30253"
+msgid "No results"
+msgstr "Ei tuloksia"
+
+msgctxt "#30254"
+msgid "No hidden game lists found"
+msgstr "Piilotettuja pelilistoja ei löytynyt"
+
+msgctxt "#30255"
+msgid "Game lists unhidden"
+msgstr "Peliluettelot näkyvissä"
+
+msgctxt "#30256"
+msgid "Confirm reset"
+msgstr "Vahvista nollaus"
+
+msgctxt "#30257"
+msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
+msgstr "Haluatko varmasti nollata tietokannan?[CR]Kaikki käyttäjätiedot menetetään![CR]Tätä ei voi kumota!"
+
+msgctxt "#30258"
+msgid "Database has been reset"
+msgstr "Tietokanta on nollattu"
+
+msgctxt "#30259"
+msgid "Update Launcher"
+msgstr "Päivitä käynnistysohjelma"
+
+msgctxt "#30260"
+msgid "Update launcher from[CR]Kodi to[CR]External?"
+msgstr "Päivitetäänkö käynnistysohjelma [CR]Kodista[CR]Externaliin?"
+
+msgctxt "#30261"
+msgid "Update launcher from[CR]External to[CR]Kodi?"
+msgstr "Päivitetäänkö käynnistysohjelma [CR]Externalista [CR]Kodiin?"
+
+msgctxt "#30262"
+msgid "Launcher updated to external"
+msgstr "Käynnistysohjelma päivitetty ulkoiseen"
+
+msgctxt "#30263"
+msgid "Launcher updated to retroplayer"
+msgstr "Launcher päivitetty retroplayeriin"
+
+msgctxt "#30264"
+msgid "Select game addon"
+msgstr "Valitse pelin lisäosa"
+
+msgctxt "#30265"
+msgid "Are you sure you want to reset the game addon launch command?"
+msgstr "Haluatko varmasti nollata pelilisäyksen käynnistyskomennon?"
+
+msgctxt "#30266"
+msgid "Download game to…"
+msgstr "Lataa peli…"
+
+msgctxt "#30267"
+msgid "Select download folder"
+msgstr "Valitse latauskansio"
+
+msgctxt "#30268"
+msgid "Archive.org login success!"
+msgstr "Archive.org kirjautuminen onnistui!"
+
+msgctxt "#30269"
+msgid "Archive.org login failed.[CR]Check credentials or log for more details"
+msgstr "Archive.org-kirjautuminen epäonnistui.[CR]Tarkista tunnistetiedot tai kirjaudu sisään saadaksesi lisätietoja"
+
+msgctxt "#30270"
+msgid "Error"
+msgstr "Virhe"
+
+msgctxt "#30271"
+msgid "Initializing download for[CR]"
+msgstr "Alustetaan latausta [CR]:lle"
+
+msgctxt "#30272"
+msgid "Check logs"
+msgstr "Tarkista lokit"
+
+msgctxt "#30273"
+msgid "Checking login for[CR]"
+msgstr "Tarkistetaan kirjautumista [CR]"
+
+msgctxt "#30274"
+msgid "Requesting file info for[CR]"
+msgstr "Pyydetään tiedostotietoja [CR]"
+
+msgctxt "#30275"
+msgid "Select from Retroarch Cores"
+msgstr "Valitse Retroarch Coresista"
+
+msgctxt "#30276"
+msgid "Select from Extra Emulators"
+msgstr "Valitse ylimääräisistä emulaattoreista"
+
+msgctxt "#30277"
+msgid "Manually Enter Launch Command"
+msgstr "Syötä manuaalisesti Launch Command"
+
+msgctxt "#30278"
+msgid "Select External Command Type"
+msgstr "Valitse Ulkoinen komentotyyppi"
+
+msgctxt "#30279"
+msgid "Extra Emulators"
+msgstr "Ylimääräiset emulaattorit"
+
+msgctxt "#30280"
+msgid "Dolphin"
+msgstr "Delfiini"
+
+msgctxt "#30281"
+msgid "Select the path to the Dolphin application (optional)"
+msgstr "Valitse polku Dolphin-sovellukseen (valinnainen)"
+
+msgctxt "#30282"
+msgid "MAME"
+msgstr "MAME"
+
+msgctxt "#30283"
+msgid "Select the path to the MAME application (optional)"
+msgstr "Valitse polku MAME-sovellukseen (valinnainen)"
+
+msgctxt "#30284"
+msgid "Project 64"
+msgstr "Projekti 64"
+
+msgctxt "#30285"
+msgid "Select the path to the Project 64 application (optional)"
+msgstr "Valitse Project 64 -sovelluksen polku (valinnainen)"
+
+msgctxt "#30286"
+msgid "ePSXe"
+msgstr "ePSXe"
+
+msgctxt "#30287"
+msgid "Select the path to the ePSXe application (optional)"
+msgstr "Valitse polku ePSXe-sovellukseen (valinnainen)"
+
+msgctxt "#30288"
+msgid "Demul"
+msgstr "Demul"
+
+msgctxt "#30289"
+msgid "Select the path to the Demul application (optional)"
+msgstr "Valitse polku Demul-sovellukseen (valinnainen)"
+
+msgctxt "#30290"
+msgid "FS-UAE"
+msgstr "FS-UAE"
+
+msgctxt "#30291"
+msgid "Select the path to the FS-UAE application (optional)"
+msgstr "Valitse polku FS-UAE-sovellukseen (valinnainen)"
+
+msgctxt "#30292"
+msgid "Are you sure you want to set external launch command?"
+msgstr "Haluatko varmasti asettaa ulkoisen käynnistyskomennon?"
+
+msgctxt "#30293"
+msgid "External launch command updated"
+msgstr "Ulkoinen käynnistyskomento päivitetty"
+
+msgctxt "#30294"
+msgid "Android users must verify the core is installed in Retroarch"
+msgstr "Android-käyttäjien on varmistettava, että ydin on asennettu Retroarchiin"
+
+msgctxt "#30295"
+msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
+msgstr "Käynnistysasetukset ovat tällä hetkellä tyhjiä[CR]Päivitä lisäosan ulkoiset käynnistysasetukset."
+
+msgctxt "#30296"
+msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
+msgstr "Käynnistysasetukset ovat tällä hetkellä tyhjiä[CR]Päivitä lisäosan käyttöjärjestelmän käynnistysasetukset."
+
+msgctxt "#30297"
+msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
+msgstr "Ylimääräisiä emulaattoreita ei löytynyt[CR]Päivitä lisäemulaattorin asetukset"
+
+msgctxt "#30298"
+msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
+msgstr "Anna käynnistyskomento[CR]Katso valinnaiset avainsanat IAGL-wikissä"
+
+msgctxt "#30299"
+msgid "Reset Launch Command"
+msgstr "Nollaa käynnistyskomento"
+
+msgctxt "#30300"
+msgid "Are you sure you want to reset the external launch command?"
+msgstr "Haluatko varmasti nollata ulkoisen käynnistyskomennon?"
+
+msgctxt "#30301"
+msgid "External launch command was reset"
+msgstr "Ulkoinen käynnistyskomento nollattiin"
+
+msgctxt "#30302"
+msgid "Enter a value for"
+msgstr "Anna arvo kohteelle"
+
+msgctxt "#30303"
+msgid "View game list settings"
+msgstr "Katso peliluettelon asetukset"
+
+msgctxt "#30304"
+msgid "Game List"
+msgstr "Peliluettelo"
+
+msgctxt "#30305"
+msgid "Game List System"
+msgstr "Peliluettelojärjestelmä"
+
+msgctxt "#30306"
+msgid "Total 1G1R Games in List"
+msgstr "Yhteensä 1G1R-pelejä luettelossa"
+
+msgctxt "#30307"
+msgid "Total Games in List"
+msgstr "Kaikki pelit luettelossa"
+
+msgctxt "#30308"
+msgid "Total Favorited Games in List"
+msgstr "Suosikkipelit yhteensä luettelossa"
+
+msgctxt "#30309"
+msgid "Default External Launch Command"
+msgstr "Oletusulkoinen käynnistyskomento"
+
+msgctxt "#30310"
+msgid "Default Retroplayer Game Addon"
+msgstr "Oletusretroplayer-pelilisäys"
+
+msgctxt "#30311"
+msgid "Default Game Post Process"
+msgstr "Pelin oletuspostitusprosessi"
+
+msgctxt "#30312"
+msgid "User Defined Download Path"
+msgstr "Käyttäjän määrittämä latauspolku"
+
+msgctxt "#30313"
+msgid "User External Launch Command"
+msgstr "Käyttäjän ulkoinen käynnistyskomento"
+
+msgctxt "#30314"
+msgid "User Defined Retroplayer Game Addon"
+msgstr "Käyttäjän määrittämä Retroplayer Game Addon"
+
+msgctxt "#30315"
+msgid "User Defined Post Process"
+msgstr "Käyttäjän määrittämä postiprosessi"
+
+msgctxt "#30316"
+msgid "Game List Settings"
+msgstr "Peliluettelon asetukset"
+
+msgctxt "#30317"
+msgid "None (will use addon default)"
+msgstr "Ei mitään (käyttää lisäosan oletusarvoa)"
+
+msgctxt "#30318"
+msgid "Games List Launcher"
+msgstr "Peliluettelon käynnistysohjelma"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Ulkoinen käynnistyskomento"
+
+msgctxt "#30320"
+msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
+msgstr "Ulkoinen käynnistyskomento[CR]*Käyttäjän käynnistyskomentoa ei löytynyt / oletusarvo käytössä*"
+
+msgctxt "#30321"
+msgid "Kodi Retroplayer"
+msgstr "Kodi Retroplayer"
+
+msgctxt "#30322"
+msgid "Are you sure you want to update game list download path?"
+msgstr "Haluatko varmasti päivittää peliluettelon latauspolun?"
+
+msgctxt "#30323"
+msgid "Download path updated"
+msgstr "Latauspolku päivitetty"
+
+msgctxt "#30324"
+msgid "Are you sure you want to reset game list download path?"
+msgstr "Haluatko varmasti nollata peliluettelon latauspolun?"
+
+msgctxt "#30325"
+msgid "Download path reset"
+msgstr "Latauspolun nollaus"
+
+msgctxt "#30326"
+msgid "Change download path"
+msgstr "Muuta latauspolkua"
+
+msgctxt "#30327"
+msgid "Reset download path"
+msgstr "Nollaa latauspolku"
+
+msgctxt "#30328"
+msgid "Reset game list settings"
+msgstr "Nollaa peliluettelon asetukset"
+
+msgctxt "#30329"
+msgid "Are you sure you want to reset all game list settings to default?"
+msgstr "Haluatko varmasti palauttaa kaikki peliluettelon oletusasetukset?"
+
+msgctxt "#30330"
+msgid "Game list settings were reset to default"
+msgstr "Peliluettelon asetukset palautettiin oletusasetuksiin"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Vastaava paikallinen tiedosto"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Tarkistetaan valtuustietoja"
+
+msgctxt "#30333"
+msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "seuraavat muuttujat korvataan käynnistyksen aikana:[CR]● XXROM_PATHXX: käynnistettävän tiedoston polku[CR]● XXROM_NAMEXX: käynnistettävän tiedoston nimi (ei polkua)[CR]● XXROM_STEMXX: käynnistettävän tiedoston nimi (ei polkua, ei päätettä)[CR]● XXNETPLAY_COMMANDXX: Kaikki netplayn edellyttämät komennot, katso lisäasetukset asetukset[CR]Katso wikistä lisätietoja…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Arkistotiedostoa ei voitu käsitellä[CR]Tarkista lokeista lisätietoja"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Valitse toiminto ennen käynnistystä"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Jätä Kodi pyörimään taustalla (oletus)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Sulje Kodi ennen käynnistämistä, avaa Kodi uudelleen emulaattorin poistuttua"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Keskeytä Kodi ennen käynnistystä, herätä Kodi emulaattorin poistuttua"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Näytä IAGL db -tilastot"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Luetteloi IAGL db:n nykyiset tilastot"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db Tilastot"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Katso käynnistysparametrit"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Peliasetukset"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Pelin käynnistysparametrit"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Jos käyttäjää ei ole, käynnistä komento"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Valitse, mitä Kodi tekee, kun käynnistyskomentoa (retroplayer-lisäosa tai ulkoinen emulaattori) ei ole asetettu"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Yritä käynnistää oletuksena"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Pysäytä / Älä käynnistä"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Ei komentoja asetettu"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Käynnistyskomentoa ei ole asetettu tälle luettelolle, asetetaanko se nyt?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Tälle luettelolle ei löytynyt oletuskäynnistyskomentoa"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Oletusydintä ei löytynyt.  Asenna {} tai päivitä käynnistysohjelma"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Pelilisäosan käynnistyskomento nollataan"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Pelin lisäosia ei löytynyt"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Pelin lisäosan käynnistyskomento päivitetty"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Käytä vaihtoehtoista oletuslatauskansiota"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Näytä vain vaihtoehdot, jotka pitävät Kodin taustalla"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Näytä vain vaihtoehdot, jotka sulkevat Kodin"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Näytä vain vaihtoehdot, jotka keskeyttävät Kodin"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Sijainti merkkijonona"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Vaihtoehtoisesti voit kirjoittaa retroarch.cfg-tiedoston polun täsmälleen sellaisena kuin se näkyy Retroarchissa"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Retroarch Cores -hakemisto merkkijonona"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Vaihtoehtoisesti voit kirjoittaa polku Cores-hakemistoon täsmälleen sellaisena kuin se näkyy Retroarch-hakemiston kokoonpanossa"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Päivitä käynnistysohjelma pelille {}?[CR][B]Tämä muuttaa kaikkien tämän luettelon pelien asetuksia.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Päivitetäänkö {} Launch Command?[CR][B]Tämä muuttaa kaikkien tämän luettelon pelien asetuksia.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Päivitetäänkö {} aloituslatauspolku?[CR][B]Tämä muuttaa kaikkien tämän luettelon pelien asetuksia.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Päivitä Launch Command"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Päivitä Käynnistä latauspolku"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Nollaa asetukset pelille {}?[CR][B]Tämä muuttaa kaikkien tämän luettelon pelien asetuksia.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Tukea"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Lahjoita Archive.orgille"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Uusi IAGL-tietokanta on löydetty[CR]Haluatko päivittää?[CR]Asetukset kopioidaan uuteen tietokantaan, jos mahdollista"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Uusi db"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Tietokanta päivitettiin[CR]Käyttäjäasetukset siirrettiin"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Tietokanta päivitettiin[CR]Joidenkin käyttäjäasetusten siirto epäonnistui[CR]Katso lisätietoja lokista"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Tietokannan päivityksessä tapahtui virhe[CR]Katso lisätietoja lokista"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Kysy myöhemmin uudelleen"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Älä päivitä tällä kertaa[CR](Älä kysy uudelleen ennen seuraavaa päivitystä)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Tervetuloa IAGL:n ohjattuun asennustoimintoon[CR]Käymme läpi kaikki asetukset, jotta pääset pelaamaan!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Useimmat pelit vaativat archive.org-tilin[CR]Rekisteröidy osoitteessa https://archive.org/account/signup[CR]Haluatko käyttää tiliäsi IAGL:n kanssa?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Asennus on valmis Kodi-pelilisäosien käyttöä varten![CR]Oletko valmis pelaamaan?[CR]Valitse [B]Ei[/B] määrittääksesi ulkoisen pelin käynnistyksen."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Aseta kaikki peliluettelot ulkoisesti käynnistettäväksi"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Aseta vain jotkin peliluettelot ulkoisesti käynnistettäväksi"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Palauta kaikki peliluettelon käynnistysohjelmat oletusarvoiksi"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} peliluetteloa päivitettiin ulkoista julkaisua varten"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Oletusasetukset on asetettu valmiiksi jokaiselle ulkoiselle käynnistyskomennolle[CR]Tarkista tarvittaessa pelin käynnistysparametrit ennen käynnistämistä[CR]Katso wikistä lisätietoja."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch-sovelluksen asetus on:[CR]{}[CR]Muokkaa lisäosan asetuksia tarvittaessa"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch config asetettu arvoon:[CR]{}[CR]Muokkaa lisäosan asetuksia tarvittaessa"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Ohjattu toiminto valmis[CR]Pelataan!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Aseta kaikki peliluettelot käynnistettäväksi Kodin kanssa"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Aseta nopeasti kaikki peliluettelot ulkoiseen käynnistykseen"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Aseta nopeasti kaikki peliluettelot Kodi retroplayeriin"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Vahvistaa"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Oletko varma, että haluat asettaa kaikki luettelot ulkoiseen käynnistykseen"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Haluatko varmasti asettaa kaikki luettelot Kodi retroplayeriin"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Android-käyttöoikeudet edellyttävät Retroarch-määrityspolun syöttämistä manuaalisesti[CR]Katso wikistä lisäohjeita"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Android-käyttöoikeudet edellyttävät Retroarch-ydinpolun syöttämistä manuaalisesti[CR]Katso wikistä lisäohjeita"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Varmuuskopioi nykyinen tietokanta"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Palauta tietokanta varmuuskopiosta"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Varmuuskopioi nykyinen IAGL-tietokanta ja kaikki käyttäjäasetukset"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Palauta nykyinen lisäosatietokanta varmuuskopiosta"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Valitse varmuuskopiopolku"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Valitse varmuuskopio db"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Varmuuskopiointi valmis"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Palautus valmis"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} vastaavaa pelitunnusta ei löytynyt uudesta db[CR]Valitse seuraava toiminto"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Päivitä tietokanta, yritä yhdistää pelejä nimen ja peliluettelon mukaan"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Päivitä tietokanta, poista pelitunnukset, joita ei löytynyt"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Palauta takaisin vanhaan tietokantaan"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Tietokanta palautettu vanhaan tietokantaan"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Odota"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Aseta Retroarch-hakemistot manuaalisesti"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL tunnistaa oletuksena hakemistot RA-konfiguraatiosta, voit ohittaa tämän toiminnon manuaalisesti"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch Core Directory"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroach-tietohakemisto"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Liitä linux-sovellus käynnistääksesi käynnistyskomennon"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak käytetään tietyissä linux/elec-järjestelmissä.  Ota käyttöön vain, jos järjestelmäsi vaatii sitä."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Liitä systemd-run Retroarch-komentoihin"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Liitä systemd-run kaikkien komentojen alkuun"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Liitä flatpak-ajo Retroarch-komentoihin"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Liitä kaikkien komentojen edelle flatpak-ajo"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Android-käyttöoikeudet vaativat jaetun tallennushakemiston[CR]Anna jaettu sijainti, jota molemmat sovellukset voivat käyttää"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Pura tiedostot"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Ei käsittelyä"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Pura tiedostot, ohita BIOS-tiedostot"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Pura tiedostot kansioon"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Pura tiedostot, siirrä CHD kansioon"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Siirrä tiedostot kansioon: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Siirrä tiedostot kansioon: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Siirrä tiedostot kansioon: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Siirrä tiedostot kansioon: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Siirrä tiedostot kansioon: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Siirrä tiedostot kansioon megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Siirrä tiedostot kansioon: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Siirrä tiedostot kansioon: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Siirrä tiedostot kansioon: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Siirrä tiedostot kansioon: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Siirrä tiedostot kansioon: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Siirrä tiedostot kansioon: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Siirrä tiedostot kansioon: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Siirrä tiedostot kansioon: spektri"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Siirrä tiedostot kansioon: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Haluatko varmasti päivittää pelilistan julkaisuprosessin?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Postitusprosessi päivitetty"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Päivitetään {}?[CR][B]Tämä muuttaa kaikkien tämän luettelon pelien asetuksia.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Lataus valmis.  Lähetä prosessitiedostot?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Pelitiedostot käsitelty"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Ei saatavilla (vain Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Netplay-käyttäjänimen tyyppi"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Valitse integrointi netplay-soittimen nimelle"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Käytä Discordia"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord mahdollistaa automaattiset netplay-ottelut (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Syötä pelaajan nimi manuaalisesti"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Pelaajien nimet julkaistaan ​​Retroarch-aulassa"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Pelaajan nimi"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Nykyinen Discord-käyttäjä"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord User asetukseksi [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Katso pelisessiot, joihin voit liittyä verkossa Retroarch netplayn avulla"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Epäasiallista käyttäjää, jonka tunnus on [CR]{}, ei löydy"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Aulan suodatinasetukset"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Näytä vain huoneet, joihin pääsee sisään"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Näytä vain libretroa käyttävät huoneet"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Näytä huoneet, joissa on salasana"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Näytä huoneet, joissa on katsojan salasana"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Näytä huoneet MITM-palvelimilla"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Näytä vain aikavälillä luodut huoneet"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 minuuttia"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 minuuttia"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Mikä tahansa aikakehys"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Suodata aulahuoneet luomisajan perusteella"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Näytä vain huoneet, joissa käytetään IAGL:ää"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Ei löydy vastaavaa peliä nimellä [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Ei löydy"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Valitse sopiva peli"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Netplayn käynnistystoiminto"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Liity retroarch-aulasta"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Liity localhostista"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Valitse oletustoiminto liittyessäsi netplay-peliin"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Käynnistä netplay-isäntänä"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Nimeä IAGL-suosikki uudelleen"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Uudelleennimeäminen valmis"

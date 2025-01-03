@@ -1,0 +1,1936 @@
+# Kodi Media Center language file
+# Addon Name: /Internet Archive Game Launcher
+# Addon id: pltugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/zach-morris/plugin.program.iagl/issues\n"
+"Language: bg_bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "Стартиране на игри за интернет архив"
+
+msgctxt "#30002"
+msgid "Browse all Lists"
+msgstr "Преглед на всички списъци"
+
+msgctxt "#30003"
+msgid "Browse lists by Category"
+msgstr "Преглед на списъци по категория"
+
+msgctxt "#30004"
+msgid "Browse games by Playlist"
+msgstr "Преглед на игри по плейлист"
+
+msgctxt "#30005"
+msgid "Favorites"
+msgstr "Любими"
+
+msgctxt "#30006"
+msgid "Play History"
+msgstr "История на играта"
+
+msgctxt "#30007"
+msgid "Search"
+msgstr "Търсене"
+
+msgctxt "#30008"
+msgid "Random Play"
+msgstr "Произволно възпроизвеждане"
+
+msgctxt "#30009"
+msgid "Next"
+msgstr "Следваща"
+
+msgctxt "#30010"
+msgid "Previous"
+msgstr "Предишен"
+
+msgctxt "#30011"
+msgid "One Big List"
+msgstr "Един голям списък"
+
+msgctxt "#30012"
+msgid "Alphabetical"
+msgstr "Азбучен ред"
+
+msgctxt "#30013"
+msgid "Group by Genre"
+msgstr "Групиране по жанр"
+
+msgctxt "#30014"
+msgid "Group by Year"
+msgstr "Групиране по години"
+
+msgctxt "#30015"
+msgid "Group by Players"
+msgstr "Групиране по играчи"
+
+msgctxt "#30016"
+msgid "Group by Studio"
+msgstr "Групиране по студио"
+
+msgctxt "#30017"
+msgid "Group by Tag"
+msgstr "Групиране по етикет"
+
+msgctxt "#30018"
+msgid "Group by Playlist"
+msgstr "Групиране по плейлист"
+
+msgctxt "#30019"
+msgid "Group by Region"
+msgstr "Групиране по регион"
+
+msgctxt "#30020"
+msgid "Group by Language"
+msgstr "Групиране по език"
+
+msgctxt "#30021"
+msgid "Group by Edition"
+msgstr "Групиране по издание"
+
+msgctxt "#30022"
+msgid "Group by Code"
+msgstr "Групиране по код"
+
+msgctxt "#30023"
+msgid "Group by Rating"
+msgstr "Групиране по рейтинг"
+
+msgctxt "#30024"
+msgid "Select Game Lists"
+msgstr "Изберете Списъци с игри"
+
+msgctxt "#30025"
+msgid "Search Game Titles"
+msgstr "Търсете заглавия на игри"
+
+msgctxt "#30026"
+msgid "Filter by Genre"
+msgstr "Филтриране по жанр"
+
+msgctxt "#30027"
+msgid "Filter by Players"
+msgstr "Филтриране по играчи"
+
+msgctxt "#30028"
+msgid "Filter by Studio"
+msgstr "Филтриране по Студио"
+
+msgctxt "#30029"
+msgid "Filter by Tag"
+msgstr "Филтриране по етикет"
+
+msgctxt "#30030"
+msgid "Filter by Playlist"
+msgstr "Филтриране по плейлист"
+
+msgctxt "#30031"
+msgid "Filter by Region"
+msgstr "Филтриране по регион"
+
+msgctxt "#30032"
+msgid "Filter by Language"
+msgstr "Филтриране по език"
+
+msgctxt "#30033"
+msgid "Filter by Edition"
+msgstr "Филтриране по издание"
+
+msgctxt "#30034"
+msgid "Filter by Code"
+msgstr "Филтриране по код"
+
+msgctxt "#30035"
+msgid "Filter by Rating"
+msgstr "Филтриране по рейтинг"
+
+msgctxt "#30036"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Извършване на търсене[/COLOR]"
+
+msgctxt "#30037"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Създаване на връзка за търсене[/COLOR]"
+
+msgctxt "#30038"
+msgid "Choose Number of Results"
+msgstr "Изберете Брой резултати"
+
+msgctxt "#30039"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Извършване на произволно търсене[/COLOR]"
+
+msgctxt "#30040"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Създаване на връзка за произволно търсене[/COLOR]"
+
+msgctxt "#30041"
+msgid "General"
+msgstr "генерал"
+
+msgctxt "#30042"
+msgid "Launching"
+msgstr "Стартиране"
+
+msgctxt "#30043"
+msgid "Downloading"
+msgstr "Изтегля се"
+
+msgctxt "#30044"
+msgid "Views and Navigation"
+msgstr "Изгледи и навигация"
+
+msgctxt "#30045"
+msgid "Netplay"
+msgstr "Netplay"
+
+msgctxt "#30046"
+msgid "Setup Wizard"
+msgstr "Съветник за настройка"
+
+msgctxt "#30047"
+msgid "Advanced"
+msgstr "Разширено"
+
+msgctxt "#30048"
+msgid "Play History"
+msgstr "История на играта"
+
+msgctxt "#30049"
+msgid "Define how many games to save in last played history"
+msgstr "Определете колко игри да се запишат в историята на последната игра"
+
+msgctxt "#30050"
+msgid "Default action on selecting game"
+msgstr "Действие по подразбиране при избор на игра"
+
+msgctxt "#30051"
+msgid "Define action to take when a game is selected"
+msgstr "Определете действието, което да предприемете, когато бъде избрана игра"
+
+msgctxt "#30052"
+msgid "If game already exists locally"
+msgstr "Ако играта вече съществува локално"
+
+msgctxt "#30053"
+msgid "Define the action to take if a game file is found to exist locally"
+msgstr "Определете действието, което да предприемете, ако се установи, че файл на игра съществува локално"
+
+msgctxt "#30054"
+msgid "Prompt"
+msgstr "подкана"
+
+msgctxt "#30055"
+msgid "Do not re-download"
+msgstr "Не изтегляйте повторно"
+
+msgctxt "#30056"
+msgid "Re-download and overwrite"
+msgstr "Изтеглете отново и презапишете"
+
+msgctxt "#30057"
+msgid "Enable archive.org login"
+msgstr "Разрешете влизането в archive.org"
+
+msgctxt "#30058"
+msgid "Enabled"
+msgstr "Активирано"
+
+msgctxt "#30059"
+msgid "Disabled"
+msgstr "Забранено"
+
+msgctxt "#30060"
+msgid "Some games require login.  Enter your archive.org email address and password."
+msgstr "Някои игри изискват влизане.  Въведете своя имейл адрес и парола за archive.org."
+
+msgctxt "#30061"
+msgid "archive.org Email"
+msgstr "archive.org Имейл"
+
+msgctxt "#30062"
+msgid "Some games require login.  Enter your archive.org email address"
+msgstr "Някои игри изискват влизане.  Въведете вашия имейл адрес archive.org"
+
+msgctxt "#30063"
+msgid "archive.org Password"
+msgstr "archive.org парола"
+
+msgctxt "#30064"
+msgid "Some games require login.  Enter your archive.org password"
+msgstr "Някои игри изискват влизане.  Въведете вашата парола за archive.org"
+
+msgctxt "#30065"
+msgid "Check login credentials"
+msgstr "Проверете идентификационните данни за вход"
+
+msgctxt "#30066"
+msgid "Test the entered email and password to check your ability to login"
+msgstr "Тествайте въведените имейл и парола, за да проверите способността си да влезете"
+
+msgctxt "#30067"
+msgid "Download folder size limit"
+msgstr "Ограничение за размера на папката за изтегляне"
+
+msgctxt "#30068"
+msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
+msgstr "Определете размера на изтеглянето / размера на кеша.[CR]Папката се изчиства при достигане на ограничението за размер."
+
+msgctxt "#30069"
+msgid "Front page display"
+msgstr "Дисплей на предната страница"
+
+msgctxt "#30070"
+msgid "Choose from list"
+msgstr "Изберете от списъка"
+
+msgctxt "#30071"
+msgid "Games are presented as"
+msgstr "Игрите са представени като"
+
+msgctxt "#30072"
+msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
+msgstr "Kodi предоставя няколко опции за кожа за филми, телевизионни предавания и игри.  Вижте wiki за повече информация"
+
+msgctxt "#30073"
+msgid "TV Shows"
+msgstr "ТВ предавания"
+
+msgctxt "#30074"
+msgid "Movies"
+msgstr "Филми"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "игри"
+
+msgctxt "#30076"
+msgid "10 Games"
+msgstr "10 игри"
+
+msgctxt "#30077"
+msgid "25 Games"
+msgstr "25 игри"
+
+msgctxt "#30078"
+msgid "50 Games"
+msgstr "50 игри"
+
+msgctxt "#30079"
+msgid "100 Games"
+msgstr "100 игри"
+
+msgctxt "#30080"
+msgid "250 Games"
+msgstr "250 игри"
+
+msgctxt "#30081"
+msgid "500 Games"
+msgstr "500 игри"
+
+msgctxt "#30082"
+msgid "Game artwork"
+msgstr "Произведение на играта"
+
+msgctxt "#30083"
+msgid "Game list artwork"
+msgstr "Списък с игри"
+
+msgctxt "#30084"
+msgid "Retroarch Settings"
+msgstr "Настройки за обратна арка"
+
+msgctxt "#30085"
+msgid "Suspend Kodi IO on launch"
+msgstr "Спрете Kodi IO при стартиране"
+
+msgctxt "#30086"
+msgid "Stop media on launch"
+msgstr "Спрете медиите при стартиране"
+
+msgctxt "#30087"
+msgid "Waiting for return"
+msgstr "В очакване на връщане"
+
+msgctxt "#30088"
+msgid "Add to IAGL Favorites"
+msgstr "Добавете към любимите на IAGL"
+
+msgctxt "#30089"
+msgid "Enter a name for your favorites group"
+msgstr "Въведете име за вашата група любими"
+
+msgctxt "#30090"
+msgid "Favorite added to group"
+msgstr "Любимият е добавен към групата"
+
+msgctxt "#30091"
+msgid "Use clean game title"
+msgstr "Използвайте чисто заглавие на играта"
+
+msgctxt "#30092"
+msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
+msgstr "Премахване на етикети от заглавие на игра за показване.  Пример: [B]Марио (САЩ)[/B] става [B]Марио[/B]"
+
+msgctxt "#30093"
+msgid "Games per page"
+msgstr "Игри на страница"
+
+msgctxt "#30094"
+msgid "Define how many games are listed per page"
+msgstr "Определете колко игри са изброени на страница"
+
+msgctxt "#30095"
+msgid "List all"
+msgstr "Избройте всички"
+
+msgctxt "#30096"
+msgid "Always filter list to 1 Game 1 Rom Set"
+msgstr "Винаги филтрирайте списъка до 1 Game 1 Rom Set"
+
+msgctxt "#30097"
+msgid "If possible, game lists will be pre-filtered to a 1G1R set"
+msgstr "Ако е възможно, списъците с игри ще бъдат предварително филтрирани към набор 1G1R"
+
+msgctxt "#30098"
+msgid "Append game list name to search and random results"
+msgstr "Добавете име на списък с игри към търсене и произволни резултати"
+
+msgctxt "#30099"
+msgid "When enabled, the name of the game list will be appended to search results"
+msgstr "Когато е активирано, името на списъка с игри ще бъде добавено към резултатите от търсенето"
+
+msgctxt "#30100"
+msgid "Append game list name when browsing by playlist"
+msgstr "Добавете име на списък с игри, когато разглеждате по списък за изпълнение"
+
+msgctxt "#30101"
+msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
+msgstr "Когато е активирано, името на списъка с игри ще бъде добавено към името на играта в списъка за изпълнение"
+
+msgctxt "#30102"
+msgid "Kodi landscape art equates to"
+msgstr "Ландшафтното изкуство на Kodi се равнява на"
+
+msgctxt "#30103"
+msgid "Select the game artwork to be displayed as the landscape art"
+msgstr "Изберете изображението на играта, което да се показва като пейзажно изкуство"
+
+msgctxt "#30104"
+msgid "Title Screen"
+msgstr "Заглавен екран"
+
+msgctxt "#30105"
+msgid "Screenshot"
+msgstr "Екранна снимка"
+
+msgctxt "#30106"
+msgid "Kodi thumbnail art equates to"
+msgstr "Изкуството с миниатюри на Kodi се равнява на"
+
+msgctxt "#30107"
+msgid "Select the game artwork to be displayed as the thumbnail art"
+msgstr "Изберете изображението на играта, което да се показва като миниатюрно изображение"
+
+msgctxt "#30108"
+msgid "Game list clearlogo equates to"
+msgstr "Списък с игри clearlogo се равнява на"
+
+msgctxt "#30109"
+msgid "Select the artwork displayed for the game list clearlogo"
+msgstr "Изберете изображението, показано за ясното лого на списъка с игри"
+
+msgctxt "#30110"
+msgid "System logo"
+msgstr "Системно лого"
+
+msgctxt "#30111"
+msgid "System console"
+msgstr "Системна конзола"
+
+msgctxt "#30112"
+msgid "System controller"
+msgstr "Системен контролер"
+
+msgctxt "#30113"
+msgid "Game list fanart equates to"
+msgstr "Fanart списък с игри се равнява на"
+
+msgctxt "#30114"
+msgid "Select the artwork displayed for the game list fanart"
+msgstr "Изберете произведението на изкуството, което се показва за фенарт на списъка с игри"
+
+msgctxt "#30115"
+msgid "System collage"
+msgstr "Системен колаж"
+
+msgctxt "#30116"
+msgid "System console"
+msgstr "Системна конзола"
+
+msgctxt "#30117"
+msgid "System wallpaper"
+msgstr "Системен тапет"
+
+msgctxt "#30118"
+msgid "Force IAGL viewtypes"
+msgstr "Принудително IAGL изгледи"
+
+msgctxt "#30119"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "Уверете се, че вашият скин има наличен ID за принуден вид"
+
+msgctxt "#30120"
+msgid "Frontpage viewtype"
+msgstr "Тип изглед на първа страница"
+
+msgctxt "#30121"
+msgid "Game library lists viewtype"
+msgstr "Библиотеката с игри изброява тип изглед"
+
+msgctxt "#30122"
+msgid "Game categories viewtype"
+msgstr "Тип изглед на категории игри"
+
+msgctxt "#30123"
+msgid "Games list viewtype"
+msgstr "Тип изглед на списък с игри"
+
+msgctxt "#30124"
+msgid "Choose list viewtype"
+msgstr "Изберете тип изглед на списък"
+
+msgctxt "#30125"
+msgid "Search and Random results viewtype"
+msgstr "Тип изглед на резултатите за търсене и произволни резултати"
+
+msgctxt "#30126"
+msgid "Off (Default)"
+msgstr "Изключено (по подразбиране)"
+
+msgctxt "#30127"
+msgid "List / Poster (50)"
+msgstr "Списък / плакат (50)"
+
+msgctxt "#30128"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "Плакат / Голям списък / Стена за плакати (51)"
+
+msgctxt "#30129"
+msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
+msgstr "Стена с икони / Хоризонтална шарка / LS стена (52)"
+
+msgctxt "#30130"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "Информация за банер / пейзаж / плакат (501)"
+
+msgctxt "#30131"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "Фанарт / Пейзаж Единичен / Списък с епизоди (502)"
+
+msgctxt "#30132"
+msgid "Logos / Big Square Wall (503)"
+msgstr "Логота / Голяма квадратна стена (503)"
+
+msgctxt "#30133"
+msgid "Big List 2 (504)"
+msgstr "Голям списък 2 (504)"
+
+msgctxt "#30134"
+msgid "Landscape Details (505)"
+msgstr "Подробности за пейзажа (505)"
+
+msgctxt "#30135"
+msgid "Operating System"
+msgstr "Операционна система"
+
+msgctxt "#30136"
+msgid "Select your operating system"
+msgstr "Изберете вашата операционна система"
+
+msgctxt "#30137"
+msgid "Windows"
+msgstr "Windows"
+
+msgctxt "#30138"
+msgid "Linux"
+msgstr "Linux"
+
+msgctxt "#30139"
+msgid "OSX"
+msgstr "OSX"
+
+msgctxt "#30140"
+msgid "Retroarch App Location"
+msgstr "Местоположение на приложението Retroarch"
+
+msgctxt "#30141"
+msgid "Select the path to the retroarch executable"
+msgstr "Изберете пътя до изпълнимия файл retroarch"
+
+msgctxt "#30142"
+msgid "Retroarch CFG Location"
+msgstr "Retroarch CFG Местоположение"
+
+msgctxt "#30143"
+msgid "Select the path to the retroarch config file"
+msgstr "Изберете пътя до конфигурационния файл на retroarch"
+
+msgctxt "#30144"
+msgid "Android"
+msgstr "Android"
+
+msgctxt "#30145"
+msgid "Android aarch64"
+msgstr "Android aarch64"
+
+msgctxt "#30146"
+msgid "Android ra32"
+msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Метод за избор на стартера на игри"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Изберете какво ще направи Kodi, когато изберете стартер на игра (само за Windows, Linux и OSX)"
+
+msgctxt "#30149"
+msgid "Keep Kodi in the background"
+msgstr "Дръжте Kodi на заден план"
+
+msgctxt "#30150"
+msgid "Close Kodi"
+msgstr "Затворете Kodi"
+
+msgctxt "#30151"
+msgid "Pause Kodi"
+msgstr "Пауза на Kodi"
+
+msgctxt "#30152"
+msgid "Retroarch core picker"
+msgstr "Retroarch core picker"
+
+msgctxt "#30153"
+msgid "List by System and Core Name"
+msgstr "Списък по име на система и ядро"
+
+msgctxt "#30154"
+msgid "List by Core Name"
+msgstr "Списък по основно име"
+
+msgctxt "#30155"
+msgid "List by Emulated Systems"
+msgstr "Списък по емулирани системи"
+
+msgctxt "#30156"
+msgid "Select Core"
+msgstr "Изберете Ядро"
+
+msgctxt "#30157"
+msgid "Select Emulated System"
+msgstr "Изберете Емулирана система"
+
+msgctxt "#30158"
+msgid "Select Emulator"
+msgstr "Изберете емулатор"
+
+msgctxt "#30159"
+msgid "Credentials were not found[CR]Please enter them in addon settings"
+msgstr "Идентификационните данни не бяха намерени[CR]Моля, въведете ги в настройките на добавката"
+
+msgctxt "#30160"
+msgid "Game List Download Path"
+msgstr "Път за изтегляне на списък с игри"
+
+msgctxt "#30161"
+msgid "Zero (Current Game Only)"
+msgstr "Нула (само текуща игра)"
+
+msgctxt "#30162"
+msgid "25 MB"
+msgstr "25 MB"
+
+msgctxt "#30163"
+msgid "50 MB"
+msgstr "50 MB"
+
+msgctxt "#30164"
+msgid "100 MB"
+msgstr "100 MB"
+
+msgctxt "#30165"
+msgid "200 MB"
+msgstr "200 MB"
+
+msgctxt "#30166"
+msgid "500 MB"
+msgstr "500 MB"
+
+msgctxt "#30167"
+msgid "1 GB"
+msgstr "1 GB"
+
+msgctxt "#30168"
+msgid "2 GB"
+msgstr "2 GB"
+
+msgctxt "#30169"
+msgid "5 GB"
+msgstr "5 GB"
+
+msgctxt "#30170"
+msgid "10 GB"
+msgstr "10 GB"
+
+msgctxt "#30171"
+msgid "20 GB"
+msgstr "20 GB"
+
+msgctxt "#30172"
+msgid "Enable Netplay"
+msgstr "Активирайте Netplay"
+
+msgctxt "#30173"
+msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
+msgstr "Активиране на ретроарк netplay (само за Windows, Linux, OSX), използвайте контекстното меню за стартиране с netplay"
+
+msgctxt "#30174"
+msgid "Show Netplay Lobby"
+msgstr "Показване на лобито на Netplay"
+
+msgctxt "#30175"
+msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
+msgstr "Когато е активирано, лобито на netplay ще се показва на началната страница на IAGL"
+
+msgctxt "#30176"
+msgid "Filter game lobby to IAGL auto launch games"
+msgstr "Филтрирайте лобито на играта към игри с автоматично стартиране на IAGL"
+
+msgctxt "#30177"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "Ако е активирано, лобито на netplay ще показва само автоматично стартиращи игри"
+
+msgctxt "#30178"
+msgid "Netplay Port"
+msgstr "Netplay порт"
+
+msgctxt "#30179"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "Дефинирайте IP порта на netplay за свързване (оставете празно по подразбиране)"
+
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "IP на локалния хост по подразбиране"
+
+msgctxt "#30181"
+msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
+msgstr "Дефинирайте име на хост netplay по подразбиране / IP (полезно за netplay в локална мрежа, оставете празно за подразбиране)"
+
+msgctxt "#30182"
+msgid "Check frames"
+msgstr "Проверете рамките"
+
+msgctxt "#30183"
+msgid "Define number of netplay sync frames (leave blank for default)"
+msgstr "Дефиниране на броя рамки за синхронизиране на netplay (оставете празно по подразбиране)"
+
+msgctxt "#30184"
+msgid "Announce Netplay on Discord"
+msgstr "Обявете Netplay на Discord"
+
+msgctxt "#30185"
+msgid "Announces netplay start on discord for IAGL players"
+msgstr "Обявява стартиране на netplay на discord за играчи на IAGL"
+
+msgctxt "#30186"
+msgid "Discord Player Name"
+msgstr "Име на играча на Discord"
+
+msgctxt "#30187"
+msgid "Enter your player name to be announced on Discord"
+msgstr "Въведете името на вашия играч, за да бъде обявено в Discord"
+
+msgctxt "#30188"
+msgid "Discord User Account ID"
+msgstr "ID на потребителския акаунт в Discord"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Предоставете вашия Discord ID (Потребителски настройки>Моят акаунт>Копиране на ID)"
+
+msgctxt "#30190"
+msgid "Display report when wizard is completed"
+msgstr "Показване на отчет, когато съветникът приключи"
+
+msgctxt "#30191"
+msgid "Execute setup wizard"
+msgstr "Изпълнете съветника за настройка"
+
+msgctxt "#30192"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Стартирайте съветника, за да промените бързо настройките за вашите списъци с игри.  Това може да се повтори по всяко време"
+
+msgctxt "#30193"
+msgid "Android Advance Settings"
+msgstr "Предварителни настройки на Android"
+
+msgctxt "#30194"
+msgid "Use StartAndroidActivity"
+msgstr "Използвайте StartAndroidActivity"
+
+msgctxt "#30195"
+msgid "Leave as default if unsure"
+msgstr "Оставете по подразбиране, ако не сте сигурни"
+
+msgctxt "#30196"
+msgid "Suspend Kodi Input and Audio when using External Launcher"
+msgstr "Спрете въвеждането и аудиото на Kodi, когато използвате външен стартер"
+
+msgctxt "#30197"
+msgid "Stop Kodi media playing before External Launch"
+msgstr "Спрете възпроизвеждането на мултимедия на Kodi преди външно стартиране"
+
+msgctxt "#30198"
+msgid "Kodi is busy / waiting for return to Kodi after External Launch"
+msgstr "Kodi е зает / чака връщане към Kodi след външно стартиране"
+
+msgctxt "#30199"
+msgid "Download Advanced Settings"
+msgstr "Изтеглете Разширени настройки"
+
+msgctxt "#30200"
+msgid "Download Threads"
+msgstr "Изтегляне на теми"
+
+msgctxt "#30201"
+msgid "Alternate default download folder"
+msgstr "Алтернативна папка за изтегляне по подразбиране"
+
+msgctxt "#30202"
+msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
+msgstr "Когато е избрано, всички изтегляния ще отидат в алтернативна папка.  [B]Забележка: Тази папка няма да бъде изтрита или наблюдавана за размер[/B]"
+
+msgctxt "#30203"
+msgid "Organize default download folder using system folders"
+msgstr "Организирайте папката за изтегляне по подразбиране, като използвате системни папки"
+
+msgctxt "#30204"
+msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
+msgstr "Когато е разрешено, временната папка ще бъде организирана по система (понякога е необходимо за отмяна на конфигурацията)"
+
+msgctxt "#30205"
+msgid "Copy Kodi Network Source downloads to Local Filesystem"
+msgstr "Копирайте изтеглянията на Kodi Network Source в локална файлова система"
+
+msgctxt "#30206"
+msgid "Reset Options"
+msgstr "Опции за нулиране"
+
+msgctxt "#30207"
+msgid "Reset IAGL database to default settings"
+msgstr "Нулирайте базата данни IAGL до настройките по подразбиране"
+
+msgctxt "#30208"
+msgid "When selected, the database will be reset to default settings"
+msgstr "Когато бъде избрана, базата данни ще бъде върната към настройките по подразбиране"
+
+msgctxt "#30209"
+msgid "Unhide game lists"
+msgstr "Показване на списъци с игри"
+
+msgctxt "#30210"
+msgid "When selected, previously hidden game lists can be unhidden"
+msgstr "Когато е избрано, скрити преди това списъци с игри могат да бъдат показани"
+
+msgctxt "#30211"
+msgid "Clear Cache"
+msgstr "Изчистване на кеша"
+
+msgctxt "#30212"
+msgid "When selected, all data in the cache folder including games will be purged"
+msgstr "Когато е избрано, всички данни в папката на кеша, включително игрите, ще бъдат изчистени"
+
+msgctxt "#30213"
+msgid "Select"
+msgstr "Изберете"
+
+msgctxt "#30214"
+msgid "Selected"
+msgstr "Избрано"
+
+msgctxt "#30215"
+msgid "Game lists selected"
+msgstr "Избрани списъци с игри"
+
+msgctxt "#30216"
+msgid "Genres selected"
+msgstr "Избрани жанрове"
+
+msgctxt "#30217"
+msgid "Players selected"
+msgstr "Избрани играчи"
+
+msgctxt "#30218"
+msgid "Studios selected"
+msgstr "Избрани ателиета"
+
+msgctxt "#30219"
+msgid "Tags selected"
+msgstr "Избрани етикети"
+
+msgctxt "#30220"
+msgid "Playlists selected"
+msgstr "Избрани плейлисти"
+
+msgctxt "#30221"
+msgid "Regions selected"
+msgstr "Избрани региони"
+
+msgctxt "#30222"
+msgid "Languages selected"
+msgstr "Избрани езици"
+
+msgctxt "#30223"
+msgid "Editions selected"
+msgstr "Избрани издания"
+
+msgctxt "#30224"
+msgid "Codes selected"
+msgstr "Избрани кодове"
+
+msgctxt "#30225"
+msgid "Ratings selected"
+msgstr "Избрани оценки"
+
+msgctxt "#30226"
+msgid "Enter title search query"
+msgstr "Въведете заявка за търсене на заглавие"
+
+msgctxt "#30227"
+msgid "Empty search"
+msgstr "Празно търсене"
+
+msgctxt "#30228"
+msgid "Search criteria is empty.[CR]Update criteria and try again."
+msgstr "Критериите за търсене са празни.[CR]Актуализирайте критериите и опитайте отново."
+
+msgctxt "#30229"
+msgid "Reset criteria"
+msgstr "Нулиране на критериите"
+
+msgctxt "#30230"
+msgid "Enter Link Name"
+msgstr "Въведете име на връзката"
+
+msgctxt "#30231"
+msgid "Define the start page for IAGL"
+msgstr "Дефинирайте началната страница за IAGL"
+
+msgctxt "#30232"
+msgid "Kodi launch options"
+msgstr "Опции за стартиране на Kodi"
+
+msgctxt "#30233"
+msgid "Completed"
+msgstr "Завършено"
+
+msgctxt "#30234"
+msgid "Create new group"
+msgstr "Създайте нова група"
+
+msgctxt "#30235"
+msgid "Select favorite group"
+msgstr "Изберете любима група"
+
+msgctxt "#30236"
+msgid "Group by Favorites Group"
+msgstr "Групиране по група любими"
+
+msgctxt "#30237"
+msgid "Remove IAGL Favorite"
+msgstr "Премахнете IAGL Favorite"
+
+msgctxt "#30238"
+msgid "Are you sure you want to delete this Favorite?"
+msgstr "Сигурни ли сте, че искате да изтриете този любим?"
+
+msgctxt "#30239"
+msgid "Favorite deleted"
+msgstr "Любимият е изтрит"
+
+msgctxt "#30240"
+msgid "Favorites display"
+msgstr "Показване на любими"
+
+msgctxt "#30241"
+msgid "Define the start page for IAGL Favorites"
+msgstr "Дефинирайте началната страница за IAGL Favorites"
+
+msgctxt "#30242"
+msgid "By Favorites Group"
+msgstr "По група любими"
+
+msgctxt "#30243"
+msgid "Reset *all* criteria"
+msgstr "Нулирайте *всички* критерии"
+
+msgctxt "#30244"
+msgid "Run IAGL setup wizard?"
+msgstr "Изпълнение на съветника за настройка на IAGL?"
+
+msgctxt "#30245"
+msgid "Wizard"
+msgstr "Магьосник"
+
+msgctxt "#30246"
+msgid "Update game list Launcher"
+msgstr "Актуализирайте програмата за стартиране на списък с игри"
+
+msgctxt "#30247"
+msgid "Update game list Launch Command"
+msgstr "Актуализиране на списъка с игри. Команда за стартиране"
+
+msgctxt "#30248"
+msgid "Update game list Download Path"
+msgstr "Актуализиране на списъка с игри Път за изтегляне"
+
+msgctxt "#30249"
+msgid "Hide game list"
+msgstr "Скриване на списъка с игри"
+
+msgctxt "#30250"
+msgid "Update game list post download process"
+msgstr "Актуализирайте списъка с игри след процеса на изтегляне"
+
+msgctxt "#30251"
+msgid "Are you sure you want to hide game list"
+msgstr "Сигурни ли сте, че искате да скриете списъка с игри?"
+
+msgctxt "#30252"
+msgid "Game list is now hidden"
+msgstr "Списъкът с игри вече е скрит"
+
+msgctxt "#30253"
+msgid "No results"
+msgstr "Няма резултати"
+
+msgctxt "#30254"
+msgid "No hidden game lists found"
+msgstr "Няма намерени скрити списъци с игри"
+
+msgctxt "#30255"
+msgid "Game lists unhidden"
+msgstr "Списъците с игри са показани"
+
+msgctxt "#30256"
+msgid "Confirm reset"
+msgstr "Потвърдете нулирането"
+
+msgctxt "#30257"
+msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
+msgstr "Сигурни ли сте, че искате да нулирате базата данни?[CR]Цялата потребителска информация ще бъде загубена![CR]Това не може да бъде отменено!"
+
+msgctxt "#30258"
+msgid "Database has been reset"
+msgstr "Базата данни е нулирана"
+
+msgctxt "#30259"
+msgid "Update Launcher"
+msgstr "Стартов панел за актуализиране"
+
+msgctxt "#30260"
+msgid "Update launcher from[CR]Kodi to[CR]External?"
+msgstr "Актуализиране на стартовия панел от [CR]Kodi на [CR]External?"
+
+msgctxt "#30261"
+msgid "Update launcher from[CR]External to[CR]Kodi?"
+msgstr "Актуализиране на стартовия панел от [CR]External на [CR]Kodi?"
+
+msgctxt "#30262"
+msgid "Launcher updated to external"
+msgstr "Стартовият панел е актуализиран до външен"
+
+msgctxt "#30263"
+msgid "Launcher updated to retroplayer"
+msgstr "Стартовият панел е актуализиран до retroplayer"
+
+msgctxt "#30264"
+msgid "Select game addon"
+msgstr "Изберете добавка за игра"
+
+msgctxt "#30265"
+msgid "Are you sure you want to reset the game addon launch command?"
+msgstr "Сигурни ли сте, че искате да нулирате командата за стартиране на добавката на играта?"
+
+msgctxt "#30266"
+msgid "Download game to…"
+msgstr "Изтеглете играта на..."
+
+msgctxt "#30267"
+msgid "Select download folder"
+msgstr "Изберете папка за изтегляне"
+
+msgctxt "#30268"
+msgid "Archive.org login success!"
+msgstr "Успешно влизане в Archive.org!"
+
+msgctxt "#30269"
+msgid "Archive.org login failed.[CR]Check credentials or log for more details"
+msgstr "Неуспешно влизане в Archive.org.[CR]Проверете идентификационните данни или влезте за повече подробности"
+
+msgctxt "#30270"
+msgid "Error"
+msgstr "Грешка"
+
+msgctxt "#30271"
+msgid "Initializing download for[CR]"
+msgstr "Инициализиране на изтеглянето за [CR]"
+
+msgctxt "#30272"
+msgid "Check logs"
+msgstr "Проверете регистрационните файлове"
+
+msgctxt "#30273"
+msgid "Checking login for[CR]"
+msgstr "Проверка на входа за [CR]"
+
+msgctxt "#30274"
+msgid "Requesting file info for[CR]"
+msgstr "Искане на информация за файла за [CR]"
+
+msgctxt "#30275"
+msgid "Select from Retroarch Cores"
+msgstr "Изберете от Retroarch Cores"
+
+msgctxt "#30276"
+msgid "Select from Extra Emulators"
+msgstr "Изберете от допълнителни емулатори"
+
+msgctxt "#30277"
+msgid "Manually Enter Launch Command"
+msgstr "Въведете ръчно команда за стартиране"
+
+msgctxt "#30278"
+msgid "Select External Command Type"
+msgstr "Изберете Тип външна команда"
+
+msgctxt "#30279"
+msgid "Extra Emulators"
+msgstr "Допълнителни емулатори"
+
+msgctxt "#30280"
+msgid "Dolphin"
+msgstr "Делфин"
+
+msgctxt "#30281"
+msgid "Select the path to the Dolphin application (optional)"
+msgstr "Изберете пътя до приложението Dolphin (по избор)"
+
+msgctxt "#30282"
+msgid "MAME"
+msgstr "МАМЕ"
+
+msgctxt "#30283"
+msgid "Select the path to the MAME application (optional)"
+msgstr "Изберете пътя до приложението MAME (по избор)"
+
+msgctxt "#30284"
+msgid "Project 64"
+msgstr "Проект 64"
+
+msgctxt "#30285"
+msgid "Select the path to the Project 64 application (optional)"
+msgstr "Изберете пътя до приложението Project 64 (по избор)"
+
+msgctxt "#30286"
+msgid "ePSXe"
+msgstr "ePSXe"
+
+msgctxt "#30287"
+msgid "Select the path to the ePSXe application (optional)"
+msgstr "Изберете пътя до приложението ePSXe (по избор)"
+
+msgctxt "#30288"
+msgid "Demul"
+msgstr "Демул"
+
+msgctxt "#30289"
+msgid "Select the path to the Demul application (optional)"
+msgstr "Изберете пътя до приложението Demul (по избор)"
+
+msgctxt "#30290"
+msgid "FS-UAE"
+msgstr "FS-ОАЕ"
+
+msgctxt "#30291"
+msgid "Select the path to the FS-UAE application (optional)"
+msgstr "Изберете пътя до приложението FS-UAE (по избор)"
+
+msgctxt "#30292"
+msgid "Are you sure you want to set external launch command?"
+msgstr "Сигурни ли сте, че искате да зададете външна команда за стартиране?"
+
+msgctxt "#30293"
+msgid "External launch command updated"
+msgstr "Актуализирана външна команда за стартиране"
+
+msgctxt "#30294"
+msgid "Android users must verify the core is installed in Retroarch"
+msgstr "Потребителите на Android трябва да потвърдят, че ядрото е инсталирано в Retroarch"
+
+msgctxt "#30295"
+msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
+msgstr "Настройките за стартиране в момента са празни[CR]Моля, актуализирайте външните настройки за стартиране на добавката."
+
+msgctxt "#30296"
+msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
+msgstr "Настройките за стартиране в момента са празни[CR]Моля, актуализирайте настройките за стартиране на добавената операционна система."
+
+msgctxt "#30297"
+msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
+msgstr "Не бяха намерени допълнителни емулатори[CR]Моля, актуализирайте настройките на допълнителния емулатор на добавката"
+
+msgctxt "#30298"
+msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
+msgstr "Въведете команда за стартиране[CR]Вижте незадължителни ключови думи в wiki на IAGL"
+
+msgctxt "#30299"
+msgid "Reset Launch Command"
+msgstr "Нулиране на командата за стартиране"
+
+msgctxt "#30300"
+msgid "Are you sure you want to reset the external launch command?"
+msgstr "Сигурни ли сте, че искате да нулирате външната команда за стартиране?"
+
+msgctxt "#30301"
+msgid "External launch command was reset"
+msgstr "Външната команда за стартиране беше нулирана"
+
+msgctxt "#30302"
+msgid "Enter a value for"
+msgstr "Въведете стойност за"
+
+msgctxt "#30303"
+msgid "View game list settings"
+msgstr "Вижте настройките на списъка с игри"
+
+msgctxt "#30304"
+msgid "Game List"
+msgstr "Списък с игри"
+
+msgctxt "#30305"
+msgid "Game List System"
+msgstr "Система за списък с игри"
+
+msgctxt "#30306"
+msgid "Total 1G1R Games in List"
+msgstr "Общо 1G1R игри в списъка"
+
+msgctxt "#30307"
+msgid "Total Games in List"
+msgstr "Общо игри в списъка"
+
+msgctxt "#30308"
+msgid "Total Favorited Games in List"
+msgstr "Общо любими игри в списъка"
+
+msgctxt "#30309"
+msgid "Default External Launch Command"
+msgstr "Външна команда за стартиране по подразбиране"
+
+msgctxt "#30310"
+msgid "Default Retroplayer Game Addon"
+msgstr "Добавка за игра Retroplayer по подразбиране"
+
+msgctxt "#30311"
+msgid "Default Game Post Process"
+msgstr "Постпроцес на играта по подразбиране"
+
+msgctxt "#30312"
+msgid "User Defined Download Path"
+msgstr "Дефиниран от потребителя път за изтегляне"
+
+msgctxt "#30313"
+msgid "User External Launch Command"
+msgstr "Потребителска външна команда за стартиране"
+
+msgctxt "#30314"
+msgid "User Defined Retroplayer Game Addon"
+msgstr "Дефинирана от потребителя добавка за игра Retroplayer"
+
+msgctxt "#30315"
+msgid "User Defined Post Process"
+msgstr "Дефиниран от потребителя постпроцес"
+
+msgctxt "#30316"
+msgid "Game List Settings"
+msgstr "Настройки на списъка с игри"
+
+msgctxt "#30317"
+msgid "None (will use addon default)"
+msgstr "Няма (ще използва добавката по подразбиране)"
+
+msgctxt "#30318"
+msgid "Games List Launcher"
+msgstr "Стартиране на списък с игри"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Външна команда за стартиране"
+
+msgctxt "#30320"
+msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
+msgstr "Външна команда за стартиране [CR]*Няма открита команда за стартиране на потребител / Използва се по подразбиране*"
+
+msgctxt "#30321"
+msgid "Kodi Retroplayer"
+msgstr "Kodi Retroplayer"
+
+msgctxt "#30322"
+msgid "Are you sure you want to update game list download path?"
+msgstr "Сигурни ли сте, че искате да актуализирате пътя за изтегляне на списъка с игри?"
+
+msgctxt "#30323"
+msgid "Download path updated"
+msgstr "Пътят за изтегляне е актуализиран"
+
+msgctxt "#30324"
+msgid "Are you sure you want to reset game list download path?"
+msgstr "Сигурни ли сте, че искате да нулирате пътя за изтегляне на списъка с игри?"
+
+msgctxt "#30325"
+msgid "Download path reset"
+msgstr "Нулиране на пътя за изтегляне"
+
+msgctxt "#30326"
+msgid "Change download path"
+msgstr "Променете пътя за изтегляне"
+
+msgctxt "#30327"
+msgid "Reset download path"
+msgstr "Нулирайте пътя за изтегляне"
+
+msgctxt "#30328"
+msgid "Reset game list settings"
+msgstr "Нулирайте настройките на списъка с игри"
+
+msgctxt "#30329"
+msgid "Are you sure you want to reset all game list settings to default?"
+msgstr "Сигурни ли сте, че искате да възстановите всички настройки на списъка с игри по подразбиране?"
+
+msgctxt "#30330"
+msgid "Game list settings were reset to default"
+msgstr "Настройките на списъка с игри бяха нулирани по подразбиране"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Съответстващ локален файл"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Проверка на идентификационните данни"
+
+msgctxt "#30333"
+msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "Следните променливи ще бъдат заменени по време на стартиране:[CR]● XXROM_PATHXX: Пътят до файла, който ще бъде стартиран[CR]● XXROM_NAMEXX: Името на файла, който ще бъде стартиран (без път)[CR]● XXROM_STEMXX: име на файла, който ще бъде стартиран (без път без разширение)[CR]● XXNETPLAY_COMMANDXX: Всяко добавяне на команда, необходимо за netplay, вижте настройките на добавката за опции[CR]Вижте wiki за повече информация..."
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Архивният файл не можа да бъде обработен[CR]Проверете регистрационните файлове за повече подробности"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Изберете действие преди стартиране"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Оставете Kodi да работи във фонов режим (по подразбиране)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Затворете Kodi преди стартиране, отворете отново Kodi след излизане от емулатора"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Спрете Kodi преди стартиране, събудете Kodi след излизане от емулатора"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Вижте IAGL db статистика"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Изброява текущата статистика за IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "db статистики"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Вижте параметрите за стартиране"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Настройки на играта"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Параметри за стартиране на играта"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Ако няма потребителска команда за стартиране"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Изберете какво ще прави Kodi, когато не е зададена команда за стартиране (добавка за retroplayer или външен емулатор)."
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Опит за стартиране по подразбиране"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Стоп / Не стартирайте"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Няма зададена команда"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Команда за стартиране не е зададена за този списък, задайте ли я сега?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Не може да бъде намерена команда за стартиране по подразбиране за този списък"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Ядрото по подразбиране не е намерено.  Моля, инсталирайте {} или актуализирайте стартовия панел"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Нулиране на командата за стартиране на добавка за игра"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Няма намерени добавки за игри"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Актуализирана команда за стартиране на добавка за игра"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Използвайте алтернативна папка за изтегляне по подразбиране"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Показвайте само опции, които държат Kodi на заден план"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Показвайте само опции, които затварят Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Показвайте само опции, които поставят на пауза Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Retroarch CFG Местоположение като низ"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Като алтернатива въведете пътя до файла retroarch.cfg точно както се показва в Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Директория Retroarch Cores като низ"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Друга възможност е да въведете пътя до директорията Cores точно както се показва в конфигурацията на директория Retroarch"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Актуализиране на стартовия панел за {}?[CR][B]Това ще промени настройките за всички игри в този списък.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Актуализиране на командата за стартиране за {}?[CR][B]Това ще промени настройките за всички игри в този списък.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Актуализиране на пътя за стартиране на изтегляне за {}?[CR][B]Това ще промени настройките за всички игри в този списък.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Актуализиране на командата за стартиране"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Актуализиране на стартиране на пътя за изтегляне"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Нулирайте настройките за {}?[CR][B]Това ще промени настройките за всички игри в този списък.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "поддръжка"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Дарете на Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Намерена е нова база данни IAGL[CR]Искате ли да актуализирате?[CR]Настройките ще бъдат копирани в новата база данни, ако е възможно"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Нов db"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Базата данни беше актуализирана[CR]Потребителските настройки бяха прехвърлени"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Базата данни беше актуализирана[CR]Някои потребителски настройки не успяха да се прехвърлят[CR]Вижте регистрационния файл за повече подробности"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Възникна грешка при актуализирането на базата данни[CR]Вижте регистрационния файл за повече подробности"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Попитай ме пак по-късно"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Не актуализирайте този път[CR](Не ме питайте отново до следващата актуализация)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Добре дошли в съветника за настройка на IAGL [CR] Нека преминем през всички настройки, за да можете да играете!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Повечето игри изискват акаунт в archive.org[CR]Регистрирайте се на https://archive.org/account/signup[CR]Искате ли да използвате акаунта си с IAGL?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Настройката е завършена за използване на добавки за игри Kodi![CR]Готови ли сте да играете?[CR]Изберете [B]Не[/B], за да настроите стартирането на външна игра."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Задайте всички списъци с игри да се стартират външно"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Задайте само някои списъци с игри да бъдат стартирани външно"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Възстановете всички стартиращи списъци с игри по подразбиране"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} списъци с игри бяха актуализирани за външно стартиране"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Стандартните настройки са предварително зададени за всяка външна команда за стартиране[CR]Преди стартиране прегледайте параметрите за стартиране на играта, ако е необходимо[CR]Вижте wiki за повече подробности."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Приложението Retroarch е зададено на: [CR] {}[CR] Променете в настройките на добавката, ако е необходимо"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Конфигурацията Retroarch е зададена на: [CR] {}[CR] Променете в настройките на добавката, ако е необходимо"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Съветникът е завършен[CR]Да играем!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Задайте всички списъци с игри да се стартират с Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Бързо настройте всички списъци с игри за външно стартиране"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Бързо настройте всички списъци с игри на Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Потвърдете"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Сигурни ли сте, че искате да настроите всички списъци на външно стартиране"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Сигурни ли сте, че искате да настроите всички списъци на Kodi retroplayer"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Разрешенията за Android изискват да въведете ръчно конфигурационния път на Retroarch[CR]Вижте wiki за повече помощ"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Разрешенията за Android изискват ръчно въвеждане на основния път на Retroarch[CR]Вижте wiki за повече помощ"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Архивирайте текущата база данни"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Възстановете базата данни от резервно копие"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Архивирайте текущата база данни IAGL и всички потребителски настройки"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Възстановете текущата база данни на добавки от резервно копие"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Изберете резервен път"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Изберете резервна база данни"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Архивирането е завършено"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Възстановяването е завършено"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} съвпадащи идентификационни номера на игри не бяха намерени в новата база данни[CR]Избор на следващо действие"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Актуализирайте базата данни, опитайте се да съпоставите игрите по заглавие и списък с игри"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Актуализирайте базата данни, премахнете идентификаторите на игри, които не са намерени"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Възстановете обратно към старата база данни"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Базата данни е възстановена обратно към старата база данни"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Моля изчакайте"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Ръчно задайте Retroarch директории"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL по подразбиране ще открие директории от RA config, можете ръчно да отмените тази функция"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch Core Directory"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Информационна директория на Retroach"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Добавете linux приложение, за да стартирате команда за стартиране"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak се използва за специфични системи linux/elec.  Активирайте само ако системата ви го изисква."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Добавяне на systemd-run към командите на Retroarch"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Добавяне на systemd-run към всички команди"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Добавете изпълнение на flatpak към командите Retroarch"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Добавете изпълнение на flatpak към всички команди"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Разрешенията за Android изискват споделена директория за съхранение[CR]Въведете споделено местоположение, до което могат да имат достъп и двете приложения"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Разархивирайте файлове"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Без обработка"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Разархивирайте файлове, пропуснете BIOS файлове"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Разархивирайте файловете в папка"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Разархивирайте файлове, преместете CHD в папка"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Преместване на файлове в папка: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Преместване на файлове в папка: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Преместване на файлове в папка: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Преместване на файлове в папка: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Преместване на файлове в папка: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Преместване на файлове в папка: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Преместване на файлове в папка: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Преместване на файлове в папка: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Преместване на файлове в папка: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Преместване на файлове в папка: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Преместване на файлове в папка: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Преместване на файлове в папка: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Преместване на файлове в папка: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Преместване на файлове в папка: спектър"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Преместване на файлове в папка: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Сигурни ли сте, че искате да актуализирате списъка с игри след процеса?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Процесът на публикуване е актуализиран"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Актуализиране на последващия процес за {}?[CR][B]Това ще промени настройките за всички игри в този списък.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Изтеглянето завърши.  Файлове за последваща обработка?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Файловете на играта са обработени"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Не е налично (само за Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Тип потребителско име на Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Изберете интеграция за име на играч на netplay"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Използвайте Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord позволява автоматизирани съвпадения в мрежата (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Въведете ръчно име на играч"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Имената на играчите ще бъдат публикувани в Retroarch Lobby"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Име на играча"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Текущ потребител на Discord"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Потребителят на Discord е зададен на [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Преглеждайте игрови сесии, към които можете да се присъедините онлайн с помощта на Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Не може да се намери потребител на Discord с ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Опции за лоби филтър"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Показвайте само стаи, в които може да се влезе"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Показвайте само стаи, които използват libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Показване на стаи, които имат парола"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Покажете стаи, които имат парола за зрители"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Покажете стаи, използвайки MITM сървъри"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Показвайте само стаи, създадени в рамките на времевата рамка"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 минути"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 минути"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Всякаква времева рамка"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Филтрирайте стаите във фоайето според времето на създаване"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Показвайте само стаи, които използват IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Не може да се намери съответстваща игра с име като [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Не е намерено"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Изберете подходяща игра"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Действие за стартиране на Netplay"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Присъединете се от ретроархивното лоби"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Присъединете се от localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Изберете действието по подразбиране, когато се присъединявате към netplay игра"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Стартирайте като netplay хост"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Преименувайте IAGL Favorite"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Преименуването е завършено"

@@ -1,0 +1,1936 @@
+# Kodi Media Center language file
+# Addon Name: /Internet Archive Game Launcher
+# Addon id: pltugin.program.iagl
+# Addon Provider: ZachMorris
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/zach-morris/plugin.program.iagl/issues\n"
+"Language: vi_vn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "#30001"
+msgid "Internet Archive Game Launcher"
+msgstr "Trình khởi chạy trò chơi Internet Archive"
+
+msgctxt "#30002"
+msgid "Browse all Lists"
+msgstr "Duyệt tất cả danh sách"
+
+msgctxt "#30003"
+msgid "Browse lists by Category"
+msgstr "Duyệt danh sách theo Thể loại"
+
+msgctxt "#30004"
+msgid "Browse games by Playlist"
+msgstr "Duyệt trò chơi theo Danh sách phát"
+
+msgctxt "#30005"
+msgid "Favorites"
+msgstr "Yêu thích"
+
+msgctxt "#30006"
+msgid "Play History"
+msgstr "Lịch sử chơi"
+
+msgctxt "#30007"
+msgid "Search"
+msgstr "Tìm kiếm"
+
+msgctxt "#30008"
+msgid "Random Play"
+msgstr "Chơi ngẫu nhiên"
+
+msgctxt "#30009"
+msgid "Next"
+msgstr "Kế tiếp"
+
+msgctxt "#30010"
+msgid "Previous"
+msgstr "Trước"
+
+msgctxt "#30011"
+msgid "One Big List"
+msgstr "Một danh sách lớn"
+
+msgctxt "#30012"
+msgid "Alphabetical"
+msgstr "theo thứ tự chữ cái"
+
+msgctxt "#30013"
+msgid "Group by Genre"
+msgstr "Nhóm theo thể loại"
+
+msgctxt "#30014"
+msgid "Group by Year"
+msgstr "Nhóm theo năm"
+
+msgctxt "#30015"
+msgid "Group by Players"
+msgstr "Nhóm theo người chơi"
+
+msgctxt "#30016"
+msgid "Group by Studio"
+msgstr "Nhóm theo Studio"
+
+msgctxt "#30017"
+msgid "Group by Tag"
+msgstr "Nhóm theo thẻ"
+
+msgctxt "#30018"
+msgid "Group by Playlist"
+msgstr "Nhóm theo danh sách phát"
+
+msgctxt "#30019"
+msgid "Group by Region"
+msgstr "Nhóm theo khu vực"
+
+msgctxt "#30020"
+msgid "Group by Language"
+msgstr "Nhóm theo ngôn ngữ"
+
+msgctxt "#30021"
+msgid "Group by Edition"
+msgstr "Nhóm theo phiên bản"
+
+msgctxt "#30022"
+msgid "Group by Code"
+msgstr "Nhóm theo Mã"
+
+msgctxt "#30023"
+msgid "Group by Rating"
+msgstr "Nhóm theo Xếp hạng"
+
+msgctxt "#30024"
+msgid "Select Game Lists"
+msgstr "Chọn danh sách trò chơi"
+
+msgctxt "#30025"
+msgid "Search Game Titles"
+msgstr "Tìm kiếm tựa game"
+
+msgctxt "#30026"
+msgid "Filter by Genre"
+msgstr "Lọc theo thể loại"
+
+msgctxt "#30027"
+msgid "Filter by Players"
+msgstr "Lọc theo Người chơi"
+
+msgctxt "#30028"
+msgid "Filter by Studio"
+msgstr "Lọc theo Studio"
+
+msgctxt "#30029"
+msgid "Filter by Tag"
+msgstr "Lọc theo thẻ"
+
+msgctxt "#30030"
+msgid "Filter by Playlist"
+msgstr "Lọc theo danh sách phát"
+
+msgctxt "#30031"
+msgid "Filter by Region"
+msgstr "Lọc theo khu vực"
+
+msgctxt "#30032"
+msgid "Filter by Language"
+msgstr "Lọc theo ngôn ngữ"
+
+msgctxt "#30033"
+msgid "Filter by Edition"
+msgstr "Lọc theo Phiên bản"
+
+msgctxt "#30034"
+msgid "Filter by Code"
+msgstr "Lọc theo Mã"
+
+msgctxt "#30035"
+msgid "Filter by Rating"
+msgstr "Lọc theo Xếp hạng"
+
+msgctxt "#30036"
+msgid "[COLOR FF12A0C7]Execute Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Thực hiện tìm kiếm[/COLOR]"
+
+msgctxt "#30037"
+msgid "[COLOR FF12A0C7]Create Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Tạo liên kết tìm kiếm[/COLOR]"
+
+msgctxt "#30038"
+msgid "Choose Number of Results"
+msgstr "Chọn số lượng kết quả"
+
+msgctxt "#30039"
+msgid "[COLOR FF12A0C7]Execute Random Search[/COLOR]"
+msgstr "[COLOR FF12A0C7]Thực hiện tìm kiếm ngẫu nhiên[/COLOR]"
+
+msgctxt "#30040"
+msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
+msgstr "[COLOR FF12A0C7]Tạo liên kết tìm kiếm ngẫu nhiên[/COLOR]"
+
+msgctxt "#30041"
+msgid "General"
+msgstr "Tổng quan"
+
+msgctxt "#30042"
+msgid "Launching"
+msgstr "Đang khởi chạy"
+
+msgctxt "#30043"
+msgid "Downloading"
+msgstr "Đang tải xuống"
+
+msgctxt "#30044"
+msgid "Views and Navigation"
+msgstr "Lượt xem và Điều hướng"
+
+msgctxt "#30045"
+msgid "Netplay"
+msgstr "Chơi mạng"
+
+msgctxt "#30046"
+msgid "Setup Wizard"
+msgstr "Trình hướng dẫn thiết lập"
+
+msgctxt "#30047"
+msgid "Advanced"
+msgstr "Trình độ cao"
+
+msgctxt "#30048"
+msgid "Play History"
+msgstr "Lịch sử chơi"
+
+msgctxt "#30049"
+msgid "Define how many games to save in last played history"
+msgstr "Xác định số lượng trò chơi cần lưu trong lịch sử chơi gần đây nhất"
+
+msgctxt "#30050"
+msgid "Default action on selecting game"
+msgstr "Hành động mặc định khi chọn trò chơi"
+
+msgctxt "#30051"
+msgid "Define action to take when a game is selected"
+msgstr "Xác định hành động cần thực hiện khi trò chơi được chọn"
+
+msgctxt "#30052"
+msgid "If game already exists locally"
+msgstr "Nếu trò chơi đã tồn tại cục bộ"
+
+msgctxt "#30053"
+msgid "Define the action to take if a game file is found to exist locally"
+msgstr "Xác định hành động cần thực hiện nếu phát hiện tệp trò chơi tồn tại cục bộ"
+
+msgctxt "#30054"
+msgid "Prompt"
+msgstr "Nhắc nhở"
+
+msgctxt "#30055"
+msgid "Do not re-download"
+msgstr "Không tải lại"
+
+msgctxt "#30056"
+msgid "Re-download and overwrite"
+msgstr "Tải lại và ghi đè"
+
+msgctxt "#30057"
+msgid "Enable archive.org login"
+msgstr "Cho phép đăng nhập archive.org"
+
+msgctxt "#30058"
+msgid "Enabled"
+msgstr "Đã bật"
+
+msgctxt "#30059"
+msgid "Disabled"
+msgstr "Tàn tật"
+
+msgctxt "#30060"
+msgid "Some games require login.  Enter your archive.org email address and password."
+msgstr "Một số trò chơi yêu cầu đăng nhập. Nhập địa chỉ email và mật khẩu archive.org của bạn."
+
+msgctxt "#30061"
+msgid "archive.org Email"
+msgstr "archive.org Email"
+
+msgctxt "#30062"
+msgid "Some games require login.  Enter your archive.org email address"
+msgstr "Một số trò chơi yêu cầu đăng nhập. Nhập địa chỉ email archive.org của bạn"
+
+msgctxt "#30063"
+msgid "archive.org Password"
+msgstr "archive.org Mật khẩu"
+
+msgctxt "#30064"
+msgid "Some games require login.  Enter your archive.org password"
+msgstr "Một số trò chơi yêu cầu đăng nhập. Nhập mật khẩu archive.org của bạn"
+
+msgctxt "#30065"
+msgid "Check login credentials"
+msgstr "Kiểm tra thông tin đăng nhập"
+
+msgctxt "#30066"
+msgid "Test the entered email and password to check your ability to login"
+msgstr "Kiểm tra email và mật khẩu đã nhập để kiểm tra khả năng đăng nhập của bạn"
+
+msgctxt "#30067"
+msgid "Download folder size limit"
+msgstr "Tải xuống giới hạn kích thước thư mục"
+
+msgctxt "#30068"
+msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
+msgstr "Xác định kích thước của bộ nhớ đệm/kích thước tải xuống.[CR]Thư mục sẽ bị xóa khi đạt đến giới hạn kích thước."
+
+msgctxt "#30069"
+msgid "Front page display"
+msgstr "Hiển thị trang đầu"
+
+msgctxt "#30070"
+msgid "Choose from list"
+msgstr "Chọn từ danh sách"
+
+msgctxt "#30071"
+msgid "Games are presented as"
+msgstr "Trò chơi được trình bày như"
+
+msgctxt "#30072"
+msgid "Kodi provides several skin options for Movies, TV Shows, and Games.  See wiki for more info"
+msgstr "Kodi cung cấp một số tùy chọn giao diện cho Phim, Chương trình truyền hình và Trò chơi. Xem wiki để biết thêm thông tin"
+
+msgctxt "#30073"
+msgid "TV Shows"
+msgstr "Chương trình truyền hình"
+
+msgctxt "#30074"
+msgid "Movies"
+msgstr "Phim"
+
+msgctxt "#30075"
+msgid "Games "
+msgstr "Trò chơi"
+
+msgctxt "#30076"
+msgid "10 Games"
+msgstr "10 trò chơi"
+
+msgctxt "#30077"
+msgid "25 Games"
+msgstr "25 trò chơi"
+
+msgctxt "#30078"
+msgid "50 Games"
+msgstr "50 trò chơi"
+
+msgctxt "#30079"
+msgid "100 Games"
+msgstr "100 trò chơi"
+
+msgctxt "#30080"
+msgid "250 Games"
+msgstr "250 trò chơi"
+
+msgctxt "#30081"
+msgid "500 Games"
+msgstr "500 trò chơi"
+
+msgctxt "#30082"
+msgid "Game artwork"
+msgstr "Tác phẩm nghệ thuật trò chơi"
+
+msgctxt "#30083"
+msgid "Game list artwork"
+msgstr "Danh sách trò chơi tác phẩm nghệ thuật"
+
+msgctxt "#30084"
+msgid "Retroarch Settings"
+msgstr "Cài đặt Retroarch"
+
+msgctxt "#30085"
+msgid "Suspend Kodi IO on launch"
+msgstr "Tạm dừng Kodi IO khi khởi chạy"
+
+msgctxt "#30086"
+msgid "Stop media on launch"
+msgstr "Dừng phương tiện truyền thông khi khởi chạy"
+
+msgctxt "#30087"
+msgid "Waiting for return"
+msgstr "Chờ đợi sự trở lại"
+
+msgctxt "#30088"
+msgid "Add to IAGL Favorites"
+msgstr "Thêm vào mục yêu thích của IAGL"
+
+msgctxt "#30089"
+msgid "Enter a name for your favorites group"
+msgstr "Nhập tên cho nhóm yêu thích của bạn"
+
+msgctxt "#30090"
+msgid "Favorite added to group"
+msgstr "Đã thêm mục yêu thích vào nhóm"
+
+msgctxt "#30091"
+msgid "Use clean game title"
+msgstr "Sử dụng tiêu đề trò chơi sạch"
+
+msgctxt "#30092"
+msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
+msgstr "Xóa thẻ khỏi tiêu đề trò chơi để hiển thị. Ví dụ: [B]Mario (USA)[/B] trở thành [B]Mario[/B]"
+
+msgctxt "#30093"
+msgid "Games per page"
+msgstr "Trò chơi trên mỗi trang"
+
+msgctxt "#30094"
+msgid "Define how many games are listed per page"
+msgstr "Xác định số lượng trò chơi được liệt kê trên mỗi trang"
+
+msgctxt "#30095"
+msgid "List all"
+msgstr "Liệt kê tất cả"
+
+msgctxt "#30096"
+msgid "Always filter list to 1 Game 1 Rom Set"
+msgstr "Luôn lọc danh sách thành 1 Game 1 Rom Set"
+
+msgctxt "#30097"
+msgid "If possible, game lists will be pre-filtered to a 1G1R set"
+msgstr "Nếu có thể, danh sách trò chơi sẽ được lọc trước thành một bộ 1G1R"
+
+msgctxt "#30098"
+msgid "Append game list name to search and random results"
+msgstr "Thêm tên danh sách trò chơi vào tìm kiếm và kết quả ngẫu nhiên"
+
+msgctxt "#30099"
+msgid "When enabled, the name of the game list will be appended to search results"
+msgstr "Khi được bật, tên của danh sách trò chơi sẽ được thêm vào kết quả tìm kiếm"
+
+msgctxt "#30100"
+msgid "Append game list name when browsing by playlist"
+msgstr "Thêm tên danh sách trò chơi khi duyệt theo danh sách phát"
+
+msgctxt "#30101"
+msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
+msgstr "Khi được bật, tên của danh sách trò chơi sẽ được thêm vào tên trò chơi trong danh sách phát"
+
+msgctxt "#30102"
+msgid "Kodi landscape art equates to"
+msgstr "Nghệ thuật phong cảnh Kodi tương đương với"
+
+msgctxt "#30103"
+msgid "Select the game artwork to be displayed as the landscape art"
+msgstr "Chọn tác phẩm nghệ thuật trò chơi để hiển thị dưới dạng nghệ thuật phong cảnh"
+
+msgctxt "#30104"
+msgid "Title Screen"
+msgstr "Màn hình tiêu đề"
+
+msgctxt "#30105"
+msgid "Screenshot"
+msgstr "Ảnh chụp màn hình"
+
+msgctxt "#30106"
+msgid "Kodi thumbnail art equates to"
+msgstr "Nghệ thuật thu nhỏ của Kodi tương đương với"
+
+msgctxt "#30107"
+msgid "Select the game artwork to be displayed as the thumbnail art"
+msgstr "Chọn tác phẩm nghệ thuật trò chơi để hiển thị dưới dạng hình thu nhỏ"
+
+msgctxt "#30108"
+msgid "Game list clearlogo equates to"
+msgstr "Danh sách trò chơi clearlogo tương đương với"
+
+msgctxt "#30109"
+msgid "Select the artwork displayed for the game list clearlogo"
+msgstr "Chọn tác phẩm nghệ thuật hiển thị cho danh sách trò chơi clearlogo"
+
+msgctxt "#30110"
+msgid "System logo"
+msgstr "Logo hệ thống"
+
+msgctxt "#30111"
+msgid "System console"
+msgstr "Bảng điều khiển hệ thống"
+
+msgctxt "#30112"
+msgid "System controller"
+msgstr "Bộ điều khiển hệ thống"
+
+msgctxt "#30113"
+msgid "Game list fanart equates to"
+msgstr "Danh sách trò chơi fanart tương đương với"
+
+msgctxt "#30114"
+msgid "Select the artwork displayed for the game list fanart"
+msgstr "Chọn tác phẩm nghệ thuật được hiển thị cho danh sách trò chơi fanart"
+
+msgctxt "#30115"
+msgid "System collage"
+msgstr "Hệ thống ghép ảnh"
+
+msgctxt "#30116"
+msgid "System console"
+msgstr "Bảng điều khiển hệ thống"
+
+msgctxt "#30117"
+msgid "System wallpaper"
+msgstr "Hình nền hệ thống"
+
+msgctxt "#30118"
+msgid "Force IAGL viewtypes"
+msgstr "Buộc các kiểu xem IAGL"
+
+msgctxt "#30119"
+msgid "Verify your skin has the forced viewtype ID available"
+msgstr "Xác minh skin của bạn có ID viewtype bắt buộc khả dụng"
+
+msgctxt "#30120"
+msgid "Frontpage viewtype"
+msgstr "Kiểu xem trang đầu"
+
+msgctxt "#30121"
+msgid "Game library lists viewtype"
+msgstr "Thư viện trò chơi liệt kê kiểu xem"
+
+msgctxt "#30122"
+msgid "Game categories viewtype"
+msgstr "Loại trò chơi viewtype"
+
+msgctxt "#30123"
+msgid "Games list viewtype"
+msgstr "Kiểu xem danh sách trò chơi"
+
+msgctxt "#30124"
+msgid "Choose list viewtype"
+msgstr "Chọn kiểu xem danh sách"
+
+msgctxt "#30125"
+msgid "Search and Random results viewtype"
+msgstr "Kiểu xem kết quả tìm kiếm và ngẫu nhiên"
+
+msgctxt "#30126"
+msgid "Off (Default)"
+msgstr "Tắt (Mặc định)"
+
+msgctxt "#30127"
+msgid "List / Poster (50)"
+msgstr "Danh sách / Poster (50)"
+
+msgctxt "#30128"
+msgid "Poster / Big List / Poster Wall (51)"
+msgstr "Poster / Danh sách lớn / Poster Wall (51)"
+
+msgctxt "#30129"
+msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
+msgstr "Tường biểu tượng / Hoa văn ngang / Tường LS (52)"
+
+msgctxt "#30130"
+msgid "Banner / Landscape / Poster Info (501)"
+msgstr "Thông tin Banner / Landscape / Poster (501)"
+
+msgctxt "#30131"
+msgid "Fanart / Landscape Single / Episode List (502)"
+msgstr "Fanart / Phong cảnh Đơn / Danh sách tập (502)"
+
+msgctxt "#30132"
+msgid "Logos / Big Square Wall (503)"
+msgstr "Logo / Bức tường hình vuông lớn (503)"
+
+msgctxt "#30133"
+msgid "Big List 2 (504)"
+msgstr "Danh sách lớn 2 (504)"
+
+msgctxt "#30134"
+msgid "Landscape Details (505)"
+msgstr "Chi tiết cảnh quan (505)"
+
+msgctxt "#30135"
+msgid "Operating System"
+msgstr "Hệ điều hành"
+
+msgctxt "#30136"
+msgid "Select your operating system"
+msgstr "Chọn hệ điều hành của bạn"
+
+msgctxt "#30137"
+msgid "Windows"
+msgstr "Cửa sổ"
+
+msgctxt "#30138"
+msgid "Linux"
+msgstr "Linux"
+
+msgctxt "#30139"
+msgid "OSX"
+msgstr "Hệ điều hành"
+
+msgctxt "#30140"
+msgid "Retroarch App Location"
+msgstr "Vị trí ứng dụng Retroarch"
+
+msgctxt "#30141"
+msgid "Select the path to the retroarch executable"
+msgstr "Chọn đường dẫn đến tệp thực thi retroarch"
+
+msgctxt "#30142"
+msgid "Retroarch CFG Location"
+msgstr "Vị trí Retroarch CFG"
+
+msgctxt "#30143"
+msgid "Select the path to the retroarch config file"
+msgstr "Chọn đường dẫn đến tệp cấu hình retroarch"
+
+msgctxt "#30144"
+msgid "Android"
+msgstr "Android"
+
+msgctxt "#30145"
+msgid "Android aarch64"
+msgstr "Android aarch64"
+
+msgctxt "#30146"
+msgid "Android ra32"
+msgstr "Android ra32"
+
+msgctxt "#30147"
+msgid "Game launcher selection method"
+msgstr "Phương pháp lựa chọn trình khởi chạy trò chơi"
+
+msgctxt "#30148"
+msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
+msgstr "Chọn những gì Kodi sẽ làm khi chọn trình khởi chạy trò chơi (chỉ dành cho Windows, Linux và OSX)"
+
+msgctxt "#30149"
+msgid "Keep Kodi in the background"
+msgstr "Giữ Kodi ở chế độ nền"
+
+msgctxt "#30150"
+msgid "Close Kodi"
+msgstr "Đóng Kodi"
+
+msgctxt "#30151"
+msgid "Pause Kodi"
+msgstr "Tạm dừng Kodi"
+
+msgctxt "#30152"
+msgid "Retroarch core picker"
+msgstr "Bộ chọn lõi Retroarch"
+
+msgctxt "#30153"
+msgid "List by System and Core Name"
+msgstr "Liệt kê theo Hệ thống và Tên lõi"
+
+msgctxt "#30154"
+msgid "List by Core Name"
+msgstr "Liệt kê theo Tên lõi"
+
+msgctxt "#30155"
+msgid "List by Emulated Systems"
+msgstr "Danh sách theo Hệ thống mô phỏng"
+
+msgctxt "#30156"
+msgid "Select Core"
+msgstr "Chọn lõi"
+
+msgctxt "#30157"
+msgid "Select Emulated System"
+msgstr "Chọn Hệ thống mô phỏng"
+
+msgctxt "#30158"
+msgid "Select Emulator"
+msgstr "Chọn Trình giả lập"
+
+msgctxt "#30159"
+msgid "Credentials were not found[CR]Please enter them in addon settings"
+msgstr "Không tìm thấy thông tin xác thực[CR]Vui lòng nhập thông tin xác thực vào cài đặt bổ sung"
+
+msgctxt "#30160"
+msgid "Game List Download Path"
+msgstr "Đường dẫn tải xuống danh sách trò chơi"
+
+msgctxt "#30161"
+msgid "Zero (Current Game Only)"
+msgstr "Zero (Chỉ trò chơi hiện tại)"
+
+msgctxt "#30162"
+msgid "25 MB"
+msgstr "25MB"
+
+msgctxt "#30163"
+msgid "50 MB"
+msgstr "50MB"
+
+msgctxt "#30164"
+msgid "100 MB"
+msgstr "100MB"
+
+msgctxt "#30165"
+msgid "200 MB"
+msgstr "200MB"
+
+msgctxt "#30166"
+msgid "500 MB"
+msgstr "500MB"
+
+msgctxt "#30167"
+msgid "1 GB"
+msgstr "1 GB"
+
+msgctxt "#30168"
+msgid "2 GB"
+msgstr "2 GB"
+
+msgctxt "#30169"
+msgid "5 GB"
+msgstr "5GB"
+
+msgctxt "#30170"
+msgid "10 GB"
+msgstr "10GB"
+
+msgctxt "#30171"
+msgid "20 GB"
+msgstr "20GB"
+
+msgctxt "#30172"
+msgid "Enable Netplay"
+msgstr "Bật Netplay"
+
+msgctxt "#30173"
+msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
+msgstr "Bật netplay retroarch (chỉ dành cho Windows, Linux, OSX), sử dụng menu ngữ cảnh để khởi chạy bằng netplay"
+
+msgctxt "#30174"
+msgid "Show Netplay Lobby"
+msgstr "Hiển thị Sảnh Netplay"
+
+msgctxt "#30175"
+msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
+msgstr "Khi được bật, sảnh netplay sẽ được hiển thị trên trang chủ IAGL"
+
+msgctxt "#30176"
+msgid "Filter game lobby to IAGL auto launch games"
+msgstr "Lọc sảnh trò chơi để IAGL tự động khởi chạy trò chơi"
+
+msgctxt "#30177"
+msgid "If enabled, the netplay lobby will only show auto launchable games"
+msgstr "Nếu được bật, sảnh netplay sẽ chỉ hiển thị các trò chơi có thể tự động khởi chạy"
+
+msgctxt "#30178"
+msgid "Netplay Port"
+msgstr "Cổng Netplay"
+
+msgctxt "#30179"
+msgid "Define the netplay IP port to connect through (leave blank for default)"
+msgstr "Xác định cổng IP netplay để kết nối (để trống cho mặc định)"
+
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Địa chỉ IP cục bộ mặc định"
+
+msgctxt "#30181"
+msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
+msgstr "Xác định tên máy chủ netplay mặc định / IP (hữu ích cho netplay mạng cục bộ, để trống cho mặc định)"
+
+msgctxt "#30182"
+msgid "Check frames"
+msgstr "Kiểm tra khung"
+
+msgctxt "#30183"
+msgid "Define number of netplay sync frames (leave blank for default)"
+msgstr "Xác định số lượng khung đồng bộ netplay (để trống cho mặc định)"
+
+msgctxt "#30184"
+msgid "Announce Netplay on Discord"
+msgstr "Thông báo Netplay trên Discord"
+
+msgctxt "#30185"
+msgid "Announces netplay start on discord for IAGL players"
+msgstr "Thông báo bắt đầu chơi netplay trên discord cho người chơi IAGL"
+
+msgctxt "#30186"
+msgid "Discord Player Name"
+msgstr "Tên người chơi Discord"
+
+msgctxt "#30187"
+msgid "Enter your player name to be announced on Discord"
+msgstr "Nhập tên người chơi của bạn để được thông báo trên Discord"
+
+msgctxt "#30188"
+msgid "Discord User Account ID"
+msgstr "ID tài khoản người dùng Discord"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Cung cấp ID Discord của bạn (Cài đặt người dùng>Tài khoản của tôi>Sao chép ID)"
+
+msgctxt "#30190"
+msgid "Display report when wizard is completed"
+msgstr "Hiển thị báo cáo khi trình hướng dẫn hoàn tất"
+
+msgctxt "#30191"
+msgid "Execute setup wizard"
+msgstr "Thực hiện trình hướng dẫn thiết lập"
+
+msgctxt "#30192"
+msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
+msgstr "Chạy trình hướng dẫn để nhanh chóng thay đổi cài đặt cho danh sách trò chơi của bạn. Có thể chạy lại bất kỳ lúc nào"
+
+msgctxt "#30193"
+msgid "Android Advance Settings"
+msgstr "Cài đặt nâng cao của Android"
+
+msgctxt "#30194"
+msgid "Use StartAndroidActivity"
+msgstr "Sử dụng StartAndroidActivity"
+
+msgctxt "#30195"
+msgid "Leave as default if unsure"
+msgstr "Để nguyên mặc định nếu không chắc chắn"
+
+msgctxt "#30196"
+msgid "Suspend Kodi Input and Audio when using External Launcher"
+msgstr "Tạm dừng Kodi Input và Audio khi sử dụng External Launcher"
+
+msgctxt "#30197"
+msgid "Stop Kodi media playing before External Launch"
+msgstr "Dừng phát phương tiện Kodi trước khi khởi chạy bên ngoài"
+
+msgctxt "#30198"
+msgid "Kodi is busy / waiting for return to Kodi after External Launch"
+msgstr "Kodi đang bận / đang chờ trả về Kodi sau khi ra mắt bên ngoài"
+
+msgctxt "#30199"
+msgid "Download Advanced Settings"
+msgstr "Tải xuống Cài đặt nâng cao"
+
+msgctxt "#30200"
+msgid "Download Threads"
+msgstr "Tải xuống Chủ đề"
+
+msgctxt "#30201"
+msgid "Alternate default download folder"
+msgstr "Thư mục tải xuống mặc định thay thế"
+
+msgctxt "#30202"
+msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
+msgstr "Khi được chọn, tất cả các bản tải xuống sẽ được chuyển đến một thư mục thay thế. [B]Lưu ý: Thư mục này sẽ không bị xóa hoặc theo dõi kích thước[/B]"
+
+msgctxt "#30203"
+msgid "Organize default download folder using system folders"
+msgstr "Tổ chức thư mục tải xuống mặc định bằng cách sử dụng thư mục hệ thống"
+
+msgctxt "#30204"
+msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
+msgstr "Khi được bật, thư mục tạm thời sẽ được sắp xếp theo hệ thống (đôi khi cần thiết để ghi đè cấu hình)"
+
+msgctxt "#30205"
+msgid "Copy Kodi Network Source downloads to Local Filesystem"
+msgstr "Sao chép các bản tải xuống Nguồn mạng Kodi vào Hệ thống tệp cục bộ"
+
+msgctxt "#30206"
+msgid "Reset Options"
+msgstr "Tùy chọn thiết lập lại"
+
+msgctxt "#30207"
+msgid "Reset IAGL database to default settings"
+msgstr "Đặt lại cơ sở dữ liệu IAGL về cài đặt mặc định"
+
+msgctxt "#30208"
+msgid "When selected, the database will be reset to default settings"
+msgstr "Khi được chọn, cơ sở dữ liệu sẽ được thiết lập lại về cài đặt mặc định"
+
+msgctxt "#30209"
+msgid "Unhide game lists"
+msgstr "Hiển thị danh sách trò chơi"
+
+msgctxt "#30210"
+msgid "When selected, previously hidden game lists can be unhidden"
+msgstr "Khi được chọn, danh sách trò chơi đã ẩn trước đó có thể được hiển thị lại"
+
+msgctxt "#30211"
+msgid "Clear Cache"
+msgstr "Xóa bộ nhớ đệm"
+
+msgctxt "#30212"
+msgid "When selected, all data in the cache folder including games will be purged"
+msgstr "Khi được chọn, tất cả dữ liệu trong thư mục bộ nhớ đệm bao gồm cả trò chơi sẽ bị xóa"
+
+msgctxt "#30213"
+msgid "Select"
+msgstr "Lựa chọn"
+
+msgctxt "#30214"
+msgid "Selected"
+msgstr "Đã chọn"
+
+msgctxt "#30215"
+msgid "Game lists selected"
+msgstr "Danh sách trò chơi đã chọn"
+
+msgctxt "#30216"
+msgid "Genres selected"
+msgstr "Thể loại đã chọn"
+
+msgctxt "#30217"
+msgid "Players selected"
+msgstr "Người chơi được chọn"
+
+msgctxt "#30218"
+msgid "Studios selected"
+msgstr "Các studio được chọn"
+
+msgctxt "#30219"
+msgid "Tags selected"
+msgstr "Thẻ đã chọn"
+
+msgctxt "#30220"
+msgid "Playlists selected"
+msgstr "Danh sách phát đã chọn"
+
+msgctxt "#30221"
+msgid "Regions selected"
+msgstr "Các vùng đã chọn"
+
+msgctxt "#30222"
+msgid "Languages selected"
+msgstr "Ngôn ngữ đã chọn"
+
+msgctxt "#30223"
+msgid "Editions selected"
+msgstr "Phiên bản đã chọn"
+
+msgctxt "#30224"
+msgid "Codes selected"
+msgstr "Mã đã chọn"
+
+msgctxt "#30225"
+msgid "Ratings selected"
+msgstr "Xếp hạng đã chọn"
+
+msgctxt "#30226"
+msgid "Enter title search query"
+msgstr "Nhập truy vấn tìm kiếm tiêu đề"
+
+msgctxt "#30227"
+msgid "Empty search"
+msgstr "Tìm kiếm trống"
+
+msgctxt "#30228"
+msgid "Search criteria is empty.[CR]Update criteria and try again."
+msgstr "Tiêu chí tìm kiếm đang trống.[CR]Cập nhật tiêu chí và thử lại."
+
+msgctxt "#30229"
+msgid "Reset criteria"
+msgstr "Đặt lại tiêu chí"
+
+msgctxt "#30230"
+msgid "Enter Link Name"
+msgstr "Nhập tên liên kết"
+
+msgctxt "#30231"
+msgid "Define the start page for IAGL"
+msgstr "Xác định trang bắt đầu cho IAGL"
+
+msgctxt "#30232"
+msgid "Kodi launch options"
+msgstr "Tùy chọn khởi chạy Kodi"
+
+msgctxt "#30233"
+msgid "Completed"
+msgstr "Hoàn thành"
+
+msgctxt "#30234"
+msgid "Create new group"
+msgstr "Tạo nhóm mới"
+
+msgctxt "#30235"
+msgid "Select favorite group"
+msgstr "Chọn nhóm yêu thích"
+
+msgctxt "#30236"
+msgid "Group by Favorites Group"
+msgstr "Nhóm theo Nhóm yêu thích"
+
+msgctxt "#30237"
+msgid "Remove IAGL Favorite"
+msgstr "Xóa mục yêu thích của IAGL"
+
+msgctxt "#30238"
+msgid "Are you sure you want to delete this Favorite?"
+msgstr "Bạn có chắc chắn muốn xóa mục Yêu thích này không?"
+
+msgctxt "#30239"
+msgid "Favorite deleted"
+msgstr "Đã xóa mục yêu thích"
+
+msgctxt "#30240"
+msgid "Favorites display"
+msgstr "Hiển thị mục ưa thích"
+
+msgctxt "#30241"
+msgid "Define the start page for IAGL Favorites"
+msgstr "Xác định trang bắt đầu cho IAGL Favorites"
+
+msgctxt "#30242"
+msgid "By Favorites Group"
+msgstr "Theo Nhóm Yêu thích"
+
+msgctxt "#30243"
+msgid "Reset *all* criteria"
+msgstr "Đặt lại *tất cả* tiêu chí"
+
+msgctxt "#30244"
+msgid "Run IAGL setup wizard?"
+msgstr "Chạy trình hướng dẫn thiết lập IAGL?"
+
+msgctxt "#30245"
+msgid "Wizard"
+msgstr "Phù thủy"
+
+msgctxt "#30246"
+msgid "Update game list Launcher"
+msgstr "Cập nhật danh sách trò chơi Launcher"
+
+msgctxt "#30247"
+msgid "Update game list Launch Command"
+msgstr "Cập nhật danh sách trò chơi Khởi chạy lệnh"
+
+msgctxt "#30248"
+msgid "Update game list Download Path"
+msgstr "Cập nhật danh sách trò chơi Tải xuống Đường dẫn"
+
+msgctxt "#30249"
+msgid "Hide game list"
+msgstr "Ẩn danh sách trò chơi"
+
+msgctxt "#30250"
+msgid "Update game list post download process"
+msgstr "Cập nhật danh sách trò chơi sau khi tải xuống"
+
+msgctxt "#30251"
+msgid "Are you sure you want to hide game list"
+msgstr "Bạn có chắc chắn muốn ẩn danh sách trò chơi không?"
+
+msgctxt "#30252"
+msgid "Game list is now hidden"
+msgstr "Danh sách trò chơi hiện đã bị ẩn"
+
+msgctxt "#30253"
+msgid "No results"
+msgstr "Không có kết quả"
+
+msgctxt "#30254"
+msgid "No hidden game lists found"
+msgstr "Không tìm thấy danh sách trò chơi ẩn"
+
+msgctxt "#30255"
+msgid "Game lists unhidden"
+msgstr "Danh sách trò chơi hiện ra"
+
+msgctxt "#30256"
+msgid "Confirm reset"
+msgstr "Xác nhận đặt lại"
+
+msgctxt "#30257"
+msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
+msgstr "Bạn có chắc chắn muốn thiết lập lại cơ sở dữ liệu không?[CR]Tất cả thông tin người dùng sẽ bị mất![CR]Không thể hoàn tác thao tác này!"
+
+msgctxt "#30258"
+msgid "Database has been reset"
+msgstr "Cơ sở dữ liệu đã được thiết lập lại"
+
+msgctxt "#30259"
+msgid "Update Launcher"
+msgstr "Cập nhật Launcher"
+
+msgctxt "#30260"
+msgid "Update launcher from[CR]Kodi to[CR]External?"
+msgstr "Cập nhật trình khởi chạy từ [CR]Kodi lên [CR]External?"
+
+msgctxt "#30261"
+msgid "Update launcher from[CR]External to[CR]Kodi?"
+msgstr "Cập nhật trình khởi chạy từ [CR]Ngoài sang [CR]Kodi?"
+
+msgctxt "#30262"
+msgid "Launcher updated to external"
+msgstr "Trình khởi chạy được cập nhật bên ngoài"
+
+msgctxt "#30263"
+msgid "Launcher updated to retroplayer"
+msgstr "Trình khởi chạy được cập nhật cho retroplayer"
+
+msgctxt "#30264"
+msgid "Select game addon"
+msgstr "Chọn tiện ích bổ sung trò chơi"
+
+msgctxt "#30265"
+msgid "Are you sure you want to reset the game addon launch command?"
+msgstr "Bạn có chắc chắn muốn thiết lập lại lệnh khởi chạy tiện ích bổ sung của trò chơi không?"
+
+msgctxt "#30266"
+msgid "Download game to…"
+msgstr "Tải trò chơi về để…"
+
+msgctxt "#30267"
+msgid "Select download folder"
+msgstr "Chọn thư mục tải xuống"
+
+msgctxt "#30268"
+msgid "Archive.org login success!"
+msgstr "Đăng nhập Archive.org thành công!"
+
+msgctxt "#30269"
+msgid "Archive.org login failed.[CR]Check credentials or log for more details"
+msgstr "Đăng nhập Archive.org không thành công.[CR]Kiểm tra thông tin đăng nhập hoặc nhật ký để biết thêm chi tiết"
+
+msgctxt "#30270"
+msgid "Error"
+msgstr "Lỗi"
+
+msgctxt "#30271"
+msgid "Initializing download for[CR]"
+msgstr "Đang khởi tạo tải xuống cho [CR]"
+
+msgctxt "#30272"
+msgid "Check logs"
+msgstr "Kiểm tra nhật ký"
+
+msgctxt "#30273"
+msgid "Checking login for[CR]"
+msgstr "Đang kiểm tra đăng nhập cho [CR]"
+
+msgctxt "#30274"
+msgid "Requesting file info for[CR]"
+msgstr "Yêu cầu thông tin tập tin cho [CR]"
+
+msgctxt "#30275"
+msgid "Select from Retroarch Cores"
+msgstr "Chọn từ Lõi Retroarch"
+
+msgctxt "#30276"
+msgid "Select from Extra Emulators"
+msgstr "Chọn từ Trình giả lập bổ sung"
+
+msgctxt "#30277"
+msgid "Manually Enter Launch Command"
+msgstr "Nhập lệnh khởi chạy thủ công"
+
+msgctxt "#30278"
+msgid "Select External Command Type"
+msgstr "Chọn loại lệnh bên ngoài"
+
+msgctxt "#30279"
+msgid "Extra Emulators"
+msgstr "Trình giả lập bổ sung"
+
+msgctxt "#30280"
+msgid "Dolphin"
+msgstr "Cá heo"
+
+msgctxt "#30281"
+msgid "Select the path to the Dolphin application (optional)"
+msgstr "Chọn đường dẫn đến ứng dụng Dolphin (tùy chọn)"
+
+msgctxt "#30282"
+msgid "MAME"
+msgstr "MAME"
+
+msgctxt "#30283"
+msgid "Select the path to the MAME application (optional)"
+msgstr "Chọn đường dẫn đến ứng dụng MAME (tùy chọn)"
+
+msgctxt "#30284"
+msgid "Project 64"
+msgstr "Dự án 64"
+
+msgctxt "#30285"
+msgid "Select the path to the Project 64 application (optional)"
+msgstr "Chọn đường dẫn đến ứng dụng Project 64 (tùy chọn)"
+
+msgctxt "#30286"
+msgid "ePSXe"
+msgstr "ePSXe"
+
+msgctxt "#30287"
+msgid "Select the path to the ePSXe application (optional)"
+msgstr "Chọn đường dẫn đến ứng dụng ePSXe (tùy chọn)"
+
+msgctxt "#30288"
+msgid "Demul"
+msgstr "Demul"
+
+msgctxt "#30289"
+msgid "Select the path to the Demul application (optional)"
+msgstr "Chọn đường dẫn đến ứng dụng Demul (tùy chọn)"
+
+msgctxt "#30290"
+msgid "FS-UAE"
+msgstr "FS-UAE"
+
+msgctxt "#30291"
+msgid "Select the path to the FS-UAE application (optional)"
+msgstr "Chọn đường dẫn đến ứng dụng FS-UAE (tùy chọn)"
+
+msgctxt "#30292"
+msgid "Are you sure you want to set external launch command?"
+msgstr "Bạn có chắc chắn muốn thiết lập lệnh khởi chạy bên ngoài không?"
+
+msgctxt "#30293"
+msgid "External launch command updated"
+msgstr "Lệnh khởi chạy bên ngoài đã được cập nhật"
+
+msgctxt "#30294"
+msgid "Android users must verify the core is installed in Retroarch"
+msgstr "Người dùng Android phải xác minh lõi được cài đặt trong Retroarch"
+
+msgctxt "#30295"
+msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
+msgstr "Cài đặt khởi chạy hiện đang trống[CR]Vui lòng cập nhật cài đặt khởi chạy bên ngoài của tiện ích bổ sung."
+
+msgctxt "#30296"
+msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
+msgstr "Cài đặt khởi chạy hiện đang trống[CR]Vui lòng cập nhật cài đặt khởi chạy hệ điều hành bổ sung."
+
+msgctxt "#30297"
+msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
+msgstr "Không tìm thấy trình giả lập bổ sung nào[CR]Vui lòng cập nhật cài đặt trình giả lập bổ sung"
+
+msgctxt "#30298"
+msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
+msgstr "Nhập lệnh khởi chạy[CR]Xem các từ khóa tùy chọn trên wiki IAGL"
+
+msgctxt "#30299"
+msgid "Reset Launch Command"
+msgstr "Đặt lại lệnh khởi chạy"
+
+msgctxt "#30300"
+msgid "Are you sure you want to reset the external launch command?"
+msgstr "Bạn có chắc chắn muốn thiết lập lại lệnh khởi chạy bên ngoài không?"
+
+msgctxt "#30301"
+msgid "External launch command was reset"
+msgstr "Lệnh khởi chạy bên ngoài đã được thiết lập lại"
+
+msgctxt "#30302"
+msgid "Enter a value for"
+msgstr "Nhập giá trị cho"
+
+msgctxt "#30303"
+msgid "View game list settings"
+msgstr "Xem cài đặt danh sách trò chơi"
+
+msgctxt "#30304"
+msgid "Game List"
+msgstr "Danh sách trò chơi"
+
+msgctxt "#30305"
+msgid "Game List System"
+msgstr "Hệ thống danh sách trò chơi"
+
+msgctxt "#30306"
+msgid "Total 1G1R Games in List"
+msgstr "Tổng số 1G1R Trò chơi trong Danh sách"
+
+msgctxt "#30307"
+msgid "Total Games in List"
+msgstr "Tổng số trò chơi trong danh sách"
+
+msgctxt "#30308"
+msgid "Total Favorited Games in List"
+msgstr "Tổng số trò chơi được yêu thích trong danh sách"
+
+msgctxt "#30309"
+msgid "Default External Launch Command"
+msgstr "Lệnh khởi chạy bên ngoài mặc định"
+
+msgctxt "#30310"
+msgid "Default Retroplayer Game Addon"
+msgstr "Tiện ích bổ sung trò chơi Retroplayer mặc định"
+
+msgctxt "#30311"
+msgid "Default Game Post Process"
+msgstr "Quá trình đăng bài mặc định của trò chơi"
+
+msgctxt "#30312"
+msgid "User Defined Download Path"
+msgstr "Đường dẫn tải xuống do người dùng xác định"
+
+msgctxt "#30313"
+msgid "User External Launch Command"
+msgstr "Lệnh khởi chạy bên ngoài của người dùng"
+
+msgctxt "#30314"
+msgid "User Defined Retroplayer Game Addon"
+msgstr "Tiện ích bổ sung trò chơi Retroplayer do người dùng xác định"
+
+msgctxt "#30315"
+msgid "User Defined Post Process"
+msgstr "Quá trình hậu kỳ do người dùng xác định"
+
+msgctxt "#30316"
+msgid "Game List Settings"
+msgstr "Cài đặt danh sách trò chơi"
+
+msgctxt "#30317"
+msgid "None (will use addon default)"
+msgstr "Không có (sẽ sử dụng addon mặc định)"
+
+msgctxt "#30318"
+msgid "Games List Launcher"
+msgstr "Trình khởi chạy danh sách trò chơi"
+
+msgctxt "#30319"
+msgid "External Launch Command "
+msgstr "Lệnh khởi chạy bên ngoài"
+
+msgctxt "#30320"
+msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
+msgstr "Lệnh khởi chạy bên ngoài[CR]*Không tìm thấy lệnh khởi chạy của người dùng / Sử dụng mặc định*"
+
+msgctxt "#30321"
+msgid "Kodi Retroplayer"
+msgstr "Trình phát lại Kodi"
+
+msgctxt "#30322"
+msgid "Are you sure you want to update game list download path?"
+msgstr "Bạn có chắc chắn muốn cập nhật đường dẫn tải xuống danh sách trò chơi không?"
+
+msgctxt "#30323"
+msgid "Download path updated"
+msgstr "Đường dẫn tải xuống đã được cập nhật"
+
+msgctxt "#30324"
+msgid "Are you sure you want to reset game list download path?"
+msgstr "Bạn có chắc chắn muốn thiết lập lại đường dẫn tải xuống danh sách trò chơi không?"
+
+msgctxt "#30325"
+msgid "Download path reset"
+msgstr "Tải xuống đường dẫn thiết lập lại"
+
+msgctxt "#30326"
+msgid "Change download path"
+msgstr "Thay đổi đường dẫn tải xuống"
+
+msgctxt "#30327"
+msgid "Reset download path"
+msgstr "Đặt lại đường dẫn tải xuống"
+
+msgctxt "#30328"
+msgid "Reset game list settings"
+msgstr "Đặt lại cài đặt danh sách trò chơi"
+
+msgctxt "#30329"
+msgid "Are you sure you want to reset all game list settings to default?"
+msgstr "Bạn có chắc chắn muốn đặt lại tất cả cài đặt danh sách trò chơi về mặc định không?"
+
+msgctxt "#30330"
+msgid "Game list settings were reset to default"
+msgstr "Cài đặt danh sách trò chơi đã được đặt lại về mặc định"
+
+msgctxt "#30331"
+msgid "Matching local file"
+msgstr "Phù hợp với tập tin cục bộ"
+
+msgctxt "#30332"
+msgid "Checking credentials"
+msgstr "Kiểm tra thông tin xác thực"
+
+msgctxt "#30333"
+msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
+msgstr "Các biến sau sẽ được thay thế trong quá trình khởi chạy:[CR]● XXROM_PATHXX: Đường dẫn đến tệp sẽ được khởi chạy[CR]● XXROM_NAMEXX: Tên của tệp sẽ được khởi chạy (không có đường dẫn)[CR]● XXROM_STEMXX: Tên của tệp sẽ được khởi chạy (không có đường dẫn, không có phần mở rộng)[CR]● XXNETPLAY_COMMANDXX: Bất kỳ lệnh bổ sung nào được yêu cầu cho netplay, hãy xem cài đặt tiện ích bổ sung để biết các tùy chọn[CR]Xem wiki để biết thêm thông tin…"
+
+msgctxt "#30334"
+msgid "The archive file could not be processed[CR]Check logs for more details"
+msgstr "Không thể xử lý tệp lưu trữ[CR]Kiểm tra nhật ký để biết thêm chi tiết"
+
+msgctxt "#30335"
+msgid "Select action before launch"
+msgstr "Chọn hành động trước khi khởi chạy"
+
+msgctxt "#30336"
+msgid "Leave Kodi running in background (default)"
+msgstr "Để Kodi chạy ở chế độ nền (mặc định)"
+
+msgctxt "#30337"
+msgid "Close Kodi before launch, reopen Kodi after emulator exit"
+msgstr "Đóng Kodi trước khi khởi chạy, mở lại Kodi sau khi thoát khỏi trình giả lập"
+
+msgctxt "#30338"
+msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
+msgstr "Tạm dừng Kodi trước khi khởi chạy, đánh thức Kodi sau khi thoát khỏi trình giả lập"
+
+msgctxt "#30339"
+msgid "View IAGL db stats"
+msgstr "Xem số liệu thống kê cơ sở dữ liệu IAGL"
+
+msgctxt "#30340"
+msgid "Lists current stats for IAGL db"
+msgstr "Liệt kê số liệu thống kê hiện tại cho IAGL db"
+
+msgctxt "#30341"
+msgid "db Stats"
+msgstr "Thống kê db"
+
+msgctxt "#30342"
+msgid "View launch parameters"
+msgstr "Xem thông số khởi chạy"
+
+msgctxt "#30343"
+msgid "Game Settings"
+msgstr "Cài đặt trò chơi"
+
+msgctxt "#30344"
+msgid "Game Launch Parameters"
+msgstr "Tham số khởi chạy trò chơi"
+
+msgctxt "#30345"
+msgid "If no user Launch Command is present"
+msgstr "Nếu không có lệnh khởi chạy của người dùng nào hiện diện"
+
+msgctxt "#30346"
+msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
+msgstr "Chọn những gì Kodi sẽ làm khi không có lệnh khởi chạy nào được thiết lập (phần bổ trợ retroplayer hoặc trình giả lập bên ngoài)"
+
+msgctxt "#30347"
+msgid "Attempt Launch with default"
+msgstr "Thử khởi chạy với mặc định"
+
+msgctxt "#30348"
+msgid "Stop / Do not launch"
+msgstr "Dừng lại / Không khởi chạy"
+
+msgctxt "#30349"
+msgid "No command set"
+msgstr "Không có lệnh nào được đặt"
+
+msgctxt "#30350"
+msgid "A launch command is not set for this list, set one now?"
+msgstr "Chưa thiết lập lệnh khởi chạy cho danh sách này, hãy thiết lập ngay bây giờ?"
+
+msgctxt "#30351"
+msgid "No default launch command could be found for this list"
+msgstr "Không tìm thấy lệnh khởi chạy mặc định cho danh sách này"
+
+msgctxt "#30352"
+msgid "Default core was not found.  Please install {} or update launcher"
+msgstr "Không tìm thấy lõi mặc định. Vui lòng cài đặt {} hoặc cập nhật trình khởi chạy"
+
+msgctxt "#30353"
+msgid "Game addon launch command reset"
+msgstr "Lệnh khởi chạy tiện ích bổ sung trò chơi được thiết lập lại"
+
+msgctxt "#30354"
+msgid "No game addons found"
+msgstr "Không tìm thấy tiện ích bổ sung cho trò chơi"
+
+msgctxt "#30355"
+msgid "Game addon launch command updated"
+msgstr "Lệnh khởi chạy tiện ích bổ sung trò chơi đã được cập nhật"
+
+msgctxt "#30356"
+msgid "Use alternate default download folder"
+msgstr "Sử dụng thư mục tải xuống mặc định thay thế"
+
+msgctxt "#30357"
+msgid "Only show options that keep Kodi in the background"
+msgstr "Chỉ hiển thị các tùy chọn giữ Kodi ở chế độ nền"
+
+msgctxt "#30358"
+msgid "Only show options that close Kodi"
+msgstr "Chỉ hiển thị các tùy chọn đóng Kodi"
+
+msgctxt "#30359"
+msgid "Only show options that pause Kodi"
+msgstr "Chỉ hiển thị các tùy chọn tạm dừng Kodi"
+
+msgctxt "#30360"
+msgid "Retroarch CFG Location as string"
+msgstr "Vị trí Retroarch CFG dưới dạng chuỗi"
+
+msgctxt "#30361"
+msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
+msgstr "Hoặc nhập đường dẫn đến tệp retroarch.cfg chính xác như nó xuất hiện trong Retroarch"
+
+msgctxt "#30362"
+msgid "Retroarch Cores directory as string"
+msgstr "Thư mục Retroarch Cores dưới dạng chuỗi"
+
+msgctxt "#30363"
+msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
+msgstr "Hoặc nhập đường dẫn đến thư mục Cores chính xác như trong cấu hình thư mục Retroarch"
+
+msgctxt "#30364"
+msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Cập nhật Trình khởi chạy cho {}?[CR][B]Điều này sẽ thay đổi cài đặt cho tất cả trò chơi trong danh sách này.[/B]"
+
+msgctxt "#30365"
+msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Cập nhật lệnh khởi chạy cho {}?[CR][B]Điều này sẽ thay đổi cài đặt cho tất cả trò chơi trong danh sách này.[/B]"
+
+msgctxt "#30366"
+msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Cập nhật Đường dẫn tải xuống cho {}?[CR][B]Điều này sẽ thay đổi cài đặt cho tất cả trò chơi trong danh sách này.[/B]"
+
+msgctxt "#30367"
+msgid "Update Launch Command"
+msgstr "Cập nhật lệnh khởi chạy"
+
+msgctxt "#30368"
+msgid "Update Launch Download Path"
+msgstr "Cập nhật Đường dẫn Tải xuống"
+
+msgctxt "#30369"
+msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Đặt lại cài đặt cho {}?[CR][B]Điều này sẽ thay đổi cài đặt cho tất cả trò chơi trong danh sách này.[/B]"
+
+msgctxt "#30370"
+msgid "Support"
+msgstr "Ủng hộ"
+
+msgctxt "#30371"
+msgid "Donate to Archive.org"
+msgstr "Quyên góp cho Archive.org"
+
+msgctxt "#30372"
+msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
+msgstr "Đã tìm thấy cơ sở dữ liệu IAGL mới[CR]Bạn có muốn cập nhật không?[CR]Cài đặt sẽ được sao chép vào cơ sở dữ liệu mới nếu có thể"
+
+msgctxt "#30373"
+msgid "New db"
+msgstr "Cơ sở dữ liệu mới"
+
+msgctxt "#30374"
+msgid "Database was updated[CR]User settings were transferred"
+msgstr "Cơ sở dữ liệu đã được cập nhật[CR]Cài đặt người dùng đã được chuyển giao"
+
+msgctxt "#30375"
+msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
+msgstr "Cơ sở dữ liệu đã được cập nhật[CR]Một số cài đặt người dùng không thể chuyển giao[CR]Xem nhật ký để biết thêm chi tiết"
+
+msgctxt "#30376"
+msgid "There was an error updating the database[CR]See log for more details"
+msgstr "Đã xảy ra lỗi khi cập nhật cơ sở dữ liệu[CR]Xem nhật ký để biết thêm chi tiết"
+
+msgctxt "#30377"
+msgid "Ask me again later"
+msgstr "Hỏi lại tôi sau nhé"
+
+msgctxt "#30378"
+msgid "Do not update this time[CR](Don’t ask me again until next update)"
+msgstr "Lần này không cập nhật[CR](Đừng hỏi tôi nữa cho đến lần cập nhật tiếp theo)"
+
+msgctxt "#30379"
+msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
+msgstr "Chào mừng đến với Trình hướng dẫn thiết lập IAGL[CR]Chúng ta hãy cùng xem qua tất cả các cài đặt để bắt đầu chơi!"
+
+msgctxt "#30380"
+msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
+msgstr "Hầu hết các trò chơi đều yêu cầu có tài khoản archive.org[CR]Đăng ký tại https://archive.org/account/signup[CR]Bạn có muốn sử dụng tài khoản của mình với IAGL không?"
+
+msgctxt "#30381"
+msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
+msgstr "Quá trình thiết lập để sử dụng tiện ích bổ sung trò chơi Kodi đã hoàn tất![CR]Bạn đã sẵn sàng chơi chưa?[CR]Chọn [B]Không[/B] để thiết lập khởi chạy trò chơi bên ngoài."
+
+msgctxt "#30382"
+msgid "Set all game lists to be externally launched"
+msgstr "Thiết lập tất cả danh sách trò chơi được khởi chạy bên ngoài"
+
+msgctxt "#30383"
+msgid "Set only some game lists to be externally launched"
+msgstr "Chỉ thiết lập một số danh sách trò chơi được khởi chạy bên ngoài"
+
+msgctxt "#30384"
+msgid "Reset all game list launchers back to default"
+msgstr "Đặt lại tất cả trình khởi chạy danh sách trò chơi về mặc định"
+
+msgctxt "#30385"
+msgid "{} game lists were updated for external launching"
+msgstr "{} danh sách trò chơi đã được cập nhật để ra mắt bên ngoài"
+
+msgctxt "#30386"
+msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
+msgstr "Các giá trị mặc định được thiết lập sẵn cho mỗi lệnh khởi chạy bên ngoài[CR]Trước khi khởi chạy, hãy xem lại các thông số khởi chạy trò chơi nếu cần[CR]Xem wiki để biết thêm chi tiết."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Ứng dụng Retroarch được đặt thành:[CR]{}[CR]Sửa đổi trong cài đặt tiện ích bổ sung nếu cần"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Cấu hình Retroarch được đặt thành:[CR]{}[CR]Sửa đổi trong cài đặt bổ sung nếu cần"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Wizard đã hoàn thành[CR]Cùng chơi thôi!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Thiết lập tất cả danh sách trò chơi sẽ được khởi chạy bằng Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Nhanh chóng thiết lập tất cả danh sách trò chơi để khởi chạy bên ngoài"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Nhanh chóng thiết lập tất cả danh sách trò chơi cho Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Xác nhận"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Bạn có chắc chắn muốn thiết lập tất cả các danh sách để khởi chạy bên ngoài không?"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Bạn có chắc chắn muốn thiết lập tất cả danh sách cho Kodi retroplayer không?"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Quyền Android yêu cầu bạn phải nhập thủ công đường dẫn cấu hình Retroarch[CR]Xem wiki để biết thêm trợ giúp"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Quyền Android yêu cầu bạn phải nhập thủ công đường dẫn lõi Retroarch[CR]Xem wiki để biết thêm trợ giúp"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Sao lưu cơ sở dữ liệu hiện tại"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Khôi phục cơ sở dữ liệu từ bản sao lưu"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Sao lưu cơ sở dữ liệu IAGL hiện tại và tất cả các thiết lập của người dùng"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Khôi phục cơ sở dữ liệu bổ trợ hiện tại từ bản sao lưu"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Chọn đường dẫn sao lưu"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Chọn cơ sở dữ liệu sao lưu"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Sao lưu đã hoàn tất"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Khôi phục hoàn tất"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} không tìm thấy id trò chơi phù hợp trong db mới[CR]Chọn hành động tiếp theo"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Cập nhật cơ sở dữ liệu, cố gắng khớp các trò chơi theo tiêu đề và danh sách trò chơi"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Cập nhật cơ sở dữ liệu, xóa các id trò chơi không tìm thấy"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Khôi phục lại cơ sở dữ liệu cũ"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Cơ sở dữ liệu được khôi phục lại về cơ sở dữ liệu cũ"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Vui lòng chờ"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Thiết lập thủ công các thư mục Retroarch"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "Theo mặc định, IAGL sẽ phát hiện các thư mục từ cấu hình RA, bạn có thể ghi đè thủ công chức năng này"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Thư mục lõi Retroarch"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Thư mục thông tin Retroach"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Thêm ứng dụng Linux vào lệnh khởi chạy"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak được sử dụng cho các hệ thống linux/elec cụ thể. Chỉ bật nếu hệ thống của bạn yêu cầu."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Thêm systemd-run vào lệnh Retroarch"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Thêm systemd-run vào tất cả các lệnh"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Thêm lệnh flatpak run vào lệnh Retroarch"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Thêm flatpak run vào tất cả các lệnh"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Quyền Android yêu cầu một thư mục lưu trữ được chia sẻ[CR]Nhập một vị trí được chia sẻ mà cả hai ứng dụng đều có thể truy cập"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Giải nén tập tin"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Không xử lý"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Giải nén tập tin, bỏ qua tập tin BIOS"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Giải nén tập tin vào thư mục"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Giải nén tập tin, di chuyển CHD vào thư mục"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Di chuyển các tập tin vào thư mục: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Di chuyển các tập tin vào thư mục: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Di chuyển tập tin vào thư mục: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Di chuyển các tập tin vào thư mục: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Di chuyển các tập tin vào thư mục: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Di chuyển tập tin vào thư mục: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Di chuyển tập tin vào thư mục: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Di chuyển các tập tin vào thư mục: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Di chuyển các tập tin vào thư mục: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Di chuyển các tập tin vào thư mục: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Di chuyển tập tin vào thư mục: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Di chuyển tập tin vào thư mục: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Di chuyển tập tin vào thư mục: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Di chuyển các tập tin vào thư mục: spectrum"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Di chuyển tập tin vào thư mục: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Bạn có chắc chắn muốn cập nhật danh sách trò chơi sau quá trình đăng không?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Quá trình hậu kỳ được cập nhật"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Cập nhật quá trình hậu kỳ cho {}?[CR][B]Điều này sẽ thay đổi cài đặt cho tất cả trò chơi trong danh sách này.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Tải xuống hoàn tất. Xử lý tập tin sau?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Các tập tin trò chơi đã được xử lý"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Không khả dụng (Chỉ dành cho Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Loại tên người dùng Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Chọn tích hợp cho tên người chơi netplay"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Sử dụng Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord cho phép các trận đấu netplay tự động (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Nhập thủ công Tên người chơi"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Tên người chơi sẽ được công bố tại Sảnh Retroarch"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Tên người chơi"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Người dùng Discord hiện tại"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Người dùng Discord được đặt thành [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Xem các phiên chơi game bạn có thể tham gia trực tuyến bằng Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Không tìm thấy người dùng Discord có ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Tùy chọn bộ lọc sảnh"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Chỉ hiển thị những phòng có thể vào được"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Chỉ hiển thị các phòng đang sử dụng libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Hiển thị các phòng có mật khẩu"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Hiển thị phòng có mật khẩu khán giả"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Hiển thị phòng bằng máy chủ MITM"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Chỉ hiển thị các phòng được tạo trong khoảng thời gian"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 phút"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 phút"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Bất kỳ khung thời gian nào"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Lọc phòng sảnh dựa trên thời gian tạo"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Chỉ hiển thị các phòng đang sử dụng IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Không tìm thấy trò chơi phù hợp với tên như [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Không tìm thấy"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Chọn trò chơi phù hợp"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Hành động ra mắt Netplay"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Tham gia từ sảnh retroarch"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Tham gia từ máy chủ cục bộ"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Chọn hành động mặc định khi tham gia trò chơi netplay"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Khởi chạy như máy chủ netplay"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Đổi tên IAGL Yêu thích"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Đổi tên đã hoàn tất"
