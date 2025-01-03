@@ -13,7 +13,7 @@ msgstr ""
 
 msgctxt "#30001"
 msgid "Internet Archive Game Launcher"
-msgstr "Interneti-arhiivi mängukäivitaja"
+msgstr "Interneti-arhiivi mängude käivitaja"
 
 msgctxt "#30002"
 msgid "Browse all Lists"
@@ -65,7 +65,7 @@ msgstr "Grupp žanri järgi"
 
 msgctxt "#30014"
 msgid "Group by Year"
-msgstr "Rühmitamine Aastate järgi"
+msgstr "Rühmitada aastate kaupa"
 
 msgctxt "#30015"
 msgid "Group by Players"
@@ -197,7 +197,7 @@ msgstr "Seadistusviisard"
 
 msgctxt "#30047"
 msgid "Advanced"
-msgstr "Täpsemalt"
+msgstr "Täiustatud"
 
 msgctxt "#30048"
 msgid "Play History"
@@ -213,7 +213,7 @@ msgstr "Vaikimisi toiming mängu valimisel"
 
 msgctxt "#30051"
 msgid "Define action to take when a game is selected"
-msgstr "Määrake mängu valimisel tehtav toiming"
+msgstr "Määrake tegevus, mida teha, kui mäng on valitud"
 
 msgctxt "#30052"
 msgid "If game already exists locally"
@@ -285,7 +285,7 @@ msgstr "Määrake allalaaditava/vahemälu suurus.[CR]Kaust tühjendatakse, kui m
 
 msgctxt "#30069"
 msgid "Front page display"
-msgstr "Esilehe kuva"
+msgstr "Esilehe kuvamine"
 
 msgctxt "#30070"
 msgid "Choose from list"
@@ -409,7 +409,7 @@ msgstr "Kui see on lubatud, lisatakse otsingutulemustele mänguloendi nimi"
 
 msgctxt "#30100"
 msgid "Append game list name when browsing by playlist"
-msgstr "Esitusloendi järgi sirvimisel lisage mänguloendi nimi"
+msgstr "Lisage esitusloendi järgi sirvimisel mängude loendi nimi"
 
 msgctxt "#30101"
 msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
@@ -485,7 +485,7 @@ msgstr "Sundida IAGL-i vaatetüüpe"
 
 msgctxt "#30119"
 msgid "Verify your skin has the forced viewtype ID available"
-msgstr "Veenduge, et teie nahal oleks saadaval sundvaatetüübi ID"
+msgstr "Veenduge, et teie nahal oleks saadaval sundvaate tüübi ID"
 
 msgctxt "#30120"
 msgid "Frontpage viewtype"
@@ -493,7 +493,7 @@ msgstr "Esilehe vaate tüüp"
 
 msgctxt "#30121"
 msgid "Game library lists viewtype"
-msgstr "Mänguteegi loendi vaatetüüp"
+msgstr "Mänguteegi loendid vaatetüübid"
 
 msgctxt "#30122"
 msgid "Game categories viewtype"
@@ -569,7 +569,7 @@ msgstr "OSX"
 
 msgctxt "#30140"
 msgid "Retroarch App Location"
-msgstr "Retroarch rakenduse asukoht"
+msgstr "Retroarchi rakenduse asukoht"
 
 msgctxt "#30141"
 msgid "Select the path to the retroarch executable"
@@ -727,6 +727,10 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Määrake ühenduse loomiseks mõeldud netplay IP-port (vaikimisi jätke tühjaks)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Kohaliku hosti vaike-IP"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Määrake võrgumängimise vaikehostinimi / IP (kasulik kohaliku võrgu võrgumängimise jaoks, vaikimisi jätke tühjaks)"
@@ -745,7 +749,7 @@ msgstr "Teatage Netplayst Discordis"
 
 msgctxt "#30185"
 msgid "Announces netplay start on discord for IAGL players"
-msgstr "Teatab võrgumängu alustamisest IAGL-i mängijate ebakõla korral"
+msgstr "Teatab IAGL-i mängijate ebakõla korral võrgumängu algusest"
 
 msgctxt "#30186"
 msgid "Discord Player Name"
@@ -758,6 +762,10 @@ msgstr "Sisestage oma mängija nimi, mida Discordis teatatakse"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discordi kasutajakonto ID"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Esitage oma Discordi ID (kasutaja seaded> Minu konto> Kopeeri ID)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -885,7 +893,7 @@ msgstr "Esitusloendid valitud"
 
 msgctxt "#30221"
 msgid "Regions selected"
-msgstr "Valitud piirkonnad"
+msgstr "Piirkonnad valitud"
 
 msgctxt "#30222"
 msgid "Languages selected"
@@ -893,11 +901,11 @@ msgstr "Valitud keeled"
 
 msgctxt "#30223"
 msgid "Editions selected"
-msgstr "Väljaanded valitud"
+msgstr "Väljaanded on valitud"
 
 msgctxt "#30224"
 msgid "Codes selected"
-msgstr "Valitud koodid"
+msgstr "Koodid valitud"
 
 msgctxt "#30225"
 msgid "Ratings selected"
@@ -917,7 +925,7 @@ msgstr "Otsingukriteeriumid on tühjad.[CR]Värskendage kriteeriume ja proovige 
 
 msgctxt "#30229"
 msgid "Reset criteria"
-msgstr "Lähtesta kriteeriumid"
+msgstr "Lähtestage kriteeriumid"
 
 msgctxt "#30230"
 msgid "Enter Link Name"
@@ -969,7 +977,7 @@ msgstr "Määrake IAGL-i lemmikute avaleht"
 
 msgctxt "#30242"
 msgid "By Favorites Group"
-msgstr "Lemmikute rühma järgi"
+msgstr "Lemmikute grupi järgi"
 
 msgctxt "#30243"
 msgid "Reset *all* criteria"
@@ -977,7 +985,7 @@ msgstr "Lähtestage *kõik* kriteeriumid"
 
 msgctxt "#30244"
 msgid "Run IAGL setup wizard?"
-msgstr "Kas käivitada IAGL-i häälestusviisard?"
+msgstr "Kas käivitada IAGL-i seadistusviisard?"
 
 msgctxt "#30245"
 msgid "Wizard"
@@ -1001,7 +1009,7 @@ msgstr "Peida mängude loend"
 
 msgctxt "#30250"
 msgid "Update game list post download process"
-msgstr "Värskendage mängude loendi allalaadimisprotsessi"
+msgstr "Värskendage mängude loendit pärast allalaadimise protsessi"
 
 msgctxt "#30251"
 msgid "Are you sure you want to hide game list"
@@ -1181,7 +1189,7 @@ msgstr "Androidi kasutajad peavad kontrollima, kas tuum on rakendusse Retroarch 
 
 msgctxt "#30295"
 msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
-msgstr "Käivitusseaded on praegu tühjad[CR]Värskendage lisandmooduli väliseid käivitusseadeid."
+msgstr "Käivitusseaded on praegu tühjad[CR]Palun värskendage lisandmooduli väliseid käivitusseadeid."
 
 msgctxt "#30296"
 msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
@@ -1193,7 +1201,7 @@ msgstr "Täiendavaid emulaatoreid ei leitud[CR]Värskendage lisaemulaatori lisas
 
 msgctxt "#30298"
 msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
-msgstr "Sisesta käivitamise käsk[CR]Vaadake valikulisi märksõnu IAGL-i vikis"
+msgstr "Sisesta käivituskäsk[CR]Vaadake valikulisi märksõnu IAGL-i vikis"
 
 msgctxt "#30299"
 msgid "Reset Launch Command"
@@ -1225,7 +1233,7 @@ msgstr "Mängude loendi süsteem"
 
 msgctxt "#30306"
 msgid "Total 1G1R Games in List"
-msgstr "Kokku 1G1R mänge loendis"
+msgstr "Loendis kokku 1G1R mänge"
 
 msgctxt "#30307"
 msgid "Total Games in List"
@@ -1241,7 +1249,7 @@ msgstr "Vaikimisi väline käivituskäsk"
 
 msgctxt "#30310"
 msgid "Default Retroplayer Game Addon"
-msgstr "Vaikimisi retromängija mängulisand"
+msgstr "Vaikimisi Retroplayer mängu lisand"
 
 msgctxt "#30311"
 msgid "Default Game Post Process"
@@ -1261,7 +1269,7 @@ msgstr "Kasutaja määratud retromängija mängulisand"
 
 msgctxt "#30315"
 msgid "User Defined Post Process"
-msgstr "Kasutaja määratud postitamisprotsess"
+msgstr "Kasutaja määratud postiprotsess"
 
 msgctxt "#30316"
 msgid "Game List Settings"
@@ -1305,7 +1313,7 @@ msgstr "Laadimistee lähtestamine"
 
 msgctxt "#30326"
 msgid "Change download path"
-msgstr "Muutke allalaadimise teed"
+msgstr "Muutke allalaadimisteed"
 
 msgctxt "#30327"
 msgid "Reset download path"
@@ -1333,7 +1341,7 @@ msgstr "Mandaatide kontrollimine"
 
 msgctxt "#30333"
 msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
-msgstr "käivitamisel asendatakse järgmised muutujad:[CR]● XXROM_PATHXX: käivitatava faili tee[CR]● XXROM_NAMEXX: käivitatava faili nimi (tee puudub)[CR]● XXROM_STEMXX: käivitatava faili nimi (tee pole laiendita)[CR]● XXNETPLAY_COMMANDXX: netplay jaoks on vaja mis tahes käsu lisamist, vaadake lisaseadeid valikud[CR]Lisateavet leiate wikist…"
+msgstr "käivitamisel asendatakse järgmised muutujad:[CR]● XXROM_PATHXX: käivitatava faili tee[CR]● XXROM_NAMEXX: käivitatava faili nimi (tee puudub)[CR]● XXROM_STEMXX: käivitatava faili nimi (tee pole laiendita)[CR]● XXNETPLAY_COMMANDXX: netplay jaoks on vaja mis tahes käsu lisamist, vaadake lisaseadeid valikud[CR]Lisateabe saamiseks vaadake wikit…"
 
 msgctxt "#30334"
 msgid "The archive file could not be processed[CR]Check logs for more details"
@@ -1477,7 +1485,7 @@ msgstr "Värskendage Käivitage allalaadimistee"
 
 msgctxt "#30369"
 msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
-msgstr "Lähtestada mängu {} seaded?[CR][B]See muudab kõigi selles loendis olevate mängude seadeid.[/B]"
+msgstr "Kas lähtestada mängu {} seaded?[CR][B]See muudab kõigi selles loendis olevate mängude seadeid.[/B]"
 
 msgctxt "#30370"
 msgid "Support"
@@ -1505,7 +1513,7 @@ msgstr "Andmebaasi värskendati[CR]Mõne kasutaja seadete ülekandmine ebaõnnes
 
 msgctxt "#30376"
 msgid "There was an error updating the database[CR]See log for more details"
-msgstr "Andmebaasi värskendamisel ilmnes viga[CR]Lisateavet leiate logist"
+msgstr "Andmebaasi värskendamisel ilmnes viga[CR]Lisateavet vaadake logist"
 
 msgctxt "#30377"
 msgid "Ask me again later"
@@ -1513,7 +1521,7 @@ msgstr "Küsi hiljem uuesti"
 
 msgctxt "#30378"
 msgid "Do not update this time[CR](Don’t ask me again until next update)"
-msgstr "Ärge värskendage seekord[CR](Ärge küsige enne järgmist värskendust)"
+msgstr "Ära värskenda seekord[CR](Ärge küsige enne järgmist värskendust)"
 
 msgctxt "#30379"
 msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
@@ -1545,4 +1553,384 @@ msgstr "Välise käivitamise jaoks värskendati {} mängude loendit"
 
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
-msgstr "Iga välise käivituskäsu jaoks on vaikesätted eelseadistatud[CR]Enne käivitamist vaadake vajadusel mängu käivitusparameetrid üle[CR]Lisateavet leiate wikist."
+msgstr "Vaikimisi on iga välise käivituskäsu jaoks eelseadistatud[CR]Enne käivitamist vaadake vajadusel mängu käivitusparameetrid üle[CR]Lisateavet leiate wikist."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Rakenduse Retroarch seadistus on:[CR]{}[CR]Muutke vajadusel lisaseadeid"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch config on seatud järgmisele:[CR]{}[CR]Muutke vajadusel lisaseadeid"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Nõustaja lõpetatud[CR]Mängime!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Määrake kõik mängude loendid Kodiga käivitamiseks"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Seadistage kõik mängude loendid kiiresti välisele käivitamisele"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Määrake kõik mängude loendid kiiresti Kodi retroplayerile"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Kinnita"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Kas olete kindel, et soovite määrata kõik loendid välisele käivitamisele?"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Kas soovite kindlasti määrata kõik loendid Kodi retroplayerile?"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Androidi load nõuavad Retroarchi konfiguratsioonitee käsitsi sisestamist[CR]Lisateavet leiate wikist"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Androidi load nõuavad Retroarchi põhitee käsitsi sisestamist[CR]Lisateavet leiate wikist"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Varunda praegune andmebaas"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Taastage andmebaas varukoopiast"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Varundage praegune IAGL-i andmebaas ja kõik kasutaja seaded"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Taastage praegune lisandmooduli andmebaas varukoopiast"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Valige varutee"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Valige backup db"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Varundamine on lõpetatud"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Taastamine lõpetatud"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "Uues db-s ei leitud {} sobivat mängu ID-d[CR]Valige järgmine toiming"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Värskendage andmebaasi, proovige mänge pealkirja ja mängude loendi järgi sobitada"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Värskendage andmebaasi, eemaldage mängu ID-d, mida ei leitud"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Taastage vana andmebaas"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Andmebaas taastati vanasse andmebaasi"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Palun oodake"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Retroarchi kataloogide käsitsi määramine"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL tuvastab vaikimisi kataloogid RA konfiguratsioonist, saate selle funktsiooni käsitsi alistada"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarchi põhikataloog"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroachi teabekataloog"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Käivituskäsu käivitamiseks lisage linuxi rakendus"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak kasutatakse konkreetsete linux/elec süsteemide jaoks.  Lubage ainult siis, kui teie süsteem seda nõuab."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Lisage Retroarchi käskudele systemd-run"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Lisage kõikidele käskudele systemd-run"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Lisage Retroarchi käskude ette flatpaki käitamine"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Lisage kõigi käskude ette flatpak run"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Androidi load nõuavad jagatud salvestuskataloogi[CR]Sisestage jagatud asukoht, millele pääsevad juurde mõlemad rakendused"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Paki failid lahti"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Töötlemine puudub"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Pakkige failid lahti, jätke BIOS-failid vahele"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Pakkige failid lahti kausta"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Pakkige failid lahti, teisaldage CHD kausta"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Teisalda failid kausta: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Teisalda failid kausta: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Teisalda failid kausta: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Teisalda failid kausta: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Teisalda failid kausta: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Teisalda failid kausta: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Teisalda failid kausta: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Teisalda failid kausta: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Teisalda failid kausta: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Teisalda failid kausta: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Teisalda failid kausta: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Teisalda failid kausta: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Teisalda failid kausta: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Teisalda failid kausta: spekter"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Teisalda failid kausta: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Kas olete kindel, et soovite mängude loendi postitamisprotsessi värskendada?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Postitusprotsess on värskendatud"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Kas värskendada mängu {} postitamisprotsessi?[CR][B]See muudab kõigi selles loendis olevate mängude seadeid.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Allalaadimine lõpetatud.  Kas postitada protsessifailid?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Mängufailid on töödeldud"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Pole saadaval (ainult Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Netplay kasutajanime tüüp"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Valige võrgumängija nime integreerimine"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Kasutage Discordi"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord võimaldab automatiseeritud võrgumänge (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Sisestage käsitsi mängija nimi"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Mängijate nimed avaldatakse Retroarhi fuajees"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Mängija nimi"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Praegune Discordi kasutaja"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord User seatud väärtusele [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Vaadake mänguseansse, millega saate võrgus Retroarch netplay abil liituda"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Ei leitud lahkarvamust kasutajat ID-ga [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Fuajee filtri valikud"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Näita ainult ruume, kuhu saab siseneda"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Kuva ainult libretrot kasutavad ruumid"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Kuva ruumid, millel on parool"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Näidake ruume, millel on vaataja parool"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Kuva ruumid MITM-serverite abil"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Kuva ainult aja jooksul loodud ruume"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 minutit"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 minutit"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Mis tahes ajakava"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Filtreerige fuajee ruume loomise aja järgi"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Näita ainult ruume, mis kasutavad IAGL-i"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Ei leitud sobivat mängu nimega [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Ei leitud"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Valige sobiv mäng"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Netplay käivitamine"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Liituge retroarhi fuajeest"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Liituge kohalikust hostist"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Valige võrgumänguga liitumisel vaiketoiming"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Käivitage netplay hostina"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Nimeta IAGL-i lemmik ümber"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Ümbernimetamine lõpetatud"

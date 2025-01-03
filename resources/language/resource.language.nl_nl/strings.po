@@ -493,7 +493,7 @@ msgstr "Weergavetype voorpagina"
 
 msgctxt "#30121"
 msgid "Game library lists viewtype"
-msgstr "Gamebibliotheek lijsten viewtype"
+msgstr "Gamebibliotheek geeft viewtype weer"
 
 msgctxt "#30122"
 msgid "Game categories viewtype"
@@ -727,6 +727,10 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Definieer de IP-poort van het netwerk waarmee verbinding moet worden gemaakt (laat leeg voor standaard)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Standaard Localhost IP"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Definieer een standaard netwerkhostnaam/IP (handig voor lokaal netwerknetwerk, laat leeg voor standaard)"
@@ -758,6 +762,10 @@ msgstr "Voer je spelersnaam in om aangekondigd te worden op Discord"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord-gebruikersaccount-ID"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Geef je Discord-ID op (Gebruikersinstellingen > Mijn account > ID kopiëren)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -809,7 +817,7 @@ msgstr "Alternatieve standaard downloadmap"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
-msgstr "Als deze optie is geselecteerd, worden alle downloads naar een alternatieve map gestuurd. [B]Let op: Deze map wordt niet verwijderd of gecontroleerd op grootte[/B]"
+msgstr "Als deze optie is geselecteerd, worden alle downloads naar een alternatieve map verplaatst. [B]Let op: Deze map wordt niet verwijderd of gecontroleerd op grootte[/B]"
 
 msgctxt "#30203"
 msgid "Organize default download folder using system folders"
@@ -861,7 +869,7 @@ msgstr "Gekozen"
 
 msgctxt "#30215"
 msgid "Game lists selected"
-msgstr "Spellijsten geselecteerd"
+msgstr "Geselecteerde spellijsten"
 
 msgctxt "#30216"
 msgid "Genres selected"
@@ -1093,7 +1101,7 @@ msgstr "Controleer logs"
 
 msgctxt "#30273"
 msgid "Checking login for[CR]"
-msgstr "Controle van de login voor [CR]"
+msgstr "Controleer de login voor [CR]"
 
 msgctxt "#30274"
 msgid "Requesting file info for[CR]"
@@ -1393,7 +1401,7 @@ msgstr "Probeer te starten met standaard"
 
 msgctxt "#30348"
 msgid "Stop / Do not launch"
-msgstr "Stoppen / Niet lanceren"
+msgstr "Stoppen / Niet starten"
 
 msgctxt "#30349"
 msgid "No command set"
@@ -1517,7 +1525,7 @@ msgstr "Deze keer niet updaten[CR](Vraag het me niet opnieuw tot de volgende upd
 
 msgctxt "#30379"
 msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
-msgstr "Welkom bij de IAGL-installatiewizard[CR]Laten we alle instellingen doornemen, zodat je aan de slag kunt!"
+msgstr "Welkom bij de IAGL-installatiewizard. [CR]Laten we alle instellingen doornemen, zodat je aan de slag kunt!"
 
 msgctxt "#30380"
 msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
@@ -1546,3 +1554,383 @@ msgstr "{} spellijsten zijn bijgewerkt voor externe lancering"
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "Standaardinstellingen zijn vooraf ingesteld voor elke externe startopdracht[CR]Controleer indien nodig de startparameters van het spel voordat u het spel start[CR]Zie wiki voor meer informatie."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch-app ingesteld op:[CR]{}[CR]Wijzig indien nodig in de add-oninstellingen"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch-configuratie ingesteld op:[CR]{}[CR]Wijzig indien nodig in de add-on-instellingen"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Wizard voltooid[CR]Laten we spelen!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Stel in dat alle spellijsten met Kodi worden gestart"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Snel alle spellijsten instellen op extern opstarten"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Snel alle spellijsten instellen op Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Bevestigen"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Weet u zeker dat u alle lijsten wilt instellen op externe lancering?"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Weet u zeker dat u alle lijsten wilt instellen op Kodi retroplayer?"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Voor Android-machtigingen moet u handmatig het Retroarch-configuratiepad invoeren[CR]Zie wiki voor meer hulp"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Voor Android-machtigingen moet u handmatig het Retroarch-kernpad invoeren[CR]Zie wiki voor meer hulp"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Back-up huidige database"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Database herstellen vanaf een back-up"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Maak een back-up van de huidige IAGL-database en alle gebruikersinstellingen"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Herstel de huidige add-ondatabase vanuit een back-up"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Selecteer back-uppad"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Selecteer back-up db"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Back-up voltooid"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Herstel voltooid"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} overeenkomende game-id's werden niet gevonden in de nieuwe db[CR]Selecteer volgende actie"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Database bijwerken, proberen spellen te matchen op titel en spellijst"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Database bijwerken, game-id's verwijderen die niet zijn gevonden"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Herstel terug naar oude database"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Database hersteld naar oude database"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Even geduld aub"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Retroarch-directory's handmatig instellen"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL detecteert standaard mappen uit de RA-configuratie, u kunt deze functie handmatig overschrijven"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch Kern Directory"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroach Info-gids"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Voeg Linux-app toe aan startopdracht"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak wordt gebruikt voor specifieke linux/elec-systemen. Schakel alleen in als uw systeem dit vereist."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Voeg systemd-run toe aan Retroarch-opdrachten"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Voeg systemd-run toe aan alle opdrachten"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Voeg flatpak run toe aan Retroarch-opdrachten"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Voeg flatpak run toe aan alle opdrachten"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Android-machtigingen vereisen een gedeelde opslagdirectory[CR]Voer een gedeelde locatie in die toegankelijk is voor beide apps"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Bestanden uitpakken"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Geen verwerking"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Bestanden uitpakken, BIOS-bestanden overslaan"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Bestanden uitpakken naar map"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Bestanden uitpakken, CHD naar map verplaatsen"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Verplaats bestanden naar map: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Verplaats bestanden naar map: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Verplaats bestanden naar map: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Verplaats bestanden naar map: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Verplaats bestanden naar map: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Verplaats bestanden naar map: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Verplaats bestanden naar map: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Verplaats bestanden naar map: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Verplaats bestanden naar map: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Verplaats bestanden naar map: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Verplaats bestanden naar map: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Verplaats bestanden naar map: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Verplaats bestanden naar map: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Verplaats bestanden naar map: spectrum"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Verplaats bestanden naar map: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Weet u zeker dat u de gamelijst na het proces wilt bijwerken?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Postproces bijgewerkt"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Postproces bijwerken voor {}?[CR][B]Hiermee worden de instellingen voor alle games in deze lijst gewijzigd.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Download voltooid. Bestanden nabewerken?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Gamebestanden verwerkt"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Niet beschikbaar (alleen Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Netplay Gebruikersnaam Type"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Selecteer integratie voor netplay-spelernaam"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Gebruik Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord maakt geautomatiseerde netplay-wedstrijden mogelijk (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Handmatig een spelersnaam invoeren"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Spelersnamen worden gepubliceerd in de Retroarch Lobby"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Speler Naam"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Huidige Discord-gebruiker"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord-gebruiker ingesteld op [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Bekijk spelsessies waaraan u online kunt deelnemen via Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Kan geen Discord-gebruiker vinden met ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Lobbyfilteropties"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Toon alleen kamers die toegankelijk zijn"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Toon alleen kamers die libretro gebruiken"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Toon kamers met een wachtwoord"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Toon kamers die een toeschouwerswachtwoord hebben"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Toon kamers met behulp van MITM-servers"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Alleen binnen het tijdsbestek gecreëerde ruimtes tonen"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 minuten"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 minuten"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Elk tijdsbestek"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Filter de lobbyruimtes op basis van de aanmaaktijd"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Toon alleen kamers die IAGL gebruiken"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Kan geen overeenkomend spel vinden met een naam zoals [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Niet gevonden"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Selecteer een passend spel"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Netplay-lanceringsactie"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Doe mee vanuit de lobby van Retroarch"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Deelnemen vanaf localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Selecteer de standaardactie bij deelname aan een netplay-game"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Lancering als netplay-host"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Hernoem IAGL Favoriet"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Hernoemen voltooid"

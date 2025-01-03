@@ -57,7 +57,7 @@ msgstr "Една голема листа"
 
 msgctxt "#30012"
 msgid "Alphabetical"
-msgstr "Азбучно"
+msgstr "По азбучен ред"
 
 msgctxt "#30013"
 msgid "Group by Genre"
@@ -77,7 +77,7 @@ msgstr "Група по Студио"
 
 msgctxt "#30017"
 msgid "Group by Tag"
-msgstr "Групирајте по ознака"
+msgstr "Група по ознака"
 
 msgctxt "#30018"
 msgid "Group by Playlist"
@@ -97,7 +97,7 @@ msgstr "Група по издание"
 
 msgctxt "#30022"
 msgid "Group by Code"
-msgstr "Група по код"
+msgstr "Групирајте по код"
 
 msgctxt "#30023"
 msgid "Group by Rating"
@@ -145,7 +145,7 @@ msgstr "Филтрирај по издание"
 
 msgctxt "#30034"
 msgid "Filter by Code"
-msgstr "Филтрирај по код"
+msgstr "Филтрирајте по код"
 
 msgctxt "#30035"
 msgid "Filter by Rating"
@@ -205,7 +205,7 @@ msgstr "Историја на игра"
 
 msgctxt "#30049"
 msgid "Define how many games to save in last played history"
-msgstr "Дефинирајте колку игри да зачувате во последната играна историја"
+msgstr "Дефинирајте колку игри да се зачуваат во последната играна историја"
 
 msgctxt "#30050"
 msgid "Default action on selecting game"
@@ -221,7 +221,7 @@ msgstr "Ако играта веќе постои локално"
 
 msgctxt "#30053"
 msgid "Define the action to take if a game file is found to exist locally"
-msgstr "Дефинирајте го дејството што треба да се преземе доколку се открие дека датотеката со игра постои локално"
+msgstr "Дефинирајте го дејството што треба да се преземе ако се открие дека датотеката со игра постои локално"
 
 msgctxt "#30054"
 msgid "Prompt"
@@ -249,7 +249,7 @@ msgstr "Оневозможено"
 
 msgctxt "#30060"
 msgid "Some games require login.  Enter your archive.org email address and password."
-msgstr "Некои игри бараат најавување.  Внесете ја вашата е-пошта и лозинка на archive.org."
+msgstr "Некои игри бараат најавување.  Внесете ја вашата е-адреса и лозинка на archive.org."
 
 msgctxt "#30061"
 msgid "archive.org Email"
@@ -437,7 +437,7 @@ msgstr "Уметноста на сликичката на Коди е еднак
 
 msgctxt "#30107"
 msgid "Select the game artwork to be displayed as the thumbnail art"
-msgstr "Изберете го уметничкото дело од играта што треба да се прикаже како сликичка"
+msgstr "Изберете го уметничкото дело од играта што ќе се прикаже како сликичка"
 
 msgctxt "#30108"
 msgid "Game list clearlogo equates to"
@@ -645,7 +645,7 @@ msgstr "Изберете Емулатор"
 
 msgctxt "#30159"
 msgid "Credentials were not found[CR]Please enter them in addon settings"
-msgstr "Ингеренциите не се пронајдени[CR]Внесете ги во поставките за додатокот"
+msgstr "Ингеренциите не се пронајдени[CR]Внесете ги во поставките за додаток"
 
 msgctxt "#30160"
 msgid "Game List Download Path"
@@ -717,7 +717,7 @@ msgstr "Филтрирајте го лобито на играта до игри
 
 msgctxt "#30177"
 msgid "If enabled, the netplay lobby will only show auto launchable games"
-msgstr "Ако е овозможено, лобито на мрежата ќе прикажува само игри што се активираат автоматски"
+msgstr "Ако е овозможено, лобито на мрежата ќе прикажува само игри што се стартуваат автоматски"
 
 msgctxt "#30178"
 msgid "Netplay Port"
@@ -727,17 +727,21 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Дефинирајте ја IP-портата на netplay преку која треба да се поврзете (оставете празно за стандардно)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Стандардна IP адреса на Localhost"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Дефинирајте стандардно име на хост / IP на netplay (корисно за локална мрежа, оставете празно за стандардно)"
 
 msgctxt "#30182"
 msgid "Check frames"
-msgstr "Проверете ги рамки"
+msgstr "Проверете рамки"
 
 msgctxt "#30183"
 msgid "Define number of netplay sync frames (leave blank for default)"
-msgstr "Дефинирајте број на рамки за синхронизирање на мрежата (оставете празно за стандардно)"
+msgstr "Дефинирајте број на рамки за синхронизација на netplay (оставете празно за стандардно)"
 
 msgctxt "#30184"
 msgid "Announce Netplay on Discord"
@@ -758,6 +762,10 @@ msgstr "Внесете го името на вашиот играч што ќе 
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord ID на корисничка сметка"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Наведете го вашиот ID на Discord (Кориснички поставки>Моја сметка>Копирај ID)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -793,7 +801,7 @@ msgstr "Прекинете ја репродукцијата на медиуми
 
 msgctxt "#30198"
 msgid "Kodi is busy / waiting for return to Kodi after External Launch"
-msgstr "Коди е зафатен / чека враќање во Коди по надворешното лансирање"
+msgstr "Коди е зафатен / чека враќање во Коди по надворешното стартување"
 
 msgctxt "#30199"
 msgid "Download Advanced Settings"
@@ -997,7 +1005,7 @@ msgstr "Ажурирајте го списокот со игри Патека з
 
 msgctxt "#30249"
 msgid "Hide game list"
-msgstr "Скриј список со игри"
+msgstr "Сокриј го списокот со игри"
 
 msgctxt "#30250"
 msgid "Update game list post download process"
@@ -1357,11 +1365,11 @@ msgstr "Суспендирајте го Kodi пред лансирањето, р
 
 msgctxt "#30339"
 msgid "View IAGL db stats"
-msgstr "Погледнете ја статистиката на IAGL db"
+msgstr "Прикажи ја статистиката на IAGL db"
 
 msgctxt "#30340"
 msgid "Lists current stats for IAGL db"
-msgstr "Ја наведува моменталната статистика за IAGL db"
+msgstr "Ги наведува моменталните статистики за IAGL db"
 
 msgctxt "#30341"
 msgid "db Stats"
@@ -1493,7 +1501,7 @@ msgstr "Пронајдена е нова база на податоци на IAG
 
 msgctxt "#30373"
 msgid "New db"
-msgstr "Нов db"
+msgstr "Нов дб"
 
 msgctxt "#30374"
 msgid "Database was updated[CR]User settings were transferred"
@@ -1546,3 +1554,383 @@ msgstr "{} списоци на игри беа ажурирани за надв�
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "Стандардните вредности се однапред поставени за секоја надворешна команда за стартување[CR]Пред да започнете преглед на параметрите за стартување на играта доколку е потребно[CR]Погледнете во вики за повеќе детали."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Апликацијата Retroarch е поставена на:[CR]{}[CR]Изменете ги поставките за додаток доколку е потребно"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Конфигурацијата Retroarch е поставена на:[CR]{}[CR]Изменете ги во поставките за додаток доколку е потребно"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Волшебникот е завршен[CR]Lets Play!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Поставете ги сите списоци со игри да се лансираат со Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Брзо поставете ги сите списоци со игри на надворешно стартување"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Брзо поставете ги сите списоци со игри на Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Потврди"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Дали сте сигурни дека сакате да ги поставите сите списоци на надворешно стартување"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Дали сте сигурни дека сакате да ги поставите сите списоци на Kodi retroplayer"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Дозволите за Android бараат од вас рачно да ја внесете патеката за конфигурација на Retroarch[CR]Погледнете во вики за повеќе помош"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Дозволите за Android бараат од вас рачно да ја внесете основната патека на Retroarch[CR]Погледнете во вики за повеќе помош"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Бекап на тековната база на податоци"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Враќање на базата на податоци од резервна копија"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Направете резервна копија од тековната база на податоци на IAGL и сите кориснички поставки"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Вратете ја тековната база на податоци за додатоци од резервна копија"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Изберете резервна патека"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Изберете резервна копија db"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Бекапот е завршен"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Враќањето е завршено"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} соодветни идентификатори на играта не беа пронајдени во новата db[CR]Изберете следно дејство"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Ажурирајте ја базата на податоци, обидете се да ги усогласите игрите по наслов и список на игри"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Ажурирајте ја базата на податоци, отстранете ги идентификаторите на играта што не беа пронајдени"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Вратете се на старата база на податоци"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Базата на податоци е вратена на старата база на податоци"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Ве молиме почекајте"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Рачно поставете директориуми Retroarch"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL стандардно ќе открие директориуми од конфигурацијата RA, можете рачно да ја отфрлите оваа функција"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Основен директориум на Retroarch"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Директориум за информации за повратни информации"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Додадете ја апликацијата Linux за да започне командата за стартување"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak се користи за специфични Linux/elec системи.  Овозможете само ако тоа го бара вашиот систем."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Претпоставете systemd-run на командите Retroarch"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Претпоставете systemd-run на сите команди"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Предложете flatpak трчање до командите на Retroarch"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Прикажи flatpak извршување на сите команди"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Дозволите за Android бараат заеднички директориум за складирање[CR]Внесете споделена локација до која може да пристапат двете апликации"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Отпакувајте датотеки"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Нема обработка"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Отпакувајте датотеки, прескокнете ги датотеките на BIOS-от"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Отпакувајте ги датотеките во папката"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Отпакувајте датотеки, преместете го CHD во папката"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Преместете ги датотеките во папката: аркада"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Преместете ги датотеките во папката: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Преместете ги датотеките во папката: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Преместете ги датотеките во папката: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Преместете ги датотеките во папката: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Преместете ги датотеките во папката: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Преместете ги датотеките во папката: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Преместете ги датотеките во папката: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Преместете ги датотеките во папката: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Преместете ги датотеките во папката: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Преместете ги датотеките во папката: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Преместете ги датотеките во папката: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Преместете ги датотеките во папката: смс"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Преместете ги датотеките во папката: спектар"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Преместете ги датотеките во папката: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Дали сте сигурни дека сакате да го ажурирате процесот на објавување на списокот на игри?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Процесот на објавување е ажуриран"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Да се ​​ажурира Процесот на објавување за {}?[CR][B]Ова ќе ги промени поставките за сите игри на оваа листа.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Преземањето е завршено.  Да се ​​објават датотеки со процеси?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Обработени датотеки за игра"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Не е достапно (само Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Тип на корисничко име на Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Изберете интеграција за името на нетплеј плеер"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Користете Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord овозможува автоматизирани натпревари во мрежата (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Рачно внесете име на играч"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Имињата на играчите ќе бидат објавени во лобито на Retroarch"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Име на играч"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Тековен корисник на раздор"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord User е поставен на [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Гледајте сесии за игри на кои можете да се придружите онлајн користејќи Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Не можам да најдам несогласен корисник со ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Опции за филтер за лоби"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Прикажи само соби во кои може да се влезе"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Прикажи само соби што користат либретро"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Прикажи соби што имаат лозинка"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Прикажи соби што имаат лозинка за гледачот"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Прикажи соби користејќи MITM сервери"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Прикажи само соби создадени во временска рамка"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 минути"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 минути"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Било која временска рамка"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Филтрирајте ги просториите во лобито според времето на создавање"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Прикажувај само соби што користат IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Не може да се најде соодветна игра со име како[CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Не е пронајдено"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Изберете соодветна игра"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Акција за лансирање на Netplay"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Приклучи се од лобито на ретроарх"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Придружете се од локалниот домаќин"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Изберете го стандардното дејство кога се приклучувате на нетплеј игра"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Стартувајте како домаќин на netplay"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Преименувајте го IAGL во омилени"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Преименувањето е завршено"

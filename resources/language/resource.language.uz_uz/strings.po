@@ -205,7 +205,7 @@ msgstr "Oʻyin tarixi"
 
 msgctxt "#30049"
 msgid "Define how many games to save in last played history"
-msgstr "Oxirgi oʻyinlar tarixida qancha oʻyinni saqlash kerakligini aniqlang"
+msgstr "Oxirgi o‘yinlar tarixida qancha o‘yinni saqlash kerakligini belgilang"
 
 msgctxt "#30050"
 msgid "Default action on selecting game"
@@ -221,7 +221,7 @@ msgstr "Agar o'yin allaqachon mahalliy bo'lsa"
 
 msgctxt "#30053"
 msgid "Define the action to take if a game file is found to exist locally"
-msgstr "Agar o'yin fayli mahalliy sifatida topilsa, bajarilishi kerak bo'lgan harakatni belgilang"
+msgstr "Agar o'yin fayli mahalliy sifatida topilsa, qanday harakat qilishni belgilang"
 
 msgctxt "#30054"
 msgid "Prompt"
@@ -249,7 +249,7 @@ msgstr "O'chirilgan"
 
 msgctxt "#30060"
 msgid "Some games require login.  Enter your archive.org email address and password."
-msgstr "Ba'zi o'yinlar tizimga kirishni talab qiladi.  archive.org elektron pochta manzili va parolni kiriting."
+msgstr "Ba'zi o'yinlar tizimga kirishni talab qiladi.  archive.org elektron pochta manzilingiz va parolingizni kiriting."
 
 msgctxt "#30061"
 msgid "archive.org Email"
@@ -337,7 +337,7 @@ msgstr "500 o'yinlar"
 
 msgctxt "#30082"
 msgid "Game artwork"
-msgstr "O'yin san'ati"
+msgstr "O'yin san'at asari"
 
 msgctxt "#30083"
 msgid "Game list artwork"
@@ -517,7 +517,7 @@ msgstr "Oʻchirilgan (standart)"
 
 msgctxt "#30127"
 msgid "List / Poster (50)"
-msgstr "Ro'yxat / afisha (50)"
+msgstr "Roʻyxat / afisha (50)"
 
 msgctxt "#30128"
 msgid "Poster / Big List / Poster Wall (51)"
@@ -625,7 +625,7 @@ msgstr "Tizim va yadro nomi bo'yicha ro'yxat"
 
 msgctxt "#30154"
 msgid "List by Core Name"
-msgstr "Asosiy ism bo'yicha ro'yxat"
+msgstr "Asosiy nomi bo'yicha ro'yxat"
 
 msgctxt "#30155"
 msgid "List by Emulated Systems"
@@ -713,11 +713,11 @@ msgstr "Yoqilganda, netplay lobbi IAGL bosh sahifasida ko'rsatiladi"
 
 msgctxt "#30176"
 msgid "Filter game lobby to IAGL auto launch games"
-msgstr "IAGL o'yinlarini avtomatik ishga tushirish uchun o'yin lobbisini filtrlang"
+msgstr "O'yin lobbisini IAGL avtomatik ishga tushirish o'yinlariga filtrlang"
 
 msgctxt "#30177"
 msgid "If enabled, the netplay lobby will only show auto launchable games"
-msgstr "Agar yoqilgan bo'lsa, netplay qabulxonasi faqat avtomatik ishga tushiriladigan o'yinlarni ko'rsatadi"
+msgstr "Agar yoqilgan bo'lsa, netplay lobbi faqat avtomatik ishga tushiriladigan o'yinlarni ko'rsatadi"
 
 msgctxt "#30178"
 msgid "Netplay Port"
@@ -726,6 +726,10 @@ msgstr "Netplay porti"
 msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Ulanish uchun netplay IP portini aniqlang (standart sifatida bo'sh qoldiring)"
+
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Standart Localhost IP"
 
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
@@ -737,7 +741,7 @@ msgstr "Ramkalarni tekshiring"
 
 msgctxt "#30183"
 msgid "Define number of netplay sync frames (leave blank for default)"
-msgstr "Netplay sinxronlash freymlari sonini aniqlang (sukut bo'yicha bo'sh qoldiring)"
+msgstr "Netplay sinxronlash ramkalari sonini aniqlang (sukut bo'yicha bo'sh qoldiring)"
 
 msgctxt "#30184"
 msgid "Announce Netplay on Discord"
@@ -758,6 +762,10 @@ msgstr "Discordda e'lon qilinishi uchun o'yinchi ismingizni kiriting"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord foydalanuvchi hisobi identifikatori"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Discord identifikatoringizni taqdim eting (Foydalanuvchi sozlamalari>Mening hisobim>Identifikatorni nusxalash)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -781,7 +789,7 @@ msgstr "StartAndroidActivity-dan foydalaning"
 
 msgctxt "#30195"
 msgid "Leave as default if unsure"
-msgstr "Agar ishonchingiz komil bo'lmasa, sukut bo'yicha qoldiring"
+msgstr "Agar ishonchingiz komil bo'lmasa, standart sifatida qoldiring"
 
 msgctxt "#30196"
 msgid "Suspend Kodi Input and Audio when using External Launcher"
@@ -817,7 +825,7 @@ msgstr "Tizim papkalari yordamida standart yuklab olish papkasini tashkil qiling
 
 msgctxt "#30204"
 msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
-msgstr "Yoqilganda, vaqtinchalik jild tizim tomonidan tartibga solinadi (ba'zan konfiguratsiyani bekor qilish uchun kerak bo'ladi)"
+msgstr "Yoqilganda, vaqtinchalik jild tizim tomonidan tartibga solinadi (ba'zan konfiguratsiyani bekor qilish uchun kerak)"
 
 msgctxt "#30205"
 msgid "Copy Kodi Network Source downloads to Local Filesystem"
@@ -861,7 +869,7 @@ msgstr "Tanlangan"
 
 msgctxt "#30215"
 msgid "Game lists selected"
-msgstr "Oʻyinlar roʻyxati tanlandi"
+msgstr "Tanlangan oʻyinlar roʻyxati"
 
 msgctxt "#30216"
 msgid "Genres selected"
@@ -1001,7 +1009,7 @@ msgstr "O'yinlar ro'yxatini yashirish"
 
 msgctxt "#30250"
 msgid "Update game list post download process"
-msgstr "Yuklab olish jarayonidan keyin o'yinlar ro'yxatini yangilang"
+msgstr "Yuklab olish jarayonidan keyingi o'yinlar ro'yxatini yangilang"
 
 msgctxt "#30251"
 msgid "Are you sure you want to hide game list"
@@ -1009,7 +1017,7 @@ msgstr "Haqiqatan ham oʻyinlar roʻyxatini berkitmoqchimisiz"
 
 msgctxt "#30252"
 msgid "Game list is now hidden"
-msgstr "Oʻyinlar roʻyxati endi yashirin"
+msgstr "O'yinlar ro'yxati endi yashirin"
 
 msgctxt "#30253"
 msgid "No results"
@@ -1041,7 +1049,7 @@ msgstr "Launcher yangilash"
 
 msgctxt "#30260"
 msgid "Update launcher from[CR]Kodi to[CR]External?"
-msgstr "Launcher[CR]Kodi'dan[CR]Tashqiga yangilansinmi?"
+msgstr "Launcher [CR]Kodi'dan[CR]Tashqiga yangilansinmi?"
 
 msgctxt "#30261"
 msgid "Update launcher from[CR]External to[CR]Kodi?"
@@ -1065,7 +1073,7 @@ msgstr "Haqiqatan ham oʻyin qoʻshimchasini ishga tushirish buyrugʻini tiklamo
 
 msgctxt "#30266"
 msgid "Download game to…"
-msgstr "Oʻyinni yuklab oling…"
+msgstr "Oʻyinni yuklab olish uchun…"
 
 msgctxt "#30267"
 msgid "Select download folder"
@@ -1201,7 +1209,7 @@ msgstr "Ishga tushirish buyrug'ini tiklash"
 
 msgctxt "#30300"
 msgid "Are you sure you want to reset the external launch command?"
-msgstr "Haqiqatan ham tashqi ishga tushirish buyrug'ini qayta o'rnatmoqchimisiz?"
+msgstr "Haqiqatan ham tashqi ishga tushirish buyrug'ini tiklamoqchimisiz?"
 
 msgctxt "#30301"
 msgid "External launch command was reset"
@@ -1273,7 +1281,7 @@ msgstr "Yo'q (birlamchi qo'shimchadan foydalaniladi)"
 
 msgctxt "#30318"
 msgid "Games List Launcher"
-msgstr "O'yinlar ro'yxatini ishga tushirish dasturi"
+msgstr "O'yinlar ro'yxatini ishga tushirgich"
 
 msgctxt "#30319"
 msgid "External Launch Command "
@@ -1321,7 +1329,7 @@ msgstr "Haqiqatan ham barcha oʻyinlar roʻyxati sozlamalarini asl holatiga qayt
 
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
-msgstr "Oʻyinlar roʻyxati sozlamalari asl holatiga qaytarildi"
+msgstr "Oʻyin roʻyxati sozlamalari asl holatiga qaytarildi"
 
 msgctxt "#30331"
 msgid "Matching local file"
@@ -1329,7 +1337,7 @@ msgstr "Mahalliy fayl mos keladi"
 
 msgctxt "#30332"
 msgid "Checking credentials"
-msgstr "Hisob ma'lumotlarini tekshirish"
+msgstr "Hisob ma'lumotlari tekshirilmoqda"
 
 msgctxt "#30333"
 msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
@@ -1353,7 +1361,7 @@ msgstr "Ishga tushirishdan oldin Kodi-ni yoping, emulyatordan chiqqandan keyin K
 
 msgctxt "#30338"
 msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
-msgstr "Kodi-ni ishga tushirishdan oldin to'xtatib turing, emulyatordan chiqqandan keyin Kodi-ni uyg'oting"
+msgstr "Ishga tushirishdan oldin Kodi-ni to'xtatib turing, emulyator chiqqandan keyin Kodi-ni uyg'oting"
 
 msgctxt "#30339"
 msgid "View IAGL db stats"
@@ -1397,7 +1405,7 @@ msgstr "To'xtating / ishga tushirmang"
 
 msgctxt "#30349"
 msgid "No command set"
-msgstr "Hech qanday buyruq o'rnatilmagan"
+msgstr "Buyruqlar o'rnatilmagan"
 
 msgctxt "#30350"
 msgid "A launch command is not set for this list, set one now?"
@@ -1421,7 +1429,7 @@ msgstr "Oʻyin qoʻshimchalari topilmadi"
 
 msgctxt "#30355"
 msgid "Game addon launch command updated"
-msgstr "O'yin qo'shimchasini ishga tushirish buyrug'i yangilandi"
+msgstr "Oʻyin qoʻshimchasini ishga tushirish buyrugʻi yangilandi"
 
 msgctxt "#30356"
 msgid "Use alternate default download folder"
@@ -1453,7 +1461,7 @@ msgstr "Retroarch Cores katalogi qator sifatida"
 
 msgctxt "#30363"
 msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
-msgstr "Shu bilan bir qatorda Cores katalogiga yo'lni aynan Retroarch katalog konfiguratsiyasida ko'rsatilganidek kiriting."
+msgstr "Shu bilan bir qatorda, Cores katalogiga yo'lni aynan Retroarch katalog konfiguratsiyasida ko'rsatilganidek kiriting."
 
 msgctxt "#30364"
 msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
@@ -1465,7 +1473,7 @@ msgstr "{} uchun ishga tushirish buyrugʻini yangilang?[CR][B]Bu roʻyxatdagi ba
 
 msgctxt "#30366"
 msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
-msgstr "{} Yuklab olish yoʻlini yangilang?[CR][B]Bu roʻyxatdagi barcha oʻyinlar sozlamalarini oʻzgartiradi.[/B]"
+msgstr "{} uchun yuklab olish yoʻlini ishga tushirishni yangilang?[CR][B]Bu roʻyxatdagi barcha oʻyinlar sozlamalarini oʻzgartiradi.[/B]"
 
 msgctxt "#30367"
 msgid "Update Launch Command"
@@ -1477,7 +1485,7 @@ msgstr "Yuklab olish yo'lini yangilang"
 
 msgctxt "#30369"
 msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
-msgstr "{} uchun sozlamalarni asliga qaytaring?[CR][B]Bu roʻyxatdagi barcha oʻyinlar sozlamalarini oʻzgartiradi.[/B]"
+msgstr "{} uchun sozlamalarni tiklash?[CR][B]Bu roʻyxatdagi barcha oʻyinlar sozlamalarini oʻzgartiradi.[/B]"
 
 msgctxt "#30370"
 msgid "Support"
@@ -1517,7 +1525,7 @@ msgstr "Bu safar yangilanmasin[CR](Keyingi yangilanishgacha mendan boshqa soʻra
 
 msgctxt "#30379"
 msgid "Welcome to the IAGL Setup Wizard[CR]Lets run through all the settings to get you playing!"
-msgstr "IAGL sozlash ustasiga xush kelibsiz[CR]Sizni oʻynashingiz uchun barcha sozlamalarni koʻrib chiqishga ruxsat bering!"
+msgstr "IAGL oʻrnatish ustasiga xush kelibsiz[CR]Sizni oʻynashingizga yordam berish uchun barcha sozlamalarni ishga tushiramiz!"
 
 msgctxt "#30380"
 msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
@@ -1529,7 +1537,7 @@ msgstr "Kodi oʻyin qoʻshimchalaridan foydalanish uchun sozlash tugallandi![CR]
 
 msgctxt "#30382"
 msgid "Set all game lists to be externally launched"
-msgstr "Barcha oʻyin roʻyxatlarini tashqaridan ishga tushiriladigan qilib oʻrnating"
+msgstr "Barcha o'yin ro'yxatlarini tashqaridan ishga tushiriladigan qilib o'rnating"
 
 msgctxt "#30383"
 msgid "Set only some game lists to be externally launched"
@@ -1537,7 +1545,7 @@ msgstr "Faqat ba'zi o'yinlar ro'yxatini tashqaridan ishga tushirish uchun o'rnat
 
 msgctxt "#30384"
 msgid "Reset all game list launchers back to default"
-msgstr "Barcha oʻyinlar roʻyxati ishga tushirgichlarini asl holatiga qaytaring"
+msgstr "Barcha oʻyinlar roʻyxatini ishga tushirish moslamalarini asl holatiga qaytaring"
 
 msgctxt "#30385"
 msgid "{} game lists were updated for external launching"
@@ -1545,4 +1553,384 @@ msgstr "{} oʻyin roʻyxati tashqi ishga tushirish uchun yangilandi"
 
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
-msgstr "Har bir tashqi ishga tushirish buyrugʻi uchun birlamchi sozlamalar oldindan oʻrnatiladi[CR]Agar kerak boʻlsa, oʻyinni boshlash parametrlarini koʻrib chiqishdan oldin[CR]Batafsil maʼlumot uchun wiki-ga qarang."
+msgstr "Har bir tashqi ishga tushirish buyrugʻi uchun birlamchi sozlamalar oʻrnatiladi[CR]Agar kerak boʻlsa, oʻyinni boshlash parametrlarini koʻrib chiqishdan oldin[CR]Batafsil maʼlumot uchun wiki-ga qarang."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch ilovasi quyidagilarga oʻrnatildi:[CR]{}[CR]Agar kerak boʻlsa, qoʻshimcha sozlamalarida oʻzgartiring"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch konfiguratsiyasi quyidagicha oʻrnatildi:[CR]{}[CR]Agar kerak boʻlsa, qoʻshimcha sozlamalarida oʻzgartiring"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Sehrgar tugallandi[CR]O'ynaymiz!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Kodi bilan ishga tushiriladigan barcha o'yinlar ro'yxatini o'rnating"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Barcha o'yinlar ro'yxatini tezda tashqi ishga tushirishga o'rnating"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Barcha o'yinlar ro'yxatini tezda Kodi retroplayeriga o'rnating"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Tasdiqlang"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Haqiqatan ham barcha roʻyxatlarni tashqi ishga tushirishga oʻrnatmoqchimisiz"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Haqiqatan ham barcha roʻyxatlarni Kodi retroplayeriga oʻrnatmoqchimisiz"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Android ruxsatlari Retroarch konfiguratsiya yoʻlini qoʻlda kiritishingizni talab qiladi[CR]Qoʻshimcha yordam uchun wiki-ga qarang"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Android ruxsatlari Retroarch asosiy yoʻlini qoʻlda kiritishingizni talab qiladi[CR]Batafsil yordam uchun wiki-ga qarang"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Joriy ma'lumotlar bazasini zaxiralang"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Zaxiradan ma'lumotlar bazasini tiklash"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Joriy IAGL ma'lumotlar bazasini va barcha foydalanuvchi sozlamalarini zaxiralang"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Joriy qo'shimcha ma'lumotlar bazasini zaxiradan tiklang"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Zaxira yo'lini tanlang"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Zaxira db ni tanlang"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Zaxiralash tugallandi"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Qayta tiklash tugallandi"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "Yangi db[CR]Keyingi amalni tanlashda {} mos oʻyin identifikatorlari topilmadi"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Ma'lumotlar bazasini yangilang, o'yinlarni sarlavha va o'yin ro'yxati bo'yicha moslashtirishga harakat qiling"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Ma'lumotlar bazasini yangilang, topilmagan o'yin identifikatorlarini olib tashlang"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Eski ma'lumotlar bazasiga qayta tiklang"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Ma'lumotlar bazasi eski ma'lumotlar bazasiga tiklandi"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Iltimos kuting"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Retroarch kataloglarini qo'lda o'rnating"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL sukut bo'yicha RA konfiguratsiyasidagi kataloglarni aniqlaydi, siz ushbu funktsiyani qo'lda bekor qilishingiz mumkin"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch asosiy katalogi"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroach ma'lumotlar katalogi"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Ishga tushirish buyrug'ini boshlash uchun Linux ilovasini qo'shing"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak maxsus Linux/elec tizimlari uchun ishlatiladi.  Tizim talab qilgan taqdirdagina yoqing."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Retroarch buyruqlariga systemd-run ni qo'ying"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Barcha buyruqlar oldiga systemd-run yozing"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Retroarch buyruqlariga flatpak run buyrug'ini qo'ying"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Barcha buyruqlar oldiga flatpak run ni qo'ying"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Android ruxsatlari umumiy xotira katalogini talab qiladi[CR]Har ikkala ilova ham kirishi mumkin boʻlgan umumiy joylashuvni kiriting"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Fayllarni ochish"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Ishlov berilmaydi"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Fayllarni oching, BIOS fayllarini o'tkazib yuboring"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Fayllarni jildga oching"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Fayllarni oching, CHD-ni jildga ko'chiring"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Fayllarni jildga ko'chiring: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Fayllarni jildga ko'chiring: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Fayllarni jildga ko'chiring: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Fayllarni jildga ko'chiring: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Fayllarni jildga ko'chiring: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Fayllarni jildga ko'chiring: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Fayllarni jildga ko'chiring: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Fayllarni jildga ko'chiring: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Fayllarni jildga ko'chiring: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Fayllarni jildga ko'chiring: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Fayllarni jildga ko'chiring: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Fayllarni jildga ko'chiring: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Fayllarni jildga ko'chiring: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Fayllarni jildga ko'chiring: spektr"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Fayllarni jildga ko'chiring: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Haqiqatan ham oʻyinlar roʻyxatini yuborish jarayonini yangilamoqchimisiz?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Post jarayoni yangilandi"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{} uchun post jarayonini yangilang?[CR][B]Bu roʻyxatdagi barcha oʻyinlar sozlamalarini oʻzgartiradi.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Yuklab olish tugallandi.  Jarayon fayllari yuborilsinmi?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Oʻyin fayllari qayta ishlandi"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Mavjud emas (faqat Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Netplay foydalanuvchi nomi turi"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Netplay o'yinchisi nomi uchun integratsiyani tanlang"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Discord-dan foydalaning"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord avtomatlashtirilgan netplay o'yinlarini yoqish imkonini beradi (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "O'yinchi nomini qo'lda kiriting"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "O'yinchilarning nomlari Retroarch Lobbyda e'lon qilinadi"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "O'yinchi nomi"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Hozirgi Discord foydalanuvchisi"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord foydalanuvchisi [CR] {} ga oʻrnatildi"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Retroarch netplay yordamida onlayn qo'shilishingiz mumkin bo'lgan o'yin seanslarini ko'ring"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "[CR]{} identifikatoriga ega boʻlgan ixtilof foydalanuvchisini topib boʻlmadi."
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Lobbi filtri parametrlari"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Faqat kirish mumkin bo'lgan xonalarni ko'rsating"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Faqat libretro ishlatadigan xonalarni ko'rsating"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Parolli xonalarni ko'rsatish"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Tomoshabin paroli bo'lgan xonalarni ko'rsating"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "MITM serverlari yordamida xonalarni ko'rsatish"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Faqat vaqt oraligʻida yaratilgan xonalarni koʻrsatish"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 daqiqa"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 daqiqa"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Har qanday vaqt oralig'i"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Yaratish vaqtiga qarab qabulxona xonalarini filtrlang"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Faqat IAGL ishlatadigan xonalarni ko'rsating"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "[CR]{} kabi nomli mos oʻyin topilmadi"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Topilmadi"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Mos keladigan o'yinni tanlang"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Netplay ishga tushirish harakati"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Retroarch lobbisidan qo'shiling"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Localhost-dan qo'shiling"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Netplay o'yiniga qo'shilishda standart amalni tanlang"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Netplay xost sifatida ishga tushiring"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "IAGL Favorite nomini o‘zgartiring"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Nomini oʻzgartirish tugallandi"

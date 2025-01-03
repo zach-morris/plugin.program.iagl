@@ -697,7 +697,7 @@ msgstr "20 GB"
 
 msgctxt "#30172"
 msgid "Enable Netplay"
-msgstr "Įgalinti „Netplay“."
+msgstr "Įgalinti Netplay"
 
 msgctxt "#30173"
 msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
@@ -726,6 +726,10 @@ msgstr "Netplay prievadas"
 msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Apibrėžkite „netplay“ IP prievadą, per kurį norite prisijungti (palikite tuščią, jei norite numatytųjų)"
+
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Numatytasis Localhost IP"
 
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
@@ -758,6 +762,10 @@ msgstr "Įveskite savo žaidėjo vardą, kuris bus paskelbtas Discord"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "„Discord“ vartotojo paskyros ID"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Pateikite savo „Discord“ ID (Vartotojo nustatymai> Mano paskyra> Kopijavimo ID)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -933,7 +941,7 @@ msgstr "Kodi paleidimo parinktys"
 
 msgctxt "#30233"
 msgid "Completed"
-msgstr "Baigta"
+msgstr "Užbaigta"
 
 msgctxt "#30234"
 msgid "Create new group"
@@ -1546,3 +1554,383 @@ msgstr "Atnaujinti žaidimų sąrašai: {} išoriniam paleidimui"
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "Numatytieji nustatymai yra iš anksto nustatyti kiekvienai išorinei paleidimo komandai[CR]Prieš paleidžiant peržiūrėkite žaidimo paleidimo parametrus, jei reikia[CR]Daugiau informacijos rasite wiki."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch programa nustatyta į:[CR]{}[CR]Jei reikia, pakeiskite priedo nustatymus"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch konfigūracija nustatyta į:[CR]{}[CR]Jei reikia, pakeiskite priedo nustatymus"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Vedlys baigtas[CR]Žaiskime!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Nustatykite visus žaidimų sąrašus, kad jie būtų paleisti naudojant „Kodi“."
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Greitai nustatykite visų žaidimų sąrašų išorinį paleidimą"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Greitai nustatykite visus žaidimų sąrašus į „Kodi retroplayer“."
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Patvirtinti"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Ar tikrai norite nustatyti visų sąrašų išorinį paleidimą?"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Ar tikrai norite nustatyti visus sąrašus į „Kodi retroplayer“."
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Norint gauti „Android“ leidimus, reikia rankiniu būdu įvesti „Retroarch“ konfigūracijos kelią[CR]Daugiau pagalbos ieškokite wiki"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Norint gauti „Android“ leidimus, reikia rankiniu būdu įvesti pagrindinį „Retroarch“ kelią[CR]Jei reikia daugiau pagalbos, žr. wiki"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Sukurkite atsarginę dabartinės duomenų bazės kopiją"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Atkurti duomenų bazę iš atsarginės kopijos"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Sukurkite atsarginę dabartinės IAGL duomenų bazės ir visų vartotojo nustatymų kopiją"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Atkurkite dabartinę priedų duomenų bazę iš atsarginės kopijos"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Pasirinkite atsarginį kelią"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Pasirinkite atsarginę kopiją db"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Atsarginė kopija baigta"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Atkūrimas baigtas"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} atitinkantys žaidimo ID nerasta naujame db[CR]Pasirinkite kitą veiksmą"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Atnaujinkite duomenų bazę, pabandykite suderinti žaidimus pagal pavadinimą ir žaidimų sąrašą"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Atnaujinkite duomenų bazę, pašalinkite žaidimų ID, kurie nebuvo rasti"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Atkurti atgal į seną duomenų bazę"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Duomenų bazė atkurta atgal į seną duomenų bazę"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Prašome palaukti"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Rankiniu būdu nustatykite Retroarch katalogus"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL pagal numatytuosius nustatymus aptiks katalogus iš RA konfigūracijos, galite rankiniu būdu nepaisyti šios funkcijos"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "„Retroarch“ pagrindinis katalogas"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroach informacijos katalogas"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Pridėkite „Linux“ programą, kad paleistumėte komandą"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak naudojamas konkrečioms linux/elec sistemoms.  Įjunkite tik tada, kai to reikalauja jūsų sistema."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Prie Retroarch komandų pridėkite systemd-run"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Prie visų komandų pridėkite systemd-run"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Pridėkite „flatpak“ paleidimą prie „Retroarch“ komandų"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Pridėkite flatpak paleidimą prie visų komandų"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Norint gauti „Android“ leidimus, reikalingas bendrinamas saugojimo katalogas[CR]Įveskite bendrinamą vietą, kurią gali pasiekti abi programos"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Išpakuokite failus"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Jokio apdorojimo"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Išpakuokite failus, praleiskite BIOS failus"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Išpakuokite failus į aplanką"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Išpakuokite failus, perkelkite CHD į aplanką"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Perkelkite failus į aplanką: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Perkelkite failus į aplanką: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Perkelkite failus į aplanką: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Perkelkite failus į aplanką: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Perkelkite failus į aplanką: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Perkelkite failus į aplanką megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Perkelkite failus į aplanką: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Perkelkite failus į aplanką: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Perkelkite failus į aplanką: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Perkelti failus į aplanką: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Perkelkite failus į aplanką: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Perkelkite failus į aplanką: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Perkelti failus į aplanką: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Perkelkite failus į aplanką: spektras"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Perkelkite failus į aplanką: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Ar tikrai norite atnaujinti žaidimų sąrašo paskelbimo procesą?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Paskelbimo procesas atnaujintas"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Atnaujinti {} paskelbimo procesą?[CR][B]Tai pakeis visų šiame sąraše esančių žaidimų nustatymus.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Atsisiuntimas baigtas.  Paskelbti proceso failus?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Žaidimo failai apdoroti"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Nepasiekiamas (tik „Windows“, „OSX“, „Linux“)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Netplay vartotojo vardo tipas"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Pasirinkite „netplay“ grotuvo pavadinimo integraciją"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Naudokite Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "„Discord“ įgalina automatines tinklo rungtynes ​​(IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Rankiniu būdu įveskite žaidėjo vardą"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Žaidėjų vardai bus paskelbti Retroarch fojė"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Žaidėjo vardas"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Dabartinis „Discord“ vartotojas"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord User nustatytas į [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Peržiūrėkite žaidimų seansus, prie kurių galite prisijungti naudodami „Retroarch netplay“."
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Nepavyko rasti nesuderinamo vartotojo, kurio ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Fojė filtro parinktys"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Rodyti tik patalpas, į kurias galima patekti"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Rodyti tik kambarius, kuriuose naudojamas libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Rodyti patalpas, kuriose yra slaptažodis"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Rodyti patalpas, kuriose yra žiūrovo slaptažodis"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Rodyti patalpas naudojant MITM serverius"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Rodyti tik per laikotarpį sukurtus kambarius"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 minučių"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 minučių"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Bet koks laikotarpis"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Filtruokite vestibiulio kambarius pagal sukūrimo laiką"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Rodyti tik patalpas, kuriose naudojamas IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Nepavyko rasti tinkamo žaidimo pavadinimu [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Nerasta"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Pasirinkite atitinkamą žaidimą"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "„Netplay“ paleidimo veiksmas"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Prisijunkite iš retroarch fojė"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Prisijunkite iš localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Prisijungdami prie tinklo žaidimo pasirinkite numatytąjį veiksmą"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Paleiskite kaip „netplay“ prieglobą"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Pervardykite IAGL mėgstamiausią"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Pervadinimas baigtas"

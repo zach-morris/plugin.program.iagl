@@ -217,7 +217,7 @@ msgstr "Definujte akci, která se má provést při výběru hry"
 
 msgctxt "#30052"
 msgid "If game already exists locally"
-msgstr "Pokud hra již existuje lokálně"
+msgstr "Pokud hra již lokálně existuje"
 
 msgctxt "#30053"
 msgid "Define the action to take if a game file is found to exist locally"
@@ -273,7 +273,7 @@ msgstr "Zkontrolujte přihlašovací údaje"
 
 msgctxt "#30066"
 msgid "Test the entered email and password to check your ability to login"
-msgstr "Vyzkoušejte zadaný e-mail a heslo, abyste si ověřili svou schopnost přihlásit se"
+msgstr "Vyzkoušejte zadaný e-mail a heslo, abyste si ověřili svou schopnost přihlášení"
 
 msgctxt "#30067"
 msgid "Download folder size limit"
@@ -281,7 +281,7 @@ msgstr "Limit velikosti složky pro stahování"
 
 msgctxt "#30068"
 msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
-msgstr "Definujte velikost stahování / velikost mezipaměti.[CR]Po dosažení limitu velikosti se složka vymaže."
+msgstr "Definujte velikost stahování / velikost mezipaměti.[CR]Složka je vymazána, když je dosaženo limitu velikosti."
 
 msgctxt "#30069"
 msgid "Front page display"
@@ -485,7 +485,7 @@ msgstr "Vynutit typy zobrazení IAGL"
 
 msgctxt "#30119"
 msgid "Verify your skin has the forced viewtype ID available"
-msgstr "Ověřte, zda má váš vzhled k dispozici vynucené ID typu zobrazení"
+msgstr "Ověřte, že váš vzhled má k dispozici vynucené ID typu zobrazení"
 
 msgctxt "#30120"
 msgid "Frontpage viewtype"
@@ -717,7 +717,7 @@ msgstr "Filtrujte herní lobby na hry s automatickým spouštěním IAGL"
 
 msgctxt "#30177"
 msgid "If enabled, the netplay lobby will only show auto launchable games"
-msgstr "Pokud je povoleno, v lobby netplay se budou zobrazovat pouze automaticky spouštěné hry"
+msgstr "Pokud je povoleno, v lobby netplay se budou zobrazovat pouze hry, které lze automaticky spouštět"
 
 msgctxt "#30178"
 msgid "Netplay Port"
@@ -727,9 +727,13 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Definujte IP port netplay, přes který se chcete připojit (ve výchozím nastavení ponechte prázdné)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Výchozí adresa IP Localhost"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
-msgstr "Definujte výchozí název hostitele / IP síťové hry (užitečné pro síťové hraní v místní síti, jako výchozí ponechte prázdné)"
+msgstr "Definujte výchozí název hostitele / IP síťové hry (užitečné pro síťové hraní v místní síti, pro výchozí ponechejte prázdné)"
 
 msgctxt "#30182"
 msgid "Check frames"
@@ -759,6 +763,10 @@ msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord ID uživatelského účtu"
 
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Zadejte své ID Discord (Uživatelské nastavení> Můj účet> Zkopírovat ID)"
+
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
 msgstr "Po dokončení průvodce zobrazit zprávu"
@@ -785,7 +793,7 @@ msgstr "Pokud si nejste jisti, ponechte jako výchozí"
 
 msgctxt "#30196"
 msgid "Suspend Kodi Input and Audio when using External Launcher"
-msgstr "Při používání externího spouštěče pozastavte vstup a zvuk Kodi"
+msgstr "Při použití externího spouštěče pozastavte vstup a zvuk Kodi"
 
 msgctxt "#30197"
 msgid "Stop Kodi media playing before External Launch"
@@ -877,7 +885,7 @@ msgstr "Vybraná studia"
 
 msgctxt "#30219"
 msgid "Tags selected"
-msgstr "Vybrané štítky"
+msgstr "Vybrané značky"
 
 msgctxt "#30220"
 msgid "Playlists selected"
@@ -1057,7 +1065,7 @@ msgstr "Launcher aktualizován na retroplayer"
 
 msgctxt "#30264"
 msgid "Select game addon"
-msgstr "Vyberte doplněk hry"
+msgstr "Vyberte herní doplněk"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
@@ -1181,7 +1189,7 @@ msgstr "Uživatelé Androidu musí ověřit, zda je jádro nainstalováno v Retr
 
 msgctxt "#30295"
 msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
-msgstr "Nastavení spouštění jsou aktuálně prázdná[CR]Aktualizujte nastavení externího spouštění doplňku."
+msgstr "Nastavení spouštění jsou aktuálně prázdná[CR]Prosím aktualizujte nastavení externího spouštění doplňku."
 
 msgctxt "#30296"
 msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
@@ -1269,7 +1277,7 @@ msgstr "Nastavení seznamu her"
 
 msgctxt "#30317"
 msgid "None (will use addon default)"
-msgstr "Žádné (použije se výchozí nastavení doplňku)"
+msgstr "Žádný (bude použit výchozí doplněk)"
 
 msgctxt "#30318"
 msgid "Games List Launcher"
@@ -1313,7 +1321,7 @@ msgstr "Obnovit cestu ke stažení"
 
 msgctxt "#30328"
 msgid "Reset game list settings"
-msgstr "Obnovte nastavení seznamu her"
+msgstr "Obnovit nastavení seznamu her"
 
 msgctxt "#30329"
 msgid "Are you sure you want to reset all game list settings to default?"
@@ -1333,7 +1341,7 @@ msgstr "Kontrola přihlašovacích údajů"
 
 msgctxt "#30333"
 msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
-msgstr "Při spuštění budou nahrazeny následující proměnné:[CR]● XXROM_PATHXX: Cesta k souboru, který bude spuštěn[CR]● XXROM_NAMEXX: Název souboru, který bude spuštěn (bez cesty)[CR]● XXROM_STEMXX: název souboru, který bude spuštěn (bez cesty, bez přípony)[CR]● XXNETPLAY_COMMANDXX: Pro netplay je nutné přidat jakýkoli příkaz, možnosti viz nastavení addonu[CR]Viz wiki pro více informací…"
+msgstr "Během spouštění budou nahrazeny následující proměnné:[CR]● XXROM_PATHXX: Cesta k souboru, který bude spuštěn[CR]● XXROM_NAMEXX: Název souboru, který bude spuštěn (bez cesty)[CR]● XXROM_STEMXX: název souboru, který bude spuštěn (bez cesty, bez přípony)[CR]● XXNETPLAY_COMMANDXX: Jakékoli přidání příkazu potřebné pro netplay, možnosti viz nastavení addonu[CR]Viz wiki pro více informací…"
 
 msgctxt "#30334"
 msgid "The archive file could not be processed[CR]Check logs for more details"
@@ -1465,7 +1473,7 @@ msgstr "Aktualizovat spouštěcí příkaz pro {}?[CR][B]Tímto se změní nasta
 
 msgctxt "#30366"
 msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
-msgstr "Aktualizovat spustit cestu stahování pro {}?[CR][B]Tímto se změní nastavení pro všechny hry v tomto seznamu.[/B]"
+msgstr "Aktualizovat Spustit cestu stahování pro {}?[CR][B]Tímto se změní nastavení pro všechny hry v tomto seznamu.[/B]"
 
 msgctxt "#30367"
 msgid "Update Launch Command"
@@ -1525,7 +1533,7 @@ msgstr "Většina her vyžaduje účet archive.org[CR]Zaregistrujte se na https:
 
 msgctxt "#30381"
 msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
-msgstr "Nastavení je dokončeno pro použití herních doplňků Kodi![CR]Jste připraveni hrát?[CR]Výběrem [B]Ne[/B] nastavíte spouštění externí hry."
+msgstr "Nastavení je dokončeno pro použití doplňků hry Kodi![CR]Jste připraveni hrát?[CR]Výběrem [B]Ne[/B] nastavíte spouštění externí hry."
 
 msgctxt "#30382"
 msgid "Set all game lists to be externally launched"
@@ -1546,3 +1554,383 @@ msgstr "Pro externí spuštění bylo aktualizováno {} seznamů her"
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "Výchozí hodnoty jsou přednastaveny pro každý externí příkaz ke spuštění[CR]Před spuštěním si v případě potřeby zkontrolujte parametry spuštění hry[CR]Další podrobnosti naleznete na wiki."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Aplikace Retroarch nastavena na:[CR]{}[CR]V případě potřeby upravte v nastavení doplňku"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Konfigurace Retroarch nastavena na:[CR]{}[CR]V případě potřeby upravte v nastavení doplňku"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Průvodce dokončen[CR]Lets Play!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Nastavte všechny seznamy her, které se mají spustit pomocí Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Rychle nastavte všechny seznamy her na externí spuštění"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Rychle nastavte všechny seznamy her na retroplayer Kodi"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Potvrdit"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Jste si jisti, že chcete nastavit všechny seznamy na externí spouštění?"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Jste si jisti, že chcete nastavit všechny seznamy na Kodi retroplayer?"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Oprávnění Android vyžadují ruční zadání konfigurační cesty Retroarch[CR]Další nápovědu naleznete na wiki"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Oprávnění systému Android vyžadují, abyste ručně zadali cestu jádra Retroarch[CR]Další nápovědu naleznete na wiki"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Zálohujte aktuální databázi"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Obnovte databázi ze zálohy"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Zálohujte aktuální databázi IAGL a všechna uživatelská nastavení"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Obnovte aktuální databázi doplňků ze zálohy"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Vyberte cestu k zálohování"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Vyberte záložní db"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Zálohování dokončeno"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Obnovení dokončeno"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} odpovídajících ID her nebylo nalezeno v novém db[CR]Vyberte další akci"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Aktualizujte databázi, pokuste se porovnat hry podle názvu a seznamu her"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Aktualizujte databázi, odstraňte ID her, která nebyla nalezena"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Obnovit zpět do staré databáze"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Databáze obnovena zpět do staré databáze"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Prosím čekejte"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Ručně nastavte adresáře Retroarch"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL bude ve výchozím nastavení detekovat adresáře z konfigurace RA, tuto funkci můžete ručně přepsat"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch Core Directory"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroach Info Directory"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Chcete-li spustit příkaz ke spuštění, přidejte linuxovou aplikaci"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak se používá pro specifické systémy linux/elec.  Povolte, pouze pokud to váš systém vyžaduje."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Předpřidejte systemd-run k příkazům Retroarch"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Před všechny příkazy přidejte systemd-run"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Před příkazy Retroarch přidejte běh flatpak"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Ke všem příkazům přidejte spuštění flatpak"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Oprávnění Android vyžadují sdílený adresář úložiště[CR]Zadejte sdílené umístění, ke kterému mají přístup obě aplikace"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Rozbalte soubory"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Žádné zpracování"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Rozbalte soubory, přeskočte soubory BIOS"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Rozbalte soubory do složky"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Rozbalte soubory, přesuňte CHD do složky"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Přesunout soubory do složky: arkáda"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Přesunout soubory do složky: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Přesunout soubory do složky: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Přesunout soubory do složky: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Přesunout soubory do složky: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Přesunout soubory do složky: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Přesunout soubory do složky: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Přesunout soubory do složky: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Přesunout soubory do složky: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Přesunout soubory do složky: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Přesunout soubory do složky: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Přesunout soubory do složky: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Přesunout soubory do složky: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Přesunout soubory do složky: Spectrum"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Přesunout soubory do složky: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Opravdu chcete aktualizovat proces odesílání seznamu her?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Post proces aktualizován"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Aktualizovat Post Proces pro {}?[CR][B]Tímto se změní nastavení pro všechny hry v tomto seznamu.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Stahování dokončeno.  Po zpracování souborů?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Herní soubory zpracovány"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Není k dispozici (pouze Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Typ uživatelského jména Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Vyberte integraci pro název síťového hráče"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Použijte Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord umožňuje automatické zápasy v síti (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Ručně zadejte jméno hráče"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Jména hráčů budou zveřejněna v Retroarch Lobby"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Jméno hráče"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Aktuální uživatel Discordu"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Uživatel Discord nastaven na [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Prohlédněte si herní relace, ke kterým se můžete připojit online pomocí Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Nelze najít uživatele neshody s ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Možnosti filtru ve vstupní hale"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Zobrazit pouze místnosti, do kterých lze vstoupit"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Zobrazovat pouze místnosti, které používají libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Zobrazit místnosti, které mají heslo"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Zobrazit místnosti, které mají heslo pro diváky"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Zobrazit místnosti pomocí serverů MITM"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Zobrazit pouze místnosti vytvořené v časovém rámci"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 minut"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 minut"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Jakýkoli časový rámec"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Filtrujte místnosti ve vstupní hale podle času vytvoření"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Zobrazovat pouze místnosti, které používají IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Nelze najít odpovídající hru s názvem jako [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Nenalezeno"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Vyberte odpovídající hru"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Akce spuštění Netplay"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Připojte se z retroarch lobby"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Připojte se z localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Vyberte výchozí akci, když se připojujete ke hře netplay"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Spusťte jako hostitel netplay"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Přejmenovat oblíbené IAGL"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Přejmenování dokončeno"

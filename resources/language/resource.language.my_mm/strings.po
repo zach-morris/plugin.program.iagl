@@ -101,7 +101,7 @@ msgstr "Code အလိုက် အုပ်စုဖွဲ့ပါ။"
 
 msgctxt "#30023"
 msgid "Group by Rating"
-msgstr "အဆင့်သတ်မှတ်ခြင်းဖြင့် အုပ်စုဖွဲ့ပါ။"
+msgstr "အဆင့်သတ်မှတ်မှုဖြင့် အုပ်စုဖွဲ့ပါ။"
 
 msgctxt "#30024"
 msgid "Select Game Lists"
@@ -221,7 +221,7 @@ msgstr "ဂိမ်းက ပြည်တွင်းမှာ ရှိပြ�
 
 msgctxt "#30053"
 msgid "Define the action to take if a game file is found to exist locally"
-msgstr "ဂိမ်းဖိုင်ကို စက်တွင်း၌ ရှိနေကြောင်း တွေ့ရှိပါက လုပ်ဆောင်ရန် လုပ်ဆောင်ချက်ကို သတ်မှတ်ပါ။"
+msgstr "ဂိမ်းဖိုင်ကို စက်တွင်း၌ တွေ့ရှိပါက လုပ်ဆောင်ရန် သတ်မှတ်ပါ။"
 
 msgctxt "#30054"
 msgid "Prompt"
@@ -385,7 +385,7 @@ msgstr "စာမျက်နှာအလိုက်ဂိမ်းများ
 
 msgctxt "#30094"
 msgid "Define how many games are listed per page"
-msgstr "စာမျက်နှာတစ်ခုလျှင် ဂိမ်းမည်မျှရှိသည်ကို သတ်မှတ်ပါ။"
+msgstr "စာမျက်နှာတစ်ခုလျှင် ဂိမ်းအရေအတွက်မည်မျှရှိသည်ကို သတ်မှတ်ပါ။"
 
 msgctxt "#30095"
 msgid "List all"
@@ -413,7 +413,7 @@ msgstr "အစီအစဉ်ဖြင့်ကြည့်ရှုသည့်
 
 msgctxt "#30101"
 msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
-msgstr "ဖွင့်ထားသောအခါ၊ ဂိမ်းစာရင်း၏အမည်သည် အစီအစဉ်ရှိ ဂိမ်းအမည်တွင် ပေါင်းထည့်မည်ဖြစ်သည်။"
+msgstr "ဖွင့်ထားသောအခါတွင်၊ ဂိမ်းစာရင်း၏အမည်ကို ဖွင့်ရန်စာရင်းရှိ ဂိမ်းအမည်တွင် ပေါင်းထည့်မည်ဖြစ်သည်။"
 
 msgctxt "#30102"
 msgid "Kodi landscape art equates to"
@@ -505,7 +505,7 @@ msgstr "ဂိမ်းများစာရင်း မြင်ကွင်�
 
 msgctxt "#30124"
 msgid "Choose list viewtype"
-msgstr "စာရင်းရှုထောင့်ကို ရွေးပါ။"
+msgstr "စာရင်းအမြင်အမျိုးအစားကို ရွေးပါ။"
 
 msgctxt "#30125"
 msgid "Search and Random results viewtype"
@@ -601,7 +601,7 @@ msgstr "ဂိမ်း launcher ရွေးချယ်မှုနည်း�
 
 msgctxt "#30148"
 msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
-msgstr "ဂိမ်း launcher ကိုရွေးချယ်သည့်အခါ Kodi လုပ်မည့်အရာကို ရွေးပါ (Windows၊ Linux နှင့် OSX သာ)"
+msgstr "ဂိမ်း launcher ကိုရွေးချယ်သည့်အခါ Kodi ဘာလုပ်မည်ကိုရွေးချယ်ပါ (Windows၊ Linux နှင့် OSX သာ)"
 
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
@@ -649,7 +649,7 @@ msgstr "အထောက်အထားများကို ရှာမတွ�
 
 msgctxt "#30160"
 msgid "Game List Download Path"
-msgstr "ဂိမ်းစာရင်း ဒေါင်းလုဒ်လမ်းကြောင်း"
+msgstr "ဂိမ်းစာရင်းဒေါင်းလုဒ်လမ်းကြောင်း"
 
 msgctxt "#30161"
 msgid "Zero (Current Game Only)"
@@ -709,7 +709,7 @@ msgstr "Netplay Lobby ကိုပြပါ။"
 
 msgctxt "#30175"
 msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
-msgstr "ဖွင့်ထားသောအခါ၊ Netplay ဧည့်ခန်းကို IAGL ရှေ့စာမျက်နှာတွင် ပြသပါမည်။"
+msgstr "ဖွင့်ထားသောအခါတွင်၊ Netplay ဧည့်ခန်းကို IAGL ရှေ့စာမျက်နှာတွင် ပြသပါမည်။"
 
 msgctxt "#30176"
 msgid "Filter game lobby to IAGL auto launch games"
@@ -726,6 +726,10 @@ msgstr "Netplay Port"
 msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "ချိတ်ဆက်ရန် netplay IP ပေါက်ကို သတ်မှတ်ပါ (မူလအတွက် ဗလာချန်ထားပါ)"
+
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "မူရင်း Localhost IP"
 
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
@@ -745,7 +749,7 @@ msgstr "Discord တွင် Netplay ကိုကြေငြာပါ။"
 
 msgctxt "#30185"
 msgid "Announces netplay start on discord for IAGL players"
-msgstr "IAGL ကစားသမားများအတွက် သဘောထားကွဲလွဲမှုဖြင့် netplay စတင်ကြောင်းကြေငြာသည်။"
+msgstr "IAGL ကစားသမားများအတွက် သဘောထားကွဲလွဲမှုတွင် netplay စတင်ကြောင်း ကြေညာသည်။"
 
 msgctxt "#30186"
 msgid "Discord Player Name"
@@ -758,6 +762,10 @@ msgstr "Discord တွင်ကြေငြာရန် သင်၏ကစား
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord အသုံးပြုသူအကောင့် ID"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "သင်၏ Discord ID (အသုံးပြုသူ ဆက်တင်များ> ကျွန်ုပ်၏အကောင့်> မိတ္တူ ID) ကို ပေးပါ။"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -841,7 +849,7 @@ msgstr "ဂိမ်းစာရင်းများကို ဖျောက�
 
 msgctxt "#30210"
 msgid "When selected, previously hidden game lists can be unhidden"
-msgstr "ရွေးချယ်သည့်အခါ၊ ယခင်က ဝှက်ထားသောဂိမ်းစာရင်းများကို ဖျောက်ထားနိုင်သည်။"
+msgstr "ရွေးချယ်သည့်အခါ၊ ယခင်က ဝှက်ထားသော ဂိမ်းစာရင်းများကို ဖျောက်ထားနိုင်သည်။"
 
 msgctxt "#30211"
 msgid "Clear Cache"
@@ -1033,7 +1041,7 @@ msgstr "ဒေတာဘေ့စ်ကို ပြန်လည်သတ်မ�
 
 msgctxt "#30258"
 msgid "Database has been reset"
-msgstr "ဒေတာဘေ့စ်ကို ပြန်လည်သတ်မှတ်လိုက်ပါပြီ။"
+msgstr "ဒေတာဘေ့စ်ကို ပြန်လည်သတ်မှတ်ပြီးပါပြီ။"
 
 msgctxt "#30259"
 msgid "Update Launcher"
@@ -1245,7 +1253,7 @@ msgstr "မူရင်း Retroplayer ဂိမ်း Addon"
 
 msgctxt "#30311"
 msgid "Default Game Post Process"
-msgstr "ပုံသေဂိမ်းပို့စ် လုပ်ငန်းစဉ်"
+msgstr "ပုံသေဂိမ်းပို့စ်လုပ်ငန်းစဉ်"
 
 msgctxt "#30312"
 msgid "User Defined Download Path"
@@ -1381,11 +1389,11 @@ msgstr "Game Launch Parameters"
 
 msgctxt "#30345"
 msgid "If no user Launch Command is present"
-msgstr "အကယ်၍ အသုံးပြုသူ Launch Command မရှိပါ။"
+msgstr "အသုံးပြုသူ Launch Command မရှိလျှင်"
 
 msgctxt "#30346"
 msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
-msgstr "စတင်ခြင်း command (retroplayer addon သို့မဟုတ် external emulator) ကို သတ်မှတ်မထားသောအခါ Kodi သည် မည်သည့်အရာကို လုပ်ဆောင်မည်ကို ရွေးပါ။"
+msgstr "စတင်ခြင်း command (retroplayer addon သို့မဟုတ် external emulator) ကို သတ်မှတ်မထားသောအခါ Kodi လုပ်မည့်အရာကို ရွေးပါ။"
 
 msgctxt "#30347"
 msgid "Attempt Launch with default"
@@ -1453,7 +1461,7 @@ msgstr "string အဖြစ် Retroarch Cores လမ်းညွှန်"
 
 msgctxt "#30363"
 msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
-msgstr "တနည်းအားဖြင့် Retroarch directory configuration တွင် ပြထားသည့်အတိုင်း Cores directory သို့ လမ်းကြောင်းကို အတိအကျထည့်ပါ။"
+msgstr "တနည်းအားဖြင့် Retroarch directory configuration တွင်တွေ့ရသည့်အတိုင်း Cores directory သို့ လမ်းကြောင်းကို အတိအကျထည့်ပါ။"
 
 msgctxt "#30364"
 msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
@@ -1546,3 +1554,383 @@ msgstr "ပြင်ပဖွင့်ခြင်းအတွက် {} ဂိ�
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "ပုံသေများသည် ပြင်ပဖွင့်ခြင်းအမိန့်တစ်ခုစီအတွက် ကြိုတင်သတ်မှတ်ထားပါသည်[CR]လိုအပ်ပါက ပြန်လည်သုံးသပ်ခြင်းဂိမ်းစတင်ခြင်းဆိုင်ရာ ကန့်သတ်ချက်များမစတင်မီ[CR]အသေးစိတ်အချက်အလက်များအတွက် wiki တွင်ကြည့်ပါ။"
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch အက်ပ်ကို-[CR]{}[CR]လိုအပ်ပါက addon ဆက်တင်များတွင် ပြင်ဆင်ပါ။"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch config ကို:[CR]{}[CR]လိုအပ်ပါက addon ဆက်တင်များတွင် ပြင်ဆင်ပါ။"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Wizard ပြီးပါပြီ[CR]ကစားရအောင်။"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Kodi ဖြင့် စတင်မည့် ဂိမ်းစာရင်းအားလုံးကို သတ်မှတ်ပါ။"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "ဂိမ်းစာရင်းအားလုံးကို ပြင်ပဖွင့်ခြင်းသို့ အမြန်သတ်မှတ်ပါ။"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "ဂိမ်းစာရင်းအားလုံးကို Kodi retroplayer အဖြစ် အမြန်သတ်မှတ်ပါ။"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "အတည်ပြုပါ။"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "စာရင်းအားလုံးကို ပြင်ပဖွင့်ခြင်းတွင် သင်သတ်မှတ်လိုသည်မှာ သေချာပါသလား။"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "စာရင်းအားလုံးကို Kodi retroplayer အဖြစ် သင်သတ်မှတ်လိုသည်မှာ သေချာပါသလား။"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Android ခွင့်ပြုချက်များသည် Retroarch config လမ်းကြောင်းကို ကိုယ်တိုင်ဝင်ရောက်ရန် လိုအပ်သည်[CR]နောက်ထပ်အကူအညီအတွက် wiki ကိုကြည့်ပါ။"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Android ခွင့်ပြုချက်များသည် Retroarch core လမ်းကြောင်းကို ကိုယ်တိုင်ဝင်ရောက်ရန် လိုအပ်သည်[CR]နောက်ထပ်အကူအညီအတွက် wiki ကိုကြည့်ပါ။"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "လက်ရှိဒေတာဘေ့စ်ကို အရန်သိမ်းပါ။"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "ဒေတာဘေ့စ်ကို အရန်သိမ်းဆည်းခြင်းမှ ပြန်လည်ရယူပါ။"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "လက်ရှိ IAGL ဒေတာဘေ့စ်နှင့် အသုံးပြုသူ ဆက်တင်များအားလုံးကို အရန်သိမ်းပါ။"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "လက်ရှိ addon ဒေတာဘေ့စ်ကို အရန်သိမ်းဆည်းမှုမှ ပြန်လည်ရယူပါ။"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "မိတ္တူလမ်းကြောင်းကို ရွေးပါ။"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Backup db ကို ရွေးပါ။"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "မိတ္တူကူးပြီးပါပြီ။"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "ပြန်လည်ရယူခြင်း ပြီးသွားပါပြီ။"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "db[CR]အသစ်တွင် ကိုက်ညီသည့်ဂိမ်းအိုင်ဒီများကို ရှာမတွေ့ပါ[CR]နောက်လုပ်ဆောင်ချက်ကို ရွေးပါ။"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "ဒေတာဘေ့စ်ကို အပ်ဒိတ်လုပ်ပါ၊ ဂိမ်းများကို ခေါင်းစဉ်နှင့် ဂိမ်းစာရင်းအလိုက် ကိုက်ညီအောင် ကြိုးစားပါ။"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "ဒေတာဘေ့စ်ကို အပ်ဒိတ်လုပ်ပါ၊ ရှာမတွေ့သော ဂိမ်းအိုင်ဒီများကို ဖယ်ရှားပါ။"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "ဒေတာဘေ့စ်အဟောင်းသို့ ပြန်ယူပါ။"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "ဒေတာဘေ့စ်ကို ဒေတာဘေ့စ်ဟောင်းသို့ ပြန်လည်ရယူခဲ့သည်။"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "ကျေးဇူးပြုပြီးခဏစောင့်ပါ"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Retroarch လမ်းညွှန်များကို ကိုယ်တိုင်သတ်မှတ်ပါ။"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL သည် RA config မှ လမ်းညွှန်များကို မူရင်းအတိုင်း ရှာဖွေမည်ဖြစ်ပြီး၊ သင်သည် ဤလုပ်ဆောင်ချက်ကို ကိုယ်တိုင် အစားထိုးနိုင်သည်။"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch Core လမ်းညွှန်"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroach အချက်အလက် လမ်းညွှန်"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "စတင်ခြင်းအမိန့်ကို စတင်ရန် linux အက်ပ်ကို ထပ်ထည့်ပါ။"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak ကို သီးခြား linux/elec စနစ်များအတွက် အသုံးပြုသည်။  သင့်စနစ်က လိုအပ်မှသာ ဖွင့်ပါ။"
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Retroarch အမိန့်များဆီသို့ systemd-run ကိုကြိုတင်ထားပါ။"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "အမိန့်အားလုံးအတွက် systemd-run ကိုကြိုတင်ထားပါ။"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "flatpak run ကို Retroarch commands တွင်ကြိုတင်ထားပါ။"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "အမိန့်အားလုံးအတွက် flatpak run ကိုကြိုတင်ထားပါ။"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Android ခွင့်ပြုချက်များသည် မျှဝေထားသောသိုလှောင်မှုလမ်းညွှန်တစ်ခု လိုအပ်သည်[CR]အပလီကေးရှင်းနှစ်ခုလုံးမှဝင်ရောက်နိုင်သော မျှဝေထားသောတည်နေရာကိုထည့်ပါ။"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "ဖိုင်များကို ဇစ်ဖွင့်ပါ။"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "လုပ်ဆောင်ခြင်းမရှိပါ။"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "ဖိုင်များကို ဇစ်ဖွင့်ပါ၊ BIOS ဖိုင်များကို ကျော်ပါ။"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "ဖိုင်များကို ဖိုဒါသို့ ဇစ်ဖွင့်ပါ။"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "ဖိုင်များကို ဇစ်ဖွင့်ပါ၊ CHD ကို ဖိုင်တွဲသို့ ရွှေ့ပါ။"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "ဖိုင်များကို ဖိုင်တွဲသို့ ရွှေ့ပါ- အာကိတ်"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "ဖိုင်များကို ဖိုင်တွဲသို့ ရွှေ့ပါ- channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "ဖိုင်များကို ဖိုင်တွဲသို့ ရွှေ့ပါ- coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "ဖိုင်များကို ဖိုင်တွဲသို့ ရွှေ့ပါ- fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "ဖိုင်များကို ဖိုင်တွဲသို့ ရွှေ့ပါ- gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "ဖိုင်များကို ဖိုင်တွဲသို့ ရွှေ့ပါ- megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "ဖိုင်များကို ဖိုင်တွဲသို့ ရွှေ့ပါ- msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "ဖိုင်များကို ဖိုဒါသို့ ရွှေ့ပါ- nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "ဖိုင်များကို ဖိုင်တွဲသို့ ရွှေ့ပါ- ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "ဖိုင်များကို ဖိုဒါသို့ ရွှေ့ပါ- pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "ဖိုင်များကို ဖိုင်တွဲသို့ ရွှေ့ပါ- sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "ဖိုင်များကို ဖိုင်တွဲသို့ ရွှေ့ပါ- sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "ဖိုင်များကို ဖိုင်တွဲသို့ ရွှေ့ပါ- sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "ဖိုင်များကို ဖိုင်တွဲသို့ ရွှေ့ပါ- spectrum"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "ဖိုင်များကို ဖိုင်တွဲသို့ ရွှေ့ပါ- tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "ဂိမ်းစာရင်းတင်ခြင်းလုပ်ငန်းစဉ်ကို အပ်ဒိတ်လုပ်လိုသည်မှာ သေချာပါသလား။"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "ပို့စ်လုပ်ငန်းစဉ်ကို အပ်ဒိတ်လုပ်ထားသည်။"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{} အတွက် ပို့စ်လုပ်ငန်းစဉ်ကို အပ်ဒိတ်လုပ်ပါ။[CR][B]၎င်းသည် ဤစာရင်းရှိ ဂိမ်းအားလုံးအတွက် ဆက်တင်များကို ပြောင်းလဲပါမည်။[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "ဒေါင်းလုဒ် ပြီးပါပြီ။  လုပ်ငန်းစဉ်ဖိုင်များကို ပို့စ်တင်မလား။"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "ဂိမ်းဖိုင်များကို လုပ်ဆောင်ပြီးပါပြီ။"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "မရရှိနိုင်ပါ (Windows၊ OSX၊ Linux သီးသန့်)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Netplay အသုံးပြုသူအမည် အမျိုးအစား"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "netplay player အမည်အတွက် ပေါင်းစပ်မှုကို ရွေးပါ။"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Discord ကိုသုံးပါ။"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord သည် အလိုအလျောက် netplay ပွဲစဉ်များကို ဖွင့်ပေးသည် (IAGL- https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "ကစားသမားအမည်ကို ကိုယ်တိုင်ထည့်ပါ။"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "ကစားသမားအမည်များကို Retroarch Lobby တွင် ထုတ်ပြန်ပါမည်။"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "ကစားသမားအမည်"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "လက်ရှိ Discord အသုံးပြုသူ"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord အသုံးပြုသူကို [CR]{} ဟု သတ်မှတ်သည်"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Retroarch netplay ကို အသုံးပြု၍ အွန်လိုင်းတွင် သင်ပါဝင်နိုင်သည့် ဂိမ်းဆက်ရှင်များကို ကြည့်ပါ။"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "ID [CR]{} ဖြင့် သဘောထားကွဲလွဲသော အသုံးပြုသူကို ရှာမတွေ့ပါ"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Lobby Filter ရွေးစရာများ"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "ဝင်နိုင်သော အခန်းများကိုသာ ပြသပါ။"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "libretro သုံးနေသော အခန်းများကိုသာ ပြသပါ။"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "စကားဝှက်ပါသော အခန်းများကို ပြပါ။"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "ကြည့်ရှုသူ စကားဝှက်ပါသော အခန်းများကို ပြပါ။"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "MITM ဆာဗာများကို အသုံးပြု၍ အခန်းများကို ပြသပါ။"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "အချိန်ဘောင်အတွင်း ဖန်တီးထားသော အခန်းများကိုသာ ပြသပါ။"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "မိနစ် 30"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "မိနစ် 60"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "မည်သည့်အချိန်ဘောင်"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "ဖန်တီးချိန်ပေါ်မူတည်၍ ဧည့်ခန်းအခန်းများကို စစ်ထုတ်ပါ။"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "IAGL ကို အသုံးပြုနေသော အခန်းများကိုသာ ပြသပါ။"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "[CR]{} ကဲ့သို့သော အမည်ဖြင့် ကိုက်ညီသောဂိမ်းကို ရှာမတွေ့ပါ"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "မတွေ့ပါ။"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "ကိုက်ညီသောဂိမ်းကိုရွေးချယ်ပါ။"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Netplay စတင်ခြင်းလုပ်ဆောင်ချက်"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "ခေတ်နောက်ပြန်ဆွဲ ဧည့်ခန်းမှ ပါဝင်ပါ။"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "localhost မှ ပူးပေါင်းပါ။"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "netplay ဂိမ်းတွင်ပါဝင်သည့်အခါ မူရင်းလုပ်ဆောင်ချက်ကို ရွေးချယ်ပါ။"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "netplay host အဖြစ် စတင်ပါ။"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "IAGL Favourite ဟု အမည်ပြောင်းပါ။"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "အမည်ပြောင်းပြီးပါပြီ။"

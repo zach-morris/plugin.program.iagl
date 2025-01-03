@@ -85,7 +85,7 @@ msgstr "Grupp skond Playlist"
 
 msgctxt "#30019"
 msgid "Group by Region"
-msgstr "Grupp skond ir-Reġjun"
+msgstr "Grupp skond Reġjun"
 
 msgctxt "#30020"
 msgid "Group by Language"
@@ -505,7 +505,7 @@ msgstr "Logħob lista viewtype"
 
 msgctxt "#30124"
 msgid "Choose list viewtype"
-msgstr "Agħżel it-tip tal-vista tal-lista"
+msgstr "Agħżel it-tip ta' viżjoni tal-lista"
 
 msgctxt "#30125"
 msgid "Search and Random results viewtype"
@@ -727,6 +727,10 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Iddefinixxi l-port IP netplay biex tikkonnettja (ħalli vojta għal default)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Default Localhost IP"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Iddefinixxi isem tal-hostname / IP default netplay (utli għan-netplay tan-netwerk lokali, ħalli vojt għal default)"
@@ -758,6 +762,10 @@ msgstr "Daħħal l-isem tal-plejer tiegħek biex jitħabbar fuq Discord"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "ID tal-Kont tal-Utent tad-Discord"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Ipprovdi l-ID Discord tiegħek (Settings tal-Utent> Kont Tiegħi> Kopja tal-ID)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -829,7 +837,7 @@ msgstr "Irrisettja Għażliet"
 
 msgctxt "#30207"
 msgid "Reset IAGL database to default settings"
-msgstr "Irrisettja d-database IAGL għall-issettjar default"
+msgstr "Irrisettja d-database IAGL għas-settings default"
 
 msgctxt "#30208"
 msgid "When selected, the database will be reset to default settings"
@@ -953,7 +961,7 @@ msgstr "Neħħi IAGL Favorit"
 
 msgctxt "#30238"
 msgid "Are you sure you want to delete this Favorite?"
-msgstr "Int żgur li trid tħassar dan il-Favorit?"
+msgstr "Żgur li trid tħassar dan il-Favorit?"
 
 msgctxt "#30239"
 msgid "Favorite deleted"
@@ -1109,7 +1117,7 @@ msgstr "Agħżel minn Emulaturi Extra"
 
 msgctxt "#30277"
 msgid "Manually Enter Launch Command"
-msgstr "Manwalment Daħħal Kmand tat-Tnedija"
+msgstr "Ikteb il-Kmand tat-Tnedija manwalment"
 
 msgctxt "#30278"
 msgid "Select External Command Type"
@@ -1149,7 +1157,7 @@ msgstr "ePSXe"
 
 msgctxt "#30287"
 msgid "Select the path to the ePSXe application (optional)"
-msgstr "Agħżel it-triq għall-applikazzjoni ePSXe (mhux obbligatorju)"
+msgstr "Agħżel it-triq għall-applikazzjoni ePSXe (mhux obbligatorja)"
 
 msgctxt "#30288"
 msgid "Demul"
@@ -1225,7 +1233,7 @@ msgstr "Sistema Lista tal-Logħob"
 
 msgctxt "#30306"
 msgid "Total 1G1R Games in List"
-msgstr "Logħob Total 1G1R fil-Lista"
+msgstr "Logħob totali 1G1R fil-Lista"
 
 msgctxt "#30307"
 msgid "Total Games in List"
@@ -1233,7 +1241,7 @@ msgstr "Logħob Totali fil-Lista"
 
 msgctxt "#30308"
 msgid "Total Favorited Games in List"
-msgstr "Logħob Favoriti Totali fil-Lista"
+msgstr "Logħob Preferit totali fil-Lista"
 
 msgctxt "#30309"
 msgid "Default External Launch Command"
@@ -1273,7 +1281,7 @@ msgstr "Xejn (se tuża l-addon default)"
 
 msgctxt "#30318"
 msgid "Games List Launcher"
-msgstr "Logħob Lista Llanċjar"
+msgstr "Logħob Lista Luncher"
 
 msgctxt "#30319"
 msgid "External Launch Command "
@@ -1373,11 +1381,11 @@ msgstr "Ara l-parametri tat-tnedija"
 
 msgctxt "#30343"
 msgid "Game Settings"
-msgstr "Issettjar tal-Logħob"
+msgstr "Settings tal-Logħob"
 
 msgctxt "#30344"
 msgid "Game Launch Parameters"
-msgstr "Parametri tat-Tnedija tal-Logħba"
+msgstr "Parametri tat-Tnedija tal-Logħob"
 
 msgctxt "#30345"
 msgid "If no user Launch Command is present"
@@ -1405,7 +1413,7 @@ msgstr "Kmand tat-tnedija mhuwiex issettjat għal din il-lista, issettja waħda 
 
 msgctxt "#30351"
 msgid "No default launch command could be found for this list"
-msgstr "L-ebda kmand tal-varar default ma seta' jinstab għal din il-lista"
+msgstr "L-ebda kmand tat-tnedija default ma seta' jinstab għal din il-lista"
 
 msgctxt "#30352"
 msgid "Default core was not found.  Please install {} or update launcher"
@@ -1445,7 +1453,7 @@ msgstr "Retroarch CFG Post bħala spag"
 
 msgctxt "#30361"
 msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
-msgstr "Alternattivament daħħal it-triq għall-fajl retroarch.cfg eżatt kif jidher f'Retroarch"
+msgstr "Alternattivament daħħal it-triq għall-fajl retroarch.cfg eżattament kif jidher f'Retroarch"
 
 msgctxt "#30362"
 msgid "Retroarch Cores directory as string"
@@ -1489,7 +1497,7 @@ msgstr "Agħti donazzjoni lil Archive.org"
 
 msgctxt "#30372"
 msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
-msgstr "Instabet database IAGL ġdida[CR]Trid taġġorna?[CR]Is-settings se jiġu kkupjati fid-db il-ġdid jekk possibbli"
+msgstr "Instabet database IAGL ġdida[CR]Tridu taġġorna?[CR]Is-settings se jiġu kkupjati fid-db il-ġdid jekk possibbli"
 
 msgctxt "#30373"
 msgid "New db"
@@ -1525,7 +1533,7 @@ msgstr "Il-biċċa l-kbira tal-logħob jeħtieġu kont ta' archive.org[CR]Irreġ
 
 msgctxt "#30381"
 msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
-msgstr "Is-setup hija kompluta għall-użu ta' addons tal-logħob Kodi![CR]Int lest biex tilgħab?[CR]Agħżel [B]Le[/B] biex issettja t-tnedija tal-logħba esterna."
+msgstr "Is-setup hija kompluta għall-użu ta' addons tal-logħob Kodi![CR]Let biex tilgħab?[CR]Agħżel [B]Le[/B] biex issettja t-tnedija tal-logħba esterna."
 
 msgctxt "#30382"
 msgid "Set all game lists to be externally launched"
@@ -1545,4 +1553,384 @@ msgstr "{} listi tal-logħob ġew aġġornati għat-tnedija esterna"
 
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
-msgstr "Id-defaults huma ssettjati minn qabel għal kull kmand estern tat-tnedija[CR]Qabel ma tniedi l-parametri tat-tnedija tal-logħob tar-reviżjoni jekk meħtieġ[CR]Ara l-wiki għal aktar dettalji."
+msgstr "Id-defaults huma ssettjati minn qabel għal kull kmand estern tat-tnedija[CR]Qabel ma tniedi l-parametri tar-reviżjoni tal-varar tal-logħob jekk meħtieġ[CR]Ara l-wiki għal aktar dettalji."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "App Retroarch issettjata għal:[CR]{}[CR]Immodifika fis-settings tal-addon jekk meħtieġ"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Il-konfigurazzjoni retroarch issettjata għal:[CR]{}[CR]Immodifika fis-settings tal-addon jekk meħtieġ"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Wizard lest[CR]Ejja nilgħab!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Issettja l-listi tal-logħob kollha biex jiġu mnedija b'Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Issettja malajr il-listi tal-logħob kollha għal tnedija esterna"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Issettja malajr il-listi tal-logħob kollha għal Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Ikkonferma"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Int żgur li trid issettja l-listi kollha għal tnedija esterna"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Int żgur li trid issettja l-listi kollha għal Kodi retroplayer"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Il-permessi tal-Android jeħtieġu li inti tidħol manwalment fit-triq tal-konfigurazzjoni Retroarch[CR]Ara l-wiki għal aktar għajnuna"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Il-permessi tal-Android jeħtieġu li inti tidħol manwalment fit-triq tal-qalba Retroarch[CR]Ara l-wiki għal aktar għajnuna"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Backup database kurrenti"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Irrestawra d-database mill-backup"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Agħmel backup tad-database attwali tal-IAGL u tas-settings kollha tal-utent"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Irrestawra d-database tal-addon attwali minn backup"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Agħżel il-passaġġ tal-backup"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Agħżel backup db"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Il-backup tlesta"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Restore lest"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} ids tal-logħob li jaqblu ma nstabux fid-db il-ġdid[CR]Agħżel l-azzjoni li jmiss"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Aġġorna d-database, ipprova tqabbel il-logħob skont it-titlu u l-lista tal-logħob"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Aġġorna d-database, neħħi l-ids tal-logħob li ma nstabux"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Irrestawra lura għad-database l-antika"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Database restawrata lura għal database l-antika"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Jekk jogħġbok Stenna"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Issettja manwalment direttorji Retroarch"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL awtomatikament se jiskopri direttorji mill-konfigurazzjoni RA, tista 'manwalment override din il-funzjoni"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Direttorju Core Retroarch"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Direttorju ta' Informazzjoni Retroach"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Waħħal l-app tal-Linux biex tibda l-kmand tat-tnedija"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak jintuża għal sistemi speċifiċi linux/elec.  Attiva biss jekk is-sistema tiegħek teħtieġha."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Prepend systemd-run għall-kmandi Retroarch"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Prepend systemd-run għall-kmandi kollha"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Prepend flatpak run għall-kmandi Retroarch"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Prepend flatpak run għall-kmandi kollha"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Il-permessi ta' Android jeħtieġu direttorju ta' ħażna kondiviża[CR]Ikteb post kondiviż li jista' jiġi aċċessat miż-żewġ applikazzjonijiet"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Unzip Fajls"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Nru Ipproċessar"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Unzip Files, Aqbeż fajls BIOS"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Unzip Fajls għal Folder"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Unzip Files, Mexxi CHD għall-folder"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Mexxi fajls għall-folder: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Mexxi l-fajls fil-folder: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Mexxi l-fajls fil-folder: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Mexxi l-fajls fil-folder: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Mexxi l-fajls fil-folder: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Mexxi l-fajls fil-folder: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Mexxi l-fajls fil-folder: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Mexxi l-fajls fil-folder: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Mexxi l-fajls fil-folder: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Mexxi l-fajls fil-folder: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Mexxi l-fajls fil-folder: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Mexxi l-fajls fil-folder: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Mexxi l-fajls fil-folder: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Mexxi fajls għall-folder: spettru"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Mexxi l-fajls fil-folder: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Int żgur li trid taġġorna l-proċess ta' wara l-lista tal-logħob?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Post proċess aġġornat"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Aġġorna l-Proċess ta' Post għal {}?[CR][B]Dan se jibdel is-settings għal-logħob kollu f'din il-lista.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Niżżel lest.  Post proċess fajls?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Fajls tal-logħob ipproċessati"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Mhux Disponibbli (Windows, OSX, Linux Biss)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Netplay Username Tip"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Agħżel l-integrazzjoni għall-isem tal-plejer netplay"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Uża Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord jippermetti logħbiet ta' netplay awtomatizzati (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Daħħal l-Isem tal-Plejer manwalment"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "L-ismijiet tal-plejers se jiġu ppubblikati fil-Lobby tar-Retroarch"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Isem tal-Plejer"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Utent Discord kurrenti"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord User issettjat għal [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Ara s-sessjonijiet tal-logħob li tista' tingħaqad onlajn billi tuża Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Ma tistax issib utent tad-discord b'ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Għażliet tal-Filtru tal-Lobby"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Uri biss kmamar li jistgħu jidħlu"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Uri biss kmamar li qed jużaw libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Uri kmamar li għandhom password"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Uri kmamar li għandhom password tal-ispettatur"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Uri kmamar bl-użu ta' servers MITM"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Uri biss kmamar maħluqa fiż-żmien"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 minuta"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 minuta"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Kwalunkwe Żmien"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Iffiltra l-kmamar tal-lobby ibbażati fuq il-ħin tal-ħolqien"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Uri biss kmamar li qed jużaw IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Ma tistax issib logħba li tqabbel b'isem bħal[CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Mhux misjuba"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Agħżel logħba tqabbil"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Netplay tnedija azzjoni"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Ingħaqad mil-lobby retroarch"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Ingħaqad minn localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Agħżel l-azzjoni awtomatika meta tingħaqad ma' logħba netplay"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Tnedija bħala host netplay"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Semmi mill-ġdid IAGL Favorit"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Semmi Tlesti"

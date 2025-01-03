@@ -265,7 +265,7 @@ msgstr "archive.org парола"
 
 msgctxt "#30064"
 msgid "Some games require login.  Enter your archive.org password"
-msgstr "Някои игри изискват влизане.  Въведете паролата си за archive.org"
+msgstr "Някои игри изискват влизане.  Въведете вашата парола за archive.org"
 
 msgctxt "#30065"
 msgid "Check login credentials"
@@ -277,7 +277,7 @@ msgstr "Тествайте въведените имейл и парола, за
 
 msgctxt "#30067"
 msgid "Download folder size limit"
-msgstr "Ограничение на размера на папката за изтегляне"
+msgstr "Ограничение за размера на папката за изтегляне"
 
 msgctxt "#30068"
 msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
@@ -345,7 +345,7 @@ msgstr "Списък с игри"
 
 msgctxt "#30084"
 msgid "Retroarch Settings"
-msgstr "Настройки за ретроарка"
+msgstr "Настройки за обратна арка"
 
 msgctxt "#30085"
 msgid "Suspend Kodi IO on launch"
@@ -401,7 +401,7 @@ msgstr "Ако е възможно, списъците с игри ще бъда
 
 msgctxt "#30098"
 msgid "Append game list name to search and random results"
-msgstr "Добавете име на списък с игри към резултати от търсене и произволни резултати"
+msgstr "Добавете име на списък с игри към търсене и произволни резултати"
 
 msgctxt "#30099"
 msgid "When enabled, the name of the game list will be appended to search results"
@@ -727,6 +727,10 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Дефинирайте IP порта на netplay за свързване (оставете празно по подразбиране)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "IP на локалния хост по подразбиране"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Дефинирайте име на хост netplay по подразбиране / IP (полезно за netplay в локална мрежа, оставете празно за подразбиране)"
@@ -758,6 +762,10 @@ msgstr "Въведете името на вашия играч, за да бъд
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "ID на потребителския акаунт в Discord"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Предоставете вашия Discord ID (Потребителски настройки>Моят акаунт>Копиране на ID)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -817,7 +825,7 @@ msgstr "Организирайте папката за изтегляне по �
 
 msgctxt "#30204"
 msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
-msgstr "Когато е активирана, временната папка ще бъде организирана по система (понякога е необходимо за отмяна на конфигурацията)"
+msgstr "Когато е разрешено, временната папка ще бъде организирана по система (понякога е необходимо за отмяна на конфигурацията)"
 
 msgctxt "#30205"
 msgid "Copy Kodi Network Source downloads to Local Filesystem"
@@ -917,7 +925,7 @@ msgstr "Критериите за търсене са празни.[CR]Акту�
 
 msgctxt "#30229"
 msgid "Reset criteria"
-msgstr "Нулирайте критериите"
+msgstr "Нулиране на критериите"
 
 msgctxt "#30230"
 msgid "Enter Link Name"
@@ -977,7 +985,7 @@ msgstr "Нулирайте *всички* критерии"
 
 msgctxt "#30244"
 msgid "Run IAGL setup wizard?"
-msgstr "Стартиране на съветника за настройка на IAGL?"
+msgstr "Изпълнение на съветника за настройка на IAGL?"
 
 msgctxt "#30245"
 msgid "Wizard"
@@ -1097,7 +1105,7 @@ msgstr "Проверка на входа за [CR]"
 
 msgctxt "#30274"
 msgid "Requesting file info for[CR]"
-msgstr "Иска се информация за файла за [CR]"
+msgstr "Искане на информация за файла за [CR]"
 
 msgctxt "#30275"
 msgid "Select from Retroarch Cores"
@@ -1545,4 +1553,384 @@ msgstr "{} списъци с игри бяха актуализирани за �
 
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
-msgstr "Стойностите по подразбиране са предварително зададени за всяка външна команда за стартиране[CR]Преди стартиране прегледайте параметрите за стартиране на играта, ако е необходимо[CR]Вижте wiki за повече подробности."
+msgstr "Стандартните настройки са предварително зададени за всяка външна команда за стартиране[CR]Преди стартиране прегледайте параметрите за стартиране на играта, ако е необходимо[CR]Вижте wiki за повече подробности."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Приложението Retroarch е зададено на: [CR] {}[CR] Променете в настройките на добавката, ако е необходимо"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Конфигурацията Retroarch е зададена на: [CR] {}[CR] Променете в настройките на добавката, ако е необходимо"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Съветникът е завършен[CR]Да играем!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Задайте всички списъци с игри да се стартират с Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Бързо настройте всички списъци с игри за външно стартиране"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Бързо настройте всички списъци с игри на Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Потвърдете"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Сигурни ли сте, че искате да настроите всички списъци на външно стартиране"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Сигурни ли сте, че искате да настроите всички списъци на Kodi retroplayer"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Разрешенията за Android изискват да въведете ръчно конфигурационния път на Retroarch[CR]Вижте wiki за повече помощ"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Разрешенията за Android изискват ръчно въвеждане на основния път на Retroarch[CR]Вижте wiki за повече помощ"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Архивирайте текущата база данни"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Възстановете базата данни от резервно копие"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Архивирайте текущата база данни IAGL и всички потребителски настройки"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Възстановете текущата база данни на добавки от резервно копие"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Изберете резервен път"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Изберете резервна база данни"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Архивирането е завършено"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Възстановяването е завършено"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} съвпадащи идентификационни номера на игри не бяха намерени в новата база данни[CR]Избор на следващо действие"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Актуализирайте базата данни, опитайте се да съпоставите игрите по заглавие и списък с игри"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Актуализирайте базата данни, премахнете идентификаторите на игри, които не са намерени"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Възстановете обратно към старата база данни"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Базата данни е възстановена обратно към старата база данни"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Моля изчакайте"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Ръчно задайте Retroarch директории"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL по подразбиране ще открие директории от RA config, можете ръчно да отмените тази функция"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch Core Directory"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Информационна директория на Retroach"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Добавете linux приложение, за да стартирате команда за стартиране"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak се използва за специфични системи linux/elec.  Активирайте само ако системата ви го изисква."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Добавяне на systemd-run към командите на Retroarch"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Добавяне на systemd-run към всички команди"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Добавете изпълнение на flatpak към командите Retroarch"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Добавете изпълнение на flatpak към всички команди"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Разрешенията за Android изискват споделена директория за съхранение[CR]Въведете споделено местоположение, до което могат да имат достъп и двете приложения"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Разархивирайте файлове"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Без обработка"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Разархивирайте файлове, пропуснете BIOS файлове"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Разархивирайте файловете в папка"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Разархивирайте файлове, преместете CHD в папка"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Преместване на файлове в папка: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Преместване на файлове в папка: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Преместване на файлове в папка: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Преместване на файлове в папка: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Преместване на файлове в папка: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Преместване на файлове в папка: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Преместване на файлове в папка: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Преместване на файлове в папка: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Преместване на файлове в папка: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Преместване на файлове в папка: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Преместване на файлове в папка: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Преместване на файлове в папка: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Преместване на файлове в папка: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Преместване на файлове в папка: спектър"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Преместване на файлове в папка: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Сигурни ли сте, че искате да актуализирате списъка с игри след процеса?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Процесът на публикуване е актуализиран"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Актуализиране на последващия процес за {}?[CR][B]Това ще промени настройките за всички игри в този списък.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Изтеглянето завърши.  Файлове за последваща обработка?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Файловете на играта са обработени"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Не е налично (само за Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Тип потребителско име на Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Изберете интеграция за име на играч на netplay"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Използвайте Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord позволява автоматизирани съвпадения в мрежата (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Въведете ръчно име на играч"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Имената на играчите ще бъдат публикувани в Retroarch Lobby"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Име на играча"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Текущ потребител на Discord"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Потребителят на Discord е зададен на [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Преглеждайте игрови сесии, към които можете да се присъедините онлайн с помощта на Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Не може да се намери потребител на Discord с ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Опции за лоби филтър"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Показвайте само стаи, в които може да се влезе"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Показвайте само стаи, които използват libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Показване на стаи, които имат парола"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Покажете стаи, които имат парола за зрители"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Покажете стаи, използвайки MITM сървъри"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Показвайте само стаи, създадени в рамките на времевата рамка"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 минути"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 минути"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Всякаква времева рамка"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Филтрирайте стаите във фоайето според времето на създаване"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Показвайте само стаи, които използват IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Не може да се намери съответстваща игра с име като [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Не е намерено"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Изберете подходяща игра"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Действие за стартиране на Netplay"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Присъединете се от ретроархивното лоби"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Присъединете се от localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Изберете действието по подразбиране, когато се присъединявате към netplay игра"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Стартирайте като netplay хост"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Преименувайте IAGL Favorite"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Преименуването е завършено"

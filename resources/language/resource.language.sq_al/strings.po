@@ -249,7 +249,7 @@ msgstr "I paaftë"
 
 msgctxt "#30060"
 msgid "Some games require login.  Enter your archive.org email address and password."
-msgstr "Disa lojëra kërkojnë hyrje.  Futni adresën dhe fjalëkalimin tuaj të emailit archive.org."
+msgstr "Disa lojëra kërkojnë hyrje.  Fusni adresën dhe fjalëkalimin tuaj të emailit archive.org."
 
 msgctxt "#30061"
 msgid "archive.org Email"
@@ -257,7 +257,7 @@ msgstr "archive.org Email"
 
 msgctxt "#30062"
 msgid "Some games require login.  Enter your archive.org email address"
-msgstr "Disa lojëra kërkojnë hyrje.  Futni adresën tuaj të emailit archive.org"
+msgstr "Disa lojëra kërkojnë hyrje.  Shkruani adresën tuaj të emailit archive.org"
 
 msgctxt "#30063"
 msgid "archive.org Password"
@@ -449,7 +449,7 @@ msgstr "Zgjidhni veprën artistike të shfaqur për listën e qartë të lojëra
 
 msgctxt "#30110"
 msgid "System logo"
-msgstr "Logoja e sistemit"
+msgstr "Logo e sistemit"
 
 msgctxt "#30111"
 msgid "System console"
@@ -465,7 +465,7 @@ msgstr "Lista e lojërave fanart barazohet me"
 
 msgctxt "#30114"
 msgid "Select the artwork displayed for the game list fanart"
-msgstr "Zgjidhni veprën artistike të shfaqur për fanart të listës së lojërave"
+msgstr "Zgjidhni veprën artistike të shfaqur për fanartin e listës së lojërave"
 
 msgctxt "#30115"
 msgid "System collage"
@@ -485,7 +485,7 @@ msgstr "Forco llojet e pamjeve IAGL"
 
 msgctxt "#30119"
 msgid "Verify your skin has the forced viewtype ID available"
-msgstr "Verifikoni që lëkura juaj të ketë ID-në e llojit të shikimit të detyruar"
+msgstr "Verifikoni që lëkura juaj të ketë të disponueshme ID-në e llojit të shikimit të detyruar"
 
 msgctxt "#30120"
 msgid "Frontpage viewtype"
@@ -513,7 +513,7 @@ msgstr "Lloji i pamjes së kërkimit dhe rezultateve të rastësishme"
 
 msgctxt "#30126"
 msgid "Off (Default)"
-msgstr "Joaktiv (i parazgjedhur)"
+msgstr "Joaktiv (e parazgjedhur)"
 
 msgctxt "#30127"
 msgid "List / Poster (50)"
@@ -633,7 +633,7 @@ msgstr "Lista sipas Sistemeve të Emuluara"
 
 msgctxt "#30156"
 msgid "Select Core"
-msgstr "Zgjidhni Core"
+msgstr "Zgjidhni Bërthamë"
 
 msgctxt "#30157"
 msgid "Select Emulated System"
@@ -653,7 +653,7 @@ msgstr "Rruga e shkarkimit të listës së lojërave"
 
 msgctxt "#30161"
 msgid "Zero (Current Game Only)"
-msgstr "Zero (Vetëm lojën aktuale)"
+msgstr "Zero (vetëm loja aktuale)"
 
 msgctxt "#30162"
 msgid "25 MB"
@@ -713,7 +713,7 @@ msgstr "Kur aktivizohet, lobi i rrjetit do të shfaqet në faqen e parë të IAG
 
 msgctxt "#30176"
 msgid "Filter game lobby to IAGL auto launch games"
-msgstr "Filtro hollin e lojës në lojërat e lëshimit automatik të IAGL"
+msgstr "Filtro lobin e lojës te lojërat e lëshimit automatik të IAGL"
 
 msgctxt "#30177"
 msgid "If enabled, the netplay lobby will only show auto launchable games"
@@ -727,9 +727,13 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Përcaktoni portën IP të netplay për t'u lidhur (lëreni bosh si parazgjedhje)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "IP e parazgjedhur Localhost"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
-msgstr "Përcaktoni një emër pritës/IP të paracaktuar të netplay (e dobishme për rrjetin lokal të rrjetit, lëreni bosh për parazgjedhjen)"
+msgstr "Përcaktoni një emër pritës/IP të paracaktuar të rrjetit (i dobishëm për rrjetin lokal të rrjetit, lëreni bosh për parazgjedhjen)"
 
 msgctxt "#30182"
 msgid "Check frames"
@@ -759,6 +763,10 @@ msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord ID e llogarisë së përdoruesit"
 
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Jepni ID-në tuaj të Discord (Cilësimet e përdoruesit> Llogaria ime> Kopjo ID)"
+
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
 msgstr "Shfaq raportin kur magjistari të përfundojë"
@@ -781,7 +789,7 @@ msgstr "Përdor StartAndroidActivity"
 
 msgctxt "#30195"
 msgid "Leave as default if unsure"
-msgstr "Lini si parazgjedhje nëse nuk jeni të sigurt"
+msgstr "Lëreni si parazgjedhje nëse nuk jeni të sigurt"
 
 msgctxt "#30196"
 msgid "Suspend Kodi Input and Audio when using External Launcher"
@@ -809,7 +817,7 @@ msgstr "Dosja alternative e shkarkimit të paracaktuar"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
-msgstr "Kur zgjidhet, të gjitha shkarkimet do të shkojnë në një dosje alternative.  [B]Shënim: Kjo dosje nuk do të pastrohet ose monitorohet për nga madhësia[/B]"
+msgstr "Kur zgjidhet, të gjitha shkarkimet do të shkojnë në një dosje alternative.  [B]Shënim: Kjo dosje nuk do të pastrohet ose monitorohet për madhësi[/B]"
 
 msgctxt "#30203"
 msgid "Organize default download folder using system folders"
@@ -881,7 +889,7 @@ msgstr "Etiketat e zgjedhura"
 
 msgctxt "#30220"
 msgid "Playlists selected"
-msgstr "Listat për luajtje të zgjedhura"
+msgstr "Listat e luajtjes të zgjedhura"
 
 msgctxt "#30221"
 msgid "Regions selected"
@@ -993,7 +1001,7 @@ msgstr "Përditëso listën e lojërave Launch Command"
 
 msgctxt "#30248"
 msgid "Update game list Download Path"
-msgstr "Përditëso listën e lojërave të shtegut të shkarkimit"
+msgstr "Përditëso listën e lojërave të shkarkimit"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1085,7 +1093,7 @@ msgstr "Gabim"
 
 msgctxt "#30271"
 msgid "Initializing download for[CR]"
-msgstr "Po inicohet shkarkimi për [CR]"
+msgstr "Po inicializohet shkarkimi për [CR]"
 
 msgctxt "#30272"
 msgid "Check logs"
@@ -1121,7 +1129,7 @@ msgstr "Emulatorë shtesë"
 
 msgctxt "#30280"
 msgid "Dolphin"
-msgstr "Delfin"
+msgstr "delfin"
 
 msgctxt "#30281"
 msgid "Select the path to the Dolphin application (optional)"
@@ -1189,7 +1197,7 @@ msgstr "Cilësimet e nisjes janë aktualisht bosh[CR]Ju lutemi, përditësoni ci
 
 msgctxt "#30297"
 msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
-msgstr "Nuk u gjet asnjë emulator shtesë[CR]Ju lutemi përditësoni cilësimet shtesë të emulatorit shtesë"
+msgstr "Nuk u gjet asnjë emulator shtesë[CR]Ju lutemi, përditësoni cilësimet shtesë të emulatorit shtesë"
 
 msgctxt "#30298"
 msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
@@ -1237,7 +1245,7 @@ msgstr "Gjithsej lojërat e preferuara në listë"
 
 msgctxt "#30309"
 msgid "Default External Launch Command"
-msgstr "Komanda e parazgjedhur e nisjes së jashtme"
+msgstr "Komanda e paracaktuar e nisjes së jashtme"
 
 msgctxt "#30310"
 msgid "Default Retroplayer Game Addon"
@@ -1281,7 +1289,7 @@ msgstr "Komanda e nisjes së jashtme"
 
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
-msgstr "Komanda e jashtme e nisjes[CR]*Nuk u gjet asnjë komandë e nisjes nga përdoruesi / Përdorimi i parazgjedhur*"
+msgstr "Komanda e nisjes së jashtme[CR]*Nuk u gjet asnjë komandë e nisjes nga përdoruesi / Përdorimi i parazgjedhur*"
 
 msgctxt "#30321"
 msgid "Kodi Retroplayer"
@@ -1297,7 +1305,7 @@ msgstr "Rruga e shkarkimit u përditësua"
 
 msgctxt "#30324"
 msgid "Are you sure you want to reset game list download path?"
-msgstr "Jeni i sigurt që dëshironi të rivendosni shtegun e shkarkimit të listës së lojërave?"
+msgstr "Jeni i sigurt që dëshironi të rivendosni rrugën e shkarkimit të listës së lojërave?"
 
 msgctxt "#30325"
 msgid "Download path reset"
@@ -1333,7 +1341,7 @@ msgstr "Kontrollimi i kredencialeve"
 
 msgctxt "#30333"
 msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
-msgstr "variablat e mëposhtëm do të zëvendësohen gjatë nisjes:[CR]● XXROM_PATHXX: Rruga drejt skedarit që do të hapet[CR]● XXROM_NAMEXX: Emri i skedarit që do të hapet (pa shteg)[CR]● XXROM_STEMXX: emri i skedarit që do të hapet (pa shteg pa shtesë)[CR]● XXNETPLAY_COMMANDXX: Çdo shtesë komandimi kërkohet për netplay, shiko cilësimet e shtesës për opsionet[CR]Shiko wiki për më shumë informacion…"
+msgstr "variablat e mëposhtëm do të zëvendësohen gjatë nisjes:[CR]● XXROM_PATHXX: Rruga drejt skedarit që do të hapet[CR]● XXROM_NAMEXX: Emri i skedarit që do të hapet (pa shteg)[CR]● XXROM_STEMXX: emri i skedarit që do të hapet (pa shteg pa zgjatje)[CR]● XXNETPLAY_COMMANDXX: Çdo shtesë komandimi kërkohet për netplay, shiko cilësimet e shtesës për opsionet[CR]Shiko wiki për më shumë informacion…"
 
 msgctxt "#30334"
 msgid "The archive file could not be processed[CR]Check logs for more details"
@@ -1381,7 +1389,7 @@ msgstr "Parametrat e nisjes së lojës"
 
 msgctxt "#30345"
 msgid "If no user Launch Command is present"
-msgstr "Nëse nuk është e pranishme Komanda e nisjes nga përdoruesi"
+msgstr "Nëse nuk është e pranishme komanda e nisjes nga përdoruesi"
 
 msgctxt "#30346"
 msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
@@ -1417,7 +1425,7 @@ msgstr "Rivendosja e komandës së nisjes së shtesës së lojës"
 
 msgctxt "#30354"
 msgid "No game addons found"
-msgstr "Nuk u gjetën shtesa për lojëra"
+msgstr "Nuk u gjetën shtesa lojërash"
 
 msgctxt "#30355"
 msgid "Game addon launch command updated"
@@ -1429,7 +1437,7 @@ msgstr "Përdorni dosjen alternative të shkarkimit të paracaktuar"
 
 msgctxt "#30357"
 msgid "Only show options that keep Kodi in the background"
-msgstr "Shfaq vetëm opsionet që e mbajnë Kodin në sfond"
+msgstr "Shfaq vetëm opsionet që mbajnë Kodin në sfond"
 
 msgctxt "#30358"
 msgid "Only show options that close Kodi"
@@ -1489,7 +1497,7 @@ msgstr "Dhuroni në Archive.org"
 
 msgctxt "#30372"
 msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
-msgstr "Është gjetur një bazë e re e të dhënave IAGL[CR]Dëshiron të përditësosh?[CR]Cilësimet do të kopjohen në db-në e re nëse është e mundur."
+msgstr "Është gjetur një bazë e re e të dhënave IAGL[CR]A doni të përditësoni?[CR]Cilësimet do të kopjohen në db-në e re nëse është e mundur."
 
 msgctxt "#30373"
 msgid "New db"
@@ -1521,7 +1529,7 @@ msgstr "Mirë se vini në IAGL Setup Wizard[CR]Le të kalojmë nëpër të gjith
 
 msgctxt "#30380"
 msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
-msgstr "Shumica e lojërave kërkojnë një llogari archive.org[CR]Regjistrohu në https://archive.org/account/signup[CR]Dëshiron të përdorësh llogarinë tënde me IAGL?"
+msgstr "Shumica e lojërave kërkojnë një llogari në archive.org[CR]Regjistrohu në https://archive.org/account/signup[CR]Dëshiron të përdorësh llogarinë tënde me IAGL?"
 
 msgctxt "#30381"
 msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
@@ -1533,11 +1541,11 @@ msgstr "Vendosni të gjitha listat e lojërave që të hapen nga jashtë"
 
 msgctxt "#30383"
 msgid "Set only some game lists to be externally launched"
-msgstr "Cakto vetëm disa lista lojërash që të lansohen nga jashtë"
+msgstr "Vendosni vetëm disa lista lojërash për t'u lëshuar nga jashtë"
 
 msgctxt "#30384"
 msgid "Reset all game list launchers back to default"
-msgstr "Rivendosni të gjithë lëshuesit e listës së lojërave në parazgjedhje"
+msgstr "Rivendos të gjithë lëshuesit e listës së lojërave në parazgjedhje"
 
 msgctxt "#30385"
 msgid "{} game lists were updated for external launching"
@@ -1546,3 +1554,383 @@ msgstr "{} lista lojërash u përditësuan për nisje të jashtme"
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "Parazgjedhjet janë të paracaktuara për çdo komandë nisjeje të jashtme[CR]Përpara nisjes së rishikimit të parametrave të nisjes së lojës nëse është e nevojshme[CR]Shihni wiki për më shumë detaje."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Aplikacioni Retroarch u caktua në:[CR]{}[CR]Modifiko cilësimet e shtesës nëse është e nevojshme"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Konfigurimi i Retroarch u caktua në:[CR]{}[CR]Modifiko cilësimet e shtesës nëse është e nevojshme"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Magjistari përfundoi[CR]Let të luajë!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Vendosni të gjitha listat e lojërave që të lansohen me Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Vendosni shpejt të gjitha listat e lojërave në nisje të jashtme"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Vendosni shpejt të gjitha listat e lojërave në Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Konfirmo"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Jeni i sigurt që dëshironi t'i vendosni të gjitha listat në nisje të jashtme"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Jeni të sigurt që dëshironi të vendosni të gjitha listat në Kodi retroplayer"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Lejet e Android kërkojnë që ju të futni manualisht shtegun e konfigurimit të Retroarch[CR]Shihni wiki për më shumë ndihmë"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Lejet e Android kërkojnë që ju të futni manualisht rrugën kryesore të Retroarch[CR]Shihni wiki për më shumë ndihmë"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Rezervoni bazën e të dhënave aktuale"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Rivendosja e bazës së të dhënave nga rezervimi"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Bëni kopje rezervë të bazës së të dhënave aktuale të IAGL dhe të gjitha cilësimet e përdoruesit"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Rivendosni bazën e të dhënave aktuale të shtesave nga një kopje rezervë"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Zgjidhni rrugën rezervë"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Zgjidhni db rezervë"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Rezervimi përfundoi"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Rivendosja përfundoi"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} ID lojërash që përputhen nuk u gjetën në db[CR]Zgjidh veprimin tjetër"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Përditësoni bazën e të dhënave, përpiquni të përputhni lojërat sipas titullit dhe listës së lojërave"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Përditësoni bazën e të dhënave, hiqni ID-të e lojës që nuk u gjetën"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Rikthe përsëri në bazën e të dhënave të vjetër"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Baza e të dhënave u rikthye në bazën e të dhënave të vjetër"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Ju lutemi prisni"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Vendosni manualisht drejtoritë Retroarch"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL do të zbulojë si parazgjedhje direktori nga konfigurimi RA, ju mund ta anashkaloni manualisht këtë funksion"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Drejtoria kryesore e Retroarch"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroach Info Directory"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Shtoni aplikacionin linux për të filluar komandën e nisjes"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak përdoret për sisteme specifike linux/elec.  Aktivizojeni vetëm nëse e kërkon sistemi juaj."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Parashtroni systemd-run te komandat Retroarch"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Përcaktoni systemd-run për të gjitha komandat"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Paraqisni drejtimin flatpak te komandat Retroarch"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Përgatitni ekzekutimin flatpak për të gjitha komandat"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Lejet e Android kërkojnë një drejtori të përbashkët të ruajtjes[CR]Fut një vendndodhje të përbashkët që mund të aksesohet nga të dy aplikacionet"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Zhzip skedarët"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Nuk ka përpunim"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Zhzip skedarët, kapërce skedarët BIOS"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Zhzip skedarët në dosje"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Zhzip skedarët, zhvendos CHD në dosje"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Zhvendosni skedarët në dosje: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Zhvendosni skedarët në dosje: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Zhvendosni skedarët në dosje: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Zhvendosni skedarët në dosje: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Zhvendos skedarët në dosje: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Zhvendosni skedarët në dosje: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Zhvendosni skedarët në dosje: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Zhvendos skedarët në dosje: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Zhvendosni skedarët në dosje: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Zhvendos skedarët në dosje: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Zhvendosni skedarët në dosje: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Zhvendosni skedarët në dosje: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Zhvendosni skedarët në dosje: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Zhvendosni skedarët në dosje: spektri"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Zhvendosni skedarët në dosje: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Jeni i sigurt që dëshironi të përditësoni procesin e postimit të listës së lojës?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Procesi i postimit u përditësua"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Të përditësohet procesi i postimit për {}?[CR][B]Kjo do të ndryshojë cilësimet për të gjitha lojërat në këtë listë.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Shkarkimi përfundoi.  Të postohen skedarët e procesit?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Skedarët e lojës u përpunuan"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Nuk disponohet (vetëm Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Lloji i emrit të përdoruesit të Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Zgjidhni integrimin për emrin e lojtarit netplay"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Përdorni Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord mundëson ndeshje të automatizuara në rrjet (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Futni manualisht emrin e lojtarit"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Emrat e lojtarëve do të publikohen në Lobin e Retroarch"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Emri i lojtarit"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Përdoruesi aktual i mosmarrëveshjes"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord User u vendos në [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Shikoni seancat e lojërave ku mund të bashkoheni në internet duke përdorur Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Nuk mund të gjendet përdoruesi i mosmarrëveshjeve me ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Opsionet e filtrit të hollit"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Shfaq vetëm dhomat ku mund të hysh"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Shfaq vetëm dhomat që përdorin libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Trego dhomat që kanë një fjalëkalim"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Trego dhomat që kanë një fjalëkalim spektatori"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Shfaq dhoma duke përdorur serverët MITM"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Shfaq vetëm dhomat e krijuara brenda kornizës kohore"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 minuta"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 minuta"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Çdo afat kohor"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Filtro dhomat e hollit bazuar në kohën e krijimit"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Trego vetëm dhomat që përdorin IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Nuk mund të gjendet një lojë që përputhet me një emër si[CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Nuk u gjet"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Zgjidhni lojën që përputhet"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Veprimi i nisjes së Netplay"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Bashkohuni nga lobi retroarch"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Bashkohuni nga localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Zgjidhni veprimin e paracaktuar kur bashkoheni në një lojë netplay"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Nis si host i netplay"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Riemërto IAGL Favorite"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Riemërtimi Përfundoi"

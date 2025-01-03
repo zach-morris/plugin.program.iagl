@@ -65,7 +65,7 @@ msgstr "گروه بر اساس ژانر"
 
 msgctxt "#30014"
 msgid "Group by Year"
-msgstr "گروه بر حسب سال"
+msgstr "گروه بر اساس سال"
 
 msgctxt "#30015"
 msgid "Group by Players"
@@ -81,7 +81,7 @@ msgstr "گروه بر اساس برچسب"
 
 msgctxt "#30018"
 msgid "Group by Playlist"
-msgstr "گروه بر اساس لیست پخش"
+msgstr "گروه بندی بر اساس لیست پخش"
 
 msgctxt "#30019"
 msgid "Group by Region"
@@ -205,7 +205,7 @@ msgstr "تاریخچه بازی"
 
 msgctxt "#30049"
 msgid "Define how many games to save in last played history"
-msgstr "تعداد بازی‌ها را در تاریخچه آخرین بازی ذخیره کنید"
+msgstr "تعداد بازی‌ها را در تاریخ آخرین بازی ذخیره کنید"
 
 msgctxt "#30050"
 msgid "Default action on selecting game"
@@ -213,7 +213,7 @@ msgstr "اقدام پیش فرض در انتخاب بازی"
 
 msgctxt "#30051"
 msgid "Define action to take when a game is selected"
-msgstr "زمانی که یک بازی انتخاب می شود، اقدامی را تعریف کنید"
+msgstr "زمانی که یک بازی انتخاب می‌شود، اقدامی را تعریف کنید"
 
 msgctxt "#30052"
 msgid "If game already exists locally"
@@ -349,7 +349,7 @@ msgstr "تنظیمات Retroarch"
 
 msgctxt "#30085"
 msgid "Suspend Kodi IO on launch"
-msgstr "تعلیق Kodi IO در هنگام راه اندازی"
+msgstr "در هنگام راه اندازی Kodi IO را تعلیق کنید"
 
 msgctxt "#30086"
 msgid "Stop media on launch"
@@ -485,7 +485,7 @@ msgstr "اجباری کردن انواع نمای IAGL"
 
 msgctxt "#30119"
 msgid "Verify your skin has the forced viewtype ID available"
-msgstr "بررسی کنید که پوست شما دارای شناسه نوع نمایش اجباری در دسترس است"
+msgstr "بررسی کنید که پوست شما دارای شناسه نوع نمایش اجباری است"
 
 msgctxt "#30120"
 msgid "Frontpage viewtype"
@@ -613,7 +613,7 @@ msgstr "Kodi را ببندید"
 
 msgctxt "#30151"
 msgid "Pause Kodi"
-msgstr "مکث Kodi"
+msgstr "کدی را مکث کنید"
 
 msgctxt "#30152"
 msgid "Retroarch core picker"
@@ -709,7 +709,7 @@ msgstr "نمایش لابی نت پلی"
 
 msgctxt "#30175"
 msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
-msgstr "هنگامی که فعال باشد، لابی شبکه در صفحه اول IAGL نمایش داده می شود"
+msgstr "وقتی فعال باشد، لابی شبکه در صفحه اول IAGL نمایش داده می شود"
 
 msgctxt "#30176"
 msgid "Filter game lobby to IAGL auto launch games"
@@ -727,9 +727,13 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "پورت IP netplay را برای اتصال تعریف کنید (برای پیش فرض خالی بگذارید)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "IP پیش فرض Localhost"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
-msgstr "نام میزبان / IP پیش فرض نت پلی را تعریف کنید (مفید برای نت پلی شبکه محلی، برای پیش فرض خالی بگذارید)"
+msgstr "نام میزبان / IP پیش فرض نت پلی را تعریف کنید (مفید برای شبکه محلی شبکه، برای پیش فرض خالی بگذارید)"
 
 msgctxt "#30182"
 msgid "Check frames"
@@ -741,7 +745,7 @@ msgstr "تعداد فریم های همگام نت پلی را تعریف کنی
 
 msgctxt "#30184"
 msgid "Announce Netplay on Discord"
-msgstr "نت پلی را در دیسکورد اعلام کنید"
+msgstr "Netplay را در Discord اعلام کنید"
 
 msgctxt "#30185"
 msgid "Announces netplay start on discord for IAGL players"
@@ -758,6 +762,10 @@ msgstr "نام بازیکن خود را وارد کنید تا در Discord اع
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "شناسه حساب کاربری Discord"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "شناسه Discord خود را ارائه دهید (تنظیمات کاربر> حساب من> شناسه کپی)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -785,7 +793,7 @@ msgstr "اگر مطمئن نیستید به عنوان پیش فرض بگذار�
 
 msgctxt "#30196"
 msgid "Suspend Kodi Input and Audio when using External Launcher"
-msgstr "هنگام استفاده از لانچر خارجی، ورودی Kodi و صدا را به حالت تعلیق درآورید"
+msgstr "هنگام استفاده از راه‌انداز خارجی، ورودی Kodi و صدا را تعلیق کنید"
 
 msgctxt "#30197"
 msgid "Stop Kodi media playing before External Launch"
@@ -817,7 +825,7 @@ msgstr "پوشه دانلود پیش فرض را با استفاده از پوش
 
 msgctxt "#30204"
 msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
-msgstr "هنگامی که فعال باشد، پوشه موقت توسط سیستم سازماندهی می شود (گاهی اوقات برای لغو تنظیمات لازم است)"
+msgstr "هنگامی که فعال شود، پوشه موقت توسط سیستم سازماندهی می شود (گاهی اوقات برای لغو تنظیمات لازم است)"
 
 msgctxt "#30205"
 msgid "Copy Kodi Network Source downloads to Local Filesystem"
@@ -877,7 +885,7 @@ msgstr "استودیو انتخاب شده است"
 
 msgctxt "#30219"
 msgid "Tags selected"
-msgstr "برچسب ها انتخاب شدند"
+msgstr "برچسب‌ها انتخاب شدند"
 
 msgctxt "#30220"
 msgid "Playlists selected"
@@ -893,7 +901,7 @@ msgstr "زبان‌های انتخاب شده"
 
 msgctxt "#30223"
 msgid "Editions selected"
-msgstr "نسخه ها انتخاب شدند"
+msgstr "نسخه‌ها انتخاب شدند"
 
 msgctxt "#30224"
 msgid "Codes selected"
@@ -921,7 +929,7 @@ msgstr "بازنشانی معیارها"
 
 msgctxt "#30230"
 msgid "Enter Link Name"
-msgstr "نام لینک را وارد کنید"
+msgstr "نام پیوند را وارد کنید"
 
 msgctxt "#30231"
 msgid "Define the start page for IAGL"
@@ -985,7 +993,7 @@ msgstr "جادوگر"
 
 msgctxt "#30246"
 msgid "Update game list Launcher"
-msgstr "لانچر لیست بازی را به روز کنید"
+msgstr "راه‌انداز لیست بازی را به‌روزرسانی کنید"
 
 msgctxt "#30247"
 msgid "Update game list Launch Command"
@@ -1001,7 +1009,7 @@ msgstr "لیست بازی ها را مخفی کنید"
 
 msgctxt "#30250"
 msgid "Update game list post download process"
-msgstr "به روز رسانی لیست بازی پس از مراحل دانلود"
+msgstr "به روز رسانی لیست بازی مراحل دانلود"
 
 msgctxt "#30251"
 msgid "Are you sure you want to hide game list"
@@ -1013,7 +1021,7 @@ msgstr "لیست بازی اکنون پنهان است"
 
 msgctxt "#30253"
 msgid "No results"
-msgstr "هیچ نتیجه ای وجود ندارد"
+msgstr "بدون نتیجه"
 
 msgctxt "#30254"
 msgid "No hidden game lists found"
@@ -1029,7 +1037,7 @@ msgstr "تنظیم مجدد را تأیید کنید"
 
 msgctxt "#30257"
 msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
-msgstr "آیا مطمئن هستید که می‌خواهید پایگاه داده را بازنشانی کنید؟[CR]همه اطلاعات کاربر از بین خواهند رفت![CR]این کار قابل واگرد نیست!"
+msgstr "آیا مطمئن هستید که می‌خواهید پایگاه داده را بازنشانی کنید؟[CR]همه اطلاعات کاربر از بین خواهد رفت![CR]این کار قابل واگرد نیست!"
 
 msgctxt "#30258"
 msgid "Database has been reset"
@@ -1113,7 +1121,7 @@ msgstr "به صورت دستی Launch Command را وارد کنید"
 
 msgctxt "#30278"
 msgid "Select External Command Type"
-msgstr "نوع فرمان خارجی را انتخاب کنید"
+msgstr "External Command Type را انتخاب کنید"
 
 msgctxt "#30279"
 msgid "Extra Emulators"
@@ -1185,7 +1193,7 @@ msgstr "تنظیمات راه‌اندازی در حال حاضر خالی هس�
 
 msgctxt "#30296"
 msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
-msgstr "تنظیمات راه‌اندازی در حال حاضر خالی هستند[CR]لطفاً تنظیمات راه‌اندازی سیستم عامل افزونه را به‌روزرسانی کنید."
+msgstr "تنظیمات راه‌اندازی در حال حاضر خالی هستند[CR]لطفاً تنظیمات راه‌اندازی سیستم‌عامل افزونه را به‌روزرسانی کنید."
 
 msgctxt "#30297"
 msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
@@ -1225,7 +1233,7 @@ msgstr "سیستم لیست بازی ها"
 
 msgctxt "#30306"
 msgid "Total 1G1R Games in List"
-msgstr "مجموع بازی های 1G1R در لیست"
+msgstr "مجموع بازی‌های 1G1R در فهرست"
 
 msgctxt "#30307"
 msgid "Total Games in List"
@@ -1289,7 +1297,7 @@ msgstr "Kodi Retroplayer"
 
 msgctxt "#30322"
 msgid "Are you sure you want to update game list download path?"
-msgstr "آیا مطمئن هستید که می خواهید مسیر دانلود لیست بازی ها را به روز کنید؟"
+msgstr "آیا مطمئنید که می خواهید مسیر دانلود لیست بازی را به روز کنید؟"
 
 msgctxt "#30323"
 msgid "Download path updated"
@@ -1317,7 +1325,7 @@ msgstr "تنظیمات لیست بازی را بازنشانی کنید"
 
 msgctxt "#30329"
 msgid "Are you sure you want to reset all game list settings to default?"
-msgstr "آیا مطمئن هستید که می خواهید همه تنظیمات لیست بازی ها را به حالت پیش فرض بازنشانی کنید؟"
+msgstr "آیا مطمئن هستید که می خواهید تمام تنظیمات لیست بازی ها را به حالت پیش فرض بازنشانی کنید؟"
 
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
@@ -1333,7 +1341,7 @@ msgstr "بررسی مدارک"
 
 msgctxt "#30333"
 msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
-msgstr "متغیرهای زیر در حین راه‌اندازی جایگزین می‌شوند:[CR]● XXROM_PATHXX: مسیر فایلی که راه‌اندازی می‌شود[CR]● XXROM_NAMEXX: نام فایلی که راه‌اندازی می‌شود (بدون مسیر)[CR]● XXROM_STEMXX: نام فایلی که راه‌اندازی می‌شود (بدون مسیر بدون پسوند)[CR]● XXNETPLAY_COMMANDXX: هر دستوری که برای netplay، تنظیمات افزونه را برای گزینه‌ها ببینید[CR]برای اطلاعات بیشتر به ویکی مراجعه کنید…"
+msgstr "متغیرهای زیر در حین راه‌اندازی جایگزین می‌شوند:[CR]● XXROM_PATHXX: مسیر فایلی که راه‌اندازی می‌شود[CR]● XXROM_NAMEXX: نام فایلی که راه‌اندازی می‌شود (بدون مسیر)[CR]● XXROM_STEMXX: نام فایلی که راه‌اندازی می‌شود (بدون مسیر بدون پسوند)[CR]● XXNETPLAY_COMMANDXX: هر دستور اضافه‌ای که برای netplay، تنظیمات افزونه را برای گزینه‌ها ببینید[CR]برای اطلاعات بیشتر به ویکی مراجعه کنید…"
 
 msgctxt "#30334"
 msgid "The archive file could not be processed[CR]Check logs for more details"
@@ -1349,11 +1357,11 @@ msgstr "Kodi را در پس‌زمینه اجرا کنید (پیش‌فرض)"
 
 msgctxt "#30337"
 msgid "Close Kodi before launch, reopen Kodi after emulator exit"
-msgstr "Kodi را قبل از راه‌اندازی ببندید، پس از خروج شبیه‌ساز Kodi را دوباره باز کنید"
+msgstr "کدی را قبل از راه‌اندازی ببندید، پس از خروج شبیه‌ساز Kodi را دوباره باز کنید"
 
 msgctxt "#30338"
 msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
-msgstr "Kodi را قبل از راه‌اندازی به حالت تعلیق درآورید، پس از خروج از شبیه‌ساز، Kodi را بیدار کنید"
+msgstr "کدی را قبل از راه‌اندازی به حالت تعلیق درآورید، پس از خروج از شبیه‌ساز، Kodi را بیدار کنید"
 
 msgctxt "#30339"
 msgid "View IAGL db stats"
@@ -1429,7 +1437,7 @@ msgstr "از پوشه دانلود پیش فرض جایگزین استفاده �
 
 msgctxt "#30357"
 msgid "Only show options that keep Kodi in the background"
-msgstr "فقط گزینه هایی را نشان دهید که Kodi را در پس زمینه نگه می دارند"
+msgstr "فقط گزینه هایی را نشان دهید که Kodi را در پس زمینه نگه می دارد"
 
 msgctxt "#30358"
 msgid "Only show options that close Kodi"
@@ -1457,7 +1465,7 @@ msgstr "یا مسیر دایرکتوری Cores را دقیقاً همانطور 
 
 msgctxt "#30364"
 msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
-msgstr "راه‌انداز را برای {} به‌روزرسانی کنید؟[CR][B]این کار تنظیمات همه بازی‌های این فهرست را تغییر می‌دهد.[/B]"
+msgstr "راه‌انداز برای {} به‌روزرسانی شود؟[CR][B]این کار تنظیمات همه بازی‌های این فهرست را تغییر می‌دهد.[/B]"
 
 msgctxt "#30365"
 msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
@@ -1485,11 +1493,11 @@ msgstr "پشتیبانی کنید"
 
 msgctxt "#30371"
 msgid "Donate to Archive.org"
-msgstr "به Archive.org اهدا کنید"
+msgstr "به Archive.org کمک کنید"
 
 msgctxt "#30372"
 msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
-msgstr "یک پایگاه داده جدید IAGL پیدا شده است[CR]آیا می خواهید به روز رسانی کنید؟[CR]تنظیمات در صورت امکان به db جدید کپی می شوند"
+msgstr "یک پایگاه داده جدید IAGL پیدا شد[CR]آیا می خواهید به روز رسانی کنید؟[CR]تنظیمات در صورت امکان در db جدید کپی می شوند"
 
 msgctxt "#30373"
 msgid "New db"
@@ -1505,7 +1513,7 @@ msgstr "پایگاه داده به‌روزرسانی شد[CR]برخی تنظی�
 
 msgctxt "#30376"
 msgid "There was an error updating the database[CR]See log for more details"
-msgstr "هنگام به‌روزرسانی پایگاه داده خطایی روی داد[CR] برای جزئیات بیشتر به گزارش مراجعه کنید"
+msgstr "هنگام به‌روزرسانی پایگاه داده خطایی روی داد[CR]برای جزئیات بیشتر به گزارش مراجعه کنید"
 
 msgctxt "#30377"
 msgid "Ask me again later"
@@ -1545,4 +1553,384 @@ msgstr "{} لیست بازی برای راه اندازی خارجی به روز
 
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
-msgstr "پیش‌فرض‌ها برای هر فرمان راه‌اندازی خارجی از پیش تنظیم شده‌اند[CR]قبل از راه‌اندازی بازبینی پارامترهای راه‌اندازی بازی در صورت نیاز[CR]برای جزئیات بیشتر به ویکی مراجعه کنید."
+msgstr "پیش‌فرض‌ها برای هر فرمان راه‌اندازی خارجی از قبل تنظیم شده‌اند[CR]قبل از راه‌اندازی بازبینی پارامترهای راه‌اندازی بازی در صورت نیاز[CR]برای جزئیات بیشتر به ویکی مراجعه کنید."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "برنامه Retroarch روی:[CR]{}[CR]در صورت نیاز تنظیمات افزونه را تغییر دهید"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "پیکربندی Retroarch روی:[CR]{}[CR]در صورت نیاز تنظیمات افزونه را تغییر دهید"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "جادوگر تکمیل شد[CR]اجازه می دهد بازی کنیم!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "همه لیست های بازی را تنظیم کنید تا با Kodi راه اندازی شوند"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "به سرعت همه لیست های بازی را روی راه اندازی خارجی تنظیم کنید"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "به سرعت همه لیست های بازی را به Kodi retroplayer تنظیم کنید"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "تایید کنید"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "آیا مطمئن هستید که می‌خواهید همه فهرست‌ها را روی راه‌اندازی خارجی تنظیم کنید؟"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "آیا مطمئن هستید که می‌خواهید همه لیست‌ها را روی Kodi retroplayer تنظیم کنید"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "مجوزهای Android از شما می خواهد که به صورت دستی مسیر پیکربندی Retroarch را وارد کنید[CR]برای راهنمایی بیشتر به ویکی مراجعه کنید"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "مجوزهای Android از شما می خواهد که به صورت دستی مسیر اصلی Retroarch را وارد کنید[CR]برای راهنمایی بیشتر به ویکی مراجعه کنید"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "پشتیبان گیری از پایگاه داده فعلی"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "بازیابی پایگاه داده از پشتیبان گیری"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "از پایگاه داده فعلی IAGL و تمام تنظیمات کاربر نسخه پشتیبان تهیه کنید"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "پایگاه داده فعلی افزونه را از یک نسخه پشتیبان بازیابی کنید"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "مسیر پشتیبان را انتخاب کنید"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "پشتیبان db را انتخاب کنید"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "پشتیبان گیری تکمیل شد"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "بازیابی تکمیل شد"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} شناسه بازی منطبق در db[CR]انتخاب اقدام بعدی یافت نشد"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "پایگاه داده را به روز کنید، سعی کنید بازی ها را بر اساس عنوان و لیست بازی مطابقت دهید"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "به روز رسانی پایگاه داده، حذف شناسه های بازی که پیدا نشدند"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "بازگردانی به پایگاه داده قدیمی"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "پایگاه داده به پایگاه داده قدیمی بازگردانده شد"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "لطفا صبر کنید"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "دایرکتوری های Retroarch را به صورت دستی تنظیم کنید"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL به طور پیش‌فرض دایرکتوری‌ها را از پیکربندی RA شناسایی می‌کند، می‌توانید به صورت دستی این عملکرد را لغو کنید"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "فهرست اصلی Retroarch"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "دایرکتوری اطلاعات Retroach"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "برای شروع دستور راه اندازی برنامه لینوکس را اضافه کنید"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak برای سیستم های خاص لینوکس/الکترونیک استفاده می شود.  فقط در صورتی فعال کنید که سیستم شما به آن نیاز داشته باشد."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "دستور systemd-run را به دستورات Retroarch اضافه کنید"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "systemd-run را به همه دستورات اضافه کنید"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "اجرای flatpak را در دستورات Retroarch قرار دهید"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "اجرای flatpak را برای همه دستورات آماده کنید"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "مجوزهای Android به یک فهرست ذخیره‌سازی مشترک نیاز دارند[CR]یک مکان مشترک را وارد کنید که برای هر دو برنامه قابل دسترسی باشد"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "فایل ها را از حالت فشرده خارج کنید"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "بدون پردازش"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "فایل‌ها را از حالت فشرده خارج کنید، فایل‌های بایوس را رد کنید"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "فایل ها را در پوشه از حالت فشرده خارج کنید"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "فایل‌ها را از حالت فشرده خارج کنید، CHD را به پوشه منتقل کنید"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "انتقال فایل ها به پوشه: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "انتقال فایل ها به پوشه: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "انتقال فایل ها به پوشه: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "انتقال فایل ها به پوشه: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "انتقال فایل ها به پوشه: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "انتقال فایل ها به پوشه: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "انتقال فایل ها به پوشه: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "انتقال فایل ها به پوشه: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "انتقال فایل ها به پوشه: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "انتقال فایل ها به پوشه: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "انتقال فایل ها به پوشه: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "انتقال فایل ها به پوشه: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "انتقال فایل ها به پوشه: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "انتقال فایل ها به پوشه: طیف"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "انتقال فایل ها به پوشه: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "آیا مطمئن هستید که می خواهید روند پست لیست بازی را به روز کنید؟"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "فرآیند ارسال به روز شد"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "فرآیند ارسال پست برای {} به‌روزرسانی شود؟[CR][B]این کار تنظیمات همه بازی‌های این فهرست را تغییر می‌دهد.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "دانلود کامل شد.  ارسال فایل های پردازش؟"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "فایل های بازی پردازش شد"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "در دسترس نیست (فقط ویندوز، OSX، لینوکس)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "نوع نام کاربری Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "ادغام را برای نام پخش کننده نت پلی انتخاب کنید"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "از Discord استفاده کنید"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord مسابقات Netplay خودکار را فعال می کند (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "یک نام بازیکن را به صورت دستی وارد کنید"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "اسامی بازیکنان در لابی Retroarch منتشر خواهد شد"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "نام بازیکن"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "کاربر فعلی Discord"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord User روی [CR]{} تنظیم شد"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "جلسات بازی را مشاهده کنید که می‌توانید به صورت آنلاین با استفاده از Retroarch netplay به آنها بپیوندید"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "کاربر ناسازگار با شناسه [CR]{} پیدا نشد"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "گزینه های فیلتر لابی"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "فقط اتاق هایی را نشان دهید که می توان وارد آنها شد"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "فقط اتاق‌هایی را نشان دهید که از لیبرترو استفاده می‌کنند"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "نمایش اتاق هایی که دارای رمز عبور هستند"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "نمایش اتاق هایی که دارای رمز عبور تماشاگر هستند"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "نمایش اتاق ها با استفاده از سرورهای MITM"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "فقط اتاق‌های ایجاد شده در بازه زمانی را نشان دهید"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 دقیقه"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 دقیقه"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "هر بازه زمانی"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "اتاق های لابی را بر اساس زمان ایجاد فیلتر کنید"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "فقط اتاق هایی را نشان دهید که از IAGL استفاده می کنند"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "بازی منطبق با نامی مانند[CR]{} پیدا نشد"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "یافت نشد"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "بازی منطبق را انتخاب کنید"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "اقدام راه اندازی Netplay"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "از لابی retroarch بپیوندید"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "از لوکال هاست بپیوندید"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "هنگام پیوستن به یک بازی نت پلی، اقدام پیش فرض را انتخاب کنید"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "به عنوان میزبان نت پلی راه اندازی شود"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "تغییر نام IAGL Favorite"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "تغییر نام تکمیل شد"

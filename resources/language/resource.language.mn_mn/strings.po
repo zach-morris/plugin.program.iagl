@@ -57,7 +57,7 @@ msgstr "Нэг том жагсаалт"
 
 msgctxt "#30012"
 msgid "Alphabetical"
-msgstr "Цагаан толгойн дарааллаар"
+msgstr "Цагаан толгойн дараалал"
 
 msgctxt "#30013"
 msgid "Group by Genre"
@@ -409,7 +409,7 @@ msgstr "Идэвхжүүлсэн үед тоглоомын жагсаалтын 
 
 msgctxt "#30100"
 msgid "Append game list name when browsing by playlist"
-msgstr "Тоглуулах жагсаалтаар үзэхдээ тоглоомын жагсаалтын нэрийг нэмнэ үү"
+msgstr "Тоглуулах жагсаалтаар үзэх үед тоглоомын жагсаалтын нэрийг нэмнэ үү"
 
 msgctxt "#30101"
 msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
@@ -417,7 +417,7 @@ msgstr "Идэвхжүүлсэн үед тоглоомын жагсаалтын 
 
 msgctxt "#30102"
 msgid "Kodi landscape art equates to"
-msgstr "Коди ландшафтын урлаг нь үүнтэй тэнцэнэ"
+msgstr "Коди ландшафтын урлаг нь ижил төстэй"
 
 msgctxt "#30103"
 msgid "Select the game artwork to be displayed as the landscape art"
@@ -727,6 +727,10 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Холбох netplay IP портыг тодорхойлох (өгөгдмөл бол хоосон орхино уу)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Өгөгдмөл Localhost IP"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Өгөгдмөл netplay хостын нэр / IP-г тодорхойлох (дотоод сүлжээний netplay-д хэрэгтэй, анхдагчаар хоосон орхино уу)"
@@ -741,7 +745,7 @@ msgstr "Netplay синк фрэймийн тоог тодорхойлох (өг�
 
 msgctxt "#30184"
 msgid "Announce Netplay on Discord"
-msgstr "Discord дээр Netplay-г зарла"
+msgstr "Discord дээр Netplay-г зарлана"
 
 msgctxt "#30185"
 msgid "Announces netplay start on discord for IAGL players"
@@ -759,6 +763,10 @@ msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord хэрэглэгчийн бүртгэлийн ID"
 
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Discord ID-аа оруулна уу (Хэрэглэгчийн тохиргоо> Миний бүртгэл> Хуулбар ID)"
+
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
 msgstr "Шидтэний ажил дууссаны дараа тайланг харуулах"
@@ -769,7 +777,7 @@ msgstr "Тохируулах шидтэнг ажиллуулна уу"
 
 msgctxt "#30192"
 msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
-msgstr "Тоглоомын жагсаалтынхаа тохиргоог хурдан өөрчлөхийн тулд шидтэнг ажиллуулна уу.  Үүнийг хүссэн үедээ дахин ажиллуулж болно"
+msgstr "Тоглоомын жагсаалтынхаа тохиргоог хурдан өөрчлөхийн тулд шидтэнг ажиллуулна уу.  Үүнийг ямар ч үед дахин ажиллуулж болно"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -873,7 +881,7 @@ msgstr "Тоглогчид сонгосон"
 
 msgctxt "#30218"
 msgid "Studios selected"
-msgstr "Студиудыг сонгосон"
+msgstr "Студи сонгосон"
 
 msgctxt "#30219"
 msgid "Tags selected"
@@ -1069,7 +1077,7 @@ msgstr "Тоглоомыг татаж авах…"
 
 msgctxt "#30267"
 msgid "Select download folder"
-msgstr "Татаж авах хавтсыг сонгоно уу"
+msgstr "Татаж авах хавтас сонгоно уу"
 
 msgctxt "#30268"
 msgid "Archive.org login success!"
@@ -1121,7 +1129,7 @@ msgstr "Нэмэлт эмуляторууд"
 
 msgctxt "#30280"
 msgid "Dolphin"
-msgstr "Дельфин"
+msgstr "Далайн гахай"
 
 msgctxt "#30281"
 msgid "Select the path to the Dolphin application (optional)"
@@ -1546,3 +1554,383 @@ msgstr "{} тоглоомын жагсаалтыг гаднаас гаргаха
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "Анхдагч тохиргоог гадаад эхлүүлэх команд бүрд урьдчилан тохируулсан байна[CR]Шаардлагатай бол тоглоом эхлүүлэх параметрүүдийг шалгахын өмнө[CR]Дэлгэрэнгүй мэдээллийг вики-г үзнэ үү."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch програмыг дараах байдлаар тохируулсан:[CR]{}[CR]Шаардлагатай бол нэмэлт тохиргоонд өөрчлөлт оруулна уу"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch тохиргоог дараах байдлаар тохируулсан:[CR]{}[CR]Шаардлагатай бол нэмэлт тохиргоонд өөрчилнө үү"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Шидтэн дууслаа[CR]Тоглоцгооё!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Kodi-р эхлүүлэх бүх тоглоомын жагсаалтыг тохируулна уу"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Бүх тоглоомын жагсаалтыг гаднаас эхлүүлэхээр хурдан тохируулаарай"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Бүх тоглоомын жагсаалтыг Kodi retroplayer руу хурдан тохируулаарай"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Баталгаажуулах"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Та бүх жагсаалтыг гаднаас эхлүүлэхээр тохируулахдаа итгэлтэй байна уу"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Та бүх жагсаалтыг Kodi retroplayer болгон тохируулахдаа итгэлтэй байна уу"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Андройдын зөвшөөрөл нь таныг Retroarch тохиргооны замыг гараар оруулахыг шаарддаг[CR]Дэлгэрэнгүй тусламж авахыг хүсвэл вики-г үзнэ үү"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Андройдын зөвшөөрөл нь таныг Retroarch үндсэн замыг гараар оруулахыг шаарддаг[CR]Дэлгэрэнгүй тусламж авахыг хүсвэл вики-г үзнэ үү"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Одоогийн мэдээллийн санг нөөцлөх"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Өгөгдлийн санг нөөцөөс сэргээх"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Одоогийн IAGL мэдээллийн сан болон хэрэглэгчийн бүх тохиргоог нөөцлөөрэй"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Одоогийн нэмэлт мэдээллийн санг нөөцлөлтөөс сэргээнэ үү"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Нөөцлөх замыг сонгоно уу"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Нөөц db-г сонгоно уу"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Нөөцлөлт дууссан"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Сэргээх ажил дууссан"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "Шинэ db[CR]Дараагийн үйлдлийг сонгоход {} тохирох тоглоомын ID олдсонгүй"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Өгөгдлийн санг шинэчилж, тоглоомуудыг гарчиг болон тоглоомын жагсаалтаар нь тааруулахыг оролдоорой"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Өгөгдлийн санг шинэчилж, олдоогүй тоглоомын ID-г устгана уу"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Хуучин мэдээллийн сан руу буцаан сэргээх"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Өгөгдлийн санг хуучин мэдээллийн сан руу буцаан сэргээв"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Хүлээгээрэй"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Retroarch лавлахуудыг гараар тохируулна уу"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL нь анхдагчаар RA тохиргооноос сангуудыг илрүүлэх бөгөөд та энэ функцийг гараар дарж болно"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch үндсэн лавлах"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroach мэдээллийн лавлах"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Эхлүүлэх командыг эхлүүлэхийн тулд Linux програмыг хавсаргана уу"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak нь тодорхой linux/elec системүүдэд ашиглагддаг.  Зөвхөн таны систем шаардлагатай бол идэвхжүүлнэ үү."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Retroarch командын өмнө systemd-run гэж бичнэ"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Бүх командын өмнө systemd-run гэж бичнэ"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Retroarch командын өмнө flatpak run гэж бичнэ"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Бүх командын өмнө flatpak run гэж бичнэ"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Андройдын зөвшөөрөл нь дундын хадгалах сангийн лавлахыг шаарддаг[CR]Хоёр аппликешн хандах боломжтой хуваалцсан байршлыг оруулна уу"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Файлуудыг задлах"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Боловсруулахгүй"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Файлуудыг задлах, BIOS файлуудыг алгасах"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Файлуудыг хавтас руу задлах"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Файлуудыг задлах, CHD хавтас руу зөөх"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Файлуудыг хавтас руу зөөх: аркад"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Файлуудыг хавтас руу зөөх: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Файлуудыг фолдер руу зөөх: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Файлуудыг хавтас руу зөөх: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Файлуудыг хавтас руу зөөх: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Файлуудыг хавтас руу зөөх: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Файлуудыг хавтас руу зөөх: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Файлуудыг хавтас руу зөөх: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Файлуудыг хавтас руу зөөх: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Файлуудыг хавтас руу зөөх: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Файлуудыг хавтас руу зөөх: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Файлуудыг хавтас руу зөөх: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Файлуудыг хавтас руу зөөх: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Файлуудыг фолдер руу зөөх: спектр"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Файлуудыг хавтас руу зөөх: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Та тоглоомын жагсаалтыг нийтлэх үйл явцыг шинэчлэхдээ итгэлтэй байна уу?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Нийтлэлийн процесс шинэчлэгдсэн"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}-н нийтлэлийн процессыг шинэчлэх үү?[CR][B]Энэ жагсаалтад байгаа бүх тоглоомын тохиргоог өөрчилнө.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Татаж дууссан.  Процессын файлуудыг нийтлэх үү?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Тоглоомын файлуудыг боловсруулсан"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Боломжгүй (Зөвхөн Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Netplay хэрэглэгчийн нэр төрөл"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Netplay тоглуулагчийн нэрийн интеграцийг сонгоно уу"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Discord ашиглах"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord нь автоматжуулсан сүлжээний тоглолтыг идэвхжүүлдэг (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Тоглогчийн нэрийг гараар оруулна уу"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Тоглогчдын нэрийг Retroarch Lobby-д нийтлэх болно"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Тоглогчийн нэр"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Одоогийн Discord хэрэглэгч"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord хэрэглэгчийг [CR]{} болгож тохируулсан"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Retroarch netplay ашиглан онлайнаар нэгдэж болох тоглоомын сессүүдийг үзээрэй"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "[CR]{} ID-тай discord хэрэглэгчийг олж чадсангүй"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Лобби шүүлтүүрийн сонголтууд"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Зөвхөн орж болох өрөөнүүдийг харуул"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Зөвхөн либретро ашиглаж байгаа өрөөг харуул"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Нууц үгтэй өрөөг харуулах"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Үзэгчийн нууц үгтэй өрөөг харуул"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "MITM сервер ашиглан өрөөнүүдийг харуулах"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Зөвхөн хугацаанд бий болсон өрөөнүүдийг харуул"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 минут"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 минут"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Аливаа цаг хугацаа"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Бүтээлийн цаг дээр үндэслэн лобби өрөөнүүдийг шүүнэ үү"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Зөвхөн IAGL ашигладаг өрөөг харуул"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "[CR]{} гэх мэт нэртэй тохирох тоглоомыг олж чадсангүй"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Олдсонгүй"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Тохирох тоглоомыг сонгоно уу"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Netplay эхлүүлэх үйлдэл"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Retroarch лоббиноос нэгдээрэй"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Localhost-оос нэгдээрэй"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Netplay тоглоомд нэгдэхдээ үндсэн үйлдлийг сонгоно уу"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Netplay хостоор ажиллуул"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "IAGL Favorite нэрийг өөрчлөх"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Нэрээ өөрчилсөн"

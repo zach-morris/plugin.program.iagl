@@ -25,7 +25,7 @@ msgstr "Pregledajte liste po kategorijama"
 
 msgctxt "#30004"
 msgid "Browse games by Playlist"
-msgstr "Pretražujte igre po listi za reprodukciju"
+msgstr "Pregledajte igre po listi za reprodukciju"
 
 msgctxt "#30005"
 msgid "Favorites"
@@ -45,7 +45,7 @@ msgstr "Slučajna igra"
 
 msgctxt "#30009"
 msgid "Next"
-msgstr "Sledeći"
+msgstr "Dalje"
 
 msgctxt "#30010"
 msgid "Previous"
@@ -73,7 +73,7 @@ msgstr "Grupirajte po igračima"
 
 msgctxt "#30016"
 msgid "Group by Studio"
-msgstr "Grupa po Studiju"
+msgstr "Group by Studio"
 
 msgctxt "#30017"
 msgid "Group by Tag"
@@ -265,7 +265,7 @@ msgstr "archive.org Lozinka"
 
 msgctxt "#30064"
 msgid "Some games require login.  Enter your archive.org password"
-msgstr "Neke igre zahtijevaju prijavu.  Unesite svoju lozinku za archive.org"
+msgstr "Neke igre zahtijevaju prijavu.  Unesite lozinku za archive.org"
 
 msgctxt "#30065"
 msgid "Check login credentials"
@@ -273,7 +273,7 @@ msgstr "Provjerite vjerodajnice za prijavu"
 
 msgctxt "#30066"
 msgid "Test the entered email and password to check your ability to login"
-msgstr "Testirajte unesenu e-poštu i lozinku kako biste provjerili svoju sposobnost prijave"
+msgstr "Testirajte unesenu adresu e-pošte i lozinku da provjerite svoju mogućnost prijave"
 
 msgctxt "#30067"
 msgid "Download folder size limit"
@@ -597,7 +597,7 @@ msgstr "Android ra32"
 
 msgctxt "#30147"
 msgid "Game launcher selection method"
-msgstr "Metoda odabira pokretača igara"
+msgstr "Metoda odabira pokretača igre"
 
 msgctxt "#30148"
 msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
@@ -697,7 +697,7 @@ msgstr "20 GB"
 
 msgctxt "#30172"
 msgid "Enable Netplay"
-msgstr "Omogući Netplay"
+msgstr "Omogućite Netplay"
 
 msgctxt "#30173"
 msgid "Enable retroarch netplay (Windows, Linux, OSX only), use context menu to launch with netplay"
@@ -727,9 +727,13 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Definirajte netplay IP port za povezivanje (ostavite prazno za zadano)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Zadana IP adresa lokalnog hosta"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
-msgstr "Definirajte zadano netplay ime hosta / IP (korisno za netplay na lokalnoj mreži, ostavite prazno za default)"
+msgstr "Definirajte zadano netplay hostname / IP (korisno za netplay na lokalnoj mreži, ostavite prazno za default)"
 
 msgctxt "#30182"
 msgid "Check frames"
@@ -745,7 +749,7 @@ msgstr "Najavite Netplay na Discordu"
 
 msgctxt "#30185"
 msgid "Announces netplay start on discord for IAGL players"
-msgstr "Najavljuje početak netplay-a na discord-u za IAGL igrače"
+msgstr "Najavljuje početak netplaya u diskordu za IAGL igrače"
 
 msgctxt "#30186"
 msgid "Discord Player Name"
@@ -758,6 +762,10 @@ msgstr "Unesite svoje ime igrača da bude objavljeno na Discordu"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord ID korisničkog naloga"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Navedite svoj Discord ID (korisničke postavke>Moj račun>Kopiraj ID)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -781,7 +789,7 @@ msgstr "Koristite StartAndroidActivity"
 
 msgctxt "#30195"
 msgid "Leave as default if unsure"
-msgstr "Ostavite kao zadano ako niste sigurni"
+msgstr "Ostavite kao zadanu ako niste sigurni"
 
 msgctxt "#30196"
 msgid "Suspend Kodi Input and Audio when using External Launcher"
@@ -797,7 +805,7 @@ msgstr "Kodi je zauzet / čeka povratak na Kodi nakon vanjskog pokretanja"
 
 msgctxt "#30199"
 msgid "Download Advanced Settings"
-msgstr "Preuzmite napredne postavke"
+msgstr "Preuzmite Napredne postavke"
 
 msgctxt "#30200"
 msgid "Download Threads"
@@ -817,7 +825,7 @@ msgstr "Organizujte podrazumevani folder za preuzimanje koristeći sistemske fas
 
 msgctxt "#30204"
 msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
-msgstr "Kada je omogućeno, privremeni folder će biti organiziran po sistemu (ponekad je potrebno za poništavanje konfiguracije)"
+msgstr "Kada je omogućeno, privremeni folder će biti organiziran po sistemu (ponekad je potrebno za zamjenu konfiguracije)"
 
 msgctxt "#30205"
 msgid "Copy Kodi Network Source downloads to Local Filesystem"
@@ -845,7 +853,7 @@ msgstr "Kada se izabere, prethodno skrivene liste igara mogu biti otkrivene"
 
 msgctxt "#30211"
 msgid "Clear Cache"
-msgstr "Obriši Cache"
+msgstr "Clear Cache"
 
 msgctxt "#30212"
 msgid "When selected, all data in the cache folder including games will be purged"
@@ -877,7 +885,7 @@ msgstr "Odabrani studiji"
 
 msgctxt "#30219"
 msgid "Tags selected"
-msgstr "Oznake su odabrane"
+msgstr "Oznake odabrane"
 
 msgctxt "#30220"
 msgid "Playlists selected"
@@ -1053,7 +1061,7 @@ msgstr "Pokretač je ažuriran na vanjski"
 
 msgctxt "#30263"
 msgid "Launcher updated to retroplayer"
-msgstr "Pokretač ažuriran na retroplayer"
+msgstr "Pokretač je ažuriran na retroplayer"
 
 msgctxt "#30264"
 msgid "Select game addon"
@@ -1073,7 +1081,7 @@ msgstr "Odaberite folder za preuzimanje"
 
 msgctxt "#30268"
 msgid "Archive.org login success!"
-msgstr "Archive.org prijava uspješna!"
+msgstr "Uspješno prijavljivanje na Archive.org!"
 
 msgctxt "#30269"
 msgid "Archive.org login failed.[CR]Check credentials or log for more details"
@@ -1141,7 +1149,7 @@ msgstr "Projekat 64"
 
 msgctxt "#30285"
 msgid "Select the path to the Project 64 application (optional)"
-msgstr "Odaberite put do aplikacije Project 64 (opcionalno)"
+msgstr "Odaberite put do Project 64 aplikacije (opcionalno)"
 
 msgctxt "#30286"
 msgid "ePSXe"
@@ -1185,7 +1193,7 @@ msgstr "Postavke pokretanja su trenutno prazne[CR]Ažurirajte postavke eksternog
 
 msgctxt "#30296"
 msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
-msgstr "Postavke pokretanja su trenutno prazne[CR]Ažurirajte postavke pokretanja dodatka za OS."
+msgstr "Postavke pokretanja su trenutno prazne[CR]Ažurirajte postavke za pokretanje OS-a."
 
 msgctxt "#30297"
 msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
@@ -1309,7 +1317,7 @@ msgstr "Promjena putanje preuzimanja"
 
 msgctxt "#30327"
 msgid "Reset download path"
-msgstr "Resetujte putanju za preuzimanje"
+msgstr "Resetujte putanju preuzimanja"
 
 msgctxt "#30328"
 msgid "Reset game list settings"
@@ -1333,7 +1341,7 @@ msgstr "Provjera akreditiva"
 
 msgctxt "#30333"
 msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
-msgstr "sljedeće varijable će biti zamijenjene tokom pokretanja:[CR]● XXROM_PATHXX: Putanja do datoteke koja će biti pokrenuta[CR]● XXROM_NAMEXX: Ime datoteke koja će biti pokrenuta (bez putanje)[CR]● XXROM_STEMXX: ime datoteke koja će biti pokrenuta (bez putanje bez ekstenzije)[CR]● XXNETPLAY_COMMANDXX: Bilo koji dodatak naredbi potreban za netplay, pogledajte postavke dodataka za opcije[CR]Pogledajte wiki za više informacija…"
+msgstr "sljedeće varijable će biti zamijenjene tokom pokretanja:[CR]● XXROM_PATHXX: Putanja do datoteke koja će biti pokrenuta[CR]● XXROM_NAMEXX: Ime datoteke koja će biti pokrenuta (bez putanje)[CR]● XXROM_STEMXX: ime datoteke koja će biti pokrenuta (bez putanje bez ekstenzije)[CR]● XXNETPLAY_COMMANDXX: Bilo koji dodatak naredbi potreban za mrežnu reprodukciju, pogledajte postavke dodataka za opcije[CR]Pogledajte wiki za više informacija…"
 
 msgctxt "#30334"
 msgid "The archive file could not be processed[CR]Check logs for more details"
@@ -1389,7 +1397,7 @@ msgstr "Odaberite što će Kodi učiniti kada nije postavljena naredba za pokret
 
 msgctxt "#30347"
 msgid "Attempt Launch with default"
-msgstr "Pokušaj pokretanja sa zadanim"
+msgstr "Pokušaj pokretanja sa zadanim postavkama"
 
 msgctxt "#30348"
 msgid "Stop / Do not launch"
@@ -1417,7 +1425,7 @@ msgstr "Reset naredbe za pokretanje dodatka za igru"
 
 msgctxt "#30354"
 msgid "No game addons found"
-msgstr "Nije pronađen nijedan dodatak za igru"
+msgstr "Nisu pronađeni dodaci za igru"
 
 msgctxt "#30355"
 msgid "Game addon launch command updated"
@@ -1445,7 +1453,7 @@ msgstr "Retroarch CFG Lokacija kao niz"
 
 msgctxt "#30361"
 msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
-msgstr "Alternativno, unesite putanju do retroarch.cfg datoteke tačno onako kako se pojavljuje u Retroarch"
+msgstr "Alternativno, unesite putanju do datoteke retroarch.cfg tačno onako kako se pojavljuje u Retroarch"
 
 msgctxt "#30362"
 msgid "Retroarch Cores directory as string"
@@ -1465,7 +1473,7 @@ msgstr "Ažurirati naredbu za pokretanje za {}?[CR][B]Ovo će promijeniti postav
 
 msgctxt "#30366"
 msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
-msgstr "Ažurirati putanju za preuzimanje pokretanja za {}?[CR][B]Ovo će promijeniti postavke za sve igre na ovoj listi.[/B]"
+msgstr "Ažuriraj putanju za pokretanje za {}?[CR][B]Ovo će promijeniti postavke za sve igre na ovoj listi.[/B]"
 
 msgctxt "#30367"
 msgid "Update Launch Command"
@@ -1533,7 +1541,7 @@ msgstr "Postavite sve liste igara da se pokreću eksterno"
 
 msgctxt "#30383"
 msgid "Set only some game lists to be externally launched"
-msgstr "Postavite samo neke liste igara da se pokreću eksterno"
+msgstr "Postavite samo neke liste igara za eksterno pokretanje"
 
 msgctxt "#30384"
 msgid "Reset all game list launchers back to default"
@@ -1546,3 +1554,383 @@ msgstr "{} liste igara su ažurirane za vanjsko pokretanje"
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "Zadane postavke su unaprijed postavljene za svaku eksternu naredbu za pokretanje[CR]Prije pokretanja pregledajte parametre pokretanja igre ako je potrebno[CR]Pogledajte wiki za više detalja."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Aplikacija Retroarch postavljena na:[CR]{}[CR]Izmijenite u postavkama dodataka ako je potrebno"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch konfiguracija je postavljena na:[CR]{}[CR]Izmijenite u postavkama dodatka ako je potrebno"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Čarobnjak je završen[CR]Lets Play!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Postavite sve liste igara za pokretanje s Kodi-jem"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Brzo postavite sve liste igara na vanjsko pokretanje"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Brzo postavite sve liste igara na Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Potvrdi"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Jeste li sigurni da želite sve liste postaviti na vanjsko pokretanje"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Jeste li sigurni da želite sve liste postaviti na Kodi retroplayer"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Android dozvole zahtijevaju da ručno unesete Retroarch konfiguracijsku stazu[CR]Pogledajte wiki za dodatnu pomoć"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Android dozvole zahtijevaju da ručno unesete Retroarch jezgro[CR]Pogledajte wiki za dodatnu pomoć"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Backup trenutne baze podataka"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Vratite bazu podataka iz sigurnosne kopije"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Napravite sigurnosnu kopiju trenutne IAGL baze podataka i svih korisničkih postavki"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Vratite trenutnu bazu podataka dodataka iz sigurnosne kopije"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Odaberite sigurnosnu putanju"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Odaberite backup db"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Sigurnosna kopija je završena"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Vraćanje je završeno"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} odgovarajući ID-ovi igre nisu pronađeni u novom db[CR]Odaberi sljedeću radnju"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Ažurirajte bazu podataka, pokušajte da uskladite igre po naslovu i listi igara"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Ažurirajte bazu podataka, uklonite ID-ove igara koji nisu pronađeni"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Vratite na staru bazu podataka"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Baza podataka vraćena na staru bazu podataka"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Molim sačekajte"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Ručno postavite Retroarch direktorije"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL će po defaultu otkriti direktorije iz RA konfiguracije, možete ručno nadjačati ovu funkciju"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch Core Directory"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroach Info Directory"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Dodajte linux aplikaciju da pokrenete naredbu za pokretanje"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak se koristi za specifične linux/elec sisteme.  Omogućite samo ako vaš sistem to zahtijeva."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Dodajte systemd-run naredbama Retroarch"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Dodati systemd-run svim naredbama"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Prethodno pokrenuti flatpak naredbama Retroarch"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Dodati flatpak run svim naredbama"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Android dozvole zahtijevaju dijeljeni direktorij pohrane[CR]Unesite dijeljenu lokaciju kojoj obje aplikacije mogu pristupiti"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Raspakujte datoteke"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Bez obrade"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Raspakujte datoteke, preskočite BIOS datoteke"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Raspakujte datoteke u fasciklu"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Raspakujte datoteke, premjestite CHD u folder"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Premjesti datoteke u folder: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Premjestite fajlove u folder: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Premjestite fajlove u folder: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Premjestite fajlove u folder: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Premjestite fajlove u folder: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Premjestite fajlove u folder: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Premjestite fajlove u folder: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Premesti fajlove u folder: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Premesti fajlove u fasciklu: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Premjestite fajlove u folder: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Premjestite datoteke u folder: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Premjestite fajlove u folder: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Premesti fajlove u folder: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Premjestite datoteke u folder: spectrum"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Premjestite fajlove u folder: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Jeste li sigurni da želite ažurirati proces objave liste igara?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Post proces je ažuriran"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Ažurirati postproces za {}?[CR][B]Ovo će promijeniti postavke za sve igre na ovoj listi.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Preuzimanje je završeno.  Fajlovi nakon obrade?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Fajlovi igara su obrađeni"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Nije dostupno (samo za Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Vrsta korisničkog imena za Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Odaberite integraciju za ime netplay igrača"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Koristite Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord omogućava automatske utakmice na mreži (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Ručno unesite ime igrača"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Imena igrača će biti objavljena u Retroarch Lobbyju"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Ime igrača"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Trenutni Discord korisnik"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord korisnik postavljen na [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Pogledajte sesije igranja kojima se možete pridružiti na mreži koristeći Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Nije moguće pronaći diskord korisnika sa ID-om [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Opcije filtera u predvorju"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Pokažite samo sobe u koje se može ući"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Pokažite samo sobe koje koriste libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Prikaži sobe koje imaju lozinku"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Prikaži sobe koje imaju lozinku gledaoca"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Prikaži sobe koristeći MITM servere"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Prikaži samo sobe kreirane u vremenskom okviru"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 minuta"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 minuta"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Bilo koji vremenski okvir"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Filtrirajte sobe u predvorju na osnovu vremena kreiranja"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Pokažite samo sobe koje koriste IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Nije moguće pronaći odgovarajuću igru ​​s imenom kao što je [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Nije pronađeno"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Odaberite odgovarajuću igru"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Akcija pokretanja Netplaya"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Pridružite se iz predvorja retroarhije"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Pridružite se sa lokalnog hosta"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Odaberite zadanu radnju kada se pridružite igrici na mreži"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Pokreni kao netplay host"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Preimenujte IAGL Favorite"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Preimenovanje je završeno"

@@ -61,7 +61,7 @@ msgstr "Alfabético"
 
 msgctxt "#30013"
 msgid "Group by Genre"
-msgstr "Agrupar por Gênero"
+msgstr "Agrupar por gênero"
 
 msgctxt "#30014"
 msgid "Group by Year"
@@ -365,7 +365,7 @@ msgstr "Adicionar aos favoritos do IAGL"
 
 msgctxt "#30089"
 msgid "Enter a name for your favorites group"
-msgstr "Insira um nome para o seu grupo de favoritos"
+msgstr "Insira um nome para seu grupo de favoritos"
 
 msgctxt "#30090"
 msgid "Favorite added to group"
@@ -727,6 +727,10 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Defina a porta IP do netplay para conectar (deixe em branco para o padrão)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "IP do host local padrão"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Defina um nome de host / IP de rede padrão (útil para rede local de rede, deixe em branco para o padrão)"
@@ -758,6 +762,10 @@ msgstr "Insira seu nome de jogador para ser anunciado no Discord"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "ID da conta de usuário do Discord"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Forneça seu ID do Discord (Configurações do usuário>Minha conta>Copiar ID)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -1241,7 +1249,7 @@ msgstr "Comando de inicialização externa padrão"
 
 msgctxt "#30310"
 msgid "Default Retroplayer Game Addon"
-msgstr "Addon de jogo Retroplayer padrão"
+msgstr "Addon de jogo padrão Retroplayer"
 
 msgctxt "#30311"
 msgid "Default Game Post Process"
@@ -1361,7 +1369,7 @@ msgstr "Ver estatísticas do banco de dados IAGL"
 
 msgctxt "#30340"
 msgid "Lists current stats for IAGL db"
-msgstr "Lista estatísticas atuais para IAGL db"
+msgstr "Lista estatísticas atuais para o banco de dados IAGL"
 
 msgctxt "#30341"
 msgid "db Stats"
@@ -1409,7 +1417,7 @@ msgstr "Nenhum comando de inicialização padrão foi encontrado para esta lista
 
 msgctxt "#30352"
 msgid "Default core was not found.  Please install {} or update launcher"
-msgstr "O núcleo padrão não foi encontrado. Instale {} ou atualize o iniciador"
+msgstr "O núcleo padrão não foi encontrado. Por favor, instale {} ou atualize o iniciador"
 
 msgctxt "#30353"
 msgid "Game addon launch command reset"
@@ -1521,7 +1529,7 @@ msgstr "Bem-vindo ao Assistente de configuração do IAGL[CR]Vamos analisar toda
 
 msgctxt "#30380"
 msgid "Most games require an archive.org account[CR]Sign up at https://archive.org/account/signup[CR]Would you like to use your account with IAGL?"
-msgstr "A maioria dos jogos exige uma conta archive.org[CR]Cadastre-se em https://archive.org/account/signup[CR]Gostaria de usar sua conta com a IAGL?"
+msgstr "A maioria dos jogos exige uma conta archive.org[CR]Cadastre-se em https://archive.org/account/signup[CR]Você gostaria de usar sua conta com a IAGL?"
 
 msgctxt "#30381"
 msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
@@ -1533,7 +1541,7 @@ msgstr "Defina todas as listas de jogos para serem iniciadas externamente"
 
 msgctxt "#30383"
 msgid "Set only some game lists to be externally launched"
-msgstr "Defina apenas algumas listas de jogos para serem iniciadas externamente"
+msgstr "Defina apenas algumas listas de jogos para serem lançadas externamente"
 
 msgctxt "#30384"
 msgid "Reset all game list launchers back to default"
@@ -1546,3 +1554,383 @@ msgstr "{} listas de jogos foram atualizadas para lançamento externo"
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "Os padrões são predefinidos para cada comando de inicialização externo[CR]Antes de iniciar, revise os parâmetros de inicialização do jogo, se necessário[CR]Consulte o wiki para mais detalhes."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Aplicativo Retroarch definido para:[CR]{}[CR]Modificar nas configurações do complemento, se necessário"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Configuração do Retroarch definida como:[CR]{}[CR]Modifique nas configurações do complemento, se necessário"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Assistente concluído[CR]Vamos jogar!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Defina todas as listas de jogos para serem iniciadas com o Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Defina rapidamente todas as listas de jogos para inicialização externa"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Defina rapidamente todas as listas de jogos para o Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Confirmar"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Tem certeza de que deseja definir todas as listas para lançamento externo?"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Tem certeza de que deseja definir todas as listas para o Kodi retroplayer"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "As permissões do Android exigem que você insira manualmente o caminho de configuração do Retroarch[CR]Veja o wiki para obter mais ajuda"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "As permissões do Android exigem que você insira manualmente o caminho do núcleo do Retroarch[CR]Veja o wiki para obter mais ajuda"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Fazer backup do banco de dados atual"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Restaurar banco de dados a partir de backup"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Faça backup do banco de dados IAGL atual e de todas as configurações do usuário"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Restaurar o banco de dados de complementos atual a partir de um backup"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Selecione o caminho de backup"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Selecione o banco de dados de backup"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Backup concluído"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Restauração concluída"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} IDs de jogos correspondentes não foram encontrados no novo banco de dados[CR]Selecione a próxima ação"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Atualizar banco de dados, tentar combinar jogos por título e lista de jogos"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Atualizar banco de dados, remover IDs de jogos que não foram encontrados"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Restaurar para o banco de dados antigo"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Banco de dados restaurado de volta ao banco de dados antigo"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Por favor, aguarde"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Definir diretórios Retroarch manualmente"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "O IAGL detectará por padrão os diretórios da configuração do RA, você pode substituir manualmente esta função"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Diretório do núcleo Retroarch"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Diretório de informações do Retroach"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Adicionar aplicativo Linux para iniciar o comando de inicialização"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak é usado para sistemas linux/elec específicos. Habilite somente se seu sistema exigir."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Adicionar systemd-run aos comandos do Retroarch"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Adicionar systemd-run a todos os comandos"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Adicionar flatpak run aos comandos do Retroarch"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Adicionar flatpak run a todos os comandos"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "As permissões do Android exigem um diretório de armazenamento compartilhado[CR]Insira um local compartilhado que possa ser acessado por ambos os aplicativos"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Descompactar arquivos"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Sem processamento"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Descompactar arquivos, pular arquivos do BIOS"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Descompactar arquivos para pasta"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Descompacte os arquivos, mova o CHD para a pasta"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Mover arquivos para a pasta: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Mover arquivos para a pasta: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Mover arquivos para a pasta: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Mover arquivos para a pasta: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Mover arquivos para a pasta: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Mover arquivos para pasta: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Mover arquivos para a pasta: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Mover arquivos para a pasta: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Mover arquivos para pasta: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Mover arquivos para a pasta: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Mover arquivos para a pasta: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Mover arquivos para a pasta: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Mover arquivos para pasta: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Mover arquivos para a pasta: spectrum"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Mover arquivos para a pasta: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Tem certeza de que deseja atualizar a lista de jogos após o processo?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Pós-processo atualizado"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Atualizar processo de postagem para {}?[CR][B]Isso alterará as configurações de todos os jogos nesta lista.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Download concluído. Pós-processar arquivos?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Arquivos de jogo processados"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Não disponível (somente Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Tipo de nome de usuário do Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Selecione a integração para o nome do jogador netplay"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Usar Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "O Discord permite partidas de netplay automatizadas (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Insira manualmente um nome de jogador"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Os nomes dos jogadores serão publicados no Lobby Retroarch"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Nome do jogador"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Usuário atual do Discord"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Usuário do Discord definido como [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Veja as sessões de jogo que você pode participar online usando o Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Não foi possível encontrar o usuário do Discord com ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Opções de filtro do lobby"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Mostrar apenas salas que podem ser acessadas"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Mostrar apenas salas que usam libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Mostrar salas que possuem senha"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Mostrar salas que possuem senha de espectador"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Mostrar salas usando servidores MITM"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Mostrar apenas as salas criadas dentro do prazo"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 minutos"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 minutos"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Qualquer período de tempo"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Filtrar as salas do lobby com base no tempo de criação"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Mostrar apenas salas que usam IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Não é possível encontrar um jogo correspondente com nome como [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Não encontrado"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Selecione o jogo correspondente"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Ação de lançamento do Netplay"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Junte-se ao lobby do retroarch"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Junte-se a partir do localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Selecione a ação padrão ao entrar em um jogo de rede"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Iniciar como host netplay"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Renomear IAGL Favorito"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Renomear concluído"

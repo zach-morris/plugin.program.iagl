@@ -727,6 +727,10 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Tentukan port IP netplay untuk terhubung (biarkan kosong untuk default)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "IP Lokal Host Default"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Tentukan nama host / IP netplay default (berguna untuk netplay jaringan lokal, biarkan kosong untuk default)"
@@ -758,6 +762,10 @@ msgstr "Masukkan nama pemain Anda untuk diumumkan di Discord"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "ID Akun Pengguna Discord"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Berikan ID Discord Anda (Pengaturan Pengguna>Akun Saya>Salin ID)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -1546,3 +1554,383 @@ msgstr "{} daftar game diperbarui untuk peluncuran eksternal"
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "Nilai default telah ditetapkan sebelumnya untuk setiap perintah peluncuran eksternal.[CR]Sebelum meluncurkan, tinjau parameter peluncuran game jika diperlukan.[CR]Lihat wiki untuk detail lebih lanjut."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Aplikasi Retroarch diatur ke:[CR]{}[CR]Ubah dalam pengaturan addon jika diperlukan"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Konfigurasi Retroarch diatur ke:[CR]{}[CR]Ubah dalam pengaturan addon jika diperlukan"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Penyihir selesai[CR]Ayo Bermain!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Tetapkan semua daftar game untuk diluncurkan dengan Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Atur semua daftar game dengan cepat ke peluncuran eksternal"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Atur semua daftar game dengan cepat ke Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Mengonfirmasi"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Apakah Anda yakin ingin mengatur semua daftar ke peluncuran eksternal?"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Apakah Anda yakin ingin mengatur semua daftar ke Kodi retroplayer?"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Izin Android mengharuskan Anda memasukkan jalur konfigurasi Retroarch secara manual[CR]Lihat wiki untuk bantuan lebih lanjut"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Izin Android mengharuskan Anda memasukkan jalur inti Retroarch secara manual[CR]Lihat wiki untuk bantuan lebih lanjut"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Cadangkan basis data saat ini"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Pulihkan database dari cadangan"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Cadangkan database IAGL saat ini dan semua pengaturan pengguna"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Pulihkan database addon saat ini dari cadangan"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Pilih jalur cadangan"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Pilih database cadangan"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Pencadangan selesai"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Pemulihan selesai"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} id permainan yang cocok tidak ditemukan di db baru[CR]Pilih tindakan berikutnya"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Perbarui basis data, coba cocokkan game berdasarkan judul dan daftar game"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Perbarui database, hapus id game yang tidak ditemukan"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Pulihkan kembali ke database lama"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Database dikembalikan ke database lama"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Harap tunggu"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Mengatur direktori Retroarch secara manual"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL secara default akan mendeteksi direktori dari konfigurasi RA, Anda dapat mengganti fungsi ini secara manual"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Direktori Inti Retroarch"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Direktori Info Retroach"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Tambahkan aplikasi linux untuk memulai perintah peluncuran"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak digunakan untuk sistem linux/elec tertentu. Aktifkan hanya jika sistem Anda memerlukannya."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Tambahkan systemd-run ke perintah Retroarch"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Tambahkan systemd-run ke semua perintah"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Tambahkan flatpak run ke perintah Retroarch"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Tambahkan flatpak run ke semua perintah"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Izin Android memerlukan direktori penyimpanan bersama[CR]Masukkan lokasi bersama yang dapat diakses oleh kedua aplikasi"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Ekstrak File Zip"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Tidak Ada Pemrosesan"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Ekstrak File, Lewati file BIOS"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Ekstrak File ke Folder"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Ekstrak File, Pindahkan CHD ke folder"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Pindahkan file ke folder: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Pindahkan file ke folder: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Pindahkan file ke folder: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Pindahkan file ke folder: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Pindahkan file ke folder: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Pindahkan file ke folder: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Pindahkan file ke folder: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Pindahkan file ke folder: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Pindahkan file ke folder: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Pindahkan file ke folder: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Pindahkan file ke folder: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Pindahkan file ke folder: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Pindahkan file ke folder: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Pindahkan file ke folder: spektrum"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Pindahkan file ke folder: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Apakah Anda yakin ingin memperbarui daftar permainan setelah proses?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Proses pasca diperbarui"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Perbarui Proses Pasca untuk {}?[CR][B]Ini akan mengubah pengaturan untuk semua permainan dalam daftar ini.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Pengunduhan selesai. File pascaproses?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "File game diproses"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Tidak Tersedia (Hanya Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Tipe Nama Pengguna Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Pilih integrasi untuk nama pemain netplay"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Gunakan Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord memungkinkan pencocokan netplay otomatis (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Masukkan Nama Pemain secara manual"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Nama pemain akan dipublikasikan di Lobi Retroarch"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Nama Pemain"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Pengguna Discord Saat Ini"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Pengguna Discord diatur ke [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Lihat sesi permainan yang dapat Anda ikuti secara online menggunakan Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Tidak dapat menemukan pengguna discord dengan ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Opsi Filter Lobi"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Hanya tampilkan ruangan yang bisa dimasuki"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Hanya tampilkan ruangan yang menggunakan libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Tampilkan ruangan yang memiliki kata sandi"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Tampilkan ruangan yang memiliki kata sandi penonton"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Ruang pamer menggunakan server MITM"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Hanya tampilkan ruang pamer yang dibuat dalam jangka waktu tertentu"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 menit"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 menit"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Jangka Waktu Apa Pun"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Filter ruang lobi berdasarkan waktu pembuatan"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Hanya tampilkan ruangan yang menggunakan IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Tidak dapat menemukan permainan yang cocok dengan nama seperti [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Tidak Ditemukan"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Pilih permainan yang cocok"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Aksi peluncuran Netplay"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Bergabung dari lobi retroarch"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Bergabung dari localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Pilih tindakan default saat bergabung dengan permainan netplay"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Luncurkan sebagai host netplay"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Ubah Nama IAGL Menjadi Favorit"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Ganti Nama Selesai"

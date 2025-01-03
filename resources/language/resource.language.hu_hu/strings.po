@@ -21,7 +21,7 @@ msgstr "Az összes lista böngészése"
 
 msgctxt "#30003"
 msgid "Browse lists by Category"
-msgstr "Böngésszen a listákon kategóriák szerint"
+msgstr "Böngésszen a listák között kategóriák szerint"
 
 msgctxt "#30004"
 msgid "Browse games by Playlist"
@@ -273,7 +273,7 @@ msgstr "Ellenőrizze a bejelentkezési adatokat"
 
 msgctxt "#30066"
 msgid "Test the entered email and password to check your ability to login"
-msgstr "Tesztelje a megadott e-mail címet és jelszavát, hogy ellenőrizze bejelentkezési képességét"
+msgstr "Tesztelje a megadott e-mail-címet és jelszót, hogy ellenőrizhesse a bejelentkezési képességét"
 
 msgctxt "#30067"
 msgid "Download folder size limit"
@@ -397,7 +397,7 @@ msgstr "Mindig szűrje a listát 1 Game 1 Rom Setre"
 
 msgctxt "#30097"
 msgid "If possible, game lists will be pre-filtered to a 1G1R set"
-msgstr "Ha lehetséges, a játéklisták előre szűrve lesznek egy 1G1R készletre"
+msgstr "Ha lehetséges, a játéklisták egy 1G1R készletre lesznek előszűrve"
 
 msgctxt "#30098"
 msgid "Append game list name to search and random results"
@@ -421,7 +421,7 @@ msgstr "Kodi tájművészet egyenlő"
 
 msgctxt "#30103"
 msgid "Select the game artwork to be displayed as the landscape art"
-msgstr "Válassza ki a tájképként megjeleníteni kívánt játékgrafikát"
+msgstr "Válassza ki a játék grafikáját, amelyet tájképként szeretne megjeleníteni"
 
 msgctxt "#30104"
 msgid "Title Screen"
@@ -469,7 +469,7 @@ msgstr "Válassza ki a megjelenített grafikát a fanart játéklistához"
 
 msgctxt "#30115"
 msgid "System collage"
-msgstr "Rendszer kollázs"
+msgstr "Rendszerkollázs"
 
 msgctxt "#30116"
 msgid "System console"
@@ -485,7 +485,7 @@ msgstr "IAGL nézettípusok kényszerítése"
 
 msgctxt "#30119"
 msgid "Verify your skin has the forced viewtype ID available"
-msgstr "Győződjön meg arról, hogy a bőrön elérhető a kényszerített nézettípus azonosítója"
+msgstr "Győződjön meg arról, hogy a bőrén rendelkezésre áll a kényszerített nézettípus azonosítója"
 
 msgctxt "#30120"
 msgid "Frontpage viewtype"
@@ -553,7 +553,7 @@ msgstr "Operációs rendszer"
 
 msgctxt "#30136"
 msgid "Select your operating system"
-msgstr "Válassza ki az operációs rendszert"
+msgstr "Válassza ki az operációs rendszerét"
 
 msgctxt "#30137"
 msgid "Windows"
@@ -705,7 +705,7 @@ msgstr "A retroarch netplay engedélyezése (csak Windows, Linux, OSX), a helyi 
 
 msgctxt "#30174"
 msgid "Show Netplay Lobby"
-msgstr "A Netplay Lobby megjelenítése"
+msgstr "Mutasd a Netplay Lobbyt"
 
 msgctxt "#30175"
 msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
@@ -725,11 +725,15 @@ msgstr "Netplay port"
 
 msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
-msgstr "Határozza meg a netplay IP-portját, amelyen keresztül csatlakozik (alapértelmezés szerint hagyja üresen)"
+msgstr "Határozza meg a netplay IP-portját a csatlakozáshoz (alapértelmezés szerint hagyja üresen)"
+
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Alapértelmezett Localhost IP"
 
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
-msgstr "Határozzon meg egy alapértelmezett netplay gazdagépnevet/IP-t (hasznos helyi hálózati netplay esetén, alapértelmezés esetén hagyja üresen)"
+msgstr "Határozzon meg egy alapértelmezett netplay gazdagépnevet/IP-t (hasznos a helyi hálózati netplayhez, hagyja üresen az alapértelmezés szerint)"
 
 msgctxt "#30182"
 msgid "Check frames"
@@ -745,7 +749,7 @@ msgstr "A Netplay bejelentése a Discordon"
 
 msgctxt "#30185"
 msgid "Announces netplay start on discord for IAGL players"
-msgstr "Bejelenti, hogy az IAGL-játékosok számára elkezdődik a netplay"
+msgstr "Bejelenti, hogy az IAGL-játékosok között a netplay elkezdődik"
 
 msgctxt "#30186"
 msgid "Discord Player Name"
@@ -759,13 +763,17 @@ msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord felhasználói fiók azonosítója"
 
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Adja meg Discord-azonosítóját (Felhasználói beállítások> Fiókom> Másolásazonosító)"
+
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
 msgstr "Jelentés megjelenítése, amikor a varázsló befejeződött"
 
 msgctxt "#30191"
 msgid "Execute setup wizard"
-msgstr "A telepítővarázsló végrehajtása"
+msgstr "A telepítő varázsló végrehajtása"
 
 msgctxt "#30192"
 msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
@@ -773,7 +781,7 @@ msgstr "Futtassa a varázslót a játéklisták beállításainak gyors módosí
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
-msgstr "Az Android speciális beállításai"
+msgstr "Android speciális beállítások"
 
 msgctxt "#30194"
 msgid "Use StartAndroidActivity"
@@ -945,7 +953,7 @@ msgstr "Válassza ki a kedvenc csoportot"
 
 msgctxt "#30236"
 msgid "Group by Favorites Group"
-msgstr "Csoport a kedvencek csoportja szerint"
+msgstr "Csoportosítás kedvencek csoportja szerint"
 
 msgctxt "#30237"
 msgid "Remove IAGL Favorite"
@@ -989,7 +997,7 @@ msgstr "Frissítse a játéklistát Launcher"
 
 msgctxt "#30247"
 msgid "Update game list Launch Command"
-msgstr "A játéklista frissítése Indítsa el a parancsot"
+msgstr "Frissítse a játéklistát Indítsa el a parancsot"
 
 msgctxt "#30248"
 msgid "Update game list Download Path"
@@ -1057,7 +1065,7 @@ msgstr "Az indító frissítve retroplayerre"
 
 msgctxt "#30264"
 msgid "Select game addon"
-msgstr "Válassza ki a játékkiegészítőt"
+msgstr "Válassza ki a játék kiegészítőt"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
@@ -1177,7 +1185,7 @@ msgstr "A külső indítási parancs frissítve"
 
 msgctxt "#30294"
 msgid "Android users must verify the core is installed in Retroarch"
-msgstr "Az Android-felhasználóknak ellenőrizniük kell, hogy a mag telepítve van-e a Retroarch alkalmazásban"
+msgstr "Az Android-felhasználóknak ellenőrizniük kell, hogy a mag telepítve van-e a Retroarchban"
 
 msgctxt "#30295"
 msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
@@ -1185,7 +1193,7 @@ msgstr "Az indítási beállítások jelenleg üresek[CR]Kérjük, frissítse a 
 
 msgctxt "#30296"
 msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
-msgstr "Az indítási beállítások jelenleg üresek[CR]Kérjük, frissítse az OS indítási beállításait."
+msgstr "Az indítási beállítások jelenleg üresek[CR]Kérjük, frissítse a kiegészítő operációs rendszer indítási beállításait."
 
 msgctxt "#30297"
 msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
@@ -1233,7 +1241,7 @@ msgstr "Összes játék a listán"
 
 msgctxt "#30308"
 msgid "Total Favorited Games in List"
-msgstr "Összes kedvenc játék a listában"
+msgstr "Összes kedvenc játék a listán"
 
 msgctxt "#30309"
 msgid "Default External Launch Command"
@@ -1317,7 +1325,7 @@ msgstr "A játéklista beállításainak visszaállítása"
 
 msgctxt "#30329"
 msgid "Are you sure you want to reset all game list settings to default?"
-msgstr "Biztosan vissza szeretné állítani az összes játéklista beállítást az alapértelmezettre?"
+msgstr "Biztos, hogy vissza szeretné állítani az összes játéklista beállítást az alapértelmezettre?"
 
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
@@ -1385,7 +1393,7 @@ msgstr "Ha nincs felhasználó, indítsa el a parancsot"
 
 msgctxt "#30346"
 msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
-msgstr "Válassza ki, mit tegyen a Kodi, ha nincs beállítva indítási parancs (retroplayer kiegészítő vagy külső emulátor)."
+msgstr "Válassza ki, hogy mit tegyen a Kodi, ha nincs beállítva indítási parancs (retroplayer kiegészítő vagy külső emulátor)."
 
 msgctxt "#30347"
 msgid "Attempt Launch with default"
@@ -1421,7 +1429,7 @@ msgstr "Nem találhatók játékkiegészítők"
 
 msgctxt "#30355"
 msgid "Game addon launch command updated"
-msgstr "A játékkiegészítő indító parancsa frissítve"
+msgstr "A játékkiegészítő indítóparancsa frissítve"
 
 msgctxt "#30356"
 msgid "Use alternate default download folder"
@@ -1441,11 +1449,11 @@ msgstr "Csak azokat a beállításokat jelenítse meg, amelyek szüneteltetik a 
 
 msgctxt "#30360"
 msgid "Retroarch CFG Location as string"
-msgstr "Retroarch CFG Hely mint karakterlánc"
+msgstr "Retroarch CFG Hely karakterláncként"
 
 msgctxt "#30361"
 msgid "Alternatively enter the path to the retroarch.cfg file exactly as it appears in Retroarch"
-msgstr "Alternatív megoldásként adja meg a retroarch.cfg fájl elérési útját pontosan úgy, ahogy az a Retroarchban megjelenik"
+msgstr "Alternatív megoldásként adja meg a retroarch.cfg fájl elérési útját pontosan úgy, ahogyan az a Retroarchban megjelenik"
 
 msgctxt "#30362"
 msgid "Retroarch Cores directory as string"
@@ -1509,7 +1517,7 @@ msgstr "Hiba történt az adatbázis frissítése során[CR]További részletek�
 
 msgctxt "#30377"
 msgid "Ask me again later"
-msgstr "Kérdezd meg később"
+msgstr "Kérdezd meg újra később"
 
 msgctxt "#30378"
 msgid "Do not update this time[CR](Don’t ask me again until next update)"
@@ -1546,3 +1554,383 @@ msgstr "{} játéklista frissítve lett külső indításhoz"
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "Az alapértelmezett értékek minden külső indítóparancshoz előre be vannak állítva[CR]Indítás előtt ellenőrizze a játék indítási paramétereit, ha szükséges[CR]További részletekért lásd a wikit."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "A Retroarch alkalmazás a következőre van állítva:[CR]{}[CR]Módosítsa a kiegészítő beállításait, ha szükséges"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "A Retroarch konfiguráció a következőre van állítva: [CR]{}[CR] Szükség esetén módosítsa a kiegészítő beállításait"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "A varázsló befejeződött[CR]Játsszunk!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Állítsa be az összes játéklistát a Kodival való indításhoz"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Gyorsan állítsa be az összes játéklistát külső indításra"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Gyorsan állítsa be az összes játéklistát a Kodi retroplayerre"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Erősítse meg"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Biztosan az összes listát külső indításra szeretné állítani?"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Biztosan beállítja az összes listát a Kodi retroplayerre?"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Az Android engedélyekhez manuálisan kell megadnia a Retroarch konfigurációs útvonalát[CR]További segítségért lásd a wikit"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Az Android engedélyekhez manuálisan kell megadnia a Retroarch alapvető elérési útját[CR]További segítségért tekintse meg a wikit"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Az aktuális adatbázis biztonsági mentése"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Adatbázis visszaállítása biztonsági másolatból"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Készítsen biztonsági másolatot az aktuális IAGL adatbázisról és az összes felhasználói beállításról"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Állítsa vissza az aktuális kiegészítő adatbázist egy biztonsági másolatból"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Válassza ki a biztonsági mentési útvonalat"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Válassza ki a biztonsági másolatot"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "A biztonsági mentés befejeződött"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "A visszaállítás befejeződött"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} egyező játékazonosító nem található az új db-ban[CR]Válassza ki a következő műveletet"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Frissítse az adatbázist, próbálja meg a játékokat cím és játéklista alapján párosítani"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Frissítse az adatbázist, távolítsa el a nem található játékazonosítókat"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Visszaállítás a régi adatbázisba"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Az adatbázis visszaállítva a régi adatbázisba"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Kérem, várjon"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Retroarch könyvtárak manuális beállítása"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "Az IAGL alapértelmezés szerint felismeri a könyvtárakat az RA konfigurációból, ezt a funkciót manuálisan felülbírálhatja"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch Core Directory"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroach Info Directory"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Az indítóparancs elindításához fűzze hozzá a linux alkalmazást"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "A systemd-run/flatpak bizonyos linux/elec rendszerekhez használatos.  Csak akkor engedélyezze, ha a rendszer megköveteli."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "A Retroarch parancsok elé illessze a systemd-run-t"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Minden parancs elé illessze a systemd-run parancsot"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "A flatpak futtatását fűzze a Retroarch parancsokhoz"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Az összes parancs elé fűzze a flatpak futtatást"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Az Android engedélyei megosztott tárolási könyvtárat igényelnek[CR]Adjon meg egy megosztott helyet, amelyet mindkét alkalmazás elérhet"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Csomagolja ki a fájlokat"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Nincs feldolgozás"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Csomagolja ki a fájlokat, hagyja ki a BIOS-fájlokat"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Csomagolja ki a fájlokat a mappába"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Csomagolja ki a fájlokat, helyezze át a CHD-t mappába"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Fájlok áthelyezése a következő mappába: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Fájlok áthelyezése a következő mappába: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Fájlok áthelyezése a coleco mappába"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Fájlok áthelyezése a következő mappába: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Fájlok áthelyezése a következő mappába: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Fájlok áthelyezése a megadrive mappába"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Fájlok áthelyezése a következő mappába: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Fájlok áthelyezése a következő mappába: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Fájlok áthelyezése a következő mappába: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Fájlok áthelyezése a következő mappába: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Fájlok áthelyezése a következő mappába: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Fájlok áthelyezése a következő mappába: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Fájlok áthelyezése mappába: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Fájlok áthelyezése a spektrum mappába"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Fájlok áthelyezése a következő mappába: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Biztos, hogy frissíteni szeretnéd a játéklista feladási folyamatát?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Az utánkövetési folyamat frissítve"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Frissíti a bejegyzési folyamatot a következőhöz: {}?[CR][B]Ez módosítja a listán szereplő összes játék beállításait.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Letöltés befejeződött.  Elküldési folyamat fájlok?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "A játékfájlok feldolgozva"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Nem elérhető (csak Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Netplay felhasználónév típusa"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Válassza ki az integrációt a netplay lejátszó nevéhez"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Használd a Discordot"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "A Discord lehetővé teszi az automatikus netplay meccseket (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Adja meg manuálisan a játékos nevét"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "A játékosok neveit a Retroarch Lobbyban tesszük közzé"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Játékos neve"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Jelenlegi Discord felhasználó"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "A Discord User beállítása [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Tekintse meg azokat a játékmeneteket, amelyekhez online csatlakozhat a Retroarch netplay használatával"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Nem található [CR]{} azonosítójú nem megfelelő felhasználó"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Lobby szűrőbeállítások"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Csak olyan szobákat mutasson, amelyekbe be lehet lépni"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Csak azokat a szobákat jelenítse meg, amelyek libretrót használnak"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Jelszóval rendelkező szobák megjelenítése"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Mutasd meg a nézői jelszóval rendelkező szobákat"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Szobák megjelenítése MITM szerverekkel"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Csak az időn belül létrehozott szobák megjelenítése"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 perc"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 perc"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Bármilyen időkeret"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "A lobby helyiségek szűrése a létrehozási idő alapján"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Csak azokat a szobákat jelenítse meg, amelyek IAGL-t használnak"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Nem található a megfelelő játék a következő névvel: [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Nem található"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Válassza ki a megfelelő játékot"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Netplay indítási akció"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Csatlakozzon a retroarch előcsarnokból"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Csatlakozz a localhosttól"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Válassza ki az alapértelmezett műveletet, amikor csatlakozik egy netplay játékhoz"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Indítsa el a netplay gazdagépként"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Nevezze át az IAGL kedvencet"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Átnevezés kész"

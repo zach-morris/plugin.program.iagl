@@ -33,7 +33,7 @@ msgstr "Sevimlilər"
 
 msgctxt "#30006"
 msgid "Play History"
-msgstr "Oyun Tarixçəsi"
+msgstr "Play Tarixi"
 
 msgctxt "#30007"
 msgid "Search"
@@ -93,7 +93,7 @@ msgstr "Dilə görə qruplaşdırın"
 
 msgctxt "#30021"
 msgid "Group by Edition"
-msgstr "Buraxılış üzrə qruplaşdırın"
+msgstr "Nəşr üzrə qruplaşdırın"
 
 msgctxt "#30022"
 msgid "Group by Code"
@@ -201,7 +201,7 @@ msgstr "Qabaqcıl"
 
 msgctxt "#30048"
 msgid "Play History"
-msgstr "Oyun Tarixçəsi"
+msgstr "Play Tarixi"
 
 msgctxt "#30049"
 msgid "Define how many games to save in last played history"
@@ -709,7 +709,7 @@ msgstr "Netplay Lobbisini göstərin"
 
 msgctxt "#30175"
 msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
-msgstr "Aktivləşdirildikdə, netplay lobbisi IAGL ön səhifəsində göstəriləcək"
+msgstr "Aktivləşdirildikdə, netplay lobbisi IAGL-in ön səhifəsində göstəriləcək"
 
 msgctxt "#30176"
 msgid "Filter game lobby to IAGL auto launch games"
@@ -726,6 +726,10 @@ msgstr "Netplay Portu"
 msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Qoşulmaq üçün netplay IP portunu təyin edin (defolt olaraq boş buraxın)"
+
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Defolt Localhost IP"
 
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
@@ -758,6 +762,10 @@ msgstr "Discord-da elan ediləcək oyunçu adınızı daxil edin"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord İstifadəçi Hesabı ID"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Discord ID-nizi təqdim edin (İstifadəçi Parametrləri>Mənim Hesabım>İdentifikatoru Kopyalayın)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -793,7 +801,7 @@ msgstr "Xarici işə salınmadan əvvəl Kodi mediasının oynatılmasını daya
 
 msgctxt "#30198"
 msgid "Kodi is busy / waiting for return to Kodi after External Launch"
-msgstr "Kodi məşğuldur / Xarici işə salındıqdan sonra Kodiyə qayıtmağı gözləyir"
+msgstr "Kodi məşğuldur / Xarici işə salındıqdan sonra Kodi-yə qayıtmağı gözləyir"
 
 msgctxt "#30199"
 msgid "Download Advanced Settings"
@@ -841,7 +849,7 @@ msgstr "Oyun siyahılarını göstərin"
 
 msgctxt "#30210"
 msgid "When selected, previously hidden game lists can be unhidden"
-msgstr "Seçildikdə, əvvəllər gizli olan oyun siyahıları görünə bilər"
+msgstr "Seçildikdə, əvvəllər gizli olan oyun siyahıları açıla bilər"
 
 msgctxt "#30211"
 msgid "Clear Cache"
@@ -921,7 +929,7 @@ msgstr "Kriteriyaları sıfırlayın"
 
 msgctxt "#30230"
 msgid "Enter Link Name"
-msgstr "Linkin adını daxil edin"
+msgstr "Link adını daxil edin"
 
 msgctxt "#30231"
 msgid "Define the start page for IAGL"
@@ -977,7 +985,7 @@ msgstr "*bütün* meyarları sıfırlayın"
 
 msgctxt "#30244"
 msgid "Run IAGL setup wizard?"
-msgstr "IAGL quraşdırma sehrbazı işə salınsın?"
+msgstr "IAGL quraşdırma sehrbazını işə salın?"
 
 msgctxt "#30245"
 msgid "Wizard"
@@ -985,7 +993,7 @@ msgstr "Sehrbaz"
 
 msgctxt "#30246"
 msgid "Update game list Launcher"
-msgstr "Oyun siyahısı Başlatıcını yeniləyin"
+msgstr "Oyun siyahısını yeniləyin Launcher"
 
 msgctxt "#30247"
 msgid "Update game list Launch Command"
@@ -1189,7 +1197,7 @@ msgstr "Başlatma parametrləri hazırda boşdur[CR]Addon ƏS başlatma parametr
 
 msgctxt "#30297"
 msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
-msgstr "Əlavə emulyator tapılmadı[CR]Lütfən, əlavə emulyator parametrlərini yeniləyin"
+msgstr "Əlavə emulyator tapılmadı[CR]Lütfən, əlavə emulator parametrlərini yeniləyin"
 
 msgctxt "#30298"
 msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
@@ -1257,7 +1265,7 @@ msgstr "İstifadəçinin Xarici Başlatma Komandası"
 
 msgctxt "#30314"
 msgid "User Defined Retroplayer Game Addon"
-msgstr "İstifadəçi tərəfindən təyin edilmiş Retroplayer Oyun Addon"
+msgstr "İstifadəçi tərəfindən müəyyən edilmiş Retroplayer Oyun Addon"
 
 msgctxt "#30315"
 msgid "User Defined Post Process"
@@ -1349,7 +1357,7 @@ msgstr "Kodi-ni arxa planda buraxın (defolt)"
 
 msgctxt "#30337"
 msgid "Close Kodi before launch, reopen Kodi after emulator exit"
-msgstr "Başlamadan əvvəl Kodi bağlayın, emulyatordan çıxdıqdan sonra Kodi-ni yenidən açın"
+msgstr "Başlamazdan əvvəl Kodi bağlayın, emulyatordan çıxdıqdan sonra Kodi-ni yenidən açın"
 
 msgctxt "#30338"
 msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
@@ -1489,7 +1497,7 @@ msgstr "Archive.org saytına ianə edin"
 
 msgctxt "#30372"
 msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
-msgstr "Yeni IAGL verilənlər bazası tapıldı[CR]Güncəlləmək istəyirsiniz?[CR]Mümkünsə, parametrlər yeni db-yə kopyalanacaq"
+msgstr "Yeni IAGL verilənlər bazası tapıldı[CR]Yeniləmək istəyirsiniz?[CR]Mümkünsə, parametrlər yeni db-yə kopyalanacaq"
 
 msgctxt "#30373"
 msgid "New db"
@@ -1546,3 +1554,383 @@ msgstr "{} oyun siyahıları xarici işə salınmaq üçün yeniləndi"
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "Defoltlar hər bir xarici işə salma əmri üçün əvvəlcədən təyin edilir[CR]Ehtiyac olarsa, oyun başlatma parametrlərini nəzərdən keçirməyə başlamazdan əvvəl[CR]Ətraflı məlumat üçün vikiyə baxın."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch tətbiqi üçün ayarlanıb:[CR]{}[CR]Lazım olduqda əlavə parametrlərində dəyişiklik edin"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch konfiqurasiyası:[CR]{}[CR]Ehtiyac olduqda əlavə parametrlərində dəyişiklik edin"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Sehrbaz tamamlandı[CR]Oynamağa icazə verin!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Kodi ilə işə salınacaq bütün oyun siyahılarını təyin edin"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Tez bütün oyun siyahılarını xarici işə salmağa təyin edin"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Tez bütün oyun siyahılarını Kodi retroplayerinə təyin edin"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Təsdiq edin"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Bütün siyahıları xarici işə salmaq istədiyinizə əminsiniz"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Bütün siyahıları Kodi retroplayerinə təyin etmək istədiyinizə əminsiniz"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Android icazələri sizdən Retroarch konfiqurasiya yolunu əl ilə daxil etməyi tələb edir[CR]Ətraflı yardım üçün vikiyə baxın"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Android icazələri sizdən Retroarch əsas yolunu əl ilə daxil etməyi tələb edir[CR]Ətraflı yardım üçün vikiyə baxın"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Cari verilənlər bazasının ehtiyat nüsxəsini çıxarın"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Verilənlər bazasını ehtiyat nüsxədən bərpa edin"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Cari IAGL verilənlər bazasını və bütün istifadəçi parametrlərini ehtiyat nüsxəsini çıxarın"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Cari addon verilənlər bazasını ehtiyat nüsxədən bərpa edin"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Yedəkləmə yolunu seçin"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "ehtiyat db seçin"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Yedəkləmə tamamlandı"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Bərpa tamamlandı"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} uyğun oyun idləri yeni db[CR]Növbəti əməliyyatda tapılmadı"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Verilənlər bazasını yeniləyin, oyunları başlıq və oyun siyahısına uyğunlaşdırmağa çalışın"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Verilənlər bazasını yeniləyin, tapılmayan oyun idlərini silin"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Köhnə verilənlər bazasına bərpa edin"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Verilənlər bazası köhnə verilənlər bazasına bərpa edildi"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Zəhmət olmasa gözləyin"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Retroarch qovluqlarını əl ilə təyin edin"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL standart olaraq RA konfiqurasiyasından qovluqları aşkarlayacaq, siz bu funksiyanı əl ilə ləğv edə bilərsiniz"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch əsas kataloqu"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroach Info Directory"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Başlatma əmrini başlamaq üçün linux tətbiqini əlavə edin"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak xüsusi linux/elec sistemləri üçün istifadə olunur.  Yalnız sisteminiz bunu tələb etdikdə aktivləşdirin."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Retroarch əmrlərinə systemd-run əmrini yazın"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Bütün əmrlərə systemd-run əmrini yazın"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Retroarch əmrlərinə düz pak run əmrini yazın"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Bütün əmrlərə flatpak run əmrini yazın"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Android icazələri paylaşılan yaddaş kataloqu tələb edir[CR]Hər iki proqram tərəfindən əldə edilə bilən paylaşılan məkanı daxil edin"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Faylları açın"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Emal yoxdur"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Faylları açın, BIOS fayllarını keçin"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Faylları Qovluğa açın"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Faylları açın, CHD-ni qovluğa köçürün"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Faylları qovluğa köçürün: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Faylları qovluğa köçürün: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Faylları qovluğa köçürün: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Faylları qovluğa köçürün: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Faylları qovluğa köçürün: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Faylları qovluğa köçürün: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Faylları qovluğa köçürün: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Faylları qovluğa köçürün: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Faylları qovluğa köçürün: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Faylları qovluğa köçürün: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Faylları qovluğa köçürün: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Faylları qovluğa köçürün: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Faylları qovluğa köçürün: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Faylları qovluğa köçürün: spektr"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Faylları qovluğa köçürün: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Oyun siyahısı göndərmə prosesini yeniləmək istədiyinizə əminsiniz?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Post prosesi yeniləndi"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{} üçün Göndərmə Prosesini yeniləyin?[CR][B]Bu, bu siyahıdakı bütün oyunlar üçün parametrləri dəyişəcək.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Yükləmə tamamlandı.  Proses faylları göndərilsin?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Oyun faylları işlənib"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Mövcud deyil (Yalnız Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Netplay İstifadəçi adı növü"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Netplay oyunçu adı üçün inteqrasiya seçin"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Discord istifadə edin"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord avtomatlaşdırılmış netplay matçlarına imkan verir (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Oyunçu adını əl ilə daxil edin"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Oyunçu adları Retroarch Lobby-də dərc olunacaq"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Oyunçunun adı"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Cari Discord İstifadəçisi"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord İstifadəçisi [CR]{} olaraq təyin edildi"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Retroarch netplay istifadə edərək onlayn qoşula biləcəyiniz oyun seanslarına baxın"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "ID [CR]{} olan discord istifadəçisini tapmaq mümkün olmadı"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Lobbi Filtr Seçimləri"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Yalnız daxil edilə bilən otaqları göstərin"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Yalnız libretrodan istifadə edən otaqları göstərin"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Parollu otaqları göstərin"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Tamaşaçı parolu olan otaqları göstərin"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "MITM serverlərindən istifadə edərək otaqları göstərin"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Yalnız vaxt çərçivəsində yaradılmış otaqları göstərin"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 dəqiqə"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 dəqiqə"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "İstənilən Müddət"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Yaradılma vaxtına əsasən lobbi otaqlarını süzün"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Yalnız IAGL istifadə edən otaqları göstərin"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "[CR]{} kimi adla uyğun oyunu tapmaq mümkün deyil"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Tapılmadı"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Uyğun oyun seçin"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Netplay başlatma hərəkəti"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Retroarx lobbisindən qoşulun"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Localhost-dan qoşulun"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Netplay oyununa qoşularkən standart hərəkəti seçin"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "netplay host kimi işə salın"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "IAGL Sevimli adını dəyişin"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Adının dəyişdirilməsi Tamamlandı"

@@ -477,7 +477,7 @@ msgstr "Sistemkonzolo"
 
 msgctxt "#30117"
 msgid "System wallpaper"
-msgstr "Sistemtapeto"
+msgstr "Sistema tapeto"
 
 msgctxt "#30118"
 msgid "Force IAGL viewtypes"
@@ -509,7 +509,7 @@ msgstr "Elektu listan vidospecon"
 
 msgctxt "#30125"
 msgid "Search and Random results viewtype"
-msgstr "Vidtipo de serĉo kaj hazardaj rezultoj"
+msgstr "Vidspeco de serĉo kaj hazardaj rezultoj"
 
 msgctxt "#30126"
 msgid "Off (Default)"
@@ -521,7 +521,7 @@ msgstr "Listo/Afiŝo (50)"
 
 msgctxt "#30128"
 msgid "Poster / Big List / Poster Wall (51)"
-msgstr "Afiŝo/Granda Listo/Afiŝa Muro (51)"
+msgstr "Afiŝo/Granda Listo/Afiŝmuro (51)"
 
 msgctxt "#30129"
 msgid "Icon Wall / Horizontal Pattern / LS Wall (52)"
@@ -529,7 +529,7 @@ msgstr "Ikono Muro / Horizontala Skemo / LS-Muro (52)"
 
 msgctxt "#30130"
 msgid "Banner / Landscape / Poster Info (501)"
-msgstr "Standardo / Pejzaĝo / Afiŝa Informo (501)"
+msgstr "Standardo / Pejzaĝo / Afiŝo Informoj (501)"
 
 msgctxt "#30131"
 msgid "Fanart / Landscape Single / Episode List (502)"
@@ -645,7 +645,7 @@ msgstr "Elektu Emulilon"
 
 msgctxt "#30159"
 msgid "Credentials were not found[CR]Please enter them in addon settings"
-msgstr "Akreditaĵoj ne estis trovitaj[CR]Bonvolu enigi ilin en aldonajn agordojn"
+msgstr "Akreditaĵoj ne estis trovitaj[CR]Bonvolu enigi ilin en aldonaj agordoj"
 
 msgctxt "#30160"
 msgid "Game List Download Path"
@@ -713,7 +713,7 @@ msgstr "Kiam ĝi estas ebligita, la retluda vestiblo estos montrata sur la ĉefp
 
 msgctxt "#30176"
 msgid "Filter game lobby to IAGL auto launch games"
-msgstr "Filtrilu ludvestiblon al IAGL-aŭtomatlanĉaj ludoj"
+msgstr "Filtrilu ludvestiblon al IAGL-aŭtomataj lanĉaj ludoj"
 
 msgctxt "#30177"
 msgid "If enabled, the netplay lobby will only show auto launchable games"
@@ -727,9 +727,13 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Difinu la retludan IP-pordon por konektiĝi (lasu malplena kiel defaŭlte)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Defaŭlta Localhost IP"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
-msgstr "Difinu defaŭltan retludan gastigan nomon/IP (utila por loka reto, lasu malplenan por defaŭlta)"
+msgstr "Difinu defaŭltan retludan gastigantan nomon / IP (utila por loka reto retludado, lasu malplenan por defaŭlto)"
 
 msgctxt "#30182"
 msgid "Check frames"
@@ -759,9 +763,13 @@ msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord Uzanto-Konto ID"
 
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Provizu vian Discord-ID (Uzanto-Agordoj>Mia Konto>Kopii ID)"
+
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
-msgstr "Montru raporton kiam la sorĉisto estas finita"
+msgstr "Montru raporton kiam la asistanto estas finita"
 
 msgctxt "#30191"
 msgid "Execute setup wizard"
@@ -833,7 +841,7 @@ msgstr "Restarigu IAGL-datumbazon al defaŭltaj agordoj"
 
 msgctxt "#30208"
 msgid "When selected, the database will be reset to default settings"
-msgstr "Kiam elektita, la datumbazo estos restarigita al defaŭltaj agordoj"
+msgstr "Kiam elektita, la datumbazo estos rekomencigita al defaŭltaj agordoj"
 
 msgctxt "#30209"
 msgid "Unhide game lists"
@@ -849,7 +857,7 @@ msgstr "Malplenigi Kaŝmemoron"
 
 msgctxt "#30212"
 msgid "When selected, all data in the cache folder including games will be purged"
-msgstr "Kiam oni elektas, ĉiuj datumoj en la kaŝmemoro dosierujo inkluzive de ludoj estos elpurigitaj"
+msgstr "Kiam oni elektas, ĉiuj datumoj en la kaŝmemordosierujo inkluzive de ludoj estos elpurigitaj"
 
 msgctxt "#30213"
 msgid "Select"
@@ -961,7 +969,7 @@ msgstr "Favorito forigita"
 
 msgctxt "#30240"
 msgid "Favorites display"
-msgstr "Afiŝado de ŝatatoj"
+msgstr "Vidigo de favoratoj"
 
 msgctxt "#30241"
 msgid "Define the start page for IAGL Favorites"
@@ -1001,7 +1009,7 @@ msgstr "Kaŝi ludliston"
 
 msgctxt "#30250"
 msgid "Update game list post download process"
-msgstr "Ĝisdatigu ludliston post elŝuta procezo"
+msgstr "Ĝisdatigi ludliston post elŝuta procezo"
 
 msgctxt "#30251"
 msgid "Are you sure you want to hide game list"
@@ -1061,7 +1069,7 @@ msgstr "Elektu ludon aldonaĵon"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "Ĉu vi certas, ke vi volas reagordi la lanĉan komandon de la aldonaĵo de la ludo?"
+msgstr "Ĉu vi certas, ke vi volas reagordi la lanĉan komandon de la ludo aldonaĵo?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1453,7 +1461,7 @@ msgstr "Dosierujo Retroarch Cores kiel ĉeno"
 
 msgctxt "#30363"
 msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
-msgstr "Alternative enigu la vojon al la dosierujo Cores ĝuste kiel ĝi aperas en la agordo de la dosierujo de Retroarch"
+msgstr "Alternative enigu la vojon al la dosierujo Cores ĝuste kiel ĝi aperas en la agordo de dosierujo de Retroarch"
 
 msgctxt "#30364"
 msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
@@ -1501,7 +1509,7 @@ msgstr "Datumaro estis ĝisdatigita[CR]Uzantaj agordoj estis translokigitaj"
 
 msgctxt "#30375"
 msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
-msgstr "Datumaro estis ĝisdatigita[CR]Kelkaj uzantaj agordoj malsukcesis translokiĝi[CR]Vidu protokolon por pliaj detaloj"
+msgstr "Datumaro estis ĝisdatigita[CR]Kelkaj uzantaj agordoj ne sukcesis translokiĝi[CR]Vidu protokolon por pliaj detaloj"
 
 msgctxt "#30376"
 msgid "There was an error updating the database[CR]See log for more details"
@@ -1546,3 +1554,383 @@ msgstr "{} ludlistoj estis ĝisdatigitaj por ekstera lanĉo"
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "Defaŭltoj estas antaŭfiksitaj por ĉiu ekstera lanĉa komando[CR]Antaŭ lanĉi reviziajn ludajn lanĉajn parametrojn se necese[CR]Vidu vikion por pliaj detaloj."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch-apliko agordita al:[CR]{}[CR]Modifu en aldonaj agordoj se necese"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarka agordo agordita al:[CR]{}[CR]Modifu en aldonaj agordoj se necese"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Sorĉisto finiĝis[CR]Ni Ludu!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Agordu ĉiujn ludlistojn por lanĉi kun Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Rapide agordu ĉiujn ludlistojn al ekstera lanĉo"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Rapide agordu ĉiujn ludlistojn al Kodi-retroludilo"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Konfirmu"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Ĉu vi certas, ke vi volas agordi ĉiujn listojn al ekstera lanĉo"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Ĉu vi certas, ke vi volas agordi ĉiujn listojn al Kodi-retroludilo"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Android-permesoj postulas, ke vi mane eniru la Retroarch-agordan vojon[CR]Vidu vikion por pli da helpo"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Android-permesoj postulas, ke vi mane eniru la kernan vojon de Retroarch[CR]Vidu vikion por pli da helpo"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Rezerva nuna datumbazo"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Restarigi datumbazon de sekurkopio"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Rezervu la nunan IAGL-datumbazon kaj ĉiujn uzantajn agordojn"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Restarigu la nunan aldonan datumbazon de sekurkopio"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Elektu rezervan vojon"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Elektu rezervan db"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Rezervo finiĝis"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Restarigo finita"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} kongruaj ludidentigiloj ne estis trovitaj en la nova db[CR]Elektu sekvan agon"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Ĝisdatigu datumbazon, provu kongrui ludojn laŭ titolo kaj ludlisto"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Ĝisdatigu datumbazon, forigu ludidentigilojn, kiuj ne estis trovitaj"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Restarigu al malnova datumbazo"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Datumbazo reestigita al malnova datumbazo"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Bonvolu Atendu"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Mane agordu Retroarch-dosierujojn"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL defaŭlte detektos dosierujojn de RA-agordo, vi povas mane anstataŭi ĉi tiun funkcion"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarka Kerna Adresaro"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroach Info Adresaro"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Aldonu linuksan apon por komenci lanĉan komandon"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak estas uzata por specifaj sistemoj linux/elec.  Ebligu nur se via sistemo postulas ĝin."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Antaŭmeti systemd-run al Retroarch-komandoj"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Antaŭmetu systemd-run al ĉiuj komandoj"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Antaŭmeti flatpak-kuron al Retroarch-komandoj"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Antaŭmeti flatpak rulon al ĉiuj komandoj"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Android-permesoj postulas komunan stokan dosierujon[CR]Enigu komunan lokon alirebla de ambaŭ aplikaĵoj"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Malfermu dosierojn"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Neniu Pretigo"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Malfermu dosierojn, saltu BIOS-dosierojn"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Malfermu dosierojn al dosierujo"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Malfermu dosierojn, movu CHD al dosierujo"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Movu dosierojn al dosierujo: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Movu dosierojn al dosierujo: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Movu dosierojn al dosierujo: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Movu dosierojn al dosierujo: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Movu dosierojn al dosierujo: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Movu dosierojn al dosierujo: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Movu dosierojn al dosierujo: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Movu dosierojn al dosierujo: ne"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Movu dosierojn al dosierujo: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Movu dosierojn al dosierujo: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Movu dosierojn al dosierujo: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Movu dosierojn al dosierujo: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Movu dosierojn al dosierujo: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Movu dosierojn al dosierujo: spektro"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Movu dosierojn al dosierujo: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Ĉu vi certas, ke vi volas ĝisdatigi la postprocezon de la ludlisto?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Postprocezo ĝisdatigita"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Ĝisdatigu Postprocezon por {}?[CR][B]Ĉi tio ŝanĝos agordojn por ĉiuj ludoj en ĉi tiu listo.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Elŝuto finiĝis.  Postprocezaj dosieroj?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Ludaj dosieroj procesitaj"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Ne Disponebla (Nur Vindozo, OSX, Linukso)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Netplay Uzantnomo Tipo"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Elektu integriĝon por retplay-ludanto nomo"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Uzu Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord ebligas aŭtomatigitajn retludajn matĉojn (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Mane enigu Ludantan Nomon"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Ludantaj nomoj estos publikigitaj en la Retroarka Vestiblo"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Nomo de Ludanto"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Nuna Discord Uzanto"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord Uzanto agordita al [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Rigardu videoludadsesiojn, kiujn vi povas aliĝi interrete uzante Retroarch-retludon"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Ne eblas trovi malkonkordan uzanton kun ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Lobiaj Filtrilaj Opcioj"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Montru nur ĉambrojn enireblajn"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Montru nur ĉambrojn, kiuj uzas libretron"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Montru ĉambrojn, kiuj havas pasvorton"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Montru ĉambrojn, kiuj havas pasvorton de spektanto"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Montru ĉambrojn uzante MITM-servilojn"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Nur spektakloĉambroj kreitaj en tempokadro"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 minutoj"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 minutoj"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Ajna Tempokadro"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Filtru la vestiblojn surbaze de krea tempo"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Montru nur ĉambrojn, kiuj uzas IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Ne eblas trovi kongruan ludon kun nomo kiel [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Ne Trovita"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Elektu kongruan ludon"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Netplay lanĉa ago"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Aliĝu el retroarka vestiblo"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Aliĝu de loka gastiganto"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Elektu la defaŭltan agon kiam vi aliĝas al retluda ludo"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Lanĉu kiel retluda gastiganto"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Alinomigi IAGL-Favoraton"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Alinomi Finite"

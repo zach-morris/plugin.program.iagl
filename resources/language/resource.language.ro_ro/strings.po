@@ -461,7 +461,7 @@ msgstr "Controler de sistem"
 
 msgctxt "#30113"
 msgid "Game list fanart equates to"
-msgstr "Lista de jocuri cu care fanart-ul echivalează"
+msgstr "Lista de jocuri cu care echivalează fanart-ul"
 
 msgctxt "#30114"
 msgid "Select the artwork displayed for the game list fanart"
@@ -529,7 +529,7 @@ msgstr "Perete cu pictograme / Model orizontal / Perete LS (52)"
 
 msgctxt "#30130"
 msgid "Banner / Landscape / Poster Info (501)"
-msgstr "Banner / Peisaj / Informații afiș (501)"
+msgstr "Banner / Peisaj / Informații poster (501)"
 
 msgctxt "#30131"
 msgid "Fanart / Landscape Single / Episode List (502)"
@@ -621,7 +621,7 @@ msgstr "Selector de miez retroarch"
 
 msgctxt "#30153"
 msgid "List by System and Core Name"
-msgstr "Listează după sistem și nume de bază"
+msgstr "Listați după sistem și nume de bază"
 
 msgctxt "#30154"
 msgid "List by Core Name"
@@ -727,6 +727,10 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Definiți portul IP netplay prin care să vă conectați (lasați necompletat pentru implicit)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "IP Localhost implicit"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Definiți un nume de gazdă/IP implicit pentru netplay (util pentru redarea locală, lăsați necompletat pentru implicit)"
@@ -758,6 +762,10 @@ msgstr "Introduceți numele jucătorului pentru a fi anunțat pe Discord"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "ID-ul contului de utilizator Discord"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Furnizați ID-ul dvs. Discord (Setări utilizator> Contul meu> Copiați ID-ul)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -1105,7 +1113,7 @@ msgstr "Selectați din Retroarch Cores"
 
 msgctxt "#30276"
 msgid "Select from Extra Emulators"
-msgstr "Selectați dintre emulatori suplimentari"
+msgstr "Selectați din emulatoarele suplimentare"
 
 msgctxt "#30277"
 msgid "Manually Enter Launch Command"
@@ -1546,3 +1554,383 @@ msgstr "{} liste de jocuri au fost actualizate pentru lansare externă"
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "Valorile implicite sunt prestabilite pentru fiecare comandă de lansare externă[CR]Înainte de lansare, revizuiți parametrii de lansare a jocului, dacă este necesar[CR]Consultați wiki pentru mai multe detalii."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Aplicația Retroarch este setată la:[CR]{}[CR]Modificați în setările suplimentelor dacă este necesar"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Configurația Retroarch este setată la:[CR]{}[CR]Modificați în setările suplimentului dacă este necesar"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Asistentul a fost finalizat[CR]Lets Play!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Setați toate listele de jocuri să fie lansate cu Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Setați rapid toate listele de jocuri la lansare externă"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Setați rapid toate listele de jocuri la Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Confirma"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Sigur doriți să setați toate listele la lansare externă"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Sigur doriți să setați toate listele la Kodi retroplayer"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Permisiunile Android necesită să introduceți manual calea de configurare Retroarch[CR]Consultați wiki pentru mai mult ajutor"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Permisiunile Android necesită să introduceți manual calea de bază Retroarch[CR]Consultați wiki pentru mai mult ajutor"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Faceți o copie de rezervă a bazei de date curente"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Restaurați baza de date din backup"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Faceți backup pentru baza de date IAGL curentă și pentru toate setările utilizatorului"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Restaurați baza de date de supliment actuală dintr-o copie de rezervă"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Selectați calea de rezervă"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Selectați backup db"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Backup finalizat"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Restaurare finalizată"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} ID-uri de joc care se potrivesc nu au fost găsite în noul db[CR]Selectați următoarea acțiune"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Actualizați baza de date, încercați să potriviți jocurile după titlu și lista de jocuri"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Actualizați baza de date, eliminați ID-urile jocului care nu au fost găsite"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Restaurați înapoi la vechea bază de date"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Baza de date restaurată înapoi la vechea bază de date"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Va rugam asteptati"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Setați manual directoarele Retroarch"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL va detecta în mod implicit directoarele din configurația RA, puteți suprascrie manual această funcție"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch Core Directory"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Director de informații Retroach"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Adăugați aplicația Linux pentru a porni comanda de lansare"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak este folosit pentru anumite sisteme Linux/elec.  Activați numai dacă sistemul dvs. o cere."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Adăugați systemd-run la comenzile Retroarch"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Adăugați systemd-run înaintea tuturor comenzilor"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Adăugați rularea flatpak la comenzile Retroarch"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Adăugați rularea flatpak la toate comenzile"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Permisiunile Android necesită un director de stocare partajat[CR]Introduceți o locație comună care poate fi accesată de ambele aplicații"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Dezarhivați fișierele"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Fără procesare"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Dezarhivați fișierele, ignorați fișierele BIOS"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Dezarhivați fișierele în dosar"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Dezarhivați fișierele, mutați CHD în dosar"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Mutați fișierele în folderul: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Mutați fișierele în folderul: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Mutați fișierele în folderul: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Mutați fișierele în folder: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Mutați fișierele în folderul: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Mutați fișierele în folderul: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Mutați fișierele în folderul: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Mutați fișierele în folder: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Mutați fișierele în folderul: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Mutați fișierele în folderul: pc"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Mutați fișierele în folder: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Mutați fișierele în folderul: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Mutați fișierele în folder: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Mutați fișierele în folder: spectrum"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Mutați fișierele în folder: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Sigur vrei să actualizezi procesul de postare a listei de jocuri?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Procesul de postare a fost actualizat"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Actualizați procesul de postare pentru {}?[CR][B]Acest lucru va schimba setările pentru toate jocurile din această listă.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Descărcarea finalizată.  Fișiere post proces?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Fișiere de joc procesate"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Nu este disponibil (doar Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Tip de nume de utilizator Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Selectați integrarea pentru numele jucătorului netplay"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Folosește Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord permite meciuri automate în redare (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Introduceți manual un nume de jucător"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Numele jucătorilor vor fi publicate în Lobby-ul Retroarch"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Numele jucătorului"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Utilizator Discord curent"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Utilizator Discord setat la [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Vizualizați sesiunile de jocuri la care vă puteți înscrie online folosind Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Imposibil de găsit utilizatorul Discord cu ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Opțiuni de filtrare în lobby"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Afișați doar camerele în care se poate intra"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Afișați numai camerele care folosesc libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Afișați camerele care au o parolă"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Afișați camere care au o parolă pentru spectator"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Afișați camere folosind servere MITM"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Afișați numai sălile create în intervalul de timp"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 de minute"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 de minute"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Orice interval de timp"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Filtrați camerele din hol în funcție de timpul de creare"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Afișați numai camerele care utilizează IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Imposibil de găsit jocul care se potrivește cu nume precum [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Nu a fost găsit"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Selectați jocul potrivit"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Acțiune de lansare Netplay"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Alăturați-vă din holul retroarh"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Alăturați-vă de la localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Selectați acțiunea implicită când vă alăturați unui joc netplay"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Lansați ca gazdă netplay"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Redenumiți IAGL Favorit"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Redenumire Finalizat"

@@ -405,7 +405,7 @@ msgstr "Afegeix el nom de la llista de jocs a la cerca i als resultats aleatoris
 
 msgctxt "#30099"
 msgid "When enabled, the name of the game list will be appended to search results"
-msgstr "Quan estigui activat, el nom de la llista de jocs s'adjuntarà als resultats de la cerca"
+msgstr "Quan està activat, el nom de la llista de jocs s'adjuntarà als resultats de la cerca"
 
 msgctxt "#30100"
 msgid "Append game list name when browsing by playlist"
@@ -533,7 +533,7 @@ msgstr "Informació sobre pancarta/paisatge/pòster (501)"
 
 msgctxt "#30131"
 msgid "Fanart / Landscape Single / Episode List (502)"
-msgstr "Fanart / Landscape Single / Llista d'episodis (502)"
+msgstr "Fanart/Paisatge individual/Llista d'episodis (502)"
 
 msgctxt "#30132"
 msgid "Logos / Big Square Wall (503)"
@@ -709,23 +709,27 @@ msgstr "Mostra Netplay Lobby"
 
 msgctxt "#30175"
 msgid "When enabled, the netplay lobby will be displayed on the IAGL front page"
-msgstr "Quan està activat, el lobby de netplay es mostrarà a la pàgina principal de l'IAGL"
+msgstr "Quan estigui activat, el lobby de netplay es mostrarà a la pàgina principal de l'IAGL"
 
 msgctxt "#30176"
 msgid "Filter game lobby to IAGL auto launch games"
-msgstr "Filtra el vestíbul del joc als jocs de llançament automàtic d'IAGL"
+msgstr "Filtra el vestíbul de jocs als jocs de llançament automàtic d'IAGL"
 
 msgctxt "#30177"
 msgid "If enabled, the netplay lobby will only show auto launchable games"
-msgstr "Si està activat, el vestíbul de netplay només mostrarà jocs que es poden iniciar automàticament"
+msgstr "Si està activat, el vestíbul de netplay només mostrarà jocs que es puguin iniciar automàticament"
 
 msgctxt "#30178"
 msgid "Netplay Port"
-msgstr "Port de Netplay"
+msgstr "Port Netplay"
 
 msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Definiu el port IP de netplay per connectar-vos (deixeu en blanc per defecte)"
+
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "IP Localhost per defecte"
 
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
@@ -759,6 +763,10 @@ msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Identificador del compte d'usuari de Discord"
 
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Proporcioneu el vostre identificador de Discord (Configuració d'usuari>El meu compte>Copia l'identificador)"
+
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
 msgstr "Mostra l'informe quan s'hagi completat l'assistent"
@@ -781,7 +789,7 @@ msgstr "Utilitzeu StartAndroidActivity"
 
 msgctxt "#30195"
 msgid "Leave as default if unsure"
-msgstr "Deixeu com a predeterminat si no esteu segur"
+msgstr "Deixeu-ho com a predeterminat si no esteu segurs"
 
 msgctxt "#30196"
 msgid "Suspend Kodi Input and Audio when using External Launcher"
@@ -1025,7 +1033,7 @@ msgstr "Les llistes de jocs es mostren"
 
 msgctxt "#30256"
 msgid "Confirm reset"
-msgstr "Confirmeu el reinici"
+msgstr "Confirmeu el restabliment"
 
 msgctxt "#30257"
 msgid "Are you sure you want to reset the database?[CR]All user info will be lost![CR]This cannot be undone!"
@@ -1085,7 +1093,7 @@ msgstr "Error"
 
 msgctxt "#30271"
 msgid "Initializing download for[CR]"
-msgstr "S'està inicialitzant la baixada per a[CR]"
+msgstr "S'està iniciant la baixada per a[CR]"
 
 msgctxt "#30272"
 msgid "Check logs"
@@ -1333,7 +1341,7 @@ msgstr "Comprovació de credencials"
 
 msgctxt "#30333"
 msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
-msgstr "Les variables següents es substituiran durant el llançament:[CR]● XXROM_PATHXX: el camí del fitxer que s'iniciarà[CR]● XXROM_NAMEXX: el nom del fitxer que s'iniciarà (sense camí)[CR]● XXROM_STEMXX: el nom del fitxer que s'iniciarà (sense camí sense extensió)[CR]● XXNETPLAY_COMMANDXX: qualsevol addició d'ordres necessària per a netplay, vegeu la configuració del complement per opcions[CR]Vegeu la wiki per obtenir més informació..."
+msgstr "Les variables següents es substituiran durant el llançament:[CR]● XXROM_PATHXX: el camí del fitxer que s'iniciarà[CR]● XXROM_NAMEXX: el nom del fitxer que s'iniciarà (sense camí)[CR]● XXROM_STEMXX: el nom del fitxer que s'iniciarà (sense camí sense extensió)[CR]● XXNETPLAY_COMMANDXX: qualsevol addició d'ordres necessària per a netplay, vegeu la configuració del complement per opcions[CR]Consulteu la wiki per obtenir més informació..."
 
 msgctxt "#30334"
 msgid "The archive file could not be processed[CR]Check logs for more details"
@@ -1389,7 +1397,7 @@ msgstr "Seleccioneu què farà Kodi quan no hi hagi cap comanda d'inici (complem
 
 msgctxt "#30347"
 msgid "Attempt Launch with default"
-msgstr "Intenteu llançar amb el valor predeterminat"
+msgstr "Intenteu llançar amb predeterminat"
 
 msgctxt "#30348"
 msgid "Stop / Do not launch"
@@ -1397,7 +1405,7 @@ msgstr "Aturar / No iniciar"
 
 msgctxt "#30349"
 msgid "No command set"
-msgstr "No hi ha cap comanda establerta"
+msgstr "No s'ha establert cap ordre"
 
 msgctxt "#30350"
 msgid "A launch command is not set for this list, set one now?"
@@ -1405,7 +1413,7 @@ msgstr "No s'ha establert una ordre d'inici per a aquesta llista, n'ha definit u
 
 msgctxt "#30351"
 msgid "No default launch command could be found for this list"
-msgstr "No s'ha trobat cap ordre d'inici per defecte per a aquesta llista"
+msgstr "No s'ha trobat cap ordre d'inici predeterminada per a aquesta llista"
 
 msgctxt "#30352"
 msgid "Default core was not found.  Please install {} or update launcher"
@@ -1453,7 +1461,7 @@ msgstr "Directori Retroarch Cores com a cadena"
 
 msgctxt "#30363"
 msgid "Alternatively enter the path to the Cores directory exactly as it appears in Retroarch directory configuration"
-msgstr "Alternativament, introduïu el camí al directori Cores exactament tal com apareix a la configuració del directori Retroarch"
+msgstr "Alternativament, introduïu el camí al directori Cores tal com apareix a la configuració del directori Retroarch"
 
 msgctxt "#30364"
 msgid "Update Launcher for {}?[CR][B]This will change settings for all games in this list.[/B]"
@@ -1525,7 +1533,7 @@ msgstr "La majoria dels jocs requereixen un compte d'archive.org[CR]Registreu-vo
 
 msgctxt "#30381"
 msgid "Setup is complete for using Kodi game addons![CR]Are you ready to play?[CR]Select [B]No[/B] to setup external game launching."
-msgstr "La configuració s'ha completat per utilitzar els complements de jocs de Kodi![CR]Esteu preparat per jugar?[CR]Seleccioneu [B]No[/B] per configurar el llançament extern del joc."
+msgstr "La configuració s'ha completat per utilitzar els complements de joc de Kodi![CR]Esteu preparat per jugar?[CR]Seleccioneu [B]No[/B] per configurar el llançament extern del joc."
 
 msgctxt "#30382"
 msgid "Set all game lists to be externally launched"
@@ -1537,7 +1545,7 @@ msgstr "Estableix només algunes llistes de jocs perquè s'iniciïn externament"
 
 msgctxt "#30384"
 msgid "Reset all game list launchers back to default"
-msgstr "Restableix tots els llançadors de la llista de jocs a la configuració predeterminada"
+msgstr "Restableix tots els llançadors de la llista de jocs als valors predeterminats"
 
 msgctxt "#30385"
 msgid "{} game lists were updated for external launching"
@@ -1545,4 +1553,384 @@ msgstr "S'han actualitzat {} llistes de jocs per al llançament extern"
 
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
-msgstr "Els valors predeterminats estan preestablerts per a cada comanda de llançament externa[CR]Abans de llançar, revisa els paràmetres de llançament del joc si cal[CR]Consulta la wiki per a més detalls."
+msgstr "Els valors predeterminats estan preestablerts per a cada comanda de llançament externa[CR]Abans de llançar revisa els paràmetres de llançament del joc si cal[CR]Consulta la wiki per a més detalls."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "L'aplicació Retroarch s'ha establert a:[CR]{}[CR]Modifica a la configuració del complement si cal"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "La configuració de Retroarch s'ha establert a:[CR]{}[CR]Modifica a la configuració del complement si cal"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Assistent completat[CR]Anem a jugar!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Estableix totes les llistes de jocs perquè s'iniciïn amb Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Estableix ràpidament totes les llistes de jocs en un llançament extern"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Configureu ràpidament totes les llistes de jocs a Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Confirmeu"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Esteu segur que voleu configurar totes les llistes per a un llançament extern?"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Esteu segur que voleu configurar totes les llistes a Kodi retroplayer?"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Els permisos d'Android requereixen que introduïu manualment el camí de configuració de Retroarch[CR]Consulteu la wiki per obtenir més ajuda"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Els permisos d'Android requereixen que introduïu manualment la ruta bàsica de Retroarch[CR]Consulteu la wiki per obtenir més ajuda"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Còpia de seguretat de la base de dades actual"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Restaura la base de dades des de la còpia de seguretat"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Feu una còpia de seguretat de la base de dades IAGL actual i de tota la configuració d'usuari"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Restaura la base de dades de complements actual des d'una còpia de seguretat"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Seleccioneu el camí de còpia de seguretat"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Seleccioneu còpia de seguretat db"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Còpia de seguretat completada"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Restauració completada"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "No s'han trobat {} identificadors de joc coincidents a la nova base de dades[CR]Selecciona l'acció següent"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Actualitza la base de dades, intenta fer coincidir els jocs per títol i llista de jocs"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Actualitza la base de dades, elimina els identificadors del joc que no s'han trobat"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Restaurar a la base de dades antiga"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Base de dades restaurada a la base de dades antiga"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Si us plau, espereu"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Establiu manualment els directoris Retroarch"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL detectarà per defecte directoris de la configuració de RA, podeu anul·lar aquesta funció manualment"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Directori bàsic de Retroarch"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Directori d'informació de Retroach"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Afegiu l'aplicació de Linux per iniciar l'ordre d'inici"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak s'utilitza per a sistemes Linux/elec específics.  Activeu només si el vostre sistema ho requereix."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Afegeix systemd-run a les ordres de Retroarch"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Anteposa systemd-run a totes les ordres"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Afegeix l'execució de flatpak a les ordres de Retroarch"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Afegeix l'execució de flatpak a totes les ordres"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Els permisos d'Android requereixen un directori d'emmagatzematge compartit[CR]Introduïu una ubicació compartida a la qual puguin accedir ambdues aplicacions"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Descomprimir fitxers"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Sense processament"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Descomprimiu els fitxers, ometeu els fitxers de la BIOS"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Descomprimiu els fitxers a la carpeta"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Descomprimiu fitxers, moveu CHD a la carpeta"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Mou els fitxers a la carpeta: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Mou els fitxers a la carpeta: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Mou els fitxers a la carpeta: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Mou els fitxers a la carpeta: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Mou els fitxers a la carpeta: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Mou els fitxers a la carpeta: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Mou els fitxers a la carpeta: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Mou els fitxers a la carpeta: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Mou els fitxers a la carpeta: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Mou els fitxers a la carpeta: pc"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Mou els fitxers a la carpeta: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Mou els fitxers a la carpeta: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Mou els fitxers a la carpeta: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Mou els fitxers a la carpeta: spectrum"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Mou els fitxers a la carpeta: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Confirmes que vols actualitzar el procés de publicació de la llista de jocs?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "S'ha actualitzat el procés de publicació"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Actualitza el procés posterior per a {}?[CR][B]Això canviarà la configuració de tots els jocs d'aquesta llista.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Descàrrega completada.  Fitxers posteriors al procés?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Fitxers de joc processats"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "No disponible (només per a Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Tipus de nom d'usuari de Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Seleccioneu la integració per al nom del jugador de netplay"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Utilitzeu Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord permet les partides de joc en xarxa automatitzades (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Introduïu manualment un nom de jugador"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Els noms dels jugadors es publicaran al vestíbul de Retroarch"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Nom del jugador"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Usuari actual de Discord"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Usuari de Discord establert en [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Consulta les sessions de joc a les quals pots unir-te en línia amb Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "No s'ha pogut trobar l'usuari de Discord amb ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Opcions de filtre del vestíbul"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Mostra només les sales a les quals es pot entrar"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Mostra només les sales que utilitzen libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Mostra les sales que tenen una contrasenya"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Mostra sales que tenen una contrasenya d'espectador"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Mostra sales amb servidors MITM"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Mostra només les sales creades dins d'un període de temps"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 minuts"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 minuts"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Qualsevol període de temps"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Filtra les sales del vestíbul en funció del temps de creació"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Mostra només les sales que utilitzen IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "No s'ha pogut trobar el joc que coincideixi amb un nom com [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "No trobat"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Seleccioneu el joc coincident"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Acció de llançament de Netplay"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Uneix-te des del vestíbul retroarch"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Uneix-te des de localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Seleccioneu l'acció predeterminada quan us uniu a un joc de netplay"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Llançament com a amfitrió de la xarxa"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Canvia el nom de Preferit d'IAGL"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "S'ha completat el canvi de nom"

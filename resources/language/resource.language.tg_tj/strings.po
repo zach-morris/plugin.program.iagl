@@ -169,7 +169,7 @@ msgstr "[COLOR FF12A0C7]Ҷустуҷӯи тасодуфиро иҷро куне�
 
 msgctxt "#30040"
 msgid "[COLOR FF12A0C7]Create Random Search Link[/COLOR]"
-msgstr "[COLOR FF12A0C7]Сохтани пайванди тасодуфии ҷустуҷӯ[/COLOR]"
+msgstr "[COLOR FF12A0C7]Сохтани пайванди ҷустуҷӯи тасодуфӣ[/COLOR]"
 
 msgctxt "#30041"
 msgid "General"
@@ -341,7 +341,7 @@ msgstr "Асарҳои бозӣ"
 
 msgctxt "#30083"
 msgid "Game list artwork"
-msgstr "Рӯйхати бозӣ"
+msgstr "Рӯйхати бозиҳо"
 
 msgctxt "#30084"
 msgid "Retroarch Settings"
@@ -413,11 +413,11 @@ msgstr "Ҳангоми дидан аз рӯи рӯйхати навозиш но
 
 msgctxt "#30101"
 msgid "When enabled, the name of the game list will be appended to the game name in the playlist"
-msgstr "Ҳангоми фаъол шудан, номи рӯйхати бозӣ ба номи бозӣ дар рӯйхати навозиш замима карда мешавад"
+msgstr "Вақте ки фаъол карда мешавад, номи рӯйхати бозӣ ба номи бозӣ дар рӯйхати навозиш замима карда мешавад"
 
 msgctxt "#30102"
 msgid "Kodi landscape art equates to"
-msgstr "Санъати манзараи Kodi ба он баробар аст"
+msgstr "Санъати манзараи Коди баробар аст"
 
 msgctxt "#30103"
 msgid "Select the game artwork to be displayed as the landscape art"
@@ -573,7 +573,7 @@ msgstr "Ҷойгиршавии барномаи Retroarch"
 
 msgctxt "#30141"
 msgid "Select the path to the retroarch executable"
-msgstr "Роҳи иҷрошавандаи ретроархро интихоб кунед"
+msgstr "Роҳро ба иҷрошавандаи ретроарх интихоб кунед"
 
 msgctxt "#30142"
 msgid "Retroarch CFG Location"
@@ -629,7 +629,7 @@ msgstr "Рӯйхат аз рӯи номи асосӣ"
 
 msgctxt "#30155"
 msgid "List by Emulated Systems"
-msgstr "Рӯйхати системаҳои тақлидшуда"
+msgstr "Рӯйхати системаҳои эмуляторӣ"
 
 msgctxt "#30156"
 msgid "Select Core"
@@ -713,7 +713,7 @@ msgstr "Вақте ки фаъол карда мешавад, лобби netplay
 
 msgctxt "#30176"
 msgid "Filter game lobby to IAGL auto launch games"
-msgstr "Лобби бозиро ба бозиҳои худкори IAGL филтр кунед"
+msgstr "Лобби бозӣ филтр кунед ба бозиҳои худкори IAGL"
 
 msgctxt "#30177"
 msgid "If enabled, the netplay lobby will only show auto launchable games"
@@ -726,6 +726,10 @@ msgstr "Порт Netplay"
 msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Порти IP-и netplay-ро барои пайвастшавӣ муайян кунед (барои пешфарз холӣ гузоред)"
+
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "IP-и пешфарз Localhost"
 
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
@@ -759,6 +763,10 @@ msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "ID ҳисоби корбари Discord"
 
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "ID Discord-и худро пешниҳод кунед (Танзимоти корбар> Ҳисоби ман> Нусхаи ID)"
+
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
 msgstr "Ҳисоботро ҳангоми анҷом додани устод намоиш диҳед"
@@ -769,7 +777,7 @@ msgstr "Устоди танзимро иҷро кунед"
 
 msgctxt "#30192"
 msgid "Run the wizard to quickly change settings for your game lists.  This can be rerun at any time"
-msgstr "Устодро иҷро кунед, то танзимоти рӯйхати бозиҳои худро зуд тағир диҳед.  Ин метавонад дар ҳар вақт такрор шавад"
+msgstr "Устодро иҷро кунед, то танзимоти рӯйхати бозиҳои худро зуд тағир диҳед.  Ин метавонад дар ҳар вақт такрор карда шавад"
 
 msgctxt "#30193"
 msgid "Android Advance Settings"
@@ -805,7 +813,7 @@ msgstr "Зеркашӣ кардани риштаҳо"
 
 msgctxt "#30201"
 msgid "Alternate default download folder"
-msgstr "Папкаи зеркашии алтернативии пешфарз"
+msgstr "Папкаи зеркашии пешфарз"
 
 msgctxt "#30202"
 msgid "When selected, all downloads will go to an alternate folder.  [B]Note:  This folder will not be purged or monitored for size[/B]"
@@ -841,7 +849,7 @@ msgstr "Рӯйхати бозиҳоро нишон диҳед"
 
 msgctxt "#30210"
 msgid "When selected, previously hidden game lists can be unhidden"
-msgstr "Ҳангоми интихоб, рӯйхати бозиҳои қаблан пинҳоншуда метавонанд пинҳон шаванд"
+msgstr "Ҳангоми интихоб, рӯйхати бозиҳои қаблан пинҳоншуда метавонанд пинҳон карда шаванд"
 
 msgctxt "#30211"
 msgid "Clear Cache"
@@ -877,7 +885,7 @@ msgstr "Студияҳо интихоб шуданд"
 
 msgctxt "#30219"
 msgid "Tags selected"
-msgstr "Тегҳо интихоб шудаанд"
+msgstr "Тегҳо интихоб карда шуданд"
 
 msgctxt "#30220"
 msgid "Playlists selected"
@@ -993,7 +1001,7 @@ msgstr "Навсозии рӯйхати бозиҳо Фармони оғоз"
 
 msgctxt "#30248"
 msgid "Update game list Download Path"
-msgstr "Рӯйхати бозиҳоро навсозӣ кунед"
+msgstr "Рӯйхати бозиҳоро навсозии роҳи зеркашӣ"
 
 msgctxt "#30249"
 msgid "Hide game list"
@@ -1161,7 +1169,7 @@ msgstr "Роҳро ба барномаи Demul интихоб кунед (ихт
 
 msgctxt "#30290"
 msgid "FS-UAE"
-msgstr "FS-АМА"
+msgstr "ФС-БА"
 
 msgctxt "#30291"
 msgid "Select the path to the FS-UAE application (optional)"
@@ -1181,11 +1189,11 @@ msgstr "Истифодабарандагони Android бояд тасдиқ к�
 
 msgctxt "#30295"
 msgid "Launch settings are currently empty[CR]Please update addon external launch settings."
-msgstr "Танзимоти оғозёбӣ дар ҳоли ҳозир холӣ аст[CR]Лутфан, иловаи танзимоти оғози берунаро навсозӣ кунед."
+msgstr "Танзимоти оғозёбӣ айни ҳол холӣ аст[CR]Лутфан, замимаи танзимоти оғози берунаро нав кунед."
 
 msgctxt "#30296"
 msgid "Launch settings are currently empty[CR]Please update addon OS launch settings."
-msgstr "Танзимоти оғозёбӣ ҳоло холӣ аст[CR]Лутфан, танзимоти оғози OS-ро навсозӣ кунед."
+msgstr "Танзимоти оғозёбӣ айни ҳол холӣ аст[CR]Лутфан, танзимоти оғози OS-ро навсозӣ кунед."
 
 msgctxt "#30297"
 msgid "No extra emulators were found[CR]Please update addon extra emulator settings"
@@ -1197,7 +1205,7 @@ msgstr "Фармони оғозро ворид кунед[CR]Дар вики IAG
 
 msgctxt "#30299"
 msgid "Reset Launch Command"
-msgstr "Фармони оғозёбиро аз нав танзим кунед"
+msgstr "Фармони оғозро аз нав танзим кунед"
 
 msgctxt "#30300"
 msgid "Are you sure you want to reset the external launch command?"
@@ -1261,11 +1269,11 @@ msgstr "Addon Game Retroplayer муайяншудаи корбар"
 
 msgctxt "#30315"
 msgid "User Defined Post Process"
-msgstr "Раванди пости корбар муайяншуда"
+msgstr "Раванди Post Муайянкунандаи корбар"
 
 msgctxt "#30316"
 msgid "Game List Settings"
-msgstr "Танзимоти Рӯйхати бозӣ"
+msgstr "Танзимоти рӯйхати бозӣ"
 
 msgctxt "#30317"
 msgid "None (will use addon default)"
@@ -1281,7 +1289,7 @@ msgstr "Фармони Оғози беруна"
 
 msgctxt "#30320"
 msgid "External Launch Command[CR]*No User Launch Command Found / Using Default*"
-msgstr "Фармони Оғози беруна[CR]*Фармони оғози корбар ёфт нашуд/Истифодаи пешфарз*"
+msgstr "Фармони Оғози беруна[CR]*Ягон Фармони Оғози корбар ёфт нашуд/Истифодаи пешфарз*"
 
 msgctxt "#30321"
 msgid "Kodi Retroplayer"
@@ -1333,7 +1341,7 @@ msgstr "Санҷиши эътимоднома"
 
 msgctxt "#30333"
 msgid "The following variables will be replaced during launch:[CR]● XXROM_PATHXX:  The path to the file that will be launched[CR]● XXROM_NAMEXX:  The name of the file that will be launched (no path)[CR]● XXROM_STEMXX:  The name of the file that will be launched (no path no extension)[CR]● XXNETPLAY_COMMANDXX:  Any command addition required for netplay, see addon settings for options[CR]See wiki for more info…"
-msgstr "вай ҳангоми оғозёбӣ тағирёбандаҳои зерин иваз карда мешаванд:[CR]● XXROM_PATHXX: Роҳ ба файле, ки оғоз мешавад[CR]● XXROM_NAMEXX: Номи файле, ки оғоз мешавад (роҳ нест)[CR]● XXROM_STEMXX: номи файле, ки оғоз хоҳад шуд (бе роҳе нест, васеъшавӣ)[CR]● XXNETPLAY_COMMANDXX: Ҳар як иловаи фармон барои netplay лозим аст, ба танзимоти изофӣ нигаред имконоти[CR]Барои маълумоти бештар ба вики нигаред…"
+msgstr "вай ҳангоми оғозёбӣ тағирёбандаҳои зерин иваз карда мешаванд:[CR]● XXROM_PATHXX: Роҳ ба файле, ки оғоз мешавад[CR]● XXROM_NAMEXX: Номи файле, ки оғоз мешавад (роҳ нест)[CR]● XXROM_STEMXX: номи файле, ки оғоз хоҳад шуд (бе роҳе нест тамдид)[CR]● XXNETPLAY_COMMANDXX: Ҳама гуна иловаи фармон барои netplay лозим аст, ба танзимоти изофӣ нигаред имконоти[CR]Барои маълумоти бештар ба вики нигаред…"
 
 msgctxt "#30334"
 msgid "The archive file could not be processed[CR]Check logs for more details"
@@ -1385,7 +1393,7 @@ msgstr "Агар ягон корбар Фармони оғозёбӣ мавҷу�
 
 msgctxt "#30346"
 msgid "Select what Kodi will do when no launch command (retroplayer addon or external emulator) is set"
-msgstr "Вақте ки ягон фармони оғозёбӣ (addon retroplayer ё эмулятори беруна) таъин нашудааст, Kodi чӣ кор хоҳад кард, интихоб кунед"
+msgstr "Вақте ки ягон фармони оғозёбӣ (addon retroplayer ё эмулятори беруна) насб нашудааст, Kodi чӣ кор хоҳад кард, интихоб кунед"
 
 msgctxt "#30347"
 msgid "Attempt Launch with default"
@@ -1461,7 +1469,7 @@ msgstr "Навсозии Launcher барои {}?[CR][B]Ин танзимоти �
 
 msgctxt "#30365"
 msgid "Update Launch Command for {}?[CR][B]This will change settings for all games in this list.[/B]"
-msgstr "Навсозии Фармони оғозёбӣ барои {}?[CR][B]Ин танзимоти ҳамаи бозиҳои ин рӯйхатро тағир медиҳад.[/B]"
+msgstr "Навсозии Фармони оғозёбӣ барои {}?[CR][B]Ин танзимотро барои ҳамаи бозиҳои ин рӯйхат тағир медиҳад.[/B]"
 
 msgctxt "#30366"
 msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
@@ -1469,7 +1477,7 @@ msgstr "Роҳи оғози боргириро барои {} навсозӣ ку
 
 msgctxt "#30367"
 msgid "Update Launch Command"
-msgstr "Навсозии Фармони оғозёбӣ"
+msgstr "Фармони оғозро навсозӣ кунед"
 
 msgctxt "#30368"
 msgid "Update Launch Download Path"
@@ -1477,7 +1485,7 @@ msgstr "Навсозии Оғози роҳи зеркашӣ"
 
 msgctxt "#30369"
 msgid "Reset settings for {}?[CR][B]This will change settings for all games in this list.[/B]"
-msgstr "Танзимотҳоро барои {} аз нав танзим кунед?[CR][B]Ин танзимотро барои ҳамаи бозиҳои ин рӯйхат тағир медиҳад.[/B]"
+msgstr "Танзимотҳоро барои {} аз нав барқарор кунед?[CR][B]Ин танзимотро барои ҳамаи бозиҳои ин рӯйхат тағир медиҳад.[/B]"
 
 msgctxt "#30370"
 msgid "Support"
@@ -1489,7 +1497,7 @@ msgstr "Ба Archive.org хайрия кунед"
 
 msgctxt "#30372"
 msgid "A new IAGL database has been found[CR]Do you want to update?[CR]Settings will be copied to the new db if possible"
-msgstr "Пойгоҳи нави IAGL пайдо шуд[CR]Оё шумо мехоҳед навсозӣ кунед?[CR]Агар имконпазир бошад, танзимот ба DB-и нав нусхабардорӣ карда мешаванд"
+msgstr "Пойгоҳи нави IAGL пайдо шуд[CR]Оё шумо мехоҳед навсозӣ кунед?[CR]Агар имконпазир бошад, танзимот ба DB-и нав нусхабардорӣ карда мешаванд."
 
 msgctxt "#30373"
 msgid "New db"
@@ -1545,4 +1553,384 @@ msgstr "{} рӯйхати бозиҳо барои оғози берунӣ нав
 
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
-msgstr "Барои ҳар як фармони оғози берунӣ танзимоти пешфарз муқаррар карда мешаванд[CR]Пеш аз оғози баррасии параметрҳои оғози бозӣ, агар лозим бошад[CR]Барои тафсилоти бештар ба вики нигаред."
+msgstr "Барои ҳар як фармони оғози берунӣ танзимоти пешфарз муқаррар карда шудаанд[CR]Пеш аз оғози баррасии параметрҳои оғози бозӣ, агар лозим бошад[CR]Барои тафсилоти бештар ба вики нигаред."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Барномаи ретроарчӣ чунин таъин шудааст:[CR]{}[CR]Агар лозим бошад, дар танзимоти изофӣ тағир диҳед"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Танзимоти такрорӣ ба чунин муқаррар карда шудааст:[CR]{}[CR]Агар лозим бошад, дар танзимоти изофӣ тағир диҳед"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Ёвар анҷом ёфт[CR]Бигзор бозӣ кунем!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Ҳама рӯйхатҳои бозиҳоро бо Kodi оғоз кунед"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Ҳама рӯйхатҳои бозиҳоро ба оғози берунӣ зуд танзим кунед"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Ҳама рӯйхатҳои бозиҳоро ба Retroplayer Kodi зуд насб кунед"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Тасдиқ кунед"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Оё мутмаин ҳастед, ки мехоҳед ҳамаи рӯйхатҳоро барои оғози берунӣ таъин кунед"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Оё мутмаин ҳастед, ки мехоҳед ҳамаи рӯйхатҳоро ба Retroplayer Kodi насб кунед"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Иҷозатҳои Android аз шумо талаб мекунанд, ки ба таври дастӣ роҳи конфигуратсияи Retroarch ворид шавед[CR]Барои кӯмаки бештар ба вики нигаред"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Иҷозатҳои Android аз шумо талаб мекунанд, ки ба таври дастӣ ба роҳи асосии Retroarch ворид шавед[CR]Барои кӯмаки бештар ба вики нигаред"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Нусхабардории пойгоҳи додаҳои ҷорӣ"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Барқарор кардани пойгоҳи додаҳо аз нусхабардорӣ"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Нусхабардории махзани ҷории IAGL ва ҳама танзимоти корбар"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Пойгоҳи иловагии ҷорӣро аз нусхабардорӣ барқарор кунед"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Роҳи эҳтиётиро интихоб кунед"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Нусхаи DB-ро интихоб кунед"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Нусхаи эҳтиётӣ анҷом ёфт"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Барқароркунӣ анҷом ёфт"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} ID-и бозии мувофиқ дар db нав ёфт нашуд[CR]Амали навбатиро интихоб кунед"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Навсозии пойгоҳи додаҳо, кӯшиш кунед, ки бозиҳоро аз рӯи унвон ва рӯйхати бозӣ мувофиқ созед"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Махзани маълумотро навсозӣ кунед, идентификаторҳои бозиеро, ки ёфт нашудаанд, хориҷ кунед"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Бозгашт ба базаи кӯҳна"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Пойгоҳи додаҳо ба пойгоҳи додаҳои кӯҳна баргардонида шуд"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Илтимос истед"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Феҳристҳои Retroarch-ро дастӣ танзим кунед"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL ба таври нобаёнӣ директорияҳоро аз конфигуратсияи RA муайян мекунад, шумо метавонед ин функсияро дастӣ бекор кунед"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Феҳристи асосии Retroarch"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Феҳристи маълумоти Retroach"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Замимаи Linux-ро барои оғоз кардани фармони оғоз"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak барои системаҳои мушаххаси Linux/elec истифода мешавад.  Танҳо агар системаи шумо инро талаб кунад, фаъол кунед."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Ба фармонҳои Retroarch systemd-run гузоред"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Ба ҳама фармонҳо systemd-run -ро пешнавис кунед"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Ба фармонҳои Retroarch flatpak иҷро кунед"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Барои ҳама фармонҳо flatpak иҷро кунед"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Иҷозатҳои Android феҳристи нигаҳдории муштаракро талаб мекунанд[CR]Макони муштаракеро ворид кунед, ки ҳарду барнома онро дастрас кардан мумкин аст"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Файлҳоро кушоед"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Коркард нест"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Файлҳоро кушоед, файлҳои BIOS-ро гузаред"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Файлҳоро ба папка кушоед"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Файлҳоро кушоед, CHD-ро ба ҷузвдон интиқол диҳед"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Файлҳоро ба ҷузвдон интиқол диҳед: аркада"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Файлҳоро ба ҷузвдон интиқол диҳед: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Файлҳоро ба ҷузвдон интиқол диҳед: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Файлҳоро ба ҷузвдон интиқол диҳед: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Файлҳоро ба ҷузвдон интиқол диҳед: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Файлҳоро ба ҷузвдон интиқол диҳед: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Файлҳоро ба ҷузвдон интиқол диҳед: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Файлҳоро ба ҷузвдон интиқол диҳед: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Файлҳоро ба ҷузвдон интиқол диҳед: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Файлҳоро ба ҷузвдон интиқол диҳед: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Файлҳоро ба ҷузвдон интиқол диҳед: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Файлҳоро ба ҷузвдон интиқол диҳед: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Файлҳоро ба ҷузвдон интиқол диҳед: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Файлҳоро ба ҷузвдон интиқол диҳед: спектр"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Файлҳоро ба ҷузвдон интиқол диҳед: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Шумо мутмаин ҳастед, ки мехоҳед раванди баъдии рӯйхати бозиҳоро навсозӣ кунед?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Раванди пост навсозӣ шуд"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Навсозии раванди интишори {}?[CR][B]Ин танзимоти ҳамаи бозиҳои ин рӯйхатро тағир медиҳад.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Зеркашӣ анҷом ёфт.  Файлҳои равандро интишор кунед?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Файлҳои бозӣ коркард карда шуданд"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Дастрас нест (танҳо Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Навъи номи корбари Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Интегратсияро барои номи плеери netplay интихоб кунед"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Discord-ро истифода баред"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord имкон медиҳад бозиҳои автоматии шабакавӣ (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Номи бозигарро дастӣ ворид кунед"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Номҳои бозигарон дар Lobby Retroarch нашр карда мешаванд"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Номи бозигар"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Корбари ҳозираи Discord"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Корбари Discord ба [CR]{} гузошта шудааст"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Сеансҳои бозиро бинед, ки шумо метавонед бо истифода аз Retroarch netplay онлайн ҳамроҳ шавед"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Корбари ихтилофро бо ID [CR]{} ёфтан ғайриимкон аст"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Имконоти филтри лобби"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Танҳо утоқҳоеро нишон диҳед, ки ворид шуданашон мумкин аст"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Танҳо утоқҳоеро нишон диҳед, ки либретро истифода мебаранд"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Ҳуҷраҳоеро нишон диҳед, ки парол доранд"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Ҳуҷраҳоеро нишон диҳед, ки пароли тамошобин доранд"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Ҳуҷраҳоро бо истифода аз серверҳои MITM нишон диҳед"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Танҳо утоқҳои дар давоми мӯҳлат сохташударо нишон диҳед"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 дақиқа"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 дақиқа"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Ҳар чаҳорчӯбаи вақт"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Ҳуҷраҳои лоббиро аз рӯи вақти эҷод филтр кунед"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Танҳо ҳуҷраҳоеро нишон диҳед, ки IAGL-ро истифода мебаранд"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Бозии мувофиқро бо номи монанди [CR]{} ёфтан ғайриимкон аст"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Дарёфт нашуд"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Бозии мувофиқро интихоб кунед"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Амали оғози Netplay"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Аз лобби ретроархӣ ҳамроҳ шавед"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Аз localhost ҳамроҳ шавед"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Ҳангоми ҳамроҳ шудан ба бозии netplay амали пешфарзро интихоб кунед"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Ҳамчун мизбони netplay оғоз кунед"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Номи IAGL Favorite"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Иваз кардани ном анҷом ёфт"

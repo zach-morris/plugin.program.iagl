@@ -393,7 +393,7 @@ msgstr "Rhestrwch y cyfan"
 
 msgctxt "#30096"
 msgid "Always filter list to 1 Game 1 Rom Set"
-msgstr "Hidlo'r rhestr i 1 Gêm 1 Set Rom bob amser"
+msgstr "Hidlwch y rhestr i 1 Gêm 1 Set Rom bob amser"
 
 msgctxt "#30097"
 msgid "If possible, game lists will be pre-filtered to a 1G1R set"
@@ -727,6 +727,10 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Diffiniwch y porthladd IP netplay i gysylltu trwyddo (gadewch yn wag ar gyfer rhagosodiad)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "IP Localhost diofyn"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Diffiniwch enw gwesteiwr / IP netplay rhagosodedig (defnyddiol ar gyfer chwarae rhwydwaith lleol, gadewch yn wag ar gyfer rhagosodiad)"
@@ -758,6 +762,10 @@ msgstr "Rhowch enw eich chwaraewr i'w gyhoeddi ar Discord"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "ID Cyfrif Defnyddiwr Discord"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Rhowch eich ID Discord (Gosodiadau Defnyddiwr> Fy Nghyfrif> Copi ID)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -857,7 +865,7 @@ msgstr "Dewiswch"
 
 msgctxt "#30214"
 msgid "Selected"
-msgstr "Dewiswyd"
+msgstr "Wedi'i ddewis"
 
 msgctxt "#30215"
 msgid "Game lists selected"
@@ -1546,3 +1554,383 @@ msgstr "Cafodd {} rhestri gemau eu diweddaru i'w lansio'n allanol"
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "Mae rhagosodiadau wedi'u rhagosod ar gyfer pob gorchymyn lansio allanol[CR]Cyn lansio paramedrau lansio gêm adolygu os oes angen[CR]Gweler wici am ragor o fanylion."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Ap ôl-arch wedi'i osod i:[CR]{/}[CR]Addasu yng ngosodiadau addon os oes angen"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Ffurfweddiad ôl-arch wedi'i osod i:[CR][CR]Addasu yng ngosodiadau addon os oes angen"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Dewin wedi'i gwblhau[CR]Let Play!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Gosodwch yr holl restrau gêm i'w lansio gyda Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Gosodwch bob rhestr gêm yn gyflym i lansiad allanol"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Gosodwch yr holl restrau gêm yn gyflym i Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Cadarnhau"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "A ydych yn siŵr eich bod am osod pob rhestr i lansiad allanol"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Ydych chi'n siŵr eich bod am osod pob rhestr i Kodi retroplayer"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Mae caniatâd Android yn gofyn i chi fynd i mewn i'r llwybr ffurfweddu Retroarch â llaw[CR]Gweler wiki am ragor o help"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Mae caniatâd Android yn gofyn ichi fynd i mewn i lwybr craidd Retroarch â llaw[CR]Gweler wiki am ragor o help"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Gwneud copi wrth gefn o'r gronfa ddata gyfredol"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Adfer cronfa ddata o'r copi wrth gefn"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Gwneud copi wrth gefn o'r gronfa ddata IAGL gyfredol a'r holl leoliadau defnyddiwr"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Adfer y gronfa ddata addon gyfredol o gopi wrth gefn"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Dewiswch y llwybr wrth gefn"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Dewiswch db wrth gefn"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Copi wrth gefn wedi'i gwblhau"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Adfer wedi'i gwblhau"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "Ni ddaethpwyd o hyd i {} ID gêm sy'n cyfateb yn y db newydd[CR]Dewiswch y weithred nesaf"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Diweddaru cronfa ddata, ceisio paru gemau yn ôl teitl a rhestr gêm"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Diweddaru cronfa ddata, cael gwared ar ids gêm na chanfuwyd"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Adfer yn ôl i hen gronfa ddata"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Cronfa ddata wedi'i hadfer yn ôl i hen gronfa ddata"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Os gwelwch yn dda Aros"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Cyfeiriaduron Retroarch wedi'u gosod â llaw"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "Bydd IAGL yn canfod cyfeiriaduron o RA config yn ddiofyn, gallwch chi ddiystyru'r swyddogaeth hon â llaw"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Cyfeiriadur Craidd Retroarch"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Cyfeiriadur Gwybodaeth Retroach"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Atodwch app linux i ddechrau gorchymyn lansio"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "defnyddir systemd-run/flatpak ar gyfer systemau linux/elec penodol.  Galluogi dim ond os yw eich system ei angen."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Prepend systemd-run i Retroarch gorchmynion"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Prepend systemd-run i bob gorchymyn"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Prepend flatpak rhedeg i Retroarch gorchmynion"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Prepend flatpak rhedeg i'r holl orchmynion"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Mae angen cyfeiriadur storio a rennir ar gyfer caniatâd Android[CR]Rhowch leoliad a rennir y gall y ddau raglen gael mynediad ato"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Dadsipio Ffeiliau"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Dim Prosesu"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Dadsipio Ffeiliau, Hepgor ffeiliau BIOS"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Dadsipio Ffeiliau i Ffolder"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Dadsipio Ffeiliau, Symud CHD i ffolder"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Symud ffeiliau i ffolder: arcêd"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Symud ffeiliau i ffolder: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Symud ffeiliau i ffolder: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Symud ffeiliau i ffolder: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Symud ffeiliau i ffolder: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Symud ffeiliau i ffolder: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Symud ffeiliau i ffolder: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Symud ffeiliau i ffolder: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Symud ffeiliau i ffolder: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Symud ffeiliau i ffolder: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Symud ffeiliau i ffolder: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Symud ffeiliau i ffolder: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Symud ffeiliau i ffolder: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Symud ffeiliau i ffolder: sbectrwm"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Symud ffeiliau i ffolder: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Ydych chi'n siŵr eich bod am ddiweddaru'r broses postio rhestr gêm?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Diweddaru'r broses bostio"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Diweddaru Proses Postio ar gyfer {}?[CR][B]Bydd hyn yn newid gosodiadau ar gyfer pob gêm yn y rhestr hon.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Lawrlwytho wedi'i gwblhau.  Postio ffeiliau proses?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Ffeiliau gêm wedi'u prosesu"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Ddim ar gael (Windows, OSX, Linux yn unig)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Math Enw Defnyddiwr Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Dewiswch integreiddiad ar gyfer enw chwaraewr netplay"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Defnyddiwch Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Mae Discord yn galluogi gemau chwarae rhwyd ​​awtomataidd (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Rhowch Enw Chwaraewr â llaw"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Bydd enwau chwaraewyr yn cael eu cyhoeddi yn y Lobi Retroarch"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Enw Chwaraewr"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Defnyddiwr Discord Presennol"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord User wedi'i osod i [CR]{/}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Gweld sesiynau hapchwarae y gallwch ymuno â nhw ar-lein gan ddefnyddio Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Methu dod o hyd i ddefnyddiwr anghytgord ag ID [CR]{/}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Opsiynau Hidlo Lobi"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Dim ond ystafelloedd arddangos y gellir mynd i mewn iddynt"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Dim ond ystafelloedd dangos sy'n defnyddio libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Dangoswch ystafelloedd sydd â chyfrinair"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Dangos ystafelloedd sydd â chyfrinair gwyliwr"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Dangos ystafelloedd gan ddefnyddio gweinyddwyr MITM"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Dim ond ystafelloedd dangos a grëwyd o fewn yr amserlen"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 munud"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 munud"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Unrhyw Amserlen"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Hidlo'r ystafelloedd lobi yn seiliedig ar amser creu"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Dim ond ystafelloedd dangos sy'n defnyddio IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Methu dod o hyd i gêm sy'n cyfateb ag enw fel[CR]{/}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Heb ei Ddarganfod"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Dewiswch gêm gyfatebol"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Gweithred lansio Netplay"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Ymunwch o lobi retroarch"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Ymunwch o localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Dewiswch y weithred ddiofyn wrth ymuno â gêm netplay"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Lansio fel gwesteiwr netplay"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Ail-enwi IAGL Hoff"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Cwblhawyd ailenwi"

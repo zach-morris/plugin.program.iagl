@@ -273,7 +273,7 @@ msgstr "Skontrolujte prihlasovacie údaje"
 
 msgctxt "#30066"
 msgid "Test the entered email and password to check your ability to login"
-msgstr "Otestujte zadaný e-mail a heslo, aby ste si overili svoju schopnosť prihlásiť sa"
+msgstr "Otestujte zadaný e-mail a heslo a skontrolujte svoju schopnosť prihlásiť sa"
 
 msgctxt "#30067"
 msgid "Download folder size limit"
@@ -281,7 +281,7 @@ msgstr "Limit veľkosti priečinka na stiahnutie"
 
 msgctxt "#30068"
 msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
-msgstr "Definujte veľkosť sťahovania / veľkosť vyrovnávacej pamäte.[CR]Priečinok sa vymaže po dosiahnutí limitu veľkosti."
+msgstr "Definujte veľkosť sťahovania / veľkosť vyrovnávacej pamäte.[CR]Priečinok sa vymaže, keď sa dosiahne limit veľkosti."
 
 msgctxt "#30069"
 msgid "Front page display"
@@ -569,7 +569,7 @@ msgstr "OSX"
 
 msgctxt "#30140"
 msgid "Retroarch App Location"
-msgstr "Poloha aplikácie Retroarch"
+msgstr "Retroarch App Location"
 
 msgctxt "#30141"
 msgid "Select the path to the retroarch executable"
@@ -727,6 +727,10 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "Definujte IP port netplay, cez ktorý sa chcete pripojiť (pre predvolené nastavenie nechajte prázdne)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "Predvolená adresa IP Localhost"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "Definujte predvolený názov hostiteľa siete / IP (užitočné pre sieťovú hru v lokálnej sieti, ponechajte prázdne pre predvolené)"
@@ -758,6 +762,10 @@ msgstr "Zadajte svoje meno hráča, ktorý bude oznámený na Discord"
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Zhodnúť ID používateľského účtu"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Zadajte svoje ID Discord (Nastavenia používateľa> Môj účet> Kopírovať ID)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -829,7 +837,7 @@ msgstr "Obnoviť možnosti"
 
 msgctxt "#30207"
 msgid "Reset IAGL database to default settings"
-msgstr "Resetovať databázu IAGL na predvolené nastavenia"
+msgstr "Obnovte predvolené nastavenia databázy IAGL"
 
 msgctxt "#30208"
 msgid "When selected, the database will be reset to default settings"
@@ -1001,7 +1009,7 @@ msgstr "Skryť zoznam hier"
 
 msgctxt "#30250"
 msgid "Update game list post download process"
-msgstr "Aktualizácia zoznamu hier po stiahnutí procesu"
+msgstr "Aktualizujte zoznam hier po stiahnutí procesu"
 
 msgctxt "#30251"
 msgid "Are you sure you want to hide game list"
@@ -1421,7 +1429,7 @@ msgstr "Nenašli sa žiadne doplnky hry"
 
 msgctxt "#30355"
 msgid "Game addon launch command updated"
-msgstr "Príkaz na spustenie herného doplnku bol aktualizovaný"
+msgstr "Príkaz na spustenie doplnku hry bol aktualizovaný"
 
 msgctxt "#30356"
 msgid "Use alternate default download folder"
@@ -1546,3 +1554,383 @@ msgstr "{} zoznamov hier bolo aktualizovaných na externé spustenie"
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "Predvolené nastavenia sú prednastavené pre každý externý príkaz na spustenie[CR]Pred spustením skontrolujte parametre spustenia hry, ak je to potrebné[CR]Viac podrobností nájdete na wiki."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Aplikácia Retroarch nastavená na:[CR]{}[CR]V prípade potreby upravte nastavenia doplnku"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Konfigurácia Retroarch nastavená na:[CR]{}[CR]V prípade potreby upravte nastavenia doplnku"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "Sprievodca dokončený[CR]Lets Play!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "Nastavte všetky zoznamy hier, ktoré sa majú spustiť pomocou Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "Rýchlo nastavte všetky zoznamy hier na externé spustenie"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "Rýchlo nastavte všetky zoznamy hier na retroplayer Kodi"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "Potvrďte"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "Naozaj chcete nastaviť všetky zoznamy na externé spustenie?"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "Naozaj chcete nastaviť všetky zoznamy na retroplayer Kodi?"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Povolenia systému Android vyžadujú, aby ste manuálne zadali konfiguračnú cestu Retroarch[CR]Ďalšie informácie nájdete na wiki"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Povolenia systému Android vyžadujú, aby ste manuálne zadali cestu k jadru Retroarch[CR]Ďalšiu pomoc nájdete na wiki"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "Zálohujte aktuálnu databázu"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "Obnovte databázu zo zálohy"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "Zálohujte aktuálnu databázu IAGL a všetky používateľské nastavenia"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "Obnovte aktuálnu databázu doplnkov zo zálohy"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "Vyberte cestu zálohy"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "Vyberte zálohu db"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "Zálohovanie dokončené"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "Obnovenie dokončené"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} zhodných ID hier sa nenašlo v novom db[CR]Vyberte ďalšiu akciu"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "Aktualizujte databázu, pokúste sa spojiť hry podľa názvu a zoznamu hier"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "Aktualizujte databázu, odstráňte identifikátory hier, ktoré sa nenašli"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "Obnovte späť starú databázu"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "Databáza obnovená späť do starej databázy"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "Čakajte prosím"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Manuálne nastavenie adresárov Retroarch"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL predvolene zisťuje adresáre z konfigurácie RA, túto funkciu môžete manuálne prepísať"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch Core Directory"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroach Info Directory"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "Ak chcete spustiť príkaz na spustenie, pripojte linuxovú aplikáciu"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak sa používa pre špecifické systémy linux/elec.  Povoľte iba vtedy, ak to váš systém vyžaduje."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Pred príkazy Retroarch pridajte systemd-run"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "Pred všetky príkazy pridajte systemd-run"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Pred príkazy Retroarch spustite flatpak"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "Pred všetky príkazy pridajte spustenie flatpak"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Povolenia systému Android vyžadujú adresár zdieľaného úložiska[CR]Zadajte zdieľané umiestnenie, ku ktorému majú prístup obe aplikácie"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "Rozbaľte súbory"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "Žiadne spracovanie"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "Rozbaľte súbory, preskočte súbory systému BIOS"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "Rozbaľte súbory do priečinka"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "Rozbaľte súbory, presuňte CHD do priečinka"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "Presuňte súbory do priečinka: arkáda"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "Presuňte súbory do priečinka: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "Presuňte súbory do priečinka: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "Presuňte súbory do priečinka: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "Presuňte súbory do priečinka: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "Presuňte súbory do priečinka: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "Presuňte súbory do priečinka: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "Presunúť súbory do priečinka: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "Presunúť súbory do priečinka: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "Presunúť súbory do priečinka: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "Presuňte súbory do priečinka: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "Presuňte súbory do priečinka: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "Presunúť súbory do priečinka: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "Presuňte súbory do priečinka: spektrum"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "Presuňte súbory do priečinka: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "Naozaj chcete aktualizovať proces odosielania zoznamu hier?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "Aktualizovaný proces odosielania"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "Aktualizovať postproces pre {}?[CR][B]Týmto sa zmenia nastavenia pre všetky hry v tomto zozname.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "Sťahovanie dokončené.  Po spracovaní súborov?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "Herné súbory boli spracované"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "Nie je k dispozícii (iba Windows, OSX, Linux)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Typ používateľského mena Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "Vyberte integráciu pre meno hráča v sieti"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Použite Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord umožňuje automatické zápasy v sieti (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "Manuálne zadajte meno hráča"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "Mená hráčov budú zverejnené v Retroarch Lobby"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "Meno hráča"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "Aktuálny používateľ Discordu"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Používateľ Discord nastavený na [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Pozrite si herné relácie, ku ktorým sa môžete pripojiť online pomocou siete Retroarch"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "Nepodarilo sa nájsť používateľa nesúladu s ID [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "Možnosti filtra v lobby"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "Zobraziť iba miestnosti, do ktorých je možné vstúpiť"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "Zobrazovať iba miestnosti, ktoré používajú libretro"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "Zobraziť miestnosti, ktoré majú heslo"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "Zobraziť miestnosti, ktoré majú heslo diváka"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "Zobraziť miestnosti pomocou serverov MITM"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "Zobraziť iba miestnosti vytvorené v časovom rámci"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 minút"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 minút"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "Akýkoľvek časový rámec"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "Filtrujte miestnosti vo vstupnej hale podľa času vytvorenia"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "Zobrazovať iba miestnosti, ktoré používajú IAGL"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "Nedá sa nájsť zodpovedajúca hra s názvom ako [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "Nenájdené"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "Vyberte zodpovedajúcu hru"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "Spustenie akcie Netplay"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "Pripojte sa z retroarch lobby"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "Pripojte sa z localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "Vyberte predvolenú akciu pri pripájaní sa k hre netplay"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "Spustite ako hostiteľ siete"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "Premenovať IAGL Obľúbené"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "Premenovanie dokončené"

@@ -453,7 +453,7 @@ msgstr "شعار النظام"
 
 msgctxt "#30111"
 msgid "System console"
-msgstr "وحدة التحكم بالنظام"
+msgstr "وحدة التحكم في النظام"
 
 msgctxt "#30112"
 msgid "System controller"
@@ -461,7 +461,7 @@ msgstr "وحدة تحكم النظام"
 
 msgctxt "#30113"
 msgid "Game list fanart equates to"
-msgstr "تعادل قائمة الألعاب الفنية"
+msgstr "قائمة الألعاب تعادل فن المعجبين"
 
 msgctxt "#30114"
 msgid "Select the artwork displayed for the game list fanart"
@@ -473,7 +473,7 @@ msgstr "نظام الكولاج"
 
 msgctxt "#30116"
 msgid "System console"
-msgstr "وحدة التحكم بالنظام"
+msgstr "وحدة التحكم في النظام"
 
 msgctxt "#30117"
 msgid "System wallpaper"
@@ -537,7 +537,7 @@ msgstr "قائمة الحلقات الفردية / المشهدية / الفني
 
 msgctxt "#30132"
 msgid "Logos / Big Square Wall (503)"
-msgstr "شعارات / حائط مربع كبير (503)"
+msgstr "الشعارات / الحائط المربع الكبير (503)"
 
 msgctxt "#30133"
 msgid "Big List 2 (504)"
@@ -645,11 +645,11 @@ msgstr "حدد المحاكي"
 
 msgctxt "#30159"
 msgid "Credentials were not found[CR]Please enter them in addon settings"
-msgstr "لم يتم العثور على بيانات الاعتماد[CR]الرجاء إدخالها في إعدادات الوظيفة الإضافية"
+msgstr "لم يتم العثور على بيانات الاعتماد[CR]يرجى إدخالها في إعدادات الوظيفة الإضافية"
 
 msgctxt "#30160"
 msgid "Game List Download Path"
-msgstr "مسار تحميل قائمة الألعاب"
+msgstr "مسار تنزيل قائمة الألعاب"
 
 msgctxt "#30161"
 msgid "Zero (Current Game Only)"
@@ -713,7 +713,7 @@ msgstr "عند التمكين، سيتم عرض لوبي اللعب على ال�
 
 msgctxt "#30176"
 msgid "Filter game lobby to IAGL auto launch games"
-msgstr "تصفية صالة الألعاب لتشغيل الألعاب تلقائيًا في IAGL"
+msgstr "تصفية لوبي اللعبة لتشغيل الألعاب تلقائيًا في IAGL"
 
 msgctxt "#30177"
 msgid "If enabled, the netplay lobby will only show auto launchable games"
@@ -727,6 +727,10 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "قم بتحديد منفذ IP الخاص بشبكة الإنترنت للاتصال من خلاله (اتركه فارغًا للوضع الافتراضي)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "عنوان IP الافتراضي للمضيف المحلي"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
 msgstr "قم بتحديد اسم مضيف/عنوان IP افتراضي لشبكة اللعب (مفيد لشبكة اللعب المحلية، اتركه فارغًا للوضع الافتراضي)"
@@ -737,7 +741,7 @@ msgstr "فحص الإطارات"
 
 msgctxt "#30183"
 msgid "Define number of netplay sync frames (leave blank for default)"
-msgstr "تحديد عدد إطارات مزامنة الشبكة (اتركها فارغة للوضع الافتراضي)"
+msgstr "تحديد عدد إطارات مزامنة اللعب عبر الشبكة (اتركها فارغة للوضع الافتراضي)"
 
 msgctxt "#30184"
 msgid "Announce Netplay on Discord"
@@ -758,6 +762,10 @@ msgstr "أدخل اسم اللاعب الخاص بك ليتم الإعلان ع�
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "معرف حساب مستخدم Discord"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "قم بتوفير معرف Discord الخاص بك (إعدادات المستخدم> حسابي> نسخ المعرف)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -817,7 +825,7 @@ msgstr "تنظيم مجلد التنزيل الافتراضي باستخدام �
 
 msgctxt "#30204"
 msgid "When enabled, the temporary folder will be organized by system (sometimes necessary for config overrides)"
-msgstr "عند التمكين، سيتم تنظيم المجلد المؤقت حسب النظام (أحيانًا يكون ذلك ضروريًا لتجاوزات التكوين)"
+msgstr "عند التمكين، سيتم تنظيم المجلد المؤقت حسب النظام (وهو أمر ضروري في بعض الأحيان لتجاوزات التكوين)"
 
 msgctxt "#30205"
 msgid "Copy Kodi Network Source downloads to Local Filesystem"
@@ -1317,7 +1325,7 @@ msgstr "إعادة تعيين إعدادات قائمة الألعاب"
 
 msgctxt "#30329"
 msgid "Are you sure you want to reset all game list settings to default?"
-msgstr "هل أنت متأكد أنك تريد إعادة تعيين كافة إعدادات قائمة الألعاب إلى الإعدادات الافتراضية؟"
+msgstr "هل أنت متأكد أنك تريد إعادة تعيين كافة إعدادات قائمة الألعاب إلى الوضع الافتراضي؟"
 
 msgctxt "#30330"
 msgid "Game list settings were reset to default"
@@ -1465,7 +1473,7 @@ msgstr "تحديث أمر التشغيل لـ {}?[CR][B]سيؤدي هذا إلى
 
 msgctxt "#30366"
 msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
-msgstr "تحديث مسار التنزيل الخاص بـ {}?[CR][B]سيؤدي هذا إلى تغيير الإعدادات لجميع الألعاب الموجودة في هذه القائمة.[/B]"
+msgstr "تحديث مسار التنزيل لبدء تشغيل {}؟[CR][B]سيؤدي هذا إلى تغيير الإعدادات لجميع الألعاب في هذه القائمة.[/B]"
 
 msgctxt "#30367"
 msgid "Update Launch Command"
@@ -1546,3 +1554,383 @@ msgstr "تم تحديث قوائم الألعاب {} لإطلاقها خارجي
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "يتم تعيين الإعدادات الافتراضية مسبقًا لكل أمر تشغيل خارجي[CR]قبل التشغيل، راجع معلمات تشغيل اللعبة إذا لزم الأمر[CR]راجع ويكي لمزيد من التفاصيل."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "تم تعيين تطبيق Retroarch على:[CR]{}[CR]تعديل في إعدادات الوظيفة الإضافية إذا لزم الأمر"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "تم ضبط تكوين Retroarch على:[CR]{}[CR]تعديل في إعدادات الوظيفة الإضافية إذا لزم الأمر"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "تم الانتهاء من المعالج[CR]لنلعب!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "قم بتعيين جميع قوائم الألعاب ليتم تشغيلها باستخدام Kodi"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "قم بتعيين جميع قوائم الألعاب بسرعة ليتم تشغيلها خارجيًا"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "قم بتعيين جميع قوائم الألعاب بسرعة إلى Kodi retroplayer"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "يتأكد"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "هل أنت متأكد من أنك تريد تعيين كافة القوائم للتشغيل الخارجي؟"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "هل أنت متأكد من أنك تريد تعيين جميع القوائم إلى Kodi retroplayer؟"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "تتطلب أذونات Android منك إدخال مسار تكوين Retroarch يدويًا[CR]راجع wiki للحصول على مزيد من المساعدة"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "تتطلب أذونات Android منك إدخال مسار نواة Retroarch يدويًا[CR]راجع wiki للحصول على مزيد من المساعدة"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "النسخ الاحتياطي لقاعدة البيانات الحالية"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "استعادة قاعدة البيانات من النسخة الاحتياطية"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "قم بعمل نسخة احتياطية لقاعدة بيانات IAGL الحالية وجميع إعدادات المستخدم"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "استعادة قاعدة بيانات الوظيفة الإضافية الحالية من نسخة احتياطية"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "حدد مسار النسخ الاحتياطي"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "حدد قاعدة البيانات الاحتياطية"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "تم الانتهاء من النسخ الاحتياطي"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "تم الاستعادة"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "لم يتم العثور على {} معرفات اللعبة المطابقة في قاعدة البيانات الجديدة [CR]حدد الإجراء التالي"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "تحديث قاعدة البيانات، ومحاولة مطابقة الألعاب حسب العنوان وقائمة الألعاب"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "تحديث قاعدة البيانات، وإزالة معرفات الألعاب التي لم يتم العثور عليها"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "استعادة قاعدة البيانات القديمة"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "تمت استعادة قاعدة البيانات إلى قاعدة البيانات القديمة"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "انتظر من فضلك"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "تعيين أدلة Retroarch يدويًا"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "سيقوم IAGL افتراضيًا باكتشاف الدلائل من تكوين RA، ويمكنك تجاوز هذه الوظيفة يدويًا"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "دليل Retroarch الأساسي"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "دليل معلومات ريترواش"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "إضافة تطبيق لينكس لبدء أمر التشغيل"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "يتم استخدام systemd-run/flatpak لأنظمة linux/elec محددة. قم بتمكينه فقط إذا كان نظامك يتطلب ذلك."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "إضافة systemd-run إلى أوامر Retroarch"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "إضافة systemd-run إلى جميع الأوامر"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "إضافة أمر تشغيل flatpak إلى أوامر Retroarch"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "إضافة أمر تشغيل flatpak إلى جميع الأوامر"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "تتطلب أذونات Android دليل تخزين مشترك[CR]أدخل موقعًا مشتركًا يمكن الوصول إليه بواسطة كلا التطبيقين"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "فك ضغط الملفات"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "لا يوجد معالجة"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "فك ضغط الملفات وتخطي ملفات BIOS"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "فك ضغط الملفات إلى مجلد"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "فك ضغط الملفات ونقل CHD إلى المجلد"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "نقل الملفات إلى المجلد: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "نقل الملفات إلى المجلد: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "نقل الملفات إلى المجلد: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "نقل الملفات إلى المجلد: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "نقل الملفات إلى المجلد: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "نقل الملفات إلى المجلد: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "نقل الملفات إلى المجلد: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "نقل الملفات إلى المجلد: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "نقل الملفات إلى المجلد: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "نقل الملفات إلى المجلد: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "نقل الملفات إلى المجلد: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "نقل الملفات إلى المجلد: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "نقل الملفات إلى المجلد: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "نقل الملفات إلى المجلد: الطيف"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "نقل الملفات إلى المجلد: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "هل أنت متأكد أنك تريد تحديث قائمة الألعاب بعد العملية؟"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "تم تحديث عملية النشر"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "تحديث عملية النشر لـ {}؟[CR][B]سيؤدي هذا إلى تغيير الإعدادات لجميع الألعاب في هذه القائمة.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "تم الانتهاء من التنزيل. هل تم الانتهاء من معالجة الملفات؟"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "ملفات اللعبة المعالجة"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "غير متوفر (Windows، OSX، Linux فقط)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "نوع اسم المستخدم في Netplay"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "حدد التكامل لاسم لاعب netplay"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "استخدم Discord"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "يتيح Discord مباريات اللعب التلقائي على الشبكة (IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "أدخل اسم اللاعب يدويًا"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "سيتم نشر أسماء اللاعبين في ردهة Retroarch"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "اسم اللاعب"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "مستخدم Discord الحالي"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "تم تعيين مستخدم Discord على [CR]{}"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "اعرض جلسات الألعاب التي يمكنك الانضمام إليها عبر الإنترنت باستخدام Retroarch netplay"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "تعذر العثور على مستخدم Discord الذي يحمل المعرف [CR]{}"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "خيارات تصفية اللوبي"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "إظهار الغرف التي يمكن الدخول إليها فقط"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "إظهار الغرف التي تستخدم libretro فقط"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "إظهار الغرف التي تحتوي على كلمة مرور"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "إظهار الغرف التي تحتوي على كلمة مرور للمشاهد"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "صالات العرض التي تستخدم خوادم MITM"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "إظهار الغرف التي تم إنشاؤها ضمن الإطار الزمني فقط"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 دقيقة"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 دقيقة"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "أي إطار زمني"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "تصفية غرف اللوبي بناءً على وقت الإنشاء"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "إظهار الغرف التي تستخدم IAGL فقط"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "غير قادر على العثور على لعبة مطابقة باسم مثل [CR]{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "لم يتم العثور عليه"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "اختر لعبة المطابقة"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "إطلاق Netplay"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "انضم من لوبي retroarch"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "الانضمام من localhost"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "حدد الإجراء الافتراضي عند الانضمام إلى لعبة على الشبكة"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "إطلاق كمضيف للعب على الشبكة"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "إعادة تسمية IAGL المفضلة"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "تم الانتهاء من إعادة التسمية"

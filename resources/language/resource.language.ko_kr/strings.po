@@ -601,7 +601,7 @@ msgstr "게임런처 선택 방법"
 
 msgctxt "#30148"
 msgid "Select what Kodi will do when selecting a game launcher (Windows, Linux and OSX only)"
-msgstr "게임 실행기를 선택할 때 Kodi가 수행할 작업을 선택합니다(Windows, Linux 및 OSX 전용)"
+msgstr "게임 실행기를 선택할 때 Kodi가 수행할 작업을 선택합니다(Windows, Linux 및 OSX에만 해당)"
 
 msgctxt "#30149"
 msgid "Keep Kodi in the background"
@@ -669,7 +669,7 @@ msgstr "100MB"
 
 msgctxt "#30165"
 msgid "200 MB"
-msgstr "200MB"
+msgstr "200메가바이트"
 
 msgctxt "#30166"
 msgid "500 MB"
@@ -685,7 +685,7 @@ msgstr "2GB(2기가바이트)"
 
 msgctxt "#30169"
 msgid "5 GB"
-msgstr "5GB (5기가바이트)"
+msgstr "5GB(5기가바이트)"
 
 msgctxt "#30170"
 msgid "10 GB"
@@ -713,7 +713,7 @@ msgstr "활성화되면 넷플레이 로비가 IAGL 첫 페이지에 표시됩�
 
 msgctxt "#30176"
 msgid "Filter game lobby to IAGL auto launch games"
-msgstr "게임 로비를 필터링하여 IAGL 자동 실행 게임으로 전환"
+msgstr "게임 로비를 IAGL 자동 실행 게임으로 필터링"
 
 msgctxt "#30177"
 msgid "If enabled, the netplay lobby will only show auto launchable games"
@@ -726,6 +726,10 @@ msgstr "넷플레이 포트"
 msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "연결할 netplay IP 포트를 정의합니다(기본값은 비워둡니다)"
+
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "기본 로컬 호스트 IP"
 
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
@@ -758,6 +762,10 @@ msgstr "Discord에 발표될 플레이어 이름을 입력하세요."
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord 사용자 계정 ID"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "Discord ID를 입력하세요(사용자 설정>내 계정>ID 복사)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -877,7 +885,7 @@ msgstr "선택된 스튜디오"
 
 msgctxt "#30219"
 msgid "Tags selected"
-msgstr "선택된 태그"
+msgstr "태그 선택됨"
 
 msgctxt "#30220"
 msgid "Playlists selected"
@@ -989,7 +997,7 @@ msgstr "게임 목록 업데이트 런처"
 
 msgctxt "#30247"
 msgid "Update game list Launch Command"
-msgstr "게임 목록 업데이트 명령 실행"
+msgstr "게임 목록 업데이트 실행 명령"
 
 msgctxt "#30248"
 msgid "Update game list Download Path"
@@ -1049,7 +1057,7 @@ msgstr "[CR]외부에서 [CR]Kodi로 런처를 업데이트하시겠습니까?"
 
 msgctxt "#30262"
 msgid "Launcher updated to external"
-msgstr "외부로 런처 업데이트됨"
+msgstr "런처가 외부로 업데이트되었습니다."
 
 msgctxt "#30263"
 msgid "Launcher updated to retroplayer"
@@ -1546,3 +1554,383 @@ msgstr "{} 게임 목록이 외부 출시를 위해 업데이트되었습니다.
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "각 외부 실행 명령에 대한 기본값이 미리 설정되어 있습니다.[CR]필요한 경우 실행하기 전에 게임 실행 매개변수를 검토하세요.[CR]자세한 내용은 위키를 참조하세요."
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch 앱이 다음으로 설정됨:[CR]{}[CR]필요한 경우 애드온 설정에서 수정"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "Retroarch 구성이 다음으로 설정됨:[CR]{}[CR]필요한 경우 애드온 설정에서 수정"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "마법사가 완료되었습니다[CR]플레이하자!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "모든 게임 목록을 Kodi로 실행되도록 설정"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "모든 게임 목록을 빠르게 외부 실행으로 설정"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "모든 게임 목록을 Kodi retroplayer로 빠르게 설정"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "확인하다"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "모든 목록을 외부 시작으로 설정하시겠습니까?"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "모든 목록을 Kodi retroplayer로 설정하시겠습니까?"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "Android 권한을 얻으려면 Retroarch 구성 경로를 수동으로 입력해야 합니다.[CR] 자세한 도움말은 위키를 참조하세요."
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "Android 권한을 얻으려면 Retroarch 핵심 경로를 수동으로 입력해야 합니다.[CR] 자세한 도움말은 위키를 참조하세요."
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "현재 데이터베이스 백업"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "백업에서 데이터베이스 복원"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "현재 IAGL 데이터베이스와 모든 사용자 설정을 백업합니다."
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "백업에서 현재 애드온 데이터베이스 복원"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "백업 경로를 선택하세요"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "백업 DB 선택"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "백업이 완료되었습니다"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "복구 완료"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "새 db에서 일치하는 게임 ID를 찾을 수 없습니다[CR]다음 작업 선택"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "데이터베이스 업데이트, 게임 제목 및 게임 목록별로 게임 매칭 시도"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "데이터베이스 업데이트, 찾을 수 없는 게임 ID 제거"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "이전 데이터베이스로 복원"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "데이터베이스가 이전 데이터베이스로 복원되었습니다."
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "기다리세요"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Retroarch 디렉토리를 수동으로 설정"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL은 기본적으로 RA 구성에서 디렉토리를 감지하지만 이 기능을 수동으로 재정의할 수 있습니다."
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch 코어 디렉토리"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "Retroach 정보 디렉토리"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "시작 명령에 linux 앱을 추가합니다."
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak은 특정 linux/elec 시스템에 사용됩니다. 시스템에 필요한 경우에만 활성화하세요."
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "Retroarch 명령어 앞에 systemd-run을 추가합니다."
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "모든 명령 앞에 systemd-run을 추가합니다."
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Retroarch 명령에 flatpak 실행을 추가합니다."
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "모든 명령 앞에 flatpak run을 추가합니다."
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "Android 권한에는 공유 저장 디렉토리가 필요합니다.[CR] 두 애플리케이션 모두에서 액세스할 수 있는 공유 위치를 입력하세요."
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "파일 압축 해제"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "처리 없음"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "파일 압축 해제, BIOS 파일 건너뛰기"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "폴더에 파일 압축 해제"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "파일 압축 해제, CHD를 폴더로 이동"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "파일을 폴더로 이동: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "파일을 폴더로 이동: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "파일을 폴더로 이동: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "파일을 폴더로 이동: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "파일을 폴더로 이동: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "파일을 폴더로 이동: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "파일을 폴더로 이동: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "파일을 폴더로 이동: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "파일을 폴더로 이동: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "파일을 폴더로 이동: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "파일을 폴더로 이동: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "파일을 폴더로 이동: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "파일을 폴더로 이동: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "파일을 폴더로 이동: spectrum"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "파일을 폴더로 이동: tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "게임 목록 포스트 프로세스를 업데이트하시겠습니까?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "포스트 프로세스 업데이트됨"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "{}에 대한 포스트 프로세스를 업데이트하시겠습니까?[CR][B]이렇게 하면 이 목록에 있는 모든 게임의 설정이 변경됩니다.[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "다운로드가 완료되었습니다. 파일을 후처리하시겠습니까?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "게임 파일 처리됨"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "사용할 수 없음(Windows, OSX, Linux만 해당)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Netplay 사용자 이름 유형"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "넷플레이 플레이어 이름에 대한 통합을 선택하세요"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Discord를 사용하세요"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord에서는 자동화된 넷플레이 매치가 가능합니다(IAGL: https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "수동으로 플레이어 이름을 입력하세요"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "플레이어 이름은 Retroarch 로비에 게시됩니다."
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "플레이어 이름"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "현재 Discord 사용자"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "Discord 사용자가 [CR]{}로 설정되었습니다."
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Retroarch netplay를 사용하여 온라인으로 참여할 수 있는 게임 세션 보기"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "ID가 [CR]{}인 Discord 사용자를 찾을 수 없습니다."
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "로비 필터 옵션"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "입장 가능한 방만 표시"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "libretro를 사용하는 방만 표시합니다."
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "비밀번호가 있는 객실을 보여주세요"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "관람객 비밀번호가 있는 쇼룸"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "MITM 서버를 사용하여 객실 표시"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "기간 내에 생성된 방만 표시"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30분"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60분"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "모든 시간 프레임"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "생성 시간을 기준으로 로비 룸 필터링"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "IAGL을 사용하는 객실만 표시"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "[CR]{}와(과) 비슷한 이름의 게임을 찾을 수 없습니다."
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "찾을 수 없음"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "매칭 게임을 선택하세요"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "넷플레이 런칭 액션"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "retroarch 로비에서 참여"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "로컬호스트에서 참여"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "넷플레이 게임에 참여할 때 기본 동작을 선택하세요"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "넷플레이 호스트로 실행"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "IAGL 즐겨찾기 이름 변경"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "이름 변경 완료"

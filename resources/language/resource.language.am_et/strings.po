@@ -245,7 +245,7 @@ msgstr "ነቅቷል"
 
 msgctxt "#30059"
 msgid "Disabled"
-msgstr "ተሰናክሏል"
+msgstr "ተሰናክሏል።"
 
 msgctxt "#30060"
 msgid "Some games require login.  Enter your archive.org email address and password."
@@ -257,7 +257,7 @@ msgstr "archive.org ኢሜይል"
 
 msgctxt "#30062"
 msgid "Some games require login.  Enter your archive.org email address"
-msgstr "አንዳንድ ጨዋታዎች መግባት ያስፈልጋቸዋል።  የእርስዎን archive.org ኢሜይል አድራሻ ያስገቡ"
+msgstr "አንዳንድ ጨዋታዎች መግባት ያስፈልጋቸዋል።  የ archive.org ኢሜይል አድራሻዎን ያስገቡ"
 
 msgctxt "#30063"
 msgid "archive.org Password"
@@ -281,7 +281,7 @@ msgstr "የማውረድ የአቃፊ መጠን ገደብ"
 
 msgctxt "#30068"
 msgid "Define the size of the download / cache size.[CR]The folder is purged when the size limit is reached."
-msgstr "የማውረጃውን/የመሸጎጫውን መጠን ይግለጹ።[CR]የመጠኑ ገደቡ ሲደርስ ማህደሩ ይጸዳል።"
+msgstr "የማውረጃውን/የመሸጎጫውን መጠን ይግለጹ።[CR]የመጠኑ ገደብ ሲደረስ ማህደሩ ይጸዳል።"
 
 msgctxt "#30069"
 msgid "Front page display"
@@ -389,7 +389,7 @@ msgstr "በገጽ ምን ያህል ጨዋታዎች እንደተዘረዘሩ ይ�
 
 msgctxt "#30095"
 msgid "List all"
-msgstr "ሁሉንም ይዘርዝሩ"
+msgstr "ሁሉንም ዘርዝሩ"
 
 msgctxt "#30096"
 msgid "Always filter list to 1 Game 1 Rom Set"
@@ -481,7 +481,7 @@ msgstr "የስርዓት ልጣፍ"
 
 msgctxt "#30118"
 msgid "Force IAGL viewtypes"
-msgstr "የ IAGL እይታዎችን አስገድድ"
+msgstr "የ IAGL እይታ ዓይነቶችን አስገድድ"
 
 msgctxt "#30119"
 msgid "Verify your skin has the forced viewtype ID available"
@@ -727,9 +727,13 @@ msgctxt "#30179"
 msgid "Define the netplay IP port to connect through (leave blank for default)"
 msgstr "ለማገናኘት የኔትፕሌይ አይፒ ወደብ ይግለጹ (ለነባሪ ባዶ ይተው)"
 
+msgctxt "#30180"
+msgid "Default Localhost IP"
+msgstr "ነባሪ Localhost IP"
+
 msgctxt "#30181"
 msgid "Define a default netplay hostname / IP (useful for local network netplay, leave blank for default)"
-msgstr "ነባሪውን የኔትፕሌይ አስተናጋጅ ስም/አይ ፒን ይግለጹ (ለአካባቢያዊ አውታረ መረብ netplay ይጠቅማል፣ ለነባሪ ባዶ ይተው)"
+msgstr "ነባሪውን የኔትፕሌይ አስተናጋጅ ስም/አይፒን ይግለጹ (ለአካባቢያዊ አውታረ መረብ ኔትፕሌይ ይጠቅማል፣ ለነባሪ ባዶ ይተው)"
 
 msgctxt "#30182"
 msgid "Check frames"
@@ -758,6 +762,10 @@ msgstr "በ Discord ላይ ለመታወቅ የተጫዋች ስምዎን ያስ�
 msgctxt "#30188"
 msgid "Discord User Account ID"
 msgstr "Discord የተጠቃሚ መለያ መታወቂያ"
+
+msgctxt "#30189"
+msgid "Provide your Discord ID (User Settings>My Account>Copy ID)"
+msgstr "የእርስዎን Discord መታወቂያ ያቅርቡ (የተጠቃሚ ቅንብሮች>የእኔ መለያ>መታወቂያ ቅጂ)"
 
 msgctxt "#30190"
 msgid "Display report when wizard is completed"
@@ -841,7 +849,7 @@ msgstr "የጨዋታ ዝርዝሮችን አትደብቅ"
 
 msgctxt "#30210"
 msgid "When selected, previously hidden game lists can be unhidden"
-msgstr "ሲመረጡ ከዚህ ቀደም የተደበቁ የጨዋታ ዝርዝሮች ሊደበቁ ይችላሉ።"
+msgstr "ሲመረጥ ከዚህ ቀደም የተደበቁ የጨዋታ ዝርዝሮች ሊደበቁ ይችላሉ።"
 
 msgctxt "#30211"
 msgid "Clear Cache"
@@ -1061,7 +1069,7 @@ msgstr "የጨዋታ አዶን ይምረጡ"
 
 msgctxt "#30265"
 msgid "Are you sure you want to reset the game addon launch command?"
-msgstr "እርግጠኛ ነህ የጨዋታውን የአዶን ማስጀመሪያ ትዕዛዝ ዳግም ማስጀመር ትፈልጋለህ?"
+msgstr "እርግጠኛ ነህ የጨዋታውን አድን ማስጀመሪያ ትዕዛዙን ዳግም ማስጀመር ትፈልጋለህ?"
 
 msgctxt "#30266"
 msgid "Download game to…"
@@ -1077,7 +1085,7 @@ msgstr "Archive.org የመግባት ስኬት!"
 
 msgctxt "#30269"
 msgid "Archive.org login failed.[CR]Check credentials or log for more details"
-msgstr "Archive.org መግባት አልተሳካም።[CR] ምስክርነቶችን ያረጋግጡ ወይም ለተጨማሪ ዝርዝሮች ይግቡ"
+msgstr "Archive.org መግባት አልተሳካም።[CR] ምስክርነቶችን ይመልከቱ ወይም ለተጨማሪ ዝርዝሮች ይግቡ"
 
 msgctxt "#30270"
 msgid "Error"
@@ -1169,11 +1177,11 @@ msgstr "ወደ FS-UAE መተግበሪያ የሚወስደውን መንገድ ይ�
 
 msgctxt "#30292"
 msgid "Are you sure you want to set external launch command?"
-msgstr "እርግጠኛ ነዎት የውጪ ማስጀመሪያ ትዕዛዝ ማዘጋጀት ይፈልጋሉ?"
+msgstr "እርግጠኛ ነህ የውጪ ማስጀመሪያ ትዕዛዝ ማዘጋጀት ትፈልጋለህ?"
 
 msgctxt "#30293"
 msgid "External launch command updated"
-msgstr "የውጭ ማስጀመሪያ ትዕዛዝ ተዘምኗል"
+msgstr "የውጪ ማስጀመሪያ ትዕዛዝ ተዘምኗል"
 
 msgctxt "#30294"
 msgid "Android users must verify the core is installed in Retroarch"
@@ -1193,7 +1201,7 @@ msgstr "ምንም ተጨማሪ አስማሚዎች አልተገኙም[CR]እባ�
 
 msgctxt "#30298"
 msgid "Enter launch command[CR]See optional keywords on IAGL wiki"
-msgstr "የማስጀመሪያ ትዕዛዝ አስገባ[CR]በ IAGL wiki ላይ አማራጭ ቁልፍ ቃላትን ተመልከት"
+msgstr "የማስጀመሪያ ትእዛዝ አስገባ[CR]በ IAGL wiki ላይ አማራጭ ቁልፍ ቃላትን ተመልከት"
 
 msgctxt "#30299"
 msgid "Reset Launch Command"
@@ -1225,7 +1233,7 @@ msgstr "የጨዋታ ዝርዝር ስርዓት"
 
 msgctxt "#30306"
 msgid "Total 1G1R Games in List"
-msgstr "በዝርዝሩ ውስጥ ጠቅላላ 1G1R ጨዋታዎች"
+msgstr "ጠቅላላ 1G1R ጨዋታዎች በዝርዝር"
 
 msgctxt "#30307"
 msgid "Total Games in List"
@@ -1353,7 +1361,7 @@ msgstr "ከማስጀመሪያዎ በፊት Kodiን ዝጋ፣ ከኢምዩሌተ�
 
 msgctxt "#30338"
 msgid "Suspend Kodi before launch, wake Kodi after emulator exit"
-msgstr "ከማስጀመሪያው በፊት Kodiን ያንጠልጥሉት፣ ከኢምዩሌተር ከወጡ በኋላ Kodiን ያንቁ"
+msgstr "ከማስጀመሪያው በፊት Kodiን ያንጠልጥሉት፣ ከኢምዩተር ከወጡ በኋላ Kodiን ያንቁ"
 
 msgctxt "#30339"
 msgid "View IAGL db stats"
@@ -1465,7 +1473,7 @@ msgstr "የ{} ማስጀመሪያ ትዕዛዙን አዘምን?[CR][B]ይህ በ�
 
 msgctxt "#30366"
 msgid "Update Launch Download Path for {}?[CR][B]This will change settings for all games in this list.[/B]"
-msgstr "የ{} ማውረጃ ዱካንን አዘምን?[CR][B]ይህ በዚህ ዝርዝር ውስጥ ላሉ ሁሉም ጨዋታዎች ቅንብሮችን ይለውጣል።[/B]"
+msgstr "የ{} ማውረጃ መንገድን አዘምን?[CR][B]ይህ በዚህ ዝርዝር ውስጥ ላሉ ጨዋታዎች ሁሉ ቅንብሮችን ይለውጣል።[/B]"
 
 msgctxt "#30367"
 msgid "Update Launch Command"
@@ -1501,7 +1509,7 @@ msgstr "የውሂብ ጎታ ተዘምኗል[CR]የተጠቃሚ ቅንብሮች �
 
 msgctxt "#30375"
 msgid "Database was updated[CR]Some user settings failed to transfer[CR]See log for more details"
-msgstr "የውሂብ ጎታ ተዘምኗል[CR] አንዳንድ የተጠቃሚ ቅንጅቶች ማስተላለፍ አልቻሉም[CR] ለተጨማሪ ዝርዝሮች ምዝግብ ማስታወሻን ይመልከቱ"
+msgstr "የውሂብ ጎታ ተዘምኗል[CR] አንዳንድ የተጠቃሚ ቅንብሮች ማስተላለፍ አልቻሉም[CR]ለተጨማሪ ዝርዝሮች ምዝግብ ማስታወሻን ይመልከቱ"
 
 msgctxt "#30376"
 msgid "There was an error updating the database[CR]See log for more details"
@@ -1546,3 +1554,383 @@ msgstr "{} የጨዋታ ዝርዝሮች ለውጫዊ ማስጀመር ተዘም�
 msgctxt "#30386"
 msgid "Defaults are pre-set for each external launch command[CR]Before launching review game launch parameters if needed[CR]See wiki for more details."
 msgstr "ነባሪዎች ለእያንዳንዱ የውጪ ማስጀመሪያ ትዕዛዝ ቀድሞ ተዘጋጅተዋል[CR] ካስፈለገ የግምገማ ጨዋታ ማስጀመሪያ መለኪያዎችን ከመጀመርዎ በፊት[CR] ለበለጠ ዝርዝር ዊኪን ይመልከቱ።"
+
+msgctxt "#30387"
+msgid "Retroarch app set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "ዳግም ጀምር መተግበሪያ ወደሚከተለው ተቀናብሯል፡[CR][CR] ካስፈለገም በአዶን ቅንብሮች ውስጥ ቀይር"
+
+msgctxt "#30388"
+msgid "Retroarch config set to:[CR]{}[CR]Modify in addon settings if needed"
+msgstr "ዳግም ማዋቀር ወደሚከተለው ተቀናብሯል፡[CR]{}[CR] ካስፈለገም በአዶን ቅንብሮች ውስጥ ቀይር"
+
+msgctxt "#30389"
+msgid "Wizard completed[CR]Lets Play!"
+msgstr "ጠንቋይ ተጠናቋል[CR] እንጫወት!"
+
+msgctxt "#30390"
+msgid "Set all game lists to be launched with Kodi"
+msgstr "ሁሉንም የጨዋታ ዝርዝሮች በኮዲ ለመጀመር ያዘጋጁ"
+
+msgctxt "#30391"
+msgid "Quickly set all game lists to external launching"
+msgstr "ሁሉንም የጨዋታ ዝርዝሮች በፍጥነት ወደ ውጫዊ ማስጀመር ያዘጋጁ"
+
+msgctxt "#30392"
+msgid "Quickly set all game lists to Kodi retroplayer"
+msgstr "ሁሉንም የጨዋታ ዝርዝሮች በፍጥነት ወደ Kodi retroplayer ያቀናብሩ"
+
+msgctxt "#30393"
+msgid "Confirm"
+msgstr "አረጋግጥ"
+
+msgctxt "#30394"
+msgid "Are you sure you want to set all lists to external launching"
+msgstr "እርግጠኛ ነዎት ሁሉንም ዝርዝሮች ወደ ውጫዊ ማስጀመር ማዋቀር ይፈልጋሉ"
+
+msgctxt "#30395"
+msgid "Are you sure you want to set all lists to Kodi retroplayer"
+msgstr "እርግጠኛ ነህ ሁሉንም ዝርዝሮች ወደ Kodi retroplayer ማቀናበር እንደምትፈልግ እርግጠኛ ነህ"
+
+msgctxt "#30396"
+msgid "Android permissions require you to manually enter the Retroarch config path[CR]See wiki for more help"
+msgstr "የአንድሮይድ ፈቃዶች የ Retroarch config ዱካውን እራስዎ እንዲያስገቡ ይፈልጋሉ[CR] ለበለጠ እገዛ ዊኪን ይመልከቱ"
+
+msgctxt "#30397"
+msgid "Android permissions require you to manually enter the Retroarch core path[CR]See wiki for more help"
+msgstr "የአንድሮይድ ፈቃዶች የ Retroarch core ዱካውን እራስዎ እንዲያስገቡ ይፈልጋሉ[CR] ለበለጠ እገዛ ዊኪን ይመልከቱ"
+
+msgctxt "#30398"
+msgid "Backup current database"
+msgstr "የአሁኑን የውሂብ ጎታ ምትኬ ያስቀምጡ"
+
+msgctxt "#30399"
+msgid "Restore database from backup"
+msgstr "የውሂብ ጎታውን ከምትኬ ወደነበረበት ይመልሱ"
+
+msgctxt "#30400"
+msgid "Backup the current IAGL database and all user settings"
+msgstr "የአሁኑን IAGL የውሂብ ጎታ እና ሁሉንም የተጠቃሚ ቅንብሮችን ምትኬ ያስቀምጡ"
+
+msgctxt "#30401"
+msgid "Restore the current addon database from a backup"
+msgstr "የአሁኑን የአዶን ዳታቤዝ ከመጠባበቂያ ወደነበረበት ይመልሱ"
+
+msgctxt "#30402"
+msgid "Select backup path"
+msgstr "የምትኬ ዱካ ምረጥ"
+
+msgctxt "#30403"
+msgid "Select backup db"
+msgstr "ምትኬ db ይምረጡ"
+
+msgctxt "#30404"
+msgid "Backup completed"
+msgstr "ምትኬ ተጠናቅቋል"
+
+msgctxt "#30405"
+msgid "Restore completed"
+msgstr "ወደነበረበት መመለስ ተጠናቅቋል"
+
+msgctxt "#30406"
+msgid "{} matching game ids were not found in the new db[CR]Select next action"
+msgstr "{} ተዛማጅ የጨዋታ መታወቂያዎች በአዲሱ db ውስጥ አልተገኙም[CR]የሚቀጥለውን እርምጃ ይምረጡ"
+
+msgctxt "#30407"
+msgid "Update database, attempt to match games by title and game list"
+msgstr "ዳታቤዝ አዘምን፣ ጨዋታዎችን በርዕስ እና በጨዋታ ዝርዝር ለማዛመድ ይሞክሩ"
+
+msgctxt "#30408"
+msgid "Update database, remove game ids that were not found"
+msgstr "የውሂብ ጎታ ያዘምኑ፣ ያልተገኙ የጨዋታ መታወቂያዎችን ያስወግዱ"
+
+msgctxt "#30409"
+msgid "Restore back to old database"
+msgstr "ወደ አሮጌው የውሂብ ጎታ እነበረበት መልስ"
+
+msgctxt "#30410"
+msgid "Database restored back to old database"
+msgstr "የውሂብ ጎታ ወደ አሮጌው የውሂብ ጎታ ተመልሷል"
+
+msgctxt "#30411"
+msgid "Please Wait"
+msgstr "እባክህ ጠብቅ"
+
+msgctxt "#30412"
+msgid "Manually set Retroarch directories"
+msgstr "Retroarch ማውጫዎችን በእጅ ያዘጋጁ"
+
+msgctxt "#30413"
+msgid "IAGL will by default detect directories from RA config, you can manually override this function"
+msgstr "IAGL በነባሪነት ማውጫዎችን ከ RA ውቅረት ያገኛል፣ ይህን ተግባር እራስዎ መሻር ይችላሉ።"
+
+msgctxt "#30414"
+msgid "Retroarch Core Directory"
+msgstr "Retroarch Core ማውጫ"
+
+msgctxt "#30415"
+msgid "Retroach Info Directory"
+msgstr "የድጋሚ መረጃ ማውጫ"
+
+msgctxt "#30416"
+msgid "Append linux app to start launch command"
+msgstr "የማስጀመሪያ ትእዛዝ ለመጀመር የሊኑክስ መተግበሪያን ያክሉ"
+
+msgctxt "#30417"
+msgid "systemd-run/flatpak is used for specific linux/elec systems.  Only enable if your system requires it."
+msgstr "systemd-run/flatpak ለተወሰኑ linux/elec ስርዓቶች ጥቅም ላይ ይውላል።  ስርዓትዎ የሚፈልገው ከሆነ ብቻ ያንቁ።"
+
+msgctxt "#30418"
+msgid "Prepend systemd-run to Retroarch commands"
+msgstr "በስርዓተ-አሂድ ወደ ድጋሚ ትእዛዞችን ያዘጋጁ"
+
+msgctxt "#30419"
+msgid "Prepend systemd-run to all commands"
+msgstr "ለሁሉም ትዕዛዞች በስርዓተ-አሂድ ያዘጋጁ"
+
+msgctxt "#30420"
+msgid "Prepend flatpak run to Retroarch commands"
+msgstr "Flatpak ወደ Retroarch ትዕዛዞችን ያሂዱ"
+
+msgctxt "#30421"
+msgid "Prepend flatpak run to all commands"
+msgstr "ፕላትፓክን ወደ ሁሉም ትዕዛዞች ያሂዱ"
+
+msgctxt "#30422"
+msgid "Android permissions require a shared storage directory[CR]Enter a shared location that can be accessed by both applications"
+msgstr "የአንድሮይድ ፈቃዶች የጋራ ማከማቻ ማውጫ ያስፈልጋቸዋል[CR] በሁለቱም መተግበሪያዎች ሊደረስበት የሚችል የጋራ መገኛ አካባቢ ያስገቡ"
+
+msgctxt "#30423"
+msgid "Unzip Files"
+msgstr "ፋይሎችን ይንቀሉ"
+
+msgctxt "#30424"
+msgid "No Processing"
+msgstr "ምንም ማቀናበር የለም።"
+
+msgctxt "#30425"
+msgid "Unzip Files, Skip BIOS files"
+msgstr "ፋይሎችን ይክፈቱ ፣ የ BIOS ፋይሎችን ዝለል"
+
+msgctxt "#30426"
+msgid "Unzip Files to Folder"
+msgstr "ፋይሎችን ወደ አቃፊ ይንቀሉ"
+
+msgctxt "#30427"
+msgid "Unzip Files, Move CHD to folder"
+msgstr "ፋይሎችን ይንቀሉ፣ CHD ወደ አቃፊ ይውሰዱ"
+
+msgctxt "#30428"
+msgid "Move files to folder:  arcade"
+msgstr "ፋይሎችን ወደ አቃፊ ውሰድ: arcade"
+
+msgctxt "#30429"
+msgid "Move files to folder:  channelf"
+msgstr "ፋይሎችን ወደ አቃፊ ውሰድ: channelf"
+
+msgctxt "#30430"
+msgid "Move files to folder:  coleco"
+msgstr "ፋይሎችን ወደ አቃፊ ውሰድ: coleco"
+
+msgctxt "#30431"
+msgid "Move files to folder:  fds"
+msgstr "ፋይሎችን ወደ አቃፊ ውሰድ: fds"
+
+msgctxt "#30432"
+msgid "Move files to folder:  gamegear"
+msgstr "ፋይሎችን ወደ አቃፊ ውሰድ: gamegear"
+
+msgctxt "#30433"
+msgid "Move files to folder:  megadrive"
+msgstr "ፋይሎችን ወደ አቃፊ ውሰድ: megadrive"
+
+msgctxt "#30434"
+msgid "Move files to folder:  msx"
+msgstr "ፋይሎችን ወደ አቃፊ ውሰድ: msx"
+
+msgctxt "#30435"
+msgid "Move files to folder:  nes"
+msgstr "ፋይሎችን ወደ አቃፊ ውሰድ: nes"
+
+msgctxt "#30436"
+msgid "Move files to folder:  ngp"
+msgstr "ፋይሎችን ወደ አቃፊ ውሰድ: ngp"
+
+msgctxt "#30437"
+msgid "Move files to folder:  pce"
+msgstr "ፋይሎችን ወደ አቃፊ ውሰድ: pce"
+
+msgctxt "#30438"
+msgid "Move files to folder:  sg1000"
+msgstr "ፋይሎችን ወደ አቃፊ ውሰድ: sg1000"
+
+msgctxt "#30439"
+msgid "Move files to folder:  sgx"
+msgstr "ፋይሎችን ወደ አቃፊ ውሰድ: sgx"
+
+msgctxt "#30440"
+msgid "Move files to folder:  sms"
+msgstr "ፋይሎችን ወደ አቃፊ ውሰድ: sms"
+
+msgctxt "#30441"
+msgid "Move files to folder:  spectrum"
+msgstr "ፋይሎችን ወደ አቃፊ ውሰድ: ስፔክትረም"
+
+msgctxt "#30442"
+msgid "Move files to folder:  tg16"
+msgstr "ፋይሎችን ወደ አቃፊ ውሰድ፡ tg16"
+
+msgctxt "#30443"
+msgid "Are you sure you want to update game list post process?"
+msgstr "እርግጠኛ ነዎት የጨዋታ ዝርዝር ልጥፍ ሂደትን ማዘመን ይፈልጋሉ?"
+
+msgctxt "#30444"
+msgid "Post process updated"
+msgstr "የልጥፍ ሂደት ዘምኗል"
+
+msgctxt "#30445"
+msgid "Update Post Process for {}?[CR][B]This will change settings for all games in this list.[/B]"
+msgstr "የልጥፍ ሂደትን ለ{} አዘምን?[CR][B]ይህ በዚህ ዝርዝር ውስጥ ላሉ ሁሉም ጨዋታዎች ቅንብሮችን ይለውጣል።[/B]"
+
+msgctxt "#30446"
+msgid "Download completed.  Post process files?"
+msgstr "ማውረድ ተጠናቅቋል።  የሂደት ፋይሎች ይለጥፉ?"
+
+msgctxt "#30447"
+msgid "Game files processed"
+msgstr "የጨዋታ ፋይሎች ተካሂደዋል።"
+
+msgctxt "#30448"
+msgid "Not Available (Windows, OSX, Linux Only)"
+msgstr "አይገኝም (Windows፣ OSX፣ Linux only)"
+
+msgctxt "#30449"
+msgid "Netplay Username Type"
+msgstr "Netplay የተጠቃሚ ስም አይነት"
+
+msgctxt "#30450"
+msgid "Select integration for netplay player name"
+msgstr "ለኔትፕሌይ አጫዋች ስም ውህደትን ይምረጡ"
+
+msgctxt "#30451"
+msgid "Use Discord"
+msgstr "Discord ይጠቀሙ"
+
+msgctxt "#30452"
+msgid "Discord enables automated netplay matches (IAGL:  https://discord.gg/DyxADcp)"
+msgstr "Discord አውቶሜትድ የኔትፕሌይ ተዛማጆችን ያስችላል (IAGL፡ https://discord.gg/DyxADcp)"
+
+msgctxt "#30453"
+msgid "Manually enter a Player Name"
+msgstr "የተጫዋች ስም እራስዎ ያስገቡ"
+
+msgctxt "#30454"
+msgid "Player names will be published in the Retroarch Lobby"
+msgstr "የተጫዋቾች ስሞች በ Retroarch Lobby ውስጥ ይታተማሉ"
+
+msgctxt "#30455"
+msgid "Player Name"
+msgstr "የተጫዋች ስም"
+
+msgctxt "#30456"
+msgid "Current Discord User"
+msgstr "የአሁኑ የ Discord ተጠቃሚ"
+
+msgctxt "#30457"
+msgid "Discord User set to [CR]{}"
+msgstr "የ Discord ተጠቃሚ ወደ [CR] ተቀናብሯል"
+
+msgctxt "#30458"
+msgid "View gaming sessions you can join online using Retroarch netplay"
+msgstr "Retroarch netplayን በመጠቀም በመስመር ላይ መቀላቀል የምትችለውን የጨዋታ ክፍለ ጊዜ ተመልከት"
+
+msgctxt "#30459"
+msgid "Unable to find discord user with ID [CR]{}"
+msgstr "መታወቂያ [CR] ያለው የ discord ተጠቃሚ ማግኘት አልተቻለም"
+
+msgctxt "#30460"
+msgid "Lobby Filter Options"
+msgstr "የሎቢ ማጣሪያ አማራጮች"
+
+msgctxt "#30461"
+msgid "Only show rooms that can be entered"
+msgstr "ሊገቡ የሚችሉ ክፍሎችን ብቻ አሳይ"
+
+msgctxt "#30462"
+msgid "Only show rooms that are using libretro"
+msgstr "ሊብሬትሮ የሚጠቀሙ ክፍሎችን ብቻ ያሳዩ"
+
+msgctxt "#30463"
+msgid "Show rooms that have a password"
+msgstr "የይለፍ ቃል ያላቸውን ክፍሎች አሳይ"
+
+msgctxt "#30464"
+msgid "Show rooms that have a spectator password"
+msgstr "የተመልካች ይለፍ ቃል ያላቸውን ክፍሎች አሳይ"
+
+msgctxt "#30465"
+msgid "Show rooms using MITM servers"
+msgstr "MITM አገልጋዮችን በመጠቀም ክፍሎችን አሳይ"
+
+msgctxt "#30466"
+msgid "Only show rooms created within timeframe"
+msgstr "በጊዜ ወሰን ውስጥ የተፈጠሩ ክፍሎችን ብቻ አሳይ"
+
+msgctxt "#30467"
+msgid "30 minutes"
+msgstr "30 ደቂቃዎች"
+
+msgctxt "#30468"
+msgid "60 minutes"
+msgstr "60 ደቂቃዎች"
+
+msgctxt "#30469"
+msgid "Any Timeframe"
+msgstr "ማንኛውም የጊዜ ገደብ"
+
+msgctxt "#30470"
+msgid "Filter the lobby rooms based on creation time"
+msgstr "በፍጥረት ጊዜ ላይ በመመስረት የሎቢ ክፍሎችን ያጣሩ"
+
+msgctxt "#30471"
+msgid "Only show rooms that are using IAGL"
+msgstr "IAGL የሚጠቀሙ ክፍሎችን ብቻ አሳይ"
+
+msgctxt "#30472"
+msgid "Unable to find matching game with name like[CR]{}"
+msgstr "እንደ[CR] ያለ ተዛማጅ ጨዋታ ማግኘት አልተቻለም{}"
+
+msgctxt "#30473"
+msgid "Not Found"
+msgstr "አልተገኘም።"
+
+msgctxt "#30474"
+msgid "Select matching game"
+msgstr "ተዛማጅ ጨዋታ ይምረጡ"
+
+msgctxt "#30475"
+msgid "Netplay launch action"
+msgstr "የኔትፕሌይ ማስጀመሪያ ተግባር"
+
+msgctxt "#30476"
+msgid "Join from retroarch lobby"
+msgstr "ከእንደገና ሎቢ ይቀላቀሉ"
+
+msgctxt "#30477"
+msgid "Join from localhost"
+msgstr "ከ localhost ይቀላቀሉ"
+
+msgctxt "#30478"
+msgid "Select the default action when joining a netplay game"
+msgstr "የnetplay ጨዋታ ሲቀላቀሉ ነባሪውን እርምጃ ይምረጡ"
+
+msgctxt "#30479"
+msgid "Launch as netplay host"
+msgstr "እንደ netplay አስተናጋጅ አስጀምር"
+
+msgctxt "#30480"
+msgid "Rename IAGL Favorite"
+msgstr "IAGL ተወዳጅን እንደገና ይሰይሙ"
+
+msgctxt "#30481"
+msgid "Rename Completed"
+msgstr "ዳግም መሰየም ተጠናቋል"
