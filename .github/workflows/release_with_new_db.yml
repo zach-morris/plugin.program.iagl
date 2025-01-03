@@ -12,7 +12,7 @@ on:
           - No
   push:
     tags:
-      - 'release newdb v*'
+      - 'v*'
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
@@ -36,7 +36,7 @@ jobs:
         uses: thedoctor0/zip-release@0.7.6
         with:
             type: 'zip'
-            filename: 'plugin.program.iagl-${{ steps.getxml.outputs.info }}.zip'
+            filename: 'plugin.program.iagl-${{ steps.get_version.outputs.info }}.zip'
             exclusions: '*.git* /*node_modules/* .editorconfig *.xlsx *iagl_backup.db.zip'
 
       # Step 4: Upload the release
@@ -44,5 +44,6 @@ jobs:
         id: upload_release
         uses: ncipollo/release-action@v1.14.0
         with:
-            artifacts: 'plugin.program.iagl-${{ steps.getxml.outputs.info }}.zip'
+            artifacts: 'plugin.program.iagl-${{ steps.get_version.outputs.info }}.zip'
+            name: 'plugin.program.iagl-${{ steps.get_version.outputs.info }}'
             token: ${{ secrets.GITHUB_TOKEN }}
