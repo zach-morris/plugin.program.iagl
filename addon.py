@@ -1483,22 +1483,22 @@ def add_to_favorites_search(link_name):
 			selected = xbmcgui.Dialog().select(heading=cm.get_loc(30235),list=li,useDetails=False)
 			if isinstance(selected,int):
 				if selected==len(li)-1:
-					new_name = xbmcgui.Dialog().input(heading=cm.get_loc(30089))
-					if isinstance(new_name,str) and len(new_name)>0:
-						result = db.add_favorite(fav_group=new_name,is_search_link=1,link_query=json.dumps(current_search))
+					new_group_name = xbmcgui.Dialog().input(heading=cm.get_loc(30089))
+					if isinstance(new_group_name,str) and len(new_group_name)>0:
+						result = db.add_favorite(fav_link_name=link_name,fav_group=new_group_name,is_search_link=1,link_query=json.dumps(current_search))
 						if isinstance(result,int):
-							ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_name))
+							ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_group_name))
 				else:
-					fav_name = [x.get('label') for x in fav_groups][selected]
-					result = db.add_favorite(fav_group=fav_name,is_search_link=1,link_query=json.dumps(current_search))
+					fav_group_name = [x.get('label') for x in fav_groups][selected]
+					result = db.add_favorite(fav_link_name=link_name,fav_group=fav_group_name,is_search_link=1,link_query=json.dumps(current_search))
 					if isinstance(result,int):
-						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),fav_name))			
+						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),fav_group_name))			
 		else: #No groups defined yet
-			new_name = xbmcgui.Dialog().input(heading=cm.get_loc(30089))
-			if isinstance(new_name,str) and len(new_name)>0:
-				result = db.add_favorite(fav_group=new_name,is_search_link=1,link_query=json.dumps(current_search))
+			new_group_name = xbmcgui.Dialog().input(heading=cm.get_loc(30089))
+			if isinstance(new_group_name,str) and len(new_group_name)>0:
+				result = db.add_favorite(fav_link_name=link_name,fav_group=new_group_name,is_search_link=1,link_query=json.dumps(current_search))
 				if isinstance(result,int):
-					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_name))
+					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_group_name))
 	else:
 		xbmc.log(msg='IAGL:  /add_to_favorites_search query was malformed: {}'.format(current_search),level=xbmc.LOGERROR)
 
@@ -1513,22 +1513,22 @@ def add_to_favorites_random(link_name):
 			selected = xbmcgui.Dialog().select(heading=cm.get_loc(30235),list=li,useDetails=False)
 			if isinstance(selected,int):
 				if selected==len(li)-1:
-					new_name = xbmcgui.Dialog().input(heading=cm.get_loc(30089))
-					if isinstance(new_name,str) and len(new_name)>0:
-						result = db.add_favorite(fav_group=new_name,is_random_link=1,link_query=json.dumps(current_search))
+					new_group_name = xbmcgui.Dialog().input(heading=cm.get_loc(30089))
+					if isinstance(new_group_name,str) and len(new_group_name)>0:
+						result = db.add_favorite(fav_link_name=link_name,fav_group=new_group_name,is_random_link=1,link_query=json.dumps(current_search))
 						if isinstance(result,int):
-							ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_name))
+							ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_group_name))
 				else:
-					fav_name = [x.get('label') for x in fav_groups][selected]
-					result = db.add_favorite(fav_group=fav_name,is_random_link=1,link_query=json.dumps(current_search))
+					fav_group_name = [x.get('label') for x in fav_groups][selected]
+					result = db.add_favorite(fav_link_name=link_name,fav_group=fav_group_name,is_random_link=1,link_query=json.dumps(current_search))
 					if isinstance(result,int):
-						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),fav_name))			
+						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),fav_group_name))			
 		else: #No groups defined yet
-			new_name = xbmcgui.Dialog().input(heading=cm.get_loc(30089))
-			if isinstance(new_name,str) and len(new_name)>0:
-				result = db.add_favorite(fav_group=new_name,is_random_link=1,link_query=json.dumps(current_search))
+			new_group_name = xbmcgui.Dialog().input(heading=cm.get_loc(30089))
+			if isinstance(new_group_name,str) and len(new_group_name)>0:
+				result = db.add_favorite(fav_link_name=link_name,fav_group=new_group_name,is_random_link=1,link_query=json.dumps(current_search))
 				if isinstance(result,int):
-					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_name))
+					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_group_name))
 	else:
 		xbmc.log(msg='IAGL:  /add_to_favorites_random query was malformed: {}'.format(current_search),level=xbmc.LOGERROR)
 
@@ -1544,6 +1544,19 @@ def remove_link_from_favorites():
 				xbmc.sleep(config.defaults.get('sleep'))
 				xbmc.executebuiltin('Container.Refresh')
 
+@plugin.route('/context_menu/action/rename_link_from_favorites/<link_id>')
+def rename_link_from_favorites(link_id):
+	xbmc.log(msg='IAGL:  /rename_link_from_favorites/{}'.format(link_id),level=xbmc.LOGDEBUG)
+	if isinstance(xbmc.getInfoLabel('ListItem.FileNameAndPath'),str) and isinstance(xbmc.getInfoLabel('ListItem.FileNameAndPath').split('query=')[-1],str) and len(xbmc.getInfoLabel('ListItem.FileNameAndPath').split('query=')[-1])>0:
+		link_query = unquote(xbmc.getInfoLabel('ListItem.FileNameAndPath').split('query=')[-1]).replace('"','""')
+		new_name = xbmcgui.Dialog().input(heading=cm.get_loc(30230),defaultt=xbmc.getInfoLabel('ListItem.Label'))
+		if isinstance(new_name,str) and len(new_name)>0 and isinstance(link_query,str) and len(link_query)>0:
+			result = db.rename_favorite_link(new_name=new_name,link_query=link_query)
+			if isinstance(result,int) and result>0:
+				ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30481))
+				xbmc.sleep(config.defaults.get('sleep'))
+				xbmc.executebuiltin('Container.Refresh')
+				
 @plugin.route('/context_menu/action/update_launcher/<game_list_id>')
 def update_game_list_launcher(game_list_id):
 	xbmc.log(msg='IAGL:  /update_game_list_launcher',level=xbmc.LOGDEBUG)

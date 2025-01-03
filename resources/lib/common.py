@@ -1009,7 +1009,8 @@ class common(object):
 										(self.get_loc(30250),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_list_post_process_from_uid/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30328),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/reset_game_list_settings_from_uid/{})'.format(ip.split('/')[-1]))])
 		if type_in == 'remove_fav_link' and isinstance(ip,str):
-			li_out.addContextMenuItems([(self.get_loc(30237),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/remove_link_from_favorites)')])
+			li_out.addContextMenuItems([(self.get_loc(30480),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/rename_link_from_favorites/{})'.format(ip.split('/')[-1])),
+										(self.get_loc(30237),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/remove_link_from_favorites)')])
 		if type_in == 'game_list' and isinstance(ip,str):
 			li_out.addContextMenuItems([(self.get_loc(30303),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/get_game_list_info/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30246),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_launcher/{})'.format(ip.split('/')[-1])),

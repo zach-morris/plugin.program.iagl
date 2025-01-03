@@ -134,13 +134,13 @@ class database(object):
 		else:
 			return 0
 
-	def add_favorite(self,game_id=None,fav_group=None,is_search_link=0,is_random_link=0,link_query=None):
+	def add_favorite(self,game_id=None,fav_link_name=None,fav_group=None,is_search_link=0,is_random_link=0,link_query=None):
 		result = None
 		try:
 			with closing(sqlite3.connect(self.config.files.get('db'))) as conn:
 				with closing(conn.cursor()) as cursor:
 					# (uid,fav_group,is_search_link,is_random_link,link_name)
-					cursor.execute(self.config.database.get('query').get('insert_favorite'),(game_id,fav_group,is_search_link,is_random_link,link_query))
+					cursor.execute(self.config.database.get('query').get('insert_favorite'),(game_id,fav_link_name,fav_group,is_search_link,is_random_link,link_query))
 					conn.commit()
 					result = cursor.lastrowid
 		except Exception as exc:
@@ -187,6 +187,21 @@ class database(object):
 				with closing(sqlite3.connect(self.config.files.get('db'))) as conn:
 					with closing(conn.cursor()) as cursor:
 						cursor.execute(self.config.database.get('query').get('mark_game_as_favorite').format(game_id))
+						conn.commit()
+						result = cursor.rowcount
+			except Exception as exc:
+				xbmc.log(msg='IAGL:  SQL Error: {}'.format(exc),level=xbmc.LOGERROR)
+		return result
+
+	def rename_favorite_link(self,new_name=None,link_query=None):
+		result = None
+		if isinstance(new_name,str) and isinstance(link_query,str):
+			if self.config.debug.get('print_query'):
+				xbmc.log(msg='IAGL: SQL STATEMENT: {}'.format(self.config.database.get('query').get('rename_favorite_link').format(new_name,link_query)),level=xbmc.LOGDEBUG)
+			try:
+				with closing(sqlite3.connect(self.config.files.get('db'))) as conn:
+					with closing(conn.cursor()) as cursor:
+						cursor.execute(self.config.database.get('query').get('rename_favorite_link').format(new_name,link_query))
 						conn.commit()
 						result = cursor.rowcount
 			except Exception as exc:
