@@ -36,6 +36,8 @@ jobs:
         uses: thedoctor0/zip-release@0.7.6
         with:
             type: 'zip'
+            path: 'plugin.program.iagl'
+            command: 'mkdir plugin.program.iagl; mv * plugin.program.iagl'
             filename: 'plugin.program.iagl-${{ steps.get_version.outputs.info }}.zip'
             exclusions: '*.git* /*node_modules/* .editorconfig *.xlsx *iagl_backup.db.zip'
 
