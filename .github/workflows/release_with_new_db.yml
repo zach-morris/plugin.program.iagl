@@ -1,5 +1,15 @@
 name: Release IAGL new db
 on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Manually Release'
+        required: true
+        default: Yes
+        type: choice
+        options:
+          - Yes
+          - No
   push:
     tags:
       - 'release newdb v*'
