@@ -2194,6 +2194,16 @@ def wizard_start():
 			xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='ia_p',value=selected)
 		else:
 			xbmc.log(msg='IAGL: User entered password appears invalid {}'.format(selected),level=xbmc.LOGERROR)
+	if xbmcgui.Dialog().yesno(cm.get_loc(30067),cm.get_loc(30482)):
+		current_choice = config.addon.get('addon_handle').getSetting(id='game_cache_size')
+		if isinstance(current_choice,str) and current_choice.isdigit():
+			pre_selected = int(current_choice)
+		else:
+			pre_selected = '0'
+		selected = xbmcgui.Dialog().select(heading=cm.get_loc(30067),list=list(config.settings.get('game_cache_size').get('options_to_string').values()),useDetails=False,preselect=pre_selected)
+		if selected>-1:
+			xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='game_cache_size',value=str(selected))
+			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30483).format(config.settings.get('game_cache_size').get('options_to_string').get(selected)))
 	if xbmcgui.Dialog().yesno(cm.get_loc(30233),cm.get_loc(30381)):
 		xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='wizard_run',value='true')
 		xbmc.playSFX(str(config.files.get('sounds').get('wizard_done')),False)

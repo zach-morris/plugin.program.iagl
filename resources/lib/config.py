@@ -214,6 +214,7 @@ class config(object):
 		self.settings['kodi_saa']['default'] = 'activities'
 		self.settings['game_cache_size'] = dict()
 		self.settings['game_cache_size']['options'] = dict(zip(['0','1','2','3','4','5','6','7','8','9','10'],[0,1024*1024*25,1024*1024*50,1024*1024*100,1024*1024*200,1024*1024*500,1024*1024*1000,1024*1024*2000,1024*1024*5000,1024*1024*10000,1024*1024*20000]))
+		self.settings['game_cache_size']['options_to_string'] = dict(zip([0,1,2,3,4,5,6,7,8,9,10],['Zero (Current Game Only)','25 MB','50 MB','100 MB','200 MB','500 MB','1 GB','2 GB','5 GB','10 GB','20 GB']))
 		self.settings['game_cache_size']['default'] = 0
 		self.settings['if_game_exists'] = dict()
 		self.settings['if_game_exists']['options'] = dict(zip(['0','1','2',],[0,1,2]))
