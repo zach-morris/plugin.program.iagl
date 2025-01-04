@@ -1,0 +1,51 @@
+name: Release IAGL existing db
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Manually Release'
+        required: true
+        default: Yes
+        type: choice
+        options:
+          - Yes
+          - No
+  push:
+    tags:
+      - 'u*'
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Code
+        id: checkout
+        uses: actions/checkout@master
+
+      # Step 2: Extract the version tag from addon.xml
+      - name: Get Version from addon.xml
+        id: get_version
+        uses: mavrosxristoforos/get-xml-info@2.0
+        with:
+            xml-file: 'addon.xml'
+            xpath: '/addon/@version'
+
+      # Step 3: Create a zip file of the latest release
+      - name: Generate Release Archive
+        id: create_zip
+        uses: thedoctor0/zip-release@0.7.6
+        with:
+            type: 'zip'
+            path: 'plugin.program.iagl'
+            command: 'mkdir plugin.program.iagl; mv * plugin.program.iagl'
+            filename: 'plugin.program.iagl-${{ steps.get_version.outputs.info }}.zip'
+            exclusions: '*.git* /*node_modules/* .editorconfig *.xlsx *iagl.db.zip'
+
+      # Step 4: Upload the release
+      - name: Upload Release
+        id: upload_release
+        uses: ncipollo/release-action@v1.14.0
+        with:
+            artifacts: 'plugin.program.iagl-${{ steps.get_version.outputs.info }}.zip'
+            name: 'plugin.program.iagl-${{ steps.get_version.outputs.info }}'
+            token: ${{ secrets.GITHUB_TOKEN }}

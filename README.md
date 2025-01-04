@@ -39,7 +39,7 @@ See the [wiki](https://github.com/zach-morris/plugin.program.iagl/wiki)
 
 and
 
-See the [FAQ](https://github.com/zach-morris/plugin.program.iagl/wiki/5.--FAQ)
+See the [FAQ](https://github.com/zach-morris/plugin.program.iagl/wiki/4.--FAQ)
 
 and
 
