@@ -27,10 +27,14 @@ or
 - Download the latest version zipfile from [here](https://github.com/zach-morris/repository.zachmorris/tree/master/plugin.program.iagl) to install by zipfile.
 
 **NOTE**
+
 The addon in the repository is for Kodi v20 now.
 Users of Kodi v19 or earlier have to manually install and earlier of the addon from [here](https://github.com/zach-morris/repository.zachmorris/tree/master/plugin.program.iagl) (there is no more repository for the old version, support or maintenenance for older versions is not available).
 
+
 **NOTE**
+
+
 IAGL > v4.0 is *not compatible* with earlier versions.  Any settings/game lists/favorties/etc cannot be transferred.  _Do not upgrade_ if you want to keep your old setup.  Alternatively, take the plunge and try this new one!
 
 Help
