@@ -376,11 +376,11 @@ class post_process(object):
 			if isinstance(game_name,str):
 				self.game_name = game_name
 
-		def process_games(self): #No process = just pass the first game file back to launch
+		def process_games(self): 
 			output = dict()
 			if isinstance(self.rom,list):
 				output['rom'] = self.rom
-				output['launch_file'] = next(iter([str(x.get('dl_filepath') or x.get('matching_files')) for x in self.rom]),None)
+				output['launch_file'] = next(iter([str(x.get('dl_filepath') or x.get('matching_files')) for x in self.rom]),None) #No process = just pass the first game file back to launch
 				if isinstance(output.get('launch_file'),str) and xbmcvfs.exists(output.get('launch_file')):
 					output['process_success'] = True
 					xbmc.log(msg='IAGL:  Move chd to folder process identified launch file as {}'.format(output.get('launch_file')),level=xbmc.LOGDEBUG)
