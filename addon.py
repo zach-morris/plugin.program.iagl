@@ -76,9 +76,8 @@ def view_browse():
 @plugin.route('/all')
 def view_all():
 	xbmc.log(msg='IAGL:  /all',level=xbmc.LOGDEBUG)
-	# choose_from_list will be replaced by setting
 	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format(item_path,'choose_from_list')),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_list'),True) if isinstance(list_item.getProperty('total_games'),str) and list_item.getProperty('total_games').isdigit() and int(list_item.getProperty('total_games'))>1 else (plugin.url_for_path('{}/{}'.format(item_path,'by_all')),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_list'),True) for list_item,item_path in db.query_db(db.get_query('all_game_lists',game_list_fanart_to_art=cm.get_setting('game_list_fanart_to_art'),game_list_clearlogo_to_art=cm.get_setting('game_list_clearlogo_to_art'))) if isinstance(list_item,xbmcgui.ListItem)])
+	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format(item_path,cm.get_setting('game_list_page_display'))),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_list'),True) if isinstance(list_item.getProperty('total_games'),str) and list_item.getProperty('total_games').isdigit() and int(list_item.getProperty('total_games'))>1 else (plugin.url_for_path('{}/{}'.format(item_path,'by_all')),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_list'),True) for list_item,item_path in db.query_db(db.get_query('all_game_lists',game_list_fanart_to_art=cm.get_setting('game_list_fanart_to_art'),game_list_clearlogo_to_art=cm.get_setting('game_list_clearlogo_to_art'))) if isinstance(list_item,xbmcgui.ListItem)])
 	for sm in config.listitem.get('sort_methods').get('all'):
 		xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -108,7 +107,7 @@ def view_by_category(category_id):
 	else:
 		xbmc.log(msg='IAGL:  /by_category/{}'.format(category_id),level=xbmc.LOGDEBUG)
 		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format(item_path,'choose_from_list')),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_list'),True) if isinstance(list_item.getProperty('total_games'),str) and list_item.getProperty('total_games').isdigit() and int(list_item.getProperty('total_games'))>1 else (plugin.url_for_path('{}/{}'.format(item_path,'by_all')),list_item,True) for list_item,item_path in db.query_db(db.get_query('game_lists_by_category',category_id=category_id,game_list_fanart_to_art=cm.get_setting('game_list_fanart_to_art'),game_list_clearlogo_to_art=cm.get_setting('game_list_clearlogo_to_art'))) if isinstance(list_item,xbmcgui.ListItem)])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format(item_path,cm.get_setting('game_list_page_display'))),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_list'),True) if isinstance(list_item.getProperty('total_games'),str) and list_item.getProperty('total_games').isdigit() and int(list_item.getProperty('total_games'))>1 else (plugin.url_for_path('{}/{}'.format(item_path,'by_all')),list_item,True) for list_item,item_path in db.query_db(db.get_query('game_lists_by_category',category_id=category_id,game_list_fanart_to_art=cm.get_setting('game_list_fanart_to_art'),game_list_clearlogo_to_art=cm.get_setting('game_list_clearlogo_to_art'))) if isinstance(list_item,xbmcgui.ListItem)])
 		for sm in config.listitem.get('sort_methods').get('by_category'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -2275,7 +2274,8 @@ def wizard_start():
 			found_core_dir = xbmcgui.Dialog().input(heading=cm.get_loc(30362))
 			if isinstance(found_core_dir,str) and len(found_core_dir)>0:
 				xbmcaddon.Addon(id=config.addon.get('addon_name')).setSetting(id='ra_cores_path_android',value=found_core_dir)
-		if cm.get_setting('user_launch_os') in config.settings.get('user_launch_os').get('android_options'):
+		#Query about alt path if not already set
+		if cm.get_setting('user_launch_os') in config.settings.get('user_launch_os').get('android_options') and (isinstance(cm.get_setting('alt_temp_dl'),str) and len(cm.get_setting('alt_temp_dl'))==0 or not isinstance(cm.get_setting('alt_temp_dl'),str)):
 			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30201),cm.get_loc(30422))
 			result = xbmcgui.Dialog().browse(type=0,heading=cm.get_loc(30356),shares='')
 			if isinstance(result,str) and xbmcvfs.exists(result):

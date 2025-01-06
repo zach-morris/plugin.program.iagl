@@ -75,6 +75,26 @@
 						<heading>30069</heading>
 					</control>
 				</setting>
+				<setting id="game_list_page_display" label="30484" help="30485" type="integer">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="30070">0</option>
+							<option label="30011">1</option>
+							<option label="30012">2</option>
+							<option label="30013">3</option>
+							<option label="30014">4</option>
+							<option label="30015">5</option>
+							<option label="30016">6</option>
+							<option label="30017">7</option>
+							<option label="30018">8</option>
+						</options>
+					</constraints>
+					<control format="string" type="list">
+						<heading>30484</heading>
+					</control>
+				</setting>
 				<setting id="favorites_page_display" label="30240" help="30241" type="integer">
 					<level>0</level>
 					<default>0</default>

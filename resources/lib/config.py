@@ -99,6 +99,9 @@ class config(object):
 		self.settings['front_page_display'] = dict() 
 		self.settings['front_page_display']['options'] = dict(zip(['0','1','2','3','4','5','6','7'],['/browse','/all','/categories','/playlists','/favorites','/history','/search','/random']))
 		self.settings['front_page_display']['default'] = '/browse'
+		self.settings['game_list_page_display'] = dict() 
+		self.settings['game_list_page_display']['options'] = dict(zip(['0','1','2','3','4','5','6','7','8'],['choose_from_list','by_all','by_alpha','by_genre','by_year','by_players','by_studio','by_tag','by_group']))
+		self.settings['game_list_page_display']['default'] = 'choose_from_list'
 		self.settings['favorites_page_display'] = dict() 
 		self.settings['favorites_page_display']['options'] = dict(zip(['0','1','2'],['/favorites','/view_favorites/by_all','/view_favorites/by_group']))
 		self.settings['favorites_page_display']['default'] = '/browse'
