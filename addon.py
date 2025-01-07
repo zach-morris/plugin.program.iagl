@@ -13,7 +13,6 @@ from resources.lib import post_process
 from resources.lib import launch
 from resources.lib import common
 from resources.lib import dialogs
-from urllib.parse import unquote
 # ## Plugin Initialization Stuff ##
 # SLEEP_HACK=50  #https://github.com/xbmc/xbmc/issues/18576
 plugin = routing.Plugin()
@@ -1534,8 +1533,8 @@ def add_to_favorites_random(link_name):
 @plugin.route('/context_menu/action/remove_link_from_favorites')
 def remove_link_from_favorites():
 	xbmc.log(msg='IAGL:  /remove_link_from_favorites',level=xbmc.LOGDEBUG)
-	if isinstance(xbmc.getInfoLabel('ListItem.FileNameAndPath'),str) and isinstance(xbmc.getInfoLabel('ListItem.FileNameAndPath').split('query=')[-1],str) and len(xbmc.getInfoLabel('ListItem.FileNameAndPath').split('query=')[-1])>0:
-		query_in = unquote(xbmc.getInfoLabel('ListItem.FileNameAndPath').split('query=')[-1]).replace('"','""')
+	if isinstance(xbmc.getInfoLabel('ListItem.Property(link_query)'),str) and len(xbmc.getInfoLabel('ListItem.Property(link_query)'))>0:
+		query_in = xbmc.getInfoLabel('ListItem.Property(link_query)').replace('"','""')
 		if xbmcgui.Dialog().yesno(cm.get_loc(30237),cm.get_loc(30238)):
 			result = db.delete_favorite_from_link(query_in=query_in)
 			if isinstance(result,int) and result>0:
@@ -1546,8 +1545,8 @@ def remove_link_from_favorites():
 @plugin.route('/context_menu/action/rename_link_from_favorites/<link_id>')
 def rename_link_from_favorites(link_id):
 	xbmc.log(msg='IAGL:  /rename_link_from_favorites/{}'.format(link_id),level=xbmc.LOGDEBUG)
-	if isinstance(xbmc.getInfoLabel('ListItem.FileNameAndPath'),str) and isinstance(xbmc.getInfoLabel('ListItem.FileNameAndPath').split('query=')[-1],str) and len(xbmc.getInfoLabel('ListItem.FileNameAndPath').split('query=')[-1])>0:
-		link_query = unquote(xbmc.getInfoLabel('ListItem.FileNameAndPath').split('query=')[-1]).replace('"','""')
+	if isinstance(xbmc.getInfoLabel('ListItem.Property(link_query)'),str) and len(xbmc.getInfoLabel('ListItem.Property(link_query)'))>0:
+		link_query = xbmc.getInfoLabel('ListItem.Property(link_query)').replace('"','""')
 		new_name = xbmcgui.Dialog().input(heading=cm.get_loc(30230),defaultt=xbmc.getInfoLabel('ListItem.Label'))
 		if isinstance(new_name,str) and len(new_name)>0 and isinstance(link_query,str) and len(link_query)>0:
 			result = db.rename_favorite_link(new_name=new_name,link_query=link_query)
@@ -1555,6 +1554,8 @@ def rename_link_from_favorites(link_id):
 				ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30481))
 				xbmc.sleep(config.defaults.get('sleep'))
 				xbmc.executebuiltin('Container.Refresh')
+	else:
+		xbmc.log(msg='IAGL: Error finding link_query for link_id {}'.format(link_id),level=xbmc.LOGERROR)
 				
 @plugin.route('/context_menu/action/update_launcher/<game_list_id>')
 def update_game_list_launcher(game_list_id):
