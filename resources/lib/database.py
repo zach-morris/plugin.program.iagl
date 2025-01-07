@@ -208,6 +208,21 @@ class database(object):
 				xbmc.log(msg='IAGL:  SQL Error: {}'.format(exc),level=xbmc.LOGERROR)
 		return result
 
+	def rename_favorites_group(self,new_name=None,group_name=None):
+		result = None
+		if isinstance(new_name,str) and isinstance(group_name,str):
+			if self.config.debug.get('print_query'):
+				xbmc.log(msg='IAGL: SQL STATEMENT: {}'.format(self.config.database.get('query').get('rename_favorites_group').format(new_name,group_name)),level=xbmc.LOGDEBUG)
+			try:
+				with closing(sqlite3.connect(self.config.files.get('db'))) as conn:
+					with closing(conn.cursor()) as cursor:
+						cursor.execute(self.config.database.get('query').get('rename_favorites_group').format(new_name,group_name))
+						conn.commit()
+						result = cursor.rowcount
+			except Exception as exc:
+				xbmc.log(msg='IAGL:  SQL Error: {}'.format(exc),level=xbmc.LOGERROR)
+		return result
+
 	def add_history(self,game_id=None,insert_time=None):
 		result = None
 		delete_first_result = self.delete_history_from_uid(game_id=game_id) #Remove the last time the game was played from history first

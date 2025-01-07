@@ -23,7 +23,7 @@ db = database.database(config=config,media_type=cm.get_setting('media_type'))
 dl = download.download(config=config,ia_email=cm.get_setting('ia_u'),ia_password=cm.get_setting('ia_p'),dl_path=cm.get_setting('default_dl_path'),threads=cm.get_setting('dl_threads'),auto_login=False,if_game_exists=cm.get_setting('if_game_exists'),ige_dialog={'heading':cm.get_loc(30331),'list':[cm.get_loc(30055),cm.get_loc(30056)]}) #Dont login right away for speed, only set the dl path to the current default
 nt = netplay.netplay(config=config)
 pp = post_process.post_process(config=config)
-ln = launch.launch(config=config,user_launch_os=cm.get_setting('user_launch_os'),kodi_suspend=cm.get_setting('kodi_suspend'),kodi_media_stop=cm.get_setting('kodi_media_stop'),kodi_saa=cm.get_setting('kodi_saa'),kodi_wfr=cm.get_setting('kodi_wfr'))
+ln = launch.launch(config=config,user_launch_os=cm.get_setting('user_launch_os'),kodi_suspend=cm.get_setting('kodi_suspend'),kodi_media_stop=cm.get_setting('kodi_media_stop'),kodi_saa=cm.get_setting('kodi_saa'),kodi_wfr=cm.get_setting('kodi_wfr'),ra_app_path=cm.get_setting('ra_app_path'),ra_cores_path_override=cm.get_setting('ra_cores_path_override'))
 dialogs = dialogs.dialogs(config=config)
 
 # ## Plugin Routes ##
@@ -163,7 +163,7 @@ def view_favorites_by(choose_id):
 			xbmcplugin.endOfDirectory(plugin.handle)
 	else: #by_fav_group
 		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format('view_favorites_group',item_path)),list_item,True) for list_item,item_path in db.query_db(db.get_query('favorites_by_group')) if isinstance(list_item,xbmcgui.ListItem)])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format('view_favorites_group',item_path)),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_favorites_group_context_menu'),True) for list_item,item_path in db.query_db(db.get_query('favorites_by_group')) if isinstance(list_item,xbmcgui.ListItem)])
 		for sm in config.listitem.get('sort_methods').get('categories'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
 		xbmcplugin.endOfDirectory(plugin.handle)
@@ -1107,11 +1107,6 @@ def view_game_list(game_list_id,choose_id):
 			for sm in config.listitem.get('sort_methods').get('games'):
 				xbmcplugin.addSortMethod(plugin.handle,sm)
 	else:
-		# Possibly update this if I can understand art types for other media types
-		# if choose_id in config.settings.get('media_types').keys():
-		# 	print(config.settings.get('media_types').get(choose_id))
-		# 	xbmcplugin.setContent(plugin.handle,config.settings.get('media_types').get(choose_id))
-		# else:
 		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
 		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}/{}/{}'.format('game_list',game_list_id,choose_id,item_path)),list_item,True) for list_item,item_path in db.query_db(db.get_query(choose_id,game_list_id=game_list_id)) if isinstance(list_item,xbmcgui.ListItem)])
 		for sm in config.listitem.get('sort_methods').get('game_list_choice_by'):
@@ -1541,6 +1536,8 @@ def remove_link_from_favorites():
 				ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30237),cm.get_loc(30239))
 				xbmc.sleep(config.defaults.get('sleep'))
 				xbmc.executebuiltin('Container.Refresh')
+	else:
+		xbmc.log(msg='IAGL: Error finding link_query for current listitem',level=xbmc.LOGERROR)
 
 @plugin.route('/context_menu/action/rename_link_from_favorites/<link_id>')
 def rename_link_from_favorites(link_id):
@@ -1556,7 +1553,18 @@ def rename_link_from_favorites(link_id):
 				xbmc.executebuiltin('Container.Refresh')
 	else:
 		xbmc.log(msg='IAGL: Error finding link_query for link_id {}'.format(link_id),level=xbmc.LOGERROR)
-				
+		
+@plugin.route('/context_menu/action/rename_favorites_group/<group_name>')
+def rename_favorites_group(group_name):
+	xbmc.log(msg='IAGL:  /rename_favorites_group/{}'.format(group_name),level=xbmc.LOGDEBUG)
+	new_name = xbmcgui.Dialog().input(heading=cm.get_loc(30486),defaultt=group_name)
+	if isinstance(new_name,str) and len(new_name)>0 and isinstance(group_name,str) and len(group_name)>0:
+		result = db.rename_favorites_group(new_name=new_name,group_name=group_name)
+		if isinstance(result,int) and result>0:
+			ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),cm.get_loc(30487).format(new_name))
+			xbmc.sleep(config.defaults.get('sleep'))
+			xbmc.executebuiltin('Container.Refresh')
+
 @plugin.route('/context_menu/action/update_launcher/<game_list_id>')
 def update_game_list_launcher(game_list_id):
 	xbmc.log(msg='IAGL:  /update_game_list_launcher',level=xbmc.LOGDEBUG)

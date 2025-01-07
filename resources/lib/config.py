@@ -22,7 +22,7 @@ class config(object):
 		self.addon['addon_handle'] = xbmcaddon.Addon(id=self.addon.get('addon_name'))	
 		self.addon['version'] = self.addon.get('addon_handle').getAddonInfo('version')
 		#Debug
-		self.debug['print_query'] = True
+		self.debug['print_query'] = False
 		self.debug['factory_debug'] = False
 		#Paths
 		self.paths['self'] = Path(__file__)
@@ -106,9 +106,9 @@ class config(object):
 		self.settings['favorites_page_display']['options'] = dict(zip(['0','1','2'],['/favorites','/view_favorites/by_all','/view_favorites/by_group']))
 		self.settings['favorites_page_display']['default'] = '/browse'
 		self.settings['media_type_game'] = dict() 
-		self.settings['media_type_game']['options'] = dict(zip(['0','1','2'],['tvshows','movies','games']))
-		self.settings['media_type_game']['default'] = 'tvshows'
-		self.settings['media_type_game']['listitem_type'] = dict(zip(['tvshows','movies','games'],['video','video','game']))
+		self.settings['media_type_game']['options'] = dict(zip(['0','1','2'],['episodes','movies','games']))
+		self.settings['media_type_game']['default'] = 'episodes'
+		self.settings['media_type_game']['listitem_type'] = dict(zip(['episodes','tvshows','movies','games'],['video','video','video','game']))
 		self.settings['media_types'] = dict()
 		self.settings['media_types']['by_genre'] = 'genres'
 		self.settings['media_types']['by_studio'] = 'studios'
@@ -973,6 +973,7 @@ class config(object):
 		self.database['query']['delete_favorite_from_uid'] = 'DELETE FROM favorites WHERE uid="{}"'
 		self.database['query']['delete_favorite_from_link'] = 'DELETE FROM favorites WHERE link_query="{}"'
 		self.database['query']['rename_favorite_link'] = ('UPDATE favorites SET fav_link_name="{}" WHERE link_query="{}"')
+		self.database['query']['rename_favorites_group'] = ('UPDATE favorites SET fav_group="{}" WHERE fav_group="{}"')
 		self.database['query']['search_games'] = ('SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.system as "tvshowtitle",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,title_paths.url||games_table.art_title as landscape,snapshot_paths.url||games_table.art_snapshot as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
 												'FROM games as games_table\n'
 												'LEFT JOIN game_list as game_lists_table\n'

@@ -185,12 +185,12 @@ class launch(object):
 				self.current_launch_command = self.launch_parameters.get('launch_process')
 			if isinstance(self.current_launch_command,str):
 				if isinstance(self.rom,dict) and isinstance(self.rom.get('launch_file'),str):
-					if isisntance(ra_app_path,str):
-						self.current_launch_command = self.current_launch_command.replace('XXAPP_PATH_RAXX',ra_app_path)
-						self.current_launch_command = self.current_launch_command.replace('XXAPP_PATH_PARENT_RAXX',str(Path(ra_app_path).parent))
-					if isisntance(ra_cores_path_override,str):
-						self.current_launch_command = self.current_launch_command.replace('XXRA_CORE_PATHXX',ra_cores_path_override)
-						self.current_launch_command = self.current_launch_command.replace('XXRA_CORE_PATH_PARENTXX',str(Path(ra_cores_path_override).parent))
+					if isinstance(self.ra_app_path,str):
+						self.current_launch_command = self.current_launch_command.replace('XXAPP_PATH_RAXX',self.ra_app_path)
+						self.current_launch_command = self.current_launch_command.replace('XXAPP_PATH_PARENT_RAXX',str(Path(self.ra_app_path).parent))
+					if isinstance(self.ra_cores_path_override,str):
+						self.current_launch_command = self.current_launch_command.replace('XXRA_CORE_PATHXX',self.ra_cores_path_override)
+						self.current_launch_command = self.current_launch_command.replace('XXRA_CORE_PATH_PARENTXX',str(Path(self.ra_cores_path_override).parent))
 					self.current_launch_command = self.current_launch_command.replace('XXROM_PATHXX',self.rom.get('launch_file'))
 					self.current_launch_command = self.current_launch_command.replace('XXROM_NAMEXX',Path(self.rom.get('launch_file')).name)
 					self.current_launch_command = self.current_launch_command.replace('XXROM_NAME_QUOTEDXX',url_quote(Path(self.rom.get('launch_file')).name))

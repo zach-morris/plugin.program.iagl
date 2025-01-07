@@ -1019,6 +1019,8 @@ class common(object):
 										(self.get_loc(30248),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_dl_path/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30250),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_list_post_process/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30328),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/reset_game_list_settings/{})'.format(ip.split('/')[-1]))])
+		if type_in == 'game_favorites_group_context_menu' and isinstance(ip,str):
+			li_out.addContextMenuItems([(self.get_loc(30486),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/rename_favorites_group/{})'.format(ip.split('/')[-1]))])
 		return li_out
 
 	def get_current_launcher(self,params_in):
