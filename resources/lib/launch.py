@@ -9,7 +9,7 @@ from urllib.parse import quote as url_quote
 from subprocess import Popen, TimeoutExpired, PIPE, STDOUT
 
 class launch(object):
-	def __init__(self,config=None,rom=None,list_item=None,game_name=None,launcher=None,launch_parameters=None,user_launch_os=None,kodi_suspend=None,kodi_media_stop=None,kodi_saa=None,kodi_wfr=None,applaunch=None,appause=None):
+	def __init__(self,config=None,rom=None,list_item=None,game_name=None,launcher=None,launch_parameters=None,user_launch_os=None,kodi_suspend=None,kodi_media_stop=None,kodi_saa=None,kodi_wfr=None,applaunch=None,appause=None,ra_app_path=None,ra_cores_path_override=None):
 		self.config = config
 		self.rom = rom
 		self.list_item = list_item
@@ -22,6 +22,8 @@ class launch(object):
 		self.kodi_wfr=kodi_wfr
 		self.appause=appause
 		self.applaunch=applaunch
+		self.ra_app_path=ra_app_path
+		self.ra_cores_path_override=ra_cores_path_override
 		self.set_launcher(launcher=launcher)
 		self.set_launch_parameters(launch_parameters=launch_parameters)
 		self.set_list_item(list_item=list_item)
@@ -68,7 +70,7 @@ class launch(object):
 			if self.user_launch_os in self.config.settings.get('user_launch_os').get('android_options'):
 				self.launcher = self.external_android(config=self.config,rom=self.rom,game_name=self.game_name,launch_parameters=self.launch_parameters,kodi_suspend=self.kodi_suspend,kodi_media_stop=self.kodi_media_stop,kodi_wfr=self.kodi_wfr)
 			elif self.user_launch_os is not None:
-				self.launcher = self.external(config=self.config,rom=self.rom,game_name=self.game_name,launch_parameters=self.launch_parameters,kodi_suspend=self.kodi_suspend,kodi_media_stop=self.kodi_media_stop,kodi_wfr=self.kodi_wfr,appause=self.appause,applaunch=self.applaunch)
+				self.launcher = self.external(config=self.config,rom=self.rom,game_name=self.game_name,launch_parameters=self.launch_parameters,kodi_suspend=self.kodi_suspend,kodi_media_stop=self.kodi_media_stop,kodi_wfr=self.kodi_wfr,appause=self.appause,applaunch=self.applaunch,ra_app_path=self.ra_app_path,ra_cores_path_override=self.ra_cores_path_override)
 			else:
 				xbmc.log(msg='IAGL:  No User OS set in launch settings',level=xbmc.LOGERROR)
 		else:
@@ -142,7 +144,7 @@ class launch(object):
 			return self.rom
 
 	class external(object):
-		def __init__(self,config=None,rom=None,game_name=None,launch_parameters=None,kodi_suspend=None,kodi_media_stop=None,kodi_wfr=None,appause=None,applaunch=None):
+		def __init__(self,config=None,rom=None,game_name=None,launch_parameters=None,kodi_suspend=None,kodi_media_stop=None,kodi_wfr=None,appause=None,applaunch=None,ra_app_path=None,ra_cores_path_override=None):
 			self.config = config
 			self.rom = rom
 			self.game_name = game_name
@@ -152,6 +154,8 @@ class launch(object):
 			self.kodi_wfr = kodi_wfr
 			self.appause = appause
 			self.applaunch = applaunch
+			self.ra_app_path=ra_app_path
+			self.ra_cores_path_override=ra_cores_path_override
 			self.current_launch_command = None
 			self.io_is_suspended = False
 			self.current_launch_log = list()
@@ -181,6 +185,12 @@ class launch(object):
 				self.current_launch_command = self.launch_parameters.get('launch_process')
 			if isinstance(self.current_launch_command,str):
 				if isinstance(self.rom,dict) and isinstance(self.rom.get('launch_file'),str):
+					if isisntance(ra_app_path,str):
+						self.current_launch_command = self.current_launch_command.replace('XXAPP_PATH_RAXX',ra_app_path)
+						self.current_launch_command = self.current_launch_command.replace('XXAPP_PATH_PARENT_RAXX',str(Path(ra_app_path).parent))
+					if isisntance(ra_cores_path_override,str):
+						self.current_launch_command = self.current_launch_command.replace('XXRA_CORE_PATHXX',ra_cores_path_override)
+						self.current_launch_command = self.current_launch_command.replace('XXRA_CORE_PATH_PARENTXX',str(Path(ra_cores_path_override).parent))
 					self.current_launch_command = self.current_launch_command.replace('XXROM_PATHXX',self.rom.get('launch_file'))
 					self.current_launch_command = self.current_launch_command.replace('XXROM_NAMEXX',Path(self.rom.get('launch_file')).name)
 					self.current_launch_command = self.current_launch_command.replace('XXROM_NAME_QUOTEDXX',url_quote(Path(self.rom.get('launch_file')).name))

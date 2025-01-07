@@ -330,7 +330,7 @@ class common(object):
 								if isinstance(old_favorites,list):
 									xbmc.log(msg='IAGL: Transferring items for {} favorites'.format(len(old_favorites)),level=xbmc.LOGDEBUG)
 									for of in old_favorites:
-										xfer_results.append(db.add_favorite(game_id=of.get('uid'),fav_group=of.get('fav_group'),is_search_link=int(of.get('is_search_link') or 0),is_random_link=int(of.get('is_random_link') or 0),link_query=of.get('link_query')))
+										xfer_results.append(db.add_favorite(game_id=of.get('uid'),fav_group=of.get('fav_group'),fav_link_name=of.get('fav_link_name'),is_search_link=int(of.get('is_search_link') or 0),is_random_link=int(of.get('is_random_link') or 0),link_query=of.get('link_query')))
 									del old_favorites
 								if isinstance(old_history,list):
 									xbmc.log(msg='IAGL: Transferring items for {} history'.format(len(old_history)),level=xbmc.LOGDEBUG)
