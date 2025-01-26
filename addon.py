@@ -26,6 +26,10 @@ pp = post_process.post_process(config=config)
 ln = launch.launch(config=config,user_launch_os=cm.get_setting('user_launch_os'),kodi_suspend=cm.get_setting('kodi_suspend'),kodi_media_stop=cm.get_setting('kodi_media_stop'),kodi_saa=cm.get_setting('kodi_saa'),kodi_wfr=cm.get_setting('kodi_wfr'),ra_app_path=cm.get_setting('ra_app_path'),ra_cores_path_override=cm.get_setting('ra_cores_path_override'))
 dialogs = dialogs.dialogs(config=config)
 
+if xbmc.getCondVisibility('Window.IsActive(okdialog)'): #Close Kodi playlist error message if it was open from last run
+	xbmc.log(msg='IAGL:  Closing leftover dialog',level=xbmc.LOGDEBUG)
+	xbmc.executebuiltin('Dialog.Close(okdialog)')
+
 # ## Plugin Routes ##
 @plugin.route('/')
 def route_root():
@@ -75,7 +79,7 @@ def view_browse():
 @plugin.route('/all')
 def view_all():
 	xbmc.log(msg='IAGL:  /all',level=xbmc.LOGDEBUG)
-	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game_list'))
 	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format(item_path,cm.get_setting('game_list_page_display'))),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_list'),True) if isinstance(list_item.getProperty('total_games'),str) and list_item.getProperty('total_games').isdigit() and int(list_item.getProperty('total_games'))>1 else (plugin.url_for_path('{}/{}'.format(item_path,'by_all')),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_list'),True) for list_item,item_path in db.query_db(db.get_query('all_game_lists',game_list_fanart_to_art=cm.get_setting('game_list_fanart_to_art'),game_list_clearlogo_to_art=cm.get_setting('game_list_clearlogo_to_art'))) if isinstance(list_item,xbmcgui.ListItem)])
 	for sm in config.listitem.get('sort_methods').get('all'):
 		xbmcplugin.addSortMethod(plugin.handle,sm)
@@ -84,7 +88,7 @@ def view_all():
 @plugin.route('/categories')
 def view_categories():
 	xbmc.log(msg='IAGL:  /categories',level=xbmc.LOGDEBUG)
-	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game_list'))
 	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),list_item,True) for list_item,item_path in db.query_db(db.get_query('categories')) if isinstance(list_item,xbmcgui.ListItem)])
 	for sm in config.listitem.get('sort_methods').get('categories'):
 		xbmcplugin.addSortMethod(plugin.handle,sm)
@@ -93,8 +97,8 @@ def view_categories():
 @plugin.route('/groups')
 def view_groups():
 	xbmc.log(msg='IAGL:  /groups',level=xbmc.LOGDEBUG)
-	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),list_item,True) for list_item,item_path in db.query_db(db.get_query('playlists')) if isinstance(list_item,xbmcgui.ListItem)])
+	xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game_list'))
+	xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path(item_path),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_groups'),True) for list_item,item_path in db.query_db(db.get_query('playlists')) if isinstance(list_item,xbmcgui.ListItem)])
 	for sm in config.listitem.get('sort_methods').get('playlists'):
 		xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -105,7 +109,7 @@ def view_by_category(category_id):
 		plugin.redirect(category_id)
 	else:
 		xbmc.log(msg='IAGL:  /by_category/{}'.format(category_id),level=xbmc.LOGDEBUG)
-		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
+		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game_list'))
 		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}'.format(item_path,cm.get_setting('game_list_page_display'))),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_list'),True) if isinstance(list_item.getProperty('total_games'),str) and list_item.getProperty('total_games').isdigit() and int(list_item.getProperty('total_games'))>1 else (plugin.url_for_path('{}/{}'.format(item_path,'by_all')),list_item,True) for list_item,item_path in db.query_db(db.get_query('game_lists_by_category',category_id=category_id,game_list_fanart_to_art=cm.get_setting('game_list_fanart_to_art'),game_list_clearlogo_to_art=cm.get_setting('game_list_clearlogo_to_art'))) if isinstance(list_item,xbmcgui.ListItem)])
 		for sm in config.listitem.get('sort_methods').get('by_category'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
@@ -1108,7 +1112,7 @@ def view_game_list(game_list_id,choose_id):
 				xbmcplugin.addSortMethod(plugin.handle,sm)
 	else:
 		xbmcplugin.setContent(plugin.handle,cm.get_setting('media_type_game'))
-		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}/{}/{}'.format('game_list',game_list_id,choose_id,item_path)),list_item,True) for list_item,item_path in db.query_db(db.get_query(choose_id,game_list_id=game_list_id)) if isinstance(list_item,xbmcgui.ListItem)])
+		xbmcplugin.addDirectoryItems(plugin.handle,[(plugin.url_for_path('{}/{}/{}/{}'.format('game_list',game_list_id,choose_id,item_path)),cm.add_context_menu(li=list_item,ip=item_path,type_in='game_choose_from'),True) for list_item,item_path in db.query_db(db.get_query(choose_id,game_list_id=game_list_id)) if isinstance(list_item,xbmcgui.ListItem)])
 		for sm in config.listitem.get('sort_methods').get('game_list_choice_by'):
 			xbmcplugin.addSortMethod(plugin.handle,sm)
 	xbmcplugin.endOfDirectory(plugin.handle)
@@ -1465,6 +1469,51 @@ def remove_game_from_favorites(game_id):
 			xbmc.sleep(config.defaults.get('sleep'))
 			xbmc.executebuiltin('Container.Refresh')
 
+@plugin.route('/context_menu/action/add_to_favorites_choose/<link_name>')
+def add_to_favorites_choose(link_name):
+	xbmc.log(msg='IAGL:  /add_to_favorites_choose/{}'.format(link_name),level=xbmc.LOGDEBUG)
+	if isinstance(xbmc.getInfoLabel('ListItem.FolderPath'),str) and xbmc.getInfoLabel('ListItem.FolderPath').count('/')>3:	
+		game_lists = xbmc.getInfoLabel('ListItem.FolderPath').split('/')[-3]
+		if isinstance(game_lists,str):
+			choose_type = None
+			result = cm.update_search(game_lists=[game_lists])
+			query_type = xbmc.getInfoLabel('ListItem.FolderPath').split('/')[-2]
+			if query_type == 'by_alpha':
+				result = cm.update_search(starts_with=link_name)
+				choose_type = 'Alpha'
+			elif query_type == 'by_genre':
+				result = cm.update_search(genres=[link_name])
+				choose_type = 'Genre'
+			elif query_type == 'by_year':
+				result = cm.update_search(years=[link_name])
+				choose_type = 'Year'
+			elif query_type == 'by_players':
+				result = cm.update_search(nplayers=[link_name])
+				choose_type = 'Players'
+			elif query_type == 'by_studio':
+				result = cm.update_search(studios=[link_name])
+				choose_type = 'Studio'
+			elif query_type == 'by_tag':
+				result = cm.update_search(tags=[link_name])
+				choose_type = 'Tag'
+			elif query_type == 'by_group':
+				result = cm.update_search(playlists=[link_name])
+				choose_type = 'Playlist'
+			else:
+				xbmc.log(msg='IAGL: Unknown query type for add to favorites by choose id',level=xbmc.LOGERROR)
+			if isinstance(choose_type,str):
+				new_link_name = '{} - {} - {}'.format(game_lists,choose_type,link_name)
+				plugin.redirect('/context_menu/action/add_to_favorites_search/{}'.format(new_link_name))
+
+@plugin.route('/context_menu/action/add_to_favorites_group/<group_name>')
+def add_to_favorites_group(group_name):
+	xbmc.log(msg='IAGL:  /add_to_favorites_group/{}'.format(group_name),level=xbmc.LOGDEBUG)
+	if isinstance(group_name,str) and len(group_name)>0:
+		result = cm.update_search(playlists=[group_name])
+		choose_type = 'Playlist'
+		new_link_name = '{} - {}'.format(choose_type,group_name)
+		plugin.redirect('/context_menu/action/add_to_favorites_search/{}'.format(new_link_name))
+
 @plugin.route('/context_menu/action/add_to_favorites_search/<link_name>')
 def add_to_favorites_search(link_name):
 	xbmc.log(msg='IAGL:  /add_to_favorites_search',level=xbmc.LOGDEBUG)
@@ -1481,17 +1530,20 @@ def add_to_favorites_search(link_name):
 						result = db.add_favorite(fav_link_name=link_name,fav_group=new_group_name,is_search_link=1,link_query=json.dumps(current_search))
 						if isinstance(result,int):
 							ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_group_name))
+							result = cm.clear_search()
 				else:
 					fav_group_name = [x.get('label') for x in fav_groups][selected]
 					result = db.add_favorite(fav_link_name=link_name,fav_group=fav_group_name,is_search_link=1,link_query=json.dumps(current_search))
 					if isinstance(result,int):
-						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),fav_group_name))			
+						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),fav_group_name))
+						result = cm.clear_search()		
 		else: #No groups defined yet
 			new_group_name = xbmcgui.Dialog().input(heading=cm.get_loc(30089))
 			if isinstance(new_group_name,str) and len(new_group_name)>0:
 				result = db.add_favorite(fav_link_name=link_name,fav_group=new_group_name,is_search_link=1,link_query=json.dumps(current_search))
 				if isinstance(result,int):
 					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_group_name))
+					result = cm.clear_search()
 	else:
 		xbmc.log(msg='IAGL:  /add_to_favorites_search query was malformed: {}'.format(current_search),level=xbmc.LOGERROR)
 
@@ -1511,17 +1563,20 @@ def add_to_favorites_random(link_name):
 						result = db.add_favorite(fav_link_name=link_name,fav_group=new_group_name,is_random_link=1,link_query=json.dumps(current_search))
 						if isinstance(result,int):
 							ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_group_name))
+							result = cm.clear_random()
 				else:
 					fav_group_name = [x.get('label') for x in fav_groups][selected]
 					result = db.add_favorite(fav_link_name=link_name,fav_group=fav_group_name,is_random_link=1,link_query=json.dumps(current_search))
 					if isinstance(result,int):
-						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),fav_group_name))			
+						ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),fav_group_name))
+						result = cm.clear_random()	
 		else: #No groups defined yet
 			new_group_name = xbmcgui.Dialog().input(heading=cm.get_loc(30089))
 			if isinstance(new_group_name,str) and len(new_group_name)>0:
 				result = db.add_favorite(fav_link_name=link_name,fav_group=new_group_name,is_random_link=1,link_query=json.dumps(current_search))
 				if isinstance(result,int):
 					ok_ret = xbmcgui.Dialog().ok(cm.get_loc(30233),'{}[CR]{}'.format(cm.get_loc(30090),new_group_name))
+					result = cm.clear_random()
 	else:
 		xbmc.log(msg='IAGL:  /add_to_favorites_random query was malformed: {}'.format(current_search),level=xbmc.LOGERROR)
 

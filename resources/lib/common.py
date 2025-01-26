@@ -94,6 +94,11 @@ class common(object):
 		elif setting_in == 'media_type':
 			result1 = self.config.settings.get('media_type_game').get('options').get(self.config.addon.get('addon_handle').getSetting(id='media_type_game')) or self.config.settings.get('media_type_game').get('default')
 			result = self.config.settings.get('media_type_game').get('listitem_type').get(result1) or self.config.media.get('default_type')
+		elif setting_in == 'media_type_game_list':
+			if isinstance(self.get_setting('media_type_game'),str):
+				result = self.config.settings.get('media_type_game').get('container_type').get(self.get_setting('media_type_game')) or self.config.settings.get('media_type_game').get('container_type_default')
+			else:
+				result = self.config.settings.get('media_type_game').get('container_type_default')
 		elif setting_in in self.config.settings.get('page_viewtype_options').get('viewtype_settings'):
 			result1 = self.config.settings.get('force_viewtypes').get('options').get(self.config.addon.get('addon_handle').getSetting(id='force_viewtypes')) or self.config.settings.get('force_viewtypes').get('default')
 			if result1:
@@ -150,6 +155,7 @@ class common(object):
 		if isinstance(xbmcgui.Window(self.config.defaults.get('home_id')).getProperty(type_in),str) and len(xbmcgui.Window(self.config.defaults.get('home_id')).getProperty(type_in))>0:
 			xbmcgui.Window(self.config.defaults.get('home_id')).clearProperty(type_in)
 			result = True
+			xbmc.log(msg='IAGL:  {} property cleared'.format(type_in),level=xbmc.LOGDEBUG)
 		return result
 
 	def get_home_property(self,type_in=None):
@@ -684,6 +690,15 @@ class common(object):
 					query_out = 'WHERE game_lists_table.user_global_visibility is NULL AND ({})'.format(q)
 				else:
 					query_out = '{} AND ({})'.format(query_out,q)
+			if isinstance(current_search.get('starts_with'),str) and len(current_search.get('starts_with'))>0:
+				if current_search.get('starts_with') == '0-9':
+					q = 'UPPER(SUBSTR(games_table.originaltitle,1,1)) NOT IN ("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z")'
+				else:
+					q = 'UPPER(SUBSTR(games_table.originaltitle,1,1)) = "{}"'.format(current_search.get('starts_with'))
+				if len(query_out)==0:
+					query_out = 'WHERE game_lists_table.user_global_visibility is NULL AND ({})'.format(q)
+				else:
+					query_out = '{} AND ({})'.format(query_out,q)
 			if isinstance(current_search.get('game_lists'),list) and len([x for x in current_search.get('game_lists') if isinstance(x,str)])>0:
 				q = 'games_table.game_list IN ({})'.format(','.join(['"{}"'.format(x) for x in current_search.get('game_lists') if isinstance(x,str)]))
 				if len(query_out)==0:
@@ -703,7 +718,7 @@ class common(object):
 				else:
 					query_out = '{} AND ({})'.format(query_out,q)
 			if isinstance(current_search.get('studios'),list) and len([x for x in current_search.get('studios') if isinstance(x,str)])>0:
-				q = 'games_table.studio IN ({})'.format(','.join(['"{}"'.format(x) for x in current_search.get('studios') if isinstance(x,str)]))
+				q = 'games_table.studio LIKE '+' OR games_table.studio LIKE '.join(['"%""{}""%"'.format(x) for x in current_search.get('studios') if isinstance(x,str)])
 				if len(query_out)==0:
 					query_out = 'WHERE game_lists_table.user_global_visibility is NULL AND ({})'.format(q)
 				else:
@@ -985,6 +1000,12 @@ class common(object):
 										(self.get_loc(30248),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_dl_path_from_uid/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30250),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/update_game_list_post_process_from_uid/{})'.format(ip.split('/')[-1])),
 										(self.get_loc(30328),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/reset_game_list_settings_from_uid/{})'.format(ip.split('/')[-1]))])
+		if type_in == 'game_choose_from' and isinstance(ip,str):
+			li_out.addContextMenuItems([(self.get_loc(30088),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/add_to_favorites_choose/{})'.format(ip.split('/')[-1])),
+										])
+		if type_in == 'game_groups' and isinstance(ip,str):
+			li_out.addContextMenuItems([(self.get_loc(30088),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/add_to_favorites_group/{})'.format(ip.split('/')[-1])),
+										])
 		if type_in == 'search_link' and isinstance(ip,str):
 			li_out.addContextMenuItems([(self.get_loc(30088),'RunPlugin(plugin://plugin.program.iagl/context_menu/action/add_to_favorites_search/{})'.format(ip))])
 		if type_in == 'random_link' and isinstance(ip,str):
