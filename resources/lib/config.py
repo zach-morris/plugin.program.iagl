@@ -82,13 +82,13 @@ class config(object):
 		self.listitem['sort_methods'] = dict()
 		self.listitem['sort_methods']['all'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_SIZE]
 		self.listitem['sort_methods']['categories'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE]
-		self.listitem['sort_methods']['playlists'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE]
+		self.listitem['sort_methods']['playlists'] = [xbmcplugin.SORT_METHOD_NONE,xbmcplugin.SORT_METHOD_LABEL]
 		self.listitem['sort_methods']['by_category'] = [xbmcplugin.SORT_METHOD_NONE]
 		self.listitem['sort_methods']['by_playlist'] = [xbmcplugin.SORT_METHOD_NONE]
 		self.listitem['sort_methods']['search'] = [xbmcplugin.SORT_METHOD_NONE]
 		self.listitem['sort_methods']['random'] = [xbmcplugin.SORT_METHOD_NONE]
 		self.listitem['sort_methods']['game_list_choice'] = [xbmcplugin.SORT_METHOD_NONE]
-		self.listitem['sort_methods']['game_list_choice_by'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE]
+		self.listitem['sort_methods']['game_list_choice_by'] = [xbmcplugin.SORT_METHOD_NONE,xbmcplugin.SORT_METHOD_LABEL]
 		self.listitem['sort_methods']['games'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_GENRE,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE,xbmcplugin.SORT_METHOD_SIZE,xbmcplugin.SORT_METHOD_PLAYCOUNT]
 		self.listitem['sort_methods']['favorites'] = [xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE,xbmcplugin.SORT_METHOD_LABEL,xbmcplugin.SORT_METHOD_TITLE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_GENRE,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE,xbmcplugin.SORT_METHOD_SIZE]
 		self.listitem['sort_methods']['history'] = [xbmcplugin.SORT_METHOD_NONE,xbmcplugin.SORT_METHOD_LASTPLAYED,xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE,xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE,xbmcplugin.SORT_METHOD_LABEL,xbmcplugin.SORT_METHOD_TITLE,xbmcplugin.SORT_METHOD_DATE,xbmcplugin.SORT_METHOD_GENRE,xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE,xbmcplugin.SORT_METHOD_SIZE,xbmcplugin.SORT_METHOD_PLAYCOUNT]
@@ -334,7 +334,7 @@ class config(object):
 											'LEFT JOIN paths as clearlogo_paths\n'
 											'ON clearlogo_paths."path" = groups_table.clearlogo_path\n'
 											'WHERE groups_table.total_count<5000\n' #Remove huge playlists as they return too many games
-											'ORDER BY groups_table.label COLLATE NOCASE ASC')
+											'ORDER BY (CASE WHEN (groups_table.label LIKE "%best%" OR groups_table.label LIKE "%all killer%" OR groups_table.label LIKE "%5 stars%") THEN 1 ELSE 0 END) DESC,groups_table.label COLLATE NOCASE ASC')
 		self.database['query']['all_game_lists'] = ('SELECT game_lists_table.label,game_lists_table.next_path,game_lists_table.table_filter,thumb_paths.url||game_lists_table.thumb as thumb,poster_paths.url||game_lists_table.poster as poster,banner_paths.url||game_lists_table.banner as banner,{game_list_fanart_to_art} as fanart,{game_list_clearlogo_to_art} as clearlogo,"plugin://plugin.video.youtube/play/?video_id="||game_lists_table.trailer as trailer,game_lists_table.plot,DATE(game_lists_table.date) as premiered,game_lists_table.total_games,game_lists_table.is_1g1r_list,game_lists_table.total_1g1r_games\n'
 													'FROM game_list as game_lists_table\n'
 													'LEFT JOIN paths as thumb_paths\n'
@@ -499,7 +499,8 @@ class config(object):
 												'ON banner_paths."path" = choose_table.banner_path\n'
 												'LEFT JOIN paths as clearlogo_paths\n'
 												'ON clearlogo_paths."path" = choose_table.clearlogo_path\n'
-												'WHERE choose_table.matching_lists LIKE "%""{game_list_id}""%"') 
+												'WHERE choose_table.matching_lists LIKE "%""{game_list_id}""%"\n'
+												'ORDER BY (CASE WHEN (choose_table.label LIKE "%best%" OR choose_table.label LIKE "%all killer%" OR choose_table.label LIKE "%5 stars%") THEN 1 ELSE 0 END) DESC,choose_table.label COLLATE NOCASE ASC') 
 		self.database['query']['by_all_no_page'] = ('SELECT "play_game/"||games_table.uid as next_path,games_table.originaltitle AS originaltitle,{game_title_setting} as label,{game_title_setting} as title,games_table.name_search as sorttitle,games_table.system as "set",games_table.system as "tvshowtitle",games_table.genres AS genre,games_table.studio,DATE(games_table.date) AS date,DATE(games_table.date) as premiered,games_table.year,games_table.ESRB as mpaa,games_table.rating,games_table.tags as tag,games_table.size,games_table.plot,games_table.regions AS country,games_table.lastplayed,games_table.playcount,"plugin://plugin.video.youtube/play/?video_id="||games_table.trailer as trailer,banner_paths.url||games_table.art_banner as banner,box_paths.url||games_table.art_box as poster,clearlogo_paths.url||games_table.art_logo as clearlogo,{landscape_to_game_art} as landscape,{thumbnail_to_game_art} as thumb,fanart_paths.url||games_table.art_fanart as fanart\n'
 													'FROM games as games_table\n'
 													'LEFT JOIN game_list as game_lists_table\n'
