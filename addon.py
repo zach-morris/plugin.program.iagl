@@ -1218,24 +1218,100 @@ def view_games_list_from_choice_paged(game_list_id,choose_id,choose_value,page_i
 def play_game(game_id):
 	xbmc.log(msg='IAGL:  /play_game/{}'.format(game_id),level=xbmc.LOGDEBUG)
 	current_game_data = next(iter(db.get_game_launch_info_from_id(game_id=game_id)),None)
-	selected_game_parameters = dict()
-	if isinstance(current_game_data,dict):
-		selected_game_parameters['launcher'] = next(iter([x for x in [current_game_data.get('user_game_launcher'),current_game_data.get('user_global_launcher'),current_game_data.get('default_global_launcher')] if isinstance(x,str)]),'retroplayer') #Get launcher (retroplayer/external)
-		selected_game_parameters['game_addon'] = next(iter([x for x in [current_game_data.get('user_game_launch_addon'),current_game_data.get('user_global_launch_addon'),current_game_data.get('default_global_launch_addon')] if isinstance(x,str)]),None) #Get launch addon
-		selected_game_parameters['external_launch_command'] = next(iter([x for x in [current_game_data.get('user_game_external_launch_command'),current_game_data.get('user_global_external_launch_command'),current_game_data.get('default_global_external_launch_command')] if isinstance(x,str)]),None) #Get external launch command
-		selected_game_parameters['post_download_process'] = next(iter([x for x in [current_game_data.get('user_game_post_download_process'),current_game_data.get('user_post_download_process'),current_game_data.get('default_global_post_download_process')] if isinstance(x,str)]),None) #Get external launch command
-		xbmc.log(msg='IAGL:  Selected game parameters: {}'.format(selected_game_parameters),level=xbmc.LOGDEBUG)
-		if selected_game_parameters.get('launcher') == 'retroplayer':
-			xbmc.log(msg='IAGL:  Launcher set as retroplayer',level=xbmc.LOGDEBUG)
-			plugin.redirect('/play_game_retroplayer/{}'.format(game_id))
-		elif selected_game_parameters.get('launcher') == 'external':
-			xbmc.log(msg='IAGL:  Launcher set as external',level=xbmc.LOGDEBUG)
-			plugin.redirect('/play_game_external/{}'.format(game_id))
+	play_action = cm.get_setting('game_select_action')
+	if play_action == '1':
+		if xbmcgui.getCurrentWindowDialogId() not in [12003,10138]:  #Check to see if info dialog or busy dialog are already open
+			xbmc.log(msg='IAGL:  Game Info Window requested for {}'.format(game_id),level=xbmc.LOGDEBUG)
+			xbmc.executebuiltin('Action(Info)')
+		else:  #Launch game (duplicated from below)
+			selected_game_parameters = dict()
+			if isinstance(current_game_data,dict):
+				selected_game_parameters['launcher'] = next(iter([x for x in [current_game_data.get('user_game_launcher'),current_game_data.get('user_global_launcher'),current_game_data.get('default_global_launcher')] if isinstance(x,str)]),'retroplayer') #Get launcher (retroplayer/external)
+				selected_game_parameters['game_addon'] = next(iter([x for x in [current_game_data.get('user_game_launch_addon'),current_game_data.get('user_global_launch_addon'),current_game_data.get('default_global_launch_addon')] if isinstance(x,str)]),None) #Get launch addon
+				selected_game_parameters['external_launch_command'] = next(iter([x for x in [current_game_data.get('user_game_external_launch_command'),current_game_data.get('user_global_external_launch_command'),current_game_data.get('default_global_external_launch_command')] if isinstance(x,str)]),None) #Get external launch command
+				selected_game_parameters['post_download_process'] = next(iter([x for x in [current_game_data.get('user_game_post_download_process'),current_game_data.get('user_post_download_process'),current_game_data.get('default_global_post_download_process')] if isinstance(x,str)]),None) #Get external launch command
+				xbmc.log(msg='IAGL:  Selected game parameters: {}'.format(selected_game_parameters),level=xbmc.LOGDEBUG)
+				if selected_game_parameters.get('launcher') == 'retroplayer':
+					xbmc.log(msg='IAGL:  Launcher set as retroplayer',level=xbmc.LOGDEBUG)
+					plugin.redirect('/play_game_retroplayer/{}'.format(game_id))
+				elif selected_game_parameters.get('launcher') == 'external':
+					xbmc.log(msg='IAGL:  Launcher set as external',level=xbmc.LOGDEBUG)
+					plugin.redirect('/play_game_external/{}'.format(game_id))
+				else:
+					xbmc.log(msg='IAGL:  Launcher set as uknown ({}), defaulting to retroplayer'.format(next_path),level=xbmc.LOGDEBUG)
+					plugin.redirect('/play_game_retroplayer/{}'.format(game_id))
+			else:
+				xbmc.log(msg='IAGL:  Database returned null results for game id {}'.format(game_id),level=xbmc.LOGERROR)
+	elif play_action == '2':  #Download game to...
+		plugin.redirect('/context_menu/action/download_game_to/{}'.format(game_id))
+	elif play_action == '3' and xbmcgui.getCurrentWindowDialogId() not in [12003,10138]:
+		selected = xbmcgui.Dialog().select(heading=cm.get_loc(30490),list=[cm.get_loc(30488),cm.get_loc(30489),cm.get_loc(30266)],useDetails=False)
+		if selected>0:
+			if selected == 1 and xbmcgui.getCurrentWindowDialogId() not in [12003,10138]:  #Info window
+				if xbmcgui.getCurrentWindowDialogId() not in [12003,10138]:  #Check to see if info dialog or busy dialog are already open
+					xbmc.log(msg='IAGL:  Game Info Window requested for {}'.format(game_id),level=xbmc.LOGDEBUG)
+					xbmc.executebuiltin('Action(Info)')
+				else:  #Launch game (duplicated from below)
+					selected_game_parameters = dict()
+					if isinstance(current_game_data,dict):
+						selected_game_parameters['launcher'] = next(iter([x for x in [current_game_data.get('user_game_launcher'),current_game_data.get('user_global_launcher'),current_game_data.get('default_global_launcher')] if isinstance(x,str)]),'retroplayer') #Get launcher (retroplayer/external)
+						selected_game_parameters['game_addon'] = next(iter([x for x in [current_game_data.get('user_game_launch_addon'),current_game_data.get('user_global_launch_addon'),current_game_data.get('default_global_launch_addon')] if isinstance(x,str)]),None) #Get launch addon
+						selected_game_parameters['external_launch_command'] = next(iter([x for x in [current_game_data.get('user_game_external_launch_command'),current_game_data.get('user_global_external_launch_command'),current_game_data.get('default_global_external_launch_command')] if isinstance(x,str)]),None) #Get external launch command
+						selected_game_parameters['post_download_process'] = next(iter([x for x in [current_game_data.get('user_game_post_download_process'),current_game_data.get('user_post_download_process'),current_game_data.get('default_global_post_download_process')] if isinstance(x,str)]),None) #Get external launch command
+						xbmc.log(msg='IAGL:  Selected game parameters: {}'.format(selected_game_parameters),level=xbmc.LOGDEBUG)
+						if selected_game_parameters.get('launcher') == 'retroplayer':
+							xbmc.log(msg='IAGL:  Launcher set as retroplayer',level=xbmc.LOGDEBUG)
+							plugin.redirect('/play_game_retroplayer/{}'.format(game_id))
+						elif selected_game_parameters.get('launcher') == 'external':
+							xbmc.log(msg='IAGL:  Launcher set as external',level=xbmc.LOGDEBUG)
+							plugin.redirect('/play_game_external/{}'.format(game_id))
+						else:
+							xbmc.log(msg='IAGL:  Launcher set as uknown ({}), defaulting to retroplayer'.format(next_path),level=xbmc.LOGDEBUG)
+							plugin.redirect('/play_game_retroplayer/{}'.format(game_id))
+					else:
+						xbmc.log(msg='IAGL:  Database returned null results for game id {}'.format(game_id),level=xbmc.LOGERROR)
+			elif selected == 2:	#Download game to
+				plugin.redirect('/context_menu/action/download_game_to/{}'.format(game_id))
+			else: #Launch game (duplicated from below)
+				selected_game_parameters = dict()
+				if isinstance(current_game_data,dict):
+					selected_game_parameters['launcher'] = next(iter([x for x in [current_game_data.get('user_game_launcher'),current_game_data.get('user_global_launcher'),current_game_data.get('default_global_launcher')] if isinstance(x,str)]),'retroplayer') #Get launcher (retroplayer/external)
+					selected_game_parameters['game_addon'] = next(iter([x for x in [current_game_data.get('user_game_launch_addon'),current_game_data.get('user_global_launch_addon'),current_game_data.get('default_global_launch_addon')] if isinstance(x,str)]),None) #Get launch addon
+					selected_game_parameters['external_launch_command'] = next(iter([x for x in [current_game_data.get('user_game_external_launch_command'),current_game_data.get('user_global_external_launch_command'),current_game_data.get('default_global_external_launch_command')] if isinstance(x,str)]),None) #Get external launch command
+					selected_game_parameters['post_download_process'] = next(iter([x for x in [current_game_data.get('user_game_post_download_process'),current_game_data.get('user_post_download_process'),current_game_data.get('default_global_post_download_process')] if isinstance(x,str)]),None) #Get external launch command
+					xbmc.log(msg='IAGL:  Selected game parameters: {}'.format(selected_game_parameters),level=xbmc.LOGDEBUG)
+					if selected_game_parameters.get('launcher') == 'retroplayer':
+						xbmc.log(msg='IAGL:  Launcher set as retroplayer',level=xbmc.LOGDEBUG)
+						plugin.redirect('/play_game_retroplayer/{}'.format(game_id))
+					elif selected_game_parameters.get('launcher') == 'external':
+						xbmc.log(msg='IAGL:  Launcher set as external',level=xbmc.LOGDEBUG)
+						plugin.redirect('/play_game_external/{}'.format(game_id))
+					else:
+						xbmc.log(msg='IAGL:  Launcher set as uknown ({}), defaulting to retroplayer'.format(next_path),level=xbmc.LOGDEBUG)
+						plugin.redirect('/play_game_retroplayer/{}'.format(game_id))
+				else:
+					xbmc.log(msg='IAGL:  Database returned null results for game id {}'.format(game_id),level=xbmc.LOGERROR)
 		else:
-			xbmc.log(msg='IAGL:  Launcher set as uknown ({}), defaulting to retroplayer'.format(next_path),level=xbmc.LOGDEBUG)
-			plugin.redirect('/play_game_retroplayer/{}'.format(game_id))
+			xbmc.log(msg='IAGL:  Play game action cancelled.',level=xbmc.LOGDEBUG)
 	else:
-		xbmc.log(msg='IAGL:  Database returned null results for game id {}'.format(game_id),level=xbmc.LOGERROR)
+		selected_game_parameters = dict()
+		if isinstance(current_game_data,dict):
+			selected_game_parameters['launcher'] = next(iter([x for x in [current_game_data.get('user_game_launcher'),current_game_data.get('user_global_launcher'),current_game_data.get('default_global_launcher')] if isinstance(x,str)]),'retroplayer') #Get launcher (retroplayer/external)
+			selected_game_parameters['game_addon'] = next(iter([x for x in [current_game_data.get('user_game_launch_addon'),current_game_data.get('user_global_launch_addon'),current_game_data.get('default_global_launch_addon')] if isinstance(x,str)]),None) #Get launch addon
+			selected_game_parameters['external_launch_command'] = next(iter([x for x in [current_game_data.get('user_game_external_launch_command'),current_game_data.get('user_global_external_launch_command'),current_game_data.get('default_global_external_launch_command')] if isinstance(x,str)]),None) #Get external launch command
+			selected_game_parameters['post_download_process'] = next(iter([x for x in [current_game_data.get('user_game_post_download_process'),current_game_data.get('user_post_download_process'),current_game_data.get('default_global_post_download_process')] if isinstance(x,str)]),None) #Get external launch command
+			xbmc.log(msg='IAGL:  Selected game parameters: {}'.format(selected_game_parameters),level=xbmc.LOGDEBUG)
+			if selected_game_parameters.get('launcher') == 'retroplayer':
+				xbmc.log(msg='IAGL:  Launcher set as retroplayer',level=xbmc.LOGDEBUG)
+				plugin.redirect('/play_game_retroplayer/{}'.format(game_id))
+			elif selected_game_parameters.get('launcher') == 'external':
+				xbmc.log(msg='IAGL:  Launcher set as external',level=xbmc.LOGDEBUG)
+				plugin.redirect('/play_game_external/{}'.format(game_id))
+			else:
+				xbmc.log(msg='IAGL:  Launcher set as uknown ({}), defaulting to retroplayer'.format(next_path),level=xbmc.LOGDEBUG)
+				plugin.redirect('/play_game_retroplayer/{}'.format(game_id))
+		else:
+			xbmc.log(msg='IAGL:  Database returned null results for game id {}'.format(game_id),level=xbmc.LOGERROR)
 	xbmcplugin.endOfDirectory(plugin.handle)
 
 @plugin.route('/play_game_retroplayer/<game_id>')
