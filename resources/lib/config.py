@@ -71,7 +71,7 @@ class config(object):
 		self.defaults['android_activity_keys'] = ['package','intent','dataType','dataURI','flags','extras','action','category','className']
 		self.defaults['retroarch_logging_n_lines'] = 500
 		self.defaults['show_extract_progress_size'] = 10*1024*1024
-		self.defaults['unzip_skip_bios_files'] = set(['advision.zip','gamecom.zip','crvision.zip','vsmile.zip','gmaster.zip','scv.zip'])
+		self.defaults['unzip_skip_bios_files'] = set(['advision.zip','gamecom.zip','crvision.zip','vsmile.zip','gmaster.zip','scv.zip','casloopy.zip'])
 		#Media
 		self.media['default_type'] = 'video'
 		#Listitems

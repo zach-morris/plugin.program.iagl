@@ -1246,7 +1246,7 @@ def play_game(game_id):
 		plugin.redirect('/context_menu/action/download_game_to/{}'.format(game_id))
 	elif play_action == '3' and xbmcgui.getCurrentWindowDialogId() not in [12003,10138]:
 		selected = xbmcgui.Dialog().select(heading=cm.get_loc(30490),list=[cm.get_loc(30488),cm.get_loc(30489),cm.get_loc(30266)],useDetails=False)
-		if selected>0:
+		if selected>=0:
 			if selected == 1 and xbmcgui.getCurrentWindowDialogId() not in [12003,10138]:  #Info window
 				if xbmcgui.getCurrentWindowDialogId() not in [12003,10138]:  #Check to see if info dialog or busy dialog are already open
 					xbmc.log(msg='IAGL:  Game Info Window requested for {}'.format(game_id),level=xbmc.LOGDEBUG)
