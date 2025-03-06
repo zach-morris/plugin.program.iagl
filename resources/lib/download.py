@@ -431,11 +431,14 @@ class download(object):
 			self.get_matching_local_files() #Look for local files first
 
 			if isinstance(self.rom,list) and any([cr.get('continue_with_download')==True for cr in self.rom]):
-				if isinstance(self.ia_email,str) and isinstance(self.ia_password,str):
-					if not self.logged_in:
-						self.login()
+				if any(['archive.org' in cr.get('url').lower() for cr in self.rom if isinstance(cr.get('url'),str)]):
+					if isinstance(self.ia_email,str) and isinstance(self.ia_password,str):
+						if not self.logged_in:
+							self.login()
+					else:
+						xbmc.log(msg='IAGL:  Attempting download without login credentials',level=xbmc.LOGDEBUG)
 				else:
-					xbmc.log(msg='IAGL:  Attempting download without login credentials',level=xbmc.LOGDEBUG)
+					xbmc.log(msg='IAGL:  No archive.org url passed for download, skipping login',level=xbmc.LOGDEBUG)
 			else:
 				xbmc.log(msg='IAGL:  Skipping IA login check due to matching local files',level=xbmc.LOGDEBUG)
 				
