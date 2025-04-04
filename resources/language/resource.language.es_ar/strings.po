@@ -17,15 +17,15 @@ msgstr "Lanzador de juegos de Internet Archive"
 
 msgctxt "#30002"
 msgid "Browse all Lists"
-msgstr "Explorar todas las listas"
+msgstr "Explorar todas las Listas"
 
 msgctxt "#30003"
 msgid "Browse lists by Category"
-msgstr "Explorar listas por categoría"
+msgstr "Explorar listas por Categoría"
 
 msgctxt "#30004"
 msgid "Browse games by Playlist"
-msgstr "Explorar juegos por lista de reproducción"
+msgstr "Explorar juegos por lista de Reproducción"
 
 msgctxt "#30005"
 msgid "Favorites"
@@ -33,7 +33,7 @@ msgstr "Favoritos"
 
 msgctxt "#30006"
 msgid "Play History"
-msgstr "Historial de juego"
+msgstr "Historial de Juego"
 
 msgctxt "#30007"
 msgid "Search"
@@ -41,7 +41,7 @@ msgstr "Buscar"
 
 msgctxt "#30008"
 msgid "Random Play"
-msgstr "Juego aleatorio"
+msgstr "Juego Aleatorio"
 
 msgctxt "#30009"
 msgid "Next"
@@ -225,7 +225,7 @@ msgstr "Define la acción a tomar si se encuentra que un archivo de juego existe
 
 msgctxt "#30054"
 msgid "Prompt"
-msgstr "Prompt"
+msgstr "Preguntar"
 
 msgctxt "#30055"
 msgid "Do not re-download"
@@ -357,7 +357,7 @@ msgstr "Detener multimedia en lanzamiento"
 
 msgctxt "#30087"
 msgid "Waiting for return"
-msgstr "Esperando el regreso"
+msgstr "Esperar por el regreso"
 
 msgctxt "#30088"
 msgid "Add to IAGL Favorites"
@@ -369,11 +369,11 @@ msgstr "Introduce un nombre para tu grupo de favoritos"
 
 msgctxt "#30090"
 msgid "Favorite added to group"
-msgstr "Favorito añadido al grupo"
+msgstr "Favorito agregado al grupo"
 
 msgctxt "#30091"
 msgid "Use clean game title"
-msgstr "Utilice un título de juego vacío"
+msgstr "Utilizar título de juego más limpio"
 
 msgctxt "#30092"
 msgid "Remove tags from a game title for display.  Ex:  [B]Mario (USA)[/B] becomes [B]Mario[/B]"
@@ -401,7 +401,7 @@ msgstr "Si es posible, las listas de juegos se filtrarán previamente a un set 1
 
 msgctxt "#30098"
 msgid "Append game list name to search and random results"
-msgstr "Añade el nombre de la lista de juegos a la búsqueda y a los resultados aleatorios"
+msgstr "Añadir el nombre de la lista de juegos a la búsqueda y a los resultados aleatorios"
 
 msgctxt "#30099"
 msgid "When enabled, the name of the game list will be appended to search results"
@@ -1145,11 +1145,11 @@ msgstr "Seleccione la ruta a la aplicación MAME (opcional)"
 
 msgctxt "#30284"
 msgid "Project 64"
-msgstr "Proyecto 64"
+msgstr "Project 64"
 
 msgctxt "#30285"
 msgid "Select the path to the Project 64 application (optional)"
-msgstr "Seleccione la ruta a la aplicación Proyecto 64 (opcional)"
+msgstr "Seleccione la ruta a la aplicación Project 64 (opcional)"
 
 msgctxt "#30286"
 msgid "ePSXe"
@@ -1489,7 +1489,7 @@ msgstr "¿Restablecer configuración para {}?[CR][B]Esto cambiará la configurac
 
 msgctxt "#30370"
 msgid "Support"
-msgstr "Apoyar"
+msgstr "Colaborar"
 
 msgctxt "#30371"
 msgid "Donate to Archive.org"
@@ -1705,7 +1705,7 @@ msgstr "Descomprimir archivos"
 
 msgctxt "#30424"
 msgid "No Processing"
-msgstr "Sin procesamiento"
+msgstr "No Procesar"
 
 msgctxt "#30425"
 msgid "Unzip Files, Skip BIOS files"
