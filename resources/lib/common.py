@@ -209,7 +209,7 @@ class common(object):
 	def extract_addon_db(self,use_backup=False):
 		success = False
 		if use_backup:
-			current_file = self.config.files.get('addon_data_db_zipped_backup')
+			current_file = self.config.files.get('db_zipped_backup')
 		else:
 			current_file = self.config.files.get('addon_data_db_zipped')
 		if current_file.exists():
@@ -266,7 +266,7 @@ class common(object):
 							new_matches = []
 							no_matches = []
 							xbmc.log(msg='IAGL: Extracted zipped db with version {} to path {}'.format(self.config.addon.get('version'),str(self.config.files.get('db').parent)),level=xbmc.LOGDEBUG)
-							self.config.files.get('addon_data_db_zipped').rename(self.config.files.get('addon_data_db_zipped_backup'))  #Rename new zipped db to backup
+							self.config.files.get('addon_data_db_zipped').rename(self.config.files.get('db_zipped_backup'))  #Rename new zipped db to backup
 							if old_uids is not None:
 								new_uids = db.query_db(db.get_query('get_all_uids_in_new_db',old_uids=','.join(['"{}"'.format(x) for x in old_uids])),return_as='dict')
 								no_match_uids = [x for x in old_uids if x not in [y.get('uid') for y in new_uids if isinstance(y.get('uid'),str)]]
@@ -380,7 +380,7 @@ class common(object):
 						selected = xbmcgui.Dialog().select(heading=self.get_loc(30373),list=[self.get_loc(30377),self.get_loc(30378)],useDetails=False)
 						if selected == 1:
 							xbmc.log(msg='IAGL:  User requested not to be asked about update again.  Moving new db to backup.',level=xbmc.LOGDEBUG)
-							self.config.files.get('addon_data_db_zipped').rename(self.config.files.get('addon_data_db_zipped_backup'))
+							self.config.files.get('addon_data_db_zipped').rename(self.config.files.get('db_zipped_backup'))
 						else:
 							xbmc.log(msg='IAGL:  User will be asked about update again later...',level=xbmc.LOGDEBUG)
 				else:
@@ -394,7 +394,7 @@ class common(object):
 				if result:
 					xbmcaddon.Addon(id=self.config.addon.get('addon_name')).setSetting(id='db_version',value=self.config.addon.get('version'))
 					xbmc.log(msg='IAGL: Extracted zipped db with version {} to path {}'.format(self.config.addon.get('version'),str(self.config.files.get('db').parent)),level=xbmc.LOGDEBUG)
-					self.config.files.get('addon_data_db_zipped').rename(self.config.files.get('addon_data_db_zipped_backup'))
+					self.config.files.get('addon_data_db_zipped').rename(self.config.files.get('db_zipped_backup'))
 				else:
 					xbmc.log(msg='IAGL:  Error extracting addon db: {}'.format(self.config.files.get('addon_data_db_zipped')),level=xbmc.LOGERROR)
 			else:
@@ -411,7 +411,7 @@ class common(object):
 		pDialog.create('Please Wait','Reset in progress...')
 		if self.config.files.get('addon_data_db_zipped').exists():
 			use_backup=False  #Use the non-backup if it exists
-		elif self.config.files.get('addon_data_db_zipped_backup').exists():
+		elif self.config.files.get('db_zipped_backup').exists():
 			use_backup=True  #If it doesnt exist (likely), use the backup version
 		else:
 			use_backup = None
