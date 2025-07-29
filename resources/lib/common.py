@@ -1,4 +1,4 @@
-import xbmc,xbmcgui,xbmcaddon,xbmcvfs,json,os
+import xbmc,xbmcgui,xbmcaddon,xbmcvfs,json,os,shutil
 from pathlib import Path
 from urllib.parse import urlencode
 from datetime import datetime as dt
@@ -266,7 +266,8 @@ class common(object):
 							new_matches = []
 							no_matches = []
 							xbmc.log(msg='IAGL: Extracted zipped db with version {} to path {}'.format(self.config.addon.get('version'),str(self.config.files.get('db').parent)),level=xbmc.LOGDEBUG)
-							self.config.files.get('addon_data_db_zipped').rename(self.config.files.get('db_zipped_backup'))  #Rename new zipped db to backup
+							#Rename or copy new zipped db to backup
+							self._move_or_copy_zipped_db()
 							if old_uids is not None:
 								new_uids = db.query_db(db.get_query('get_all_uids_in_new_db',old_uids=','.join(['"{}"'.format(x) for x in old_uids])),return_as='dict')
 								no_match_uids = [x for x in old_uids if x not in [y.get('uid') for y in new_uids if isinstance(y.get('uid'),str)]]
@@ -380,7 +381,7 @@ class common(object):
 						selected = xbmcgui.Dialog().select(heading=self.get_loc(30373),list=[self.get_loc(30377),self.get_loc(30378)],useDetails=False)
 						if selected == 1:
 							xbmc.log(msg='IAGL:  User requested not to be asked about update again.  Moving new db to backup.',level=xbmc.LOGDEBUG)
-							self.config.files.get('addon_data_db_zipped').rename(self.config.files.get('db_zipped_backup'))
+							self._move_or_copy_zipped_db()
 						else:
 							xbmc.log(msg='IAGL:  User will be asked about update again later...',level=xbmc.LOGDEBUG)
 				else:
@@ -394,7 +395,7 @@ class common(object):
 				if result:
 					xbmcaddon.Addon(id=self.config.addon.get('addon_name')).setSetting(id='db_version',value=self.config.addon.get('version'))
 					xbmc.log(msg='IAGL: Extracted zipped db with version {} to path {}'.format(self.config.addon.get('version'),str(self.config.files.get('db').parent)),level=xbmc.LOGDEBUG)
-					self.config.files.get('addon_data_db_zipped').rename(self.config.files.get('db_zipped_backup'))
+					self._move_or_copy_zipped_db()
 				else:
 					xbmc.log(msg='IAGL:  Error extracting addon db: {}'.format(self.config.files.get('addon_data_db_zipped')),level=xbmc.LOGERROR)
 			else:
@@ -403,6 +404,15 @@ class common(object):
 				if result==False:
 					xbmc.log(msg='IAGL: addon database file not found, unable to restore from backup.',level=xbmc.LOGERROR)
 		return result
+
+	def _move_or_copy_zipped_db(self):
+		try:
+			self.config.files.get('addon_data_db_zipped').rename(self.config.files.get('db_zipped_backup'))
+		except Exception:
+			try:
+				shutil.copy(self.config.files.get('addon_data_db_zipped'),self.config.files.get('db_zipped_backup'))
+			except Exception as e:
+				xbmc.log(msg='IAGL: Error creating a backup of the db: {}'.format(e),level=xbmc.LOGERROR)
 
 	def reset_db(self):
 		result = False
