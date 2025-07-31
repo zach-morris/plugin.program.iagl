@@ -1,4 +1,4 @@
-import xbmc,xbmcgui,xbmcaddon,xbmcvfs,json,os,shutil
+import xbmc,xbmcgui,xbmcaddon,xbmcvfs,json,os
 from pathlib import Path
 from urllib.parse import urlencode
 from datetime import datetime as dt
@@ -410,7 +410,7 @@ class common(object):
 			self.config.files.get('addon_data_db_zipped').rename(self.config.files.get('db_zipped_backup'))
 		except Exception:
 			try:
-				shutil.copy(self.config.files.get('addon_data_db_zipped'),self.config.files.get('db_zipped_backup'))
+				xbmcvfs.copy(str(self.config.files.get('addon_data_db_zipped')), str(self.config.files.get('db_zipped_backup')))
 			except Exception as e:
 				xbmc.log(msg='IAGL: Error creating a backup of the db: {}'.format(e),level=xbmc.LOGERROR)
 
