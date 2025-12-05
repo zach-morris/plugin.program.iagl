@@ -280,17 +280,11 @@ class download(object):
 			self.check_login()
 			if not self.logged_in:
 				if isinstance(self.ia_email,str) and isinstance(self.ia_password,str):
+					xbmc.log(msg='IAGL:  Attempting Archive.org login',level=xbmc.LOGDEBUG)
 					try:
-						with self.session.get(self.config.downloads.get('archive_org_login_url'),verify=False,timeout=self.config.downloads.get('login_timeout'),headers=self.login_headers) as r1:
-							if r1.ok:
-								xbmc.log(msg='IAGL:  Attempting Archive.org login',level=xbmc.LOGDEBUG)
-					except Exception as exc:
-						xbmc.log(msg='IAGL:  Archive.org login attempt exception: {}'.format(exc),level=xbmc.LOGERROR)
-					self.login_form_data = '-----------------------------239962525138460636124209110177\r\nContent-Disposition: form-data; name="username"\r\n\r\n{}\r\n-----------------------------239962525138460636124209110177\r\nContent-Disposition: form-data; name="password"\r\n\r\n{}\r\n-----------------------------239962525138460636124209110177\r\nContent-Disposition: form-data; name="remember"\r\n\r\ntrue\r\n-----------------------------239962525138460636124209110177\r\nContent-Disposition: form-data; name="referer"\r\n\r\nhttps://archive.org/\r\n-----------------------------239962525138460636124209110177\r\nContent-Disposition: form-data; name="login"\r\n\r\ntrue\r\n-----------------------------239962525138460636124209110177\r\nContent-Disposition: form-data; name="submit_by_js"\r\n\r\ntrue\r\n-----------------------------239962525138460636124209110177--\r\n'.format(self.ia_email,self.ia_password)
-					try:
-						with self.session.post(self.config.downloads.get('archive_org_login_url'),verify=False,timeout=self.config.downloads.get('login_timeout'),headers=self.login_headers,data=self.login_form_data) as r:
+						with self.session.post(self.config.downloads.get('archive_org_login_url'),verify=False,timeout=self.config.downloads.get('login_timeout'),params={'op': 'login'},data={'email': self.ia_email, 'password': self.ia_password}) as r:
 							r.raise_for_status()
-							if r.ok and isinstance(r.text,str) and 'Successful login' in r.text:
+							if r.ok and isinstance(r.json(),dict) and r.json().get('success') == True:
 								self.logged_in = True
 								xbmc.log(msg='IAGL:  Archive.org login good',level=xbmc.LOGDEBUG)
 								if isinstance(r.cookies.get_dict(),dict) and all([x in r.cookies.get_dict().keys() for x in ['logged-in-sig', 'logged-in-user']]):

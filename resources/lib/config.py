@@ -255,7 +255,7 @@ class config(object):
 		self.dialogs['discord_invite']['buttons']['ok'] = 3001
 
 		#Downloads
-		self.downloads['archive_org_login_url'] = 'https://archive.org/account/login'
+		self.downloads['archive_org_login_url'] = 'https://archive.org/services/xauthn/'
 		self.downloads['archive_org_check_acct'] = 'https://archive.org/services/user.php?op=whoami'
 		self.downloads['chunk_size'] = 500000 #500 kb chunks
 		self.downloads['bad_file_return_size'] = 10000 #Small size returned file may mean archive returned 'Not found' html.  Note chunk_size must be larger than this
