@@ -46,9 +46,8 @@ class config(object):
 		self.paths['assets_url'] = 'special://home/addons/plugin.program.iagl/assets/default/{}'
 
 		#Files
-		self.files['addon_data_db'] = self.paths['addon_data'].joinpath('iagl.db')
 		self.files['addon_data_db_zipped'] = self.paths['addon_data'].joinpath('iagl.db.zip')
-		self.files['addon_data_db_zipped_backup'] = self.paths['addon_data'].joinpath('iagl_backup.db.zip')
+		self.files['db_zipped_backup'] = self.paths['userdata'].joinpath('iagl_backup.db.zip')
 		self.files['db'] = self.paths['userdata'].joinpath('iagl.db')
 		self.files['ia_cookie'] = self.paths['userdata'].joinpath('ia.cookie')
 		self.files['sounds'] = dict()
