@@ -210,8 +210,10 @@ class common(object):
 		success = False
 		if use_backup:
 			current_file = self.config.files.get('db_zipped_backup')
+			alternate_file = self.config.files.get('addon_data_db_zipped')
 		else:
 			current_file = self.config.files.get('addon_data_db_zipped')
+			alternate_file = self.config.files.get('db_zipped_backup')
 		if current_file.exists():
 			my_archive = archive_tool.archive_tool(archive_file=str(current_file),directory_out=str(self.config.files.get('db').parent),flatten_archive=True)
 			xbmc.log(msg='IAGL: Extracting zipped db {} to path {}'.format(current_file,self.config.files.get('db')),level=xbmc.LOGDEBUG)
@@ -221,8 +223,17 @@ class common(object):
 			else:
 				success = False
 		else:
-			xbmc.log(msg='IAGL: File not found: {}'.format(current_file),level=xbmc.LOGDEBUG)
-			success = False
+			if alternate_file.exists():
+				my_archive = archive_tool.archive_tool(archive_file=str(alternate_file),directory_out=str(self.config.files.get('db').parent),flatten_archive=True)
+				xbmc.log(msg='IAGL: Extracting zipped db {} to path {}'.format(alternate_file,self.config.files.get('db')),level=xbmc.LOGDEBUG)
+				extracted_files, result = my_archive.extract()
+				if result and self.config.files.get('db').exists():
+					success = True
+				else:
+					success = False
+			else:
+				xbmc.log(msg='IAGL: File not found: {}'.format(current_file),level=xbmc.LOGDEBUG)
+				success = False
 		return success
 
 	def check_db(self):
