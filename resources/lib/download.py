@@ -529,7 +529,7 @@ class download(object):
 										current_size=int(xbmcgui.Window(self.dp_id).getProperty('current_size'))+len(chunk) #Get size of download combining all threads
 									else:
 										current_size=len(chunk)
-									percent_complete = int(100*current_size/((rom.get('filesize') or 0)+1)) #Calculate overall progress for downloading this file combining all threads
+									percent_complete = min(100, int(100*current_size/((rom.get('filesize') or 0)+1))) #Calculate overall progress for downloading this file combining all threads
 									xbmcgui.Window(self.dp_id).setProperty('current_size',str(current_size))
 									if xbmcgui.Window(self.dp_id).getProperty('start_time').isdigit():
 										bps_start = int(xbmcgui.Window(self.dp_id).getProperty('start_time'))/1000
