@@ -1828,7 +1828,7 @@ def update_game_list_launch_command(game_list_id):
 		li = cm.get_game_addons()
 		if len(li)>0:
 			selected = xbmcgui.Dialog().select(heading=cm.get_loc(30264),list=li,useDetails=True)
-			if selected>0:
+			if selected>=0:
 				if selected == len(li)-1:
 					if xbmcgui.Dialog().yesno(cm.get_loc(30299),cm.get_loc(30265)):
 						result1 = db.reset_game_list_user_parameter(game_list_id=game_list_id,parameter='user_global_launch_addon')
